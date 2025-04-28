@@ -60,29 +60,21 @@ body {
 <h1>み旨の裏庭 - サイト目次</h1>
 
 <!-- ここに検索ボックスの場所を作る -->
-<div id="search"></div>
+<!-- Lunr.js本体 -->
+<script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
 
-<!-- スクリプトを読む -->
-<script type="module" src="/mimune-no-uraniwa/pagefind/pagefind.js"></script>
-<script src="/mimune-no-uraniwa/pagefind/pagefind-ui.js"></script>
+<!-- Lunr.js日本語対応プラグイン -->
+<script src="https://cdn.jsdelivr.net/npm/lunr-languages/lunr.stemmer.support.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lunr-languages/tinyseg.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lunr-languages/lunr.ja.min.js"></script>
 
-<!-- 検索UIの初期化 -->
-<script type="module">
-  window.addEventListener('DOMContentLoaded', () => {
-    new PagefindUI({
-      element: "#search",
-      baseUrl: "/mimune-no-uraniwa",
-      perPage: 1000,
-      autoLoad: true,
-      translations: {
-        "placeholder": "ここに検索ワードを入力",
-        "clear_search": "検索をクリア",
-        "search_label": "サイト内検索",
-        "no_results": "検索結果がありません"
-      }
-    });
-  });
-</script>
+<div id="search-area">
+  <input id="search-input" type="text" placeholder="検索キーワードを入力" />
+  <button id="search-btn">検索</button>
+</div>
+
+<ul id="search-results"></ul>
+
 
 
 
