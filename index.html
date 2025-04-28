@@ -59,21 +59,56 @@ body {
 <!-- HTML本体 -->
 <h1>み旨の裏庭 - サイト目次</h1>
 
-<!-- ここに検索ボックスの場所を作る -->
-<!-- Lunr.js本体 -->
-<script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
+  <div id="search-area">
+    <input id="search-input" type="text" placeholder="検索キーワードを入力" />
+    <button id="search-btn">検索</button>
+  </div>
 
-<!-- Lunr.js日本語対応プラグイン -->
-<script src="https://cdn.jsdelivr.net/npm/lunr-languages/lunr.stemmer.support.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lunr-languages/tinyseg.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lunr-languages/lunr.ja.min.js"></script>
+  <ul id="search-results"></ul>
 
-<div id="search-area">
-  <input id="search-input" type="text" placeholder="検索キーワードを入力" />
-  <button id="search-btn">検索</button>
-</div>
+  <!-- 必要なJSたち -->
+  <script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lunr-languages/lunr.stemmer.support.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lunr-languages/tinyseg.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lunr-languages/lunr.ja.min.js"></script>
 
-<ul id="search-results"></ul>
+  <!-- Lunr検索エンジン起動スクリプト -->
+  <script type="module">
+    fetch('/mimune-no-uraniwa/index.json')
+      .then(response => response.json())
+      .then(data => {
+        const idx = lunr(function () {
+          this.use(lunr.ja);
+          this.ref('id');
+          this.field('title');
+          this.field('body');
+          data.forEach(doc => {
+            this.add(doc);
+          });
+        });
+
+        document.getElementById('search-btn').addEventListener('click', () => {
+          const query = document.getElementById('search-input').value.trim();
+          const results = idx.search(query);
+          const output = document.getElementById('search-results');
+          output.innerHTML = '';
+
+          if (results.length === 0) {
+            output.innerHTML = '<li>検索結果がありません</li>';
+          } else {
+            results.forEach(result => {
+              const item = data.find(d => d.id == result.ref);
+              const li = document.createElement('li');
+              li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+              output.appendChild(li);
+            });
+          }
+        });
+      })
+      .catch(error => {
+        console.error('インデックスの読み込みエラー:', error);
+      });
+  </script>
 
 
 
