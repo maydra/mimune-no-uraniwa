@@ -106,7 +106,7 @@ fetch('light-index.json')
 
     const fuse = new Fuse(indexData, {
       keys: ['title'],
-      threshold: 0.4
+      threshold: 1.0
     });
 
     function createSnippet(text, keyword) {
@@ -125,23 +125,39 @@ fetch('light-index.json')
       return text.replace(regex, match => `<mark>${match}</mark>`);
     }
 
-    function doSearch() {
-      const query = searchInput.value.trim();
-      if (!query) return;
+function doSearch() {
+  const query = searchInput.value.trim();
+  if (!query) return;
 
-      const results = fuse.search(query);
+  // 最初から全部fetch対象にする
+  const results = indexData; // ←fuse検索じゃなく全件
 
-      searchResults.innerHTML = '';
-      searchCount.textContent = `検索結果: ${results.length}件`;
+  searchResults.innerHTML = '';
+  searchCount.textContent = '';
 
-      if (results.length === 0) {
-        searchResults.innerHTML = '<li>検索結果がありません</li>';
-      } else {
-        results.forEach(result => {
-          const item = result.item;
-          fetch(item.url)
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(html, "text/html");
-              const bodyText = doc.body.innerText;
+  let hitCount = 0;
+
+  results.forEach(item => {
+    fetch(item.url)
+      .then(res => res.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+        const bodyText = doc.body.innerText;
+
+        if (bodyText.includes(query)) {
+          hitCount++;
+          const snippet = createSnippet(bodyText, query);
+          const highlightedSnippet = highlight(snippet, query);
+
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${item.url}" class="search-title">${item.title}</a><br><small class="search-snippet">${highlightedSnippet}</small>`;
+          searchResults.appendChild(li);
+          searchCount.textContent = `検索結果: ${hitCount}件`;
+        }
+      })
+      .catch(error => {
+        console.error('本文読み込みエラー:', error);
+      });
+  });
+}
