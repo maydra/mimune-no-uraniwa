@@ -19,32 +19,6 @@ body {
 }
 </style>
 
-<style>
-#search input {
-  font-size: 28px; /* 検索窓の文字だけ大きく */
-  width: 90%;
-  max-width: 800px;
-  padding: 15px 20px;
-  margin: 20px auto;
-  display: block;
-  border: 2px solid #aaa;
-  border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-}
-
-#search input:focus {
-  border-color: #66aaff;
-  box-shadow: 0px 0px 8px rgba(102, 170, 255, 0.5);
-  outline: none;
-}
-</style>
-
-
-
-
-
-
-
 
 
   <meta charset="utf-8" />
@@ -59,89 +33,10 @@ body {
 <!-- HTML本体 -->
 <h1>み旨の裏庭 - サイト目次</h1>
 
-  <div id="search-area">
-    <input id="search-input" type="text" placeholder="検索キーワードを入力" />
-    <button id="search-btn">検索</button>
-  </div>
-
-  <ul id="search-results"></ul>
-
-  <!-- 必要なJSたち -->
-<!-- Lunr.js本体 -->
-<script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
-
-<!-- Lunr.js日本語対応プラグイン -->
-<script src="https://cdn.jsdelivr.net/npm/lunr-languages/lunr.stemmer.support.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lunr-languages/tinyseg.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lunr-languages/lunr.ja.min.js"></script>
-
-<!-- Lunr.js検索システム起動スクリプト -->
-<script type="module">
-  fetch('/mimune-no-uraniwa/index.json')
-    .then(response => response.json())
-    .then(data => {
-      const idx = lunr(function () {
-        this.use(lunr.ja); // 日本語対応
-        this.ref('id');    // IDをリファレンス
-        this.field('title');
-        this.field('body');
-
-        data.forEach(doc => {
-          this.add(doc);
-        });
-      });
-
-      const searchBtn = document.getElementById('search-btn');
-      const searchInput = document.getElementById('search-input');
-      const searchResults = document.getElementById('search-results');
-
-      // ボタン押したら検索
-      searchBtn.addEventListener('click', () => {
-        const query = searchInput.value.trim();
-        const results = idx.search(query);
-        searchResults.innerHTML = '';
-
-        if (results.length === 0) {
-          searchResults.innerHTML = '<li>検索結果がありません</li>';
-        } else {
-          results.forEach(result => {
-            const item = data.find(d => d.id == result.ref);
-            if (!item) return;
-
-            // スニペット生成（本文の先頭100文字ぐらい）
-            const snippet = item.body.length > 100 ? item.body.slice(0, 100) + "..." : item.body;
-
-            // クエリに一致する部分をハイライト
-            const queryRegex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-            const highlightedSnippet = snippet.replace(queryRegex, match => `<mark>${match}</mark>`);
-
-            // 結果をリストに追加
-            const li = document.createElement('li');
-            li.innerHTML = `<a href="${item.url}">${item.title}</a><br><small>${highlightedSnippet}</small>`;
-            searchResults.appendChild(li);
-          });
-        }
-      });
-
-      // Enterキーでも検索できるように
-      searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-          searchBtn.click();
-        }
-      });
-    })
-    .catch(error => {
-      console.error('インデックスの読み込みエラー:', error);
-    });
-</script>
-
-
-
-
-
 
 
   <ul>
+    <li><a href="https://maydra.github.io/mimune-no-uraniwa/search/search.html">み言検索</a></li>
     <li><a href="https://maydra.github.io/mimune-no-uraniwa/dp/index.html">原理講論</a></li>
     <li><a href="https://maydra.github.io/mimune-no-uraniwa/makotono_kami/index.html">真の神様</a></li>
     <li><a href="https://maydra.github.io/mimune-no-uraniwa/makotonofubo/index.html">真の父母</a></li>

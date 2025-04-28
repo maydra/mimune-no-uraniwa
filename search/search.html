@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>み旨の裏庭 - サイト内検索</title>
+
+  <!-- CSS: 最低限きれいに -->
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 0 1em;
+      line-height: 1.7;
+    }
+    #search-area {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #search-input {
+      width: 60%;
+      padding: 12px;
+      font-size: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+    #search-btn {
+      padding: 12px 20px;
+      font-size: 20px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #66aaff;
+      color: white;
+      cursor: pointer;
+    }
+    #search-btn:hover {
+      background-color: #5599dd;
+    }
+    #search-count {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #555;
+      text-align: center;
+    }
+    #search-results {
+      list-style: none;
+      padding: 0;
+    }
+    #search-results li {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      background: #f9f9f9;
+    }
+    .search-title {
+      font-size: 22px;
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .search-title:hover {
+      text-decoration: underline;
+    }
+    .search-snippet {
+      display: block;
+      margin-top: 8px;
+      font-size: 16px;
+      color: #333;
+    }
+    mark {
+      background-color: yellow;
+    }
+  </style>
+
+  <!-- ライブラリ読み込み -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/build/kuromoji.js"></script>
+</head>
+
+<body>
+
+<h1>み旨の裏庭 - サイト内検索</h1>
+
+<div id="search-area">
+  <input id="search-input" type="text" placeholder="検索ワードを入力" />
+  <button id="search-btn">検索</button>
+</div>
+
+<div id="search-count"></div>
+<ul id="search-results"></ul>
+
+<!-- 検索エンジン起動スクリプト -->
+<script type="module">
+  const searchInput = document.getElementById('search-input');
+  const searchBtn = document.getElementById('search-btn');
+  const searchResults = document.getElementById('search-results');
+  const searchCount = document.getElementById('search-count');
+
+  Promise.all([
+    fetch('/mimune-no-uraniwa/index.json').then(res => res.json()),
+    new Promise((resolve, reject) => {
+      kuromoji.builder({ dicPath: "https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/dict/" }).build((err, tokenizer) => {
+        if (err) reject(err);
+        else resolve(tokenizer);
+      });
+    })
+  ])
+  .then(([data, tokenizer]) => {
+    // インデックス作成
+    const documents = data.map(doc => {
+      const tokenizedTitle = tokenizer.tokenize(doc.title).map(t => t.surface_form).join(' ');
+      const tokenizedBody = tokenizer.tokenize(doc.body).map(t => t.surface_form).join(' ');
+      return {
+        id: doc.id,
+        title: doc.title,
+        body: doc.body,
+        tokenizedTitle,
+        tokenizedBody,
+        url: doc.url
+      };
+    });
+
+    const options = {
+      includeScore: true,
+      keys: [
+        { name: 'tokenizedTitle', weight: 2 },
+        { name: 'tokenizedBody', weight: 1 }
+      ],
+      threshold: 0.4
+    };
+
+    const fuse = new Fuse(documents, options);
+
+    function createSnippet(text, query) {
+      const idx = text.indexOf(query);
+      if (idx >= 0) {
+        const start = Math.max(0, idx - 20);
+        const end = Math.min(text.length, idx + query.length + 30);
+        return (start > 0 ? "..." : "") + text.slice(start, end) + (end < text.length ? "..." : "");
+      } else {
+        return text.length > 100 ? text.slice(0, 100) + "..." : text;
+      }
+    }
+
+    function highlight(text, query) {
+      const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      return text.replace(regex, match => `<mark>${match}</mark>`);
+    }
+
+    function doSearch() {
+      const query = searchInput.value.trim();
+      if (!query) return;
+
+      const tokenizedQuery = tokenizer.tokenize(query).map(t => t.surface_form).join(' ');
+      const results = fuse.search(tokenizedQuery);
+
+      searchResults.innerHTML = '';
+      searchCount.textContent = `検索結果: ${results.length}件`;
+
+      if (results.length === 0) {
+        searchResults.innerHTML = '<li>検索結果がありません</li>';
+      } else {
+        results.forEach(result => {
+          const item = result.item;
+          const snippet = createSnippet(item.body, query);
+          const highlightedSnippet = highlight(snippet, query);
+
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${item.url}" class="search-title">${item.title}</a><br><small class="search-snippet">${highlightedSnippet}</small>`;
+          searchResults.appendChild(li);
+        });
+      }
+    }
+
+    searchBtn.addEventListener('click', doSearch);
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') doSearch();
+    });
+  })
+  .catch(error => {
+    console.error('エラー:', error);
+  });
+</script>
+
+</body>
+</html>
