@@ -37,15 +37,32 @@ body {
   <h1>み旨の裏庭 - サイト目次</h1>
 
 <!-- Pagefindの検索ボックス -->
+<style>
+/* 検索窓を大きくする */
+#search input {
+  font-size: 28px; /* 文字サイズ */
+  width: 90%;      /* 横幅 */
+  max-width: 800px; /* PCでは最大800px */
+  padding: 15px 20px; /* 内側の余白 */
+  margin: 20px auto; /* 上下に余白をあけて中央寄せ */
+  display: block;  /* ブロック要素にして中央に */
+  border: 2px solid #aaa; /* 枠線をちょっと目立たせる */
+  border-radius: 10px; /* 角を丸く */
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* ほんのり影 */
+}
+
 <div id="search"></div>
 
-<script src="/mimune-no-uraniwa/pagefind/pagefind.js"></script>
-<script src="/mimune-no-uraniwa/pagefind/pagefind-ui.js"></script> <!-- ★これ追加！ -->
-<script>
+<script type="module" src="/mimune-no-uraniwa/pagefind/pagefind.js"></script>
+
+<script type="module">
+  import { PagefindUI } from "/mimune-no-uraniwa/pagefind/pagefind-ui.js";
+
   window.addEventListener('DOMContentLoaded', () => {
     new PagefindUI({
       element: "#search",
       baseUrl: "/mimune-no-uraniwa",
+      perPage: 1000, // ★これを追加！
       translations: {
         "placeholder": "ここに検索ワードを入力",
         "clear_search": "検索をクリア",
@@ -55,6 +72,8 @@ body {
     });
   });
 </script>
+</style>
+
 
 
 
