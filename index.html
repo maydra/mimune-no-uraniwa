@@ -36,21 +36,28 @@ body {
 <body>
   <h1>み旨の裏庭 - サイト目次</h1>
 
-<!-- Pagefindの検索ボックス -->
+<!-- これはCSSだけを書く場所 -->
 <style>
 /* 検索窓を大きくする */
 #search input {
-  font-size: 28px; /* 文字サイズ */
-  width: 90%;      /* 横幅 */
-  max-width: 800px; /* PCでは最大800px */
-  padding: 15px 20px; /* 内側の余白 */
-  margin: 20px auto; /* 上下に余白をあけて中央寄せ */
-  display: block;  /* ブロック要素にして中央に */
-  border: 2px solid #aaa; /* 枠線をちょっと目立たせる */
-  border-radius: 10px; /* 角を丸く */
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* ほんのり影 */
+  font-size: 28px;
+  width: 90%;
+  max-width: 800px;
+  padding: 15px 20px;
+  margin: 20px auto;
+  display: block;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
+#search input:focus {
+  border-color: #66aaff;
+  box-shadow: 0px 0px 8px rgba(102, 170, 255, 0.5);
+  outline: none;
+}
+</style>
 
+<!-- ここからは普通のHTML -->
 <div id="search"></div>
 
 <script type="module" src="/mimune-no-uraniwa/pagefind/pagefind.js"></script>
@@ -62,7 +69,7 @@ body {
     new PagefindUI({
       element: "#search",
       baseUrl: "/mimune-no-uraniwa",
-      perPage: 1000, // ★これを追加！
+      perPage: 1000,
       translations: {
         "placeholder": "ここに検索ワードを入力",
         "clear_search": "検索をクリア",
@@ -72,7 +79,7 @@ body {
     });
   });
 </script>
-</style>
+
 
 
 
