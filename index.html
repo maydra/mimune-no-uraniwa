@@ -40,10 +40,12 @@ body {
 <div id="search"></div>
 
 <script src="/mimune-no-uraniwa/pagefind/pagefind.js"></script>
+<script src="/mimune-no-uraniwa/pagefind/pagefind-ui.js"></script> <!-- ★これ追加！ -->
 <script>
   window.addEventListener('DOMContentLoaded', () => {
     new PagefindUI({
       element: "#search",
+      baseUrl: "/mimune-no-uraniwa",
       translations: {
         "placeholder": "ここに検索ワードを入力",
         "clear_search": "検索をクリア",
@@ -53,6 +55,7 @@ body {
     });
   });
 </script>
+
 
 
   <ul>
