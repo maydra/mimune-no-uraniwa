@@ -36,17 +36,17 @@ body {
 <body>
   <h1>み旨の裏庭 - サイト目次</h1>
 
-<!-- これはCSSだけを書く場所 -->
-
-
-<!-- ここからは普通のHTML -->
+<!-- Pagefindの検索ボックス -->
 <div id="search"></div>
 
+<!-- Pagefind本体（エンジン） -->
 <script type="module" src="/mimune-no-uraniwa/pagefind/pagefind.js"></script>
 
-<script type="module">
-  import { PagefindUI } from "/mimune-no-uraniwa/pagefind/pagefind-ui.js";
+<!-- PagefindUI（UIパーツ：普通のスクリプトとしてロード！） -->
+<script src="/mimune-no-uraniwa/pagefind/pagefind-ui.js"></script>
 
+<!-- 検索UI初期化 -->
+<script type="module">
   window.addEventListener('DOMContentLoaded', () => {
     new PagefindUI({
       element: "#search",
@@ -61,7 +61,6 @@ body {
     });
   });
 </script>
-
 
 
 
