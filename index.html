@@ -36,9 +36,24 @@ body {
 <body>
   <h1>み旨の裏庭 - サイト目次</h1>
 
-  <div class="search-container">
-    <script async src="https://cse.google.com/cse.js?cx=c2ed4e24f6e1d43e8"></script>
-    <div class="gcse-search"></div>
+<!-- Pagefindの検索ボックス -->
+<div id="search"></div>
+
+<script src="/001_cleaned/mimune-uraniwa/_pagefind/pagefind.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    new PagefindUI({
+      element: "#search",
+      translations: {
+        "placeholder": "ここに検索ワードを入力",
+        "clear_search": "検索をクリア",
+        "search_label": "サイト内検索",
+        "no_results": "検索結果がありません"
+      }
+    });
+  });
+</script>
+
   </div>
 
   <ul>
