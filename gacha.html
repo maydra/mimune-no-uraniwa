@@ -8,17 +8,22 @@
   <h1>🔮 ランダムなページを選んでいます...</h1>
 
   <script>
-    fetch("pages.json")
-      .then(response => response.json())
-      .then(pages => {
-        const selected = pages[Math.floor(Math.random() * pages.length)];
-        // `?randomScroll=true` を付けて遷移
-        window.location.href = selected + "?randomScroll=true";
-      })
-      .catch(error => {
-        console.error("❌ pages.json の読み込みに失敗しました:", error);
-        document.body.innerHTML += "<p>読み込みに失敗しました。</p>";
-      });
+fetch("pages.json")
+  .then((response) => response.json())
+  .then((pages) => {
+    const randomIndex = Math.floor(Math.random() * pages.length);
+    const page = pages[randomIndex];
+
+    const link = document.createElement("a");
+    link.href = `/${page}?randomScroll=true`;  // ←ここを修正
+    link.textContent = "🎲 ランダムなページへ移動！";
+    link.style.fontSize = "1.5em";
+    link.style.display = "block";
+    link.style.margin = "2em 0";
+
+    document.body.appendChild(link);
+  });
   </script>
+
 </body>
 </html>
