@@ -7,16 +7,21 @@
 <body>
   <h1>🔮 ランダムなページを選んでいます...</h1>
 
-  
-
 <script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
+  fetch("pages.json")
+    .then(response => response.json())
+    .then(pages => {
+      // ランダムに選ぶ
+      const randomPage = pages[Math.floor(Math.random() * pages.length)];
+      const params = new URLSearchParams(window.location.search);
+      const url = randomPage + (params.get("randomScroll") === "true" ? "?randomScroll=true" : "");
+      // ページ遷移
+      window.location.href = url;
+    })
+    .catch(error => {
+      console.error("ページの取得に失敗:", error);
+      document.body.innerHTML += "<p style='color:red;'>ページの取得に失敗しました。</p>";
+    });
 </script>
 
 </body>
