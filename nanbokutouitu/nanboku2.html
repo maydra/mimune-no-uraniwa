@@ -41,6 +41,8 @@ body {
 <!-- En-HP-H -->
 <div align="left"><!--#geoguide--></div>
 <p>このページを表示するには、フレームをサポートしているブラウザが必要です。</p>
+
+
 <script>
   const params = new URLSearchParams(window.location.search);
   if (params.get("randomScroll") === "true") {
@@ -50,8 +52,11 @@ body {
     };
   }
 </script>
+
 </body>
-<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="mokuji.html">前のページに戻る</a></p><p><a href="printe.html">次のページに進む</a></p></div><script>
+<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="mokuji.html">前のページに戻る</a></p><p><a href="printe.html">次のページに進む</a></p></div>
+
+<script>
   const params = new URLSearchParams(window.location.search);
   if (params.get("randomScroll") === "true") {
     window.onload = () => {
@@ -60,5 +65,6 @@ body {
     };
   }
 </script>
+
 </body>
 </html>

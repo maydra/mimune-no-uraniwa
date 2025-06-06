@@ -7,23 +7,17 @@
 <body>
   <h1>🔮 ランダムなページを選んでいます...</h1>
 
-  <script>
-fetch("pages.json")
-  .then((response) => response.json())
-  .then((pages) => {
-    const randomIndex = Math.floor(Math.random() * pages.length);
-    const page = pages[randomIndex];
+  
 
-    const link = document.createElement("a");
-    link.href = `/${page}?randomScroll=true`;  // ←ここを修正
-    link.textContent = "🎲 ランダムなページへ移動！";
-    link.style.fontSize = "1.5em";
-    link.style.display = "block";
-    link.style.margin = "2em 0";
-
-    document.body.appendChild(link);
-  });
-  </script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
 
 </body>
 </html>

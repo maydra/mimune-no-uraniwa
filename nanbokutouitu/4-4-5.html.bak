@@ -2,12 +2,14 @@
 
 <html lang="ja">
 <head>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
 <style>
 body {
   font-family: sans-serif;
   font-size: 22px;
   line-height: 1.7;
-  max-width: 1500px;
+  max-width: 1250px;
   margin: 1em auto;
   padding: 0 1em;
 }
@@ -20,70 +22,17 @@ body {
 }
 </style>
 
-<style>
-body {
-  font-family: sans-serif;
-  font-size: 22px;
-  line-height: 1.7;
-  max-width: 1000px;
-  margin: 2em auto;
-  padding: 0 2em;
-}
-@media (max-width: 600px) {
-  body {
-    font-size: 18px;
-    padding: 0 1em;
-    margin: 1em;
-  }
-}
-</style>
 
-<style>
-body {
-  font-family: sans-serif;
-  font-size: 22px;
-  line-height: 1.7;
-  max-width: 1000px;
-  margin: 2em auto;
-  padding: 0 2em;
-}
-@media (max-width: 600px) {
-  body {
-    font-size: 18px;
-    padding: 0 1em;
-    margin: 1em;
-  }
-}
-</style>
 
-<style>
-body {
-  font-family: sans-serif;
-  font-size: 22px;
-  line-height: 1.7;
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 0 1em;
-}
-@media (max-width: 600px) {
-  body {
-    font-size: 18px;
-    padding: 0 1em;
-    margin: 1em;
-  }
-}
-</style>
+
+
+
+
+
 
 <meta charset="utf-8"/>
 <title>南北統一_4-4-5</title>
-<style>
-    body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: 2em auto;
-      line-height: 1.7;
-    }
-  </style>
+
 </head>
 <body>
 <h1>南北統一_4-4-5</h1>
@@ -108,6 +57,26 @@ body {
 <br/>
       　統一方法はどこにあるのでしょうか。それは外部にあるのではなく内部にあります。統一はどのようにしなければならないかというならば、私の体と心の闘いを評定させて、心が先に立つようにしなければなりません。そのようにして心が行こうというままに、私自体が行かなければならず、家庭が行かなければならず、社会が行かなければならず、国が行かなければならず、世界が行かなければなりません。このようになれば統一は自動的になるのです。（三九―二六七）<br/>
 </blockquote>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
 </body>
-<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="4-4-4.html">前のページに戻る</a></p><p><a href="4-4-6.html">次のページに進む</a></p></div></body>
+<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="4-4-4.html">前のページに戻る</a></p><p><a href="4-4-6.html">次のページに進む</a></p></div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+</body>
 </html>
