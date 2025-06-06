@@ -8,19 +8,22 @@
   <h1>🔮 ランダムなページを選んでいます...</h1>
 
 <script>
+  // ランダムスクロールの判定
+  const wantRandomScroll = new URLSearchParams(window.location.search).get("randomScroll") === "true";
+
+  // JSONを取得してランダムページへ遷移
   fetch("pages.json")
-    .then(response => response.json())
+    .then(res => res.json())
     .then(pages => {
-      // ランダムに選ぶ
       const randomPage = pages[Math.floor(Math.random() * pages.length)];
-      const params = new URLSearchParams(window.location.search);
-      const url = randomPage + (params.get("randomScroll") === "true" ? "?randomScroll=true" : "");
-      // ページ遷移
-      window.location.href = url;
+      // ベースURLを定数で指定
+      const basePath = "/mimune-no-uraniwa/";  // ←これ重要！
+      const fullURL = basePath + randomPage + (wantRandomScroll ? "?randomScroll=true" : "");
+      location.href = fullURL;
     })
-    .catch(error => {
-      console.error("ページの取得に失敗:", error);
-      document.body.innerHTML += "<p style='color:red;'>ページの取得に失敗しました。</p>";
+    .catch(err => {
+      console.error("ページ取得失敗:", err);
+      document.body.innerHTML += "<p style='color:red;'>ページ取得に失敗しました。</p>";
     });
 </script>
 
