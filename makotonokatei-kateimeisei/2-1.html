@@ -220,4 +220,13 @@ h1, h2 {
  | <a href="1-3.html">前のページに戻る</a>
  | <a href="2-2.html">次のページに進む</a>
 </div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
 </body></html>

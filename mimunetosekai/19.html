@@ -346,6 +346,24 @@ Nation Under God”これは素晴らしい精神だ。まさしく、そのよ�
 <br/>
 <br/>
 </p>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
 </body>
-<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="18.html">前のページに戻る</a></p><p><a href="20.html">次のページに進む</a></p></div></body>
+<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="18.html">前のページに戻る</a></p><p><a href="20.html">次のページに進む</a></p></div><script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+</body>
 </html>

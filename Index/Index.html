@@ -68,5 +68,14 @@ body {
     <li><a href="https://maydra.github.io/houkansyuu_dansei/index.html">男性訪韓修練会御言集</a></li>
     <li><a href="https://maydra.github.io/honkyou/index.html">本郷：真の愛による交差祝福と国境撤廃</a></li>
   </ul>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
 </body>
 </html>

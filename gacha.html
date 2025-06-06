@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>🔮 ランダムページに移動中...</title>
+</head>
+<body>
+  <h1>🔮 ランダムなページを選んでいます...</h1>
+
+  <script>
+    fetch("pages.json")
+      .then(response => response.json())
+      .then(pages => {
+        const selected = pages[Math.floor(Math.random() * pages.length)];
+        // `?randomScroll=true` を付けて遷移
+        window.location.href = selected + "?randomScroll=true";
+      })
+      .catch(error => {
+        console.error("❌ pages.json の読み込みに失敗しました:", error);
+        document.body.innerHTML += "<p>読み込みに失敗しました。</p>";
+      });
+  </script>
+</body>
+</html>
