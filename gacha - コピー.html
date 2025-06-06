@@ -8,15 +8,16 @@
   <h1>🔮 ランダムなページを選んでいます...</h1>
 
 <script>
-  // 常に randomScroll=true を付けたいなら true 固定でもOK
-  const wantRandomScroll = true;
+  // ランダムスクロールの判定
+  const wantRandomScroll = new URLSearchParams(window.location.search).get("randomScroll") === "true";
 
   // JSONを取得してランダムページへ遷移
   fetch("pages.json")
     .then(res => res.json())
     .then(pages => {
       const randomPage = pages[Math.floor(Math.random() * pages.length)];
-      const basePath = "/mimune-no-uraniwa/";
+      // ベースURLを定数で指定
+      const basePath = "/mimune-no-uraniwa/";  // ←これ重要！
       const fullURL = basePath + randomPage + (wantRandomScroll ? "?randomScroll=true" : "");
       location.href = fullURL;
     })
