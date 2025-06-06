@@ -108,6 +108,24 @@ body {
       （一九五六・六・一〇）<br/></h2>
 <br/>
 <a href="framepage1.html" style="text-decoration : none;" target="_parent">1巻</a> <a href="framepage2.html" style="text-decoration : none;" target="_parent">2巻</a> <a href="framepage3.html" style="text-decoration : none;" target="_parent">3巻</a> <a href="framepage4.html" style="text-decoration : none;" target="_parent">4巻</a> <a href="framepage5.html" style="text-decoration : none;" target="_parent">5巻</a> <a href="framepage6.html" style="text-decoration : none;" target="_parent">6巻</a> <a href="framepage7.html" style="text-decoration : none;" target="_parent">7巻</a> <a href="framepage8.html" style="text-decoration : none;" target="_parent">8巻</a> <a href="framepage9.html" style="text-decoration : none;" target="_parent">9巻</a> <a href="framepage10.html" style="text-decoration : none;" target="_parent">10巻</a> <a href="framepage11.html" style="text-decoration : none;" target="_parent">11巻</a> <a href="framepage12.html" style="text-decoration : none;" target="_parent">12巻</a>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
 </body>
-<div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="index1.html">前のページに戻る</a></p><p><a href="fp1_02.html">次のページに進む</a></p></div></body>
+<div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="index1.html">前のページに戻る</a></p><p><a href="fp1_02.html">次のページに進む</a></p></div><script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+</body>
 </html>
