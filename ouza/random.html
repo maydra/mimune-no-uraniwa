@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>🔮 ランダムページに移動中...</title>
+</head>
+<body>
+  <h1>🔮 ランダムなページを選んでいます...</h1>
+
+<script>
+  const wantRandomScroll = true;
+  const currentDir = location.pathname.replace(/\/[^/]*$/, "/");
+
+  fetch(currentDir + "pages.json")
+    .then(res => res.json())
+    .then(pages => {
+      const randomPage = pages[Math.floor(Math.random() * pages.length)];
+      const fullURL = currentDir + randomPage + (wantRandomScroll ? "?randomScroll=true" : "");
+      location.href = fullURL;
+    })
+    .catch(err => {
+      console.error("ページ取得失敗:", err);
+      document.body.innerHTML += "<p style='color:red;'>ページ取得に失敗しました。</p>";
+    });
+</script>
+
+</body>
+</html>

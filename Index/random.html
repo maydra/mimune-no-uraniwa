@@ -8,17 +8,14 @@
   <h1>🔮 ランダムなページを選んでいます...</h1>
 
 <script>
-  // ランダムスクロールの判定
-  const wantRandomScroll = new URLSearchParams(window.location.search).get("randomScroll") === "true";
+  const wantRandomScroll = true;
+  const currentDir = location.pathname.replace(/\/[^/]*$/, "/");
 
-  // JSONを取得してランダムページへ遷移
-  fetch("pages.json")
+  fetch(currentDir + "pages.json")
     .then(res => res.json())
     .then(pages => {
       const randomPage = pages[Math.floor(Math.random() * pages.length)];
-      // ベースURLを定数で指定
-      const basePath = "/mimune-no-uraniwa/";  // ←これ重要！
-      const fullURL = basePath + randomPage + (wantRandomScroll ? "?randomScroll=true" : "");
+      const fullURL = currentDir + randomPage + (wantRandomScroll ? "?randomScroll=true" : "");
       location.href = fullURL;
     })
     .catch(err => {
