@@ -130,5 +130,16 @@ h3 {
 <li><a href="2-8.html#sec-14">　(2)解放圏を完成することを誓おう</a></li>
 </ul>
 <div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body></html>
 <p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

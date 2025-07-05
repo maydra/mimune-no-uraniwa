@@ -40,5 +40,16 @@ body {
 <p>　一九九六年九月一日</p>
 <p>　宗教法人 世界基督教統一神霊協会会長 石井光治</p>
 <div class="navigation"><a href="index.html">目次に戻る</a> | <a href="002.html">次のページに進む →</a></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body>
 </html>

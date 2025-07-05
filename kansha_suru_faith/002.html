@@ -60,5 +60,16 @@ body {
 <p>　　1978年: ソウル大学校 経営大学院 最高経営者科程7期修了</p>
 <p>　　1990年: 米国 Technical Institute Of Bible Study 名誉神学博士</p>
 <div class="navigation"><a href="001.html">← 前のページに戻る</a> | <a href="index.html">目次に戻る</a> | <a href="003.html">次のページに進む →</a></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body>
 </html>

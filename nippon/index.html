@@ -107,6 +107,17 @@ body {
 
 
 
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body>
 <div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
 
@@ -117,6 +128,17 @@ body {
 
 
 <div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body>
 </html>
 <p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>
