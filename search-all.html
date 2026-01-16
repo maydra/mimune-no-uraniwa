@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8"/>
 <title>み旨の裏庭 | 一括検索 (試験中)</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
 <style>
   body {
     font-family: sans-serif;
@@ -85,25 +86,18 @@
 </style>
 </head>
 <body>
-
-<a href="index.html" class="nav-link">← トップページに戻る</a>
-
-<h1>サイト内一括検索 (試験版)</h1>
-
+<a class="nav-link" href="index.html">← トップページに戻る</a>
+<h1 id="サイト内一括検索-(試験版)"><a href="#サイト内一括検索-(試験版)">サイト内一括検索 (試験版)</a></h1>
 <div class="warning">
-    ⚠️ <strong>注意:</strong> この検索は全データを読み込むため、最初の検索時に通信量が多くなります(約50MB)。<br>
+    ⚠️ <strong>注意:</strong> この検索は全データを読み込むため、最初の検索時に通信量が多くなります(約50MB)。<br/>
     動作が重くなる可能性があります。
 </div>
-
 <div class="search-container">
-  <input type="text" id="search-input" placeholder="キーワードを入力してEnter または 検索ボタン" autofocus>
-  <button id="search-btn">検索実行</button>
-  <div id="search-stats"></div>
+<input autofocus="" id="search-input" placeholder="キーワードを入力してEnter または 検索ボタン" type="text"/>
+<button id="search-btn">検索実行</button>
+<div id="search-stats"></div>
 </div>
-
 <div id="search-results"></div>
-
 <script src="search-all.js"></script>
-
 </body>
 </html>
