@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>聖書 - 目次</title>
+<style>
+body {
+  font-family: 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 2em;
+  background-color: #fafafa;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  border-bottom: 4px solid #3498db;
+  padding-bottom: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #34495e;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  border-left: 5px solid #3498db;
+}
+
+.book-section {
+  margin-bottom: 3em;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.book-item {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.book-item:hover {
+  border-color: #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+}
+
+.book-header {
+  padding: 1.2em 1.5em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #f8f9fa, white);
+  user-select: none;
+}
+
+.book-header:hover {
+  background: linear-gradient(to right, #e8f4f8, #f8f9fa);
+}
+
+.book-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.book-info {
+  font-size: 0.9em;
+  color: #7f8c8d;
+  margin-left: 1em;
+}
+
+.toggle-icon {
+  font-size: 1.2em;
+  color: #3498db;
+  transition: transform 0.3s ease;
+}
+
+.book-item.expanded .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.chapter-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.book-item.expanded .chapter-container {
+  max-height: 2000px;
+}
+
+.chapter-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 1.5em;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.chapter-link {
+  display: inline-block;
+  padding: 0.5em 0.9em;
+  background-color: white;
+  color: #2c3e50;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 2.8em;
+  text-align: center;
+}
+
+.chapter-link:hover {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.stats {
+  text-align: center;
+  margin: 3em 0;
+  padding: 2em;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stats h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.stats p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 0 1em;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  .book-title {
+    font-size: 1.1em;
+  }
+  
+  .book-info {
+    display: none;
+  }
+}
+
+</style>
+</head>
+<body>
+<h1>聖書 - 目次</h1>
+
+<div class="stats">
+<h3>📖 全66書 - 1,189章</h3>
+<p>創世記から黙示録まで、すべての章にアクセスできます</p>
+</div>
+
+<div class="book-section">
+<h2>旧約聖書</h2>
+<div class="book-list">
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">創世記</span>
+<span class="book-info">全50章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/01_genesis/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/01_genesis/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/01_genesis/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/01_genesis/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/01_genesis/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/01_genesis/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/01_genesis/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/01_genesis/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/01_genesis/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/01_genesis/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/01_genesis/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/01_genesis/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/01_genesis/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/01_genesis/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/01_genesis/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/01_genesis/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/01_genesis/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/01_genesis/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/01_genesis/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/01_genesis/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/01_genesis/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/01_genesis/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/01_genesis/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/01_genesis/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/01_genesis/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/01_genesis/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/01_genesis/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/01_genesis/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/01_genesis/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/01_genesis/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/01_genesis/31.html" class="chapter-link">31</a>
+<a href="01_Old Testament/01_genesis/32.html" class="chapter-link">32</a>
+<a href="01_Old Testament/01_genesis/33.html" class="chapter-link">33</a>
+<a href="01_Old Testament/01_genesis/34.html" class="chapter-link">34</a>
+<a href="01_Old Testament/01_genesis/35.html" class="chapter-link">35</a>
+<a href="01_Old Testament/01_genesis/36.html" class="chapter-link">36</a>
+<a href="01_Old Testament/01_genesis/37.html" class="chapter-link">37</a>
+<a href="01_Old Testament/01_genesis/38.html" class="chapter-link">38</a>
+<a href="01_Old Testament/01_genesis/39.html" class="chapter-link">39</a>
+<a href="01_Old Testament/01_genesis/40.html" class="chapter-link">40</a>
+<a href="01_Old Testament/01_genesis/41.html" class="chapter-link">41</a>
+<a href="01_Old Testament/01_genesis/42.html" class="chapter-link">42</a>
+<a href="01_Old Testament/01_genesis/43.html" class="chapter-link">43</a>
+<a href="01_Old Testament/01_genesis/44.html" class="chapter-link">44</a>
+<a href="01_Old Testament/01_genesis/45.html" class="chapter-link">45</a>
+<a href="01_Old Testament/01_genesis/46.html" class="chapter-link">46</a>
+<a href="01_Old Testament/01_genesis/47.html" class="chapter-link">47</a>
+<a href="01_Old Testament/01_genesis/48.html" class="chapter-link">48</a>
+<a href="01_Old Testament/01_genesis/49.html" class="chapter-link">49</a>
+<a href="01_Old Testament/01_genesis/50.html" class="chapter-link">50</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">出エジプト記</span>
+<span class="book-info">全40章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/02_exodus/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/02_exodus/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/02_exodus/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/02_exodus/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/02_exodus/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/02_exodus/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/02_exodus/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/02_exodus/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/02_exodus/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/02_exodus/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/02_exodus/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/02_exodus/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/02_exodus/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/02_exodus/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/02_exodus/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/02_exodus/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/02_exodus/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/02_exodus/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/02_exodus/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/02_exodus/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/02_exodus/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/02_exodus/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/02_exodus/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/02_exodus/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/02_exodus/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/02_exodus/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/02_exodus/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/02_exodus/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/02_exodus/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/02_exodus/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/02_exodus/31.html" class="chapter-link">31</a>
+<a href="01_Old Testament/02_exodus/32.html" class="chapter-link">32</a>
+<a href="01_Old Testament/02_exodus/33.html" class="chapter-link">33</a>
+<a href="01_Old Testament/02_exodus/34.html" class="chapter-link">34</a>
+<a href="01_Old Testament/02_exodus/35.html" class="chapter-link">35</a>
+<a href="01_Old Testament/02_exodus/36.html" class="chapter-link">36</a>
+<a href="01_Old Testament/02_exodus/37.html" class="chapter-link">37</a>
+<a href="01_Old Testament/02_exodus/38.html" class="chapter-link">38</a>
+<a href="01_Old Testament/02_exodus/39.html" class="chapter-link">39</a>
+<a href="01_Old Testament/02_exodus/40.html" class="chapter-link">40</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">レビ記</span>
+<span class="book-info">全27章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/03_leviticus/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/03_leviticus/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/03_leviticus/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/03_leviticus/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/03_leviticus/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/03_leviticus/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/03_leviticus/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/03_leviticus/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/03_leviticus/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/03_leviticus/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/03_leviticus/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/03_leviticus/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/03_leviticus/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/03_leviticus/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/03_leviticus/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/03_leviticus/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/03_leviticus/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/03_leviticus/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/03_leviticus/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/03_leviticus/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/03_leviticus/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/03_leviticus/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/03_leviticus/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/03_leviticus/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/03_leviticus/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/03_leviticus/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/03_leviticus/27.html" class="chapter-link">27</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">民数記</span>
+<span class="book-info">全36章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/04_numbers/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/04_numbers/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/04_numbers/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/04_numbers/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/04_numbers/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/04_numbers/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/04_numbers/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/04_numbers/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/04_numbers/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/04_numbers/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/04_numbers/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/04_numbers/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/04_numbers/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/04_numbers/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/04_numbers/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/04_numbers/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/04_numbers/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/04_numbers/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/04_numbers/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/04_numbers/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/04_numbers/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/04_numbers/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/04_numbers/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/04_numbers/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/04_numbers/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/04_numbers/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/04_numbers/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/04_numbers/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/04_numbers/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/04_numbers/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/04_numbers/31.html" class="chapter-link">31</a>
+<a href="01_Old Testament/04_numbers/32.html" class="chapter-link">32</a>
+<a href="01_Old Testament/04_numbers/33.html" class="chapter-link">33</a>
+<a href="01_Old Testament/04_numbers/34.html" class="chapter-link">34</a>
+<a href="01_Old Testament/04_numbers/35.html" class="chapter-link">35</a>
+<a href="01_Old Testament/04_numbers/36.html" class="chapter-link">36</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">申命記</span>
+<span class="book-info">全34章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/05_deuteronomy/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/05_deuteronomy/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/05_deuteronomy/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/05_deuteronomy/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/05_deuteronomy/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/05_deuteronomy/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/05_deuteronomy/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/05_deuteronomy/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/05_deuteronomy/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/05_deuteronomy/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/05_deuteronomy/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/05_deuteronomy/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/05_deuteronomy/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/05_deuteronomy/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/05_deuteronomy/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/05_deuteronomy/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/05_deuteronomy/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/05_deuteronomy/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/05_deuteronomy/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/05_deuteronomy/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/05_deuteronomy/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/05_deuteronomy/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/05_deuteronomy/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/05_deuteronomy/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/05_deuteronomy/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/05_deuteronomy/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/05_deuteronomy/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/05_deuteronomy/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/05_deuteronomy/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/05_deuteronomy/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/05_deuteronomy/31.html" class="chapter-link">31</a>
+<a href="01_Old Testament/05_deuteronomy/32.html" class="chapter-link">32</a>
+<a href="01_Old Testament/05_deuteronomy/33.html" class="chapter-link">33</a>
+<a href="01_Old Testament/05_deuteronomy/34.html" class="chapter-link">34</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヨシュア記</span>
+<span class="book-info">全24章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/06_joshua/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/06_joshua/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/06_joshua/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/06_joshua/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/06_joshua/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/06_joshua/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/06_joshua/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/06_joshua/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/06_joshua/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/06_joshua/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/06_joshua/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/06_joshua/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/06_joshua/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/06_joshua/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/06_joshua/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/06_joshua/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/06_joshua/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/06_joshua/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/06_joshua/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/06_joshua/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/06_joshua/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/06_joshua/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/06_joshua/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/06_joshua/24.html" class="chapter-link">24</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">士師記</span>
+<span class="book-info">全21章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/07_judges/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/07_judges/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/07_judges/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/07_judges/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/07_judges/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/07_judges/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/07_judges/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/07_judges/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/07_judges/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/07_judges/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/07_judges/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/07_judges/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/07_judges/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/07_judges/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/07_judges/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/07_judges/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/07_judges/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/07_judges/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/07_judges/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/07_judges/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/07_judges/21.html" class="chapter-link">21</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ルツ記</span>
+<span class="book-info">全4章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/08_ruth/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/08_ruth/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/08_ruth/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/08_ruth/4.html" class="chapter-link">4</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">サムエル記上</span>
+<span class="book-info">全31章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/09_samuel/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/09_samuel/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/09_samuel/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/09_samuel/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/09_samuel/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/09_samuel/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/09_samuel/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/09_samuel/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/09_samuel/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/09_samuel/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/09_samuel/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/09_samuel/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/09_samuel/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/09_samuel/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/09_samuel/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/09_samuel/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/09_samuel/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/09_samuel/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/09_samuel/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/09_samuel/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/09_samuel/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/09_samuel/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/09_samuel/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/09_samuel/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/09_samuel/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/09_samuel/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/09_samuel/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/09_samuel/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/09_samuel/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/09_samuel/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/09_samuel/31.html" class="chapter-link">31</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">サムエル記下</span>
+<span class="book-info">全24章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/10_2-samuel/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/10_2-samuel/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/10_2-samuel/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/10_2-samuel/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/10_2-samuel/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/10_2-samuel/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/10_2-samuel/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/10_2-samuel/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/10_2-samuel/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/10_2-samuel/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/10_2-samuel/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/10_2-samuel/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/10_2-samuel/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/10_2-samuel/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/10_2-samuel/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/10_2-samuel/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/10_2-samuel/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/10_2-samuel/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/10_2-samuel/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/10_2-samuel/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/10_2-samuel/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/10_2-samuel/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/10_2-samuel/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/10_2-samuel/24.html" class="chapter-link">24</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">列王紀上</span>
+<span class="book-info">全22章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/11_1-kings/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/11_1-kings/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/11_1-kings/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/11_1-kings/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/11_1-kings/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/11_1-kings/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/11_1-kings/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/11_1-kings/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/11_1-kings/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/11_1-kings/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/11_1-kings/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/11_1-kings/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/11_1-kings/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/11_1-kings/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/11_1-kings/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/11_1-kings/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/11_1-kings/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/11_1-kings/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/11_1-kings/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/11_1-kings/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/11_1-kings/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/11_1-kings/22.html" class="chapter-link">22</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">列王紀下</span>
+<span class="book-info">全25章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/12_2-kings/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/12_2-kings/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/12_2-kings/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/12_2-kings/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/12_2-kings/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/12_2-kings/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/12_2-kings/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/12_2-kings/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/12_2-kings/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/12_2-kings/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/12_2-kings/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/12_2-kings/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/12_2-kings/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/12_2-kings/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/12_2-kings/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/12_2-kings/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/12_2-kings/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/12_2-kings/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/12_2-kings/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/12_2-kings/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/12_2-kings/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/12_2-kings/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/12_2-kings/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/12_2-kings/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/12_2-kings/25.html" class="chapter-link">25</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">歴代志上</span>
+<span class="book-info">全29章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/13_1-chronicles/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/13_1-chronicles/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/13_1-chronicles/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/13_1-chronicles/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/13_1-chronicles/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/13_1-chronicles/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/13_1-chronicles/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/13_1-chronicles/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/13_1-chronicles/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/13_1-chronicles/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/13_1-chronicles/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/13_1-chronicles/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/13_1-chronicles/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/13_1-chronicles/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/13_1-chronicles/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/13_1-chronicles/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/13_1-chronicles/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/13_1-chronicles/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/13_1-chronicles/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/13_1-chronicles/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/13_1-chronicles/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/13_1-chronicles/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/13_1-chronicles/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/13_1-chronicles/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/13_1-chronicles/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/13_1-chronicles/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/13_1-chronicles/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/13_1-chronicles/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/13_1-chronicles/29.html" class="chapter-link">29</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">歴代志下</span>
+<span class="book-info">全36章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/14_2-chronicles/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/14_2-chronicles/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/14_2-chronicles/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/14_2-chronicles/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/14_2-chronicles/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/14_2-chronicles/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/14_2-chronicles/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/14_2-chronicles/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/14_2-chronicles/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/14_2-chronicles/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/14_2-chronicles/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/14_2-chronicles/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/14_2-chronicles/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/14_2-chronicles/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/14_2-chronicles/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/14_2-chronicles/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/14_2-chronicles/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/14_2-chronicles/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/14_2-chronicles/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/14_2-chronicles/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/14_2-chronicles/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/14_2-chronicles/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/14_2-chronicles/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/14_2-chronicles/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/14_2-chronicles/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/14_2-chronicles/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/14_2-chronicles/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/14_2-chronicles/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/14_2-chronicles/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/14_2-chronicles/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/14_2-chronicles/31.html" class="chapter-link">31</a>
+<a href="01_Old Testament/14_2-chronicles/32.html" class="chapter-link">32</a>
+<a href="01_Old Testament/14_2-chronicles/33.html" class="chapter-link">33</a>
+<a href="01_Old Testament/14_2-chronicles/34.html" class="chapter-link">34</a>
+<a href="01_Old Testament/14_2-chronicles/35.html" class="chapter-link">35</a>
+<a href="01_Old Testament/14_2-chronicles/36.html" class="chapter-link">36</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">エズラ記</span>
+<span class="book-info">全10章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/15_ezra/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/15_ezra/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/15_ezra/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/15_ezra/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/15_ezra/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/15_ezra/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/15_ezra/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/15_ezra/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/15_ezra/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/15_ezra/10.html" class="chapter-link">10</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ネヘミヤ書</span>
+<span class="book-info">全13章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/16_nehemiah/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/16_nehemiah/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/16_nehemiah/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/16_nehemiah/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/16_nehemiah/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/16_nehemiah/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/16_nehemiah/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/16_nehemiah/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/16_nehemiah/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/16_nehemiah/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/16_nehemiah/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/16_nehemiah/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/16_nehemiah/13.html" class="chapter-link">13</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">エステル記</span>
+<span class="book-info">全10章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/17_esther/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/17_esther/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/17_esther/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/17_esther/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/17_esther/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/17_esther/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/17_esther/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/17_esther/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/17_esther/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/17_esther/10.html" class="chapter-link">10</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヨブ記</span>
+<span class="book-info">全42章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/18_job/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/18_job/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/18_job/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/18_job/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/18_job/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/18_job/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/18_job/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/18_job/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/18_job/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/18_job/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/18_job/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/18_job/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/18_job/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/18_job/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/18_job/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/18_job/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/18_job/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/18_job/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/18_job/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/18_job/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/18_job/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/18_job/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/18_job/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/18_job/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/18_job/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/18_job/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/18_job/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/18_job/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/18_job/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/18_job/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/18_job/31.html" class="chapter-link">31</a>
+<a href="01_Old Testament/18_job/32.html" class="chapter-link">32</a>
+<a href="01_Old Testament/18_job/33.html" class="chapter-link">33</a>
+<a href="01_Old Testament/18_job/34.html" class="chapter-link">34</a>
+<a href="01_Old Testament/18_job/35.html" class="chapter-link">35</a>
+<a href="01_Old Testament/18_job/36.html" class="chapter-link">36</a>
+<a href="01_Old Testament/18_job/37.html" class="chapter-link">37</a>
+<a href="01_Old Testament/18_job/38.html" class="chapter-link">38</a>
+<a href="01_Old Testament/18_job/39.html" class="chapter-link">39</a>
+<a href="01_Old Testament/18_job/40.html" class="chapter-link">40</a>
+<a href="01_Old Testament/18_job/41.html" class="chapter-link">41</a>
+<a href="01_Old Testament/18_job/42.html" class="chapter-link">42</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">詩篇</span>
+<span class="book-info">全150章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/19_psalms/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/19_psalms/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/19_psalms/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/19_psalms/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/19_psalms/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/19_psalms/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/19_psalms/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/19_psalms/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/19_psalms/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/19_psalms/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/19_psalms/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/19_psalms/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/19_psalms/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/19_psalms/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/19_psalms/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/19_psalms/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/19_psalms/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/19_psalms/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/19_psalms/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/19_psalms/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/19_psalms/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/19_psalms/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/19_psalms/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/19_psalms/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/19_psalms/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/19_psalms/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/19_psalms/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/19_psalms/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/19_psalms/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/19_psalms/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/19_psalms/31.html" class="chapter-link">31</a>
+<a href="01_Old Testament/19_psalms/32.html" class="chapter-link">32</a>
+<a href="01_Old Testament/19_psalms/33.html" class="chapter-link">33</a>
+<a href="01_Old Testament/19_psalms/34.html" class="chapter-link">34</a>
+<a href="01_Old Testament/19_psalms/35.html" class="chapter-link">35</a>
+<a href="01_Old Testament/19_psalms/36.html" class="chapter-link">36</a>
+<a href="01_Old Testament/19_psalms/37.html" class="chapter-link">37</a>
+<a href="01_Old Testament/19_psalms/38.html" class="chapter-link">38</a>
+<a href="01_Old Testament/19_psalms/39.html" class="chapter-link">39</a>
+<a href="01_Old Testament/19_psalms/40.html" class="chapter-link">40</a>
+<a href="01_Old Testament/19_psalms/41.html" class="chapter-link">41</a>
+<a href="01_Old Testament/19_psalms/42.html" class="chapter-link">42</a>
+<a href="01_Old Testament/19_psalms/43.html" class="chapter-link">43</a>
+<a href="01_Old Testament/19_psalms/44.html" class="chapter-link">44</a>
+<a href="01_Old Testament/19_psalms/45.html" class="chapter-link">45</a>
+<a href="01_Old Testament/19_psalms/46.html" class="chapter-link">46</a>
+<a href="01_Old Testament/19_psalms/47.html" class="chapter-link">47</a>
+<a href="01_Old Testament/19_psalms/48.html" class="chapter-link">48</a>
+<a href="01_Old Testament/19_psalms/49.html" class="chapter-link">49</a>
+<a href="01_Old Testament/19_psalms/50.html" class="chapter-link">50</a>
+<a href="01_Old Testament/19_psalms/51.html" class="chapter-link">51</a>
+<a href="01_Old Testament/19_psalms/52.html" class="chapter-link">52</a>
+<a href="01_Old Testament/19_psalms/53.html" class="chapter-link">53</a>
+<a href="01_Old Testament/19_psalms/54.html" class="chapter-link">54</a>
+<a href="01_Old Testament/19_psalms/55.html" class="chapter-link">55</a>
+<a href="01_Old Testament/19_psalms/56.html" class="chapter-link">56</a>
+<a href="01_Old Testament/19_psalms/57.html" class="chapter-link">57</a>
+<a href="01_Old Testament/19_psalms/58.html" class="chapter-link">58</a>
+<a href="01_Old Testament/19_psalms/59.html" class="chapter-link">59</a>
+<a href="01_Old Testament/19_psalms/60.html" class="chapter-link">60</a>
+<a href="01_Old Testament/19_psalms/61.html" class="chapter-link">61</a>
+<a href="01_Old Testament/19_psalms/62.html" class="chapter-link">62</a>
+<a href="01_Old Testament/19_psalms/63.html" class="chapter-link">63</a>
+<a href="01_Old Testament/19_psalms/64.html" class="chapter-link">64</a>
+<a href="01_Old Testament/19_psalms/65.html" class="chapter-link">65</a>
+<a href="01_Old Testament/19_psalms/66.html" class="chapter-link">66</a>
+<a href="01_Old Testament/19_psalms/67.html" class="chapter-link">67</a>
+<a href="01_Old Testament/19_psalms/68.html" class="chapter-link">68</a>
+<a href="01_Old Testament/19_psalms/69.html" class="chapter-link">69</a>
+<a href="01_Old Testament/19_psalms/70.html" class="chapter-link">70</a>
+<a href="01_Old Testament/19_psalms/71.html" class="chapter-link">71</a>
+<a href="01_Old Testament/19_psalms/72.html" class="chapter-link">72</a>
+<a href="01_Old Testament/19_psalms/73.html" class="chapter-link">73</a>
+<a href="01_Old Testament/19_psalms/74.html" class="chapter-link">74</a>
+<a href="01_Old Testament/19_psalms/75.html" class="chapter-link">75</a>
+<a href="01_Old Testament/19_psalms/76.html" class="chapter-link">76</a>
+<a href="01_Old Testament/19_psalms/77.html" class="chapter-link">77</a>
+<a href="01_Old Testament/19_psalms/78.html" class="chapter-link">78</a>
+<a href="01_Old Testament/19_psalms/79.html" class="chapter-link">79</a>
+<a href="01_Old Testament/19_psalms/80.html" class="chapter-link">80</a>
+<a href="01_Old Testament/19_psalms/81.html" class="chapter-link">81</a>
+<a href="01_Old Testament/19_psalms/82.html" class="chapter-link">82</a>
+<a href="01_Old Testament/19_psalms/83.html" class="chapter-link">83</a>
+<a href="01_Old Testament/19_psalms/84.html" class="chapter-link">84</a>
+<a href="01_Old Testament/19_psalms/85.html" class="chapter-link">85</a>
+<a href="01_Old Testament/19_psalms/86.html" class="chapter-link">86</a>
+<a href="01_Old Testament/19_psalms/87.html" class="chapter-link">87</a>
+<a href="01_Old Testament/19_psalms/88.html" class="chapter-link">88</a>
+<a href="01_Old Testament/19_psalms/89.html" class="chapter-link">89</a>
+<a href="01_Old Testament/19_psalms/90.html" class="chapter-link">90</a>
+<a href="01_Old Testament/19_psalms/91.html" class="chapter-link">91</a>
+<a href="01_Old Testament/19_psalms/92.html" class="chapter-link">92</a>
+<a href="01_Old Testament/19_psalms/93.html" class="chapter-link">93</a>
+<a href="01_Old Testament/19_psalms/94.html" class="chapter-link">94</a>
+<a href="01_Old Testament/19_psalms/95.html" class="chapter-link">95</a>
+<a href="01_Old Testament/19_psalms/96.html" class="chapter-link">96</a>
+<a href="01_Old Testament/19_psalms/97.html" class="chapter-link">97</a>
+<a href="01_Old Testament/19_psalms/98.html" class="chapter-link">98</a>
+<a href="01_Old Testament/19_psalms/99.html" class="chapter-link">99</a>
+<a href="01_Old Testament/19_psalms/100.html" class="chapter-link">100</a>
+<a href="01_Old Testament/19_psalms/101.html" class="chapter-link">101</a>
+<a href="01_Old Testament/19_psalms/102.html" class="chapter-link">102</a>
+<a href="01_Old Testament/19_psalms/103.html" class="chapter-link">103</a>
+<a href="01_Old Testament/19_psalms/104.html" class="chapter-link">104</a>
+<a href="01_Old Testament/19_psalms/105.html" class="chapter-link">105</a>
+<a href="01_Old Testament/19_psalms/106.html" class="chapter-link">106</a>
+<a href="01_Old Testament/19_psalms/107.html" class="chapter-link">107</a>
+<a href="01_Old Testament/19_psalms/108.html" class="chapter-link">108</a>
+<a href="01_Old Testament/19_psalms/109.html" class="chapter-link">109</a>
+<a href="01_Old Testament/19_psalms/110.html" class="chapter-link">110</a>
+<a href="01_Old Testament/19_psalms/111.html" class="chapter-link">111</a>
+<a href="01_Old Testament/19_psalms/112.html" class="chapter-link">112</a>
+<a href="01_Old Testament/19_psalms/113.html" class="chapter-link">113</a>
+<a href="01_Old Testament/19_psalms/114.html" class="chapter-link">114</a>
+<a href="01_Old Testament/19_psalms/115.html" class="chapter-link">115</a>
+<a href="01_Old Testament/19_psalms/116.html" class="chapter-link">116</a>
+<a href="01_Old Testament/19_psalms/117.html" class="chapter-link">117</a>
+<a href="01_Old Testament/19_psalms/118.html" class="chapter-link">118</a>
+<a href="01_Old Testament/19_psalms/119.html" class="chapter-link">119</a>
+<a href="01_Old Testament/19_psalms/120.html" class="chapter-link">120</a>
+<a href="01_Old Testament/19_psalms/121.html" class="chapter-link">121</a>
+<a href="01_Old Testament/19_psalms/122.html" class="chapter-link">122</a>
+<a href="01_Old Testament/19_psalms/123.html" class="chapter-link">123</a>
+<a href="01_Old Testament/19_psalms/124.html" class="chapter-link">124</a>
+<a href="01_Old Testament/19_psalms/125.html" class="chapter-link">125</a>
+<a href="01_Old Testament/19_psalms/126.html" class="chapter-link">126</a>
+<a href="01_Old Testament/19_psalms/127.html" class="chapter-link">127</a>
+<a href="01_Old Testament/19_psalms/128.html" class="chapter-link">128</a>
+<a href="01_Old Testament/19_psalms/129.html" class="chapter-link">129</a>
+<a href="01_Old Testament/19_psalms/130.html" class="chapter-link">130</a>
+<a href="01_Old Testament/19_psalms/131.html" class="chapter-link">131</a>
+<a href="01_Old Testament/19_psalms/132.html" class="chapter-link">132</a>
+<a href="01_Old Testament/19_psalms/133.html" class="chapter-link">133</a>
+<a href="01_Old Testament/19_psalms/134.html" class="chapter-link">134</a>
+<a href="01_Old Testament/19_psalms/135.html" class="chapter-link">135</a>
+<a href="01_Old Testament/19_psalms/136.html" class="chapter-link">136</a>
+<a href="01_Old Testament/19_psalms/137.html" class="chapter-link">137</a>
+<a href="01_Old Testament/19_psalms/138.html" class="chapter-link">138</a>
+<a href="01_Old Testament/19_psalms/139.html" class="chapter-link">139</a>
+<a href="01_Old Testament/19_psalms/140.html" class="chapter-link">140</a>
+<a href="01_Old Testament/19_psalms/141.html" class="chapter-link">141</a>
+<a href="01_Old Testament/19_psalms/142.html" class="chapter-link">142</a>
+<a href="01_Old Testament/19_psalms/143.html" class="chapter-link">143</a>
+<a href="01_Old Testament/19_psalms/144.html" class="chapter-link">144</a>
+<a href="01_Old Testament/19_psalms/145.html" class="chapter-link">145</a>
+<a href="01_Old Testament/19_psalms/146.html" class="chapter-link">146</a>
+<a href="01_Old Testament/19_psalms/147.html" class="chapter-link">147</a>
+<a href="01_Old Testament/19_psalms/148.html" class="chapter-link">148</a>
+<a href="01_Old Testament/19_psalms/149.html" class="chapter-link">149</a>
+<a href="01_Old Testament/19_psalms/150.html" class="chapter-link">150</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">箴言</span>
+<span class="book-info">全31章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/20_proverbs/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/20_proverbs/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/20_proverbs/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/20_proverbs/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/20_proverbs/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/20_proverbs/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/20_proverbs/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/20_proverbs/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/20_proverbs/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/20_proverbs/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/20_proverbs/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/20_proverbs/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/20_proverbs/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/20_proverbs/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/20_proverbs/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/20_proverbs/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/20_proverbs/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/20_proverbs/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/20_proverbs/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/20_proverbs/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/20_proverbs/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/20_proverbs/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/20_proverbs/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/20_proverbs/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/20_proverbs/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/20_proverbs/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/20_proverbs/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/20_proverbs/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/20_proverbs/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/20_proverbs/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/20_proverbs/31.html" class="chapter-link">31</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">伝道の書</span>
+<span class="book-info">全12章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/21_ecclesiastes/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/21_ecclesiastes/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/21_ecclesiastes/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/21_ecclesiastes/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/21_ecclesiastes/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/21_ecclesiastes/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/21_ecclesiastes/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/21_ecclesiastes/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/21_ecclesiastes/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/21_ecclesiastes/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/21_ecclesiastes/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/21_ecclesiastes/12.html" class="chapter-link">12</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">雅歌</span>
+<span class="book-info">全8章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/22_song-of-songs/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/22_song-of-songs/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/22_song-of-songs/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/22_song-of-songs/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/22_song-of-songs/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/22_song-of-songs/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/22_song-of-songs/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/22_song-of-songs/8.html" class="chapter-link">8</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">イザヤ書</span>
+<span class="book-info">全66章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/23_isaiah/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/23_isaiah/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/23_isaiah/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/23_isaiah/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/23_isaiah/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/23_isaiah/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/23_isaiah/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/23_isaiah/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/23_isaiah/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/23_isaiah/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/23_isaiah/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/23_isaiah/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/23_isaiah/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/23_isaiah/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/23_isaiah/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/23_isaiah/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/23_isaiah/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/23_isaiah/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/23_isaiah/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/23_isaiah/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/23_isaiah/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/23_isaiah/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/23_isaiah/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/23_isaiah/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/23_isaiah/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/23_isaiah/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/23_isaiah/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/23_isaiah/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/23_isaiah/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/23_isaiah/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/23_isaiah/31.html" class="chapter-link">31</a>
+<a href="01_Old Testament/23_isaiah/32.html" class="chapter-link">32</a>
+<a href="01_Old Testament/23_isaiah/33.html" class="chapter-link">33</a>
+<a href="01_Old Testament/23_isaiah/34.html" class="chapter-link">34</a>
+<a href="01_Old Testament/23_isaiah/35.html" class="chapter-link">35</a>
+<a href="01_Old Testament/23_isaiah/36.html" class="chapter-link">36</a>
+<a href="01_Old Testament/23_isaiah/37.html" class="chapter-link">37</a>
+<a href="01_Old Testament/23_isaiah/38.html" class="chapter-link">38</a>
+<a href="01_Old Testament/23_isaiah/39.html" class="chapter-link">39</a>
+<a href="01_Old Testament/23_isaiah/40.html" class="chapter-link">40</a>
+<a href="01_Old Testament/23_isaiah/41.html" class="chapter-link">41</a>
+<a href="01_Old Testament/23_isaiah/42.html" class="chapter-link">42</a>
+<a href="01_Old Testament/23_isaiah/43.html" class="chapter-link">43</a>
+<a href="01_Old Testament/23_isaiah/44.html" class="chapter-link">44</a>
+<a href="01_Old Testament/23_isaiah/45.html" class="chapter-link">45</a>
+<a href="01_Old Testament/23_isaiah/46.html" class="chapter-link">46</a>
+<a href="01_Old Testament/23_isaiah/47.html" class="chapter-link">47</a>
+<a href="01_Old Testament/23_isaiah/48.html" class="chapter-link">48</a>
+<a href="01_Old Testament/23_isaiah/49.html" class="chapter-link">49</a>
+<a href="01_Old Testament/23_isaiah/50.html" class="chapter-link">50</a>
+<a href="01_Old Testament/23_isaiah/51.html" class="chapter-link">51</a>
+<a href="01_Old Testament/23_isaiah/52.html" class="chapter-link">52</a>
+<a href="01_Old Testament/23_isaiah/53.html" class="chapter-link">53</a>
+<a href="01_Old Testament/23_isaiah/54.html" class="chapter-link">54</a>
+<a href="01_Old Testament/23_isaiah/55.html" class="chapter-link">55</a>
+<a href="01_Old Testament/23_isaiah/56.html" class="chapter-link">56</a>
+<a href="01_Old Testament/23_isaiah/57.html" class="chapter-link">57</a>
+<a href="01_Old Testament/23_isaiah/58.html" class="chapter-link">58</a>
+<a href="01_Old Testament/23_isaiah/59.html" class="chapter-link">59</a>
+<a href="01_Old Testament/23_isaiah/60.html" class="chapter-link">60</a>
+<a href="01_Old Testament/23_isaiah/61.html" class="chapter-link">61</a>
+<a href="01_Old Testament/23_isaiah/62.html" class="chapter-link">62</a>
+<a href="01_Old Testament/23_isaiah/63.html" class="chapter-link">63</a>
+<a href="01_Old Testament/23_isaiah/64.html" class="chapter-link">64</a>
+<a href="01_Old Testament/23_isaiah/65.html" class="chapter-link">65</a>
+<a href="01_Old Testament/23_isaiah/66.html" class="chapter-link">66</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">エレミヤ書</span>
+<span class="book-info">全52章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/24_jeremiah/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/24_jeremiah/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/24_jeremiah/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/24_jeremiah/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/24_jeremiah/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/24_jeremiah/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/24_jeremiah/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/24_jeremiah/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/24_jeremiah/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/24_jeremiah/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/24_jeremiah/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/24_jeremiah/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/24_jeremiah/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/24_jeremiah/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/24_jeremiah/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/24_jeremiah/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/24_jeremiah/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/24_jeremiah/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/24_jeremiah/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/24_jeremiah/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/24_jeremiah/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/24_jeremiah/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/24_jeremiah/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/24_jeremiah/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/24_jeremiah/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/24_jeremiah/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/24_jeremiah/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/24_jeremiah/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/24_jeremiah/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/24_jeremiah/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/24_jeremiah/31.html" class="chapter-link">31</a>
+<a href="01_Old Testament/24_jeremiah/32.html" class="chapter-link">32</a>
+<a href="01_Old Testament/24_jeremiah/33.html" class="chapter-link">33</a>
+<a href="01_Old Testament/24_jeremiah/34.html" class="chapter-link">34</a>
+<a href="01_Old Testament/24_jeremiah/35.html" class="chapter-link">35</a>
+<a href="01_Old Testament/24_jeremiah/36.html" class="chapter-link">36</a>
+<a href="01_Old Testament/24_jeremiah/37.html" class="chapter-link">37</a>
+<a href="01_Old Testament/24_jeremiah/38.html" class="chapter-link">38</a>
+<a href="01_Old Testament/24_jeremiah/39.html" class="chapter-link">39</a>
+<a href="01_Old Testament/24_jeremiah/40.html" class="chapter-link">40</a>
+<a href="01_Old Testament/24_jeremiah/41.html" class="chapter-link">41</a>
+<a href="01_Old Testament/24_jeremiah/42.html" class="chapter-link">42</a>
+<a href="01_Old Testament/24_jeremiah/43.html" class="chapter-link">43</a>
+<a href="01_Old Testament/24_jeremiah/44.html" class="chapter-link">44</a>
+<a href="01_Old Testament/24_jeremiah/45.html" class="chapter-link">45</a>
+<a href="01_Old Testament/24_jeremiah/46.html" class="chapter-link">46</a>
+<a href="01_Old Testament/24_jeremiah/47.html" class="chapter-link">47</a>
+<a href="01_Old Testament/24_jeremiah/48.html" class="chapter-link">48</a>
+<a href="01_Old Testament/24_jeremiah/49.html" class="chapter-link">49</a>
+<a href="01_Old Testament/24_jeremiah/50.html" class="chapter-link">50</a>
+<a href="01_Old Testament/24_jeremiah/51.html" class="chapter-link">51</a>
+<a href="01_Old Testament/24_jeremiah/52.html" class="chapter-link">52</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">哀歌</span>
+<span class="book-info">全5章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/25_lamentations/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/25_lamentations/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/25_lamentations/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/25_lamentations/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/25_lamentations/5.html" class="chapter-link">5</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">エゼキエル書</span>
+<span class="book-info">全48章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/26_ezekiel/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/26_ezekiel/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/26_ezekiel/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/26_ezekiel/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/26_ezekiel/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/26_ezekiel/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/26_ezekiel/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/26_ezekiel/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/26_ezekiel/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/26_ezekiel/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/26_ezekiel/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/26_ezekiel/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/26_ezekiel/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/26_ezekiel/14.html" class="chapter-link">14</a>
+<a href="01_Old Testament/26_ezekiel/15.html" class="chapter-link">15</a>
+<a href="01_Old Testament/26_ezekiel/16.html" class="chapter-link">16</a>
+<a href="01_Old Testament/26_ezekiel/17.html" class="chapter-link">17</a>
+<a href="01_Old Testament/26_ezekiel/18.html" class="chapter-link">18</a>
+<a href="01_Old Testament/26_ezekiel/19.html" class="chapter-link">19</a>
+<a href="01_Old Testament/26_ezekiel/20.html" class="chapter-link">20</a>
+<a href="01_Old Testament/26_ezekiel/21.html" class="chapter-link">21</a>
+<a href="01_Old Testament/26_ezekiel/22.html" class="chapter-link">22</a>
+<a href="01_Old Testament/26_ezekiel/23.html" class="chapter-link">23</a>
+<a href="01_Old Testament/26_ezekiel/24.html" class="chapter-link">24</a>
+<a href="01_Old Testament/26_ezekiel/25.html" class="chapter-link">25</a>
+<a href="01_Old Testament/26_ezekiel/26.html" class="chapter-link">26</a>
+<a href="01_Old Testament/26_ezekiel/27.html" class="chapter-link">27</a>
+<a href="01_Old Testament/26_ezekiel/28.html" class="chapter-link">28</a>
+<a href="01_Old Testament/26_ezekiel/29.html" class="chapter-link">29</a>
+<a href="01_Old Testament/26_ezekiel/30.html" class="chapter-link">30</a>
+<a href="01_Old Testament/26_ezekiel/31.html" class="chapter-link">31</a>
+<a href="01_Old Testament/26_ezekiel/32.html" class="chapter-link">32</a>
+<a href="01_Old Testament/26_ezekiel/33.html" class="chapter-link">33</a>
+<a href="01_Old Testament/26_ezekiel/34.html" class="chapter-link">34</a>
+<a href="01_Old Testament/26_ezekiel/35.html" class="chapter-link">35</a>
+<a href="01_Old Testament/26_ezekiel/36.html" class="chapter-link">36</a>
+<a href="01_Old Testament/26_ezekiel/37.html" class="chapter-link">37</a>
+<a href="01_Old Testament/26_ezekiel/38.html" class="chapter-link">38</a>
+<a href="01_Old Testament/26_ezekiel/39.html" class="chapter-link">39</a>
+<a href="01_Old Testament/26_ezekiel/40.html" class="chapter-link">40</a>
+<a href="01_Old Testament/26_ezekiel/41.html" class="chapter-link">41</a>
+<a href="01_Old Testament/26_ezekiel/42.html" class="chapter-link">42</a>
+<a href="01_Old Testament/26_ezekiel/43.html" class="chapter-link">43</a>
+<a href="01_Old Testament/26_ezekiel/44.html" class="chapter-link">44</a>
+<a href="01_Old Testament/26_ezekiel/45.html" class="chapter-link">45</a>
+<a href="01_Old Testament/26_ezekiel/46.html" class="chapter-link">46</a>
+<a href="01_Old Testament/26_ezekiel/47.html" class="chapter-link">47</a>
+<a href="01_Old Testament/26_ezekiel/48.html" class="chapter-link">48</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ダニエル書</span>
+<span class="book-info">全12章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/27_daniel/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/27_daniel/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/27_daniel/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/27_daniel/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/27_daniel/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/27_daniel/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/27_daniel/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/27_daniel/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/27_daniel/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/27_daniel/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/27_daniel/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/27_daniel/12.html" class="chapter-link">12</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ホセア書</span>
+<span class="book-info">全14章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/28_hosea/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/28_hosea/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/28_hosea/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/28_hosea/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/28_hosea/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/28_hosea/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/28_hosea/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/28_hosea/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/28_hosea/9.html" class="chapter-link">9</a>
+<a href="01_Old Testament/28_hosea/10.html" class="chapter-link">10</a>
+<a href="01_Old Testament/28_hosea/11.html" class="chapter-link">11</a>
+<a href="01_Old Testament/28_hosea/12.html" class="chapter-link">12</a>
+<a href="01_Old Testament/28_hosea/13.html" class="chapter-link">13</a>
+<a href="01_Old Testament/28_hosea/14.html" class="chapter-link">14</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヨエル書</span>
+<span class="book-info">全3章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/29_joel/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/29_joel/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/29_joel/3.html" class="chapter-link">3</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">アモス書</span>
+<span class="book-info">全9章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/30_amos/1.html" class="chapter-link">1</a>
+<a href="01_Old Testament/30_amos/2.html" class="chapter-link">2</a>
+<a href="01_Old Testament/30_amos/3.html" class="chapter-link">3</a>
+<a href="01_Old Testament/30_amos/4.html" class="chapter-link">4</a>
+<a href="01_Old Testament/30_amos/5.html" class="chapter-link">5</a>
+<a href="01_Old Testament/30_amos/6.html" class="chapter-link">6</a>
+<a href="01_Old Testament/30_amos/7.html" class="chapter-link">7</a>
+<a href="01_Old Testament/30_amos/8.html" class="chapter-link">8</a>
+<a href="01_Old Testament/30_amos/9.html" class="chapter-link">9</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">オバデヤ書</span>
+<span class="book-info">全1章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/31_obadiah/1.html" class="chapter-link">1</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヨナ書</span>
+<span class="book-info">全4章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/32_jonah/001.html" class="chapter-link">1</a>
+<a href="01_Old Testament/32_jonah/002.html" class="chapter-link">2</a>
+<a href="01_Old Testament/32_jonah/003.html" class="chapter-link">3</a>
+<a href="01_Old Testament/32_jonah/004.html" class="chapter-link">4</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ミカ書</span>
+<span class="book-info">全7章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/33_micah/001.html" class="chapter-link">1</a>
+<a href="01_Old Testament/33_micah/002.html" class="chapter-link">2</a>
+<a href="01_Old Testament/33_micah/003.html" class="chapter-link">3</a>
+<a href="01_Old Testament/33_micah/004.html" class="chapter-link">4</a>
+<a href="01_Old Testament/33_micah/005.html" class="chapter-link">5</a>
+<a href="01_Old Testament/33_micah/006.html" class="chapter-link">6</a>
+<a href="01_Old Testament/33_micah/007.html" class="chapter-link">7</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ナホム書</span>
+<span class="book-info">全3章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/34_nahum/001.html" class="chapter-link">1</a>
+<a href="01_Old Testament/34_nahum/002.html" class="chapter-link">2</a>
+<a href="01_Old Testament/34_nahum/003.html" class="chapter-link">3</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ハバクク書</span>
+<span class="book-info">全3章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/35_habakkuk/001.html" class="chapter-link">1</a>
+<a href="01_Old Testament/35_habakkuk/002.html" class="chapter-link">2</a>
+<a href="01_Old Testament/35_habakkuk/003.html" class="chapter-link">3</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ゼパニヤ書</span>
+<span class="book-info">全3章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/36_zephaniah/001.html" class="chapter-link">1</a>
+<a href="01_Old Testament/36_zephaniah/002.html" class="chapter-link">2</a>
+<a href="01_Old Testament/36_zephaniah/003.html" class="chapter-link">3</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ハガイ書</span>
+<span class="book-info">全2章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/37_haggai/001.html" class="chapter-link">1</a>
+<a href="01_Old Testament/37_haggai/002.html" class="chapter-link">2</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ゼカリヤ書</span>
+<span class="book-info">全14章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/38_zechariah/001.html" class="chapter-link">1</a>
+<a href="01_Old Testament/38_zechariah/002.html" class="chapter-link">2</a>
+<a href="01_Old Testament/38_zechariah/003.html" class="chapter-link">3</a>
+<a href="01_Old Testament/38_zechariah/004.html" class="chapter-link">4</a>
+<a href="01_Old Testament/38_zechariah/005.html" class="chapter-link">5</a>
+<a href="01_Old Testament/38_zechariah/006.html" class="chapter-link">6</a>
+<a href="01_Old Testament/38_zechariah/007.html" class="chapter-link">7</a>
+<a href="01_Old Testament/38_zechariah/008.html" class="chapter-link">8</a>
+<a href="01_Old Testament/38_zechariah/009.html" class="chapter-link">9</a>
+<a href="01_Old Testament/38_zechariah/010.html" class="chapter-link">10</a>
+<a href="01_Old Testament/38_zechariah/011.html" class="chapter-link">11</a>
+<a href="01_Old Testament/38_zechariah/012.html" class="chapter-link">12</a>
+<a href="01_Old Testament/38_zechariah/013.html" class="chapter-link">13</a>
+<a href="01_Old Testament/38_zechariah/014.html" class="chapter-link">14</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">マラキ書</span>
+<span class="book-info">全4章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="01_Old Testament/39_malachi/001.html" class="chapter-link">1</a>
+<a href="01_Old Testament/39_malachi/002.html" class="chapter-link">2</a>
+<a href="01_Old Testament/39_malachi/003.html" class="chapter-link">3</a>
+<a href="01_Old Testament/39_malachi/004.html" class="chapter-link">4</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="book-section">
+<h2>新約聖書</h2>
+<div class="book-list">
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">マタイによる福音書</span>
+<span class="book-info">全28章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/01_matthew/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/01_matthew/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/01_matthew/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/01_matthew/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/01_matthew/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/01_matthew/006.html" class="chapter-link">6</a>
+<a href="02_New Testament/01_matthew/007.html" class="chapter-link">7</a>
+<a href="02_New Testament/01_matthew/008.html" class="chapter-link">8</a>
+<a href="02_New Testament/01_matthew/009.html" class="chapter-link">9</a>
+<a href="02_New Testament/01_matthew/010.html" class="chapter-link">10</a>
+<a href="02_New Testament/01_matthew/011.html" class="chapter-link">11</a>
+<a href="02_New Testament/01_matthew/012.html" class="chapter-link">12</a>
+<a href="02_New Testament/01_matthew/013.html" class="chapter-link">13</a>
+<a href="02_New Testament/01_matthew/014.html" class="chapter-link">14</a>
+<a href="02_New Testament/01_matthew/015.html" class="chapter-link">15</a>
+<a href="02_New Testament/01_matthew/016.html" class="chapter-link">16</a>
+<a href="02_New Testament/01_matthew/017.html" class="chapter-link">17</a>
+<a href="02_New Testament/01_matthew/018.html" class="chapter-link">18</a>
+<a href="02_New Testament/01_matthew/019.html" class="chapter-link">19</a>
+<a href="02_New Testament/01_matthew/020.html" class="chapter-link">20</a>
+<a href="02_New Testament/01_matthew/021.html" class="chapter-link">21</a>
+<a href="02_New Testament/01_matthew/022.html" class="chapter-link">22</a>
+<a href="02_New Testament/01_matthew/023.html" class="chapter-link">23</a>
+<a href="02_New Testament/01_matthew/024.html" class="chapter-link">24</a>
+<a href="02_New Testament/01_matthew/025.html" class="chapter-link">25</a>
+<a href="02_New Testament/01_matthew/026.html" class="chapter-link">26</a>
+<a href="02_New Testament/01_matthew/027.html" class="chapter-link">27</a>
+<a href="02_New Testament/01_matthew/028.html" class="chapter-link">28</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">マルコによる福音書</span>
+<span class="book-info">全16章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/02_mark/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/02_mark/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/02_mark/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/02_mark/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/02_mark/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/02_mark/006.html" class="chapter-link">6</a>
+<a href="02_New Testament/02_mark/007.html" class="chapter-link">7</a>
+<a href="02_New Testament/02_mark/008.html" class="chapter-link">8</a>
+<a href="02_New Testament/02_mark/009.html" class="chapter-link">9</a>
+<a href="02_New Testament/02_mark/010.html" class="chapter-link">10</a>
+<a href="02_New Testament/02_mark/011.html" class="chapter-link">11</a>
+<a href="02_New Testament/02_mark/012.html" class="chapter-link">12</a>
+<a href="02_New Testament/02_mark/013.html" class="chapter-link">13</a>
+<a href="02_New Testament/02_mark/014.html" class="chapter-link">14</a>
+<a href="02_New Testament/02_mark/015.html" class="chapter-link">15</a>
+<a href="02_New Testament/02_mark/016.html" class="chapter-link">16</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ルカによる福音書</span>
+<span class="book-info">全24章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/03_luke/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/03_luke/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/03_luke/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/03_luke/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/03_luke/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/03_luke/006.html" class="chapter-link">6</a>
+<a href="02_New Testament/03_luke/007.html" class="chapter-link">7</a>
+<a href="02_New Testament/03_luke/008.html" class="chapter-link">8</a>
+<a href="02_New Testament/03_luke/009.html" class="chapter-link">9</a>
+<a href="02_New Testament/03_luke/010.html" class="chapter-link">10</a>
+<a href="02_New Testament/03_luke/011.html" class="chapter-link">11</a>
+<a href="02_New Testament/03_luke/012.html" class="chapter-link">12</a>
+<a href="02_New Testament/03_luke/013.html" class="chapter-link">13</a>
+<a href="02_New Testament/03_luke/014.html" class="chapter-link">14</a>
+<a href="02_New Testament/03_luke/015.html" class="chapter-link">15</a>
+<a href="02_New Testament/03_luke/016.html" class="chapter-link">16</a>
+<a href="02_New Testament/03_luke/017.html" class="chapter-link">17</a>
+<a href="02_New Testament/03_luke/018.html" class="chapter-link">18</a>
+<a href="02_New Testament/03_luke/019.html" class="chapter-link">19</a>
+<a href="02_New Testament/03_luke/020.html" class="chapter-link">20</a>
+<a href="02_New Testament/03_luke/021.html" class="chapter-link">21</a>
+<a href="02_New Testament/03_luke/022.html" class="chapter-link">22</a>
+<a href="02_New Testament/03_luke/023.html" class="chapter-link">23</a>
+<a href="02_New Testament/03_luke/024.html" class="chapter-link">24</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヨハネによる福音書</span>
+<span class="book-info">全21章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/04_john/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/04_john/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/04_john/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/04_john/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/04_john/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/04_john/006.html" class="chapter-link">6</a>
+<a href="02_New Testament/04_john/007.html" class="chapter-link">7</a>
+<a href="02_New Testament/04_john/008.html" class="chapter-link">8</a>
+<a href="02_New Testament/04_john/009.html" class="chapter-link">9</a>
+<a href="02_New Testament/04_john/010.html" class="chapter-link">10</a>
+<a href="02_New Testament/04_john/011.html" class="chapter-link">11</a>
+<a href="02_New Testament/04_john/012.html" class="chapter-link">12</a>
+<a href="02_New Testament/04_john/013.html" class="chapter-link">13</a>
+<a href="02_New Testament/04_john/014.html" class="chapter-link">14</a>
+<a href="02_New Testament/04_john/015.html" class="chapter-link">15</a>
+<a href="02_New Testament/04_john/016.html" class="chapter-link">16</a>
+<a href="02_New Testament/04_john/017.html" class="chapter-link">17</a>
+<a href="02_New Testament/04_john/018.html" class="chapter-link">18</a>
+<a href="02_New Testament/04_john/019.html" class="chapter-link">19</a>
+<a href="02_New Testament/04_john/020.html" class="chapter-link">20</a>
+<a href="02_New Testament/04_john/021.html" class="chapter-link">21</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">使徒行伝</span>
+<span class="book-info">全28章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/05_acts/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/05_acts/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/05_acts/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/05_acts/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/05_acts/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/05_acts/006.html" class="chapter-link">6</a>
+<a href="02_New Testament/05_acts/007.html" class="chapter-link">7</a>
+<a href="02_New Testament/05_acts/008.html" class="chapter-link">8</a>
+<a href="02_New Testament/05_acts/009.html" class="chapter-link">9</a>
+<a href="02_New Testament/05_acts/010.html" class="chapter-link">10</a>
+<a href="02_New Testament/05_acts/011.html" class="chapter-link">11</a>
+<a href="02_New Testament/05_acts/012.html" class="chapter-link">12</a>
+<a href="02_New Testament/05_acts/013.html" class="chapter-link">13</a>
+<a href="02_New Testament/05_acts/014.html" class="chapter-link">14</a>
+<a href="02_New Testament/05_acts/015.html" class="chapter-link">15</a>
+<a href="02_New Testament/05_acts/016.html" class="chapter-link">16</a>
+<a href="02_New Testament/05_acts/017.html" class="chapter-link">17</a>
+<a href="02_New Testament/05_acts/018.html" class="chapter-link">18</a>
+<a href="02_New Testament/05_acts/019.html" class="chapter-link">19</a>
+<a href="02_New Testament/05_acts/020.html" class="chapter-link">20</a>
+<a href="02_New Testament/05_acts/021.html" class="chapter-link">21</a>
+<a href="02_New Testament/05_acts/022.html" class="chapter-link">22</a>
+<a href="02_New Testament/05_acts/023.html" class="chapter-link">23</a>
+<a href="02_New Testament/05_acts/024.html" class="chapter-link">24</a>
+<a href="02_New Testament/05_acts/025.html" class="chapter-link">25</a>
+<a href="02_New Testament/05_acts/026.html" class="chapter-link">26</a>
+<a href="02_New Testament/05_acts/027.html" class="chapter-link">27</a>
+<a href="02_New Testament/05_acts/028.html" class="chapter-link">28</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ローマ人への手紙</span>
+<span class="book-info">全16章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/06_romans/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/06_romans/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/06_romans/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/06_romans/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/06_romans/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/06_romans/006.html" class="chapter-link">6</a>
+<a href="02_New Testament/06_romans/007.html" class="chapter-link">7</a>
+<a href="02_New Testament/06_romans/008.html" class="chapter-link">8</a>
+<a href="02_New Testament/06_romans/009.html" class="chapter-link">9</a>
+<a href="02_New Testament/06_romans/010.html" class="chapter-link">10</a>
+<a href="02_New Testament/06_romans/011.html" class="chapter-link">11</a>
+<a href="02_New Testament/06_romans/012.html" class="chapter-link">12</a>
+<a href="02_New Testament/06_romans/013.html" class="chapter-link">13</a>
+<a href="02_New Testament/06_romans/014.html" class="chapter-link">14</a>
+<a href="02_New Testament/06_romans/015.html" class="chapter-link">15</a>
+<a href="02_New Testament/06_romans/016.html" class="chapter-link">16</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">コリント人への第一の手紙</span>
+<span class="book-info">全16章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/07_1-corinthians/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/07_1-corinthians/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/07_1-corinthians/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/07_1-corinthians/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/07_1-corinthians/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/07_1-corinthians/006.html" class="chapter-link">6</a>
+<a href="02_New Testament/07_1-corinthians/007.html" class="chapter-link">7</a>
+<a href="02_New Testament/07_1-corinthians/008.html" class="chapter-link">8</a>
+<a href="02_New Testament/07_1-corinthians/009.html" class="chapter-link">9</a>
+<a href="02_New Testament/07_1-corinthians/010.html" class="chapter-link">10</a>
+<a href="02_New Testament/07_1-corinthians/011.html" class="chapter-link">11</a>
+<a href="02_New Testament/07_1-corinthians/012.html" class="chapter-link">12</a>
+<a href="02_New Testament/07_1-corinthians/013.html" class="chapter-link">13</a>
+<a href="02_New Testament/07_1-corinthians/014.html" class="chapter-link">14</a>
+<a href="02_New Testament/07_1-corinthians/015.html" class="chapter-link">15</a>
+<a href="02_New Testament/07_1-corinthians/016.html" class="chapter-link">16</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">コリント人への第二の手紙</span>
+<span class="book-info">全13章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/08_2-corinthians/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/08_2-corinthians/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/08_2-corinthians/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/08_2-corinthians/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/08_2-corinthians/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/08_2-corinthians/006.html" class="chapter-link">6</a>
+<a href="02_New Testament/08_2-corinthians/007.html" class="chapter-link">7</a>
+<a href="02_New Testament/08_2-corinthians/008.html" class="chapter-link">8</a>
+<a href="02_New Testament/08_2-corinthians/009.html" class="chapter-link">9</a>
+<a href="02_New Testament/08_2-corinthians/010.html" class="chapter-link">10</a>
+<a href="02_New Testament/08_2-corinthians/011.html" class="chapter-link">11</a>
+<a href="02_New Testament/08_2-corinthians/012.html" class="chapter-link">12</a>
+<a href="02_New Testament/08_2-corinthians/013.html" class="chapter-link">13</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ガラテヤ人への手紙</span>
+<span class="book-info">全6章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/09_galatians/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/09_galatians/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/09_galatians/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/09_galatians/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/09_galatians/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/09_galatians/006.html" class="chapter-link">6</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">エペソ人への手紙</span>
+<span class="book-info">全6章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/10_ephesians/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/10_ephesians/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/10_ephesians/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/10_ephesians/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/10_ephesians/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/10_ephesians/006.html" class="chapter-link">6</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ピリピ人への手紙</span>
+<span class="book-info">全4章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/11_philippians/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/11_philippians/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/11_philippians/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/11_philippians/004.html" class="chapter-link">4</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">コロサイ人への手紙</span>
+<span class="book-info">全4章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/12_colossians/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/12_colossians/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/12_colossians/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/12_colossians/004.html" class="chapter-link">4</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">テサロニケ人への第一の手紙</span>
+<span class="book-info">全5章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/13_1-thessalonians/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/13_1-thessalonians/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/13_1-thessalonians/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/13_1-thessalonians/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/13_1-thessalonians/005.html" class="chapter-link">5</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">テサロニケ人への第二の手紙</span>
+<span class="book-info">全3章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/14_2-thessalonians/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/14_2-thessalonians/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/14_2-thessalonians/003.html" class="chapter-link">3</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">テモテヘの第一の手紙</span>
+<span class="book-info">全6章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/15_1-timothy/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/15_1-timothy/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/15_1-timothy/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/15_1-timothy/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/15_1-timothy/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/15_1-timothy/006.html" class="chapter-link">6</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">テモテヘの第二の手紙</span>
+<span class="book-info">全4章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/16_2-timothy/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/16_2-timothy/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/16_2-timothy/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/16_2-timothy/004.html" class="chapter-link">4</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">テトスヘの手紙</span>
+<span class="book-info">全3章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/17_titus/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/17_titus/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/17_titus/003.html" class="chapter-link">3</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ピレモンヘの手紙</span>
+<span class="book-info">全1章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/18_philemon/001.html" class="chapter-link">1</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヘブル人への手紙</span>
+<span class="book-info">全13章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/19_hebrews/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/19_hebrews/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/19_hebrews/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/19_hebrews/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/19_hebrews/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/19_hebrews/006.html" class="chapter-link">6</a>
+<a href="02_New Testament/19_hebrews/007.html" class="chapter-link">7</a>
+<a href="02_New Testament/19_hebrews/008.html" class="chapter-link">8</a>
+<a href="02_New Testament/19_hebrews/009.html" class="chapter-link">9</a>
+<a href="02_New Testament/19_hebrews/010.html" class="chapter-link">10</a>
+<a href="02_New Testament/19_hebrews/011.html" class="chapter-link">11</a>
+<a href="02_New Testament/19_hebrews/012.html" class="chapter-link">12</a>
+<a href="02_New Testament/19_hebrews/013.html" class="chapter-link">13</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヤコブの手紙</span>
+<span class="book-info">全5章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/20_james/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/20_james/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/20_james/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/20_james/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/20_james/005.html" class="chapter-link">5</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ペテロの第一の手紙</span>
+<span class="book-info">全5章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/21_1-peter/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/21_1-peter/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/21_1-peter/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/21_1-peter/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/21_1-peter/005.html" class="chapter-link">5</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ペテロの第二の手紙</span>
+<span class="book-info">全3章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/22_2-peter/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/22_2-peter/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/22_2-peter/003.html" class="chapter-link">3</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヨハネの第一の手紙</span>
+<span class="book-info">全5章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/23_1-john/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/23_1-john/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/23_1-john/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/23_1-john/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/23_1-john/005.html" class="chapter-link">5</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヨハネの第二の手紙</span>
+<span class="book-info">全1章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/24_2-john/001.html" class="chapter-link">1</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヨハネの第三の手紙</span>
+<span class="book-info">全1章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/25_3-john/001.html" class="chapter-link">1</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ユダの手紙</span>
+<span class="book-info">全1章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/26_jude/001.html" class="chapter-link">1</a>
+</div>
+</div>
+</div>
+<div class="book-item">
+<div class="book-header">
+<div>
+<span class="book-title">ヨハネの黙示録</span>
+<span class="book-info">全22章</span>
+</div>
+<span class="toggle-icon">▼</span>
+</div>
+<div class="chapter-container">
+<div class="chapter-links">
+<a href="02_New Testament/27_revelation/001.html" class="chapter-link">1</a>
+<a href="02_New Testament/27_revelation/002.html" class="chapter-link">2</a>
+<a href="02_New Testament/27_revelation/003.html" class="chapter-link">3</a>
+<a href="02_New Testament/27_revelation/004.html" class="chapter-link">4</a>
+<a href="02_New Testament/27_revelation/005.html" class="chapter-link">5</a>
+<a href="02_New Testament/27_revelation/006.html" class="chapter-link">6</a>
+<a href="02_New Testament/27_revelation/007.html" class="chapter-link">7</a>
+<a href="02_New Testament/27_revelation/008.html" class="chapter-link">8</a>
+<a href="02_New Testament/27_revelation/009.html" class="chapter-link">9</a>
+<a href="02_New Testament/27_revelation/010.html" class="chapter-link">10</a>
+<a href="02_New Testament/27_revelation/011.html" class="chapter-link">11</a>
+<a href="02_New Testament/27_revelation/012.html" class="chapter-link">12</a>
+<a href="02_New Testament/27_revelation/013.html" class="chapter-link">13</a>
+<a href="02_New Testament/27_revelation/014.html" class="chapter-link">14</a>
+<a href="02_New Testament/27_revelation/015.html" class="chapter-link">15</a>
+<a href="02_New Testament/27_revelation/016.html" class="chapter-link">16</a>
+<a href="02_New Testament/27_revelation/017.html" class="chapter-link">17</a>
+<a href="02_New Testament/27_revelation/018.html" class="chapter-link">18</a>
+<a href="02_New Testament/27_revelation/019.html" class="chapter-link">19</a>
+<a href="02_New Testament/27_revelation/020.html" class="chapter-link">20</a>
+<a href="02_New Testament/27_revelation/021.html" class="chapter-link">21</a>
+<a href="02_New Testament/27_revelation/022.html" class="chapter-link">22</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const bookHeaders = document.querySelectorAll('.book-header');
+  
+  bookHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      const bookItem = this.parentElement;
+      bookItem.classList.toggle('expanded');
+    });
+  });
+});
+
+</script>
+</body>
+</html>
