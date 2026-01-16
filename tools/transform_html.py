@@ -161,10 +161,12 @@ def transform_file(filepath, dry_run=False, output_dir=None):
             or "family pledge" in h1_text
         )
         
+        is_index = filename == "index.html"
+        
         path_parts = os.path.normpath(filepath).split(os.sep)
         is_excluded_folder = 'dp' in path_parts or 'tf_inori' in path_parts
 
-        if not is_family_pledge and not is_excluded_folder:
+        if not is_family_pledge and not is_excluded_folder and not is_index:
             # Create TOC structure
             toc_div = soup.new_tag('div', id="toc", **{'class': 'toc'})
             toc_div.append(soup.new_tag('h2'))
