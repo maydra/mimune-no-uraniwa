@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>み旨の裏庭 | 一括検索 (試験中)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+<style>
+  body {
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 1em auto;
+    padding: 0 1em;
+    color: #333;
+  }
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .search-container {
+    margin-bottom: 2em;
+  }
+  #search-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  #search-stats {
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    color: #666;
+  }
+  .result-item {
+    margin-bottom: 2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1em;
+  }
+  .result-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+  }
+  .result-title a {
+    text-decoration: none;
+    color: #0066cc;
+  }
+  .result-title a:hover {
+    text-decoration: underline;
+  }
+  .result-snippet {
+    font-size: 0.95em;
+    color: #444;
+  }
+  mark {
+    background-color: #fffacd;
+    font-weight: bold;
+    color: #000;
+  }
+  .nav-link {
+      display: inline-block;
+      margin-bottom: 1em;
+      text-decoration: none;
+      color: #0066cc;
+  }
+  .warning {
+      background-color: #fff3cd;
+      color: #856404;
+      padding: 0.5em;
+      border-radius: 4px;
+      margin-bottom: 1em;
+      font-size: 0.9em;
+  }
+  button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<a href="index.html" class="nav-link">← トップページに戻る</a>
+
+<h1>サイト内一括検索 (試験版)</h1>
+
+<div class="warning">
+    ⚠️ <strong>注意:</strong> この検索は全データを読み込むため、最初の検索時に通信量が多くなります(約50MB)。<br>
+    動作が重くなる可能性があります。
+</div>
+
+<div class="search-container">
+  <input type="text" id="search-input" placeholder="キーワードを入力してEnter または 検索ボタン" autofocus>
+  <button id="search-btn">検索実行</button>
+  <div id="search-stats"></div>
+</div>
+
+<div id="search-results"></div>
+
+<script src="search-all.js"></script>
+
+</body>
+</html>
