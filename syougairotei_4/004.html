@@ -1,30 +1,306 @@
 <!DOCTYPE html>
 
 <html lang="ja">
-<head>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
 <link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
-<style>
-body {
-  font-family: sans-serif;
-  font-size: 22px;
-  line-height: 1.7;
-  max-width: 1250px;
-  margin: 1em auto;
-  padding: 0 1em;
-}
-@media (max-width: 600px) {
-  body {
-    font-size: 18px;
-    padding: 0 1em;
-    margin: 1em;
-  }
-}
-</style>
+
 <meta charset="utf-8"/>
 <title>第四節　一九六三年　勝利的主管者となろう（一）/真の御父母様の生涯路程 4</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    </style>
 </head>
-<body>
+<body><div class="container">
 <h1 id="第四節-一九六三年-勝利的主管者となろう（一）/真の御父母様の生涯路程-4"><a href="#第四節-一九六三年-勝利的主管者となろう（一）/真の御父母様の生涯路程-4">第四節　一九六三年　勝利的主管者となろう（一）/真の御父母様の生涯路程 4</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 4</a></li><li class="toc-b"><a href="#002">第四節　一九六三年　勝利的主管者となろう（一）</a></li><li class="toc-b"><a href="#003">一　一九六三年出発と摂理的意義</a></li><li class="toc-b"><a href="#004">年頭標語：勝利的主管者となろう（一）
 　　　　　　（一九六三・一・一、前本部教会）</a></li><li class="toc-b"><a href="#005">一九六三年度の重点課題</a></li><li class="toc-b"><a href="#006">二　既成家庭祝福式と独身祝福式</a></li><li class="toc-b"><a href="#007">既成家庭祝福式（一九六三・二・八、二十六双／四・七、二十七双、前本部教会）</a></li><li class="toc-b"><a href="#008">独身祝福式（一九六三・三・二八、前本部教会、四十一名）</a></li><li class="toc-b"><a href="#009">三　協会登録と財団認可</a></li><li class="toc-b"><a href="#010">登録のための準備基盤</a></li><li class="toc-b"><a href="#011">協会登録（一九六三・五・三一、社会団体第二六一号）と財団法人認可（一九六三・一〇・四）</a></li><li class="toc-b"><a href="#012">協会登録の奉献祈祷</a></li><li class="toc-b"><a href="#013">四　三年路程終結と四年路程出発</a></li><li class="toc-b"><a href="#014">三年伝道期間終了（一九六三・六・二〇、閏四・二九、前本部教会）</a></li><li class="toc-b"><a href="#015">百二十四家庭の祝福式と献貢式の延長</a></li><li class="toc-b"><a href="#016">七年路程の前半三年と後半四年</a></li><li class="toc-b"><a href="#017">五　百二十四家庭合同祝福結婚式（一九六三・七・二四、ソウル市民会館）</a></li><li class="toc-b"><a href="#018">世界百二十ヵ国の代表型の家庭</a></li><li class="toc-b"><a href="#019">百二十四家庭に含まれた既成家庭四家庭</a></li><li class="toc-b"><a href="#020">一つのチームを成す三十六、七十二、百二十四家庭</a></li><li class="toc-b"><a href="#021">最初の外部行事である百二十四家庭祝福式</a></li><li class="toc-b"><a href="#022">百二十人伝道課題</a></li><li class="toc-b"><a href="#023">六　「万物の日」制定と献貢式</a></li><li class="toc-b"><a href="#024">「万物の日」制定（一九六三・六・二一　〔陰暦五・一〕）</a></li><li class="toc-b"><a href="#025">「天勝号」の進水と魚取り（進水式：一九六三・六・二六、京畿道仁川市萬石洞埠頭）</a></li><li class="toc-b"><a href="#026">「万物の日」献貢式（一九六三・七・二六〔陰暦六・六〕前本部教会）</a></li><li class="toc-b"><a href="#027">献貢式の前後の時</a></li><li class="toc-b"><a href="#028">万物奉献</a></li><li class="toc-b"><a href="#029">万物の公的管理</a></li><li class="toc-b"><a href="#030">七　仙和子供舞踊団創立</a></li><li class="toc-b"><a href="#031">リトルエンジェルス芸術学校の建学理念</a></li><li class="toc-b"><a href="#032">八　全国伝道師修練会</a></li><li class="toc-b"><a href="#033">第十五回伝道師修練会（一九六三・二・五〜二・一六、前本部教会、二百二十一人）</a></li><li class="toc-b"><a href="#034">第十六回伝道師修練会（一九六三・四・一〜五・一〇、前本部教会、百十人）</a></li><li class="toc-b"><a href="#035">第十七回伝道師特別修練会および百二十四双婚約
 （一九六三・五・二五〜六・一三、前本部教会、二百六十三名）</a></li><li class="toc-b"><a href="#036">第十八回伝道師修練会（一九六三・九・一五〜一。・二四、前本部教会、五十二人）</a></li><li class="toc-b"><a href="#037">九　全国成和学生会特別集会</a></li><li class="toc-b"><a href="#038">第三回修了証授与および第七回修了予定者修了式（一九六三・三・一五、前本部教会）</a></li><li class="toc-b"><a href="#039">第一回全国成和学生会特別修練会（一九六三・七・二七〜八・五、前本部教会）</a></li><li class="toc-b"><a href="#040">第二回全国成和学生総会（一九六三・一〇・二〜一〇・四、前本部教会、九十八名）</a></li><li class="toc-b"><a href="#041">第一回全国成和同窓総会（一九六三・一一・八〜一・一五、前本部教会、百六十四名）</a></li><li class="toc-b"><a href="#042">十　四十日伝道と全国特別復興会</a></li><li class="toc-b"><a href="#043">夏季四十日伝道（一九六三・八・一〜九・一〇）</a></li><li class="toc-b"><a href="#044">秋季全国特別復興会（一九六三・九・一六〜一〇・一三、千四百二十箇所）
@@ -544,6 +820,8 @@ body {
 <br/>
 <br/>
 </blockquote>
+
+</div>
 <script>
   const params = new URLSearchParams(window.location.search);
   if (params.get("randomScroll") === "true") {
@@ -552,8 +830,7 @@ body {
       window.scrollTo({ top: y, behavior: "smooth" });
     };
   }
-</script>
-</body>
+</script></body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="003.html">前のページに戻る</a></p><p><a href="005.html">次のページに進む</a></p></div>
 <script>
   const params = new URLSearchParams(window.location.search);

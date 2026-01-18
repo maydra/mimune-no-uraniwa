@@ -1,49 +1,303 @@
 <!DOCTYPE html>
 
-<html lang="ja"><head>
+<html lang="ja"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
 <link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/><meta charset="utf-8"/>
 <title>感謝する信仰 第二章</title>
-<style>
-body {
-  font-family: sans-serif;
-  font-size: 22px;
-  line-height: 1.7;
-  max-width: 1250px;
-  margin: 1em auto;
-  padding: 0 1em;
-}
-h2 {
-  margin-top: 2em;
-  font-size: 28px;
-}
-h3 {
-  margin-top: 1.5em;
-  font-size: 24px;
-}
-@media (max-width: 600px) {
-  body {
-    font-size: 18px;
-    padding: 0 1em;
-    margin: 1em;
-  }
-}
 
-.toc {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 1em;
-  margin: 2em 0;
-}
-.toc ul {
-  list-style: none;
-  padding-left: 0;
-}
-.toc li {
-  margin: 0.2em 0;
-}
-</style></head>
-<body>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    </style>
+</head>
+<body><div class="container">
 <div class="navigation"><a href="003.html">← 前のページに戻る</a> | <a href="index.html">目次に戻る</a> | <a href="005.html">次のページに進む →</a></div>
 <h1 id="感謝する信仰-第2章-神様になりましょう"><a href="#感謝する信仰-第2章-神様になりましょう">感謝する信仰 第2章 神様になりましょう</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-level-2"><a href="#001">第二章 神様になりましょう</a></li><li class="toc-level-2"><a href="#002">天国に行きたいですか</a></li><li class="toc-level-2"><a href="#003">韓国のクリスチャンの信仰</a></li><li class="toc-level-2"><a href="#004">ヒュゴ</a></li><li class="toc-level-2"><a href="#005">祝福を受ける前と受けた後と</a></li><li class="toc-level-2"><a href="#006">キリスト教の歴史</a></li><li class="toc-level-2"><a href="#007">地獄から天国を創る</a></li><li class="toc-level-2"><a href="#008">問題は私たちの心</a></li><li class="toc-level-2"><a href="#009">再臨主に対する絶対的信仰</a></li><li class="toc-level-2"><a href="#010">お父様の立場</a></li><li class="toc-level-2"><a href="#011">原理講論を読みましょう</a></li><li class="toc-level-2"><a href="#012">三大祝福の完成</a></li><li class="toc-level-2"><a href="#013">個性完成した人の生活</a></li><li class="toc-level-2"><a href="#014">ご父母様は愛そのものです</a></li><li class="toc-level-2"><a href="#015">最初に出発した基準に戻る</a></li><li class="toc-level-2"><a href="#016">お父様の原理に対する姿勢</a></li><li class="toc-level-2"><a href="#017">祈祷会をしましょう</a></li><li class="toc-level-2"><a href="#018">夫婦一体の生活</a></li><li class="toc-level-2"><a href="#019">子供は父母の真似をして育つのです</a></li><li class="toc-level-2"><a href="#020">自分の父母に侍りましょう</a></li><li class="toc-level-2"><a href="#021">祝福の価値</a></li><li class="toc-level-2"><a href="#022">天国へ行く門の状態</a></li><li class="toc-level-2"><a href="#023">氏族メシヤの使命</a></li><li class="toc-level-2"><a href="#024">神様が喜ばれる仕事</a></li><li class="toc-level-2"><a href="#025">家庭に天国を創る</a></li><li class="toc-level-2"><a href="#026">神様の摂理</a></li><li class="toc-level-2"><a href="#027">お父様が歩まれた四十年の路程</a></li><li class="toc-level-2"><a href="#028">信仰の基台</a></li><li class="toc-level-2"><a href="#029">世界長子転換式</a></li><li class="toc-level-2"><a href="#030">統一旗を立てなさい</a></li><li class="toc-level-2"><a href="#031">最初の交差結婚式</a></li><li class="toc-level-2"><a href="#032">還故郷して父母復帰</a></li><li class="toc-level-2"><a href="#033">世界平和女性連合の創立</a></li><li class="toc-level-2"><a href="#034">女性はお母様の分身体</a></li><li class="toc-level-2"><a href="#035">子供と夫を神の元へ</a></li><li class="toc-level-2"><a href="#036">命懸けのお父様の道</a></li><li class="toc-level-2"><a href="#037">成約元年から子女の時代</a></li><li class="toc-level-2"><a href="#038">天国入籍</a></li><li class="toc-level-2"><a href="#039">十六万女性の訪韓</a></li><li class="toc-level-2"><a href="#040">三十六万双祝福の意義</a></li><li class="toc-level-2"><a href="#041">エバ国家の使命</a></li><li class="toc-level-2"><a href="#042">国家的な結婚式</a></li><li class="toc-level-2"><a href="#043">蕩減の道</a></li><li class="toc-level-2"><a href="#044">絶対的信仰、絶対的服従、絶対的愛</a></li><li class="toc-level-2"><a href="#045">北アメリカと南アメリカ</a></li><li class="toc-level-2"><a href="#046">ワシントン・タイムズ</a></li><li class="toc-level-2"><a href="#047">南米の摂理</a></li><li class="toc-level-2"><a href="#048">アフリカの救済</a></li><li class="toc-level-2"><a href="#049">初心に帰って再出発を</a></li></ul></div>
 <h2 id="001"><a href="#001">第二章 神様になりましょう</a></h2>
@@ -420,6 +674,8 @@ h3 {
 <p>　　来年からは王権時代に入ります。王権時代とは、天法によって管理する時期です。長子権復帰、父母権復帰、王権復帰の時代に入るのでありますから、父母の最後の愛の恵みを与えられたこの期間、私たち一人一人がもう一度生まれ変わって、最後の責任を果たして、二千六百年の歴史の日本を守る皆さん一人一人になるように願うのであります。</p>
 <p>　　最後に頼むことは東郷元帥の「興国の荒廃、この一戦にあり、各員一層奮励努力せよ」という日露戦争の戦いの言葉のどおり、皆さん一人一人が真のご父母様が恵まれ誇られる統一食口となってくださるようお願いします。その勝利の基準のあかつきには、日本も世界人類の前に恵まれるし、誇られる父母の立場の国家として選ばれるという恵みを、最後まで守られる皆さん一人一人になるように願います。 神様に感謝の心を、忠孝の命を捧げる決心をして再出発する今の時間になるように、神様の恵みが守られる皆さんになるように願うのであります。</p>
 <div class="navigation"><a href="003.html">← 前のページに戻る</a> | <a href="index.html">目次に戻る</a> | <a href="005.html">次のページに進む →</a></div>
+
+</div>
 <script>
   const params = new URLSearchParams(window.location.search);
   if (params.get("randomScroll") === "true") {
@@ -428,5 +684,4 @@ h3 {
       window.scrollTo({ top: y, behavior: "smooth" });
     };
   }
-</script>
-</body></html>
+</script></body></html>

@@ -1,30 +1,306 @@
 <!DOCTYPE html>
 
 <html lang="ja">
-<head>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
 <link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
-<style>
-body {
-  font-family: sans-serif;
-  font-size: 22px;
-  line-height: 1.7;
-  max-width: 1250px;
-  margin: 1em auto;
-  padding: 0 1em;
-}
-@media (max-width: 600px) {
-  body {
-    font-size: 18px;
-    padding: 0 1em;
-    margin: 1em;
-  }
-}
-</style>
+
 <meta charset="utf-8"/>
 <title>/第三次七年路程/真の御父母様の生涯路程 6</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    </style>
 </head>
-<body>
+<body><div class="container">
 <h1 id="/第三次七年路程/真の御父母様の生涯路程-6"><a href="#/第三次七年路程/真の御父母様の生涯路程-6">/第三次七年路程/真の御父母様の生涯路程 6</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 6</a></li><li class="toc-b"><a href="#002">第四節　一九七八年　公式路程を通しての天国実現</a></li><li class="toc-b"><a href="#003">一　　一九七八年の出発と摂理的意義</a></li><li class="toc-b"><a href="#004">（一九七八一・一、ニューヨーク、マンハッタン・センター）</a></li><li class="toc-b"><a href="#005">年頭標語：公式路程を通しての天国実現</a></li><li class="toc-b"><a href="#006">一九七八年の時</a></li><li class="toc-b"><a href="#007">二　アメリカ三万名確保と三百六十家庭教会運動</a></li><li class="toc-b"><a href="#008">年始めの四十日伝道活動（一九七八・一〇〜二・二〇）</a></li><li class="toc-b"><a href="#009">カープの伝道活動</a></li><li class="toc-b"><a href="#010">三万名確保と家庭教会活動（一九七八・四・一から）</a></li><li class="toc-b"><a href="#011">機動隊再配置活動</a></li><li class="toc-b"><a href="#012">弱小民族協会結成準備</a></li><li class="toc-b"><a href="#013">三　『おお！　仁川』映画製作（一九七八・五、撮影開始）</a></li><li class="toc-b"><a href="#014">『おお！　仁川』映画とマッカーサー将軍</a></li><li class="toc-b"><a href="#015">製作準備と撮影開始</a></li><li class="toc-b"><a href="#016">四　アメリカ国会ロナルド・フレーザー小委員会</a></li><li class="toc-b"><a href="#017">攻勢時代とフレーザーとの闘い</a></li><li class="toc-b"><a href="#018">フレーザーの国際関係小委員会聴聞会
 （一九七八・三・二二〜六・二二、朴普煕宣教師が四次の証言）</a></li><li class="toc-b"><a href="#019">フレーザーの上院議員選挙予選落選（一九七八・九・一三）</a></li><li class="toc-b"><a href="#020">フレーザー敗北の根本原因</a></li><li class="toc-b"><a href="#021">五　イギリス巡回と攻勢的活動（一九七八・五・言下九・二回</a></li><li class="toc-b"><a href="#022">最高の峠を越える百二十日の期間（一九七八・五・一三〜九・一三）</a></li><li class="toc-b"><a href="#023">攻勢的なイギリスでの活動</a></li><li class="toc-b"><a href="#024">イギリスの歓迎と今後の進路</a></li><li class="toc-b"><a href="#025">六　株式会社一和脱税容疑事件</a></li><li class="toc-b"><a href="#026">創業の動機と脱税容疑事件（一九七七・一・二一、十名拘束→三・五起訴→四・一二、
 一次公判→一九七八・五・三〇、無罪言い渡し）</a></li><li class="toc-b"><a href="#027">悲惨な幹部たちの生活状態</a></li><li class="toc-b"><a href="#028">七　約婚式および祝福式</a></li><li class="toc-b"><a href="#029">日本の既成家庭の祝福（一九七八・二・一一、十六組、アメリカ）</a></li><li class="toc-b"><a href="#030">ヨーロッパ未婚者の約婚および祝福
@@ -557,6 +833,8 @@ body {
 <br/>
 <br/>
 </blockquote>
+
+</div>
 <script>
   const params = new URLSearchParams(window.location.search);
   if (params.get("randomScroll") === "true") {
@@ -565,8 +843,7 @@ body {
       window.scrollTo({ top: y, behavior: "smooth" });
     };
   }
-</script>
-</body>
+</script></body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="003.html">前のページに戻る</a></p><p><a href="005.html">次のページに進む</a></p></div>
 <script>
   const params = new URLSearchParams(window.location.search);
