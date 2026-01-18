@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Crimson+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    </style>
+</head><body><div class="container"><div style="margin-bottom: 20px; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 10px;"><a href="index.html">← 目次に戻る</a><a href="chapter001_section2.html" style="margin-left: 20px;">次へ</a></div><div class="content"><h2 id="一-一九九三年の出発と摂理的意義"><a href="#一-一九九三年の出発と摂理的意義">一　一九九三年の出発と摂理的意義</a></h2>
+<p>一九九三年一月一日、第二十六回「神の日」を迎え、千人以上の国内外の食口が集まる中、本部教会で開かれた元旦の祈祷会において、真の御父母様は、祝祷されたのちに、年頭標語である「新しい家庭と統一祖国」を揮毫され、三時間にわたってみ言を語られた。七時には漢南洞公館において敬拝式、十時には本部教会において慶祝礼拝、午後七時からはリトル・エンジェルス芸術会館において「慶祝文化の夕べ」が開かれた。<br/>
+<br/>
+<br/>
+　元旦の祝祷<br/>
+<br/>
+　愛するお父様、たった今一九九二年が過ぎ去り、新しい一九九三年の元旦を迎えました。今までの恨多き歴史において、昨年は、歴史的な縦的蕩減路程の全体を連結して横的に蕩減する重要な年でした。「セナラ（新しい国の）統一」という目標を中心として、全世界を駆け回りながら闘った歴史的に記念する年が過ぎ去りました。<br/>
+<br/>
+　おととしの十月には、お母様を中心として、「アジア平和女性連合」の起源を受け継ぎ、韓国において「アジア平和女性連合」韓国支部を創立し、一九九二年四月十日を期して「世界平和女性連合」を創立し、女性解放を世界的に宣布しました。これは、真のアダムが、完成したみ旨を中心として蕩減の道をすべて経ることにより、アダムと同等な価値を付与されたからです。そのようにして女性解放時代を迎えることにより、四月十日以降、今までの歴史路程にはなかった世界史的な女性解放運動の道を開拓してこられたお母様が、百十三箇所での大講演会を経ることにより、すべての女性の解放の旗印を高く掲げました。<br/>
+<br/>
+　この怨讐世界における迫害の峠をすべて越えることにより、初めて世界から国、国から氏族、氏族から家庭までがお父様を訪ねてくることができる時になりました。エデンの園において神様と真の父母を中心として血族的因縁を経てくることができなかったことを再び取り戻すために、今まで探し求めてきた大家庭時代を迎えるようになったことを心から感謝申し上げます。<br/>
+<br/>
+　今、一九九三年を祝福してくださり、あなたが願われ計画されるすべてのことが日進月歩していくように許諾してくださり、各自の心と体が一つになり、夫婦が一つになり、統一家が一つになることによって、統一された祖国創建が可能になるということを知り、南北を一つにするためには統一された家庭と氏族の力を経なければならないことを知りましたので、このような召命的責任を全うし、氏族的メシヤの責任を果たして余りある統一家の祝福された群れとなるように許諾してくださることを懇切にお願い申し上げます。<br/>
+<br/>
+　新年を喜びをもってお父様にゆだねましたので、この一年を、過ぎし一九九二年のように、私たちがあらゆる精誠を尽くしてお母様をお支えしたように、今、それぞれの家庭が、統班撃破を中心として、すべての精誠を尽くしてこの国、この民族を家庭的に解放することにより、祖国統一が可能になる基盤を強固に築けるように許諾してくださることを懇切にお願いしながら、このすべてのみ言を真の御父母様のみ名によって元旦にお祈りいたします。アーメン。アーメン。アーメン！<br/>
+<br/>
+<br/>
+　年頭標語：新しい家庭と統一祖国<br/>
+<br/>
+　新年の年頭標語は、「新しい家庭と統一祖国」です。今、全世界が心を合わせて祈祷し、精誠を尽くした一九九二年が過ぎ去りました。皆さんが知っているように、昨年は、お母様を中心として世界的な役事をした年であり、歴史始まって以来初めて女性解放を宣布した年でもあります。<br/>
+<br/>
+　それでは、先生の四十七年間の生涯とは何だったのでしょうか。第二次大戦直後のイギリスとアメリカとフランスが責任を果たせずに失ってしまったものを、蕩減するための期間でした。サタンが、天の側の最も貴いイギリスとアメリカとフランスをすべて奪っていきました。天は、やむを得ず、天の側のエバ国家の代わりに、怨讐国家である日本をエバ国家として立てたのです。アメリカをアベル国家として立てたのです。<br/>
+<br/>
+　神様のみ旨の中で、一度選んだのちに失敗すれば、再び選び立てることはできません。しかし復帰歴史は、二代にわたり、子孫を通して行うので、神様にはできないのですが、先生は、二代目の息子の立場にいるので選び立てることができるのです。ですから、私が日本をエバ国家として立て、アメリカを再びアベル国家として立てたのです。そのようにしなければ、新約と旧約、イスラエルの国と新約の歴史が完全に無駄になってしまうのです。旧約と新約の基盤がなくては、成約時代はあり得ません。<br/>
+<br/>
+　先生の行く道を、すべてが反対しました。アメリカが反対し、ソ連が反対し、中国が反対し、金日成が反対し、すべてが反対しました。それをすべて越えたのです。左翼を倒し、共産世界の解放とともにサタン圏、すなわち第二次大戦以降分かれてきた共産主義などのすべての主義を完全に統一し、一つの基準に統一することが先生の使命でした。<br/>
+<br/>
+　個人統一、家庭統一、氏族統一、民族統一、国家統一、世界統一、天宙統一です。統一教会の文先生は、サタン世界の垣根をすべて壊し、統一された環境をつくって祖国を取り戻してくるのです。家庭があるので祖国です。天国はまだないでしょう？　アダム家庭の延長です。アダム家庭が氏族的先祖であり、アダム家庭が民族的先祖であり、アダム家庭が天地の先祖だというのです。先祖の位置に立って先祖の価値を探し立てることのできる国が祖国になるのです。<br/>
+<br/>
+　このように先生が四十七年間苦労したことを、お母様は一年間で受け継ぐのです。真の御父母様が築いたすべての解放圏を家庭的に連結させることができる時になったのです。それで氏族的メシヤを派遣したので、家庭同士が一つになれば、自動的に国家が現れ、世界は統一されるという結論が出てくるのです。<br/>
+<br/>
+　一九九三年は新しい次元に超えていく時だということを肝に銘じ、皆さんの家庭が先生の家庭のように新しい家庭になって、先生が世界的な闘いを通じて勝利して伝授してあげたすべての家庭的な伝統を、皆さんの一族に伝授し、皆さんの家庭が手本となり、一族を教育できる教材の家庭になっていけば、統一された祖国が訪れてくるのです。<br/>
+<br/>
+<br/>
+　新年の指示事項<br/>
+<br/>
+　一　真の父母の家庭と世界勝利の統一<br/>
+<br/>
+　一、真の男性・女性個人先祖勝利。二、真の夫婦先祖勝利。三、真の父母先祖勝利。四、真の家庭先祖勝利。五、真の国家（世界）先祖勝利。六、真の天宙先祖勝利。七、真の地上天国・天上天国先祖確定。<br/>
+<br/>
+　付言一、祖国と故郷と同居、同行、同参する世界。<br/>
+<br/>
+　付言二、四大心情圏と三大王権基準造成。</p>
+<p>一、心身個体統一。二、夫婦家庭統一。三、家庭氏族統一。四、氏族国家（世界）統一。五、国家世界統一。六、世界天宙統一。七、天宙神様の解放。</p>
+<p>一、血統転換。二、所有圏転換。三、心情圏転換。四、言語圏転換（統一）。五、文化圏転換（統一）。六、生活圏転換（統一）。七、超人種圏転換（統一）。</p>
+<p>一、生まれたのは真の愛のために。二、生きるのは真の愛のために。三、死ぬのは真の愛のために。四、真の愛を中心として相対圏関係完成。五、真の愛を中心として子女圏完成のために。六、真の愛の主人になった者は、神様と同居、同行、同参できる。<br/>
+<br/>
+　付言一、個人から家庭、氏族、国家、世界に自由に往来し得るモデルが真の御父母様の家庭なので、真の御父母様の家庭と一体になることにより、永遠に一体にならなければならない伝統を受け継ぎ、家庭から世界に、真の子女として神様と真の御父母様と同和してこそ、統一された祖国が完成される。<br/>
+<br/>
+　付言二、新しい家庭は、母とカインとアベルが統一的使命を完遂する家庭である。<br/>
+<br/>
+　付言三、氏族的メシヤ母子一体。国家的メシヤ、世界的メシヤ母子協助。世界女性連合連結。<br/>
+<br/>
+　付言四、母は家庭堂において子女教育完成。<br/>
+<br/>
+　付言五、夫と祝福されなければならない。<br/>
+<br/>
+　「お母様は、統一堂において子女教育完成、それから夫祝福を家庭堂で、それから国家堂を消化して統一祖国を完成すること」です。</p>
+<a href="#section-5" id="section2"></a></div><div style="margin-bottom: 20px; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 10px;"><a href="index.html">← 目次に戻る</a><a href="chapter001_section2.html" style="margin-left: 20px;">次へ</a></div></div></body></html>

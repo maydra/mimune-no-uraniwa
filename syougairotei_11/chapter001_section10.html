@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Crimson+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    </style>
+</head><body><div class="container"><div style="margin-bottom: 20px; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 10px;"><a href="index.html">← 目次に戻る</a><a href="chapter001_section9.html" style="margin-left: 20px;">前へ</a></div><div class="content"><h2 id="十-真のお母様の世界巡回講演と真の御子女様のアメリカ講演"><a href="#十-真のお母様の世界巡回講演と真の御子女様のアメリカ講演">十　真のお母様の世界巡回講演と真の御子女様のアメリカ講演</a></h2><br/>
+<br/>
+　真の御子女様たちのアメリカ四十箇所での講演<br/>
+<br/>
+　真のお母様の世界巡回講演期間中である十月二十四日から十二月十九日まで、孝進様をはじめとする真の御子女様が、アメリカ四十箇所を分担してそれぞれ講演された。<br/>
+<br/>
+　お母様を中心として、国家的母、氏族的母、家庭的母、カイン・アベルまで再び生まなければなりません。そのように生んでこそ、天国に帰っていく時にサタンとは永遠に関係のない家庭になるのです。ですから、皆さんも間違いなく真の父母の愛の血筋を通じて生まれたと言うことができるのです。そのようにして生まれた皆さんは、先生の直系の息子、娘を兄として侍り、絶対的に一つにならなければなりません。<br/>
+<br/>
+　どの国の人が先生の血族と結婚するのでしょうか。結婚したその血族が中心となってその国を一つにするのです。三代までは、先生の家庭は韓国人と結婚しなければなりません。それ以降は拡大していくのです。今、先生の家庭は何人ですか。四十三人でしょう？　それも摂理的です。出エジプト時代に入っていくのです。四十三数は解放数に相当します。ですから成約時代です。<br/>
+<br/>
+　私の息子、娘にも、アメリカでお母様に続いて講義をしなさいと指示しました。「お母様と一緒に大会をしなさい！」と言ったのです。今後お母様がいなくても、統一教会の行く道で子孫を通して残してあげることができる基盤を相続させると同時に、彼らの行くべき道を準備しなければならないのです。ですから、今後の世界はどのような時代が来るのでしょうか。家庭が責任をもつ時代が来るのです。<br/>
+<br/>
+　統一教会で言えば、思想的に完全に備わった家庭になれば、金城鉄壁だというのです。そのようにして父親が局長になれば、局長夫人は副局長になり、息子は秘書室長などの重要な責任を負うのです。息子、娘がたくさんいれば、五人ならば五人に自分の父親を助けることのできる職責があれば、全員人事措置してあげるのです。<br/>
+<br/>
+　韓国の八十一都市において大会を行う時、お母様が四十都市で行い、半分は私の息子、娘に命じて父と母の代わりに講演させるのです。アメリカでもそのようにしたので、先生の息子、娘が父母の伝統を受けて、原稿を中心として四十都市での復興会を十［月からするようになっているのです。<br/>
+<br/>
+　私の息子、娘は優秀です。私に似て優秀です。とても多才で、話も上手です。聴衆が千万人いたとしても、震えたりするようなことがありません。一歳や二歳の小さな赤ん坊が大胆なのと同じように大胆なのです。アメリカで勉強したので、言葉は問題ありません。ですから、「いやー、レバレンド・ムーンは家庭的モデル理想を語っているが、その家庭こそ、そのみ言どおりである！」と言っているのです。<br/>
+<br/>
+<br/>
+　真のお母様の世界四十ヵ国巡回講演<br/>
+<br/>
+　真のお母様の世界四十ヵ国巡回講演が、十一月二日から十二月二十二日までの五十三日間、西ヨーロッパ、旧ソ連、東欧圏、中東、南米、アフリカ、アジア、オセアニア地域を結ぶ大長征で進められた。十一月二日、ドイツのフランクフルトで「真の父母と成約時代」を主題として最初の幕を上げた同巡回講演は、十二月二十二日の台湾の台北大会まで、行く先々で盛況を呈し、前職・現職国家指導者をはじめとして有名碩学、宗教指導者たちのメッセージと祝電が届けられ、各界著名人と女性団体代表が大挙して参席した。<br/>
+　特に今年の巡回講演において、真のお母様は、七月二十八日にアメリカ連邦議会で講演をされたのに続き、十月三十一日に韓国汝矣島の国会議事堂、十一月十八日にカナダ・オタワの国会議事堂、十二月九日にブラジル・ブラジリアの国会議事堂、十二月二十日にインド・ニューデリーの国会議事堂、十二月二十二日に台湾立法院大講堂などの国会に招請され、各国の国会議員および指導者の集まった席で講演されて参席者から熱い拍手を受けられた。<br/>
+<br/>
+　お母様が講演するために四十ヵ国に行きますが、この世から見れば何をするために見知らぬ外国の地に行くのかというのです。植えなければなりません。父母になったならば、子女たちを生かすために、難しい道も行き、山を越え、海を渡って愛の種を植えなければならないのです。同じ教育をしなければなりません。そのようにしてこそ天運が従っていくのです。<br/>
+<br/>
+　これは、アメリカで語ったものと同じみ言です。国連を経て日本まで、すべて同じみ言です。このようにして韓国を経て世界に同じみ言を伝えれば、天運がそこに従ってくるのです。そのようにして四十ヵ国を回ってこなければなりません。<br/>
+<br/>
+　先生も、四十ヵ国を中心として百二十箇所の聖地を選びました。四十ヵ国を中心として、イエス様の失ってしまった地を取り戻すのです。四十ヵ国さえ収拾すればよいのです。なぜならば、四数の乗数は、四掛ける四は十六で十六数です。百六十数です。サタン数の全体を代表した数です。それで百六十ヵ国です。<br/>
+<br/>
+　どの国に行っても歓迎を受けました。共産党がキリスト教と手を握って反対してきたのですが、今回は、共産党がキリスト教を攻撃したのです。「あなた方の言う内容よりも、文鮮明先生と韓鶴子先生のみ言のほうが素晴らしい」、「あなた方の言う再臨などという内容は理解できないが、文先生のみ言ははっきりしている。雲に乗って来るなどという、そのような狂った話がどこにあるか」と言っているのです。<br/>
+<br/>
+　アメリカの国会もＯＫです。アメリカ全土を代表してＯＫしたのです。国連世界国家もパス、日本の国会もパスしました。日本の国会は、日本の国家を代表したものです。韓国もすべてパスしたというのです。イギリスを引き継いだ国はカナダです。カナダの国会でのお母様の演説は、歴史上にない大成功でした。今、カナダには、先生が命令すれば何であろうと実行し得る基盤があります。この地上の七つの国会で、お母様が講演したのです。蕩減復帰原則によって、原理的な数字に合うように経ていかなければならないのです。<br/>
+<br/>
+<br/>
+　真のお母様を中心とする世界女性時代の七年<br/>
+<br/>
+　二〇〇〇年までの七年間で世界の行くべき方向を、再臨主を迎えて設定し、一つの世界にしなければなりません。一九四五年から一九五二年までの七年間で成そうとしたのですが、失敗したので蕩減復帰期間が残っているのです。この期間に、全面的にお母様を中心として、女性運動を大々的に世界に拡張していかなければなりません。どのような政治団体、どのような国よりも強力でなければなりません。<br/>
+<br/>
+　韓国に四柱、観相、易学を学んでいる人が数万人いるのですが、そのうちの八〇パーセントが先生を尊敬しています。証をするのです。「文先生のいる所に行かなければならない」と言うのです。それは霊界が教えるのでしょう。「理由は分からないが、そうだ」と言うのです。<br/>
+<br/>
+　きのう（十月十六日）、私がここに車に乗ってくる時、僧侶と教区長を乗せてきたのですが、その僧侶は霊界に通じている人でした。昨年から女性時代が来るということを知っていました。「今から七年間で世界が定着できなければ、世界は大変なことになる」と言うのです。すべて先生が話したことではありませんか。そして、「文総裁がこの国と世界を生かすことのできるお方だということを私は分かっているが、世の中の耳の聞こえない人や目の見えない人々には分からない」と言うのです。そのように言いながら、「今、文総裁は天だが、天であるそのお方に対して地がなければならないのに、地がありません」と言うのです。統一教会をよくよく見ても、地となる女性がいないというのです。ですから、奥様を選んであげましょうと言うのです。<br/>
+<br/>
+　しかし、お母様が今まで世界で活動してきたことを聞くと、目を丸くして、「あー、あのような美人のお方がですか。部屋でも人形のように天の位に座っている人だと思っていたのですが……」と、そのように言うのです。そして、「私が僧でなければ、目をつぶって行って一度ぱっと抱いてあげたいと思うほど魅力的な美人なのに、そのようなお方がそのようなことをするとは夢にも思いませんでした」と言うのです。<br/>
+<br/>
+　お母様を愛さなければなりません。お母様に会いたくて泣いたりしなければなりません。昔、お父様に会いたくて泣いたりしたのは、お母様の代わりの新婦の相対的な基準時代だったからです。今は子女時代に入ってきたので、お母様に会いたくならなければならないめです。お母様に会いたくて涙を流し、お母様のために精誠を尽くし、この世の母子関係の心情以上の位置に上がっていかなければ、お母様のおなかの中に入っていき、天の側の位置に帰る立場に立つことはできません。<br/>
+<br/>
+<br/>
+　女性時代の霊界協助<br/>
+<br/>
+　女性時代を発表することにより、霊界に行っていた数多くの霊人が先発隊となって地上に戻ってくる時代が来ました。なぜならば、今まで恨を抱いて死んだ女性が大勢いるのです。恨を抱いた立場は、サタンが最も好む立場ではありません。善の立場です。このように恨を抱いていった人は、悪い所に行かないというのです。そのような人々が地上に来て、母の解放時代に先頭に立って協助しようとするのです。<br/>
+<br/>
+　これが一つの家を中心として、一つの部落を経て外的に大きくなれば、全国的にたくさん連結されるのです。そのようにして、霊界で活動する霊たちがその網に従ってどんどん降りてきます。どんどん降りてきて、部落でもそれが徐々に倍になり交替するようになれば、その部落にいる悪霊たちを除去する運動をするのです。それゆえに、自然に環境がきれいになるのです。<br/>
+<br/>
+　クラブ運動をたくさんするのです。そして、そのようなクラブが同じ洞内で五つ活動していれば、「今から共に集いましょう！」と言うのです。そのようにして五つのクラブの人々が共に集まれば、そこで霊的に最も高い人、功労のある人を立てて「み言を聞きましょう」と言い、み言を聞いて和合するのです。また、「もっと大きな集いをもちましょう」と言って、都市で言えば、洞の大会をすれば区の大会をするのです。このような大会をどんどん行いなさいというのです。大会というのは社交場と同じです。<br/>
+<br/>
+　今までは、霊界の女性の霊人たちが地上に協助することはできませんでした。中間以下の悪霊人たちが、霊界にも行くことができず、地上でさまよいながら、ムーダン（注一民間司祭者）を中心として活動して悪いことをしてきたのです。ですから、高い女性の霊人たちは地上に協助することができなかったのです。しかし、「真の父母と成約時代」を発表することにより、女性が平等圏に立つのです。男性と女性が同じ平面、平等圏に立つというのです。そのような地上の基盤が生じたので、霊界に行っている善の先祖たちが地上に降臨して全面的にサタン世界を打つのです。<br/>
+<br/>
+<br/>
+　年末世界指導者会議<br/>
+<br/>
+　一九九三年、成約元年を締めくくる世界指導者会議が、十二月三十日、漢南洞公館において、真の御父母様の主宰により開かれた。<br/>
+<br/>
+　今年がもう終わりになってきましたが、一九九三年というこの年は世界的な転換時代でした。「真の父母と成約時代」を発表した成約元年が行くのです。すべて信じられないことを成しました。（拍手）時がそのようになっているのです。時がそのようになっているので、サタンの権限を「キック」してしまわなければなりません。これは、今までの新約時代の終わりとともに成約時代の出発において伝統的な一つの標的です。<br/>
+<br/>
+　今後、統一された真の父母の国と真の父母の世界を成し遂げるにおいて、その世界の一つの州のようなものを編成する使命が、国を受けもっている皆さんの責任だということを知らなければなりません。世界を管理できる中央組織がなくなれば、世界は滅びます。<br/>
+<br/>
+　今、私たちに必要なものは、多くの人です。皆さんを、私が四十年間黙ってほうっておきましたが、メンバーをどのようにしてつくるのでしょうか。今は、個人ではいけません。すべて言論媒体によって宣伝しなければなりません。そのような時代に入っていくのです。言論媒体を活用し、それから組織体制を大型化するのです。大型化です！　多くの数です。世界的に大型化をしなければなりません。<br/>
+<br/>
+　今後は、一つの国で御飯を食べて暮らす時代は過ぎ去ります。学校もすべてビデオで勉強するので、天才的な人たちは、数十年もかける必要がなく、五年で大学の卒業証書まですべて備えることができるのです。ですから、一番の問題は言語です。これはどのようなことをしてでも統一してしまわなければなりません。<br/>
+<br/>
+　今後は趣味産業を開発しなければなりません。レジャー産業ではありません。レジャー産業と言えば、利権が介在した概念です。先生の計画は、大きな観光会社の基準を中心としてチーム活動をすることができるようにして、一つの部署にほうり込むことです。一週間ならば一週間、このようにして一つの部署にほうり込むのです。釣り、カジノ、それからスポーツ、ハンティング、この四大品目が最も人間に必要なものです。<br/>
+<br/>
+　国境を超え、文化背景を超えて、世界の人々を連結することができる産業とは何でしょうか。もちろん教会活動も必要ですが、対内と対外の活動を兼ねて連結することができる事業は趣味産業しかありません。今回、韓国で私たちのプロ・サッカーチームが一等を取りました。（拍手）今から、一つ一つ世界の先端に上がっていかなければなりません。<br/>
+<br/>
+　ですから今済州で、カジノと体育館を造り、ハンティングをするのです。済州島は気候が良いのです。アラスカは、冬に釣りはできませんが、済州島は、今行けばちょうど釣りをするのに良いのです。皆さんは、一年、春夏秋冬の四季を通して釣りができる二百人を準備しなければなりません。<br/>
+<br/>
+　ですから先生は、済州島に来る時に、皆さんと会議をすることと、それからそのような面を考えたので、九日と十日に釣り大会とハンティング大会をしようと思うのです。世界平和のためにするのです。ですから、帰ってはいけません。全員一緒にしなければなりません。</div><div style="margin-bottom: 20px; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 10px;"><a href="index.html">← 目次に戻る</a><a href="chapter001_section9.html" style="margin-left: 20px;">前へ</a></div></div></body></html>

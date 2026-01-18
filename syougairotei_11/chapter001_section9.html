@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Crimson+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    </style>
+</head><body><div class="container"><div style="margin-bottom: 20px; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 10px;"><a href="index.html">← 目次に戻る</a><a href="chapter001_section8.html" style="margin-left: 20px;">前へ</a><a href="chapter001_section10.html" style="margin-left: 20px;">次へ</a></div><div class="content"><h2 id="九-日本の女性幹部の特別修練"><a href="#九-日本の女性幹部の特別修練">九　日本の女性幹部の特別修練</a></h2><br/>
+<br/>
+　日本の女性幹部のアラスカ修練会<br/>
+<br/>
+　真のお父様は、八月九日からアラスカの「コディアックにおいて開かれた二千有余人の日本の女性幹部特別修練会を主宰された。<br/>
+<br/>
+　全世界を黙ってそのままにしておけば滅びます。このようなことをすべてきちんと知らなければなりません。ですから、今回アラスカにおいて、韓国でできなかった話、秘密の話を日本の女性たちにすべて話してあげたのです。話さなかったことをすべて教えてあげました。「これでも行かないのか、この者たち！」と言いながら教育しました。<br/>
+<br/>
+　今、手をつけることができない立場にあるのです。ですから、完全にサタンの網に掛かって倒れていく運勢だというのです。それゆえに、仕方なく私が責任を負うのです。アラスカで四千人、四数を代表した四千人の教育を中心として、これを転覆する運動をしていくのです。<br/>
+<br/>
+　日本の教会から来ることができなければ、「世界平和女性連合」から百二十人を引き抜いてきなさいと言ったのです。最初は「できません」と言ったのですが、「この者たち、できないことがありますか。やってみるのです！」と言って始めたのです。「先生は、アラスカに引っ張ってきて何をされるのだろうか」と言って不満を抱きながら来た人々が、痛哭し、泣いて、帰ってからは全員が火をつけ始めたのです。このようにして「アラスカに行かなければならない！」と宣伝したのです。「よく分かりましたか（アラッスムニカ）」というのがアラスカです。「天道がよく分かりましたか」ということに対する答弁が「よく分かりました」となって、それがアラスカだというのです。（笑い）<br/>
+<br/>
+　これがなぜコディアックになったのでしょうか。自分がめんどりになって卵を産むときに、「コッコッコッコ」と鳴いてコディアックになったのです。卵を産む喜びをここで感じるのです。本当にそうだったのです。そこでめんどりが男性に会うやいなや「コッコッコッコ」と鳴いて卵を産んだのです。<br/>
+<br/>
+　このようにして四千人を教育することにしたのですが、二千人を突破しました。それで残りの二千人を七百人ずつ三次に分け、ワシントンＤ・Ｃ、ニューヨーク、このようにしようとしたのですが、そこは七百人収容できる場所ではないのです。また、飛行機の料金があまりにも高いのです。飛行機の代金だけでも大変なお金です。世の中から見れば大金持ちになることができる金額でした。ですから、仕方なく済州島に連れていって始めるのです。<br/>
+<br/>
+<br/>
+　日本の女性幹部の済州島修練会<br/>
+<br/>
+　真のお父様は、十月六日から十二月二十二日まで、済州島南原国際研修院で開催された日本の女性幹部特別修練会を直接主宰された。三泊四日ずつ二十五回にわたって七十七日間連続して進められた同修練会では、五万千八百五十四人が修了した。千人を収容するのが難しい環境であるにもかかわらず、第二十五回修練会には四千八十二人が参加するという驚異的な記録を立てた。真のお父様は、通常、朝六時に最初の講座に入られて翌日の夜二時までみ言を語られ、毎回一度、世界巡回講演中の真のお母様と電話を通して祝勝会をもたれた。<br/>
+<br/>
+　日本をここまで導いてきたのも先生です。今も、緊急対策として五万人を教育しています。これは夢のような出来事です。五万人教育を二千人ずつ二十五回に分けて行い、十二月に終了するようになれば、日本は蘇生するのです。<br/>
+<br/>
+　「いくら以上準備しなければならない」と先生が何度も話してきたでしょう？　「必ず日本の世界が打ってくる、そのようにしなければ蕩減復帰ができない」と言うと、「あー、自信があります」と言っていたのですが、結局このようになったのです。一九八七年から六年間、その背後の準備を先生が一人でしているのです。<br/>
+<br/>
+　先生も自由がありません。きのうも遅くまで皆さんにみ言を語ってあげたのですが、きょうもなぜ早くからのそのそと出てくるのかというのです。天に引っ掛かっているので、仕方なくこのように立って話をしなければならないのです。そのような苦痛の立場に立っています。これは苦痛なことですが、このようにすることによって穴に落ちたものが次第に上がってくるのです。<br/>
+<br/>
+　先生の命令によって統一教会の女性たちが荷物をまとめて済州島に来たのですが、「故郷を離れてきなさい」と命令した先生に会えなかった人が三分の一、半分近くになるのです。私は人知れず涙を流しました。「私は大変な罪人だ。近い隣の国にいながらも、私が行くことができないので会うことができないのだなあ」と思ったのです。師の命令を中心として、雨が降ろうと雪が降ろうと二十年以上絶えず街頭で迫害され、あざけられ、ありとあらゆることを経てきた人々を見つめるとき、師として責任を負わなければなりません。そのようなことを知っているので、私は一日でも安らかな日を送ろうとしないのです。私は、そのような人です。負債を負う人は後退します。<br/>
+<br/>
+　先生も、きょう背広を着ていますが、このようなものは好きではありません。乞食のいとこのようなものを着るのが好きな人です。済州島に行く時も、文総裁はノー・タイを中心として、みすぽらしいナイロンの服を着て行ったのです。ナイロンは、しわが寄りません。（笑い）寝ている時にぱっと起きて、トイレに行ったとしても無事通過です。それ一つですべて無事通過なので、どれほど便利でしょうか。<br/>
+<br/>
+　より「ため」に生きる愛をもって、投入して忘れてしまいなさいというのです。夜なのか昼なのか分かりませんでした。夜を昼だと思うので、徹夜しながら多くの話をしたのです。修練生は二泊三日から三泊四日です。しかし、この先生は継続して何ヵ国もしているというのです。まず、そこに圧倒されるのです。どうして先生はあのようにすることができるのか、と考えるのです。よくよく見ていると眠ることもありません。<br/>
+<br/>
+　そして、彼女たちに信仰の証をさせてみると、霊的体験をしていない人が一人もいませんでした。韓国は負けました。全員が一つ一つ生活報告を受けながら暮らしているのです。そのような組織だというのです。世界のどの組織がそのようになっていますか。日本の鹿児島の果てで暮らしている女性ならば女性、男性ならば男性に対して、ここで暮らしている先生が毎日のように指令しているのです。<br/>
+<br/>
+　おととい（十一月十二日）、日本と韓国の家庭的姉妹結縁を結びました。これはあなた方の国だというのです。日本の国も私たちの国だというのです。変えるのです。今は思いのままです。このようにして交替して入っていくようになれば、のちのち統一教会に反対していた人々はみなシベリアなどに行くようになるのです。そのような民族的大移動の時代が来ます。私はそのようなことを知っているので、国際結婚をさせるのです。<br/>
+<br/>
+　母が息子、娘の教育をすべてするのであり、息子、娘は母の模倣をするのです。母から八〇パーセントを学ぶのです。ですから、忠誠と精誠を尽くして、日本のエバ国家が母の使命を果たさなければなりません。それゆえに、今から世界各国に十人ずつ、百六十ヵ国に千六百人を送るために、（一九九四年一月）八日から教育するのです。<br/>
+<br/>
+<br/>
+　済州国際研修院修練条件<br/>
+<br/>
+　済州島は、日本語で言えば「さいしゅうとう」です。これが済州島なのです。日本語で言えば「再修道（さいしゅうどう）」になるのです。ですから、「済州島」という言葉は、再度修練して復活する所だ、このような意味です。このようにして、みな復活の紙切れをつけておいたのです。そこに反対派も来ました。ありとあらゆる人が来たのです。<br/>
+<br/>
+　最初は、先生の話を聞いて「本当にばかな話だ！　二千人の人員を……」と言いました。（笑い）これは完全に気の狂った話だというのです。やっと二百人できる所で二千人なのかと言うのです。しかし、今ここは二千人が入っても余裕のある場所です。最初に先生は、「二千五百人が入ることができるように造らなければならない」と言ったのです。先生が必要とするので、そのように命令しました。<br/>
+<br/>
+　寝袋に入って寝る時、体をかがめて寝るのも体を伸ばして寝るのも同じです。（笑い）東西南北、四方八方に柱が立っているようにして寝るほうがむしろ暖かく、病気にもかからず、下痢にもなりません。病気にかかりません。横になって変な寝方をすれば風邪をひくこともあるのですが、座って寝れば絶対に風邪をひきません。人間の温度が暖かいからです。<br/>
+<br/>
+　韓国の食べ物は重いのです。日本の食べ物と違います。様々な調味料を使って作るので、自分が死ぬのも知らずにやたらにたくさん食べるようになるのです。そのような食べ方をすれば、おなかを壊します。そして病気になるのです。病気になる恐れがあるので、先生は、一食はパンをあげるようにしたのです。パンが嫌な人は手を挙げてみてください。食べなくてもかまいません。（笑い）健康を維持する保護策です。<br/>
+<br/>
+　なぜならば、水が変われば、下痢をするなどの問題が生じるのです。ですから、パンを食べるのが最も良いのです。もっと良いのはパンさえも食べないことです。（笑い）そのパンをどこからもってくるのか知っていますか。飛行機で毎日ソウルからもってくるのです。せっかくお客さんにあげるのですから、済州島のパンよりもソウルのパンのほうが良いでしょう。ソウルのパンは、東京のパンと違いがありません。調味料を少し多く使うのが違うだけです。日本的なさっぱりした味ではなく、濃厚な味です。<br/>
+<br/>
+<br/>
+　韓国語の勉強の督励<br/>
+<br/>
+　真の父母の在世期間にいながら、真の父母に自分の国の言葉ではなく日本語で話をさせるという、それ以上に失礼なことはありません。先生が皆さんに日本語で説明するということは、原理に反することです。<br/>
+<br/>
+　真の父母の言葉は、永遠に真の国の母国語です。母国語なので、霊界に行ってもそれを使わなければなりません。地上で真の父母に侍って三年以上になった者は、母国語で通じなければならないようになっています。地上で真の父母に侍ったならば、霊界に行った時に先祖たちが「何年たったので、母国語で真の父母と通じるようになって来たのか」と言うのです。問題になります。そのようなことが起きるので、先生が強制的に「やりなさい」と言うのです。<br/>
+<br/>
+　一九八五年から「一九九〇年代になれば、先生は通訳を使わない」と言ってきたのですが、これは何ですか。先生が日本語で話すのが普通だと思ったら大きな間違いです。仕方なく日本語で話しているのです。<br/>
+<br/>
+　統一教会の祝福家庭の希望は何ですか。天の側の主流の血統に接ぎ木されることが最高の願いでしょう？　先生の子孫と横的に親戚関係を結ぶことが最高の願いなのです。それを成そうと思えば、韓国語が通じなければなりません。韓国語が通じなければ、その願いを果たすことはできません。<br/>
+<br/>
+<br/>
+　五万人の動員<br/>
+<br/>
+　日本がエバ国家として責任を果たすことができなかったので、日本が果たすことができなかった責任まで私が負ってあげるために、今、済州島で五万人の教育をしているのです。これは世界的な運動です。五万人を教育したのちには十万人を教育するのです。先生は、そのお金を見たいとも思わず、触りたいとも思いません。日本のためにしなさいと言っているのです。<br/>
+<br/>
+　日本の負債を返そうと思えば、それでは足りません。それで十分だと思ったら大きな錯覚です。そのような問題に先生が責任を負い、このような解決を必要とするときに、女性たちは、相対的立場で何千倍、何万倍でもしようと絶対的に決心して援助しなければなりません。親戚を動員するのです。継続して連れてくるのです。先生が倒れない限りはやりなさい。命を懸けてしているのです。<br/>
+<br/>
+　今回、霊界に通じる人々が「文総裁は済州島に行って何をしているのですか」と祈祷してみると、「今、文総裁は、日本の女性国会議員をつくるために、群れを集めて教育するのに忙しい」と答えたというのです。全員国会議員です。事実そうです。<br/>
+<br/>
+　七十七日間で五万人を教育しました。これは、誰もがみなできないと思っていたことです。それをやってのけたのです。ですから、韓国も大騒ぎで、アジアもすべて大騒ぎです。日本も大騒ぎです。「やー！　統一教会のレバレンド・ムーンの財力は大変なものだ」と言っています。また、今までこのようになっていた日本の教会が立ち直ったのです。<br/>
+<br/>
+<br/>
+　真のお母様の巡回講演激励と実況中継の聴取<br/>
+<br/>
+　お母様はかわいそうです。今私は、済州島で、三日で二千人ずつ教育しているのです。交代する日はあるので、「その前にどうぞ来てください」と言われたのですが、ここに来ました。実際、ここに来るようにはなっていないのです。どれほど寂しいでしょうか。とても大変なのですが、だからといって、横で講演している内容を聴いて慰労し、激励してあげる環境になっていないのです。大学で行えばそのような施設はないからです。ですから、一度やれば漠々としていて、二度やれば漠々としているというのです。そのような道を開拓しているということを、皆さんは知らなければなりません。三年路程を経て越えていくのです。蕩減の道は避けることができません。避けることができないのです。<br/>
+<br/>
+　お母様が「早く来てください」と言うので、行かざるを得ませんでした。女王様の命令であり、戦争に出て一線に立っているので、後方部隊は難しくても補充しなければならないのです。「先生が必要だ」と言うので、飛んでいかざるを得ないのです。小さなお母様がこのように大きな男性に向かって「こうしなさい、ああしなさい」と言っています。（笑い）「こうしなさい、ああしなさい」と言うだけの何かがあるのです。愛という量においては、私以上に私のために生きている何かがあるので、「こうしなさい、ああしなさい」と言っても問題にならないのです。それを知らなければなりません。<br/>
+<br/>
+　今お母様は、西洋社会で講演（世界巡回講演）をしています。見なくても、触らなくても、見たのと同じような、触ったのと同じような感覚が来るのです。ここでこのような表示をすれば、間違いなくそこでは私が感じたとおりに感じるのです。今、何千万マイルも離れてやっています。昨晩も電話で話しました。皆さんも参加したでしょう？　お母様がすぐ隣の部屋で話しているのです。二人で座って話しているような気分です。霊界が正にそのようになっているのです。愛は距離を超越します。また、愛した時は、最短距離を通るのです。<br/>
+ <br/>
+<a id="section10"></a></div><div style="margin-bottom: 20px; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 10px;"><a href="index.html">← 目次に戻る</a><a href="chapter001_section8.html" style="margin-left: 20px;">前へ</a><a href="chapter001_section10.html" style="margin-left: 20px;">次へ</a></div></div></body></html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Crimson+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    </style>
+</head><body><div class="container"><div style="margin-bottom: 20px; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 10px;"><a href="index.html">← 目次に戻る</a><a href="chapter001_section1.html" style="margin-left: 20px;">前へ</a><a href="chapter001_section3.html" style="margin-left: 20px;">次へ</a></div><div class="content"><h2 id="二-国内活動の方向と指針"><a href="#二-国内活動の方向と指針">二　国内活動の方向と指針</a></h2>
+<p>女性連合を中心とする体制改編<br/>
+<br/>
+　統一教会の全組織は、女性連合を中心として活動していくのです。今までは、協会長と連合会長の二人の息子がカイン・アベルだったでしょう？　これを、今年に入ると同時に、一つの体制へと人事措置を行ったのです。今は、長子を長子として扱ってもかまわないというのです。真の御父母様が定着して左右を統一し、（新しい世界に）全世界的に氏族的メシヤを派遣することにより、今は、自分の兄を兄として扱い、弟は弟として扱えばよいので、すべて一つの体制にするのです。<br/>
+<br/>
+　それゆえに、統一教会を一つにしようと思うのです。今まで、連合会と教区を中心として責任者が異なっていましたが、今からは一つにして郭錠煥氏に統一させ、朴普煕氏は外国に行ってカイン世界に責任をもって活動しなさい、という指示を与えました。そのような意味で、すべての再編成を行ったのです。日本もそうであり、すべて再編成するのです。<br/>
+<br/>
+　カイン・アベルを中心としたこの歴史を中心として、母とアベルが一つになってカインを屈服させ、サタンを屈服させなければなりません。父子を屈服させなければなりません。サタンがアダムと神様を欺いた立場で堕落させたので、そのような立場でサタン世界を欺いて蕩減復帰しなければなりません。その闘いは現在も同じです。今日、統一教会の祝福された女性たちが、「世界平和女性連合」を中心として支部長になっています。支部長の位置は、現在の自分の夫の位置よりも高いのです。<br/>
+<br/>
+<br/>
+　二世の最前線での活動<br/>
+<br/>
+　一月九日と十日の両日にわたり、中央修練院に二世三十六家庭、七十二家庭、二百家庭が集う中、還故郷活動のための二世祝福家庭教育が実施され、（また）二月一日付けで、二世家庭の効果的管理と祝福子女の信仰教育および相談等の業務を担当する協会二世家庭部が新設された。七月四日には、リトル・エンジェルス芸術会館において、二世家庭が一堂に会して和合を誓う第一回二世家庭連合の礼拝が開催された。<br/>
+<br/>
+　一世の立場であられる神様が、民主世界を選んで、第二次大戦後の勝利的統一圏、キリスト教文化圏の統一圏をつくられたのですが、それが神様を裏切ることにより、二世の立場である先生が責任を負って再び立てたのです。同じです。皆さんが責任を負い、皆さんの父母が失敗した南北統一の最前線に立つ者にならなければならないということを知らなければなりません。今から皆さんを連れていって張り飛ばすでしょう。<br/>
+<br/>
+　今から生まれる子女たちは、神様が、堕落していないアダムが愛して生まれた息子、娘の立場に立てようとしてくださるので、賢く、聡明な息子、娘が生まれます。本来、中間の立場です。そのような時代が来るのです。今年から生まれる人たちは質が異なります。<br/>
+<br/>
+　今からは、私が帰っていって、おじいさんとおばあさんの写真を私の息子、娘にあげなければならないのですが、おじいさんの写真は手に入れることができませんでした。ひいおじいさんの写真はあるのですが、おじいさんの写真は手に入れることができなかったので北朝鮮に頼んだのです。しかし、手に入れることができなかったそうです。それをすべて調えて教育しなければなりません。先生を中心として、三代を収拾しなければなりません。父と母を中心として三代を収拾しなければならないのです。先祖を復帰しなければなりません。<br/>
+<br/>
+　また、先生を中心として、皆さんまで三代が動くのです。堕落した自分の故郷のアダム復帰と第二次アダムの復帰を、皆さん二世を中心として展開しなければなりません。三代を一つの体制として見るのです。神様は三代をもつことができなかったことが恨です。ですから、皆さんは、故郷を中心として復帰しなければなりません。氏族的メシヤとして復帰しなければなりません。今は、反対の方向に進まなければなりません。祝福された人には、学校も何もやめて全員出動することを命令するのです。<br/>
+<br/>
+<br/>
+　教員および青少年の伝道と教育<br/>
+<br/>
+　第二次大戦以後に生まれた人々を、絶対的に先に伝道しなければなりません。その人々が、第二次大戦直後圏、二世だというのです。ですから、四十七歳以下の人々は、天の側であり、呪われていないのです。エジプトで長子を殺し、次子は助けたのと同じように、審判したとしても、彼らを教育してから審判しなければならないのです。ですから、若い人を伝道しなさいというのです。若い人々の伝道は、母親たちが責任をもたなければなりません。<br/>
+<br/>
+　今は、反対していた人々の方向をすべて定めたので、アメリカがどこに行かなければならず、キリスト教がどこに行かなければならないかということを知っています。ですから、何も知らないアメリカの数百万人の二世を中心として、中・高等学校の学生を中心として教育できるようにしなさいと指示してきたのです。<br/>
+<br/>
+　今後は、ソ連も中・高等学校、日本も中・高等学校、韓国も中・高等学校を中心として統一教会の教理を教育するのです。アダムとエバが堕落する前の十六歳以下の青少年たちに、天国のみ旨はこうだということ、天の民はこうであり天国の青少年はこうだという伝統的教理を教えるのです。<br/>
+<br/>
+　アメリカにも、中・高等学校が七万校以上あるそうです。今は、中・高等学校を中心として活動する時代になりました。ソ連では、既に何十万人が教育を受けるようになっているのです。今は、二世を収拾しなければなりません。ですから、統一教会の母親たちは、自分の息子、娘に責任をもたなければなりません。<br/>
+<br/>
+　金奉泰氏！　今から中・高等学校をすべて回るのです！　校長先生たちを集めてセミナーをするのです。すべての人が「真の父母歓迎」、「再臨主歓迎」と言わなければなりません。なぜならば、今日の破壊されたこの家庭を収拾するためには、真の父母の伝統でなければできないからです。<br/>
+<br/>
+<br/>
+　氏族的メシヤ活動の強化<br/>
+<br/>
+　成約元年、最高の伝道実績を収めるために、七月二十日から八月二十八日までの四十日間、全祝福家庭および学生たちが参加する中で、特別動員期間が設定された。この期間、祝福家庭は、還故郷の任地で氏族的メシヤを宣布し、十月の真のお母様の大会を準備しながら、一人当たり五家庭の祝福対象者確保のための活動を行った。十月十六日から十七日まで、中央修練院においては、百十一人が参加する中で、氏族的メシヤ協議会会長団の教育が行われた。<br/>
+<br/>
+　これは先生が語った氏族的メシヤに関する本ですが、全員この本〔文鮮明先生み言主題別精選（九）、『宗族的メシヤ』〕を読まなければなりません。氏族的メシヤがどれほど重要かということを述べているのです。既に一九六五年から氏族的メシヤという話をしているのです。これは必ずしなければなりません。第一次父母が自分の父母なので、堕落していないアダムとエバの完成した立場に自分の父母を立てることにより、自分の故郷が、堕落していないアダム家庭の先祖の血筋から生まれた立場に立つのです。神様が直接関係される立場なので、自分の故郷の地が天国の故郷の地になるのです。ですから、氏族的メシヤがなければ、自分の故郷が生じません。ですから、第一は先祖復帰であり、第二は故郷復帰であり、第三は神様のように生きることです。<br/>
+<br/>
+　先生が完成した再臨主である第三次アダムならば、イエス様に代わる第二次アダムは、皆さん祝福家庭です。三代が横的にすべて編成されるのです。この内容は、摂理史全体の総決算です。それが今の時に復帰されれば、教会組織がすべてなくなるのです。氏族的メシヤと家庭的メシヤが一つになれば、国家的メシヤと一つになって、それがすべて統一されるのです。<br/>
+<br/>
+　先生が蕩減した百六十国家の基準を中心として、これを終結させたので、十六数が問題です。韓国と北朝鮮が国連に加入する時も、百六十番目と百六十一番目でした。オリンピック大会も、百六十ヵ国が参加しました。十六数は、サタン数の理想数です。それゆえに、サタンの欲望をすべて満たしてあげるのです。韓国は百六十一番目なので、そのようになれば一番目になります。<br/>
+<br/>
+　同じ結晶体になれば、和合し一つになるのです。先生が百六十ヵ国に宣教部をつくったのと同じように、皆さんは家庭に入っていって百六十家庭を復帰するのです。百六十家庭を成すことにより、百六十ヵ国において真の御父母様が勝利したすべてのものを子女の立場で相続するのです。<br/>
+<br/>
+　いまだに皆さんは家庭だけを従えていますが、氏族的メシヤ圏で、自分の一族の金氏ならば金氏で刑務所に入っていった人がおり、朴氏ならば朴氏で刑務所にいる人がいるのです。その人々をみな引っ張り出して解放させる、そのような刑務所撤廃運動を皆さんの一族において起こすことです。それが氏族的メシヤの使命です。<br/>
+<br/>
+<br/>
+　南北統一推進委員会の編成<br/>
+<br/>
+　今は長子権復帰時代が来たので、私は、大韓民国を世界的な面において統一しようと思っています。大韓民国の統一は、南北の当事者間では絶対にできません。世界の力を借りなければなりません。世界的なアベルと世界的なカイン、キリスト教文化圏とそれ以外の文化圏が一つになり、南北統一の周旋をするのです。そのようなことを政治家たちは知りません。朴普煕氏！　朴普煕氏は、きょうからそのような責任を果たさなければなりません。<br/>
+<br/>
+　まず僑胞をみな抱き込まなければなりません。彼らは政府を不信しています。彼らは誰も信じることができずにいます。しかし、そのように不信する立場でも、文総裁だけは信任することができる段階に入ってきているのです。アメリカもそうであり、日本もそうです。僑胞を早く収拾しなければなりません。僑胞の中で、韓国人だけではなく、北朝鮮側の人までも収拾しなければなりません。<br/>
+<br/>
+　今後、南北統一準備推進委員会を結成するのですが、これは、世界平和連合の指導者たちの名前を中心として、周辺国家、アメリカとソ連、中国、日本を連結するのです。ですから、周辺国家を収拾しなければなりません。そこから有名な女性たちを動員するのです。<br/>
+<br/>
+　朴普煕氏をきょう（一月一日）付けで任命するのです。韓国に長くいようと思わないで、党を糾合するにおいて、今後、外国のすべての基盤を中心として推進委員会を結成し、韓国の著名人を入れて、連合堂を中心とした南北統一準備委員会の人脈をつくりなさいというのです。そのためには、まず思想武装をしなければなりません。<br/>
+<br/>
+<br/>
+　世界日報と鮮文大学校<br/>
+<br/>
+　日本の男性と女性たちが、朝の三時、四時に新聞を持って、言葉も通じないのに家々を回りながら「大韓民国を統一してください」と祈祷しています。それなのに、夫と妻たちが抱き合って寝ているのは、私は許すことができません。しっかりしなさいというのです。耳があって聞いた人は、きょうから寝てはいけません。先頭に立って彼らに手本を見せてあげなければならないのであって、手本を見せてもらってよいのですか。<br/>
+<br/>
+　新聞に打たれ、新聞から被害を被ったという恨をもっている先生だということを知らなければなりません。ひと月に四十億ずつ費やしています。既に四年間です。そのお金で統一教会を建設していれば、既に里単位まで千八百から二千個以上の教会を建てていたはずです。そのお金が皆さんのポケットから出ていったと考えてみなさいというのです。眠れますか。そのお金はどのようなお金ですか。先生の血肉を削り、血肉の脂を搾り出したお金です。なぜでしょうか。民族を生かすためです。<br/>
+<br/>
+　そして、韓国の成和大学校の名前が鮮文大学校になりました。鮮明な学問という意味です。英語でサン・ムーン（Sun Moon）、つまり先生の名前を取って鮮文大学と変えたのです。<br/>
+<br/>
+　先生たちも教育するのです。この場に来るまで、尹博士（尹世元）も知らなかったでしょう？教育されたから分かるのでしょう。教育をしなければなりません。千回繰り返し、万回繰り返して「私に似なさい、私に似なさい」と言えば、似るというのです。精誠を尽くせば、自分に似るというのです。息子、娘を育てるためにどれほど精誠を尽くしたかということが、あの世のコンピューターに記録として残ります。その基準が天上世界に残るのです。<br/>
+<br/>
+<br/>
+　企業体について<br/>
+<br/>
+　二世には重荷を負わせず、きれいに譲り渡そうと考えていたのですが、時になっていません。お母様の仕事が終わっていないので、その前にはできないというのです。ですから、どれほど多くの損害を受けたか分かりません。世の中の人が見れば、私は気の狂った人に見えるでしょう。しかし、道義的な責任があるので、先生は思いどおりにすることができないのです。先生はそのような人です。天理の度数を合わせるまではできないのです。<br/>
+<br/>
+　真の御父母様が聖別して天の前に献納したものを、息子たちゆえに売ることができますか、できませんか。祖業の田、先祖から受け継ぎ、先代から相続したものを、子供たちのために売ることはできないというのです。それを売るためには、先祖に対して「このようにする以外にありません。私の家のことよりも、国が滅びるので、国を生かすためには先祖の財産も売らなければなりません」と言うとき、先祖たちも、「そうか！　お前は忠臣の道理を知っている。そのようにしなさい。よろしい」と言うのです。今日、これらすべてのものを文総裁が清算するのは、お金のためではありません。国のために清算するのです。</p>
+<a href="#section-3" id="section3"></a></div><div style="margin-bottom: 20px; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 10px;"><a href="index.html">← 目次に戻る</a><a href="chapter001_section1.html" style="margin-left: 20px;">前へ</a><a href="chapter001_section3.html" style="margin-left: 20px;">次へ</a></div></div></body></html>
