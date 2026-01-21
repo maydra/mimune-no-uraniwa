@@ -402,5 +402,77 @@
       window.scrollTo({ top: y, behavior: "smooth" });
     };
   }
-</script></body>
+</script>
+
+<section id="typo-report" class="typo-box">
+  <h3 class="typo-title">誤植・修正提案</h3>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</section>
+
+<style>
+  .typo-box{margin:2.5rem 0;padding:1rem 1.1rem;border:1px solid #ddd;border-radius:14px;background:#fff;color:#111;}
+  .typo-title{margin:0 0 .35rem 0;font-size:1.05rem;color:#111;}
+  .typo-desc{margin:0 0 1rem 0;opacity:.8;color:#111;}
+  .typo-label{display:block;font-weight:600;margin:.7rem 0 .35rem 0;color:#111;}
+  .typo-textarea{width:100%;box-sizing:border-box;padding:.7rem .75rem;border:1px solid #ccc;border-radius:12px;font:inherit;line-height:1.5;resize:vertical;background:#fff;color:#111;}
+  .typo-row{margin-top:.9rem;display:flex;gap:.75rem;align-items:center;}
+  .typo-btn{padding:.6rem 1rem;border:0;border-radius:12px;background:#111;color:#fff;cursor:pointer;font:inherit;}
+  .typo-btn:hover{background:#333;}
+  .typo-btn[disabled]{opacity:.6;cursor:not-allowed;}
+  .typo-status{font-size:.95rem;opacity:.9;color:#111;}
+</style>
+
+<script>
+(() => {
+  const form = document.getElementById("typoForm");
+  const sink = document.getElementById("typoSink");
+  const statusEl = document.getElementById("typoStatus");
+  const btn = document.getElementById("typoSubmit");
+
+  function fillHidden() {
+    if(document.getElementById("pageUrl")) document.getElementById("pageUrl").value = location.href;
+    if(document.getElementById("whenIso")) document.getElementById("whenIso").value = new Date().toISOString();
+    if(document.getElementById("userAgent")) document.getElementById("userAgent").value = navigator.userAgent;
+  }
+  fillHidden();
+
+  form.addEventListener("submit", () => {
+    fillHidden();
+    btn.disabled = true;
+    statusEl.textContent = "送信中…";
+  });
+
+  sink.addEventListener("load", () => {
+    btn.disabled = false;
+    statusEl.textContent = "送信しました。ありがとうございます！";
+    setTimeout(() => form.reset(), 200);
+  });
+})();
+</script>
+</body>
 </html>

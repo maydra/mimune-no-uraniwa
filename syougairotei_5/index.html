@@ -1,1551 +1,190 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- saved from url=(0057)http://furuta65.fc2web.com/001/syougairotei_5/mokuji.html -->
-<html>
- <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XXQ0QTBYTR');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
-    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
-
-
-
-
-
-
-
-
-
-
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-  <meta content="text/css" http-equiv="Content-Style-Type"/>
-  <title>
-  </title>
-  
- 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
-        rel="stylesheet" />
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>syougairotei_5 | 目次 | み旨の裏庭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 2rem 1rem;
-            position: relative;
-            overflow-x: hidden;
-            font-size: 1.25rem;
-            line-height: 1.9;
+            padding: 3rem 1rem;
+            line-height: 1.8;
         }
-
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
-
         .container {
-            max-width: 1400px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
-            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-        }
-
-        h1 a {
-            text-decoration: none;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1.75rem;
-            margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            letter-spacing: 0.05em;
-        }
-
-        h2::before {
-            content: '◆';
-            color: #667eea;
-            font-size: 0.8em;
-        }
-
-        p {
-            margin: 1em 0;
-            line-height: 1.9;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        a:hover {
-            color: #f093fb;
-            border-bottom-color: #f093fb;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 2em 0;
-        }
-
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
-        }
-
-        li {
-            margin: 0.5em 0;
-            line-height: 1.9;
-        }
-
-        b, strong {
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .content-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-
-        .content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+            letter-spacing: 0.05em;
         }
-
-        .content-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .links-list {
+        
+        .index-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-left: 0;
+            padding: 0;
         }
-
-        .links-list li {
-            position: relative;
-            padding-left: 1.6rem;
+        .volume-item {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
         }
-
-        .links-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            transition: transform 0.3s ease;
+        .volume-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
+        .volume-title a { color: #fff; text-decoration: none; }
+        .volume-title a:hover { text-decoration: underline; }
 
-        .links-list li:hover::before {
-            transform: translateX(3px);
+        .chapter-list {
+            list-style: none;
+            padding-left: 0.5rem;
         }
-
-        .links-list a {
+        .chapter-item {
+            margin-bottom: 0.6rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .chapter-link {
             color: #e0e0e0;
             text-decoration: none;
-            font-size: 1.25rem;
-            line-height: 1.9;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.2s;
             display: inline-block;
-            position: relative;
-            border-bottom: none;
         }
+        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
 
-        .links-list a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
+        .section-list {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.4rem;
         }
-
-        .links-list a:hover {
-            color: #fff;
-            transform: translateX(3px);
+        .section-item {
+            margin-bottom: 0.3rem;
         }
-
-        .links-list a:hover::after {
-            width: 100%;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.75rem;
-                font-size: 1.1rem;
-            }
-
-            .content-card {
-                padding: 2rem;
-            }
-
-            h1 {
-                font-size: clamp(2rem, 6vw, 3.5rem);
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .links-list a {
-                font-size: 1.15rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            .links-list a {
-                font-size: 1.05rem;
-            }
-        }
-
-        /* 聖書の節リンク用スタイル（既存のものを保持） */
-        a.verse-link {
-            color: #e74c3c;
+        .section-link {
+            font-size: 0.9rem;
+            color: #b0c4de;
+            opacity: 0.8;
             text-decoration: none;
-            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .section-link:hover { opacity: 1; color: #fff; }
+        .section-link::before { content: '・'; margin-right: 0.3rem; }
+
+        .nav-links {
+            margin-top: 4rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Collapsible Details Styles */
+        details {
+            margin-bottom: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        details[open] {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        summary {
+            padding: 1.2rem 1.8rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            transition: background 0.2s;
+        }
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '＋';
+            font-size: 1.1rem;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            content: '－';
+            transform: rotate(180deg);
+        }
+        .details-content {
+            padding: 0 1.8rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0;
+        }
+        .details-content .chapter-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .details-content .chapter-item:last-child {
             border-bottom: none;
-        }
-
-        a.verse-link:hover {
-            text-decoration: underline;
-            color: #c0392b;
-            border-bottom-color: transparent;
-        }
-
-        [id^="v"]:target {
-            background-color: #fff3cd;
-            padding: 0.1em 0.2em;
-            border-radius: 3px;
-            scroll-margin-top: 1em;
         }
     </style>
 </head>
- <body style="margin: 0 auto; width: 80%; font-size: 16px; line-height: 1.6;"><div class="container">
-<!-- St-HP-H -->
-  <!-- En-HP-H -->
-  <table>
-   <tbody>
-    <tr>
-     <td bgcolor="#ffff80">
-      <hr/>
-      <b>
-       <font color="#ff0000" size="+1">
-        真の御父母様の生涯路程　５
-       </font>
-      </b>
-      <br/>
-      <b>
-       <font size="+2">
-        第二次七年路程
-       </font>
-      </b>
-      <br/>
-      <hr/>
-     </td>
-     <td width="491">
-     </td>
-    </tr>
-    <tr>
-     <td nowrap="">
-      <br/>
-      <a href="001.html" style="text-decoration : none;" target="right">
-       <b>
-        <font size="+1">
-         第一節　一九六八年　全面的な進撃をしよう(一)
-        </font>
-       </b>
-       <br/>
-       <b>
-        一　一九六八年の出発と摂理的意義
-       </b>
-       <br/>
-       元旦祝祷
-      </a>
-      <br/>
-      <a href="001.html#002" style="text-decoration : none;" target="right">
-       年頭標語：全面的な進撃をしよう(一)
-      </a>
-      <br/>
-      <br/>
-      <a href="001.html#003" style="text-decoration : none;" target="right">
-       <b>
-        二　「神の日」宣布
-       </b>
-       <br/>
-       「神の日」制定
-      </a>
-      <br/>
-      <a href="001.html#004" style="text-decoration : none;" target="right">
-       「神の日」宣布後、七ヵ月総整理儀式
-      </a>
-      <br/>
-      <br/>
-      <a href="001.html#005" style="text-decoration : none;" target="right">
-       <b>
-        三　国際勝共連合創立
-       </b>
-       <br/>
-       創立の動機と目的
-      </a>
-      <br/>
-      <a href="001.html#006" style="text-decoration : none;" target="right">
-       金新朝事件とその影響
-       <br/>
-      </a>
-      <a href="001.html#007" style="text-decoration : none;" target="right">
-       全国の勝共活動の実績
-       <br/>
-      </a>
-      <a href="001.html#008" style="text-decoration : none;" target="right">
-       『新しい共産主義批判』刊行
-       <br/>
-      </a>
-      <a href="001.html#009" style="text-decoration : none;" target="right">
-       日本勝共連合創立
-       <br/>
-       <br/>
-      </a>
-      <a href="001.html#010" style="text-decoration : none;" target="right">
-       <b>
-        四　第二次七年路程出発
-       </b>
-       <br/>
-       七年路程終結と有功者二百二名表彰
-      </a>
-      <a href="001.html#009" style="text-decoration : none;" target="right">
-       <br/>
-      </a>
-      <a href="001.html#011" style="text-decoration : none;" target="right">
-       長成期完成級を越える式
-       <br/>
-      </a>
-      <a href="001.html#012" style="text-decoration : none;" target="right">
-       祝福家庭が歩まなければならない第二次七年路程
-       <br/>
-      </a>
-      <a href="001.html#013" style="text-decoration : none;" target="right">
-       民族救援のための路程
-       <br/>
-       <br/>
-      </a>
-      <a href="001.html#014" style="text-decoration : none;" target="right">
-       <b>
-        五　四百三十家庭合同祝福結婚式
-       </b>
-       <br/>
-       壇紀四三〇〇年、四百三十六組祝福
-      </a>
-      <a href="001.html#013" style="text-decoration : none;" target="right">
-       <br/>
-      </a>
-      <a href="001.html#015" style="text-decoration : none;" target="right">
-       久保木夫婦と笹川氏
-       <br/>
-      </a>
-      <a href="001.html#016" style="text-decoration : none;" target="right">
-       四百三十家庭蕩減棒行事の際の地区巡回のみ言
-       <br/>
-       <br/>
-      </a>
-      <a href="001.html#017" style="text-decoration : none;" target="right">
-       <b>
-        六　三年路程出発と四十日伝道
-       </b>
-       <br/>
-       第二次七年路程の前半三年
-      </a>
-      <a href="001.html#016" style="text-decoration : none;" target="right">
-       <br/>
-      </a>
-      <a href="001.html#018" style="text-decoration : none;" target="right">
-       全食口百日特別祈祷
-       <br/>
-      </a>
-      <a href="001.html#019" style="text-decoration : none;" target="right">
-       第二次七年路程の最初の夏季四十日伝道
-       <br/>
-      </a>
-      <a href="001.html#020" style="text-decoration : none;" target="right">
-       夏季伝道激励のため全国巡回
-       <br/>
-      </a>
-      <a href="001.html#021" style="text-decoration : none;" target="right">
-       冬季四十日伝道出発
-       <br/>
-       <br/>
-      </a>
-      <a href="001.html#022" style="text-decoration : none;" target="right">
-       <b>
-        七　協会修練会および主要行事
-       </b>
-       <br/>
-       第二十目協会修練会
-      </a>
-      <a href="001.html#021" style="text-decoration : none;" target="right">
-       <br/>
-      </a>
-      <a href="001.html#023" style="text-decoration : none;" target="right">
-       第二十一回協会修練会
-       <br/>
-      </a>
-      <a href="001.html#024" style="text-decoration : none;" target="right">
-       第四次全国成和学生総会
-       <br/>
-      </a>
-      <a href="001.html#025" style="text-decoration : none;" target="right">
-       地区別家庭総会全国巡回
-       <br/>
-      </a>
-      <a href="001.html#026" style="text-decoration : none;" target="right">
-       日本教会代表団訪韓
-       <br/>
-       <br/>
-      </a>
-      <a href="001.html#027" style="text-decoration : none;" target="right">
-       <b>
-        八　超教派運動の強化
-       </b>
-       <br/>
-       全国的な教会一致運動
-      </a>
-      <a href="001.html#026" style="text-decoration : none;" target="right">
-       <br/>
-      </a>
-      <a href="001.html#028" style="text-decoration : none;" target="right">
-       「新興宗教研究の集い」での原理宣布
-      </a>
-      <br/>
-      <br/>
-      <a href="002.html" style="text-decoration : none;" target="right">
-       <b>
-        <font size="+1">
-         第二節　一九六九年　全面的な進撃をしよう(二)
-        </font>
-       </b>
-       <br/>
-       <b>
-        一　一九六九年の出発と摂理的意義
-       </b>
-       <br/>
-       年頭標語：全面的な進撃をしよう(二)
-      </a>
-      <br/>
-      <a href="002.html#002" style="text-decoration : none;" target="right">
-       信仰伝統の確立と活動体制
-      </a>
-      <br/>
-      <br/>
-      <a href="002.html#003" style="text-decoration : none;" target="right">
-       <b>
-        二　仙和子供舞踊団日本公演
-       </b>
-       <br/>
-       公演準備と活動指導
-      </a>
-      <br/>
-      <a href="002.html#004" style="text-decoration : none;" target="right">
-       超満員になった巡回公演
-      </a>
-      <br/>
-      <br/>
-      <a href="002.html#005" style="text-decoration : none;" target="right">
-       <b>
-        三　真の御父母様の第二次世界巡回
-       </b>
-       <br/>
-       巡回出発前の指示事項
-      </a>
-      <br/>
-      <a href="002.html#006" style="text-decoration : none;" target="right">
-       十力国四十三家庭祝福結婚式
-      </a>
-      <br/>
-      <a href="002.html#007" style="text-decoration : none;" target="right">
-       日本の情勢と巡回時の措置事項
-      </a>
-      <br/>
-      <a href="002.html#008" style="text-decoration : none;" target="right">
-       世界情勢の変化とみ旨の進路
-      </a>
-      <br/>
-      <a href="002.html#009" style="text-decoration : none;" target="right">
-       イスラエル巡回
-      </a>
-      <br/>
-      <a href="002.html#010" style="text-decoration : none;" target="right">
-       疲労と戦った強行軍の日程
-      </a>
-      <br/>
-      <br/>
-      <a href="002.html#011" style="text-decoration : none;" target="right">
-       <b>
-        四　顯進様誕生の意義
-       </b>
-       <br/>
-       顯進様誕生の意義
-      </a>
-      <br/>
-      <a href="002.html#012" style="text-decoration : none;" target="right">
-       家庭を中心とした活動時代
-      </a>
-      <br/>
-      <br/>
-      <a href="002.html#013" style="text-decoration : none;" target="right">
-       <b>
-        五　百二十日特別祈祷と全国地区分割
-       </b>
-       <br/>
-       摂理機関の活動方向
-      </a>
-      <br/>
-      <a href="002.html#014" style="text-decoration : none;" target="right">
-       世界食口百二十日特別祈祷
-      </a>
-      <br/>
-      <a href="002.html#015" style="text-decoration : none;" target="right">
-       伝道優勝旗製作と月一人伝道
-       <br/>
-      </a>
-      <a href="002.html#016" style="text-decoration : none;" target="right">
-       全国九つの地区を三十四に分割
-       <br/>
-       <br/>
-      </a>
-      <a href="002.html#017" style="text-decoration : none;" target="right">
-       <b>
-        六　夏季四十日伝道と喜進様昇華
-       </b>
-       <br/>
-       夏季四十日伝道
-      </a>
-      <a href="002.html#016" style="text-decoration : none;" target="right">
-       <br/>
-      </a>
-      <a href="002.html#018" style="text-decoration : none;" target="right">
-       喜進様自ら志願された伝道と殉教
-       <br/>
-      </a>
-      <a href="002.html#019" style="text-decoration : none;" target="right">
-       イエス様の生涯と喜進様
-       <br/>
-      </a>
-      <a href="002.html#020" style="text-decoration : none;" target="right">
-       七月七夕特別記念式
-       <br/>
-      </a>
-      <a href="002.html#021" style="text-decoration : none;" target="right">
-       <b>
-        七　大学の原理研究会を中心とした集中的活動
-       </b>
-       <br/>
-       第一回全国成和大学生総会
-      </a>
-      <a href="002.html#020" style="text-decoration : none;" target="right">
-       <br/>
-      </a>
-      <a href="002.html#022" style="text-decoration : none;" target="right">
-       大学生を中心とした活動時代
-       <br/>
-      </a>
-      <a href="002.html#023" style="text-decoration : none;" target="right">
-       原研活動の社会化方案
-       <br/>
-       <br/>
-      </a>
-      <a href="002.html#024" style="text-decoration : none;" target="right">
-       <b>
-        八　教会および経済の二元化と銃砲事業
-       </b>
-       <br/>
-       銃砲事業を中心とした経済基盤復帰
-      </a>
-      <a href="002.html#023" style="text-decoration : none;" target="right">
-       <br/>
-      </a>
-      <a href="002.html#025" style="text-decoration : none;" target="right">
-       国家防衛と銃砲事業
-       <br/>
-      </a>
-      <a href="002.html#026" style="text-decoration : none;" target="right">
-       空気銃販売現況と計画
-       <br/>
-      </a>
-      <a href="002.html#027" style="text-decoration : none;" target="right">
-       水澤里工場運営と拡張
-       <br/>
-      </a>
-      <a href="002.html#028" style="text-decoration : none;" target="right">
-       教会と事業組織二元化措置
-       <br/>
-       <br/>
-      </a>
-      <a href="002.html#029" style="text-decoration : none;" target="right">
-       <b>
-        九　日本勝共運動国民大会
-       </b>
-       <br/>
-       日本を中心としたアジア勝共運動
-      </a>
-      <a href="002.html#028" style="text-decoration : none;" target="right">
-       <br/>
-      </a>
-      <a href="002.html#030" style="text-decoration : none;" target="right">
-       日本勝共運動国民大会
-       <br/>
-       <br/>
-      </a>
-      <a href="002.html#031" style="text-decoration : none;" target="right">
-       <b>
-        十　冬季四十日伝道と一九七〇年代の迎え
-       </b>
-       <br/>
-       一九六〇年代の基盤と一九七〇年代の課題
-      </a>
-      <a href="002.html#030" style="text-decoration : none;" target="right">
-       <br/>
-      </a>
-      <a href="002.html#032" style="text-decoration : none;" target="right">
-       冬季四十日伝道と勝共啓蒙活動
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html" style="text-decoration : none;" target="right">
-       <b>
-        <font size="+1">
-         第三節　一九七〇年　勝利的統一戦線
-        </font>
-       </b>
-       <br/>
-       <b>
-        一　一九七〇年の出発と摂理的意義
-       </b>
-       <br/>
-       年頭標語：勝利的統一戦線
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html#002" style="text-decoration : none;" target="right">
-       <b>
-        二　韓日狩猟大会とアジア勝共大会
-       </b>
-       <br/>
-       第二回韓日狩猟大会
-      </a>
-      <br/>
-      <a href="003.html#003" style="text-decoration : none;" target="right">
-       第一回アジア勝共大会
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html#004" style="text-decoration : none;" target="right">
-       <b>
-        三　協会修練会および行事
-       </b>
-       <br/>
-       第一回協会幹部修練会
-      </a>
-      <br/>
-      <a href="003.html#005" style="text-decoration : none;" target="right">
-       第二回協会幹部修練会
-      </a>
-      <br/>
-      <a href="003.html#006" style="text-decoration : none;" target="right">
-       第三回協会幹部修練会
-      </a>
-      <br/>
-      <a href="003.html#007" style="text-decoration : none;" target="right">
-       祝福候補者特別修練会および婚約式
-      </a>
-      <br/>
-      <a href="003.html#008" style="text-decoration : none;" target="right">
-       成和学生会第十回修了式
-      </a>
-      <br/>
-      <a href="003.html#009" style="text-decoration : none;" target="right">
-       全国成心会総会
-      </a>
-      <br/>
-      <a href="003.html#010" style="text-decoration : none;" target="right">
-       全国成和第十五回特別総会
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html#011" style="text-decoration : none;" target="right">
-       <b>
-        四　水澤里統一の園と中央修練所開設
-       </b>
-       <br/>
-       統一の園購入と精誠
-      </a>
-      <br/>
-      <a href="003.html#012" style="text-decoration : none;" target="right">
-       中央修練所開設と建物新築
-      </a>
-      <br/>
-      <a href="003.html#013" style="text-decoration : none;" target="right">
-       修練会の成果と展望
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html#014" style="text-decoration : none;" target="right">
-       <b>
-        五　超教派運動の新しい局面
-       </b>
-       <br/>
-       統一教会、韓国宗教協議会に加入
-      </a>
-      <br/>
-      <a href="003.html#015" style="text-decoration : none;" target="right">
-       超教派運動と勝共運動
-      </a>
-      <br/>
-      <a href="003.html#016" style="text-decoration : none;" target="right">
-       第一回教役者招請原理公聴会
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html#017" style="text-decoration : none;" target="right">
-       <b>
-        六　六ヵ月特別精誠と夏季四十日伝道
-       </b>
-       <br/>
-       六ヵ月特別精誠期間
-      </a>
-      <br/>
-      <a href="003.html#018" style="text-decoration : none;" target="right">
-       夏季四十日伝道出発
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html#019" style="text-decoration : none;" target="right">
-       <b>
-        七　國進様誕生と聖進様日本留学
-       </b>
-       <br/>
-       國進様誕生
-      </a>
-      <br/>
-      <a href="003.html#020" style="text-decoration : none;" target="right">
-       聖進様日本留学
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html#021" style="text-decoration : none;" target="right">
-       <b>
-        八　劉孝元協会長昇華
-       </b>
-       <br/>
-       三次の手術と闘病
-      </a>
-      <br/>
-      <a href="003.html#022" style="text-decoration : none;" target="right">
-       み旨から見た次子の犠牲
-      </a>
-      <br/>
-      <a href="003.html#023" style="text-decoration : none;" target="right">
-       劉協会長の真心とみ旨への貢献
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html#024" style="text-decoration : none;" target="right">
-       <b>
-        九　アジア勝共戦線とワクル世界大会
-       </b>
-       <br/>
-       アジア統一戦線構築
-      </a>
-      <br/>
-      <a href="003.html#025" style="text-decoration : none;" target="right">
-       ワクル(ＷＡＣＬ：世界反共連盟)世界大会
-      </a>
-      <br/>
-      <a href="003.html#026" style="text-decoration : none;" target="right">
-       世界的活動時代の切迫
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html#027" style="text-decoration : none;" target="right">
-       <b>
-        十　七百七十七家庭国際合同祝福結婚式
-       </b>
-       <br/>
-       世界氏族圏祝福開門家庭
-      </a>
-      <br/>
-      <a href="003.html#0286" style="text-decoration : none;" target="right">
-       経済祝福と世界的活動時代の到来
-      </a>
-      <br/>
-      <br/>
-      <a href="003.html#029" style="text-decoration : none;" target="right">
-       <b>
-        十一　祝福家庭婦人三年総動員
-       </b>
-       <br/>
-       祝福家庭の家庭的蕩減路程
-      </a>
-      <br/>
-      <a href="003.html#030" style="text-decoration : none;" target="right">
-       イエス様の三年公生涯解怨と国家守護
-      </a>
-      <br/>
-      <a href="003.html#031" style="text-decoration : none;" target="right">
-       十名単位、百二十組派遣
-      </a>
-      <br/>
-      <a href="003.html#032" style="text-decoration : none;" target="right">
-       愛国愛族の碁盤と世界進出
-      </a>
-      <br/>
-      <br/>
-      <a href="004.html" style="text-decoration : none;" target="right">
-       <b>
-        <font size="+1">
-         第四節　一九七一年　統一基盤確保
-        </font>
-       </b>
-       <br/>
-       <b>
-        一　一九七一年の出発と特別儀式
-       </b>
-       <br/>
-       年頭標語:統一基盤確保
-      </a>
-      <br/>
-      <a href="004.html#002" style="text-decoration : none;" target="right">
-       真の御父母様の御家庭奉献式
-      </a>
-      <br/>
-      <a href="004.html#003" style="text-decoration : none;" target="right">
-       イエス様の御聖誕日、実体聖霊聖婚式
-      </a>
-      <br/>
-      <br/>
-      <a href="004.html#004" style="text-decoration : none;" target="right">
-       <b>
-        二　敷地および建物購入と一信石材創立
-       </b>
-       <br/>
-       経済的基盤と未来の活動基地
-      </a>
-      <br/>
-      <a href="004.html#005" style="text-decoration : none;" target="right">
-       汝矣島世界宣教本部の敷地購入
-      </a>
-      <br/>
-      <a href="004.html#006" style="text-decoration : none;" target="right">
-       地方教会聖殿準備補助
-      </a>
-      <br/>
-      <a href="004.html#007" style="text-decoration : none;" target="right">
-       一信石材工芸株式会社創立
-      </a>
-      <br/>
-      <br/>
-      <a href="004.html#008" style="text-decoration : none;" target="right">
-       <b>
-        三　協会職制改編
-       </b>
-       <br/>
-       全国教会の協会直轄制
-      </a>
-      <br/>
-      <a href="004.html#009" style="text-decoration : none;" target="right">
-       全国巡回師(十六名)制度設置
-      </a>
-      <br/>
-      <br/>
-      <a href="004.html#010" style="text-decoration : none;" target="right">
-       <b>
-        四　「週刊宗教」創刊と統一原理公聴会
-       </b>
-       <br/>
-       「週刊宗教」創刊趣旨と目標
-      </a>
-      <br/>
-      <a href="004.html#011" style="text-decoration : none;" target="right">
-       教役者招請原理公聴会
-      </a>
-      <br/>
-      <a href="004.html#012" style="text-decoration : none;" target="right">
-       教授招請原理公聴会
-      </a>
-      <br/>
-      <br/>
-      <a href="004.html#013" style="text-decoration : none;" target="right">
-       <b>
-        五　清平聖地開拓と清平修練所建設
-       </b>
-       <br/>
-       精誠の基盤と敷地購入
-      </a>
-      <br/>
-      <a href="004.html#014" style="text-decoration : none;" target="right">
-       修練所建設作業
-      </a>
-      <br/>
-      <a href="004.html#015" style="text-decoration : none;" target="right">
-       修練所一帯の山と湖
-      </a>
-      <br/>
-      <a href="004.html#016" style="text-decoration : none;" target="right">
-       清平を中心とした精誠時代
-      </a>
-      <br/>
-      <br/>
-      <a href="004.html#017" style="text-decoration : none;" target="right">
-       <b>
-        六　全国伝道と主要行事
-       </b>
-       <br/>
-       全国地区巡回および地方伝道地巡回
-      </a>
-      <br/>
-      <a href="004.html#018" style="text-decoration : none;" target="right">
-       夏季四十日伝道出発
-      </a>
-      <br/>
-      <a href="004.html#019" style="text-decoration : none;" target="right">
-       全国教会員修練会
-      </a>
-      <br/>
-      <a href="004.html#020" style="text-decoration : none;" target="right">
-       既成家庭祝福式
-      </a>
-      <br/>
-      <a href="004.html#021" style="text-decoration : none;" target="right">
-       全国成和第十六回特別総会
-      </a>
-      <br/>
-      <br/>
-      <a href="004.html#022" style="text-decoration : none;" target="right">
-       <b>
-        七　真の御父母様の第三次世界巡回(一)
-       </b>
-       <br/>
-       第三次世界巡回の目的
-      </a>
-      <br/>
-      <a href="004.html#023" style="text-decoration : none;" target="right">
-       巡回期間中の韓国食口の任務
-      </a>
-      <br/>
-      <a href="004.html#024" style="text-decoration : none;" target="right">
-       米国入国までの難関打開
-      </a>
-      <br/>
-      <br/>
-      <a href="005.html" style="text-decoration : none;" target="right">
-       <b>
-        <font size="+1">
-         第五節　一九七二年　統一戦線守護(一)
-        </font>
-       </b>
-       <br/>
-       <b>
-        一　一九七二年の出発と摂理的意義
-       </b>
-       <br/>
-       年頭標語：統一戦線守護(一)
-      </a>
-      <br/>
-      <a href="005.html#002" style="text-decoration : none;" target="right">
-       米国を中心とした世界的三年路程出発
-      </a>
-      <br/>
-      <br/>
-      <a href="005.html#003" style="text-decoration : none;" target="right">
-       <b>
-        二　真の御父母様の第三次世界巡回(二)
-       </b>
-       <br/>
-       米国、英国、ドイツの主要都市講演会
-      </a>
-      <br/>
-      <a href="005.html#004" style="text-decoration : none;" target="right">
-       世界統一十字軍出帆
-      </a>
-      <br/>
-      <a href="005.html#005" style="text-decoration : none;" target="right">
-       五カ国機動隊組織
-      </a>
-      <br/>
-      <a href="005.html#006" style="text-decoration : none;" target="right">
-       韓国機動隊
-      </a>
-      <br/>
-      <a href="005.html#007" style="text-decoration : none;" target="right">
-       日本、ヨーロッパ食□の米国活動
-      </a>
-      <br/>
-      <br/>
-      <a href="005.html#008" style="text-decoration : none;" target="right">
-       <b>
-        三　南北統一祈願特別儀式−「統一の日」宣布
-       </b>
-       <br/>
-       摂理の時と七・四共同声明
-      </a>
-      <br/>
-      <a href="005.html#009" style="text-decoration : none;" target="right">
-       解放二十七周年と「統一の日」宣布
-      </a>
-      <br/>
-      <br/>
-      <a href="005.html#010" style="text-decoration : none;" target="right">
-       <b>
-        四　統一思想研究院創立
-       </b>
-       <br/>
-       統一思想―真の父母思想
-      </a>
-      <br/>
-      <a href="005.html#011" style="text-decoration : none;" target="right">
-       『統一思想要綱』発刊
-      </a>
-      <br/>
-      <br/>
-      <a href="005.html#012" style="text-decoration : none;" target="right">
-       <b>
-        五　リトル・エンジェルス世界巡回公演
-       </b>
-       <br/>
-       欧米公演
-      </a>
-      <br/>
-      <a href="005.html#013" style="text-decoration : none;" target="right">
-       日本公演
-      </a>
-      <br/>
-      <br/>
-      <a href="005.html#014" style="text-decoration : none;" target="right">
-       <b>
-        六　韓国チタニウム工業株式会社引き受け
-       </b>
-       <br/>
-       半分の予算で出発
-      </a>
-      <br/>
-      <a href="005.html#015" style="text-decoration : none;" target="right">
-       トンファチタン引き受け
-      </a>
-      <br/>
-      <br/>
-      <a href="005.html#016" style="text-decoration : none;" target="right">
-       <b>
-        七　真の御父母様の第四次世界巡回
-       </b>
-       <br/>
-       六ヵ月特別精誠と世界巡回準備
-      </a>
-      <br/>
-      <a href="005.html#017" style="text-decoration : none;" target="right">
-       第四次世界巡回の目的
-      </a>
-      <br/>
-      <a href="005.html#018" style="text-decoration : none;" target="right">
-       日本経由で歴訪
-      </a>
-      <br/>
-      <a href="005.html#019" style="text-decoration : none;" target="right">
-       第一次「科学の統一に関する国際会議」
-      </a>
-      <br/>
-      <a href="005.html#020" style="text-decoration : none;" target="right">
-       国際機動隊(ＩＯＷＣ)結成と米国主力活動
-      </a>
-      <br/>
-      <a href="005.html#021" style="text-decoration : none;" target="right">
-       米国百日修練会開設
-      </a>
-      <br/>
-      <br/>
-      <a href="006.html" style="text-decoration : none;" target="right">
-       <b>
-        <font size="+1">
-         第六節　一九七三年　統一戦線守護(二)
-        </font>
-       </b>
-       <br/>
-       <b>
-        一　一九七三年の出発と摂理的意義
-       </b>
-       <br/>
-       年頭標語：統一戦線守護(二)
-      </a>
-      <br/>
-      <br/>
-      <a href="006.html#002" style="text-decoration : none;" target="right">
-       <b>
-        二　「世界平和教授アカデミー」創立
-       </b>
-       <br/>
-       創立目的
-      </a>
-      <br/>
-      <br/>
-      <a href="006.html#003" style="text-decoration : none;" target="right">
-       <b>
-        三　真の御父母様米国永住権獲得と「勝祝日」制定
-       </b>
-       <br/>
-       米国永住権獲得と世界的着陸
-      </a>
-      <br/>
-      <a href="006.html#004" style="text-decoration : none;" target="right">
-       米国摂理のための内的整備
-      </a>
-      <br/>
-      <a href="006.html#005" style="text-decoration : none;" target="right">
-       「勝祝日」制定
-      </a>
-      <br/>
-      <a href="006.html#006" style="text-decoration : none;" target="right">
-       七・四記念祝祭
-      </a>
-      <br/>
-      <a href="006.html#007" style="text-decoration : none;" target="right">
-       第四次世界巡回帰還日程
-      </a>
-      <br/>
-      <br/>
-      <a href="006.html#008" style="text-decoration : none;" target="right">
-       <b>
-        四　文聖進−金東淑様聖婚式
-       </b>
-       <br/>
-       子女路程と聖進様聖婚
-      </a>
-      <br/>
-      <a href="006.html#009" style="text-decoration : none;" target="right">
-       聖進様の蕩減の道とみ旨的な従順
-      </a>
-      <br/>
-      <br/>
-      <a href="006.html#010" style="text-decoration : none;" target="right">
-       <b>
-        五　各級修練会と講義の制度化
-       </b>
-       <br/>
-       七十日公式修練過程
-      </a>
-      <br/>
-      <a href="006.html#011" style="text-decoration : none;" target="right">
-       四十日修練会
-      </a>
-      <br/>
-      <a href="006.html#012" style="text-decoration : none;" target="right">
-       教役者の一日八時間講義責任
-      </a>
-      <br/>
-      <br/>
-      <a href="006.html#013" style="text-decoration : none;" target="right">
-       <b>
-        六　一和製薬(株)社屋竣工および移転式
-       </b>
-       <br/>
-       一和創業
-      </a>
-      <br/>
-      <a href="006.html#014" style="text-decoration : none;" target="right">
-       霊肉復帰の宝物である原理と高麗人参
-      </a>
-      <br/>
-      <br/>
-      <a href="006.html#015" style="text-decoration : none;" target="right">
-       <b>
-        七　文氏氏族解放式
-       </b>
-       <br/>
-       文氏氏族解放と霊界開門
-      </a>
-      <br/>
-      <a href="006.html#016" style="text-decoration : none;" target="right">
-       文氏一族登用の時
-      </a>
-      <br/>
-      <a href="006.html#017" style="text-decoration : none;" target="right">
-       李伯任論山ハルモニの先祖解怨
-      </a>
-      <br/>
-      <br/>
-      <a href="006.html#018" style="text-decoration : none;" target="right">
-       <b>
-        八　米国二十一ヵ都市講演会と主要行事
-       </b>
-       <br/>
-       韓国出発の日
-      </a>
-      <br/>
-      <a href="006.html#019" style="text-decoration : none;" target="right">
-       米国三年路程と主要都市講演会
-      </a>
-      <br/>
-      <a href="006.html#020" style="text-decoration : none;" target="right">
-       米国二十一ヵ都市講演会
-      </a>
-      <br/>
-      <a href="006.html#021" style="text-decoration : none;" target="right">
-       真の御子女様たちの米国移民
-      </a>
-      <br/>
-      <a href="006.html#022" style="text-decoration : none;" target="right">
-       リトル・エンジェルス国連特別招請公演
-      </a>
-      <br/>
-      <br/>
-      <a href="006.html#023" style="text-decoration : none;" target="right">
-       <b>
-        九　日本主要行事と活動
-       </b>
-       <br/>
-       国際勝共連合在日本部崔容碩会長派遣
-      </a>
-      <br/>
-      <a href="006.html#024" style="text-decoration : none;" target="right">
-       東大大学院生たちのサンフランシスコ教育
-      </a>
-      <br/>
-      <a href="006.html#025" style="text-decoration : none;" target="right">
-       第二次科学の統一に関する国際会議
-      </a>
-      <br/>
-      <a href="006.html#026" style="text-decoration : none;" target="right">
-       韓、中(台)、日国会議員勝共セミナー
-      </a>
-      <br/>
-      <br/>
-      <a href="007.html" style="text-decoration : none;" target="right">
-       <b>
-        <font size="+1">
-         第七節　一九七四年　統一戦線守護(三)
-        </font>
-       </b>
-       <br/>
-       <b>
-        一　一九七四年の出発と摂理的意義
-       </b>
-       <br/>
-       年頭標語：統一戦線守護(三)
-      </a>
-      <br/>
-      <a href="007.html#002" style="text-decoration : none;" target="right">
-       世界教会体制制度化
-      </a>
-      <br/>
-      <br/>
-      <a href="007.html#003" style="text-decoration : none;" target="right">
-       <b>
-        二　ウオーターゲート宣言とニクソン大統領との要談
-       </b>
-       <br/>
-       ウォーターゲート宣言とニクソン大統領赦免運動
-      </a>
-      <br/>
-      <a href="007.html#004" style="text-decoration : none;" target="right">
-       ニクソン大統領との要談
-      </a>
-      <br/>
-      <a href="007.html#005" style="text-decoration : none;" target="right">
-       米国食口六百名三日断食
-      </a>
-      <br/>
-      <a href="007.html#006" style="text-decoration : none;" target="right">
-       ニクソン大統領の退陣
-      </a>
-      <br/>
-      <br/>
-      <a href="007.html#007" style="text-decoration : none;" target="right">
-       <b>
-        三　米国三十二ヵ都市講演会と特別儀式
-       </b>
-       <br/>
-       霊界の教祖解放と地上再臨
-      </a>
-      <br/>
-      <a href="007.html#008" style="text-decoration : none;" target="right">
-       米国三十二ヵ都市講演会
-      </a>
-      <br/>
-      <a href="007.html#009" style="text-decoration : none;" target="right">
-       「勝恨式」
-      </a>
-      <br/>
-      <br/>
-      <a href="007.html#010" style="text-decoration : none;" target="right">
-       <b>
-        四　米国の敷地購入と海洋産業開拓
-       </b>
-       <br/>
-       米国ベリータウン神学大学購入
-      </a>
-      <br/>
-      <a href="007.html#011" style="text-decoration : none;" target="right">
-       海釣りと海洋産業開拓
-      </a>
-      <br/>
-      <br/>
-      <a href="007.html#012" style="text-decoration : none;" target="right">
-       <b>
-        五　全国教会Ａタイプ聖殿建立
-       </b>
-       <br/>
-       聖殿建立の必要性
-      </a>
-      <br/>
-      <a href="007.html#013" style="text-decoration : none;" target="right">
-       聖殿の形と建立基準
-      </a>
-      <br/>
-      <a href="007.html#014" style="text-decoration : none;" target="right">
-       聖殿建立と予算支援
-      </a>
-      <br/>
-      <br/>
-      <a href="007.html#015" style="text-decoration : none;" target="right">
-       <b>
-        六　マディソン大会と七ヵ都市講演会
-       </b>
-       <br/>
-       大会人員動員活動
-      </a>
-      <br/>
-      <a href="007.html#016" style="text-decoration : none;" target="right">
-       マディソン「希望の日」大講演会
-      </a>
-      <br/>
-      <a href="007.html#017" style="text-decoration : none;" target="right">
-       マディソン大会の意義
-      </a>
-      <br/>
-      <a href="007.html#018" style="text-decoration : none;" target="right">
-       マディソン大会後の七ヵ都市講演会
-      </a>
-      <br/>
-      <a href="007.html#019" style="text-decoration : none;" target="right">
-       言論機関および大学設立の至急性
-      </a>
-      <br/>
-      <br/>
-      <a href="007.html#020" style="text-decoration : none;" target="right">
-       <b>
-        七　主要国際行事と講演
-       </b>
-       <br/>
-       「希望の日」日本晩餐会
-      </a>
-      <br/>
-      <a href="007.html#021" style="text-decoration : none;" target="right">
-       主題：「ため」に存在する世界
-      </a>
-      <br/>
-      <a href="007.html#022" style="text-decoration : none;" target="right">
-       米国国会議事堂招請講演
-      </a>
-      <br/>
-      <a href="007.html#023" style="text-decoration : none;" target="right">
-       主題：神様の摂理の中心にある米国
-      </a>
-      <br/>
-      <a href="007.html#024" style="text-decoration : none;" target="right">
-       第三次「科学の統一に関する国際会議」
-      </a>
-      <br/>
-      <br/>
-      <a href="007.html#025" style="text-decoration : none;" target="right">
-       <b>
-        八　第二次七年路程の勝利基盤
-       </b>
-       <br/>
-       韓国とアジアでの影響
-      </a>
-      <br/>
-      <a href="007.html#026" style="text-decoration : none;" target="right">
-       米国を中心とした世界的三年路程
-      </a>
-      <br/>
-      <br/>
-      <br/>
-     </td>
-    </tr>
-    <tr>
-     <td>
-     </td>
-     <td width="491">
-     </td>
-    </tr>
-   </tbody>
-  </table>
-  <!-- St-HP-F -->
-  <div id="popup-container">
-  </div>
-  
-  <div id="glasp-extension-toast-container" style="position: fixed; top: 32px; right: 16px; z-index: 2147483647; display: none; flex-direction: column; align-items: flex-end; height: 0px; width: auto; margin: 0px; padding: 0px;">
-  </div>
- 
-
-
-
-
-
-
-
-<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
-
-
+<body>
+<div class="container">
+<h1>syougairotei_5</h1><div class="index-list"><div class="chapter-item"><a href="001.html" class="chapter-link">第一節　一九六八年　全面的な進撃をしよう(一)一　一九六八年の出発と摂理的意義元旦祝祷</a><ul class="section-list"><li class="section-item"><a href="001.html#001" class="section-link">真の御父母様の生涯路程 5</a></li><li class="section-item"><a href="001.html#002" class="section-link">第一節　一九六八年　全面的な進撃をしよう(一)</a></li><li class="section-item"><a href="001.html#003" class="section-link">一　一九六八年の出発と摂理的意義（一九六八・一・一、前本部教会）</a></li><li class="section-item"><a href="001.html#004" class="section-link">元旦祝祷</a></li><li class="section-item"><a href="001.html#005" class="section-link">年頭標語：全面的な進撃をしよう（一）</a></li><li class="section-item"><a href="001.html#006" class="section-link">二　「神の日」宣布</a></li><li class="section-item"><a href="001.html#007" class="section-link">「神の日」制定（一九六八・一・一・〇三：〇〇、前本部教会）</a></li><li class="section-item"><a href="001.html#008" class="section-link">「神の日」宣布後、七ヵ月総整理儀式</a></li><li class="section-item"><a href="001.html#009" class="section-link">（一九六八・七・三一　〔陰暦七・七・〇七：〇〇〕、前本部教会、在京家庭の集い）</a></li><li class="section-item"><a href="001.html#010" class="section-link">三　国際勝共連合創立</a></li><li class="section-item"><a href="001.html#011" class="section-link">創立の動機と目的（一九六八・一・一三、創立）</a></li><li class="section-item"><a href="001.html#012" class="section-link">金新朝事件とその影響（一九六八・一・二一）</a></li><li class="section-item"><a href="001.html#013" class="section-link">全国の勝共活動の実績</a></li><li class="section-item"><a href="001.html#014" class="section-link">『新しい共産主義批判』刊行（一九六八・二・二五、執筆：李相軒）</a></li><li class="section-item"><a href="001.html#015" class="section-link">日本勝共連合創立（一九六八・四・一)</a></li></ul></div><div class="chapter-item"><a href="002.html" class="chapter-link">第二節　一九六九年　全面的な進撃をしよう(二)一　一九六九年の出発と摂理的意義年頭標語：全面的な進撃をしよう(二)</a><ul class="section-list"><li class="section-item"><a href="002.html#001" class="section-link">真の御父母様の生涯路程 5</a></li><li class="section-item"><a href="002.html#002" class="section-link">第二節　一九六九年　全面的な進撃をしよう（二）</a></li><li class="section-item"><a href="002.html#003" class="section-link">一　一九六九年の出発と摂理的意義</a></li><li class="section-item"><a href="002.html#004" class="section-link">年頭標語：全面的な進撃をしよう（二）（一九六九・一・一、前本部教会）</a></li><li class="section-item"><a href="002.html#005" class="section-link">信仰伝統の確立と活動体制</a></li><li class="section-item"><a href="002.html#006" class="section-link">二　仙和子供舞踊団日本公演（一九六九・一・四〜二・三、四カ国巡回公演の中で）</a></li><li class="section-item"><a href="002.html#007" class="section-link">公演準備と活動指導</a></li><li class="section-item"><a href="002.html#008" class="section-link">超満員になった巡回公演（仙台−京都−大阪−東京−名古屋）</a></li><li class="section-item"><a href="002.html#009" class="section-link">三　真の御父母様の第二次世界巡回</a></li><li class="section-item"><a href="002.html#010" class="section-link">（一九六九・二・二〜五・二、二十一カ国、崔元福、劉孝元、久保木随行）</a></li><li class="section-item"><a href="002.html#011" class="section-link">巡回出発前の指示事項</a></li><li class="section-item"><a href="002.html#012" class="section-link">十力国四十三家庭祝福結婚式（二・二八、米国ワシントンＤ・Ｃ、十三双／三・二八、ドイツ・エッセン、八双／五・一、日本・東京、二十二双）</a></li><li class="section-item"><a href="002.html#013" class="section-link">日本の情勢と巡回時の措置事項（一九六九・二・二〜二・五、四・一八〜五・二）</a></li><li class="section-item"><a href="002.html#014" class="section-link">世界情勢の変化とみ旨の進路</a></li><li class="section-item"><a href="002.html#015" class="section-link">イスラエル巡回（一九六九・四・一四〜四・一六）</a></li></ul></div><div class="chapter-item"><a href="003.html" class="chapter-link">第三節　一九七〇年　勝利的統一戦線一　一九七〇年の出発と摂理的意義年頭標語：勝利的統一戦線</a><ul class="section-list"><li class="section-item"><a href="003.html#001" class="section-link">真の御父母様の生涯路程 5</a></li><li class="section-item"><a href="003.html#002" class="section-link">第三節　一九七〇年　勝利的統一戦線</a></li><li class="section-item"><a href="003.html#003" class="section-link">一　一九七〇年の出発と摂理的意義（一九七〇・一・一、前本部教会）</a></li><li class="section-item"><a href="003.html#004" class="section-link">年頭標語：勝利的統一戦線</a></li><li class="section-item"><a href="003.html#005" class="section-link">二　韓日狩猟大会とアジア勝共大会</a></li><li class="section-item"><a href="003.html#006" class="section-link">第二回韓日狩猟大会（一九七〇・一・一七、済州島）</a></li><li class="section-item"><a href="003.html#007" class="section-link">第一回アジア勝共大会（一九七〇・一・二一、ソウル市民会館、五カ国、六千名参加）</a></li><li class="section-item"><a href="003.html#008" class="section-link">三　協会修練会および行事</a></li><li class="section-item"><a href="003.html#009" class="section-link">第一回協会幹部修練会（一九七〇・二・一六～二八、水澤里統一産業寄宿舎、七十八名）</a></li><li class="section-item"><a href="003.html#010" class="section-link">第二回協会幹部修練会（一九七〇・三・九～二一、水澤里統一産業寄宿舎、六十名）</a></li><li class="section-item"><a href="003.html#011" class="section-link">第三回協会幹部修練会（一九七〇・三・二四、水澤里統一産業寄宿舎）</a></li><li class="section-item"><a href="003.html#012" class="section-link">祝福候補者特別修練会および婚約式（一九七〇・三～一〇、六回開催）</a></li><li class="section-item"><a href="003.html#013" class="section-link">成和学生会第十回修了式（一九七〇・四・八、前本部教会、六～一〇回、四十一名）</a></li><li class="section-item"><a href="003.html#014" class="section-link">全国成心会総会（一九七〇・八・二九～三一、水澤里、七十五名）</a></li><li class="section-item"><a href="003.html#015" class="section-link">全国成和第十五回特別総会（一九七〇・一二・二〇～二三、前本部教会）</a></li></ul></div><div class="chapter-item"><a href="004.html" class="chapter-link">第四節　一九七一年　統一基盤確保一　一九七一年の出発と特別儀式年頭標語:統一基盤確保</a><ul class="section-list"><li class="section-item"><a href="004.html#001" class="section-link">真の御父母様の生涯路程 5</a></li><li class="section-item"><a href="004.html#002" class="section-link">第四節　一九七一年　統一基盤確保</a></li><li class="section-item"><a href="004.html#003" class="section-link">一　一九七一年の出発と特別儀式（一九七一・一・一、前本部教会）</a></li><li class="section-item"><a href="004.html#004" class="section-link">年頭標語‥統一基盤確保</a></li><li class="section-item"><a href="004.html#005" class="section-link">真の御父母様の御家庭奉献式（一九七一・一・一、第四回「神の日」、前本部教会）</a></li><li class="section-item"><a href="004.html#006" class="section-link">イエス様の御聖誕日、実体聖霊聖婚式（一九七一・一・三、前本部教会）</a></li><li class="section-item"><a href="004.html#007" class="section-link">二　敷地および建物購入と一信石材創立</a></li><li class="section-item"><a href="004.html#008" class="section-link">経済的基盤と未来の活動基地</a></li><li class="section-item"><a href="004.html#009" class="section-link">汝矣島世界宣教本部の敷地購入</a></li><li class="section-item"><a href="004.html#010" class="section-link">地方教会聖殿準備補助</a></li><li class="section-item"><a href="004.html#011" class="section-link">一信石材工芸株式会社創立（一九七一・二・二六）</a></li><li class="section-item"><a href="004.html#012" class="section-link">三　協会職制改編（一九七一・六・一）</a></li><li class="section-item"><a href="004.html#013" class="section-link">全国教会の協会直轄制</a></li><li class="section-item"><a href="004.html#014" class="section-link">全国巡回師（十六名）制度設置</a></li><li class="section-item"><a href="004.html#015" class="section-link">四　「週刊宗教」創刊と統一原理公聴会</a></li></ul></div><div class="chapter-item"><a href="005.html" class="chapter-link">第五節　一九七二年　統一戦線守護(一)一　一九七二年の出発と摂理的意義年頭標語：統一戦線守護(一)</a><ul class="section-list"><li class="section-item"><a href="005.html#001" class="section-link">真の御父母様の生涯路程 5</a></li><li class="section-item"><a href="005.html#002" class="section-link">第五節　一九七二年　統一戦線守護（一）</a></li><li class="section-item"><a href="005.html#003" class="section-link">一　一九七二年の出発と摂理的意義</a></li><li class="section-item"><a href="005.html#004" class="section-link">年頭標語：統一戦線守護（一）（一九七二・一・一、米国ワシントン教会）</a></li><li class="section-item"><a href="005.html#005" class="section-link">米国を中心とした世界的三年路程出発（一九七二〜一九七四）</a></li><li class="section-item"><a href="005.html#006" class="section-link">二　真の御父母様の第三次世界巡回（二）</a></li><li class="section-item"><a href="005.html#007" class="section-link">（一九七一・一二・五〜一九七二・五・八、十五カ国、崔元福、金榮輝随行）</a></li><li class="section-item"><a href="005.html#008" class="section-link">米国、英国、ドイツの主要都市講演会（一九七二・二・三〜三・六、米国七大都市、三・二〇〜三・二二、英国ロンドン、三・二八〜三・三〇、ドイツ・エッセン）</a></li><li class="section-item"><a href="005.html#009" class="section-link">世界統一十字軍出帆</a></li><li class="section-item"><a href="005.html#010" class="section-link">五カ国機動隊組織（一九七二年一月〜四月、米国、ドイツ、英国、日本、一九七二・六・一、韓国）</a></li><li class="section-item"><a href="005.html#011" class="section-link">韓国機動隊</a></li><li class="section-item"><a href="005.html#012" class="section-link">日本、ヨーロッパ食□の米国活動</a></li><li class="section-item"><a href="005.html#013" class="section-link">三　南北統一祈願特別儀式−「統一の日」宣布</a></li><li class="section-item"><a href="005.html#014" class="section-link">（一九七二・八・一五〔陰暦七・七〕、前本部教会）</a></li><li class="section-item"><a href="005.html#015" class="section-link">摂理の時と七・四共同声明</a></li></ul></div><div class="chapter-item"><a href="006.html" class="chapter-link">第六節　一九七三年　統一戦線守護(二)一　一九七三年の出発と摂理的意義年頭標語：統一戦線守護(二)</a><ul class="section-list"><li class="section-item"><a href="006.html#001" class="section-link">真の御父母様の生涯路程 5</a></li><li class="section-item"><a href="006.html#002" class="section-link">第六節　一九七三年　統一戦線守護（二）</a></li><li class="section-item"><a href="006.html#003" class="section-link">一　一九七三年の出発と摂理的意義</a></li><li class="section-item"><a href="006.html#004" class="section-link">年頭標語：統一戦線守護（二）（一九七三・一・一、米国、ベルベディア修練所）</a></li><li class="section-item"><a href="006.html#005" class="section-link">二　「世界平和教授アカデミー」創立</a></li><li class="section-item"><a href="006.html#006" class="section-link">（一九七三・五・六、ソウル・ニュー・コリア・ホテル）</a></li><li class="section-item"><a href="006.html#007" class="section-link">創立目的</a></li><li class="section-item"><a href="006.html#008" class="section-link">三　真の御父母様米国永住権獲得と「勝祝日」制定（第四次世界巡回中）</a></li><li class="section-item"><a href="006.html#009" class="section-link">米国永住権獲得と世界的着陸（一九七三・四・三〇）</a></li><li class="section-item"><a href="006.html#010" class="section-link">米国摂理のための内的整備（一九七三・六・三〇）</a></li><li class="section-item"><a href="006.html#011" class="section-link">「勝祝日」制定（一九七三・七・一、米国）</a></li><li class="section-item"><a href="006.html#012" class="section-link">七・四記念祝祭（一九七三・七・四、南韓入監日および米国独立記念日）</a></li><li class="section-item"><a href="006.html#013" class="section-link">第四次世界巡回帰還日程（一九七三・七・七〜七・二二）</a></li><li class="section-item"><a href="006.html#014" class="section-link">四　文聖進−金東淑様聖婚式（一九七三・七・一八、日本・東京）</a></li><li class="section-item"><a href="006.html#015" class="section-link">子女路程と聖進様聖婚</a></li></ul></div><div class="chapter-item"><a href="007.html" class="chapter-link">第七節　一九七四年　統一戦線守護(三)一　一九七四年の出発と摂理的意義年頭標語：統一戦線守護(三)</a><ul class="section-list"><li class="section-item"><a href="007.html#001" class="section-link">真の御父母様の生涯路程 5</a></li><li class="section-item"><a href="007.html#002" class="section-link">第七節　一九七四年　統一戦線守護（三）</a></li><li class="section-item"><a href="007.html#003" class="section-link">一　一九七四年の出発と摂理的意義</a></li><li class="section-item"><a href="007.html#004" class="section-link">年頭標語：統一戦線守護（三）（一九七四・一・一、米国、ベルベディア修練所）</a></li><li class="section-item"><a href="007.html#005" class="section-link">世界教会体制制度化（一九七四・四・三〇）</a></li><li class="section-item"><a href="007.html#006" class="section-link">二　ウオーターゲート宣言とニクソン大統領との要談</a></li><li class="section-item"><a href="007.html#007" class="section-link">ウォーターゲート宣言とニクソン大統領赦免運動（一九七三・一一・三〇）</a></li><li class="section-item"><a href="007.html#008" class="section-link">ニクソン大統領との要談（一九七四・二・一、米国、ホワイトハウス）</a></li><li class="section-item"><a href="007.html#009" class="section-link">米国食口六百名三日断食（一九七四・七・二二〜二四、ワシントンＤ・Ｃ米国国会議事堂階段）</a></li><li class="section-item"><a href="007.html#010" class="section-link">ニクソン大統領の退陣</a></li><li class="section-item"><a href="007.html#011" class="section-link">三　米国三十二ヵ都市講演会と特別儀式</a></li><li class="section-item"><a href="007.html#012" class="section-link">霊界の教祖解放と地上再臨（一九七四・二・一一）</a></li><li class="section-item"><a href="007.html#013" class="section-link">米国三十二ヵ都市講演会（一九七四・二・一五〜四・二〇、主題：キリスト教の新しい未来）</a></li><li class="section-item"><a href="007.html#014" class="section-link">「勝恨式」（一九七四・五・一、協会創立二十周年、前本部教会）</a></li><li class="section-item"><a href="007.html#015" class="section-link">四　米国の敷地購入と海洋産業開拓</a></li></ul></div></div>
+    <div class="nav-links">
+        <a href="../index.html">トップページへ戻る</a>
+    </div>
 </div>
-<script>
-   (function() {
-    const STORAGE_KEY = 'popupDismissed';
-    const excludedDomain = 'www.fc2web.com';
-    if (
-        localStorage.getItem(STORAGE_KEY) === 'true' ||
-        window.location.hostname === excludedDomain
-    ) {
-        return;
-    }
-    const container = document.getElementById('popup-container');
-    const shadow = container.attachShadow({ mode: 'open' });
-
-    shadow.innerHTML = `
-        
-        <div class="overlay">
-        <div class="popup">
-            <p>
-<h4>サービス終了のお知らせ</h4>
-FC2WEB は 2025年6月30日 (月) をもって、<br>
-サービスを終了とさせていただくこととなりました。<br>
-これまでのご愛顧に対し、深くお礼申しあげます。<br>
-詳しくは <a href="http://www.fc2web.com/" target="_blank" rel="noopener">FC2WEBポータル</a>をご確認ください。
-            </p>
-            <label><input type="checkbox" id="dont-show"> 今後このお知らせを表示しない</label>
-            <button id="close-btn">閉じる</button>
-        </div>
-        </div>
-    `;
-
-    const closeBtn = shadow.getElementById('close-btn');
-    const checkbox = shadow.getElementById('dont-show');
-
-    closeBtn.addEventListener('click', () => {
-        if (checkbox.checked) {
-        localStorage.setItem(STORAGE_KEY, 'true');
-        }
-        container.remove();
-    });
-    })();
-  </script>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script></body>
+</body>
 </html>
-
-<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

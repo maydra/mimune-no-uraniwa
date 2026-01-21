@@ -1,397 +1,190 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XXQ0QTBYTR');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
-<link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
-
-<meta charset="utf-8"/>
-<title>御旨と世界/目次</title>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
-        rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>御旨と世界/ | 目次 | み旨の裏庭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 2rem 1rem;
-            position: relative;
-            overflow-x: hidden;
-            font-size: 1.25rem;
-            line-height: 1.9;
+            padding: 3rem 1rem;
+            line-height: 1.8;
         }
-
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
-
         .container {
-            max-width: 1400px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
-            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-        }
-
-        h1 a {
-            text-decoration: none;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1.75rem;
-            margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            letter-spacing: 0.05em;
-        }
-
-        h2::before {
-            content: '◆';
-            color: #667eea;
-            font-size: 0.8em;
-        }
-
-        p {
-            margin: 1em 0;
-            line-height: 1.9;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        a:hover {
-            color: #f093fb;
-            border-bottom-color: #f093fb;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 2em 0;
-        }
-
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
-        }
-
-        li {
-            margin: 0.5em 0;
-            line-height: 1.9;
-        }
-
-        b, strong {
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .content-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-
-        .content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+            letter-spacing: 0.05em;
         }
-
-        .content-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .links-list {
+        
+        .index-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-left: 0;
+            padding: 0;
         }
-
-        .links-list li {
-            position: relative;
-            padding-left: 1.6rem;
+        .volume-item {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
         }
-
-        .links-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            transition: transform 0.3s ease;
+        .volume-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
+        .volume-title a { color: #fff; text-decoration: none; }
+        .volume-title a:hover { text-decoration: underline; }
 
-        .links-list li:hover::before {
-            transform: translateX(3px);
+        .chapter-list {
+            list-style: none;
+            padding-left: 0.5rem;
         }
-
-        .links-list a {
+        .chapter-item {
+            margin-bottom: 0.6rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .chapter-link {
             color: #e0e0e0;
             text-decoration: none;
-            font-size: 1.25rem;
-            line-height: 1.9;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.2s;
             display: inline-block;
-            position: relative;
-            border-bottom: none;
         }
+        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
 
-        .links-list a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
+        .section-list {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.4rem;
         }
-
-        .links-list a:hover {
-            color: #fff;
-            transform: translateX(3px);
+        .section-item {
+            margin-bottom: 0.3rem;
         }
-
-        .links-list a:hover::after {
-            width: 100%;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.75rem;
-                font-size: 1.1rem;
-            }
-
-            .content-card {
-                padding: 2rem;
-            }
-
-            h1 {
-                font-size: clamp(2rem, 6vw, 3.5rem);
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .links-list a {
-                font-size: 1.15rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            .links-list a {
-                font-size: 1.05rem;
-            }
-        }
-
-        /* 聖書の節リンク用スタイル（既存のものを保持） */
-        a.verse-link {
-            color: #e74c3c;
+        .section-link {
+            font-size: 0.9rem;
+            color: #b0c4de;
+            opacity: 0.8;
             text-decoration: none;
-            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .section-link:hover { opacity: 1; color: #fff; }
+        .section-link::before { content: '・'; margin-right: 0.3rem; }
+
+        .nav-links {
+            margin-top: 4rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Collapsible Details Styles */
+        details {
+            margin-bottom: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        details[open] {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        summary {
+            padding: 1.2rem 1.8rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            transition: background 0.2s;
+        }
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '＋';
+            font-size: 1.1rem;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            content: '－';
+            transform: rotate(180deg);
+        }
+        .details-content {
+            padding: 0 1.8rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0;
+        }
+        .details-content .chapter-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .details-content .chapter-item:last-child {
             border-bottom: none;
-        }
-
-        a.verse-link:hover {
-            text-decoration: underline;
-            color: #c0392b;
-            border-bottom-color: transparent;
-        }
-
-        [id^="v"]:target {
-            background-color: #fff3cd;
-            padding: 0.1em 0.2em;
-            border-radius: 3px;
-            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body><div class="container">
-<h1>御旨と世界/目次</h1><div class="toc"><ul></ul></div>
-<body alink="#000000" background="b014bcg.gif" link="#000000" text="#464646" vlink="#000000">
-<!-- St-HP-H -->
-<!-- En-HP-H -->
-<div align="left"><!--#geoguide--></div>
-<div align="left">
-<hr/>
-<b>　御旨と世界</b>
-<hr/>
-<p><a href="00.html" style="text-decoration : none;" target="right">序文</a><br/>
-<a href="01.html" style="text-decoration : none;" target="right">１.復帰と祝福</a><br/>
-<a href="02.html" style="text-decoration : none;" target="right">２.理想相対</a><br/>
-<a href="03.html" style="text-decoration : none;" target="right">３.生涯において何をなすべきか</a><br/>
-<a href="04.html" style="text-decoration : none;" target="right">４.血統的転換</a><br/>
-<a href="05.html" style="text-decoration : none;" target="right">５.勝敗と現在</a><br/>
-<a href="06.html" style="text-decoration : none;" target="right">６.統一戦線守護</a><br/>
-<a href="07.html" style="text-decoration : none;" target="right">７.復帰の道</a><br/>
-<a href="08.html" style="text-decoration : none;" target="right">８.真の父母と我々</a><br/>
-<a href="09.html" style="text-decoration : none;" target="right">９.我らはなぜ苦労しなければならないか</a><br/>
-<a href="10.html" style="text-decoration : none;" target="right">10.年頭のみことば(一九七三年）</a><br/>
-<a href="11.html" style="text-decoration : none;" target="right">11.勝祝日の制定にあたって</a><br/>
-<a href="12.html" style="text-decoration : none;" target="right">12.一心不乱一生懸命</a><br/>
-<a href="13.html" style="text-decoration : none;" target="right">13.人間に対する神の希望</a><br/>
-<a href="14.html" style="text-decoration : none;" target="right">14.アメリカに対する神の希望</a><br/>
-<a href="15.html" style="text-decoration : none;" target="right">15.キリスト教の将来</a><br/>
-<a href="16.html" style="text-decoration : none;" target="right">16.伝統の旗手</a><br/>
-<a href="17.html" style="text-decoration : none;" target="right">17.キリスト教の新しい未来</a><br/>
-<a href="18.html" style="text-decoration : none;" target="right">18.総解怨式のみことば</a><br/>
-<a href="19.html" style="text-decoration : none;" target="right">19.私自身</a><br/>
-<a href="20.html" style="text-decoration : none;" target="right">20.歴史の転換点</a><br/>
-<a href="21.html" style="text-decoration : none;" target="right">21.統一式のみことば</a><br/>
-<a href="22.html" style="text-decoration : none;" target="right">22.新しい宇宙的な春は永遠に繁栄する</a><br/>
-<a href="23.html" style="text-decoration : none;" target="right">23.摂理的歴史の光の中にあって</a><br/>
-<a href="24.html" style="text-decoration : none;" target="right">24.歴史的父母の日</a><br/>
-<a href="25.html" style="text-decoration : none;" target="right">25.創立以前の内的教会史</a><br/>
-<a href="26.html" style="text-decoration : none;" target="right">26.再会の心情</a><br/>
-<a href="27.html" style="text-decoration : none;" target="right">27.刺激と冒険</a><br/>
-<a href="28.html" style="text-decoration : none;" target="right">28.愛の相続</a><br/>
-<a href="29.html" style="text-decoration : none;" target="right">29.祝福を迎える一日</a><br/>
-<a href="30.html" style="text-decoration : none;" target="right">30.七七七双祝福八周年記念によせて</a><br/>
-<a href="31.html" style="text-decoration : none;" target="right">31.私たち自身を知ろう</a><br/>
-<a href="32.html" style="text-decoration : none;" target="right">32.神の祖国</a><br/>
-<a href="33.html" style="text-decoration : none;" target="right">33.摂理と昔今の私</a><br/>
-<a href="34.html" style="text-decoration : none;" target="right">34.全体蕩減</a><br/>
-<a href="35.html" style="text-decoration : none;" target="right">35.信仰の三子女と本然の家庭基盤</a><br/>
-<a href="36.html" style="text-decoration : none;" target="right">36.私を中心とした父母と子女と万物世界</a><br/>
-<a href="37.html" style="text-decoration : none;" target="right">37.愛勝日の必要性</a><br/>
-<a href="38.html" style="text-decoration : none;" target="right">38.真の愛を中心とした本然のエデン</a><br/>
-<br/>
-<br/>
-<br/></p>
+<body>
+<div class="container">
+<h1>御旨と世界/</h1><div class="index-list"><div class="chapter-item"><a href="00.html" class="chapter-link">序文</a><ul class="section-list"><li class="section-item"><a href="00.html#002" class="section-link">序文</a></li><li class="section-item"><a href="00.html#003" class="section-link">久保木 修己</a></li></ul></div><div class="chapter-item"><a href="01.html" class="chapter-link">１.復帰と祝福</a><ul class="section-list"><li class="section-item"><a href="01.html#001" class="section-link">復帰と祝福</a></li><li class="section-item"><a href="01.html#021" class="section-link">1969年2月2日</a></li></ul></div><div class="chapter-item"><a href="02.html" class="chapter-link">２.理想相対</a><ul class="section-list"><li class="section-item"><a href="02.html#001" class="section-link">理想相対</a></li><li class="section-item"><a href="02.html#016" class="section-link">1969年2月4日</a></li></ul></div><div class="chapter-item"><a href="03.html" class="chapter-link">３.生涯において何をなすべきか</a><ul class="section-list"><li class="section-item"><a href="03.html#008" class="section-link">生涯においてなにをなすべきか</a></li><li class="section-item"><a href="03.html#009" class="section-link">1970年9月27日</a></li></ul></div><div class="chapter-item"><a href="04.html" class="chapter-link">４.血統的転換</a><ul class="section-list"><li class="section-item"><a href="04.html#023" class="section-link">血統的転換</a></li><li class="section-item"><a href="04.html#024" class="section-link">1970年10月13日</a></li></ul></div><div class="chapter-item"><a href="05.html" class="chapter-link">５.勝敗と現在</a><ul class="section-list"><li class="section-item"><a href="05.html#012" class="section-link">勝敗と現在</a></li><li class="section-item"><a href="05.html#013" class="section-link">1971年12月5日</a></li></ul></div><div class="chapter-item"><a href="06.html" class="chapter-link">６.統一戦線守護</a><ul class="section-list"><li class="section-item"><a href="06.html#006" class="section-link">統一戦線守護</a></li><li class="section-item"><a href="06.html#007" class="section-link">1972年1月1日 アメリカ</a></li></ul></div><div class="chapter-item"><a href="07.html" class="chapter-link">７.復帰の道</a><ul class="section-list"><li class="section-item"><a href="07.html#009" class="section-link">復帰の道</a></li><li class="section-item"><a href="07.html#010" class="section-link">1972年4月1日</a></li></ul></div><div class="chapter-item"><a href="08.html" class="chapter-link">８.真の父母と我々</a><ul class="section-list"><li class="section-item"><a href="08.html#034" class="section-link">真の父母と我々</a></li><li class="section-item"><a href="08.html#035" class="section-link">1972年5月7日</a></li></ul></div><div class="chapter-item"><a href="09.html" class="chapter-link">９.我らはなぜ苦労しなければならないか</a><ul class="section-list"><li class="section-item"><a href="09.html#010" class="section-link">我らはなぜ苦労しなければならないか</a></li><li class="section-item"><a href="09.html#011" class="section-link">1972年9月11日</a></li></ul></div><div class="chapter-item"><a href="10.html" class="chapter-link">10.年頭のみことば(一九七三年）</a><ul class="section-list"><li class="section-item"><a href="10.html#009" class="section-link">年頭のみことば(1973年)</a></li></ul></div><div class="chapter-item"><a href="11.html" class="chapter-link">11.勝祝日の制定にあたって</a><ul class="section-list"><li class="section-item"><a href="11.html#007" class="section-link">勝祝日の制定にあたって</a></li><li class="section-item"><a href="11.html#008" class="section-link">1973年7月1日</a></li></ul></div><div class="chapter-item"><a href="12.html" class="chapter-link">12.一心不乱一生懸命</a><ul class="section-list"><li class="section-item"><a href="12.html#004" class="section-link">一心不乱</a></li><li class="section-item"><a href="12.html#005" class="section-link">一九七三年七月八日</a></li></ul></div><div class="chapter-item"><a href="13.html" class="chapter-link">13.人間に対する神の希望</a><ul class="section-list"><li class="section-item"><a href="13.html#001" class="section-link">人間に対する神の希望</a></li></ul></div><div class="chapter-item"><a href="14.html" class="chapter-link">14.アメリカに対する神の希望</a><ul class="section-list"><li class="section-item"><a href="14.html#001" class="section-link">アメリカに対する神の希望</a></li></ul></div><div class="chapter-item"><a href="15.html" class="chapter-link">15.キリスト教の将来</a><ul class="section-list"><li class="section-item"><a href="15.html#001" class="section-link">キリスト教の将来</a></li><li class="section-item"><a href="15.html#002" class="section-link">1973年10月28日</a></li></ul></div><div class="chapter-item"><a href="16.html" class="chapter-link">16.伝統の旗手</a><ul class="section-list"><li class="section-item"><a href="16.html#012" class="section-link">伝統の旗手</a></li><li class="section-item"><a href="16.html#013" class="section-link">1974年5月10日</a></li></ul></div><div class="chapter-item"><a href="17.html" class="chapter-link">17.キリスト教の新しい未来</a><ul class="section-list"><li class="section-item"><a href="17.html#022" class="section-link">キリスト教の新しい未来</a></li><li class="section-item"><a href="17.html#023" class="section-link">1974年9月18日</a></li></ul></div><div class="chapter-item"><a href="18.html" class="chapter-link">18.総解怨式のみことば</a><ul class="section-list"><li class="section-item"><a href="18.html#御旨と世界/18_総解怨式のみことば" class="section-link">御旨と世界/18_総解怨式のみことば</a></li><li class="section-item"><a href="18.html#総解怨式のみことば1975年5月1日-韓国-清平" class="section-link">総解怨式のみことば1975年5月1日　韓国　清平</a></li><li class="section-item"><span class="section-link">誤植・修正提案</span></li></ul></div><div class="chapter-item"><a href="19.html" class="chapter-link">19.私自身</a><ul class="section-list"><li class="section-item"><a href="19.html#014" class="section-link">私自身</a></li><li class="section-item"><a href="19.html#015" class="section-link">1975年7月13日</a></li></ul></div><div class="chapter-item"><a href="20.html" class="chapter-link">20.歴史の転換点</a><ul class="section-list"><li class="section-item"><a href="20.html#022" class="section-link">歴史の転換点</a></li><li class="section-item"><a href="20.html#023" class="section-link">1975年12月1日</a></li></ul></div><div class="chapter-item"><a href="21.html" class="chapter-link">21.統一式のみことば</a><ul class="section-list"><li class="section-item"><a href="21.html#御旨と世界/21_統一式のみことば" class="section-link">御旨と世界/21_統一式のみことば</a></li><li class="section-item"><span class="section-link">目次</span></li><li class="section-item"><a href="21.html#001" class="section-link">◆歴史的な年</a></li><li class="section-item"><a href="21.html#002" class="section-link">◆ヤンキー大会</a></li><li class="section-item"><a href="21.html#003" class="section-link">◆新しい時代</a></li><li class="section-item"><a href="21.html#004" class="section-link">◆統一式</a></li><li class="section-item"><a href="21.html#005" class="section-link">◆すべてが一つになる。</a></li><li class="section-item"><a href="21.html#006" class="section-link">◆勝利の時</a></li><li class="section-item"><a href="21.html#007" class="section-link">◆子女様の運勢</a></li><li class="section-item"><a href="21.html#008" class="section-link">◆犠牲の道は公式路程</a></li><li class="section-item"><a href="21.html#009" class="section-link">◆努力すれば発展</a></li><li class="section-item"><a href="21.html#010" class="section-link">◆原理で収拾</a></li><li class="section-item"><a href="21.html#011" class="section-link">◆統一の原則</a></li><li class="section-item"><span class="section-link">誤植・修正提案</span></li></ul></div><div class="chapter-item"><a href="22.html" class="chapter-link">22.新しい宇宙的な春は永遠に繁栄する</a><ul class="section-list"><li class="section-item"><a href="22.html#001" class="section-link">御旨と世界</a></li><li class="section-item"><a href="22.html#007" class="section-link">新しい宇宙的な春は永遠に繁栄する</a></li></ul></div><div class="chapter-item"><a href="23.html" class="chapter-link">23.摂理的歴史の光の中にあって</a><ul class="section-list"><li class="section-item"><a href="23.html#020" class="section-link">摂理的歴史の光の中にあって</a></li><li class="section-item"><a href="23.html#021" class="section-link">1977年2月23日</a></li></ul></div><div class="chapter-item"><a href="24.html" class="chapter-link">24.歴史的父母の日</a><ul class="section-list"><li class="section-item"><a href="24.html#017" class="section-link">歴史的父母の日</a></li><li class="section-item"><a href="24.html#018" class="section-link">1977年4月18日</a></li></ul></div><div class="chapter-item"><a href="25.html" class="chapter-link">25.創立以前の内的教会史</a><ul class="section-list"><li class="section-item"><a href="25.html#027" class="section-link">創立以前の内的教会史</a></li><li class="section-item"><a href="25.html#028" class="section-link">1977年5月1日</a></li></ul></div><div class="chapter-item"><a href="26.html" class="chapter-link">26.再会の心情</a><ul class="section-list"><li class="section-item"><a href="26.html#023" class="section-link">再会の心情</a></li><li class="section-item"><a href="26.html#024" class="section-link">1977年9月11日</a></li></ul></div><div class="chapter-item"><a href="27.html" class="chapter-link">27.刺激と冒険</a><ul class="section-list"><li class="section-item"><a href="27.html#011" class="section-link">刺激と冒険</a></li><li class="section-item"><a href="27.html#012" class="section-link">1978年4月16日</a></li></ul></div><div class="chapter-item"><a href="28.html" class="chapter-link">28.愛の相続</a><ul class="section-list"><li class="section-item"><a href="28.html#001" class="section-link">御旨と世界</a></li></ul></div><div class="chapter-item"><a href="29.html" class="chapter-link">29.祝福を迎える一日</a><ul class="section-list"><li class="section-item"><a href="29.html#010" class="section-link">御旨と世界</a></li></ul></div><div class="chapter-item"><a href="30.html" class="chapter-link">30.七七七双祝福八周年記念によせて</a><ul class="section-list"><li class="section-item"><a href="30.html#025" class="section-link">七七七双祝福　八周年記念に寄せて</a></li><li class="section-item"><a href="30.html#026" class="section-link">1978年10月22日　韓国　水沢里</a></li></ul></div><div class="chapter-item"><a href="31.html" class="chapter-link">31.私たち自身を知ろう</a><ul class="section-list"><li class="section-item"><a href="31.html#013" class="section-link">私たち自身を知ろう</a></li><li class="section-item"><a href="31.html#014" class="section-link">1979年9月30日</a></li></ul></div><div class="chapter-item"><a href="32.html" class="chapter-link">32.神の祖国</a><ul class="section-list"><li class="section-item"><a href="32.html#008" class="section-link">神の祖国</a></li><li class="section-item"><a href="32.html#009" class="section-link">1980年2月21日</a></li></ul></div><div class="chapter-item"><a href="33.html" class="chapter-link">33.摂理と昔今の私</a><ul class="section-list"><li class="section-item"><a href="33.html#002" class="section-link">摂理と昔今の私</a></li><li class="section-item"><a href="33.html#003" class="section-link">1981年2月22日</a></li></ul></div><div class="chapter-item"><a href="34.html" class="chapter-link">34.全体蕩減</a><ul class="section-list"><li class="section-item"><a href="34.html#020" class="section-link">御旨と世界　全体蕩減</a></li></ul></div><div class="chapter-item"><a href="35.html" class="chapter-link">35.信仰の三子女と本然の家庭基盤</a><ul class="section-list"><li class="section-item"><a href="35.html#008" class="section-link">信仰の三子女と本然の家庭基盤</a></li><li class="section-item"><a href="35.html#009" class="section-link">1983年5月13日</a></li></ul></div><div class="chapter-item"><a href="36.html" class="chapter-link">36.私を中心とした父母と子女と万物世界</a><ul class="section-list"><li class="section-item"><a href="36.html#001" class="section-link">私を中心とした父母と子女と万物世界</a></li><li class="section-item"><a href="36.html#002" class="section-link">1983年6月5日</a></li></ul></div><div class="chapter-item"><a href="37.html" class="chapter-link">37.愛勝日の必要性</a><ul class="section-list"><li class="section-item"><a href="37.html#001" class="section-link">愛勝日の必要性</a></li><li class="section-item"><a href="37.html#002" class="section-link">1984年1月15日</a></li></ul></div><div class="chapter-item"><a href="38.html" class="chapter-link">38.真の愛を中心とした本然のエデン</a><ul class="section-list"><li class="section-item"><a href="38.html#001" class="section-link">真の愛を中心とした本然のエデン</a></li><li class="section-item"><a href="38.html#002" class="section-link">1984年5月27日</a></li></ul></div></div>
+    <div class="nav-links">
+        <a href="../index.html">トップページへ戻る</a>
+    </div>
 </div>
-<p><br/>
-<br/>
-<br/>
-<br/></p>
-
-
-</div>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script></body>
-<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
-<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
-
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script>
-
 </body>
 </html>
-<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

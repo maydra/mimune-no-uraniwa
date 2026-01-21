@@ -1,554 +1,190 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XXQ0QTBYTR');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
-<link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
-
-<meta charset="utf-8"/>
-<title>目次/文鮮明先生御言選集 55</title>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
-        rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>文鮮明先生御言選集 55 | 目次 | み旨の裏庭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 2rem 1rem;
-            position: relative;
-            overflow-x: hidden;
-            font-size: 1.25rem;
-            line-height: 1.9;
+            padding: 3rem 1rem;
+            line-height: 1.8;
         }
-
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
-
         .container {
-            max-width: 1400px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
-            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-        }
-
-        h1 a {
-            text-decoration: none;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1.75rem;
-            margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            letter-spacing: 0.05em;
-        }
-
-        h2::before {
-            content: '◆';
-            color: #667eea;
-            font-size: 0.8em;
-        }
-
-        p {
-            margin: 1em 0;
-            line-height: 1.9;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        a:hover {
-            color: #f093fb;
-            border-bottom-color: #f093fb;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 2em 0;
-        }
-
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
-        }
-
-        li {
-            margin: 0.5em 0;
-            line-height: 1.9;
-        }
-
-        b, strong {
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .content-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-
-        .content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+            letter-spacing: 0.05em;
         }
-
-        .content-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .links-list {
+        
+        .index-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-left: 0;
+            padding: 0;
         }
-
-        .links-list li {
-            position: relative;
-            padding-left: 1.6rem;
+        .volume-item {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
         }
-
-        .links-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            transition: transform 0.3s ease;
+        .volume-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
+        .volume-title a { color: #fff; text-decoration: none; }
+        .volume-title a:hover { text-decoration: underline; }
 
-        .links-list li:hover::before {
-            transform: translateX(3px);
+        .chapter-list {
+            list-style: none;
+            padding-left: 0.5rem;
         }
-
-        .links-list a {
+        .chapter-item {
+            margin-bottom: 0.6rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .chapter-link {
             color: #e0e0e0;
             text-decoration: none;
-            font-size: 1.25rem;
-            line-height: 1.9;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.2s;
             display: inline-block;
-            position: relative;
-            border-bottom: none;
         }
+        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
 
-        .links-list a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
+        .section-list {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.4rem;
         }
-
-        .links-list a:hover {
-            color: #fff;
-            transform: translateX(3px);
+        .section-item {
+            margin-bottom: 0.3rem;
         }
-
-        .links-list a:hover::after {
-            width: 100%;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.75rem;
-                font-size: 1.1rem;
-            }
-
-            .content-card {
-                padding: 2rem;
-            }
-
-            h1 {
-                font-size: clamp(2rem, 6vw, 3.5rem);
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .links-list a {
-                font-size: 1.15rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            .links-list a {
-                font-size: 1.05rem;
-            }
-        }
-
-        /* 聖書の節リンク用スタイル（既存のものを保持） */
-        a.verse-link {
-            color: #e74c3c;
+        .section-link {
+            font-size: 0.9rem;
+            color: #b0c4de;
+            opacity: 0.8;
             text-decoration: none;
-            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .section-link:hover { opacity: 1; color: #fff; }
+        .section-link::before { content: '・'; margin-right: 0.3rem; }
+
+        .nav-links {
+            margin-top: 4rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Collapsible Details Styles */
+        details {
+            margin-bottom: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        details[open] {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        summary {
+            padding: 1.2rem 1.8rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            transition: background 0.2s;
+        }
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '＋';
+            font-size: 1.1rem;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            content: '－';
+            transform: rotate(180deg);
+        }
+        .details-content {
+            padding: 0 1.8rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0;
+        }
+        .details-content .chapter-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .details-content .chapter-item:last-child {
             border-bottom: none;
-        }
-
-        a.verse-link:hover {
-            text-decoration: underline;
-            color: #c0392b;
-            border-bottom-color: transparent;
-        }
-
-        [id^="v"]:target {
-            background-color: #fff3cd;
-            padding: 0.1em 0.2em;
-            border-radius: 3px;
-            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body><div class="container">
-<h1 id="目次/文鮮明先生御言選集-55"><a href="#目次/文鮮明先生御言選集-55">目次/文鮮明先生御言選集 55</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生御言選集 55</a></li><li class="toc-b"><a href="#002">はじめに</a></li><li class="toc-b"><a href="#003">あとがき</a></li></ul></div>
-<body bgcolor="#ffdece" link="#000000">
-<!-- St-HP-H -->
-<!-- En-HP-H -->
-<hr/>
-<b id="001"><a href="#001">文鮮明先生御言選集 55</a></b><br/>
-<hr/>
-<br/>
-<b id="002"><a href="#002" style="text-decoration : none;" target="right">はじめに</a></b><br/>
-<br/>
-<a href="001.html" style="text-decoration : none;" target="right"><b>メシヤと我々　1972.4.23</b><br/>
-      　神を失った人間</a><br/>
-<a href="001.html#001" style="text-decoration : none;" target="right">　メシヤの必要性</a><br/>
-<a href="001.html#002" style="text-decoration : none;" target="right">　堕落観念に徹せよ</a><br/>
-<a href="001.html#003" style="text-decoration : none;" target="right">　神が結ぶ愛</a><br/>
-<a href="001.html#004" style="text-decoration : none;" target="right">　自分一人が問題である</a><br/>
-<a href="001.html#005" style="text-decoration : none;" target="right">　神をはばむサタン</a><br/>
-<a href="001.html#006" style="text-decoration : none;" target="right">　サタンが主管する非原理世界</a><br/>
-<a href="001.html#007" style="text-decoration : none;" target="right">　サタンは非原理の神</a><br/>
-<a href="001.html#008" style="text-decoration : none;" target="right">　良心と肉心の戦い</a><br/>
-<a href="001.html#009" style="text-decoration : none;" target="right">　善悪の中心は自分</a><br/>
-<a href="001.html#010" style="text-decoration : none;" target="right">　肉心とサタンを占領せよ</a><br/>
-<a href="001.html#011" style="text-decoration : none;" target="right">　善を広めていく生活</a><br/>
-<a href="001.html#012" style="text-decoration : none;" target="right">　霊界からの攻撃</a><br/>
-<a href="001.html#013" style="text-decoration : none;" target="right">　サタンを追い出すメシヤ</a><br/>
-<a href="001.html#014" style="text-decoration : none;" target="right">　メシヤの使命</a><br/>
-<a href="001.html#015" style="text-decoration : none;" target="right">　この世の王様、サタン</a><br/>
-<a href="001.html#016" style="text-decoration : none;" target="right">　サタンとは何か</a><br/>
-<a href="001.html#017" style="text-decoration : none;" target="right">　宗教の使命</a><br/>
-<a href="001.html#018" style="text-decoration : none;" target="right">　国境を越える思想</a><br/>
-<a href="001.html#019" style="text-decoration : none;" target="right">　地上に来られるメシヤ</a><br/>
-<a href="001.html#020" style="text-decoration : none;" target="right">　神の戦法・サタンの戦法</a><br/>
-<a href="001.html#021" style="text-decoration : none;" target="right">　イエス様の思想</a><br/>
-<a href="001.html#022" style="text-decoration : none;" target="right">　神を解放する日まで我々は行こう</a><br/>
-<a href="001.html#023" style="text-decoration : none;" target="right">　日本的になるな</a><br/>
-<a href="001.html#024" style="text-decoration : none;" target="right">　日本の学生時代の先生</a><br/>
-<a href="001.html#025" style="text-decoration : none;" target="right">　すべてを訓練した先生</a><br/>
-<a href="001.html#026" style="text-decoration : none;" target="right">　永遠の統一教会</a><br/>
-<a href="001.html#027" style="text-decoration : none;" target="right">　アメリカでの先生</a><br/>
-<a href="001.html#028" style="text-decoration : none;" target="right">　ドイツに負けるな</a><br/>
-<a href="001.html#029" style="text-decoration : none;" target="right">　アメリカへ行こう</a><br/>
-<a href="001.html#030" style="text-decoration : none;" target="right">　機動隊の使命</a><br/>
-<a href="001.html#031" style="text-decoration : none;" target="right">　日本人はダイヤの塊</a><br/>
-<a href="001.html#032" style="text-decoration : none;" target="right">　日本人を先頭に立たせよう</a><br/>
-<a href="001.html#033" style="text-decoration : none;" target="right">　蟻のように働こう</a><br/>
-<a href="001.html#034" style="text-decoration : none;" target="right">　恩讐・サタン</a><br/>
-<a href="001.html#035" style="text-decoration : none;" target="right">　神が導いたイスラエル</a><br/>
-<a href="001.html#036" style="text-decoration : none;" target="right">　再臨主が来られる</a><br/>
-<a href="001.html#037" style="text-decoration : none;" target="right">　三次にわたる七年路程</a><br/>
-<a href="001.html#038" style="text-decoration : none;" target="right">　重い荷を負う先生</a><br/>
-<a href="001.html#039" style="text-decoration : none;" target="right">　復帰の道は成して行く道</a><br/>
-<a href="001.html#040" style="text-decoration : none;" target="right">　先生より苦労せよ</a><br/>
-<a href="001.html#041" style="text-decoration : none;" target="right">　神の願う国</a><br/>
-<a href="001.html#042" style="text-decoration : none;" target="right">　「統一戦線守護」の七二年</a><br/>
-<a href="001.html#043" style="text-decoration : none;" target="right">　神と人が共に住む国</a><br/>
-<a href="001.html#044" style="text-decoration : none;" target="right">　第二次七年路程</a><br/>
-<a href="001.html#045" style="text-decoration : none;" target="right">　日本が先頭に立て</a><br/>
-<a href="001.html#046" style="text-decoration : none;" target="right">　インドが問題である</a><br/>
-<a href="001.html#047" style="text-decoration : none;" target="right">　メシヤに必要な個人</a><br/>
-<a href="001.html#048" style="text-decoration : none;" target="right">　祝福家庭の責任</a><br/>
-<a href="001.html#049" style="text-decoration : none;" target="right">　素晴らしい所・統一教会</a><br/>
-<a href="001.html#050" style="text-decoration : none;" target="right">　最高のものを占領しよう</a><br/>
-<a href="001.html#051" style="text-decoration : none;" target="right">　愛の極致</a><br/>
-<a href="001.html#052" style="text-decoration : none;" target="right">　祈祷</a><br/>
-<br/>
-<br/>
-<a href="002.html" style="text-decoration : none;" target="right"><b>家庭の伝統　1972.4.29</b><br/>
-      　女として唯一の道</a><br/>
-<a href="002.html#002" style="text-decoration : none;" target="right">　先生がすべて蕩減してきた</a><br/>
-<a href="002.html#003" style="text-decoration : none;" target="right">　アダムの主管圏</a><br/>
-<a href="002.html#004" style="text-decoration : none;" target="right">　真のお母様</a><br/>
-<a href="002.html#005" style="text-decoration : none;" target="right">　先生の子女の祝福</a><br/>
-<a href="002.html#006" style="text-decoration : none;" target="right">　世界へ行く道</a><br/>
-<br/>
-<br/>
-<a href="003.html" style="text-decoration : none;" target="right"><b>復帰の道　1972.4.1</b><br/>
-      　復帰の公式</a><br/>
-<a href="003.html#002" style="text-decoration : none;" target="right">　ヤコブの勝利</a><br/>
-<a href="003.html#003" style="text-decoration : none;" target="right">　ユダとタマル</a><br/>
-<a href="003.html#004" style="text-decoration : none;" target="right">　来られる真の父母</a><br/>
-<a href="003.html#005" style="text-decoration : none;" target="right">　新しいメシヤ</a><br/>
-<a href="003.html#006" style="text-decoration : none;" target="right">　真の子女様との一体化</a><br/>
-<a href="003.html#007" style="text-decoration : none;" target="right">　国家的勝利基盤</a><br/>
-<a href="003.html#008" style="text-decoration : none;" target="right">　統一戦線守護</a><br/>
-<br/>
-<br/>
-<a href="004.html" style="text-decoration : none;" target="right"><b>アメリカに負けるな　1972.5.6</b><br/>
-      　アメリカの底力</a><br/>
-<a href="004.html#002" style="text-decoration : none;" target="right">　日本は信用できない</a><br/>
-<a href="004.html#003" style="text-decoration : none;" target="right">　神が祝福したアメリカ</a><br/>
-<a href="004.html#004" style="text-decoration : none;" target="right">　何倍も苦労しよう</a><br/>
-<a href="004.html#005" style="text-decoration : none;" target="right">　日本人は聖書が分からない</a><br/>
-<a href="004.html#006" style="text-decoration : none;" target="right">　いつも先生についてい</a>く<br/>
-<a href="004.html#007" style="text-decoration : none;" target="right">　温かい心情</a><br/>
-<a href="004.html#008" style="text-decoration : none;" target="right">　勝たねばならない</a><br/>
-<br/>
-<br/>
-<a href="005.html" style="text-decoration : none;" target="right"><b>真の父母と我々　19723.5.7</b><br/>
-      　善と悪</a><br/>
-<a href="005.html#002" style="text-decoration : none;" target="right">　個人の救いから</a><br/>
-<a href="005.html#003" style="text-decoration : none;" target="right">　メシヤ</a><br/>
-<a href="005.html#004" style="text-decoration : none;" target="right">　祝福</a><br/>
-<a href="005.html#005" style="text-decoration : none;" target="right">　三時代を通過</a><br/>
-<a href="005.html#006" style="text-decoration : none;" target="right">　子女</a><br/>
-<a href="005.html#007" style="text-decoration : none;" target="right">　父母の位置</a><br/>
-<a href="005.html#008" style="text-decoration : none;" target="right">　再臨の主</a><br/>
-<a href="005.html#009" style="text-decoration : none;" target="right">　勝利の時</a><br/>
-<a href="005.html#010" style="text-decoration : none;" target="right">　統一教会</a><br/>
-<a href="005.html#011" style="text-decoration : none;" target="right">　サタン不可侵圏</a><br/>
-<a href="005.html#012" style="text-decoration : none;" target="right">　一九六〇年</a><br/>
-<a href="005.html#013" style="text-decoration : none;" target="right">　三人の子女</a><br/>
-<a href="005.html#014" style="text-decoration : none;" target="right">　迫害時代</a><br/>
-<a href="005.html#015" style="text-decoration : none;" target="right">　二十一年間</a><br/>
-<a href="005.html#016" style="text-decoration : none;" target="right">　第三の父母</a><br/>
-<a href="005.html#017" style="text-decoration : none;" target="right">　真の父母と我々</a><br/>
-<a href="005.html#018" style="text-decoration : none;" target="right">　勝利の結実体</a><br/>
-<a href="005.html#019" style="text-decoration : none;" target="right">　地上から</a><br/>
-<a href="005.html#020" style="text-decoration : none;" target="right">　アメリカと世界</a><br/>
-<a href="005.html#021" style="text-decoration : none;" target="right">　父母の必要性</a><br/>
-<a href="005.html#022" style="text-decoration : none;" target="right">　理想世界</a><br/>
-<a href="005.html#023" style="text-decoration : none;" target="right">　愛の復帰</a><br/>
-<a href="005.html#024" style="text-decoration : none;" target="right">　完成の時代</a><br/>
-<a href="005.html#025" style="text-decoration : none;" target="right">　涙の道</a><br/>
-<a href="005.html#026" style="text-decoration : none;" target="right">　聖婚式</a><br/>
-<a href="005.html#027" style="text-decoration : none;" target="right">　三十六家庭</a><br/>
-<a href="005.html#028" style="text-decoration : none;" target="right">　勝利した先祖</a><br/>
-<a href="005.html#029" style="text-decoration : none;" target="right">　七十二家庭</a><br/>
-<a href="005.html#030" style="text-decoration : none;" target="right">　世界的時代圏</a><br/>
-<a href="005.html#031" style="text-decoration : none;" target="right">　四三〇双</a><br/>
-<a href="005.html#032" style="text-decoration : none;" target="right">　七七七双</a><br/>
-<a href="005.html#033" style="text-decoration : none;" target="right">　家庭の行く道</a><br/>
-<a href="005.html#034" style="text-decoration : none;" target="right">　変わってはいけない</a><br/>
-<br/>
-<br/>
-<a href="006.html" style="text-decoration : none;" target="right"><b>不信の種を抜いて信義の種をまこう　1972.5.8</b><br/>
-      　祈祷</a><br/>
-<a href="006.html#002" style="text-decoration : none;" target="right">　神よ不信の種を抜いてください</a><br/>
-<a href="006.html#003" style="text-decoration : none;" target="right">　不信の世界、不信の人間</a><br/>
-<a href="006.html#004" style="text-decoration : none;" target="right">　信義の世界を成すために摂理してこられた神様</a><br/>
-<a href="006.html#005" style="text-decoration : none;" target="right">　信義の結実体とならなければならない統一教会</a><br/>
-<a href="006.html#006" style="text-decoration : none;" target="right">　不信の種を抜いて、信義の種を植えるには</a><br/>
-<a href="006.html#007" style="text-decoration : none;" target="right">　信義の世界の伝統を残す教会員になろう</a><br/>
-<a href="006.html#008" style="text-decoration : none;" target="right">　祈祷</a><br/>
-<br/>
-<br/>
-<a href="007.html" style="text-decoration : none;" target="right"><b>今後私たちが成すべきこと　1972.5.9</b><br/>
-      　今後私たちがなすべきこと</a><br/>
-<a href="007.html#001" style="text-decoration : none;" target="right">　統一教会における祝福の意義</a><br/>
-<a href="007.html#002" style="text-decoration : none;" target="right">　信仰の子女を立てなければならない理由</a><br/>
-<a href="007.html#003" style="text-decoration : none;" target="right">　アベルの使命</a><br/>
-<a href="007.html#004" style="text-decoration : none;" target="right">　アベルの立場</a><br/>
-<a href="007.html#005" style="text-decoration : none;" target="right">　ヤコブから始まったイスラエルの歴史</a><br/>
-<a href="007.html#006" style="text-decoration : none;" target="right">　サタンは国家主義、神は世界主義</a><br/>
-<a href="007.html#007" style="text-decoration : none;" target="right">　神様の願い</a><br/>
-<a href="007.html#008" style="text-decoration : none;" target="right">　第三次世界巡回の目的</a><br/>
-<a href="007.html#009" style="text-decoration : none;" target="right">　復帰摂理をされる神様の苦しみ</a><br/>
-<a href="007.html#010" style="text-decoration : none;" target="right">　共産主義の脅威を受けている自由世界</a><br/>
-<a href="007.html#011" style="text-decoration : none;" target="right">　神様が導かれる道</a><br/>
-<a href="007.html#012" style="text-decoration : none;" target="right">　自ら先に打たれようとして前に立って戦わねばならない</a><br/>
-<a href="007.html#013" style="text-decoration : none;" target="right">　世界のために自己犠牲をする道が我々の道</a><br/>
-<a href="007.html#014" style="text-decoration : none;" target="right">　解放直後におけるキリスト教の責任</a><br/>
-<a href="007.html#015" style="text-decoration : none;" target="right">　縦的、横的関係の切れる現象</a><br/>
-<a href="007.html#016" style="text-decoration : none;" target="right">　復帰の時代においての女性の使命</a><br/>
-<a href="007.html#017" style="text-decoration : none;" target="right">　成熟すれば父母の下を離れなければならない</a><br/>
-<a href="007.html#018" style="text-decoration : none;" target="right">　世界的な女性の前にアダムとして来られる主</a><br/>
-<a href="007.html#019" style="text-decoration : none;" target="right">　エデンで失われた神様の娘の心情を復帰</a><br/>
-<a href="007.html#020" style="text-decoration : none;" target="right">　霊的心情復帰の現象</a><br/>
-<a href="007.html#021" style="text-decoration : none;" target="right">　三年期間の必要な理由</a><br/>
-<a href="007.html#022" style="text-decoration : none;" target="right">　成約聖徒の使命</a><br/>
-<a href="007.html#023" style="text-decoration : none;" target="right">　神様の作戦</a><br/>
-<a href="007.html#024" style="text-decoration : none;" target="right">　メシヤの使命</a><br/>
-<a href="007.html#025" style="text-decoration : none;" target="right">　存在、作用、発展の原則</a><br/>
-<a href="007.html#026" style="text-decoration : none;" target="right">　カイン・アベルの復帰も宇宙の生成発展の原則</a><br/>
-<a href="007.html#027" style="text-decoration : none;" target="right">　既成教会と1つになって国家的な復帰の基盤を備えなければならない</a><br/>
-<a href="007.html#028" style="text-decoration : none;" target="right">　全国的に国民運動を展開しなければならない時</a><br/>
-<a href="007.html#029" style="text-decoration : none;" target="right">　活動基盤が整えられたアメリカの統一教会</a><br/>
-<a href="007.html#030" style="text-decoration : none;" target="right">　火がついた機動隊活動</a><br/>
-<a href="007.html#031" style="text-decoration : none;" target="right">　第三次世界巡回期間中に成したこと</a><br/>
-<a href="007.html#032" style="text-decoration : none;" target="right">　来られる主が成すべき使命</a><br/>
-<a href="007.html#033" style="text-decoration : none;" target="right">　世界的な使命遂行の先頭に立つべき韓国</a><br/>
-<a href="007.html#034" style="text-decoration : none;" target="right">　信仰の主体国として責任を果たすべき韓国</a><br/>
-<a href="007.html#035" style="text-decoration : none;" target="right">　反省しなければならない韓国</a><br/>
-<a href="007.html#036" style="text-decoration : none;" target="right">　統一教会の人が行くべき運命の道</a><br/>
-<a href="007.html#037" style="text-decoration : none;" target="right">　国家的機動隊活動法案</a><br/>
-<a href="007.html#038" style="text-decoration : none;" target="right">　『原理講論』を読ませること</a><br/>
-<a href="007.html#039" style="text-decoration : none;" target="right">　祈祷</a><br/>
-<br/>
-<br/>
-<a href="008.html" style="text-decoration : none;" target="right"><b>メシヤが成すべきこと　1972.5.9</b><br/>
-      　堕落によってサタンの主管を受けるようになった人間</a><br/>
-<a href="008.html#002" style="text-decoration : none;" target="right">　血統転換をしなければ神様に帰ることが出来ない</a><br/>
-<a href="008.html#003" style="text-decoration : none;" target="right">　カイン・アベルから始まった長子権復帰摂理</a><br/>
-<a href="008.html#004" style="text-decoration : none;" target="right">　アダムとアベルの立場を復帰したヤコブ</a><br/>
-<a href="008.html#005" style="text-decoration : none;" target="right">　エバの立場を復帰する為に威信と面目を捨てたタマル</a><br/>
-<a href="008.html#006" style="text-decoration : none;" target="right">　自分達の摂理的立場を離れたマリヤとヨセフ</a><br/>
-<a href="008.html#007" style="text-decoration : none;" target="right">　神様の愛の圏内から生まれたイエス様</a><br/>
-<a href="008.html#008" style="text-decoration : none;" target="right">　人類は真のオリーブの木として来られるイエス様に接木されなければならない</a><br/>
-<a href="008.html#009" style="text-decoration : none;" target="right">　キリスト教2000年の歴史に該当する統一教会20年の歴史</a><br/>
-<a href="008.html#010" style="text-decoration : none;" target="right">　この地上で聖霊を迎えるべきイエス様</a><br/>
-<a href="008.html#011" style="text-decoration : none;" target="right">  1960年以前の統一教会における信仰運動の意義</a><br/>
-<a href="008.html#012" style="text-decoration : none;" target="right">  三年期間の蕩減復帰歴史</a><br/>
-<a href="008.html#013" style="text-decoration : none;" target="right">  必ず行かなければならない七年路程</a><br/>
-<a href="008.html#014" style="text-decoration : none;" target="right">  国を探して行くべきか、家庭に帰って行くべきか</a><br/>
-<a href="008.html#015" style="text-decoration : none;" target="right">　国のために祈りなさい</a><br/>
-<a href="008.html#016" style="text-decoration : none;" target="right">　一日も早く復帰しなければならない既成教会</a><br/>
-<a href="008.html#017" style="text-decoration : none;" target="right">　国を探すために信義の種をまこう</a><br/>
-<a href="008.html#018" style="text-decoration : none;" target="right">　縦的歴史の横的蕩減復帰</a><br/>
-<a href="008.html#019" style="text-decoration : none;" target="right">　神が一番愛される統一教会</a><br/>
-<a href="008.html#020" style="text-decoration : none;" target="right">　人間はみんな相手のために生まれた</a><br/>
-<a href="008.html#021" style="text-decoration : none;" target="right">　国のために行こう</a><br/>
-<a href="008.html#022" style="text-decoration : none;" target="right">　世界復興団創設計画</a><br/>
-<a href="008.html#023" style="text-decoration : none;" target="right">　機動隊のチャンピョンたれ</a><br/>
-<a href="008.html#024" style="text-decoration : none;" target="right">　アメリカ教会の経済問題解決法案</a><br/>
-<a href="008.html#025" style="text-decoration : none;" target="right">　日本食口とアメリカの食口の使命</a><br/>
-<a href="008.html#026" style="text-decoration : none;" target="right">　日本での摂理</a><br/>
-<a href="008.html#027" style="text-decoration : none;" target="right">　祈祷</a><br/>
-<br/>
-<br/>
-<b id="003"><a href="#003" style="text-decoration : none;" target="right">あとがき</a></b><br/>
-<br/>
-<p><br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-</p>
-</div></body>
-<div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p></p><p></p></div>
-<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+<body>
+<div class="container">
+<h1>文鮮明先生御言選集 55</h1><div class="index-list"><div class="chapter-item"><a href="001.html" class="chapter-link">メシヤと我々　1972.4.23神を失った人間</a><ul class="section-list"><li class="section-item"><a href="001.html#001" class="section-link">文鮮明先生御言選集 55</a></li><li class="section-item"><a href="001.html#002" class="section-link">神を失った人間</a></li><li class="section-item"><a href="001.html#003" class="section-link">メシヤの必要性</a></li><li class="section-item"><a href="001.html#004" class="section-link">堕落観念に徹せよ</a></li><li class="section-item"><a href="001.html#005" class="section-link">神が結ぶ愛</a></li><li class="section-item"><a href="001.html#006" class="section-link">自分一人が問題である</a></li><li class="section-item"><a href="001.html#007" class="section-link">神をはばむサタン</a></li><li class="section-item"><a href="001.html#008" class="section-link">サタンが主管する非原理世界</a></li><li class="section-item"><a href="001.html#009" class="section-link">サタンは非原理の神</a></li><li class="section-item"><a href="001.html#010" class="section-link">良心と肉心の戦い</a></li><li class="section-item"><a href="001.html#011" class="section-link">善悪の中心は自分</a></li><li class="section-item"><a href="001.html#012" class="section-link">肉心とサタンを占領せよ</a></li><li class="section-item"><a href="001.html#013" class="section-link">善を広めていく生活</a></li><li class="section-item"><a href="001.html#014" class="section-link">霊界からの攻撃</a></li><li class="section-item"><a href="001.html#015" class="section-link">サタンを追い出すメシヤ</a></li></ul></div><div class="chapter-item"><a href="002.html" class="chapter-link">家庭の伝統　1972.4.29女として唯一の道</a><ul class="section-list"><li class="section-item"><a href="002.html#001" class="section-link">文鮮明先生御言選集 55</a></li><li class="section-item"><a href="002.html#002" class="section-link">女として唯一の道</a></li><li class="section-item"><a href="002.html#003" class="section-link">先生がすべて蕩減してきた</a></li><li class="section-item"><a href="002.html#004" class="section-link">アダムの主管圏</a></li><li class="section-item"><a href="002.html#005" class="section-link">真のお母様</a></li><li class="section-item"><a href="002.html#006" class="section-link">先生の子女の祝福</a></li><li class="section-item"><a href="002.html#007" class="section-link">世界へ行く道</a></li></ul></div><div class="chapter-item"><a href="003.html" class="chapter-link">復帰の道　1972.4.1復帰の公式</a><ul class="section-list"><li class="section-item"><a href="003.html#001" class="section-link">文鮮明先生御言選集 55</a></li><li class="section-item"><a href="003.html#002" class="section-link">復帰の公式</a></li><li class="section-item"><a href="003.html#003" class="section-link">ヤコブの勝利</a></li><li class="section-item"><a href="003.html#004" class="section-link">ユダとタマル</a></li><li class="section-item"><a href="003.html#005" class="section-link">来られる真の父母</a></li><li class="section-item"><a href="003.html#006" class="section-link">新しいメシヤ</a></li><li class="section-item"><a href="003.html#007" class="section-link">真の子女様との一体化</a></li><li class="section-item"><a href="003.html#008" class="section-link">国家的勝利基盤</a></li><li class="section-item"><a href="003.html#009" class="section-link">統一戦線守護</a></li></ul></div><div class="chapter-item"><a href="004.html" class="chapter-link">アメリカに負けるな　1972.5.6アメリカの底力</a><ul class="section-list"><li class="section-item"><a href="004.html#001" class="section-link">文鮮明先生御言選集 55</a></li><li class="section-item"><a href="004.html#002" class="section-link">アメリカの底力</a></li><li class="section-item"><a href="004.html#003" class="section-link">日本は信用できない</a></li><li class="section-item"><a href="004.html#004" class="section-link">神が祝福したアメリカ</a></li><li class="section-item"><a href="004.html#005" class="section-link">何倍も苦労しよう</a></li><li class="section-item"><a href="004.html#006" class="section-link">日本人は聖書が分からない</a></li><li class="section-item"><a href="004.html#007" class="section-link">いつも先生についていく</a></li><li class="section-item"><a href="004.html#008" class="section-link">温かい心情</a></li><li class="section-item"><a href="004.html#009" class="section-link">勝たねばならない</a></li></ul></div><div class="chapter-item"><a href="005.html" class="chapter-link">真の父母と我々　19723.5.7善と悪</a><ul class="section-list"><li class="section-item"><a href="005.html#001" class="section-link">文鮮明先生御言選集 55</a></li><li class="section-item"><a href="005.html#002" class="section-link">善と悪</a></li><li class="section-item"><a href="005.html#003" class="section-link">個人の救いから</a></li><li class="section-item"><a href="005.html#004" class="section-link">メシヤ</a></li><li class="section-item"><a href="005.html#005" class="section-link">祝福</a></li><li class="section-item"><a href="005.html#006" class="section-link">三時代を通過</a></li><li class="section-item"><a href="005.html#007" class="section-link">子女</a></li><li class="section-item"><a href="005.html#008" class="section-link">父母の位置</a></li><li class="section-item"><a href="005.html#009" class="section-link">再臨の主</a></li><li class="section-item"><a href="005.html#010" class="section-link">勝利の時</a></li><li class="section-item"><a href="005.html#011" class="section-link">統一教会</a></li><li class="section-item"><a href="005.html#012" class="section-link">サタン不可侵圏</a></li><li class="section-item"><a href="005.html#013" class="section-link">一九六〇年</a></li><li class="section-item"><a href="005.html#014" class="section-link">三人の子女</a></li><li class="section-item"><a href="005.html#015" class="section-link">迫害時代</a></li></ul></div><div class="chapter-item"><a href="006.html" class="chapter-link">不信の種を抜いて信義の種をまこう　1972.5.8祈祷</a><ul class="section-list"><li class="section-item"><a href="006.html#001" class="section-link">文鮮明先生御言選集 55</a></li><li class="section-item"><a href="006.html#002" class="section-link">不信の種を抜いて信義の種をまこう</a></li><li class="section-item"><a href="006.html#003" class="section-link">祈祷</a></li><li class="section-item"><a href="006.html#004" class="section-link">神よ不信の種を抜いてください</a></li><li class="section-item"><a href="006.html#005" class="section-link">不信の世界、不信の人間</a></li><li class="section-item"><a href="006.html#006" class="section-link">信義の世界を成すために摂理してこられた神様</a></li><li class="section-item"><a href="006.html#007" class="section-link">信義の結実体とならなければならない統一教会</a></li><li class="section-item"><a href="006.html#008" class="section-link">不信の種を抜いて、信義の種を植えるには</a></li><li class="section-item"><a href="006.html#009" class="section-link">信義の世界の伝統を残す教会員になろう</a></li></ul></div><div class="chapter-item"><a href="007.html" class="chapter-link">今後私たちが成すべきこと　1972.5.9今後私たちがなすべきこと</a><ul class="section-list"><li class="section-item"><a href="007.html#001" class="section-link">文鮮明先生御言選集 55</a></li><li class="section-item"><a href="007.html#002" class="section-link">今後私たちが成すべきこと</a></li><li class="section-item"><a href="007.html#003" class="section-link">統一教会における祝福の意義</a></li><li class="section-item"><a href="007.html#004" class="section-link">信仰の子女を立てなければならない理由</a></li><li class="section-item"><a href="007.html#005" class="section-link">アベルの使命</a></li><li class="section-item"><a href="007.html#006" class="section-link">アベルの立場</a></li><li class="section-item"><a href="007.html#007" class="section-link">ヤコブから始まったイスラエルの歴史</a></li><li class="section-item"><a href="007.html#008" class="section-link">サタンは国家主義、神は世界主義</a></li><li class="section-item"><a href="007.html#009" class="section-link">神様の願い</a></li><li class="section-item"><a href="007.html#010" class="section-link">第三次世界巡回の目的</a></li><li class="section-item"><a href="007.html#011" class="section-link">復帰摂理をされる神様の苦しみ</a></li><li class="section-item"><a href="007.html#012" class="section-link">共産主義の脅威を受けている自由世界</a></li><li class="section-item"><a href="007.html#013" class="section-link">神様が導かれる道</a></li><li class="section-item"><a href="007.html#014" class="section-link">自ら先に打たれようとして前に立って戦わねばならない</a></li><li class="section-item"><a href="007.html#015" class="section-link">世界のために自己犠牲をする道が我々の道</a></li></ul></div><div class="chapter-item"><a href="008.html" class="chapter-link">メシヤが成すべきこと　1972.5.9堕落によってサタンの主管を受けるようになった人間</a><ul class="section-list"><li class="section-item"><a href="008.html#001" class="section-link">文鮮明先生御言選集 55</a></li><li class="section-item"><a href="008.html#002" class="section-link">堕落によってサタンの主管を受けるようになった人間</a></li><li class="section-item"><a href="008.html#003" class="section-link">血統転換をしなければ神様に帰ることができない</a></li><li class="section-item"><a href="008.html#004" class="section-link">カイン・アベルから始まった長子権復帰摂理</a></li><li class="section-item"><a href="008.html#005" class="section-link">アダムとアベルの立場を復帰したヤコブ</a></li><li class="section-item"><a href="008.html#006" class="section-link">エバの立場を復帰するために威信と面目を捨てたタマル</a></li><li class="section-item"><a href="008.html#007" class="section-link">自分たちの摂理的立場を離れたマリヤとヨセフ</a></li><li class="section-item"><a href="008.html#008" class="section-link">神様の愛の圏内から生まれたイエス様</a></li><li class="section-item"><a href="008.html#009" class="section-link">人類は真のオリーブの木として来られるイエス様に接ぎ木されなければならない</a></li><li class="section-item"><a href="008.html#010" class="section-link">キリスト教二〇〇〇年の歴史に該当する統一教会二十年の歴史</a></li><li class="section-item"><a href="008.html#011" class="section-link">この地上で聖霊を迎えるべきイエス様</a></li><li class="section-item"><a href="008.html#012" class="section-link">一九六〇年以前の統一教会における信仰運動の意義</a></li><li class="section-item"><a href="008.html#013" class="section-link">三年期間の蕩減復帰歴史</a></li><li class="section-item"><a href="008.html#014" class="section-link">必ず行かなければならない七年路程</a></li><li class="section-item"><a href="008.html#015" class="section-link">国を探しに行くべきか、家庭に帰って行くべきか</a></li></ul></div><div class="chapter-item"><a href="atogaki.html" class="chapter-link">あとがき</a><ul class="section-list"><li class="section-item"><a href="atogaki.html#001" class="section-link">文鮮明先生御言選集 55</a></li><li class="section-item"><a href="atogaki.html#002" class="section-link">あとがき</a></li></ul></div></div>
+    <div class="nav-links">
+        <a href="../index.html">トップページへ戻る</a>
+    </div>
+</div>
 </body>
 </html>

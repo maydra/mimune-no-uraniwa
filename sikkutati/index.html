@@ -1,603 +1,190 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XXQ0QTBYTR');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
-    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
-
-
-
-
-
-
-
-
-
-
-<meta charset="utf-8"/>
-<title>統一教会と食口たち</title>
-
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
-        rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>統一教会と食口たち | 目次 | み旨の裏庭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 2rem 1rem;
-            position: relative;
-            overflow-x: hidden;
-            font-size: 1.25rem;
-            line-height: 1.9;
+            padding: 3rem 1rem;
+            line-height: 1.8;
         }
-
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
-
         .container {
-            max-width: 1400px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
-            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-        }
-
-        h1 a {
-            text-decoration: none;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1.75rem;
-            margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            letter-spacing: 0.05em;
-        }
-
-        h2::before {
-            content: '◆';
-            color: #667eea;
-            font-size: 0.8em;
-        }
-
-        p {
-            margin: 1em 0;
-            line-height: 1.9;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        a:hover {
-            color: #f093fb;
-            border-bottom-color: #f093fb;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 2em 0;
-        }
-
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
-        }
-
-        li {
-            margin: 0.5em 0;
-            line-height: 1.9;
-        }
-
-        b, strong {
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .content-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-
-        .content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+            letter-spacing: 0.05em;
         }
-
-        .content-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .links-list {
+        
+        .index-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-left: 0;
+            padding: 0;
         }
-
-        .links-list li {
-            position: relative;
-            padding-left: 1.6rem;
+        .volume-item {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
         }
-
-        .links-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            transition: transform 0.3s ease;
+        .volume-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
+        .volume-title a { color: #fff; text-decoration: none; }
+        .volume-title a:hover { text-decoration: underline; }
 
-        .links-list li:hover::before {
-            transform: translateX(3px);
+        .chapter-list {
+            list-style: none;
+            padding-left: 0.5rem;
         }
-
-        .links-list a {
+        .chapter-item {
+            margin-bottom: 0.6rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .chapter-link {
             color: #e0e0e0;
             text-decoration: none;
-            font-size: 1.25rem;
-            line-height: 1.9;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.2s;
             display: inline-block;
-            position: relative;
-            border-bottom: none;
         }
+        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
 
-        .links-list a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
+        .section-list {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.4rem;
         }
-
-        .links-list a:hover {
-            color: #fff;
-            transform: translateX(3px);
+        .section-item {
+            margin-bottom: 0.3rem;
         }
-
-        .links-list a:hover::after {
-            width: 100%;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.75rem;
-                font-size: 1.1rem;
-            }
-
-            .content-card {
-                padding: 2rem;
-            }
-
-            h1 {
-                font-size: clamp(2rem, 6vw, 3.5rem);
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .links-list a {
-                font-size: 1.15rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            .links-list a {
-                font-size: 1.05rem;
-            }
-        }
-
-        /* 聖書の節リンク用スタイル（既存のものを保持） */
-        a.verse-link {
-            color: #e74c3c;
+        .section-link {
+            font-size: 0.9rem;
+            color: #b0c4de;
+            opacity: 0.8;
             text-decoration: none;
-            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .section-link:hover { opacity: 1; color: #fff; }
+        .section-link::before { content: '・'; margin-right: 0.3rem; }
+
+        .nav-links {
+            margin-top: 4rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Collapsible Details Styles */
+        details {
+            margin-bottom: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        details[open] {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        summary {
+            padding: 1.2rem 1.8rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            transition: background 0.2s;
+        }
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '＋';
+            font-size: 1.1rem;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            content: '－';
+            transform: rotate(180deg);
+        }
+        .details-content {
+            padding: 0 1.8rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0;
+        }
+        .details-content .chapter-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .details-content .chapter-item:last-child {
             border-bottom: none;
-        }
-
-        a.verse-link:hover {
-            text-decoration: underline;
-            color: #c0392b;
-            border-bottom-color: transparent;
-        }
-
-        [id^="v"]:target {
-            background-color: #fff3cd;
-            padding: 0.1em 0.2em;
-            border-radius: 3px;
-            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body><div class="container">
-<h1>統一教会と食口たち</h1>
-<body bgcolor="#ddffff" link="#000000" style="text-decoration : none;">
-<!-- St-HP-H -->
-<!-- En-HP-H -->
-<hr/>
-<b>統一教会と食口たち</b>
-<hr/>
-<a href="maegaki.html" style="text-decoration : none;" target="right"><b>まえがき</b></a><br/>
-<br/>
-<a href="1-1.html" style="text-decoration : none;" target="right"><b>第一章　宗教の意義と使命<br/>
-      第一節　宗教の意義と目的<br/>
-      　一　宗教の意義</b><br/>
-      　　1.宗教の語義<br/>
-      　　2.宗教の根本となる教えは<br/>
-      　　3.真なる宗教とは</a><br/>
-<a href="1-1.html#002" style="text-decoration : none;" target="right"><b>　二　宗教の必要性</b><br/>
-      　　1.宗教が必要な理由<br/>
-      　　2.宗教は万民に必要</a><br/>
-<a href="1-1.html#003" style="text-decoration : none;" target="right">　<b>三　宗教の目的</b><br/>
-      　　1.宗教の目的は<br/>
-      　　2.宗教が指向する最高の目的点</a><br/>
-<br/>
-<a href="1-2.html" style="text-decoration : none;" target="right"><b>第二節　宗教の役割と使命<br/>
-      　一　宗教に与えられた使命と目標</b><br/>
-      　　1.宗教は絶対者と因縁を結ぶ方便<br/>
-      　　2.宗教とは善の一つの中心を探していく歴史的な道<br/>
-      　　3.宗教が提示すべき重要な基準</a><br/>
-<a href="1-2.html#002" style="text-decoration : none;" target="right">　<b>二　宗教とは故障した人間を再生する所</b><br/>
-      　　1.宗教とは故障した人間を修理する修理工場<br/>
-      　　2.故障した人間を再生する再生倉庫<br/>
-      　　3.統一教会は総合修理工場</a><br/>
-<a href="1-2.html#003" style="text-decoration : none;" target="right">　<b>三　神様のみ意の世界をつくる所</b></a><br/>
-<a href="1-2.html#004" style="text-decoration : none;" target="right">　<b>四　本郷の法度を教えてあげて訓練させる所</b></a><br/>
-<br/>
-<a href="2-1.html" style="text-decoration : none;" target="right"><b>第二章　統一教会<br/>
-      第一節　統一教会成立とその背景</b><br/>
-      　<b>一　統一教会の公式名称</b></a><br/>
-<a href="2-1.html#002" style="text-decoration : none;" target="right">　<b>二　統一の真なる意味</b></a><br/>
-<a href="2-1.html#003" style="text-decoration : none;" target="right">　<b>三　世界基督教統一神霊協会とは</b></a><br/>
-<a href="2-1.html#004" style="text-decoration : none;" target="right">　<b>四　神霊とは</b></a><br/>
-<a href="2-1.html#005" style="text-decoration : none;" target="right">　<b>五　統一教会の旗</b></a><br/>
-<br/>
-<a href="2-2.html" style="text-decoration : none;" target="right"><b>第二節　統一教会の主張と思想<br/>
-      　一　統一教会が追求するもの</b><br/>
-      　　1.統一教会出現の目的<br/>
-      　　2.統一教会が追求してきたもの<br/>
-      　　3.統一教会の目的</a><br/>
-<a href="2-2.html#002" style="text-decoration : none;" target="right">　<b>二　統一教会教理の骨子</b></a><br/>
-<a href="2-2.html#003" style="text-decoration : none;" target="right">　<b>三　統一教会が提示するもの</b><br/>
-      　　1.真の父母の思想を提示<br/>
-      　　2.家庭を提示する<br/>
-      　　3.サタンに公認される方法を教えてくれる</a><br/>
-<a href="2-2.html#004" style="text-decoration : none;" target="right">　<b>四　統一教会が教えてくれるもの</b><br/>
-      　　1.原理原則を教えてくれる<br/>
-      　　2.神様を教えてくれる<br/>
-      　　3.神様のみ旨を教えてくれる<br/>
-      　　4.神様の愛と心情を教えてくれる<br/>
-      　　5.真の父母との関係を教えてくれる<br/>
-      　　6.神様の孝子・孝女になれと教えてくれる</a><br/>
-<a href="2-2.html#005" style="text-decoration : none;" target="right">　<b>五　統一教会の思想</b><br/>
-      　　1.統一思想の根源<br/>
-      　　2.統一教会は何主義か<br/>
-      　　3.統一教会の主流思想<br/>
-      　　4.統一思想の理解<br/>
-      　　5.天宙主義の解説</a><br/>
-<a href="2-2.html#006" style="text-decoration : none;" target="right">　<b>六　統一教会の偉力［威力］</b></a><br/>
-<br/>
-<a href="2-3.html" style="text-decoration : none;" target="right"><b>第三節　統一教会の使命<br/>
-      　一　世界の三大難問題と統一教会</b></a><br/>
-<a href="2-3.html#002" style="text-decoration : none;" target="right">　<b>二　摂理的使命</b><br/>
-      　　1.復帰を通した救援の使命<br/>
-      　　2.イエス様の恨みを解いて差し上げようという宗教<br/>
-      　　3.三時代の使命を完結すべき統一教会</a><br/>
-<a href="2-3.html#003" style="text-decoration : none;" target="right">　<b>三　宗教統一</b><br/>
-      　　1.全ての宗教が求めていく目的は一つ<br/>
-      　　2.神様のみ旨は宗派や教派の救いではなくこの世の救い<br/>
-      　　3.宗教統一の必然性<br/>
-      　　　イ）絶対的神は一つ<br/>
-      　　　ロ）神はいろいろな宗教を必要としない<br/>
-      　　　ハ）最後には全ての宗教が一つとなってこそ<br/>
-      　　4.宗教統一の方案<br/>
-      　　5.霊界の協助と宗教統一<br/>
-      　　6.宗派間の和睦は世界平和に向かう必須条件</a><br/>
-<a href="2-3.html#004" style="text-decoration : none;" target="right">　<b>四　世界の救いと世界統一</b><br/>
-      　　1.世界を救う使命<br/>
-      　　2.東西文明の結束を通した中和文明の創建<br/>
-      　　3.五色人種を一つの兄弟姉妹として<br/>
-      　　4.神様を中心とした一つの世界建設</a><br/>
-<a href="2-3.html#005" style="text-decoration : none;" target="right">　<b>五　地上天国建設</b><br/>
-      　　1.神様のみ旨は地上に天国の王権を立てること<br/>
-      　　2.教会の目的は国を救うところにある<br/>
-      　　3.祖国光復をなすべき統一教会<br/>
-      　　4.私たちは国を持った国民とならなければならない<br/>
-      　　5.天の国の市民にしようとする所</a><br/>
-<br/>
-<a href="2-4.html" style="text-decoration : none;" target="right"><b>第四節　統一教会の活動<br/>
-      　一　この世との差</b></a><br/>
-<a href="2-4.html#002" style="text-decoration : none;" target="right">　<b>二　反対と迫害</b><br/>
-      　　1.反対の結果<br/>
-      　　2.迫害の価値<br/>
-      　　3.<br/>
-      　　4.統一教会は悪口もたくさん言われた</a><br/>
-<a href="2-4.html#003" style="text-decoration : none;" target="right">　<b>三　神様の作戦</b><br/>
-      　　1.神様はどのように作戦なさるのか<br/>
-      　　2.打たれながら勝利する<br/>
-      　　3.追われながら発展した</a><br/>
-<a href="2-4.html#004" style="text-decoration : none;" target="right">　<b>四　統一教会の活動目的</b><br/>
-      　　1.統一教会を立てた目的<br/>
-      　　2.統一教会は何のために働くのか<br/>
-      　　3.統一教会は人のために働いている<br/>
-      　　4.統一教会は国と世界のために<br/>
-      　　5.統一教会の活動</a><br/>
-<a href="2-4.html#005" style="text-decoration : none;" target="right">　<b>五　統一教会の能力</b></a><br/>
-<br/>
-<a href="3-1.html" style="text-decoration : none;" target="right"><b>第三章　統一教会員<br/>
-      第一節　統一教会員とは<br/>
-      　一　統一教会員の入教背景</b><br/>
-      　　1.み旨的な背景<br/>
-      　　2.先祖達の功績の結実<br/>
-      　　3.私たちは善なる先祖株式会社の社長<br/>
-      　　4.先祖たちの協助と再臨復活</a><br/>
-<a href="3-1.html#002" style="text-decoration : none;" target="right">　<b>二　入教後の望ましい姿勢</b><br/>
-      　　1.統一教会に入った目的<br/>
-      　　2.入教後現れる現象<br/>
-      　　3.入教後備えるべき姿勢<br/>
-      　　4.入教後、注意すべき点</a><br/>
-<a href="3-1.html#003" style="text-decoration : none;" target="right">　<b>三　食口とは何か</b><br/>
-      　　1.統一教会で言う食口とは<br/>
-      　　2.食口という言葉の設定背景<br/>
-      　　3.だれが真の食口であろうか</a><br/>
-<a href="3-1.html#004" style="text-decoration : none;" target="right">　<b>四　本然の食口が持つべき姿勢</b></a><br/>
-<a href="3-1.html#005" style="text-decoration : none;" target="right">　<b>五　統一教会の価値</b><br/>
-      　　1.私たちは歴史的結実体である<br/>
-      　　2.計り知れない恩賜の立場に置かれた私たち<br/>
-      　　3.見事で誇らしい<br/>
-      　　4.幸福なる立場である<br/>
-      　　5.幸福なる所である<br/>
-      　　6.食口の価値</a><br/>
-<a href="3-1.html#006" style="text-decoration : none;" target="right">　<b>六　統一教会を信じてから離れて休む場合</b><br/>
-      　　1.休むのは分からないから<br/>
-      　　2.離れてもまた入ってくる<br/>
-      　　3.離れて休む食口たちの事例</a><br/>
-<br/>
-<a href="3-2.html" style="text-decoration : none;" target="right"><b>第二節　統一教会員の道<br/>
-      　一　三つの類形の道</b><br/>
-      　　1.善悪を中心とした三つの類型の道<br/>
-      　　2.三つの愛をなしていく本然の人生の道</a><br/>
-<a href="3-2.html#002" style="text-decoration : none;" target="right">　<b>二　統一教会員が行くべき道</b><br/>
-      　　1.神様と統一教会員の道<br/>
-      　　2.統一教会員が行くべき運命の道<br/>
-      　　3.復帰の道と原理の道<br/>
-      　　　イ）復帰の道とは<br/>
-      　　　ロ）復帰の道を行くためには<br/>
-      　　　ハ）復帰は個人から<br/>
-      　　　ニ）復帰の道は決められている<br/>
-      　　　ホ）三段階の復帰の公式<br/>
-      　　　ヘ）復帰の道は開拓していく道<br/>
-      　　　ト）原理の道は一つだけ<br/>
-      　　4.七年路程</a><br/>
-<a href="3-2.html#003" style="text-decoration : none;" target="right">　<b>三　天の道を行くための私たちの姿勢</b><br/>
-      　　1.先生が見られた統一教会員の道<br/>
-      　　2.統一教会員の道は難しい道<br/>
-      　　3.天の道を行く時、取るべき心の姿勢<br/>
-      　　4.天の道を行く秘訣</a><br/>
-<br/>
-<a href="3-3.html" style="text-decoration : none;" target="right"><b>第三節　統一教会員の使命と時<br/>
-      　一　統一教会の連中とは何か</b></a><br/>
-<a href="3-3.html#002" style="text-decoration : none;" target="right">　<b>二　内的使命とその使命の価値</b><br/>
-      　　1.内的使命<br/>
-      　　2.とてつもない私たちの使命</a><br/>
-<a href="3-3.html#003" style="text-decoration : none;" target="right">　<b>三　統一教会員の使命</b><br/>
-      　　1.サタンを追放しなければならない使命<br/>
-      　　2.イエス様が関係した使命<br/>
-      　　3.愛の秩序を立てるべき使命<br/>
-      　　4.五色人種を連結させるべき使命<br/>
-      　　5.宗派統一の使命<br/>
-      　　6.思想統一の使命<br/>
-      　　7.その国を訪ねる使命</a><br/>
-<a href="3-3.html#004" style="text-decoration : none;" target="right">　<b>四　私たちと時</b><br/>
-      　　1.今の時<br/>
-      　　2.時の兆し<br/>
-      　　3.自分の時を一致させよ<br/>
-      　　4.時を失わない方法<br/>
-      　　5.今は活動する時</a><br/>
-<br/>
-<a href="3-4.html" style="text-decoration : none;" target="right"><b>第四節　統一教会員の信仰生活<br/>
-      　一　真なる信仰生活</b><br/>
-      　　1.信仰者の願い<br/>
-      　　2.信仰の基準が必要な理由<br/>
-      　　3.望ましい信仰の基準<br/>
-      　　4.信仰生活の意味<br/>
-      　　5.信仰生活の目的<br/>
-      　　6.信仰生活の第一条</a><br/>
-<a href="3-4.html#002" style="text-decoration : none;" target="right">　<b>二　統一教会の信仰の特性</b><br/>
-      　　1.信仰生活の三大要素(絶対信仰、絶対否定、絶対愛)<br/>
-      　　2.体恤信仰<br/>
-      　　3.統一教会をなぜ信ずるのか</a><br/>
-<a href="3-4.html#003" style="text-decoration : none;" target="right">　<b>三　真なる信仰姿勢</b><br/>
-      　　1.信仰者の態度<br/>
-      　　　イ）待ち焦がれる心情が必要である<br/>
-      　　　ロ）負債を負った者の姿勢を持つべき<br/>
-      　　　ハ）固い覚悟を持たなければ<br/>
-      　　　ニ）ぴんと張った心情的態度が必要<br/>
-      　　2.忍耐が尊い<br/>
-      　　3.克服が貴い<br/>
-      　　4.平凡なことに感謝しなければ</a><br/>
-<br/>
-<a href="3-5.html" style="text-decoration : none;" target="right"><b>第五節　統一教会員の生活<br/>
-      　一　生活の意味と目標</b><br/>
-      　　1.私たちの生活が持つ意味<br/>
-      　　2.生活統一</a><br/>
-<a href="3-5.html#002" style="text-decoration : none;" target="right"><b>　二　真なる生活</b><br/>
-      　　1.統一教会員のの生活観<br/>
-      　　2.生活の法度<br/>
-      　　3.真なる生活<br/>
-      　　4.生活の基準と基盤<br/>
-      　　5.神様と共に生きなければ<br/>
-      　　6.一日の生活の重要性</a><br/>
-<a href="3-5.html#003" style="text-decoration : none;" target="right"><b>　三　生活方法</b><br/>
-      　　1.どのようなことが豊かに暮らすことか<br/>
-      　　2.中心を探し生活しなければ<br/>
-      　　3.為にする生活をしなければ<br/>
-      　　4.愛の中心は犠牲<br/>
-      　　5.福は苦労から</a><br/>
-<br/>
-
-<blockquote><br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-</blockquote>
-
-
-
-
-
-
-
-
-
+<body>
+<div class="container">
+<h1>統一教会と食口たち</h1><div class="index-list"><div class="chapter-item"><a href="maegaki.html" class="chapter-link">まえがき</a><ul class="section-list"><li class="section-item"><a href="maegaki.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="maegaki.html#002" class="section-link">まえがき</a></li></ul></div><div class="chapter-item"><a href="1-1.html" class="chapter-link">第一章　宗教の意義と使命第一節　宗教の意義と目的一　宗教の意義1.宗教の語義2.宗教の根本となる教えは3.真なる宗教とは</a><ul class="section-list"><li class="section-item"><a href="1-1.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="1-1.html#002" class="section-link">第一章　宗教の意義と使命</a></li><li class="section-item"><a href="1-1.html#003" class="section-link">第一節　宗教の意義と目的</a></li><li class="section-item"><a href="1-1.html#004" class="section-link">一　宗教の意義</a></li><li class="section-item"><a href="1-1.html#005" class="section-link">１　宗教の語義</a></li><li class="section-item"><a href="1-1.html#006" class="section-link">２　宗教の根本となる教えは</a></li><li class="section-item"><a href="1-1.html#007" class="section-link">３　真なる宗教とは</a></li><li class="section-item"><a href="1-1.html#008" class="section-link">二　宗教の必要性</a></li><li class="section-item"><a href="1-1.html#009" class="section-link">１　宗教が必要な理由</a></li><li class="section-item"><a href="1-1.html#010" class="section-link">２　宗教は万民に必要</a></li><li class="section-item"><a href="1-1.html#011" class="section-link">三　宗教の目的</a></li><li class="section-item"><a href="1-1.html#012" class="section-link">１　宗教の目的は</a></li><li class="section-item"><a href="1-1.html#013" class="section-link">２　宗教が指向する最高の目的点</a></li></ul></div><div class="chapter-item"><a href="1-2.html" class="chapter-link">第二節　宗教の役割と使命一　宗教に与えられた使命と目標1.宗教は絶対者と因縁を結ぶ方便2.宗教とは善の一つの中心を探していく歴史的な道3.宗教が提示すべき重要な基準</a><ul class="section-list"><li class="section-item"><a href="1-2.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="1-2.html#002" class="section-link">第二節　宗教の役割と使命</a></li><li class="section-item"><a href="1-2.html#003" class="section-link">一　宗教に与えられた使命と目標</a></li><li class="section-item"><a href="1-2.html#004" class="section-link">１　宗教は絶対者と因縁を結ぶ方便</a></li><li class="section-item"><a href="1-2.html#005" class="section-link">２　宗教とは善の一つの中心を捜していく歴史的な道</a></li><li class="section-item"><a href="1-2.html#006" class="section-link">３　宗教が提示すべき重要な基準</a></li><li class="section-item"><a href="1-2.html#007" class="section-link">二　宗教とは故障した人間を再生する所</a></li><li class="section-item"><a href="1-2.html#008" class="section-link">１　宗教とは故障した人間を修理する修理工場</a></li><li class="section-item"><a href="1-2.html#009" class="section-link">２　故障した人間を再生する再生倉庫</a></li><li class="section-item"><a href="1-2.html#010" class="section-link">３　統一教会は総合修理工場</a></li><li class="section-item"><a href="1-2.html#011" class="section-link">三　神様のみ意の世界をつくる所</a></li><li class="section-item"><a href="1-2.html#012" class="section-link">四　本郷の法度を教えてあげて訓練させる所</a></li></ul></div><div class="chapter-item"><a href="2-1.html" class="chapter-link">第二章　統一教会第一節　統一教会成立とその背景一　統一教会の公式名称</a><ul class="section-list"><li class="section-item"><a href="2-1.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="2-1.html#002" class="section-link">第二章　統一教会</a></li><li class="section-item"><a href="2-1.html#003" class="section-link">第一節　統一教会の摂理とその背景</a></li><li class="section-item"><a href="2-1.html#004" class="section-link">一　統一教会の公式名称</a></li><li class="section-item"><a href="2-1.html#005" class="section-link">二　統一の真なる意味</a></li><li class="section-item"><a href="2-1.html#006" class="section-link">三　世界基督教統一神霊協会とは</a></li><li class="section-item"><a href="2-1.html#007" class="section-link">四　神霊とは</a></li><li class="section-item"><a href="2-1.html#008" class="section-link">五　統一教会の旗</a></li></ul></div><div class="chapter-item"><a href="2-2.html" class="chapter-link">第二節　統一教会の主張と思想一　統一教会が追求するもの1.統一教会出現の目的2.統一教会が追求してきたもの3.統一教会の目的</a><ul class="section-list"><li class="section-item"><a href="2-2.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="2-2.html#002" class="section-link">第二節　統一教会の主張と思想</a></li><li class="section-item"><a href="2-2.html#003" class="section-link">一　統一教会が追求するもの</a></li><li class="section-item"><a href="2-2.html#004" class="section-link">１　統一教会出現の目的</a></li><li class="section-item"><a href="2-2.html#005" class="section-link">２　統一教会が追求してきたもの</a></li><li class="section-item"><a href="2-2.html#006" class="section-link">３　統一教会の目的</a></li><li class="section-item"><a href="2-2.html#007" class="section-link">二　統一教会の教理の骨子</a></li><li class="section-item"><a href="2-2.html#008" class="section-link">三　統一教会が提示するもの</a></li><li class="section-item"><a href="2-2.html#009" class="section-link">１　真の父母の思想を提示</a></li><li class="section-item"><a href="2-2.html#010" class="section-link">２　家庭を提示する</a></li><li class="section-item"><a href="2-2.html#011" class="section-link">３　サタンに公認される方法を教えてくれる</a></li><li class="section-item"><a href="2-2.html#012" class="section-link">四　統一教会が教えてくれるもの</a></li><li class="section-item"><a href="2-2.html#013" class="section-link">１　原理原則を教えてくれる</a></li><li class="section-item"><a href="2-2.html#014" class="section-link">２　神様を教えてくれる</a></li><li class="section-item"><a href="2-2.html#015" class="section-link">３　神様のみ旨を教えてくれる</a></li></ul></div><div class="chapter-item"><a href="2-3.html" class="chapter-link">第三節　統一教会の使命一　世界の三大難問題と統一教会</a><ul class="section-list"><li class="section-item"><a href="2-3.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="2-3.html#002" class="section-link">第三節　統一教会の使命</a></li><li class="section-item"><a href="2-3.html#003" class="section-link">一　世界の三大難問題と統一教会</a></li><li class="section-item"><a href="2-3.html#004" class="section-link">二　摂理的使命</a></li><li class="section-item"><a href="2-3.html#005" class="section-link">１　復帰を通した救援の使命</a></li><li class="section-item"><a href="2-3.html#006" class="section-link">２　イエス様の恨みを解いて差し上げようという宗教</a></li><li class="section-item"><a href="2-3.html#007" class="section-link">３　三時代の使命を完結すべき統一教会</a></li><li class="section-item"><a href="2-3.html#008" class="section-link">三　宗教統一</a></li><li class="section-item"><a href="2-3.html#009" class="section-link">１　すべての宗教が求めていく目的は一つ</a></li><li class="section-item"><a href="2-3.html#010" class="section-link">２　神様のみ旨は宗派や教派の救いではなくこの世の救い</a></li><li class="section-item"><a href="2-3.html#011" class="section-link">３　宗教統一の必然性</a></li><li class="section-item"><a href="2-3.html#012" class="section-link">イ）絶対的神は一つ</a></li><li class="section-item"><a href="2-3.html#013" class="section-link">ロ）神様はいろいろな宗教を必要としない</a></li><li class="section-item"><a href="2-3.html#014" class="section-link">ハ）最後にはすべての宗教が一つとなってこそ</a></li><li class="section-item"><a href="2-3.html#015" class="section-link">４　宗教統一の方案</a></li></ul></div><div class="chapter-item"><a href="2-4.html" class="chapter-link">第四節　統一教会の活動一　この世との差</a><ul class="section-list"><li class="section-item"><a href="2-4.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="2-4.html#002" class="section-link">第四節　統一教会の活動</a></li><li class="section-item"><a href="2-4.html#003" class="section-link">一　この世との差</a></li><li class="section-item"><a href="2-4.html#004" class="section-link">二　反対と迫害</a></li><li class="section-item"><a href="2-4.html#005" class="section-link">１　反対の結果</a></li><li class="section-item"><a href="2-4.html#006" class="section-link">２　迫害の価値</a></li><li class="section-item"><a href="2-4.html#007" class="section-link">４　統一教会は悪口もたくさん言われた</a></li><li class="section-item"><a href="2-4.html#008" class="section-link">三　神様の作戦</a></li><li class="section-item"><a href="2-4.html#009" class="section-link">１　神様はどのような作戦をなさるのか</a></li><li class="section-item"><a href="2-4.html#010" class="section-link">２　打たれながら勝利する</a></li><li class="section-item"><a href="2-4.html#011" class="section-link">３　追われながら発展した</a></li><li class="section-item"><a href="2-4.html#012" class="section-link">四　統一教会の活動目的</a></li><li class="section-item"><a href="2-4.html#013" class="section-link">１　統一教会を立てた目的</a></li><li class="section-item"><a href="2-4.html#014" class="section-link">２　統一教会は何のために働くのか</a></li><li class="section-item"><a href="2-4.html#015" class="section-link">３　統一教会は人のために働いている</a></li></ul></div><div class="chapter-item"><a href="3-1.html" class="chapter-link">第三章　統一教会員第一節　統一教会員とは一　統一教会員の入教背景1.み旨的な背景2.先祖達の功績の結実3.私たちは善なる先祖株式会社の社長4.先祖たちの協助と再臨復活</a><ul class="section-list"><li class="section-item"><a href="3-1.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="3-1.html#002" class="section-link">第三章　統一教会員</a></li><li class="section-item"><a href="3-1.html#003" class="section-link">第一節　統一教会員とは</a></li><li class="section-item"><a href="3-1.html#004" class="section-link">一　統一教会員の入教背景</a></li><li class="section-item"><a href="3-1.html#005" class="section-link">１　み旨的な背景</a></li><li class="section-item"><a href="3-1.html#006" class="section-link">２　先祖たちの功績の結実</a></li><li class="section-item"><a href="3-1.html#007" class="section-link">３　私たちは善なる先祖株式会社の社長</a></li><li class="section-item"><a href="3-1.html#008" class="section-link">４　先祖たちの協助と再臨復活</a></li><li class="section-item"><a href="3-1.html#009" class="section-link">二　入教後の望ましい姿勢</a></li><li class="section-item"><a href="3-1.html#010" class="section-link">１　統一教会に入った目的</a></li><li class="section-item"><a href="3-1.html#011" class="section-link">２　入教後現れる現象</a></li><li class="section-item"><a href="3-1.html#012" class="section-link">３　入教後備えるべき姿勢</a></li><li class="section-item"><a href="3-1.html#013" class="section-link">４　入教後、注意すべき点</a></li><li class="section-item"><a href="3-1.html#014" class="section-link">三　食口とは何か</a></li><li class="section-item"><a href="3-1.html#015" class="section-link">１　統一教会で言う食口とは</a></li></ul></div><div class="chapter-item"><a href="3-2.html" class="chapter-link">第二節　統一教会員の道一　三つの類形の道1.善悪を中心とした三つの類型の道2.三つの愛をなしていく本然の人生の道</a><ul class="section-list"><li class="section-item"><a href="3-2.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="3-2.html#002" class="section-link">第二節　統一教会員の道</a></li><li class="section-item"><a href="3-2.html#003" class="section-link">一　三つの類型の道</a></li><li class="section-item"><a href="3-2.html#004" class="section-link">１　善悪を中心とした三つの類型の道</a></li><li class="section-item"><a href="3-2.html#005" class="section-link">２　三つの愛を成していく本然の人生の道</a></li><li class="section-item"><a href="3-2.html#006" class="section-link">二　統一教会員が行くべき道</a></li><li class="section-item"><a href="3-2.html#007" class="section-link">１　神様と統一教会員の道</a></li><li class="section-item"><a href="3-2.html#008" class="section-link">２　統一教会員が行くべき運命の道</a></li><li class="section-item"><a href="3-2.html#009" class="section-link">３　復帰の道と原理の道</a></li><li class="section-item"><a href="3-2.html#010" class="section-link">イ）復帰の道とは</a></li><li class="section-item"><a href="3-2.html#011" class="section-link">ロ）復帰の道を行くためには</a></li><li class="section-item"><a href="3-2.html#012" class="section-link">ハ）復帰は個人から</a></li><li class="section-item"><a href="3-2.html#013" class="section-link">二）復帰の道は定められている</a></li><li class="section-item"><a href="3-2.html#014" class="section-link">ホ）三段階復帰の公式</a></li><li class="section-item"><a href="3-2.html#015" class="section-link">ヘ）復帰の道は開拓していく道</a></li></ul></div><div class="chapter-item"><a href="3-3.html" class="chapter-link">第三節　統一教会員の使命と時一　統一教会の連中とは何か</a><ul class="section-list"><li class="section-item"><a href="3-3.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="3-3.html#002" class="section-link">第三節　統一教会員の使命と時</a></li><li class="section-item"><a href="3-3.html#003" class="section-link">一　統一教会の連中とは何か</a></li><li class="section-item"><a href="3-3.html#004" class="section-link">二　内的使命とその使命の価値</a></li><li class="section-item"><a href="3-3.html#005" class="section-link">１　内的使命</a></li><li class="section-item"><a href="3-3.html#006" class="section-link">２　とてつもない私たちの使命</a></li><li class="section-item"><a href="3-3.html#007" class="section-link">三　統一教会員の使命</a></li><li class="section-item"><a href="3-3.html#008" class="section-link">１　サタンを追放しなければならない使命</a></li><li class="section-item"><a href="3-3.html#009" class="section-link">２　イエス様が関係した使命</a></li><li class="section-item"><a href="3-3.html#010" class="section-link">３　愛の秩序を立てるべき使命</a></li><li class="section-item"><a href="3-3.html#011" class="section-link">４　五色人種を連結させるべき使命</a></li><li class="section-item"><a href="3-3.html#012" class="section-link">５　宗派統一の使命</a></li><li class="section-item"><a href="3-3.html#013" class="section-link">６　思想統一の使命</a></li><li class="section-item"><a href="3-3.html#014" class="section-link">７　その国を訪ねる使命</a></li><li class="section-item"><a href="3-3.html#015" class="section-link">四　私たちと時</a></li></ul></div><div class="chapter-item"><a href="3-4.html" class="chapter-link">第四節　統一教会員の信仰生活一　真なる信仰生活1.信仰者の願い2.信仰の基準が必要な理由3.望ましい信仰の基準4.信仰生活の意味5.信仰生活の目的6.信仰生活の第一条</a><ul class="section-list"><li class="section-item"><a href="3-4.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="3-4.html#002" class="section-link">第四節　統一教会員の信仰生活</a></li><li class="section-item"><a href="3-4.html#003" class="section-link">一　真なる信仰生活</a></li><li class="section-item"><a href="3-4.html#004" class="section-link">１　信仰者の願い</a></li><li class="section-item"><a href="3-4.html#005" class="section-link">２　信仰の基準が必要な理由</a></li><li class="section-item"><a href="3-4.html#006" class="section-link">３　望ましい信仰の基準</a></li><li class="section-item"><a href="3-4.html#007" class="section-link">４　信仰生活の意味</a></li><li class="section-item"><a href="3-4.html#008" class="section-link">５　信仰生活の目的</a></li><li class="section-item"><a href="3-4.html#009" class="section-link">６　信仰生活の第一条</a></li><li class="section-item"><a href="3-4.html#010" class="section-link">二　統一教会の信仰の特性</a></li><li class="section-item"><a href="3-4.html#011" class="section-link">１　統一信仰の三大要素（絶対信仰、絶対否定、絶対愛）</a></li><li class="section-item"><a href="3-4.html#012" class="section-link">２　体恤信仰</a></li><li class="section-item"><a href="3-4.html#013" class="section-link">３　統一教会をなぜ信ずるのか</a></li><li class="section-item"><a href="3-4.html#014" class="section-link">三　真なる信仰姿勢</a></li><li class="section-item"><a href="3-4.html#015" class="section-link">１　信仰者の態度</a></li></ul></div><div class="chapter-item"><a href="3-5.html" class="chapter-link">第五節　統一教会員の生活一　生活の意味と目標1.私たちの生活が持つ意味2.生活統一</a><ul class="section-list"><li class="section-item"><a href="3-5.html#001" class="section-link">統一教会と食口たち</a></li><li class="section-item"><a href="3-5.html#002" class="section-link">第五節　統一教会員の生活</a></li><li class="section-item"><a href="3-5.html#003" class="section-link">一　生活の意味と目標</a></li><li class="section-item"><a href="3-5.html#004" class="section-link">１　私たちの生活がもつ意味</a></li><li class="section-item"><a href="3-5.html#005" class="section-link">２　生活統一</a></li><li class="section-item"><a href="3-5.html#006" class="section-link">二　真なる生活</a></li><li class="section-item"><a href="3-5.html#007" class="section-link">１　統一教会員の生活観</a></li><li class="section-item"><a href="3-5.html#008" class="section-link">２　生活の法度</a></li><li class="section-item"><a href="3-5.html#009" class="section-link">３　真なる生活</a></li><li class="section-item"><a href="3-5.html#010" class="section-link">４　生活の基準と基盤</a></li><li class="section-item"><a href="3-5.html#011" class="section-link">５　神様と共に生きなければ</a></li><li class="section-item"><a href="3-5.html#012" class="section-link">６　一日の生活の重要性</a></li><li class="section-item"><a href="3-5.html#013" class="section-link">三　生活方法</a></li><li class="section-item"><a href="3-5.html#014" class="section-link">１　どのようなことが豊かに暮らすことか</a></li><li class="section-item"><a href="3-5.html#015" class="section-link">２　中心を探し生活しなければ</a></li></ul></div></div>
+    <div class="nav-links">
+        <a href="../index.html">トップページへ戻る</a>
+    </div>
 </div>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script></body>
-<div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p></p><p></p></div>
-
-
-
-
-
-
-
-<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
-
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script>
-
 </body>
 </html>
-<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

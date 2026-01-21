@@ -1,639 +1,190 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XXQ0QTBYTR');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
-    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
-
-
-
-
-
-
-
-
-
-
-<meta charset="utf-8"/>
-<title>二世の道_Index06</title>
-
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
-        rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>二世の道_Index06 | 目次 | み旨の裏庭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 2rem 1rem;
-            position: relative;
-            overflow-x: hidden;
-            font-size: 1.25rem;
-            line-height: 1.9;
+            padding: 3rem 1rem;
+            line-height: 1.8;
         }
-
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
-
         .container {
-            max-width: 1400px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
-            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-        }
-
-        h1 a {
-            text-decoration: none;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1.75rem;
-            margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            letter-spacing: 0.05em;
-        }
-
-        h2::before {
-            content: '◆';
-            color: #667eea;
-            font-size: 0.8em;
-        }
-
-        p {
-            margin: 1em 0;
-            line-height: 1.9;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        a:hover {
-            color: #f093fb;
-            border-bottom-color: #f093fb;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 2em 0;
-        }
-
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
-        }
-
-        li {
-            margin: 0.5em 0;
-            line-height: 1.9;
-        }
-
-        b, strong {
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .content-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-
-        .content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+            letter-spacing: 0.05em;
         }
-
-        .content-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .links-list {
+        
+        .index-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-left: 0;
+            padding: 0;
         }
-
-        .links-list li {
-            position: relative;
-            padding-left: 1.6rem;
+        .volume-item {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
         }
-
-        .links-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            transition: transform 0.3s ease;
+        .volume-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
+        .volume-title a { color: #fff; text-decoration: none; }
+        .volume-title a:hover { text-decoration: underline; }
 
-        .links-list li:hover::before {
-            transform: translateX(3px);
+        .chapter-list {
+            list-style: none;
+            padding-left: 0.5rem;
         }
-
-        .links-list a {
+        .chapter-item {
+            margin-bottom: 0.6rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .chapter-link {
             color: #e0e0e0;
             text-decoration: none;
-            font-size: 1.25rem;
-            line-height: 1.9;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.2s;
             display: inline-block;
-            position: relative;
-            border-bottom: none;
         }
+        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
 
-        .links-list a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
+        .section-list {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.4rem;
         }
-
-        .links-list a:hover {
-            color: #fff;
-            transform: translateX(3px);
+        .section-item {
+            margin-bottom: 0.3rem;
         }
-
-        .links-list a:hover::after {
-            width: 100%;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.75rem;
-                font-size: 1.1rem;
-            }
-
-            .content-card {
-                padding: 2rem;
-            }
-
-            h1 {
-                font-size: clamp(2rem, 6vw, 3.5rem);
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .links-list a {
-                font-size: 1.15rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            .links-list a {
-                font-size: 1.05rem;
-            }
-        }
-
-        /* 聖書の節リンク用スタイル（既存のものを保持） */
-        a.verse-link {
-            color: #e74c3c;
+        .section-link {
+            font-size: 0.9rem;
+            color: #b0c4de;
+            opacity: 0.8;
             text-decoration: none;
-            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .section-link:hover { opacity: 1; color: #fff; }
+        .section-link::before { content: '・'; margin-right: 0.3rem; }
+
+        .nav-links {
+            margin-top: 4rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Collapsible Details Styles */
+        details {
+            margin-bottom: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        details[open] {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        summary {
+            padding: 1.2rem 1.8rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            transition: background 0.2s;
+        }
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '＋';
+            font-size: 1.1rem;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            content: '－';
+            transform: rotate(180deg);
+        }
+        .details-content {
+            padding: 0 1.8rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0;
+        }
+        .details-content .chapter-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .details-content .chapter-item:last-child {
             border-bottom: none;
-        }
-
-        a.verse-link:hover {
-            text-decoration: underline;
-            color: #c0392b;
-            border-bottom-color: transparent;
-        }
-
-        [id^="v"]:target {
-            background-color: #fff3cd;
-            padding: 0.1em 0.2em;
-            border-radius: 3px;
-            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body><div class="container">
-<h1>二世の道_Index06</h1>
-<body alink="#cc00cc" background="b014bcg.gif" link="#000099" vlink="#0000cc">
-<!-- St-HP-H -->
-<!-- En-HP-H -->
-
-<hr align="left" width="60%"/>
-　　二世の道<br/>
-<hr align="left" width="60%"/>
-
-
-
-
-第一章　神様の創造のみ業　…　17
-    <p>
-　第一節　神様の実存　…　18<br/>
-　　一　<a href="0601010018.html" target="right">神様の実存を知る</a>　…　18<br/>
-　　二　<a href="0601020020.html" target="right">本来は自然に分かるようになっていた</a>　…　20<br/>
-　　三　<a href="0601030021.html" target="right">神様の遍在性</a>　…　21<br/>
-　　四　<a href="0601040022.html" target="right">神様は無形の存在</a>　…　22<br/>
-　　五　<a href="0601050023.html" target="right">神様は体恤しなければ分からない</a>　…　23
-    </p>
-<p>
-　第二節　神様の創造　… 26<br/>
-　　一　<a href="0602010026.html" target="right">なぜ、天地万物をつくったのか</a>　…　26<br/>
-　　二　<a href="0602020027.html" target="right">神様が人間を創造されたわけ</a>　…　27<br/>
-　　三　<a href="0602030029.html" target="right">神様は人間をどのようにつくったのか</a>　…　29<br/>
-　　四　<a href="0602040030.html" target="right">万物をつくった目的</a>　…　30<br/>
-　　五　<a href="0602050032.html" target="right">創造の過程</a>　…　32
-    </p>
-<p>
-　第三節　宇宙　… 34<br/>
-　　一　<a href="0603010034.html" target="right">宇宙とは何か</a>　…　34<br/>
-　　二　<a href="0603020034.html" target="right">宇宙の規模と構造</a>　…　34<br/>
-　　三　<a href="0603030036.html" target="right">宇宙の完成</a>　…　36
-    </p>
-<p>
-　第四節　自然と人間　… 38<br/>
-　　一　<a href="0604010038.html" target="right">自然は第一の聖書</a>　…　38<br/>
-　　二　<a href="0604020038.html" target="right">神様の心情的因縁が宿る万物</a>　…　38<br/>
-　　三　<a href="0604030040.html" target="right">宇宙は神様がつくった自然博物館</a>　…　40<br/>
-　　四　<a href="0604040041.html" target="right">自然に対する姿勢</a>　…　41<br/>
-　　五　<a href="0604050044.html" target="right">自然を愛し、人を愛せ</a>　…　44<br/>
-</p>
-<p>
-第二章　人間の価値と人体の神秘　… 45<br/>
-　<br/>
-　第一節　人間の位置と特性　… 46<br/>
-　　一　<a href="0605010046.html" target="right">人間の位置</a>　…　46<br/>
-　　　１　神様の形状を持った分性的実体　… 46<br/>
-　　　２　神様の愛の対象　… 47<br/>
-　　　３　神様の息子・娘　… 48<br/>
-　　　４　万物の霊長　… 49<br/>
-　　二　<a href="0605020054.html" target="right">被造世界における人間の価値</a>　…　54<br/>
-　　　１　二つの世界の主管者　… 54<br/>
-　　　２　和動の中心体　… 54<br/>
-　　　３　大宇宙の縮小体　… 56<br/>
-　　三　<a href="0605030057.html" target="right">人間の型</a>　…　57<br/>
-　　　１　人間の区分　… 57<br/>
-　　　２　人間のさまざまな型　…　58<br/>
-　　　３　個性真理体としての人間の特性　… 59<br/>
-　　四　<a href="0605040060.html" target="right">人間の特性</a>　…　60<br/>
-　　　１　人間は貴い　… 61<br/>
-　　　２　人間の本性　… 63<br/>
-　　　３　人間の精神力　… 64<br/>
-　　　４　人間の求めるもの　… 64<br/>
-　　　５　人間が好きなもの　… 66<br/>
-　　　６　人間の特徴　… 68
-    </p>
-<p>
-　第二節　人間の目的と価値観　… 70<br/>
-　　一　<a href="0606010070.html" target="right">人間の目的</a>　…　70<br/>
-　　　１　本然の目的　… 70<br/>
-　　　２　人生最高の目的　… 72<br/>
-　　　３　二重目的　… 73<br/>
-　　二　<a href="0606020074.html" target="right">人間の価値決定</a>　…　74<br/>
-　　　１　没落した世俗的価値観とその代案　… 74<br/>
-　　　２　人間の価値決定　… 76<br/>
-　　　３　人間の価値基準　… 78<br/>
-　　　４　価値の形成　… 79<br/>
-　　　５　人間の価値は偉大だ　…　80
-    </p>
-<p>
-　第三節　人体の神秘　…　82　<br/>
-　　一　<a href="0607010082.html" target="right">体は神秘の王宮</a>　…　82<br/>
-　　二　<a href="0607020083.html" target="right">人体の三段階</a>　…　83<br/>
-　　三　<a href="0607030085.html" target="right">人体に絶対必要な要素</a>　…　85<br/>
-　　四　<a href="0607040087.html" target="right">身体の解説</a>　…　87<br/>
-　　　１　目は神様の象徴　…　87<br/>
-　　　２　眉毛　…　90<br/>
-　　　３　鼻　…　93<br/>
-　　　４　口・舌・唇　…　98<br/>
-　　　５　耳　…　101<br/>
-　　　６　髪　…　103<br/>
-　　　７　額と顔　…　104<br/>
-　　　８　ひげ　…　104<br/>
-　　　９　首　…　104<br/>
-　　　10　手・指・爪　…　105<br/>
-　　　11　五感と六感　…　106<br/>
-　　　12　細胞　…　107<br/>
-　　　13　その他　…　108<br/>
-　　五　<a href="0607050111.html" target="right">笑いと調和</a>　…　111<br/>
-</p>
-<p>
-第三章　青少年期と成和　…　113
-    </p>
-<p>
-　第一節　青少年期　…　114<br/>
-　　一　<a href="0608010114.html" target="right">青少年期は春の季節</a>　…　114<br/>
-　　二　<a href="0608020115.html" target="right">青少年たちの性向</a>　…　115<br/>
-　　三　<a href="0608030118.html" target="right">青少年が持つべき姿勢</a>　…　118<br/>
-　　　１　大きな夢を持て　…　118<br/>
-　　　２　自分の適性を早期発見せよ　…　119<br/>
-　　　３　計画を立てよ　…　120<br/>
-　　四　<a href="0608040121.html" target="right">青少年に必要なこと</a>　…　121<br/>
-　　五　<a href="0608050128.html" target="right">立派な人物になるには</a>　…　128<br/>
-　　　１　重要な人物になるには　…　128<br/>
-　　　２　全体のためになる思考方式を持とう　…　131<br/>
-　　　３　自責できなければならない　…　132<br/>
-　　　４　先を行くべきである　…　132<br/>
-　　　５　丈夫で強く変わりなくあるべき　…　134
-    </p>
-<p>
-　第二節　思春期の特徴と現象　…　136<br/>
-　　一　<a href="0609010136.html" target="right">思春期とはどのような時か</a>　…　136<br/>
-　　二　<a href="0609020138.html" target="right">思春期の特徴</a>　…　138<br/>
-　　三　<a href="0609030140.html" target="right">思春期の心と体の状態</a>　…　140<br/>
-　　四　<a href="0609040142.html" target="right">思春期の戒律</a>　…　142<br/>
-　　　１　思春期を正しく過ごせ　…　142<br/>
-　　　２　秩序を正しく守れ　…　145<br/>
-　　　３　初恋を神様に捧げよう　…　147<br/>
-　第三節　成和の道　…　153<br/>
-　　一　<a href="0610010153.html" target="right">成和の意味</a>　…　153<br/>
-　　二　<a href="0610020154.html" target="right">「私は天の子女だ」という自覚を持て</a>　…　154<br/>
-　　三　<a href="0610030156.html" target="right">終わりの日には成和が自覚するとき</a>　…　156<br/>
-　　四　<a href="0610040158.html" target="right">成和の活動姿勢</a>　…　158<br/>
-　　五　<a href="0610050160.html" target="right">成和人となれ</a>　…　160<br/>
-</p>
-<p>
-第四章　学校と勉強　…　163
-    </p>
-<p>
-　第一節　学校と先生　…　164<br/>
-　　一　<a href="0611010164.html" target="right">学校とは何か</a>　…　164　<br/>
-　　二　<a href="0611020164.html" target="right">学校に通うわけ</a>　…　164<br/>
-　　三　<a href="0611030165.html" target="right">教育と善</a>　…　165<br/>
-　　四　<a href="0611040167.html" target="right">学校での教育課程</a>　…　167<br/>
-　　五　<a href="0611050169.html" target="right">よい先生とは</a>　…　169
-    </p>
-<p>
-　第二節　学生の本分　…　172　<br/>
-　　一　<a href="0612010172.html" target="right">学生の位置と責任</a>　…　172<br/>
-　　二　<a href="0612020175.html" target="right">学生時代は準備するとき</a>　…　175<br/>
-　　三　<a href="0612030176.html" target="right">真なる学生</a>　…　176<br/>
-　　　１　真なる学生　…　176<br/>
-　　　２　よい学生　…　178
-    </p>
-<p>
-　第三節　友達関係　…　181<br/>
-　　一　<a href="0613010181.html" target="right">本来の友達の中の友達は父母</a>　…　181<br/>
-　　二　<a href="0613020181.html" target="right">友達関係は友情が必要だ</a>　…　181<br/>
-　　三　<a href="0613030182.html" target="right">友達関係の形成</a>　…　182<br/>
-　　四　<a href="0613040183.html" target="right">望ましい友達</a>　…　183<br/>
-　　五　<a href="0613050185.html" target="right">友達関係の留意点</a>　…　185
-    </p>
-<p>
-　第四節　勉強　…　189<br/>
-　　一　<a href="0614010189.html" target="right">勉強をする理由</a>　…　189<br/>
-　　　１　勉強とは何か　…　189<br/>
-　　　２　勉強する理由　…　189<br/>
-　　　３　勉強すれば未来が保証される　…　190<br/>
-　　二　<a href="0614020192.html" target="right">勉強する目標</a>　…　192<br/>
-　　　１　勉強する目的　…　192<br/>
-　　　２　勉強は自分のための手段ではない　…　193<br/>
-　　　３　勉強する目標　…　194<br/>
-　　三　<a href="0614030196.html" target="right">勉強するのが骨が折れる</a>　…　196<br/>
-　　　１　勉強するのが好きな人はいない　…　196<br/>
-　　　２　「勉強しろ」の本当の意味　…　198<br/>
-　　四　<a href="0614040200.html" target="right">勉強をよくする法</a>　…　200　<br/>
-　　　１　勉強する心の姿勢　…　200<br/>
-　　　２　目的に対するたゆみない刺激があってこそ　…　201<br/>
-　　　３　だれよりも努力しなければ　…　202<br/>
-　　　４　全力投入しなさい　…　204<br/>
-　　五　<a href="0614050206.html" target="right">実力と点数</a>　…　206<br/>
-　　　１　実力が必要である　…　206<br/>
-　　　２　試験と点数　…　207<br/>
-</p>
-<p>
-第五章　信仰と責任分担　…　211
-    </p>
-<p>
-　第一節　信仰生活　…　212<br/>
-　　一　<a href="0615010212.html" target="right">信仰とは何か</a>　…　212<br/>
-　　　１　信仰の意味　…　212<br/>
-　　　２　信仰が必要なわけ　…　213<br/>
-　　二　<a href="0615020214.html" target="right">信仰の目的</a>　…　214<br/>
-　　　１　信仰の目的とは何か　…　214<br/>
-　　　２　私たちの信仰目標　…　215<br/>
-　　三　<a href="0615030216.html" target="right">信仰生活</a>　…　216<br/>
-　　　１　信仰生活の定義　…　216<br/>
-　　　２　信仰生活の第一条　…　217<br/>
-　　　３　信仰の出発点　…　218<br/>
-　　　４　信仰生活の方法　…　219<br/>
-　　　５　体恤的信仰が必要　…　221<br/>
-　　四　<a href="0615040222.html" target="right">信仰姿勢</a>　…　222<br/>
-　　　１　信仰と中心問題　…　222<br/>
-　　　２　絶対信仰　…　224<br/>
-　　五　<a href="0615050234.html" target="right">信仰生活の注意点</a>　…　234<br/>
-　　　１　心が沈んでしまうとき　…　234<br/>
-　　　２　困難なとき　…　235<br/>
-　　　３　信仰の試練　…　241<br/>
-　　　４　信仰生活の中の注意点　…　242
-    </p>
-<p>
-　第二節　人間の責任分担　…　245<br/>
-　　一　<a href="0616010245.html" target="right">間接主管圏と直接主管圏</a>　…　245<br/>
-　　　１　間接主管圏　…　245<br/>
-　　　２　直接主管圏　…　246<br/>
-　　二　<a href="0616020247.html" target="right">人間の責任分担とは</a>　…　247<br/>
-　　　１　アダム・エバの五パーセント　…　247<br/>
-　　　２　責任分担をくださったわけ　…　248<br/>
-　　　３　責任分担を果たせなかった結果　…　249<br/>
-　　　４　責任分担を完成した立場とは　…　250<br/>
-　　三　<a href="0616030251.html" target="right">責任分担の発見とその重要性</a>　…　251<br/>
-　　　１　責任分担の発見　…　251<br/>
-　　　２　責任分担の重要性　…　253<br/>
-　　　３　責任分担を遂行する姿勢　…　254<br/>
-　　四　<a href="0616040256.html" target="right">私たちのための祈祷文</a>　…　256<br/>
-</p>
-<p>
-第六章　先生の学生時代　…　257<br/>
-　<br/>
-　第一節　先生の幼少時代　…　258<br/>
-　　一　<a href="0617010258.html" target="right">先生の誕生</a>　…　258<br/>
-　　二　<a href="0617020258.html" target="right">信仰の中で成長される</a>　…　258<br/>
-　　三　<a href="0617030259.html" target="right">幼少時代の自然探求</a>　…　259<br/>
-　　　１　自然から学ぶ　…　259<br/>
-　　　２　自然を通して情緒豊かな人格を養う　…　261<br/>
-　　　３　先生の自然に対する好奇心　…　264<br/>
-　　　４　自然に対する新しい姿勢　…　266<br/>
-　　四　<a href="0617040268.html" target="right">先生の小学校時代</a>　…　268<br/>
-　<br/>
-　第二節　先生のソウルでの学生時代　…　271<br/>
-　　一　<a href="0618010271.html" target="right">衣食住生活</a>　…　271<br/>
-　　二　<a href="0618020272.html" target="right">教会生活</a>　…　272<br/>
-　　三　<a href="0618030274.html" target="right">お金を惜しんで歩き回られる</a>　…　274<br/>
-　　四　<a href="0618040275.html" target="right">学習</a>　…　275<br/>
-　　五　<a href="0618050276.html" target="right">学生のときの生活</a>　…　276<br/>
-　　六　<a href="0618060277.html" target="right">豊富な訓練と経験を積まれる</a>　…　277
-    </p>
-　第三節　先生の信念と思想　…　279 　<br/>
-　　一　<a href="0619010279.html" target="right">先生の祈祷生活</a>　…　279<br/>
-　　二　<a href="0619020280.html" target="right">早くから人生の問題について悩まれる</a>　…　280<br/>
-　　三　<a href="0619030282.html" target="right">先生の生活標語と修養目標</a>　…　282<br/>
-　　　１　生活標語　…　282<br/>
-　　　２　修養の三大目標　…　282<br/>
-　　四　<a href="0619040284.html" target="right">先生の生活信念</a>　…　284<br/>
-　　五　<a href="0619050286.html" target="right">先生のみ旨の道</a>　…　286<br/>
-　　六　<a href="0619060288.html" target="right">先生に対する私たちの姿勢</a>　…　288
-
-
-
-
-
-<p><br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-</p>
-
-
-
-
-
-
-
-
-
+<body>
+<div class="container">
+<h1>二世の道_Index06</h1><div class="index-list"><div class="chapter-item"><a href="0601010018.html" class="chapter-link">神様の実存を知る</a><ul class="section-list"><li class="section-item"><a href="0601010018.html#001" class="section-link">第一章　神様の創造のみ業</a></li></ul></div><div class="chapter-item"><a href="0601020020.html" class="chapter-link">本来は自然に分かるようになっていた</a><ul class="section-list"><li class="section-item"><a href="0601020020.html#001" class="section-link">二　本来は自然に分かるようになっていた</a></li></ul></div><div class="chapter-item"><a href="0601030021.html" class="chapter-link">神様の遍在性</a><ul class="section-list"><li class="section-item"><a href="0601030021.html#001" class="section-link">三　神様の遍在性</a></li></ul></div><div class="chapter-item"><a href="0601040022.html" class="chapter-link">神様は無形の存在</a><ul class="section-list"><li class="section-item"><a href="0601040022.html#001" class="section-link">四　神様は無形の存在</a></li></ul></div><div class="chapter-item"><a href="0601050023.html" class="chapter-link">神様は体恤しなければ分からない</a><ul class="section-list"><li class="section-item"><a href="0601050023.html#001" class="section-link">五　神様は体恤しなければ分からない</a></li></ul></div><div class="chapter-item"><a href="0602010026.html" class="chapter-link">なぜ、天地万物をつくったのか</a><ul class="section-list"><li class="section-item"><a href="0602010026.html#001" class="section-link">第二節　神様の創造</a></li></ul></div><div class="chapter-item"><a href="0602020027.html" class="chapter-link">神様が人間を創造されたわけ</a><ul class="section-list"><li class="section-item"><a href="0602020027.html#001" class="section-link">二　神様が人間を創造されたわけ</a></li></ul></div><div class="chapter-item"><a href="0602030029.html" class="chapter-link">神様は人間をどのようにつくったのか</a><ul class="section-list"><li class="section-item"><a href="0602030029.html#001" class="section-link">三　神様は人間をどのようにつくったのか</a></li></ul></div><div class="chapter-item"><a href="0602040030.html" class="chapter-link">万物をつくった目的</a><ul class="section-list"><li class="section-item"><a href="0602040030.html#001" class="section-link">四　万物をつくった目的</a></li></ul></div><div class="chapter-item"><a href="0602050032.html" class="chapter-link">創造の過程</a><ul class="section-list"><li class="section-item"><a href="0602050032.html#001" class="section-link">五　創造の過程</a></li></ul></div><div class="chapter-item"><a href="0603010034.html" class="chapter-link">宇宙とは何か</a><ul class="section-list"><li class="section-item"><a href="0603010034.html#001" class="section-link">第三節　宇宙</a></li></ul></div><div class="chapter-item"><a href="0603020034.html" class="chapter-link">宇宙の規模と構造</a><ul class="section-list"><li class="section-item"><a href="0603020034.html#001" class="section-link">二　宇宙の規模と構造</a></li></ul></div><div class="chapter-item"><a href="0603030036.html" class="chapter-link">宇宙の完成</a><ul class="section-list"><li class="section-item"><a href="0603030036.html#001" class="section-link">三　宇宙の完成</a></li></ul></div><div class="chapter-item"><a href="0604010038.html" class="chapter-link">自然は第一の聖書</a><ul class="section-list"><li class="section-item"><a href="0604010038.html#001" class="section-link">第四節　.自然と人間</a></li></ul></div><div class="chapter-item"><a href="0604020038.html" class="chapter-link">神様の心情的因縁が宿る万物</a><ul class="section-list"><li class="section-item"><a href="0604020038.html#001" class="section-link">二　神様の心情的因縁が宿る万物</a></li></ul></div><div class="chapter-item"><a href="0604030040.html" class="chapter-link">宇宙は神様がつくった自然博物館</a><ul class="section-list"><li class="section-item"><a href="0604030040.html#001" class="section-link">三　宇宙は神様がつくった自然博物館</a></li></ul></div><div class="chapter-item"><a href="0604040041.html" class="chapter-link">自然に対する姿勢</a><ul class="section-list"><li class="section-item"><a href="0604040041.html#001" class="section-link">四　自然に対する姿勢</a></li></ul></div><div class="chapter-item"><a href="0604050044.html" class="chapter-link">自然を愛し、人を愛せ</a><ul class="section-list"><li class="section-item"><a href="0604050044.html#001" class="section-link">五　自然を愛し、人を愛せ</a></li></ul></div><div class="chapter-item"><a href="0605010046.html" class="chapter-link">人間の位置</a><ul class="section-list"><li class="section-item"><a href="0605010046.html#001" class="section-link">第二章　人間の価値と人体の神秘</a></li></ul></div><div class="chapter-item"><a href="0605020054.html" class="chapter-link">被造世界における人間の価値</a><ul class="section-list"><li class="section-item"><a href="0605020054.html#001" class="section-link">二　被造世界における人間の価値</a></li></ul></div><div class="chapter-item"><a href="0605030057.html" class="chapter-link">人間の型</a><ul class="section-list"><li class="section-item"><a href="0605030057.html#001" class="section-link">三　人間の型</a></li></ul></div><div class="chapter-item"><a href="0605040060.html" class="chapter-link">人間の特性</a><ul class="section-list"><li class="section-item"><a href="0605040060.html#001" class="section-link">四　人間の特性</a></li></ul></div><div class="chapter-item"><a href="0606010070.html" class="chapter-link">人間の目的</a><ul class="section-list"><li class="section-item"><a href="0606010070.html#001" class="section-link">第二節　人間の目的と価値観</a></li></ul></div><div class="chapter-item"><a href="0606020074.html" class="chapter-link">人間の価値決定</a><ul class="section-list"><li class="section-item"><a href="0606020074.html#001" class="section-link">二　人間の価値決定</a></li></ul></div><div class="chapter-item"><a href="0607010082.html" class="chapter-link">体は神秘の王宮</a><ul class="section-list"><li class="section-item"><a href="0607010082.html#001" class="section-link">第三節　人体の神秘</a></li></ul></div><div class="chapter-item"><a href="0607020083.html" class="chapter-link">人体の三段階</a><ul class="section-list"><li class="section-item"><a href="0607020083.html#001" class="section-link">二　人体の三段階</a></li></ul></div><div class="chapter-item"><a href="0607030085.html" class="chapter-link">人体に絶対必要な要素</a><ul class="section-list"><li class="section-item"><a href="0607030085.html#001" class="section-link">三　人体に絶対必要な要素</a></li></ul></div><div class="chapter-item"><a href="0607040087.html" class="chapter-link">身体の解説</a><ul class="section-list"><li class="section-item"><a href="0607040087.html#001" class="section-link">四　身体の解説</a></li></ul></div><div class="chapter-item"><a href="0607050111.html" class="chapter-link">笑いと調和</a><ul class="section-list"><li class="section-item"><a href="0607050111.html#001" class="section-link">五　笑いと調和</a></li></ul></div><div class="chapter-item"><a href="0608010114.html" class="chapter-link">青少年期は春の季節</a><ul class="section-list"><li class="section-item"><a href="0608010114.html#001" class="section-link">第三章　青少年期と成和</a></li></ul></div><div class="chapter-item"><a href="0608020115.html" class="chapter-link">青少年たちの性向</a><ul class="section-list"><li class="section-item"><a href="0608020115.html#001" class="section-link">二　青少年たちの性向</a></li></ul></div><div class="chapter-item"><a href="0608030118.html" class="chapter-link">青少年が持つべき姿勢</a><ul class="section-list"><li class="section-item"><a href="0608030118.html#001" class="section-link">三　青少年が持つべき姿勢</a></li></ul></div><div class="chapter-item"><a href="0608040121.html" class="chapter-link">青少年に必要なこと</a><ul class="section-list"><li class="section-item"><a href="0608040121.html#001" class="section-link">四　青少年に必要なこと</a></li></ul></div><div class="chapter-item"><a href="0608050128.html" class="chapter-link">立派な人物になるには</a><ul class="section-list"><li class="section-item"><a href="0608050128.html#001" class="section-link">五　立派な人物になるには</a></li></ul></div><div class="chapter-item"><a href="0609010136.html" class="chapter-link">思春期とはどのような時か</a><ul class="section-list"><li class="section-item"><a href="0609010136.html#001" class="section-link">第二節　思春期の特徴と現象</a></li></ul></div><div class="chapter-item"><a href="0609020138.html" class="chapter-link">思春期の特徴</a><ul class="section-list"><li class="section-item"><a href="0609020138.html#001" class="section-link">二　思春期の特徴</a></li></ul></div><div class="chapter-item"><a href="0609030140.html" class="chapter-link">思春期の心と体の状態</a><ul class="section-list"><li class="section-item"><a href="0609030140.html#001" class="section-link">三　思春期の心と体の状態</a></li></ul></div><div class="chapter-item"><a href="0609040142.html" class="chapter-link">思春期の戒律</a><ul class="section-list"><li class="section-item"><a href="0609040142.html#001" class="section-link">四　思春期の戒律</a></li></ul></div><div class="chapter-item"><a href="0610010153.html" class="chapter-link">成和の意味</a><ul class="section-list"><li class="section-item"><a href="0610010153.html#001" class="section-link">第三節　成和の道</a></li></ul></div><div class="chapter-item"><a href="0610020154.html" class="chapter-link">「私は天の子女だ」という自覚を持て</a><ul class="section-list"><li class="section-item"><a href="0610020154.html#001" class="section-link">二　「私は天の子女だ」という自覚を持て</a></li></ul></div><div class="chapter-item"><a href="0610030156.html" class="chapter-link">終わりの日には成和が自覚するとき</a><ul class="section-list"><li class="section-item"><a href="0610030156.html#001" class="section-link">三　終わりの日には成和が自覚するとき</a></li></ul></div><div class="chapter-item"><a href="0610040158.html" class="chapter-link">成和の活動姿勢</a><ul class="section-list"><li class="section-item"><a href="0610040158.html#001" class="section-link">四　成和の活動姿勢</a></li></ul></div><div class="chapter-item"><a href="0610050160.html" class="chapter-link">成和人となれ</a><ul class="section-list"><li class="section-item"><a href="0610050160.html#001" class="section-link">五　成和人となれ</a></li></ul></div><div class="chapter-item"><a href="0611010164.html" class="chapter-link">学校とは何か</a><ul class="section-list"><li class="section-item"><a href="0611010164.html#001" class="section-link">第四章　学校と勉強</a></li></ul></div><div class="chapter-item"><a href="0611020164.html" class="chapter-link">学校に通うわけ</a><ul class="section-list"><li class="section-item"><a href="0611020164.html#001" class="section-link">二　学校に通うわけ</a></li></ul></div><div class="chapter-item"><a href="0611030165.html" class="chapter-link">教育と善</a><ul class="section-list"><li class="section-item"><a href="0611030165.html#001" class="section-link">三　教育と善</a></li></ul></div><div class="chapter-item"><a href="0611040167.html" class="chapter-link">学校での教育課程</a><ul class="section-list"><li class="section-item"><a href="0611040167.html#001" class="section-link">四　学校での教育課程</a></li></ul></div><div class="chapter-item"><a href="0611050169.html" class="chapter-link">よい先生とは</a><ul class="section-list"><li class="section-item"><a href="0611050169.html#001" class="section-link">五　よい先生とは</a></li></ul></div><div class="chapter-item"><a href="0612010172.html" class="chapter-link">学生の位置と責任</a><ul class="section-list"><li class="section-item"><a href="0612010172.html#001" class="section-link">第二節　学生の本分</a></li></ul></div><div class="chapter-item"><a href="0612020175.html" class="chapter-link">学生時代は準備するとき</a><ul class="section-list"><li class="section-item"><a href="0612020175.html#001" class="section-link">二　学生時代は準備するとき</a></li></ul></div><div class="chapter-item"><a href="0612030176.html" class="chapter-link">真なる学生</a><ul class="section-list"><li class="section-item"><a href="0612030176.html#001" class="section-link">三　真なる学生</a></li></ul></div><div class="chapter-item"><a href="0613010181.html" class="chapter-link">本来の友達の中の友達は父母</a><ul class="section-list"><li class="section-item"><a href="0613010181.html#001" class="section-link">第三節　友達関係</a></li></ul></div><div class="chapter-item"><a href="0613020181.html" class="chapter-link">友達関係は友情が必要だ</a><ul class="section-list"><li class="section-item"><a href="0613020181.html#001" class="section-link">二　友達関係は友情が必要だ</a></li></ul></div><div class="chapter-item"><a href="0613030182.html" class="chapter-link">友達関係の形成</a><ul class="section-list"><li class="section-item"><a href="0613030182.html#001" class="section-link">三　友達関係の形成</a></li></ul></div><div class="chapter-item"><a href="0613040183.html" class="chapter-link">望ましい友達</a><ul class="section-list"><li class="section-item"><a href="0613040183.html#001" class="section-link">四　望ましい友達</a></li></ul></div><div class="chapter-item"><a href="0613050185.html" class="chapter-link">友達関係の留意点</a><ul class="section-list"><li class="section-item"><a href="0613050185.html#001" class="section-link">五　友達関係の留意点</a></li></ul></div><div class="chapter-item"><a href="0614010189.html" class="chapter-link">勉強をする理由</a><ul class="section-list"><li class="section-item"><a href="0614010189.html#001" class="section-link">第四節　勉強</a></li></ul></div><div class="chapter-item"><a href="0614020192.html" class="chapter-link">勉強する目標</a><ul class="section-list"><li class="section-item"><a href="0614020192.html#001" class="section-link">二　勉強する目標</a></li></ul></div><div class="chapter-item"><a href="0614030196.html" class="chapter-link">勉強するのが骨が折れる</a><ul class="section-list"><li class="section-item"><a href="0614030196.html#001" class="section-link">三　勉強するのが骨が折れる</a></li></ul></div><div class="chapter-item"><a href="0614040200.html" class="chapter-link">勉強をよくする法</a><ul class="section-list"><li class="section-item"><a href="0614040200.html#001" class="section-link">四　勉強をよくする法</a></li></ul></div><div class="chapter-item"><a href="0614050206.html" class="chapter-link">実力と点数</a><ul class="section-list"><li class="section-item"><a href="0614050206.html#001" class="section-link">五　実力と点数</a></li></ul></div><div class="chapter-item"><a href="0615010212.html" class="chapter-link">信仰とは何か</a><ul class="section-list"><li class="section-item"><a href="0615010212.html#001" class="section-link">第五章　信仰と責任分担</a></li></ul></div><div class="chapter-item"><a href="0615020214.html" class="chapter-link">信仰の目的</a><ul class="section-list"><li class="section-item"><a href="0615020214.html#001" class="section-link">二　信仰の目的</a></li></ul></div><div class="chapter-item"><a href="0615030216.html" class="chapter-link">信仰生活</a><ul class="section-list"><li class="section-item"><a href="0615030216.html#001" class="section-link">三　信仰生活</a></li></ul></div><div class="chapter-item"><a href="0615040222.html" class="chapter-link">信仰姿勢</a><ul class="section-list"><li class="section-item"><a href="0615040222.html#001" class="section-link">四　信仰姿勢</a></li></ul></div><div class="chapter-item"><a href="0615050234.html" class="chapter-link">信仰生活の注意点</a><ul class="section-list"><li class="section-item"><a href="0615050234.html#001" class="section-link">五　信仰生活の注意点</a></li></ul></div><div class="chapter-item"><a href="0616010245.html" class="chapter-link">間接主管圏と直接主管圏</a><ul class="section-list"><li class="section-item"><a href="0616010245.html#001" class="section-link">第二節　人間の責任分担</a></li></ul></div><div class="chapter-item"><a href="0616020247.html" class="chapter-link">人間の責任分担とは</a><ul class="section-list"><li class="section-item"><a href="0616020247.html#001" class="section-link">二　人間の責任分担とは</a></li></ul></div><div class="chapter-item"><a href="0616030251.html" class="chapter-link">責任分担の発見とその重要性</a><ul class="section-list"><li class="section-item"><a href="0616030251.html#001" class="section-link">三　責任分担の発見とその重要性</a></li></ul></div><div class="chapter-item"><a href="0616040256.html" class="chapter-link">私たちのための祈祷文</a><ul class="section-list"><li class="section-item"><a href="0616040256.html#001" class="section-link">四　私たちのための祈祷文</a></li></ul></div><div class="chapter-item"><a href="0617010258.html" class="chapter-link">先生の誕生</a><ul class="section-list"><li class="section-item"><a href="0617010258.html#001" class="section-link">第六章　先生の学生時代</a></li></ul></div><div class="chapter-item"><a href="0617020258.html" class="chapter-link">信仰の中で成長される</a><ul class="section-list"><li class="section-item"><a href="0617020258.html#001" class="section-link">二　信仰の中で成長される</a></li></ul></div><div class="chapter-item"><a href="0617030259.html" class="chapter-link">幼少時代の自然探求</a><ul class="section-list"><li class="section-item"><a href="0617030259.html#001" class="section-link">三　幼少時代の自然探求</a></li></ul></div><div class="chapter-item"><a href="0617040268.html" class="chapter-link">先生の小学校時代</a><ul class="section-list"><li class="section-item"><a href="0617040268.html#001" class="section-link">四　先生の小学校時代</a></li></ul></div><div class="chapter-item"><a href="0618010271.html" class="chapter-link">衣食住生活</a><ul class="section-list"><li class="section-item"><a href="0618010271.html#001" class="section-link">第二節　先生のソウルでの学生時代</a></li></ul></div><div class="chapter-item"><a href="0618020272.html" class="chapter-link">教会生活</a><ul class="section-list"><li class="section-item"><a href="0618020272.html#001" class="section-link">二　教会生活</a></li></ul></div><div class="chapter-item"><a href="0618030274.html" class="chapter-link">お金を惜しんで歩き回られる</a><ul class="section-list"><li class="section-item"><a href="0618030274.html#001" class="section-link">三　お金を惜しんで歩き回られる</a></li></ul></div><div class="chapter-item"><a href="0618040275.html" class="chapter-link">学習</a><ul class="section-list"><li class="section-item"><a href="0618040275.html#001" class="section-link">四　学習</a></li></ul></div><div class="chapter-item"><a href="0618050276.html" class="chapter-link">学生のときの生活</a><ul class="section-list"><li class="section-item"><a href="0618050276.html#001" class="section-link">五　学生のときの生活</a></li></ul></div><div class="chapter-item"><a href="0618060277.html" class="chapter-link">豊富な訓練と経験を積まれる</a><ul class="section-list"><li class="section-item"><a href="0618060277.html#001" class="section-link">六　豊富な訓練と経験を積まれる</a></li></ul></div><div class="chapter-item"><a href="0619010279.html" class="chapter-link">先生の祈祷生活</a><ul class="section-list"><li class="section-item"><a href="0619010279.html#001" class="section-link">第三節　先生の信念と思想</a></li></ul></div><div class="chapter-item"><a href="0619020280.html" class="chapter-link">早くから人生の問題について悩まれる</a><ul class="section-list"><li class="section-item"><a href="0619020280.html#001" class="section-link">二　早くから人生の問題について悩まれる</a></li></ul></div><div class="chapter-item"><a href="0619030282.html" class="chapter-link">先生の生活標語と修養目標</a><ul class="section-list"><li class="section-item"><a href="0619030282.html#001" class="section-link">三　先生の生活標語と修養目標</a></li></ul></div><div class="chapter-item"><a href="0619040284.html" class="chapter-link">先生の生活信念</a><ul class="section-list"><li class="section-item"><a href="0619040284.html#001" class="section-link">四　先生の生活信念</a></li></ul></div><div class="chapter-item"><a href="0619050286.html" class="chapter-link">先生のみ旨の道</a><ul class="section-list"><li class="section-item"><a href="0619050286.html#001" class="section-link">五　先生のみ旨の道</a></li></ul></div><div class="chapter-item"><a href="0619060288.html" class="chapter-link">先生に対する私たちの姿勢</a><ul class="section-list"><li class="section-item"><a href="0619060288.html#001" class="section-link">六　先生に対する私たちの姿勢</a></li></ul></div></div>
+    <div class="nav-links">
+        <a href="../index.html">トップページへ戻る</a>
+    </div>
 </div>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script></body>
-<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
-
-
-
-
-
-
-
-<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
-
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script>
-
 </body>
 </html>
-<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

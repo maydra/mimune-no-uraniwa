@@ -1,393 +1,190 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XXQ0QTBYTR');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
-<link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
-
-<meta charset="utf-8"/>
-<title>御旨と海/目次</title>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
-        rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>御旨と海/ | 目次 | み旨の裏庭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 2rem 1rem;
-            position: relative;
-            overflow-x: hidden;
-            font-size: 1.25rem;
-            line-height: 1.9;
+            padding: 3rem 1rem;
+            line-height: 1.8;
         }
-
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
-
         .container {
-            max-width: 1400px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
-            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-        }
-
-        h1 a {
-            text-decoration: none;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1.75rem;
-            margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            letter-spacing: 0.05em;
-        }
-
-        h2::before {
-            content: '◆';
-            color: #667eea;
-            font-size: 0.8em;
-        }
-
-        p {
-            margin: 1em 0;
-            line-height: 1.9;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        a:hover {
-            color: #f093fb;
-            border-bottom-color: #f093fb;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 2em 0;
-        }
-
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
-        }
-
-        li {
-            margin: 0.5em 0;
-            line-height: 1.9;
-        }
-
-        b, strong {
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .content-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-
-        .content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+            letter-spacing: 0.05em;
         }
-
-        .content-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .links-list {
+        
+        .index-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-left: 0;
+            padding: 0;
         }
-
-        .links-list li {
-            position: relative;
-            padding-left: 1.6rem;
+        .volume-item {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
         }
-
-        .links-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            transition: transform 0.3s ease;
+        .volume-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
+        .volume-title a { color: #fff; text-decoration: none; }
+        .volume-title a:hover { text-decoration: underline; }
 
-        .links-list li:hover::before {
-            transform: translateX(3px);
+        .chapter-list {
+            list-style: none;
+            padding-left: 0.5rem;
         }
-
-        .links-list a {
+        .chapter-item {
+            margin-bottom: 0.6rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .chapter-link {
             color: #e0e0e0;
             text-decoration: none;
-            font-size: 1.25rem;
-            line-height: 1.9;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.2s;
             display: inline-block;
-            position: relative;
-            border-bottom: none;
         }
+        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
 
-        .links-list a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
+        .section-list {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.4rem;
         }
-
-        .links-list a:hover {
-            color: #fff;
-            transform: translateX(3px);
+        .section-item {
+            margin-bottom: 0.3rem;
         }
-
-        .links-list a:hover::after {
-            width: 100%;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.75rem;
-                font-size: 1.1rem;
-            }
-
-            .content-card {
-                padding: 2rem;
-            }
-
-            h1 {
-                font-size: clamp(2rem, 6vw, 3.5rem);
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .links-list a {
-                font-size: 1.15rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            .links-list a {
-                font-size: 1.05rem;
-            }
-        }
-
-        /* 聖書の節リンク用スタイル（既存のものを保持） */
-        a.verse-link {
-            color: #e74c3c;
+        .section-link {
+            font-size: 0.9rem;
+            color: #b0c4de;
+            opacity: 0.8;
             text-decoration: none;
-            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .section-link:hover { opacity: 1; color: #fff; }
+        .section-link::before { content: '・'; margin-right: 0.3rem; }
+
+        .nav-links {
+            margin-top: 4rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Collapsible Details Styles */
+        details {
+            margin-bottom: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        details[open] {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        summary {
+            padding: 1.2rem 1.8rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            transition: background 0.2s;
+        }
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '＋';
+            font-size: 1.1rem;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            content: '－';
+            transform: rotate(180deg);
+        }
+        .details-content {
+            padding: 0 1.8rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0;
+        }
+        .details-content .chapter-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .details-content .chapter-item:last-child {
             border-bottom: none;
-        }
-
-        a.verse-link:hover {
-            text-decoration: underline;
-            color: #c0392b;
-            border-bottom-color: transparent;
-        }
-
-        [id^="v"]:target {
-            background-color: #fff3cd;
-            padding: 0.1em 0.2em;
-            border-radius: 3px;
-            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body><div class="container">
-<h1 id="御旨と海/目次"><a href="#御旨と海/目次">御旨と海/目次</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">目　次</a></li><li class="toc-b"><a href="#002">◇序　文</a></li></ul></div>
-<body background="kabe069.gif" link="#000000" vlink="#000000">
-<!-- St-HP-H -->
-<!-- En-HP-H -->
-<br/>
-<b>　　　</b><b id="001"><a href="#001">目　次</a></b><br/>
-<br/>
-<b id="002"><a href="#002" style="text-decoration : none;" target="right">◇序　文</a></b><br/>
-<br/>
-<a href="01_maguronomiti.html" style="text-decoration : none;" target="right"><b>1.マグロの道<br/>
-      　　　1980年7月13日　ベルベディア<br/>
-<br/>
-</b></a><a href="02_seturiti.html" style="text-decoration : none;" target="right"><b>2.オーシャン・チャーチの設立<br/>
-      　　　</b>1980年10月 1日　モーニング・ガーデン</a><br/>
-<br/>
-<a href="03_amerika.htm" style="text-decoration : none;" target="right"><b>3.オーシャン・チャーチとアメリカ</b><br/>
-      　　　1982年 8月28日　プロビンス・タウン</a><a href="04_naze_hituyounanoka.htm" style="text-decoration : none;" target="right"><br/>
-<br/>
-<b>4.なぜオーシャン・チャーチが必要なのか</b><br/>
-      　　　1982年 9月 5日　イースト・ガーデン</a><br/>
-<br/>
-<a href="05_kidai.html" style="text-decoration : none;" target="right"><b>5.オーシャン・チャーチの基台</b><br/>
-      　　　1983年 6月10日　グロースター</a><a href="06_uketugu.html" style="text-decoration : none;" target="right"><br/>
-<br/>
-<b>6.誰が海を受け継ぐのか</b><br/>
-      　　　1983年 7月 3日　グロースター</a><a href="07_toriniikuka.html" style="text-decoration : none;" target="right"><br/>
-<br/>
-<b>7.なぜ我々はマグロを捕りに行くか</b><br/>
-      　　　1983年 8月31日　グロースター</a><a href="08_hajimemasyou.html" style="text-decoration : none;" target="right"><br/>
-<br/>
-<b>8.新たに始めましょう</b><br/>
-      　　　1984年 2月 8日　ワールド・ミッション・センター</a><a href="09_kunrensurunoka.html" style="text-decoration : none;" target="right"><br/>
-<br/>
-<b>9.なぜ我々は海の訓練をするのか</b><br/>
-      　　　1984年 7月 2日　モーニング・ガーデン</a><a href="10_seikatuyousiki.html" style="text-decoration : none;" target="right"><br/>
-<br/>
-<b>10.マグロ釣りと生活様式</b><br/>
-      　　　1984年 7月 5日　モーニング・ガーデン</a><a href="11_tougen.html" style="text-decoration : none;" target="right"><br/>
-<br/>
-<b>11.真の父母と蕩減</b><br/>
-      　　　1984年 8月　　バークレイ</a><a href="12_sinjyouto_seisin.html" style="text-decoration : none;" target="right"><br/>
-<br/>
-<b>12.魚釣りの心情と精神</b><br/>
-      　　　1986年 7月 3日　モーニング・ガーデン</a><a href="13_uminomiti.html" style="text-decoration : none;" target="right"><br/>
-<br/>
-<b>13.海の道</b><br/>
-      　　　1986年 8月28日　モーニング・ガーデン</a><a href="14_syupan.html" style="text-decoration : none;" target="right"><br/>
-<br/>
-<b>14.既に出版されている御言葉からの抜粋</b><br/>
-      　　　1974年〜1983年<br/>
-<br/>
-</a>
-<a href="http://www.unification.net/gwo/" target="_top"><b>God's Will and the Ocean</b></a>
-<p><br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-</p>
-</div></body>
-<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
-<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+<body>
+<div class="container">
+<h1>御旨と海/</h1><div class="index-list"><div class="chapter-item"><a href="umi_jyobunn.html" class="chapter-link">◇序　文</a><ul class="section-list"><li class="section-item"><a href="umi_jyobunn.html#御旨と海/序文" class="section-link">御旨と海/序文</a></li><li class="section-item"><span class="section-link">誤植・修正提案</span></li></ul></div><div class="chapter-item"><a href="01_maguronomiti.html" class="chapter-link">1.マグロの道1980年7月13日　ベルベディア</a><ul class="section-list"><li class="section-item"><a href="01_maguronomiti.html#001" class="section-link">御旨と海　マグロの道</a></li></ul></div><div class="chapter-item"><a href="02_seturiti.html" class="chapter-link">2.オーシャン・チャーチの設立1980年10月 1日　モーニング・ガーデン</a><ul class="section-list"><li class="section-item"><a href="02_seturiti.html#001" class="section-link">御旨と海　オーシャン・チャーチの設立</a></li><li class="section-item"><a href="02_seturiti.html#002" class="section-link">敬礼の意味</a></li><li class="section-item"><a href="02_seturiti.html#003" class="section-link">歴史の最初の種子</a></li><li class="section-item"><a href="02_seturiti.html#004" class="section-link">誓いの意味</a></li><li class="section-item"><a href="02_seturiti.html#005" class="section-link">東と西の関係</a></li><li class="section-item"><a href="02_seturiti.html#006" class="section-link">敬礼式の準備</a></li><li class="section-item"><a href="02_seturiti.html#007" class="section-link">東洋文化の理解</a></li><li class="section-item"><a href="02_seturiti.html#008" class="section-link">マッチングと祝福を通しての統一</a></li><li class="section-item"><a href="02_seturiti.html#009" class="section-link">チャンピオンを作る</a></li><li class="section-item"><a href="02_seturiti.html#010" class="section-link">他人の尊敬と友情を勝ち取ろう</a></li><li class="section-item"><a href="02_seturiti.html#011" class="section-link">成功の基礎を作ること</a></li><li class="section-item"><a href="02_seturiti.html#012" class="section-link">結果を得るために自らを投入する</a></li><li class="section-item"><a href="02_seturiti.html#013" class="section-link">新しい出発</a></li><li class="section-item"><a href="02_seturiti.html#014" class="section-link">出発の時は今</a></li><li class="section-item"><a href="02_seturiti.html#015" class="section-link">アメリカの水産業の窮状</a></li></ul></div><div class="chapter-item"><a href="05_kidai.html" class="chapter-link">5.オーシャン・チャーチの基台1983年 6月10日　グロースター</a><ul class="section-list"><li class="section-item"><a href="05_kidai.html#001" class="section-link">御旨と海</a></li><li class="section-item"><a href="05_kidai.html#002" class="section-link">オーシャン・チャーチの基台</a></li><li class="section-item"><a href="05_kidai.html#003" class="section-link">堅固な基台を作るために一生懸命働く</a></li><li class="section-item"><a href="05_kidai.html#004" class="section-link">オーシャン・チャーチのための具体的な指示</a></li><li class="section-item"><a href="05_kidai.html#005" class="section-link">Ａ．自己訓練と管理</a></li><li class="section-item"><a href="05_kidai.html#006" class="section-link">Ｂ．メンバー達を育成</a></li><li class="section-item"><a href="05_kidai.html#007" class="section-link">Ｃ．地域指導者達の支持を得る</a></li><li class="section-item"><a href="05_kidai.html#008" class="section-link">Ｄ．海に関する関心事項</a></li></ul></div><div class="chapter-item"><a href="06_uketugu.html" class="chapter-link">6.誰が海を受け継ぐのか1983年 7月 3日　グロースター</a><ul class="section-list"><li class="section-item"><a href="06_uketugu.html#001" class="section-link">御旨と海　誰が海を受け継ぐのか</a></li><li class="section-item"><a href="06_uketugu.html#002" class="section-link">人生の目的</a></li><li class="section-item"><a href="06_uketugu.html#003" class="section-link">海と未来</a></li><li class="section-item"><a href="06_uketugu.html#004" class="section-link">アメリカの水産業の士気を高める</a></li><li class="section-item"><a href="06_uketugu.html#005" class="section-link">海への真の愛</a></li><li class="section-item"><a href="06_uketugu.html#006" class="section-link">特別なワン・ホープ号</a></li><li class="section-item"><a href="06_uketugu.html#007" class="section-link">世界が必要とする指導者とは</a></li><li class="section-item"><a href="06_uketugu.html#008" class="section-link">海を通して未来を受け継ぐ</a></li></ul></div><div class="chapter-item"><a href="07_toriniikuka.html" class="chapter-link">7.なぜ我々はマグロを捕りに行くか1983年 8月31日　グロースター</a><ul class="section-list"><li class="section-item"><a href="07_toriniikuka.html#001" class="section-link">御旨と海　なぜ我々はマグロを捕りに行くか</a></li><li class="section-item"><a href="07_toriniikuka.html#002" class="section-link">伝統の確立</a></li><li class="section-item"><a href="07_toriniikuka.html#003" class="section-link">マグロ釣りの技術</a></li><li class="section-item"><a href="07_toriniikuka.html#004" class="section-link">マグロ釣りは訓練である。</a></li><li class="section-item"><a href="07_toriniikuka.html#005" class="section-link">若者と将来に投資する</a></li></ul></div><div class="chapter-item"><a href="08_hajimemasyou.html" class="chapter-link">8.新たに始めましょう1984年 2月 8日　ワールド・ミッション・センター</a><ul class="section-list"><li class="section-item"><a href="08_hajimemasyou.html#001" class="section-link">御旨と海　新たに始めましょう</a></li></ul></div><div class="chapter-item"><a href="09_kunrensurunoka.html" class="chapter-link">9.なぜ我々は海の訓練をするのか1984年 7月 2日　モーニング・ガーデン</a><ul class="section-list"><li class="section-item"><a href="09_kunrensurunoka.html#001" class="section-link">御旨と海　なぜ我々は海の訓練をするのか</a></li><li class="section-item"><a href="09_kunrensurunoka.html#002" class="section-link">訓練の価値</a></li><li class="section-item"><a href="09_kunrensurunoka.html#003" class="section-link">マグロ釣りの訓練路程</a></li><li class="section-item"><a href="09_kunrensurunoka.html#004" class="section-link">万物と心情の関係</a></li><li class="section-item"><a href="09_kunrensurunoka.html#005" class="section-link">共に働くことを学ぶ</a></li></ul></div><div class="chapter-item"><a href="10_seikatuyousiki.html" class="chapter-link">10.マグロ釣りと生活様式1984年 7月 5日　モーニング・ガーデン</a><ul class="section-list"><li class="section-item"><a href="10_seikatuyousiki.html#001" class="section-link">御旨と海　マグロ釣りと生活様式</a></li><li class="section-item"><a href="10_seikatuyousiki.html#002" class="section-link">海の中の生活様式</a></li><li class="section-item"><a href="10_seikatuyousiki.html#003" class="section-link">理論を実践すること、人生における実践</a></li><li class="section-item"><a href="10_seikatuyousiki.html#004" class="section-link">最善の者から相続する価値ある者となれ</a></li><li class="section-item"><a href="10_seikatuyousiki.html#005" class="section-link">漁業の伝統の復興</a></li></ul></div><div class="chapter-item"><a href="11_tougen.html" class="chapter-link">11.真の父母と蕩減1984年 8月　　バークレイ</a><ul class="section-list"><li class="section-item"><a href="11_tougen.html#001" class="section-link">御旨と海　 真の父母と蕩減</a></li><li class="section-item"><a href="11_tougen.html#002" class="section-link">蕩減による統一</a></li><li class="section-item"><a href="11_tougen.html#003" class="section-link">蕩減の価値</a></li><li class="section-item"><a href="11_tougen.html#004" class="section-link">教授達は先生が主張していることを理解し尊敬しています。</a></li><li class="section-item"><a href="11_tougen.html#005" class="section-link">海は将来のための我々の基盤</a></li><li class="section-item"><a href="11_tougen.html#006" class="section-link">父母の言葉を学ぶ</a></li></ul></div><div class="chapter-item"><a href="12_sinjyouto_seisin.html" class="chapter-link">12.魚釣りの心情と精神1986年 7月 3日　モーニング・ガーデン</a><ul class="section-list"><li class="section-item"><a href="12_sinjyouto_seisin.html#001" class="section-link">御旨と海　魚釣りの心情と精神</a></li><li class="section-item"><a href="12_sinjyouto_seisin.html#002" class="section-link">マグロ釣りにおける先生の基台</a></li><li class="section-item"><a href="12_sinjyouto_seisin.html#003" class="section-link">マグロ釣りの背後のビジョン</a></li><li class="section-item"><a href="12_sinjyouto_seisin.html#004" class="section-link">我々がなるべき種類の人間とは</a></li><li class="section-item"><a href="12_sinjyouto_seisin.html#005" class="section-link">魚釣りに対する先生の心情</a></li><li class="section-item"><a href="12_sinjyouto_seisin.html#006" class="section-link">マグロ釣りに関する真剣なポイント</a></li><li class="section-item"><a href="12_sinjyouto_seisin.html#007" class="section-link">結論</a></li></ul></div><div class="chapter-item"><a href="13_uminomiti.html" class="chapter-link">13.海の道1986年 8月28日　モーニング・ガーデン</a><ul class="section-list"><li class="section-item"><a href="13_uminomiti.html#001" class="section-link">御旨と海　 海 の 道</a></li><li class="section-item"><a href="13_uminomiti.html#002" class="section-link">我々が目指している究極の目的</a></li><li class="section-item"><a href="13_uminomiti.html#003" class="section-link">基盤を造るための代価</a></li><li class="section-item"><a href="13_uminomiti.html#004" class="section-link">神様の摂理が我々を待っている</a></li></ul></div><div class="chapter-item"><a href="14_syupan.html" class="chapter-link">14.既に出版されている御言葉からの抜粋1974年〜1983年</a><ul class="section-list"><li class="section-item"><a href="14_syupan.html#001" class="section-link">御旨と海</a></li><li class="section-item"><a href="14_syupan.html#002" class="section-link">既に出版されている御言葉からの抜粋</a></li><li class="section-item"><a href="14_syupan.html#003" class="section-link">ベルベェディア修練生に対して</a></li><li class="section-item"><a href="14_syupan.html#004" class="section-link">過去と未来の世代</a></li><li class="section-item"><a href="14_syupan.html#005" class="section-link">完成と感謝</a></li><li class="section-item"><a href="14_syupan.html#006" class="section-link">統一教会二十三周年記念日</a></li><li class="section-item"><a href="14_syupan.html#007" class="section-link">神様に属する物と人間に属する物</a></li><li class="section-item"><a href="14_syupan.html#008" class="section-link">神様に感謝しましょう</a></li><li class="section-item"><a href="14_syupan.html#009" class="section-link">神様は我々のみを頼りとしておられる</a></li><li class="section-item"><a href="14_syupan.html#010" class="section-link">我々の誇り</a></li><li class="section-item"><a href="14_syupan.html#011" class="section-link">神様の願い</a></li><li class="section-item"><a href="14_syupan.html#012" class="section-link">再会の心情</a></li><li class="section-item"><a href="14_syupan.html#013" class="section-link">我々の新しく生まれた自己</a></li><li class="section-item"><a href="14_syupan.html#014" class="section-link">ワシントン・モニュメント記念日にて</a></li><li class="section-item"><a href="14_syupan.html#015" class="section-link">我々の立場</a></li></ul></div></div>
+    <div class="nav-links">
+        <a href="../index.html">トップページへ戻る</a>
+    </div>
+</div>
 </body>
 </html>

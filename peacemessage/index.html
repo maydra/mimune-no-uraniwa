@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>平和神経／平和メッセージ | 平和メッセージ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            line-height: 1.9;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.05em;
+        }
+        .toc {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .toc-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .toc-title::before { content: '◆'; color: #667eea; font-size: 0.8em; }
+        .toc ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.8rem; }
+        .toc li { position: relative; padding-left: 1.5rem; }
+        .toc li::before { content: '▸'; position: absolute; left: 0; color: #667eea; }
+        .toc a { color: #b8c1ec; text-decoration: none; transition: all 0.3s; }
+        .toc a:hover { color: #fff; text-decoration: underline; }
+        
+        .subheading {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #fff;
+            margin: 5rem 0 2rem 0;
+            display: block;
+            border-left: 6px solid #667eea;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            background: linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+        }
+        .subheading a { color: inherit; text-decoration: none; }
+        
+        /* Details style for Index */
+        details {
+            margin-bottom: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        details:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+        summary {
+            padding: 1.5rem 2rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        summary::-webkit-details-marker { display: none; }
+        .summary-title { flex-grow: 1; color: #fff; text-decoration: none; }
+        .summary-title:hover { text-decoration: underline; }
+        .summary-hint { font-size: 0.9rem; opacity: 0.5; font-weight: normal; }
+
+        .details-content {
+            padding: 0 2rem 2rem 3.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0.5rem;
+            padding-top: 1.5rem;
+        }
+        .details-content ul { list-style: none; }
+        .details-content li { margin-bottom: 0.8rem; position: relative; }
+        .details-content li::before { content: '▸'; position: absolute; left: -1.5rem; color: #667eea; }
+        .details-content a { color: #a5b4fc; text-decoration: none; transition: 0.3s; font-size: 1.1rem; }
+        .details-content a:hover { color: #fff; }
+
+        .nav-links { margin-top: 5rem; text-align: center; }
+        .nav-links a {
+            color: #fff; text-decoration: none; padding: 1rem 2.5rem;
+            background: rgba(255, 255, 255, 0.1); border-radius: 50px;
+            transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+        }
+        .nav-links a:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-3px); }
+        
+        @media (max-width: 768px) {
+            .container { padding: 1.5rem; }
+            h1 { font-size: 2.2rem; }
+            .subheading { font-size: 1.5rem; }
+            .toc ul { grid-template-columns: 1fr; }
+            summary { font-size: 1.2rem; padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<h1>平和神経／平和メッセージ</h1><p style="text-align:center; opacity:0.8; margin-bottom: 3rem;">世界平和統一家庭連合の創始者、文鮮明・韓鶴子ご夫妻による講演文集です。</p><details>  <summary>    <a href="1.html" class="summary-title">平和メッセージ１</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="1.html#sec-1">神様の理想家庭</a></li><li><a href="1.html#sec-2">血統の重要性</a></li><li><a href="1.html#sec-3">真の父母を探し求めてきた天の苦痛</a></li><li><a href="1.html#sec-4">祝福結婚を通じた血統復帰</a></li><li><a href="1.html#sec-5">真の愛の人生とは</a></li><li><a href="1.html#sec-6">平和大使は天の密使</a></li><li><a href="1.html#sec-7">人類平和のためのプロジェクト</a></li><li><a href="1.html#sec-8">私たちの使命</a></li></ul>  </div></details><details>  <summary>    <a href="2.html" class="summary-title">平和メッセージ2</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="2.html#sec-1">神様の恨</a></li><li><a href="2.html#sec-2">アダムとエバを創造された神様の目的</a></li><li><a href="2.html#sec-3">神様の創造理想</a></li><li><a href="2.html#sec-4">家庭の価値</a></li><li><a href="2.html#sec-5">三代が調和して暮らす家庭</a></li><li><a href="2.html#sec-6">結婚の目的</a></li></ul>  </div></details><details>  <summary>    <a href="3.html" class="summary-title">平和メッセージ3</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="3.html#sec-1">実存する霊界</a></li><li><a href="3.html#sec-2">霊人体と肉身の関係</a></li><li><a href="3.html#sec-3">天国と地獄の限界</a></li><li><a href="3.html#sec-4">真の愛の人生</a></li><li><a href="3.html#sec-5">人間堕落の結果</a></li><li><a href="3.html#sec-6">天国はまず家庭から</a></li><li><a href="3.html#sec-7">家庭の価値</a></li><li><a href="3.html#sec-8">三代が調和して暮らす家庭</a></li></ul>  </div></details><details>  <summary>    <a href="4.html" class="summary-title">平和メッセージ4</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="4.html#sec-1">人類の願い</a></li><li><a href="4.html#sec-2">人間を中心とする平和追求の限界</a></li><li><a href="4.html#sec-3">宗親たちの使命</a></li><li><a href="4.html#sec-4">交叉祝福結婚の価値</a></li><li><a href="4.html#sec-5">「天宙平和連合」の出現</a></li></ul>  </div></details><details>  <summary>    <a href="5.html" class="summary-title">平和メッセージ5</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="5.html#sec-1">神様王権即位式</a></li><li><a href="5.html#sec-2">天一国の民の道</a></li><li><a href="5.html#sec-3">交叉結婚を通じた平和世界</a></li><li><a href="5.html#sec-4">天一国市民の生き方</a></li></ul>  </div></details><details>  <summary>    <a href="6.html" class="summary-title">平和メッセージ6</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><p style="opacity: 0.5;">（目次構成なし）</p>  </div></details><details>  <summary>    <a href="7.html" class="summary-title">平和メッセージ7</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="7.html#sec-1">「天宙平和連合」の出現</a></li><li><a href="7.html#sec-2">神様の創造目的</a></li><li><a href="7.html#sec-3">血統の重要性</a></li><li><a href="7.html#sec-4">真の愛</a></li><li><a href="7.html#sec-5">天国と家庭</a></li><li><a href="7.html#sec-6">三代が共に暮らす家庭</a></li><li><a href="7.html#sec-7">交叉・交体祝福結婚</a></li><li><a href="7.html#sec-8">真の父母様の平和運動</a></li><li><a href="7.html#sec-9">平和理想世界王国の到来</a></li><li><a href="7.html#sec-10">私たちの使命</a></li></ul>  </div></details><details>  <summary>    <a href="8.html" class="summary-title">平和メッセージ8</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="8.html#sec-1">真の家庭三代圏の勝利</a></li><li><a href="8.html#sec-2">実存する霊界</a></li><li><a href="8.html#sec-3">霊人体と肉身の関係</a></li><li><a href="8.html#sec-4">天国と地獄の限界</a></li><li><a href="8.html#sec-5">真の愛の人生</a></li><li><a href="8.html#sec-6">人間堕落の結果</a></li><li><a href="8.html#sec-7">天国はまず家庭から</a></li><li><a href="8.html#sec-8">三代が調和して暮らす家庭</a></li></ul>  </div></details><details>  <summary>    <a href="9.html" class="summary-title">平和メッセージ9</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="9.html#sec-1">「天宙平和連合」の出現</a></li><li><a href="9.html#sec-2">神様の創造目的</a></li><li><a href="9.html#sec-3">血統の重要性</a></li><li><a href="9.html#sec-4">真の愛</a></li><li><a href="9.html#sec-5">実存する霊界</a></li><li><a href="9.html#sec-6">霊人体と肉身の関係</a></li><li><a href="9.html#sec-7">天国と家庭</a></li><li><a href="9.html#sec-8">三代が共に暮らす家庭</a></li><li><a href="9.html#sec-9">交叉・交体祝福結婚</a></li><li><a href="9.html#sec-10">真の父母様の平和運動</a></li><li><a href="9.html#sec-11">平和理想世界王国の到来</a></li><li><a href="9.html#sec-12">私たちの使命</a></li></ul>  </div></details><details>  <summary>    <a href="10.html" class="summary-title">平和メッセージ10</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="10.html#sec-1">「天宙平和連合」の出現</a></li><li><a href="10.html#sec-2">神様の創造目的</a></li><li><a href="10.html#sec-3">絶対「性」</a></li><li><a href="10.html#sec-4">血統の重要性</a></li><li><a href="10.html#sec-5">真の愛</a></li><li><a href="10.html#sec-6">実存する霊界</a></li><li><a href="10.html#sec-7">霊人体と肉身の関係</a></li><li><a href="10.html#sec-8">天国と家庭</a></li><li><a href="10.html#sec-9">三代が共に暮らす家庭</a></li><li><a href="10.html#sec-10">交叉・交体祝福結婚</a></li><li><a href="10.html#sec-11">真の父母様の平和運動</a></li><li><a href="10.html#sec-12">平和理想世界王国の到来</a></li><li><a href="10.html#sec-13">私たちの使命</a></li></ul>  </div></details><details>  <summary>    <a href="11.html" class="summary-title">平和メッセージ11</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="11.html#sec-1">人類の願い</a></li><li><a href="11.html#sec-2">個性真理体である人間の価値</a></li><li><a href="11.html#sec-3">人間を中心とする平和追求の限界</a></li><li><a href="11.html#sec-4">平和大使の使命</a></li><li><a href="11.html#sec-5">交叉・交体祝福結婚の価値</a></li><li><a href="11.html#sec-6">「天宙平和連合」の出現</a></li></ul>  </div></details><details>  <summary>    <a href="12.html" class="summary-title">平和メッセージ12</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="12.html#sec-1">神様の創造目的</a></li><li><a href="12.html#sec-2">絶対「性」</a></li><li><a href="12.html#sec-3">真の愛の属性</a></li><li><a href="12.html#sec-4">天国と真の愛</a></li><li><a href="12.html#sec-5">血統の重要性</a></li><li><a href="12.html#sec-6">交叉・交体祝福結婚</a></li><li><a href="12.html#sec-7">三代が共に暮らす理想家庭</a></li><li><a href="12.html#sec-8">人間の二重構造と霊界</a></li><li><a href="12.html#sec-9">霊人体の完成のための地上生活</a></li><li><a href="12.html#sec-10">真の父母様の生涯</a></li><li><a href="12.html#sec-11">平和理想王国時代の到来</a></li><li><a href="12.html#sec-12">後天時代にいる私たちの使命</a></li></ul>  </div></details><details>  <summary>    <a href="13.html" class="summary-title">平和メッセージ13</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="13.html#sec-1">人類歴史の発展過程</a></li><li><a href="13.html#sec-2">環太平洋時代の私たちの使命</a></li><li><a href="13.html#sec-3">真の愛・真の家庭</a></li><li><a href="13.html#sec-4">人類の未来は環太平洋圏の未来から</a></li><li><a href="13.html#sec-5">真の父母の業績</a></li><li><a href="13.html#sec-6">交叉・交体祝福結婚</a></li></ul>  </div></details><details>  <summary>    <a href="14.html" class="summary-title">平和メッセージ14</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="14.html#sec-1">「家庭盟誓」は天一国を成し遂げる絶対基準であり、憲法</a></li><li><a href="14.html#sec-2">「家庭盟誓」の各節の解説</a></li><li><a href="14.html#sec-3">本郷の地を求めて、地上天国と天上天国を創建しよう</a></li><li><a href="14.html#sec-4">孝子、忠臣、聖人、聖子の家庭の道理を完成しよう</a></li><li><a href="14.html#sec-5">四大心情圏と三大王権と皇族圏の完成</a></li><li><a href="14.html#sec-6">神様の理想は天宙大家族の形成</a></li><li><a href="14.html#sec-7">停止は死亡に通じる</a></li><li><a href="14.html#sec-8">天運を動かす家庭になりなさい</a></li><li><a href="14.html#sec-9">本然の血統と連結された為に生きる生活を通して、心情文化世界完成</a></li><li><a href="14.html#sec-10">地上天国と天上天国の解放圏と釈放圏を完成しよう</a></li><li><a href="14.html#sec-11">神様の創造目的は神人愛一体</a></li><li><a href="14.html#sec-12">良心は人間の三大主体</a></li><li><a href="14.html#sec-13">天の伝統が皆様の家法</a></li></ul>  </div></details><details>  <summary>    <a href="15.html" class="summary-title">平和メッセージ15</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="15.html#sec-1">終末期に置かれた人類</a></li><li><a href="15.html#sec-2">三大主体思想</a></li><li><a href="15.html#sec-3">三大主体思想の有機的関係</a></li><li><a href="15.html#sec-4">良心は真の父母、真の師、真の主人</a></li><li><a href="15.html#sec-5">交叉・交体祝福結婚の偉大性</a></li></ul>  </div></details><details>  <summary>    <a href="16.html" class="summary-title">平和メッセージ16</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="16.html#sec-1">分捧王中心摂理時代</a></li><li><a href="16.html#sec-2">善主権の時代である後天開闢時代</a></li><li><a href="16.html#sec-3">人類歴史の発展過程</a></li><li><a href="16.html#sec-4">環太平洋時代の私たちの使命</a></li><li><a href="16.html#sec-5">真の愛・真の家庭</a></li><li><a href="16.html#sec-6">真の父母様の業績</a></li><li><a href="16.html#sec-7">真の父母の勝利的伝統の相続</a></li><li><a href="16.html#sec-8">交叉 ・交体祝福結婚</a></li><li><a href="16.html#sec-9">祖国光復の主役</a></li><li><a href="16.html#sec-10">重生完成・復活完成・永生完成</a></li></ul>  </div></details><details>  <summary>    <a href="17.html" class="summary-title">平和メッセージ17</a>    <span class="summary-hint">▼ 章一覧</span>  </summary>  <div class="details-content"><ul><li><a href="17.html#sec-1">歴史の中の摂理的結実</a></li><li><a href="17.html#sec-2">圓球ピースカップ大会</a></li><li><a href="17.html#sec-3">真の父母を求めてこられた神様</a></li><li><a href="17.html#sec-4">真の愛の革命</a></li></ul>  </div></details>
+    <div class="nav-links">
+        <a href="../index.html">トップページへ戻る</a>
+    </div>
+</div>
+</body>
+</html>

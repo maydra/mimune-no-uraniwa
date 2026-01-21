@@ -1,340 +1,226 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XXQ0QTBYTR');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
-<link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
-
-<meta charset="utf-8"/>
-<title>文鮮明師講演文集</title>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
-        rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>文鮮明師講演文集 | 目次 | み旨の裏庭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 2rem 1rem;
-            position: relative;
-            overflow-x: hidden;
-            font-size: 1.25rem;
-            line-height: 1.9;
+            padding: 3rem 1rem;
+            line-height: 1.8;
         }
-
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
-
         .container {
-            max-width: 1400px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
-            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-        }
-
-        h1 a {
-            text-decoration: none;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1.75rem;
-            margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            letter-spacing: 0.05em;
-        }
-
-        h2::before {
-            content: '◆';
-            color: #667eea;
-            font-size: 0.8em;
-        }
-
-        p {
-            margin: 1em 0;
-            line-height: 1.9;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        a:hover {
-            color: #f093fb;
-            border-bottom-color: #f093fb;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 2em 0;
-        }
-
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
-        }
-
-        li {
-            margin: 0.5em 0;
-            line-height: 1.9;
-        }
-
-        b, strong {
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .content-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-
-        .content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+            letter-spacing: 0.05em;
         }
-
-        .content-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .links-list {
+        
+        .index-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-left: 0;
+            padding: 0;
         }
-
-        .links-list li {
-            position: relative;
-            padding-left: 1.6rem;
+        .volume-item {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
         }
-
-        .links-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            transition: transform 0.3s ease;
+        .volume-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
+        .volume-title a { color: #fff; text-decoration: none; }
+        .volume-title a:hover { text-decoration: underline; }
 
-        .links-list li:hover::before {
-            transform: translateX(3px);
+        .chapter-list {
+            list-style: none;
+            padding-left: 0.5rem;
         }
-
-        .links-list a {
+        .chapter-item {
+            margin-bottom: 0.6rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .chapter-link {
             color: #e0e0e0;
             text-decoration: none;
-            font-size: 1.25rem;
-            line-height: 1.9;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.2s;
             display: inline-block;
-            position: relative;
-            border-bottom: none;
         }
+        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
 
-        .links-list a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
+        .section-list {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.4rem;
         }
-
-        .links-list a:hover {
-            color: #fff;
-            transform: translateX(3px);
+        .section-item {
+            margin-bottom: 0.3rem;
         }
-
-        .links-list a:hover::after {
-            width: 100%;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.75rem;
-                font-size: 1.1rem;
-            }
-
-            .content-card {
-                padding: 2rem;
-            }
-
-            h1 {
-                font-size: clamp(2rem, 6vw, 3.5rem);
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .links-list a {
-                font-size: 1.15rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            .links-list a {
-                font-size: 1.05rem;
-            }
-        }
-
-        /* 聖書の節リンク用スタイル（既存のものを保持） */
-        a.verse-link {
-            color: #e74c3c;
+        .section-link {
+            font-size: 0.9rem;
+            color: #b0c4de;
+            opacity: 0.8;
             text-decoration: none;
-            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .section-link:hover { opacity: 1; color: #fff; }
+        .section-link::before { content: '・'; margin-right: 0.3rem; }
+
+        .nav-links {
+            margin-top: 4rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Collapsible Details Styles */
+        details {
+            margin-bottom: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        details[open] {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        summary {
+            padding: 1.2rem 1.8rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            transition: background 0.2s;
+        }
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '＋';
+            font-size: 1.1rem;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            content: '－';
+            transform: rotate(180deg);
+        }
+        .details-content {
+            padding: 0 1.8rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0;
+        }
+        .details-content .chapter-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .details-content .chapter-item:last-child {
             border-bottom: none;
-        }
-
-        a.verse-link:hover {
-            text-decoration: underline;
-            color: #c0392b;
-            border-bottom-color: transparent;
-        }
-
-        [id^="v"]:target {
-            background-color: #fff3cd;
-            padding: 0.1em 0.2em;
-            border-radius: 3px;
-            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body><div class="container">
-<h1 id="文鮮明師講演文集"><a href="#文鮮明師講演文集">文鮮明師講演文集</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明師 
-講演文集</a></li><li class="toc-b"><a href="#002">In the beginning was the Word, and the Word was with God, and the word was God." 
-John1:1</a></li></ul></div>
-<body background="http://furuta65.fc2web.com/001/images/wall007.png">
-<!-- St-HP-H -->
-<!-- En-HP-H -->
-<p align="center"><b id="001"><a href="#001" name="文鮮明師">文鮮明師</a> 
-講演文集<i><br/>
-<br/>
-</i>
-</b>
-<i>
-"<b id="002"><a href="#002">In the beginning was the Word, and the Word was with God, and the word was God." 
-John1:1</a></b></i></p>
-<hr align="center" width="71%"/>
-<blockquote>
-<blockquote>
-<blockquote>
-<ul><li><a href="731020.html">人間に対する神の希望</a>（1973年10月20日）</li><li><a href="960416.html">救援摂理史の原理観</a>（1996年4月16日）</li><li><a href="960801.html">宇宙の根本を探して</a>（1996年8月1日）</li><li><a href="970810.html">真の愛を中心とした真の家庭と真の宇宙</a>（1997年8月10日）</li><li><a href="980202.html">祝福と永生</a>（1998年2月2日）</li><li><a href="990117.html">人間の行くべき生涯路程</a>（1999年1月17日）</li><li><a href="990205.html">｢生と死」についての理解</a>（1999年2月5日）</li><li><a href="990206.html">世界平和超宗教超国家連合創設大会</a>（1999年2月6日）</li><li><a href="truelove.html">誰もが願う真の愛</a>（2000年3月）</li><li><a href="000312.html">神様の王子・王女が行くべき生涯路程</a>（2000年3月12日）</li><li><a href="000818.html">国連の刷新と「平和の文化」建設</a>（2000年8月18日）</li><li><a href="000818b.html">国境線撤廃と世界平和</a>（2000年8月18日）</li><li><a href="010115.html">世界化時代に言論の道徳基準確立を</a>（2001年1月15日）</li><li><a href="010127.html">文明間の対話と調和</a>（2001年1月27日）</li><li><a href="010129.html">天国にはだれがどのように入るのか</a>（2001年1月29日）</li><li><a href="010508.html">神様は私たちの王であり、真の父母であられる</a>（2001年5月8日）</li><li><a href="010515.html">「神様王権即位式」は天と地の勝利を完成する</a>（2001年5月15日）</li><li><a href="010713.html">神様の祖国光復</a>（2001年7月13日）</li><li><a href="011020.html">神のみ旨から見た平和への道</a>（2001年10月20日）</li><li><a href="011021.html">真の“私”をさがして</a>（2001年10月21日）</li><li><a href="011029-1108.html">神様と人類が探していく平和の国と世界</a>（2001年10月29日）</li><li><a href="020215.html">平和の根は真の愛に</a>（2002年2月15日）</li><li><a href="020215tm.html">WCSF2002開会式での創設者紹介スピーチ</a>（2002年2月15日）</li><li><a href="020217.html">世界と国家の真の救済への道</a>（2002年2月17日）</li><li><a href="020427.html">人類救済は真の家庭から</a>（2002年4月27日）</li><li><a href="020521.html">神のみ旨からみたイエスの生涯と終末期の今日に対する神の警告</a>（2002年5月21日）</li><li><a href="020521b.html">自由、家庭、信仰−21世紀のメディアの役割</a>（2002年5月21日）</li><li><a href="020621.html">天地父母統一安着宣布</a>（2002年6月21日）</li><li><a href="020818.html">平和の根源は神様</a>（2002年8月18日）</li><li><a href="020921.html">神の祖国と1つの世界</a>（2002年9月21日）</li><li><a href="030205.html">神様の祖国と天一国王権時代</a>（2003年2月5日）</li><li><a href="030206.html">神様の真の愛と天地人の関係の回復</a>（2003年2月6日）</li><li><a href="030815.html">再創造の主人</a>（2003年8月15日）</li><li><a href="031003.html">新たな国境線撤廃と世界平和</a>（2003年10月3日）</li><li><a href="031015.html">平和国連を通して平和天国を完成しよう</a>（2003年10月15日）</li><li><a href="031015_2.html">平和国連創設・韓国本部大会　奉献祈祷文</a>（2003年10月15日）</li></ul>
-</blockquote>
-</blockquote>
-</blockquote>
-</div></body>
-<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
-<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+<body>
+<div class="container">
+<h1>文鮮明師講演文集</h1><div class="index-list"><div class="chapter-item"><a href="731020.html" class="chapter-link">人間に対する神の希望</a><ul class="section-list"><li class="section-item"><a href="731020.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="731020.html#002" class="section-link">「人間に対する神の希望」</a></li></ul></div><div class="chapter-item"><a href="960416.html" class="chapter-link">救援摂理史の原理観</a><ul class="section-list"><li class="section-item"><a href="960416.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="960416.html#002" class="section-link">「救援摂理史の原理観」</a></li></ul></div><div class="chapter-item"><a href="960801.html" class="chapter-link">宇宙の根本を探して</a><ul class="section-list"><li class="section-item"><a href="960801.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="960801.html#002" class="section-link">「宇宙の根本を探して」</a></li></ul></div><div class="chapter-item"><a href="970810.html" class="chapter-link">真の愛を中心とした真の家庭と真の宇宙</a><ul class="section-list"><li class="section-item"><a href="970810.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="970810.html#002" class="section-link">「真の愛を中心とした真なる家庭と真なる宇宙」</a></li></ul></div><div class="chapter-item"><a href="980202.html" class="chapter-link">祝福と永生</a><ul class="section-list"><li class="section-item"><a href="980202.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="980202.html#002" class="section-link">「祝福と永生」</a></li></ul></div><div class="chapter-item"><a href="990117.html" class="chapter-link">人間の行くべき生涯路程</a><ul class="section-list"><li class="section-item"><a href="990117.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="990117.html#002" class="section-link">「人間の行くべき生涯路程」</a></li></ul></div><div class="chapter-item"><a href="990205.html" class="chapter-link">｢生と死」についての理解</a><ul class="section-list"><li class="section-item"><a href="990205.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="990205.html#002" class="section-link">「“生と死”についての理解」</a></li></ul></div><div class="chapter-item"><a href="990206.html" class="chapter-link">世界平和超宗教超国家連合創設大会</a><ul class="section-list"><li class="section-item"><a href="990206.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="990206.html#002" class="section-link">「世界平和超宗教超国家連合創設大会　基調講演文」</a></li></ul></div><div class="chapter-item"><a href="truelove.html" class="chapter-link">誰もが願う真の愛</a><ul class="section-list"><li class="section-item"><a href="truelove.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="truelove.html#002" class="section-link">「真の愛は誰もが願う」</a></li></ul></div><div class="chapter-item"><a href="000312.html" class="chapter-link">神様の王子・王女が行くべき生涯路程</a><ul class="section-list"><li class="section-item"><a href="000312.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="000312.html#002" class="section-link">「神様の王子・王女が行くべき生涯路程」</a></li></ul></div><div class="chapter-item"><a href="000818.html" class="chapter-link">国連の刷新と「平和の文化」建設</a><ul class="section-list"><li class="section-item"><a href="000818.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="000818.html#002" class="section-link">国連の刷新と「平和の文化」建設</a></li></ul></div><div class="chapter-item"><a href="000818b.html" class="chapter-link">国境線撤廃と世界平和</a><ul class="section-list"><li class="section-item"><a href="000818b.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="000818b.html#002" class="section-link">「国境線撤廃と世界平和」</a></li></ul></div><div class="chapter-item"><a href="010115.html" class="chapter-link">世界化時代に言論の道徳基準確立を</a><ul class="section-list"><li class="section-item"><a href="010115.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="010115.html#002" class="section-link">「世界化時代に言論の道徳基準確立を」</a></li></ul></div><div class="chapter-item"><a href="010127.html" class="chapter-link">文明間の対話と調和</a><ul class="section-list"><li class="section-item"><a href="010127.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="010127.html#002" class="section-link">「文明間の対話と調和」</a></li></ul></div><div class="chapter-item"><a href="010129.html" class="chapter-link">天国にはだれがどのように入るのか</a><ul class="section-list"><li class="section-item"><a href="010129.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="010129.html#002" class="section-link">「天国にはだれがどのように入るのか」</a></li></ul></div><div class="chapter-item"><a href="010508.html" class="chapter-link">神様は私たちの王であり、真の父母であられる</a><ul class="section-list"><li class="section-item"><a href="010508.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="010508.html#002" class="section-link">「神様は私たちの王であり、真の父母であられる」</a></li></ul></div><div class="chapter-item"><a href="010515.html" class="chapter-link">「神様王権即位式」は天と地の勝利を完成する</a><ul class="section-list"><li class="section-item"><a href="010515.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="010515.html#002" class="section-link">「『神様王権即位式』は天と地の勝利を完成する」</a></li></ul></div><div class="chapter-item"><a href="010713.html" class="chapter-link">神様の祖国光復</a><ul class="section-list"><li class="section-item"><a href="010713.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="010713.html#002" class="section-link">「神様の祖国光復」</a></li><li class="section-item"><a href="010713.html#003" class="section-link">最も貴いのは永遠に続く血統</a></li><li class="section-item"><a href="010713.html#004" class="section-link">祝福結婚は真の父母だけがなし得る</a></li><li class="section-item"><a href="010713.html#005" class="section-link">「死なんとする者は生きん」の真の意味</a></li><li class="section-item"><a href="010713.html#006" class="section-link">神様王権即位式以後の生活規範</a></li><li class="section-item"><a href="010713.html#007" class="section-link">ために生きる生活で永生を準備すべき</a></li></ul></div><div class="chapter-item"><a href="011020.html" class="chapter-link">神のみ旨から見た平和への道</a><ul class="section-list"><li class="section-item"><a href="011020.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="011020.html#002" class="section-link">「神のみ旨から見た平和への道」</a></li></ul></div><div class="chapter-item"><a href="011021.html" class="chapter-link">真の“私”をさがして</a><ul class="section-list"><li class="section-item"><a href="011021.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="011021.html#002" class="section-link">「真の“私”をさがして」</a></li></ul></div><div class="chapter-item"><a href="011029-1108.html" class="chapter-link">神様と人類が探していく平和の国と世界</a><ul class="section-list"><li class="section-item"><a href="011029-1108.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li></ul></div><div class="chapter-item"><a href="020215.html" class="chapter-link">平和の根は真の愛に</a><ul class="section-list"><li class="section-item"><a href="020215.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="020215.html#002" class="section-link">「平和の根は真の愛に」</a></li><li class="section-item"><a href="020215.html#003" class="section-link">まず神様と霊界を知る</a></li><li class="section-item"><a href="020215.html#004" class="section-link">神様王権即位式を奉献</a></li><li class="section-item"><a href="020215.html#005" class="section-link">独りで平和ならず</a></li><li class="section-item"><a href="020215.html#006" class="section-link">心と体を完全に一つに</a></li><li class="section-item"><a href="020215.html#007" class="section-link">力の支配時代は終わった</a></li><li class="section-item"><a href="020215.html#008" class="section-link">家庭は最高の贈り物</a></li><li class="section-item"><a href="020215.html#009" class="section-link">公金・環境は不可侵</a></li></ul></div><div class="chapter-item"><a href="020215tm.html" class="chapter-link">WCSF2002開会式での創設者紹介スピーチ</a><ul class="section-list"><li class="section-item"><a href="020215tm.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="020215tm.html#002" class="section-link">「WCSF2002開会式での創設者紹介スピーチ」</a></li></ul></div><div class="chapter-item"><a href="020217.html" class="chapter-link">世界と国家の真の救済への道</a><ul class="section-list"><li class="section-item"><a href="020217.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="020217.html#002" class="section-link">「世界と国家の真の救済への道」</a></li></ul></div><div class="chapter-item"><a href="020427.html" class="chapter-link">人類救済は真の家庭から</a><ul class="section-list"><li class="section-item"><a href="020427.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="020427.html#002" class="section-link">「人類救済は真の家庭から」</a></li><li class="section-item"><a href="020427.html#003" class="section-link">盛大に聖職者祝福式</a></li></ul></div><div class="chapter-item"><a href="020521.html" class="chapter-link">神のみ旨からみたイエスの生涯と終末期の今日に対する神の警告</a><ul class="section-list"><li class="section-item"><a href="020521.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="020521.html#002" class="section-link">「神のみ旨からみたイエスの生涯と終末期の今日に対する神の警告」</a></li><li class="section-item"><a href="020521.html#003" class="section-link">十字架上のイエスの愛とその遺産</a></li><li class="section-item"><a href="020521.html#004" class="section-link">右の強盗の功績</a></li><li class="section-item"><a href="020521.html#005" class="section-link">キリスト教に霊的基盤だけを与えたイエスの死</a></li><li class="section-item"><a href="020521.html#006" class="section-link">イエスの3日間の苦難の路程</a></li><li class="section-item"><a href="020521.html#007" class="section-link">十字架上でもイエスは天のことを心配し、敵を愛した</a></li><li class="section-item"><a href="020521.html#008" class="section-link">イエスが私たちと分かつパンとぶどう酒の意味</a></li></ul></div><div class="chapter-item"><a href="020521b.html" class="chapter-link">自由、家庭、信仰−21世紀のメディアの役割</a><ul class="section-list"><li class="section-item"><a href="020521b.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="020521b.html#002" class="section-link">「自由、家庭、信仰−21世紀のメディアの役割」</a></li></ul></div><div class="chapter-item"><a href="020621.html" class="chapter-link">天地父母統一安着宣布</a><ul class="section-list"><li class="section-item"><a href="020621.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="020621.html#002" class="section-link">「天地父母統一安着宣布」</a></li></ul></div><div class="chapter-item"><a href="020818.html" class="chapter-link">平和の根源は神様</a><ul class="section-list"><li class="section-item"><a href="020818.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="020818.html#002" class="section-link">「平和の根源は神様」</a></li></ul></div><div class="chapter-item"><a href="020921.html" class="chapter-link">神の祖国と1つの世界</a><ul class="section-list"><li class="section-item"><a href="020921.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="020921.html#002" class="section-link">「神の祖国と１つの世界」</a></li><li class="section-item"><a href="020921.html#003" class="section-link">なぜ、神の国を築かなければならないか</a></li><li class="section-item"><a href="020921.html#004" class="section-link">神の王国は全人類の抱く願い</a></li><li class="section-item"><a href="020921.html#005" class="section-link">神の国を築くための神の摂理</a></li><li class="section-item"><a href="020921.html#006" class="section-link">イエスと神の王国</a></li></ul></div><div class="chapter-item"><a href="030205.html" class="chapter-link">神様の祖国と天一国王権時代</a><ul class="section-list"><li class="section-item"><a href="030205.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="030205.html#002" class="section-link">「神様の祖国と天一国王権時代」</a></li></ul></div><div class="chapter-item"><a href="030206.html" class="chapter-link">神様の真の愛と天地人の関係の回復</a><ul class="section-list"><li class="section-item"><a href="030206.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="030206.html#002" class="section-link">「神様の真の愛と天地人の関係の回復」</a></li></ul></div><div class="chapter-item"><a href="030815.html" class="chapter-link">再創造の主人</a><ul class="section-list"><li class="section-item"><a href="030815.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="030815.html#002" class="section-link">「再創造の主人」</a></li></ul></div><div class="chapter-item"><a href="031003.html" class="chapter-link">新たな国境線撤廃と世界平和</a><ul class="section-list"><li class="section-item"><a href="031003.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="031003.html#002" class="section-link">「新たな国境線撤廃と世界平和」</a></li></ul></div><div class="chapter-item"><a href="031015.html" class="chapter-link">平和国連を通して平和天国を完成しよう</a><ul class="section-list"><li class="section-item"><a href="031015.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="031015.html#002" class="section-link">「平和国連を通して平和天国を完成しよう」</a></li></ul></div><div class="chapter-item"><a href="031015_2.html" class="chapter-link">平和国連創設・韓国本部大会　奉献祈祷文</a><ul class="section-list"><li class="section-item"><a href="031015_2.html#001" class="section-link">In the beginning 
+  was the Word, and the Word was with God, and the word was God." John1:1</a></li><li class="section-item"><a href="031015_2.html#002" class="section-link">「平和国連創設・韓国本部大会　奉献祈祷文」</a></li></ul></div></div>
+    <div class="nav-links">
+        <a href="../index.html">トップページへ戻る</a>
+    </div>
+</div>
 </body>
 </html>

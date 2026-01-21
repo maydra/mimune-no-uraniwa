@@ -1,392 +1,190 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XXQ0QTBYTR');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
-<link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png"/>
-
-<meta charset="utf-8"/>
-<title>訓教経(下)</title>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
-        rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>訓教経(下) | 目次 | み旨の裏庭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 2rem 1rem;
-            position: relative;
-            overflow-x: hidden;
-            font-size: 1.25rem;
-            line-height: 1.9;
+            padding: 3rem 1rem;
+            line-height: 1.8;
         }
-
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
-
         .container {
-            max-width: 1400px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
-            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-        }
-
-        h1 a {
-            text-decoration: none;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1.75rem;
-            margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            letter-spacing: 0.05em;
-        }
-
-        h2::before {
-            content: '◆';
-            color: #667eea;
-            font-size: 0.8em;
-        }
-
-        p {
-            margin: 1em 0;
-            line-height: 1.9;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        a:hover {
-            color: #f093fb;
-            border-bottom-color: #f093fb;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 2em 0;
-        }
-
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
-        }
-
-        li {
-            margin: 0.5em 0;
-            line-height: 1.9;
-        }
-
-        b, strong {
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .content-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-
-        .content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+            letter-spacing: 0.05em;
         }
-
-        .content-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .links-list {
+        
+        .index-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-left: 0;
+            padding: 0;
         }
-
-        .links-list li {
-            position: relative;
-            padding-left: 1.6rem;
+        .volume-item {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
         }
-
-        .links-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            transition: transform 0.3s ease;
+        .volume-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
+        .volume-title a { color: #fff; text-decoration: none; }
+        .volume-title a:hover { text-decoration: underline; }
 
-        .links-list li:hover::before {
-            transform: translateX(3px);
+        .chapter-list {
+            list-style: none;
+            padding-left: 0.5rem;
         }
-
-        .links-list a {
+        .chapter-item {
+            margin-bottom: 0.6rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .chapter-link {
             color: #e0e0e0;
             text-decoration: none;
-            font-size: 1.25rem;
-            line-height: 1.9;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.2s;
             display: inline-block;
-            position: relative;
-            border-bottom: none;
         }
+        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
 
-        .links-list a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
+        .section-list {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.4rem;
         }
-
-        .links-list a:hover {
-            color: #fff;
-            transform: translateX(3px);
+        .section-item {
+            margin-bottom: 0.3rem;
         }
-
-        .links-list a:hover::after {
-            width: 100%;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.75rem;
-                font-size: 1.1rem;
-            }
-
-            .content-card {
-                padding: 2rem;
-            }
-
-            h1 {
-                font-size: clamp(2rem, 6vw, 3.5rem);
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .links-list a {
-                font-size: 1.15rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            .links-list a {
-                font-size: 1.05rem;
-            }
-        }
-
-        /* 聖書の節リンク用スタイル（既存のものを保持） */
-        a.verse-link {
-            color: #e74c3c;
+        .section-link {
+            font-size: 0.9rem;
+            color: #b0c4de;
+            opacity: 0.8;
             text-decoration: none;
-            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .section-link:hover { opacity: 1; color: #fff; }
+        .section-link::before { content: '・'; margin-right: 0.3rem; }
+
+        .nav-links {
+            margin-top: 4rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Collapsible Details Styles */
+        details {
+            margin-bottom: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        details[open] {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        summary {
+            padding: 1.2rem 1.8rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            transition: background 0.2s;
+        }
+        summary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '＋';
+            font-size: 1.1rem;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            content: '－';
+            transform: rotate(180deg);
+        }
+        .details-content {
+            padding: 0 1.8rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0;
+        }
+        .details-content .chapter-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .details-content .chapter-item:last-child {
             border-bottom: none;
-        }
-
-        a.verse-link:hover {
-            text-decoration: underline;
-            color: #c0392b;
-            border-bottom-color: transparent;
-        }
-
-        [id^="v"]:target {
-            background-color: #fff3cd;
-            padding: 0.1em 0.2em;
-            border-radius: 3px;
-            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body><div class="container">
-<h1 id="訓教経(下)"><a href="#訓教経(下)">訓教経(下)</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生のみ言集</a></li></ul></div>
-<body bgcolor="#ffcc99">
-<!-- St-HP-H -->
-<!-- En-HP-H -->
-<p><br/>
-</p>
-<b id="001"><a href="#001">文鮮明先生のみ言集</a></b><br/>
-訓教経(下)
-
-
-
-<br/>
-<a href="hajimeni.html" style="color: #ffffff;text-decoration : none;" target="right">01.はじめに<br/>
-      02.日本語版発刊に寄せて</a><br/>
-<br/>
-      03.<a href="003.html" style="color: #ffffff;text-decoration : none;" target="right">任命された人々</a><br/>
-      04.<a href="004.html" style="color: #ffffff;text-decoration : none;" target="right">天が尋ねきた道</a><br/>
-      05.<a href="005.html" style="color: #ffffff;text-decoration : none;" target="right">明日を迎えよう</a><br/>
-      06.<a href="006.html" style="color: #ffffff;text-decoration : none;" target="right">手本になろう</a><br/>
-      07.<a href="007.html" style="color: #ffffff;text-decoration : none;" target="right">良い人々</a><br/>
-      08.<a href="008.html" style="color: #ffffff;text-decoration : none;" target="right">感謝の生活</a><br/>
-      09.<a href="009.html" style="color: #ffffff;text-decoration : none;" target="right">真を探して</a><br/>
-      10.<a href="010.html" style="color: #ffffff;text-decoration : none;" target="right">体恤信仰が必要</a><br/>
-      11.<a href="011.html" style="color: #ffffff;text-decoration : none;" target="right">真の人々</a><br/>
-      12.<a href="012.html" style="color: #ffffff;text-decoration : none;" target="right">私たちの願い</a><br/>
-      13.<a href="013.html" style="color: #ffffff;text-decoration : none;" target="right">前進と停止</a><br/>
-      14.<a href="014.html" style="color: #ffffff;text-decoration : none;" target="right">興亡の分岐点</a><br/>
-      15.<a href="015.html" style="color: #ffffff;text-decoration : none;" target="right">天国の拠点はどこか</a><br/>
-      16.<a href="016.html" style="color: #ffffff;text-decoration : none;" target="right">模範を打ち立てるべき地上時代</a><br/>
-      17.<a href="017.html" style="color: #ffffff;text-decoration : none;" target="right">人間の価値と天国の起源</a><br/>
-      18.<a href="018.html" style="color: #ffffff;text-decoration : none;" target="right">完全復帰</a><br/>
-      19.<a href="019.html" style="color: #ffffff;text-decoration : none;" target="right">統一方案と私</a><br/>
-      20.<a href="020.html" style="color: #ffffff;text-decoration : none;" target="right">み旨と私たちの生涯</a><br/>
-      21.<a href="021.html" style="color: #ffffff;text-decoration : none;" target="right">神様に対する体恤と私たちの自覚</a><br/>
-      22.<a href="022.html" style="color: #ffffff;text-decoration : none;" target="right">摂理の十字路</a><br/>
-      23.<a href="023.html" style="color: #ffffff;text-decoration : none;" target="right">因縁の行路</a><br/>
-      24.<a href="024.html" style="color: #ffffff;text-decoration : none;" target="right">三時代のための責任</a><br/>
-      25.<a href="025.html" style="color: #ffffff;text-decoration : none;" target="right">真なる人と罪</a><br/>
-      26.<a href="026.html" style="color: #ffffff;text-decoration : none;" target="right">み旨の完成と私たちの使命</a><br/>
-      27.<a href="027.html" style="color: #ffffff;text-decoration : none;" target="right">侍る生活</a><br/>
-      28.<a href="028.html" style="color: #ffffff;text-decoration : none;" target="right">相続者</a><br/>
-      29.<a href="029.html" style="color: #ffffff;text-decoration : none;" target="right">心の鐘の音</a><br/>
-      30.<a href="030.html" style="color: #ffffff;text-decoration : none;" target="right">必ず行かなければならない運命の道</a><br/>
-      31.<a href="031.html" style="color: #ffffff;text-decoration : none;" target="right">模範生活</a><br/>
-      32.<a href="032.html" style="color: #ffffff;text-decoration : none;" target="right">真なる世界へ</a><br/>
-      33.<a href="033.html" style="color: #ffffff;text-decoration : none;" target="right">理想的焦点を合わせよう</a><br/>
-      34.<a href="034.html" style="color: #ffffff;text-decoration : none;" target="right">故　郷</a><br/>
-      35.<a href="035.html" style="color: #ffffff;text-decoration : none;" target="right">根本思想</a><br/>
-      36.<a href="036.html" style="color: #ffffff;text-decoration : none;" target="right">神人思想の完成</a><br/>
-      37.<a href="037.html" style="color: #ffffff;text-decoration : none;" target="right">真の統一と一つの世界</a><br/>
-      38.<a href="038.html" style="color: #ffffff;text-decoration : none;" target="right">女性解放</a><br/>
-<br/>
-<br/>
-<p><br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-</p>
-</div></body>
-<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
-<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+<body>
+<div class="container">
+<h1>訓教経(下)</h1><div class="index-list"><div class="chapter-item"><a href="hajimeni.html" class="chapter-link">01.はじめに02.日本語版発刊に寄せて</a><ul class="section-list"><li class="section-item"><a href="hajimeni.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="hajimeni.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="hajimeni.html#003" class="section-link">はじめに</a></li><li class="section-item"><a href="hajimeni.html#004" class="section-link">日本語版発刊によせて</a></li></ul></div><div class="chapter-item"><a href="003.html" class="chapter-link">任命された人々</a><ul class="section-list"><li class="section-item"><a href="003.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="003.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="003.html#003" class="section-link">任命された人々</a></li><li class="section-item"><a href="003.html#004" class="section-link">◆天命によりそれぞれ異なる使命を担っている人間</a></li><li class="section-item"><a href="003.html#005" class="section-link">◆自己の責任を完遂しようとするなら</a></li><li class="section-item"><a href="003.html#006" class="section-link">◆任命された者の特権と権威</a></li><li class="section-item"><a href="003.html#007" class="section-link">◆任命された者が知るべきこととすべきこと</a></li><li class="section-item"><a href="003.html#008" class="section-link">◆責任の量と使命の期間</a></li><li class="section-item"><a href="003.html#009" class="section-link">◆最善を尽くす姿勢が必要</a></li><li class="section-item"><a href="003.html#010" class="section-link">◆神様が好むことのできる人</a></li><li class="section-item"><a href="003.html#011" class="section-link">◆忠孝の道</a></li><li class="section-item"><a href="003.html#012" class="section-link">◆任命された者の責任</a></li></ul></div><div class="chapter-item"><a href="004.html" class="chapter-link">天が尋ねきた道</a><ul class="section-list"><li class="section-item"><a href="004.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="004.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="004.html#003" class="section-link">天が尋ねきた道</a></li><li class="section-item"><a href="004.html#004" class="section-link">◆直接会えない神様</a></li><li class="section-item"><a href="004.html#005" class="section-link">◆神様に会おうと思えば</a></li><li class="section-item"><a href="004.html#006" class="section-link">◆霊界との距離を短縮するには</a></li><li class="section-item"><a href="004.html#007" class="section-link">◆信仰の道と絶対信仰</a></li><li class="section-item"><a href="004.html#008" class="section-link">◆段階的に踏んで行くべき信仰生活</a></li><li class="section-item"><a href="004.html#009" class="section-link">◆恵みを受けた人の行く道</a></li><li class="section-item"><a href="004.html#010" class="section-link">◆神様の愛の内容</a></li><li class="section-item"><a href="004.html#011" class="section-link">◆主従関係を結んだイエス様と弟子</a></li><li class="section-item"><a href="004.html#012" class="section-link">◆善なる先祖以上の基準となれ</a></li><li class="section-item"><a href="004.html#013" class="section-link">◆神様が尋ねくることのできる道</a></li><li class="section-item"><a href="004.html#014" class="section-link">◆僕の立場を克服すべき私たち</a></li><li class="section-item"><a href="004.html#015" class="section-link">◆主従関係を越えた立場</a></li></ul></div><div class="chapter-item"><a href="005.html" class="chapter-link">明日を迎えよう</a><ul class="section-list"><li class="section-item"><a href="005.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="005.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="005.html#003" class="section-link">明日を迎えよう</a></li><li class="section-item"><a href="005.html#004" class="section-link">◆今日を生きる人間が願うこと</a></li><li class="section-item"><a href="005.html#005" class="section-link">◆人間が備えるべき価値</a></li><li class="section-item"><a href="005.html#006" class="section-link">◆歴史的代表となるべき私たち</a></li><li class="section-item"><a href="005.html#007" class="section-link">◆あすを迎えることのできる人</a></li><li class="section-item"><a href="005.html#008" class="section-link">◆神様の最高の願い</a></li><li class="section-item"><a href="005.html#009" class="section-link">◆絶対的な因縁で連結された神様と人間</a></li><li class="section-item"><a href="005.html#010" class="section-link">◆体 恤的な愛を感じる立場</a></li><li class="section-item"><a href="005.html#011" class="section-link">◆神様の救いの摂理の原則</a></li><li class="section-item"><a href="005.html#012" class="section-link">◆国を求めて立てようとされたイエス様の悲しみ</a></li><li class="section-item"><a href="005.html#013" class="section-link">◆愛と犠牲</a></li><li class="section-item"><a href="005.html#014" class="section-link">◆私たちが行くべき道</a></li><li class="section-item"><a href="005.html#015" class="section-link">◆真のあすを迎えるために祭物の道、犠牲の道を行け</a></li></ul></div><div class="chapter-item"><a href="006.html" class="chapter-link">手本になろう</a><ul class="section-list"><li class="section-item"><a href="006.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="006.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="006.html#003" class="section-link">手本になろう</a></li><li class="section-item"><a href="006.html#004" class="section-link">◆神様と万物が接したいと思う人</a></li><li class="section-item"><a href="006.html#005" class="section-link">◆手本となる立場</a></li><li class="section-item"><a href="006.html#006" class="section-link">◆手本になる人の人格基準</a></li><li class="section-item"><a href="006.html#007" class="section-link">◆神様は皆さんが哀れな人々の慰労の対象になることを願われる</a></li><li class="section-item"><a href="006.html#008" class="section-link">◆内的に深く、高い生活をされたイエス様</a></li><li class="section-item"><a href="006.html#009" class="section-link">◆手本になる人になれば</a></li><li class="section-item"><a href="006.html#010" class="section-link">◆本当に善なる人になろうとすれば</a></li><li class="section-item"><a href="006.html#011" class="section-link">◆宇宙的な手本になられたイエス・キリスト</a></li><li class="section-item"><a href="006.html#012" class="section-link">◆手本になる人になろうとするなら、神様と近い立場に立ってこそ</a></li><li class="section-item"><a href="006.html#013" class="section-link">◆外的な生活と内的な生活をよく併用しなさい</a></li><li class="section-item"><a href="006.html#014" class="section-link">◆サタン世界の前に手本になる家庭になれ</a></li><li class="section-item"><a href="006.html#015" class="section-link">◆サタンも避けていく人となろう</a></li></ul></div><div class="chapter-item"><a href="007.html" class="chapter-link">良い人々</a><ul class="section-list"><li class="section-item"><a href="007.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="007.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="007.html#003" class="section-link">良い人々</a></li><li class="section-item"><a href="007.html#004" class="section-link">◆良い世界を築くことは人間だけではできない</a></li><li class="section-item"><a href="007.html#005" class="section-link">◆絶対者が必要な人間</a></li><li class="section-item"><a href="007.html#006" class="section-link">◆神様の苦痛を解消してさしあげようとするならば</a></li><li class="section-item"><a href="007.html#007" class="section-link">◆良い人だけではなく、良い国が成されなければ</a></li><li class="section-item"><a href="007.html#008" class="section-link">◆善なる人の要件</a></li><li class="section-item"><a href="007.html#009" class="section-link">◆良い世界を築くことのできる人</a></li><li class="section-item"><a href="007.html#010" class="section-link">◆愛の本質</a></li><li class="section-item"><a href="007.html#011" class="section-link">◆良い人とはすべてをあげたのちにももっとあげたいと思う人</a></li><li class="section-item"><a href="007.html#012" class="section-link">◆万民の願う定着地は愛のある所</a></li><li class="section-item"><a href="007.html#013" class="section-link">◆愛さずしては本然の世界へ戻ることができない</a></li><li class="section-item"><a href="007.html#014" class="section-link">◆世界のためにすべてを与えよ</a></li><li class="section-item"><a href="007.html#015" class="section-link">◆発展できる原動力</a></li></ul></div><div class="chapter-item"><a href="008.html" class="chapter-link">感謝の生活</a><ul class="section-list"><li class="section-item"><a href="008.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="008.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="008.html#003" class="section-link">感謝の生活</a></li><li class="section-item"><a href="008.html#004" class="section-link">◆人が本来あるべき所</a></li><li class="section-item"><a href="008.html#005" class="section-link">◆人間が失望し絶望するようになった起源</a></li><li class="section-item"><a href="008.html#006" class="section-link">◆宗教が行く道</a></li><li class="section-item"><a href="008.html#007" class="section-link">◆未来に向けた新しい価値観確立の必要性</a></li><li class="section-item"><a href="008.html#008" class="section-link">◆最後の主義</a></li><li class="section-item"><a href="008.html#009" class="section-link">◆縦的な愛を横的に展開するには</a></li><li class="section-item"><a href="008.html#010" class="section-link">◆偉大なる名詞「真の父母」</a></li><li class="section-item"><a href="008.html#011" class="section-link">◆真の父母を中心とした家庭的革命の必要性</a></li><li class="section-item"><a href="008.html#012" class="section-link">◆家庭は宇宙の根本</a></li><li class="section-item"><a href="008.html#013" class="section-link">◆先生の思想――天宙主義</a></li><li class="section-item"><a href="008.html#014" class="section-link">◆神様の前に感謝を捧げることができる人</a></li><li class="section-item"><a href="008.html#015" class="section-link">◆感謝する生活をすべき私たち</a></li></ul></div><div class="chapter-item"><a href="009.html" class="chapter-link">真を探して</a><ul class="section-list"><li class="section-item"><a href="009.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="009.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="009.html#003" class="section-link">真を探して</a></li><li class="section-item"><a href="009.html#004" class="section-link">◆良いことと関係を結ぼうとする人間</a></li><li class="section-item"><a href="009.html#005" class="section-link">◆価値あるものを万民がどのように共有するかが問題</a></li><li class="section-item"><a href="009.html#006" class="section-link">◆未来の世界に残れる人</a></li><li class="section-item"><a href="009.html#007" class="section-link">◆生命の帰着点</a></li><li class="section-item"><a href="009.html#008" class="section-link">◆善の主体</a></li><li class="section-item"><a href="009.html#009" class="section-link">◆良いことを残そうとし相続しようとする人間</a></li><li class="section-item"><a href="009.html#010" class="section-link">◆父母の愛より大きい神様の愛</a></li><li class="section-item"><a href="009.html#011" class="section-link">◆刈り入れできる人</a></li><li class="section-item"><a href="009.html#012" class="section-link">◆良い人は犠牲になる人</a></li><li class="section-item"><a href="009.html#013" class="section-link">◆世界を統一しようとするなら</a></li><li class="section-item"><a href="009.html#014" class="section-link">◆生活哲学の根本</a></li><li class="section-item"><a href="009.html#015" class="section-link">◆「ため」にする人生は滅びない</a></li></ul></div><div class="chapter-item"><a href="010.html" class="chapter-link">体恤信仰が必要</a><ul class="section-list"><li class="section-item"><a href="010.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="010.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="010.html#003" class="section-link">体恤信仰が必要</a></li><li class="section-item"><a href="010.html#004" class="section-link">◆体恤信仰の出発</a></li><li class="section-item"><a href="010.html#005" class="section-link">◆自分の心を神様の方向とどのように一致させるかが問題</a></li><li class="section-item"><a href="010.html#006" class="section-link">◆信仰者が注意すべきこと</a></li><li class="section-item"><a href="010.html#007" class="section-link">◆み旨と一致しようとすれば</a></li><li class="section-item"><a href="010.html#008" class="section-link">◆物にどのように対すべきか</a></li><li class="section-item"><a href="010.html#009" class="section-link">◆事物は原則を中心として接しなさい</a></li><li class="section-item"><a href="010.html#010" class="section-link">◆体恤信仰を開発する生活</a></li><li class="section-item"><a href="010.html#011" class="section-link">◆体恤信仰の重要性</a></li><li class="section-item"><a href="010.html#012" class="section-link">◆常に喜び、体恤的な感度を広げよ</a></li><li class="section-item"><a href="010.html#013" class="section-link">◆神様の息子になることができる生活態度</a></li><li class="section-item"><a href="010.html#014" class="section-link">◆善悪は生活の中で決定される</a></li><li class="section-item"><a href="010.html#015" class="section-link">◆心を純粋にして最初の感じを見極め心霊を開発せよ</a></li></ul></div><div class="chapter-item"><a href="011.html" class="chapter-link">真の人々</a><ul class="section-list"><li class="section-item"><a href="011.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="011.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="011.html#003" class="section-link">真の人々</a></li><li class="section-item"><a href="011.html#004" class="section-link">◆人々は自分を中心として善し悪しを判断する</a></li><li class="section-item"><a href="011.html#005" class="section-link">◆真の人の標準</a></li><li class="section-item"><a href="011.html#006" class="section-link">◆人間の感情は時間と環境の変化によって変わる</a></li><li class="section-item"><a href="011.html#007" class="section-link">◆千態万状の人間の考え</a></li><li class="section-item"><a href="011.html#008" class="section-link">◆真の本質</a></li><li class="section-item"><a href="011.html#009" class="section-link">◆幸福の基準</a></li><li class="section-item"><a href="011.html#010" class="section-link">◆聖人の道理</a></li><li class="section-item"><a href="011.html#011" class="section-link">◆幸福は情緒を離れてはあり得ない</a></li><li class="section-item"><a href="011.html#012" class="section-link">◆天情を教えてくれたイエス様</a></li><li class="section-item"><a href="011.html#013" class="section-link">◆真の起源と真の人</a></li><li class="section-item"><a href="011.html#014" class="section-link">◆真の人と天国建設</a></li></ul></div><div class="chapter-item"><a href="012.html" class="chapter-link">私たちの願い</a><ul class="section-list"><li class="section-item"><a href="012.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="012.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="012.html#003" class="section-link">私たちの願い</a></li><li class="section-item"><a href="012.html#004" class="section-link">◆理想的な根拠地となっていないこの世</a></li><li class="section-item"><a href="012.html#005" class="section-link">◆人間の願いと絶対者の願い</a></li><li class="section-item"><a href="012.html#006" class="section-link">◆過去よりも現在、現在よりも未来が良ければ終着点に到達できる</a></li><li class="section-item"><a href="012.html#007" class="section-link">◆自分を発展させようとすれば</a></li><li class="section-item"><a href="012.html#008" class="section-link">◆ある位置に進もうとすればそこに比例する困難を克服せねば</a></li><li class="section-item"><a href="012.html#009" class="section-link">◆神様と一つになっていたならば</a></li><li class="section-item"><a href="012.html#010" class="section-link">◆故障した人間</a></li><li class="section-item"><a href="012.html#011" class="section-link">◆人間の完成は神様の願い</a></li><li class="section-item"><a href="012.html#012" class="section-link">◆宗教は故障した人間を直す修理工場</a></li><li class="section-item"><a href="012.html#013" class="section-link">◆直すべき人間</a></li><li class="section-item"><a href="012.html#014" class="section-link">◆真の息子と娘の結婚式を待つ歴史</a></li><li class="section-item"><a href="012.html#015" class="section-link">◆人間の体は外的な神様</a></li></ul></div><div class="chapter-item"><a href="013.html" class="chapter-link">前進と停止</a><ul class="section-list"><li class="section-item"><a href="013.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="013.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="013.html#003" class="section-link">前進と停止</a></li><li class="section-item"><a href="013.html#004" class="section-link">◆前進の一路を歩んでこられた神様の復帰摂理</a></li><li class="section-item"><a href="013.html#005" class="section-link">◆ずっと前進できるかということが問題</a></li><li class="section-item"><a href="013.html#006" class="section-link">◆喜びは前進する中で感じるもの</a></li><li class="section-item"><a href="013.html#007" class="section-link">◆現実問題をどのように処理するかが重要</a></li><li class="section-item"><a href="013.html#008" class="section-link">◆目的が明確で動機が良ければ前進</a></li><li class="section-item"><a href="013.html#009" class="section-link">◆前進させたり後退させるのは自分自身</a></li><li class="section-item"><a href="013.html#010" class="section-link">◆悲しみも喜びとして消化せよ</a></li><li class="section-item"><a href="013.html#011" class="section-link">◆悲しい神様を慰労してさしあげようとすれば</a></li><li class="section-item"><a href="013.html#012" class="section-link">◆後退する人は神様も好まれない</a></li><li class="section-item"><a href="013.html#013" class="section-link">◆今この瞬間がいかに重要であるかを知れ</a></li><li class="section-item"><a href="013.html#014" class="section-link">◆神様はどれほど孤独で哀れなお方か</a></li><li class="section-item"><a href="013.html#015" class="section-link">◆神様が協助できる内容</a></li></ul></div><div class="chapter-item"><a href="014.html" class="chapter-link">興亡の分岐点</a><ul class="section-list"><li class="section-item"><a href="014.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="014.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="014.html#003" class="section-link">興亡の分岐点</a></li><li class="section-item"><a href="014.html#004" class="section-link">◆絶対者の願い</a></li><li class="section-item"><a href="014.html#005" class="section-link">◆発展できる人</a></li><li class="section-item"><a href="014.html#006" class="section-link">◆栄える立場と滅びる立場</a></li><li class="section-item"><a href="014.html#007" class="section-link">◆滅びる立場を避けて行くことのできる道</a></li><li class="section-item"><a href="014.html#008" class="section-link">◆後退する立場を収拾しようと思えば</a></li><li class="section-item"><a href="014.html#009" class="section-link">◆他人のために生きるならば滅びるはずがない</a></li><li class="section-item"><a href="014.html#010" class="section-link">◆何も知らない人間を悟らせてこられた神様</a></li><li class="section-item"><a href="014.html#011" class="section-link">◆真の愛</a></li><li class="section-item"><a href="014.html#012" class="section-link">◆善の本性と悪の本性</a></li><li class="section-item"><a href="014.html#013" class="section-link">◆どんな立場で「ため」に生きなければならないのか</a></li><li class="section-item"><a href="014.html#014" class="section-link">◆暗闇圏を打開していこうとするならば</a></li><li class="section-item"><a href="014.html#015" class="section-link">◆滅びない人になろうとすれば</a></li></ul></div><div class="chapter-item"><a href="015.html" class="chapter-link">天国の拠点はどこか</a><ul class="section-list"><li class="section-item"><a href="015.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="015.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="015.html#003" class="section-link">天国の拠点はどこか</a></li><li class="section-item"><a href="015.html#004" class="section-link">◆分かれ道に置かれている現時点</a></li><li class="section-item"><a href="015.html#005" class="section-link">◆終末時代において神様が提示する方向とその拠点</a></li><li class="section-item"><a href="015.html#006" class="section-link">◆天の方向を受け継ぐ拠点になろうとするなら</a></li><li class="section-item"><a href="015.html#007" class="section-link">◆やるせない神様に侍ろうとすれば</a></li><li class="section-item"><a href="015.html#008" class="section-link">◆天国の拠点はどこか</a></li><li class="section-item"><a href="015.html#009" class="section-link">◆天の拠点になれる一人を探してこられた神様</a></li><li class="section-item"><a href="015.html#010" class="section-link">◆神様が探してこられた一人とはどんな人なのか</a></li><li class="section-item"><a href="015.html#011" class="section-link">◆聖人のモデルがもつべき三つの条件</a></li><li class="section-item"><a href="015.html#012" class="section-link">◆愛と心情の教えが最高の教え</a></li><li class="section-item"><a href="015.html#013" class="section-link">◆神様が願うことは真の家庭を成すこと</a></li><li class="section-item"><a href="015.html#014" class="section-link">◆天国にはどんな人が行くのか</a></li><li class="section-item"><a href="015.html#015" class="section-link">◆イエス様がこの地上に来て探そうとしたもの</a></li></ul></div><div class="chapter-item"><a href="016.html" class="chapter-link">模範を打ち立てるべき地上時代</a><ul class="section-list"><li class="section-item"><a href="016.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="016.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="016.html#003" class="section-link">模範を打ち立てるべき地上時代</a></li><li class="section-item"><a href="016.html#004" class="section-link">◆宗教人が追求すること</a></li><li class="section-item"><a href="016.html#005" class="section-link">◆すべてを否定せよ</a></li><li class="section-item"><a href="016.html#006" class="section-link">◆自ら死の場を求めていけ</a></li><li class="section-item"><a href="016.html#007" class="section-link">◆信仰の道では、なぜ低くなり死のうとしなければならないか</a></li><li class="section-item"><a href="016.html#008" class="section-link">◆いつも生活の中でねらっているサタン</a></li><li class="section-item"><a href="016.html#009" class="section-link">◆聖書の教え</a></li><li class="section-item"><a href="016.html#010" class="section-link">◆地上で打ち立てるべき模範の立場</a></li><li class="section-item"><a href="016.html#011" class="section-link">◆三段階の世界を経る人間</a></li><li class="section-item"><a href="016.html#012" class="section-link">◆万物は神様が人間のために造ってくださったもの</a></li><li class="section-item"><a href="016.html#013" class="section-link">◆宇宙の所有権と主管圏は地上で決定される</a></li><li class="section-item"><a href="016.html#014" class="section-link">◆私たちが打ち立てるべき模範の道</a></li></ul></div><div class="chapter-item"><a href="017.html" class="chapter-link">人間の価値と天国の起源</a><ul class="section-list"><li class="section-item"><a href="017.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="017.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="017.html#003" class="section-link">人間の価値と天国の起源</a></li><li class="section-item"><a href="017.html#004" class="section-link">◆神様と人間の願いが実現される場</a></li><li class="section-item"><a href="017.html#005" class="section-link">◆人間が追求する人格基準</a></li><li class="section-item"><a href="017.html#006" class="section-link">◆愛の立場</a></li><li class="section-item"><a href="017.html#007" class="section-link">◆幸福の出発地</a></li><li class="section-item"><a href="017.html#008" class="section-link">◆愛と生命</a></li><li class="section-item"><a href="017.html#009" class="section-link">◆人間が追求しなければならない価値の基準</a></li><li class="section-item"><a href="017.html#010" class="section-link">◆まず人を愛せよ</a></li><li class="section-item"><a href="017.html#011" class="section-link">◆父母から愛の教育を受けなければ</a></li><li class="section-item"><a href="017.html#012" class="section-link">◆神様の愛の教育</a></li><li class="section-item"><a href="017.html#013" class="section-link">◆再臨主はどんな方として来なければならないか</a></li><li class="section-item"><a href="017.html#014" class="section-link">◆節概と志操</a></li><li class="section-item"><a href="017.html#015" class="section-link">◆天の父母に侍ろうとするなら</a></li></ul></div><div class="chapter-item"><a href="018.html" class="chapter-link">完全復帰</a><ul class="section-list"><li class="section-item"><a href="018.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="018.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="018.html#003" class="section-link">完全復帰</a></li><li class="section-item"><a href="018.html#004" class="section-link">◆善と悪の岐路に立つ人間</a></li><li class="section-item"><a href="018.html#005" class="section-link">◆完全なる対象的な善の実体を願う神様</a></li><li class="section-item"><a href="018.html#006" class="section-link">◆堕落により神様の完全な愛を受けられない人間</a></li><li class="section-item"><a href="018.html#007" class="section-link">◆神様が人間を創造された理由</a></li><li class="section-item"><a href="018.html#008" class="section-link">◆無限圏に通じることができる素性は愛</a></li><li class="section-item"><a href="018.html#009" class="section-link">◆完全な愛</a></li><li class="section-item"><a href="018.html#010" class="section-link">◆より大きなことのために犠牲になれば、愛の中心者となる</a></li><li class="section-item"><a href="018.html#011" class="section-link">◆完全復帰の出発は自己否定するところから</a></li><li class="section-item"><a href="018.html#012" class="section-link">◆より大きいことのために犠牲になれば滅びない</a></li><li class="section-item"><a href="018.html#013" class="section-link">◆宗教は棟になるという教え</a></li><li class="section-item"><a href="018.html#014" class="section-link">◆完全復帰の出発地</a></li><li class="section-item"><a href="018.html#015" class="section-link">◆極と極から善の文明が出発する</a></li></ul></div><div class="chapter-item"><a href="019.html" class="chapter-link">統一方案と私</a><ul class="section-list"><li class="section-item"><a href="019.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="019.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="019.html#003" class="section-link">統一方案と私</a></li><li class="section-item"><a href="019.html#004" class="section-link">◆統一の道は個人から開始しなければ</a></li><li class="section-item"><a href="019.html#005" class="section-link">◆中心存在は神様の愛で相対的環境を再創造</a></li><li class="section-item"><a href="019.html#006" class="section-link">◆統一できるただ一つの秘法</a></li><li class="section-item"><a href="019.html#007" class="section-link">◆主体の前に絶対服従することが統一の出発点</a></li><li class="section-item"><a href="019.html#008" class="section-link">◆統一方案は愛</a></li><li class="section-item"><a href="019.html#009" class="section-link">◆犠牲と服従は統一の元肥</a></li><li class="section-item"><a href="019.html#010" class="section-link">◆神様の喜びは統一を通じて</a></li><li class="section-item"><a href="019.html#011" class="section-link">◆祭物の姿勢</a></li><li class="section-item"><a href="019.html#012" class="section-link">◆私たちがもたなければならない統一方案の姿勢</a></li><li class="section-item"><a href="019.html#013" class="section-link">◆統一の道</a></li><li class="section-item"><a href="019.html#014" class="section-link">◆統一は血の汗と犠牲と服従と順応の道でなされる</a></li></ul></div><div class="chapter-item"><a href="020.html" class="chapter-link">み旨と私たちの生涯</a><ul class="section-list"><li class="section-item"><a href="020.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="020.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="020.html#003" class="section-link">み旨と私たちの生涯</a></li><li class="section-item"><a href="020.html#004" class="section-link">◆永遠のみ旨の目的と方向が一致した生活、生涯にならなければならない</a></li><li class="section-item"><a href="020.html#005" class="section-link">◆信仰者は日々の生活を正しくしなければならない</a></li><li class="section-item"><a href="020.html#006" class="section-link">◆み旨の出発点と直線になるように方向を合わせるべき信仰者</a></li><li class="section-item"><a href="020.html#007" class="section-link">◆神様と人間が一致する点</a></li><li class="section-item"><a href="020.html#008" class="section-link">◆一致した相対なしには理想世界を成し遂げられない</a></li><li class="section-item"><a href="020.html#009" class="section-link">◆目的は完全な中心の立場で発展させていかなければならないもの</a></li><li class="section-item"><a href="020.html#010" class="section-link">◆統一教会は愛を中心として方向を合わせて行こうという教会</a></li><li class="section-item"><a href="020.html#011" class="section-link">◆善が行く公式的路程</a></li><li class="section-item"><a href="020.html#012" class="section-link">◆「統一思想」の程度</a></li><li class="section-item"><a href="020.html#013" class="section-link">◆賢い人になって天の道を行かなければならない</a></li></ul></div><div class="chapter-item"><a href="021.html" class="chapter-link">神様に対する体恤と私たちの自覚</a><ul class="section-list"><li class="section-item"><a href="021.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="021.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="021.html#003" class="section-link">神様に対する体恤と私たちの自覚</a></li><li class="section-item"><a href="021.html#004" class="section-link">◆どれだけ天と共に生きようとしたか</a></li><li class="section-item"><a href="021.html#005" class="section-link">◆生活の中での神様に対する体恤が私たちの生命の要因</a></li><li class="section-item"><a href="021.html#006" class="section-link">◆立体的な立場で神様の心情を体恤しなさい</a></li><li class="section-item"><a href="021.html#007" class="section-link">◆体 恤的感情を実現してこそ新しい自覚が形成される</a></li><li class="section-item"><a href="021.html#008" class="section-link">◆完全な対象が現れれば主体形成は自然となされる</a></li><li class="section-item"><a href="021.html#009" class="section-link">◆信仰生活には体 恤的感情の体得が必要</a></li><li class="section-item"><a href="021.html#010" class="section-link">◆父子の関係の心情を体得して外面化させなさい</a></li><li class="section-item"><a href="021.html#011" class="section-link">◆神様とと共に同化できる体 恤圏</a></li><li class="section-item"><a href="021.html#012" class="section-link">◆すべての存在が投入されて投影された私であることを自覚しなさい</a></li><li class="section-item"><a href="021.html#013" class="section-link">◆神様を体恤するにおいて最も重要なこと</a></li><li class="section-item"><a href="021.html#014" class="section-link">◆互いに「ため」に生きる対象と主体は滅びない</a></li><li class="section-item"><a href="021.html#015" class="section-link">◆絶対的に主体のためにに生きてこそ体 恤的な信仰圏内に入る</a></li></ul></div><div class="chapter-item"><a href="022.html" class="chapter-link">摂理の十字路</a><ul class="section-list"><li class="section-item"><a href="022.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="022.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="022.html#003" class="section-link">摂理の十字路</a></li><li class="section-item"><a href="022.html#004" class="section-link">◆原因と結果、主体と対象が完全に一つになるところに幸福がある</a></li><li class="section-item"><a href="022.html#005" class="section-link">◆原因を受け継ぎ過程を吸収した結実</a></li><li class="section-item"><a href="022.html#006" class="section-link">◆作用の原則</a></li><li class="section-item"><a href="022.html#007" class="section-link">◆一つの起源から始まった結果の世界は必然的に一つ</a></li><li class="section-item"><a href="022.html#008" class="section-link">◆天地のパターンとしての個人の原形があってこそ</a></li><li class="section-item"><a href="022.html#009" class="section-link">◆絶対圏的方向をもっているところから絶対的な統一圏が成される</a></li><li class="section-item"><a href="022.html#010" class="section-link">◆人類が願い、原因者が願う世界のパターン</a></li><li class="section-item"><a href="022.html#011" class="section-link">◆人は神様を絶対視することなくして帰る道がない</a></li><li class="section-item"><a href="022.html#012" class="section-link">◆イエス様の十字路</a></li><li class="section-item"><a href="022.html#013" class="section-link">◆完全な種と沃土</a></li><li class="section-item"><a href="022.html#014" class="section-link">◆宗教の基台と終わり日の人間</a></li><li class="section-item"><a href="022.html#015" class="section-link">◆宗教に再臨思想のある理由</a></li></ul></div><div class="chapter-item"><a href="023.html" class="chapter-link">因縁の行路</a><ul class="section-list"><li class="section-item"><a href="023.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="023.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="023.html#003" class="section-link">因縁の行路</a></li><li class="section-item"><a href="023.html#004" class="section-link">◆因縁と運命の道</a></li><li class="section-item"><a href="023.html#005" class="section-link">◆人間の幸、不幸と因縁</a></li><li class="section-item"><a href="023.html#006" class="section-link">◆幸福と善の起源</a></li><li class="section-item"><a href="023.html#007" class="section-link">◆愛、幸福、慈悲が設定される立場</a></li><li class="section-item"><a href="023.html#008" class="section-link">◆歴史的因縁と私</a></li><li class="section-item"><a href="023.html#009" class="section-link">◆因縁の革命をすべき私たち</a></li><li class="section-item"><a href="023.html#010" class="section-link">◆「ため」に生きなさい</a></li><li class="section-item"><a href="023.html#011" class="section-link">◆メシヤが愛をもってくる理由</a></li><li class="section-item"><a href="023.html#012" class="section-link">◆誰よりも神様を愛せ</a></li><li class="section-item"><a href="023.html#013" class="section-link">◆新しい人生観、世界観、宇宙観の出発点</a></li><li class="section-item"><a href="023.html#014" class="section-link">◆新しい世界の文化形成の起源</a></li><li class="section-item"><a href="023.html#015" class="section-link">◆神様が臨在される立場</a></li></ul></div><div class="chapter-item"><a href="024.html" class="chapter-link">三時代のための責任</a><ul class="section-list"><li class="section-item"><a href="024.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="024.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="024.html#003" class="section-link">三時代のための責任</a></li><li class="section-item"><a href="024.html#004" class="section-link">◆現在の基点</a></li><li class="section-item"><a href="024.html#005" class="section-link">◆現在に輝く価値の基準</a></li><li class="section-item"><a href="024.html#006" class="section-link">◆現在は三時代を連結することができる中心点</a></li><li class="section-item"><a href="024.html#007" class="section-link">◆歴史的運命の一瞬</a></li><li class="section-item"><a href="024.html#008" class="section-link">◆歴史的総合実体としての私の責任</a></li><li class="section-item"><a href="024.html#009" class="section-link">◆世界人類は、三時代が連結した一つの直線の道を行かねば</a></li><li class="section-item"><a href="024.html#010" class="section-link">◆歴史と現在と未来と神様が願う道</a></li><li class="section-item"><a href="024.html#011" class="section-link">◆終わりの日の目的に向けて、今日の方向を合わせていかねば</a></li><li class="section-item"><a href="024.html#012" class="section-link">◆人類歴史は因果応報の歴史</a></li><li class="section-item"><a href="024.html#013" class="section-link">◆人生行路の目的</a></li><li class="section-item"><a href="024.html#014" class="section-link">◆現実は歴史的標準点であり未来の起源</a></li><li class="section-item"><a href="024.html#015" class="section-link">◆歴史的結実を成し遂げるべき私</a></li></ul></div><div class="chapter-item"><a href="025.html" class="chapter-link">真なる人と罪</a><ul class="section-list"><li class="section-item"><a href="025.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="025.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="025.html#003" class="section-link">真なる人と罪</a></li><li class="section-item"><a href="025.html#004" class="section-link">◆救援摂理の目的と真なる人が行くべき道</a></li><li class="section-item"><a href="025.html#005" class="section-link">◆復帰摂理歴史は真なる男性を捜すための歴史</a></li><li class="section-item"><a href="025.html#006" class="section-link">◆イエス様はが真なる息子の使命を果たしたのか</a></li><li class="section-item"><a href="025.html#007" class="section-link">◆イエス様の願いとそれを信じる者の願い</a></li><li class="section-item"><a href="025.html#008" class="section-link">◆真なる男性、真なる女性になるためには</a></li><li class="section-item"><a href="025.html#009" class="section-link">◆宗教の道は受難の道、逆説の道、克服の道</a></li><li class="section-item"><a href="025.html#010" class="section-link">◆先に犠牲になり、愛し、尽くそうとし、死なんとする人となれ</a></li><li class="section-item"><a href="025.html#011" class="section-link">◆新郎新婦となり、真なる父母になるのがイエス様の願い</a></li><li class="section-item"><a href="025.html#012" class="section-link">◆一生の間悔い改めても、足らない歴史的な罪人であることを悟るべし</a></li><li class="section-item"><a href="025.html#013" class="section-link">◆歴史的な罪を許されるただ一つの道</a></li><li class="section-item"><a href="025.html#014" class="section-link">◆歴史的な罪を悔い改める道を教えてあげるために現れた統一教会</a></li><li class="section-item"><a href="025.html#015" class="section-link">◆真なる人になるために、一番下から犠牲奉仕せよ</a></li></ul></div><div class="chapter-item"><a href="026.html" class="chapter-link">み旨の完成と私たちの使命</a><ul class="section-list"><li class="section-item"><a href="026.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="026.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="026.html#003" class="section-link">み旨の完成と私たちの使命</a></li><li class="section-item"><a href="026.html#004" class="section-link">◆神様の救援摂理</a></li><li class="section-item"><a href="026.html#005" class="section-link">◆神様の人間救援の責任</a></li><li class="section-item"><a href="026.html#006" class="section-link">◆歴史的主流宗教</a></li><li class="section-item"><a href="026.html#007" class="section-link">◆天国に行こうとするなら</a></li><li class="section-item"><a href="026.html#008" class="section-link">◆復帰の道</a></li><li class="section-item"><a href="026.html#009" class="section-link">◆メシヤ思想</a></li><li class="section-item"><a href="026.html#010" class="section-link">◆メシヤの位置</a></li><li class="section-item"><a href="026.html#011" class="section-link">◆歴史的終末時代の到来</a></li><li class="section-item"><a href="026.html#012" class="section-link">◆み旨の完成</a></li><li class="section-item"><a href="026.html#013" class="section-link">◆メシヤ降臨とイスラエル</a></li><li class="section-item"><a href="026.html#014" class="section-link">◆メシヤの使命</a></li><li class="section-item"><a href="026.html#015" class="section-link">◆イエス降臨の目的</a></li></ul></div><div class="chapter-item"><a href="027.html" class="chapter-link">侍る生活</a><ul class="section-list"><li class="section-item"><a href="027.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="027.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="027.html#003" class="section-link">侍る生活</a></li><li class="section-item"><a href="027.html#004" class="section-link">◆侍る生活の必要性</a></li><li class="section-item"><a href="027.html#005" class="section-link">◆堕落人間が神様の愛を受けることのできる道</a></li><li class="section-item"><a href="027.html#006" class="section-link">◆神様の愛の出発</a></li><li class="section-item"><a href="027.html#007" class="section-link">◆侍る生活は精誠により真の父母と一つになる生活</a></li><li class="section-item"><a href="027.html#008" class="section-link">◆精誠の重要性</a></li><li class="section-item"><a href="027.html#009" class="section-link">◆愛する心で常に精誠を込めてこそ神様の愛が共にある</a></li><li class="section-item"><a href="027.html#010" class="section-link">◆侍る生活と天国実現</a></li><li class="section-item"><a href="027.html#011" class="section-link">◆神様の愛を実現する所は家庭</a></li><li class="section-item"><a href="027.html#012" class="section-link">◆精誠さえ尽くせば神様が共にある</a></li><li class="section-item"><a href="027.html#013" class="section-link">◆侍る伝統を世界的に立てていかなければならない私たち</a></li></ul></div><div class="chapter-item"><a href="028.html" class="chapter-link">相続者</a><ul class="section-list"><li class="section-item"><a href="028.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="028.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="028.html#003" class="section-link">相続者</a></li><li class="section-item"><a href="028.html#004" class="section-link">◆幸福よりは不幸の条件がより多い現実</a></li><li class="section-item"><a href="028.html#005" class="section-link">◆幸福の主人</a></li><li class="section-item"><a href="028.html#006" class="section-link">◆幸福の要件</a></li><li class="section-item"><a href="028.html#007" class="section-link">◆神様が必要とする人</a></li><li class="section-item"><a href="028.html#008" class="section-link">◆生命を保つことのできるただ一つの思想</a></li><li class="section-item"><a href="028.html#009" class="section-link">◆全体的な考え方をもたなければ</a></li><li class="section-item"><a href="028.html#010" class="section-link">◆人類を救援する思想</a></li><li class="section-item"><a href="028.html#011" class="section-link">◆理想的な道</a></li><li class="section-item"><a href="028.html#012" class="section-link">◆私たちが相続しなければならないもの</a></li><li class="section-item"><a href="028.html#013" class="section-link">◆人間の最高の理想</a></li><li class="section-item"><a href="028.html#014" class="section-link">神様の息子、娘として宇宙の相続者になれ</a></li></ul></div><div class="chapter-item"><a href="029.html" class="chapter-link">心の鐘の音</a><ul class="section-list"><li class="section-item"><a href="029.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="029.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="029.html#003" class="section-link">心の鐘の音</a></li><li class="section-item"><a href="029.html#004" class="section-link">◆電球のように光を放つ人間</a></li><li class="section-item"><a href="029.html#005" class="section-link">◆人間は何によっても倣うことのできない、太陽の光を願っている</a></li><li class="section-item"><a href="029.html#006" class="section-link">◆神様の心のような純金の心の鐘を鳴らさなければ</a></li><li class="section-item"><a href="029.html#007" class="section-link">◆聖人は純粋な真の鐘を鳴らした人</a></li><li class="section-item"><a href="029.html#008" class="section-link">◆真の生命と人格と愛と神様を教えてこそ真の聖人</a></li><li class="section-item"><a href="029.html#009" class="section-link">◆神様のひとり子であるイエス様も相対を迎えなければ</a></li><li class="section-item"><a href="029.html#010" class="section-link">◆聖人の中心に認められたイエス様</a></li><li class="section-item"><a href="029.html#011" class="section-link">◆神様の前に自慢できるのは愛の実績しかない</a></li><li class="section-item"><a href="029.html#012" class="section-link">◆愛の鐘の音は大きいほど響いて良いもの</a></li><li class="section-item"><a href="029.html#013" class="section-link">◆真の愛に対しては誰も讒訴することはできない</a></li><li class="section-item"><a href="029.html#014" class="section-link">◆病んだ世の中に愛の薬を投入して治さねばならない</a></li><li class="section-item"><a href="029.html#015" class="section-link">◆霊界で必要とする人</a></li></ul></div><div class="chapter-item"><a href="030.html" class="chapter-link">必ず行かなければならない運命の道</a><ul class="section-list"><li class="section-item"><a href="030.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="030.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="030.html#003" class="section-link">必ず行かなければならない運命の道</a></li><li class="section-item"><a href="030.html#004" class="section-link">◆生まれながらにして定められた運命の道</a></li><li class="section-item"><a href="030.html#005" class="section-link">◆個人、家庭、社会、世界、神様も行かなければならない運命の道がある</a></li><li class="section-item"><a href="030.html#006" class="section-link">◆人間の運命の道は限界があるが、天の運命の道は無限である</a></li><li class="section-item"><a href="030.html#007" class="section-link">◆より大きな運命に従っていかなければならない</a></li><li class="section-item"><a href="030.html#008" class="section-link">◆天運の主流に立つことのできる者</a></li><li class="section-item"><a href="030.html#009" class="section-link">◆最高のものを標準とする者は最高の受難の道を消化しなければならない</a></li><li class="section-item"><a href="030.html#010" class="section-link">◆神様の心情と愛を中心として天運に乗ろう</a></li><li class="section-item"><a href="030.html#011" class="section-link">◆鶴のように孤高に飛ぶことができなければならない</a></li><li class="section-item"><a href="030.html#012" class="section-link">◆高い所にいるほど低い所を理解して愛することができる</a></li><li class="section-item"><a href="030.html#013" class="section-link">◆鶴のように生きなければならない</a></li><li class="section-item"><a href="030.html#014" class="section-link">◆天運に従っていく統一教会</a></li><li class="section-item"><a href="030.html#015" class="section-link">◆精誠の結果は後世まで残る</a></li></ul></div><div class="chapter-item"><a href="031.html" class="chapter-link">模範生活</a><ul class="section-list"><li class="section-item"><a href="031.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="031.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="031.html#003" class="section-link">模範生活</a></li><li class="section-item"><a href="031.html#004" class="section-link">◆一　生活の模範</a></li><li class="section-item"><a href="031.html#005" class="section-link">◆　１　主食</a></li><li class="section-item"><a href="031.html#006" class="section-link">◆　２　副食</a></li><li class="section-item"><a href="031.html#007" class="section-link">◆　３　飲料水</a></li><li class="section-item"><a href="031.html#008" class="section-link">◆　４　環境改善</a></li><li class="section-item"><a href="031.html#009" class="section-link">◆　５　住宅問題</a></li><li class="section-item"><a href="031.html#010" class="section-link">◆◆①　電　気</a></li><li class="section-item"><a href="031.html#011" class="section-link">◆◆②　水　道</a></li><li class="section-item"><a href="031.html#012" class="section-link">◆◆③　電　話</a></li><li class="section-item"><a href="031.html#013" class="section-link">◆◆④　家　具</a></li><li class="section-item"><a href="031.html#014" class="section-link">◆◆⑤　備　品</a></li><li class="section-item"><a href="031.html#015" class="section-link">◆◆⑥　美　化</a></li></ul></div><div class="chapter-item"><a href="032.html" class="chapter-link">真なる世界へ</a><ul class="section-list"><li class="section-item"><a href="032.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="032.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="032.html#003" class="section-link">真なる世界へ</a></li><li class="section-item"><a href="032.html#004" class="section-link">◆全体の理想をくくることができる共通分母は愛</a></li><li class="section-item"><a href="032.html#005" class="section-link">◆永遠なる理想世界成立の要件</a></li><li class="section-item"><a href="032.html#006" class="section-link">◆男性にとって最も貴いものは女性、女性にとって最も貴いものは男性</a></li><li class="section-item"><a href="032.html#007" class="section-link">◆真なる愛は変わることがない</a></li><li class="section-item"><a href="032.html#008" class="section-link">◆真なる人と真なる愛</a></li><li class="section-item"><a href="032.html#009" class="section-link">◆真の愛の属性</a></li><li class="section-item"><a href="032.html#010" class="section-link">◆心と体の統一</a></li><li class="section-item"><a href="032.html#011" class="section-link">◆神様の統一の起源</a></li><li class="section-item"><a href="032.html#012" class="section-link">◆真の愛の特権</a></li><li class="section-item"><a href="032.html#013" class="section-link">◆愛の因縁に従って収拾してきた歴史</a></li><li class="section-item"><a href="032.html#014" class="section-link">◆物質と子女と父母が愛で因縁をもつとき、共同所有が決定される</a></li><li class="section-item"><a href="032.html#015" class="section-link">◆家庭は共有の愛の理想が実践できる核</a></li></ul></div><div class="chapter-item"><a href="033.html" class="chapter-link">理想的焦点を合わせよう</a><ul class="section-list"><li class="section-item"><a href="033.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="033.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="033.html#003" class="section-link">理想的焦点を合わせよう</a></li><li class="section-item"><a href="033.html#004" class="section-link">◆すべての存在は一つの焦点を中心として動く</a></li><li class="section-item"><a href="033.html#005" class="section-link">◆見えない内的根源に焦点を合わせなければ</a></li><li class="section-item"><a href="033.html#006" class="section-link">◆神様の愛が臨む焦点に方向を合わせるべき人間</a></li><li class="section-item"><a href="033.html#007" class="section-link">◆全体が和合できる位置は愛の位置</a></li><li class="section-item"><a href="033.html#008" class="section-link">◆万物を代表した自分になってこそ理想的な焦点に立った人となる</a></li><li class="section-item"><a href="033.html#009" class="section-link">◆すべては愛から出発して愛に帰る</a></li><li class="section-item"><a href="033.html#010" class="section-link">◆人は愛の焦点に合わせて生きなければ</a></li><li class="section-item"><a href="033.html#011" class="section-link">◆真の愛で一つになったものは永遠に発展していく</a></li><li class="section-item"><a href="033.html#012" class="section-link">◆神様と人間が会う愛の焦点は二つはあり得ない</a></li><li class="section-item"><a href="033.html#013" class="section-link">◆愛は人間を連体的存在として存続するようにする</a></li><li class="section-item"><a href="033.html#014" class="section-link">◆愛の焦点をつかむ人にならなければ</a></li><li class="section-item"><a href="033.html#015" class="section-link">◆全体の中心になるのは真の愛だけ</a></li></ul></div><div class="chapter-item"><a href="034.html" class="chapter-link">故　郷</a><ul class="section-list"><li class="section-item"><a href="034.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="034.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="034.html#003" class="section-link">故　郷</a></li><li class="section-item"><a href="034.html#004" class="section-link">◆故郷に対する回想</a></li><li class="section-item"><a href="034.html#005" class="section-link">◆宗教人たちが追求する故郷</a></li><li class="section-item"><a href="034.html#006" class="section-link">◆心と体がとどまることができる故郷</a></li><li class="section-item"><a href="034.html#007" class="section-link">◆故郷に対する懐かしさと「郷心」</a></li><li class="section-item"><a href="034.html#008" class="section-link">◆故郷に対する情緒</a></li><li class="section-item"><a href="034.html#009" class="section-link">◆故郷は心情の博物館</a></li><li class="section-item"><a href="034.html#010" class="section-link">◆霊界と故郷</a></li><li class="section-item"><a href="034.html#011" class="section-link">◆霊界での侍りの中心</a></li><li class="section-item"><a href="034.html#012" class="section-link">◆愛の幸福</a></li><li class="section-item"><a href="034.html#013" class="section-link">◆本郷を訪ねていこうとすれば</a></li></ul></div><div class="chapter-item"><a href="035.html" class="chapter-link">根本思想</a><ul class="section-list"><li class="section-item"><a href="035.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="035.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="035.html#003" class="section-link">根本思想</a></li><li class="section-item"><a href="035.html#004" class="section-link">◆人生の問題は神様を中心とした聖人の教えにより解決すべき</a></li><li class="section-item"><a href="035.html#005" class="section-link">◆なぜ自己の完成のためすべてを否定しなければならないのか</a></li><li class="section-item"><a href="035.html#006" class="section-link">◆宗教の起源</a></li><li class="section-item"><a href="035.html#007" class="section-link">◆すべての関係をどのように結ぶかが問題</a></li><li class="section-item"><a href="035.html#008" class="section-link">◆心と体が一つになるには体を打つ生活をしなければ</a></li><li class="section-item"><a href="035.html#009" class="section-link">◆心と体が一つになったのちはそのような男女が結婚して一つとならねば</a></li><li class="section-item"><a href="035.html#010" class="section-link">◆人間は結果的存在であり第二存在</a></li><li class="section-item"><a href="035.html#011" class="section-link">◆宇宙の根本真理</a></li><li class="section-item"><a href="035.html#012" class="section-link">◆真の愛で神様と最短距離で結ばれる</a></li><li class="section-item"><a href="035.html#013" class="section-link">◆相対のために生まれ存在する宇宙</a></li><li class="section-item"><a href="035.html#014" class="section-link">◆宇宙の根本</a></li><li class="section-item"><a href="035.html#015" class="section-link">◆神様は私たちの父</a></li></ul></div><div class="chapter-item"><a href="036.html" class="chapter-link">神人思想の完成</a><ul class="section-list"><li class="section-item"><a href="036.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="036.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="036.html#003" class="section-link">神人思想の完成</a></li><li class="section-item"><a href="036.html#004" class="section-link">◆宇宙の根本</a></li><li class="section-item"><a href="036.html#005" class="section-link">◆神様に絶対的に必要なもの</a></li><li class="section-item"><a href="036.html#006" class="section-link">◆神様と愛</a></li><li class="section-item"><a href="036.html#007" class="section-link">◆神様の理想</a></li><li class="section-item"><a href="036.html#008" class="section-link">◆主体と対象の原則</a></li><li class="section-item"><a href="036.html#009" class="section-link">◆神様と人間が願う理想基準</a></li><li class="section-item"><a href="036.html#010" class="section-link">◆真の愛とは</a></li><li class="section-item"><a href="036.html#011" class="section-link">愛と生命</a></li><li class="section-item"><a href="036.html#012" class="section-link">◆神様の思想</a></li><li class="section-item"><a href="036.html#013" class="section-link">◆宇宙の作用</a></li><li class="section-item"><a href="036.html#014" class="section-link">◆宗教は堕落した人間の再生工場</a></li><li class="section-item"><a href="036.html#015" class="section-link">◆堕落の根源</a></li></ul></div><div class="chapter-item"><a href="037.html" class="chapter-link">真の統一と一つの世界</a><ul class="section-list"><li class="section-item"><a href="037.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="037.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="037.html#003" class="section-link">真の統一と一つの世界</a></li><li class="section-item"><a href="037.html#004" class="section-link">◆統一は真の愛を中心として成される</a></li><li class="section-item"><a href="037.html#005" class="section-link">◆神様の戦略戦術とサタンの戦略戦術</a></li><li class="section-item"><a href="037.html#006" class="section-link">◆最後に残る主人公</a></li><li class="section-item"><a href="037.html#007" class="section-link">◆神様が人間を創造された目的</a></li><li class="section-item"><a href="037.html#008" class="section-link">◆「ため」に生きようとする真の愛をもって統一を願わなければならない</a></li><li class="section-item"><a href="037.html#009" class="section-link">◆真の愛が行く道は「ため」に生きる道</a></li><li class="section-item"><a href="037.html#010" class="section-link">◆良心は天下を与えても換えることのできない私の主人</a></li><li class="section-item"><a href="037.html#011" class="section-link">◆故郷へ行こうとするなら宗教を通さなければならない</a></li><li class="section-item"><a href="037.html#012" class="section-link">◆愛の三大属性</a></li><li class="section-item"><a href="037.html#013" class="section-link">◆サタンも親子の関係で一体化した真の愛の前には順応する</a></li><li class="section-item"><a href="037.html#014" class="section-link">◆メシヤが背負う重大な責任</a></li><li class="section-item"><a href="037.html#015" class="section-link">◆神様が創造摂理をなさった目的</a></li></ul></div><div class="chapter-item"><a href="038.html" class="chapter-link">女性解放</a><ul class="section-list"><li class="section-item"><a href="038.html#001" class="section-link">文鮮明先生のみ言集</a></li><li class="section-item"><a href="038.html#002" class="section-link">訓教経(下）</a></li><li class="section-item"><a href="038.html#003" class="section-link">女性解放</a></li><li class="section-item"><a href="038.html#004" class="section-link">◆女性は家庭生活の中心であり責任者</a></li><li class="section-item"><a href="038.html#005" class="section-link">◆人類歴史の中で一番大きな困難は家庭の分裂</a></li><li class="section-item"><a href="038.html#006" class="section-link">◆女性が困難と悲しみの歴史を経てきた理由</a></li><li class="section-item"><a href="038.html#007" class="section-link">◆真の愛に出会い愛の解放を受けるための闘争歴史</a></li><li class="section-item"><a href="038.html#008" class="section-link">◆宗教は真の愛の理想的家庭を取り戻すためのもの</a></li><li class="section-item"><a href="038.html#009" class="section-link">◆男性と女性は愛の解放を受けなければならない</a></li><li class="section-item"><a href="038.html#010" class="section-link">◆解放圏は天と地を越えた位置に設定しなければならない</a></li><li class="section-item"><a href="038.html#011" class="section-link">◆解放されようとすれば女性は男性の三倍以上蕩減の道を行かねばならない</a></li><li class="section-item"><a href="038.html#012" class="section-link">◆小羊の婚宴の一等花嫁条件</a></li><li class="section-item"><a href="038.html#013" class="section-link">◆真の愛によってのみ世界史的解放が可能である</a></li><li class="section-item"><a href="038.html#014" class="section-link">◆イエス様は真の愛の家庭を成しに来られたお方</a></li><li class="section-item"><a href="038.html#015" class="section-link">◆天の愛をもった花婿が来る時の現象</a></li></ul></div></div>
+    <div class="nav-links">
+        <a href="../index.html">トップページへ戻る</a>
+    </div>
+</div>
 </body>
 </html>
