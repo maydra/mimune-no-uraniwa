@@ -1,194 +1,531 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>本郷/真の愛による交差祝福と国境撤廃 | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<title>目次/本郷/真の愛による交差祝福と国境撤廃</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>本郷/真の愛による交差祝福と国境撤廃</h1><div class="index-list"><div class="chapter-item"><a href="hajimeni.html" class="chapter-link">推薦の辞</a><ul class="section-list"><li class="section-item"><a href="hajimeni.html#001" class="section-link">本　郷</a></li><li class="section-item"><a href="hajimeni.html#003" class="section-link">愛する六五〇〇家庭の皆様！</a></li><li class="section-item"><a href="hajimeni.html#004" class="section-link">まえがき</a></li></ul></div><div class="chapter-item"><a href="001.html" class="chapter-link">主礼の御言1988年10月30日</a><ul class="section-list"><li class="section-item"><a href="001.html#001" class="section-link">本　郷</a></li><li class="section-item"><a href="001.html#003" class="section-link">六五〇〇双祝福式での主礼の御言</a></li><li class="section-item"><a href="001.html#004" class="section-link">成婚問答</a></li><li class="section-item"><a href="001.html#005" class="section-link">成婚宣布</a></li></ul></div><div class="chapter-item"><a href="002.html" class="chapter-link">六五〇〇双祝福式での真のご父母様の祝祷1988年10月30日</a><ul class="section-list"><li class="section-item"><a href="002.html#001" class="section-link">本　郷</a></li></ul></div><div class="chapter-item"><a href="003.html" class="chapter-link">国境を超えた真の愛の因縁1988年10月23日「一和」という名が持つ意味</a><ul class="section-list"><li class="section-item"><a href="003.html#001" class="section-link">本　郷</a></li><li class="section-item"><a href="003.html#004" class="section-link">今の時は、一つにならなければならない時</a></li><li class="section-item"><a href="003.html#005" class="section-link">何によって一つになるべきか</a></li><li class="section-item"><a href="003.html#006" class="section-link">結婚とは根本に帰るためのもの</a></li><li class="section-item"><a href="003.html#007" class="section-link">自分勝手にはなっていない膨大な宇宙</a></li><li class="section-item"><a href="003.html#008" class="section-link">宇宙と似た人間</a></li><li class="section-item"><a href="003.html#009" class="section-link">婚約式場に参加したのは宇宙の形態に合格するため</a></li><li class="section-item"><a href="003.html#010" class="section-link">結婚は、天地が引っ繰り返り一家の興亡盛衰がかかる重大事</a></li><li class="section-item"><a href="003.html#011" class="section-link">嫁ぎ先は、遠くてこそいい</a></li><li class="section-item"><a href="003.html#012" class="section-link">幸福の道は一人では行くことのできない道</a></li><li class="section-item"><a href="003.html#013" class="section-link">自分を絶対視するところでは和合がなされない</a></li><li class="section-item"><a href="003.html#014" class="section-link">趣の真の意味</a></li><li class="section-item"><a href="003.html#015" class="section-link">博物館に置いておくことのできる人</a></li><li class="section-item"><a href="003.html#016" class="section-link">神様の御名で愛の根を下ろすようになるとき、真の息子、娘になる</a></li><li class="section-item"><a href="003.html#017" class="section-link">神様の息子、娘になることは容易ではない</a></li><li class="section-item"><a href="003.html#018" class="section-link">家庭が行くことのできる世界的道を開くために経た苦難</a></li><li class="section-item"><a href="003.html#019" class="section-link">すべての先祖の軸は一つ</a></li><li class="section-item"><a href="003.html#020" class="section-link">血統転換式をしてこそ心情圏が連結される</a></li><li class="section-item"><a href="003.html#021" class="section-link">国境と怨讐をなくすことが世界平準化の絶対的条件</a></li><li class="section-item"><a href="003.html#022" class="section-link">血統を伝授されるためには、反対される道を行ってこそ</a></li><li class="section-item"><a href="003.html#023" class="section-link">種を植え損なえればサタン扱いされる</a></li><li class="section-item"><a href="003.html#024" class="section-link">蕩減の道を行く理由</a></li><li class="section-item"><a href="003.html#025" class="section-link">男の行く道と女性の行く道</a></li><li class="section-item"><a href="003.html#026" class="section-link">蕩減は同じ立地条件を立てておいてする</a></li><li class="section-item"><a href="003.html#027" class="section-link">復帰世界が正しくなることならば犠牲の場でも行ってこそ</a></li><li class="section-item"><a href="003.html#028" class="section-link">心情圏が作られれば環境の基盤は、自然に生じる</a></li><li class="section-item"><a href="003.html#029" class="section-link">植えたとおり結実するようになっている世の中</a></li><li class="section-item"><a href="003.html#030" class="section-link">国際平和高速道路が置かれれば</a></li><li class="section-item"><a href="003.html#031" class="section-link">今からは国が互いに一つになるべきとき</a></li><li class="section-item"><a href="003.html#032" class="section-link">道義天国は女性が立ててこそ</a></li><li class="section-item"><a href="003.html#033" class="section-link">愛の調和は、並ぶものがない</a></li><li class="section-item"><a href="003.html#034" class="section-link">男女の生活が紊乱であれば滅びる</a></li><li class="section-item"><a href="003.html#035" class="section-link">愛がこの上なければ糞の味もみる</a></li><li class="section-item"><a href="003.html#036" class="section-link">復帰の道を行くには理性の誘惑に打ち勝ってこそ</a></li><li class="section-item"><a href="003.html#037" class="section-link">「怨讐を愛せ」という言葉が宗教世界に出てきた理由</a></li><li class="section-item"><a href="003.html#038" class="section-link">祝福を受けた人々が行くべき運命の道</a></li><li class="section-item"><a href="003.html#039" class="section-link">今は交差する時代</a></li><li class="section-item"><a href="003.html#040" class="section-link">夜も昼も争わず、怨讐視するな</a></li><li class="section-item"><a href="003.html#041" class="section-link">結婚相手を迎えるのをメシヤを迎えるように行いなさい</a></li><li class="section-item"><a href="003.html#042" class="section-link">過ぎし過誤はすべて忘れ、十倍百倍愛そうという心を持つ</a></li><li class="section-item"><a href="003.html#043" class="section-link">縦的な真の愛の父母、横的な真の愛の父母</a></li><li class="section-item"><a href="003.html#044" class="section-link">永遠な夫妻になろうとするなら</a></li><li class="section-item"><a href="003.html#045" class="section-link">完全投入で創造が始まった</a></li><li class="section-item"><a href="003.html#046" class="section-link">怨讐を赦してあげ、愛で対しなさい</a></li><li class="section-item"><a href="003.html#047" class="section-link">先に打てば滅びるようになっている</a></li><li class="section-item"><a href="003.html#048" class="section-link">自分の欲望で相対を探してはいけない</a></li><li class="section-item"><a href="003.html#049" class="section-link">先輩たちの精神を投入し、後輩たちの基盤を築いてあげ</a></li><li class="section-item"><a href="003.html#050" class="section-link">平和の世界は、五色人種が一つになってこそ</a></li><li class="section-item"><a href="003.html#051" class="section-link">後代を思いながらペアを組んであげる</a></li></ul></div><div class="chapter-item"><a href="004.html" class="chapter-link">聖酒式前の御言1988年10月29日我々の使命</a><ul class="section-list"><li class="section-item"><a href="004.html#001" class="section-link">本　郷</a></li><li class="section-item"><a href="004.html#004" class="section-link">み旨の完成</a></li><li class="section-item"><a href="004.html#005" class="section-link">サタン世界転覆のための闘い</a></li><li class="section-item"><a href="004.html#006" class="section-link">習慣性の克服</a></li><li class="section-item"><a href="004.html#007" class="section-link">神解放の基準</a></li><li class="section-item"><a href="004.html#008" class="section-link">復帰摂理の原則</a></li><li class="section-item"><a href="004.html#009" class="section-link">神聖なる歴史の出発点</a></li><li class="section-item"><a href="004.html#010" class="section-link">女性の位置</a></li><li class="section-item"><a href="004.html#011" class="section-link">メシヤの思想</a></li><li class="section-item"><a href="004.html#012" class="section-link">天国の中心者</a></li><li class="section-item"><a href="004.html#013" class="section-link">真の子女の血統</a></li><li class="section-item"><a href="004.html#014" class="section-link">心情圏出発</a></li><li class="section-item"><a href="004.html#015" class="section-link">生命の元</a></li><li class="section-item"><a href="004.html#016" class="section-link">心情の土産</a></li><li class="section-item"><a href="004.html#017" class="section-link">真の血統の相続</a></li><li class="section-item"><a href="004.html#018" class="section-link">永遠の共鳴圏</a></li><li class="section-item"><a href="004.html#019" class="section-link">宇宙的愛の統一式</a></li><li class="section-item"><a href="004.html#020" class="section-link">究極の思想</a></li><li class="section-item"><a href="004.html#021" class="section-link">ために生きる</a></li><li class="section-item"><a href="004.html#022" class="section-link">真の父母の分身としての結婚式</a></li><li class="section-item"><a href="004.html#023" class="section-link">天国の王座</a></li><li class="section-item"><a href="004.html#024" class="section-link">父母として立つ道</a></li><li class="section-item"><a href="004.html#025" class="section-link">蕩減復帰の道</a></li><li class="section-item"><a href="004.html#026" class="section-link">内外の長子権復帰</a></li><li class="section-item"><a href="004.html#027" class="section-link">世界基準を超えた祝福</a></li><li class="section-item"><a href="004.html#028" class="section-link">栄光の歴史的瞬間</a></li><li class="section-item"><a href="004.html#029" class="section-link">三大歴史過程を中心としての十字架路程</a></li><li class="section-item"><a href="004.html#030" class="section-link">所有権決定</a></li><li class="section-item"><a href="004.html#031" class="section-link">純潔な血統</a></li><li class="section-item"><a href="004.html#032" class="section-link">聖酒式の意義</a></li></ul></div><div class="chapter-item"><a href="005.html" class="chapter-link">六五〇〇双結婚式後の御言1988年10月31日「7000人を捜し立てる摂理史」</a><ul class="section-list"><li class="section-item"><a href="005.html#001" class="section-link">本　郷</a></li><li class="section-item"><a href="005.html#003" class="section-link">「七千人を捜し立てる摂理史」</a></li></ul></div><div class="chapter-item"><a href="006.html" class="chapter-link">六五〇〇双「韓・日」祝福家庭への御言1988年11月7日愛の戦争</a><ul class="section-list"><li class="section-item"><a href="006.html#001" class="section-link">本　郷</a></li><li class="section-item"><a href="006.html#004" class="section-link">一大革命的な自分</a></li><li class="section-item"><a href="006.html#005" class="section-link">歴史的伝統の情の基台</a></li><li class="section-item"><a href="006.html#006" class="section-link">中和文明の時代</a></li><li class="section-item"><a href="006.html#007" class="section-link">真の愛</a></li><li class="section-item"><a href="006.html#008" class="section-link">神の国に必要な子供</a></li><li class="section-item"><a href="006.html#009" class="section-link">最も貴いもの</a></li><li class="section-item"><a href="006.html#010" class="section-link">愛の支柱</a></li><li class="section-item"><a href="006.html#011" class="section-link">愛の道</a></li><li class="section-item"><a href="006.html#012" class="section-link">歴史に残すべき実績</a></li><li class="section-item"><a href="006.html#013" class="section-link">真の愛の基準</a></li><li class="section-item"><a href="006.html#014" class="section-link">忍耐と注意</a></li><li class="section-item"><a href="006.html#015" class="section-link">生死を決定する足場</a></li><li class="section-item"><a href="006.html#016" class="section-link">正しい生涯の道</a></li><li class="section-item"><a href="006.html#017" class="section-link">最高の心情基準</a></li><li class="section-item"><a href="006.html#018" class="section-link">最後の救いの道</a></li></ul></div><div class="chapter-item"><a href="007.html" class="chapter-link">六五〇〇双特別集会における御言1989年6月19日相対のために生まれた人間</a><ul class="section-list"><li class="section-item"><a href="007.html#001" class="section-link">本　郷</a></li><li class="section-item"><a href="007.html#004" class="section-link">真の愛の定義</a></li><li class="section-item"><a href="007.html#005" class="section-link">愛、生命、血統</a></li><li class="section-item"><a href="007.html#006" class="section-link">自分というもの</a></li><li class="section-item"><a href="007.html#007" class="section-link">円満な夫婦生活</a></li><li class="section-item"><a href="007.html#008" class="section-link">真の愛の道</a></li><li class="section-item"><a href="007.html#009" class="section-link">同居権、同参権</a></li><li class="section-item"><a href="007.html#010" class="section-link">宇宙の根本</a></li><li class="section-item"><a href="007.html#011" class="section-link">霊界での生活を規定するもの</a></li><li class="section-item"><a href="007.html#012" class="section-link">先生からの最高の土産物</a></li><li class="section-item"><a href="007.html#013" class="section-link">言葉の革命</a></li><li class="section-item"><a href="007.html#014" class="section-link">真の子女としての責任</a></li><li class="section-item"><a href="007.html#015" class="section-link">言語統一、心情統一、血統統一</a></li><li class="section-item"><a href="007.html#016" class="section-link">涙の祈祷で解かれた天宙の公式</a></li><li class="section-item"><a href="007.html#017" class="section-link">価値ある世界を目指して</a></li></ul></div><div class="chapter-item"><a href="008.html" class="chapter-link">本郷人集会での御言1991年1月21日祈祷</a></div><div class="chapter-item"><a href="009.html" class="chapter-link">本郷人集会　1991年8月22日</a><ul class="section-list"><li class="section-item"><a href="009.html#003" class="section-link">（祝祷）</a></li></ul></div><div class="chapter-item"><a href="010.html" class="chapter-link">六五〇〇双特別集会　1992年5月8日</a><ul class="section-list"><li class="section-item"><a href="010.html#001" class="section-link">本　郷</a></li><li class="section-item"><a href="010.html#003" class="section-link">1992年5月8日　　在韓日本人教会員集会</a></li><li class="section-item"><a href="010.html#004" class="section-link">【指示事項】</a></li><li class="section-item"><a href="010.html#005" class="section-link">１、韓日統一化時代</a></li><li class="section-item"><a href="010.html#006" class="section-link">（１）アダム圏勝利。国家的勝利が問題です。</a></li><li class="section-item"><a href="010.html#007" class="section-link">（２）エバ圏復帰完成（韓国女性、日本女性、関係女性一体化）</a></li><li class="section-item"><a href="010.html#008" class="section-link">（３）外的家庭基地一体化運動</a></li><li class="section-item"><a href="010.html#009" class="section-link">２、真の父母完成圏と家庭</a></li><li class="section-item"><a href="010.html#010" class="section-link">（１）お母様と家庭婦人の一体化。</a></li><li class="section-item"><a href="010.html#011" class="section-link">（２）</a></li><li class="section-item"><a href="010.html#012" class="section-link">３、</a></li><li class="section-item"><a href="010.html#013" class="section-link">（１）全体連合と統一世界。</a></li><li class="section-item"><a href="010.html#014" class="section-link">（２）生活共同化時代。</a></li><li class="section-item"><a href="010.html#015" class="section-link">（３）血族一体化時代です。</a></li><li class="section-item"><a href="010.html#016" class="section-link">（４）国家統一化です。すべてが国が一つの国になります。</a></li><li class="section-item"><a href="010.html#017" class="section-link">（５）そして、天上地上天国化自治圏です。</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+<body><div class="container">
+<h1>目次/本郷/真の愛による交差祝福と国境撤廃</h1>
+<body bgcolor="#ffffbb" link="#000000">
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<hr/>
+<b>　本　郷</b><br/>
+<b>真の愛による交差祝福と国境撤廃</b><br/>
+<hr/>
+<br/>
+<a href="hajimeni.html" style="text-decoration : none;" target="right"><b>推薦の辞</b></a><br/>
+<a href="hajimeni.html#002" style="text-decoration : none;" target="right"><b>まえがき</b></a><br/>
+<br/>
+<a href="001.html" style="text-decoration : none;" target="right"><b>主礼の御言<br/>
+      　　　1988年10月30日</b></a><br/>
+<a href="001.html#002" style="text-decoration : none;" target="right">成婚問答</a><br/>
+<a href="001.html#003" style="text-decoration : none;" target="right">成婚宣布</a><br/>
+<br/>
+<b><a href="002.html" style="text-decoration : none;" target="right">六五〇〇双祝福式での真のご父母様の祝祷<br/>
+      　　　1988年10月30日</a></b><br/>
+<br/>
+<a href="003.html" style="text-decoration : none;" target="right"><b>国境を超えた真の愛の因縁<br/>
+      　　　1988年10月23日</b><br/>
+      　「一和」という名が持つ意味</a><br/>
+<a href="003.html#003" style="text-decoration : none;" target="right">　今の時は、一つにならなければならない時</a><br/>
+<a href="003.html#004" style="text-decoration : none;" target="right">　何によって一つになるべきか</a><br/>
+<a href="003.html#005" style="text-decoration : none;" target="right">　結婚とは根本に帰るためのもの</a><br/>
+<a href="003.html#006" style="text-decoration : none;" target="right">　自分勝手にはなっていない膨大な宇宙</a><br/>
+<a href="003.html#007" style="text-decoration : none;" target="right">　宇宙と似た人間</a><br/>
+<a href="003.html#008" style="text-decoration : none;" target="right">　結婚式場に参加したのは宇宙の形態に合格するため</a><br/>
+<a href="003.html#009" style="text-decoration : none;" target="right">　結婚は、天地が引っくり返り一家の興亡盛衰がかかる自重大時</a><br/>
+<a href="003.html#010" style="text-decoration : none;" target="right">　嫁ぎ先は、遠くてこそいい</a><br/>
+<a href="003.html#011" style="text-decoration : none;" target="right">　幸福の道は一人では行く事の出来ない道</a><br/>
+<a href="003.html#012" style="text-decoration : none;" target="right">　自分を絶対視するところでは和合がなされない</a><br/>
+<a href="003.html#013" style="text-decoration : none;" target="right">　趣の真の意味</a><br/>
+<a href="003.html#014" style="text-decoration : none;" target="right">　博物館に置いておくことのできる人</a><br/>
+<a href="003.html#015" style="text-decoration : none;" target="right">　神様の御名で愛の根をおろすようになる時、真の息子、娘になる</a><br/>
+<a href="003.html#016" style="text-decoration : none;" target="right">　神様の息子、娘になることは容易ではない</a><br/>
+<a href="003.html#017" style="text-decoration : none;" target="right">　家庭が行く事のできる世界的道を開くために経た苦難</a><br/>
+<a href="003.html#018" style="text-decoration : none;" target="right">　すべての先祖の軸は一つ</a><br/>
+<a href="003.html#019" style="text-decoration : none;" target="right">　血統転換式をしてこそ心情圏が連結される</a><br/>
+<a href="003.html#020" style="text-decoration : none;" target="right">　国境と怨讐をなくす事が世界平準化の絶対条件</a><br/>
+<a href="003.html#021" style="text-decoration : none;" target="right">　血統を伝授されるためには、反対される道を行ってこそ</a><br/>
+<a href="003.html#022" style="text-decoration : none;" target="right">　種を植え損なえばサタン扱いされる</a><br/>
+<a href="003.html#023" style="text-decoration : none;" target="right">　蕩減の道を行く理由</a><br/>
+<a href="003.html#024" style="text-decoration : none;" target="right">　男の行く道と女の行く道</a><br/>
+<a href="003.html#025" style="text-decoration : none;" target="right">　蕩減は同じ立地条件を立てておいてする</a><br/>
+<a href="003.html#026" style="text-decoration : none;" target="right">　復帰世界が正しくなる事ならば犠牲の場でも行ってこそ</a><br/>
+<a href="003.html#027" style="text-decoration : none;" target="right">　心情圏が作られれば環境の基盤は、自然に生じる</a><br/>
+<a href="003.html#028" style="text-decoration : none;" target="right">　植えたとおり結実するようになっている世の中</a><br/>
+<a href="003.html#029" style="text-decoration : none;" target="right">　国際平和高速道路が置かれれば</a><br/>
+<a href="003.html#030" style="text-decoration : none;" target="right">　今からは国が互いに一つになるべきとき</a><br/>
+<a href="003.html#031" style="text-decoration : none;" target="right">　道義天国は女性が立ててこそ</a><br/>
+<a href="003.html#032" style="text-decoration : none;" target="right">　愛の調和は、並ぶべきものがない</a><br/>
+<a href="003.html#033" style="text-decoration : none;" target="right">　男女の生活が紊乱であれば滅びる</a><br/>
+<a href="003.html#034" style="text-decoration : none;" target="right">　愛がこの上なければ糞の味もみる</a><br/>
+<a href="003.html#035" style="text-decoration : none;" target="right">　復帰の道を行くには理性の誘惑に打ち勝ってこそ</a><br/>
+<a href="003.html#036" style="text-decoration : none;" target="right">　「怨讐を愛せ」という言葉が宗教世界に出てきた理由</a><br/>
+<a href="003.html#037" style="text-decoration : none;" target="right">　祝福を受けた人々が行くべき運命の道</a><br/>
+<a href="003.html#038" style="text-decoration : none;" target="right">　今は交差する時代</a><br/>
+<a href="003.html#039" style="text-decoration : none;" target="right">　夜も昼も争わず、怨讐視するな</a><br/>
+<a href="003.html#040" style="text-decoration : none;" target="right">　結婚相手を迎えるのをメシヤを迎えるように行いなさい</a><br/>
+<a href="003.html#041" style="text-decoration : none;" target="right">　過ぎし過誤はすべて忘れ、十倍百倍愛そうという心をもつ</a><br/>
+<a href="003.html#042" style="text-decoration : none;" target="right">　縦的な真の愛の父母、横的な真の父母</a><br/>
+<a href="003.html#043" style="text-decoration : none;" target="right">　永遠な夫妻になろうとするなら</a><br/>
+<a href="003.html#044" style="text-decoration : none;" target="right">　完全投入で創造が始まった</a><br/>
+<a href="003.html#045" style="text-decoration : none;" target="right">　怨讐を赦してあげ、愛で対しなさい</a><br/>
+<a href="003.html#046" style="text-decoration : none;" target="right">　先に打てば滅びるようになっている</a><br/>
+<a href="003.html#047" style="text-decoration : none;" target="right">　自分の欲望で相対を探してはいけない</a><br/>
+<a href="003.html#048" style="text-decoration : none;" target="right">　先輩たちの精神を投入し、後輩たちの基盤を築いてあげ</a><br/>
+<a href="003.html#049" style="text-decoration : none;" target="right">　世界の平和は、五色人種が一つになってこそ</a><br/>
+<a href="003.html#050" style="text-decoration : none;" target="right">　後代を思いながらペアを組んであげる</a><br/>
+<br/>
+<a href="004.html" style="text-decoration : none;" target="right"><b>聖酒式前の御言<br/>
+      　　　1988年10月29日</b><br/>
+      　我々の使命</a><br/>
+<a href="004.html#002" style="text-decoration : none;" target="right">　み旨の完成</a><br/>
+<a href="004.html#003" style="text-decoration : none;" target="right">　サタン世界転覆のための闘い</a><br/>
+<a href="004.html#004" style="text-decoration : none;" target="right">　習慣性の克服</a><br/>
+<a href="004.html#005" style="text-decoration : none;" target="right">　神解放の基準</a><br/>
+<a href="004.html#006" style="text-decoration : none;" target="right">　復帰摂理の原則</a><br/>
+<a href="004.html#007" style="text-decoration : none;" target="right">　神聖なる歴史の出発点</a><br/>
+<a href="004.html#008" style="text-decoration : none;" target="right">　女性の位置</a><br/>
+<a href="004.html#009" style="text-decoration : none;" target="right">　メシヤの思想</a><br/>
+<a href="004.html#010" style="text-decoration : none;" target="right">　天国の中心者</a><br/>
+<a href="004.html#011" style="text-decoration : none;" target="right">　真の子女の血統</a><br/>
+<a href="004.html#012" style="text-decoration : none;" target="right">　心情圏出発</a><br/>
+<a href="004.html#013" style="text-decoration : none;" target="right">　生命の元</a><br/>
+<a href="004.html#014" style="text-decoration : none;" target="right">　心情の土産</a><br/>
+<a href="004.html#015" style="text-decoration : none;" target="right">　真の血統の相続</a><br/>
+<a href="004.html#016" style="text-decoration : none;" target="right">　永遠の共鳴圏</a><br/>
+<a href="004.html#017" style="text-decoration : none;" target="right">　宇宙的愛の統一式</a><br/>
+<a href="004.html#018" style="text-decoration : none;" target="right">　究極の思想</a><br/>
+<a href="004.html#019" style="text-decoration : none;" target="right">　ために生きる</a><br/>
+<a href="004.html#020" style="text-decoration : none;" target="right">　真の父母の分身としての結婚式</a><br/>
+<a href="004.html#021" style="text-decoration : none;" target="right">　天国の王座</a><br/>
+<a href="004.html#022" style="text-decoration : none;" target="right">　父母として立つ道</a><br/>
+<a href="004.html#023" style="text-decoration : none;" target="right">　蕩減復帰の道</a><br/>
+<a href="004.html#024" style="text-decoration : none;" target="right">　内外の長子権復帰</a><br/>
+<a href="004.html#025" style="text-decoration : none;" target="right">　世界基準を超えた祝福</a><br/>
+<a href="004.html#026" style="text-decoration : none;" target="right">　栄光の歴史的瞬間</a><br/>
+<a href="004.html#027" style="text-decoration : none;" target="right">　三大歴史過程を中心としての十字架路程</a><br/>
+<a href="004.html#028" style="text-decoration : none;" target="right">　所有権決定</a><br/>
+<a href="004.html#029" style="text-decoration : none;" target="right">　純潔な血統</a><br/>
+<a href="004.html#030" style="text-decoration : none;" target="right">　聖酒式の意義</a><br/>
+<br/>
+<b><a href="005.html" style="text-decoration : none;" target="right">六五〇〇双結婚式後の御言<br/>
+      　　　1988年10月31日<br/>
+      「7000人を捜し立てる摂理史」</a></b><br/>
+<br/>
+<a href="006.html" style="text-decoration : none;" target="right"><b>六五〇〇双「韓・日」祝福家庭への御言<br/>
+      　　　1988年11月7日</b><br/>
+      　愛の戦争</a><br/>
+<a href="006.html#002" style="text-decoration : none;" target="right">　一大革命的な自分</a><br/>
+<a href="006.html#003" style="text-decoration : none;" target="right">　伝統的伝統の情の基台</a><br/>
+<a href="006.html#004" style="text-decoration : none;" target="right">　中和文明の時代</a><br/>
+<a href="006.html#005" style="text-decoration : none;" target="right">　真の愛</a><br/>
+<a href="006.html#006" style="text-decoration : none;" target="right">　神の国に必要な子供</a><br/>
+<a href="006.html#007" style="text-decoration : none;" target="right">　最も貴いもの</a><br/>
+<a href="006.html#008" style="text-decoration : none;" target="right">　愛の支柱</a><br/>
+<a href="006.html#009" style="text-decoration : none;" target="right">　愛の道</a><br/>
+<a href="006.html#010" style="text-decoration : none;" target="right">　歴史に残すべき実績</a><br/>
+<a href="006.html#011" style="text-decoration : none;" target="right">　真の愛の基準</a><br/>
+<a href="006.html#012" style="text-decoration : none;" target="right">　忍耐と注意</a><br/>
+<a href="006.html#013" style="text-decoration : none;" target="right">　生死を決定する足場</a><br/>
+<a href="006.html#014" style="text-decoration : none;" target="right">　正しい生涯の道</a><br/>
+<a href="006.html#015" style="text-decoration : none;" target="right">　最高の心情基準</a><br/>
+<a href="006.html#016" style="text-decoration : none;" target="right">　最後の救いの道</a><br/>
+<br/>
+<a href="007.html" style="text-decoration : none;" target="right"><b>六五〇〇双特別集会における御言<br/>
+      　　　1989年6月19日</b><br/>
+      　相対のために生まれた人間</a><br/>
+<a href="007.html#002" style="text-decoration : none;" target="right">　真の愛の定義</a><br/>
+<a href="007.html#003" style="text-decoration : none;" target="right">　愛、生命、血統</a><br/>
+<a href="007.html#004" style="text-decoration : none;" target="right">　自分というもの</a><br/>
+<a href="007.html#005" style="text-decoration : none;" target="right">　円満な夫婦生活</a><br/>
+<a href="007.html#006" style="text-decoration : none;" target="right">　真の愛の道</a><br/>
+<a href="007.html#007" style="text-decoration : none;" target="right">　同居権、同参権</a><br/>
+<a href="007.html#008" style="text-decoration : none;" target="right">　宇宙の根本</a><br/>
+<a href="007.html#009" style="text-decoration : none;" target="right">　霊界での生活を規定するもの</a><br/>
+<a href="007.html#010" style="text-decoration : none;" target="right">　先生からの最高の土産物</a><br/>
+<a href="007.html#011" style="text-decoration : none;" target="right">　言葉の革命</a><br/>
+<a href="007.html#012" style="text-decoration : none;" target="right">　真の子女としての責任</a><br/>
+<a href="007.html#013" style="text-decoration : none;" target="right">　言語統一、心情統一、血統統一</a><br/>
+<a href="007.html#014" style="text-decoration : none;" target="right">　涙の祈祷で解かれた天宙の公式</a><br/>
+<a href="007.html#015" style="text-decoration : none;" target="right">　価値ある世界を目指して</a><br/>
+<br/>
+<a href="008.html" style="text-decoration : none;" target="right"><b>本郷人集会での御言<br/>
+      　　　1991年1月21日</b><br/>
+      　祈祷</a><br/>
+<br/>
+<br/>
+<b><a href="009.html" style="text-decoration : none;" target="right">本郷人集会　1991年8月22日</a></b><br/>
+<br/>
+<b><a href="010.html" style="text-decoration : none;" target="right">六五〇〇双特別集会　1992年5月8日</a></b><br/>
+<br/>
+<a href="010.html#002" style="text-decoration : none;" target="right">1992年5月8日　在韓日本人教会員集会<br/>
+      【指示事項】<br/>
+      １、韓日統一化時代<br/>
+      　（1）アダム圏勝利。国家的勝利が問題です。<br/>
+      　（2）エバ圏復帰完成（韓国女性、日本女性、関係女性一体）<br/>
+      　（3）外的家庭基地一体化運動</a><br/>
+<a href="010.html#003" style="text-decoration : none;" target="right">２、真の父母完成圏と家庭<br/>
+      　（1）お母様と家庭婦人の一体化<br/>
+      　（2）</a><br/>
+<a href="010.html#004" style="text-decoration : none;" target="right">３、<br/>
+      　　その次は男性復帰です<br/>
+      　　南北女性と統一連合<br/>
+      　　海外、日本においてカインとアベルが一体化<br/>
+      　　父母権返還時代<br/>
+      　（1）全体連合と統一世界<br/>
+      　（2）生活共同化時代<br/>
+      　（3）血族一体化時代です<br/>
+      　（4）国家統一化です。すべての国が一つの国になります。<br/>
+      　（5）そして、天上地上天国化自治圏です。</a><br/>
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
 </div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script></body>
+<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body>
 </html>
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

@@ -1,194 +1,487 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>マルスム | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta charset="utf-8"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.4 for Windows">
+<NOBR>
+<TITLE>マルスム</TITLE>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
         }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
     </style>
-</head>
-<body>
-<div class="container">
-<h1>マルスム</h1><div class="index-list"><div class="chapter-item"><a href="Word010100.html" class="chapter-link">序</a></div><div class="chapter-item"><a href="Word010101.html" class="chapter-link">一、神をはっきり知れ！</a></div><div class="chapter-item"><a href="Word010102.html" class="chapter-link">二、先生を研究せよ！</a></div><div class="chapter-item"><a href="Word010103.html" class="chapter-link">三、神と先生の出会い</a></div><div class="chapter-item"><a href="Word010104.html" class="chapter-link">四、先生の教示</a></div><div class="chapter-item"><a href="Word010105.html" class="chapter-link">五、最後に</a></div><div class="chapter-item"><a href="Word020200.html" class="chapter-link">序</a></div><div class="chapter-item"><a href="Word020201.html" class="chapter-link">一、自分なりの生活観念を持つな！</a></div><div class="chapter-item"><a href="Word020202.html" class="chapter-link">二、自己主管せよ！</a></div><div class="chapter-item"><a href="Word020203.html" class="chapter-link">三、物欲</a></div><div class="chapter-item"><a href="Word020204.html" class="chapter-link">四、金</a></div><div class="chapter-item"><a href="Word020205.html" class="chapter-link">五、食事</a></div><div class="chapter-item"><a href="Word020206.html" class="chapter-link">六、七大怨讐</a></div><div class="chapter-item"><a href="Word020207.html" class="chapter-link">七、御旨の道</a></div><div class="chapter-item"><a href="Word020208.html" class="chapter-link">八、時間がない</a></div><div class="chapter-item"><a href="Word020209.html" class="chapter-link">九、睡眠</a></div><div class="chapter-item"><a href="Word020210.html" class="chapter-link">十、疲れ</a></div><div class="chapter-item"><a href="Word020211.html" class="chapter-link">十一、最後に</a></div><div class="chapter-item"><a href="Word010300.html" class="chapter-link">序</a></div><div class="chapter-item"><a href="Word030101.html" class="chapter-link">1、親のために生きる者</a></div><div class="chapter-item"><a href="Word030102.html" class="chapter-link">2、親の一番の願いを自ら悟って行なう者</a></div><div class="chapter-item"><a href="Word030103.html" class="chapter-link">3、親を休ませ、代りに御旨のために責任を持って働く</a></div><div class="chapter-item"><a href="Word030104.html" class="chapter-link">4、全世界の人々は兄弟姉妹という心情を持つ者</a></div><div class="chapter-item"><a href="Word030105.html" class="chapter-link">5、世界は神から与えられた自分の国であると自覚する者</a></div><div class="chapter-item"><a href="Word030106.html" class="chapter-link">6、親を何遍も泣かす者</a></div><div class="chapter-item"><a href="Word030201.html" class="chapter-link">1、「先生はまだ神の前に真の息子だということができない」</a></div><div class="chapter-item"><a href="Word030202.html" class="chapter-link">2、「先生は一人でも行く」</a></div><div class="chapter-item"><a href="Word040100.html" class="chapter-link">序</a></div><div class="chapter-item"><a href="Word040101.html" class="chapter-link">1、受難や迫害の場合</a></div><div class="chapter-item"><a href="Word040202.html" class="chapter-link">2、教会の基盤ができ、迫害がなくなり物的にも豊かになり出した時の試練の場合</a></div><div class="chapter-item"><a href="Word040201.html" class="chapter-link">1、天の願いがいつもきびしいという場合</a></div><div class="chapter-item"><a href="Word040203.html" class="chapter-link">3、神からも人からも捨てられたような場合</a></div><div class="chapter-item"><a href="Word050101.html" class="chapter-link">一、復帰の道</a></div><div class="chapter-item"><a href="Word050102.html" class="chapter-link">・僕の僕から</a></div><div class="chapter-item"><a href="Word050103.html" class="chapter-link">・復帰の八段階</a></div><div class="chapter-item"><a href="Word050104.html" class="chapter-link">・自然屈伏</a></div><div class="chapter-item"><a href="Word050105.html" class="chapter-link">・夫婦で神の直接主管圏に</a></div><div class="chapter-item"><a href="Word050201.html" class="chapter-link">二、真の父母の道</a></div><div class="chapter-item"><a href="Word050203.html" class="chapter-link">三、七年路程</a></div><div class="chapter-item"><a href="Word050204.html" class="chapter-link">四、復帰路程の三段階</a></div><div class="chapter-item"><a href="Word050205.html" class="chapter-link">五、万物と旧約時代</a></div><div class="chapter-item"><a href="Word050206.html" class="chapter-link">六、伝道と新約時代</a></div><div class="chapter-item"><a href="Word050207.html" class="chapter-link">七、祝福</a></div><div class="chapter-item"><a href="Word050701.html" class="chapter-link">1、原理と祝福</a></div><div class="chapter-item"><a href="Word050702.html" class="chapter-link">2、愛の時代</a></div><div class="chapter-item"><a href="Word050703.html" class="chapter-link">3、男女関係</a></div><div class="chapter-item"><a href="Word050704.html" class="chapter-link">・自己中心愛</a></div><div class="chapter-item"><a href="Word050705.html" class="chapter-link">・愛の絶対基準</a></div><div class="chapter-item"><a href="Word050706.html" class="chapter-link">・悔い改めよ</a></div><div class="chapter-item"><a href="Word050707.html" class="chapter-link">・神の子女としての実感</a></div><div class="chapter-item"><a href="Word050708.html" class="chapter-link">・女性は注意せよ</a></div><div class="chapter-item"><a href="Word050709.html" class="chapter-link">・すべてを告白して</a></div><div class="chapter-item"><a href="Word050801.html" class="chapter-link">八、僕の僕から王の王まで</a></div><div class="chapter-item"><a href="Word050802.html" class="chapter-link">・大いなる特権</a></div><div class="chapter-item"><a href="Word050803.html" class="chapter-link">・七年路程の終末的意義</a></div><div class="chapter-item"><a href="Word050804.html" class="chapter-link">・死なんとする者は生き</a></div><div class="chapter-item"><a href="Word050805.html" class="chapter-link">・聖人の道</a></div><div class="chapter-item"><a href="Word050806.html" class="chapter-link">・神様は泣いておられる</a></div><div class="chapter-item"><a href="Word050807.html" class="chapter-link">・涙の基台</a></div><div class="chapter-item"><a href="Word050808.html" class="chapter-link">・心情の相続者</a></div><div class="chapter-item"><a href="Word050809.html" class="chapter-link">・神を知る者の道</a></div><div class="chapter-item"><a href="Word050810.html" class="chapter-link">・真の後継者</a></div><div class="chapter-item"><a href="Word050901.html" class="chapter-link">九、祝福家庭</a></div><div class="chapter-item"><a href="Word051001.html" class="chapter-link">十、ホーム・チャーチ</a></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+</HEAD>
+<body><div class="container">
+<div style="max-width: 800px; margin: auto; padding: 20px; text-align: left;">
+
+
+
+ <br><br>
+
+
+<P align="center"><A href="topmenu.html" target="_parent"></A><BR>
+</P>
+<h2><P align="center"><B><FONT size="+2">マルスム（一）</FONT></B></P></h2>
+<h2><P>（一）御言に見る神との出会い<BR></h2>
+<A href="Word010100.html" target="right ">
+序</A><BR>
+<A href="Word010101.html" target="right ">一、神をはっきり知れ！</A><BR>
+<A href="Word010102.html" target="right ">
+二、先生を研究せよ！</A><BR>
+<A href="Word010103.html" target="right ">
+三、神と先生の出会い</A><BR>
+<A href="Word010104.html" target="right ">
+四、先生の教示</A><BR>
+<A href="Word010105.html" target="right ">
+五、最後に</A><br>
+<h2>（二）御言に見る生活基準と自己主管<BR></h2>
+<A href="Word020200.html" target="right ">
+序</A><BR>
+<A href="Word020201.html" target="right ">
+一、自分なりの生活観念を持つな！</A><BR>
+<A href="Word020202.html" target="right ">
+二、自己主管せよ！</A><BR>
+<A href="Word020203.html" target="right ">
+三、物欲</A><BR>
+<A href="Word020204.html" target="right ">
+四、金</A><BR>
+<A href="Word020205.html" target="right ">
+五、食事</A><BR>
+<A href="Word020206.html" target="right ">
+六、七大怨讐</A><BR>
+<A href="Word020207.html" target="right ">
+七、御旨の道</A><BR>
+<A href="Word020208.html" target="right ">
+八、時間がない</A><BR>
+<A href="Word020209.html" target="right ">
+九、睡眠</A><BR>
+<A href="Word020210.html" target="right ">
+十、疲れ</A><BR>
+<A href="Word020211.html" target="right ">
+十一、最後に</A><br>
+<h2>（三）御言に見る真の子女<BR></h2>
+<A href="Word010300.html" target="right ">
+序</A><BR>
+一、真の子女とは<BR>
+　　<A href="Word030101.html" target="right ">1、親のために生きる者</A><BR>
+　　<A href="Word030102.html" target="right ">2、親の一番の願いを自ら悟って行なう者</A><BR>
+　　<A href="Word030103.html" target="right ">3、親を休ませ、代りに御旨のために責任を持って働く</A><BR>
+　　<A href="Word030104.html" target="right ">4、全世界の人々は兄弟姉妹という心情を持つ者</A><BR>
+　　<A href="Word030105.html" target="right ">5、世界は神から与えられた自分の国であると自覚する者</A><BR>
+　　<A href="Word030106.html" target="right ">6、親を何遍も泣かす者</A><BR>
+二、真の子女としての先生<BR>
+　　<A href="Word030201.html" target="right ">1、「先生はまだ神の前に真の息子だということができない」</A><BR>
+　　<A href="Word030202.html" target="right ">2、「先生は一人でも行く」</A><br>
+<h2>（四）御言に見る苦難と試練の克服<BR></h2>
+<A href="Word040100.html" target="right ">序</A><BR>
+一、外的な苦難と試練<BR>
+　　<A href="Word040101.html" target="right ">1、受難や迫害の場合</A><BR>
+　　<A href="Word040202.html" target="right ">2、教会の基盤ができ、迫害がなくなり物的にも豊かになり出した時の試練の場合</A><BR>
+二、内的な苦難と試練<BR>
+　　<A href="Word040201.html" target="right ">1、天の願いがいつもきびしいという場合</A><BR>
+　　<A href="Word040202.html" target="right ">2、御旨に疲れをおぼえ、くたびれてしまう場合</A><BR>
+　　<A href="Word040203.html" target="right ">3、神からも人からも捨てられたような場合</A><br>
+<h2>（五）復帰の公式路程<BR></h2>
+<A href="Word050101.html" target="right ">一、復帰の道</A><BR>
+　　　<A href="Word050102.html" target="right ">・僕の僕から</A><BR>
+　　　<A href="Word050103.html" target="right ">・復帰の八段階</A><BR>
+　　　<A href="Word050104.html" target="right ">・自然屈伏</A><BR>
+　　　<A href="Word050105.html" target="right ">・夫婦で神の直接主管圏に</A><BR>
+<A href="Word050201.html" target="right ">二、真の父母の道</A><BR>
+<A href="Word050203.html" target="right ">三、七年路程</A><BR>
+<A href="Word050204.html" target="right ">四、復帰路程の三段階</A><BR>
+<A href="Word050205.html" target="right ">五、万物と旧約時代</A><BR>
+<A href="Word050206.html" target="right ">六、伝道と新約時代</A><BR>
+<A href="Word050207.html" target="right ">七、祝福</A><BR>
+　<A href="Word050701.html" target="right ">1、原理と祝福</A><BR>
+　<A href="Word050702.html" target="right ">2、愛の時代</A><BR>
+　<A href="Word050703.html" target="right ">3、男女関係</A><BR>
+　 　<A href="Word050704.html" target="right ">・自己中心愛</A><BR>
+　 　<A href="Word050705.html" target="right ">・愛の絶対基準</A><BR>
+　 　<A href="Word050706.html" target="right ">・悔い改めよ</A><BR>
+　 　<A href="Word050707.html" target="right ">・神の子女としての実感</A><BR>
+　 　<A href="Word050708.html" target="right ">・女性は注意せよ</A><BR>
+　 　<A href="Word050709.html" target="right ">・すべてを告白して</A><BR>
+<A href="Word050801.html" target="right ">八、僕の僕から王の王まで</A><BR>
+　　 <A href="Word050802.html" target="right ">・大いなる特権</A><BR>
+　　 <A href="Word050803.html" target="right ">・七年路程の終末的意義</A><BR>
+　　 <A href="Word050804.html" target="right ">・死なんとする者は生き</A><BR>
+　　 <A href="Word050805.html" target="right ">・聖人の道</A><BR>
+　　<A href="Word050806.html" target="right "> ・神様は泣いておられる</A><BR>
+　　<A href="Word050807.html" target="right "> ・涙の基台</A><BR>
+　　<A href="Word050808.html" target="right "> ・心情の相続者</A><BR>
+　　<A href="Word050809.html" target="right "> ・神を知る者の道</A><BR>
+　　<A href="Word050810.html" target="right "> ・真の後継者</A><BR>
+<A href="Word050901.html" target="right ">九、祝福家庭</A><BR>
+<A href="Word051001.html" target="right ">十、ホーム・チャーチ</A><BR>
+</P>
+
+
+ <br><br>
+
+
+
+
+
+
+
+
+
+
+<div style="text-align:center; margin-top:50px;">
+
+ | 
 </div>
-</body>
-</html>
+</div>
+
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
+
+</div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script></body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</HTML>
+</object></layer></div></span></style></table></script></applet>
+
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

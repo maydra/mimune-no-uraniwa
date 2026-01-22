@@ -1,194 +1,660 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>祝福家庭と理想天国 | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<title>祝福家庭と理想天国</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>祝福家庭と理想天国</h1><div class="index-list"><div class="chapter-item"><a href="jyobunn.html" class="chapter-link">序　文</a><ul class="section-list"><li class="section-item"><a href="jyobunn.html#001" class="section-link">祝福家庭と理想天国</a></li></ul></div><div class="chapter-item"><a href="001.html" class="chapter-link">成約のみ言・救援摂理史の原理観</a><ul class="section-list"><li class="section-item"><a href="001.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="001.html#004" class="section-link">一九九六年九月十日から二十九日まで世界二十二カ国四十三都市で講演</a></li><li class="section-item"><a href="001.html#005" class="section-link">一九九七年三月十三日から四月三日まで韓国二十二都市で講演</a></li><li class="section-item"><a href="001.html#006" class="section-link">宇宙の根本を探して</a></li><li class="section-item"><a href="001.html#007" class="section-link">真の愛を中心とした真の家庭と真の宇宙</a></li><li class="section-item"><a href="001.html#008" class="section-link">家庭が円満になるメッセージ</a></li><li class="section-item"><a href="001.html#009" class="section-link">神様は父母の中の真の父母</a></li><li class="section-item"><a href="001.html#010" class="section-link">天を父母として見れば、地は子女</a></li><li class="section-item"><a href="001.html#011" class="section-link">東洋文明は縦的、西洋文明は横的</a></li><li class="section-item"><a href="001.html#012" class="section-link">聖子になることを願われる神様</a></li><li class="section-item"><a href="001.html#013" class="section-link">真の愛のために生まれた五官</a></li><li class="section-item"><a href="001.html#014" class="section-link">霊界を統一したレバレンド・ムーン</a></li><li class="section-item"><a href="001.html#016" class="section-link">生命を三度以上投入する真の愛</a></li><li class="section-item"><a href="001.html#017" class="section-link">真の家庭と私</a></li><li class="section-item"><a href="001.html#018" class="section-link">心と体の闘争はどこから？</a></li><li class="section-item"><a href="001.html#019" class="section-link">人間はみなサタンの後孫</a></li><li class="section-item"><a href="001.html#020" class="section-link">善悪が分立、闘争してきた歴史</a></li><li class="section-item"><a href="001.html#021" class="section-link">神の創造を認めるか否か、それが問題</a></li><li class="section-item"><a href="001.html#022" class="section-link">体を打って心を立てるのが宗教</a></li><li class="section-item"><a href="001.html#023" class="section-link">良心は私のすべてを知っている</a></li><li class="section-item"><a href="001.html#024" class="section-link">良心は神をも占領する</a></li><li class="section-item"><a href="001.html#025" class="section-link">解放された良心は真の愛に結ばれる</a></li><li class="section-item"><a href="001.html#026" class="section-link">人間は神の無限の愛の対象</a></li><li class="section-item"><a href="001.html#027" class="section-link">救いの摂理は復帰摂理</a></li><li class="section-item"><a href="001.html#028" class="section-link">千六百名以上が海外ボランティア活動</a></li><li class="section-item"><a href="001.html#029" class="section-link">自由と平和は真の家庭と私から</a></li></ul></div><div class="chapter-item"><a href="002.html" class="chapter-link">み旨の道一　み旨についてみ旨一　み旨</a><ul class="section-list"><li class="section-item"><a href="002.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="002.html#005" class="section-link">二　善と悪</a></li><li class="section-item"><a href="002.html#006" class="section-link">復帰・復帰の心情</a></li></ul></div><div class="chapter-item"><a href="003.html" class="chapter-link">指導者</a><ul class="section-list"><li class="section-item"><a href="003.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="003.html#003" class="section-link">実　践</a></li><li class="section-item"><a href="003.html#004" class="section-link">伝統・公義・責任感</a></li><li class="section-item"><a href="003.html#005" class="section-link">一　伝　統</a></li><li class="section-item"><a href="003.html#006" class="section-link">二　公　義</a></li><li class="section-item"><a href="003.html#007" class="section-link">三　責任感</a></li></ul></div><div class="chapter-item"><a href="004.html" class="chapter-link">苦労・祭物・従順一　苦労</a><ul class="section-list"><li class="section-item"><a href="004.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="004.html#006" class="section-link">審　判</a></li><li class="section-item"><a href="004.html#007" class="section-link">天　国</a></li></ul></div><div class="chapter-item"><a href="005.html" class="chapter-link">二　み言・人格・心情についてみ言一　み言</a><ul class="section-list"><li class="section-item"><a href="005.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="005.html#005" class="section-link">二　法度（法律と制度）</a></li></ul></div><div class="chapter-item"><a href="006.html" class="chapter-link">三　信仰について教会・教会生活一　教会・聖地</a><ul class="section-list"><li class="section-item"><a href="006.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="006.html#005" class="section-link">二　生活指導</a></li><li class="section-item"><a href="006.html#006" class="section-link">三　カイン・アベル</a></li><li class="section-item"><a href="006.html#007" class="section-link">信仰生活</a></li></ul></div><div class="chapter-item"><a href="007.html" class="chapter-link">伝　道一　伝道</a><ul class="section-list"><li class="section-item"><a href="007.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="007.html#004" class="section-link">二　信仰の子女</a></li><li class="section-item"><a href="007.html#005" class="section-link">試験・試練</a></li><li class="section-item"><a href="007.html#006" class="section-link">説　教</a></li><li class="section-item"><a href="007.html#007" class="section-link">祈　祷</a></li><li class="section-item"><a href="007.html#008" class="section-link">義務守則</a></li></ul></div><div class="chapter-item"><a href="008.html" class="chapter-link">四　祝福について祝福</a><ul class="section-list"><li class="section-item"><a href="008.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="008.html#004" class="section-link">理想相対</a></li><li class="section-item"><a href="008.html#005" class="section-link">家庭・家庭生活</a></li></ul></div><div class="chapter-item"><a href="009.html" class="chapter-link">祝福と理想家庭第一章　創造理想と男女の愛第一節　創造理想と人間の堕落１.神のみ旨と四位基台完成</a><ul class="section-list"><li class="section-item"><a href="009.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="009.html#004" class="section-link">第二節　真の男女の愛</a></li><li class="section-item"><a href="009.html#005" class="section-link">第三節　真なる結婚と真の愛</a></li><li class="section-item"><a href="009.html#006" class="section-link">第四節　愛を中心とした終末の現象</a></li><li class="section-item"><a href="009.html#008" class="section-link">１、神様のみ旨と四位基台完成</a></li><li class="section-item"><a href="009.html#009" class="section-link">２、愛を通した創造理想実現</a></li><li class="section-item"><a href="009.html#010" class="section-link">３、アダムとエバを創造された目的</a></li><li class="section-item"><a href="009.html#011" class="section-link">４、アダムとエバの成長期間</a></li><li class="section-item"><a href="009.html#012" class="section-link">５、個人完成と愛の出発点</a></li><li class="section-item"><a href="009.html#013" class="section-link">６、アダムとエバを通した創造理想世界</a></li><li class="section-item"><a href="009.html#014" class="section-link">７、アダムとエバの堕落</a></li><li class="section-item"><a href="009.html#015" class="section-link">８、堕落の結果</a></li><li class="section-item"><a href="009.html#016" class="section-link">９、アダムとエバが堕落しなかったならば</a></li></ul></div><div class="chapter-item"><a href="010.html" class="chapter-link">第二節　真の男女の愛１.創造本然の男女の愛</a><ul class="section-list"><li class="section-item"><a href="010.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="010.html#003" class="section-link">１、創造本然の男女の愛</a></li><li class="section-item"><a href="010.html#004" class="section-link">２、男性と女性が生まれた理由</a></li><li class="section-item"><a href="010.html#005" class="section-link">３、互いは絶対的に必要な存在</a></li><li class="section-item"><a href="010.html#006" class="section-link">４、愛は相対から来る</a></li><li class="section-item"><a href="010.html#007" class="section-link">５、真の異性観</a></li><li class="section-item"><a href="010.html#008" class="section-link">６、男性は志操、女性は貞節</a></li><li class="section-item"><a href="010.html#009" class="section-link">７、愛には発展も革命もない</a></li><li class="section-item"><a href="010.html#010" class="section-link">８、愛は極めて自然なもの</a></li></ul></div><div class="chapter-item"><a href="011.html" class="chapter-link">第三節　真なる結婚と真の愛１.結婚の意義</a><ul class="section-list"><li class="section-item"><a href="011.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="011.html#003" class="section-link">１、結婚の意義</a></li><li class="section-item"><a href="011.html#004" class="section-link">２、結婚はなぜするのか</a></li><li class="section-item"><a href="011.html#005" class="section-link">３、真の結婚観</a></li><li class="section-item"><a href="011.html#006" class="section-link">４、思春期の変化と結婚の適期</a></li><li class="section-item"><a href="011.html#007" class="section-link">５、勉強と結婚</a></li><li class="section-item"><a href="011.html#008" class="section-link">６、思春期と初恋</a></li><li class="section-item"><a href="011.html#009" class="section-link">７、心と体が一致しなければならない</a></li><li class="section-item"><a href="011.html#010" class="section-link">８、真の愛の完成</a></li><li class="section-item"><a href="011.html#011" class="section-link">９、真の愛の特権</a></li></ul></div><div class="chapter-item"><a href="012.html" class="chapter-link">第四節　愛を中心とした終末の現象１.終末とはどのような時か</a><ul class="section-list"><li class="section-item"><a href="012.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="012.html#003" class="section-link">１、終末とはどのような時か</a></li><li class="section-item"><a href="012.html#004" class="section-link">２、終末の現象――青少年の堕落</a></li><li class="section-item"><a href="012.html#005" class="section-link">３、終末におけるサタンの正体</a></li><li class="section-item"><a href="012.html#006" class="section-link">４、世界的な分裂現象と統一運動</a></li><li class="section-item"><a href="012.html#007" class="section-link">５、青少年問題と統一教会</a></li><li class="section-item"><a href="012.html#008" class="section-link">６、真の愛の運動と統一教会</a></li><li class="section-item"><a href="012.html#009" class="section-link">７、終末における望みの中心</a></li></ul></div><div class="chapter-item"><a href="013.html" class="chapter-link">第二章　真の父母と神の家庭第一節　イエスと祝福１.メシヤは誰か</a><ul class="section-list"><li class="section-item"><a href="013.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="013.html#004" class="section-link">第二節　小羊の婚宴と最初の復活</a></li><li class="section-item"><a href="013.html#005" class="section-link">第三節　真の父母と真の子女</a></li><li class="section-item"><a href="013.html#006" class="section-link">第四節　家庭を中心とした復帰摂理</a></li><li class="section-item"><a href="013.html#008" class="section-link">１、メシヤは誰か</a></li><li class="section-item"><a href="013.html#009" class="section-link">２、イエス様と祝福</a></li><li class="section-item"><a href="013.html#010" class="section-link">３、本来のイエス様</a></li><li class="section-item"><a href="013.html#011" class="section-link">４、イエス様の恨み</a></li><li class="section-item"><a href="013.html#012" class="section-link">５、イエス様の祝福とキリスト教思想</a></li></ul></div><div class="chapter-item"><a href="014.html" class="chapter-link">第二節　小羊の婚宴と最初の復活１.小羊の婚宴を通した神様の理想実現</a><ul class="section-list"><li class="section-item"><a href="014.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="014.html#003" class="section-link">１、小羊の婚宴を通した神様の理想実現</a></li><li class="section-item"><a href="014.html#004" class="section-link">２、小羊の婚宴の意義</a></li><li class="section-item"><a href="014.html#005" class="section-link">３、小羊の婚宴は地上で成される</a></li><li class="section-item"><a href="014.html#006" class="section-link">４、宗教はなぜ、独身生活を強調してきたか</a></li><li class="section-item"><a href="014.html#007" class="section-link">５、最初の復活にあずかる者</a></li></ul></div><div class="chapter-item"><a href="015.html" class="chapter-link">第三節　真の父母と真の子女１.真の父母とはどんな方か</a><ul class="section-list"><li class="section-item"><a href="015.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="015.html#003" class="section-link">１、真の父母とはどんな方か</a></li><li class="section-item"><a href="015.html#004" class="section-link">２、真の父母は全体の希望</a></li><li class="section-item"><a href="015.html#005" class="section-link">３、真の父母は歴史的希望の中心点</a></li><li class="section-item"><a href="015.html#006" class="section-link">４、人類歴史とは真の父母を迎えるためのもの</a></li><li class="section-item"><a href="015.html#007" class="section-link">５、偽りの父母と真の父母</a></li><li class="section-item"><a href="015.html#008" class="section-link">６、統一教会が主張すること</a></li><li class="section-item"><a href="015.html#009" class="section-link">７、真の父母の息子・娘になろうとすれば</a></li><li class="section-item"><a href="015.html#010" class="section-link">８、失われた心情を復帰すべき私たち</a></li><li class="section-item"><a href="015.html#011" class="section-link">９、歴史的な希望の日</a></li></ul></div><div class="chapter-item"><a href="016.html" class="chapter-link">第四節　家庭を中心とした復帰摂理１.堕落人間の願い</a><ul class="section-list"><li class="section-item"><a href="016.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="016.html#003" class="section-link">１、堕落人間の願い</a></li><li class="section-item"><a href="016.html#004" class="section-link">２、復帰摂理の最終目標</a></li><li class="section-item"><a href="016.html#005" class="section-link">３、家庭を中心とした復帰摂理</a></li><li class="section-item"><a href="016.html#006" class="section-link">４、復帰の家庭</a></li><li class="section-item"><a href="016.html#007" class="section-link">５、復帰の家庭になるには</a></li><li class="section-item"><a href="016.html#008" class="section-link">６、真の家庭主義と真の父母の宗教</a></li></ul></div><div class="chapter-item"><a href="017.html" class="chapter-link">第三章　祝福の意義と価値第一節　新生の根本原理１.メシヤが必要な理由</a><ul class="section-list"><li class="section-item"><a href="017.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="017.html#004" class="section-link">第二節　新生と祝福の起源</a></li><li class="section-item"><a href="017.html#006" class="section-link">第四節　祝福を受けるための蕩減条件</a></li><li class="section-item"><a href="017.html#008" class="section-link">１、メシヤが必要な理由</a></li><li class="section-item"><a href="017.html#009" class="section-link">２、再び生まれることの真の意味</a></li><li class="section-item"><a href="017.html#010" class="section-link">３、血統転換の意味</a></li><li class="section-item"><a href="017.html#011" class="section-link">４、重生（新生）しようとすれば</a></li></ul></div><div class="chapter-item"><a href="018.html" class="chapter-link">第二節　新生と祝福の起源１.イスラエル民族を通した血統転換</a><ul class="section-list"><li class="section-item"><a href="018.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="018.html#003" class="section-link">１、イスラエル民族を通した血統転換</a></li><li class="section-item"><a href="018.html#004" class="section-link">２、イエスと聖霊を通した重生の役事</a></li><li class="section-item"><a href="018.html#005" class="section-link">３、真の父母と真の子女を通した重生の役事</a></li><li class="section-item"><a href="018.html#006" class="section-link">４、歴史的犠牲の土台の上に成された祝福</a></li><li class="section-item"><a href="018.html#007" class="section-link">５、祝福の日は歴史的所願成就の日</a></li></ul></div><div class="chapter-item"><a href="019.html" class="chapter-link">第三節　祝福の意義と価値１.祝福の意義</a><ul class="section-list"><li class="section-item"><a href="019.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="019.html#003" class="section-link">１、祝福の意義</a></li><li class="section-item"><a href="019.html#004" class="section-link">２、祝福の価値</a></li><li class="section-item"><a href="019.html#005" class="section-link">３、祝福を受けるべき理由</a></li><li class="section-item"><a href="019.html#006" class="section-link">４、祝福は誰がしてくれるのか</a></li><li class="section-item"><a href="019.html#007" class="section-link">５、祝福は宇宙全体のためのものである</a></li><li class="section-item"><a href="019.html#008" class="section-link">６、合同結婚式を挙行する理由</a></li></ul></div><div class="chapter-item"><a href="020.html" class="chapter-link">第四節　祝福を受けるための蕩減条件１.復活と蕩減条件</a><ul class="section-list"><li class="section-item"><a href="020.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="020.html#003" class="section-link">１、復活と蕩減条件</a></li><li class="section-item"><a href="020.html#004" class="section-link">２、蕩減条件は自分自身が立てなければならない</a></li><li class="section-item"><a href="020.html#005" class="section-link">３、サタン圏（堕落圏）を脱するには</a></li><li class="section-item"><a href="020.html#006" class="section-link">４、祝福を受けるための基台</a></li><li class="section-item"><a href="020.html#007" class="section-link">５、祝福を受けるための蕩減条件</a></li><li class="section-item"><a href="020.html#008" class="section-link">６、祝福を受けるための蕩減期間</a></li><li class="section-item"><a href="020.html#009" class="section-link">７、修練の過程と七日断食</a></li><li class="section-item"><a href="020.html#010" class="section-link">８、信仰の三子女</a></li><li class="section-item"><a href="020.html#011" class="section-link">９、祝福の本来の基準</a></li><li class="section-item"><a href="020.html#012" class="section-link">10、祝福を受けられる資格基準</a></li><li class="section-item"><a href="020.html#013" class="section-link">11、祝福を受けられるただ一つの資格</a></li><li class="section-item"><a href="020.html#014" class="section-link">12、私たちがもつべき信念と姿勢</a></li></ul></div><div class="chapter-item"><a href="021.html" class="chapter-link">第四章　祝福の過程第一節　祝福の相対の決定１.祝福の相対は誰が決めるか</a><ul class="section-list"><li class="section-item"><a href="021.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="021.html#004" class="section-link">第二節　相対を結ぶ基準と私たちの姿勢</a></li><li class="section-item"><a href="021.html#005" class="section-link">第三節　約婚事例</a></li><li class="section-item"><a href="021.html#006" class="section-link">第四節　祝福の過程とその意義</a></li><li class="section-item"><a href="021.html#008" class="section-link">１、祝福の相対は誰が決めるか</a></li><li class="section-item"><a href="021.html#009" class="section-link">２、自分自身で相対を決定してはいけない</a></li><li class="section-item"><a href="021.html#010" class="section-link">３、どうすれば理想相対に結ばれるか</a></li><li class="section-item"><a href="021.html#011" class="section-link">４、相手はどこかにいるものである</a></li><li class="section-item"><a href="021.html#012" class="section-link">５、相対的に創造された男性と女性</a></li><li class="section-item"><a href="021.html#013" class="section-link">６、女性の美しさと男性の魅力</a></li><li class="section-item"><a href="021.html#014" class="section-link">７、女性と化粧</a></li><li class="section-item"><a href="021.html#015" class="section-link">８、恋愛は絶対許されない</a></li></ul></div><div class="chapter-item"><a href="022.html" class="chapter-link">第二節　相対を結ぶ基準と私たちの姿勢１.組み合わせてくださるお父様の眼識</a><ul class="section-list"><li class="section-item"><a href="022.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="022.html#003" class="section-link">１、組み合わせてくださるお父様の眼識</a></li><li class="section-item"><a href="022.html#004" class="section-link">２、極と極の調和を成さなければならない</a></li><li class="section-item"><a href="022.html#005" class="section-link">３、人間の四つの型と理想的均衡</a></li><li class="section-item"><a href="022.html#006" class="section-link">４、「目の峠」を越えられなければならない</a></li><li class="section-item"><a href="022.html#007" class="section-link">５、低くなろうとする者が高くなる</a></li><li class="section-item"><a href="022.html#008" class="section-link">６、学歴よりもっと重要な条件</a></li><li class="section-item"><a href="022.html#009" class="section-link">７、結婚は後孫のためにしなければならない</a></li><li class="section-item"><a href="022.html#010" class="section-link">８、約婚のための真の父母の苦労</a></li></ul></div><div class="chapter-item"><a href="023.html" class="chapter-link">第三節　約婚事例事例１：自分のために祈祷する者</a><ul class="section-list"><li class="section-item"><a href="023.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="023.html#004" class="section-link">事例２：写真結婚</a></li><li class="section-item"><a href="023.html#005" class="section-link">事例３：ある夫婦の話</a></li><li class="section-item"><a href="023.html#006" class="section-link">事例４：不具の一人の女性</a></li><li class="section-item"><a href="023.html#007" class="section-link">事例５：アメリカの精鋭の三人</a></li><li class="section-item"><a href="023.html#008" class="section-link">事例６：あるオランダ宣教師の信仰</a></li><li class="section-item"><a href="023.html#009" class="section-link">事例７：蕩減復帰のための祝福</a></li><li class="section-item"><a href="023.html#010" class="section-link">事例８：六〇〇〇双の約婚時にあったこと</a></li></ul></div><div class="chapter-item"><a href="024.html" class="chapter-link">第四節　祝福の過程とその意義１.約婚式の意義</a><ul class="section-list"><li class="section-item"><a href="024.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="024.html#003" class="section-link">１、約婚式の意義</a></li><li class="section-item"><a href="024.html#004" class="section-link">２、聖酒式の成立過程と意義</a></li><li class="section-item"><a href="024.html#005" class="section-link">３、聖酒伝授の意義</a></li><li class="section-item"><a href="024.html#006" class="section-link">４、男性と女性の立場と復帰</a></li><li class="section-item"><a href="024.html#007" class="section-link">５、祝福式の意義</a></li><li class="section-item"><a href="024.html#008" class="section-link">６、四十日蕩減期間</a></li><li class="section-item"><a href="024.html#009" class="section-link">７、蕩減棒行事と三日行事</a></li><li class="section-item"><a href="024.html#010" class="section-link">８、祝福後の三年動員路程</a></li><li class="section-item"><a href="024.html#011" class="section-link">９、祝福は最後の道である</a></li></ul></div><div class="chapter-item"><a href="025.html" class="chapter-link">第五章　完成のための公式路程第一節　完成期七年公式路程１.三時代を一時に蕩減する七年路程</a><ul class="section-list"><li class="section-item"><a href="025.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="025.html#004" class="section-link">第二節　再創造のための子女たちの責任分担</a></li><li class="section-item"><a href="025.html#005" class="section-link">第三節　信仰の三子女を通した家庭復帰</a></li><li class="section-item"><a href="025.html#007" class="section-link">１、三時代を一時に蕩減する七年路程</a></li><li class="section-item"><a href="025.html#008" class="section-link">２、七年大患難と七年路程</a></li><li class="section-item"><a href="025.html#009" class="section-link">３、祝福を受ける位置は完成した位置ではない</a></li><li class="section-item"><a href="025.html#010" class="section-link">４、父母の位置を復帰するための七年路程</a></li><li class="section-item"><a href="025.html#011" class="section-link">５、霊界と肉界を蕩減復帰するための七年期間</a></li><li class="section-item"><a href="025.html#012" class="section-link">６、ご父母様の七年路程と子女たちの七年路程</a></li><li class="section-item"><a href="025.html#013" class="section-link">７、個人的七年路程と家庭的七年路程</a></li><li class="section-item"><a href="025.html#014" class="section-link">８、家庭完成を要する時代</a></li><li class="section-item"><a href="025.html#015" class="section-link">９、摂理の先頭に立つべき女性</a></li></ul></div><div class="chapter-item"><a href="026.html" class="chapter-link">第二節　再創造のための子女たちの責任分担１.再創造時に必要な条件</a><ul class="section-list"><li class="section-item"><a href="026.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="026.html#003" class="section-link">１、再創造時に必要な条件</a></li><li class="section-item"><a href="026.html#004" class="section-link">２、再創造のための私たちの活動</a></li><li class="section-item"><a href="026.html#005" class="section-link">３、真の父母の愛の圏を相続するための訓練</a></li><li class="section-item"><a href="026.html#006" class="section-link">４、万物復帰</a></li><li class="section-item"><a href="026.html#007" class="section-link">５、神様を痛哭させうる内容</a></li><li class="section-item"><a href="026.html#008" class="section-link">６、月一人伝道の意義</a></li><li class="section-item"><a href="026.html#009" class="section-link">７、霊界生活のための地上訓練</a></li></ul></div><div class="chapter-item"><a href="027.html" class="chapter-link">第三節　信仰の三子女を通した家庭復帰１.信仰の三子女</a><ul class="section-list"><li class="section-item"><a href="027.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="027.html#003" class="section-link">１、信仰の三子女</a></li><li class="section-item"><a href="027.html#004" class="section-link">２、八人の家族がいなければ復帰できない</a></li><li class="section-item"><a href="027.html#005" class="section-link">３、信仰の三子女を通した家庭編成</a></li><li class="section-item"><a href="027.html#006" class="section-link">４、家庭復帰のための公式路程</a></li><li class="section-item"><a href="027.html#007" class="section-link">５、信仰の子女と直系子女の関係</a></li><li class="section-item"><a href="027.html#008" class="section-link">６、復帰された父母の立場に立とうとすれば</a></li><li class="section-item"><a href="027.html#009" class="section-link">７、信仰の父母の使命と愛の公式</a></li></ul></div><div class="chapter-item"><a href="028.html" class="chapter-link">第六章　ご父母様の聖婚と祝福家庭第一節　ご父母様の聖婚と七年路程１.患難と迫害の最高峰になった聖婚式</a><ul class="section-list"><li class="section-item"><a href="028.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="028.html#004" class="section-link">第二節　祝福家庭に対する摂理的意義</a></li><li class="section-item"><a href="028.html#005" class="section-link">第三節　祝福家庭の価値と使命</a></li><li class="section-item"><a href="028.html#006" class="section-link">第四節　国際祝福家庭の使命</a></li><li class="section-item"><a href="028.html#008" class="section-link">１、患難と迫害の最高峰になった聖婚式</a></li><li class="section-item"><a href="028.html#009" class="section-link">２、三弟子を先に探し立てたご父母様の聖婚式</a></li><li class="section-item"><a href="028.html#010" class="section-link">３、父母が責任をもち開拓する時代</a></li><li class="section-item"><a href="028.html#011" class="section-link">４、ご父母様の家庭的十字架路程</a></li><li class="section-item"><a href="028.html#012" class="section-link">５、お母様を通した七年路程</a></li><li class="section-item"><a href="028.html#013" class="section-link">６、一九六〇年代の摂理的標語</a></li><li class="section-item"><a href="028.html#014" class="section-link">７、三六、七二、一二四家庭の祝福</a></li><li class="section-item"><a href="028.html#015" class="section-link">８、失った日々を探し立てた期間</a></li></ul></div><div class="chapter-item"><a href="029.html" class="chapter-link">第二節　祝福家庭に対する摂理的意義１.第三イスラエルの意義</a><ul class="section-list"><li class="section-item"><a href="029.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="029.html#003" class="section-link">１、第三イスラエルの意義</a></li><li class="section-item"><a href="029.html#004" class="section-link">２、祝福家庭を通した第三イスラエル圏の編成</a></li><li class="section-item"><a href="029.html#005" class="section-link">３、三六家庭祝福の摂理的意義</a></li><li class="section-item"><a href="029.html#006" class="section-link">４、七二家庭祝福の摂理的意義</a></li><li class="section-item"><a href="029.html#007" class="section-link">５、一二四家庭祝福の摂理的意義</a></li><li class="section-item"><a href="029.html#008" class="section-link">６、四三〇家庭祝福の摂理的意義</a></li><li class="section-item"><a href="029.html#009" class="section-link">７、七七七家庭祝福の摂理的意義</a></li><li class="section-item"><a href="029.html#010" class="section-link">８、一八〇〇家庭祝福の意義</a></li><li class="section-item"><a href="029.html#011" class="section-link">９、六〇〇〇家庭祝福の意義</a></li></ul></div><div class="chapter-item"><a href="030.html" class="chapter-link">第三節　祝福家庭の価値と使命１.祝福家庭の価値</a><ul class="section-list"><li class="section-item"><a href="030.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="030.html#003" class="section-link">１、祝福家庭の価値</a></li><li class="section-item"><a href="030.html#004" class="section-link">２、祝福家庭はご父母様の指導を受けなければならない</a></li><li class="section-item"><a href="030.html#005" class="section-link">３、祝福をしてくださった理由</a></li><li class="section-item"><a href="030.html#006" class="section-link">４、祝福家庭の使命と責任</a></li><li class="section-item"><a href="030.html#007" class="section-link">５、祭司長の使命を果たすべき祝福家庭</a></li><li class="section-item"><a href="030.html#008" class="section-link">６、三時代の使命に責任を負うべき祝福家庭</a></li><li class="section-item"><a href="030.html#009" class="section-link">７、氏族的メシヤとなれ</a></li><li class="section-item"><a href="030.html#010" class="section-link">８、既成祝福家庭の使命</a></li><li class="section-item"><a href="030.html#011" class="section-link">９、祝福家庭が行くべき必然的運命の道</a></li><li class="section-item"><a href="030.html#012" class="section-link">10、祝福を受けた夫婦が行くべき道</a></li><li class="section-item"><a href="030.html#013" class="section-link">11、世界的な家庭的カナン復帰</a></li><li class="section-item"><a href="030.html#014" class="section-link">12、新しい時代の主人になる者</a></li></ul></div><div class="chapter-item"><a href="031.html" class="chapter-link">第四節　国際祝福家庭の使命１.神様を中心とした一つの世界主義</a><ul class="section-list"><li class="section-item"><a href="031.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="031.html#003" class="section-link">１、神様を中心とした一つの世界主義</a></li><li class="section-item"><a href="031.html#004" class="section-link">２、すべての人類は一つの兄弟、一つの家族</a></li><li class="section-item"><a href="031.html#005" class="section-link">３、国際合同結婚式の意義</a></li><li class="section-item"><a href="031.html#006" class="section-link">４、東西文明の差異と国際結婚</a></li><li class="section-item"><a href="031.html#007" class="section-link">５、国際結婚時代の開幕</a></li><li class="section-item"><a href="031.html#008" class="section-link">６、国際祝福家庭の使命</a></li></ul></div><div class="chapter-item"><a href="032.html" class="chapter-link">第七章　真の夫婦と理想家庭第一節　真の夫婦１.創造本然の夫婦関係</a><ul class="section-list"><li class="section-item"><a href="032.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="032.html#005" class="section-link">第三節　祝福家庭の生活</a></li><li class="section-item"><a href="032.html#006" class="section-link">第四節　真なる父母と子女</a></li><li class="section-item"><a href="032.html#007" class="section-link">第五節　子女教育</a></li><li class="section-item"><a href="032.html#009" class="section-link">１、創造本然の夫婦関係</a></li><li class="section-item"><a href="032.html#010" class="section-link">２、復帰されるべき真の夫婦の理想</a></li><li class="section-item"><a href="032.html#011" class="section-link">３、祝福を受けた夫婦の立場</a></li><li class="section-item"><a href="032.html#012" class="section-link">４、理想的夫婦</a></li><li class="section-item"><a href="032.html#013" class="section-link">５、夫婦の愛</a></li><li class="section-item"><a href="032.html#014" class="section-link">６、夫婦の運命の道</a></li><li class="section-item"><a href="032.html#015" class="section-link">７、愛する人が死ねばなぜ悲しいか</a></li><li class="section-item"><a href="032.html#016" class="section-link">８、真の夫婦の協助</a></li></ul></div><div class="chapter-item"><a href="033.html" class="chapter-link">第二節　理想家庭１.理想家庭</a><ul class="section-list"><li class="section-item"><a href="033.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="033.html#003" class="section-link">１、理想家庭</a></li><li class="section-item"><a href="033.html#004" class="section-link">２、三時代が連結されている家庭</a></li><li class="section-item"><a href="033.html#005" class="section-link">３、家庭は真の愛の訓練道場</a></li><li class="section-item"><a href="033.html#006" class="section-link">４、家庭は天宙主義を完成する最終基準</a></li><li class="section-item"><a href="033.html#007" class="section-link">５、息子・娘をなぜ生まなければならないか</a></li><li class="section-item"><a href="033.html#008" class="section-link">６、祝福子女の価値</a></li><li class="section-item"><a href="033.html#009" class="section-link">７、家庭天国</a></li><li class="section-item"><a href="033.html#010" class="section-link">８、天国に入る秘訣</a></li></ul></div><div class="chapter-item"><a href="034.html" class="chapter-link">第三節　祝福家庭の生活１.手本となるべき祝福家庭</a><ul class="section-list"><li class="section-item"><a href="034.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="034.html#003" class="section-link">１、手本となるべき祝福家庭</a></li><li class="section-item"><a href="034.html#004" class="section-link">２、祝福家庭の家庭生活</a></li><li class="section-item"><a href="034.html#005" class="section-link">３、祝福家庭の夫婦生活</a></li><li class="section-item"><a href="034.html#006" class="section-link">４、祝福家庭のみ旨にかなう生活</a></li><li class="section-item"><a href="034.html#007" class="section-link">５、祝福家庭の信仰生活</a></li><li class="section-item"><a href="034.html#008" class="section-link">６、祝福家庭の侍る生活</a></li><li class="section-item"><a href="034.html#009" class="section-link">７、三位基台を中心とした生活</a></li><li class="section-item"><a href="034.html#010" class="section-link">８、祝福家庭の共同生活</a></li><li class="section-item"><a href="034.html#011" class="section-link">９、後孫が福を受ける道</a></li><li class="section-item"><a href="034.html#012" class="section-link">10、死ぬときも四位基台を備えなければならない</a></li></ul></div><div class="chapter-item"><a href="035.html" class="chapter-link">第四節　真なる父母と子女１.真なる父母と子女</a><ul class="section-list"><li class="section-item"><a href="035.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="035.html#003" class="section-link">１、真なる父母と子女</a></li><li class="section-item"><a href="035.html#004" class="section-link">２、真なる子女の道理</a></li><li class="section-item"><a href="035.html#005" class="section-link">３、伝統を相続してあげる父母となろう</a></li><li class="section-item"><a href="035.html#006" class="section-link">４、子女に対する父母の愛</a></li><li class="section-item"><a href="035.html#007" class="section-link">５、子供は父母の愛を受けなければならない</a></li><li class="section-item"><a href="035.html#008" class="section-link">６、愛のむち</a></li><li class="section-item"><a href="035.html#009" class="section-link">７、後孫のために精誠を尽くそう</a></li></ul></div><div class="chapter-item"><a href="036.html" class="chapter-link">第五節　子女教育１.家庭教育</a><ul class="section-list"><li class="section-item"><a href="036.html#001" class="section-link">祝福家庭と理想天国</a></li><li class="section-item"><a href="036.html#003" class="section-link">１、家庭教育</a></li><li class="section-item"><a href="036.html#004" class="section-link">２、真なる子女教育</a></li><li class="section-item"><a href="036.html#005" class="section-link">３、真なる愛国教育</a></li><li class="section-item"><a href="036.html#006" class="section-link">４、世界と共に生きることのできる教育</a></li><li class="section-item"><a href="036.html#007" class="section-link">５、信仰と勉強</a></li><li class="section-item"><a href="036.html#008" class="section-link">６、愛は学んで分かるものではない</a></li><li class="section-item"><a href="036.html#009" class="section-link">７、愛を中心とした人生行路</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
-</div>
+<body><div class="container">
+<h1>祝福家庭と理想天国</h1>
+<body alink="#000000" bgcolor="#ccffcc" link="#000000" vlink="#000000">
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+
+<hr align="left" width="60%"/>
+<b>祝福家庭と理想天国(1)</b>
+<hr align="left" width="60%"/>
+<b><a href="jyobunn.html" style="text-decoration : none;" target="right">序　文</a></b><br/>
+<br/>
+<a href="001.html" style="text-decoration : none;" target="right"><b>成約のみ言</b><br/>
+<b>・救援摂理史の原理観</b></a><br/>
+<b><a href="001.html#002" style="text-decoration : none;" target="right">・宇宙の根本を探して</a></b><br/>
+<b><a href="001.html#003" style="text-decoration : none;" target="right">・真の愛を中心とした<br/>
+      　　　　真の家庭と真の宇宙</a></b><br/>
+<b><a href="001.html#004" style="text-decoration : none;" target="right">・真の家庭と私</a></b><br/>
+<hr align="left" size="1" width="60%"/>
+<a href="002.html" style="text-decoration : none;" target="right"><b>み旨の道</b><br/>
+<b>一　み旨について</b><br/>
+      　み旨<br/>
+      　　一　み旨</a><br/>
+<a href="002.html#002" style="text-decoration : none;" target="right">　　二　善と悪</a><br/>
+<a href="002.html#003" style="text-decoration : none;" target="right">　復帰・復帰の心情</a><br/>
+<a href="003.html" style="text-decoration : none;" target="right">　指導者</a><br/>
+<a href="003.html#002" style="text-decoration : none;" target="right">　実践</a><br/>
+<a href="003.html#003" style="text-decoration : none;" target="right">　伝統・公義・責任感<br/>
+      　　一　伝統</a><br/>
+<a href="003.html#004" style="text-decoration : none;" target="right">　　二　公義</a><br/>
+<a href="003.html#005" style="text-decoration : none;" target="right">　　三　責任感</a><br/>
+<a href="004.html" style="text-decoration : none;" target="right">　苦労・祭物・従順<br/>
+      　　一　苦労</a><br/>
+<a href="004.html#002" style="text-decoration : none;" target="right">　　二　祭物</a><br/>
+<a href="004.html#003" style="text-decoration : none;" target="right">　　三　従順</a><br/>
+<a href="004.html#004" style="text-decoration : none;" target="right">　審判</a><br/>
+<a href="004.html#005" style="text-decoration : none;" target="right">　天国</a><br/>
+<a href="005.html" style="text-decoration : none;" target="right"><b>二　み言・人格・心情について</b><br/>
+      　み言<br/>
+      　　一　み言</a><br/>
+<a href="005.html#002" style="text-decoration : none;" target="right">　　二　法度（法律と制度）</a><br/>
+<a href="005.html#003" style="text-decoration : none;" target="right">　人格</a><br/>
+<a href="005.html#004" style="text-decoration : none;" target="right">　心情</a><br/>
+<a href="006.html" style="text-decoration : none;" target="right"><b>三　信仰について</b><br/>
+      　教会・教会生活<br/>
+      　　一　教会・聖地</a><br/>
+<a href="006.html#002" style="text-decoration : none;" target="right">　　二　生活指導</a><br/>
+<a href="006.html#003" style="text-decoration : none;" target="right">　　三　カイン・アベル</a><br/>
+<a href="006.html#004" style="text-decoration : none;" target="right">　信仰生活</a><br/>
+<a href="007.html" style="text-decoration : none;" target="right">　伝　道<br/>
+      　　一　伝道</a><br/>
+<a href="007.html#002" style="text-decoration : none;" target="right">　　二　信仰の子女</a><br/>
+<a href="007.html#003" style="text-decoration : none;" target="right">　試験・試練</a><br/>
+<a href="007.html#004" style="text-decoration : none;" target="right">　説教</a><br/>
+<a href="007.html#005" style="text-decoration : none;" target="right">　祈祷</a><br/>
+<a href="007.html#006" style="text-decoration : none;" target="right">　義務守則</a><br/>
+<a href="008.html" style="text-decoration : none;" target="right"><b>四　祝福について</b><br/>
+      　祝福</a><br/>
+<a href="008.html#002" style="text-decoration : none;" target="right">　理想相対</a><br/>
+<a href="008.html#003" style="text-decoration : none;" target="right">　家庭・家庭生活</a><br/>
+<hr align="left" size="1" width="60%"/>
+<a href="009.html" style="text-decoration : none;" target="right"><b>祝福と理想家庭</b><br/>
+<br/>
+<b>第一章　創造理想と男女の愛</b><br/>
+<b>第一節　創造理想と人間の堕落</b><br/>
+      　１.神のみ旨と四位基台完成</a><br/>
+<a href="009.html#002" style="text-decoration : none;" target="right">　２.愛を通した創造理想実現</a><br/>
+<a href="009.html#003" style="text-decoration : none;" target="right">　３.アダムとエバを創造された目的</a><br/>
+<a href="009.html#004" style="text-decoration : none;" target="right">　４.アダムとエバの成長期間</a><br/>
+<a href="009.html#005" style="text-decoration : none;" target="right">　５.個人完成と愛の出発点</a><br/>
+<a href="009.html#006" style="text-decoration : none;" target="right">　６.アダムとエバを通した創造理想世界</a><br/>
+<a href="009.html#007" style="text-decoration : none;" target="right">　７.アダムとエバの堕落</a><br/>
+<a href="009.html#008" style="text-decoration : none;" target="right">　８.堕落の結果</a><br/>
+<a href="009.html#009" style="text-decoration : none;" target="right">　９.アダムとエバが堕落しなかったならば</a><br/>
+<a href="010.html" style="text-decoration : none;" target="right"><b>第二節　真の男女の愛</b><br/>
+      　１.創造本然の男女の愛</a><br/>
+<a href="010.html#002" style="text-decoration : none;" target="right">　２.男性と女性が生まれた理由</a><br/>
+<a href="010.html#003" style="text-decoration : none;" target="right">　３.互いは絶対的に必要な存在</a><br/>
+<a href="010.html#004" style="text-decoration : none;" target="right">　４.愛は相対から来る</a><br/>
+<a href="010.html#005" style="text-decoration : none;" target="right">　５.真の異性観</a><br/>
+<a href="010.html#006" style="text-decoration : none;" target="right">　６.男性は志操、女性は貞節</a><br/>
+<a href="010.html#007" style="text-decoration : none;" target="right">　７.愛には発展も革命もない</a><br/>
+<a href="010.html#008" style="text-decoration : none;" target="right">　８.愛は極めて自然なもの</a><br/>
+<a href="011.html" style="text-decoration : none;" target="right"><b>第三節　真なる結婚と真の愛</b><br/>
+      　１.結婚の意義</a><br/>
+<a href="011.html#002" style="text-decoration : none;" target="right">　２.結婚はなぜするのか</a><br/>
+<a href="011.html#003" style="text-decoration : none;" target="right">　３.真の結婚観</a><br/>
+<a href="011.html#004" style="text-decoration : none;" target="right">　４.思春期の変化と結婚の適期</a><br/>
+<a href="011.html#005" style="text-decoration : none;" target="right">　５.勉強と結婚</a><br/>
+<a href="011.html#006" style="text-decoration : none;" target="right">　６.思春期と初恋</a><br/>
+<a href="011.html#007" style="text-decoration : none;" target="right">　７.心と体が一致しなければならない</a><br/>
+<a href="011.html#008" style="text-decoration : none;" target="right">　８.真の愛の完成</a><br/>
+<a href="011.html#009" style="text-decoration : none;" target="right">　９.真の愛の特権</a><br/>
+<a href="012.html" style="text-decoration : none;" target="right"><b>第四節　愛を中心とした終末の現象</b><br/>
+      　１.終末とはどのような時か</a><br/>
+<a href="012.html#002" style="text-decoration : none;" target="right">　２.終末の現象―青少年の堕落</a><br/>
+<a href="012.html#003" style="text-decoration : none;" target="right">　３.終末におけるサタンの正体</a><br/>
+<a href="012.html#004" style="text-decoration : none;" target="right">　４.世界的な分裂現象と統一運動</a><br/>
+<a href="012.html#005" style="text-decoration : none;" target="right">　５.青少年問題と統一教会</a><br/>
+<a href="012.html#006" style="text-decoration : none;" target="right">　６.真の愛の運動と統一教会</a><br/>
+<a href="012.html#007" style="text-decoration : none;" target="right">　７.終末における望みの中心</a><br/>
+<br/>
+<a href="013.html" style="text-decoration : none;" target="right"><b>第二章　真の父母と神の家庭</b><br/>
+<b>第一節　イエスと祝福</b><br/>
+      　１.メシヤは誰か</a><br/>
+<a href="013.html#002" style="text-decoration : none;" target="right">　２.イエス様と祝福</a><br/>
+<a href="013.html#003" style="text-decoration : none;" target="right">　３.本来のイエス様</a><br/>
+<a href="013.html#004" style="text-decoration : none;" target="right">　４.イエス様の恨み</a><br/>
+<a href="013.html#005" style="text-decoration : none;" target="right">　５.イエス様の祝福とキリスト教思想</a><br/>
+<a href="014.html" style="text-decoration : none;" target="right"><b>第二節　小羊の婚宴と最初の復活</b><br/>
+      　１.小羊の婚宴を通した神様の理想実現</a><br/>
+<a href="014.html#002" style="text-decoration : none;" target="right">　２.小羊の婚宴の意義</a><br/>
+<a href="014.html#003" style="text-decoration : none;" target="right">　３.小羊の婚宴は地上で成される</a><br/>
+<a href="014.html#004" style="text-decoration : none;" target="right">　４.宗教はなぜ、独身生活を強調してきたか</a><br/>
+<a href="014.html#005" style="text-decoration : none;" target="right">　５.最初の復活にあずかる者</a><br/>
+<a href="015.html" style="text-decoration : none;" target="right"><b>第三節　真の父母と真の子女</b><br/>
+      　１.真の父母とはどんな方か</a><br/>
+<a href="015.html#002" style="text-decoration : none;" target="right">　２.真の父母は全体の希望</a><br/>
+<a href="015.html#003" style="text-decoration : none;" target="right">　３.真の父母は歴史的希望の中心点</a><br/>
+<a href="015.html" style="text-decoration : none;" target="right">　４.人類歴史とは真の父母を迎えるためのもの</a><br/>
+<a href="015.html#005" style="text-decoration : none;" target="right">　５.偽りの父母と真の父母</a><br/>
+<a href="015.html#006" style="text-decoration : none;" target="right">　６.統一教会が主張すること</a><br/>
+<a href="015.html#007" style="text-decoration : none;" target="right">　７.真の父母の息子・娘になろうとすれば</a><br/>
+<a href="015.html#008" style="text-decoration : none;" target="right">　８.失われた心情を復帰すべき私たち</a><br/>
+<a href="015.html#009" style="text-decoration : none;" target="right">　９.歴史的な希望の日</a><br/>
+<a href="016.html" style="text-decoration : none;" target="right"><b>第四節　家庭を中心とした復帰摂理</b><br/>
+      　１.堕落人間の願い</a><br/>
+<a href="016.html#002" style="text-decoration : none;" target="right">　２.復帰摂理の最終目標</a><br/>
+<a href="016.html#003" style="text-decoration : none;" target="right">　３.家庭を中心とした復帰摂理</a><br/>
+<a href="016.html#004" style="text-decoration : none;" target="right">　４.復帰の家庭</a><br/>
+<a href="016.html#005" style="text-decoration : none;" target="right">　５.復帰の家庭になるには</a><br/>
+<a href="016.html#006" style="text-decoration : none;" target="right">　６.真の家庭主義と真の父母の宗教</a><br/>
+<br/>
+<a href="017.html" style="text-decoration : none;" target="right"><b>第三章　祝福の意義と価値</b><br/>
+<b>第一節　新生の根本原理</b><br/>
+      　１.メシヤが必要な理由</a><br/>
+<a href="017.html#002" style="text-decoration : none;" target="right">　２.再び生まれることの真の意味</a><br/>
+<a href="017.html#003" style="text-decoration : none;" target="right">　３.血統転換の意味</a><br/>
+<a href="017.html#004" style="text-decoration : none;" target="right">　４.重生（新生）しようとすれば</a><br/>
+<a href="018.html" style="text-decoration : none;" target="right"><b>第二節　新生と祝福の起源</b><br/>
+      　１.イスラエル民族を通した血統転換</a><br/>
+<a href="018.html#002" style="text-decoration : none;" target="right">　２.イエスと聖霊を通した重生の役事</a><br/>
+<a href="018.html#003" style="text-decoration : none;" target="right">　３.真の父母と真の子女を通した重生の役事</a><br/>
+<a href="018.html#004" style="text-decoration : none;" target="right">　４.歴史的犠牲の土台の上に成された祝福</a><br/>
+<a href="018.html#005" style="text-decoration : none;" target="right">　５.祝福の日は歴史的所願成就の日</a><br/>
+<a href="019.html" style="text-decoration : none;" target="right"><b>第三節　祝福の意義と価値</b><br/>
+      　１.祝福の意義</a><br/>
+<a href="019.html" style="text-decoration : none;" target="right">　２.祝福の価値</a><br/>
+<a href="019.html#003" style="text-decoration : none;" target="right">　３.祝福を受けるべき理由</a><br/>
+<a href="019.html#004" style="text-decoration : none;" target="right">　４.祝福は誰がしてくれるのか</a><br/>
+<a href="019.html#005" style="text-decoration : none;" target="right">　５.祝福は宇宙全体のためのものである</a><br/>
+<a href="019.html#006" style="text-decoration : none;" target="right">　６.合同結婚式を挙行する理由</a><br/>
+<a href="020.html" style="text-decoration : none;" target="right"><b>第四節　祝福を受けるための蕩減条件</b><br/>
+      　１.復活と蕩減条件</a><br/>
+<a href="020.html#002" style="text-decoration : none;" target="right">　２.蕩減条件は自分自身が立てなければならない</a><br/>
+<a href="020.html#003" style="text-decoration : none;" target="right">　３.サタン圏（堕落圏）を脱するには</a><br/>
+<a href="020.html#004" style="text-decoration : none;" target="right">　４.祝福を受けるための基台</a><br/>
+<a href="020.html#005" style="text-decoration : none;" target="right">　５.祝福を受けるための蕩減条件</a><br/>
+<a href="020.html#006" style="text-decoration : none;" target="right">　６.祝福を受けるための蕩減期間</a><br/>
+<a href="020.html#007" style="text-decoration : none;" target="right">　７.修練の過程と七日断食</a><br/>
+<a href="020.html#008" style="text-decoration : none;" target="right">　８.信仰の三子女</a><br/>
+<a href="020.html#009" style="text-decoration : none;" target="right">　９.祝福の本来の基準</a><br/>
+<a href="020.html#010" style="text-decoration : none;" target="right">　10.祝福を受けられる資格基準</a><br/>
+<a href="020.html#011" style="text-decoration : none;" target="right">　11.祝福を受けられるただ一つの資格</a><br/>
+<a href="020.html#012" style="text-decoration : none;" target="right">　12.私たちがもつべき信念と姿勢</a><br/>
+<br/>
+<a href="021.html" style="text-decoration : none;" target="right"><b>第四章　祝福の過程</b><br/>
+<b>第一節　祝福の相対の決定</b><br/>
+      　１.祝福の相対は誰が決めるか</a><br/>
+<a href="021.html#002" style="text-decoration : none;" target="right">　２.自分自身で相対を決定してはいけない</a><br/>
+<a href="021.html#003" style="text-decoration : none;" target="right">　３.どうすれば理想相対に結ばれるか</a><br/>
+<a href="021.html#004" style="text-decoration : none;" target="right">　４.相手はどこかにいるものである</a><br/>
+<a href="021.html#005" style="text-decoration : none;" target="right">　５.相対的に創造された男性と女性</a><br/>
+<a href="021.html#006" style="text-decoration : none;" target="right">　６.女性の美しさと男性の魅力</a><br/>
+<a href="021.html#007" style="text-decoration : none;" target="right">　７.女性と化粧</a><br/>
+<a href="021.html#008" style="text-decoration : none;" target="right">　８.恋愛は絶対許されない</a><br/>
+<a href="022.html" style="text-decoration : none;" target="right"><b>第二節　相対を結ぶ基準と私たちの姿勢</b><br/>
+      　１.組み合わせてくださるお父様の眼識</a><br/>
+<a href="022.html#002" style="text-decoration : none;" target="right">　２.極と極の調和を成さなければならない</a><br/>
+<a href="022.html#003" style="text-decoration : none;" target="right">　３.人間の四つの型と理想的均衡</a><br/>
+<a href="022.html#004" style="text-decoration : none;" target="right">　４.「目の峠」を越えられなければならない</a><br/>
+<a href="022.html#005" style="text-decoration : none;" target="right">　５.低くなろうとする者が高くなる</a><br/>
+<a href="022.html#006" style="text-decoration : none;" target="right">　６.学歴よりもっと重要な条件</a><br/>
+<a href="022.html#007" style="text-decoration : none;" target="right">　７.結婚は後孫のためにしなければならない</a><br/>
+<a href="022.html#008" style="text-decoration : none;" target="right">　８.約婚のための真の父母の苦労</a><br/>
+<a href="023.html" style="text-decoration : none;" target="right"><b>第三節　約婚事例</b><br/>
+      　事例１：自分のために祈祷する者</a><br/>
+<a href="023.html#002" style="text-decoration : none;" target="right">　事例２：写真結婚</a><br/>
+<a href="023.html#003" style="text-decoration : none;" target="right">　事例３：ある夫婦の話</a><br/>
+<a href="023.html#004" style="text-decoration : none;" target="right">　事例４：不具の一人の女性</a><br/>
+<a href="023.html#005" style="text-decoration : none;" target="right">　事例５：アメリカの精鋭の三人</a><br/>
+<a href="023.html#006" style="text-decoration : none;" target="right">　事例６：あるオランダ宣教師の信仰</a><br/>
+<a href="023.html#007" style="text-decoration : none;" target="right">　事例７：蕩減復帰のための祝福</a><br/>
+<a href="023.html#008" style="text-decoration : none;" target="right">　事例８：六〇〇〇双の約婚時にあったこと</a><br/>
+<a href="024.html" style="text-decoration : none;" target="right"><b>第四節　祝福の過程とその意義</b><br/>
+      　１.約婚式の意義</a><br/>
+<a href="024.html#002" style="text-decoration : none;" target="right">　２.聖酒式の成立過程と意義</a><br/>
+<a href="024.html#003" style="text-decoration : none;" target="right">　３.聖酒伝授の意義</a><br/>
+<a href="024.html#004" style="text-decoration : none;" target="right">　４.男性と女性の立場と復帰</a><br/>
+<a href="024.html#005" style="text-decoration : none;" target="right">　５.祝福式の意義</a><br/>
+<a href="024.html#006" style="text-decoration : none;" target="right">　６.四十日蕩減期間</a><br/>
+<a href="024.html#007" style="text-decoration : none;" target="right">　７.蕩減棒行事と三日行事</a><br/>
+<a href="024.html#008" style="text-decoration : none;" target="right">　８.祝福後の三年動員路程</a><br/>
+<a href="024.html#009" style="text-decoration : none;" target="right">　９.祝福は最後の道である</a><br/>
+<br/>
+<a href="025.html" style="text-decoration : none;" target="right"><b>第五章　完成のための公式路程</b><br/>
+<b>第一節　完成期七年公式路程</b><br/>
+      　１.三時代を一時に蕩減する七年路程</a><br/>
+<a href="025.html#002" style="text-decoration : none;" target="right">　２.七年大患難と七年路程</a><br/>
+<a href="025.html#003" style="text-decoration : none;" target="right">　３.祝福を受ける位置は完成した位置ではない</a><br/>
+<a href="025.html#004" style="text-decoration : none;" target="right">　４.父母の位置を復帰するための七年路程</a><br/>
+<a href="025.html#005" style="text-decoration : none;" target="right">　５.霊界と肉界を蕩減復帰するための七年期間</a><br/>
+<a href="025.html#006" style="text-decoration : none;" target="right">　６.ご父母様の七年路程と子女たちの七年路程</a><br/>
+<a href="025.html#007" style="text-decoration : none;" target="right">　７.個人的七年路程と家庭的七年路程</a><br/>
+<a href="025.html#008" style="text-decoration : none;" target="right">　８.家庭完成を要する時代</a><br/>
+<a href="025.html#009" style="text-decoration : none;" target="right">　９.摂理の先頭に立つべき女性</a><br/>
+<a href="026.html" style="text-decoration : none;" target="right"><b>第二節　再創造のための子女たちの責任分担</b><br/>
+      　１.再創造時に必要な条件</a><br/>
+<a href="026.html#002" style="text-decoration : none;" target="right">　２.再創造のための私たちの活動</a><br/>
+<a href="026.html#003" style="text-decoration : none;" target="right">　３.真の父母の愛の圏を相続するための訓練</a><br/>
+<a href="026.html#004" style="text-decoration : none;" target="right">　４.万物復帰</a><br/>
+<a href="026.html#005" style="text-decoration : none;" target="right">　５.神様を痛哭させうる内容</a><br/>
+<a href="026.html#006" style="text-decoration : none;" target="right">　６.月一人伝道の意義</a><br/>
+<a href="026.html#007" style="text-decoration : none;" target="right">　７.霊界生活のための地上訓練</a><br/>
+<a href="027.html" style="text-decoration : none;" target="right"><b>第三節　信仰の三子女を通した家庭復帰</b><br/>
+      　１.信仰の三子女</a><br/>
+<a href="027.html#002" style="text-decoration : none;" target="right">　２.八人の家族がいなければ復帰できない</a><br/>
+<a href="027.html#003" style="text-decoration : none;" target="right">　３.信仰の三子女を通した家庭編成</a><br/>
+<a href="027.html#004" style="text-decoration : none;" target="right">　４.家庭復帰のための公式路程</a><br/>
+<a href="027.html#005" style="text-decoration : none;" target="right">　５.信仰の子女と直系子女の関係</a><br/>
+<a href="027.html#006" style="text-decoration : none;" target="right">　６.復帰された父母の立場に立とうとすれば</a><br/>
+<a href="027.html#007" style="text-decoration : none;" target="right">　７.信仰の父母の使命と愛の公式</a><br/>
+<br/>
+<a href="028.html" style="text-decoration : none;" target="right"><b>第六章　ご父母様の聖婚と祝福家庭</b><br/>
+<b>第一節　ご父母様の聖婚と七年路程</b><br/>
+      　１.患難と迫害の最高峰になった聖婚式</a><br/>
+<a href="028.html#002" style="text-decoration : none;" target="right">　２.三弟子を先に探し立てたご父母様の聖婚式</a><br/>
+<a href="028.html#003" style="text-decoration : none;" target="right">　３.父母が責任をもち開拓する時代</a><br/>
+<a href="028.html#004" style="text-decoration : none;" target="right">　４.ご父母様の家庭的十字架路程</a><br/>
+<a href="028.html#005" style="text-decoration : none;" target="right">　５.お母様を通した七年路程</a><br/>
+<a href="028.html#006" style="text-decoration : none;" target="right">　６.一九六〇年代の摂理的標語</a><br/>
+<a href="028.html#007" style="text-decoration : none;" target="right">　７.三六、七二、一二四家庭の祝福</a><br/>
+<a href="028.html#008" style="text-decoration : none;" target="right">　８.失った日々を探し立てた期間</a><br/>
+<a href="029.html" style="text-decoration : none;" target="right"><b>第二節　祝福家庭に対する摂理的意義</b><br/>
+      　１.第三イスラエルの意義</a><br/>
+<a href="029.html#002" style="text-decoration : none;" target="right">　２.祝福家庭を通した第三イスラエル圏の編成</a><br/>
+<a href="029.html#003" style="text-decoration : none;" target="right">　３.三六家庭祝福の摂理的意義</a><br/>
+<a href="029.html#004" style="text-decoration : none;" target="right">　４.七二家庭祝福の摂理的意義</a><br/>
+<a href="029.html#005" style="text-decoration : none;" target="right">　５.一二四家庭祝福の摂理的意義</a><br/>
+<a href="029.html#006" style="text-decoration : none;" target="right">　６.四三〇家庭祝福の摂理的意義</a><br/>
+<a href="029.html#007" style="text-decoration : none;" target="right">　７.七七七家庭祝福の摂理的意義</a><br/>
+<a href="029.html#008" style="text-decoration : none;" target="right">　８.一八〇〇家庭祝福の意義</a><br/>
+<a href="029.html#009" style="text-decoration : none;" target="right">　９.六〇〇〇家庭祝福の意義</a><br/>
+<a href="030.html" style="text-decoration : none;" target="right"><b>第三節　祝福家庭の価値と使命</b><br/>
+      　１.祝福家庭の価値</a><br/>
+<a href="030.html#002" style="text-decoration : none;" target="right">　２.祝福家庭はご父母様の指導を受けなければならない</a><br/>
+<a href="030.html#003" style="text-decoration : none;" target="right">　３.祝福をしてくださった理由</a><br/>
+<a href="030.html#004" style="text-decoration : none;" target="right">　４.祝福家庭の使命と責任</a><br/>
+<a href="030.html#005" style="text-decoration : none;" target="right">　５.祭司長の使命を果たすべき祝福家庭</a><br/>
+<a href="030.html#006" style="text-decoration : none;" target="right">　６.三時代の使命に責任を負うべき祝福家庭</a><br/>
+<a href="030.html#007" style="text-decoration : none;" target="right">　７.氏族的メシヤとなれ</a><br/>
+<a href="030.html#008" style="text-decoration : none;" target="right">　８.既成祝福家庭の使命</a><br/>
+<a href="030.html#009" style="text-decoration : none;" target="right">　９.祝福家庭が行くべき必然的運命の道</a><br/>
+<a href="030.html#010" style="text-decoration : none;" target="right">　10.祝福を受けた夫婦が行くべき道</a><br/>
+<a href="030.html#011" style="text-decoration : none;" target="right">　11.世界的な家庭的カナン復帰</a><br/>
+<a href="030.html#012" style="text-decoration : none;" target="right">　12.新しい時代の主人になる者</a><br/>
+<a href="031.html" style="text-decoration : none;" target="right"><b>第四節　国際祝福家庭の使命</b><br/>
+      　１.神様を中心とした一つの世界主義</a><br/>
+<a href="031.html#002" style="text-decoration : none;" target="right">　２.すべての人類は一つの兄弟、一つの家族</a><br/>
+<a href="031.html#003" style="text-decoration : none;" target="right">　３.国際合同結婚式の意義</a><br/>
+<a href="031.html#004" style="text-decoration : none;" target="right">　４.東西文明の差異と国際結婚</a><br/>
+<a href="031.html#005" style="text-decoration : none;" target="right">　５.国際結婚時代の開幕</a><br/>
+<a href="031.html#006" style="text-decoration : none;" target="right">　６.国際祝福家庭の使命</a><br/>
+<br/>
+<a href="032.html" style="text-decoration : none;" target="right"><b>第七章　真の夫婦と理想家庭</b><br/>
+<b>第一節　真の夫婦</b><br/>
+      　１.創造本然の夫婦関係</a><br/>
+<a href="032.html#002" style="text-decoration : none;" target="right">　２.復帰されるべき真の夫婦の理想</a><br/>
+<a href="032.html#003" style="text-decoration : none;" target="right">　３.祝福を受けた夫婦の立場</a><br/>
+<a href="032.html" style="text-decoration : none;" target="right">　４.理想的夫婦</a><br/>
+<a href="032.html#005" style="text-decoration : none;" target="right">　５.夫婦の愛</a><br/>
+<a href="032.html#006" style="text-decoration : none;" target="right">　６.夫婦の運命の道</a><br/>
+<a href="032.html#007" style="text-decoration : none;" target="right">　７.愛する人が死ねばなぜ悲しいか</a><br/>
+<a href="032.html#008" style="text-decoration : none;" target="right">　８.真の夫婦の協助</a><br/>
+<a href="033.html" style="text-decoration : none;" target="right"><b>第二節　理想家庭</b><br/>
+      　１.理想家庭</a><br/>
+<a href="033.html#002" style="text-decoration : none;" target="right">　２.三時代が連結されている家庭</a><br/>
+<a href="033.html#003" style="text-decoration : none;" target="right">　３.家庭は真の愛の訓練道場</a><br/>
+<a href="033.html#004" style="text-decoration : none;" target="right">　４.家庭は天宙主義を完成する最終基準</a><br/>
+<a href="033.html#005" style="text-decoration : none;" target="right">　５.息子・娘をなぜ生まなければならないか</a><br/>
+<a href="033.html#006" style="text-decoration : none;" target="right">　６.祝福子女の価値</a><br/>
+<a href="033.html#007" style="text-decoration : none;" target="right">　７.家庭天国</a><br/>
+<a href="033.html#008" style="text-decoration : none;" target="right">　８.天国に入る秘訣</a><br/>
+<a href="034.html" style="text-decoration : none;" target="right"><b>第三節　祝福家庭の生活</b><br/>
+      　１.手本となるべき祝福家庭</a><br/>
+<a href="034.html#002" style="text-decoration : none;" target="right">　２.祝福家庭の家庭生活</a><br/>
+<a href="034.html#003" style="text-decoration : none;" target="right">　３.祝福家庭の夫婦生活</a><br/>
+<a href="034.html#004" style="text-decoration : none;" target="right">　４.祝福家庭のみ旨にかなう生活</a><br/>
+<a href="034.html#005" style="text-decoration : none;" target="right">　５.祝福家庭の信仰生活</a><br/>
+<a href="034.html#006" style="text-decoration : none;" target="right">　６.祝福家庭の侍る生活</a><br/>
+<a href="034.html#007" style="text-decoration : none;" target="right">　７.三位基台を中心とした生活</a><br/>
+<a href="034.html#008" style="text-decoration : none;" target="right">　８.祝福家庭の共同生活</a><br/>
+<a href="034.html#009" style="text-decoration : none;" target="right">　９.後孫が福を受ける道</a><br/>
+<a href="034.html#010" style="text-decoration : none;" target="right">　10.死ぬときも四位基台を備えなければならない</a><br/>
+<a href="035.html" style="text-decoration : none;" target="right"><b>第四節　真なる父母と子女</b><br/>
+      　１.真なる父母と子女</a><br/>
+<a href="035.html#002" style="text-decoration : none;" target="right">　２.真なる子女の道理</a><br/>
+<a href="035.html#003" style="text-decoration : none;" target="right">　３.伝統を相続してあげる父母となろう</a><br/>
+<a href="035.html#004" style="text-decoration : none;" target="right">　４.子女に対する父母の愛</a><br/>
+<a href="035.html#005" style="text-decoration : none;" target="right">　５.子供は父母の愛を受けなければならない</a><br/>
+<a href="035.html#006" style="text-decoration : none;" target="right">　６.愛のむち</a><br/>
+<a href="035.html#007" style="text-decoration : none;" target="right">　７.後孫のために精誠を尽くそう</a><br/>
+<a href="036.html" style="text-decoration : none;" target="right"><b>第五節　子女教育</b><br/>
+      　１.家庭教育</a><br/>
+<a href="036.html#002" style="text-decoration : none;" target="right">　２.真なる子女教育</a><br/>
+<a href="036.html#003" style="text-decoration : none;" target="right">　３.真なる愛国教育</a><br/>
+<a href="036.html#004" style="text-decoration : none;" target="right">　４.世界と共に生きることのできる教育</a><br/>
+<a href="036.html#005" style="text-decoration : none;" target="right">　５.信仰と勉強</a><br/>
+<a href="036.html#006" style="text-decoration : none;" target="right">　６.愛は学んで分かるものではない</a><br/>
+<a href="036.html#007" style="text-decoration : none;" target="right">　７.愛を中心とした人生行路</a><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<blockquote><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</blockquote>
+</div></body>
+<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
 </body>
 </html>
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

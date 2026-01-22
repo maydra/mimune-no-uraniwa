@@ -1,194 +1,577 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>真の父母 | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<title>真の父母</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>真の父母</h1><div class="index-list"><div class="chapter-item"><a href="1001010015.html" class="chapter-link">真の父母という言葉の意味</a><ul class="section-list"><li class="section-item"><a href="1001010015.html#002" class="section-link">一、真の父母とは</a></li></ul></div><div class="chapter-item"><a href="1001020016.html" class="chapter-link">「真」とは</a><ul class="section-list"><li class="section-item"><a href="1001020016.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1001020016.html#002" class="section-link">二）真の起源</a></li></ul></div><div class="chapter-item"><a href="1001030019.html" class="chapter-link">真の起源</a><ul class="section-list"><li class="section-item"><a href="1001030019.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1001040022.html" class="chapter-link">真の原器</a><ul class="section-list"><li class="section-item"><a href="1001040022.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1001050027.html" class="chapter-link">真と真の愛</a><ul class="section-list"><li class="section-item"><a href="1001050027.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1001060030.html" class="chapter-link">二つの石板と真の父母</a><ul class="section-list"><li class="section-item"><a href="1001060030.html#002" class="section-link">五）真の父母は何か</a></li></ul></div><div class="chapter-item"><a href="1001070032.html" class="chapter-link">真の父母の定義</a></div><div class="chapter-item"><a href="1001080037.html" class="chapter-link">真の父母は人格の実体</a></div><div class="chapter-item"><a href="1001090040.html" class="chapter-link">真の父母という言葉は貴い</a><ul class="section-list"><li class="section-item"><a href="1001090040.html#002" class="section-link">六）我々が知るべき「真の父母」の語義</a></li></ul></div><div class="chapter-item"><a href="1001100041.html" class="chapter-link">真の父母という言葉は誇るべきでありとてつもない</a></div><div class="chapter-item"><a href="1001110043.html" class="chapter-link">真の父母という言葉は驚くべき言葉</a></div><div class="chapter-item"><a href="1001120045.html" class="chapter-link">真の父母という言葉は恐ろしい言葉</a></div><div class="chapter-item"><a href="1002010047.html" class="chapter-link">堕落と真の父母</a><ul class="section-list"><li class="section-item"><a href="1002010047.html#002" class="section-link">二、メシアと真の父母</a></li></ul></div><div class="chapter-item"><a href="1002020049.html" class="chapter-link">歴史の願い</a><ul class="section-list"><li class="section-item"><a href="1002020049.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1002030051.html" class="chapter-link">歴史と真の父母</a></div><div class="chapter-item"><a href="1002040052.html" class="chapter-link">復帰摂理歴史は真の父母を探すための歴史</a></div><div class="chapter-item"><a href="1002050057.html" class="chapter-link">メシアは真の父母である</a><ul class="section-list"><li class="section-item"><a href="1002050057.html#002" class="section-link">二）メシアは真の父母</a></li></ul></div><div class="chapter-item"><a href="1002060058.html" class="chapter-link">メシアの顕現過程</a><ul class="section-list"><li class="section-item"><a href="1002060058.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1002070061.html" class="chapter-link">メシアの使命</a><ul class="section-list"><li class="section-item"><a href="1002070061.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1002080064.html" class="chapter-link">イエス様と真の父母</a></div><div class="chapter-item"><a href="1002090065.html" class="chapter-link">準備すべきメシアを迎えること</a><ul class="section-list"><li class="section-item"><a href="1002090065.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1002090065.html#002" class="section-link">四）再臨と真の父母</a></li></ul></div><div class="chapter-item"><a href="1002100067.html" class="chapter-link">再臨主のすべきこと</a><ul class="section-list"><li class="section-item"><a href="1002100067.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1003010071.html" class="chapter-link">普遍的父母も必要</a><ul class="section-list"><li class="section-item"><a href="1003010071.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1003010071.html#002" class="section-link">三、真の父母の必要性</a></li></ul></div><div class="chapter-item"><a href="1003020072.html" class="chapter-link">世の中の父母と真の父母</a></div><div class="chapter-item"><a href="1003030076.html" class="chapter-link">真の父母が来るべき理由</a></div><div class="chapter-item"><a href="1003040077.html" class="chapter-link">真の父母出現の前提条件</a></div><div class="chapter-item"><a href="1003050078.html" class="chapter-link">真の血統は真の父母を通じてこそ</a></div><div class="chapter-item"><a href="1003060079.html" class="chapter-link">真の父母が絶対必要な理由</a></div><div class="chapter-item"><a href="1003070083.html" class="chapter-link">真の父母決定は先見的予知予定圏</a><ul class="section-list"><li class="section-item"><a href="1003070083.html#002" class="section-link">七）真の父母の決定は先見的予知予定圏</a></li></ul></div><div class="chapter-item"><a href="1003080084.html" class="chapter-link">選挙で選出できない真の父母</a></div><div class="chapter-item"><a href="1004010087.html" class="chapter-link">真の父母の立場</a><ul class="section-list"><li class="section-item"><a href="1004010087.html#002" class="section-link">四、真の父母の使命</a></li></ul></div><div class="chapter-item"><a href="1004020089.html" class="chapter-link">真の父母の道</a></div><div class="chapter-item"><a href="1004030092.html" class="chapter-link">真の父母になる前の過程</a></div><div class="chapter-item"><a href="1004040098.html" class="chapter-link">真の父母の権限と使命</a></div><div class="chapter-item"><a href="1004050102.html" class="chapter-link">真の父母の愛</a></div><div class="chapter-item"><a href="1005010105.html" class="chapter-link">「天」の字と「父母」の字のもう一つの意味</a><ul class="section-list"><li class="section-item"><a href="1005010105.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1005010105.html#002" class="section-link">五、天国と真の父母</a></li></ul></div><div class="chapter-item"><a href="1005020107.html" class="chapter-link">地で真の父母に侍るべき理由</a></div><div class="chapter-item"><a href="1005030109.html" class="chapter-link">天国は真の父母を通じてこそ可能</a></div><div class="chapter-item"><a href="1005040112.html" class="chapter-link">天国と真の愛</a><ul class="section-list"><li class="section-item"><a href="1005040112.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1005050114.html" class="chapter-link">真の父母と永生</a></div><div class="chapter-item"><a href="1005060116.html" class="chapter-link">真の父母と国</a></div><div class="chapter-item"><a href="1006010121.html" class="chapter-link">父母哲学</a><ul class="section-list"><li class="section-item"><a href="1006010121.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1006010121.html#002" class="section-link">六、真の父母と我々</a></li></ul></div><div class="chapter-item"><a href="1006020123.html" class="chapter-link">真なる家庭・宇宙の中心を決定</a><ul class="section-list"><li class="section-item"><a href="1006020123.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1006020123.html#002" class="section-link">A 真なる家庭\宇宙の中心を決定</a></li></ul></div><div class="chapter-item"><a href="1006030125.html" class="chapter-link">神様の愛と真の父母の愛</a></div><div class="chapter-item"><a href="1006040126.html" class="chapter-link">父母と食口</a><ul class="section-list"><li class="section-item"><a href="1006040126.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1006050128.html" class="chapter-link">真の父母の在世時の価値</a></div><div class="chapter-item"><a href="1006060133.html" class="chapter-link">真の父母は我々に絶対必要</a><ul class="section-list"><li class="section-item"><a href="1006060133.html#002" class="section-link">三）真の父母の苦労と我々</a></li></ul></div><div class="chapter-item"><a href="1006070133.html" class="chapter-link">我々は真の父母に接ぎ木された枝</a></div><div class="chapter-item"><a href="1006080137.html" class="chapter-link">我々のための真の父母の苦労</a></div><div class="chapter-item"><a href="1006090137.html" class="chapter-link">我々に対する真の父母の期待</a></div><div class="chapter-item"><a href="1006100139.html" class="chapter-link">我々がなるべき水準</a><ul class="section-list"><li class="section-item"><a href="1006100139.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1006110141.html" class="chapter-link">真の父母という言葉は初めて現れた言葉</a><ul class="section-list"><li class="section-item"><a href="1006110141.html#002" class="section-link">四）恩寵と自覚</a></li></ul></div><div class="chapter-item"><a href="1006120142.html" class="chapter-link">真の父母という言葉は福音中の福音</a></div><div class="chapter-item"><a href="1006140145.html" class="chapter-link">その価値は限りない</a><ul class="section-list"><li class="section-item"><a href="1006140145.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1006150149.html" class="chapter-link">感謝すべき我々</a><ul class="section-list"><li class="section-item"><a href="1006150149.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1006160152.html" class="chapter-link">真の父母との因縁は宿命的な業</a></div><div class="chapter-item"><a href="1006170153.html" class="chapter-link">責任を持つべき我々</a><ul class="section-list"><li class="section-item"><a href="1006170153.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1006180155.html" class="chapter-link">我々の責任</a><ul class="section-list"><li class="section-item"><a href="1006180155.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1006180155.html#002" class="section-link">五）我々のすべきこと</a></li></ul></div><div class="chapter-item"><a href="1006190158.html" class="chapter-link">我々の使命</a><ul class="section-list"><li class="section-item"><a href="1006190158.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1006200160.html" class="chapter-link">自己主張不可</a><ul class="section-list"><li class="section-item"><a href="1006200160.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1006200160.html#002" class="section-link">六）生命視すべきこと</a></li></ul></div><div class="chapter-item"><a href="1006210165.html" class="chapter-link">一つになるべし</a><ul class="section-list"><li class="section-item"><a href="1006210165.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1006220166.html" class="chapter-link">真の父母を愛すべし</a></div><div class="chapter-item"><a href="1006230167.html" class="chapter-link">真の父母に侍るべし</a></div><div class="chapter-item"><a href="1006240168.html" class="chapter-link">従順であるべし</a><ul class="section-list"><li class="section-item"><a href="1006240168.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1006250168.html" class="chapter-link">伝統を受け継ぐべし</a><ul class="section-list"><li class="section-item"><a href="1006250168.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1006260171.html" class="chapter-link">真の父母を誇るべし</a></div><div class="chapter-item"><a href="1006270172.html" class="chapter-link">真の父母に借りを返すべし</a></div><div class="chapter-item"><a href="1007010173.html" class="chapter-link">真の父母の日と真の父母</a><ul class="section-list"><li class="section-item"><a href="1007010173.html#002" class="section-link">七、真の父母を中心とした生活</a></li></ul></div><div class="chapter-item"><a href="1007020175.html" class="chapter-link">真の父母という言葉を完全に知るべし</a></div><div class="chapter-item"><a href="1007030177.html" class="chapter-link">真の父母の言語を習え</a></div><div class="chapter-item"><a href="1007040179.html" class="chapter-link">民謡の中の啓示</a><ul class="section-list"><li class="section-item"><a href="1007040179.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1007050184.html" class="chapter-link">真の父母の名で祈祷</a></div><div class="chapter-item"><a href="1007060185.html" class="chapter-link">真の父母の名の威力</a></div><div class="chapter-item"><a href="1007070186.html" class="chapter-link">真の父母の名でいつまでも栄光</a></div><div class="chapter-item"><a href="1007080187.html" class="chapter-link">心情の伝授　…　187</a><ul class="section-list"><li class="section-item"><a href="1007080187.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1007080187.html#002" class="section-link">八）真の父母の心情伝授と相続</a></li></ul></div><div class="chapter-item"><a href="1007090189.html" class="chapter-link">息子娘は父母のものを相続</a><ul class="section-list"><li class="section-item"><a href="1007090189.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1007100191.html" class="chapter-link">留意すべき内容</a><ul class="section-list"><li class="section-item"><a href="1007100191.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1008010193.html" class="chapter-link">三大主体思想は我々の願い</a><ul class="section-list"><li class="section-item"><a href="1008010193.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1008010193.html#002" class="section-link">八、三大主体思想と真の父母宣布</a></li></ul></div><div class="chapter-item"><a href="1008020194.html" class="chapter-link">三大主体思想は真の父母思想</a></div><div class="chapter-item"><a href="1008030195.html" class="chapter-link">三大主体思想の骨子</a><ul class="section-list"><li class="section-item"><a href="1008030195.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1008040196.html" class="chapter-link">父母主義</a><ul class="section-list"><li class="section-item"><a href="1008040196.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1008050198.html" class="chapter-link">真の父母宣布の背景</a><ul class="section-list"><li class="section-item"><a href="1008050198.html#002" class="section-link">二）真の父母宣布</a></li></ul></div><div class="chapter-item"><a href="1008060199.html" class="chapter-link">真の父母宣布の基準</a></div><div class="chapter-item"><a href="1008070202.html" class="chapter-link">真の父母宣布の場所</a></div><div class="chapter-item"><a href="1008080202.html" class="chapter-link">真の父母宣布後現れた現象</a></div><div class="chapter-item"><a href="1008090210.html" class="chapter-link">真の父母宣布は驚くべき事実</a></div><div class="chapter-item"><a href="1008100212.html" class="chapter-link">真の父母宣布後我々の処世の方向</a></div><div class="chapter-item"><a href="1008110220.html" class="chapter-link">真の父母宣布後我々のすべきこと</a></div><div class="chapter-item"><a href="1008120228.html" class="chapter-link">北の父母と南の真の父母</a></div><div class="chapter-item"><a href="1008130230.html" class="chapter-link">宗主たちと真の父母</a></div><div class="chapter-item"><a href="1008140233.html" class="chapter-link">本来はアダム家庭が王宮出発地</a><ul class="section-list"><li class="section-item"><a href="1008140233.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1008140233.html#002" class="section-link">三）真の父母宣布と王権</a></li></ul></div><div class="chapter-item"><a href="1008150235.html" class="chapter-link">王権設定</a><ul class="section-list"><li class="section-item"><a href="1008150235.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1008160237.html" class="chapter-link">王権復帰</a><ul class="section-list"><li class="section-item"><a href="1008160237.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1008170239.html" class="chapter-link">先生が真の父母であられる</a></div><div class="chapter-item"><a href="1008180243.html" class="chapter-link">父母様の写真を奉る理由</a><ul class="section-list"><li class="section-item"><a href="1008180243.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1008180243.html#002" class="section-link">四）父母様の写真を奉ること</a></li></ul></div><div class="chapter-item"><a href="1008190246.html" class="chapter-link">父母様の写真の威力</a><ul class="section-list"><li class="section-item"><a href="1008190246.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1009010253.html" class="chapter-link">父母圏設定のための宗族的メシアの使命</a><ul class="section-list"><li class="section-item"><a href="1009010253.html#001" class="section-link">真の父母</a></li><li class="section-item"><a href="1009010253.html#002" class="section-link">九、真の父母に関係した指示のみ言</a></li></ul></div><div class="chapter-item"><a href="1009020254.html" class="chapter-link">王権復帰と天上地上天国還元</a><ul class="section-list"><li class="section-item"><a href="1009020254.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1009030255.html" class="chapter-link">真の父母侍衛と世界国家</a></div><div class="chapter-item"><a href="1009040257.html" class="chapter-link">真の愛創造理想と神権時代</a><ul class="section-list"><li class="section-item"><a href="1009040257.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1009050258.html" class="chapter-link">真の父母圏主体</a><ul class="section-list"><li class="section-item"><a href="1009050258.html#002" class="section-link">二）一九九一年一〇月二〇日の指示のみ言</a></li></ul></div><div class="chapter-item"><a href="1009060262.html" class="chapter-link">真の王権主体</a><ul class="section-list"><li class="section-item"><a href="1009060262.html#001" class="section-link">真の父母</a></li></ul></div><div class="chapter-item"><a href="1009070264.html" class="chapter-link">本然的我々の価値</a><ul class="section-list"><li class="section-item"><a href="1009070264.html#001" class="section-link">真の父母</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+<body><div class="container">
+<h1>真の父母</h1>
+<body alink="#000000" background="b014bcg.gif" link="#000000" vlink="#000000">
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<div align="left"><!--#geoguide--></div>
+<hr/>
+<b>　　真の父母</b><br/>
+<hr/>
+
+
+
+
+一　真の父母とは　…　15
+<p>　一）<a href="1001010015.html" target="right">真の父母という言葉の意味</a>　…　15<br/>
+      　二）真の起源　…　16 <br/>
+      　　・<a href="1001020016.html" target="right">「真」とは</a>　…　16
+<br/>
+      　　・<a href="1001030019.html" target="right">真の起源</a>　…　19<br/>
+      　三）<a href="1001040022.html" target="right">真の原器</a>　…　22<br/>
+      　四）<a href="1001050027.html" target="right">真と真の愛</a>　…　27<br/>
+      　五）真の父母は何か　…　30 <br/>
+      　　・<a href="1001060030.html" target="right">二つの石板と真の父母</a>　…　30
+<br/>
+      　　・<a href="1001070032.html" target="right">真の父母の定義</a>　…　32
+<br/>
+      　　・<a href="1001080037.html" target="right">真の父母は人格の実体</a>　…　37<br/>
+      　六）我々が知るべき「真の父母」の語義　…　40 <br/>
+      　　・<a href="1001090040.html" target="right">真の父母という言葉は貴い</a>　…　40
+<br/>
+      　　・<a href="1001100041.html" target="right">真の父母という言葉は誇るべきでありとてつもない</a>　…　41
+<br/>
+      　　・<a href="1001110043.html" target="right">真の父母という言葉は驚くべき言葉</a>　…　43
+<br/>
+      　　・<a href="1001120045.html" target="right">真の父母という言葉は恐ろしい言葉</a>　…　45
+<p>二　メシアと真の父母　…　47<br/>
+      　一）歴史と真の父母　…　47 <br/>
+      　　・<a href="1002010047.html" target="right">堕落と真の父母</a>　…　47
+<br/>
+      　　・<a href="1002020049.html" target="right">歴史の願い</a>　…　49
+<br/>
+      　　・<a href="1002030051.html" target="right">歴史と真の父母</a>　…　51
+<br/>
+      　　・<a href="1002040052.html" target="right">復帰摂理歴史は真の父母を探すための歴史</a>　…　52<br/>
+      　二）メシアは真の父母　…　57 <br/>
+      　　・<a href="1002050057.html" target="right">メシアは真の父母である</a>　…　57
+<br/>
+      　　・<a href="1002060058.html" target="right">メシアの顕現過程</a>　…　58
+<br/>
+      　　・<a href="1002070061.html" target="right">メシアの使命</a>　…　61<br/>
+      　三）<a href="1002080064.html" target="right">イエス様と真の父母</a>　…　64<br/>
+      　四）再臨と真の父母　…　65 <br/>
+      　　・<a href="1002090065.html" target="right">準備すべきメシアを迎えること</a>　…　65
+<br/>
+      　　・<a href="1002100067.html" target="right">再臨主のすべきこと</a>　…　67
+<p>三　真の父母の必要性　…　71<br/>
+      　一）<a href="1003010071.html" target="right">普遍的父母も必要</a>　…　71<br/>
+      　二）<a href="1003020072.html" target="right">世の中の父母と真の父母</a>　…　72<br/>
+      　三）<a href="1003030076.html" target="right">真の父母が来るべき理由</a>　…　76<br/>
+      　四）<a href="1003040077.html" target="right">真の父母出現の前提条件</a>　…　77<br/>
+      　五）<a href="1003050078.html" target="right">真の血統は真の父母を通じてこそ</a>　…　78<br/>
+      　六）<a href="1003060079.html" target="right">真の父母が絶対必要な理由</a>　…　79<br/>
+      　七）<a href="1003070083.html" target="right">真の父母決定は先見的予知予定圏</a>　…　83<br/>
+      　八）<a href="1003080084.html" target="right">選挙で選出できない真の父母</a>　…　84
+<p>四　真の父母の使命　…　87<br/>
+      　一）<a href="1004010087.html" target="right">真の父母の立場</a>　…　87<br/>
+      　二）<a href="1004020089.html" target="right">真の父母の道</a>　…　89<br/>
+      　三）<a href="1004030092.html" target="right">真の父母になる前の過程</a>　…　92<br/>
+      　四）<a href="1004040098.html" target="right">真の父母の権限と使命</a>　…　98<br/>
+      　五）<a href="1004050102.html" target="right">真の父母の愛</a>　…　102
+<br/>
+      　<br/>
+      五　天国と真の父母　…　105<br/>
+      　一）<a href="1005010105.html" target="right">「天」の字と「父母」の字のもう一つの意味</a>　…　105<br/>
+      　二）<a href="1005020107.html" target="right">地で真の父母に侍るべき理由</a>　…　107<br/>
+      　三）<a href="1005030109.html" target="right">天国は真の父母を通じてこそ可能</a>　…　109<br/>
+      　四）<a href="1005040112.html" target="right">天国と真の愛</a>　…　112<br/>
+      　五）<a href="1005050114.html" target="right">真の父母と永生</a>　…　114<br/>
+      　六）<a href="1005060116.html" target="right">真の父母と国</a>　…　116
+<p>六　真の父母と我々　…　121<br/>
+      　一）統一教会の教えの核心　…　121 <br/>
+      　　・<a href="1006010121.html" target="right">父母哲学</a>　…　121
+<br/>
+      　　・<a href="1006020123.html" target="right">真なる家庭・宇宙の中心を決定</a>　…　123
+<br/>
+      　　・<a href="1006030125.html" target="right">神様の愛と真の父母の愛</a>　…　125
+<br/>
+      　　・<a href="1006040126.html" target="right">父母と食口</a>　…　126<br/>
+      　二）<a href="1006050128.html" target="right">真の父母の在世時の価値</a>　…　128<br/>
+      　三）真の父母の苦労と我々　…　133 <br/>
+      　　・<a href="1006060133.html" target="right">真の父母は我々に絶対必要</a>　…　133
+<br/>
+      　　・<a href="1006070133.html" target="right">我々は真の父母に接ぎ木された枝</a>　…　133
+<br/>
+      　　・<a href="1006080137.html" target="right">我々のための真の父母の苦労</a>　…　137
+<br/>
+      　　・<a href="1006090137.html" target="right">我々に対する真の父母の期待</a>　…　137
+<br/>
+      　　・<a href="1006100139.html" target="right">我々がなるべき水準</a>　…　139<br/>
+      　四）恩寵と自覚　…　141 <br/>
+      　　・<a href="1006110141.html" target="right">真の父母という言葉は初めて現れた言葉</a>　…　141
+<br/>
+      　　・<a href="1006120142.html" target="right">真の父母という言葉は福音中の福音</a>　…　142
+<br/>
+      　　・<a href="1001120045.html" target="right">真の父母で未来が保障</a>　…　145
+<br/>
+      　　・<a href="1006140145.html" target="right">その価値は限りない</a>　…　145
+<br/>
+      　　・<a href="1006150149.html" target="right">感謝すべき我々</a>　…　149
+<br/>
+      　　・<a href="1006160152.html" target="right">真の父母との因縁は宿命的な業</a>　…　152
+<br/>
+      　　・<a href="1006170153.html" target="right">責任を持つべき我々</a>　…　153<br/>
+      　五）我々のすべきこと　…　155 <br/>
+      　　・<a href="1006180155.html" target="right">我々の責任</a>　…　155
+<br/>
+      　　・<a href="1006190158.html" target="right">我々の使命</a>　…　158<br/>
+      　六）生命視すべきこと　…　160 <br/>
+      　　・<a href="1006200160.html" target="right">自己主張不可</a>　…　160
+<br/>
+      　　・<a href="1006210165.html" target="right">一つになるべし</a>　…　165
+<br/>
+      　　・<a href="1006220166.html" target="right">真の父母を愛すべし</a>　…　166
+<br/>
+      　　・<a href="1006230167.html" target="right">真の父母に侍るべし</a>　…　167
+<br/>
+      　　・<a href="1006240168.html" target="right">従順であるべし</a>　…　168
+<br/>
+      　　・<a href="1006250168.html" target="right">伝統を受け継ぐべし</a>　…　168
+<br/>
+      　　・<a href="1006260171.html" target="right">真の父母を誇るべし</a>　…　171
+<br/>
+      　　・<a href="1006270172.html" target="right">真の父母に借りを返すべし</a>　…　172
+<p>七　真の父母を中心とした生活　…　173<br/>
+      　一）<a href="1007010173.html" target="right">真の父母の日と真の父母</a>　…　173<br/>
+      　二）<a href="1007020175.html" target="right">真の父母という言葉を完全に知るべし</a>　…　175<br/>
+      　三）<a href="1007030177.html" target="right">真の父母の言語を習え</a>　…　177<br/>
+      　四）<a href="1007040179.html" target="right">民謡の中の啓示</a>　…　179<br/>
+      　五）<a href="1007050184.html" target="right">真の父母の名で祈祷</a>　…　184<br/>
+      　六）<a href="1007060185.html" target="right">真の父母の名の威力</a>　…　185<br/>
+      　七）<a href="1007070186.html" target="right">真の父母の名でいつまでも栄光</a>　…　186<br/>
+      　八）真の父母の心情伝授と相続　…　187 <br/>
+      　　・<a href="1007080187.html" target="right">心情の伝授　…　187</a>
+<br/>
+      　　・<a href="1007090189.html" target="right">息子娘は父母のものを相続</a>　…　189<br/>
+      　九）<a href="1007100191.html" target="right">留意すべき内容</a>　…　191
+<p>八　三大主体思想と真の父母宣布　…　193<br/>
+      　一）三大主体思想と父母主義　…　193 <br/>
+      　　・<a href="1008010193.html" target="right">三大主体思想は我々の願い</a>　…　193
+<br/>
+      　　・<a href="1008020194.html" target="right">三大主体思想は真の父母思想</a>　…　194
+<br/>
+      　　・<a href="1008030195.html" target="right">三大主体思想の骨子</a>　…　195
+<br/>
+      　　・<a href="1008040196.html" target="right">父母主義</a>　…　196<br/>
+      　二）真の父母宣布　…　198 <br/>
+      　　・<a href="1008050198.html" target="right">真の父母宣布の背景</a>　…　198
+<br/>
+      　　・<a href="1008060199.html" target="right">真の父母宣布の基準</a>　…　199
+<br/>
+      　　・<a href="1008070202.html" target="right">真の父母宣布の場所</a>　…　202
+<br/>
+      　　・<a href="1008080202.html" target="right">真の父母宣布後現れた現象</a>　…　202
+<br/>
+      　　　イ) 八定式発表で急変する今日の世界　…　202
+<br/>
+      　　　ロ) 悪魔の勢力は死亡圏に進入　…　204
+<br/>
+      　　　ハ) 統一の運勢圏到来　…　204
+<br/>
+      　　　ニ) 将来には戦いがない　…　209
+<br/>
+      　　・<a href="1008090210.html" target="right">真の父母宣布は驚くべき事実</a>　…　210
+<br/>
+      　　・<a href="1008100212.html" target="right">真の父母宣布後我々の処世の方向</a>　…　212
+<br/>
+      　　・<a href="1008110220.html" target="right">真の父母宣布後我々のすべきこと</a>　…　220
+<br/>
+      　　　イ) 宣布の前に感謝しよう　…　220
+<br/>
+      　　 ロ) 実績を積むこと　…　223
+<br/>
+      　　 ハ) 真の父母歓迎大会開催　…　224
+<br/>
+      　　・<a href="1008120228.html" target="right">北の父母と南の真の父母</a>　…　228
+<br/>
+      　　・<a href="1008130230.html" target="right">宗主たちと真の父母</a>　…　230<br/>
+      　三）真の父母宣布と王権　…　233 <br/>
+      　　・<a href="1008140233.html" target="right">本来はアダム家庭が王宮出発地</a>　…　233
+<br/>
+      　　・<a href="1008150235.html" target="right">王権設定</a>　…　235
+<br/>
+      　　・<a href="1008160237.html" target="right">王権復帰</a>　…　237
+<br/>
+      　　・<a href="1008170239.html" target="right">先生が真の父母であられる</a>　…　239<br/>
+      　四）父母様の写真を奉ること　…　243 <br/>
+      　　・<a href="1008180243.html" target="right">父母様の写真を奉る理由</a>　…　243
+<br/>
+      　　・<a href="1008190246.html" target="right">父母様の写真の威力</a>　…　246<br/>
+<br/>
+      九　真の父母に関係した指示のみ言　…　253<br/>
+      　一）一九九一年七月一日のみ言　…　253 <br/>
+      　　・<a href="1009010253.html" target="right">父母圏設定のための宗族的メシアの使命</a>　…　253
+<br/>
+      　　・<a href="1009020254.html" target="right">王権復帰と天上地上天国還元</a>　…　254
+<br/>
+      　　・<a href="1009030255.html" target="right">真の父母侍衛と世界国家</a>　…　255
+<br/>
+      　　・<a href="1009040257.html" target="right">真の愛創造理想と神権時代</a>　…　257<br/>
+      　二）一九九一年一〇月二〇日の指示のみ言　…　258 <br/>
+      　　・<a href="1009050258.html" target="right">真の父母圏主体</a>　…　258
+<br/>
+      　　・<a href="1009060262.html" target="right">真の王権主体</a>　…　262
+<br/>
+      　　・<a href="1009070264.html" target="right">本然的我々の価値</a>　…　264
+<br/>
+      　　　イ) 祖父母は神様の代わり　…　265
+<br/>
+      　　　ロ) 父母は現在の王　…　265
+<br/>
+      　　　ハ) 子女は未来の王　…　266
+</p></p></p></p></p></p></p>
+<br/>
+
+
+
+
+
+
+
+
+
 </div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script></body>
+<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body>
 </html>
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

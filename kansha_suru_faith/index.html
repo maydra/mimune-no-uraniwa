@@ -1,194 +1,409 @@
+
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>感謝する信仰 - 総合 | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+  <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+<meta charset="utf-8"/>
+<title>感謝する信仰 - 総合目次</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>感謝する信仰 - 総合</h1><div class="index-list"><div class="chapter-item"><a href="001.html" class="chapter-link">推薦の言葉</a></div><div class="chapter-item"><a href="002.html" class="chapter-link">あいさつ</a></div><div class="chapter-item"><a href="003.html" class="chapter-link">第一章 従順に従ってきたみ旨の道</a><ul class="section-list"><li class="section-item"><a href="003.html#001" class="section-link">召命されたみ旨に従って</a></li><li class="section-item"><a href="003.html#002" class="section-link">あらかじめ定められた信仰の中に育つ</a></li><li class="section-item"><a href="003.html#003" class="section-link">「淫乱で非難される所に行け」</a></li><li class="section-item"><a href="003.html#004" class="section-link">牧会の一戦に出て行く</a></li><li class="section-item"><a href="003.html#005" class="section-link">慶尚南道地区を受け持って</a></li><li class="section-item"><a href="003.html#006" class="section-link">全北(全羅北道)地区で情熱を注ぐ</a></li><li class="section-item"><a href="003.html#007" class="section-link">先生の家庭に似ようと努力する</a></li><li class="section-item"><a href="003.html#008" class="section-link">いくつかの分野の使命を担当する</a></li><li class="section-item"><a href="003.html#009" class="section-link">教会部長から開拓教会長に</a></li><li class="section-item"><a href="003.html#010" class="section-link">信仰の系譜</a></li><li class="section-item"><a href="003.html#011" class="section-link">祖母の啓示による信仰の雰囲気の中で成長する</a></li><li class="section-item"><a href="003.html#012" class="section-link">開拓伝道の出発</a></li><li class="section-item"><a href="003.html#013" class="section-link">監理教会の勧士を伝道する</a></li><li class="section-item"><a href="003.html#014" class="section-link">平凡な生活の中の非凡な教訓</a></li><li class="section-item"><a href="003.html#015" class="section-link">徹夜登山強行軍</a></li><li class="section-item"><a href="003.html#016" class="section-link">試練と苦痛の後に来る恩恵</a></li><li class="section-item"><a href="003.html#017" class="section-link">心に尋ねて生活しなければ</a></li><li class="section-item"><a href="003.html#018" class="section-link">私の家庭生活</a></li><li class="section-item"><a href="003.html#019" class="section-link">成和青年時代の活動　（一九七七年九月二十九日）</a></li><li class="section-item"><a href="003.html#020" class="section-link">先生と友なる青年時代（一九八〇年四月二十二日）</a></li><li class="section-item"><a href="003.html#021" class="section-link">私のマグロ釣り（一九八〇年九月二十九日）</a></li></ul></div><div class="chapter-item"><a href="004.html" class="chapter-link">第二章 神様になりましょう</a><ul class="section-list"><li class="section-item"><a href="004.html#002" class="section-link">天国に行きたいですか</a></li><li class="section-item"><a href="004.html#003" class="section-link">韓国のクリスチャンの信仰</a></li><li class="section-item"><a href="004.html#004" class="section-link">ヒュゴ</a></li><li class="section-item"><a href="004.html#005" class="section-link">祝福を受ける前と受けた後と</a></li><li class="section-item"><a href="004.html#006" class="section-link">キリスト教の歴史</a></li><li class="section-item"><a href="004.html#007" class="section-link">地獄から天国を創る</a></li><li class="section-item"><a href="004.html#008" class="section-link">問題は私たちの心</a></li><li class="section-item"><a href="004.html#009" class="section-link">再臨主に対する絶対的信仰</a></li><li class="section-item"><a href="004.html#010" class="section-link">お父様の立場</a></li><li class="section-item"><a href="004.html#011" class="section-link">原理講論を読みましょう</a></li><li class="section-item"><a href="004.html#012" class="section-link">三大祝福の完成</a></li><li class="section-item"><a href="004.html#013" class="section-link">個性完成した人の生活</a></li><li class="section-item"><a href="004.html#014" class="section-link">ご父母様は愛そのものです</a></li><li class="section-item"><a href="004.html#016" class="section-link">お父様の原理に対する姿勢</a></li><li class="section-item"><a href="004.html#017" class="section-link">祈祷会をしましょう</a></li><li class="section-item"><a href="004.html#018" class="section-link">夫婦一体の生活</a></li><li class="section-item"><a href="004.html#019" class="section-link">子供は父母の真似をして育つのです</a></li><li class="section-item"><a href="004.html#020" class="section-link">自分の父母に侍りましょう</a></li><li class="section-item"><a href="004.html#021" class="section-link">祝福の価値</a></li><li class="section-item"><a href="004.html#022" class="section-link">天国へ行く門の状態</a></li><li class="section-item"><a href="004.html#023" class="section-link">氏族メシヤの使命</a></li><li class="section-item"><a href="004.html#024" class="section-link">神様が喜ばれる仕事</a></li><li class="section-item"><a href="004.html#025" class="section-link">家庭に天国を創る</a></li><li class="section-item"><a href="004.html#026" class="section-link">神様の摂理</a></li><li class="section-item"><a href="004.html#027" class="section-link">お父様が歩まれた四十年の路程</a></li><li class="section-item"><a href="004.html#028" class="section-link">信仰の基台</a></li><li class="section-item"><a href="004.html#029" class="section-link">世界長子転換式</a></li><li class="section-item"><a href="004.html#030" class="section-link">統一旗を立てなさい</a></li><li class="section-item"><a href="004.html#031" class="section-link">最初の交差結婚式</a></li><li class="section-item"><a href="004.html#032" class="section-link">還故郷して父母復帰</a></li><li class="section-item"><a href="004.html#033" class="section-link">世界平和女性連合の創立</a></li><li class="section-item"><a href="004.html#034" class="section-link">女性はお母様の分身体</a></li><li class="section-item"><a href="004.html#035" class="section-link">子供と夫を神の元へ</a></li><li class="section-item"><a href="004.html#036" class="section-link">命懸けのお父様の道</a></li><li class="section-item"><a href="004.html#037" class="section-link">成約元年から子女の時代</a></li><li class="section-item"><a href="004.html#038" class="section-link">天国入籍</a></li><li class="section-item"><a href="004.html#039" class="section-link">十六万女性の訪韓</a></li><li class="section-item"><a href="004.html#040" class="section-link">三十六万双祝福の意義</a></li><li class="section-item"><a href="004.html#041" class="section-link">エバ国家の使命</a></li><li class="section-item"><a href="004.html#042" class="section-link">国家的な結婚式</a></li><li class="section-item"><a href="004.html#043" class="section-link">蕩減の道</a></li><li class="section-item"><a href="004.html#044" class="section-link">絶対的信仰、絶対的服従、絶対的愛</a></li><li class="section-item"><a href="004.html#045" class="section-link">北アメリカと南アメリカ</a></li><li class="section-item"><a href="004.html#046" class="section-link">ワシントン・タイムズ</a></li><li class="section-item"><a href="004.html#047" class="section-link">南米の摂理</a></li><li class="section-item"><a href="004.html#048" class="section-link">アフリカの救済</a></li><li class="section-item"><a href="004.html#049" class="section-link">初心に帰って再出発を</a></li></ul></div><div class="chapter-item"><a href="005.html" class="chapter-link">第三章 御父母様の夫婦一体化に倣う</a><ul class="section-list"><li class="section-item"><a href="005.html#002" class="section-link">皆さんの第一次七年路程</a></li><li class="section-item"><a href="005.html#003" class="section-link">予定された内容は皆違う</a></li><li class="section-item"><a href="005.html#004" class="section-link">夫婦が一つになる運動</a></li><li class="section-item"><a href="005.html#005" class="section-link">真のご父母様と共に超える</a></li><li class="section-item"><a href="005.html#006" class="section-link">今は分別しながら統一する時</a></li><li class="section-item"><a href="005.html#007" class="section-link">お父様によるマッチング</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+<body><div class="container">
+<h1>感謝する信仰 総合目次</h1>
+<h2><a href="001.html">推薦の言葉</a></h2>
+<h2><a href="002.html">あいさつ</a></h2>
+<h1><a href="003.html">第一章 従順に従ってきたみ旨の道</a></h1>
+<ul>
+  <li><a href="003.html#001"><h2>召命されたみ旨に従って</h2></a></li>
+  <li><a href="003.html#002">　あらかじめ定められた信仰の中に育つ</a></li>
+  <li><a href="003.html#003">　「淫乱で非難される所に行け」</a></li>
+  <li><a href="003.html#004">　牧会の一戦に出て行く</a></li>
+  <li><a href="003.html#005">　慶尚南道地区を受け持って</a></li>
+  <li><a href="003.html#006">　全北(全羅北道)地区で情熱を注ぐ</a></li>
+  <li><a href="003.html#007">　先生の家庭に似ようと努力する</a></li>
+  <li><a href="003.html#008">　いくつかの分野の使命を担当する</a></li>
+  <li><a href="003.html#009">　教会部長から開拓教会長に</a></li>
+  <li><a href="003.html#010"><h2>信仰の系譜</h2></a></li>
+  <li><a href="003.html#011">　祖母の啓示による信仰の雰囲気の中で成長する</a></li>
+  <li><a href="003.html#012">　開拓伝道の出発</a></li>
+  <li><a href="003.html#013">　監理教会の勧士を伝道する</a></li>
+  <li><a href="003.html#014">　平凡な生活の中の非凡な教訓</a></li>
+  <li><a href="003.html#015">　徹夜登山強行軍</a></li>
+  <li><a href="003.html#016">　試練と苦痛の後に来る恩恵</a></li>
+  <li><a href="003.html#017">　心に尋ねて生活しなければ</a></li>
+  <li><a href="003.html#018"><h2>私の家庭生活</h2></a></li>
+  <li><a href="003.html#019"><h2>成和青年時代の活動　（一九七七年九月二十九日）</h2></a></li>
+  <li><a href="003.html#020"><h2>先生と友なる青年時代　（一九八〇年四月二十二日）</h2></a></li>
+  <li><a href="003.html#021"><h2>私のマグロ釣り　（一九八〇年九月二十九日）</h2></a></li>
+
+</ul>
+<h1><a href="004.html">第二章 神様になりましょう</a></h1>
+<ul>
+  <li><a href="004.html#002">天国に行きたいですか</a></li>
+  <li><a href="004.html#003">韓国のクリスチャンの信仰</a></li>
+  <li><a href="004.html#004">ヒュゴ</a></li>
+  <li><a href="004.html#005">祝福を受ける前と受けた後と</a></li>
+  <li><a href="004.html#006">キリスト教の歴史</a></li>
+  <li><a href="004.html#007">地獄から天国を創る</a></li>
+  <li><a href="004.html#008">問題は私たちの心</a></li>
+  <li><a href="004.html#009">再臨主に対する絶対的信仰</a></li>
+  <li><a href="004.html#010">お父様の立場</a></li>
+  <li><a href="004.html#011">原理講論を読みましょう</a></li>
+  <li><a href="004.html#012">三大祝福の完成</a></li>
+  <li><a href="004.html#013">個性完成した人の生活</a></li>
+  <li><a href="004.html#014">ご父母様は愛そのものです</a></li>
+  <li><a href="004.html#015">最初に出発した基準に戻る</a></li>
+  <li><a href="004.html#016">お父様の原理に対する姿勢</a></li>
+  <li><a href="004.html#017">祈祷会をしましょう</a></li>
+  <li><a href="004.html#018">夫婦一体の生活</a></li>
+  <li><a href="004.html#019">子供は父母の真似をして育つのです</a></li>
+  <li><a href="004.html#020">自分の父母に侍りましょう</a></li>
+  <li><a href="004.html#021">祝福の価値</a></li>
+  <li><a href="004.html#022">天国へ行く門の状態</a></li>
+  <li><a href="004.html#023">氏族メシヤの使命</a></li>
+  <li><a href="004.html#024">神様が喜ばれる仕事</a></li>
+  <li><a href="004.html#025">家庭に天国を創る</a></li>
+  <li><a href="004.html#026">神様の摂理</a></li>
+  <li><a href="004.html#027">お父様が歩まれた四十年の路程</a></li>
+  <li><a href="004.html#028">信仰の基台</a></li>
+  <li><a href="004.html#029">世界長子転換式</a></li>
+  <li><a href="004.html#030">統一旗を立てなさい</a></li>
+  <li><a href="004.html#031">最初の交差結婚式</a></li>
+  <li><a href="004.html#032">還故郷して父母復帰</a></li>
+  <li><a href="004.html#033">世界平和女性連合の創立</a></li>
+  <li><a href="004.html#034">女性はお母様の分身体</a></li>
+  <li><a href="004.html#035">子供と夫を神の元へ</a></li>
+  <li><a href="004.html#036">命懸けのお父様の道</a></li>
+  <li><a href="004.html#037">成約元年から子女の時代</a></li>
+  <li><a href="004.html#038">天国入籍</a></li>
+  <li><a href="004.html#039">十六万女性の訪韓</a></li>
+  <li><a href="004.html#040">三十六万双祝福の意義</a></li>
+  <li><a href="004.html#041">エバ国家の使命</a></li>
+  <li><a href="004.html#042">国家的な結婚式</a></li>
+  <li><a href="004.html#043">蕩減の道</a></li>
+  <li><a href="004.html#044">絶対的信仰、絶対的服従、絶対的愛</a></li>
+  <li><a href="004.html#045">北アメリカと南アメリカ</a></li>
+  <li><a href="004.html#046">ワシントン・タイムズ</a></li>
+  <li><a href="004.html#047">南米の摂理</a></li>
+  <li><a href="004.html#048">アフリカの救済</a></li>
+  <li><a href="004.html#049">初心に帰って再出発を</a></li>
+
+
+</ul>
+<h1><a href="005.html">第三章 御父母様の夫婦一体化に倣う</a></h1>
+<ul>
+  <li><a href="005.html#002">皆さんの第一次七年路程</a></li>
+  <li><a href="005.html#003">予定された内容は皆違う</a></li>
+  <li><a href="005.html#004">夫婦が一つになる運動</a></li>
+  <li><a href="005.html#005">真のご父母様と共に超える</a></li>
+  <li><a href="005.html#006">今は分別しながら統一する時</a></li>
+  <li><a href="005.html#007">お父様によるマッチング</a></li>
+</ul>
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
+
 </div>
-</body>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script></body>
 </html>
+
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

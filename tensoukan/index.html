@@ -1,194 +1,419 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>天総官　文興進様/ | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<title>天総官　文興進様/目次</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>天総官　文興進様/</h1><div class="index-list"><div class="chapter-item"><a href="001.html" class="chapter-link">第一章　真の御父母様の御家庭と興進様一　真の御父母様の御家庭の来歴１　真の御父母様の家庭的信仰基盤</a><ul class="section-list"><li class="section-item"><a href="001.html#001" class="section-link">天総官　文興進様</a></li><li class="section-item"><a href="001.html#005" class="section-link">２　真のお父様の性格</a></li><li class="section-item"><a href="001.html#006" class="section-link">二　真のお母様の二番目の息子、興進様</a></li><li class="section-item"><a href="001.html#007" class="section-link">＊真の御父母様の真の孝子、興進様</a></li></ul></div><div class="chapter-item"><a href="002.html" class="chapter-link">第二章　興進様の昇華と「愛勝日」宣布一　摂理史において二番目が犠牲になる理由</a><ul class="section-list"><li class="section-item"><a href="002.html#001" class="section-link">天総官　文興進様</a></li><li class="section-item"><a href="002.html#004" class="section-link">二　犠牲になった当時の時代状況</a></li><li class="section-item"><a href="002.html#005" class="section-link">１　興進様が犠牲になる時の韓国の時代状況</a></li><li class="section-item"><a href="002.html#006" class="section-link">２　真の御父母様の御家庭の事故−摂理的な意味</a></li><li class="section-item"><a href="002.html#007" class="section-link">三　勝共決起大会のみ言から見た当時の時代状況</a></li><li class="section-item"><a href="002.html#008" class="section-link">１　受難の事件の経緯</a></li></ul></div><div class="chapter-item"><a href="003.html" class="chapter-link">四　興進様の御臨終と「統一式」１　興進様の御臨終と「統一式」の意味</a><ul class="section-list"><li class="section-item"><a href="003.html#001" class="section-link">天総官　文興進様</a></li><li class="section-item"><a href="003.html#004" class="section-link">２　「統一式」によって霊界と地上世界が一つになった</a></li><li class="section-item"><a href="003.html#005" class="section-link">３　「統一式」の時の真の御父母様のみ言</a></li><li class="section-item"><a href="003.html#006" class="section-link">五　「愛勝日」、「昇華式」、「元殿」という言葉の意味</a></li><li class="section-item"><a href="003.html#007" class="section-link">１　「愛勝日」宣布、愛のみが死を超克</a></li><li class="section-item"><a href="003.html#008" class="section-link">２　昇華式と死の正しい理解</a></li><li class="section-item"><a href="003.html#009" class="section-link">①　死は新次元への昇華だ</a></li><li class="section-item"><a href="003.html#010" class="section-link">②　死はより良い世界へ移してあげるための手順</a></li><li class="section-item"><a href="003.html#011" class="section-link">③　昇華式は興進様から始まる</a></li><li class="section-item"><a href="003.html#012" class="section-link">３　元殿という言葉の意味</a></li></ul></div><div class="chapter-item"><a href="004.html" class="chapter-link">第三章　興進様の祝福と五旬節の役事一　興進様の相対の選定と祝福１　興進様の相対を定めながら</a><ul class="section-list"><li class="section-item"><a href="004.html#001" class="section-link">天総官　文興進様</a></li><li class="section-item"><a href="004.html#005" class="section-link">２　興進様と薫淑様の結婚によって愛の橋が生じた</a></li><li class="section-item"><a href="004.html#006" class="section-link">二　興進様の貴い犠牲とその結果</a></li><li class="section-item"><a href="004.html#007" class="section-link">三　興道様と五旬節の地上役事</a></li><li class="section-item"><a href="004.html#008" class="section-link">１　亡くなった興進様を実体復活させ、五旬節が来るようにされた</a></li><li class="section-item"><a href="004.html#009" class="section-link">２　興進様は百二十カ国を真の御父母様のみ前に</a></li><li class="section-item"><a href="004.html#010" class="section-link">３　興進様の地上役事</a></li><li class="section-item"><a href="004.html#011" class="section-link">四　真の御父母様の御家庭とダンベリーの苦難</a></li><li class="section-item"><a href="004.html#012" class="section-link">１　アメリカのダンベリーでの苦難の意味</a></li><li class="section-item"><a href="004.html#013" class="section-link">２　私が行かなければ神様がお行きにならなければならない道</a></li></ul></div><div class="chapter-item"><a href="005.html" class="chapter-link">第四章　興進様と霊界統一一　霊界にいらっしゃる興進様の位置</a><ul class="section-list"><li class="section-item"><a href="005.html#001" class="section-link">天総官　文興進様</a></li><li class="section-item"><a href="005.html#004" class="section-link">二　イエス様と興進様、キリスト教と読了教会</a></li><li class="section-item"><a href="005.html#005" class="section-link">１　イエス様と興進様</a></li><li class="section-item"><a href="005.html#006" class="section-link">２　キリスト教と統一教会、超宗派運動の展開</a></li><li class="section-item"><a href="005.html#007" class="section-link">三　四大聖人の祝福と宗教圏の一致</a></li><li class="section-item"><a href="005.html#008" class="section-link">１　四大聖人と地上・天上解放祝福式</a></li><li class="section-item"><a href="005.html#009" class="section-link">２　宗教圏を超えて一つの世界に</a></li></ul></div><div class="chapter-item"><a href="006.html" class="chapter-link">四　興進様の霊界祝福と祝福の平準化１　祝福の平準化と真の愛で霊界解放</a><ul class="section-list"><li class="section-item"><a href="006.html#001" class="section-link">天総官　文興進様</a></li><li class="section-item"><a href="006.html#004" class="section-link">２　地上・天上世界の解放は王権の解放によって</a></li><li class="section-item"><a href="006.html#005" class="section-link">五　天国入籍と一体圏統一祝福</a></li><li class="section-item"><a href="006.html#006" class="section-link">１　興進様は天上霊界世界の中心軸</a></li><li class="section-item"><a href="006.html#007" class="section-link">２　三時代大転換四位基台入籍祝福</a></li><li class="section-item"><a href="006.html#008" class="section-link">３　入籍祝福により霊肉界統一圏に</a></li><li class="section-item"><a href="006.html#009" class="section-link">六　興進様と清平の役事</a></li><li class="section-item"><a href="006.html#010" class="section-link">１　清平は天地の運勢が集まった明堂</a></li><li class="section-item"><a href="006.html#011" class="section-link">２　先祖解怨式と清平の役事</a></li><li class="section-item"><a href="006.html#012" class="section-link">３　今からは罪を犯せば許す法がない</a></li><li class="section-item"><a href="006.html#013" class="section-link">４　最後は真の御父母様の責任に</a></li></ul></div><div class="chapter-item"><a href="007.html" class="chapter-link">付録　興進様からの霊界メッセージ一　真の御父母様にお捧げする霊界報告書</a><ul class="section-list"><li class="section-item"><a href="007.html#001" class="section-link">天総官　文興進様</a></li><li class="section-item"><a href="007.html#004" class="section-link">１　真の御父母様の宣布による霊界の変化</a></li><li class="section-item"><a href="007.html#005" class="section-link">２　霊界の状況変化</a></li><li class="section-item"><a href="007.html#006" class="section-link">３　先祖解怨式と霊界修練所</a></li><li class="section-item"><a href="007.html#007" class="section-link">４　「神様王権即位式」以後の変化</a></li><li class="section-item"><a href="007.html#008" class="section-link">二　興進様から送られてきた霊界メッセージ</a></li><li class="section-item"><a href="007.html#009" class="section-link">１　摂理的発展に伴う霊界の動向</a></li><li class="section-item"><a href="007.html#010" class="section-link">２　五大宗派代表の霊界での活動</a></li><li class="section-item"><a href="007.html#011" class="section-link">３　統班撃破活動の重要性</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
-</div>
+<body><div class="container">
+<h1>天総官　文興進様/目次</h1>
+<body bgcolor="#fff0ff" link="#000000" vlink="#000000">
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<hr/>
+<b>　天総官　文興進様</b><br/>
+<hr/>
+<b><a href="hajimeni.html" style="text-decoration : none;" target="right">はじめに</a></b><br/>
+<br/>
+<a href="001.html" style="text-decoration : none;" target="right"><b>第一章　真の御父母様の御家庭と興進様</b><br/>
+<b>一　真の御父母様の御家庭の来歴</b><br/>
+      １　真の御父母様の家庭的信仰基盤</a><br/>
+<a href="001.html#002" style="text-decoration : none;" target="right">２　真のお父様の性格</a><br/>
+<br/>
+<a href="001.html#003" style="text-decoration : none;" target="right"><b>二　真のお母様の二番目の息子、興進様</b></a><br/>
+<a href="001.html#004" style="text-decoration : none;" target="right">＊真の御父母様の真の孝子、興進様</a><br/>
+<br/>
+<a href="002.html" style="text-decoration : none;" target="right"><b>第二章　興進様の昇華と「愛勝日」宣布</b><br/>
+<b>一　摂理史において二番目が犠牲になる理由</b></a><br/>
+<br/>
+<a href="002.html#002" style="text-decoration : none;" target="right"><b>二　犠牲になった当時の時代状況</b><br/>
+      １　興進様が犠牲になる時の韓国の時代状況</a><br/>
+<a href="002.html#003" style="text-decoration : none;" target="right">２　真の御父母様の御家庭の事故－摂理的な意味</a><br/>
+<br/>
+<a href="002.html#004" style="text-decoration : none;" target="right"><b>三　勝共決起大会のみ言から見た当時の時代状況</b></a><br/>
+<a href="002.html#005" style="text-decoration : none;" target="right">１　受難の事件の経緯</a><br/>
+<br/>
+<a href="003.html" style="text-decoration : none;" target="right"><b>四　興進様の御臨終と「統一式」</b><br/>
+      １　興進様の御臨終と「統一式」の意味</a><br/>
+<a href="003.html#002" style="text-decoration : none;" target="right">２　「統一式」によって霊界と地上世界が一つになった</a><br/>
+<a href="003.html#003" style="text-decoration : none;" target="right">３　「統一式」の時の真の御父母様のみ言</a><br/>
+<br/>
+<a href="003.html#004" style="text-decoration : none;" target="right"><b>五　「愛勝日」、「昇華式」、「元殿」という言葉の意味</b><br/>
+      １　「愛勝日」宣布、愛のみが死を超克</a><br/>
+<a href="003.html#005" style="text-decoration : none;" target="right">２　昇華式と死の正しい理解<br/>
+      　①　死は新次元への昇華だ</a><br/>
+<a href="003.html#006" style="text-decoration : none;" target="right">　②　死はより良い世界へ移してあげるための手順</a><br/>
+<a href="003.html#007" style="text-decoration : none;" target="right">　③　昇華式は興進様から始まる</a><br/>
+<a href="003.html#008" style="text-decoration : none;" target="right">３　元殿という言葉の意味</a><br/>
+<br/>
+<a href="004.html" style="text-decoration : none;" target="right"><b>第三章　興進様の祝福と五旬節の役事</b><br/>
+<b>一　興進様の相対の選定と祝福</b><br/>
+      １　興進様の相対を定めながら</a><br/>
+<a href="004.html#002" style="text-decoration : none;" target="right">２　興進様と薫淑様の結婚によって愛の橋が生じた</a><br/>
+<br/>
+<b><a href="004.html#003" style="text-decoration : none;" target="right">二　興進様の貴い犠牲とその結果</a></b><br/>
+<br/>
+<a href="004.html#004" style="text-decoration : none;" target="right"><b>三　興道様と五旬節の地上役事</b><br/>
+      １　亡くなった興進様を実体復活させ、五旬節が来るようにされた</a><br/>
+<a href="004.html#005" style="text-decoration : none;" target="right">２　興進様は百二十カ国を真の御父母様のみ前に</a><br/>
+<a href="004.html#006" style="text-decoration : none;" target="right">３　興進様の地上役事</a><br/>
+<br/>
+<a href="004.html#007" style="text-decoration : none;" target="right"><b>四　真の御父母様の御家庭とダンベリーの苦難</b><br/>
+      １　アメリカのダンベリーでの苦難の意味</a><br/>
+<a href="004.html#008" style="text-decoration : none;" target="right">２　私が行かなければ神様がお行きにならなければならない道</a><br/>
+<br/>
+<a href="005.html" style="text-decoration : none;" target="right"><b>第四章　興進様と霊界統一</b><br/>
+<b>一　霊界にいらっしゃる興進様の位置</b></a><br/>
+<br/>
+<a href="005.html#002" style="text-decoration : none;" target="right"><b>二　イエス様と興進様、キリスト教と読了教会</b><br/>
+      １　イエス様と興進様</a><br/>
+<a href="005.html#003" style="text-decoration : none;" target="right">２　キリスト教と統一教会、超宗派運動の展開</a><br/>
+<br/>
+<a href="005.html#004" style="text-decoration : none;" target="right"><b>三　四大聖人の祝福と宗教圏の一致</b><br/>
+      １　四大聖人と地上・天上解放祝福式</a><br/>
+<a href="005.html#005" style="text-decoration : none;" target="right">２　宗教圏を超えて一つの世界に</a><br/>
+<br/>
+<a href="006.html" style="text-decoration : none;" target="right"><b>四　興進様の霊界祝福と祝福の平準化</b><br/>
+      １　祝福の平準化と真の愛で霊界解放</a><br/>
+<a href="006.html#002" style="text-decoration : none;" target="right">２　地上・天上世界の解放は王権の解放によって</a><br/>
+<br/>
+<a href="006.html#003" style="text-decoration : none;" target="right"><b>五　天国入籍と一体圏統一祝福</b><br/>
+      １　興進様は天上霊界世界の中心軸</a><br/>
+<a href="006.html#004" style="text-decoration : none;" target="right">２　三時代大転換四位基台入籍祝福</a><br/>
+<a href="006.html#005" style="text-decoration : none;" target="right">３　入籍祝福により霊肉界統一圏に</a><br/>
+<br/>
+<a href="006.html#006" style="text-decoration : none;" target="right"><b>六　興進様と清平の役事</b><br/>
+      １　清平は天地の運勢が集まった明堂</a><br/>
+<a href="006.html#007" style="text-decoration : none;" target="right">２　先祖解怨式と清平の役事</a><br/>
+<a href="006.html#008" style="text-decoration : none;" target="right">３　今からは罪を犯せば許す法がない</a><br/>
+<a href="006.html#009" style="text-decoration : none;" target="right">４　最後は真の御父母様の責任に</a><br/>
+<br/>
+<b><a href="007.html" style="text-decoration : none;" target="right">付録　興進様からの霊界メッセージ<br/>
+      一　真の御父母様にお捧げする霊界報告書</a></b><br/>
+<a href="007.html#002" style="text-decoration : none;" target="right">１　真の御父母様の宣布による霊界の変化</a><br/>
+<a href="007.html#003" style="text-decoration : none;" target="right">２　霊界の状況変化</a><br/>
+<a href="007.html#004" style="text-decoration : none;" target="right">３　先祖解怨式と霊界修練所</a><br/>
+<a href="007.html#005" style="text-decoration : none;" target="right">４　「神様王権即位式」以後の変化</a><br/>
+<br/>
+<b><a href="007.html#006" style="text-decoration : none;" target="right">二　興進様から送られてきた霊界メッセージ</a></b><br/>
+<a href="007.html#007" style="text-decoration : none;" target="right">１　摂理的発展に伴う霊界の動向</a><br/>
+<a href="007.html#008" style="text-decoration : none;" target="right">２　五大宗派代表の霊界での活動</a><br/>
+<a href="007.html#009" style="text-decoration : none;" target="right">３　統班撃破活動の重要性</a><br/>
+</div></body>
+
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
 </body>
 </html>
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

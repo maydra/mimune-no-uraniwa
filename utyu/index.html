@@ -1,194 +1,389 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>宇宙主管を願う前に自己主管を完成せよ／／み旨の道 | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<title>宇宙主管を願う前に自己主管を完成せよ／／み旨の道</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>宇宙主管を願う前に自己主管を完成せよ／／み旨の道</h1><div class="index-list"><div class="chapter-item"><a href="utyu_001.html" class="chapter-link">一、序</a><ul class="section-list"><li class="section-item"><a href="utyu_001.html#001" class="section-link">宇宙主管を願う前に自己主管を完成せよ</a></li><li class="section-item"><a href="utyu_001.html#005" class="section-link">一）　先生の七年間の苦労</a></li><li class="section-item"><a href="utyu_001.html#006" class="section-link">二）　天の伝統を立てなければならなかった先生</a></li><li class="section-item"><a href="utyu_001.html#007" class="section-link">三）　眠りをなせない理由</a></li><li class="section-item"><a href="utyu_001.html#008" class="section-link">四）眠るときも楽に眠ることができない</a></li><li class="section-item"><a href="utyu_001.html#009" class="section-link">五）　徹夜祈祷と精誠（補充資料参照）</a></li><li class="section-item"><a href="utyu_001.html#010" class="section-link">六）　我々は摂理的な時をつかむべきである</a></li><li class="section-item"><a href="utyu_001.html#011" class="section-link">補充資料　一</a></li></ul></div><div class="chapter-item"><a href="utyu_002.html" class="chapter-link">四、空腹の主管</a><ul class="section-list"><li class="section-item"><a href="utyu_002.html#001" class="section-link">宇宙主管を願う前に自己主管を完成せよ</a></li><li class="section-item"><a href="utyu_002.html#003" class="section-link">一）先生は三〇歳までお腹が空かなかった日がなかった。</a></li><li class="section-item"><a href="utyu_002.html#004" class="section-link">二）　空腹を我慢してきた理由</a></li><li class="section-item"><a href="utyu_002.html#005" class="section-link">三）食べ物に対する心の姿勢</a></li><li class="section-item"><a href="utyu_002.html#006" class="section-link">四）衣食住生活の蕩減の原則</a></li><li class="section-item"><a href="utyu_002.html#007" class="section-link">五）天の人はどこへ行っても飢える法はない</a></li><li class="section-item"><a href="utyu_002.html#008" class="section-link">六）十一条生活</a></li><li class="section-item indent-1"><a href="utyu_002.html#009" class="section-link">（一）十一条の意義</a></li><li class="section-item indent-1"><a href="utyu_002.html#010" class="section-link">（二）聖徒たちの基本の道理</a></li><li class="section-item indent-1"><a href="utyu_002.html#011" class="section-link">（三）十一条生活</a></li><li class="section-item indent-1"><a href="utyu_002.html#012" class="section-link">（四）教会の品物を重要視すべきである</a></li><li class="section-item"><a href="utyu_002.html#013" class="section-link">＊参考:公金は毒薬よりもっと恐ろしいものである。</a></li></ul></div><div class="chapter-item"><a href="utyu_003.html" class="chapter-link">五、情欲の主管</a><ul class="section-list"><li class="section-item"><a href="utyu_003.html#001" class="section-link">宇宙主管を願う前に自己主管を完成せよ</a></li><li class="section-item"><a href="utyu_003.html#002" class="section-link">五、情欲主管</a></li><li class="section-item"><a href="utyu_003.html#003" class="section-link">きれいな血統をどのように保存するのかが我々の問題</a></li><li class="section-item"><a href="utyu_003.html#004" class="section-link">愛の失敗をするのは後孫に毒を飲ませること</a></li><li class="section-item"><a href="utyu_003.html#005" class="section-link">志操を生命よりもっと重要視せよ</a></li><li class="section-item"><a href="utyu_003.html#006" class="section-link">我々はすべての面で新しい次元の規律を持つべし</a></li><li class="section-item"><a href="utyu_003.html#007" class="section-link">結婚することは天地が合わさること</a></li><li class="section-item"><a href="utyu_003.html#008" class="section-link">問：我々が講義を聴いて堕落論を知っても堕落をしてはいけないと言われましたが、いつからその責任がありますか？</a></li><li class="section-item"><a href="utyu_003.html#009" class="section-link">問：男は男にだけ、女は女にだけ伝道しますか？</a></li><li class="section-item"><a href="utyu_003.html#010" class="section-link">問：そのように考えることさえも罪を犯すことだとイエス様が言われたそのみ言の基準がここに適用されますか？</a></li><li class="section-item"><a href="utyu_003.html#011" class="section-link">新しい愛の姿勢を正して結婚しなければならない</a></li><li class="section-item"><a href="utyu_003.html#012" class="section-link">きれいな体と心を大切にして愛すべし</a></li><li class="section-item"><a href="utyu_003.html#013" class="section-link">問：ところで、それにどのように勝ちますか？　悪霊が来てそうしうることもあり、先祖たちが来てそうしうることもあるのですが。</a></li><li class="section-item"><a href="utyu_003.html#014" class="section-link">問：あるとき、祈るときには、正しい祈りが出てこないのですが、それでも続けて祈るべきですか？</a></li><li class="section-item"><a href="utyu_003.html#015" class="section-link">問：ティーンエージャーの場合、また二一歳になると結婚をするというのですが、これから入ってくる学生たち、次の世代に性の問題をどのように教えるべきですか？</a></li><li class="section-item"><a href="utyu_003.html#016" class="section-link">男女が会うには、三人以上一緒に会え</a></li><li class="section-item"><a href="utyu_003.html#017" class="section-link">きれいな血統は、純粋な愛を通じてのみ現れる</a></li><li class="section-item"><a href="utyu_003.html#018" class="section-link">問：機動隊の活動において、あるときは女性とカウンセリングをする場合もあります。そのようなときは、どのようにしますか？</a></li></ul></div><div class="chapter-item"><a href="utyu_004.html" class="chapter-link">心と体の統一方案</a><ul class="section-list"><li class="section-item"><a href="utyu_004.html#001" class="section-link">宇宙主管を願う前に自己主管を完成せよ</a></li><li class="section-item"><a href="utyu_004.html#003" class="section-link">一、相反した二つの目的を持った人間</a></li><li class="section-item"><a href="utyu_004.html#004" class="section-link">二、核戦争よりももっと恐ろしい戦争</a></li><li class="section-item"><a href="utyu_004.html#005" class="section-link">三、神様が宗教を立てた目的</a></li><li class="section-item"><a href="utyu_004.html#006" class="section-link">四、心と体を統一させるための二つの方案</a></li><li class="section-item indent-1"><a href="utyu_004.html#007" class="section-link">（一）体を主管しうる第一の方案</a></li><li class="section-item indent-1"><a href="utyu_004.html#009" class="section-link">（三）心と体を統一させる方法</a></li><li class="section-item"><a href="utyu_004.html#010" class="section-link">五、体と心の統一の基準は愛</a></li><li class="section-item"><a href="utyu_004.html#011" class="section-link">六、真なる愛だけが体と心を一つにする。</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+<body><div class="container">
+<h1>宇宙主管を願う前に自己主管を完成せよ／／み旨の道</h1>
+<body alink="#cc00cc" background="bgs_005.gif" link="#525252" text="#525252" vlink="#525252">
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<div align="left">
+<a href="http://www.geocities.co.jp/MusicHall-Horn/9211/" style="color : white;background-color : red;text-decoration : none;" target="_top"></a>
+<hr align="left" width="80%"/>
+<b>　</b><b>宇宙主管を願う前に</b><b><br/>
+      　</b><b>自己主管を完成せよ</b>
+<hr align="left" width="80%"/>
+<br/>
+<a href="utyu_001.html" target="right"><b>一、序</b></a><br/>
+<b><a href="utyu_001.html#02" target="right"><br/>
+<br/>
+二、自己主管の三大困難</a></b><br/>
+<b><a href="utyu_001.html#03" target="right"><br/>
+<br/>
+三、眠りの主管</a></b><br/>
+      　<a>一）　先生の七年間の苦労</a><br/>
+      　<a href="utyu_001.html#04" target="right"><b>二）　天の伝統を</b></a><br/>
+      　　　　　<a href="utyu_001.html#04" target="right"><b>立てなければならなかった先生</b></a><br/>
+      　<a href="utyu_001.html#05" target="right"><b>三）　眠りをなせない理由</b></a><br/>
+      　<a href="utyu_001.html#06" target="right"><b>四）眠るときも楽に眠ることができない</b></a><br/>
+      　<a href="utyu_001.html#07" target="right"><b>五）　徹夜祈祷と精誠（補充資料参照</b>）</a><br/>
+      　<a href="utyu_001.html#08" target="right"><b>六）　我々は摂理的な</b></a><br/>
+      　　　　　<a href="utyu_001.html#08" target="right"><b>時をつかむべきである</b></a><br/>
+      　　　　<a href="utyu_001.html#09" target="right"><b>補充資料　一</b></a><br/>
+      　　　　<a href="utyu_001.html#10" target="right"><b>補充資料　二</b></a><br/>
+      　　　　<b><a href="utyu_001.html#11" target="right">補充資料　三</a></b><br/>
+<br/>
+<br/>
+<b><a href="utyu_002.html" target="right">四、空腹の主管</a></b><br/>
+      　<b>一）先生は三〇歳まで</b><br/>
+      　　 　<b>お腹が空かなかった日がなかった。</b><br/>
+      　<b><a href="utyu_002.html#02" target="right">二）　空腹を我慢してきた理由</a></b><br/>
+      　<a href="utyu_002.html#03" target="right"><b>三）食べ物に対する心の姿勢</b></a><br/>
+      　<a href="utyu_002.html#04" target="right"><b>四）衣食住生活の蕩減の原則</b></a><br/>
+      　<a href="utyu_002.html#05" target="right"><b>五）天の人はどこへ行っても飢える法はない</b></a><br/>
+      　<b><a href="utyu_002.html#06" target="right">六）十一条生活</a></b><br/>
+<br/>
+<br/>
+<b><a href="utyu_003.html" target="right">五、情欲の主管</a></b><br/>
+      　<b>・きれいな血統をどのように保存するのかが我々の問題</b><br/>
+      　<b><a href="utyu_003.html#02" target="right">・愛の失敗をするのは後孫に毒を飲ませること</a></b><br/>
+      　<b><a href="utyu_003.html#03" target="right">・志操を生命よりもっと重要視せよ</a></b><br/>
+      　<a href="utyu_003.html#04" target="right"><b>・我々はすべての面で新しい次元の規律を持つべし</b></a><br/>
+      　<b><a href="utyu_003.html#05" target="right">・結婚することは天地が合わさること</a></b><br/>
+      　<b><a href="utyu_003.html#06" target="right">・新しい愛の姿勢を正して結婚しなければならない</a></b><br/>
+      　<a href="utyu_003.html#07" target="right"><b>・きれいな体と心を大切にして愛すべし</b></a><br/>
+      　<b><a href="utyu_003.html#08" target="right">・男女が会うには、三人以上一緒に会え</a></b><br/>
+      　<b><a href="utyu_003.html#09" target="right">・きれいな血統は、純粋な愛を通じてのみ現れる</a></b><br/>
+<br/>
+<br/>
+<b><a href="utyu_004.html" target="right">心と体の統一方案</a></b><br/>
+      　<b>一、相反した二つの目的を持った人間</b><br/>
+      　<b><a href="utyu_004.html#02" target="right">二、核戦争よりもっと恐ろしい戦争</a></b><br/>
+      　<b><a href="utyu_004.html#03" target="right">三、神様が宗教を立てた目的</a></b><br/>
+      　<b><a href="utyu_004.html#04" target="right">四、心と体を統一させるための二つの方案</a></b><br/>
+      　<a href="utyu_004.html#05" target="right"><b>五、体と心の統一の基準は愛</b></a><br/>
+      　<a href="utyu_004.html#06" target="right"><b>六、真の愛だけが心を一つにする</b></a><br/>
+<br/>
 </div>
+<p align="left">
+</div></body>
+
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
 </body>
 </html>
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

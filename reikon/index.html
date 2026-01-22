@@ -1,194 +1,468 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>人間の生と霊魂の世界 | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<title>人間の生と霊魂の世界</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>人間の生と霊魂の世界</h1><div class="index-list"><div class="chapter-item"><a href="hajimeni.html" class="chapter-link">はじめに</a><ul class="section-list"><li class="section-item"><a href="hajimeni.html#001" class="section-link">人間の生と霊魂の世界</a></li></ul></div><div class="chapter-item"><a href="reikon_001.html" class="chapter-link">第一章　人生の行くべき道一　私たちの人生の道１．一寸先も見通すことのできない人生</a><ul class="section-list"><li class="section-item"><a href="reikon_001.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_001.html#005" class="section-link">２．私たちはどこに進んでいるのか</a></li><li class="section-item"><a href="reikon_001.html#006" class="section-link">３．一生は霊界へ行く準備期間</a></li><li class="section-item"><a href="reikon_001.html#007" class="section-link">４．生涯はあまりにも短い</a></li></ul></div><div class="chapter-item"><a href="reikon_002.html" class="chapter-link">二　死に対する正しい理解１．死は人生必然の道</a><ul class="section-list"><li class="section-item"><a href="reikon_002.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_002.html#004" class="section-link">２．死は三世界を連結する過程</a></li><li class="section-item"><a href="reikon_002.html#005" class="section-link">３．死はもっと良い世界へ移ること</a></li><li class="section-item"><a href="reikon_002.html#006" class="section-link">４．死は新しい次元への昇華である</a></li><li class="section-item"><a href="reikon_002.html#007" class="section-link">５．死の前での姿勢</a></li><li class="section-item"><a href="reikon_002.html#008" class="section-link">６．祝福によって永生の道が開かれる</a></li><li class="section-item"><a href="reikon_002.html#009" class="section-link">①　最も重要なことは永生問題</a></li><li class="section-item"><a href="reikon_002.html#010" class="section-link">②　愛から永生概念が出てくる</a></li><li class="section-item"><a href="reikon_002.html#011" class="section-link">③　祝福と永生</a></li></ul></div><div class="chapter-item"><a href="reikon_003.html" class="chapter-link">三　地上生活の価値１．地上は愛の実を収める所</a><ul class="section-list"><li class="section-item"><a href="reikon_003.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_003.html#004" class="section-link">２．地上は天国の民の生産地</a></li><li class="section-item"><a href="reikon_003.html#005" class="section-link">３．あの世の所有権を地上で決定</a></li><li class="section-item"><a href="reikon_003.html#006" class="section-link">４．肉身をつけた地上生活が日ごとに記録される</a></li><li class="section-item"><a href="reikon_003.html#007" class="section-link">５．肉身で犯した罪は地上で蕩減しなければならない</a></li><li class="section-item"><a href="reikon_003.html#008" class="section-link">６．自然の中への順応的生き方が貴い</a></li></ul></div><div class="chapter-item"><a href="reikon_004.html" class="chapter-link">四　天国に入る秘訣１．天国は皇族の名誉をもって入る所</a><ul class="section-list"><li class="section-item"><a href="reikon_004.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_004.html#004" class="section-link">２．四大心情圏の愛の実体が天国に行く</a></li><li class="section-item"><a href="reikon_004.html#005" class="section-link">３．心に同化された生活をしなければならない</a></li><li class="section-item"><a href="reikon_004.html#006" class="section-link">４．絶対「性」を中心として天国、地獄が分かれる</a></li><li class="section-item"><a href="reikon_004.html#007" class="section-link">５．夫婦愛が愛の理想の中心の花</a></li><li class="section-item"><a href="reikon_004.html#008" class="section-link">６．天国は家庭単位で入る</a></li><li class="section-item"><a href="reikon_004.html#009" class="section-link">７．「ため」に生きれば天国に行く</a></li></ul></div><div class="chapter-item"><a href="reikon_005.html" class="chapter-link">第二章　霊界はどのような所か一　霊界の実相と法度１．霊界は時空を超越した無限の世界</a><ul class="section-list"><li class="section-item"><a href="reikon_005.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_005.html#005" class="section-link">２．霊界は愛全能の世界</a></li><li class="section-item"><a href="reikon_005.html#006" class="section-link">３．霊界の空気は愛である</a></li><li class="section-item"><a href="reikon_005.html#007" class="section-link">４．霊人たちの生、霊人たちの相互関係</a></li><li class="section-item"><a href="reikon_005.html#008" class="section-link">５．霊界での衣食住問題は自由自在</a></li><li class="section-item"><a href="reikon_005.html#009" class="section-link">６．霊界の権力は愛の権力である</a></li><li class="section-item"><a href="reikon_005.html#010" class="section-link">７．霊界は神様の法則と秩序の世界</a></li></ul></div><div class="chapter-item"><a href="reikon_006.html" class="chapter-link">二　天国と地獄１．天国は愛の理想の世界</a><ul class="section-list"><li class="section-item"><a href="reikon_006.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_006.html#004" class="section-link">２．天国はお互いのために生きる世界</a></li><li class="section-item"><a href="reikon_006.html#005" class="section-link">３．天国は地上天国を経ていく所</a></li><li class="section-item"><a href="reikon_006.html#006" class="section-link">４．イエス様と楽園</a></li><li class="section-item"><a href="reikon_006.html#007" class="section-link">５．地獄は神様の愛と関係ない所</a></li><li class="section-item"><a href="reikon_006.html#008" class="section-link">６．天国と地獄は自らが選択する</a></li></ul></div><div class="chapter-item"><a href="reikon_007.html" class="chapter-link">三　霊人と地上人の関係１．霊界は善の霊界と悪の霊界に分かれている</a><ul class="section-list"><li class="section-item"><a href="reikon_007.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_007.html#004" class="section-link">２．霊人たちの霊界での立場</a></li><li class="section-item"><a href="reikon_007.html#005" class="section-link">３．霊人たちの完成も地上人を通さなければならない</a></li><li class="section-item"><a href="reikon_007.html#006" class="section-link">４．霊界の協助と確信</a></li><li class="section-item"><a href="reikon_007.html#007" class="section-link">５．流離する霊たち</a></li></ul></div><div class="chapter-item"><a href="reikon_008.html" class="chapter-link">四　先祖たちと私たち１．私たちは先祖の結実体</a><ul class="section-list"><li class="section-item"><a href="reikon_008.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_008.html#002" class="section-link">四　先祖と私たち</a></li><li class="section-item"><a href="reikon_008.html#004" class="section-link">２．先祖の救いは私たちがする</a></li><li class="section-item"><a href="reikon_008.html#005" class="section-link">３．祝福家庭と祭祀</a></li><li class="section-item"><a href="reikon_008.html#006" class="section-link">五　霊界を知らなければならない</a></li><li class="section-item"><a href="reikon_008.html#007" class="section-link">六　審判</a></li><li class="section-item"><a href="reikon_008.html#008" class="section-link">１．神様には怨讐の概念がない</a></li><li class="section-item"><a href="reikon_008.html#009" class="section-link">２．真の御父母様は愛の統治法で審判</a></li><li class="section-item"><a href="reikon_008.html#010" class="section-link">３．罪を犯せば家庭裁判に、一族が審判する</a></li></ul></div><div class="chapter-item"><a href="reikon_009.html" class="chapter-link">第三章　真の御父母様と霊界一　真の御父母様の権限と使命１．真の御父母様は肉体をつけられた神様</a><ul class="section-list"><li class="section-item"><a href="reikon_009.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_009.html#005" class="section-link">２．宇宙の中心軸、地上・天上の統治者</a></li><li class="section-item"><a href="reikon_009.html#006" class="section-link">３．真の御父母様を通して天国に行く</a></li></ul></div><div class="chapter-item"><a href="reikon_010.html" class="chapter-link">二　真の御父母様と天国建設１．真の父母になるためにみ印を受けなければならない</a><ul class="section-list"><li class="section-item"><a href="reikon_010.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_010.html#004" class="section-link">２．天国建設と地上、天上世界の統一</a></li></ul></div><div class="chapter-item"><a href="reikon_011.html" class="chapter-link">三　真の御父母様と愛の役事１．聖人と殺人鬼も同席で祝福</a><ul class="section-list"><li class="section-item"><a href="reikon_011.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_011.html#004" class="section-link">２．真の祝福の天宙化、霊界・肉界平準化</a></li><li class="section-item"><a href="reikon_011.html#005" class="section-link">３．地上・天上地獄、真の愛による解放</a></li><li class="section-item"><a href="reikon_011.html#006" class="section-link">４．天国入籍と祝福家庭の霊界</a></li><li class="section-item"><a href="reikon_011.html#007" class="section-link">①　入籍をするためには</a></li><li class="section-item"><a href="reikon_011.html#008" class="section-link">②　統一圏霊界も中間霊界、監獄がある</a></li></ul></div><div class="chapter-item"><a href="reikon_012.html" class="chapter-link">四　真の御父母様の家庭と霊界役事１．興進様の霊界長子権成立</a><ul class="section-list"><li class="section-item"><a href="reikon_012.html#001" class="section-link">人間の生と霊魂の世界</a></li><li class="section-item"><a href="reikon_012.html#004" class="section-link">２．先祖解怨式と清平役事</a></li></ul></div><div class="chapter-item"><a href="reikon_013.html" class="chapter-link">五　ただ一つの願いが残っているとすれば</a><ul class="section-list"><li class="section-item"><a href="reikon_013.html#001" class="section-link">人間の生と霊魂の世界</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+<body><div class="container">
+<h1>人間の生と霊魂の世界</h1>
+<body alink="#cc00cc" background="bgs_002.gif" link="#660000" vlink="#660000">
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<hr/>
+<b>人間の生と霊魂の世界</b>
+<hr/>
+<a href="hajimeni.html" style="text-decoration : none;" target="right">はじめに</a><br/>
+<br/>
+<a href="reikon_001.html" style="text-decoration : none;" target="right"><b>第一章　人生の行くべき道</b><br/>
+<b>一　私たちの人生の道</b><br/>
+      　１．一寸先も見通すことのできない人生</a><br/>
+<a href="reikon_001.html#002" style="text-decoration : none;" target="right">　２．私たちはどこに進んでいるのか</a><br/>
+<a href="reikon_001.html#003" style="text-decoration : none;" target="right">　３．一生は霊界へ行く準備期間</a><br/>
+<a href="reikon_001.html#004" style="text-decoration : none;" target="right">　４．生涯はあまりにも短い</a><br/>
+<a href="reikon_002.html" style="text-decoration : none;" target="right"><b>二　死に対する正しい理解</b><br/>
+      　１．死は人生必然の道</a><br/>
+<a href="reikon_002.html#002" style="text-decoration : none;" target="right">　２．死は三世界を連結する過程</a><br/>
+<a href="reikon_002.html#003" style="text-decoration : none;" target="right">　３．死はもっと良い世界へ移ること</a><br/>
+<a href="reikon_002.html#004" style="text-decoration : none;" target="right">　４．死は新しい次元への昇華である</a><br/>
+<a href="reikon_002.html#005" style="text-decoration : none;" target="right">　５．死の前での姿勢</a><br/>
+<a href="reikon_002.html#006" style="text-decoration : none;" target="right">　６．祝福によって永生の道が開かれる<br/>
+      　　①　最も重要なことは永生問題</a><br/>
+<a href="reikon_002.html#007" style="text-decoration : none;" target="right">　　②　愛から永生概念が出てくる</a><br/>
+<a href="reikon_002.html#008" style="text-decoration : none;" target="right">　　③　祝福と永生</a><br/>
+<a href="reikon_003.html" style="text-decoration : none;" target="right"><b>三　地上生活の価値</b><br/>
+      　１．地上は愛の実を収める所</a><br/>
+<a href="reikon_003.html#002" style="text-decoration : none;" target="right">　２．地上は天国の民の生産地</a><br/>
+<a href="reikon_003.html#003" style="text-decoration : none;" target="right">　３．あの世の所有権を地上で決定</a><br/>
+<a href="reikon_003.html#004" style="text-decoration : none;" target="right">　４．肉身をつけた地上生活が日ごとに記録される</a><br/>
+<a href="reikon_003.html#005" style="text-decoration : none;" target="right">　５．肉身で犯した罪は地上で蕩減しなければならない</a><br/>
+<a href="reikon_003.html#006" style="text-decoration : none;" target="right">　６．自然の中への順応的生き方が貴い</a><br/>
+<a href="reikon_004.html" style="text-decoration : none;" target="right"><b>四　天国に入る秘訣</b><br/>
+      　１．天国は皇族の名誉をもって入る所</a><br/>
+<a href="reikon_004.html#002" style="text-decoration : none;" target="right">　２．四大心情圏の愛の実体が天国に行く</a><br/>
+<a href="reikon_004.html#003" style="text-decoration : none;" target="right">　３．心に同化された生活をしなければならない</a><br/>
+<a href="reikon_004.html#004" style="text-decoration : none;" target="right">　４．絶対「性」を中心として天国、地獄が分かれる</a><br/>
+<a href="reikon_004.html#005" style="text-decoration : none;" target="right">　５．夫婦愛が愛の理想の中心の花</a><br/>
+<a href="reikon_004.html#006" style="text-decoration : none;" target="right">　６．天国は家庭単位で入る</a><br/>
+<a href="reikon_004.html#007" style="text-decoration : none;" target="right">　７．「ため」に生きれば天国に行く</a><br/>
+<br/>
+<a href="reikon_005.html" style="text-decoration : none;" target="right"><b>第二章　霊界はどのような所か<br/>
+      一　霊界の実相と法度</b><br/>
+      　１．霊界は時空を超越した無限の世界</a><br/>
+<a href="reikon_005.html#002" style="text-decoration : none;" target="right">　２．霊界は愛全能の世界</a><br/>
+<a href="reikon_005.html#003" style="text-decoration : none;" target="right">　３．霊界の空気は愛である</a><br/>
+<a href="reikon_005.html#004" style="text-decoration : none;" target="right">　４．霊人たちの生、霊人たちの相互関係</a><br/>
+<a href="reikon_005.html#005" style="text-decoration : none;" target="right">　５．霊界での衣食住問題は自由自在</a><br/>
+<a href="reikon_005.html#006" style="text-decoration : none;" target="right">　６．霊界の権力は愛の権力である</a><br/>
+<a href="reikon_005.html#007" style="text-decoration : none;" target="right">　７．霊界は神様の法則と秩序の世界</a><br/>
+<a href="reikon_006.html" style="text-decoration : none;" target="right"><b>二　天国と地獄</b><br/>
+      　１．天国は愛の理想の世界</a><br/>
+<a href="reikon_006.html#002" style="text-decoration : none;" target="right">　２．天国はお互いのために生きる世界</a><br/>
+<a href="reikon_006.html#003" style="text-decoration : none;" target="right">　３．天国は地上天国を経ていく所</a><br/>
+<a href="reikon_006.html#004" style="text-decoration : none;" target="right">　４．イエス様と楽園</a><br/>
+<a href="reikon_006.html#005" style="text-decoration : none;" target="right">　５．地獄は神様の愛と関係ない所</a><br/>
+<a href="reikon_006.html#006" style="text-decoration : none;" target="right">　６．天国と地獄は自らが選択する</a><br/>
+<a href="reikon_007.html" style="text-decoration : none;" target="right"><b>三　霊人と地上人の関係</b><br/>
+      　１．霊界は善の霊界と悪の霊界に分かれている</a><br/>
+<a href="reikon_007.html#002" style="text-decoration : none;" target="right">　２．霊人たちの霊界での立場</a><br/>
+<a href="reikon_007.html#003" style="text-decoration : none;" target="right">　３．霊人たちの完成も地上人を通さなければならない</a><br/>
+<a href="reikon_007.html#004" style="text-decoration : none;" target="right">　４．霊界の協助と確信</a><br/>
+<a href="reikon_007.html#005" style="text-decoration : none;" target="right">　５．流離する霊たち</a><br/>
+<a href="reikon_008.html" style="text-decoration : none;" target="right"><b>四　先祖たちと私たち</b><br/>
+      　１．私たちは先祖の結実体</a><br/>
+<a href="reikon_008.html#002" style="text-decoration : none;" target="right">　２．先祖の救いは私たちがする</a><br/>
+<a href="reikon_008.html#003" style="text-decoration : none;" target="right">　３．祝福家庭と祭祀</a><br/>
+<b><a href="reikon_008.html#004" style="text-decoration : none;" target="right">五　霊界を知らなければならない</a><br/>
+</b><a href="reikon_008.html#005" style="text-decoration : none;" target="right"><b>六　審判</b><br/>
+      　１．神様には怨讐の概念がない</a><br/>
+<a href="reikon_008.html#006" style="text-decoration : none;" target="right">　２．真の御父母様は愛の統治法で審判</a><br/>
+<a href="reikon_008.html#007" style="text-decoration : none;" target="right">　３．罪を犯せば家庭裁判に、一族が審判する</a><br/>
+<br/>
+<a href="reikon_009.html" style="text-decoration : none;" target="right"><b>第三章　真の御父母様と霊界<br/>
+      一　真の御父母様の権限と使命</b><br/>
+      　１．真の御父母様は肉体をつけられた神様</a><br/>
+<a href="reikon_009.html#002" style="text-decoration : none;" target="right">　２．宇宙の中心軸、地上・天上の統治者</a><br/>
+<a href="reikon_009.html#003" style="text-decoration : none;" target="right">　３．真の御父母様を通して天国に行く</a><br/>
+<a href="reikon_010.html" style="text-decoration : none;" target="right"><b>二　真の御父母様と天国建設</b><br/>
+      　１．真の父母になるためにみ印を受けなければならない</a><br/>
+<a href="reikon_010.html#002" style="text-decoration : none;" target="right">　２．天国建設と地上、天上世界の統一</a><br/>
+<a href="reikon_011.html" style="text-decoration : none;" target="right"><b>三　真の御父母様と愛の役事</b><br/>
+      　１．聖人と殺人鬼も同席で祝福</a><br/>
+<a href="reikon_011.html#002" style="text-decoration : none;" target="right">　２．真の祝福の天宙化、霊界・肉界平準化</a><br/>
+<a href="reikon_011.html#003" style="text-decoration : none;" target="right">　３．地上・天上地獄、真の愛による解放</a><br/>
+<a href="reikon_011.html#004" style="text-decoration : none;" target="right">　４．天国入籍と祝福家庭の霊界<br/>
+      　　①　入籍をするためには</a><br/>
+<a href="reikon_011.html#005" style="text-decoration : none;" target="right">　　②　統一圏霊界も中間霊界、監獄がある</a><br/>
+<a href="reikon_012.html" style="text-decoration : none;" target="right"><b>四　真の御父母様の家庭と霊界役事</b><br/>
+      　１．興進様の霊界長子権成立</a><br/>
+<a href="reikon_012.html#002" style="text-decoration : none;" target="right">　２．先祖解怨式と清平役事</a><br/>
+<b><a href="reikon_013.html" style="text-decoration : none;" target="right">五　ただ一つの願いが残っているとすれば</a></b><br/>
+<br/>
+<br/>
+<blockquote><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</blockquote>
+
+
+
+
+
+
+
+
+
 </div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script></body>
+<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body>
 </html>
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

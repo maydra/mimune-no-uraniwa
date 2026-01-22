@@ -1,194 +1,497 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>男性訪韓修練会御言集 | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<title>男性訪韓修練会御言集</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>男性訪韓修練会御言集</h1><div class="index-list"><div class="chapter-item"><a href="hajimeni.html" class="chapter-link">はじめに</a><ul class="section-list"><li class="section-item"><a href="hajimeni.html#001" class="section-link">男性訪韓修練会</a></li></ul></div><div class="chapter-item"><a href="001.html" class="chapter-link">真の自分を探しましょう1995年1月17日32万人修練会の開始にあたって</a><ul class="section-list"><li class="section-item"><a href="001.html#001" class="section-link">男性訪韓修練会</a></li><li class="section-item"><a href="001.html#002" class="section-link">真の自分を探しましょう!!!</a></li><li class="section-item"><a href="001.html#004" class="section-link">迫害されるこの道</a></li><li class="section-item"><a href="001.html#005" class="section-link">統一教会の理論は完全に正しい</a></li><li class="section-item"><a href="001.html#006" class="section-link">真剣でもって真剣に生きる</a></li><li class="section-item"><a href="001.html#007" class="section-link">忠臣の伝統精神とは</a></li><li class="section-item"><a href="001.html#008" class="section-link">聖子の行く道</a></li><li class="section-item"><a href="001.html#009" class="section-link">悪い世界の中の日本の国</a></li><li class="section-item"><a href="001.html#010" class="section-link">心身紛争する自分</a></li><li class="section-item"><a href="001.html#011" class="section-link">歴史の動機と結実体である人間</a></li><li class="section-item"><a href="001.html#012" class="section-link">一人ひとりが一億二千万人を代表した日本人</a></li><li class="section-item"><a href="001.html#013" class="section-link">すべての問題の解決は男と女</a></li><li class="section-item"><a href="001.html#014" class="section-link">すべては世界のため、天宙のため、神様解放のため</a></li><li class="section-item"><a href="001.html#015" class="section-link">神様が宇宙の唯一の根である</a></li><li class="section-item"><a href="001.html#016" class="section-link">心身紛争の出発点は何か</a></li><li class="section-item"><a href="001.html#017" class="section-link">愛によって所有権が決定される</a></li><li class="section-item"><a href="001.html#018" class="section-link">神様に反発する愛の動機</a></li><li class="section-item"><a href="001.html#019" class="section-link">宇宙は相対理想の組み合わせから</a></li><li class="section-item"><a href="001.html#020" class="section-link">永遠に変わらない神の愛</a></li><li class="section-item"><a href="001.html#021" class="section-link">神様の愛と人間の愛の決着する一点</a></li><li class="section-item"><a href="001.html#022" class="section-link">家庭は天国の基地である</a></li><li class="section-item"><a href="001.html#023" class="section-link">愛の神秘境の内容をすべて知っている神様</a></li></ul></div><div class="chapter-item"><a href="002.html" class="chapter-link">■(修練会、二日目の朝)1995年1月18日人間は愛のために生まれてきた</a><ul class="section-list"><li class="section-item"><a href="002.html#001" class="section-link">男性訪韓修練会</a></li><li class="section-item"><a href="002.html#003" class="section-link">すべての存在は愛を求めて相対のために生まれてきた</a></li><li class="section-item"><a href="002.html#004" class="section-link">半品なる者も愛によって完品になる</a></li><li class="section-item"><a href="002.html#005" class="section-link">すべてが愛を中心とする</a></li><li class="section-item"><a href="002.html#006" class="section-link">全体のために生きるところから天国が生まれる</a></li><li class="section-item"><a href="002.html#007" class="section-link">中心者の三大要目</a></li><li class="section-item"><a href="002.html#008" class="section-link">神様を完成させるのは、相対の愛を持つ者である</a></li><li class="section-item"><a href="002.html#009" class="section-link">結婚は共に完成するためである</a></li><li class="section-item"><a href="002.html#010" class="section-link">サタンも絶対愛の神様には絶対服従する</a></li><li class="section-item"><a href="002.html#011" class="section-link">神様の願いは世界万民の救済である</a></li><li class="section-item"><a href="002.html#012" class="section-link">日本と世界の行く道</a></li><li class="section-item"><a href="002.html#013" class="section-link">日本民族は神様に向かって祈らなければならない</a></li></ul></div><div class="chapter-item"><a href="003.html" class="chapter-link">■(修練会、第二日目の午後)1995年1月18日真の父母という名前は、神の創造理想の標準である</a><ul class="section-list"><li class="section-item"><a href="003.html#001" class="section-link">男性訪韓修練会</a></li><li class="section-item"><a href="003.html#003" class="section-link">神の戦略戦術とサタンの戦略戦術</a></li><li class="section-item"><a href="003.html#004" class="section-link">自分自身の決意がすべてを決める</a></li><li class="section-item"><a href="003.html#005" class="section-link">神様の創造理想が地上に定着する時代</a></li><li class="section-item"><a href="003.html#006" class="section-link">中心者の使命とは</a></li><li class="section-item"><a href="003.html#007" class="section-link">宗教は民族と国家を超えていく</a></li><li class="section-item"><a href="003.html#008" class="section-link">孝子、忠臣、聖人、聖子の道</a></li><li class="section-item"><a href="003.html#009" class="section-link">引っ張り合う良心の力と肉身の力</a></li><li class="section-item"><a href="003.html#010" class="section-link">神様の願われる宗教の使命</a></li><li class="section-item"><a href="003.html#011" class="section-link">還故郷とお母様の勝利圏</a></li><li class="section-item"><a href="003.html#012" class="section-link">投入の哲学ですべてが治まる</a></li><li class="section-item"><a href="003.html#013" class="section-link">記録をつくるメンバーは素晴らしい</a></li><li class="section-item"><a href="003.html#014" class="section-link">あなたたちは神様の実体の延長体である</a></li><li class="section-item"><a href="003.html#015" class="section-link">真の父母を迎えて血統転換がなされる</a></li><li class="section-item"><a href="003.html#016" class="section-link">重生するための産苦の基準</a></li></ul></div><div class="chapter-item"><a href="004.html" class="chapter-link">■良心は真の愛の羅針盤である</a><ul class="section-list"><li class="section-item"><a href="004.html#001" class="section-link">男性訪韓修練会</a></li><li class="section-item"><a href="004.html#003" class="section-link">四大心情圏と三大王権と皇族圏の復帰</a></li><li class="section-item"><a href="004.html#004" class="section-link">自分は父母の愛の同参者である</a></li><li class="section-item"><a href="004.html#005" class="section-link">貴重なる本郷の地</a></li><li class="section-item"><a href="004.html#006" class="section-link">良心絶対主義</a></li><li class="section-item"><a href="004.html#007" class="section-link">良心解放の宣言</a></li><li class="section-item"><a href="004.html#008" class="section-link">良心は両親に優る</a></li><li class="section-item"><a href="004.html#009" class="section-link">良心は先生に優る</a></li><li class="section-item"><a href="004.html#010" class="section-link">良心は神様に優る</a></li></ul></div><div class="chapter-item"><a href="005.html" class="chapter-link">蕩減復帰の峠を越えましょう1995年1月19日神の摂理史における蕩減復帰</a><ul class="section-list"><li class="section-item"><a href="005.html#001" class="section-link">男性訪韓修練会</a></li><li class="section-item"><a href="005.html#002" class="section-link">蕩減復帰の峠を越えましょう!!!</a></li><li class="section-item"><a href="005.html#003" class="section-link">神の摂理歴史における蕩減復帰</a></li><li class="section-item"><a href="005.html#004" class="section-link">世界の救済を中心とする神のみ旨</a></li><li class="section-item"><a href="005.html#005" class="section-link">一九六〇年代を中心とする摂理</a></li><li class="section-item"><a href="005.html#006" class="section-link">歴史上に残された教訓</a></li><li class="section-item"><a href="005.html#007" class="section-link">「真の父母と成約時代」の宣布と安着</a></li><li class="section-item"><a href="005.html#008" class="section-link">世界国家群時代の到来</a></li><li class="section-item"><a href="005.html#009" class="section-link">神様の権威と面子</a></li><li class="section-item"><a href="005.html#010" class="section-link">アベルの伝統は愛の救済運動</a></li></ul></div><div class="chapter-item"><a href="006.html" class="chapter-link">■(修練会、第三日目の夜)1995年1月19日救援摂理は復帰摂理であり、元に帰る神の経綸</a><ul class="section-list"><li class="section-item"><a href="006.html#001" class="section-link">男性訪韓修練会</a></li><li class="section-item"><a href="006.html#003" class="section-link">救援摂理には再創造摂理の公式が必要</a></li><li class="section-item"><a href="006.html#004" class="section-link">指導者になるための三大要件</a></li><li class="section-item"><a href="006.html#005" class="section-link">エバ国家の摂理の勝利の旗を掲げよう</a></li><li class="section-item"><a href="006.html#006" class="section-link">アベルを犠牲にしてもカインを救う神の摂理</a></li><li class="section-item"><a href="006.html#007" class="section-link">日本の立場と神のみ旨</a></li><li class="section-item"><a href="006.html#008" class="section-link">お母様の立てられた勝利圏</a></li><li class="section-item"><a href="006.html#009" class="section-link">神様の創造の公式と再創造の公式</a></li><li class="section-item"><a href="006.html#010" class="section-link">神の愛の理想の完成点を求めて</a></li><li class="section-item"><a href="006.html#011" class="section-link">恐ろしい復帰の蕩減公式</a></li><li class="section-item"><a href="006.html#012" class="section-link">全世界の女性はお母様の分身体</a></li><li class="section-item"><a href="006.html#013" class="section-link">真の父母様の勝利圏の相続</a></li><li class="section-item"><a href="006.html#014" class="section-link">再創造摂理は公式的に復帰する</a></li><li class="section-item"><a href="006.html#015" class="section-link">氏族メシヤの使命と神の国への入籍</a></li><li class="section-item"><a href="006.html#016" class="section-link">創世以来の戦いの歴史は長子権復帰である</a></li></ul></div><div class="chapter-item"><a href="007.html" class="chapter-link">■家庭における女性の使命</a><ul class="section-list"><li class="section-item"><a href="007.html#001" class="section-link">男性訪韓修練会</a></li><li class="section-item"><a href="007.html#003" class="section-link">ヤコブ家庭を中心とする摂理</a></li><li class="section-item"><a href="007.html#004" class="section-link">蕩減復帰のイスラエル歴史</a></li><li class="section-item"><a href="007.html#005" class="section-link">北朝と南朝を一つにするエリヤの使命</a></li><li class="section-item"><a href="007.html#006" class="section-link">「真の父母と成約時代」の宣布</a></li><li class="section-item"><a href="007.html#007" class="section-link">神様の心中の悩みは人間の救援である</a></li><li class="section-item"><a href="007.html#008" class="section-link">残された天使長の立場の使命</a></li><li class="section-item"><a href="007.html#009" class="section-link">ヨセフとマリヤの心境</a></li><li class="section-item"><a href="007.html#010" class="section-link">イエス様の結婚問題</a></li><li class="section-item"><a href="007.html#011" class="section-link">再臨主の家庭圏と日本の選択</a></li><li class="section-item"><a href="007.html#012" class="section-link">最後にエバの蕩減すべきこと</a></li><li class="section-item"><a href="007.html#013" class="section-link">イサク家庭のリベカの立場</a></li><li class="section-item"><a href="007.html#014" class="section-link">ユダの家のタマルの立場</a></li><li class="section-item"><a href="007.html#015" class="section-link">エバ国家のなすべき使命</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+<body><div class="container">
+<h1>男性訪韓修練会御言集</h1>
+<body bgcolor="#ffd2f9" link="#000000">
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<hr/>
+<b>男性訪韓修練会</b><br/>
+<hr/>
+<b>男性訪韓修練会御言集<br/>
+      1995年1月11日〜19日</b><br/>
+<br/>
+<a href="hajimeni.html" style="text-decoration : none;" target="right"><b>はじめに</b></a><br/>
+<br/>
+<a href="001.html" style="text-decoration : none;" target="right"><b>真の自分を探しましょう</b><br/>
+      　　　1995年1月17日<br/>
+      　32万人修練会の開始にあたって</a><br/>
+<a href="001.html#002" style="text-decoration : none;" target="right">　迫害されるこの道</a><br/>
+<a href="001.html#003" style="text-decoration : none;" target="right">　統一教会の理論は完全に正しい</a><br/>
+<a href="001.html#004" style="text-decoration : none;" target="right">　真剣で持って真剣に生きる</a><br/>
+<a href="001.html#005" style="text-decoration : none;" target="right">　忠臣の伝統精神とは</a><br/>
+<a href="001.html#006" style="text-decoration : none;" target="right">　聖子の行く道</a><br/>
+<a href="001.html#007" style="text-decoration : none;" target="right">　悪い世界の中の日本の国</a><br/>
+<a href="001.html#008" style="text-decoration : none;" target="right">　心身紛争する自分</a><br/>
+<a href="001.html#009" style="text-decoration : none;" target="right">　歴史の動機と結実体である人間</a><br/>
+<a href="001.html#010" style="text-decoration : none;" target="right">　一人ひとりが一億二千万人を代表した日本人</a><br/>
+<a href="001.html#011" style="text-decoration : none;" target="right">　すべての問題の解決は男と女</a><br/>
+<a href="001.html#012" style="text-decoration : none;" target="right">　すべては世界のため、天宙のため、神様解放のため</a><br/>
+<a href="001.html#013" style="text-decoration : none;" target="right">　神様が宇宙の唯一の根である</a><br/>
+<a href="001.html#014" style="text-decoration : none;" target="right">　心身紛争の出発点は何か</a><br/>
+<a href="001.html#015" style="text-decoration : none;" target="right">　愛によって所有権が決定される</a><br/>
+<a href="001.html#016" style="text-decoration : none;" target="right">　神様に反発する愛の動機</a><br/>
+<a href="001.html#017" style="text-decoration : none;" target="right">　宇宙は相対理論の組み合わせから</a><br/>
+<a href="001.html#018" style="text-decoration : none;" target="right">　永遠に変わらない神の愛</a><br/>
+<a href="001.html#019" style="text-decoration : none;" target="right">　神様の愛と人間の愛の決着する一点</a><br/>
+<a href="001.html#020" style="text-decoration : none;" target="right">　家庭は天国の基地である</a><br/>
+<a href="001.html#021" style="text-decoration : none;" target="right">　愛の神秘境の内容をすべて知っている神様</a><br/>
+<br/>
+<a href="002.html" style="text-decoration : none;" target="right">■(修練会、二日目の朝)<br/>
+      　　　1995年1月18日<br/>
+      　人間は愛のために生まれてきた</a><br/>
+<a href="002.html#002" style="text-decoration : none;" target="right">　すべての存在は愛を求めて相対のために生まれてきた</a><br/>
+<a href="002.html#003" style="text-decoration : none;" target="right">　半品なる者も愛によって完品になる</a><br/>
+<a href="002.html#004" style="text-decoration : none;" target="right">　すべてが愛を中心とする</a><br/>
+<a href="002.html#005" style="text-decoration : none;" target="right">　全体のために生きるところから天国が生まれる</a><br/>
+<a href="002.html#006" style="text-decoration : none;" target="right">　中心者の三大要目</a><br/>
+<a href="002.html#007" style="text-decoration : none;" target="right">　神様を完成させるのは、相対の愛を持つ者である</a><br/>
+<a href="002.html#008" style="text-decoration : none;" target="right">　結婚は共に完成するためである</a><br/>
+<a href="002.html#009" style="text-decoration : none;" target="right">　サタンも絶対愛の神様には絶対服従する</a><br/>
+<a href="002.html#010" style="text-decoration : none;" target="right">　神様の願いは世界万民の救済である</a><br/>
+<a href="002.html#011" style="text-decoration : none;" target="right">　日本と世界の行く道</a><br/>
+<a href="002.html#012" style="text-decoration : none;" target="right">　日本民族は神様に向って祈らなければならない</a><br/>
+<br/>
+<a href="003.html" style="text-decoration : none;" target="right">■(修練会、第二日目の午後)<br/>
+      　　　1995年1月18日<br/>
+      　真の父母という名前は、神の創造理想の標準である</a><br/>
+<a href="003.html#002" style="text-decoration : none;" target="right">　神の戦略戦術とサタンの戦略戦術</a><br/>
+<a href="003.html#003" style="text-decoration : none;" target="right">　自分自身の決意がすべてを決める</a><br/>
+<a href="003.html#004" style="text-decoration : none;" target="right">　神様の創造理想が地上に定着する時代</a><br/>
+<a href="003.html#005" style="text-decoration : none;" target="right">　中心者の使命とは</a><br/>
+<a href="003.html#006" style="text-decoration : none;" target="right">　宗教は民族と国家を超えていく</a><br/>
+<a href="003.html#007" style="text-decoration : none;" target="right">　孝子、忠臣、聖人、聖子の道</a><br/>
+<a href="003.html#008" style="text-decoration : none;" target="right">　引っ張り合う良心の力と肉身の力</a><br/>
+<a href="003.html#009" style="text-decoration : none;" target="right">　神様の願われる宗教の使命</a><br/>
+<a href="003.html#010" style="text-decoration : none;" target="right">　還故郷とお母様の勝利圏</a><br/>
+<a href="003.html#011" style="text-decoration : none;" target="right">　投入の哲学ですべてが治まる</a><br/>
+<a href="003.html#012" style="text-decoration : none;" target="right">　記録をつくるメンバーは素晴らしい</a><br/>
+<a href="003.html#013" style="text-decoration : none;" target="right">　あなたたちは神様の実体の延長体である</a><br/>
+<a href="003.html#014" style="text-decoration : none;" target="right">　真の父母様を迎えて血統転換がなされる</a><br/>
+<a href="003.html#015" style="text-decoration : none;" target="right">　重生するための産苦の基準</a><br/>
+<br/>
+<a href="004.html" style="text-decoration : none;" target="right">■良心は真の愛の羅針盤である</a><br/>
+<a href="004.html#002" style="text-decoration : none;" target="right">　四大心情圏と三大王権と皇族圏の復帰</a><br/>
+<a href="004.html#003" style="text-decoration : none;" target="right">　自分は父母の愛の同参者である</a><br/>
+<a href="004.html#004" style="text-decoration : none;" target="right">　貴重なる本郷の地</a><br/>
+<a href="004.html#005" style="text-decoration : none;" target="right">　良心絶対主義</a><br/>
+<a href="004.html#006" style="text-decoration : none;" target="right">　良心解放の宣言</a><br/>
+<a href="004.html#007" style="text-decoration : none;" target="right">　良心は両親に優る</a><br/>
+<a href="004.html#008" style="text-decoration : none;" target="right">　良心は先生に優る</a><br/>
+<a href="004.html#009" style="text-decoration : none;" target="right">　良心は神様に優る</a><br/>
+<br/>
+<br/>
+<a href="005.html" style="text-decoration : none;" target="right"><b>蕩減復帰の峠を越えましょう</b><br/>
+      　　　1995年1月19日<br/>
+      　神の摂理史における蕩減復帰</a><br/>
+<a href="005.html#002" style="text-decoration : none;" target="right">　世界の救済を中心とする神のみ旨</a><br/>
+<a href="005.html#003" style="text-decoration : none;" target="right">　一九六〇年代を中心とする摂理</a><br/>
+<a href="005.html#004" style="text-decoration : none;" target="right">　歴史上に残された教訓</a><br/>
+<a href="005.html#005" style="text-decoration : none;" target="right">　「真の父母と成約時代」の宣布と安着</a><br/>
+<a href="005.html#006" style="text-decoration : none;" target="right">　世界国家群時代の到来</a><br/>
+<a href="005.html#007" style="text-decoration : none;" target="right">　神様の権威と面子</a><br/>
+<a href="005.html#008" style="text-decoration : none;" target="right">　アベルの伝統は愛の救済運動</a><br/>
+<br/>
+<a href="006.html" style="text-decoration : none;" target="right">■(修練会、第三日目の夜)<br/>
+      　　　1995年1月19日<br/>
+      　救援摂理は復帰摂理であり、元に帰る神の経綸</a><br/>
+<a href="006.html#002" style="text-decoration : none;" target="right">　救援摂理には再創造摂理の公式が必要</a><br/>
+<a href="006.html#003" style="text-decoration : none;" target="right">　指導者になるための三大要件</a><br/>
+<a href="006.html#004" style="text-decoration : none;" target="right">　エバ国家の摂理の勝利の旗を掲げよう</a><br/>
+<a href="006.html#005" style="text-decoration : none;" target="right">　アベルを犠牲にしてもカインを救う神の摂理</a><br/>
+<a href="006.html#006" style="text-decoration : none;" target="right">　日本の立場と神のみ旨</a><br/>
+<a href="006.html#007" style="text-decoration : none;" target="right">　お母様の立てられた勝利圏</a><br/>
+<a href="006.html#008" style="text-decoration : none;" target="right">　神の創造の公式と再創造の公式</a><br/>
+<a href="006.html#009" style="text-decoration : none;" target="right">　神の愛の理想の完成点を求めて</a><br/>
+<a href="006.html#010" style="text-decoration : none;" target="right">　恐ろしい復帰の蕩減公式</a><br/>
+<a href="006.html#011" style="text-decoration : none;" target="right">　全世界の女性はお母様の分身体</a><br/>
+<a href="006.html#012" style="text-decoration : none;" target="right">　真の父母様の勝利圏の相続</a><br/>
+<a href="006.html#013" style="text-decoration : none;" target="right">　再創造摂理は公式的に復帰する</a><br/>
+<a href="006.html#014" style="text-decoration : none;" target="right">　氏族メシヤの使命と神の国への入籍</a><br/>
+<a href="006.html#015" style="text-decoration : none;" target="right">　創世以来の戦いの歴史は長子権復帰である</a><br/>
+<br/>
+<a href="007.html" style="text-decoration : none;" target="right">■家庭における女性の使命</a><br/>
+<a href="007.html#002" style="text-decoration : none;" target="right">　ヤコブ家庭を中心とする摂理</a><br/>
+<a href="007.html#003" style="text-decoration : none;" target="right">　蕩減復帰のイスラエル歴史</a><br/>
+<a href="007.html#004" style="text-decoration : none;" target="right">　北朝と南朝を一つにするエリヤの使命</a><br/>
+<a href="007.html#005" style="text-decoration : none;" target="right">　「真の父母と成約時代」の宣布</a><br/>
+<a href="007.html#006" style="text-decoration : none;" target="right">　神様の心中の悩みは人間の救援である</a><br/>
+<a href="007.html#007" style="text-decoration : none;" target="right">　残された天使長の立場の使命</a><br/>
+<a href="007.html#008" style="text-decoration : none;" target="right">　ヨセフとマリヤの心境</a><br/>
+<a href="007.html#009" style="text-decoration : none;" target="right">　イエス様の結婚問題</a><br/>
+<a href="007.html#010" style="text-decoration : none;" target="right">　再臨主の家庭圏と日本の選択</a><br/>
+<a href="007.html#011" style="text-decoration : none;" target="right">　最後にエバの蕩減すべきこと</a><br/>
+<a href="007.html#012" style="text-decoration : none;" target="right">　イサク家庭のリベカの立場</a><br/>
+<a href="007.html#013" style="text-decoration : none;" target="right">　ユダの家のタマルの立場</a><br/>
+<a href="007.html#014" style="text-decoration : none;" target="right">　エバ国家のなすべき使命</a><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+
+
+
+
+
+
+
+
+
 </div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script></body>
+<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body>
 </html>
+
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

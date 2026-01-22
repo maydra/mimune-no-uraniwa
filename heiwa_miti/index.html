@@ -1,194 +1,605 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>南北統一と世界平和への道 | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<title>南北統一と世界平和への道</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>南北統一と世界平和への道</h1><div class="index-list"><div class="chapter-item"><a href="kansyu.html" class="chapter-link">監修のことば　神山威</a><ul class="section-list"><li class="section-item"><a href="kansyu.html#001" class="section-link">南北統一と世界平和への道</a></li></ul></div><div class="chapter-item"><a href="chapter_1.html" class="chapter-link">第一章</a><ul class="section-list"><li class="section-item"><a href="chapter_1.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_1.html#002" class="section-link">第一章　文鮮明師の北朝鮮訪問</a></li><li class="section-item"><a href="chapter_1.html#003" class="section-link">―現代のヤコブとエサウの歴史的な出会い―</a></li><li class="section-item"><a href="chapter_1.html#004" class="section-link">文鮮明師北朝鮮訪問の摂理的意義韓国「世界日報」社社長　朴普煕</a></li><li class="section-item"><a href="chapter_1.html#005" class="section-link">メシヤの使命</a></li><li class="section-item"><a href="chapter_1.html#006" class="section-link">現代のヤコブとエサウ</a></li><li class="section-item"><a href="chapter_1.html#007" class="section-link">最高の歓迎を受けて</a></li><li class="section-item"><a href="chapter_1.html#008" class="section-link">真実を語るために</a></li><li class="section-item"><a href="chapter_1.html#009" class="section-link">大人物と大人物が認め合う</a></li><li class="section-item"><a href="chapter_1.html#010" class="section-link">金主席との歴史的会談</a></li><li class="section-item"><a href="chapter_1.html#011" class="section-link">友人から兄弟へ</a></li><li class="section-item"><a href="chapter_1.html#012" class="section-link">神の代理者として</a></li><li class="section-item"><a href="chapter_1.html#013" class="section-link">同胞愛を感じつつ</a></li></ul></div><div class="chapter-item"><a href="chapter_1_a.html" class="chapter-link">文鮮明師のメッセージ</a><ul class="section-list"><li class="section-item"><a href="chapter_1_a.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_1_a.html#003" class="section-link">血は水よりも濃い</a></li><li class="section-item"><a href="chapter_1_a.html#004" class="section-link">平壌　　1991年11月30日</a></li></ul></div><div class="chapter-item"><a href="chapter_1_b.html" class="chapter-link">愛は血よりも濃い　北朝鮮を発つにあたって</a><ul class="section-list"><li class="section-item"><a href="chapter_1_b.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_1_b.html#002" class="section-link">文鮮明師のメッセージ</a></li><li class="section-item"><a href="chapter_1_b.html#004" class="section-link">平壌　　1991年12月6日</a></li></ul></div><div class="chapter-item"><a href="chapter_1_c.html" class="chapter-link">北朝鮮から帰って　北京空港にて</a><ul class="section-list"><li class="section-item"><a href="chapter_1_c.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_1_c.html#002" class="section-link">文鮮明師のメッセージ</a></li><li class="section-item"><a href="chapter_1_c.html#004" class="section-link">北京　　1991年12月7日</a></li><li class="section-item"><a href="chapter_1_c.html#006" class="section-link">勝共思想は人類救済の思想</a></li><li class="section-item"><a href="chapter_1_c.html#007" class="section-link">離散家族のための努力</a></li><li class="section-item"><a href="chapter_1_c.html#008" class="section-link">経済開発支援提議</a></li><li class="section-item"><a href="chapter_1_c.html#009" class="section-link">北朝鮮はイラクではない</a></li><li class="section-item"><a href="chapter_1_c.html#010" class="section-link">祖国統一は我々の使命</a></li></ul></div><div class="chapter-item"><a href="chapter_1_d.html" class="chapter-link">文鮮明師と尹基福委員長との共同声明要旨</a><ul class="section-list"><li class="section-item"><a href="chapter_1_d.html#001" class="section-link">南北統一と世界平和への道</a></li></ul></div><div class="chapter-item"><a href="chapter_1_e.html" class="chapter-link">文鮮明師と金日成主席の四項目合意</a><ul class="section-list"><li class="section-item"><a href="chapter_1_e.html#001" class="section-link">南北統一と世界平和への道</a></li></ul></div><div class="chapter-item"><a href="chapter_1_f.html" class="chapter-link">文鮮明師一行の定州訪問のご様子</a><ul class="section-list"><li class="section-item"><a href="chapter_1_f.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_1_f.html#003" class="section-link">韓国「世界日報」社社長　朴普煕</a></li><li class="section-item"><a href="chapter_1_f.html#004" class="section-link">四十余年ぶりの帰郷</a></li><li class="section-item"><a href="chapter_1_f.html#005" class="section-link">迎賓館接見室にて姉妹たちと対面</a></li><li class="section-item"><a href="chapter_1_f.html#006" class="section-link">ヘリコプターで定州ご訪問</a></li><li class="section-item"><a href="chapter_1_f.html#007" class="section-link">聖地となった文先生の生家</a></li><li class="section-item"><a href="chapter_1_f.html#008" class="section-link">ご両親のお墓参り</a></li><li class="section-item"><a href="chapter_1_f.html#009" class="section-link">文先生のお母様</a></li><li class="section-item"><a href="chapter_1_f.html#010" class="section-link">涙のお別れ</a></li></ul></div><div class="chapter-item"><a href="chapter_2.html" class="chapter-link">第二章</a><ul class="section-list"><li class="section-item"><a href="chapter_2.html#001" class="section-link">南北統一と世界平和への道</a></li></ul></div><div class="chapter-item"><a href="chapter_2_a.html" class="chapter-link">世界平和のための宗教の使命</a><ul class="section-list"><li class="section-item"><a href="chapter_2_a.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_2_a.html#002" class="section-link">世界平和宗教連合創設大会</a></li><li class="section-item"><a href="chapter_2_a.html#004" class="section-link">1991年8月27日　　韓国・ソウル</a></li><li class="section-item"><a href="chapter_2_a.html#005" class="section-link">真の愛によってのみ実現する理想世界</a></li><li class="section-item"><a href="chapter_2_a.html#006" class="section-link">為政者の使命</a></li><li class="section-item"><a href="chapter_2_a.html#008" class="section-link">神の摂理の方向</a></li></ul></div><div class="chapter-item"><a href="chaoter_2_b.html" class="chapter-link">世界平和への道</a><ul class="section-list"><li class="section-item"><a href="chaoter_2_b.html#002" class="section-link">世界平和連合創設大会</a></li><li class="section-item"><a href="chaoter_2_b.html#004" class="section-link">1991年8月28日　　韓国・ソウル</a></li><li class="section-item"><a href="chaoter_2_b.html#005" class="section-link">平和を切望し続けた人類歴史</a></li><li class="section-item"><a href="chaoter_2_b.html#006" class="section-link">神の創造理想</a></li><li class="section-item"><a href="chaoter_2_b.html#007" class="section-link">創造主を失った世界</a></li><li class="section-item"><a href="chaoter_2_b.html#008" class="section-link">世界平和を復帰なさろうとする神様</a></li><li class="section-item"><a href="chaoter_2_b.html#009" class="section-link">心と体の和合</a></li><li class="section-item"><a href="chaoter_2_b.html#010" class="section-link">家庭こそ平和の基礎</a></li><li class="section-item"><a href="chaoter_2_b.html#011" class="section-link">真の世界平和のための真の父母理想</a></li><li class="section-item"><a href="chaoter_2_b.html#012" class="section-link">槍と剣を溶かしてすきをつくる時</a></li><li class="section-item"><a href="chaoter_2_b.html#013" class="section-link">貧困と無知と疾病と罪悪からの解放</a></li><li class="section-item"><a href="chaoter_2_b.html#014" class="section-link">二十一世紀は共生共栄共義の時代</a></li></ul></div><div class="chapter-item"><a href="chapter_2_c.html" class="chapter-link">我々の時代の真なる平和、</a><ul class="section-list"><li class="section-item"><a href="chapter_2_c.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_2_c.html#002" class="section-link">第二回世界平和のための頂上会議・第八回ＡＵＬＡ（中南米統合機構）総会</a></li><li class="section-item"><a href="chapter_2_c.html#004" class="section-link">1990年2月2日　　韓国・ソウル</a></li><li class="section-item"><a href="chapter_2_c.html#005" class="section-link">対決から和解へ</a></li><li class="section-item"><a href="chapter_2_c.html#006" class="section-link">西欧社会の問題</a></li><li class="section-item"><a href="chapter_2_c.html#007" class="section-link">神様を中心とする世界観</a></li><li class="section-item"><a href="chapter_2_c.html#008" class="section-link">霊的覚醒が必要</a></li><li class="section-item"><a href="chapter_2_c.html#009" class="section-link">韓国の統一</a></li></ul></div><div class="chapter-item"><a href="chapter_2_d.html" class="chapter-link">神のみ旨と韓国</a><ul class="section-list"><li class="section-item"><a href="chapter_2_d.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_2_d.html#002" class="section-link">国際勝共安保決意大会</a></li><li class="section-item"><a href="chapter_2_d.html#004" class="section-link">1985年12月16日　　韓国・ソウル</a></li><li class="section-item"><a href="chapter_2_d.html#005" class="section-link">休戦ラインは善悪の対峙線</a></li><li class="section-item"><a href="chapter_2_d.html#006" class="section-link">分断は摂理的十字架</a></li><li class="section-item"><a href="chapter_2_d.html#007" class="section-link">すべての難問を解く絶対真理</a></li><li class="section-item"><a href="chapter_2_d.html#008" class="section-link">共産主義の悪を諭し包容する</a></li><li class="section-item"><a href="chapter_2_d.html#009" class="section-link">国境を超えた世界愛が天理</a></li></ul></div><div class="chapter-item"><a href="chapter_2_e.html" class="chapter-link">南と北が共に生きる道</a><ul class="section-list"><li class="section-item"><a href="chapter_2_e.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_2_e.html#002" class="section-link">全国大学教授学生南北統一運動連合創設集会</a></li><li class="section-item"><a href="chapter_2_e.html#004" class="section-link">1986年10月11日　　韓国・ソウル</a></li><li class="section-item"><a href="chapter_2_e.html#005" class="section-link">「共に生きる」思想が必要</a></li><li class="section-item"><a href="chapter_2_e.html#006" class="section-link">家族の心を占領する孝子</a></li><li class="section-item"><a href="chapter_2_e.html#007" class="section-link">聖人は神と一致して歩む人</a></li><li class="section-item"><a href="chapter_2_e.html#008" class="section-link">学校内の関係も愛を基調に</a></li><li class="section-item"><a href="chapter_2_e.html#009" class="section-link">子供よりも痛みを感じる親</a></li><li class="section-item"><a href="chapter_2_e.html#010" class="section-link">北韓の同胞と共に住みたい</a></li><li class="section-item"><a href="chapter_2_e.html#011" class="section-link">天理の道に従った生涯</a></li><li class="section-item"><a href="chapter_2_e.html#012" class="section-link">北の悲惨さに心痛める</a></li><li class="section-item"><a href="chapter_2_e.html#013" class="section-link">涙しキリスト教の没落防ぐ</a></li><li class="section-item"><a href="chapter_2_e.html#014" class="section-link">金や知識より心が大切</a></li><li class="section-item"><a href="chapter_2_e.html#015" class="section-link">韓国で郷土学校始まる</a></li><li class="section-item"><a href="chapter_2_e.html#016" class="section-link">後の歴史から愛の審判</a></li><li class="section-item"><a href="chapter_2_e.html#017" class="section-link">死の恐怖を越えて生きる</a></li></ul></div><div class="chapter-item"><a href="chapter_2_f.html" class="chapter-link">南北統一への熱望を信仰化しよう</a><ul class="section-list"><li class="section-item"><a href="chapter_2_f.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_2_f.html#002" class="section-link">南北統一運動国民連合創設大会</a></li><li class="section-item"><a href="chapter_2_f.html#004" class="section-link">1987年5月15日　　韓国・ソウル</a></li><li class="section-item"><a href="chapter_2_f.html#005" class="section-link">三八度線は価値観の対立</a></li><li class="section-item"><a href="chapter_2_f.html#006" class="section-link">共産主義の人間観の誤り</a></li><li class="section-item"><a href="chapter_2_f.html#007" class="section-link">自由統一こそ真実なる解放</a></li><li class="section-item"><a href="chapter_2_f.html#008" class="section-link">機が熟した国民連合の創立</a></li><li class="section-item"><a href="chapter_2_f.html#009" class="section-link">神主義で大覚醒運動を起こす</a></li><li class="section-item"><a href="chapter_2_f.html#010" class="section-link">世界的な思想武装を急げ</a></li></ul></div><div class="chapter-item"><a href="chapter_2_g.html" class="chapter-link">世界平和はいかにして達成されるか</a><ul class="section-list"><li class="section-item"><a href="chapter_2_g.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_2_g.html#002" class="section-link">第九回科学の統一に関する国際会議（ＩＣＵＳ）</a></li><li class="section-item"><a href="chapter_2_g.html#004" class="section-link">1980年11月28日　　米国・マイアミ</a></li><li class="section-item"><a href="chapter_2_g.html#005" class="section-link">愛の実践による秩序の回復</a></li><li class="section-item"><a href="chapter_2_g.html#006" class="section-link">絶対的愛と絶対的価値</a></li><li class="section-item"><a href="chapter_2_g.html#007" class="section-link">絶対的な存在の証明</a></li></ul></div><div class="chapter-item"><a href="chapter_2_h.html" class="chapter-link">世界の中の韓国</a><ul class="section-list"><li class="section-item"><a href="chapter_2_h.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_2_h.html#002" class="section-link">救国世界大会</a></li><li class="section-item"><a href="chapter_2_h.html#004" class="section-link">1975年6月7日　　韓国・ソウル</a></li><li class="section-item"><a href="chapter_2_h.html#005" class="section-link">歴史的宣布の日</a></li><li class="section-item"><a href="chapter_2_h.html#006" class="section-link">共産主義は「神を否定する」宗教</a></li><li class="section-item"><a href="chapter_2_h.html#007" class="section-link">真なる真理と信念と思想</a></li><li class="section-item"><a href="chapter_2_h.html#008" class="section-link">神の名によって決起せよ</a></li><li class="section-item"><a href="chapter_2_h.html#009" class="section-link">レーニン政治戦略学校の教え</a></li><li class="section-item"><a href="chapter_2_h.html#010" class="section-link">信仰の祖国</a></li><li class="section-item"><a href="chapter_2_h.html#011" class="section-link">総和文明の結実体</a></li><li class="section-item"><a href="chapter_2_h.html#012" class="section-link">神を中心として団結できる思想体系</a></li><li class="section-item"><a href="chapter_2_h.html#013" class="section-link">神の名のもとに平和統一の世界を</a></li></ul></div><div class="chapter-item"><a href="chapter_2_i.html" class="chapter-link">資料　「世界平和連合」設立の背景</a><ul class="section-list"><li class="section-item"><a href="chapter_2_i.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_2_i.html#004" class="section-link">国際情勢は不確実性の時代</a></li><li class="section-item"><a href="chapter_2_i.html#005" class="section-link">技術力の格差埋める諸組織</a></li><li class="section-item"><a href="chapter_2_i.html#006" class="section-link">神中心の世界観を強調</a></li><li class="section-item"><a href="chapter_2_i.html#007" class="section-link">政府と国民の相互協力生む</a></li></ul></div><div class="chapter-item"><a href="chapter_3_a.html" class="chapter-link">第三章文鮮明師の北朝鮮訪問に関するマスコミ報道</a><ul class="section-list"><li class="section-item"><a href="chapter_3_a.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_3_a.html#003" class="section-link">世界日報（1991年12月1日付）</a></li><li class="section-item"><a href="chapter_3_a.html#004" class="section-link">感慨深く四十一年ぶり故郷へ　―　文鮮明師、北朝鮮入り　―崩れる「体制」に救いの手　―　真の「南北統一」へ道　―</a></li><li class="section-item"><a href="chapter_3_a.html#006" class="section-link">文鮮明師、金日成主席と会談離散家族再会で合意　　―主席、米大統領への仲介依頼―</a></li><li class="section-item"><a href="chapter_3_a.html#007" class="section-link">世界日報・社説（1991年12月2日付）統一へ文師訪朝の歴史的意義</a></li><li class="section-item"><a href="chapter_3_a.html#008" class="section-link">共産国の救済も図る勝共運動</a></li><li class="section-item"><a href="chapter_3_a.html#009" class="section-link">金主席との単独会談焦点に</a></li><li class="section-item"><a href="chapter_3_a.html#010" class="section-link">世界日報（1991年12月7日付）南北平和統一の扉開いた文師</a></li><li class="section-item"><a href="chapter_3_a.html#011" class="section-link">勝共運動から交流のパイプ</a></li><li class="section-item"><a href="chapter_3_a.html#012" class="section-link">民族自決という問題として</a></li><li class="section-item"><a href="chapter_3_a.html#013" class="section-link">世界日報（1991年12月14日付）統一へ基礎つくった南北合意</a></li><li class="section-item"><a href="chapter_3_a.html#014" class="section-link">画期的な北側の融和姿勢</a></li><li class="section-item"><a href="chapter_3_a.html#015" class="section-link">南北和解はアジア安定の要</a></li></ul></div><div class="chapter-item"><a href="chapter_3_b.html" class="chapter-link">◇ワシントン・タイムズ（1991年12月7日付）</a><ul class="section-list"><li class="section-item"><a href="chapter_3_b.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_3_b.html#003" class="section-link">金日成主席、韓半島統一について会談</a></li><li class="section-item"><a href="chapter_3_b.html#004" class="section-link">月刊『ワールド＆アイ』（1992年2月号）</a></li><li class="section-item"><a href="chapter_3_b.html#005" class="section-link">血は水よりも濃い</a></li><li class="section-item"><a href="chapter_3_b.html#006" class="section-link">月刊『世界女性』（1992年2月号）南北和解時代の劇的な出会い</a></li><li class="section-item"><a href="chapter_3_b.html#007" class="section-link">週刊　東大新報（1991年12月11日付）文鮮明師と神主義共産主義崩壊の予言と思想的超克</a></li><li class="section-item"><a href="chapter_3_b.html#008" class="section-link">数理的予言がソ連史上で的中</a></li><li class="section-item"><a href="chapter_3_b.html#009" class="section-link">具体的に年代までも予言</a></li><li class="section-item"><a href="chapter_3_b.html#010" class="section-link">マルクスの経済学公理は現実離れ</a></li><li class="section-item"><a href="chapter_3_b.html#011" class="section-link">復讐心から社会転覆狙った共産主義</a></li><li class="section-item"><a href="chapter_3_b.html#012" class="section-link">神主義により物心両面を救済</a></li></ul></div><div class="chapter-item"><a href="chapter_3_c.html" class="chapter-link">朝日新聞</a><ul class="section-list"><li class="section-item"><a href="chapter_3_c.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_3_c.html#005" class="section-link">読売新聞（1991年12月1日付）文鮮明夫妻が北朝鮮入り　金主席と会談へ</a></li><li class="section-item"><a href="chapter_3_c.html#006" class="section-link">読売新聞（1991年12月7日付）文鮮明師と会談　金日成主席</a></li><li class="section-item"><a href="chapter_3_c.html#007" class="section-link">毎日新聞（1991年12月6日付）文鮮明教祖訪朝で共同声明</a></li><li class="section-item"><a href="chapter_3_c.html#008" class="section-link">東京新聞（1991年12月8日付）金主席、訪米し、大統領と会談も　文鮮明氏に意向伝達？</a></li><li class="section-item"><a href="chapter_3_c.html#009" class="section-link">日本経済新聞（1991年12月8日付）文鮮明氏、北朝鮮訪問終える</a></li><li class="section-item"><a href="chapter_3_c.html#010" class="section-link">中和新聞（1992年1月1日付）九二年国際情勢徹底分析摂理的使命果たした文鮮明先生の北訪問　　　外交評論家　井上茂信</a></li></ul></div><div class="chapter-item"><a href="chapter_4.html" class="chapter-link">第四章</a><ul class="section-list"><li class="section-item"><a href="chapter_4.html#001" class="section-link">南北統一と世界平和への道</a></li><li class="section-item"><a href="chapter_4.html#002" class="section-link">第四章　共産主義を越えて</a></li><li class="section-item"><a href="chapter_4.html#004" class="section-link">統一思想研究院副院長　大谷明史</a></li><li class="section-item"><a href="chapter_4.html#005" class="section-link">キリスト教と政府から追われて</a></li><li class="section-item"><a href="chapter_4.html#006" class="section-link">国際勝共連合の設立と世界的大会の開催</a></li><li class="section-item"><a href="chapter_4.html#007" class="section-link">最高度に高まった東西の緊張</a></li><li class="section-item"><a href="chapter_4.html#008" class="section-link">共産主義の終焉宣言</a></li><li class="section-item"><a href="chapter_4.html#009" class="section-link">共産主義の崩壊</a></li><li class="section-item"><a href="chapter_4.html#010" class="section-link">神のみ旨の勝利</a></li><li class="section-item indent-1"><a href="chapter_4.html#011" class="section-link">（二）　マルクスの思想の変遷</a></li><li class="section-item"><a href="chapter_4.html#012" class="section-link">第一の心理的撃発</a></li><li class="section-item indent-1"><a href="chapter_4.html#015" class="section-link">（三）　マルクス主義の悪魔的要素</a></li><li class="section-item"><a href="chapter_4.html#016" class="section-link">憎悪と復讐心の凝結</a></li><li class="section-item"><a href="chapter_4.html#017" class="section-link">マルクスの人間疎外論</a></li><li class="section-item"><a href="chapter_4.html#018" class="section-link">暴力の肯定</a></li><li class="section-item"><a href="chapter_4.html#019" class="section-link">独裁論の樹立</a></li><li class="section-item indent-1"><a href="chapter_4.html#020" class="section-link">（四）　真の愛による人間の解放</a></li><li class="section-item"><a href="chapter_4.html#021" class="section-link">真の愛に基づいた思想</a></li><li class="section-item"><a href="chapter_4.html#022" class="section-link">文先生とゴルバチョフ大統領との会談</a></li><li class="section-item"><a href="chapter_4.html#023" class="section-link">北朝鮮訪問と金日成主席との会談</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+<body><div class="container">
+<h1>南北統一と世界平和への道</h1>
+<body alink="#000000" background="bgs_003.gif" link="#000000" text="#000000" vlink="#000000">
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+
+<p><br/>
+</p>
+<div align="left">
+<a href="http://www.geocities.co.jp/MusicHall-Horn/9211/" style="color : white;background-color : red;text-decoration : none;" target="_top"></a>
+<hr align="left" width="75%"/>
+<b>　南北統一と<br/>
+      　世界平和への道</b>
+<hr align="left" width="75%"/>
+<br/>
+<b><a href="kansyu.html" style="color : #000000;text-decoration : none;" target="right">監修のことば　神山威</a></b><br/>
+<br/>
+<b><a href="chapter_1.html" style="color : #000000;text-decoration : none;" target="right">第一章</a></b>　<br/>
+<br/>
+<a href="chapter_1.html" style="text-decoration : none;color : #000000;" target="right"><b>文鮮明師の北朝鮮訪問</b> <br/>
+      　― 現代のヤコブとエサウの歴史的な出会い―<br/>
+      ◆文鮮明師北朝鮮訪問の摂理的意義<br/>
+      　　　　　　朴普煕・韓国「世界日報」社社長</a><br/>
+      　<a href="chapter_1.html#01" style="text-decoration : none;" target="right">・メシヤの使命</a><br/>
+      　<a href="chapter_1.html#02" style="text-decoration : none;" target="right">・現代のヤコブとエサウ</a><br/>
+      　<a href="chapter_1.html#03" style="text-decoration : none;" target="right">・最高の歓迎を受けて</a><br/>
+      　<a href="chapter_1.html#04" style="text-decoration : none;" target="right">・真実を語るために</a><br/>
+      　<a href="chapter_1.html#05" style="text-decoration : none;" target="right">・大人物と大人物が認め合う</a><br/>
+      　<a href="chapter_1.html#06" style="text-decoration : none;" target="right">・金主席との歴史的会談</a><br/>
+      　<a href="chapter_1.html#07" style="text-decoration : none;" target="right">・友人から兄弟へ</a><br/>
+      　<a href="chapter_1.html#08" style="text-decoration : none;" target="right">・神の代理者として</a><br/>
+      　<a href="chapter_1.html#09" style="text-decoration : none;" target="right">・同胞愛を感じつつ</a><br/>
+<br/>
+<b><a href="chapter_1_a.html" style="color : #000000;text-decoration : none;" target="right">文鮮明師のメッセージ</a></b><br/>
+      ■<a href="chapter_1_a.html" style="text-decoration : none;" target="right">血は水よりも濃い　平譲木蓮館賓館にて</a><br/>
+      ■<a href="chapter_1_b.html" style="text-decoration : none;" target="right">愛は血よりも濃い　北朝鮮を発つにあたって</a><br/>
+      ■<a href="chapter_1_c.html" style="text-decoration : none;" target="right">北朝鮮から帰って　北京空港にて</a><br/>
+      　<a href="chapter_1_c.html#01" style="text-decoration : none;" target="right">・北朝鮮から帰って</a><br/>
+      　<a href="chapter_1_c.html#02" style="text-decoration : none;" target="right">・勝共思想は人類救済の思想</a><br/>
+      　<a href="chapter_1_c.html#03" style="text-decoration : none;" target="right">・離散家族のための努力</a><br/>
+      　<a href="chapter_1_c.html#04" style="text-decoration : none;" target="right">・経済開発支援提議</a><br/>
+      　<a href="chapter_1_c.html#05" style="text-decoration : none;" target="right">・北朝鮮はイラクではない</a><br/>
+      　<a href="chapter_1_c.html#06" style="text-decoration : none;" target="right">・祖国統一は我々の使命</a><br/>
+<br/>
+      ◆<a href="chapter_1_d.html" style="text-decoration : none;" target="right">文鮮明師と尹基福委員長との共同声明要旨</a><br/>
+      ◆<a href="chapter_1_e.html" style="text-decoration : none;" target="right">文鮮明師と金日成主席の四項目合意</a><br/>
+<br/>
+      　<b><a href="chapter_1_f.html" style="color : #000000;text-decoration : none;" target="right">文鮮明師一行の定州訪問のご様子</a></b><br/>
+      　　　<a href="chapter_1_f.html" style="color : #000000;text-decoration : none;" target="right"><b>朴普煕・韓国「世界日報」社社長</b></a><br/>
+      　<a href="chapter_1_f.html#01" style="text-decoration : none;" target="right">・四十余年ぶりの帰郷</a><br/>
+      　<a href="chapter_1_f.html#02" style="text-decoration : none;" target="right">・迎賓館接見室にて姉妹たちと対面</a><br/>
+      　<a href="chapter_1_f.html#03" style="text-decoration : none;" target="right">・ヘリコプターで定州ご訪問</a><br/>
+      　<a href="chapter_1_f.html#04" style="text-decoration : none;" target="right">・聖地となった文先生の生家</a><br/>
+      　<a href="chapter_1_f.html#05" style="text-decoration : none;" target="right">・ご両親のお墓参り</a><br/>
+      　<a href="chapter_1_f.html#06" style="text-decoration : none;" target="right">・文先生のお母様</a><br/>
+      　<a href="chapter_1_f.html#07" style="text-decoration : none;" target="right">・涙のお別れ</a><br/>
+<br/>
+<b><a href="chapter_2.html" style="color : #000000;text-decoration : none;" target="right">第二章</a></b><br/>
+<br/>
+      ■<a href="chapter_2_a.html" style="color : #000000;text-decoration : none;" target="right"><b>世界平和のための宗教の使命</b></a><br/>
+      　<a href="chapter_2_a.html" style="text-decoration : none;" target="right">世界平和宗教連合創設大会</a><br/>
+      　　　<a href="chapter_2_a.html" style="text-decoration : none;" target="right">（1991年8月27日　韓国・ソウル）</a><br/>
+      　<a href="chapter_2_a.html#01" style="text-decoration : none;" target="right">・真の愛によってのみ実現する理想世界</a><br/>
+      　<a href="chapter_2_a.html#02" style="text-decoration : none;" target="right">・為政者の使命</a><br/>
+      　<a href="chapter_2_a.html#03" style="text-decoration : none;" target="right">・宗教の使命</a><br/>
+      　<a href="chapter_2_a.html#04" style="text-decoration : none;" target="right">・神の摂理の方向</a><br/>
+<br/>
+      ■<a href="chaoter_2_b.html" style="text-decoration : none;color : #000000;" target="right"><b>世界平和への道</b></a><br/>
+      　<a href="chaoter_2_b.html" style="text-decoration : none;" target="right">世界平和連合創設大会</a><br/>
+      　　　<a href="chaoter_2_b.html" style="text-decoration : none;" target="right">　(1991年8月28日　韓国・ソウル）</a><br/>
+      　<a href="chaoter_2_b.html#01" style="text-decoration : none;" target="right">・平和を切望し続けた人類歴史</a><br/>
+      　<a href="chaoter_2_b.html#02" style="text-decoration : none;" target="right">・神の創造理想</a><br/>
+      　<a href="chaoter_2_b.html#03" style="text-decoration : none;" target="right">・創造主を失った世界</a><br/>
+      　<a href="chaoter_2_b.html#04" style="text-decoration : none;" target="right">・世界平和を復帰なさろうとする神様</a><br/>
+      　<a href="chaoter_2_b.html#05" style="text-decoration : none;" target="right">・心と体の和合</a><br/>
+      　<a href="chaoter_2_b.html#06" style="text-decoration : none;" target="right">・家庭こそ平和の基礎</a><br/>
+      　<a href="chaoter_2_b.html#07" style="text-decoration : none;" target="right">・真の世界平和のための真の父母理想</a><br/>
+      　<a href="chaoter_2_b.html#08" style="text-decoration : none;" target="right">・槍と剣を溶かしてすきをつくる時</a><br/>
+      　<a href="chaoter_2_b.html#09" style="text-decoration : none;" target="right">・貧困と無知と疾病と罪悪からの解放</a><br/>
+      　<a href="chaoter_2_b.html#10" style="text-decoration : none;" target="right">・二十一世紀は共生共栄共義の時代</a><br/>
+<br/>
+      ■<b><a href="chapter_2_c.html" style="color : #000000;text-decoration : none;" target="right">我々の時代の真なる平和、</a></b><br/>
+      　　　　　<b><a href="chapter_2_c.html" style="color : #000000;text-decoration : none;" target="right">韓国の統一と東西協力</a></b><br/>
+      　<a href="chapter_2_c.html" style="text-decoration : none;" target="right">第二回世界平和のための頂上会議</a><br/>
+      　　　<a href="chapter_2_c.html" style="text-decoration : none;" target="right">第八回ＡＵＬＡ総会</a><br/>
+      　　　　<a :="" href="chapter_2_c.html" none;""="" style="text-decoration : none;" target="right style=" text-decoration="">（1990年2月2日　韓国・ソウル）</a><br/>
+      　<a href="chapter_2_c.html#01" style="text-decoration : none;" target="right">・対決から和解へ</a><br/>
+      　<a href="chapter_2_c.html#02" style="text-decoration : none;" target="right">・西欧社会の問題</a><br/>
+      　<a href="chapter_2_c.html#03" style="text-decoration : none;" target="right">・神様を中心とする世界観</a><br/>
+      　<a href="chapter_2_c.html#04" style="text-decoration : none;" target="right">・霊的覚醒が必要</a><br/>
+      　<a href="chapter_2_c.html#05" style="text-decoration : none;" target="right">・韓国の統一</a><br/>
+<br/>
+      ■<b><a href="chapter_2_d.html" style="color : #000000;text-decoration : none;" target="right">神のみ旨と韓国</a></b><br/>
+      　<a href="chapter_2_d.html" style="text-decoration : none;" target="right">国際勝共安保決意大会</a><br/>
+      　　　　<a href="chapter_2_d.html" style="text-decoration : none;" target="right">（1985年12月16日　韓国・ソウル）</a><br/>
+      　<a href="chapter_2_d.html#01" style="text-decoration : none;" target="right">・休戦ラインは善悪の対峙線</a><br/>
+      　<a href="chapter_2_d.html#02" style="text-decoration : none;" target="right">・分断は摂理的十字架</a><br/>
+      　<a href="chapter_2_d.html#03" style="text-decoration : none;" target="right">・すべての難問を解く絶対真理</a><br/>
+      　<a href="chapter_2_d.html#04" style="text-decoration : none;" target="right">・共産主義の悪を諭し包容する</a><br/>
+      　<a href="chapter_2_d.html#05" style="text-decoration : none;" target="right">・国境を超えた世界愛が天理</a><br/>
+<br/>
+      ■<b><a href="chapter_2_e.html" style="color : #000000;text-decoration : none;" target="right">南と北が共に生きる道</a></b><br/>
+      　<a href="chapter_2_e.html" style="text-decoration : none;" target="right">全国大学教授学生</a><br/>
+      　　　　<a href="chapter_2_e.html" style="text-decoration : none;" target="right">南北統一運動連合創設集会</a><br/>
+      　　　　<a href="chapter_2_e.html" style="text-decoration : none;" target="right">（1986年10月11日　韓国・ソウル）</a><br/>
+      　<a href="chapter_2_e.html#01" style="text-decoration : none;" target="right">・「共に生きる」思想が必要</a><br/>
+      　<a href="chapter_2_e.html#02" style="text-decoration : none;" target="right">・家族の心を占領する孝子</a><br/>
+      　<a href="chapter_2_e.html#03" style="text-decoration : none;" target="right">・聖人は神と一致して歩む人</a><br/>
+      　<a href="chapter_2_e.html#04" style="text-decoration : none;" target="right">・学校内の関係も愛を基調に</a><br/>
+      　<a href="chapter_2_e.html#05" style="text-decoration : none;" target="right">・子供よりも痛みを感じる親</a><br/>
+      　<a href="chapter_2_e.html#06" style="text-decoration : none;" target="right">・北韓の同胞と共に住みたい</a><br/>
+      　<a href="chapter_2_e.html#07" style="text-decoration : none;" target="right">・天理の道に従った生涯</a><br/>
+      　<a href="chapter_2_e.html#08" style="text-decoration : none;" target="right">・北の悲惨さに心痛める</a><br/>
+      　<a href="chapter_2_e.html#09" style="text-decoration : none;" target="right">・涙しキリスト教の没落防ぐ</a><br/>
+      　<a href="chapter_2_e.html#10" style="text-decoration : none;" target="right">・金や知識より心が大切</a><br/>
+      　<a href="chapter_2_e.html#11" style="text-decoration : none;" target="right">・韓国で郷土学校始まる</a><br/>
+      　<a href="chapter_2_e.html#12" style="text-decoration : none;" target="right">・後の歴史から愛の審判</a><br/>
+      　<a href="chapter_2_e.html#13" style="text-decoration : none;" target="right">・死の恐怖を越えて生きる</a><br/>
+<br/>
+      ■<b><a href="chapter_2_f.html" style="color : #000000;text-decoration : none;" target="right">南北統一への熱望を信仰化しよう</a></b><br/>
+      　<a href="chapter_2_f.html" style="text-decoration : none;" target="right">南北統一運動国民連合創設大会</a><br/>
+      　　　<a href="chapter_2_f.html" style="text-decoration : none;" target="right">（1987年5月15日　韓国・ソウル）</a><br/>
+      　<a href="chapter_2_f.html#01" style="text-decoration : none;" target="right">・三八度線は価値観の対立</a><br/>
+      　<a href="chapter_2_f.html#02" style="text-decoration : none;" target="right">・共産主義の人間観の誤り</a><br/>
+      　<a href="chapter_2_f.html#03" style="text-decoration : none;" target="right">・自由統一こそ真実なる解放</a><br/>
+      　<a href="chapter_2_f.html#04" style="text-decoration : none;" target="right">・機が熟した国民連合の創立</a><br/>
+      　<a href="chapter_2_f.html#05" style="text-decoration : none;" target="right">・神主義で大覚醒運動を起こす</a><br/>
+      　<a href="chapter_2_f.html#06" style="text-decoration : none;" target="right">・世界的な思想武装を急げ</a><br/>
+<br/>
+      ■<b><a href="chapter_2_g.html" style="color : #000000;text-decoration : none;" target="right">世界平和はいかにして達成されるか</a></b><br/>
+      　<a href="chapter_2_g.html" style="text-decoration : none;" target="right">第九回科学の統一に関する国際会議</a><br/>
+      　　　<a href="chapter_2_g.html" style="text-decoration : none;" target="right">（1980年11月28日 米国・マイアミ）</a><br/>
+      　<a href="chapter_2_g.html#01" style="text-decoration : none;" target="right">・愛の実践による秩序の回復</a><br/>
+      　<a href="chapter_2_g.html#02" style="text-decoration : none;" target="right">・絶対的愛と絶対的価値</a><br/>
+      　<a href="chapter_2_g.html#03" style="text-decoration : none;" target="right">・絶対的な存在の証明</a><br/>
+<br/>
+      ■<b><a href="chapter_2_h.html" style="color : #000000;text-decoration : none;" target="right">世界の中の韓国</a></b><br/>
+      　<a href="chapter_2_h.html" style="text-decoration : none;" target="right">救国世界大会</a><br/>
+      　　 <a href="chapter_2_h.html" style="text-decoration : none;" target="right">（19975年6月7日　韓国・ソウル）</a><br/>
+      　<a href="chapter_2_h.html#01" style="text-decoration : none;" target="right">・歴史的宣布の日</a><br/>
+      　<a href="chapter_2_h.html#02" style="text-decoration : none;" target="right">・共産主義は「神を否定する」宗教</a><br/>
+      　<a href="chapter_2_h.html#03" style="text-decoration : none;" target="right">・真なる真理と信念と思想</a><br/>
+      　<a href="chapter_2_h.html#04" style="text-decoration : none;" target="right">・神の名によって決起せよ</a><br/>
+      　<a href="chapter_2_h.html#05" style="text-decoration : none;" target="right">・レーニン政治戦略学校の教え</a><br/>
+      　<a href="chapter_2_h.html#06" style="text-decoration : none;" target="right">・信仰の祖国</a><br/>
+      　<a href="chapter_2_h.html#07" style="text-decoration : none;" target="right">・総和文明の結実体</a><br/>
+      　<a href="chapter_2_h.html#08" style="text-decoration : none;" target="right">・神を中心として団結できる思想体系</a><br/>
+      　<a href="chapter_2_h.html#09" style="text-decoration : none;" target="right">・神の名のもとに平和統一の世界を</a><br/>
+<br/>
+<b><a href="chapter_2_i.html" style="color : #000000;text-decoration : none;" target="right">資料　「世界平和連合」設立の背景</a></b><br/>
+      　<a href="chapter_2_i.html" style="text-decoration : none;" target="right">・国際情勢は不確実性の時代</a><br/>
+      　<a href="chapter_2_i.html#02" style="text-decoration : none;" target="right">・技術力の格差埋める諸組織</a><br/>
+      　<a href="chapter_2_i.html#03" style="text-decoration : none;" target="right">・神中心の世界観を強調</a><br/>
+      　<a href="chapter_2_i.html#04" style="text-decoration : none;" target="right">・政府と国民の相互協力生む</a><br/>
+<br/>
+<a href="chapter_3_a.html" style="color : #000000;text-decoration : none;" target="right"><b>第三章</b><br/>
+<b>文鮮明師の北朝鮮訪問に関する<br/>
+      　　　　　　　　　マスコミ報道</b></a><br/>
+<b>◇<a href="chapter_3_a.html" style="color : #000000;text-decoration : none;" target="right">世界日報（1991年12月1日付）</a></b><br/>
+      　　<a href="chapter_3_a.html" style="text-decoration : none;" target="right">感慨深く41年ぶり故郷へ</a><br/>
+<b>◇<a href="chapter_3_a.html#02" style="color : #000000;text-decoration : none;" target="right">世界日報（1991年12月7日付）</a></b><br/>
+      　　<a href="chapter_3_a.html#02" style="text-decoration : none;" target="right">文鮮明師、金日成主席と会談</a><br/>
+<b>◇<a href="chapter_3_a.html#03" style="color : #000000;text-decoration : none;" target="right">世界日報社説（1991年12月2日付）</a></b><br/>
+      　　<a href="chapter_3_a.html#03" style="text-decoration : none;" target="right">統一へ文師訪朝の歴史的意義</a><br/>
+      　　<a href="chapter_3_a.html#03-1" style="text-decoration : none;" target="right">・共産国の救済も図る勝共運動</a><br/>
+      　　　<a href="chapter_3_a.html#03-2" style="text-decoration : none;" target="right">・金主席との単独会談焦点に</a><br/>
+<b>◇<a href="chapter_3_a.html#04" style="color : #000000;text-decoration : none;" target="right">世界日報（1991年12月7日付）</a></b><br/>
+      　　<a href="chapter_3_a.html#04" style="text-decoration : none;" target="right">南北平和統一の扉開いた文師</a><br/>
+      　　　<a href="chapter_3_a.html#4-1" style="text-decoration : none;" target="right">・勝共運動から交流のパイプ</a><br/>
+      　　　<a href="chapter_3_a.html#4-2" style="text-decoration : none;" target="right">・民族自決という問題として</a><br/>
+<b>◇<a href="chapter_3_a.html#05" style="color : #000000;text-decoration : none;" target="right">世界日報（1991年12月14日付）</a></b><br/>
+      　　<a href="chapter_3_a.html#05" style="text-decoration : none;" target="right">統一へ基礎つくった南北合意</a><br/>
+      　　　<a href="chapter_3_a.html#05-1" style="text-decoration : none;" target="right">・勝共運動から交流のパイプ</a><br/>
+      　　　<a href="chapter_3_a.html#05-2" style="text-decoration : none;" target="right">・民族自決という問題として</a><br/>
+<hr align="left" size="1" width="90%"/>
+<b><a href="chapter_3_b.html" style="color : #000000;text-decoration : none;" target="right">◇ワシントン・タイムズ（1991年12月7日付）</a></b><br/>
+      　<a href="chapter_3_b.html" style="text-decoration : none;" target="right">金日成主席、韓半島統一について会談</a><br/>
+<br/>
+<b><a href="chapter_3_b.html#02" style="color : #000000;text-decoration : none;" target="right">◇月刊『ワールド＆アイ』（1992年2月号）</a></b><br/>
+      　<a href="chapter_3_b.html#02" style="text-decoration : none;" target="right">血は水よりも濃い</a><br/>
+<br/>
+<b><a href="chapter_3_b.html#03" style="color : #000000;text-decoration : none;" target="right">◇月刊『世界女性』（1992年2月号）</a></b><br/>
+      　<a href="chapter_3_b.html#03" style="text-decoration : none;" target="right">南北和解時代の劇的な出会い</a><br/>
+<br/>
+<b><a href="chapter_3_b.html#04" style="color : #000000;text-decoration : none;" target="right">◇週刊　東大新報（1991年12月11日付）</a></b><br/>
+      　<a href="chapter_3_b.html#04" style="text-decoration : none;" target="right">文鮮明師と神主義</a><br/>
+      　<a href="chapter_3_b.html#04" style="text-decoration : none;" target="right">共産主義崩壊の予言と思想的超克</a><br/>
+      　<a href="chapter_3_b.html#04-1" style="text-decoration : none;" target="right">数理的予言がソ連史上で的中</a><br/>
+      　<a href="chapter_3_b.html#04-2" style="text-decoration : none;" target="right">・具体的に年代までも予言</a><br/>
+      　<a href="chapter_3_b.html#04-3" style="text-decoration : none;" target="right">・マルクスの経済学公理は現実離れ</a><br/>
+      　<a href="chapter_3_b.html#04-4" style="text-decoration : none;" target="right">・復讐心から社会転覆狙った共産主義</a><br/>
+      　<a href="chapter_3_b.html#05-5" style="text-decoration : none;" target="right">・神主義により物心両面を救済</a>
+<hr align="left" size="1" width="90%"/>
+<b>◇<a href="chapter_3_c.html" style="color : #000000;text-decoration : none;" target="right">朝日新聞</a></b><br/>
+      　<b><a href="chapter_3_c.html" style="color : #000000;text-decoration : none;" target="right">・1991年12月1日付</a></b><br/>
+      　　　<a href="chapter_3_b.html" style="text-decoration : none;" target="right">文鮮明氏、北朝鮮入り</a><br/>
+      　　　　　　　<a href="chapter_3_c.html" style="text-decoration : none;" target="right">―経済協力などを協議か―</a><br/>
+      　<b><a href="chapter_3_c.html#01" style="color : #000000;text-decoration : none;" target="right">・1991年12月6日付</a></b><br/>
+      　　　<a href="chapter_3_c.html#01" style="text-decoration : none;" target="right">北朝鮮と共同声明</a><br/>
+      　　　　　　　　<a href="chapter_3_c.html#01" style="text-decoration : none;" target="right">統一教会・文教祖</a><br/>
+      　<a href="chapter_3_c.html#02" style="color : #000000;text-decoration : none;" target="right"><b>・1991年12月7日付</b></a><br/>
+      　　　<a href="chapter_3_c.html" style="text-decoration : none;" target="right">・経済協力など金主席と合意</a><br/>
+      　　　　　　　　<a href="chapter_3_c.html#02" style="text-decoration : none;" target="right">文鮮明師</a><br/>
+<b><a href="chapter_3_c.html#03" style="color : #000000;text-decoration : none;" target="right">◇読売新聞</a></b><br/>
+      　<b><a href="chapter_3_c.html#03" style="color : #000000;text-decoration : none;" target="right">・1991年12月1日付</a></b><br/>
+      　　　<a href="chapter_3_c.html#03" style="text-decoration : none;" target="right">・文鮮明夫妻が北朝鮮入り</a><br/>
+      　　　　　　　　　<a href="chapter_3_c.html#03" style="text-decoration : none;" target="right">金主席と会談へ</a><br/>
+      　<a href="chapter_3_c.html#04" style="color : #000000;text-decoration : none;" target="right"><b>・1991年12月7日付</b></a><br/>
+      　　　<a href="chapter_3_c.html#04" style="text-decoration : none;" target="right">・文鮮明師と会談</a><br/>
+      　　　　　　　　　　<a href="chapter_3_c.html#04" style="text-decoration : none;" target="right">金日成主席</a><br/>
+<b><a href="chapter_3_c.html#05" style="color : #000000;text-decoration : none;" target="right">◇毎日新聞</a></b><br/>
+      　<a href="chapter_3_c.html#05" style="color : #000000;text-decoration : none;" target="right"><b>・1991年12月6日付</b></a><br/>
+      　　　<a href="chapter_3_c.html#04" style="text-decoration : none;" target="right">・文鮮明教祖訪朝で共同声明</a><br/>
+<b><a href="chapter_3_c.html#06" style="color : #000000;text-decoration : none;" target="right">◇東京新聞</a></b><br/>
+      　<a href="chapter_3_c.html#06" style="color : #000000;text-decoration : none;" target="right"><b>・1991年12月8日付</b></a><br/>
+      　　　<a href="chapter_3_c.html#06" style="text-decoration : none;" target="right">・金主席、訪米し、大統領と会談も</a><br/>
+      　　　　　　　　<a href="chapter_3_c.html#06" style="text-decoration : none;" target="right">文鮮明氏に意向伝達？</a><br/>
+<b><a href="chapter_3_c.html#07" style="color : #000000;text-decoration : none;" target="right">◇日本経済新聞</a></b><br/>
+      　<a href="chapter_3_c.html#07" style="color : #000000;text-decoration : none;" target="right"><b>・1991年12月8日付</b></a><br/>
+      　　　<a href="chapter_3_c.html#07" style="text-decoration : none;" target="right">・文鮮明氏、北朝鮮訪問終える</a><br/>
+<a href="chapter_3_c.html#08" style="color : #000000;text-decoration : none;" target="right"><b>◇中和新聞</b></a><br/>
+      　<a href="chapter_3_c.html#08" style="color : #000000;text-decoration : none;" target="right"><b>・1992年1月1日付</b></a><br/>
+      　　　<a href="chapter_3_c.html#08" style="text-decoration : none;" target="right">・92年国際情勢徹底分析</a><br/>
+      　　　　　<a href="chapter_3_c.html#08" style="text-decoration : none;" target="right">摂理的使命果たした</a><br/>
+      　　　　　　　　<a href="chapter_3_c.html#08" style="text-decoration : none;" target="right">文鮮明先生の北訪問</a><br/>
+      　　　　　<a href="chapter_3_c.html#08" style="text-decoration : none;" target="right">外交評論家　井上茂信</a><br/>
+<br/>
+<b><a href="chapter_4.html" style="color : #000000;text-decoration : none;" target="right">第四章</a><br/>
+<a href="chapter_4.html" style="color : #000000;text-decoration : none;" target="right">共産主義を越えて</a></b><br/>
+<br/>
+      　<a href="chapter_4.html" style="text-decoration : none;" target="right">共産主義を越えて</a><br/>
+      　　　　<a href="chapter_4.html" style="text-decoration : none;" target="right">統一思想研究院副院長　大谷明史</a><br/>
+<br/>
 </div>
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+
+
+
+
+
+
+
+
+
+</div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script></body>
+<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body>
 </html>
+
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

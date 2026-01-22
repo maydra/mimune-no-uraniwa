@@ -1,194 +1,520 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>真の家庭／ | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<title>真の家庭／</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>真の家庭／</h1><div class="index-list"><div class="chapter-item"><a href="hajimeni.html" class="chapter-link">はじめに</a><ul class="section-list"><li class="section-item"><a href="hajimeni.html#001" class="section-link">真の家庭</a></li><li class="section-item"><a href="hajimeni.html#003" class="section-link">日本語版発刊によせて</a></li></ul></div><div class="chapter-item"><a href="001.html" class="chapter-link">第一章　創造本然の真の家庭</a><ul class="section-list"><li class="section-item"><a href="001.html#003" class="section-link">◆一　アダムとエバを通じた神様のみ旨</a></li><li class="section-item"><a href="001.html#004" class="section-link">◆二　神様が絶対に必要とするもの</a></li><li class="section-item"><a href="001.html#005" class="section-link">◆三　神様の永遠なる愛の相対者</a></li><li class="section-item"><a href="001.html#006" class="section-link">◆四　アダムとエバを創造なさった目的</a></li><li class="section-item"><a href="001.html#007" class="section-link">◆五　アダムとエバの初愛の時期</a></li><li class="section-item"><a href="001.html#008" class="section-link">◆六　すべての存在は愛を通じてのみ完成する</a></li><li class="section-item"><a href="001.html#009" class="section-link">◆七　人間たちが誇ることのできる最も大きな自慢の種</a></li><li class="section-item"><a href="001.html#010" class="section-link">◆八　真の家庭として伝統を立てるべきだったアダム家庭</a></li></ul></div><div class="chapter-item"><a href="002.html" class="chapter-link">第二章　家庭を中心とした愛の法度</a><ul class="section-list"><li class="section-item"><a href="002.html#001" class="section-link">真の家庭</a></li><li class="section-item"><a href="002.html#003" class="section-link">◆一　家庭を中心とした神様の愛の法度</a></li><li class="section-item"><a href="002.html#004" class="section-link">◆二　家庭に三代が共存すべき理由</a></li><li class="section-item"><a href="002.html#005" class="section-link">◆三　父母はまさに愛の起源</a></li><li class="section-item"><a href="002.html#006" class="section-link">◆四　兄弟姉妹が必要な理由</a></li><li class="section-item"><a href="002.html#007" class="section-link">◆五　おじいさんは家の神様の立場</a></li><li class="section-item"><a href="002.html#008" class="section-link">◆六　祖父母と孫との関係</a></li><li class="section-item"><a href="002.html#009" class="section-link">◆七　家和万事成の真なる意味</a></li></ul></div><div class="chapter-item"><a href="003.html" class="chapter-link">第三章　家庭は天国の中心模型</a><ul class="section-list"><li class="section-item"><a href="003.html#001" class="section-link">真の家庭</a></li><li class="section-item"><a href="003.html#003" class="section-link">◆一　家庭はすべての存在の中心モデル</a></li><li class="section-item"><a href="003.html#004" class="section-link">◆二　家庭は宇宙の愛に接する愛の教材</a></li><li class="section-item"><a href="003.html#005" class="section-link">◆三　愛の王国に入籍するための愛の訓練場</a></li><li class="section-item"><a href="003.html#006" class="section-link">◆四　家庭は天国の模型教科書</a></li><li class="section-item"><a href="003.html#007" class="section-link">◆五　家庭は三時代の愛が結集した核心体</a></li><li class="section-item"><a href="003.html#008" class="section-link">◆六　家庭は心情的な訓練場所</a></li><li class="section-item"><a href="003.html#009" class="section-link">◆七　人間の永遠の本郷は家庭</a></li><li class="section-item"><a href="003.html#010" class="section-link">◆八　家庭は天宙主義を完結させる最終基準</a></li></ul></div><div class="chapter-item"><a href="004.html" class="chapter-link">第四章　愛を中心とした人生行路</a><ul class="section-list"><li class="section-item"><a href="004.html#001" class="section-link">真の家庭</a></li><li class="section-item"><a href="004.html#003" class="section-link">◆一　人間はなぜ生まれたのか</a></li><li class="section-item"><a href="004.html#004" class="section-link">◆二　愛を中心とした創造本然の人生</a></li><li class="section-item"><a href="004.html#005" class="section-link">◆三　人間の永遠なる生命の要素は愛</a></li><li class="section-item"><a href="004.html#006" class="section-link">◆四　神様の愛はどのようなものか</a></li><li class="section-item"><a href="004.html#007" class="section-link">◆五　愛と喜びの相続のための神様の祝福</a></li><li class="section-item"><a href="004.html#008" class="section-link">◆六　愛の中心を求めていく人生行路</a></li><li class="section-item"><a href="004.html#009" class="section-link">◆七　三時代を行く人生路程</a></li><li class="section-item"><a href="004.html#010" class="section-link">◆八　地上生活は霊界の拍子を合わせるための訓練場所</a></li></ul></div><div class="chapter-item"><a href="005.html" class="chapter-link">第五章　創造本然の男女の愛</a><ul class="section-list"><li class="section-item"><a href="005.html#001" class="section-link">真の家庭</a></li><li class="section-item"><a href="005.html#004" class="section-link">◆二　男性と女性が生まれた理由</a></li><li class="section-item"><a href="005.html#005" class="section-link">◆三　男性と女性は互いに絶対的に必要な存在</a></li><li class="section-item"><a href="005.html#006" class="section-link">◆四　愛は相対から来るもの</a></li><li class="section-item"><a href="005.html#007" class="section-link">◆五　異性間で愛の調和を成せば</a></li><li class="section-item"><a href="005.html#008" class="section-link">◆六　真の愛に酔った本然の人間</a></li><li class="section-item"><a href="005.html#009" class="section-link">◆七　愛はきわめて自然なところで成される</a></li></ul></div><div class="chapter-item"><a href="006.html" class="chapter-link">第六章　思春期の変化と真なる結婚</a><ul class="section-list"><li class="section-item"><a href="006.html#001" class="section-link">真の家庭</a></li><li class="section-item"><a href="006.html#003" class="section-link">◆一　結婚の意義</a></li><li class="section-item"><a href="006.html#004" class="section-link">◆二　なぜ結婚するのか</a></li><li class="section-item"><a href="006.html#005" class="section-link">◆三　真の結婚観</a></li><li class="section-item"><a href="006.html#006" class="section-link">◆四　思春期とはどのような時か</a></li><li class="section-item"><a href="006.html#007" class="section-link">◆五　思春期に起こる身体的変化は何のためか</a></li><li class="section-item"><a href="006.html#008" class="section-link">◆六　思春期の初恋</a></li><li class="section-item"><a href="006.html#009" class="section-link">◆七　結婚の適齢期−愛はいつから連結されるのか</a></li><li class="section-item"><a href="006.html#010" class="section-link">◆八　心と体が一致した愛</a></li></ul></div><div class="chapter-item"><a href="007.html" class="chapter-link">第七章　真なる夫婦の愛</a><ul class="section-list"><li class="section-item"><a href="007.html#001" class="section-link">真の家庭</a></li><li class="section-item"><a href="007.html#003" class="section-link">◆一　創造本然の夫婦関係</a></li><li class="section-item"><a href="007.html#004" class="section-link">◆二　夫婦の愛が必要な理由</a></li><li class="section-item"><a href="007.html#005" class="section-link">◆三　理想的な夫婦の関係</a></li><li class="section-item"><a href="007.html#006" class="section-link">◆四　神様も酔うことのできる真の夫婦の愛</a></li><li class="section-item"><a href="007.html#007" class="section-link">◆五　会えば会うほどいっそう会いたいのが夫婦の愛</a></li><li class="section-item"><a href="007.html#008" class="section-link">◆六　夫婦の愛の発展過程</a></li><li class="section-item"><a href="007.html#009" class="section-link">◆七　愛する人が死ぬとなぜ悲しいのか</a></li><li class="section-item"><a href="007.html#010" class="section-link">◆八　死ぬときまでに永遠に成すべき夫婦の愛</a></li></ul></div><div class="chapter-item"><a href="008.html" class="chapter-link">第八章　真なる父母の愛<</a><ul class="section-list"><li class="section-item"><a href="008.html#001" class="section-link">真の家庭</a></li><li class="section-item"><a href="008.html#003" class="section-link">◆一　父母の限りない愛の心</a></li><li class="section-item"><a href="008.html#004" class="section-link">◆二　子供がより素晴らしくなることを願う父母の心</a></li><li class="section-item"><a href="008.html#005" class="section-link">◆三　父母の愛は永遠不変の愛</a></li><li class="section-item"><a href="008.html#006" class="section-link">◆四　すべてを投入する父母の愛</a></li><li class="section-item"><a href="008.html#007" class="section-link">◆五　子供に対する父母の愛は絶対的</a></li><li class="section-item"><a href="008.html#008" class="section-link">◆六　限りない父母の愛</a></li><li class="section-item"><a href="008.html#009" class="section-link">◆七　父母の愛はすべての愛の基準であり、伝統になる</a></li></ul></div><div class="chapter-item"><a href="009.html" class="chapter-link">第九章　真なる子女教育</a><ul class="section-list"><li class="section-item"><a href="009.html#001" class="section-link">真の家庭</a></li><li class="section-item"><a href="009.html#003" class="section-link">◆一　父母は子女をどう教育すべきか</a></li><li class="section-item"><a href="009.html#004" class="section-link">◆二　父母は子女に何を教えるのだろうか</a></li><li class="section-item"><a href="009.html#005" class="section-link">◆三　父母がまず手本を示すべきである</a></li><li class="section-item"><a href="009.html#006" class="section-link">◆四　父母は友達の中の友達、先生の中の先生</a></li><li class="section-item"><a href="009.html#007" class="section-link">◆五　愛の鞭</a></li><li class="section-item"><a href="009.html#008" class="section-link">◆六　勉強は何のためにするのか</a></li><li class="section-item"><a href="009.html#009" class="section-link">◆七　真の父母と先生の教え</a></li><li class="section-item"><a href="009.html#010" class="section-link">◆八　世界とともに生きることのできる教育</a></li></ul></div><div class="chapter-item"><a href="010.html" class="chapter-link">第十章　復帰すべき人類の真の家庭</a><ul class="section-list"><li class="section-item"><a href="010.html#003" class="section-link">◆一　神様の救援摂理の目的</a></li><li class="section-item"><a href="010.html#004" class="section-link">◆二　サタンの所有物になったアダム家庭</a></li><li class="section-item"><a href="010.html#005" class="section-link">◆三　堕落人間の願い</a></li><li class="section-item"><a href="010.html#006" class="section-link">◆四　復帰の最終目的はアダム家庭を復帰すること</a></li><li class="section-item"><a href="010.html#007" class="section-link">◆五　イエス様がなさるべき家庭の復帰</a></li><li class="section-item"><a href="010.html#008" class="section-link">◆六　再臨主を中心とした家庭の復帰</a></li><li class="section-item"><a href="010.html#009" class="section-link">◆七　統一教会は本然の真の家庭を探すためにある</a></li><li class="section-item"><a href="010.html#010" class="section-link">◆八　真の家庭主義と真の父母宗教</a></li></ul></div><div class="chapter-item"><a href="011.html" class="chapter-link">第十一章　家庭は永遠の幸福の土台</a><ul class="section-list"><li class="section-item"><a href="011.html#001" class="section-link">真の家庭</a></li><li class="section-item"><a href="011.html#003" class="section-link">◆一　家庭はなぜいいのか</a></li><li class="section-item"><a href="011.html#004" class="section-link">◆二　家庭は永遠なる幸福の基盤</a></li><li class="section-item"><a href="011.html#005" class="section-link">◆三　家庭は天国完成の基本単位</a></li><li class="section-item"><a href="011.html#006" class="section-link">◆四　愛の理想実現は家庭から</a></li><li class="section-item"><a href="011.html#007" class="section-link">◆五　天国は家庭単位で入る所</a></li><li class="section-item"><a href="011.html#008" class="section-link">◆六　愛する人が死ぬとなぜ悲しいのか</a></li><li class="section-item"><a href="011.html#009" class="section-link">◆七　家庭を通して人間が行くべき天道</a></li><li class="section-item"><a href="011.html#010" class="section-link">◆八　統一教会は家庭天国を築こうとするもの</a></li></ul></div><div class="chapter-item"><a href="012.html" class="chapter-link">第十二章　真の家庭を求めて</a><ul class="section-list"><li class="section-item"><a href="012.html#003" class="section-link">◆一　自己のために生じたものは一つもない</a></li><li class="section-item"><a href="012.html#004" class="section-link">◆二　神様が臨在できる至聖所</a></li><li class="section-item"><a href="012.html#005" class="section-link">◆三　男性の主人は女性であり、女性の主人は男性</a></li><li class="section-item"><a href="012.html#006" class="section-link">◆四　愛には発展も革命もない</a></li><li class="section-item"><a href="012.html#007" class="section-link">◆五　女性は貞節、男性は志操</a></li><li class="section-item"><a href="012.html#008" class="section-link">◆六　堕落はフリーセックスの根であり個人主義の祖先</a></li><li class="section-item"><a href="012.html#009" class="section-link">◆七　絶対純潔と真の家庭運動を通した平和世界実現</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+<body><div class="container">
+<h1>真の家庭／</h1>
+<body alink="#000000" bgcolor="#ffffcc" link="#000000" vlink="#000000">
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<p><br/>
+</p>
+
+
+
+　
+
+
+
+
+<hr/>
+　真の家庭
+<hr/>
+<br/>
+<a href="hajimeni.html" style="color : black;text-decoration : none;" target="right">はじめに</a><br/>
+<a href="hajimeni.html#02" style="color : black;text-decoration : none;" target="right">日本語版発刊によせて</a><br/>
+<br/>
+<a href="001.html" style="color : black;text-decoration : none;" target="right"><b>第一章　創造本然の真の家庭</b></a><br/>
+<a href="001.html#01" style="color : black;text-decoration : none;" target="right">　一　アダムとエバを通じた神様のみ旨</a><br/>
+<a href="001.html#02" style="color : black;text-decoration : none;" target="right">　二　神様が絶対に必要とするもの</a><br/>
+<a href="001.html#03" style="color : black;text-decoration : none;" target="right">　三　神様の永遠なる愛の相対者</a><br/>
+<a href="001.html#04" style="color : black;text-decoration : none;" target="right">　四　アダムとエバを創造なさった目的</a><br/>
+<a href="001.html#05" style="color : black;text-decoration : none;" target="right">　五　アダムとエバの初愛の時期</a><br/>
+<a href="001.html#06" style="color : black;text-decoration : none;" target="right">　六　すべての存在は愛を通じてのみ完成する</a><br/>
+<a href="001.html#07" style="color : black;text-decoration : none;" target="right">　七　人間たちが誇ることのできる最も大きな自慢の種</a><br/>
+<a href="001.html#08" style="color : black;text-decoration : none;" target="right">　八　真の家庭として伝統を立てるべきだったアダム家庭<br/>
+</a><br/>
+<b><a href="002.html" style="color : black;text-decoration : none;" target="right">第二章　家庭を中心とした愛の法度</a></b><br/>
+<a href="002.html#01" style="color : black;text-decoration : none;" target="right">　一　家庭を中心とした神様の愛の法度</a><br/>
+<a href="002.html#02" style="color : black;text-decoration : none;" target="right">　二　家庭に三代が共存すべき理由</a><br/>
+<a href="002.html#03" style="color : black;text-decoration : none;" target="right">　三　父母はまさに愛の起源</a><br/>
+<a href="002.html#04" style="color : black;text-decoration : none;" target="right">　四　兄弟姉妹が必要な理由</a><br/>
+<a href="002.html#05" style="color : black;text-decoration : none;" target="right">　五　おじいさんは家の神様の立場</a><br/>
+<a href="002.html#06" style="color : black;text-decoration : none;" target="right">　六　祖父母と孫との関係</a><br/>
+<a href="002.html#07" style="color : black;text-decoration : none;" target="right">　七　家和万事成の真なる意味</a><br/>
+<br/>
+<b><a href="003.html" style="color : black;text-decoration : none;" target="right">第三章　家庭は天国の中心模型</a></b><br/>
+<a href="003.html#01" style="color : black;text-decoration : none;" target="right">　一　家庭はすべての存在の中心モデル</a><br/>
+<a href="003.html#02" style="color : black;text-decoration : none;" target="right">　二　家庭は宇宙の愛に接する愛の教材</a><br/>
+<a href="003.html#03" style="color : black;text-decoration : none;" target="right">　三　愛の王国に入籍するための愛の訓練場</a><br/>
+<a href="003.html#04" style="color : black;text-decoration : none;" target="right">　四　家庭は天国の模型教科書</a><br/>
+<a href="003.html#05" style="color : black;text-decoration : none;" target="right">　五　家庭は三時代の愛が結集した核心体</a><br/>
+<a href="003.html#06" style="color : black;text-decoration : none;" target="right">　六　家庭は心情的な訓練場所</a><br/>
+<a href="003.html#07" style="color : black;text-decoration : none;" target="right">　七　人間の永遠なる本郷は家庭</a><br/>
+<a href="003.html#08" style="color : black;text-decoration : none;" target="right">　八　家庭は天宙主義を完結させる最終基準</a><br/>
+<br/>
+<b><a href="004.html" style="color : black;text-decoration : none;" target="right">第四章　愛を中心とした人生行路</a></b><br/>
+<a href="004.html#01" style="color : black;text-decoration : none;" target="right">　一　人間はなぜ生まれたのか</a><br/>
+<a href="004.html#02" style="color : black;text-decoration : none;" target="right">　二　愛を中心とした創造本然の人生</a><br/>
+<a href="004.html#03" style="color : black;text-decoration : none;" target="right">　三　人間の永遠なる生命の要素は愛</a><br/>
+<a href="004.html#04" style="color : black;text-decoration : none;" target="right">　四　神様の愛はどのようなものか</a><br/>
+<a href="004.html#05" style="color : black;text-decoration : none;" target="right">　五　愛と喜びの相続のための神様の祝福</a><br/>
+<a href="004.html#06" style="color : black;text-decoration : none;" target="right">　六　愛の中心を求めていく人生行路</a><br/>
+<a href="004.html#07" style="color : black;text-decoration : none;" target="right">　七　三時代を行く人生行路</a><br/>
+<a href="004.html#08" style="color : black;text-decoration : none;" target="right">　八　地上生活は霊界の拍子を合わせるための訓練場所</a><br/>
+<br/>
+<b><a href="005.html" style="color : black;text-decoration : none;" target="right">第五章　創造本然の男女の愛</a></b><br/>
+<a href="005.html#01" style="color : black;text-decoration : none;" target="right">　一　創造本然の男女の愛</a><br/>
+<a href="005.html#02" style="color : black;text-decoration : none;" target="right">　二　男性と女性が生まれた理由</a><br/>
+<a href="005.html#03" style="color : black;text-decoration : none;" target="right">　三　男性と女性は互いに絶対的に必要な存在</a><br/>
+<a href="005.html#04" style="color : black;text-decoration : none;" target="right">　四　愛は相対から来るもの</a><br/>
+<a href="005.html#05" style="color : black;text-decoration : none;" target="right">　五　異性間で愛の調和を成せば</a><br/>
+<a href="005.html#06" style="color : black;text-decoration : none;" target="right">　六　真の愛に酔った本然の人間</a><br/>
+<a href="005.html#07" style="color : black;text-decoration : none;" target="right">　七　愛はきわめて自然なところで成される</a><br/>
+<br/>
+<b><a href="006.html" style="color : black;text-decoration : none;" target="right">第六章　思春期の変化と真なる結婚</a></b><br/>
+<a href="006.html#01" style="color : black;text-decoration : none;" target="right">　一　結婚の意義</a><br/>
+<a href="006.html#02" style="color : black;text-decoration : none;" target="right">　二　なぜ結婚するのか</a><br/>
+<a href="006.html#03" style="color : black;text-decoration : none;" target="right">　三　真の結婚観</a><br/>
+<a href="006.html#04" style="color : black;text-decoration : none;" target="right">　四　思春期とはどのような時か</a><br/>
+<a href="006.html#05" style="color : black;text-decoration : none;" target="right">　五　思春期に起こる身体的変化は何のためか</a><br/>
+<a href="006.html#06" style="color : black;text-decoration : none;" target="right">　六　思春期の初恋</a><br/>
+<a href="006.html#07" style="color : black;text-decoration : none;" target="right">　七　結婚の適齢期−愛はいつから連結されるか</a><br/>
+<a href="006.html#08" style="color : black;text-decoration : none;" target="right">　八　心と体が一致した愛</a><br/>
+<br/>
+<b><a href="007.html" style="color : black;text-decoration : none;" target="right">第七章　真なる夫婦の愛</a></b><br/>
+<a href="007.html#01" style="color : black;text-decoration : none;" target="right">　一　創造本然の夫婦関係</a><br/>
+<a href="007.html#02" style="color : black;text-decoration : none;" target="right">　二　夫婦の愛が必要な理由</a><br/>
+<a href="007.html#03" style="color : black;text-decoration : none;" target="right">　三　理想的な夫婦の関係</a><br/>
+<a href="007.html#04" style="color : black;text-decoration : none;" target="right">　四　神様も酔うことのできる真の夫婦の愛</a><br/>
+<a href="007.html#05" style="color : black;text-decoration : none;" target="right">　五　会えば会うほどいっそう会いたいのが夫婦の愛</a><br/>
+<a href="007.html#06" style="color : black;text-decoration : none;" target="right">　六　夫婦の愛の発展過程</a><br/>
+<a href="007.html#07" style="color : black;text-decoration : none;" target="right">　七　愛する人が死ぬとなぜ悲しいのか</a><br/>
+<a href="007.html#08" style="color : black;text-decoration : none;" target="right">　八　死ぬときまでに永遠に成すべき夫婦の愛</a><br/>
+<br/>
+<b><a href="008.html" style="color : black;text-decoration : none;" target="right">第八章　真なる父母の愛&lt;</a></b><br/>
+<a href="008.html#01" style="color : black;text-decoration : none;" target="right">　一　父母の限りない愛の心</a><br/>
+<a href="008.html#02" style="color : black;text-decoration : none;" target="right">　二　子供がより素晴らしくなることを願う父母の心</a><br/>
+<a href="008.html#03" style="color : black;text-decoration : none;" target="right">　三　父母の愛は永遠不変の愛</a><br/>
+<a href="008.html#04" style="color : black;text-decoration : none;" target="right">　四　すべてを投入する父母の愛</a><br/>
+<a href="008.html#05" style="color : black;text-decoration : none;" target="right">　五　子供に対する父母の愛は絶対的</a><br/>
+<a href="008.html#06" style="color : black;text-decoration : none;" target="right">　六　限りない父母の愛</a><br/>
+<a href="008.html#07" style="color : black;text-decoration : none;" target="right">　七　父母の愛はすべての愛の基準であり、伝統になる</a><br/>
+<br/>
+<b><a href="009.html" style="color : black;text-decoration : none;" target="right">第九章　真なる子女教育</a></b><br/>
+<a href="009.html#01" style="color : black;text-decoration : none;" target="right">　一　父母は子女をどう教育すべきか</a><br/>
+<a href="009.html#02" style="color : black;text-decoration : none;" target="right">　二　父母は子女に何を教えるのだろうか</a><br/>
+<a href="009.html#03" style="color : black;text-decoration : none;" target="right">　三　父母がまず手本を示すべきである</a><br/>
+<a href="009.html#04" style="color : black;text-decoration : none;" target="right">　四　父母は友達の中の友達、先生の中の先生</a><br/>
+<a href="009.html#05" style="color : black;text-decoration : none;" target="right">　五　愛の鞭</a><br/>
+<a href="009.html#06" style="color : black;text-decoration : none;" target="right">　六　勉強は何のためにするのか</a><br/>
+<a href="009.html#07" style="color : black;text-decoration : none;" target="right">　七　真の父母と先生の教え</a><br/>
+<a href="009.html#08" style="color : black;text-decoration : none;" target="right">　八　世界とともに生きることのできる教育</a><br/>
+<br/>
+<b><a href="010.html" style="color : black;text-decoration : none;" target="right">第十章　復帰すべき人類の真の家庭</a></b><br/>
+<a href="010.html#01" style="color : black;text-decoration : none;" target="right">　一　神様の救援摂理の目的</a><br/>
+<a href="010.html#02" style="color : black;text-decoration : none;" target="right">　二　サタンの所有物になったアダム家庭</a><br/>
+<a href="010.html#03" style="color : black;text-decoration : none;" target="right">　三　堕落人間の願い</a><br/>
+<a href="010.html#04" style="color : black;text-decoration : none;" target="right">　四　復帰の最終目的はアダム家庭を復帰すること</a><br/>
+<a href="010.html#05" style="color : black;text-decoration : none;" target="right">　五　イエス様がなさるべき家庭の復帰</a><br/>
+<a href="010.html#06" style="color : black;text-decoration : none;" target="right">　六　再臨主を中心とした家庭の復帰</a><br/>
+<a href="010.html#07" style="color : black;text-decoration : none;" target="right">　七　統一教会は本然の真の家庭を探すためにある</a><br/>
+<a href="010.html#08" style="color : black;text-decoration : none;" target="right">　八　真の家庭主義と真の父母宗教</a><br/>
+<br/>
+<b><a href="011.html" style="color : black;text-decoration : none;" target="right">第十一章　家庭は永遠の幸福の土台</a></b><br/>
+<a href="011.html#01" style="color : black;text-decoration : none;" target="right">　一　家庭はなぜいいのか</a><br/>
+<a href="011.html#02" style="color : black;text-decoration : none;" target="right">　二　家庭は永遠なる幸福の基盤</a><br/>
+<a href="011.html#03" style="color : black;text-decoration : none;" target="right">　三　家庭は天国完成の基本単位</a><br/>
+<a href="011.html#04" style="color : black;text-decoration : none;" target="right">　四　愛の理想実現は家庭から</a><br/>
+<a href="011.html#05" style="color : black;text-decoration : none;" target="right">　五　天国は家庭単位で入る所</a><br/>
+<a href="011.html#06" style="color : black;text-decoration : none;" target="right">　六　愛する人が死ぬとなぜ悲しいのか</a><br/>
+<a href="011.html#07" style="color : black;text-decoration : none;" target="right">　七　家庭を通して人間が行くべき天道</a><br/>
+<a href="011.html#08" style="color : black;text-decoration : none;" target="right">　八　統一教会は家庭天国を築こうとするもの</a><br/>
+<br/>
+<b><a href="012.html" style="color : black;text-decoration : none;" target="right">第十二章　真の家庭を求めて</a></b><br/>
+<a href="012.html#01" style="color : black;text-decoration : none;" target="right">　一　自己のために生じたものは一つもない</a><br/>
+<a href="012.html#02" style="color : black;text-decoration : none;" target="right">　二　神様が臨在できる至聖所</a><br/>
+<a href="012.html#03" style="color : black;text-decoration : none;" target="right">　三　男性の主人は女性であり、女性の主人は男性</a><br/>
+<a href="012.html#04" style="color : black;text-decoration : none;" target="right">　四　愛には発展も革命もない</a><br/>
+<a href="012.html#05" style="color : black;text-decoration : none;" target="right">　五　女性は貞節、男性は志操</a><br/>
+<a href="012.html#06" style="color : black;text-decoration : none;" target="right">　六　堕落はフリーセックスの根であり個人主義の祖先</a><br/>
+<a href="012.html#07" style="color : black;text-decoration : none;" target="right">　七　絶対純潔と真の家庭運動を通した平和世界実現</a><br/>
+<br/>
+<br/>
+<blockquote><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</blockquote>
+
+
+
+
+
+
+
+
+
 </div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script></body>
+<div style="margin-top: 2em;"><hr/><p></p><p></p><p></p></div>
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+
 </body>
 </html>
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>

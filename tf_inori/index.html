@@ -1,194 +1,355 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>父の祈り | 目次 | み旨の裏庭</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png">
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8">
+<title>父の祈り　目次</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Noto Serif JP', 'Crimson Pro', serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
         }
+
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 900;
+
+        header {
             text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 3rem;
-            letter-spacing: 0.05em;
-        }
-        
-        .index-list {
-            list-style: none;
-            padding: 0;
-        }
-        .volume-item {
-            margin-top: 2.5rem;
+            background-clip: text;
             margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
         }
-        .volume-title {
-            font-size: 1.5rem;
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
             font-weight: 700;
             color: #fff;
-            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .volume-title a { color: #fff; text-decoration: none; }
-        .volume-title a:hover { text-decoration: underline; }
-
-        .chapter-list {
-            list-style: none;
-            padding-left: 0.5rem;
-        }
-        .chapter-item {
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .chapter-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
-
-        .section-list {
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.4rem;
-        }
-        .section-item {
-            margin-bottom: 0.3rem;
-        }
-        .section-link {
-            font-size: 0.9rem;
-            color: #b0c4de;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .section-link:hover { opacity: 1; color: #fff; }
-        .section-link::before { content: '・'; margin-right: 0.3rem; }
-
-        .section-item { margin-bottom: 0.2rem; }
-        .section-item.indent-1 { margin-left: 1.5rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 0.8rem; margin-top: 0.3rem; }
-        .section-item.indent-2 { margin-left: 3.0rem; border-left: 1px solid rgba(255,255,255,0.04); padding-left: 0.8rem; margin-top: 0.2rem; }
-
-        .nav-links {
-            margin-top: 4rem;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
         }
 
-        /* Collapsible Details Styles */
-        details {
-            margin-bottom: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
         }
-        details[open] {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
         }
-        summary {
-            padding: 1.2rem 1.8rem;
-            font-size: 1.25rem;
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
             font-weight: 700;
-            cursor: pointer;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
             list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            transition: background 0.2s;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
         }
-        summary:hover {
-            background: rgba(255, 255, 255, 0.05);
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
         }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '＋';
-            font-size: 1.1rem;
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
             color: #667eea;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        details[open] summary::after {
-            content: '－';
-            transform: rotate(180deg);
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
         }
-        .details-content {
-            padding: 0 1.8rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 0;
-        }
-        .details-content .chapter-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .details-content .chapter-item:last-child {
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
             border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
         }
     </style>
 </head>
-<body>
-<div class="container">
-<h1>父の祈り</h1><div class="index-list"><details><summary>父の祈り　１　希望編</summary><div class="details-content"><div class="chapter-item"><a href="fp1_01.html" class="chapter-link">01 お父様の本然の美を表せるようにしてください</a></div><div class="chapter-item"><a href="fp1_02.html" class="chapter-link">02 お父様に栄光を帰することができるようにしてください</a></div><div class="chapter-item"><a href="fp1_03.html" class="chapter-link">03 お父様に敬拝をお捧げいたします</a></div><div class="chapter-item"><a href="fp1_04.html" class="chapter-link">04 お父様に栄光を捧げ得る子女とならせてください</a></div><div class="chapter-item"><a href="fp1_05.html" class="chapter-link">05 ホザナの栄光を帰し奉ることができるようにしてください</a></div><div class="chapter-item"><a href="fp1_06.html" class="chapter-link">06 本然の園の上に本然の姿として立ててください</a></div><div class="chapter-item"><a href="fp1_07.html" class="chapter-link">07 お父様と完全に一つになる喜びの日を臨ませてください</a></div><div class="chapter-item"><a href="fp1_08.html" class="chapter-link">08 四方性を備えた愛の存在とならせてください</a></div><div class="chapter-item"><a href="fp1_09.html" class="chapter-link">09 本然の形状に似て喜びとなるようにしてください</a></div><div class="chapter-item"><a href="fp1_10.html" class="chapter-link">10 悲しみの歴史を清算する本然の姿とならせてください</a></div><div class="chapter-item"><a href="fp1_11.html" class="chapter-link">11 お父様に無限に賛美を捧げる存在とならせてください</a></div><div class="chapter-item"><a href="fp1_12.html" class="chapter-link">12 お父様に向かう望みの心情をもたせてください</a></div><div class="chapter-item"><a href="fp1_13.html" class="chapter-link">13 歓喜のひと日を成す喜びの実とならせてください</a></div><div class="chapter-item"><a href="fp1_14.html" class="chapter-link">14 お父様の心情世界に尋ね入らせてください</a></div><div class="chapter-item"><a href="fp1_15.html" class="chapter-link">15 お父様の栄光の時代を開いてさしあげる子女とならせてください</a></div><div class="chapter-item"><a href="fp1_16.html" class="chapter-link">16 本郷を建設する真の子女とならせてください</a></div><div class="chapter-item"><a href="fp1_17.html" class="chapter-link">17 本然の世界を慕うようにしてください</a></div><div class="chapter-item"><a href="fp1_18.html" class="chapter-link">18 心情を通して天を知るようにしてください</a></div><div class="chapter-item"><a href="fp1_19.html" class="chapter-link">19 心情を通した父子の因縁を許諾してください</a></div><div class="chapter-item"><a href="fp1_20.html" class="chapter-link">20 天国家庭を慕う私たちとならせてください</a></div><div class="chapter-item"><a href="fp1_21.html" class="chapter-link">21 心と体でお父様と和すことができるようにしてください</a></div><div class="chapter-item"><a href="fp1_22.html" class="chapter-link">22 心情で和し、一つとならせてください</a></div><div class="chapter-item"><a href="fp1_23.html" class="chapter-link">23 私たちの願いをあなたの願いと一致させてください</a></div><div class="chapter-item"><a href="fp1_24.html" class="chapter-link">24 創造理想世界が早く早く臨むようにしてください</a></div><div class="chapter-item"><a href="fp1_25.html" class="chapter-link">25 新しい覚悟をお父様の栄光の基盤としてください</a></div><div class="chapter-item"><a href="fp1_26.html" class="chapter-link">26 喜びを得ようとして創造なさった被造物であることを悟らせてください</a></div><div class="chapter-item"><a href="fp1_27.html" class="chapter-link">27 勝利的主管者の使命を果たさせてください</a></div><div class="chapter-item"><a href="fp1_28.html" class="chapter-link">28 本郷の地を探していく子女とならせてください</a></div><div class="chapter-item"><a href="fp1_29.html" class="chapter-link">29 天の受か芽生える家庭の貴い価値を悟らせてください</a></div><div class="chapter-item"><a href="fp1_30.html" class="chapter-link">30 お父様！　あなたはどこにご臨在なさいますか</a></div><div class="chapter-item"><a href="fp1_31.html" class="chapter-link">31 お父様のみ前に歓喜の光となりたいです</a></div><div class="chapter-item"><a href="fp1_32.html" class="chapter-link">32 あなたとの父子の因縁を慕うようにしてください</a></div><div class="chapter-item"><a href="fp1_33.html" class="chapter-link">33 お父様の表象として現れ得るようにしてください</a></div><div class="chapter-item"><a href="fp1_34.html" class="chapter-link">34 歴史的新時代に生まれたことに感謝申し上げます</a></div><div class="chapter-item"><a href="fp1_35.html" class="chapter-link">35 希望の国を築くことができるようにしてください</a></div><div class="chapter-item"><a href="fp1_36.html" class="chapter-link">36 私たちの一切の感情が本然のものを慕うようにしてください</a></div><div class="chapter-item"><a href="fp1_37.html" class="chapter-link">37 天国の起源となり得る家庭を築かせてください</a></div><div class="chapter-item"><a href="fp1_38.html" class="chapter-link">38 あなたの永遠なる対象の実体として立ててください</a></div><div class="chapter-item"><a href="fp1_39.html" class="chapter-link">39 愛の理想世界を成す統一の群れとならせてください</a></div></div></details><details><summary>父の祈り　２　熱望編</summary><div class="details-content"><div class="chapter-item"><a href="fp2_01.html" class="chapter-link">01 お父様！　不足なる私たちを受け入れてください</a></div><div class="chapter-item"><a href="fp2_02.html" class="chapter-link">02 善だけを備えた生きた祭物とならせてください</a></div><div class="chapter-item"><a href="fp2_03.html" class="chapter-link">03 すべてを謙遜にお任せしますので役事してください</a></div><div class="chapter-item"><a href="fp2_04.html" class="chapter-link">04 私たちを引き受け主管してください</a></div><div class="chapter-item"><a href="fp2_05.html" class="chapter-link">05 私たちの不足を悔悟しますのですべて主管してください</a></div><div class="chapter-item"><a href="fp2_06.html" class="chapter-link">06 この時間に、悟りを与えてください</a></div><div class="chapter-item"><a href="fp2_07.html" class="chapter-link">07 お父様！　哀れみの恩賜と愛を施してください</a></div><div class="chapter-item"><a href="fp2_08.html" class="chapter-link">08 宇宙的な理念と真理をもたせてください</a></div><div class="chapter-item"><a href="fp2_09.html" class="chapter-link">09 お父様！　私たちの中心となってください</a></div><div class="chapter-item"><a href="fp2_10.html" class="chapter-link">10 聖別の役事を許諾してください</a></div><div class="chapter-item"><a href="fp2_11.html" class="chapter-link">11 サタンと闘い勝利する子女たちとなるようお導きください</a></div><div class="chapter-item"><a href="fp2_12.html" class="chapter-link">12 お父様の心と体と一つにならせてください</a></div><div class="chapter-item"><a href="fp2_13.html" class="chapter-link">13 混乱の中でも真の道を探し出すようにしてください</a></div><div class="chapter-item"><a href="fp2_14.html" class="chapter-link">14 心の扉を開いてお父様の実存を感じるようにしてください</a></div><div class="chapter-item"><a href="fp2_15.html" class="chapter-link">15 お父様！　私たちを哀れにお思いください</a></div><div class="chapter-item"><a href="fp2_16.html" class="chapter-link">16 愛のみ手で私たちを尋ねてください</a></div><div class="chapter-item"><a href="fp2_17.html" class="chapter-link">17 新しい衝撃の中で新しい出発をさせてください</a></div><div class="chapter-item"><a href="fp2_18.html" class="chapter-link">18 お父様！　哀れにお思いください</a></div><div class="chapter-item"><a href="fp2_19.html" class="chapter-link">19 温柔謙遜なる心をもたせてください</a></div><div class="chapter-item"><a href="fp2_20.html" class="chapter-link">20 悲惨な立場に置かれている自分であることを悟らせてください</a></div><div class="chapter-item"><a href="fp2_21.html" class="chapter-link">21 実証的な感じをもてるようにしてください</a></div><div class="chapter-item"><a href="fp2_22.html" class="chapter-link">22 保護のみ手と慰安の土台を許諾してください</a></div><div class="chapter-item"><a href="fp2_23.html" class="chapter-link">23 過ぎし日の過誤を受け入れてください</a></div><div class="chapter-item"><a href="fp2_24.html" class="chapter-link">24 お父様のみ前に不憫な私たちであることを感じさせてください</a></div><div class="chapter-item"><a href="fp2_25.html" class="chapter-link">25 過ぎし日の過ちを悟らせてください</a></div><div class="chapter-item"><a href="fp2_26.html" class="chapter-link">26 心が宿る本然の立場を慕っようにしてください</a></div><div class="chapter-item"><a href="fp2_27.html" class="chapter-link">27 私たちはお父様が慕わしいのです</a></div><div class="chapter-item"><a href="fp2_28.html" class="chapter-link">28 お父様を慕う心をもたせてください</a></div><div class="chapter-item"><a href="fp2_29.html" class="chapter-link">29 真にお父様を慕う子女とならせてください</a></div><div class="chapter-item"><a href="fp2_30.html" class="chapter-link">30 幼子のような心で進ませてください</a></div><div class="chapter-item"><a href="fp2_31.html" class="chapter-link">31 善と共に永遠であり得る私たちとならせてください</a></div><div class="chapter-item"><a href="fp2_32.html" class="chapter-link">32 私たち自身が置かれた立場を自ら見極めさせてください</a></div><div class="chapter-item"><a href="fp2_33.html" class="chapter-link">33 常に私たちの横におられるお父様の実存を体得させてください</a></div><div class="chapter-item"><a href="fp2_34.html" class="chapter-link">34 お父様と共に生きる生涯路程を歩ませてください</a></div><div class="chapter-item"><a href="fp2_35.html" class="chapter-link">35 感謝の生活をする私たちとならせてください</a></div><div class="chapter-item"><a href="fp2_36.html" class="chapter-link">36 お父様の生命の脈拍を大切に保つ子女とならせてください</a></div><div class="chapter-item"><a href="fp2_37.html" class="chapter-link">37 お父様に向かう欽慕の心情に燃えさせてください</a></div><div class="chapter-item"><a href="fp2_38.html" class="chapter-link">38 新しい芽とならせてください</a></div><div class="chapter-item"><a href="fp2_39.html" class="chapter-link">39 温柔謙遜な姿勢で真の生活を追求させてください</a></div><div class="chapter-item"><a href="fp2_40.html" class="chapter-link">40 無限に与えても恥じらい得る姿とならせてください</a></div><div class="chapter-item"><a href="fp2_41.html" class="chapter-link">41 天を中心とする私たちの出会いとならせてください</a></div><div class="chapter-item"><a href="fp2_42.html" class="chapter-link">42 人のための道を行かせてください</a></div><div class="chapter-item"><a href="fp2_43.html" class="chapter-link">43 一生の季節を知るようにしてください</a></div><div class="chapter-item"><a href="fp2_44.html" class="chapter-link">44 お父様の誇らしい子女の姿として立ててください</a></div><div class="chapter-item"><a href="fp2_45.html" class="chapter-link">45 お父様！　私たちは全く知りませんでした</a></div><div class="chapter-item"><a href="fp2_46.html" class="chapter-link">46 真の若者とならせてください</a></div><div class="chapter-item"><a href="fp2_47.html" class="chapter-link">47 信仰の道において自分自身が怨讐であることを悟らせてください</a></div><div class="chapter-item"><a href="fp2_48.html" class="chapter-link">48 お父様の望みの実体とならせてください</a></div><div class="chapter-item"><a href="fp2_49.html" class="chapter-link">49 ただお父様のご心情をもって堕落圏を克服させてください</a></div><div class="chapter-item"><a href="fp2_50.html" class="chapter-link">50 世界復帰のために心労する子女たちを記憶してください</a></div></div></details><details><summary>父の祈り　３　復活編</summary><div class="details-content"><div class="chapter-item"><a href="fp3_01.html" class="chapter-link">01 あなたの形状に似せてください</a></div><div class="chapter-item"><a href="fp3_02.html" class="chapter-link">02 私たちを再創造してください</a></div><div class="chapter-item"><a href="fp3_03.html" class="chapter-link">03 み言をもって善の実体を成す者とならせてください</a></div><div class="chapter-item"><a href="fp3_04.html" class="chapter-link">04 お父様の善の実存体として復活させてください</a></div><div class="chapter-item"><a href="fp3_05.html" class="chapter-link">05 真理・生命・愛の真の子女とならせてくたさい</a></div><div class="chapter-item"><a href="fp3_06.html" class="chapter-link">06 永遠なる真の父母の真の息子・娘とならせてください</a></div><div class="chapter-item"><a href="fp3_07.html" class="chapter-link">07 再創造のみ手で私たちを守ってください</a></div><div class="chapter-item"><a href="fp3_08.html" class="chapter-link">08 天の生命を備えさせてください</a></div><div class="chapter-item"><a href="fp3_09.html" class="chapter-link">09 罪悪の根を清算し、新しい道に行かせてください</a></div><div class="chapter-item"><a href="fp3_10.html" class="chapter-link">10 本然の人間に回復するようにしてください</a></div><div class="chapter-item"><a href="fp3_11.html" class="chapter-link">11 本黙の価値を悟らせてくがさることに感謝いたします</a></div><div class="chapter-item"><a href="fp3_12.html" class="chapter-link">12 本然の姿を忘却した無知の眠りから目覚めさせてください</a></div><div class="chapter-item"><a href="fp3_13.html" class="chapter-link">13 私たちの心と体を主管してください</a></div><div class="chapter-item"><a href="fp3_14.html" class="chapter-link">14 私たちを哀れに思い、再創造の役事を起こしてください</a></div><div class="chapter-item"><a href="fp3_15.html" class="chapter-link">15 新しい心情をもってお父様と関係を結ばせてください</a></div><div class="chapter-item"><a href="fp3_16.html" class="chapter-link">16 人類の真の先祖となるよう導いてください</a></div><div class="chapter-item"><a href="fp3_17.html" class="chapter-link">17 お父様の生命のご心情を接ぎ木してください</a></div><div class="chapter-item"><a href="fp3_18.html" class="chapter-link">18 上下、前後、左右に結ばれた存在であることを分からせてください</a></div><div class="chapter-item"><a href="fp3_19.html" class="chapter-link">19 子女の栄光と子女の名分をもつよう許諾してください</a></div><div class="chapter-item"><a href="fp3_20.html" class="chapter-link">20 お父様の心情基準と一致した立場に立たせてください</a></div><div class="chapter-item"><a href="fp3_21.html" class="chapter-link">21 選び、縁を結んでくださったことに感謝を申し上げます</a></div><div class="chapter-item"><a href="fp3_22.html" class="chapter-link">22 お父様の子女という貴い価値を悟らせてください</a></div><div class="chapter-item"><a href="fp3_23.html" class="chapter-link">23 私たちを選んでくださったことに感謝と賛美をお捧げします</a></div><div class="chapter-item"><a href="fp3_24.html" class="chapter-link">24 サタン圏を逃れさせ、お父様と一体とならせてください</a></div><div class="chapter-item"><a href="fp3_25.html" class="chapter-link">25 本然の愛をもって因縁を結んでください</a></div><div class="chapter-item"><a href="fp3_26.html" class="chapter-link">26 本性の力で罪悪の根を断ち切らせてください</a></div><div class="chapter-item"><a href="fp3_27.html" class="chapter-link">27 堕落による罪悪の痕跡を捨てさせてください</a></div><div class="chapter-item"><a href="fp3_28.html" class="chapter-link">28 歴史に輝き得る「私」の姿を備えさせてください</a></div><div class="chapter-item"><a href="fp3_29.html" class="chapter-link">29 サタン圈の因縁を切り、本然の父母を探させてください</a></div><div class="chapter-item"><a href="fp3_30.html" class="chapter-link">30 祝福の恩賜で新しい愛の秩序を立てさせてください</a></div><div class="chapter-item"><a href="fp3_31.html" class="chapter-link">31 お父様の懐に抱かれる息子・娘となるよう祝福してください</a></div><div class="chapter-item"><a href="fp3_32.html" class="chapter-link">32 お望みになった真の子女の姿とならせてください</a></div><div class="chapter-item"><a href="fp3_33.html" class="chapter-link">33 み旨と一致する生活に生まれ変わらせてください</a></div><div class="chapter-item"><a href="fp3_34.html" class="chapter-link">34 再創造のみ手で主管してください</a></div><div class="chapter-item"><a href="fp3_35.html" class="chapter-link">35 息子の権限を許諾してください</a></div></div></details><details><summary>父の祈り　４　心情編</summary><div class="details-content"><div class="chapter-item"><a href="fp4_01.html" class="chapter-link">01 お父様のご心情に目覚めさせてください</a></div><div class="chapter-item"><a href="fp4_02.html" class="chapter-link">02 お父様のご心情を体得させてください</a></div><div class="chapter-item"><a href="fp4_03.html" class="chapter-link">03 お父様の悲しみの路程の前にこうべを垂れさせてください</a></div><div class="chapter-item"><a href="fp4_04.html" class="chapter-link">04 天の悲しみと苦痛を相続する主人公とならせてください</a></div><div class="chapter-item"><a href="fp4_05.html" class="chapter-link">05 お父様のご心情を慰める真の息子・娘となることを願います</a></div><div class="chapter-item"><a href="fp4_06.html" class="chapter-link">06 イエス様を通してお父様のご心情を悟らせてください</a></div><div class="chapter-item"><a href="fp4_07.html" class="chapter-link">07 悲しいご心情のお父様を証すことができるようにしてください</a></div><div class="chapter-item"><a href="fp4_08.html" class="chapter-link">08 お父様の悲しみを代身させてください</a></div><div class="chapter-item"><a href="fp4_09.html" class="chapter-link">09 お父様のご事情とご心情を私たちのものとさせてください</a></div><div class="chapter-item"><a href="fp4_10.html" class="chapter-link">10 天の誠に向かう道ならば涙の道でも従います</a></div><div class="chapter-item"><a href="fp4_11.html" class="chapter-link">11 天のご苦労の歴史路程を慰労させてください</a></div><div class="chapter-item"><a href="fp4_12.html" class="chapter-link">12 お父様の悲しみを悟った謙遜な姿となることを願います</a></div><div class="chapter-item"><a href="fp4_13.html" class="chapter-link">13 悲しみのお父様を慰労させてください</a></div><div class="chapter-item"><a href="fp4_14.html" class="chapter-link">14 お父様のご心情の源泉に接するようにしてください</a></div><div class="chapter-item"><a href="fp4_15.html" class="chapter-link">15 お父様の物悲しいご心情に通じさせてください</a></div><div class="chapter-item"><a href="fp4_16.html" class="chapter-link">16 お父様のご心情と通じさせてください</a></div><div class="chapter-item"><a href="fp4_17.html" class="chapter-link">17 お父様と心情の因縁を結ぶことができるようにしてください</a></div><div class="chapter-item"><a href="fp4_18.html" class="chapter-link">18 お父様を抱いて泣くことのできる真の子女とならせてください</a></div><div class="chapter-item"><a href="fp4_19.html" class="chapter-link">19 お父様のご心情の同伴者とならせてください</a></div><div class="chapter-item"><a href="fp4_20.html" class="chapter-link">20 天情に徹して涙を流させてください</a></div><div class="chapter-item"><a href="fp4_21.html" class="chapter-link">21 嘆息の歴史路程を歩んでこられたお父様！</a></div><div class="chapter-item"><a href="fp4_22.html" class="chapter-link">22 悲しい歴史の曲折を痛感させてください</a></div><div class="chapter-item"><a href="fp4_23.html" class="chapter-link">23 子を追い立てるお父様の苦しいご心情を察することができるようにしてください</a></div><div class="chapter-item"><a href="fp4_24.html" class="chapter-link">24 悲しいお父様を慰労してさしあげることのできる統一信徒とならせてください</a></div><div class="chapter-item"><a href="fp4_25.html" class="chapter-link">25 心情の因縁を探して復帰の完結を成させてください</a></div><div class="chapter-item"><a href="fp4_26.html" class="chapter-link">26 私よりもっと苦痛なるお立場で摂理してこられたお父様！</a></div><div class="chapter-item"><a href="fp4_27.html" class="chapter-link">27 背反し背信した哀れな群れをお許しください</a></div><div class="chapter-item"><a href="fp4_28.html" class="chapter-link">28 お父様の愛のご心情を体得する子女とならせてください</a></div><div class="chapter-item"><a href="fp4_29.html" class="chapter-link">29 すべてのことがあなたの愛ゆえでした</a></div><div class="chapter-item"><a href="fp4_30.html" class="chapter-link">30 過ぎてみるとすべてのものが愛でした</a></div><div class="chapter-item"><a href="fp4_31.html" class="chapter-link">31 恨みで綴られた六千年の歴史を解怨させてください</a></div><div class="chapter-item"><a href="fp4_32.html" class="chapter-link">32 歴史的総解怨のひと日として祝福してください</a></div></div></details><details><summary>父の祈り　５　信仰編</summary><div class="details-content"><div class="chapter-item"><a href="fp5_01.html" class="chapter-link">01 イエス・キリストの切ない心情を体恤させてください</a></div><div class="chapter-item"><a href="fp5_02.html" class="chapter-link">02 イエス様の身代わりとならせてください</a></div><div class="chapter-item"><a href="fp5_03.html" class="chapter-link">03 キリストの人格に似るようにさせてください</a></div><div class="chapter-item"><a href="fp5_04.html" class="chapter-link">04 イエス様の心情を体恤し、ゴルゴタの道を行きます</a></div><div class="chapter-item"><a href="fp5_05.html" class="chapter-link">05 善なる牧者の声を聞かせてください</a></div><div class="chapter-item"><a href="fp5_06.html" class="chapter-link">06 キリストの心情を体恤させてください</a></div><div class="chapter-item"><a href="fp5_07.html" class="chapter-link">07 天の切ない心情を体恤させてください</a></div><div class="chapter-item"><a href="fp5_08.html" class="chapter-link">08 イエス様の悲しみを解怨するひと日とならせてください</a></div><div class="chapter-item"><a href="fp5_09.html" class="chapter-link">09 この日、イエス様の心情を酌み取らせてください</a></div><div class="chapter-item"><a href="fp5_10.html" class="chapter-link">10 排斥されたイエス様の悲しい事情を洞察させてください</a></div><div class="chapter-item"><a href="fp5_11.html" class="chapter-link">11 十字架を越えて復活の栄光を歌わせてください</a></div><div class="chapter-item"><a href="fp5_12.html" class="chapter-link">12 メシヤを迎えられる姿とならせてください</a></div><div class="chapter-item"><a href="fp5_13.html" class="chapter-link">13 イエス様の悲しい心情を感じさせてください</a></div><div class="chapter-item"><a href="fp5_14.html" class="chapter-link">14 イエス様を通じた歴史的痛恨の心情を感じさせてください</a></div><div class="chapter-item"><a href="fp5_15.html" class="chapter-link">15 イエス様の悲しい心情をつかみ立つ子女とならせてください</a></div><div class="chapter-item"><a href="fp5_16.html" class="chapter-link">16 み意に背いたイスラエルを教訓とさせてください</a></div><div class="chapter-item"><a href="fp5_17.html" class="chapter-link">17 メシヤを迎えるにふさわしい姿とならせてください</a></div><div class="chapter-item"><a href="fp5_18.html" class="chapter-link">18 イエス様の慰労者となり慰安者とならせてください</a></div><div class="chapter-item"><a href="fp5_19.html" class="chapter-link">19 イエス様とともに天的な責任を果たさせてください</a></div><div class="chapter-item"><a href="fp5_20.html" class="chapter-link">20 イエス様の歴史的な悲しみのひと日を回想させてください</a></div><div class="chapter-item"><a href="fp5_21.html" class="chapter-link">21 イエス様のような心情でお父様の前に立たせてください</a></div><div class="chapter-item"><a href="fp5_22.html" class="chapter-link">22 恨みを残し逝かれたイエス様の心情を慰労させてください</a></div><div class="chapter-item"><a href="fp5_23.html" class="chapter-link">23 イスラエルが果たせなかった使命を私たちが成してさしあげられますように</a></div><div class="chapter-item"><a href="fp5_24.html" class="chapter-link">24 イエス様が成せなかったみ旨を成就させてください</a></div><div class="chapter-item"><a href="fp5_25.html" class="chapter-link">25 イエス様の恨みを解怨する統一教団とならせてください</a></div><div class="chapter-item"><a href="fp5_26.html" class="chapter-link">26 最後の開拓者の使命を果たさせてください</a></div><div class="chapter-item"><a href="fp5_27.html" class="chapter-link">27 恨み多い復帰の道に責任を負わせてください</a></div><div class="chapter-item"><a href="fp5_28.html" class="chapter-link">28 復帰の路程で勝利させてください</a></div><div class="chapter-item"><a href="fp5_29.html" class="chapter-link">29 復帰摂理の責任を果たす子女とならせてください</a></div><div class="chapter-item"><a href="fp5_30.html" class="chapter-link">30 原理と一致する堅固な基盤を立てさせてください</a></div><div class="chapter-item"><a href="fp5_31.html" class="chapter-link">31 未来の希望の世界を相続する者とならせてください</a></div><div class="chapter-item"><a href="fp5_32.html" class="chapter-link">32 心情を体恤させてください</a></div><div class="chapter-item"><a href="fp5_33.html" class="chapter-link">33 天の事情と心情に因縁が結ばれるようにしてください</a></div><div class="chapter-item"><a href="fp5_34.html" class="chapter-link">34 み旨を中心とした一つの心と体をもたせてください</a></div></div></details><details><summary>父の祈り ６　孝心編</summary><div class="details-content"><div class="chapter-item"><a href="fp6_01.html" class="chapter-link">01 お父様を慰労する孝子とならせてください</a></div><div class="chapter-item"><a href="fp6_02.html" class="chapter-link">02 貴任を果たす子女とならせてください</a></div><div class="chapter-item"><a href="fp6_03.html" class="chapter-link">03 お父様の恨みの心情を解怨する子女とならせてください</a></div><div class="chapter-item"><a href="fp6_04.html" class="chapter-link">04 強く雄々しい、心情的な息子・娘とならせてください</a></div><div class="chapter-item"><a href="fp6_05.html" class="chapter-link">05 新婦のような立場で責任を果たさせてください</a></div><div class="chapter-item"><a href="fp6_06.html" class="chapter-link">06 天宙を代表する真の子女とならせてください</a></div><div class="chapter-item"><a href="fp6_07.html" class="chapter-link">07 お父様を慰労してさしあげられる子女とならせてください</a></div><div class="chapter-item"><a href="fp6_08.html" class="chapter-link">08 お父様の愛による安息を捜させてください</a></div><div class="chapter-item"><a href="fp6_09.html" class="chapter-link">09 お父様の勧告を貴ぶ子女とならせてください</a></div><div class="chapter-item"><a href="fp6_10.html" class="chapter-link">10 お父様のものとしてだけ動じ得るようにしてください</a></div><div class="chapter-item"><a href="fp6_11.html" class="chapter-link">11 歴史的解怨のために先立たせてください</a></div><div class="chapter-item"><a href="fp6_12.html" class="chapter-link">12 本然の心情を通して命令してください</a></div><div class="chapter-item"><a href="fp6_13.html" class="chapter-link">13 悲しいお父様に侍りゆく信仰の道とならせてください</a></div><div class="chapter-item"><a href="fp6_14.html" class="chapter-link">14 お父様の苦労の路程を尋ねさせてください</a></div><div class="chapter-item"><a href="fp6_15.html" class="chapter-link">15 お父様の解放を歌えるようにしてください</a></div><div class="chapter-item"><a href="fp6_16.html" class="chapter-link">16 お父様！　おそれ多く恵み深こうございます</a></div><div class="chapter-item"><a href="fp6_17.html" class="chapter-link">17 恨みを残さない子女とならせてください</a></div><div class="chapter-item"><a href="fp6_18.html" class="chapter-link">18 お父様に侍り奉る忠孝の道を歩ませてください</a></div><div class="chapter-item"><a href="fp6_19.html" class="chapter-link">19 お父様を思慕する真の息子・娘とならせてください</a></div><div class="chapter-item"><a href="fp6_20.html" class="chapter-link">20 すべての精誠を捧げ、侍り奉る真の孝子とならせてください</a></div><div class="chapter-item"><a href="fp6_21.html" class="chapter-link">21 真の孝子となり、責任を完遂させてください</a></div><div class="chapter-item"><a href="fp6_22.html" class="chapter-link">22 真の息子・娘の資格を持たせてください</a></div><div class="chapter-item"><a href="fp6_23.html" class="chapter-link">23 お父様と共に本然の春を迎えさせてください</a></div><div class="chapter-item"><a href="fp6_24.html" class="chapter-link">24 心情で体得する子女とならせてください</a></div><div class="chapter-item"><a href="fp6_25.html" class="chapter-link">25 お父様の心情の懐に抱かれ得る子女とならせてください</a></div><div class="chapter-item"><a href="fp6_26.html" class="chapter-link">26 お父様の犠牲の道を相続させてください</a></div><div class="chapter-item"><a href="fp6_27.html" class="chapter-link">27 お父様だけのために行くと言える子女とならせてください</a></div><div class="chapter-item"><a href="fp6_28.html" class="chapter-link">28 父子の因縁を忘却しない子女とならせてください</a></div><div class="chapter-item"><a href="fp6_29.html" class="chapter-link">29 お父様に代わることのできる子女の姿を備えさせてください</a></div><div class="chapter-item"><a href="fp6_30.html" class="chapter-link">30 お父様の偉業を継承できる子女とならせてください</a></div><div class="chapter-item"><a href="fp6_31.html" class="chapter-link">31 お父様の前にふさわしい子女の姿で立たせてください</a></div><div class="chapter-item"><a href="fp6_32.html" class="chapter-link">32 お父様の子女たることを証せる私たちとならせてください</a></div><div class="chapter-item"><a href="fp6_33.html" class="chapter-link">33 真の父母の貴い価値を悟って侍る私たちとならせてください</a></div><div class="chapter-item"><a href="fp6_34.html" class="chapter-link">34 憤懣やるかたない天の事情を慰労させてください</a></div><div class="chapter-item"><a href="fp6_35.html" class="chapter-link">35 ます父母の心を案じる子女とならせてください</a></div></div></details><details><summary>父の祈り　７　忠孝編</summary><div class="details-content"><div class="chapter-item"><a href="fp7_01.html" class="chapter-link">01 天の希望・信仰・愛の継承者とならせてください</a></div><div class="chapter-item"><a href="fp7_02.html" class="chapter-link">02 本然の園を復帰する忠節の子女とならせてください</a></div><div class="chapter-item"><a href="fp7_03.html" class="chapter-link">03 私の運命を自覚し、摂理の使命を完遂させてください</a></div><div class="chapter-item"><a href="fp7_04.html" class="chapter-link">04 天の勇士とならせてください</a></div><div class="chapter-item"><a href="fp7_05.html" class="chapter-link">05 天的な使命を果たす勇士とならせてください</a></div><div class="chapter-item"><a href="fp7_06.html" class="chapter-link">06 曲折の多いお父様の道、今、私たちがまいります</a></div><div class="chapter-item"><a href="fp7_07.html" class="chapter-link">07 み旨の前に恥ずかしくない忠孝の子女とならせてください</a></div><div class="chapter-item"><a href="fp7_08.html" class="chapter-link">08 民族と人類を身代わりする姿として導いてください</a></div><div class="chapter-item"><a href="fp7_09.html" class="chapter-link">09 理想天国に向かう十字架の峠を越えさせてください</a></div><div class="chapter-item"><a href="fp7_10.html" class="chapter-link">10 世界的悲しみの障壁を越えて立つ子女とならせてください</a></div><div class="chapter-item"><a href="fp7_11.html" class="chapter-link">11 世界を超えて飛翔する息子・娘として貴任を果たさせてください</a></div><div class="chapter-item"><a href="fp7_12.html" class="chapter-link">12 天のための闘いに責任を持った息子・娘とならせてください</a></div><div class="chapter-item"><a href="fp7_13.html" class="chapter-link">13 お父様に仕え奉る平和の天国を早く成させてください</a></div><div class="chapter-item"><a href="fp7_14.html" class="chapter-link">14 お父様の安息の基盤のために忠孝の道を行かせてください</a></div><div class="chapter-item"><a href="fp7_15.html" class="chapter-link">15 蕩減復帰路程の中で忠孝を尽くす子女とならせてください</a></div><div class="chapter-item"><a href="fp7_16.html" class="chapter-link">16 神様の国を建てる聖なる婦女子たちとならせてください</a></div><div class="chapter-item"><a href="fp7_17.html" class="chapter-link">17 天国建設のために死んでいった先烈たちと似させてください</a></div><div class="chapter-item"><a href="fp7_18.html" class="chapter-link">18 私たちを通してお父様のみ旨を成してください</a></div><div class="chapter-item"><a href="fp7_19.html" class="chapter-link">19 お父様が行かれる道に同参することを願います</a></div><div class="chapter-item"><a href="fp7_20.html" class="chapter-link">20 お父様に代わってト字架を負う孝子とならせてください</a></div><div class="chapter-item"><a href="fp7_21.html" class="chapter-link">21 密使としての使命を果たさせてください</a></div><div class="chapter-item"><a href="fp7_22.html" class="chapter-link">22 お父様の忠孝の子女たちを祝福してください</a></div><div class="chapter-item"><a href="fp7_23.html" class="chapter-link">23 不孝の歴史を終結させる子女とならせてください</a></div><div class="chapter-item"><a href="fp7_24.html" class="chapter-link">24 お父様の恩徳に対して忠孝を帰し奉る子女とならせてください</a></div><div class="chapter-item"><a href="fp7_25.html" class="chapter-link">25 新しい歴史を創造していく統一の群れとならせてください</a></div><div class="chapter-item"><a href="fp7_26.html" class="chapter-link">26 摂理史的な環境圈で勝利させてください</a></div><div class="chapter-item"><a href="fp7_27.html" class="chapter-link">27 勝利の一路を開拓させてください</a></div><div class="chapter-item"><a href="fp7_28.html" class="chapter-link">28 お父様を愛し奉り、み旨の道をまいります</a></div><div class="chapter-item"><a href="fp7_29.html" class="chapter-link">29 新しい時代の旗手の使命を果たさせてください</a></div><div class="chapter-item"><a href="fp7_30.html" class="chapter-link">30 人類を私の体と同じように愛させてください</a></div></div></details><details><summary>父の祈り　８　決断編</summary><div class="details-content"><div class="chapter-item"><a href="fp8_01.html" class="chapter-link">01 天だけを中心としてみ旨を成させてください</a></div><div class="chapter-item"><a href="fp8_02.html" class="chapter-link">02 神様のみ旨のために走っていきます</a></div><div class="chapter-item"><a href="fp8_03.html" class="chapter-link">03 感謝してみ旨の道をまいります</a></div><div class="chapter-item"><a href="fp8_04.html" class="chapter-link">04 あなたのみ旨を担い得る子女とならせてくたさい</a></div><div class="chapter-item"><a href="fp8_05.html" class="chapter-link">05 み旨を成す実体的な姿とならせてください</a></div><div class="chapter-item"><a href="fp8_06.html" class="chapter-link">06 み旨成就の歴史的運命を悟らせてください</a></div><div class="chapter-item"><a href="fp8_07.html" class="chapter-link">07 どのような苦痛にも打ち勝たせてください</a></div><div class="chapter-item"><a href="fp8_08.html" class="chapter-link">08 お父様のみ旨を知りましたので、行わせてください</a></div><div class="chapter-item"><a href="fp8_09.html" class="chapter-link">09 きょうも変わることなくみ旨に向かって走らせてください</a></div><div class="chapter-item"><a href="fp8_10.html" class="chapter-link">10 一片丹心にお父様のみ旨の道を行かせてください</a></div><div class="chapter-item"><a href="fp8_11.html" class="chapter-link">11 各地でみ旨のために闘う子女たちをお守りください</a></div><div class="chapter-item"><a href="fp8_12.html" class="chapter-link">12 行くべき道を終わりまで行かせてください</a></div><div class="chapter-item"><a href="fp8_13.html" class="chapter-link">13 耐えに耐えて残される群れとならせてください</a></div><div class="chapter-item"><a href="fp8_14.html" class="chapter-link">14 お父様のみ旨の道に同参するようになったことに感謝を申し上げ</a></div><div class="chapter-item"><a href="fp8_15.html" class="chapter-link">15 苦痛のいばらの道でもみ旨のためにまいります</a></div><div class="chapter-item"><a href="fp8_16.html" class="chapter-link">16 お父様のみ旨を成す統一教会員とならせてください</a></div><div class="chapter-item"><a href="fp8_17.html" class="chapter-link">17 み旨だけに向かって直行することのできる子女とならせてください</a></div><div class="chapter-item"><a href="fp8_18.html" class="chapter-link">18 世界を救うことのできる者とならせてください</a></div><div class="chapter-item"><a href="fp8_19.html" class="chapter-link">19 理想世界実現のための家庭圏を成させてください</a></div><div class="chapter-item"><a href="fp8_20.html" class="chapter-link">20 み旨のための家庭的責任路程をすべて歩ませてください</a></div><div class="chapter-item"><a href="fp8_21.html" class="chapter-link">21 み旨の道を行く者としての使命を果たさせてください</a></div><div class="chapter-item"><a href="fp8_22.html" class="chapter-link">22 み旨の道を行くのに一瞬たりとも疎かにさせないでください</a></div><div class="chapter-item"><a href="fp8_23.html" class="chapter-link">23 あなたの前に自らこうべを垂れて謙虚な心を持たせてください</a></div><div class="chapter-item"><a href="fp8_24.html" class="chapter-link">24 み旨の前に直行できる勝利の息子・娘とならせてください</a></div><div class="chapter-item"><a href="fp8_25.html" class="chapter-link">25 み旨とともに生きさせてください</a></div><div class="chapter-item"><a href="fp8_26.html" class="chapter-link">26 自らお父様のみ旨の道を果たさせてください</a></div><div class="chapter-item"><a href="fp8_27.html" class="chapter-link">27 み旨と一致する生涯路程を歩ませてください</a></div><div class="chapter-item"><a href="fp8_28.html" class="chapter-link">28 お父様に倣って受難のみ旨の道も克服させてください</a></div><div class="chapter-item"><a href="fp8_29.html" class="chapter-link">29 人類のための公義の道を歩ませてください</a></div><div class="chapter-item"><a href="fp8_30.html" class="chapter-link">30 み旨の道に向かって総進軍できる群れとならせてください</a></div><div class="chapter-item"><a href="fp8_31.html" class="chapter-link">31 この身をすべて捧げて天道を正して行かせてください</a></div></div></details><details><summary>父の祈り　９　献身編</summary><div class="details-content"><div class="chapter-item"><a href="fp9_01.html" class="chapter-link">01 アベル的な祭壇の前に祭物とならせてください</a></div><div class="chapter-item"><a href="fp9_02.html" class="chapter-link">02 伝統的アベルの道を歩ませてください</a></div><div class="chapter-item"><a href="fp9_03.html" class="chapter-link">03 天が喜び得る祭壇の祭物とならせてください</a></div><div class="chapter-item"><a href="fp9_04.html" class="chapter-link">04 天の恨みの塀を壊す祭物とならせてください</a></div><div class="chapter-item"><a href="fp9_05.html" class="chapter-link">05 天の恩賜に報いる祭物とならせてください</a></div><div class="chapter-item"><a href="fp9_06.html" class="chapter-link">06 すべてのものを純粋なまま捧げる真なる新婦とならせてください</a></div><div class="chapter-item"><a href="fp9_07.html" class="chapter-link">07 勝利の道の上に祭物として棒げられるようにしてください</a></div><div class="chapter-item"><a href="fp9_08.html" class="chapter-link">08 み旨のための祭物としてお使いください</a></div><div class="chapter-item"><a href="fp9_09.html" class="chapter-link">09 天がお命じになった使命を抱いて走らせてください</a></div><div class="chapter-item"><a href="fp9_10.html" class="chapter-link">10 足らない心と体ですが完全にあなたに捧げます</a></div><div class="chapter-item"><a href="fp9_11.html" class="chapter-link">11 お父様のための祭物になりたいです</a></div><div class="chapter-item"><a href="fp9_12.html" class="chapter-link">12 私のすべてのものをお父様に捧げます</a></div><div class="chapter-item"><a href="fp9_13.html" class="chapter-link">13 患難の中でもこの身をお守りくださったわがお父様！</a></div><div class="chapter-item"><a href="fp9_14.html" class="chapter-link">14 彷徨する民族の前に祭物とならせてください</a></div><div class="chapter-item"><a href="fp9_15.html" class="chapter-link">15 謙遜な心で祭物とならせてください</a></div><div class="chapter-item"><a href="fp9_16.html" class="chapter-link">16 私たちのすべてのものをお父様の前に捧げさせてください</a></div><div class="chapter-item"><a href="fp9_17.html" class="chapter-link">17 忠・孝・烈の道を行かせてください</a></div><div class="chapter-item"><a href="fp9_18.html" class="chapter-link">18 悲しい歴史に責任をもつ息子・娘にならせてください</a></div><div class="chapter-item"><a href="fp9_19.html" class="chapter-link">19 この民族と人類と天下に代わる生きた祭物とならせてください</a></div><div class="chapter-item"><a href="fp9_20.html" class="chapter-link">20 お父様のみ前に喜びの実体として捧げられる天の息子・娘とならせてください</a></div><div class="chapter-item"><a href="fp9_21.html" class="chapter-link">21 み意に徹して身もだえする統一祭壇とならせてください</a></div><div class="chapter-item"><a href="fp9_22.html" class="chapter-link">22 世界史的な使命を果たす天の息子・娘となるようにしてください</a></div><div class="chapter-item"><a href="fp9_23.html" class="chapter-link">23 身も心もすべて捧げて、残された使命と責任を果たさせてください</a></div><div class="chapter-item"><a href="fp9_24.html" class="chapter-link">24 真なる祭物の「私」とならせてください</a></div><div class="chapter-item"><a href="fp9_25.html" class="chapter-link">25 蕩減の祭物として残らず捧げられ得るようにしてください</a></div><div class="chapter-item"><a href="fp9_26.html" class="chapter-link">26 より大きなもののために犠牲になれるようにしてください</a></div><div class="chapter-item"><a href="fp9_27.html" class="chapter-link">27 全体のための勝利的祭物の道を行かせてください</a></div><div class="chapter-item"><a href="fp9_28.html" class="chapter-link">28 完全な祭物となり、勝利の凱歌を歌わせてください</a></div><div class="chapter-item"><a href="fp9_29.html" class="chapter-link">29 世界的統一の祭壇上で祭物とならせてください</a></div></div></details><details><summary>父の祈り　10　復帰編</summary><div class="details-content"><div class="chapter-item"><a href="fp10_01.html" class="chapter-link">01 歴史の負債を清算する群れとならせてください</a></div><div class="chapter-item"><a href="fp10_02.html" class="chapter-link">02 先狙たちの残した恨みを踏んで立たせてください</a></div><div class="chapter-item"><a href="fp10_03.html" class="chapter-link">03 しこりを解く天的な指導者とならせてくたさい</a></div><div class="chapter-item"><a href="fp10_04.html" class="chapter-link">04 六千年の忍苦の路程を終結させてください</a></div><div class="chapter-item"><a href="fp10_05.html" class="chapter-link">05 天宙的な「父母の日」を復帰させてください</a></div><div class="chapter-item"><a href="fp10_06.html" class="chapter-link">06 復帰させてくださった「万物の日」に感謝を申し上げます</a></div><div class="chapter-item"><a href="fp10_07.html" class="chapter-link">07 世界的悲しみの障壁を越え立つ子女とならせてください</a></div><div class="chapter-item"><a href="fp10_08.html" class="chapter-link">08 歴史的な交差点で善の結実を刈り取らせてください</a></div><div class="chapter-item"><a href="fp10_09.html" class="chapter-link">09 宇宙史的な「子女の日」を迎えるようになったことに感謝いたします</a></div><div class="chapter-item"><a href="fp10_10.html" class="chapter-link">10 カインまでも愛することのできる新しい時代を迎えさせてください</a></div><div class="chapter-item"><a href="fp10_11.html" class="chapter-link">11 世界的奉献の日を成す私たちとならせてください</a></div><div class="chapter-item"><a href="fp10_12.html" class="chapter-link">12 歴史と時代と未来を代表した私たちであることを悟らせてください</a></div><div class="chapter-item"><a href="fp10_13.html" class="chapter-link">13 「子女の日」を期して万人類と多くの霊魂たちを祝福してください</a></div><div class="chapter-item"><a href="fp10_14.html" class="chapter-link">14 苦難の歴史を解怨成就する統一教会とならせてください</a></div><div class="chapter-item"><a href="fp10_15.html" class="chapter-link">15 六千年の復帰歴史を私たちに結実させてください</a></div><div class="chapter-item"><a href="fp10_16.html" class="chapter-link">16 カインを自然屈服させるアベルとならせてください</a></div><div class="chapter-item"><a href="fp10_17.html" class="chapter-link">17 公的な蕩減路程を歩ませてください</a></div><div class="chapter-item"><a href="fp10_18.html" class="chapter-link">18 「万物の日」を迎え、恥ずかしい過去を反省させてください</a></div><div class="chapter-item"><a href="fp10_19.html" class="chapter-link">19 未来の世界とお父様のために生きさせてください</a></div><div class="chapter-item"><a href="fp10_20.html" class="chapter-link">20 摂理の時を知る者とならせてください</a></div><div class="chapter-item"><a href="fp10_21.html" class="chapter-link">21 家庭的蕩減路程を越えさせてください</a></div><div class="chapter-item"><a href="fp10_22.html" class="chapter-link">22 真なる家庭の基を築かせてください</a></div><div class="chapter-item"><a href="fp10_23.html" class="chapter-link">23 嘆息する万物たちが解放を迎える日とならせてください</a></div><div class="chapter-item"><a href="fp10_24.html" class="chapter-link">24 縦的なる歴史的恨みを横的に総蕩減させてください</a></div><div class="chapter-item"><a href="fp10_25.html" class="chapter-link">25 歴史的に貴い立場に置かれていることを悟らせてください</a></div><div class="chapter-item"><a href="fp10_26.html" class="chapter-link">26 善霊たちの労苦が実を結ぶようにしてください</a></div><div class="chapter-item"><a href="fp10_27.html" class="chapter-link">27 後代に善なる先祖として残り得る姿とならせてください</a></div><div class="chapter-item"><a href="fp10_28.html" class="chapter-link">28 アベル的使命を抱いて世界に向かわせてください</a></div><div class="chapter-item"><a href="fp10_29.html" class="chapter-link">29 復帰の道にお召しくださったことに感謝を申し上げます</a></div><div class="chapter-item"><a href="fp10_30.html" class="chapter-link">30 悪主権の歴史に終止符を打つ私たちとならせてください</a></div><div class="chapter-item"><a href="fp10_31.html" class="chapter-link">31 三時代を代表した立場で責任を果たさせてください</a></div><div class="chapter-item"><a href="fp10_32.html" class="chapter-link">32 霊界と肉界が喜ぶ日とならせてください</a></div><div class="chapter-item"><a href="fp10_33.html" class="chapter-link">33 サタンの讒訴を越えて新しい時代を迎えさせてください</a></div><div class="chapter-item"><a href="fp10_34.html" class="chapter-link">34 「世界統一国開天日」を宣布いたします</a></div><div class="chapter-item"><a href="fp10_35.html" class="chapter-link">35 勝利と解放の天国が地上に到来することを宣布いたします</a></div><div class="chapter-item"><a href="fp10_36.html" class="chapter-link">36 天宙全体に安着され得る基盤を奉献いたします</a></div></div></details><details><summary>父の祈り　11　勝利編</summary><div class="details-content"><div class="chapter-item"><a href="fp11_01.html" class="chapter-link">01 天の精兵とならせてください</a></div><div class="chapter-item"><a href="fp11_02.html" class="chapter-link">02 ヤコブの路程に倣い勝利の栄光を帰させてください</a></div><div class="chapter-item"><a href="fp11_03.html" class="chapter-link">03 シオンの栄光が臨むようにしてください</a></div><div class="chapter-item"><a href="fp11_04.html" class="chapter-link">04 恨みの城壁を崩し、前進する勝利の勇士とならせてください</a></div><div class="chapter-item"><a href="fp11_05.html" class="chapter-link">05 天の愛に接ぎ木された収穫者とならせてください</a></div><div class="chapter-item"><a href="fp11_06.html" class="chapter-link">06 不変の志操を守る天の精兵とならせてください</a></div><div class="chapter-item"><a href="fp11_07.html" class="chapter-link">07 最後の闘いに勝利させてください</a></div><div class="chapter-item"><a href="fp11_08.html" class="chapter-link">08 サタンに勝利する天の精兵とならせてください</a></div><div class="chapter-item"><a href="fp11_09.html" class="chapter-link">09 第三イスラエルを成就させてください</a></div><div class="chapter-item"><a href="fp11_10.html" class="chapter-link">10 真なる自由と解放と統一の世界を成させてください</a></div><div class="chapter-item"><a href="fp11_11.html" class="chapter-link">11 お父様の前に最後まで残され得る者とならせてください</a></div><div class="chapter-item"><a href="fp11_12.html" class="chapter-link">12 すべてのものを克服し、いで立つ天の勇士とならせてください</a></div><div class="chapter-item"><a href="fp11_13.html" class="chapter-link">13 強く雄々しい天の精兵とならせてください</a></div><div class="chapter-item"><a href="fp11_14.html" class="chapter-link">14 終わりまで耐え努力して最後の結実を結ばせてください</a></div><div class="chapter-item"><a href="fp11_15.html" class="chapter-link">15 善なる実を結ぶ姿とならせてください</a></div><div class="chapter-item"><a href="fp11_16.html" class="chapter-link">16 カナンに向かって突進する天の勇兵とならせてください</a></div><div class="chapter-item"><a href="fp11_17.html" class="chapter-link">17 サタン世界での勝利のために勇進させてください</a></div><div class="chapter-item"><a href="fp11_18.html" class="chapter-link">18 最後の激戦地で終わりまで変わらない者とならせてください</a></div><div class="chapter-item"><a href="fp11_19.html" class="chapter-link">19 死を覚悟していで立ちました</a></div><div class="chapter-item"><a href="fp11_20.html" class="chapter-link">20 世界に向かって勇進する天の勇士とならせてください</a></div><div class="chapter-item"><a href="fp11_21.html" class="chapter-link">21 はっきりとした目的意識を持って前進させてください</a></div><div class="chapter-item"><a href="fp11_22.html" class="chapter-link">22 お父様の国を建設する若者とならせてください</a></div><div class="chapter-item"><a href="fp11_23.html" class="chapter-link">23 最後の勝利をお父様に捧げ奉る子女とならせてください</a></div><div class="chapter-item"><a href="fp11_24.html" class="chapter-link">24 お父様の勝利の国を立てる開拓者とならせてください</a></div><div class="chapter-item"><a href="fp11_25.html" class="chapter-link">25 試練を克服して勝利させてください</a></div><div class="chapter-item"><a href="fp11_26.html" class="chapter-link">26 ダビデのような雄々しい勇気をもって進ませてください</a></div><div class="chapter-item"><a href="fp11_27.html" class="chapter-link">27 強く雄々しく勝利させてください</a></div><div class="chapter-item"><a href="fp11_28.html" class="chapter-link">28 逆境を突破して勝利させてください</a></div><div class="chapter-item"><a href="fp11_29.html" class="chapter-link">29 ホーム・チャーチを通したみ旨の完成を成させてください</a></div><div class="chapter-item"><a href="fp11_30.html" class="chapter-link">30 天意に従って先に立つ若者とならせてください</a></div><div class="chapter-item"><a href="fp11_31.html" class="chapter-link">31 天国建設の精兵であることを自覚させてください</a></div></div></details><details><summary>父の祈り　12　統一編</summary><div class="details-content"><div class="chapter-item"><a href="fp12_01.html" class="chapter-link">01 お父様！ この民族の中心となる者は誰でしょうか</a></div><div class="chapter-item"><a href="fp12_02.html" class="chapter-link">02 民族の十字架を先に負わせてください</a></div><div class="chapter-item"><a href="fp12_03.html" class="chapter-link">03 この民族を選んでこられた涙の路程を悟らせてください</a></div><div class="chapter-item"><a href="fp12_04.html" class="chapter-link">04 歴史的な恨みを解怨する民族とならせてください</a></div><div class="chapter-item"><a href="fp12_05.html" class="chapter-link">05 希望の第三イスラエルとして祝福してください</a></div><div class="chapter-item"><a href="fp12_06.html" class="chapter-link">06 この民族を悲しみの歴史に導かれたあなたのみ意を分からせてください</a></div><div class="chapter-item"><a href="fp12_07.html" class="chapter-link">07 お父様に侍る民族とならせてください</a></div><div class="chapter-item"><a href="fp12_08.html" class="chapter-link">08 お選びになった民族の子女たることに感謝を申し上げます</a></div><div class="chapter-item"><a href="fp12_09.html" class="chapter-link">09 苦難の中でこの民族を探してこられた心情を悟らせてください</a></div><div class="chapter-item"><a href="fp12_10.html" class="chapter-link">10 韓民族を心配する統一の群れとならせてください</a></div><div class="chapter-item"><a href="fp12_11.html" class="chapter-link">11 本郷の地韓国のためにすべての精誠を尽くさせてください</a></div><div class="chapter-item"><a href="fp12_12.html" class="chapter-link">12 韓国を第三イスラエルとして立て得る私たちとならせてください</a></div><div class="chapter-item"><a href="fp12_13.html" class="chapter-link">13 お父様！ この国の苦難が終わるようにしてください</a></div><div class="chapter-item"><a href="fp12_14.html" class="chapter-link">14 民族の運命に責任を負う強い若者とならせてください</a></div><div class="chapter-item"><a href="fp12_15.html" class="chapter-link">15 民族の運命と共にある統一教会とならせてください</a></div><div class="chapter-item"><a href="fp12_16.html" class="chapter-link">16 民族のために奉仕する息子たちとならせてください</a></div><div class="chapter-item"><a href="fp12_17.html" class="chapter-link">17 国運を左右する時点において使命を果たさせてください</a></div><div class="chapter-item"><a href="fp12_18.html" class="chapter-link">18 新しい春の起源を成す群れとならせてください</a></div><div class="chapter-item"><a href="fp12_19.html" class="chapter-link">19 分断された民族の恨みを解怨させてください</a></div><div class="chapter-item"><a href="fp12_20.html" class="chapter-link">20 民族の未来を開拓する主体的な責任者とならせてください</a></div><div class="chapter-item"><a href="fp12_21.html" class="chapter-link">21 この民族と人類に対するお父様の心情を体恤させてください</a></div><div class="chapter-item"><a href="fp12_22.html" class="chapter-link">22 お父様！　大韓民国の行くべき道をお守りください</a></div><div class="chapter-item"><a href="fp12_23.html" class="chapter-link">23 新しい歴史を創建する統一の群れとならせてください</a></div><div class="chapter-item"><a href="fp12_24.html" class="chapter-link">24 この民族の上にその国を築かせてください</a></div><div class="chapter-item"><a href="fp12_25.html" class="chapter-link">25 民族の統一を成させてください</a></div><div class="chapter-item"><a href="fp12_26.html" class="chapter-link">26 北韓を解放して勝利のイスラエルを成させてください</a></div><div class="chapter-item"><a href="fp12_27.html" class="chapter-link">27 新しい光明の朝を迎えるこの国とならせてください</a></div><div class="chapter-item"><a href="fp12_28.html" class="chapter-link">28 あなたの解怨成就を成す勝利の天国とならせてください</a></div><div class="chapter-item"><a href="fp12_29.html" class="chapter-link">29 天運の法度に順応する民族とならせてください</a></div><div class="chapter-item"><a href="fp12_30.html" class="chapter-link">30 お父様！ この国の主人におなりください</a></div><div class="chapter-item"><a href="fp12_31.html" class="chapter-link">31 分立された世界を一つにする統一の勇士とならせてください</a></div><div class="chapter-item"><a href="fp12_32.html" class="chapter-link">32 愛を中心とした統一圏を成させてください</a></div><div class="chapter-item"><a href="fp12_33.html" class="chapter-link">33 お父様の愛を中心として平和世界を成させてください</a></div><div class="chapter-item"><a href="fp12_34.html" class="chapter-link">34 為に生きる心情圏の世界を成させてください</a></div><div class="chapter-item"><a href="fp12_35.html" class="chapter-link">35 天の愛の同役者とならせてください</a></div></div></details></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+
+<body><div class="container">
+<h1>父の祈り　目次</h1>
+
+<ul>
+  <li><a href="fp1_mokuji.html">父の祈り　１　希望編</a></li>
+  <li><a href="fp2_mokuji.html">父の祈り　２　熱望編</a></li>
+  <li><a href="fp3_mokuji.html">父の祈り　３　復活編</a></li>
+  <li><a href="fp4_mokuji.html">父の祈り　４　心情編</a></li>
+  <li><a href="fp5_mokuji.html">父の祈り　５　信仰編</a></li>
+  <li><a href="fp6_mokuji.html">父の祈り　６　孝心編</a></li>
+  <li><a href="fp7_mokuji.html">父の祈り　７　忠孝編</a></li>
+  <li><a href="fp8_mokuji.html">父の祈り　８　決断編</a></li>
+  <li><a href="fp9_mokuji.html">父の祈り　９　献身編</a></li>
+  <li><a href="fp10_mokuji.html">父の祈り　１０　復帰編</a></li>
+  <li><a href="fp11_mokuji.html">父の祈り　１１　勝利編</a></li>
+  <li><a href="fp12_mokuji.html">父の祈り　１２　統一編</a></li>
+</ul>
+
+<div style="margin-top: 2em;"><hr/></div>
+<p></p>
+
+
+
+
+
+
+
+
+<div><a href="https://maydra.github.io/mimune-no-uraniwa/index.html">み旨の裏庭トップに戻る</a></div>
+
 </div>
-</body>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script></body>
 </html>
+
+<p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>
