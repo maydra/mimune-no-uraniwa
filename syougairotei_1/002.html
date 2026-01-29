@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="第二節-幼少時代と初期学習/真の御父母様の生涯路程-1"><a href="#第二節-幼少時代と初期学習/真の御父母様の生涯路程-1">第二節　幼少時代と初期学習/真の御父母様の生涯路程 1</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 1</a></li><li class="toc-b"><a href="#002">第二節　幼少時代と初期学習</a></li><li class="toc-b"><a href="#003">一九二〇〜一九三八・三</a></li><li class="toc-b"><a href="#004">一　自然探求と農村生活</a></li><li class="toc-b"><a href="#005">故郷の山河</a></li><li class="toc-b"><a href="#006">植物探求と木登り</a></li><li class="toc-b"><a href="#007">鳥たちの生態観察</a></li><li class="toc-b"><a href="#008">昆虫たちの生態探求</a></li><li class="toc-b"><a href="#009">狩りと魚取り</a></li><li class="toc-b"><a href="#010">家畜への愛</a></li><li class="toc-b"><a href="#011">好奇心と探求力</a></li><li class="toc-b"><a href="#012">農村環境の生活経験</a></li><li class="toc-b"><a href="#013">懐かしい故郷の味</a></li><li class="toc-b"><a href="#014">二　生まれつきの同情心と家族愛</a></li><li class="toc-b"><a href="#015">やるせない童心の涙</a></li><li class="toc-b"><a href="#016">貧しい家庭を助ける</a></li><li class="toc-b"><a href="#017">同情心と義侠心</a></li><li class="toc-b"><a href="#018">家族に対する愛情</a></li><li class="toc-b"><a href="#019">三　恐ろしい闘志と義憤心</a></li><li class="toc-b"><a href="#020">正しい事に対する固執</a></li><li class="toc-b"><a href="#021">勝負根性</a></li><li class="toc-b"><a href="#022">正義感と義憤心</a></li><li class="toc-b"><a href="#023">四　注目された少年</a></li><li class="toc-b"><a href="#024">天賦的な霊的感覚</a></li><li class="toc-b"><a href="#025">一族と村の評価</a></li><li class="toc-b"><a href="#026">五　初期学習と信仰入門</a></li><li class="toc-b"><a href="#027">漢文書堂で勉強（一九二六〜一九三二）</a></li><li class="toc-b"><a href="#028">圓峰の学院で受講</a></li><li class="toc-b"><a href="#029">三つ以上の博士学位という夢</a></li><li class="toc-b"><a href="#030">定州私立五山普通学校三年編入（一九三四）</a></li><li class="toc-b"><a href="#031">モルム村の徳興長老教会入教</a></li><li class="toc-b"><a href="#032">定州公立普通学校四年に転校（一九三五・四〜一九三八・三・二五）</a></li><li class="toc-b"><a href="#033">卒業式の時に特別所見を発表（一九三八・三・二五　第二十九回卒業）</a></li></ul></div>
@@ -740,10 +746,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="001.html">前のページに戻る</a></p><p><a href="003.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -766,9 +771,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -780,7 +784,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -823,6 +827,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

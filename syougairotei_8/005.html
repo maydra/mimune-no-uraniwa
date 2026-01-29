@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="真の御父母様の生涯路程-8/統班撃破と南北統一運動/第三節-一九八八年-祖国統一-（二）"><a href="#真の御父母様の生涯路程-8/統班撃破と南北統一運動/第三節-一九八八年-祖国統一-（二）">真の御父母様の生涯路程 8/統班撃破と南北統一運動/第三節　一九八八年　祖国統一　（二）</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 8</a></li><li class="toc-b"><a href="#002">第三節　一九八八年　祖国統一　（二）</a></li><li class="toc-b"><a href="#003">一　一九八八年の出発と摂理的意義（一九八八・一・一、本部教会）</a></li><li class="toc-b"><a href="#004">元旦の祝祷</a></li><li class="toc-b"><a href="#005">年頭標語：「祖国統一」（二）</a></li><li class="toc-b"><a href="#006">一九八八年の時</a></li><li class="toc-b"><a href="#007">二　年頭の主要行事</a></li><li class="toc-b"><a href="#008">原理および勝共講師の特別修練会</a></li><li class="toc-b"><a href="#009">都元ビル竣工式</a></li><li class="toc-b"><a href="#010">李載錫牧師が韓国宗教協議会会長に就任</a></li><li class="toc-b"><a href="#011">宗教協議会会館奉献式</a></li><li class="toc-b"><a href="#012">《祝祷》</a></li><li class="toc-b"><a href="#013">三　全国の聖殿建築と二世の収拾</a></li><li class="toc-b"><a href="#014">市・郡・区の事務室と面単位の基地の確保</a></li><li class="toc-b"><a href="#015">邑・面単位の敷地購入と聖殿建築</a></li><li class="toc-b"><a href="#016">二世の収拾</a></li><li class="toc-b"><a href="#017">全国学舎教区設置と大学撃破活動</a></li><li class="toc-b"><a href="#018">成和学生会と聖日学校の活性化</a></li><li class="toc-b"><a href="#019">四　南北総選挙準備の統班撃破活動</a></li><li class="toc-b"><a href="#020">予想総選挙戦と統班撃破</a></li><li class="toc-b"><a href="#021">「（南北統一運動）国民連合」を中心とした統班撃破</a></li><li class="toc-b"><a href="#022">全国民の思想武装</a></li><li class="toc-b"><a href="#023">五　還故郷氏族復帰活動の開始</a></li><li class="toc-b"><a href="#024">摂理的還故郷時代</a></li><li class="toc-b"><a href="#025">本格的な氏族復帰の出発</a></li><li class="toc-b"><a href="#026">還故郷の祝宴</a></li><li class="toc-b"><a href="#027">六　南北統一運動と機関・企業体の体制一新</a></li><li class="toc-b"><a href="#028">機関・企業体の教育強化と活動体制</a></li><li class="toc-b"><a href="#029">成和神学校の校舎新築</a></li><li class="toc-b"><a href="#030">「世界日報」創刊準備</a></li><li class="toc-b"><a href="#031">（株）一和龍仁メッコール工場の竣工式</a></li><li class="toc-b"><a href="#032">《祝祷》</a></li><li class="toc-b"><a href="#033">国民運動の資金調達事業</a></li><li class="toc-b"><a href="#034">統一実業の製品</a></li><li class="toc-b"><a href="#035">基金造成と預金</a></li></ul></div>
@@ -862,10 +868,9 @@
 </body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="004.html">前のページに戻る</a></p><p><a href="006.html">次のページに進む</a></p></div>
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -888,9 +893,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -902,7 +906,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -945,6 +949,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

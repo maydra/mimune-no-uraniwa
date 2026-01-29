@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="真の御父母様天宙勝利祝賀宣布/四、一九九九年度の宣布のみ言"><a href="#真の御父母様天宙勝利祝賀宣布/四、一九九九年度の宣布のみ言">真の御父母様天宙勝利祝賀宣布/四、一九九九年度の宣布のみ言</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様天宙勝利祝賀宣布</a></li><li class="toc-b"><a href="#002">四、一九九九年度の宣布のみ言</a></li><li class="toc-b"><a href="#003">一）元旦の祈祷文とみ言</a></li><li class="toc-b"><a href="#004">〈祈祷〉</a></li><li class="toc-b"><a href="#005">〈み言〉</a></li><li class="toc-b"><a href="#006">この世界はサタン世界</a></li><li class="toc-b"><a href="#007">キリスト教文化圏世界</a></li><li class="toc-b"><a href="#008">真の御父母様は一生をかけて</a></li><li class="toc-b"><a href="#009">永生的家庭定着の条件</a></li><li class="toc-b"><a href="#010">人間の責任分担とその福音</a></li><li class="toc-b"><a href="#011">全体、全般、全権の時代</a></li><li class="toc-b"><a href="#012">総生畜献納祭</a></li><li class="toc-b"><a href="#013">神様権能時代渡来</a></li><li class="toc-b"><a href="#014">二）世界平和統一のための理想世界</a></li><li class="toc-b"><a href="#015">〈真の祝福天宙化とサタン血統根絶〉</a></li><li class="toc-b"><a href="#016">一、世界平和統一のための理想世界</a></li><li class="toc-b"><a href="#017">①統合宗教のための超宗教国連</a></li><li class="toc-b"><a href="#018">②統合国家のための超国家国連</a></li><li class="toc-b"><a href="#019">③統一宗教国家のための超銀行機構</a></li><li class="toc-b"><a href="#020">④超宗教国家のための言論機構編成</a></li><li class="toc-b"><a href="#021">⑤超宗教超国家のための大学連盟機構編成</a></li><li class="toc-b"><a href="#022">二、祝福の世界化で神の国を形成しよう</a></li><li class="toc-b"><a href="#023">①真の統一家庭形成</a></li><li class="toc-b"><a href="#024">②真の氏族形成</a></li><li class="toc-b"><a href="#025">③真の民族編成</a></li><li class="toc-b"><a href="#026">④真の国家編成</a></li><li class="toc-b"><a href="#027">⑤真の理想党編成</a></li><li class="toc-b"><a href="#028">⑥真の天国議会</a></li><li class="toc-b"><a href="#029">三）訓読会以後に下さったみ言</a></li><li class="toc-b"><a href="#030">父の願い</a></li><li class="toc-b"><a href="#031">祈祷と精誠と愛</a></li><li class="toc-b"><a href="#032">神様に近い道</a></li><li class="toc-b"><a href="#033">一心不乱にしなさい</a></li><li class="toc-b"><a href="#034">準備しなさい</a></li></ul></div>
@@ -909,10 +915,9 @@
 </body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="005.html">前のページに戻る</a></p><p><a href="007.html">次のページに進む</a></p></div>
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -935,9 +940,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -949,7 +953,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -992,6 +996,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

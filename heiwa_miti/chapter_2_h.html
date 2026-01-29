@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="◆救国世界大会・世界の中の韓国◆"><a href="#◆救国世界大会・世界の中の韓国◆">◆救国世界大会・世界の中の韓国◆</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">南北統一と世界平和への道</a></li><li class="toc-b"><a href="#002">救国世界大会</a></li><li class="toc-b"><a href="#003">世界の中の韓国</a></li><li class="toc-b"><a href="#004">1975年6月7日　　韓国・ソウル</a></li><li class="toc-b"><a href="#005">歴史的宣布の日</a></li><li class="toc-b"><a href="#006">共産主義は「神を否定する」宗教</a></li><li class="toc-b"><a href="#007">真なる真理と信念と思想</a></li><li class="toc-b"><a href="#008">神の名によって決起せよ</a></li><li class="toc-b"><a href="#009">レーニン政治戦略学校の教え</a></li><li class="toc-b"><a href="#010">信仰の祖国</a></li><li class="toc-b"><a href="#011">総和文明の結実体</a></li><li class="toc-b"><a href="#012">神を中心として団結できる思想体系</a></li><li class="toc-b"><a href="#013">神の名のもとに平和統一の世界を</a></li></ul></div>
@@ -536,10 +542,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="chapter_2_g.html">前のページに戻る</a></p><p><a href="chapter_2_i.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -562,9 +567,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -576,7 +580,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -619,6 +623,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="御旨と世界/17_キリスト教の新しい未来"><a href="#御旨と世界/17_キリスト教の新しい未来">御旨と世界/17_キリスト教の新しい未来</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#022">キリスト教の新しい未来</a></li><li class="toc-b"><a href="#023">1974年9月18日</a></li><li class="toc-level-2"><a href="#001">神の目的</a></li><li class="toc-level-2"><a href="#002">地上天国</a></li><li class="toc-level-2"><a href="#003">地上地獄−失楽園</a></li><li class="toc-level-2"><a href="#004">救いとは復帰である</a></li><li class="toc-level-2"><a href="#005">メシヤを迎える準備</a></li><li class="toc-level-2"><a href="#006">イエスは死ぬために来られたのではない</a></li><li class="toc-level-2"><a href="#007">無知がイエスを殺した</a></li><li class="toc-level-2"><a href="#008">旧約聖書の文字の奴隷</a></li><li class="toc-level-2"><a href="#009">バプテスマのヨハネがエリヤ</a></li><li class="toc-level-2"><a href="#010">ヨハネの使命成就を願っていたイエス</a></li><li class="toc-level-2"><a href="#011">イエスは天の雲に乗って来ると思われていた</a></li><li class="toc-level-2"><a href="#012">イエスを受け入れれば神の国は実現していた</a></li><li class="toc-level-2"><a href="#013">十字架は霊的救いのみをもたらした</a></li><li class="toc-level-2"><a href="#014">再臨は如何になされるか</a></li><li class="toc-level-2"><a href="#015">「主の日は盗人が夜くるように来る」</a></li><li class="toc-level-2"><a href="#016">主はいかに来られるか</a></li><li class="toc-level-2"><a href="#017">神の目的は成就される</a></li><li class="toc-level-2"><a href="#018">第一のアダムとエバ</a></li><li class="toc-level-2"><a href="#019">第二のアダムとエバ</a></li><li class="toc-level-2"><a href="#020">第三のアダムとエバ</a></li><li class="toc-level-2"><a href="#021">地上に天国実現</a></li></ul></div>
@@ -616,10 +622,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="16.html">前のページに戻る</a></p><p><a href="18.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -642,9 +647,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -656,7 +660,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -699,6 +703,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

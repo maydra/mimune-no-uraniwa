@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="真の御父母様の生涯路程-10/真のお母様と世界女性時代/第一節-真のお母様の誕生と成長期"><a href="#真の御父母様の生涯路程-10/真のお母様と世界女性時代/第一節-真のお母様の誕生と成長期">真の御父母様の生涯路程 10/真のお母様と世界女性時代/第一節　真のお母様の誕生と成長期</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 10</a></li><li class="toc-b"><a href="#002">第一節　真のお母様の誕生と成長期</a></li><li class="toc-b"><a href="#003">一　真のお母様の誕生とその背景</a></li><li class="toc-b"><a href="#004">韓鶴子女史の誕生</a></li><li class="toc-b"><a href="#005">真のお母様のみ言</a></li><li class="toc-b"><a href="#006">洪順愛大母様の証</a></li><li class="toc-b"><a href="#007">三代の一人娘の母性（趙元模外祖母−洪順愛大母様−真のお母様）</a></li><li class="toc-b"><a href="#008">真のお母様のみ言</a></li><li class="toc-b"><a href="#009">父君・韓承運先生（一九〇九〜一九七八）</a></li><li class="toc-b"><a href="#010">長男（真のお母様の異母弟）・韓偉一先生の証</a></li><li class="toc-b"><a href="#011">二　再臨準備、信仰の主流継承</a></li><li class="toc-b"><a href="#012">解放直後の韓国キリスト教の神霊役事</a></li><li class="toc-b"><a href="#013">元山と鐵山を中心とした神霊役事</a></li><li class="toc-b"><a href="#014">再臨準備の主流信仰の道</a></li><li class="toc-b"><a href="#015">神霊役事の精誠基盤の継承</a></li><li class="toc-b"><a href="#016">真のお母様のみ言</a></li><li class="toc-b"><a href="#017">三　真のお母様の学生時代と信仰</a></li><li class="toc-b"><a href="#018">南韓での生活</a></li><li class="toc-b"><a href="#019">真のお母様のみ言</a></li><li class="toc-b"><a href="#020">洪順貞先生の証</a></li><li class="toc-b"><a href="#021">一片丹心、絶対純潔の生活</a></li><li class="toc-b"><a href="#022">真のお母様のみ言</a></li><li class="toc-b"><a href="#023">素晴らしい性稟と資質</a></li><li class="toc-b"><a href="#024">真のお母様のみ言</a></li></ul></div>
@@ -659,10 +665,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="002.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -685,9 +690,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -699,7 +703,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -742,6 +746,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="祝福家庭と理想天国"><a href="#祝福家庭と理想天国">祝福家庭と理想天国</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭と理想天国</a></li><li class="toc-b"><a href="#002">第五章　完成のための公式路程</a></li><li class="toc-b"><a href="#003">第一節　完成期七年公式路程</a></li><li class="toc-b"><a href="#004">第二節　再創造のための子女たちの責任分担</a></li><li class="toc-b"><a href="#005">第三節　信仰の三子女を通した家庭復帰</a></li><li class="toc-b"><a href="#006">第一節　完成期七年公式路程</a></li><li class="toc-b"><a href="#007">１、三時代を一時に蕩減する七年路程</a></li><li class="toc-b"><a href="#008">２、七年大患難と七年路程</a></li><li class="toc-b"><a href="#009">３、祝福を受ける位置は完成した位置ではない</a></li><li class="toc-b"><a href="#010">４、父母の位置を復帰するための七年路程</a></li><li class="toc-b"><a href="#011">５、霊界と肉界を蕩減復帰するための七年期間</a></li><li class="toc-b"><a href="#012">６、ご父母様の七年路程と子女たちの七年路程</a></li><li class="toc-b"><a href="#013">７、個人的七年路程と家庭的七年路程</a></li><li class="toc-b"><a href="#014">８、家庭完成を要する時代</a></li><li class="toc-b"><a href="#015">９、摂理の先頭に立つべき女性</a></li></ul></div>
@@ -598,10 +604,9 @@
 </body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="024.html">前のページに戻る</a></p><p><a href="026.html">次のページに進む</a></p></div>
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -624,9 +629,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -638,7 +642,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -681,6 +685,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

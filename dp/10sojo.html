@@ -370,7 +370,13 @@
                 font-size: 1.05rem;
             }
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 
 <body>
@@ -642,11 +648,10 @@
 
 
 
-<section id="typo-report" class="typo-box">
-    <h3 class="typo-title">誤植・修正提案</h3>
-    <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
-    <form id="typoForm"
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST" target="typoSink">
 
@@ -666,9 +671,8 @@
             <span id="typoStatus" class="typo-status" aria-live="polite"></span>
         </div>
     </form>
-
-    <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
 
 <style>
     .typo-box {
@@ -732,6 +736,12 @@
         font-size: .95rem;
         opacity: .9;
     }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

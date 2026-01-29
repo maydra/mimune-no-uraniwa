@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="真の御父母様の生涯路程-９/環故郷活動と真の父母宣布/第二節-一九九〇年-ネナラ（私の国の）統一（二）"><a href="#真の御父母様の生涯路程-９/環故郷活動と真の父母宣布/第二節-一九九〇年-ネナラ（私の国の）統一（二）">真の御父母様の生涯路程 ９/環故郷活動と真の父母宣布/第二節　一九九〇年　ネナラ（私の国の）統一（二）</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 ９</a></li><li class="toc-b"><a href="#002">第二節　一九九〇年　ネナラ（私の国の）統一（二）</a></li><li class="toc-b"><a href="#003">一　一九九〇年の出発と摂理的意義（一九九〇・一・一、本部教会）</a></li><li class="toc-b"><a href="#004">元旦の祝祷</a></li><li class="toc-b"><a href="#005">年頭標語：私の国の統一（一）</a></li><li class="toc-b"><a href="#006">二　前半期の国内の主要行事</a></li><li class="toc-b"><a href="#007">第七回「愛勝日」</a></li><li class="toc-b"><a href="#008">韓国宗教協議会訪問歓迎式</a></li><li class="toc-b"><a href="#009">郷土学校創設者招請集会</a></li><li class="toc-b"><a href="#010">世界日報の課長以上の幹部午餐会</a></li><li class="toc-b"><a href="#011">南北統一運動アメリカ訪問団の地域別特別集会</a></li><li class="toc-b"><a href="#012">三　真のお父様の古稀慶祝行事と各種記念大会</a></li><li class="toc-b"><a href="#013">真のお父様の古稀慶祝式</a></li><li class="toc-b"><a href="#014">真のお父様の古稀祝賀晩餐会</a></li><li class="toc-b"><a href="#015">第二回「世界平和のための頂上会議」および第八回「中南米統一連合」総会</a></li><li class="toc-b"><a href="#016">古稀祝賀美術展作家招請午餐会</a></li><li class="toc-b"><a href="#017">古稀記念南北統一準備団結大会</a></li><li class="toc-b"><a href="#018">四　「真の御父母様歓迎大会」と特別宣布儀式</a></li><li class="toc-b"><a href="#019">韓国統一グループ主催の地域別「真の御父母様歓迎大会」</a></li><li class="toc-b"><a href="#020">天地父母宣布式</a></li><li class="toc-b"><a href="#021">〈宣布祈祷〉</a></li><li class="toc-b"><a href="#022">アメリカ統一グループ主催「真の御父母様歓迎大会」</a></li><li class="toc-b"><a href="#023">「女性全体解放圏」宣布</a></li><li class="toc-b"><a href="#024">五　ソ連のモスクワ世界大会と「真の御父母様歓迎大会」</a></li><li class="toc-b"><a href="#025">モスクワ大会準備と入城</a></li><li class="toc-b"><a href="#026">国賓待遇とオクトーバー・スカイ・ホテル宿泊</a></li><li class="toc-b"><a href="#027">モスクワ世界大会：第三回「世界平和のための頂上会議」
@@ -743,10 +749,9 @@
 </body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="002.html">前のページに戻る</a></p><p><a href="004.html">次のページに進む</a></p></div>
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -769,9 +774,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -783,7 +787,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -826,6 +830,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

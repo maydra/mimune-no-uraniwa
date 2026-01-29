@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="第三節-一九八三年-家庭教会は我々の定着地/真の御父母様の生涯路程-7"><a href="#第三節-一九八三年-家庭教会は我々の定着地/真の御父母様の生涯路程-7">第三節　一九八三年　家庭教会は我々の定着地/真の御父母様の生涯路程 7</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 7</a></li><li class="toc-b"><a href="#002">第三節　一九八三年　家庭教会は我々の定着地</a></li><li class="toc-b"><a href="#003">一　一九八三年の出発と摂理的意義（一九八三・一・一、ニューヨーク、世界宣教本部）</a></li><li class="toc-b"><a href="#004">元旦の祝祷</a></li><li class="toc-b"><a href="#005">年頭標語：家庭教会は我々の定着地</a></li><li class="toc-b"><a href="#006">二　荒野四十年路程の最後の三年（一九八三〜一九八五）</a></li><li class="toc-b"><a href="#007">世界的荒野四十年路程（一九四五〜一九八五）</a></li><li class="toc-b"><a href="#008">荒野路程最後の三年期間（一九八三〜一九八五）</a></li><li class="toc-b"><a href="#009">私たちが行くべき新しいカナン</a></li><li class="toc-b"><a href="#010">人事断行（一九八三・一・二）と三年路程の本格的出発（三・一）</a></li><li class="toc-b"><a href="#011">アメリカ三年総動員活動の指針</a></li><li class="toc-b"><a href="#012">一　新しい伝統の確立</a></li><li class="toc-b"><a href="#013">二　蕩減と悔い改め</a></li><li class="toc-b"><a href="#014">三　機動隊編成</a></li><li class="toc-b"><a href="#015">四　ビデオ伝道所</a></li><li class="toc-b"><a href="#016">五　修練所</a></li><li class="toc-b"><a href="#017">三　韓国総動員体制と事業推進</a></li><li class="toc-b"><a href="#018">金慶継忠母様追慕礼拝（一九八三・三・二九・一〇：〇〇、お誕生九十二周年、本部教会）</a></li><li class="toc-b"><a href="#019">韓国の三年総力活動の出発（一九八三・四・一）</a></li><li class="toc-b"><a href="#020">協会および原理研究会の機動隊編成</a></li><li class="toc-b"><a href="#021">教会と勝共連合に二元化</a></li><li class="toc-b"><a href="#022">済州島開発推進（一九八三・四・一五〜二二、五・九〜一三、滞在）</a></li><li class="toc-b"><a href="#023">巨済島・長承浦の開発（一九八三・四・二五、訪問踏査）</a></li><li class="toc-b"><a href="#024">江華島の摩尼山に登攀（一九八三・五・四）</a></li><li class="toc-b"><a href="#025">アジア連合圏と玄界灘海底トンネル調査着手（一九八三・五・二四、発表）</a></li><li class="toc-b"><a href="#026">83世界宗教青年セミナー
@@ -1060,10 +1066,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="002.html">前のページに戻る</a></p><p><a href="004.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -1086,9 +1091,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -1100,7 +1104,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -1143,6 +1147,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

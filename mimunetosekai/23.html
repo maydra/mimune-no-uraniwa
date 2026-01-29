@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="御旨と世界/23_摂理的歴史の光の中にあって"><a href="#御旨と世界/23_摂理的歴史の光の中にあって">御旨と世界/23_摂理的歴史の光の中にあって</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#020">摂理的歴史の光の中にあって</a></li><li class="toc-b"><a href="#021">1977年2月23日</a></li><li class="toc-level-2"><a href="#001">◆人間としての誇り</a></li><li class="toc-level-2"><a href="#002">◆善悪の判断</a></li><li class="toc-level-2"><a href="#003">◆歴史発展のパターン</a></li><li class="toc-level-2"><a href="#004">◆新しい宗教運動</a></li><li class="toc-level-2"><a href="#005">◆試練を受ける者</a></li><li class="toc-level-2"><a href="#006">◆私の唯一の誇り</a></li><li class="toc-level-2"><a href="#007">◆記念すべき一九七六年</a></li><li class="toc-level-2"><a href="#008">◆終末時代の現象</a></li><li class="toc-level-2"><a href="#009">◆恵みの橋渡し</a></li><li class="toc-level-2"><a href="#010">◆復帰歴史の流れ</a></li><li class="toc-level-2"><a href="#011">◆心をつなぐ運動</a></li><li class="toc-level-2"><a href="#012">◆人権問題は反共産主義から</a></li><li class="toc-level-2"><a href="#013">◆真実の発言</a></li><li class="toc-level-2"><a href="#014">◆すべてを経験</a></li><li class="toc-level-2"><a href="#015">◆歴史に生命を</a></li><li class="toc-level-2"><a href="#016">◆世界に耐える家庭基盤を</a></li><li class="toc-level-2"><a href="#017">◆七十二年度からの講演</a></li><li class="toc-level-2"><a href="#018">◆喜びの年を迎える</a></li><li class="toc-level-2"><a href="#019">◆摂理的歴史の完成</a></li></ul></div>
@@ -675,10 +681,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="22.html">前のページに戻る</a></p><p><a href="24.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -701,9 +706,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -715,7 +719,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -758,6 +762,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

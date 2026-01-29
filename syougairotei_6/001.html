@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="第一節-一九七五年-天国実現/第三次七年路程/真の御父母様の生涯路程-6"><a href="#第一節-一九七五年-天国実現/第三次七年路程/真の御父母様の生涯路程-6">第一節　一九七五年　天国実現/第三次七年路程/真の御父母様の生涯路程 6</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 6</a></li><li class="toc-b"><a href="#002">第一節　一九七五年　天国実現</a></li><li class="toc-b"><a href="#003">一　一九七五年の出発と摂理的意義（一九七五・一・一、前本部教会）</a></li><li class="toc-b"><a href="#004">元旦の祝祷</a></li><li class="toc-b"><a href="#005">年頭標語：天国実現</a></li><li class="toc-b"><a href="#006">崔元福先生使命完結</a></li><li class="toc-b"><a href="#007">天国実現と先祖解怨（一九七五・一・三、李伯任ハルモニ特別巡回師任命）</a></li><li class="toc-b"><a href="#008">二　第三次七年路程の出発（一九七五〜一九八一）</a></li><li class="toc-b"><a href="#009">三次の七年路程（一九六〇〜一九八一）</a></li><li class="toc-b"><a href="#010">第三次七年路程（一九七五〜一九八一）</a></li><li class="toc-b"><a href="#011">第二次と第三次七年路程の連結期間（一九七二〜一九七八）</a></li><li class="toc-b"><a href="#012">三　「希望の日」大饗宴と千八百家庭祝福式</a></li><li class="toc-b"><a href="#013">「希望の日」韓国晩餐会
@@ -973,10 +979,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="002.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -999,9 +1004,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -1013,7 +1017,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -1056,6 +1060,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

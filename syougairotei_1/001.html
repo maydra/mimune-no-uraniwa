@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="第一節-真のお父様の誕生とその背景/真の御父母様の生涯路程-1"><a href="#第一節-真のお父様の誕生とその背景/真の御父母様の生涯路程-1">第一節　真のお父様の誕生とその背景/真の御父母様の生涯路程 1</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 1</a></li><li class="toc-b"><a href="#002">第一節　真のお父様の誕生とその背景</a></li><li class="toc-b"><a href="#003">一九二〇年・陰暦一月六日</a></li><li class="toc-b"><a href="#004">一　平安北道定州郡徳彦面上思里二二二一番地</a></li><li class="toc-b"><a href="#005">失郷民になった人類</a></li><li class="toc-b"><a href="#006">人類の本郷として定めた村里</a></li><li class="toc-b"><a href="#007">平安北道定州郡</a></li><li class="toc-b"><a href="#008">徳彦面上思里</a></li><li class="toc-b"><a href="#009">生家二二二一番地</a></li><li class="toc-b"><a href="#010">真のご父母様に侍って本郷の地に</a></li><li class="toc-b"><a href="#011">「故郷無情」と「大韓八景」</a></li><li class="toc-b"><a href="#012">二　南平文氏の家門の伝統と家庭環境</a></li><li class="toc-b"><a href="#013">南平文氏の起源と伝統的性格</a></li><li class="toc-b"><a href="#014">お客さんと乞食接待の家風</a></li><li class="toc-b"><a href="#015">曽祖父文禎?先生（一八四一・陰一一・三〜一九一八・一一・二六）</a></li><li class="toc-b"><a href="#016">祖父文致國先生（一八七〇・陰九・二〜？）</a></li><li class="toc-b"><a href="#017">従祖父文潤國牧師（一八七七・陰一・三〇〜一九五八・陰一・二）</a></li><li class="toc-b"><a href="#018">父親文慶裕先生（一八九三・陰七・一一〜一九五四・一〇・一一）</a></li><li class="toc-b"><a href="#019">金慶継忠母様（一八八八・陰一〇・一五〜一九六八・一・七）</a></li><li class="toc-b"><a href="#020">文龍壽大兄様（一九一五・陰三・五〜？）</a></li><li class="toc-b"><a href="#021">天が準備した長孫（直系の子女）の血統</a></li><li class="toc-b"><a href="#022">三　歴史的な大混乱時代と真のお父様の誕生</a></li><li class="toc-b"><a href="#023">第一次世界大戦三年後</a></li><li class="toc-b"><a href="#024">民族の試練と三・一独立運動</a></li><li class="toc-b"><a href="#025">家門に迫った憂患</a></li><li class="toc-b"><a href="#026">天の玉のような男の子（文龍明）誕生（一九二〇・二・二五、陰一・六、子の刻）</a></li><li class="toc-b"><a href="#027">真のお父様のお名前「文鮮明」の意味</a></li></ul></div>
@@ -666,10 +672,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="hajimeni.html">前のページに戻る</a></p><p><a href="002.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -692,9 +697,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -706,7 +710,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -749,6 +753,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

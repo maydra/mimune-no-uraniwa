@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="人の生涯"><a href="#人の生涯">人の生涯</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">人の生涯</a></li><li class="toc-b"><a href="#002">第四節　対人、対言、対物関係</a></li><li class="toc-b"><a href="#003">一　対人関係</a></li><li class="toc-b"><a href="#004">１　人に対する方法</a></li><li class="toc-b"><a href="#005">イ）こなすべき人間関係</a></li><li class="toc-b"><a href="#006">ロ）人は三つの部類に分けられる</a></li><li class="toc-b"><a href="#007">ハ）先代の因縁圏にいる私たち</a></li><li class="toc-b"><a href="#008">ニ）良い人とは</a></li><li class="toc-b"><a href="#009">２　望ましい人間関係</a></li><li class="toc-b"><a href="#010">イ）愛の人間関係</a></li><li class="toc-b"><a href="#011">ロ）対人関係の核心的要素</a></li><li class="toc-b"><a href="#012">３　私たちは信徒ではなく食口</a></li><li class="toc-b"><a href="#013">イ）食口という言葉の成り立ち</a></li><li class="toc-b"><a href="#014">ロ）因縁があって出会った私たち</a></li><li class="toc-b"><a href="#015">ハ）食口同士の留意事項</a></li><li class="toc-b"><a href="#016">４　万民を愛さなければならない理由</a></li><li class="toc-b"><a href="#017">イ）人を愛さなければならない理由</a></li><li class="toc-b"><a href="#018">ロ）人をどの程度愛すべきか</a></li><li class="toc-b"><a href="#019">二　対言関係</a></li><li class="toc-b"><a href="#020">１　言葉の重要性</a></li><li class="toc-b"><a href="#021">２　愛が込められた言葉</a></li><li class="toc-b"><a href="#022">３　言葉と行動</a></li><li class="toc-b"><a href="#023">４　一言の言葉による被害</a></li><li class="toc-b"><a href="#024">５　話を聞く姿勢</a></li><li class="toc-b"><a href="#025">三　対物関係</a></li><li class="toc-b"><a href="#026">１　日常生活における対物関係</a></li><li class="toc-b"><a href="#027">２　万物の真の主人</a></li><li class="toc-b"><a href="#028">３　対物関係における基本姿勢</a></li><li class="toc-b"><a href="#029">４　先生の万物を愛する境地</a></li><li class="toc-b"><a href="#030">四　仕事（使命）に対する法</a></li><li class="toc-b"><a href="#031">１　仕事に対する基本姿勢</a></li><li class="toc-b"><a href="#032">２　先生の仕事に対する姿勢</a></li></ul></div>
@@ -704,10 +710,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="hitonosyougai_007.html">前のページに戻る</a></p><p><a href="hitonosyougai_009.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -730,9 +735,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -744,7 +748,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -787,6 +791,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

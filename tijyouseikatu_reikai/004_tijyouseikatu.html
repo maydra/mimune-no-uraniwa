@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="地上生活と霊界"><a href="#地上生活と霊界">地上生活と霊界</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">地上生活と霊界</a></li><li class="toc-b"><a href="#002">第四章　天　国</a></li><li class="toc-b"><a href="#003">第一節　天国に対する理解</a></li><li class="toc-b"><a href="#004">一　天国の所在</a></li><li class="toc-b"><a href="#005">二　キリスト教と天国</a></li><li class="toc-b"><a href="#006">三　イエス様と楽園</a></li><li class="toc-b"><a href="#007">四　心情と天国</a></li><li class="toc-b"><a href="#008">五　肉身と地獄</a></li><li class="toc-b"><a href="#009">六　地獄人も天国を願う</a></li><li class="toc-b"><a href="#010">七　地上天国と天上天国</a></li><li class="toc-b"><a href="#011">八　天国に対する正しい観</a></li><li class="toc-b"><a href="#012">第二節　天国に行くための準備</a></li><li class="toc-b"><a href="#013">一　天国の拠点</a></li><li class="toc-b"><a href="#014">二　天国に行く基準</a></li><li class="toc-b"><a href="#015">三　天国の始まり</a></li><li class="toc-b"><a href="#016">四　天国の本質</a></li><li class="toc-b"><a href="#017">五　天国の枠</a></li><li class="toc-b"><a href="#018">第三節　天国に行くことができる要素と条件</a></li><li class="toc-b"><a href="#019">一　天国に行くことができる要素</a></li><li class="toc-b"><a href="#020">１　苦労が必要</a></li><li class="toc-b"><a href="#021">２　愛が必要</a></li><li class="toc-b"><a href="#022">３　実績をもつべし</a></li><li class="toc-b"><a href="#023">４　「ため」に生きるべし</a></li><li class="toc-b"><a href="#024">二　天国に行くことができる生活</a></li><li class="toc-b"><a href="#025">１　我々の立場</a></li><li class="toc-b"><a href="#026">２　天国に行けない場合</a></li><li class="toc-b"><a href="#027">３　天国のための我々の生活</a></li><li class="toc-b"><a href="#028">４　我々と天国</a></li><li class="toc-b"><a href="#029">三　四位基台と天国</a></li><li class="toc-b"><a href="#030">１　天国は家庭が入る</a></li><li class="toc-b"><a href="#031">２　イエス様と家庭</a></li><li class="toc-b"><a href="#032">３　四位基台と天国</a></li><li class="toc-b"><a href="#033">第四節　天国の門と天国入城</a></li><li class="toc-b"><a href="#034">一　人間の心門</a></li><li class="toc-b"><a href="#035">二　開天門とは何か</a></li><li class="toc-b"><a href="#036">１　開天門すべき理由</a></li><li class="toc-b"><a href="#037">２　開天門の始原</a></li><li class="toc-b"><a href="#038">３　真の父母と天国の門</a></li><li class="toc-b"><a href="#039">４　開天門に先立つ我々の姿勢</a></li><li class="toc-b"><a href="#040">三　責任分担を通じた天国行き</a></li><li class="toc-b"><a href="#041">四　天国と地獄は自身が選択する</a></li><li class="toc-b"><a href="#042">第五節　天国と地獄に関係した指示のみ言</a></li><li class="toc-b"><a href="#043">一　天国、地獄観設定</a></li><li class="toc-b"><a href="#044">二　永生と地上生活の重要性</a></li></ul></div>
@@ -839,10 +845,9 @@
 </body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="003_tijyouseikatu.html">前のページに戻る</a></p><p><a href="005_tijyouseikatu.html">次のページに進む</a></p></div>
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -865,9 +870,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -879,7 +883,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -922,6 +926,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

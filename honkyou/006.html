@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="六五〇〇双「韓・日」祝福家庭への御言/本郷/真の愛による交差祝福と国境撤廃"><a href="#六五〇〇双「韓・日」祝福家庭への御言/本郷/真の愛による交差祝福と国境撤廃">六五〇〇双「韓・日」祝福家庭への御言/本郷/真の愛による交差祝福と国境撤廃</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">本　郷</a></li><li class="toc-b"><a href="#002">六五〇〇双「韓・日」祝福家庭への御言</a></li><li class="toc-b"><a href="#003">愛の戦争</a></li><li class="toc-b"><a href="#004">一大革命的な自分</a></li><li class="toc-b"><a href="#005">歴史的伝統の情の基台</a></li><li class="toc-b"><a href="#006">中和文明の時代</a></li><li class="toc-b"><a href="#007">真の愛</a></li><li class="toc-b"><a href="#008">神の国に必要な子供</a></li><li class="toc-b"><a href="#009">最も貴いもの</a></li><li class="toc-b"><a href="#010">愛の支柱</a></li><li class="toc-b"><a href="#011">愛の道</a></li><li class="toc-b"><a href="#012">歴史に残すべき実績</a></li><li class="toc-b"><a href="#013">真の愛の基準</a></li><li class="toc-b"><a href="#014">忍耐と注意</a></li><li class="toc-b"><a href="#015">生死を決定する足場</a></li><li class="toc-b"><a href="#016">正しい生涯の道</a></li><li class="toc-b"><a href="#017">最高の心情基準</a></li><li class="toc-b"><a href="#018">最後の救いの道</a></li></ul></div>
@@ -754,10 +760,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="005.html">前のページに戻る</a></p><p><a href="007.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -780,9 +785,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -794,7 +798,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -837,6 +841,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="真の御父母様天宙勝利祝賀宣布/第五章-天宙大宣布"><a href="#真の御父母様天宙勝利祝賀宣布/第五章-天宙大宣布">真の御父母様天宙勝利祝賀宣布/第五章　天宙大宣布</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様天宙勝利祝賀宣布</a></li><li class="toc-b"><a href="#002">第五章　天宙大宣布</a></li><li class="toc-b"><a href="#003">一、一九九〇年の天地父母宣布</a></li><li class="toc-b"><a href="#004">〈祈祷〉</a></li><li class="toc-b"><a href="#005">二、一九九一年の神様祝福永遠宣布式</a></li><li class="toc-b"><a href="#006">〈一次祈祷〉</a></li><li class="toc-b"><a href="#007">〈二次祈祷〉</a></li><li class="toc-b"><a href="#008">〈み言〉</a></li><li class="toc-b"><a href="#009">〈追加のみ言〉</a></li><li class="toc-b"><a href="#010">三、一九九八年度の宣布のみ言</a></li><li class="toc-b"><a href="#011">一）長子権、父母権、王権開門宣布式</a></li><li class="toc-b"><a href="#012">〈祈祷〉</a></li><li class="toc-b"><a href="#013">〈み言〉</a></li><li class="toc-b"><a href="#014">二）特別祈祷会</a></li><li class="toc-b"><a href="#015">〈祈祷〉</a></li><li class="toc-b"><a href="#016">〈み言〉</a></li><li class="toc-b"><a href="#017">〈祈祷〉</a></li><li class="toc-b"><a href="#018">三）地獄解放と天国開門のための真の御父母様の宣布</a></li><li class="toc-b"><a href="#019">四）奉献転換式宣布</a></li><li class="toc-b"><a href="#020">〈奉献転換式宣布（Ｉ）〉</a></li><li class="toc-b"><a href="#021">〈祈祷〉</a></li><li class="toc-b"><a href="#022">〈奉献転換式宣布（Ⅱ）〉</a></li><li class="toc-b"><a href="#023">五）告天文と霊肉界の統一宣布式</a></li><li class="toc-b"><a href="#024">六）四・四節宣布の祝祷</a></li><li class="toc-b"><a href="#025">〈祈祷〉</a></li><li class="toc-b"><a href="#026">七）総霊界霊人解放式―全体解放統一式の祈祷</a></li><li class="toc-b"><a href="#027">〈祈祷〉</a></li></ul></div>
@@ -795,10 +801,9 @@
 </body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="004.html">前のページに戻る</a></p><p><a href="006.html">次のページに進む</a></p></div>
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -821,9 +826,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -835,7 +839,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -878,6 +882,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

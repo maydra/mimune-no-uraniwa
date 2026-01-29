@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="真の御父母様の生涯路程-8/統班撃破と南北統一運動/五-金榮輝会長総括体制と大学街の統一運動"><a href="#真の御父母様の生涯路程-8/統班撃破と南北統一運動/五-金榮輝会長総括体制と大学街の統一運動">真の御父母様の生涯路程 8/統班撃破と南北統一運動/五　金榮輝会長総括体制と大学街の統一運動</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 8</a></li><li class="toc-b"><a href="#002">五　金榮輝会長総括体制と大学街の統一運動</a></li><li class="toc-b"><a href="#003">教会と勝共連合</a></li><li class="toc-b"><a href="#004">金榮輝会長が摂理機関を総括</a></li><li class="toc-b"><a href="#005">「南北統一全国学生総連合」（統学連）発足</a></li><li class="toc-b"><a href="#006">「全国大学教授学生南北統一運動連合」（教学統連）発足</a></li><li class="toc-b"><a href="#007">六　南・北米ＣＡＵＳＡ運動と世界的影響力の増大</a></li><li class="toc-b"><a href="#008">南・北米ＣＡＵＳＡ運動</a></li><li class="toc-b"><a href="#009">アメリカの牧師七万名の教育</a></li><li class="toc-b"><a href="#010">アメリカ在郷軍人と国会議員の教育</a></li><li class="toc-b"><a href="#011">「インサイト」と「ワシントン・タイムズ」の威信</a></li><li class="toc-b"><a href="#012">国際安全保障会議</a></li><li class="toc-b"><a href="#013">米言論人の東アジア事実調査旅行</a></li><li class="toc-b"><a href="#014">世界的な政治的影響力</a></li><li class="toc-b"><a href="#015">アメリカのＣＡＵＳＡ一千万会員の確保</a></li><li class="toc-b"><a href="#016">アメリカ統一神学大学院の認可</a></li><li class="toc-b"><a href="#017">七　世界の重点事業の促進</a></li><li class="toc-b"><a href="#018">一和メッコール事業の拡張</a></li><li class="toc-b"><a href="#019">統一産業の機械技術と世界技術平準化</a></li><li class="toc-b"><a href="#020">水産産業とアメリカ全域に日本食堂の拡張</a></li><li class="toc-b"><a href="#021">日本の活動と霊的役事</a></li></ul></div>
@@ -700,10 +706,9 @@
 </body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="001.html">前のページに戻る</a></p><p><a href="003.html">次のページに進む</a></p></div>
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -726,9 +731,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -740,7 +744,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -783,6 +787,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

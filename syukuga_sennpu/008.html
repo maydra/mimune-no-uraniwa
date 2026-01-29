@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="真の御父母様天宙勝利祝賀宣布/五、真の御父母様天宙勝利祝賀宣布式"><a href="#真の御父母様天宙勝利祝賀宣布/五、真の御父母様天宙勝利祝賀宣布式">真の御父母様天宙勝利祝賀宣布/五、真の御父母様天宙勝利祝賀宣布式</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様天宙勝利祝賀宣布</a></li><li class="toc-b"><a href="#002">五、真の御父母様天宙勝利祝賀宣布式</a></li><li class="toc-b"><a href="#003">一）宣布式の背景に関する郭錠煥会長の経過報告</a></li><li class="toc-b"><a href="#004">二）真の御父母様天宙勝利祝賀宣布式のみ言</a></li><li class="toc-b"><a href="#005">〈み言〉</a></li><li class="toc-b"><a href="#006">霊界の実相を知るべき私たち</a></li><li class="toc-b"><a href="#007">蕩減と犠牲の歴史</a></li><li class="toc-b"><a href="#008">神様の戦略戦術</a></li><li class="toc-b"><a href="#009">真の御父母様の犠牲とご苦労</a></li><li class="toc-b"><a href="#010">人類歴史の堕落の起源</a></li><li class="toc-b"><a href="#011">神様を慰労してさしあげるには</a></li><li class="toc-b"><a href="#012">堕落による神様の恨</a></li><li class="toc-b"><a href="#013">真の御父母様の恩賜―地上と霊界の平準化</a></li><li class="toc-b"><a href="#014">天宙解放式（一九九八年五月十四日）の意義</a></li><li class="toc-b"><a href="#015">女性解放は真のお母様から</a></li><li class="toc-b"><a href="#016">真の御父母様天宙勝利祝賀宣布</a></li><li class="toc-b"><a href="#017">〈祝祷〉</a></li><li class="toc-b"><a href="#018">三）真の御父母様天宙勝利祝賀宣布に対する総評</a></li><li class="toc-b"><a href="#019">総結論はアダム完成</a></li><li class="toc-b"><a href="#020">主管性転倒の結果</a></li><li class="toc-b"><a href="#021">メシアの後継者として行かなければならない道</a></li><li class="toc-b"><a href="#022">聖者の責任まで</a></li><li class="toc-b"><a href="#023">真の御父母様の心</a></li><li class="toc-b"><a href="#024">痛哭して迎える</a></li><li class="toc-b"><a href="#025">天国完了時まで</a></li></ul></div>
@@ -795,10 +801,9 @@
 </body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="007.html">前のページに戻る</a></p><p><a href="index.html">次のページに進む</a></p></div>
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -821,9 +826,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -835,7 +839,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -878,6 +882,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="御旨と世界/04_血統的転換"><a href="#御旨と世界/04_血統的転換">御旨と世界/04_血統的転換</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#023">血統的転換</a></li><li class="toc-b"><a href="#024">1970年10月13日</a></li><li class="toc-level-2"><a href="#001">アダムの創造</a></li><li class="toc-level-2"><a href="#002">愛の復活路程</a></li><li class="toc-level-2"><a href="#003">メシヤを迎えたイスラエル</a></li><li class="toc-level-2"><a href="#004">メシヤの必要性</a></li><li class="toc-level-2"><a href="#005">イエス様の道</a></li><li class="toc-level-2"><a href="#006">愛の基台</a></li><li class="toc-level-2"><a href="#007">復活の教え</a></li><li class="toc-level-2"><a href="#008">イエス様を慕う</a></li><li class="toc-level-2"><a href="#009">今は生涯の転換期</a></li><li class="toc-level-2"><a href="#010">新しく生まれる道</a></li><li class="toc-level-2"><a href="#011">タマル</a></li><li class="toc-level-2"><a href="#012">マリヤ</a></li><li class="toc-level-2"><a href="#013">イエス様の誕生</a></li><li class="toc-level-2"><a href="#014">入籍する国は</a></li><li class="toc-level-2"><a href="#015">国なきイスラエル</a></li><li class="toc-level-2"><a href="#016">再臨の道</a></li><li class="toc-level-2"><a href="#017">先生の使命</a></li><li class="toc-level-2"><a href="#018">北に行った先生</a></li><li class="toc-level-2"><a href="#019">三弟子の立場</a></li><li class="toc-level-2"><a href="#020">三役事</a></li><li class="toc-level-2"><a href="#021">血統的転換</a></li><li class="toc-level-2"><a href="#022">血統に責任をもて</a></li></ul></div>
@@ -572,10 +578,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="03.html">前のページに戻る</a></p><p><a href="05.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -598,9 +603,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -612,7 +616,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -655,6 +659,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

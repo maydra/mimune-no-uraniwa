@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="訓教経(下)015"><a href="#訓教経(下)015">訓教経(下)015</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生のみ言集</a></li><li class="toc-b"><a href="#002">訓教経(下）</a></li><li class="toc-b"><a href="#003">天国の拠点はどこか</a></li><li class="toc-b"><a href="#004">◆分かれ道に置かれている現時点</a></li><li class="toc-b"><a href="#005">◆終末時代において神様が提示する方向とその拠点</a></li><li class="toc-b"><a href="#006">◆天の方向を受け継ぐ拠点になろうとするなら</a></li><li class="toc-b"><a href="#007">◆やるせない神様に侍ろうとすれば</a></li><li class="toc-b"><a href="#008">◆天国の拠点はどこか</a></li><li class="toc-b"><a href="#009">◆天の拠点になれる一人を探してこられた神様</a></li><li class="toc-b"><a href="#010">◆神様が探してこられた一人とはどんな人なのか</a></li><li class="toc-b"><a href="#011">◆聖人のモデルがもつべき三つの条件</a></li><li class="toc-b"><a href="#012">◆愛と心情の教えが最高の教え</a></li><li class="toc-b"><a href="#013">◆神様が願うことは真の家庭を成すこと</a></li><li class="toc-b"><a href="#014">◆天国にはどんな人が行くのか</a></li><li class="toc-b"><a href="#015">◆イエス様がこの地上に来て探そうとしたもの</a></li><li class="toc-b"><a href="#016">◆天国の拠点を確立するために行く道</a></li><li class="toc-b"><a href="#017">◆神様を中心として体と心が水平を成す時に天国が成される</a></li><li class="toc-b"><a href="#018">◆宗教の道</a></li><li class="toc-b"><a href="#019">◆天国の拠点は人間の心</a></li><li class="toc-b"><a href="#020">◆体と心の統一方案</a></li></ul></div>
@@ -669,10 +675,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="014.html">前のページに戻る</a></p><p><a href="016.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -695,9 +700,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -709,7 +713,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -752,6 +756,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

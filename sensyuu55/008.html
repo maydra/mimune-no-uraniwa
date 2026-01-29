@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="メシヤが成すべきこと/文鮮明先生御言選集-55"><a href="#メシヤが成すべきこと/文鮮明先生御言選集-55">メシヤが成すべきこと/文鮮明先生御言選集 55</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生御言選集 55</a></li><li class="toc-b"><a href="#002">堕落によってサタンの主管を受けるようになった人間</a></li><li class="toc-b"><a href="#003">血統転換をしなければ神様に帰ることができない</a></li><li class="toc-b"><a href="#004">カイン・アベルから始まった長子権復帰摂理</a></li><li class="toc-b"><a href="#005">アダムとアベルの立場を復帰したヤコブ</a></li><li class="toc-b"><a href="#006">エバの立場を復帰するために威信と面目を捨てたタマル</a></li><li class="toc-b"><a href="#007">自分たちの摂理的立場を離れたマリヤとヨセフ</a></li><li class="toc-b"><a href="#008">神様の愛の圏内から生まれたイエス様</a></li><li class="toc-b"><a href="#009">人類は真のオリーブの木として来られるイエス様に接ぎ木されなければならない</a></li><li class="toc-b"><a href="#010">キリスト教二〇〇〇年の歴史に該当する統一教会二十年の歴史</a></li><li class="toc-b"><a href="#011">この地上で聖霊を迎えるべきイエス様</a></li><li class="toc-b"><a href="#012">一九六〇年以前の統一教会における信仰運動の意義</a></li><li class="toc-b"><a href="#013">三年期間の蕩減復帰歴史</a></li><li class="toc-b"><a href="#014">必ず行かなければならない七年路程</a></li><li class="toc-b"><a href="#015">国を探しに行くべきか、家庭に帰って行くべきか</a></li><li class="toc-b"><a href="#016">国のために祈りなさい</a></li><li class="toc-b"><a href="#017">一日も早く復帰しなければならない既成教会</a></li><li class="toc-b"><a href="#018">国を探すために信義の種をまこう</a></li><li class="toc-b"><a href="#019">縦的歴史の横的蕩減</a></li><li class="toc-b"><a href="#020">神様が一番愛される統一教会</a></li><li class="toc-b"><a href="#021">人間はみんな相手のために生まれた</a></li><li class="toc-b"><a href="#022">国のために行こう</a></li><li class="toc-b"><a href="#023">世界復興団創設計画</a></li><li class="toc-b"><a href="#024">機動隊のチャンピオンたれ</a></li><li class="toc-b"><a href="#025">アメリカ教会の経済問題解決法案</a></li><li class="toc-b"><a href="#026">日本の食口とアメリカの食口の使命</a></li><li class="toc-b"><a href="#027">日本での摂理</a></li><li class="toc-b"><a href="#028">祈祷</a></li></ul></div>
@@ -868,10 +874,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="007.html">前のページに戻る</a></p><p><a href="atogaki.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -894,9 +899,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -908,7 +912,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -951,6 +955,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

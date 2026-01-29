@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="訓教経(下)012"><a href="#訓教経(下)012">訓教経(下)012</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生のみ言集</a></li><li class="toc-b"><a href="#002">訓教経(下）</a></li><li class="toc-b"><a href="#003">私たちの願い</a></li><li class="toc-b"><a href="#004">◆理想的な根拠地となっていないこの世</a></li><li class="toc-b"><a href="#005">◆人間の願いと絶対者の願い</a></li><li class="toc-b"><a href="#006">◆過去よりも現在、現在よりも未来が良ければ終着点に到達できる</a></li><li class="toc-b"><a href="#007">◆自分を発展させようとすれば</a></li><li class="toc-b"><a href="#008">◆ある位置に進もうとすればそこに比例する困難を克服せねば</a></li><li class="toc-b"><a href="#009">◆神様と一つになっていたならば</a></li><li class="toc-b"><a href="#010">◆故障した人間</a></li><li class="toc-b"><a href="#011">◆人間の完成は神様の願い</a></li><li class="toc-b"><a href="#012">◆宗教は故障した人間を直す修理工場</a></li><li class="toc-b"><a href="#013">◆直すべき人間</a></li><li class="toc-b"><a href="#014">◆真の息子と娘の結婚式を待つ歴史</a></li><li class="toc-b"><a href="#015">◆人間の体は外的な神様</a></li><li class="toc-b"><a href="#016">◆神様に侍ることのできる所</a></li><li class="toc-b"><a href="#017">◆人間は目に見える神様</a></li><li class="toc-b"><a href="#018">◆善の道は何倍も大変な道</a></li><li class="toc-b"><a href="#019">◆堕落した立場では自分を否定しなさい</a></li><li class="toc-b"><a href="#020">◆善なる道は「ため」に生きる道</a></li><li class="toc-b"><a href="#021">◆まず家庭のために犠牲になりなさい</a></li><li class="toc-b"><a href="#022">◆聖人になろうとすれば国家と民族を超越すべし</a></li><li class="toc-b"><a href="#023">◆神様と人間が好む主義、思想、宗教</a></li><li class="toc-b"><a href="#024">◆私たちの願いは宇宙を主管する立場で神様に侍ること</a></li></ul></div>
@@ -720,10 +726,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="011.html">前のページに戻る</a></p><p><a href="013.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -746,9 +751,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -760,7 +764,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -803,6 +807,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="真の自分を探しましょう/男性訪韓修練会"><a href="#真の自分を探しましょう/男性訪韓修練会">真の自分を探しましょう/男性訪韓修練会</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">男性訪韓修練会</a></li><li class="toc-b"><a href="#002">真の自分を探しましょう!!!</a></li><li class="toc-b"><a href="#003">三十二万人修練会の開始にあたって</a></li><li class="toc-b"><a href="#004">迫害されるこの道</a></li><li class="toc-b"><a href="#005">統一教会の理論は完全に正しい</a></li><li class="toc-b"><a href="#006">真剣でもって真剣に生きる</a></li><li class="toc-b"><a href="#007">忠臣の伝統精神とは</a></li><li class="toc-b"><a href="#008">聖子の行く道</a></li><li class="toc-b"><a href="#009">悪い世界の中の日本の国</a></li><li class="toc-b"><a href="#010">心身紛争する自分</a></li><li class="toc-b"><a href="#011">歴史の動機と結実体である人間</a></li><li class="toc-b"><a href="#012">一人ひとりが一億二千万人を代表した日本人</a></li><li class="toc-b"><a href="#013">すべての問題の解決は男と女</a></li><li class="toc-b"><a href="#014">すべては世界のため、天宙のため、神様解放のため</a></li><li class="toc-b"><a href="#015">神様が宇宙の唯一の根である</a></li><li class="toc-b"><a href="#016">心身紛争の出発点は何か</a></li><li class="toc-b"><a href="#017">愛によって所有権が決定される</a></li><li class="toc-b"><a href="#018">神様に反発する愛の動機</a></li><li class="toc-b"><a href="#019">宇宙は相対理想の組み合わせから</a></li><li class="toc-b"><a href="#020">永遠に変わらない神の愛</a></li><li class="toc-b"><a href="#021">神様の愛と人間の愛の決着する一点</a></li><li class="toc-b"><a href="#022">家庭は天国の基地である</a></li><li class="toc-b"><a href="#023">愛の神秘境の内容をすべて知っている神様</a></li></ul></div>
@@ -849,10 +855,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="hajimeni.html">前のページに戻る</a></p><p><a href="002.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -875,9 +880,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -889,7 +893,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -932,6 +936,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

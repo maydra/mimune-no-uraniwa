@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="訓教経/(上)037"><a href="#訓教経/(上)037">訓教経/(上)037</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生のみ言集</a></li><li class="toc-b"><a href="#002">訓教経(上）</a></li><li class="toc-b"><a href="#003">祝　福</a></li><li class="toc-b"><a href="#004">◆「祝福」の起源とその成立条件</a></li><li class="toc-b"><a href="#005">◆「祝福」の位置とその意味</a></li><li class="toc-b"><a href="#006">◆祝福行事の意義</a></li><li class="toc-b"><a href="#007">◆祝福の因縁を結ぶための位置</a></li><li class="toc-b"><a href="#008">◆私たちがもつべき道理</a></li><li class="toc-b"><a href="#009">◆祝福家庭の責任</a></li><li class="toc-b"><a href="#010">◆祝福家庭が抱くべき望みと信念</a></li><li class="toc-b"><a href="#011">◆祝福家庭が行くべき道</a></li><li class="toc-b"><a href="#012">◆祝福家庭の生活</a></li><li class="toc-b"><a href="#013">◆祝福は二度あり得ない</a></li><li class="toc-b"><a href="#014">◆精誠の重要性</a></li><li class="toc-b"><a href="#015">◆一生一代で最も貴いものは祝福</a></li><li class="toc-b"><a href="#016">◆祝福と理想相対</a></li></ul></div>
@@ -615,10 +621,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="036.html">前のページに戻る</a></p><p><a href="038.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -641,9 +646,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -655,7 +659,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -698,6 +702,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

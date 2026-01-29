@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="第三章摂理の発展と祈祷の変化/天一国時代の祈祷"><a href="#第三章摂理の発展と祈祷の変化/天一国時代の祈祷">第三章摂理の発展と祈祷の変化/天一国時代の祈祷</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">天一国時代の祈祷</a></li><li class="toc-b"><a href="#002">第三章　摂理の発展と祈祷の変化</a></li><li class="toc-b"><a href="#003">第一節　統一教会時代の祈祷</a></li><li class="toc-b"><a href="#004">一　イエス様の名で祈祷する理由</a></li><li class="toc-b"><a href="#005">二　統一教会では真のご父母様の名で祈祷する</a></li><li class="toc-b"><a href="#006">第二節　家庭連合時代の祈祷</a></li><li class="toc-b"><a href="#007">一　真のご父母様の勝利圏を祝福により受け継いだ…</a></li><li class="toc-b"><a href="#008">二　家庭連合時代における祈祷の実際</a></li><li class="toc-b"><a href="#009">①　祝福家庭の場合（一世、二世を含む）</a></li><li class="toc-b"><a href="#010">②　祝福家庭でない場合は以前と同じように祈祷する。</a></li><li class="toc-b"><a href="#011">第三　節天一国時代の祈祷</a></li><li class="toc-b"><a href="#012">一　祝福の中心家庭、だれそれの名前で報告</a></li><li class="toc-b"><a href="#013">二　神様と直接連結した息子、娘の時代</a></li><li class="toc-b"><a href="#014">三　報告がすなわち祈祷の時代</a></li><li class="toc-b"><a href="#015">第四節　天一国時代と祈祷の完成</a></li><li class="toc-b"><a href="#016">一　宇宙の根本</a></li><li class="toc-b"><a href="#017">二　神様に侍る家庭生活自体が宗教生活</a></li><li class="toc-b"><a href="#018">三　神様とともに、一心、一体、一念とならなければ</a></li><li class="toc-b"><a href="#019">四　愛の世界には祈祷が必要ない</a></li></ul></div>
@@ -681,10 +687,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="003.html">前のページに戻る</a></p><p><a href="hajimeni.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -707,9 +712,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -721,7 +725,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -764,6 +768,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

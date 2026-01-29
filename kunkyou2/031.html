@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="訓教経(下)031"><a href="#訓教経(下)031">訓教経(下)031</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生のみ言集</a></li><li class="toc-b"><a href="#002">訓教経(下）</a></li><li class="toc-b"><a href="#003">模範生活</a></li><li class="toc-b"><a href="#004">◆一　生活の模範</a></li><li class="toc-b"><a href="#005">◆　１　主食</a></li><li class="toc-b"><a href="#006">◆　２　副食</a></li><li class="toc-b"><a href="#007">◆　３　飲料水</a></li><li class="toc-b"><a href="#008">◆　４　環境改善</a></li><li class="toc-b"><a href="#009">◆　５　住宅問題</a></li><li class="toc-b"><a href="#010">◆◆①　電　気</a></li><li class="toc-b"><a href="#011">◆◆②　水　道</a></li><li class="toc-b"><a href="#012">◆◆③　電　話</a></li><li class="toc-b"><a href="#013">◆◆④　家　具</a></li><li class="toc-b"><a href="#014">◆◆⑤　備　品</a></li><li class="toc-b"><a href="#015">◆◆⑥　美　化</a></li><li class="toc-b"><a href="#016">◆　６　衣　類</a></li><li class="toc-b"><a href="#017">◆◆①　服の着方、着用法</a></li><li class="toc-b"><a href="#018">◆◆②　形　態</a></li><li class="toc-b"><a href="#019">◆◆③　端　正</a></li><li class="toc-b"><a href="#020">◆◆④　調　和</a></li><li class="toc-b"><a href="#021">◆◆⑤　ネクタイ</a></li><li class="toc-b"><a href="#022">◆◆⑥　装身具</a></li><li class="toc-b"><a href="#023">◆◆⑦　履き物</a></li><li class="toc-b"><a href="#024">◆◆⑧　帽　子</a></li><li class="toc-b"><a href="#025">◆◆⑨　備えるもの</a></li><li class="toc-b"><a href="#026">◆◆⑩　保　管</a></li><li class="toc-b"><a href="#027">◆　７　体を端正に</a></li><li class="toc-b"><a href="#028">◆◆①　頭</a></li><li class="toc-b"><a href="#029">◆◆②　顔</a></li><li class="toc-b"><a href="#030">◆◆③　手足の爪</a></li><li class="toc-b"><a href="#031">◆◆④　歩くこと</a></li><li class="toc-b"><a href="#032">◆◆⑤　座り方</a></li><li class="toc-b"><a href="#033">◆◆⑥　言　葉</a></li><li class="toc-b"><a href="#034">◆◆⑦　寝ること</a></li><li class="toc-b"><a href="#035">◆◆⑧　健　康</a></li><li class="toc-b"><a href="#036">◆二　教会生活</a></li><li class="toc-b"><a href="#037">◆　１　祈祷生活</a></li><li class="toc-b"><a href="#038">◆　２　集　会</a></li><li class="toc-b"><a href="#039">◆　３　学　習</a></li><li class="toc-b"><a href="#040">◆　４　伝　道</a></li><li class="toc-b"><a href="#041">◆　５　奉　仕</a></li><li class="toc-b"><a href="#042">◆　６　蕩　減</a></li><li class="toc-b"><a href="#043">◆　７　和　睦</a></li><li class="toc-b"><a href="#044">◆　８　体験生活</a></li><li class="toc-b"><a href="#045">◆　９　霊界と現実</a></li><li class="toc-b"><a href="#046">◆三　社会生活</a></li><li class="toc-b"><a href="#047">◆　１　時　間</a></li><li class="toc-b"><a href="#048">◆　２　尊敬と交流</a></li><li class="toc-b"><a href="#049">◆　３　外交と発展</a></li><li class="toc-b"><a href="#050">◆　４　職業と姿勢</a></li><li class="toc-b"><a href="#051">◆　５　主従関係</a></li><li class="toc-b"><a href="#052">◆　６　社会と私の利点</a></li></ul></div>
@@ -691,10 +697,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="030.html">前のページに戻る</a></p><p><a href="032.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -717,9 +722,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -731,7 +735,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -774,6 +778,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

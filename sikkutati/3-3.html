@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="統一教会員の使命と時/統一教会と食口たち"><a href="#統一教会員の使命と時/統一教会と食口たち">統一教会員の使命と時/統一教会と食口たち</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">統一教会と食口たち</a></li><li class="toc-b"><a href="#002">第三節　統一教会員の使命と時</a></li><li class="toc-b"><a href="#003">一　統一教会の連中とは何か</a></li><li class="toc-b"><a href="#004">二　内的使命とその使命の価値</a></li><li class="toc-b"><a href="#005">１　内的使命</a></li><li class="toc-b"><a href="#006">２　とてつもない私たちの使命</a></li><li class="toc-b"><a href="#007">三　統一教会員の使命</a></li><li class="toc-b"><a href="#008">１　サタンを追放しなければならない使命</a></li><li class="toc-b"><a href="#009">２　イエス様が関係した使命</a></li><li class="toc-b"><a href="#010">３　愛の秩序を立てるべき使命</a></li><li class="toc-b"><a href="#011">４　五色人種を連結させるべき使命</a></li><li class="toc-b"><a href="#012">５　宗派統一の使命</a></li><li class="toc-b"><a href="#013">６　思想統一の使命</a></li><li class="toc-b"><a href="#014">７　その国を訪ねる使命</a></li><li class="toc-b"><a href="#015">四　私たちと時</a></li><li class="toc-b"><a href="#016">１　今の時</a></li><li class="toc-b"><a href="#017">２　時の兆し</a></li><li class="toc-b"><a href="#018">３　自分の時を一致させよ</a></li><li class="toc-b"><a href="#019">４　時を失わない方法</a></li><li class="toc-b"><a href="#020">５　今は活動する時</a></li></ul></div>
@@ -610,10 +616,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="3-2.html">前のページに戻る</a></p><p><a href="3-4.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -636,9 +641,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -650,7 +654,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -693,6 +697,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

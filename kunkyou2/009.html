@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="訓教経(下)009"><a href="#訓教経(下)009">訓教経(下)009</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生のみ言集</a></li><li class="toc-b"><a href="#002">訓教経(下）</a></li><li class="toc-b"><a href="#003">真を探して</a></li><li class="toc-b"><a href="#004">◆良いことと関係を結ぼうとする人間</a></li><li class="toc-b"><a href="#005">◆価値あるものを万民がどのように共有するかが問題</a></li><li class="toc-b"><a href="#006">◆未来の世界に残れる人</a></li><li class="toc-b"><a href="#007">◆生命の帰着点</a></li><li class="toc-b"><a href="#008">◆善の主体</a></li><li class="toc-b"><a href="#009">◆良いことを残そうとし相続しようとする人間</a></li><li class="toc-b"><a href="#010">◆父母の愛より大きい神様の愛</a></li><li class="toc-b"><a href="#011">◆刈り入れできる人</a></li><li class="toc-b"><a href="#012">◆良い人は犠牲になる人</a></li><li class="toc-b"><a href="#013">◆世界を統一しようとするなら</a></li><li class="toc-b"><a href="#014">◆生活哲学の根本</a></li><li class="toc-b"><a href="#015">◆「ため」にする人生は滅びない</a></li><li class="toc-b"><a href="#016">◆私の中にある三十八度線を壊さなければ</a></li><li class="toc-b"><a href="#017">◆真を追求する目的</a></li><li class="toc-b"><a href="#018">◆父母の愛をもってこそ世界を統一することができる</a></li><li class="toc-b"><a href="#019">◆神様の息子、娘になる道</a></li><li class="toc-b"><a href="#020">◆善が行く道</a></li><li class="toc-b"><a href="#021">◆相反することのない真の世界を訪ねよう</a></li></ul></div>
@@ -637,10 +643,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="008.html">前のページに戻る</a></p><p><a href="010.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -663,9 +668,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -677,7 +681,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -720,6 +724,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

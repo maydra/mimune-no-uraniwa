@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="御旨と世界/26_再会の心情"><a href="#御旨と世界/26_再会の心情">御旨と世界/26_再会の心情</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#023">再会の心情</a></li><li class="toc-b"><a href="#024">1977年9月11日</a></li><li class="toc-level-2"><a href="#001">◆暖流と寒流</a></li><li class="toc-level-2"><a href="#002">◆劇的な出会い</a></li><li class="toc-level-2"><a href="#003">◆調和による美</a></li><li class="toc-level-2"><a href="#004">◆人間にある調和</a></li><li class="toc-level-2"><a href="#005">◆交わる時の混乱</a></li><li class="toc-level-2"><a href="#006">◆味わいある水</a></li><li class="toc-level-2"><a href="#007">◆出会いの理由</a></li><li class="toc-level-2"><a href="#008">◆昼の文化と夜の文化</a></li><li class="toc-level-2"><a href="#009">◆和合者による調和</a></li><li class="toc-level-2"><a href="#010">◆二つの脅威</a></li><li class="toc-level-2"><a href="#011">◆もう一つのイエロー・パワー</a></li><li class="toc-level-2"><a href="#012">◆統一教会の行く所</a></li><li class="toc-level-2"><a href="#013">◆新しい世代の種子</a></li><li class="toc-level-2"><a href="#014">◆冬を通過する種子</a></li><li class="toc-level-2"><a href="#015">◆中和文化の到来</a></li><li class="toc-level-2"><a href="#016">◆神の愛による種子</a></li><li class="toc-level-2"><a href="#017">◆争いの原因の統一</a></li><li class="toc-level-2"><a href="#018">◆神の心情を知る私たち</a></li><li class="toc-level-2"><a href="#019">◆統一教会の生き方</a></li><li class="toc-level-2"><a href="#020">◆私の立てた伝統</a></li><li class="toc-level-2"><a href="#021">◆アメリカの代表としての自覚</a></li><li class="toc-level-2"><a href="#022">◆再会の日</a></li></ul></div>
@@ -620,10 +626,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="25.html">前のページに戻る</a></p><p><a href="27.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -646,9 +651,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -660,7 +664,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -703,6 +707,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

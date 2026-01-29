@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="人の生涯"><a href="#人の生涯">人の生涯</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">人の生涯</a></li><li class="toc-b"><a href="#002">第三章　望ましい青年期</a></li><li class="toc-b"><a href="#003">第一節　成和青年</a></li><li class="toc-b"><a href="#004">一　青年期とは</a></li><li class="toc-b"><a href="#005">二　成和青年の道</a></li><li class="toc-b"><a href="#006">１　成和青年が行くべき道</a></li><li class="toc-b"><a href="#007">２　先生の青年時代の経験</a></li><li class="toc-b"><a href="#008">３　建築物の土台となれ</a></li><li class="toc-b"><a href="#009">４　三〇歳前に苦労せよ</a></li><li class="toc-b"><a href="#010">５　三〇歳前には多方面の訓練をせよ</a></li><li class="toc-b"><a href="#011">三　成和大学生</a></li><li class="toc-b"><a href="#012">１　成和は大きな名前</a></li><li class="toc-b"><a href="#013">２　成和大学生が持つべき基準</a></li><li class="toc-b"><a href="#014">３　卒業後、就職よりみ旨の道が重要</a></li><li class="toc-b"><a href="#015">四　知識と学問に対する姿勢</a></li><li class="toc-b"><a href="#016">１　知識と生命</a></li><li class="toc-b"><a href="#017">２　知識と心情</a></li><li class="toc-b"><a href="#018">３　神様は知識を勧告しなかった</a></li><li class="toc-b"><a href="#019">４　専門家になるには</a></li><li class="toc-b"><a href="#020">５　絶対価値を中心として収拾すべき</a></li><li class="toc-b"><a href="#021">６　若者が知るべきこと</a></li><li class="toc-b"><a href="#022">五　成和青年の姿勢</a></li><li class="toc-b"><a href="#023">１　内的自我の確立</a></li><li class="toc-b"><a href="#024">２　決心した以上押し通せ</a></li><li class="toc-b"><a href="#025">３　外的姿勢</a></li><li class="toc-b"><a href="#026">六　青年に施された祈祷</a></li></ul></div>
@@ -716,10 +722,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="hitonosyougai_004.html">前のページに戻る</a></p><p><a href="hitonosyougai_006.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -742,9 +747,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -756,7 +760,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -799,6 +803,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

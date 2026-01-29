@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="御旨と世界/19_私自身"><a href="#御旨と世界/19_私自身">御旨と世界/19_私自身</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#014">私自身</a></li><li class="toc-b"><a href="#015">1975年7月13日</a></li><li class="toc-level-2"><a href="#001">◆歴史の結実体としての「私」</a></li><li class="toc-level-2"><a href="#002">◆個性真理体としての「私」</a></li><li class="toc-level-2"><a href="#003">◆純粋な人間とは</a></li><li class="toc-level-2"><a href="#004">◆その出発点は神から</a></li><li class="toc-level-2"><a href="#005">◆蕩減復帰の道を歩む「私」</a></li><li class="toc-level-2"><a href="#006">◆天国建設に責任をもとう</a></li><li class="toc-level-2"><a href="#007">◆すべての価値決定は神から</a></li><li class="toc-level-2"><a href="#008">◆復帰は信じ愛すること</a></li><li class="toc-level-2"><a href="#009">◆東洋と西洋を一つに</a></li><li class="toc-level-2"><a href="#010">◆真なる世界を描く統一思想</a></li><li class="toc-level-2"><a href="#011">◆神を解放する「私」</a></li><li class="toc-level-2"><a href="#012">◆不屈の精神</a></li><li class="toc-level-2"><a href="#013">◆神の子女になろう</a></li></ul></div>
@@ -618,10 +624,9 @@ Nation Under God”これは素晴らしい精神だ。まさしく、そのよ�
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="18.html">前のページに戻る</a></p><p><a href="20.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -644,9 +649,8 @@ Nation Under God”これは素晴らしい精神だ。まさしく、そのよ�
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -658,7 +662,7 @@ Nation Under God”これは素晴らしい精神だ。まさしく、そのよ�
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -701,6 +705,12 @@ Nation Under God”これは素晴らしい精神だ。まさしく、そのよ�
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

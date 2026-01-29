@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="訓教経(下)038"><a href="#訓教経(下)038">訓教経(下)038</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生のみ言集</a></li><li class="toc-b"><a href="#002">訓教経(下）</a></li><li class="toc-b"><a href="#003">女性解放</a></li><li class="toc-b"><a href="#004">◆女性は家庭生活の中心であり責任者</a></li><li class="toc-b"><a href="#005">◆人類歴史の中で一番大きな困難は家庭の分裂</a></li><li class="toc-b"><a href="#006">◆女性が困難と悲しみの歴史を経てきた理由</a></li><li class="toc-b"><a href="#007">◆真の愛に出会い愛の解放を受けるための闘争歴史</a></li><li class="toc-b"><a href="#008">◆宗教は真の愛の理想的家庭を取り戻すためのもの</a></li><li class="toc-b"><a href="#009">◆男性と女性は愛の解放を受けなければならない</a></li><li class="toc-b"><a href="#010">◆解放圏は天と地を越えた位置に設定しなければならない</a></li><li class="toc-b"><a href="#011">◆解放されようとすれば女性は男性の三倍以上蕩減の道を行かねばならない</a></li><li class="toc-b"><a href="#012">◆小羊の婚宴の一等花嫁条件</a></li><li class="toc-b"><a href="#013">◆真の愛によってのみ世界史的解放が可能である</a></li><li class="toc-b"><a href="#014">◆イエス様は真の愛の家庭を成しに来られたお方</a></li><li class="toc-b"><a href="#015">◆天の愛をもった花婿が来る時の現象</a></li><li class="toc-b"><a href="#016">◆イエス様の伝統的思想の起源</a></li><li class="toc-b"><a href="#017">◆神様を解放することができる人</a></li></ul></div>
@@ -571,10 +577,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="037.html">前のページに戻る</a></p><p><a href="hajimeni.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -597,9 +602,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -611,7 +615,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -654,6 +658,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

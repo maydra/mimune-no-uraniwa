@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="第七節-一九七四年-統一戦線守護（三）/真の御父母様の生涯路程-5"><a href="#第七節-一九七四年-統一戦線守護（三）/真の御父母様の生涯路程-5">第七節　一九七四年　統一戦線守護（三）/真の御父母様の生涯路程 5</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 5</a></li><li class="toc-b"><a href="#002">第七節　一九七四年　統一戦線守護（三）</a></li><li class="toc-b"><a href="#003">一　一九七四年の出発と摂理的意義</a></li><li class="toc-b"><a href="#004">年頭標語：統一戦線守護（三）（一九七四・一・一、米国、ベルベディア修練所）</a></li><li class="toc-b"><a href="#005">世界教会体制制度化（一九七四・四・三〇）</a></li><li class="toc-b"><a href="#006">二　ウオーターゲート宣言とニクソン大統領との要談</a></li><li class="toc-b"><a href="#007">ウォーターゲート宣言とニクソン大統領赦免運動（一九七三・一一・三〇）</a></li><li class="toc-b"><a href="#008">ニクソン大統領との要談（一九七四・二・一、米国、ホワイトハウス）</a></li><li class="toc-b"><a href="#009">米国食口六百名三日断食（一九七四・七・二二〜二四、ワシントンＤ・Ｃ米国国会議事堂階段）</a></li><li class="toc-b"><a href="#010">ニクソン大統領の退陣</a></li><li class="toc-b"><a href="#011">三　米国三十二ヵ都市講演会と特別儀式</a></li><li class="toc-b"><a href="#012">霊界の教祖解放と地上再臨（一九七四・二・一一）</a></li><li class="toc-b"><a href="#013">米国三十二ヵ都市講演会（一九七四・二・一五〜四・二〇、主題：キリスト教の新しい未来）</a></li><li class="toc-b"><a href="#014">「勝恨式」（一九七四・五・一、協会創立二十周年、前本部教会）</a></li><li class="toc-b"><a href="#015">四　米国の敷地購入と海洋産業開拓</a></li><li class="toc-b"><a href="#016">米国ベリータウン神学大学購入（一九七四・四・三〇）</a></li><li class="toc-b"><a href="#017">海釣りと海洋産業開拓（一九七四、夏）</a></li><li class="toc-b"><a href="#018">五　全国教会Ａタイプ聖殿建立（一九七四・六・一〇、新灘津教会から全国百八十八棟）</a></li><li class="toc-b"><a href="#019">聖殿建立の必要性</a></li><li class="toc-b"><a href="#020">聖殿の形と建立基準</a></li><li class="toc-b"><a href="#021">聖殿建立と予算支援</a></li><li class="toc-b"><a href="#022">六　マディソン・スクエア・ガーデン大会と七ヵ都市講演会</a></li><li class="toc-b"><a href="#023">大会人員動員活動</a></li><li class="toc-b"><a href="#024">マディソン・スクエア・ガーデン「希望の日」大講演会
@@ -772,10 +778,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="006.html">前のページに戻る</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -798,9 +803,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -812,7 +816,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -855,6 +859,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

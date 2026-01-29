@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="訓教経(下)013"><a href="#訓教経(下)013">訓教経(下)013</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生のみ言集</a></li><li class="toc-b"><a href="#002">訓教経(下）</a></li><li class="toc-b"><a href="#003">前進と停止</a></li><li class="toc-b"><a href="#004">◆前進の一路を歩んでこられた神様の復帰摂理</a></li><li class="toc-b"><a href="#005">◆ずっと前進できるかということが問題</a></li><li class="toc-b"><a href="#006">◆喜びは前進する中で感じるもの</a></li><li class="toc-b"><a href="#007">◆現実問題をどのように処理するかが重要</a></li><li class="toc-b"><a href="#008">◆目的が明確で動機が良ければ前進</a></li><li class="toc-b"><a href="#009">◆前進させたり後退させるのは自分自身</a></li><li class="toc-b"><a href="#010">◆悲しみも喜びとして消化せよ</a></li><li class="toc-b"><a href="#011">◆悲しい神様を慰労してさしあげようとすれば</a></li><li class="toc-b"><a href="#012">◆後退する人は神様も好まれない</a></li><li class="toc-b"><a href="#013">◆今この瞬間がいかに重要であるかを知れ</a></li><li class="toc-b"><a href="#014">◆神様はどれほど孤独で哀れなお方か</a></li><li class="toc-b"><a href="#015">◆神様が協助できる内容</a></li><li class="toc-b"><a href="#016">◆前進する信仰者の生活態度</a></li><li class="toc-b"><a href="#017">◆天が同情できる基準</a></li></ul></div>
@@ -627,10 +633,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="012.html">前のページに戻る</a></p><p><a href="014.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -653,9 +658,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -667,7 +671,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -710,6 +714,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

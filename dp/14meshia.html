@@ -425,7 +425,13 @@
             background: rgba(102, 126, 234, 0.08);
             transform: translateX(4px);
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1>原理講論  メシヤの降臨とその再臨の目的</h1><details class="toc-collapsible" id="toc">
@@ -524,10 +530,9 @@
 </div>
 
 
-<section id="typo-report" class="typo-box">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -550,9 +555,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box{margin:2.5rem 0;padding:1rem 1.1rem;border:1px solid #ddd;border-radius:14px;background:#fff;}
@@ -564,6 +568,12 @@
   .typo-btn{padding:.6rem 1rem;border:0;border-radius:12px;background:#111;color:#fff;cursor:pointer;font:inherit;}
   .typo-btn[disabled]{opacity:.6;cursor:not-allowed;}
   .typo-status{font-size:.95rem;opacity:.9;}
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

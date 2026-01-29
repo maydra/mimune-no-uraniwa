@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="現地の整備/訪韓修練会御言集(女性)"><a href="#現地の整備/訪韓修練会御言集(女性)">現地の整備/訪韓修練会御言集(女性)</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">訪韓修練会御言集(女性)</a></li><li class="toc-b"><a href="#002">現地の整備</a></li><li class="toc-b"><a href="#003">1993年12月21日　韓国・済州研修院</a></li><li class="toc-b"><a href="#004">絶対信念、絶対信仰に立つ</a></li><li class="toc-b"><a href="#005">全国的な御言のブームを起こす</a></li><li class="toc-b"><a href="#006">原理の本をマスターする</a></li><li class="toc-b"><a href="#007">女性時代の到来</a></li><li class="toc-b"><a href="#008">先生の精神を相続して全体を救済する</a></li><li class="toc-b"><a href="#009">長子権の顕現</a></li><li class="toc-b"><a href="#010">血統転換</a></li><li class="toc-b"><a href="#011">真のお母様の選定</a></li><li class="toc-b"><a href="#012">四大心情圏の蕩減復帰</a></li><li class="toc-b"><a href="#013">お母様の基盤をつくるための苦労</a></li><li class="toc-b"><a href="#014">繁栄と天国に通じる道</a></li><li class="toc-b"><a href="#015">真の父母と完全に一つとなって良心の本然の基準を回復する</a></li><li class="toc-b"><a href="#016">立派な旦那さんをつくる道</a></li><li class="toc-b"><a href="#017">旦那さんは男の子が大きくなったものである</a></li><li class="toc-b"><a href="#018">お母さんと妻を合わせたような奥さんになる</a></li><li class="toc-b"><a href="#019">夫婦生活の芸術化、美術化</a></li><li class="toc-b"><a href="#020">フィーリングが最も重要である</a></li><li class="toc-b"><a href="#021">家庭の伝統を立てる</a></li><li class="toc-b"><a href="#022">実の親子以上に近くなれる姑との関係</a></li><li class="toc-b"><a href="#023">第二十五回の修練会を終えて、代表者による感謝の祈祷</a></li></ul></div>
@@ -857,10 +863,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="005.html">前のページに戻る</a></p><p><a href="007.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -883,9 +888,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -897,7 +901,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -940,6 +944,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

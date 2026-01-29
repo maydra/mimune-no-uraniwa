@@ -300,7 +300,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head><body><div class="container">
 <h1 id="真の家庭と家庭盟誓-第二章-家庭盟誓の各節の解説"><a href="#真の家庭と家庭盟誓-第二章-家庭盟誓の各節の解説">真の家庭と家庭盟誓 第二章 家庭盟誓の各節の解説</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-level-2"><a href="#五-家庭盟誓第五節の解説">五 家庭盟誓第五節の解説</a></li><li class="toc-level-4"><a href="#私たちの家庭は真の愛を中心として、毎日、主体的天上世界と対象的地上世界の統一に向かい、前進的発展を促進化することをお誓い致します。">私たちの家庭は真の愛を中心として、毎日、主体的天上世界と対象的地上世界の統一に向かい、前進的発展を促進化することをお誓い致します。</a></li><li class="toc-level-2"><a href="#sec-1">一)「主体的天上世界と対象的地上世界の統一」</a></li><li class="toc-level-3"><a href="#sec-2">(1)天上世界が主体である</a></li><li class="toc-level-3"><a href="#sec-3">(2)天上世界と地上世界を統一させなければならない</a></li><li class="toc-level-2"><a href="#sec-4">二) 「前進的発展を促進化することを」</a></li><li class="toc-level-3"><a href="#sec-5">(1)毎日、前進的発展を促進化しなさい</a></li><li class="toc-level-3"><a href="#sec-6">(2)真の愛のハイウェイを築こう</a></li></ul></div>
 <hr/>
@@ -416,10 +422,9 @@
 </div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -442,9 +447,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -456,7 +460,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -499,6 +503,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

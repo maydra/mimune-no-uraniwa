@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="御旨と世界/30_七七七双祝福八周年記念に寄せて"><a href="#御旨と世界/30_七七七双祝福八周年記念に寄せて">御旨と世界/30_七七七双祝福八周年記念に寄せて</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#025">七七七双祝福　八周年記念に寄せて</a></li><li class="toc-b"><a href="#026">1978年10月22日　韓国　水沢里</a></li><li class="toc-level-2"><a href="#001">◆祭物的基盤イスラエル</a></li><li class="toc-level-2"><a href="#002">◆愛の十字架の道</a></li><li class="toc-level-2"><a href="#003">◆人類を代表する家庭</a></li><li class="toc-level-2"><a href="#004">◆三次七年路程の設定</a></li><li class="toc-level-2"><a href="#005">◆祝福家庭自身が歩む復帰路程</a></li><li class="toc-level-2"><a href="#006">◆心情を通して連結されてきた歴史</a></li><li class="toc-level-2"><a href="#007">◆決死的な祝福</a></li><li class="toc-level-2"><a href="#008">◆家庭を中心とするカナン復帰</a></li><li class="toc-level-2"><a href="#009">◆家庭的大移動</a></li><li class="toc-level-2"><a href="#010">◆アメリカにおける闘い</a></li><li class="toc-level-2"><a href="#011">◆三次七年路程内の祝福家庭の使命</a></li><li class="toc-level-2"><a href="#012">◆ヨルダン川を渡る</a></li><li class="toc-level-2"><a href="#013">◆家庭的十字架を背負う</a></li><li class="toc-level-2"><a href="#014">◆すべての生活は神のため</a></li><li class="toc-level-2"><a href="#015">◆先生の家に伝わる家訓</a></li><li class="toc-level-2"><a href="#016">◆子供の模範に</a></li><li class="toc-level-2"><a href="#017">◆世界と永遠のための家庭</a></li><li class="toc-level-2"><a href="#018">◆家庭的勝利圏の相続</a></li><li class="toc-level-2"><a href="#019">◆万民のために生きる祝福家庭</a></li><li class="toc-level-2"><a href="#020">◆長子権の回復</a></li><li class="toc-level-2"><a href="#021">◆新時代の主流</a></li><li class="toc-level-2"><a href="#022">◆長子権復帰の基盤ホーム・チャーチ</a></li><li class="toc-level-2"><a href="#023">◆氏族的メシヤ</a></li><li class="toc-level-2"><a href="#024">◆ホーム・チャーチと新しい系図</a></li></ul></div>
@@ -616,10 +622,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="29.html">前のページに戻る</a></p><p><a href="31.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -642,9 +647,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -656,7 +660,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -699,6 +703,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

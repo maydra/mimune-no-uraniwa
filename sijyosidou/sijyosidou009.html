@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="み旨にかなった子女指導"><a href="#み旨にかなった子女指導">み旨にかなった子女指導</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">み旨にかなった子女指導</a></li><li class="toc-b"><a href="#002">第三章　子女の成長と指導</a></li><li class="toc-b"><a href="#003">第一節　子女の出生と成長</a></li><li class="toc-b"><a href="#004">一　生命の根源</a></li><li class="toc-b"><a href="#005">二　妊娠とつわり</a></li><li class="toc-b"><a href="#006">三　赤ん坊の出生</a></li><li class="toc-b"><a href="#007">１　女性たちの人体の神秘</a></li><li class="toc-b"><a href="#008">２　分娩の苦痛</a></li><li class="toc-b"><a href="#009">３　誕生の瞬間はまさに歓喜のとき</a></li><li class="toc-b"><a href="#010">４　頭から出てくる理由</a></li><li class="toc-b"><a href="#011">５　「おぎゃあおぎゃあ」の意味</a></li><li class="toc-b"><a href="#012">四　お乳を飲ませるとき</a></li><li class="toc-b"><a href="#013">１　赤ん坊がお乳を飲むこと</a></li><li class="toc-b"><a href="#014">２　お乳を飲ませること</a></li><li class="toc-b"><a href="#015">３　お乳を飲ませるときの心の姿勢</a></li><li class="toc-b"><a href="#016">４　お乳を飲ませる妙味</a></li><li class="toc-b"><a href="#017">５　母親の犠牲的な愛</a></li><li class="toc-b"><a href="#018">五　新生児のとき</a></li><li class="toc-b"><a href="#019">六　乳児のとき</a></li><li class="toc-b"><a href="#020">七　二十歳までは父母の愛圏</a></li></ul></div>
@@ -617,10 +623,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="sijyosidou008.html">前のページに戻る</a></p><p><a href="sijyosidou010.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -643,9 +648,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -657,7 +661,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -700,6 +704,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

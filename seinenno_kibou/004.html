@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="統一の要因と方案/青年の希望"><a href="#統一の要因と方案/青年の希望">統一の要因と方案/青年の希望</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">青年の希望</a></li><li class="toc-b"><a href="#002">統一の要因と方案</a></li><li class="toc-b"><a href="#003">一つになる標準基準</a></li><li class="toc-b"><a href="#004">金も権力も標準にはならない</a></li><li class="toc-b"><a href="#005">絶対の基準はなかった</a></li><li class="toc-b"><a href="#006">価値ある「自分」を残したい</a></li><li class="toc-b"><a href="#007">絶対の「生命」と「愛」</a></li><li class="toc-b"><a href="#008">愛によって生まれた者がなぜ対立するのか</a></li><li class="toc-b"><a href="#009">父母の愛だけは異なる</a></li><li class="toc-b"><a href="#010">愛の第一原因は神様</a></li><li class="toc-b"><a href="#011">絶対の主体があれば相対が立つ</a></li><li class="toc-b"><a href="#012">一番愛される者</a></li><li class="toc-b"><a href="#013">命懸けの親孝行</a></li><li class="toc-b"><a href="#014">反発作用は保護作用</a></li><li class="toc-b"><a href="#015">犠牲の道を行こう</a></li><li class="toc-b"><a href="#016">愛の法則と体験の重要性</a></li><li class="toc-b"><a href="#017">統一の要因は愛</a></li><li class="toc-b"><a href="#018">統一教会の行く道</a></li><li class="toc-b"><a href="#019">統一の方案は犠牲</a></li><li class="toc-b"><a href="#020">神様の犠牲の愛</a></li><li class="toc-b"><a href="#021">歴史的勝利者になれ</a></li><li class="toc-b"><a href="#022">勝利は近い</a></li></ul></div>
@@ -741,10 +747,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="003.html">前のページに戻る</a></p><p><a href="005.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -767,9 +772,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -781,7 +785,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -824,6 +828,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

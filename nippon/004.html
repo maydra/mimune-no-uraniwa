@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="第四章-日本へのみ言/神様の摂理と日本"><a href="#第四章-日本へのみ言/神様の摂理と日本">第四章　日本へのみ言/神様の摂理と日本</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">神様の摂理と日本</a></li><li class="toc-b"><a href="#002">第四章　日本へのみ言</a></li><li class="toc-b"><a href="#003">一　愛は観を超越</a></li><li class="toc-b"><a href="#004">二　日本教会の革新時代</a></li><li class="toc-b"><a href="#005">三　一九九二年五月八日の日本食口集会の時</a></li><li class="toc-b"><a href="#006">１　韓日統一化時代</a></li><li class="toc-b"><a href="#007">(1)　アダム圏の勝利</a></li><li class="toc-b"><a href="#008">(2)　エバ圏復帰の完成</a></li><li class="toc-b"><a href="#009">(3)　外的家庭基地一体化運動</a></li><li class="toc-b"><a href="#010">２　真の父母の完成圏と家庭</a></li><li class="toc-b"><a href="#011">(1)　お母様と家庭夫人の一体化</a></li><li class="toc-b"><a href="#012">(2)　氏族的メシヤ</a></li><li class="toc-b"><a href="#013">３　南北統一と統一教会</a></li><li class="toc-b"><a href="#014">(1)　真の父母の主体圏</a></li><li class="toc-b"><a href="#015">(2)　偽りの父母圏の解放</a></li><li class="toc-b"><a href="#016">(3)　女性を先に復帰しなさい</a></li><li class="toc-b"><a href="#017">(4)　男性復帰</a></li><li class="toc-b"><a href="#018">(5)　南北の女性と統一連合</a></li><li class="toc-b"><a href="#019">(6)海外、日本において、カインとアベルの一体化</a></li></ul></div>
@@ -517,10 +523,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="003.html">前のページに戻る</a></p><p><a href="005.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -543,9 +548,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -557,7 +561,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -600,6 +604,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

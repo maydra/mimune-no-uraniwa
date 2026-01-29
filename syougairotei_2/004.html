@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="第一節-解放を前後した摂理的基台/真の御父母様の生涯路程-2/韓国解放と摂理の出発"><a href="#第一節-解放を前後した摂理的基台/真の御父母様の生涯路程-2/韓国解放と摂理の出発">第一節　解放を前後した摂理的基台/真の御父母様の生涯路程 2/韓国解放と摂理の出発</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 2</a></li><li class="toc-b"><a href="#002">第四節　興南から釜山まで自由南下</a></li><li class="toc-b"><a href="#003">一九五〇一一〇・一四〜一九五一・一・二七</a></li><li class="toc-b"><a href="#004">一　平壌帰還十日（一九五〇・一〇・一四〜二四）</a></li><li class="toc-b"><a href="#005">再出発の決意</a></li><li class="toc-b"><a href="#006">四名の獄中弟子と文正彬氏</a></li><li class="toc-b"><a href="#007">ぼろぼろの囚人服</a></li><li class="toc-b"><a href="#008">北朝鮮の戦争準備確認</a></li><li class="toc-b"><a href="#009">二　平壌滞在四十日（一九五〇・一〇・二四〜一二・四）</a></li><li class="toc-b"><a href="#010">故郷を顧みず食口収拾</a></li><li class="toc-b"><a href="#011">神様が背を向けろと言われる時まで</a></li><li class="toc-b"><a href="#012">腹中教訪問</a></li><li class="toc-b"><a href="#013">反対した牧師たちの結末</a></li><li class="toc-b"><a href="#014">み旨に背いた食口たち</a></li><li class="toc-b"><a href="#015">平壌時代を代表する四人の食□</a></li><li class="toc-b"><a href="#016">獄中の弟子四人を代表した朴正華氏</a></li><li class="toc-b"><a href="#017">三　平壌からソウルまで（一九五〇・一二・四〜二七）</a></li><li class="toc-b"><a href="#018">平壌出発（一九五〇・一二・四）</a></li><li class="toc-b"><a href="#019">平壌から青丹に</a></li><li class="toc-b"><a href="#020">避難の道のりでの炊事</a></li><li class="toc-b"><a href="#021">御飯のさじを先に置く</a></li><li class="toc-b"><a href="#022">龍媒島一・五里の干潟道の往復</a></li><li class="toc-b"><a href="#023">郷土防衛軍の検問・検索</a></li><li class="toc-b"><a href="#024">夢の啓示を受けて準備した食事で歓待（一二・一九〜二〇）</a></li><li class="toc-b"><a href="#025">真夜中に強行軍で臨津江まで（一九五〇・一二・二〇〜二一)</a></li><li class="toc-b"><a href="#026">臨津江を渡りソウルに（一九五〇・一二・二一〜二七）</a></li><li class="toc-b"><a href="#027">三十八度線の祈祷</a></li><li class="toc-b"><a href="#028">四　ソウルに一週間滞在後、釜山に
@@ -639,10 +645,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="003.html">前のページに戻る</a></p><p><a href="005.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -665,9 +670,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -679,7 +683,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -722,6 +726,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

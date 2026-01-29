@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="真の御父母様天宙勝利祝賀宣布/第三章-天の行事"><a href="#真の御父母様天宙勝利祝賀宣布/第三章-天の行事">真の御父母様天宙勝利祝賀宣布/第三章　天の行事</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様天宙勝利祝賀宣布</a></li><li class="toc-b"><a href="#002">第三章　天の行事</a></li><li class="toc-b"><a href="#003">一、一九六〇年代の天的儀式</a></li><li class="toc-b"><a href="#004">一）霊界と肉界を連結した御聖婚式</a></li><li class="toc-b"><a href="#005">二）実体サタン屈伏儀式</a></li><li class="toc-b"><a href="#006">〈一次儀式（午前七時）〉</a></li><li class="toc-b"><a href="#007">〈二次儀式（一九六四年六月九日、正午）〉</a></li><li class="toc-b"><a href="#008">〈三次儀式（一九六四年六月九日、午後十一時）〉</a></li><li class="toc-b"><a href="#009">三）肉的サタンを打つ式</a></li><li class="toc-b"><a href="#010">四）神の日宣布（一九六八年一月一日）</a></li><li class="toc-b"><a href="#011">二、一九七〇年代の天的儀式</a></li><li class="toc-b"><a href="#012">一）勝祝日（一九七三年七月一日）</a></li><li class="toc-b"><a href="#013">二）文氏氏族解放式（一九七三年八月五日、清平修練所）</a></li><li class="toc-b"><a href="#014">三）天勝日（一九七六年十月四日）</a></li><li class="toc-b"><a href="#015">三、一九八〇年代の天的儀式</a></li><li class="toc-b"><a href="#016">一）霊界統一宣布式（一九八二年六月二十一日）</a></li><li class="toc-b"><a href="#017">二）宇宙的主権転換式（一九八三年十二月三十一日、聖フランシス病院）</a></li><li class="toc-b"><a href="#018">三）一つの世界創建宣布式（一九八四年陰暦三月一日［陽四月一日]）</a></li><li class="toc-b"><a href="#019">四）世界統一国開天日宣布（一九八八年十月三日）</a></li></ul></div>
@@ -544,10 +550,9 @@
 </body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="002.html">前のページに戻る</a></p><p><a href="004.html">次のページに進む</a></p></div>
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -570,9 +575,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -584,7 +588,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -627,6 +631,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

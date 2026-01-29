@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="御旨と海/オーシャン・チャーチの設立"><a href="#御旨と海/オーシャン・チャーチの設立">御旨と海/オーシャン・チャーチの設立</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">御旨と海　オーシャン・チャーチの設立</a></li><li class="toc-b"><a href="#002">敬礼の意味</a></li><li class="toc-b"><a href="#003">歴史の最初の種子</a></li><li class="toc-b"><a href="#004">誓いの意味</a></li><li class="toc-b"><a href="#005">東と西の関係</a></li><li class="toc-b"><a href="#006">敬礼式の準備</a></li><li class="toc-b"><a href="#007">東洋文化の理解</a></li><li class="toc-b"><a href="#008">マッチングと祝福を通しての統一</a></li><li class="toc-b"><a href="#009">チャンピオンを作る</a></li><li class="toc-b"><a href="#010">他人の尊敬と友情を勝ち取ろう</a></li><li class="toc-b"><a href="#011">成功の基礎を作ること</a></li><li class="toc-b"><a href="#012">結果を得るために自らを投入する</a></li><li class="toc-b"><a href="#013">新しい出発</a></li><li class="toc-b"><a href="#014">出発の時は今</a></li><li class="toc-b"><a href="#015">アメリカの水産業の窮状</a></li><li class="toc-b"><a href="#016">マグロの役割</a></li><li class="toc-b"><a href="#017">新しい基盤の確立</a></li><li class="toc-b"><a href="#018">基盤の拡張</a></li><li class="toc-b"><a href="#019">オーシャン・チャーチの使命</a></li><li class="toc-b"><a href="#020">新しい責任分担を受け入れること</a></li><li class="toc-b"><a href="#021">アフリカと南アメリカのための基台</a></li><li class="toc-b"><a href="#022">自分自身の基台を造ること</a></li><li class="toc-b"><a href="#023">新しい責任分担</a></li><li class="toc-b"><a href="#024">最初の指示事項</a></li><li class="toc-b"><a href="#025">まず最初にやるべきこと</a></li><li class="toc-b"><a href="#026">朴大佐の祈り</a></li></ul></div>
@@ -878,10 +884,9 @@
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="01_maguronomiti.html">前のページに戻る</a></p><p><a href="05_kidai.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -904,9 +909,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -918,7 +922,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -961,6 +965,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>

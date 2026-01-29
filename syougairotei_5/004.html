@@ -308,7 +308,13 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
 </head>
 <body><div class="container">
 <h1 id="第四節-一九七一年-統一基盤確保/真の御父母様の生涯路程-5"><a href="#第四節-一九七一年-統一基盤確保/真の御父母様の生涯路程-5">第四節　一九七一年　統一基盤確保/真の御父母様の生涯路程 5</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の御父母様の生涯路程 5</a></li><li class="toc-b"><a href="#002">第四節　一九七一年　統一基盤確保</a></li><li class="toc-b"><a href="#003">一　一九七一年の出発と特別儀式（一九七一・一・一、前本部教会）</a></li><li class="toc-b"><a href="#004">年頭標語‥統一基盤確保</a></li><li class="toc-b"><a href="#005">真の御父母様の御家庭奉献式（一九七一・一・一、第四回「神の日」、前本部教会）</a></li><li class="toc-b"><a href="#006">イエス様の御聖誕日、実体聖霊聖婚式（一九七一・一・三、前本部教会）</a></li><li class="toc-b"><a href="#007">二　敷地および建物購入と一信石材創立</a></li><li class="toc-b"><a href="#008">経済的基盤と未来の活動基地</a></li><li class="toc-b"><a href="#009">汝矣島世界宣教本部の敷地購入</a></li><li class="toc-b"><a href="#010">地方教会聖殿準備補助</a></li><li class="toc-b"><a href="#011">一信石材工芸株式会社創立（一九七一・二・二六）</a></li><li class="toc-b"><a href="#012">三　協会職制改編（一九七一・六・一）</a></li><li class="toc-b"><a href="#013">全国教会の協会直轄制</a></li><li class="toc-b"><a href="#014">全国巡回師（十六名）制度設置</a></li><li class="toc-b"><a href="#015">四　「週刊宗教」創刊と統一原理公聴会</a></li><li class="toc-b"><a href="#016">「週刊宗教」創刊趣旨と目標（一九七一・六・二、文化公報部登録　七・四、創刊）</a></li><li class="toc-b"><a href="#017">教役者招請原理公聴会</a></li><li class="toc-b"><a href="#018">教授招請原理公聴会</a></li><li class="toc-b"><a href="#019">五　清平聖地開拓と清平修練所建設</a></li><li class="toc-b"><a href="#020">精誠の基盤と敷地購入（一九六九〜一九七一、京畿道加平郡雪岳面松山里）</a></li><li class="toc-b"><a href="#021">修練所建設作業
@@ -757,10 +763,9 @@
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="003.html">前のページに戻る</a></p><p><a href="005.html">次のページに進む</a></p></div>
 
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
   <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
-
   <form id="typoForm"
         action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
         method="POST"
@@ -783,9 +788,8 @@
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
     </div>
   </form>
-
   <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+</details>
 
 <style>
   .typo-box.dark-theme{
@@ -797,7 +801,7 @@
     backdrop-filter: blur(10px);
     color: #e0e0e0;
   }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
   .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
   .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
   .dark-theme .typo-textarea{
@@ -840,6 +844,12 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
 </style>
 
 <script>
