@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭と理想天国"><a href="#祝福家庭と理想天国">祝福家庭と理想天国</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭と理想天国</a></li><li class="toc-b"><a href="#002">第四節　祝福を受けるための蕩減条件</a></li><li class="toc-b"><a href="#003">１、復活と蕩減条件</a></li><li class="toc-b"><a href="#004">２、蕩減条件は自分自身が立てなければならない</a></li><li class="toc-b"><a href="#005">３、サタン圏（堕落圏）を脱するには</a></li><li class="toc-b"><a href="#006">４、祝福を受けるための基台</a></li><li class="toc-b"><a href="#007">５、祝福を受けるための蕩減条件</a></li><li class="toc-b"><a href="#008">６、祝福を受けるための蕩減期間</a></li><li class="toc-b"><a href="#009">７、修練の過程と七日断食</a></li><li class="toc-b"><a href="#010">８、信仰の三子女</a></li><li class="toc-b"><a href="#011">９、祝福の本来の基準</a></li><li class="toc-b"><a href="#012">10、祝福を受けられる資格基準</a></li><li class="toc-b"><a href="#013">11、祝福を受けられるただ一つの資格</a></li><li class="toc-b"><a href="#014">12、私たちがもつべき信念と姿勢</a></li></ul></div>
-<body bgcolor="#ccffcc">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -714,7 +714,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="019.html">前のページに戻る</a></p><p><a href="021.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -838,6 +839,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

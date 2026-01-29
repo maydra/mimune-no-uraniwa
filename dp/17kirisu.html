@@ -496,15 +496,7 @@
 <br/></div></p>
 
 </div>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script>
+
 
 <section id="typo-report" class="typo-box">
   <h3 class="typo-title">誤植・修正提案</h3>
@@ -576,8 +568,9 @@
   });
 })();
 </script>
-</body>
-<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="16yotei.html">前のページに戻る</a></p><p><a href="20sho.html">次のページに進む</a></p></div>
+
+
+
 <script>
   const params = new URLSearchParams(window.location.search);
   if (params.get("randomScroll") === "true") {
@@ -587,5 +580,8 @@
     };
   }
 </script>
+</body>
+<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="16yotei.html">前のページに戻る</a></p><p><a href="20sho.html">次のページに進む</a></p></div>
+
 
 </html>

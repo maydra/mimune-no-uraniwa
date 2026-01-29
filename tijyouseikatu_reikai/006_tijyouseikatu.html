@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="地上生活と霊界"><a href="#地上生活と霊界">地上生活と霊界</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">地上生活と霊界</a></li><li class="toc-b"><a href="#002">第六章　我々と霊界入籍</a></li><li class="toc-b"><a href="#003">第一節　人生の結実と生霊体</a></li><li class="toc-b"><a href="#004">第二節　審判と公認</a></li><li class="toc-b"><a href="#005">一　審判の種類</a></li><li class="toc-b"><a href="#006">二　天国に行くパスポートを準備せよ</a></li><li class="toc-b"><a href="#007">第三節　霊界入籍</a></li><li class="toc-b"><a href="#008">一　天国市民が楽しむ自由</a></li><li class="toc-b"><a href="#009">二　霊界に行くときもっていく贈り物</a></li><li class="toc-b"><a href="#010">三　三大主体思想と入籍</a></li><li class="toc-b"><a href="#011">四　入籍の条件</a></li><li class="toc-b"><a href="#012">五　霊界の族長になる人</a></li></ul></div>
-<body background="bgs_003.gif">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
@@ -523,7 +523,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="005_tijyouseikatu.html">前のページに戻る</a></p><p><a href="007_tijyouseikatu.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -647,6 +648,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

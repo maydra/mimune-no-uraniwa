@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭"><a href="#祝福家庭">祝福家庭</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭</a></li><li class="toc-b"><a href="#002">第二章　真の父母と祝福の歴史</a></li><li class="toc-b"><a href="#003">一　真の父母と第三選民圏</a></li><li class="toc-b"><a href="#004">１．祝福家庭は真の父母の新しい氏族圏</a></li><li class="toc-b"><a href="#005">２．祝福家庭を通した第三イスラエル圏の編成</a></li><li class="toc-b"><a href="#006">３．第三イスラエル入籍は祝福によって</a></li></ul></div>
-<body bgcolor="#ccffff">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
@@ -413,7 +413,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="01-3.html">前のページに戻る</a></p><p><a href="02-2.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -537,6 +538,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

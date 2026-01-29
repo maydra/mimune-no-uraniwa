@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭"><a href="#祝福家庭">祝福家庭</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭</a></li><li class="toc-b"><a href="#002">第三章　祝福家庭の摂理的意義</a></li><li class="toc-b"><a href="#003">一　三十六家庭</a></li><li class="toc-b"><a href="#004">１．三家庭をまず祝福</a></li><li class="toc-b"><a href="#005">２．三十六家庭を立てた意味</a></li><li class="toc-b"><a href="#006">３．三次にわたって祝福――数多くのエピソード</a></li><li class="toc-b"><a href="#007">二　七十二家庭</a></li><li class="toc-b"><a href="#008">１．七十二家庭の祝福の意義</a></li><li class="toc-b"><a href="#009">三　百二十四家庭</a></li><li class="toc-b"><a href="#010">１．百二十四家庭を立てた意味</a></li><li class="toc-b"><a href="#011">２．献貢式と百二十カ国聖地選定</a></li><li class="toc-b"><a href="#012">四　四百三十家庭</a></li><li class="toc-b"><a href="#013">１．四百三十家庭の数理的意味</a></li><li class="toc-b"><a href="#014">２．四百三十家庭は氏族的メシヤの家庭</a></li></ul></div>
-<body bgcolor="#ccffff">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
@@ -621,7 +621,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="02-2.html">前のページに戻る</a></p><p><a href="03-2.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -745,6 +746,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

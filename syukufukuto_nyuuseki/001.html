@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福と入籍/1.入籍は真の御父母様の恩賜"><a href="#祝福と入籍/1.入籍は真の御父母様の恩賜">祝福と入籍/1.入籍は真の御父母様の恩賜</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福と入籍</a></li><li class="toc-b"><a href="#002">1.入籍は真の御父母様の恩賜</a></li><li class="toc-b"><a href="#003">(1)入籍の祈祷文</a></li><li class="toc-b"><a href="#004">(2)入籍に対する観</a></li><li class="toc-b"><a href="#005">①「入籍」という語意の解説</a></li><li class="toc-b"><a href="#006">②なぜ入籍しなけれぱならないか</a></li><li class="toc-b"><a href="#007">③入籍時代の到来</a></li><li class="toc-b"><a href="#008">④入籍は史上初めての事</a></li><li class="toc-b"><a href="#009">⑤イエス様と入籍</a></li><li class="toc-b"><a href="#010">（3）入籍とお父様の恩賜</a></li><li class="toc-b"><a href="#011">（4）入籍とお母様の苦労</a></li></ul></div>
-<body bgcolor="#ccffff">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -571,7 +571,8 @@
 <br/>
 <br/>
 </p>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="002.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -695,6 +696,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

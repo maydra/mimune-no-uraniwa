@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭と理想天国"><a href="#祝福家庭と理想天国">祝福家庭と理想天国</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭と理想天国</a></li><li class="toc-b"><a href="#002">第七章　真の夫婦と理想家庭</a></li><li class="toc-b"><a href="#003">第一節　真の夫婦</a></li><li class="toc-b"><a href="#004">第二節　理想家庭</a></li><li class="toc-b"><a href="#005">第三節　祝福家庭の生活</a></li><li class="toc-b"><a href="#006">第四節　真なる父母と子女</a></li><li class="toc-b"><a href="#007">第五節　子女教育</a></li><li class="toc-b"><a href="#008">第一節　真の夫婦</a></li><li class="toc-b"><a href="#009">１、創造本然の夫婦関係</a></li><li class="toc-b"><a href="#010">２、復帰されるべき真の夫婦の理想</a></li><li class="toc-b"><a href="#011">３、祝福を受けた夫婦の立場</a></li><li class="toc-b"><a href="#012">４、理想的夫婦</a></li><li class="toc-b"><a href="#013">５、夫婦の愛</a></li><li class="toc-b"><a href="#014">６、夫婦の運命の道</a></li><li class="toc-b"><a href="#015">７、愛する人が死ねばなぜ悲しいか</a></li><li class="toc-b"><a href="#016">８、真の夫婦の協助</a></li></ul></div>
-<body bgcolor="#ccffcc">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -869,7 +869,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="031.html">前のページに戻る</a></p><p><a href="033.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -993,6 +994,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="天総官-文興進様/第一章-真の御父母様の御家庭と興進様"><a href="#天総官-文興進様/第一章-真の御父母様の御家庭と興進様">天総官　文興進様/第一章　真の御父母様の御家庭と興進様</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">天総官　文興進様</a></li><li class="toc-b"><a href="#002">第一章　真の御父母様の御家庭と興進様</a></li><li class="toc-b"><a href="#003">一　真の御父母様の御家庭の来歴</a></li><li class="toc-b"><a href="#004">１　真の御父母様の家庭的信仰基盤</a></li><li class="toc-b"><a href="#005">２　真のお父様の性格</a></li><li class="toc-b"><a href="#006">二　真のお母様の二番目の息子、興進様</a></li><li class="toc-b"><a href="#007">＊真の御父母様の真の孝子、興進様</a></li></ul></div>
-<body bgcolor="#fff0ff">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -566,7 +566,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="002.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -690,6 +691,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

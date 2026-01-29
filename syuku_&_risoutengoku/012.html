@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭と理想天国"><a href="#祝福家庭と理想天国">祝福家庭と理想天国</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭と理想天国</a></li><li class="toc-b"><a href="#002">第四節　愛を中心とした終末の現象</a></li><li class="toc-b"><a href="#003">１、終末とはどのような時か</a></li><li class="toc-b"><a href="#004">２、終末の現象――青少年の堕落</a></li><li class="toc-b"><a href="#005">３、終末におけるサタンの正体</a></li><li class="toc-b"><a href="#006">４、世界的な分裂現象と統一運動</a></li><li class="toc-b"><a href="#007">５、青少年問題と統一教会</a></li><li class="toc-b"><a href="#008">６、真の愛の運動と統一教会</a></li><li class="toc-b"><a href="#009">７、終末における望みの中心</a></li></ul></div>
-<body bgcolor="#ccffcc">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -596,7 +596,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="011.html">前のページに戻る</a></p><p><a href="013.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -720,6 +721,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

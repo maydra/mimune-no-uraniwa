@@ -25,7 +25,27 @@
   fetch("pages.json")
     .then(res => res.json())
     .then(pages => {
-      const randomPage = pages[Math.floor(Math.random() * pages.length)];
+      // 除外フィルター: indexを含む、はじめに/序文/目次、gacha/search などを除外
+      const excludedPatterns = [
+        /index/i,
+        /hajimeni/i,
+        /jyobunn/i,
+        /mokuji/i,
+        /search/i,
+        /gacha/i,
+        /^preview\//,
+        /library\//
+      ];
+
+      const filteredPages = pages.filter(page => {
+        return !excludedPatterns.some(pattern => pattern.test(page));
+      });
+
+      if (filteredPages.length === 0) {
+        throw new Error("利用可能な本文ページが見つかりませんでした。");
+      }
+
+      const randomPage = filteredPages[Math.floor(Math.random() * filteredPages.length)];
       const basePath = "/mimune-no-uraniwa/";
       const fullURL = basePath + randomPage + (wantRandomScroll ? "?randomScroll=true" : "");
       location.href = fullURL;

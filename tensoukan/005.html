@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="天総官-文興進様/第四章-興進様と霊界統一"><a href="#天総官-文興進様/第四章-興進様と霊界統一">天総官　文興進様/第四章　興進様と霊界統一</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">天総官　文興進様</a></li><li class="toc-b"><a href="#002">第四章　興進様と霊界統一</a></li><li class="toc-b"><a href="#003">一　霊界にいらっしゃる興進様の位置</a></li><li class="toc-b"><a href="#004">二　イエス様と興進様、キリスト教と読了教会</a></li><li class="toc-b"><a href="#005">１　イエス様と興進様</a></li><li class="toc-b"><a href="#006">２　キリスト教と統一教会、超宗派運動の展開</a></li><li class="toc-b"><a href="#007">三　四大聖人の祝福と宗教圏の一致</a></li><li class="toc-b"><a href="#008">１　四大聖人と地上・天上解放祝福式</a></li><li class="toc-b"><a href="#009">２　宗教圏を超えて一つの世界に</a></li></ul></div>
-<body bgcolor="#fff0ff">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -715,7 +715,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="004.html">前のページに戻る</a></p><p><a href="006.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -839,6 +840,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

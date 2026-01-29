@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭と理想天国"><a href="#祝福家庭と理想天国">祝福家庭と理想天国</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭と理想天国</a></li><li class="toc-b"><a href="#002">第四章　祝福の過程</a></li><li class="toc-b"><a href="#003">第一節　祝福の相対の決定</a></li><li class="toc-b"><a href="#004">第二節　相対を結ぶ基準と私たちの姿勢</a></li><li class="toc-b"><a href="#005">第三節　約婚事例</a></li><li class="toc-b"><a href="#006">第四節　祝福の過程とその意義</a></li><li class="toc-b"><a href="#007">第一節　祝福の相対の決定</a></li><li class="toc-b"><a href="#008">１、祝福の相対は誰が決めるか</a></li><li class="toc-b"><a href="#009">２、自分自身で相対を決定してはいけない</a></li><li class="toc-b"><a href="#010">３、どうすれば理想相対に結ばれるか</a></li><li class="toc-b"><a href="#011">４、相手はどこかにいるものである</a></li><li class="toc-b"><a href="#012">５、相対的に創造された男性と女性</a></li><li class="toc-b"><a href="#013">６、女性の美しさと男性の魅力</a></li><li class="toc-b"><a href="#014">７、女性と化粧</a></li><li class="toc-b"><a href="#015">８、恋愛は絶対許されない</a></li></ul></div>
-<body bgcolor="#ccffcc">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -601,7 +601,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="020.html">前のページに戻る</a></p><p><a href="022.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -725,6 +726,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

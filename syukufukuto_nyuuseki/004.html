@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福と入籍/4.入籍の姿勢と入籍の結果"><a href="#祝福と入籍/4.入籍の姿勢と入籍の結果">祝福と入籍/4.入籍の姿勢と入籍の結果</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福と入籍</a></li><li class="toc-b"><a href="#002">4.入籍の姿勢と入籍の結果</a></li><li class="toc-b"><a href="#003">(1)入籍の方法と姿勢</a></li><li class="toc-b"><a href="#004">①入籍の方法</a></li><li class="toc-b"><a href="#005">②入籍のときの心構え</a></li><li class="toc-b"><a href="#006">③入籍の前の準備姿勢</a></li><li class="toc-b"><a href="#007">(2)入籍の前の留意事項</a></li><li class="toc-b"><a href="#008">(3)入籍の結果</a></li><li class="toc-b"><a href="#009">①入籍の結果とその威力</a></li><li class="toc-b"><a href="#010">②入籍後の順序(階段)</a></li><li class="toc-b"><a href="#011">(4)入籍が不可能な者</a></li><li class="toc-b"><a href="#012">(5)入籍とジャルジン教育</a></li><li class="toc-b"><a href="#013">(6)人籍と法</a></li><li class="toc-b"><a href="#014">(7)記録として家庭手帳を具備</a></li><li class="toc-b"><a href="#015">(8)入籍と支派の編成</a></li><li class="toc-b"><a href="#016">（9）戸籍と族譜</a></li></ul></div>
-<body bgcolor="#ccffff">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -561,7 +561,8 @@
 <br/>
 <br/>
 </p>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="003.html">前のページに戻る</a></p><p><a href="005.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -685,6 +686,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

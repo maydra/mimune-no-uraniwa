@@ -313,7 +313,7 @@
 <body><div class="container">
 <h1 id="宇宙主管を願う前に自己主管を完成せよ／み旨の裏道／み旨の道"><a href="#宇宙主管を願う前に自己主管を完成せよ／み旨の裏道／み旨の道">宇宙主管を願う前に自己主管を完成せよ／み旨の裏道／み旨の道</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">宇宙主管を願う前に
 自己主管を完成せよ</a></li><li class="toc-b"><a href="#002">四、空腹の主管</a></li><li class="toc-b"><a href="#003">一）先生は三〇歳までお腹が空かなかった日がなかった。</a></li><li class="toc-b"><a href="#004">二）　空腹を我慢してきた理由</a></li><li class="toc-b"><a href="#005">三）食べ物に対する心の姿勢</a></li><li class="toc-b"><a href="#006">四）衣食住生活の蕩減の原則</a></li><li class="toc-b"><a href="#007">五）天の人はどこへ行っても飢える法はない</a></li><li class="toc-b"><a href="#008">六）十一条生活</a></li><li class="toc-b"><a href="#009">（一）十一条の意義</a></li><li class="toc-b"><a href="#010">（二）聖徒たちの基本の道理</a></li><li class="toc-b"><a href="#011">（三）十一条生活</a></li><li class="toc-b"><a href="#012">（四）教会の品物を重要視すべきである</a></li><li class="toc-b"><a href="#013">＊参考:公金は毒薬よりもっと恐ろしいものである。</a></li></ul></div>
-<body background="bgs_005.gif">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -570,7 +570,8 @@
 <br/>
 <br/>
 </p>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="utyu_001.html">前のページに戻る</a></p><p><a href="utyu_003.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -694,6 +695,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

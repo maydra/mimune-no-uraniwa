@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭と理想天国"><a href="#祝福家庭と理想天国">祝福家庭と理想天国</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭と理想天国</a></li><li class="toc-b"><a href="#002">第三節　祝福家庭の生活</a></li><li class="toc-b"><a href="#003">１、手本となるべき祝福家庭</a></li><li class="toc-b"><a href="#004">２、祝福家庭の家庭生活</a></li><li class="toc-b"><a href="#005">３、祝福家庭の夫婦生活</a></li><li class="toc-b"><a href="#006">４、祝福家庭のみ旨にかなう生活</a></li><li class="toc-b"><a href="#007">５、祝福家庭の信仰生活</a></li><li class="toc-b"><a href="#008">６、祝福家庭の侍る生活</a></li><li class="toc-b"><a href="#009">７、三位基台を中心とした生活</a></li><li class="toc-b"><a href="#010">８、祝福家庭の共同生活</a></li><li class="toc-b"><a href="#011">９、後孫が福を受ける道</a></li><li class="toc-b"><a href="#012">10、死ぬときも四位基台を備えなければならない</a></li></ul></div>
-<body bgcolor="#ccffcc">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -908,7 +908,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="033.html">前のページに戻る</a></p><p><a href="035.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -1032,6 +1033,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

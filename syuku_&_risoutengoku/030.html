@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭と理想天国"><a href="#祝福家庭と理想天国">祝福家庭と理想天国</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭と理想天国</a></li><li class="toc-b"><a href="#002">第三節　祝福家庭の価値と使命</a></li><li class="toc-b"><a href="#003">１、祝福家庭の価値</a></li><li class="toc-b"><a href="#004">２、祝福家庭はご父母様の指導を受けなければならない</a></li><li class="toc-b"><a href="#005">３、祝福をしてくださった理由</a></li><li class="toc-b"><a href="#006">４、祝福家庭の使命と責任</a></li><li class="toc-b"><a href="#007">５、祭司長の使命を果たすべき祝福家庭</a></li><li class="toc-b"><a href="#008">６、三時代の使命に責任を負うべき祝福家庭</a></li><li class="toc-b"><a href="#009">７、氏族的メシヤとなれ</a></li><li class="toc-b"><a href="#010">８、既成祝福家庭の使命</a></li><li class="toc-b"><a href="#011">９、祝福家庭が行くべき必然的運命の道</a></li><li class="toc-b"><a href="#012">10、祝福を受けた夫婦が行くべき道</a></li><li class="toc-b"><a href="#013">11、世界的な家庭的カナン復帰</a></li><li class="toc-b"><a href="#014">12、新しい時代の主人になる者</a></li></ul></div>
-<body bgcolor="#ccffcc">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -860,7 +860,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="029.html">前のページに戻る</a></p><p><a href="031.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -984,6 +985,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

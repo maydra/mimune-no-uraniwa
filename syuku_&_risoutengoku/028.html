@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭と理想天国"><a href="#祝福家庭と理想天国">祝福家庭と理想天国</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭と理想天国</a></li><li class="toc-b"><a href="#002">第六章　ご父母様の聖婚と祝福家庭</a></li><li class="toc-b"><a href="#003">第一節　ご父母様の聖婚と七年路程</a></li><li class="toc-b"><a href="#004">第二節　祝福家庭に対する摂理的意義</a></li><li class="toc-b"><a href="#005">第三節　祝福家庭の価値と使命</a></li><li class="toc-b"><a href="#006">第四節　国際祝福家庭の使命</a></li><li class="toc-b"><a href="#007">第一節　ご父母様の聖婚と七年路程</a></li><li class="toc-b"><a href="#008">１、患難と迫害の最高峰になった聖婚式</a></li><li class="toc-b"><a href="#009">２、三弟子を先に探し立てたご父母様の聖婚式</a></li><li class="toc-b"><a href="#010">３、父母が責任をもち開拓する時代</a></li><li class="toc-b"><a href="#011">４、ご父母様の家庭的十字架路程</a></li><li class="toc-b"><a href="#012">５、お母様を通した七年路程</a></li><li class="toc-b"><a href="#013">６、一九六〇年代の摂理的標語</a></li><li class="toc-b"><a href="#014">７、三六、七二、一二四家庭の祝福</a></li><li class="toc-b"><a href="#015">８、失った日々を探し立てた期間</a></li></ul></div>
-<body bgcolor="#ccffcc">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -582,7 +582,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="027.html">前のページに戻る</a></p><p><a href="029.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -706,6 +707,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

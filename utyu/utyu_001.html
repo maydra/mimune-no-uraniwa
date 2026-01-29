@@ -313,7 +313,7 @@
 <body><div class="container">
 <h1 id="宇宙主管を願う前に自己主管を完成せよ／み旨の裏道／み旨の道"><a href="#宇宙主管を願う前に自己主管を完成せよ／み旨の裏道／み旨の道">宇宙主管を願う前に自己主管を完成せよ／み旨の裏道／み旨の道</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">宇宙主管を願う前に
 自己主管を完成せよ</a></li><li class="toc-b"><a href="#002">一、序</a></li><li class="toc-b"><a href="#003">二、自己主管の三大困難</a></li><li class="toc-b"><a href="#004">三、眠りの主管</a></li><li class="toc-b"><a href="#005">一）　先生の七年間の苦労</a></li><li class="toc-b"><a href="#006">二）　天の伝統を立てなければならなかった先生</a></li><li class="toc-b"><a href="#007">三）　眠りをなせない理由</a></li><li class="toc-b"><a href="#008">四）眠るときも楽に眠ることができない</a></li><li class="toc-b"><a href="#009">五）　徹夜祈祷と精誠（補充資料参照）</a></li><li class="toc-b"><a href="#010">六）　我々は摂理的な時をつかむべきである</a></li><li class="toc-b"><a href="#011">補充資料　一</a></li><li class="toc-b"><a href="#012">補充資料　二</a></li><li class="toc-b"><a href="#013">補充資料　三</a></li></ul></div>
-<body background="bgs_005.gif">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -542,7 +542,8 @@
 <br/>
 <br/>
 </p>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="utyu_002.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -666,6 +667,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

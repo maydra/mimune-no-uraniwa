@@ -313,7 +313,7 @@
 <body><div class="container">
 <h1 id="宇宙主管を願う前に自己主管を完成せよ／み旨の裏道／み旨の道"><a href="#宇宙主管を願う前に自己主管を完成せよ／み旨の裏道／み旨の道">宇宙主管を願う前に自己主管を完成せよ／み旨の裏道／み旨の道</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">宇宙主管を願う前に
 自己主管を完成せよ</a></li><li class="toc-b"><a href="#002">心と体の統一方案</a></li><li class="toc-b"><a href="#003">一、相反した二つの目的を持った人間</a></li><li class="toc-b"><a href="#004">二、核戦争よりももっと恐ろしい戦争</a></li><li class="toc-b"><a href="#005">三、神様が宗教を立てた目的</a></li><li class="toc-b"><a href="#006">四、心と体を統一させるための二つの方案</a></li><li class="toc-b"><a href="#007">（一）体を主管しうる第一の方案</a></li><li class="toc-b"><a href="#008">（二）体を主管しうる第二の方案</a></li><li class="toc-b"><a href="#009">（三）心と体を統一させる方法</a></li><li class="toc-b"><a href="#010">五、体と心の統一の基準は愛</a></li><li class="toc-b"><a href="#011">六、真なる愛だけが体と心を一つにする。</a></li></ul></div>
-<body background="bgs_005.gif">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -503,7 +503,8 @@
 <br/>
 <br/>
 </p>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="utyu_003.html">前のページに戻る</a></p><p><a href="index.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -627,6 +628,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

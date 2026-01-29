@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭"><a href="#祝福家庭">祝福家庭</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭</a></li><li class="toc-b"><a href="#002">第四章　祝福家庭と入籍</a></li><li class="toc-b"><a href="#003">一　祝福家庭入籍と私たちの祖国</a></li><li class="toc-b"><a href="#004">１．入籍とは何か</a></li><li class="toc-b"><a href="#005">２．入籍は国家祝福時代になされる</a></li><li class="toc-b"><a href="#006">３．入籍するためには主権国家が必要</a></li><li class="toc-b"><a href="#007">４．私たちが求めるべき祖国</a></li><li class="toc-b"><a href="#008">二　入籍のための条件</a></li><li class="toc-b"><a href="#009">１．所有権、血統圏、心情圏転換</a></li><li class="toc-b"><a href="#010">①所有権転換</a></li><li class="toc-b"><a href="#011">②血統転換</a></li><li class="toc-b"><a href="#012">③心情圏転換</a></li><li class="toc-b"><a href="#013">２．氏族的メシヤの使命を果たさなければ</a></li><li class="toc-b"><a href="#014">①氏族的メシヤの使命</a></li><li class="toc-b"><a href="#015">②百六十家庭完遂は必須</a></li><li class="toc-b"><a href="#016">３．天国の支派と族譜編成</a></li><li class="toc-b"><a href="#017">４．民族大移動時代が来る</a></li></ul></div>
-<body bgcolor="#ccffff">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
@@ -636,7 +636,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="03-3.html">前のページに戻る</a></p><p><a href="04-2.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -760,6 +761,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

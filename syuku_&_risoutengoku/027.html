@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭と理想天国"><a href="#祝福家庭と理想天国">祝福家庭と理想天国</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭と理想天国</a></li><li class="toc-b"><a href="#002">第三節　信仰の三子女を通した家庭復帰</a></li><li class="toc-b"><a href="#003">１、信仰の三子女</a></li><li class="toc-b"><a href="#004">２、八人の家族がいなければ復帰できない</a></li><li class="toc-b"><a href="#005">３、信仰の三子女を通した家庭編成</a></li><li class="toc-b"><a href="#006">４、家庭復帰のための公式路程</a></li><li class="toc-b"><a href="#007">５、信仰の子女と直系子女の関係</a></li><li class="toc-b"><a href="#008">６、復帰された父母の立場に立とうとすれば</a></li><li class="toc-b"><a href="#009">７、信仰の父母の使命と愛の公式</a></li></ul></div>
-<body bgcolor="#ccffcc">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -495,7 +495,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="026.html">前のページに戻る</a></p><p><a href="028.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -619,6 +620,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

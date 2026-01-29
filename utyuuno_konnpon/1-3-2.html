@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="宇宙の根本"><a href="#宇宙の根本">宇宙の根本</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">宇宙の根本</a></li><li class="toc-b"><a href="#002">２．人間は万宇宙の愛の中心</a></li><li class="toc-b"><a href="#003">(1) 神様の愛の対象として造られた</a></li><li class="toc-b"><a href="#004">(2) 人間成長の道は神様御自身の展開過程</a></li><li class="toc-b"><a href="#005">(3) 人間は被造万物の中心</a></li></ul></div>
-<body background="bgs_002.gif">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
@@ -442,7 +442,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="1-3-1.html">前のページに戻る</a></p><p><a href="1-3-3.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -566,6 +567,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

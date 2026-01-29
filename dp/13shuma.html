@@ -429,7 +429,7 @@
 </head>
 <body><div class="container">
 <h1>原理講論  人類歴史の終末論</h1>
-<body background="back3.gif">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <p>
@@ -666,25 +666,10 @@
 <br/></div></p>
 
 </div>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script></body>
+
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="12daraku.html">前のページに戻る</a></p><p><a href="14meshia.html">次のページに進む</a></p></div>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script>
+
 
 <section id="typo-report" class="typo-box">
   <h3 class="typo-title">誤植・修正提案</h3>
@@ -755,6 +740,18 @@
     setTimeout(() => form.reset(), 200);
   });
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

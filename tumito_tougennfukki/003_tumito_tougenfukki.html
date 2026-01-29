@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="罪と蕩減復帰"><a href="#罪と蕩減復帰">罪と蕩減復帰</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">罪と蕩減復帰</a></li><li class="toc-b"><a href="#002">第二章　罪、人間堕落の内的意味</a></li><li class="toc-b"><a href="#003">一　換父易祖（注：父が換わり、先祖が替わったこと）がすなわち堕落</a></li><li class="toc-b"><a href="#004">１．サタン悪魔が私たちの父</a></li><li class="toc-b"><a href="#005">２．堕落しなかったならば……</a></li><li class="toc-b"><a href="#006">二　堕落はサタンを中心とした血統転換</a></li><li class="toc-b"><a href="#007">１．怨讐の血統を受けた</a></li><li class="toc-b"><a href="#008">２．血統的な原罪は遺伝する</a></li><li class="toc-b"><a href="#009">三　サタンは神様の愛の姦夫</a></li><li class="toc-b"><a href="#010">１．サタンは堕落した天使長ルーシェル</a></li><li class="toc-b"><a href="#011">２．サタンは愛の怨讐</a></li><li class="toc-b"><a href="#012">四　善悪の実はエバの生殖器</a></li><li class="toc-b"><a href="#013">１．下部を覆ったのが罪の表示だ</a></li><li class="toc-b"><a href="#014">２．善悪の実は命と死亡の分かれ道</a></li></ul></div>
-<body background="bgs_005.gif">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
@@ -579,7 +579,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="002_tumito_tougenfukki.html">前のページに戻る</a></p><p><a href="004_tumito_tougenfukki.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -703,6 +704,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

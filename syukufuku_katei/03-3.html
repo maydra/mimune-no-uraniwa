@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭"><a href="#祝福家庭">祝福家庭</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭</a></li><li class="toc-b"><a href="#002">十　三十六万家庭</a></li><li class="toc-b"><a href="#003">１．三十六万家庭は世界的な背骨（脊椎）となる家庭</a></li><li class="toc-b"><a href="#004">十一　三百六十万（三千六百万）家庭</a></li><li class="toc-b"><a href="#005">１．三百六十万家庭祝福で解放時代を迎えて</a></li><li class="toc-b"><a href="#006">２．三百六十万双が三千六百万双に</a></li><li class="toc-b"><a href="#007">十二　三億六千万家庭</a></li><li class="toc-b"><a href="#008">１．三億六千万家庭祝福から第四次アダム圏時代出発</a></li><li class="toc-b"><a href="#009">〈祝祷〉</a></li></ul></div>
-<body bgcolor="#ccffff">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
@@ -562,7 +562,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="03-2.html">前のページに戻る</a></p><p><a href="04-1.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -686,6 +687,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

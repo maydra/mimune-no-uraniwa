@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="御旨と世界/目次"><a href="#御旨と世界/目次">御旨と世界/目次</a></h1>
-<body alink="#000000" background="b014bcg.gif" link="#000000" text="#464646" vlink="#000000">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <div align="left"><!--#geoguide--></div>
@@ -370,25 +370,10 @@
 <br/></p>
 
 </div>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script></body>
+
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="38.html">前のページに戻る</a></p><p><a href="00.html">次のページに進む</a></p></div>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script>
+
 
 <section id="typo-report" class="typo-box dark-theme">
   <h3 class="typo-title">誤植・修正提案</h3>
@@ -511,6 +496,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

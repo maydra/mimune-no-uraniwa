@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭と理想天国"><a href="#祝福家庭と理想天国">祝福家庭と理想天国</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭と理想天国</a></li><li class="toc-b"><a href="#002">第二節　小羊の婚宴と最初の復活</a></li><li class="toc-b"><a href="#003">１、小羊の婚宴を通した神様の理想実現</a></li><li class="toc-b"><a href="#004">２、小羊の婚宴の意義</a></li><li class="toc-b"><a href="#005">３、小羊の婚宴は地上で成される</a></li><li class="toc-b"><a href="#006">４、宗教はなぜ、独身生活を強調してきたか</a></li><li class="toc-b"><a href="#007">５、最初の復活にあずかる者</a></li></ul></div>
-<body bgcolor="#ccffcc">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
@@ -491,7 +491,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="013.html">前のページに戻る</a></p><p><a href="015.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -615,6 +616,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

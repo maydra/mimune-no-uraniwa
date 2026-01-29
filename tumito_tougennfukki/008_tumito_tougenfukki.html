@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="罪と蕩減復帰"><a href="#罪と蕩減復帰">罪と蕩減復帰</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">罪と蕩減復帰</a></li><li class="toc-b"><a href="#002">四　蕩減条件は自分が立てなければならない</a></li><li class="toc-b"><a href="#003">１．他の人が代わりに立てることができない</a></li><li class="toc-b"><a href="#004">２．責任分担の心構え</a></li><li class="toc-b"><a href="#005">五　蕩減法なしにはサタン分立はできない</a></li><li class="toc-b"><a href="#006">１．私は分水嶺に立っている</a></li><li class="toc-b"><a href="#007">２．サタン圏（堕落圏）を脱するには</a></li><li class="toc-b"><a href="#008">六　信仰は蕩減法を守っていくこと</a></li><li class="toc-b"><a href="#009">１．信仰と蕩減</a></li><li class="toc-b"><a href="#010">七　蕩減の道は絶対服従、絶対順従の道</a></li></ul></div>
-<body background="bgs_005.gif">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
@@ -525,7 +525,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="007_tumito_tougenfukki.html">前のページに戻る</a></p><p><a href="hajimeni.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -649,6 +650,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

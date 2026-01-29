@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭"><a href="#祝福家庭">祝福家庭</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭</a></li><li class="toc-b"><a href="#002">二　祝福家庭の歴史</a></li><li class="toc-b"><a href="#003">１．三十六、七十二、百二十四家庭の歴史</a></li><li class="toc-b"><a href="#004">２．四百三十家庭は民族を代表したもの</a></li><li class="toc-b"><a href="#005">３．七百七十七、千八百、六千、六千五百家庭の歴史</a></li><li class="toc-b"><a href="#006">４．蘇生的国際結婚――三万家庭</a></li><li class="toc-b"><a href="#007">５．長成的国際結婚―─三十六万家庭</a></li><li class="toc-b"><a href="#008">６．完成的国際結婚――三百六十万家庭</a></li></ul></div>
-<body bgcolor="#ccffff">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
@@ -590,7 +590,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="02-1.html">前のページに戻る</a></p><p><a href="03-1.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -714,6 +715,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>

@@ -312,7 +312,7 @@
 </head>
 <body><div class="container">
 <h1 id="祝福家庭"><a href="#祝福家庭">祝福家庭</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福家庭</a></li><li class="toc-b"><a href="#002">第一章　真の父母と祝福</a></li><li class="toc-b"><a href="#003">一　祝福の意義と価値</a></li><li class="toc-b"><a href="#004">１．祝福とは何か</a></li><li class="toc-b"><a href="#005">①祝福の意義</a></li><li class="toc-b"><a href="#006">②祝福の価値</a></li><li class="toc-b"><a href="#007">③祝福は人類が通過すべき公式路程</a></li><li class="toc-b"><a href="#008">２．祝福から見た真の結婚観</a></li><li class="toc-b"><a href="#009">①真の結婚は神様の形状に似るためのもの</a></li><li class="toc-b"><a href="#010">②結婚は愛の完成のためにする</a></li><li class="toc-b"><a href="#011">③結婚は天地合徳、宇宙合一の道</a></li><li class="toc-b"><a href="#012">３．祝福を受けなければならない理由</a></li><li class="toc-b"><a href="#013">①堕落によって偽りの父母から生まれた</a></li><li class="toc-b"><a href="#014">②怨讐の血統を受けた</a></li><li class="toc-b"><a href="#015">③メシヤとして真の父母が必要</a></li></ul></div>
-<body bgcolor="#ccffff">
+
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
@@ -662,7 +662,8 @@
 <br/>
 <br/>
 </blockquote>
-</div></body>
+</div>
+</body>
 <div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="01-2.html">次のページに進む</a></p></div>
 
 <section id="typo-report" class="typo-box dark-theme">
@@ -786,6 +787,18 @@
     });
   }
 })();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
 </script>
 </body>
 </html>
