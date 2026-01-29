@@ -317,7 +317,12 @@
 </style>
 </head>
 <body><div class="container">
-<h1 id="宗教の意義と使命/宗教の意義と目的/統一教会と食口たち"><a href="#宗教の意義と使命/宗教の意義と目的/統一教会と食口たち">宗教の意義と使命/宗教の意義と目的/統一教会と食口たち</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">統一教会と食口たち</a></li><li class="toc-b"><a href="#002">第一章　宗教の意義と使命</a></li><li class="toc-b"><a href="#003">第一節　宗教の意義と目的</a></li><li class="toc-b"><a href="#004">一　宗教の意義</a></li><li class="toc-b"><a href="#005">１　宗教の語義</a></li><li class="toc-b"><a href="#006">２　宗教の根本となる教えは</a></li><li class="toc-b"><a href="#007">３　真なる宗教とは</a></li><li class="toc-b"><a href="#008">二　宗教の必要性</a></li><li class="toc-b"><a href="#009">１　宗教が必要な理由</a></li><li class="toc-b"><a href="#010">２　宗教は万民に必要</a></li><li class="toc-b"><a href="#011">三　宗教の目的</a></li><li class="toc-b"><a href="#012">１　宗教の目的は</a></li><li class="toc-b"><a href="#013">２　宗教が指向する最高の目的点</a></li></ul></div>
+<h1 id="宗教の意義と使命/宗教の意義と目的/統一教会と食口たち"><a href="#宗教の意義と使命/宗教の意義と目的/統一教会と食口たち">宗教の意義と使命/宗教の意義と目的/統一教会と食口たち</a></h1>
+<nav class="page-nav">
+  <div style="flex:1"></div>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="1-2.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">統一教会と食口たち</a></li><li class="toc-b"><a href="#002">第一章　宗教の意義と使命</a></li><li class="toc-b"><a href="#003">第一節　宗教の意義と目的</a></li><li class="toc-b"><a href="#004">一　宗教の意義</a></li><li class="toc-b"><a href="#005">１　宗教の語義</a></li><li class="toc-b"><a href="#006">２　宗教の根本となる教えは</a></li><li class="toc-b"><a href="#007">３　真なる宗教とは</a></li><li class="toc-b"><a href="#008">二　宗教の必要性</a></li><li class="toc-b"><a href="#009">１　宗教が必要な理由</a></li><li class="toc-b"><a href="#010">２　宗教は万民に必要</a></li><li class="toc-b"><a href="#011">三　宗教の目的</a></li><li class="toc-b"><a href="#012">１　宗教の目的は</a></li><li class="toc-b"><a href="#013">２　宗教が指向する最高の目的点</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -467,7 +472,7 @@
 </div>
 
 </body>
-<div style="margin-top: 2em;"><hr/></div><div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="1-2.html">次のページに進む</a></p></div>
+
 
 
 <details id="typo-report" class="typo-box dark-theme">
@@ -557,6 +562,62 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
 </style>
 
 <script>
@@ -608,5 +669,10 @@
     };
   }
 </script>
+<nav class="page-nav">
+  <div style="flex:1"></div>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="1-2.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
 </body>
 </html>

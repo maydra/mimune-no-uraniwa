@@ -434,7 +434,12 @@
 </style>
 </head>
 <body><div class="container">
-<h1>原理講論  摂理的同時性から見た復帰摂理時代と復帰摂理延長時代</h1><details class="toc-collapsible" id="toc">
+<h1>原理講論  摂理的同時性から見た復帰摂理時代と復帰摂理延長時代</h1>
+<nav class="page-nav">
+  <a href="23kaku.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="25saiko.html" class="nav-btn">次へ <span>→</span></a>
+</nav><details class="toc-collapsible" id="toc">
 <summary class="toc-header">目次</summary>
 <nav aria-label="目次" class="toc-nav"><ul><li><a href="#1">第一節 エジプト苦役時代とローマ帝国迫害時代</a></li><li><a href="#2">第二節 士師時代と教区長制キリスト教会時代</a></li><li><a href="#3">第三節 統一王国時代とキリスト王国時代</a></li><li><a href="#4">第四節 南北王朝分立時代と東西王朝分立時代</a></li><li><a href="#5">第五節 ユダヤ民族捕虜および帰還時代と 法王捕虜および帰還時代</a></li><li><a href="#6">第六節 メシヤ降臨準備時代とメシヤ再降臨準備時代</a></li><li><a href="#7">第七節 復帰摂理から見た歴史発展</a><ul><li><a href="#7-1">（一）復帰摂理時代における歴史発展</a></li><li><a href="#7-2">（二）復帰摂理延長時代における歴史発展</a><ul><li><a href="#7-2-1">(1) 復帰摂理と西洋史</a></li><li><a href="#7-2-2">(2) 宗教史と経済史と政治史との相互関係</a></li><li><a href="#7-2-3">(3) 氏 族 社 会</a></li><li><a href="#7-2-4">(4) 封 建 社 会</a></li><li><a href="#7-2-5">(5) 君主社会と帝国主義社会</a></li><li><a href="#7-2-6">(6) 民主主義と社会主義</a></li><li><a href="#7-2-7">(7) 共生共栄共義主義と共産主義</a></li></ul></li></ul></li></ul></nav>
 </details>
@@ -620,6 +625,61 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Light Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+    color: #000;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
 </style>
 
 <script>
@@ -662,8 +722,13 @@
     };
   }
 </script>
+<nav class="page-nav">
+  <a href="23kaku.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="25saiko.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
 </body>
-<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="23kaku.html">前のページに戻る</a></p><p><a href="25saiko.html">次のページに進む</a></p></div>
+
 
 
 </html>

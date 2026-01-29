@@ -434,7 +434,12 @@
 </style>
 </head>
 <body><div class="container">
-<h1>原理講論  再臨論</h1><details class="toc-collapsible" id="toc">
+<h1>原理講論  再臨論</h1>
+<nav class="page-nav">
+  <a href="25saiko.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="001.html" class="nav-btn">次へ <span>→</span></a>
+</nav><details class="toc-collapsible" id="toc">
 <summary class="toc-header">目次</summary>
 <nav aria-label="目次" class="toc-nav"><ul><li><a href="#1">第一節 イエスはいつ再臨されるか</a></li><li><a href="#2">第二節 イエスはいかに再臨されるか</a><ul><li><a href="#2-1">（一）聖書を見る観点</a></li><li><a href="#2-2">（二）イエスの再臨は地上誕生をもってなされる</a></li><li><a href="#2-3">（三）雲に乗って来られるという聖句は何を意味するのか</a></li><li><a href="#2-4">（四）イエスはなぜ雲に乗って再臨されると言われたのか</a></li></ul></li><li><a href="#3">第三節 イエスはどこに再臨されるか</a><ul><li><a href="#3-1">（一）イエスはユダヤ民族の内に再臨されるか</a></li><li><a href="#3-2">（二）イエスは東の国に再臨される</a></li><li><a href="#3-3">（三）東方のその国は、すなわち韓国である</a><ul><li><a href="#3-3-1">(1) この国は蕩減復帰の民族的な基台を立てなければならない</a></li><li><a href="#3-3-2">(2) この国は神の一線であると同時にサタンの一線でなければならない</a></li><li><a href="#3-3-3">(3) この国は神の心情の対象とならなければならない</a></li><li><a href="#3-3-4">(4) この国には預言者の証拠がなければならない</a></li><li><a href="#3-3-5">(5) この国であらゆる文明が結実されなければならない</a></li></ul></li></ul></li><li><a href="#4">第四節 同時性から見たイエス当時と今日</a></li><li><a href="#5">第五節 言語混乱の原因とその統一の必然性</a></li></ul></nav>
 </details>
@@ -570,7 +575,7 @@
 <br/></div></p>
 
 
-<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="25saiko.html">前のページに戻る</a></p><p><a href="001.html">次のページに進む</a></p></div>
+
 
 </div>
 
@@ -620,6 +625,61 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Light Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+    color: #000;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
 </style>
 
 <script>
@@ -662,5 +722,10 @@
     };
   }
 </script>
+<nav class="page-nav">
+  <a href="25saiko.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="001.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
 </body>
 </html>

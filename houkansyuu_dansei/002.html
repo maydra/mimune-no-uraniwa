@@ -317,7 +317,12 @@
 </style>
 </head>
 <body><div class="container">
-<h1 id="人間は愛のために生まれてきた/男性訪韓修練会"><a href="#人間は愛のために生まれてきた/男性訪韓修練会">人間は愛のために生まれてきた/男性訪韓修練会</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">男性訪韓修練会</a></li><li class="toc-b"><a href="#002">人間は愛のために生まれてきた</a></li><li class="toc-b"><a href="#003">すべての存在は愛を求めて相対のために生まれてきた</a></li><li class="toc-b"><a href="#004">半品なる者も愛によって完品になる</a></li><li class="toc-b"><a href="#005">すべてが愛を中心とする</a></li><li class="toc-b"><a href="#006">全体のために生きるところから天国が生まれる</a></li><li class="toc-b"><a href="#007">中心者の三大要目</a></li><li class="toc-b"><a href="#008">神様を完成させるのは、相対の愛を持つ者である</a></li><li class="toc-b"><a href="#009">結婚は共に完成するためである</a></li><li class="toc-b"><a href="#010">サタンも絶対愛の神様には絶対服従する</a></li><li class="toc-b"><a href="#011">神様の願いは世界万民の救済である</a></li><li class="toc-b"><a href="#012">日本と世界の行く道</a></li><li class="toc-b"><a href="#013">日本民族は神様に向かって祈らなければならない</a></li></ul></div>
+<h1 id="人間は愛のために生まれてきた/男性訪韓修練会"><a href="#人間は愛のために生まれてきた/男性訪韓修練会">人間は愛のために生まれてきた/男性訪韓修練会</a></h1>
+<nav class="page-nav">
+  <a href="001.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="003.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">男性訪韓修練会</a></li><li class="toc-b"><a href="#002">人間は愛のために生まれてきた</a></li><li class="toc-b"><a href="#003">すべての存在は愛を求めて相対のために生まれてきた</a></li><li class="toc-b"><a href="#004">半品なる者も愛によって完品になる</a></li><li class="toc-b"><a href="#005">すべてが愛を中心とする</a></li><li class="toc-b"><a href="#006">全体のために生きるところから天国が生まれる</a></li><li class="toc-b"><a href="#007">中心者の三大要目</a></li><li class="toc-b"><a href="#008">神様を完成させるのは、相対の愛を持つ者である</a></li><li class="toc-b"><a href="#009">結婚は共に完成するためである</a></li><li class="toc-b"><a href="#010">サタンも絶対愛の神様には絶対服従する</a></li><li class="toc-b"><a href="#011">神様の願いは世界万民の救済である</a></li><li class="toc-b"><a href="#012">日本と世界の行く道</a></li><li class="toc-b"><a href="#013">日本民族は神様に向かって祈らなければならない</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -658,7 +663,7 @@
 </div>
 
 </body>
-<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="001.html">前のページに戻る</a></p><p><a href="003.html">次のページに進む</a></p></div>
+
 
 
 <details id="typo-report" class="typo-box dark-theme">
@@ -748,6 +753,62 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
 </style>
 
 <script>
@@ -799,5 +860,10 @@
     };
   }
 </script>
+<nav class="page-nav">
+  <a href="001.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="003.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
 </body>
 </html>

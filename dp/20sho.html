@@ -434,7 +434,12 @@
 </style>
 </head>
 <body><div class="container">
-<h1>原理講論  緒論</h1><details class="toc-collapsible" id="toc">
+<h1>原理講論  緒論</h1>
+<nav class="page-nav">
+  <a href="17kirisu.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="21kidai.html" class="nav-btn">次へ <span>→</span></a>
+</nav><details class="toc-collapsible" id="toc">
 <summary class="toc-header">目次</summary>
 <nav aria-label="目次" class="toc-nav"><ul><li><a href="#1">（一）蕩減復帰原理</a><ul><li><a href="#1-1">(1) 蕩 減 復 帰</a></li><li><a href="#1-2">(2) メシヤのための基台</a><ul><li><a href="#1-2-1">① 信仰基台</a></li><li><a href="#1-2-2">② 実体基台</a></li></ul></li></ul></li><li><a href="#2">（二）復帰摂理路程</a><ul><li><a href="#2-1">(1) 復帰摂理路程の時代的段階</a></li><li><a href="#2-2">(2) 復帰摂理路程の時代区分</a><ul><li><a href="#2-2-1">① み言による摂理から見た時代区分</a></li><li><a href="#2-2-6">② 復活摂理から見た時代区分</a></li><li><a href="#2-2-11">③ 信仰の期間を蕩減復帰する摂理から見た時代区分</a></li><li><a href="#2-2-16">④ メシヤのための基台の範囲から見た時代区分</a></li><li><a href="#2-2-21">⑤ 責任分担から見た時代区分</a></li><li><a href="#2-2-26">⑥ 摂理的同時性から見た時代区分</a></li></ul></li></ul></li><li><a href="#3">（三）復帰摂理歴史と「私」</a></li></ul></nav>
 </details>
@@ -522,7 +527,7 @@
 <br/>
 <br/></div></p>
 
-<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="17kirisu.html">前のページに戻る</a></p><p><a href="21kidai.html">次のページに進む</a></p></div>
+
 </div>
 
 
@@ -571,6 +576,61 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Light Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+    color: #000;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
 </style>
 
 <script>
@@ -613,5 +673,10 @@
     };
   }
 </script>
+<nav class="page-nav">
+  <a href="17kirisu.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="21kidai.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
 </body>
 </html>

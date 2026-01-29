@@ -434,7 +434,12 @@
 </style>
 </head>
 <body><div class="container">
-<h1>原理講論  復活論</h1><details class="toc-collapsible" id="toc">
+<h1>原理講論  復活論</h1>
+<nav class="page-nav">
+  <a href="14meshia.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="16yotei.html" class="nav-btn">次へ <span>→</span></a>
+</nav><details class="toc-collapsible" id="toc">
 <summary class="toc-header">目次</summary>
 <nav aria-label="目次" class="toc-nav"><ul><li><a href="#1">第一節 復 活</a><ul><li><a href="#1-1">（一）死と生に対する聖書的概念</a></li><li><a href="#1-2">（二）堕落による死</a></li><li><a href="#1-3">（三）復活の意義</a></li><li><a href="#1-4">（四）復活は人間にいかなる変化を起こすか</a></li></ul></li><li><a href="#2">第二節 復 活 摂 理</a><ul><li><a href="#2-1">（一）復活摂理はいかになされるか</a></li><li><a href="#2-2">（二）地上人に対する復活摂理</a></li><li><a href="#2-3">（三）霊人に対する復活摂理</a></li><li><a href="#2-4">（四）再臨復活から見た輪廻説</a></li></ul></li><li><a href="#3">第三節 再臨復活による宗教統一</a><ul><li><a href="#3-1">（一）再臨復活によるキリスト教統一</a></li><li><a href="#3-2">（二）再臨復活による他のすべての宗教の統一</a></li><li><a href="#3-3">（三）再臨復活による非宗教人の統一</a></li></ul></li></ul></nav>
 </details>
@@ -598,6 +603,61 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Light Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+    color: #000;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
 </style>
 
 <script>
@@ -640,8 +700,13 @@
     };
   }
 </script>
+<nav class="page-nav">
+  <a href="14meshia.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="16yotei.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
 </body>
-<div style="margin-top: 2em;"><hr/><p><a href="index.html">目次に戻る</a></p><p><a href="14meshia.html">前のページに戻る</a></p><p><a href="16yotei.html">次のページに進む</a></p></div>
+
 
 
 </html>
