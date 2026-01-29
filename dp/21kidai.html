@@ -358,6 +358,83 @@
                 font-size: 1.05rem;
             }
         }
+
+        /* 折りたたみ可能な目次のスタイル */
+        .toc-collapsible {
+            margin: 2.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            background: #fbfbfb;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .toc-header {
+            font-size: 1.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            user-select: none;
+            color: #111;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+
+        .toc-header::-webkit-details-marker {
+            display: none;
+        }
+
+        .toc-header::before {
+            content: '▶ ';
+            transition: transform 0.3s ease;
+            display: inline-block;
+            color: #667eea;
+            margin-right: 0.5rem;
+        }
+
+        details[open].toc-collapsible .toc-header::before {
+            transform: rotate(90deg);
+        }
+
+        .toc-nav {
+            margin-top: 1.25rem;
+        }
+
+        .toc-nav ul {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .toc-nav li {
+            margin: 0.2rem 0;
+            padding-left: 0;
+            position: relative;
+        }
+
+        .toc-nav ul ul {
+            padding-left: 1.5rem;
+            margin-top: 0.2rem;
+            margin-bottom: 0.5rem;
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .toc-nav a {
+            color: #444;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: block;
+            padding: 0.6rem 0.8rem;
+            border-radius: 8px;
+            font-size: 1.15rem;
+            line-height: 1.4;
+        }
+
+        .toc-nav a:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.08);
+            transform: translateX(4px);
+        }
     </style>
 </head>
 <body><div class="container">
@@ -365,9 +442,11 @@
 <body background="back3.gif">
 <!-- St-HP-H -->
 <!-- En-HP-H -->
-<p>
-<div class="no1"><br/>
-<br/></div></p><h3><div class="no1"> <span style="background-color:#FCD2E7">第一章　復帰基台摂理時代</span><br/></div></h3><p><div class="no1"><hr/><br/></div></p><ul>
+
+<details class="toc-collapsible" id="toc">
+<summary class="toc-header">目次</summary>
+<nav aria-label="目次" class="toc-nav">
+<ul>
   <li><a href="#1">第一節　アダムの家庭を中心とする復帰摂理</a>
     <ul>
       <li><a href="#1-1">（一）信仰基台</a></li>
@@ -391,7 +470,13 @@
       <li><a href="#3-4">（四）アブラハムを中心とする復帰摂理が我々に見せてくれた教訓</a></li>
     </ul>
   </li>
-</ul><p><div class="no1"><hr/><br/></div></p><h3 id="1"><div class="no1"><a href="21kidai.html#1"><span style="background-color:#FCD2E7">第一節　アダムの家庭を中心とする復帰摂理</span></a><br/></div></h3><p>
+</ul>
+</nav>
+</details>
+
+<p>
+<div class="no1"><br/>
+<br/></div></p><h3><div class="no1"> <span style="background-color:#FCD2E7">第一章　復帰基台摂理時代</span><br/></div></h3><p><div class="no1"><hr/><br/></div></p><h3 id="1"><div class="no1"><a href="21kidai.html#1"><span style="background-color:#FCD2E7">第一節　アダムの家庭を中心とする復帰摂理</span></a><br/></div></h3><p>
 <div class="no1">
 　堕落はたとえ人間自身の過ちから起きたものであるとしても、神がその堕落人間を救わなければならない理由については、既に前編第三章第二節（一）で論じた。ゆえに、「メシヤのための基台」を立てて、堕落人間を復帰なさろうとする摂理は、既にアダムの家庭から始まっていたのである。<br/>
 　既に緒論で論じたように、アダムはサタンと血縁関係を結んだので、神とも対応でき、また、サタンとも対応することができる中間位置におかれるようになった。したがって、このような中間位置におかれた堕落人間を天の側に分立して、「メシヤのための基台」を造成するためには、堕落人間自身が何らかの蕩減条件を立てなければならない。<br/>

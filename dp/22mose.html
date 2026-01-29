@@ -348,10 +348,90 @@
                 font-size: 1.05rem;
             }
         }
+
+        /* 折りたたみ可能な目次のスタイル */
+        .toc-collapsible {
+            margin: 2.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            background: #fbfbfb;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .toc-header {
+            font-size: 1.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            user-select: none;
+            color: #111;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+
+        .toc-header::-webkit-details-marker {
+            display: none;
+        }
+
+        .toc-header::before {
+            content: '▶ ';
+            transition: transform 0.3s ease;
+            display: inline-block;
+            color: #667eea;
+            margin-right: 0.5rem;
+        }
+
+        details[open].toc-collapsible .toc-header::before {
+            transform: rotate(90deg);
+        }
+
+        .toc-nav {
+            margin-top: 1.25rem;
+        }
+
+        .toc-nav ul {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .toc-nav li {
+            margin: 0.2rem 0;
+            padding-left: 0;
+            position: relative;
+        }
+
+        .toc-nav ul ul {
+            padding-left: 1.5rem;
+            margin-top: 0.2rem;
+            margin-bottom: 0.5rem;
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .toc-nav a {
+            color: #444;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: block;
+            padding: 0.6rem 0.8rem;
+            border-radius: 8px;
+            font-size: 1.15rem;
+            line-height: 1.4;
+        }
+
+        .toc-nav a:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.08);
+            transform: translateX(4px);
+        }
     </style>
 </head>
 <body><div class="container">
-<h1>原理講論  モーセとイエスを中心とする復帰摂理</h1><nav aria-label="目次" id="toc"><h2>目次</h2><ul><li><a href="#1">第一節 サタン屈伏の典型的路程</a><ul><li><a href="#1-1">（一）イエスの典型路程としてヤコブ路程とモーセ路程とを立てられた理由</a></li><li><a href="#1-2">（二）ヤコブ路程を見本として歩いたモーセ路程とイエス路程</a></li></ul></li><li><a href="#2">第二節 モーセを中心とする復帰摂理</a><ul><li><a href="#2-1">（一）モーセを中心とする復帰摂理の概観</a><ul><li><a href="#2-1-1">(1) 信 仰 基 台</a><ul><li><a href="#2-1-1-1">① 信仰基台を復帰する中心人物</a></li><li><a href="#2-1-1-2">② 信仰基台を復帰するための条件物</a></li></ul></li><li><a href="#2-1-2">(2) 実 体 基 台</a></li><li><a href="#2-1-3">(3) メシヤのための基台</a></li></ul></li><li><a href="#2-2">（二）モーセを中心とする民族的カナン復帰路程</a><ul><li><a href="#2-2-1">(1) 第一次民族的カナン復帰路程</a><ul><li><a href="#2-2-1-1">① 信 仰 基 台</a></li><li><a href="#2-2-1-2">② 実 体 基 台</a></li><li><a href="#2-2-1-3">③ 第一次民族的カナン復帰路程の失敗</a></li></ul></li><li><a href="#2-2-2">(2) 第二次民族的カナン復帰路程</a><ul><li><a href="#2-2-2-1">① 信 仰 基 台</a></li><li><a href="#2-2-2-2">② 実 体 基 台</a></li><li><a href="#2-2-2-3">③ 幕屋を中心とする復帰摂理</a></li><li><a href="#2-2-2-4">④ 第二次民族的カナン復帰路程の失敗</a></li></ul></li><li><a href="#2-2-3">(3) 第三次民族的カナン復帰路程</a><ul><li><a href="#2-2-3-1">① 信 仰 基 台</a></li><li><a href="#2-2-3-2">② 実 体 基 台</a></li><li><a href="#2-2-3-3">③ メシヤのための基台</a></li></ul></li></ul></li><li><a href="#2-3">（三）モーセ路程が見せてくれた教訓</a></li></ul></li><li><a href="#3">第三節 イエスを中心とする復帰摂理</a><ul><li><a href="#3-1">（一）第一次世界的カナン復帰路程</a><ul><li><a href="#3-1-1">(1) 信 仰 基 台</a></li><li><a href="#3-1-2">(2) 実 体 基 台</a></li><li><a href="#3-1-3">(3) 第一次世界的カナン復帰路程の失敗</a></li></ul></li><li><a href="#3-2">（二）第二次世界的カナン復帰路程</a><ul><li><a href="#3-2-1">(1) 信 仰 基 台</a><ul><li><a href="#3-2-1-1">① イエスが洗礼ヨハネの使命を代理する</a></li><li><a href="#3-2-1-2">② イエスの荒野四十日の断食祈祷と三大試練</a></li><li><a href="#3-2-1-3">③ 四十日断食と三大試練とをもってサタンを分立した結果</a></li></ul></li><li><a href="#3-2-2">(2) 実 体 基 台</a></li><li><a href="#3-2-3">(3) 第二次世界的カナン復帰路程の失敗</a></li></ul></li><li><a href="#3-3">（三）第三次世界的カナン復帰路程</a><ul><li><a href="#3-3-1">(1) イエスを中心とする霊的カナン復帰路程</a><ul><li><a href="#3-3-1-1">① 霊的な信仰基台</a></li><li><a href="#3-3-1-2">② 霊的な実体基台</a></li><li><a href="#3-3-1-3">③ メシヤのための霊的な基台</a></li><li><a href="#3-3-1-4">④ 霊的カナン復帰</a></li></ul></li><li><a href="#3-3-2">(2) 再臨主を中心とする実体的カナン復帰路程</a></li></ul></li><li><a href="#3-4">（四）イエスの路程が見せてくれた教訓</a></li></ul></li></ul></nav>
+<h1>原理講論  モーセとイエスを中心とする復帰摂理</h1><details class="toc-collapsible" id="toc">
+<summary class="toc-header">目次</summary>
+<nav aria-label="目次" class="toc-nav"><ul><li><a href="#1">第一節 サタン屈伏の典型的路程</a><ul><li><a href="#1-1">（一）イエスの典型路程としてヤコブ路程とモーセ路程とを立てられた理由</a></li><li><a href="#1-2">（二）ヤコブ路程を見本として歩いたモーセ路程とイエス路程</a></li></ul></li><li><a href="#2">第二節 モーセを中心とする復帰摂理</a><ul><li><a href="#2-1">（一）モーセを中心とする復帰摂理の概観</a><ul><li><a href="#2-1-1">(1) 信 仰 基 台</a><ul><li><a href="#2-1-1-1">① 信仰基台を復帰する中心人物</a></li><li><a href="#2-1-1-2">② 信仰基台を復帰するための条件物</a></li></ul></li><li><a href="#2-1-2">(2) 実 体 基 台</a></li><li><a href="#2-1-3">(3) メシヤのための基台</a></li></ul></li><li><a href="#2-2">（二）モーセを中心とする民族的カナン復帰路程</a><ul><li><a href="#2-2-1">(1) 第一次民族的カナン復帰路程</a><ul><li><a href="#2-2-1-1">① 信 仰 基 台</a></li><li><a href="#2-2-1-2">② 実 体 基 台</a></li><li><a href="#2-2-1-3">③ 第一次民族的カナン復帰路程の失敗</a></li></ul></li><li><a href="#2-2-2">(2) 第二次民族的カナン復帰路程</a><ul><li><a href="#2-2-2-1">① 信 仰 基 台</a></li><li><a href="#2-2-2-2">② 実 体 基 台</a></li><li><a href="#2-2-2-3">③ 幕屋を中心とする復帰摂理</a></li><li><a href="#2-2-2-4">④ 第二次民族的カナン復帰路程の失敗</a></li></ul></li><li><a href="#2-2-3">(3) 第三次民族的カナン復帰路程</a><ul><li><a href="#2-2-3-1">① 信 仰 基 台</a></li><li><a href="#2-2-3-2">② 実 体 基 台</a></li><li><a href="#2-2-3-3">③ メシヤのための基台</a></li></ul></li></ul></li><li><a href="#2-3">（三）モーセ路程が見せてくれた教訓</a></li></ul></li><li><a href="#3">第三節 イエスを中心とする復帰摂理</a><ul><li><a href="#3-1">（一）第一次世界的カナン復帰路程</a><ul><li><a href="#3-1-1">(1) 信 仰 基 台</a></li><li><a href="#3-1-2">(2) 実 体 基 台</a></li><li><a href="#3-1-3">(3) 第一次世界的カナン復帰路程の失敗</a></li></ul></li><li><a href="#3-2">（二）第二次世界的カナン復帰路程</a><ul><li><a href="#3-2-1">(1) 信 仰 基 台</a><ul><li><a href="#3-2-1-1">① イエスが洗礼ヨハネの使命を代理する</a></li><li><a href="#3-2-1-2">② イエスの荒野四十日の断食祈祷と三大試練</a></li><li><a href="#3-2-1-3">③ 四十日断食と三大試練とをもってサタンを分立した結果</a></li></ul></li><li><a href="#3-2-2">(2) 実 体 基 台</a></li><li><a href="#3-2-3">(3) 第二次世界的カナン復帰路程の失敗</a></li></ul></li><li><a href="#3-3">（三）第三次世界的カナン復帰路程</a><ul><li><a href="#3-3-1">(1) イエスを中心とする霊的カナン復帰路程</a><ul><li><a href="#3-3-1-1">① 霊的な信仰基台</a></li><li><a href="#3-3-1-2">② 霊的な実体基台</a></li><li><a href="#3-3-1-3">③ メシヤのための霊的な基台</a></li><li><a href="#3-3-1-4">④ 霊的カナン復帰</a></li></ul></li><li><a href="#3-3-2">(2) 再臨主を中心とする実体的カナン復帰路程</a></li></ul></li><li><a href="#3-4">（四）イエスの路程が見せてくれた教訓</a></li></ul></li></ul></nav>
+</details>
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <p><div class="no1"><br/></div></p><h3><div class="no1">　<span style="background-color:#FCD2E7">第二章　モーセとイエスを中心とする復帰摂理</span><br/></div></h3><p><div class="no1"><hr/><br/></div></p><p>

@@ -348,10 +348,90 @@
                 font-size: 1.05rem;
             }
         }
+
+        /* 折りたたみ可能な目次のスタイル */
+        .toc-collapsible {
+            margin: 2.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            background: #fbfbfb;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .toc-header {
+            font-size: 1.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            user-select: none;
+            color: #111;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+
+        .toc-header::-webkit-details-marker {
+            display: none;
+        }
+
+        .toc-header::before {
+            content: '▶ ';
+            transition: transform 0.3s ease;
+            display: inline-block;
+            color: #667eea;
+            margin-right: 0.5rem;
+        }
+
+        details[open].toc-collapsible .toc-header::before {
+            transform: rotate(90deg);
+        }
+
+        .toc-nav {
+            margin-top: 1.25rem;
+        }
+
+        .toc-nav ul {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .toc-nav li {
+            margin: 0.2rem 0;
+            padding-left: 0;
+            position: relative;
+        }
+
+        .toc-nav ul ul {
+            padding-left: 1.5rem;
+            margin-top: 0.2rem;
+            margin-bottom: 0.5rem;
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .toc-nav a {
+            color: #444;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: block;
+            padding: 0.6rem 0.8rem;
+            border-radius: 8px;
+            font-size: 1.15rem;
+            line-height: 1.4;
+        }
+
+        .toc-nav a:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.08);
+            transform: translateX(4px);
+        }
     </style>
 </head>
 <body><div class="container">
-<h1>原理講論  摂理的同時性から見た復帰摂理時代と復帰摂理延長時代</h1><nav aria-label="目次" id="toc"><h2>目次</h2><ul><li><a href="#1">第一節 エジプト苦役時代とローマ帝国迫害時代</a></li><li><a href="#2">第二節 士師時代と教区長制キリスト教会時代</a></li><li><a href="#3">第三節 統一王国時代とキリスト王国時代</a></li><li><a href="#4">第四節 南北王朝分立時代と東西王朝分立時代</a></li><li><a href="#5">第五節 ユダヤ民族捕虜および帰還時代と 法王捕虜および帰還時代</a></li><li><a href="#6">第六節 メシヤ降臨準備時代とメシヤ再降臨準備時代</a></li><li><a href="#7">第七節 復帰摂理から見た歴史発展</a><ul><li><a href="#7-1">（一）復帰摂理時代における歴史発展</a></li><li><a href="#7-2">（二）復帰摂理延長時代における歴史発展</a><ul><li><a href="#7-2-1">(1) 復帰摂理と西洋史</a></li><li><a href="#7-2-2">(2) 宗教史と経済史と政治史との相互関係</a></li><li><a href="#7-2-3">(3) 氏 族 社 会</a></li><li><a href="#7-2-4">(4) 封 建 社 会</a></li><li><a href="#7-2-5">(5) 君主社会と帝国主義社会</a></li><li><a href="#7-2-6">(6) 民主主義と社会主義</a></li><li><a href="#7-2-7">(7) 共生共栄共義主義と共産主義</a></li></ul></li></ul></li></ul></nav>
+<h1>原理講論  摂理的同時性から見た復帰摂理時代と復帰摂理延長時代</h1><details class="toc-collapsible" id="toc">
+<summary class="toc-header">目次</summary>
+<nav aria-label="目次" class="toc-nav"><ul><li><a href="#1">第一節 エジプト苦役時代とローマ帝国迫害時代</a></li><li><a href="#2">第二節 士師時代と教区長制キリスト教会時代</a></li><li><a href="#3">第三節 統一王国時代とキリスト王国時代</a></li><li><a href="#4">第四節 南北王朝分立時代と東西王朝分立時代</a></li><li><a href="#5">第五節 ユダヤ民族捕虜および帰還時代と 法王捕虜および帰還時代</a></li><li><a href="#6">第六節 メシヤ降臨準備時代とメシヤ再降臨準備時代</a></li><li><a href="#7">第七節 復帰摂理から見た歴史発展</a><ul><li><a href="#7-1">（一）復帰摂理時代における歴史発展</a></li><li><a href="#7-2">（二）復帰摂理延長時代における歴史発展</a><ul><li><a href="#7-2-1">(1) 復帰摂理と西洋史</a></li><li><a href="#7-2-2">(2) 宗教史と経済史と政治史との相互関係</a></li><li><a href="#7-2-3">(3) 氏 族 社 会</a></li><li><a href="#7-2-4">(4) 封 建 社 会</a></li><li><a href="#7-2-5">(5) 君主社会と帝国主義社会</a></li><li><a href="#7-2-6">(6) 民主主義と社会主義</a></li><li><a href="#7-2-7">(7) 共生共栄共義主義と共産主義</a></li></ul></li></ul></li></ul></nav>
+</details>
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <p>

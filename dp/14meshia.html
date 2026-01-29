@@ -348,10 +348,90 @@
                 font-size: 1.05rem;
             }
         }
+
+        /* 折りたたみ可能な目次のスタイル */
+        .toc-collapsible {
+            margin: 2.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            background: #fbfbfb;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .toc-header {
+            font-size: 1.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            user-select: none;
+            color: #111;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+
+        .toc-header::-webkit-details-marker {
+            display: none;
+        }
+
+        .toc-header::before {
+            content: '▶ ';
+            transition: transform 0.3s ease;
+            display: inline-block;
+            color: #667eea;
+            margin-right: 0.5rem;
+        }
+
+        details[open].toc-collapsible .toc-header::before {
+            transform: rotate(90deg);
+        }
+
+        .toc-nav {
+            margin-top: 1.25rem;
+        }
+
+        .toc-nav ul {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .toc-nav li {
+            margin: 0.2rem 0;
+            padding-left: 0;
+            position: relative;
+        }
+
+        .toc-nav ul ul {
+            padding-left: 1.5rem;
+            margin-top: 0.2rem;
+            margin-bottom: 0.5rem;
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .toc-nav a {
+            color: #444;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: block;
+            padding: 0.6rem 0.8rem;
+            border-radius: 8px;
+            font-size: 1.15rem;
+            line-height: 1.4;
+        }
+
+        .toc-nav a:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.08);
+            transform: translateX(4px);
+        }
     </style>
 </head>
 <body><div class="container">
-<h1>原理講論  メシヤの降臨とその再臨の目的</h1><nav aria-label="目次" id="toc"><h2>目次</h2><ul><li><a href="#1">第一節 十字架による救いの摂理</a><ul><li><a href="#1-1">（一）メシヤとして降臨されたイエスの目的</a></li><li><a href="#1-2">（二）十字架の贖罪により救いの摂理は完成されただろうか</a></li><li><a href="#1-3">（三）イエスの十字架の死</a></li><li><a href="#1-4">（四）十字架の贖罪による救いの限界とイエス再臨の目的</a></li><li><a href="#1-5">（五）十字架に対する預言の両面</a></li><li><a href="#1-6">（六）十字架の死が必然的なもののように記録されている聖句</a></li></ul></li><li><a href="#2">第二節 エリヤの再臨と洗礼ヨハネ</a><ul><li><a href="#2-1">（一）エリヤの再臨を中心とするユダヤ人たちの心的動向</a></li><li><a href="#2-2">（二）ユダヤ民族の行く道</a></li><li><a href="#2-3">（三）洗礼ヨハネの不信</a></li><li><a href="#2-4">（四）洗礼ヨハネがエリヤになった理由</a></li><li><a href="#2-5">（五）聖書に対する我々の態度</a></li></ul></li></ul></nav>
+<h1>原理講論  メシヤの降臨とその再臨の目的</h1><details class="toc-collapsible" id="toc">
+<summary class="toc-header">目次</summary>
+<nav aria-label="目次" class="toc-nav"><ul><li><a href="#1">第一節 十字架による救いの摂理</a><ul><li><a href="#1-1">（一）メシヤとして降臨されたイエスの目的</a></li><li><a href="#1-2">（二）十字架の贖罪により救いの摂理は完成されただろうか</a></li><li><a href="#1-3">（三）イエスの十字架の死</a></li><li><a href="#1-4">（四）十字架の贖罪による救いの限界とイエス再臨の目的</a></li><li><a href="#1-5">（五）十字架に対する預言の両面</a></li><li><a href="#1-6">（六）十字架の死が必然的なもののように記録されている聖句</a></li></ul></li><li><a href="#2">第二節 エリヤの再臨と洗礼ヨハネ</a><ul><li><a href="#2-1">（一）エリヤの再臨を中心とするユダヤ人たちの心的動向</a></li><li><a href="#2-2">（二）ユダヤ民族の行く道</a></li><li><a href="#2-3">（三）洗礼ヨハネの不信</a></li><li><a href="#2-4">（四）洗礼ヨハネがエリヤになった理由</a></li><li><a href="#2-5">（五）聖書に対する我々の態度</a></li></ul></li></ul></nav>
+</details>
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <p>
