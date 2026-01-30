@@ -181,14 +181,68 @@
         .details-content .chapter-item:last-child {
             border-bottom: none;
         }
-    </style>
+    
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+</style>
 </head>
 <body>
 <div class="container">
 <h1>感謝する信仰 - 総合</h1><div class="index-list"><div class="chapter-item"><a href="001.html" class="chapter-link">推薦の言葉</a></div><div class="chapter-item"><a href="002.html" class="chapter-link">あいさつ</a></div><div class="chapter-item"><a href="003.html" class="chapter-link">第一章 従順に従ってきたみ旨の道</a><ul class="section-list"><li class="section-item"><a href="003.html#001" class="section-link">召命されたみ旨に従って</a></li><li class="section-item"><a href="003.html#002" class="section-link">あらかじめ定められた信仰の中に育つ</a></li><li class="section-item"><a href="003.html#003" class="section-link">「淫乱で非難される所に行け」</a></li><li class="section-item"><a href="003.html#004" class="section-link">牧会の一戦に出て行く</a></li><li class="section-item"><a href="003.html#005" class="section-link">慶尚南道地区を受け持って</a></li><li class="section-item"><a href="003.html#006" class="section-link">全北(全羅北道)地区で情熱を注ぐ</a></li><li class="section-item"><a href="003.html#007" class="section-link">先生の家庭に似ようと努力する</a></li><li class="section-item"><a href="003.html#008" class="section-link">いくつかの分野の使命を担当する</a></li><li class="section-item"><a href="003.html#009" class="section-link">教会部長から開拓教会長に</a></li><li class="section-item"><a href="003.html#010" class="section-link">信仰の系譜</a></li><li class="section-item"><a href="003.html#011" class="section-link">祖母の啓示による信仰の雰囲気の中で成長する</a></li><li class="section-item"><a href="003.html#012" class="section-link">開拓伝道の出発</a></li><li class="section-item"><a href="003.html#013" class="section-link">監理教会の勧士を伝道する</a></li><li class="section-item"><a href="003.html#014" class="section-link">平凡な生活の中の非凡な教訓</a></li><li class="section-item"><a href="003.html#015" class="section-link">徹夜登山強行軍</a></li><li class="section-item"><a href="003.html#016" class="section-link">試練と苦痛の後に来る恩恵</a></li><li class="section-item"><a href="003.html#017" class="section-link">心に尋ねて生活しなければ</a></li><li class="section-item"><a href="003.html#018" class="section-link">私の家庭生活</a></li><li class="section-item"><a href="003.html#019" class="section-link">成和青年時代の活動　（一九七七年九月二十九日）</a></li><li class="section-item"><a href="003.html#020" class="section-link">先生と友なる青年時代（一九八〇年四月二十二日）</a></li><li class="section-item"><a href="003.html#021" class="section-link">私のマグロ釣り（一九八〇年九月二十九日）</a></li></ul></div><div class="chapter-item"><a href="004.html" class="chapter-link">第二章 神様になりましょう</a><ul class="section-list"><li class="section-item"><a href="004.html#002" class="section-link">天国に行きたいですか</a></li><li class="section-item"><a href="004.html#003" class="section-link">韓国のクリスチャンの信仰</a></li><li class="section-item"><a href="004.html#004" class="section-link">ヒュゴ</a></li><li class="section-item"><a href="004.html#005" class="section-link">祝福を受ける前と受けた後と</a></li><li class="section-item"><a href="004.html#006" class="section-link">キリスト教の歴史</a></li><li class="section-item"><a href="004.html#007" class="section-link">地獄から天国を創る</a></li><li class="section-item"><a href="004.html#008" class="section-link">問題は私たちの心</a></li><li class="section-item"><a href="004.html#009" class="section-link">再臨主に対する絶対的信仰</a></li><li class="section-item"><a href="004.html#010" class="section-link">お父様の立場</a></li><li class="section-item"><a href="004.html#011" class="section-link">原理講論を読みましょう</a></li><li class="section-item"><a href="004.html#012" class="section-link">三大祝福の完成</a></li><li class="section-item"><a href="004.html#013" class="section-link">個性完成した人の生活</a></li><li class="section-item"><a href="004.html#014" class="section-link">ご父母様は愛そのものです</a></li><li class="section-item"><a href="004.html#016" class="section-link">お父様の原理に対する姿勢</a></li><li class="section-item"><a href="004.html#017" class="section-link">祈祷会をしましょう</a></li><li class="section-item"><a href="004.html#018" class="section-link">夫婦一体の生活</a></li><li class="section-item"><a href="004.html#019" class="section-link">子供は父母の真似をして育つのです</a></li><li class="section-item"><a href="004.html#020" class="section-link">自分の父母に侍りましょう</a></li><li class="section-item"><a href="004.html#021" class="section-link">祝福の価値</a></li><li class="section-item"><a href="004.html#022" class="section-link">天国へ行く門の状態</a></li><li class="section-item"><a href="004.html#023" class="section-link">氏族メシヤの使命</a></li><li class="section-item"><a href="004.html#024" class="section-link">神様が喜ばれる仕事</a></li><li class="section-item"><a href="004.html#025" class="section-link">家庭に天国を創る</a></li><li class="section-item"><a href="004.html#026" class="section-link">神様の摂理</a></li><li class="section-item"><a href="004.html#027" class="section-link">お父様が歩まれた四十年の路程</a></li><li class="section-item"><a href="004.html#028" class="section-link">信仰の基台</a></li><li class="section-item"><a href="004.html#029" class="section-link">世界長子転換式</a></li><li class="section-item"><a href="004.html#030" class="section-link">統一旗を立てなさい</a></li><li class="section-item"><a href="004.html#031" class="section-link">最初の交差結婚式</a></li><li class="section-item"><a href="004.html#032" class="section-link">還故郷して父母復帰</a></li><li class="section-item"><a href="004.html#033" class="section-link">世界平和女性連合の創立</a></li><li class="section-item"><a href="004.html#034" class="section-link">女性はお母様の分身体</a></li><li class="section-item"><a href="004.html#035" class="section-link">子供と夫を神の元へ</a></li><li class="section-item"><a href="004.html#036" class="section-link">命懸けのお父様の道</a></li><li class="section-item"><a href="004.html#037" class="section-link">成約元年から子女の時代</a></li><li class="section-item"><a href="004.html#038" class="section-link">天国入籍</a></li><li class="section-item"><a href="004.html#039" class="section-link">十六万女性の訪韓</a></li><li class="section-item"><a href="004.html#040" class="section-link">三十六万双祝福の意義</a></li><li class="section-item"><a href="004.html#041" class="section-link">エバ国家の使命</a></li><li class="section-item"><a href="004.html#042" class="section-link">国家的な結婚式</a></li><li class="section-item"><a href="004.html#043" class="section-link">蕩減の道</a></li><li class="section-item"><a href="004.html#044" class="section-link">絶対的信仰、絶対的服従、絶対的愛</a></li><li class="section-item"><a href="004.html#045" class="section-link">北アメリカと南アメリカ</a></li><li class="section-item"><a href="004.html#046" class="section-link">ワシントン・タイムズ</a></li><li class="section-item"><a href="004.html#047" class="section-link">南米の摂理</a></li><li class="section-item"><a href="004.html#048" class="section-link">アフリカの救済</a></li><li class="section-item"><a href="004.html#049" class="section-link">初心に帰って再出発を</a></li></ul></div><div class="chapter-item"><a href="005.html" class="chapter-link">第三章 御父母様の夫婦一体化に倣う</a><ul class="section-list"><li class="section-item"><a href="005.html#002" class="section-link">皆さんの第一次七年路程</a></li><li class="section-item"><a href="005.html#003" class="section-link">予定された内容は皆違う</a></li><li class="section-item"><a href="005.html#004" class="section-link">夫婦が一つになる運動</a></li><li class="section-item"><a href="005.html#005" class="section-link">真のご父母様と共に超える</a></li><li class="section-item"><a href="005.html#006" class="section-link">今は分別しながら統一する時</a></li><li class="section-item"><a href="005.html#007" class="section-link">お父様によるマッチング</a></li></ul></div></div>
-    <div class="nav-links">
-        <a href="../index.html">トップページへ戻る</a>
-    </div>
+    <div class="nav-links"><a href="../index.html" class="nav-btn">み旨の裏庭 総合トップに戻る</a></div>
 </div>
 </body>
 </html>

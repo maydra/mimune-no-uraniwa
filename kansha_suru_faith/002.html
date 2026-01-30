@@ -308,10 +308,70 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+</style>
 </head>
 <body style="color: #e0e0e0;"><div class="container">
-<div class="navigation"><a href="001.html">← 前のページに戻る</a> | <a href="index.html">目次に戻る</a> | <a href="003.html">次のページに進む →</a></div>
+<nav class="page-nav">
+  <a href="001.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="003.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
 <h1 id="感謝する信仰-あいさつ"><a href="#感謝する信仰-あいさつ">感謝する信仰 あいさつ</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-level-2"><a href="#あいさつ">あいさつ</a></li></ul></div>
 <h2 id="あいさつ"><a href="#あいさつ"><p>　あいさつ</p></a></h2>
 <p>　始めに天より召命を受け、四十年余りの信仰生活を多くの恩恵の中に過ごさせて頂いたことを神様と真のご父母様に限りなく感謝申し上げます。そして日本に対し関心と好奇心を抱いていた私に、日本の食口達と近しく接する機会を与えてくださり、彼らと共に信仰生活を送れる時期を許諾して下さった天の前に、ただ感謝するばかりです。特に私一人のみならず、我々夫婦が責任者として日本で一緒に活動できる機会を下さった天の前に深く感謝申し上げます。</p><p>　天より最初に受けた任務は、広島リージョナルリーダーでしたが、一年後には韓日人教会中央会の会長の職務を任されました。赴任後、歴史的な十六万名の教育を完遂いたしました。 家庭においては、三十六万双祝福行事に五男、六男が参加し、これで八人の子供達が全員祝福を受けた恩賜は、私の生涯において忘れることができない生きがいとなりました。今年成約四年を迎え、真のご父母様が真の神様の日の行事の時に、三十三年牧会者勤続者として七人以上の祝福子女を生み育てた家庭を特別表彰して下さいました。私たち家庭がこの賞を受賞できたということは奇跡としか言いようがありません。また、韓日人教会中央会は『救国の使命を完遂せよ』という真のご父母様の切なる願いを受け、全兄弟姉妹たちの積極的な協助により、七月十四日までに責任を完遂する恩寵を受けました。</p><p>　これは食口全体が心を一つにして成し遂げた奇跡であり、天国の倉庫に永遠に残る作品となるに違いありません。神様と真のご父母様、興進様と大母様の愛の中に、このように豊かな恩恵の期間をあたえられたことを感謝するばかりです。真のご父母様に勝利の報告を申し上げた時、「苦労したね」と千金の如き珠玉のみ言を下さいました。このみ言は永遠に忘れることのできない宝として私の胸深く刻み込み、感謝の信仰を続けながら三六〇万双祝福の勝利に向かって邁進することを誓う次第です。</p><p>　このように恩恵を受けた立場で日本で活動した一年七か月間、私は全国を三回以上巡回して教育講義と講演会を行いました。ここに、巡回時に食口達に語ったみ言を集め食口達の信仰生活に少しでも役立つことを願いつつ〝感謝する信仰〟という本を刊行する運びとなりました。</p><p>　多くの愛で守り、支えてくださった食口の皆様に心からの感謝を申し上げます。</p><p>　韓日人教会中央会会長 鄭壽源</p>
@@ -343,7 +403,11 @@
 <p>　　学歴</p>
 <p>　　1978年: ソウル大学校 経営大学院 最高経営者科程7期修了</p>
 <p>　　1990年: 米国 Technical Institute Of Bible Study 名誉神学博士</p>
-<div class="navigation"><a href="001.html">← 前のページに戻る</a> | <a href="index.html">目次に戻る</a> | <a href="003.html">次のページに進む →</a></div>
+<nav class="page-nav">
+  <a href="001.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="003.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
 
 </div>
 <script>
@@ -439,6 +503,62 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
 </style>
 
 <script>

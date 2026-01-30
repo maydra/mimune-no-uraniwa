@@ -307,10 +307,69 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
-    </style>
+    
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+</style>
 </head>
 <body style="color: #e0e0e0;"><div class="container">
-<div class="navigation"><a href="004.html">← 前のページに戻る</a> | <a href="index.html">目次に戻る</a></div>
+<nav class="page-nav">
+  <a href="004.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+</nav>
 <h1 id="感謝する信仰-第3章-御父母様の夫婦一体化に倣う"><a href="#感謝する信仰-第3章-御父母様の夫婦一体化に倣う">感謝する信仰 第3章  御父母様の夫婦一体化に倣う</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-level-2"><a href="#001">第三章 御父母様の夫婦一体化に倣う</a></li><li class="toc-level-2"><a href="#002">皆さんの第一次七年路程</a></li><li class="toc-level-2"><a href="#003">予定された内容は皆違う</a></li><li class="toc-level-2"><a href="#004">夫婦が一つになる運動</a></li><li class="toc-level-2"><a href="#005">真のご父母様と共に超える</a></li><li class="toc-level-2"><a href="#006">今は分別しながら統一する時</a></li><li class="toc-level-2"><a href="#007">お父様によるマッチング</a></li></ul></div>
 <h2 id="001"><a href="#001">第三章 御父母様の夫婦一体化に倣う</a></h2>
 <p>　　三万双祝福一周年記念集会</p>
@@ -329,7 +388,7 @@
 <p>　　皆さんの今の時期はいつに当たるのでしょうか。真のご父母様は二十一年荒野路程もみな過ぎて天国圏に生活されているのですが、私たちは今ここにいます。そこにおいて、皆さん方は、家庭完成のための二十一年路程、三次の七年路程が残っているのに、その荒野路程を越えて行こうとせずに、ここで向こうの真のご父母様の生活を真似しようとする可能性があります。越えていくべきものを越えず、真似だけしようとしてはいけません。一年経って私が見るとそういう雰囲気があります。</p>
 <p>　　たとえ韓国の先輩食口たちが過去に荒野路程を越えて、今どのように生活していたとしても、今出発したばかりの私たちはそれを真似して適当に行こうとしてはいけません。選ばれた民族的位置、先祖の功績、天稟、環境、時と場所という神様の予定の条件がみな違うのです。皆さんの奥さんや、旦那さんが「そんなに集中しなくていいんじゃないか」と言ったとしても、流されてはいけません。皆さんは伝統的な信仰生活を今、受け継ぐのです。正しい信仰を自分自身が立てなければいけません。悔い改めて、覚悟、決心して出発するようにしてください。</p>
 <p>　　そして皆さん方は、この八月に真のご父母様と会って祝福を受けた、その時のその感激を忘れてはいけません。初めて韓国に来て、真のご父母様に会って、真のご父母様と共に聖酒を飲んだ、その時のその感激した心、気持ち、喜び、雰囲気、皆さんはそれをいつも、どこに行っても忘れてはいけないのです。 次に、聖婚問答を一問ずつ手を挙げて答えた時の雰囲気、それは一生涯に一回しかない、お父様と皆さんとの一対一の歴史的な時なのです。それを忘れずに再出発するようにお願いします。</p>
-<p>　　一九三五年、イエス様から責任を受け取られた後のお父様の生活は、「始小終大(シソウチョンデ)」です。世界的蕩減条件をみな立てて勝利されたお父様は、黙っていらっしゃってもいいのに、今は一人で活動するだけでなくお母様まで立てて、ご子女様まで参加させて、総動員して投入されるのです。果たす責任はみな果たされたのに、終末の終わりの時には、もっと大きな活動、大きな実績を現して、創造目的の地上天国を立てて終わりたいと活動されているお父様です。</p>
+<p>　　一九三五年、イエス様から責任を受け取られた後のお父様の生活は、「<ruby>始小終大<rt>シソウチョンデ</rt></ruby>」です。世界的蕩減条件をみな立てて勝利されたお父様は、黙っていらっしゃってもいいのに、今は一人で活動するだけでなくお母様まで立てて、ご子女様まで参加させて、総動員して投入されるのです。果たす責任はみな果たされたのに、終末の終わりの時には、もっと大きな活動、大きな実績を現して、創造目的の地上天国を立てて終わりたいと活動されているお父様です。</p>
 <p>　　今から皆さんも同じように、毎日、朝始める時は小さく出発しても、夜寝る前、反省する時、終わりにはどのくらい大きく終わったか、大きい結果をつくって私が寝るのかを確認するようにお願いします。</p>
 <p>　　一九六〇年、歴史的に初めての標語は「一生涯の最高の実績を果たしましょう」でした。六千年前、神が創造したアダムとエバが堕落せず結婚して子供を生むという立場で、その結婚式を果たしたこと、それが神様とご父母様の最高の実績であり、 ご父母様の愛の世界の基準になるのです。皆さん方にとってその標語は、九二年の皆さんの結婚式から今までの一年間ということになります。その一年間の生活、最高の実績の祝福を受けたのに、夫婦関係はどのくらいになったか、生活はどうなったか、いろいろ整理してみなさい。お父様は祝福してくれたが、それで二人で天国をつくるのにどのくらい努力したかというのです。</p>
 <h2 id="004"><a href="#004">夫婦が一つになる運動</a></h2>
@@ -368,7 +427,10 @@
 <p>　　今回、三万双のマッチングの時もどうされたでしょうか。男性の写真を並べてから、お父様が女性たちの写真をもって歩き回って決められました。決まったらすぐ、離れないようにホッチキスで止めるのです。しかし、あるカップルの時はマッチングしたのに 「とめるな」と、そして「置いておきなさい」と言われたのです。そしてその後、何百名を組み合わせた後に、「この人」と、ある写真を見つけられて、それを持っていって、置いておいた写真ともう一度組み合わせられました。そしてどのような話をされるかというと、「この人たちは早く死ぬ運命の人たちであり、また、二、三回結婚するようになっているので、最初の結婚式をしたという条件を立てておいて、次にお父様が新しく二番目の祝福をした」と言われるのです。そういうお祈りをしながら、次にマッチングをしてあげたのです。</p>
 <p>　　そういう人たちがあなたたちです! それなのに、「自分の相対者が合わない」といって大騒ぎしているのですか。分別されない私たちの、サタンの目で見たのと、分別されたお父様の目で見たのは違うのです。何の文句も言わず感謝の心だけをもちなさい。マッチングしたその時は、お父様は最高のアンテナで皆さん方の先祖をみな見られたのです。ここに来ている皆さん方の先祖たちは、とても喜んでいます。 それを忘れてはいけません。 最近「日本に行きたい」という人が多いのですが、そのために皆さんの先祖がどんどん縮こまっています。熱心に活動していればみな誇り回るのです。「自分の何代後の子孫が、韓国に来てお父様の仕事をしている」と。霊界に通じてみなさい。私の話が嘘か本当かすぐに分かります。</p>
 <p>　　お父様は霊界を整理して話されます。一九五〇年代にその世界的勝利の話をしても、誰も信じられませんでした。しかし、今すべてが現実となっています。今、二千年まで七年残ったこの期間を、私たちはまたお母様を中心として勝利していきましょう。</p>
-<div class="navigation"><a href="004.html">← 前のページに戻る</a> | <a href="index.html">目次に戻る</a></div>
+<nav class="page-nav">
+  <a href="004.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+</nav>
 
 </div>
 <script>
@@ -464,6 +526,62 @@
   }
   .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
   .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
 </style>
 
 <script>
