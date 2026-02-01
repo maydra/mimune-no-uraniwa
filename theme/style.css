@@ -107,8 +107,23 @@ body.light-mode label,
 body.light-mode input,
 body.light-mode textarea,
 body.light-mode button,
-body.light-mode blockquote {
+body.light-mode blockquote,
+body.light-mode summary,
+body.light-mode summary::after,
+body.light-mode .volume-title,
+body.light-mode .chapter-link,
+body.light-mode .section-link,
+body.light-mode .details-content {
     color: #111111 !important;
+}
+
+body.light-mode summary:hover {
+    background: rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode details {
+    background: #f9f9f9 !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 body.light-mode ruby rt {
