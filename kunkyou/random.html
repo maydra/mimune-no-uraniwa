@@ -66,10 +66,7 @@
         h1 {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #fff;
             margin-bottom: 1.5rem;
             letter-spacing: 0.05em;
             text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
@@ -77,10 +74,7 @@
 
         h1 a {
             text-decoration: none;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #fff;
         }
 
         h2 {
@@ -107,7 +101,7 @@
         }
 
         a {
-            color: #667eea;
+            color: #fff;
             text-decoration: none;
             transition: all 0.3s ease;
             border-bottom: 1px solid transparent;
@@ -135,6 +129,11 @@
         }
 
         b, strong {
+            color: #fff;
+        }
+
+        b a, strong a {
+            color: #fff !important;
             font-weight: 700;
             color: #fff;
         }
@@ -306,7 +305,9 @@
             scroll-margin-top: 1em;
         }
     </style>
-<meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png"/></head>
+<meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png"/>    
+    <link rel="stylesheet" href="../theme/style.css">
+</head>
 <body><div class="container">
 <h1 id="🔮-ランダムなページを選んでいます..."><a href="#🔮-ランダムなページを選んでいます...">🔮 ランダムなページを選んでいます...</a></h1>
 
@@ -326,5 +327,7 @@
       console.error("ページ取得失敗:", err);
       document.body.innerHTML += "<p style='color:red;'>ページ取得に失敗しました。</p>";
     });
-</script></body>
+</script>
+<script src="../theme/script.js"></script>
+</body>
 </html>

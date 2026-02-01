@@ -1,0 +1,201 @@
+/* theme/style.css */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --card-bg: #f9f9f9;
+    --card-border: rgba(0, 0, 0, 0.05);
+    --header-text: #111111;
+    --link-color: #0056b3;
+}
+
+body.dark-mode {
+    --bg-color: #1a1a2e;
+    /* Fallback */
+    --text-color: #e0e0e0;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --header-text: #ffffff;
+    --link-color: #f093fb;
+}
+
+/* Base override */
+body.light-mode {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #111111 !important;
+}
+
+body.light-mode::before {
+    display: none !important;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) fixed !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    display: block !important;
+}
+
+/* Card Overrides */
+body.light-mode .section-card,
+body.light-mode .content-card,
+body.light-mode .content-section,
+body.light-mode .section-card,
+body.light-mode .typo-box,
+body.light-mode .toc-collapsible,
+body.light-mode .container,
+body.light-mode .jpblock,
+body.light-mode .toc,
+body.light-mode [data-bible-nav] {
+    background: #ffffff !important;
+    color: #111111 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: none !important;
+}
+
+body.dark-mode .section-card,
+body.dark-mode .content-card,
+body.dark-mode .content-section,
+body.dark-mode .typo-box,
+body.dark-mode .toc-collapsible,
+body.dark-mode .jpblock,
+body.dark-mode .toc {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #e0e0e0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+/* Typography */
+body.light-mode h1,
+body.light-mode h1 a,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode b,
+body.light-mode strong,
+body.light-mode .toc-header,
+body.light-mode .volume-title,
+body.light-mode .typo-title {
+    color: #111111 !important;
+    -webkit-text-fill-color: initial !important;
+    background: none !important;
+    text-shadow: none !important;
+}
+
+body.light-mode p,
+body.light-mode li,
+body.light-mode div,
+body.light-mode span,
+body.light-mode label,
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode button,
+body.light-mode blockquote {
+    color: #111111 !important;
+}
+
+body.light-mode ruby rt {
+    color: #555555 !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode b,
+body.dark-mode strong {
+    color: #ffffff !important;
+}
+
+/* Links */
+body.light-mode a {
+    color: #0056b3 !important;
+}
+
+body.light-mode a:hover {
+    color: #003d80 !important;
+}
+
+body.light-mode a.verse-link {
+    color: #d32f2f !important;
+}
+
+body.dark-mode a {
+    color: #a5b4fc !important;
+}
+
+body.dark-mode a:hover {
+    color: #c7d2fe !important;
+}
+
+body.dark-mode a.verse-link {
+    color: #fca5a5 !important;
+}
+
+/* Navigation buttons */
+body.light-mode .nav-btn,
+body.light-mode .back-link,
+body.light-mode .search-btn {
+    background: #f0f0f0 !important;
+    color: #333 !important;
+    border: 1px solid #ddd !important;
+}
+
+body.dark-mode .nav-btn,
+body.dark-mode .back-link,
+body.dark-mode .search-btn {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #e0e0e0 !important;
+}
+
+/* Specific for Bible pages */
+body.dark-mode[data-bible] {
+    background: #1a1a2e !important;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode #theme-toggle {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
