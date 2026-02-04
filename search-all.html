@@ -17,6 +17,7 @@
   <title>み旨の裏庭 | サイト内一括検索</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png" />
+  <link rel="stylesheet" href="theme/style.css">
   <style>
     body {
       font-family: sans-serif;
@@ -111,8 +112,8 @@
     /* Dark Mode Support */
     @media (prefers-color-scheme: dark) {
       body {
-        background-color: #1a1a1a;
-        color: #ffffff;
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
       }
 
       #search-input {
@@ -126,7 +127,7 @@
       }
 
       #search-stats {
-        color: #aaa;
+        color: #ffffff !important;
       }
 
       .result-item {
@@ -134,7 +135,7 @@
       }
 
       .result-title a {
-        color: #66b3ff;
+        color: #66b3ff !important;
       }
 
       .result-title a:hover {
@@ -142,7 +143,8 @@
       }
 
       .result-snippet {
-        color: #ccc;
+        color: #ffffff !important;
+        opacity: 1 !important;
       }
 
       mark {
@@ -151,7 +153,7 @@
       }
 
       .nav-link {
-        color: #66b3ff;
+        color: #66b3ff !important;
       }
 
       .nav-link:hover {
@@ -159,9 +161,32 @@
       }
 
       .warning {
-        background-color: #3d3416;
-        color: #ffc107;
+        background-color: #3d3416 !important;
         border: 1px solid #665c1e;
+        color: #ffda6a !important;
+      }
+
+      .warning * {
+        color: #ffda6a !important;
+      }
+
+      /* Ensure all search results text is white */
+      #search-results {
+        color: #ffffff !important;
+        opacity: 1 !important;
+      }
+
+      #search-results * {
+        color: #ffffff !important;
+      }
+
+      /* Keep links blue */
+      #search-results a {
+        color: #66b3ff !important;
+      }
+
+      #search-results a:hover {
+        color: #99ccff !important;
       }
 
       button {
@@ -174,12 +199,44 @@
         background-color: #555;
       }
     }
-  </style>
 
-  <link rel="stylesheet" href="theme/style.css">
+    /* Dark mode support via theme script (body.dark-mode) */
+    body.dark-mode .result-snippet,
+    body.dark-mode #search-results,
+    body.dark-mode #search-results div,
+    body.dark-mode #search-results span,
+    body.dark-mode #search-results p {
+      color: #e0e0e0 !important;
+      opacity: 1 !important;
+      background: transparent !important;
+    }
+
+    body.dark-mode #search-stats {
+      color: #ffffff !important;
+      opacity: 1 !important;
+    }
+
+    body.dark-mode .warning {
+      background-color: #3d3416 !important;
+      border: 1px solid #665c1e;
+      color: #ffda6a !important;
+    }
+
+    body.dark-mode .warning * {
+      color: #ffda6a !important;
+    }
+
+    body.dark-mode #search-results a {
+      color: #66b3ff !important;
+    }
+
+    body.dark-mode #search-results a:hover {
+      color: #99ccff !important;
+    }
+  </style>
 </head>
 
-<body style="color: #e0e0e0;">
+<body>
   <a class="nav-link" href="index.html">← トップページに戻る</a>
   <h1 id="サイト内一括検索"><a href="#サイト内一括検索">サイト内一括検索</a></h1>
   <div class="warning">
