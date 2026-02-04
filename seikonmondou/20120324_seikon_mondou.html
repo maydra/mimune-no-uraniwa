@@ -2,292 +2,175 @@
 <html lang="ja">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-XXQ0QTBYTR');
-</script>
+    gtag('config', 'G-XXQ0QTBYTR');
+  </script>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>聖婚問答（2012.03.24）</title>
-    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png" />
-    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>聖婚問答（2012.03.24）</title>
+  <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png" />
+  <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" />
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
-        rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+    rel="stylesheet" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
-            background: #ffffff;
-            min-height: 100vh;
-            color: #111111;
-            padding: 4rem 1.5rem;
-            line-height: 2.4;
-            /* Generous line height */
-            font-size: 1.5rem;
-            /* Large font size */
-        }
+    body {
+      font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+      background: #ffffff;
+      min-height: 100vh;
+      color: #111111;
+      padding: 4rem 1.5rem;
+      line-height: 2.4;
+      /* Generous line height */
+      font-size: 1.5rem;
+      /* Large font size */
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 900;
-            color: #111;
-            text-align: center;
-            margin-bottom: 4rem;
-            letter-spacing: 0.1em;
-        }
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: #111;
+      text-align: center;
+      margin-bottom: 4rem;
+      letter-spacing: 0.1em;
+    }
 
-        h1 a {
-            text-decoration: none;
-            color: inherit;
-        }
+    h1 a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        .intro {
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: #333;
-        }
+    .intro {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      color: #333;
+    }
 
-        ol {
-            list-style-type: none;
-            /* Custom counters */
-            counter-reset: question-counter;
-        }
+    ol {
+      list-style-type: none;
+      /* Custom counters */
+      counter-reset: question-counter;
+    }
 
-        li {
-            position: relative;
-            margin-bottom: 4rem;
-            padding-left: 2rem;
-        }
+    li {
+      position: relative;
+      margin-bottom: 4rem;
+      padding-left: 2rem;
+    }
 
-        li::before {
-            counter-increment: question-counter;
-            content: counter(question-counter) ".";
-            position: absolute;
-            left: -1rem;
-            font-weight: 700;
-            color: #667eea;
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.8rem;
-        }
+    li::before {
+      counter-increment: question-counter;
+      content: counter(question-counter) ".";
+      position: absolute;
+      left: -1rem;
+      font-weight: 700;
+      color: #667eea;
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.8rem;
+    }
 
-        .footer-note {
-            text-align: right;
-            margin-top: 4rem;
-            font-size: 1.2rem;
-            color: #666;
-            font-family: 'Crimson Pro', serif;
-            font-style: italic;
-            border-top: 1px solid #eee;
-            padding-top: 1rem;
-        }
+    .footer-note {
+      text-align: right;
+      margin-top: 4rem;
+      font-size: 1.2rem;
+      color: #666;
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+      border-top: 1px solid #eee;
+      padding-top: 1rem;
+    }
 
-        .back-link {
-            text-align: center;
-            margin-top: 5rem;
-        }
+    .back-link {
+      text-align: center;
+      margin-top: 5rem;
+    }
 
-        .back-link a {
-            text-decoration: none;
-            color: #667eea;
-            font-size: 1.1rem;
-            border: 1px solid #e0e0e0;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
+    .back-link a {
+      text-decoration: none;
+      color: #667eea;
+      font-size: 1.1rem;
+      border: 1px solid #e0e0e0;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
 
-        .back-link a:hover {
-            background: #f8f9fa;
-            border-color: #667eea;
-            color: #5a67d8;
-        }
+    .back-link a:hover {
+      background: #f8f9fa;
+      border-color: #667eea;
+      color: #5a67d8;
+    }
 
-        @media (max-width: 768px) {
-            body {
-                padding: 2rem 1.5rem;
-                font-size: 1.3rem;
-            }
+    @media (max-width: 768px) {
+      body {
+        padding: 2rem 1.5rem;
+        font-size: 1.3rem;
+      }
 
-            li::before {
-                left: -0.5rem;
-            }
-        }
-    </style>
-    
-    <link rel="stylesheet" href="../theme/style.css">
+      li::before {
+        left: -0.5rem;
+      }
+    }
+  </style>
+
+  <link rel="stylesheet" href="../theme/style.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <h1 id="聖婚問答"><a href="#聖婚問答">聖婚問答</a></h1>
+  <div class="container">
+    <h1 id="聖婚問答"><a href="#聖婚問答">聖婚問答</a></h1>
 
-        <div class="intro">
-        </div>
-
-        <ol>
-            <li>あなた方は、神様の創造理想を完成する成熟した善男善女として、永遠の夫婦の因縁を設定することを、神様と真の父母様の前に約束しますか？</li>
-            <li>あなた方は、真の夫婦となり、これから子供たちを御旨に合うように養育し、統一家全体と人類と神様の前に必要な指導者として、養成することを約束しますか？</li>
-            <li>あなた方は、真の父母様を中心として、統一家の伝統を受け継ぎ、後代の統一家の子孫と人類の前に、誇らしい伝統を伝承することを誓いますか？</li>
-            <li>あなた方は、創造理想を中心として、神様と真の父母様の御旨を受け継ぎ、神様と真の父母様のように世界人を愛し、地上天国建設と天上天国建設の基本となる、理想的家庭を形成することを約束しますか？</li>
-        </ol>
-
-        <div class="footer-note">
-            （2012.03.24　聖婚問答）
-        </div>
-
-        <div class="back-link">
-            <a href="https://maydra.github.io/mimune-no-uraniwa/index.html">目次に戻る</a>
-        </div>
-
+    <div class="intro">
     </div>
 
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
-  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+    <ol>
+      <li>あなた方は、神様の創造理想を完成する成熟した善男善女として、永遠の夫婦の因縁を設定することを、神様と真の父母様の前に約束しますか？</li>
+      <li>あなた方は、真の夫婦となり、これから子供たちを御旨に合うように養育し、統一家全体と人類と神様の前に必要な指導者として、養成することを約束しますか？</li>
+      <li>あなた方は、真の父母様を中心として、統一家の伝統を受け継ぎ、後代の統一家の子孫と人類の前に、誇らしい伝統を伝承することを誓いますか？</li>
+      <li>あなた方は、創造理想を中心として、神様と真の父母様の御旨を受け継ぎ、神様と真の父母様のように世界人を愛し、地上天国建設と天上天国建設の基本となる、理想的家庭を形成することを約束しますか？</li>
+    </ol>
 
-  <form id="typoForm"
-        action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
-        method="POST"
-        target="typoSink">
-
-    <label class="typo-label" for="typoText">内容（必須）</label>
-    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
-      placeholder="例：誤字、脱字、年号違い…"></textarea>
-
-    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
-    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
-      placeholder="該当文をコピペ（任意）"></textarea>
-
-    <input type="hidden" id="pageUrl" name="pageUrl">
-    <input type="hidden" id="whenIso" name="whenIso">
-    <input type="hidden" id="userAgent" name="userAgent">
-
-    <div class="typo-row">
-      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
-      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    <div class="footer-note">
+      （2012.03.24　聖婚問答）
     </div>
-  </form>
 
-  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
+    <div class="back-link">
+      <a href="https://maydra.github.io/mimune-no-uraniwa/index.html">目次に戻る</a>
+    </div>
 
-<style>
-  .typo-box.dark-theme{
-    margin: 2.5rem 0;
-    padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    color: #e0e0e0;
-  }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
-  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
-  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
-  .dark-theme .typo-textarea{
-    width: 100%;
-    box-sizing: border-box;
-    padding: .8rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    font: inherit;
-    line-height: 1.6;
-    resize: vertical;
-    background: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    transition: border-color 0.3s ease;
-  }
-  .dark-theme .typo-textarea:focus{
-    outline: none;
-    border-color: rgba(102, 126, 234, 0.5);
-  }
-  .dark-theme .typo-row{
-    margin-top: 1.2rem;
-    display:flex;
-    gap: 1rem;
-    align-items:center;
-  }
-  .dark-theme .typo-btn{
-    padding: .7rem 1.5rem;
-    border: 0;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #fff;
-    cursor: pointer;
-    font: inherit;
-    font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .dark-theme .typo-btn:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-  }
-  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
-  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
-</style>
+  </div>
 
-<script>
-(() => {
-  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
-  if(!root) return;
-  const form = root.querySelector("#typoForm");
-  const sink = root.querySelector("#typoSink");
-  const statusEl = root.querySelector("#typoStatus");
-  const btn = root.querySelector("#typoSubmit");
 
-  function fillHidden() {
-    const pUrl = root.querySelector("#pageUrl");
-    const wIso = root.querySelector("#whenIso");
-    const uAgent = root.querySelector("#userAgent");
-    
-    if(pUrl) pUrl.value = location.href;
-    if(wIso) wIso.value = new Date().toISOString();
-    if(uAgent) uAgent.value = navigator.userAgent;
-  }
-  fillHidden();
 
-  if(form) {
-    form.addEventListener("submit", () => {
-      fillHidden();
-      if(btn) btn.disabled = true;
-      if(statusEl) statusEl.textContent = "送信中…";
-    });
-  }
 
-  if(sink) {
-    sink.addEventListener("load", () => {
-      if(btn) btn.disabled = false;
-      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
-      setTimeout(() => { if(form) form.reset(); }, 200);
-    });
-  }
-})();
-</script>
 
-<script src="../theme/script.js"></script>
+
+
+  <script src="../theme/script.js"></script>
 </body>
 
 </html>

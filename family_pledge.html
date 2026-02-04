@@ -1,326 +1,303 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>家庭盟誓 | み旨の裏庭</title>
-    <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png"/>
-    <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png"/>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
-            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-            min-height: 100vh;
-            color: #e0e0e0;
-            padding: 3rem 1rem;
-            line-height: 1.8;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            padding: 4rem;
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-        }
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 900;
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 4rem;
-            letter-spacing: 0.1em;
-            text-shadow: 0 0 30px rgba(102, 126, 234, 0.2);
-        }
-        h1 a { color: inherit; text-decoration: none; }
-        
-        h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid #667eea;
-            padding-left: 1rem;
-            display: flex;
-            align-items: center;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>家庭盟誓 | み旨の裏庭</title>
+  <link rel="icon" href="/mimune-no-uraniwa/favicon.png" type="image/png" />
+  <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .section {
-            padding: 2.5rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .section:last-of-type { border-bottom: none; }
+    body {
+      font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      min-height: 100vh;
+      color: #e0e0e0;
+      padding: 3rem 1rem;
+      line-height: 1.8;
+    }
 
-        p.line {
-            margin: 0.8rem 0;
-            font-size: 1.5rem;
-            color: #e0e0e0;
-        }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-        ruby rt {
-            font-size: 0.6em;
-            color: #a5b4fc;
-            font-weight: normal;
-        }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(25px);
+      padding: 4rem;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    }
 
-        .jpblock {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 3rem;
-            border-radius: 20px;
-            margin-top: 5rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .jpblock h2 { border-left-color: #f093fb; margin-top: 0; }
-        .jpitem { margin: 1.5rem 0; font-size: 1.3rem; line-height: 2; }
-        .jpitem strong { color: #667eea; margin-right: 0.5em; }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      text-align: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4rem;
+      letter-spacing: 0.1em;
+      text-shadow: 0 0 30px rgba(102, 126, 234, 0.2);
+    }
 
-        .nav-links {
-            margin-top: 5rem;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 3rem;
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1rem 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 700;
-        }
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
+    h1 a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        @media (max-width: 768px) {
-            .container { padding: 2rem; }
-            h1 { font-size: 2rem; }
-            p.line { font-size: 1.2rem; }
-            .jpblock { padding: 1.5rem; }
-            .jpitem { font-size: 1.1rem; }
-        }
-    </style>
-    
-    <link rel="stylesheet" href="theme/style.css">
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #667eea;
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    p.line {
+      margin: 0.8rem 0;
+      font-size: 1.5rem;
+      color: #e0e0e0;
+    }
+
+    ruby rt {
+      font-size: 0.6em;
+      color: #a5b4fc;
+      font-weight: normal;
+    }
+
+    .jpblock {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 3rem;
+      border-radius: 20px;
+      margin-top: 5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .jpblock h2 {
+      border-left-color: #f093fb;
+      margin-top: 0;
+    }
+
+    .jpitem {
+      margin: 1.5rem 0;
+      font-size: 1.3rem;
+      line-height: 2;
+    }
+
+    .jpitem strong {
+      color: #667eea;
+      margin-right: 0.5em;
+    }
+
+    .nav-links {
+      margin-top: 5rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 3rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 3rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      transition: all 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p.line {
+        font-size: 1.2rem;
+      }
+
+      .jpblock {
+        padding: 1.5rem;
+      }
+
+      .jpitem {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+
+  <link rel="stylesheet" href="theme/style.css">
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
 
     <h1 id="家庭盟誓"><a href="#家庭盟誓">家庭盟誓</a></h1>
-    
+
     <section class="section">
-        <h2 id="1">일． / 一．</h2>
-        <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은<rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
-        <p class="line"><ruby>본향<rt>ポニャン</rt></ruby> <ruby>땅을<rt>ッタンウㇽ</rt></ruby> <ruby>찾아<rt>チャヂャ</rt></ruby> <ruby>본연의<rt>ポニョネ</rt></ruby> <ruby>창조이상인<rt>チャンヂョイサンイン</rt></ruby></p>
-        <p class="line"><ruby>지상천국과<rt>チサンチョングㇰクァ</rt></ruby> <ruby>천상천국을<rt>チョンサンチョンググㇽ</rt></ruby> <ruby>창건할<rt>チャンゴナㇽ</rt></ruby> <ruby>것을<rt>コスㇽ</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
+      <h2 id="1">일． / 一．</h2>
+      <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은
+          <rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
+      <p class="line"><ruby>본향<rt>ポニャン</rt></ruby> <ruby>땅을<rt>ッタンウㇽ</rt></ruby> <ruby>찾아<rt>チャヂャ</rt></ruby> <ruby>본연의
+          <rt>ポニョネ</rt></ruby> <ruby>창조이상인<rt>チャンヂョイサンイン</rt></ruby></p>
+      <p class="line"><ruby>지상천국과<rt>チサンチョングㇰクァ</rt></ruby> <ruby>천상천국을<rt>チョンサンチョンググㇽ</rt></ruby> <ruby>창건할<rt>チャンゴナㇽ
+          </rt></ruby> <ruby>것을<rt>コスㇽ</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
     </section>
 
     <section class="section">
-        <h2 id="2">이． / 二．</h2>
-        <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은<rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
-        <p class="line"><ruby>하늘부모님과<rt>ハヌルプモニㇺグァ</rt></ruby> <ruby>참부모님을<rt>チャンプモニムㇽ</rt></ruby> <ruby>모시어<rt>モシオ</rt></ruby> <ruby>천주의<rt>チョンヂュエ</rt></ruby> <ruby>대표적<rt>テピョチョク</rt></ruby> <ruby>가정이<rt>カヂョンイ</rt></ruby> <ruby>되며<rt>デミョ</rt></ruby> <ruby>중심적<rt>チュンシムチョㇰ</rt></ruby> <ruby>가정이<rt>カヂョンイ</rt></ruby> <ruby>되어<rt>デオ</rt></ruby></p>
-        <p class="line"><ruby>가정에서는<rt>カヂョンエソヌン</rt></ruby> <ruby>효자<rt>ヒョヂャ</rt></ruby>, <ruby>국가에서는<rt>クッカエソヌン</rt></ruby> <ruby>충신<rt>チュンシン</rt></ruby>, <ruby>세계에서는<rt>セゲエソヌン</rt></ruby> <ruby>성인<rt>ソンイン</rt></ruby>,</p>
-        <p class="line"><ruby>천주에서는<rt>チョンヂュエソヌン</rt></ruby> <ruby>성자의<rt>ソンヂャエ</rt></ruby> <ruby>가정의<rt>カヂョンエ</rt></ruby> <ruby>도리를<rt>ドリルル</rt></ruby> <ruby>완성할<rt>ワンソンハル</rt></ruby> <ruby>것을<rt>コスル</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
+      <h2 id="2">이． / 二．</h2>
+      <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은
+          <rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
+      <p class="line"><ruby>하늘부모님과<rt>ハヌルプモニㇺグァ</rt></ruby> <ruby>참부모님을<rt>チャンプモニムㇽ</rt></ruby> <ruby>모시어<rt>モシオ</rt>
+          </ruby> <ruby>천주의<rt>チョンヂュエ</rt></ruby> <ruby>대표적<rt>テピョチョク</rt></ruby> <ruby>가정이<rt>カヂョンイ</rt></ruby>
+        <ruby>되며<rt>デミョ</rt></ruby> <ruby>중심적<rt>チュンシムチョㇰ</rt></ruby> <ruby>가정이<rt>カヂョンイ</rt></ruby> <ruby>되어<rt>デオ</rt>
+          </ruby></p>
+      <p class="line"><ruby>가정에서는<rt>カヂョンエソヌン</rt></ruby> <ruby>효자<rt>ヒョヂャ</rt></ruby>, <ruby>국가에서는<rt>クッカエソヌン</rt>
+          </ruby> <ruby>충신<rt>チュンシン</rt></ruby>, <ruby>세계에서는<rt>セゲエソヌン</rt></ruby> <ruby>성인<rt>ソンイン</rt></ruby>,</p>
+      <p class="line"><ruby>천주에서는<rt>チョンヂュエソヌン</rt></ruby> <ruby>성자의<rt>ソンヂャエ</rt></ruby> <ruby>가정의<rt>カヂョンエ</rt></ruby>
+        <ruby>도리를<rt>ドリルル</rt></ruby> <ruby>완성할<rt>ワンソンハル</rt></ruby> <ruby>것을<rt>コスル</rt></ruby> <ruby>맹세하나이다<rt>
+            メンセハナイダ</rt></ruby>.</p>
     </section>
 
     <section class="section">
-        <h2 id="3">삼． / 三．</h2>
-        <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은<rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
-        <p class="line"><ruby>사대심정권과<rt>サーデーシㇺヂョンクォングァ</rt></ruby> <ruby>삼대왕권과<rt>サㇺデーワンクォングァ</rt></ruby> <ruby>황족권을<rt>ファンヂョックォヌㇽ</rt></ruby> <ruby>완성할<rt>ワンソンハㇽ</rt></ruby> <ruby>것을<rt>コスㇽ</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
+      <h2 id="3">삼． / 三．</h2>
+      <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은
+          <rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
+      <p class="line"><ruby>사대심정권과<rt>サーデーシㇺヂョンクォングァ</rt></ruby> <ruby>삼대왕권과<rt>サㇺデーワンクォングァ</rt></ruby> <ruby>황족권을<rt>
+            ファンヂョックォヌㇽ</rt></ruby> <ruby>완성할<rt>ワンソンハㇽ</rt></ruby> <ruby>것을<rt>コスㇽ</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ
+          </rt></ruby>.</p>
     </section>
 
     <section class="section">
-        <h2 id="4">사． / 四．</h2>
-        <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은<rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
-        <p class="line"><ruby>하늘부모님의<rt>ハヌㇽプモニメ</rt></ruby> <ruby>창조이상인<rt>チャンヂョイサンイン</rt></ruby> <ruby>천주대가족을<rt>チョンヂュテーガヂョグㇽ</rt></ruby> <ruby>형성하여<rt>ヒョンソンハヨ</rt></ruby></p>
-        <p class="line"><ruby>자유와<rt>チャユワ</rt></ruby> <ruby>평화와<rt>ピョンファワ</rt></ruby> <ruby>통일과<rt>トンイルグァ</rt></ruby> <ruby>행복의<rt>ヘンボゲ</rt></ruby> <ruby>세계를<rt>セゲルㇽ</rt></ruby> <ruby>완성할<rt>ワンソンハㇽ</rt></ruby> <ruby>것을<rt>コスㇽ</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
+      <h2 id="4">사． / 四．</h2>
+      <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은
+          <rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
+      <p class="line"><ruby>하늘부모님의<rt>ハヌㇽプモニメ</rt></ruby> <ruby>창조이상인<rt>チャンヂョイサンイン</rt></ruby> <ruby>천주대가족을<rt>
+            チョンヂュテーガヂョグㇽ</rt></ruby> <ruby>형성하여<rt>ヒョンソンハヨ</rt></ruby></p>
+      <p class="line"><ruby>자유와<rt>チャユワ</rt></ruby> <ruby>평화와<rt>ピョンファワ</rt></ruby> <ruby>통일과<rt>トンイルグァ</rt></ruby>
+        <ruby>행복의<rt>ヘンボゲ</rt></ruby> <ruby>세계를<rt>セゲルㇽ</rt></ruby> <ruby>완성할<rt>ワンソンハㇽ</rt></ruby> <ruby>것을<rt>コスㇽ</rt>
+          </ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
     </section>
 
     <section class="section">
-        <h2 id="5">오． / 五．</h2>
-        <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은<rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
-        <p class="line"><ruby>매일<rt>メェイㇽ</rt></ruby> <ruby>주체적<rt>チュチェチョㇰ</rt></ruby> <ruby>천상세계와<rt>チョンサンセゲワ</rt></ruby> <ruby>대상적<rt>テーサンチョㇰ</rt></ruby> <ruby>지상세계의<rt>チサンセゲエ</rt></ruby> <ruby>통일을<rt>トンイルㇽ</rt></ruby> <ruby>향해<rt>ヒャンヘ</rt></ruby></p>
-        <p class="line"><ruby>전진적<rt>チョンヂンチョㇰ</rt></ruby> <ruby>발전을<rt>パルチョヌㇽ</rt></ruby> <ruby>촉진화할<rt>チョㇰチンファハㇽ</rt></ruby> <ruby>것을<rt>コスㇽ</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
+      <h2 id="5">오． / 五．</h2>
+      <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은
+          <rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
+      <p class="line"><ruby>매일<rt>メェイㇽ</rt></ruby> <ruby>주체적<rt>チュチェチョㇰ</rt></ruby> <ruby>천상세계와<rt>チョンサンセゲワ</rt></ruby>
+        <ruby>대상적<rt>テーサンチョㇰ</rt></ruby> <ruby>지상세계의<rt>チサンセゲエ</rt></ruby> <ruby>통일을<rt>トンイルㇽ</rt></ruby> <ruby>향해<rt>
+            ヒャンヘ</rt></ruby></p>
+      <p class="line"><ruby>전진적<rt>チョンヂンチョㇰ</rt></ruby> <ruby>발전을<rt>パルチョヌㇽ</rt></ruby> <ruby>촉진화할<rt>チョㇰチンファハㇽ</rt>
+          </ruby> <ruby>것을<rt>コスㇽ</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
     </section>
 
     <section class="section">
-        <h2 id="6">육． / 六．</h2>
-        <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은<rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
-        <p class="line"><ruby>하늘부모님과<rt>ハヌルプモニムグァ</rt></ruby> <ruby>참부모님의<rt>チャムプモニメ</rt></ruby> <ruby>대신<rt>テェシン</rt></ruby> <ruby>가정으로서<rt>カヂョンウロソ</rt></ruby> <ruby>천운을<rt>チョヌヌル</rt></ruby> <ruby>움직이는<rt>ウムヂギヌン</rt></ruby> <ruby>가정이<rt>カヂョンイ</rt></ruby> <ruby>되어<rt>デオ</rt></ruby></p>
-        <p class="line"><ruby>하늘의<rt>ハヌレ</rt></ruby> <ruby>축복을<rt>チュッポグル</rt></ruby> <ruby>주변에<rt>チュビョネ</rt></ruby> <ruby>연결시키는<rt>ヨンギョルシキヌン</rt></ruby> <ruby>가정을<rt>カヂョンウル</rt></ruby> <ruby>완성할<rt>ワンソンハル</rt></ruby> <ruby>것을<rt>コスル</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
+      <h2 id="6">육． / 六．</h2>
+      <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은
+          <rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
+      <p class="line"><ruby>하늘부모님과<rt>ハヌルプモニムグァ</rt></ruby> <ruby>참부모님의<rt>チャムプモニメ</rt></ruby> <ruby>대신<rt>テェシン</rt>
+          </ruby> <ruby>가정으로서<rt>カヂョンウロソ</rt></ruby> <ruby>천운을<rt>チョヌヌル</rt></ruby> <ruby>움직이는<rt>ウムヂギヌン</rt></ruby>
+        <ruby>가정이<rt>カヂョンイ</rt></ruby> <ruby>되어<rt>デオ</rt></ruby></p>
+      <p class="line"><ruby>하늘의<rt>ハヌレ</rt></ruby> <ruby>축복을<rt>チュッポグル</rt></ruby> <ruby>주변에<rt>チュビョネ</rt></ruby>
+        <ruby>연결시키는<rt>ヨンギョルシキヌン</rt></ruby> <ruby>가정을<rt>カヂョンウル</rt></ruby> <ruby>완성할<rt>ワンソンハル</rt></ruby> <ruby>것을
+          <rt>コスル</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
     </section>
 
     <section class="section">
-        <h2 id="7">칠． / 七．</h2>
-        <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은<rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
-        <p class="line"><ruby>본연의<rt>ポニョネ</rt></ruby> <ruby>혈통과<rt>ヒョルトングァ</rt></ruby> <ruby>연결된<rt>ヨンギョルデン</rt></ruby> <ruby>위하는<rt>ウィハヌン</rt></ruby> <ruby>생활을<rt>センファルル</rt></ruby> <ruby>통하여<rt>トンハヨ</rt></ruby> <ruby>심정문화세계를<rt>シムヂョンムナセゲルル</rt></ruby> <ruby>완성할<rt>ワンソンハル</rt></ruby> <ruby>것을<rt>コスル</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
+      <h2 id="7">칠． / 七．</h2>
+      <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은
+          <rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
+      <p class="line"><ruby>본연의<rt>ポニョネ</rt></ruby> <ruby>혈통과<rt>ヒョルトングァ</rt></ruby> <ruby>연결된<rt>ヨンギョルデン</rt></ruby>
+        <ruby>위하는<rt>ウィハヌン</rt></ruby> <ruby>생활을<rt>センファルル</rt></ruby> <ruby>통하여<rt>トンハヨ</rt></ruby> <ruby>심정문화세계를<rt>
+            シムヂョンムナセゲルル</rt></ruby> <ruby>완성할<rt>ワンソンハル</rt></ruby> <ruby>것을<rt>コスル</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ
+          </rt></ruby>.</p>
     </section>
 
     <section class="section">
-        <h2 id="8">팔． / 八．</h2>
-        <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은<rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
-        <p class="line"><ruby>천일국시대를<rt>チョニルグクシデェルル</rt></ruby> <ruby>맞이하여<rt>マヂハヨ</rt></ruby> <ruby>절대신앙<rt>チョルテェシナン</rt></ruby> <ruby>절대사랑<rt>チョルテェサラン</rt></ruby> <ruby>절대복종으로<rt>チョルテェポクチョンウロ</rt></ruby> <ruby>신인애<rt>シニネェ</rt></ruby> <ruby>일체이상을<rt>イルチェイサンウル</rt></ruby> <ruby>이루어<rt>イルオ</rt></ruby></p>
-        <p class="line"><ruby>지상천국과<rt>チサンチョングックァ</rt></ruby> <ruby>천상천국의<rt>チョンサンチョングゲ</rt></ruby> <ruby>해방권과<rt>ヘバンクォングァ</rt></ruby> <ruby>석방권을<rt>ソクパンクォヌル</rt></ruby> <ruby>완성할<rt>ワンソンハル</rt></ruby> <ruby>것을<rt>コスル</rt></ruby> <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
+      <h2 id="8">팔． / 八．</h2>
+      <p class="line"><ruby>천일국<rt>チョニㇽグㇰ</rt></ruby> <ruby>주인<rt>チュイン</rt></ruby> <ruby>우리<rt>ウリ</rt></ruby> <ruby>가정은
+          <rt>カヂョンウン</rt></ruby> <ruby>참사랑을<rt>チャㇺサランウㇽ</rt></ruby> <ruby>중심하고<rt>チュンシㇺハゴ</rt></ruby></p>
+      <p class="line"><ruby>천일국시대를<rt>チョニルグクシデェルル</rt></ruby> <ruby>맞이하여<rt>マヂハヨ</rt></ruby> <ruby>절대신앙<rt>チョルテェシナン</rt>
+          </ruby> <ruby>절대사랑<rt>チョルテェサラン</rt></ruby> <ruby>절대복종으로<rt>チョルテェポクチョンウロ</rt></ruby> <ruby>신인애<rt>シニネェ</rt>
+          </ruby> <ruby>일체이상을<rt>イルチェイサンウル</rt></ruby> <ruby>이루어<rt>イルオ</rt></ruby></p>
+      <p class="line"><ruby>지상천국과<rt>チサンチョングックァ</rt></ruby> <ruby>천상천국의<rt>チョンサンチョングゲ</rt></ruby> <ruby>해방권과<rt>ヘバンクォングァ
+          </rt></ruby> <ruby>석방권을<rt>ソクパンクォヌル</rt></ruby> <ruby>완성할<rt>ワンソンハル</rt></ruby> <ruby>것을<rt>コスル</rt></ruby>
+        <ruby>맹세하나이다<rt>メンセハナイダ</rt></ruby>.</p>
     </section>
 
     <section class="jpblock">
-        <h2 id="jp">日本語（意味）</h2>
-        <p class="jpitem"><strong>1.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、本郷の地を求め、本然の創造理想である地上天国と天上天国を創建することをお誓い致します。</p>
-        <p class="jpitem"><strong>2.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、天の父母様と真の父母様に侍り、天宙の代表的家庭となり、中心的家庭となって、家庭では孝子、国家では忠臣、世界では聖人、天宙では聖子の家庭の道理を完成することをお誓い致します。</p>
-        <p class="jpitem"><strong>3.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、四大心情圏と三大王権と皇族圏を完成することをお誓い致します。</p>
-        <p class="jpitem"><strong>4.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、天の父母様の創造理想である天宙大家族を形成し、自由と平和と統一と幸福の世界を完成することをお誓い致します。</p>
-        <p class="jpitem"><strong>5.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、毎日、主体的天上世界と対象的地上世界の統一に向かい、前進的発展を促進化することをお誓い致します。</p>
-        <p class="jpitem"><strong>6.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、天の父母様と真の父母様の代身家庭として、天運を動かす家庭となり、天の祝福を周辺に連結させる家庭を完成することをお誓い致します。</p>
-        <p class="jpitem"><strong>7.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、本然の血統と連結された為に生きる生活を通して、心情文化世界を完成することをお誓い致します。</p>
-        <p class="jpitem"><strong>8.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、天一国時代を迎え、絶対信仰、絶対愛、絶対服従によって、神人愛一体理想を成し、地上天国と天上天国の解放圏と釈放圏を完成することをお誓い致します。</p>
+      <h2 id="jp">日本語（意味）</h2>
+      <p class="jpitem"><strong>1.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、本郷の地を求め、本然の創造理想である地上天国と天上天国を創建することをお誓い致します。</p>
+      <p class="jpitem"><strong>2.</strong>
+        天一国主人、私たちの家庭は、真の愛を中心として、天の父母様と真の父母様に侍り、天宙の代表的家庭となり、中心的家庭となって、家庭では孝子、国家では忠臣、世界では聖人、天宙では聖子の家庭の道理を完成することをお誓い致します。
+      </p>
+      <p class="jpitem"><strong>3.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、四大心情圏と三大王権と皇族圏を完成することをお誓い致します。</p>
+      <p class="jpitem"><strong>4.</strong>
+        天一国主人、私たちの家庭は、真の愛を中心として、天の父母様の創造理想である天宙大家族を形成し、自由と平和と統一と幸福の世界を完成することをお誓い致します。</p>
+      <p class="jpitem"><strong>5.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、毎日、主体的天上世界と対象的地上世界の統一に向かい、前進的発展を促進化することをお誓い致します。</p>
+      <p class="jpitem"><strong>6.</strong>
+        天一国主人、私たちの家庭は、真の愛を中心として、天の父母様と真の父母様の代身家庭として、天運を動かす家庭となり、天の祝福を周辺に連結させる家庭を完成することをお誓い致します。</p>
+      <p class="jpitem"><strong>7.</strong> 天一国主人、私たちの家庭は、真の愛を中心として、本然の血統と連結された為に生きる生活を通して、心情文化世界を完成することをお誓い致します。</p>
+      <p class="jpitem"><strong>8.</strong>
+        天一国主人、私たちの家庭は、真の愛を中心として、天一国時代を迎え、絶対信仰、絶対愛、絶対服従によって、神人愛一体理想を成し、地上天国と天上天国の解放圏と釈放圏を完成することをお誓い致します。</p>
     </section>
 
-<div class="nav-links"><a href="index.html">トップページへ戻る</a></div>
-</div>
-<section id="typo-report" class="typo-box dark-theme">
-  <h3 class="typo-title">誤植・修正提案</h3>
-  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+    <div class="nav-links"><a href="index.html">トップページへ戻る</a></div>
+  </div>
 
-  <form id="typoForm"
-        action="https://script.google.com/macros/s/AKfycbxbuP7GLEAwodsiLog16LZDZA0hnqlK0A21fx8Vq2-n-_gq_5EudLVMJy0yXk1KYO19lA/exec"
-        method="POST"
-        target="typoSink">
 
-    <label class="typo-label" for="typoText">内容（必須）</label>
-    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
-      placeholder="例：誤字、脱字、年号違い…"></textarea>
 
-    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
-    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
-      placeholder="該当文をコピペ（任意）"></textarea>
 
-    <input type="hidden" id="pageUrl" name="pageUrl">
-    <input type="hidden" id="whenIso" name="whenIso">
-    <input type="hidden" id="userAgent" name="userAgent">
 
-    <div class="typo-row">
-      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
-      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
-    </div>
-  </form>
 
-  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
-</section>
-
-<style>
-  .typo-box.dark-theme{
-    margin: 2.5rem 0;
-    padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    color: #e0e0e0;
-  }
-  .dark-theme .typo-title{ margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
-  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
-  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
-  .dark-theme .typo-textarea{
-    width: 100%;
-    box-sizing: border-box;
-    padding: .8rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    font: inherit;
-    line-height: 1.6;
-    resize: vertical;
-    background: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    transition: border-color 0.3s ease;
-  }
-  .dark-theme .typo-textarea:focus{
-    outline: none;
-    border-color: rgba(102, 126, 234, 0.5);
-  }
-  .dark-theme .typo-row{
-    margin-top: 1.2rem;
-    display:flex;
-    gap: 1rem;
-    align-items:center;
-  }
-  .dark-theme .typo-btn{
-    padding: .7rem 1.5rem;
-    border: 0;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #fff;
-    cursor: pointer;
-    font: inherit;
-    font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .dark-theme .typo-btn:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-  }
-  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
-  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
-</style>
-
-<script>
-(() => {
-  const form = document.querySelector("#typo-report.dark-theme #typoForm") || document.getElementById("typoForm");
-  const sink = document.querySelector("#typo-report.dark-theme #typoSink") || document.getElementById("typoSink");
-  const statusEl = document.querySelector("#typo-report.dark-theme #typoStatus") || document.getElementById("typoStatus");
-  const btn = document.querySelector("#typo-report.dark-theme #typoSubmit") || document.getElementById("typoSubmit");
-
-  function fillHidden() {
-    const pUrl = document.querySelector("#typo-report.dark-theme #pageUrl") || document.getElementById("pageUrl");
-    const wIso = document.querySelector("#typo-report.dark-theme #whenIso") || document.getElementById("whenIso");
-    const uAgent = document.querySelector("#typo-report.dark-theme #userAgent") || document.getElementById("userAgent");
-    
-    if(pUrl) pUrl.value = location.href;
-    if(wIso) wIso.value = new Date().toISOString();
-    if(uAgent) uAgent.value = navigator.userAgent;
-  }
-  fillHidden();
-
-  if(form) {
-    form.addEventListener("submit", () => {
-      fillHidden();
-      if(btn) btn.disabled = true;
-      if(statusEl) statusEl.textContent = "送信中…";
-    });
-  }
-
-  if(sink) {
-    sink.addEventListener("load", () => {
-      if(btn) btn.disabled = false;
-      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
-      setTimeout(() => { if(form) form.reset(); }, 200);
-    });
-  }
-})();
-</script>
-
-<script src="theme/script.js"></script>
+  <script src="theme/script.js"></script>
 </body>
+
 </html>
