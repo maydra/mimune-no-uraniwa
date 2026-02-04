@@ -250,6 +250,15 @@
             width: 100%;
         }
 
+        /* Specific adjustment for long titles to prevent awkward wrapping */
+        .long-title {
+            font-size: 1.8rem !important;
+            /* Slightly smaller than the default 2.2rem */
+            word-break: keep-all;
+            /* Prevents breaking in the middle of words */
+            overflow-wrap: normal;
+        }
+
         /* 特別なセクション用のスタイル */
         .featured-section {
             grid-column: 1 / -1;
@@ -351,7 +360,7 @@
             }
         }
     </style>
-    
+
     <link rel="stylesheet" href="theme/style.css">
 </head>
 
@@ -409,7 +418,7 @@
             </div>
 
             <div class="section-card">
-                <h2>御父母様の生涯路程</h2>
+                <h2 class="long-title">御父母様の生涯路程</h2>
                 <ul class="links-list">
                     <li><a href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_1/index.html">真の御父母様の生涯路程　１</a>
                     </li>
@@ -546,7 +555,7 @@
         }
     </script>
 
-<script src="theme/script.js"></script>
+    <script src="theme/script.js"></script>
 </body>
 
 </html>
