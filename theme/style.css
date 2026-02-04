@@ -216,18 +216,113 @@ body.light-mode #theme-toggle {
 }
 
 /* --- Global Verse Highlight Fix (Verified) --- */
-:target {
-  background-color: #fff3cd !important; /* Light Mode: Soft Gold */
-  scroll-margin-top: 2em;
-  padding: 2px 5px;
-  border-radius: 4px;
+/* --- Global Verse Highlight Fix (High Specificity) --- */
+/* Overrides inline styles in Bible pages */
+body [id^="v"]:target {
+  scroll-margin-top: 5rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: block;
+  animation: highlightFade 0.5s ease-out;
 }
 
+/* Light Mode Highlight */
+body:not(.dark-mode) [id^="v"]:target {
+  background-color: #fff3cd !important;
+  color: #111111 !important;
+  border-left: 4px solid #ffc107;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Dark Mode Highlight */
+body.dark-mode [id^="v"]:target {
+  background-color: rgba(255, 193, 7, 0.15) !important;
+  color: #ffffff !important;
+  border-left: 4px solid #ffc107;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.1);
+  outline: none !important; /* Reset legacy outline */
+}
+
+/* System Dark Mode Fallback */
 @media (prefers-color-scheme: dark) {
-  :target {
-    background-color: #4a3b00 !important; /* Dark Mode: Deep Golden Brown */
+  body:not(.light-mode) [id^="v"]:target {
+    background-color: rgba(255, 193, 7, 0.15) !important;
     color: #ffffff !important;
-    outline: 2px solid #ffcc00 !important;
-    box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+    border-left: 4px solid #ffc107;
   }
+}
+
+/* --- Modern Navigation Bar --- */
+body [data-bible-nav] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 4rem !important; /* Increased spacing */
+    padding: 2rem !important;
+    border-radius: 16px;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Hide legacy separator elements inside nav */
+body [data-bible-nav] hr { display: none !important; }
+
+/* Layout adjustments for paragraphs */
+body [data-bible-nav] p {
+    margin: 0 !important;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+body [data-bible-nav] p:first-of-type { justify-content: flex-start; }
+body [data-bible-nav] p:last-of-type { justify-content: flex-end; }
+body [data-bible-nav] p:nth-child(2) { justify-content: center; }
+
+/* Button Styles */
+body [data-bible-nav] a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 0.95em;
+    border-radius: 12px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.02em;
+}
+
+/* Button Active State */
+body [data-bible-nav] a:active { transform: scale(0.96); }
+
+/* Light Mode Buttons */
+body:not(.dark-mode) [data-bible-nav] a {
+    background-color: #ffffff;
+    color: #444444 !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+body:not(.dark-mode) [data-bible-nav] a:hover {
+    background-color: #f8f9fa;
+    border-color: #bbbbbb;
+    color: #000000 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+/* Dark Mode Buttons */
+body.dark-mode [data-bible-nav] a {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #a5b4fc !important; /* Indigo accent */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+}
+body.dark-mode [data-bible-nav] a:hover {
+    background-color: rgba(165, 180, 252, 0.15);
+    border-color: rgba(165, 180, 252, 0.4);
+    color: #ffffff !important;
+    box-shadow: 0 0 20px rgba(165, 180, 252, 0.15);
+    transform: translateY(-2px);
 }
