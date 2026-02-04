@@ -14,7 +14,12 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>申命記 第4章</title>
+
+    
+    <link rel="stylesheet" href="../../../theme/style.css">
+
 <style>
+/* --- New Optimized Styles --- */
 body {
   font-family: 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
   font-size: 22px;
@@ -22,8 +27,34 @@ body {
   max-width: 1250px;
   margin: 1em auto;
   padding: 0 1em;
-  background-color: #fafafa;
+  background-color: #fafafa; /* Light Mode BG */
   color: #333;
+}
+
+/* Highlight for targeted verse */
+:target {
+  background-color: #fff3cd !important; /* Light Mode: Soft Yellow with Black text */
+  color: #333 !important;
+  scroll-margin-top: 2em;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a2e !important; /* Deep Dark Blue */
+    color: #e0e0e0 !important;
+  }
+  h1 { color: #81d4fa !important; }
+  a { color: #64b5f6 !important; }
+  
+  :target {
+    /* Dark Mode: Deep Brown background for White text */
+    background-color: #4a2c00 !important; 
+    color: #ffffff !important;
+    outline: 2px solid #ffcc00 !important;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+  }
 }
 
 h1 {
@@ -35,83 +66,50 @@ h1 {
   margin-bottom: 1em;
   margin-top: 0;
 }
-
 sup {
   font-weight: bold;
   color: #e74c3c;
   margin-right: 0.3em;
 }
-
 p {
   margin: 0.8em 0;
 }
-
-a {
-  color: #3498db;
-  text-decoration: none;
-  font-weight: 500;
-}
-
 a:hover {
   text-decoration: underline;
   color: #2980b9;
 }
-
 hr {
   border: none;
   border-top: 1px solid #ddd;
   margin: 2em 0;
 }
-
 [data-bible-nav] {
   background-color: #ecf0f1;
   padding: 1em;
   border-radius: 8px;
   margin-top: 2em;
 }
-
 [data-bible-nav] p {
   margin: 0.5em 0;
 }
-
 @media (max-width: 600px) {
-  body {
-    font-size: 18px;
-    padding: 0 1em;
-    margin: 1em;
-  }
-  
   h1 {
     font-size: 1.5em;
   }
 }
-
 rt {
   user-select: none;
 }
-
-
-
 a.verse-link {
   color: #e74c3c;
   text-decoration: none;
   font-weight: bold;
 }
-
 a.verse-link:hover {
   text-decoration: underline;
   color: #c0392b;
 }
-
-[id^="v"]:target {
-  background-color: #fff3cd;
-  padding: 0.1em 0.2em;
-  border-radius: 3px;
-  scroll-margin-top: 1em;
-}
 </style>
-    
-    <link rel="stylesheet" href="../../../theme/style.css">
 </head>
 <body>
 <h1>申命記 第4章</h1>

@@ -4,184 +4,102 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>聖書 - 目次</title>
+
+    
+    <link rel="stylesheet" href="../theme/style.css">
+
 <style>
+/* --- New Optimized Styles --- */
 body {
   font-family: 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 1200px;
-  margin: 2em auto;
-  padding: 0 2em;
-  background-color: #fafafa;
+  font-size: 22px;
+  line-height: 1.7;
+  max-width: 1250px;
+  margin: 1em auto;
+  padding: 0 1em;
+  background-color: #fafafa; /* Light Mode BG */
   color: #333;
 }
 
-h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  color: #2c3e50;
-  text-align: center;
-  border-bottom: 4px solid #3498db;
-  padding-bottom: 0.5em;
-  margin-bottom: 1.5em;
-}
-
-h2 {
-  font-size: 1.8em;
-  color: #34495e;
-  margin-top: 2em;
-  margin-bottom: 1em;
-  padding-left: 0.5em;
-  border-left: 5px solid #3498db;
-}
-
-.book-section {
-  margin-bottom: 3em;
-}
-
-.book-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.book-item {
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.book-item:hover {
-  border-color: #3498db;
-  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
-}
-
-.book-header {
-  padding: 1.2em 1.5em;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(to right, #f8f9fa, white);
-  user-select: none;
-}
-
-.book-header:hover {
-  background: linear-gradient(to right, #e8f4f8, #f8f9fa);
-}
-
-.book-title {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-.book-info {
-  font-size: 0.9em;
-  color: #7f8c8d;
-  margin-left: 1em;
-}
-
-.toggle-icon {
-  font-size: 1.2em;
-  color: #3498db;
-  transition: transform 0.3s ease;
-}
-
-.book-item.expanded .toggle-icon {
-  transform: rotate(180deg);
-}
-
-.chapter-container {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.book-item.expanded .chapter-container {
-  max-height: 2000px;
-}
-
-.chapter-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  padding: 1.5em;
-  background-color: #f8f9fa;
-  border-top: 1px solid #e0e0e0;
-}
-
-.chapter-link {
-  display: inline-block;
-  padding: 0.5em 0.9em;
-  background-color: white;
-  color: #2c3e50;
-  text-decoration: none;
-  border: 1px solid #ddd;
+/* Highlight for targeted verse */
+:target {
+  background-color: #fff3cd !important; /* Light Mode: Soft Yellow with Black text */
+  color: #333 !important;
+  scroll-margin-top: 2em;
+  padding: 2px 5px;
   border-radius: 4px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  min-width: 2.8em;
-  text-align: center;
 }
 
-.chapter-link:hover {
-  background-color: #3498db;
-  color: white;
-  border-color: #3498db;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
-}
-
-.stats {
-  text-align: center;
-  margin: 3em 0;
-  padding: 2em;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.stats h3 {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-.stats p {
-  font-size: 1.1em;
-  opacity: 0.9;
-}
-
-@media (max-width: 768px) {
+@media (prefers-color-scheme: dark) {
   body {
-    font-size: 16px;
-    padding: 0 1em;
+    background-color: #1a1a2e !important; /* Deep Dark Blue */
+    color: #e0e0e0 !important;
   }
+  h1 { color: #81d4fa !important; }
+  a { color: #64b5f6 !important; }
   
+  :target {
+    /* Dark Mode: Deep Brown background for White text */
+    background-color: #4a2c00 !important; 
+    color: #ffffff !important;
+    outline: 2px solid #ffcc00 !important;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+  }
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+sup {
+  font-weight: bold;
+  color: #e74c3c;
+  margin-right: 0.3em;
+}
+p {
+  margin: 0.8em 0;
+}
+a:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2em 0;
+}
+[data-bible-nav] {
+  background-color: #ecf0f1;
+  padding: 1em;
+  border-radius: 8px;
+  margin-top: 2em;
+}
+[data-bible-nav] p {
+  margin: 0.5em 0;
+}
+@media (max-width: 600px) {
   h1 {
-    font-size: 2em;
-  }
-  
-  h2 {
     font-size: 1.5em;
   }
-  
-  .book-title {
-    font-size: 1.1em;
-  }
-  
-  .book-info {
-    display: none;
-  }
 }
-
+rt {
+  user-select: none;
+}
+a.verse-link {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+a.verse-link:hover {
+  text-decoration: underline;
+  color: #c0392b;
+}
 </style>
-    
-    <link rel="stylesheet" href="../theme/style.css">
 </head>
 <body>
 <h1>聖書 - 目次</h1>

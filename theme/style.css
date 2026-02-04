@@ -214,3 +214,20 @@ body.light-mode #theme-toggle {
 #theme-toggle:hover {
     transform: scale(1.1);
 }
+
+/* --- Global Verse Highlight Fix (Verified) --- */
+:target {
+  background-color: #fff3cd !important; /* Light Mode: Soft Gold */
+  scroll-margin-top: 2em;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :target {
+    background-color: #4a3b00 !important; /* Dark Mode: Deep Golden Brown */
+    color: #ffffff !important;
+    outline: 2px solid #ffcc00 !important;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+  }
+}
