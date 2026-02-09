@@ -14,6 +14,7 @@
     </script>
 
     <link href="/mimune-no-uraniwa/favicon.png" rel="icon" type="image/png" />
+    <link rel="manifest" href="./manifest.json" />
     <meta charset="utf-8" />
     <title>み旨の裏庭 | サイト目次</title>
     <!-- ✅ SEO用に追加するタグ群 -->
@@ -371,6 +372,7 @@
             <div class="search-links">
                 <a href="search-all.html" class="search-btn">🔍 サイト内一括検索</a>
                 <a href="gacha.html" class="search-btn">🎲 み言をランダムに見る</a>
+                <button id="pwa-install-btn" class="search-btn" style="cursor: pointer; font-family: inherit;">📱 ホーム画面に追加してオフライン保存する</button>
             </div>
         </header>
 
@@ -556,6 +558,68 @@
     </script>
 
     <script src="theme/script.js"></script>
+
+    <script>
+        // PWA & Offline Save Logic
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+
+            // Listen for messages from SW
+            navigator.serviceWorker.addEventListener('message', event => {
+                const data = event.data;
+                const btn = document.getElementById('pwa-install-btn');
+                
+                if (data.type === 'CACHE_PROGRESS') {
+                     if (btn) btn.textContent = `⏳ 保存中... (${data.current}/${data.total})`;
+                } else if (data.type === 'CACHE_COMPLETE') {
+                     if (btn) {
+                         btn.textContent = '✅ 保存済み（ホーム画面から開けます）';
+                         alert('オフライン保存が完了しました。\n機内モードでも閲覧可能です。\n\nホーム画面に追加してご利用ください。');
+                     }
+                } else if (data.type === 'CACHE_ERROR') {
+                     if (btn) btn.textContent = '❌ 保存エラー';
+                     alert('保存中にエラーが発生しました: ' + data.error);
+                }
+            });
+        }
+
+        const pwaBtn = document.getElementById('pwa-install-btn');
+        if (pwaBtn) {
+            pwaBtn.addEventListener('click', async () => {
+                 // 1. Show Guidance
+                 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+                 const isAndroid = /Android/.test(navigator.userAgent);
+                 
+                 let msg = "このサイトをホーム画面に追加すると、アプリのように使えます。";
+                 if (isIOS) {
+                     msg += "\n\n【iPhoneの方】\n画面下部の「共有ボタン」から「ホーム画面に追加」を選択してください。";
+                 } else if (isAndroid) {
+                     msg += "\n\n【Androidの方】\nブラウザのメニュー（︙）から「アプリをインストール」または「ホーム画面に追加」を選択してください。";
+                 }
+                 
+                 // Show guidance first
+                 if(!confirm(msg + "\n\n「OK」を押すとオフライン保存を開始します。")) {
+                    return;
+                 }
+
+                 // 2. Trigger Offline Save
+                 if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+                     pwaBtn.textContent = "⏳ 保存準備中...";
+                     navigator.serviceWorker.controller.postMessage({ type: 'CACHE_ALL' });
+                 } else {
+                     // Try to register if not active or just reload
+                     alert('オフライン機能の準備中です。ページを再読み込みしてから再度お試しください。');
+                     window.location.reload();
+                 }
+            });
+        }
+    </script>
 </body>
 
 </html>
