@@ -370,181 +370,201 @@
         font-size: 1.05rem;
       }
     }
-  
-        /* 折りたたみ可能な目次のスタイル */
-        .toc-collapsible {
-            margin: 2.5rem 0;
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            border-radius: 16px;
-            padding: 1.5rem 2rem;
-            background: #fbfbfb;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-        }
 
-        .toc-header {
-            font-size: 1.8rem;
-            font-weight: 700;
-            cursor: pointer;
-            list-style: none;
-            user-select: none;
-            color: #111;
-            margin: 0;
-            padding: 0.5rem 0;
-        }
+    /* 折りたたみ可能な目次のスタイル */
+    .toc-collapsible {
+      margin: 2.5rem 0;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      background: #fbfbfb;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    }
 
-        .toc-header::-webkit-details-marker {
-            display: none;
-        }
+    .toc-header {
+      font-size: 1.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+      color: #111;
+      margin: 0;
+      padding: 0.5rem 0;
+    }
 
-        .toc-header::before {
-            content: '▶ ';
-            transition: transform 0.3s ease;
-            display: inline-block;
-            color: #667eea;
-            margin-right: 0.5rem;
-        }
+    .toc-header::-webkit-details-marker {
+      display: none;
+    }
 
-        details[open].toc-collapsible .toc-header::before {
-            transform: rotate(90deg);
-        }
+    .toc-header::before {
+      content: '▶ ';
+      transition: transform 0.3s ease;
+      display: inline-block;
+      color: #667eea;
+      margin-right: 0.5rem;
+    }
 
-        .toc-nav {
-            margin-top: 1.25rem;
-        }
+    details[open].toc-collapsible .toc-header::before {
+      transform: rotate(90deg);
+    }
 
-        .toc-nav ul {
-            margin: 0;
-            padding-left: 0;
-            list-style: none;
-        }
+    .toc-nav {
+      margin-top: 1.25rem;
+    }
 
-        .toc-nav li {
-            margin: 0.2rem 0;
-            padding-left: 0;
-            position: relative;
-        }
+    .toc-nav ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
 
-        .toc-nav ul ul {
-            padding-left: 1.5rem;
-            margin-top: 0.2rem;
-            margin-bottom: 0.5rem;
-            border-left: 1px solid rgba(0, 0, 0, 0.05);
-        }
+    .toc-nav li {
+      margin: 0.2rem 0;
+      padding-left: 0;
+      position: relative;
+    }
 
-        .toc-nav a {
-            color: #444;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            display: block;
-            padding: 0.6rem 0.8rem;
-            border-radius: 8px;
-            font-size: 1.15rem;
-            line-height: 1.4;
-        }
+    .toc-nav ul ul {
+      padding-left: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.5rem;
+      border-left: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
-        .toc-nav a:hover {
-            color: #667eea;
-            background: rgba(102, 126, 234, 0.08);
-            transform: translateX(4px);
-        }
+    .toc-nav a {
+      color: #444;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: block;
+      padding: 0.6rem 0.8rem;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      line-height: 1.4;
+    }
 
-  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
-  .typo-box summary::-webkit-details-marker { display: none; }
-  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
-  .typo-box[open] summary::before { transform: rotate(90deg); }
-  .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
-    
-    <link rel="stylesheet" href="../theme/style.css">
+    .toc-nav a:hover {
+      color: #667eea;
+      background: rgba(102, 126, 234, 0.08);
+      transform: translateX(4px);
+    }
+
+    .typo-box summary {
+      cursor: pointer;
+      list-style: none;
+      outline: none;
+    }
+
+    .typo-box summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .typo-box summary::before {
+      content: '▶';
+      display: inline-block;
+      margin-right: 0.5rem;
+      transition: transform 0.2s;
+      font-size: 0.8em;
+    }
+
+    .typo-box[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    .typo-box[open] {
+      padding-bottom: 1.5rem;
+    }
+  </style>
+
+  <link rel="stylesheet" href="../theme/style.css">
 </head>
 
 <body>
   <div class="container">
     <h1>原理講論 創造原理</h1>
-<nav class="page-nav">
-  <a href="10sojo.html" class="nav-btn"><span>←</span> 前へ</a>
-  <a href="index.html" class="nav-btn">目次</a>
-  <a href="12daraku.html" class="nav-btn">次へ <span>→</span></a>
-</nav>
-    <details class="toc-collapsible" id="toc">
-<summary class="toc-header">目次</summary>
-<nav aria-label="目次" class="toc-nav">
-      
-      <ul>
-        <li><a href="#1">第一節　神の 二性性相 と被造世界</a>
-          <ul>
-            <li><a href="#1-1">（一）神の二性性相</a>
-            </li>
-            <li><a href="#1-2">（二）神と被造世界との関係</a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#2">第二節　万有原力と授受作用および 四位 基台</a>
-          <ul>
-            <li><a href="#2-1">（一）　万　有　原　力</a>
-            </li>
-            <li><a href="#2-2">（二）　授　受　作　用</a>
-            </li>
-            <li><a href="#2-3">（三）　正分合作用による三対象目的を完成した 四位 基台</a>
-              <ul>
-                <li><a href="#2-3-1">(1)　正　分　合　作　用</a></li>
-                <li><a href="#2-3-2">(2)　三　対　象　目　的</a></li>
-                <li><a href="#2-3-3">(3)　四　位　基　台</a></li>
-                <li><a href="#2-3-4">(4) 四位 基台の存在様相</a></li>
-              </ul>
-            </li>
-            <li><a href="#2-4">（四）　神 の 遍 在 性</a>
-            </li>
-            <li><a href="#2-5">（五）　生 理 体 の 繁 殖</a>
-            </li>
-            <li><a href="#2-6">（六）　すべての存在が二性性相になっている理由</a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#3">第三節　創造目的</a>
-          <ul>
-            <li><a href="#3-1">（一）　被造世界を創造された目的</a>
-            </li>
-            <li><a href="#3-2">（二）　神の喜びのための善の対象</a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#4">第四節　創 造 本 然 の 価 値</a>
-          <ul>
-            <li><a href="#4-1">（一）　創造 本然 の価値の決定とその価値の基準</a>
-            </li>
-            <li><a href="#4-2">（二）　創造 本然 の知情意と創造 本然 の真美善</a>
-            </li>
-            <li><a href="#4-3">（三）　愛と美、善と悪、義と不義</a>
-              <ul>
-                <li><a href="#4-3-1">(1)　愛　と　美</a></li>
-                <li><a href="#4-3-2">(2)　善　と　悪</a></li>
-                <li><a href="#4-3-3">(3)　義　と　不　義</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#5">第五節　被造世界の創造過程とその成長期間</a>
-          <ul>
-            <li><a href="#5-1">（一）　被造世界の創造過程</a>
-            </li>
-            <li><a href="#5-2">（二）　被造物の成長期間</a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#6">第六節　人間を中心とする無形実体世界と有形実体世界</a>
-          <ul>
-            <li><a href="#6-1">（一）　無形実体世界と有形実体世界</a>
-            </li>
-            <li><a href="#6-2">（二）　被造世界における人間の位置</a>
-            </li>
-            <li><a href="#6-3">（三）　肉身と霊人体との相対的関係</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+    <nav class="page-nav">
+      <a href="10sojo.html" class="nav-btn"><span>←</span> 前へ</a>
+      <a href="index.html" class="nav-btn">目次</a>
+      <a href="12daraku.html" class="nav-btn">次へ <span>→</span></a>
     </nav>
-</details>
+    <details class="toc-collapsible" id="toc">
+      <summary class="toc-header">目次</summary>
+      <nav aria-label="目次" class="toc-nav">
+
+        <ul>
+          <li><a href="#1">第一節　神の 二性性相 と被造世界</a>
+            <ul>
+              <li><a href="#1-1">（一）神の二性性相</a>
+              </li>
+              <li><a href="#1-2">（二）神と被造世界との関係</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#2">第二節　万有原力と授受作用および 四位 基台</a>
+            <ul>
+              <li><a href="#2-1">（一）　万　有　原　力</a>
+              </li>
+              <li><a href="#2-2">（二）　授　受　作　用</a>
+              </li>
+              <li><a href="#2-3">（三）　正分合作用による三対象目的を完成した 四位 基台</a>
+                <ul>
+                  <li><a href="#2-3-1">(1)　正　分　合　作　用</a></li>
+                  <li><a href="#2-3-2">(2)　三　対　象　目　的</a></li>
+                  <li><a href="#2-3-3">(3)　四　位　基　台</a></li>
+                  <li><a href="#2-3-4">(4) 四位 基台の存在様相</a></li>
+                </ul>
+              </li>
+              <li><a href="#2-4">（四）　神 の 遍 在 性</a>
+              </li>
+              <li><a href="#2-5">（五）　生 理 体 の 繁 殖</a>
+              </li>
+              <li><a href="#2-6">（六）　すべての存在が二性性相になっている理由</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#3">第三節　創造目的</a>
+            <ul>
+              <li><a href="#3-1">（一）　被造世界を創造された目的</a>
+              </li>
+              <li><a href="#3-2">（二）　神の喜びのための善の対象</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#4">第四節　創 造 本 然 の 価 値</a>
+            <ul>
+              <li><a href="#4-1">（一）　創造 本然 の価値の決定とその価値の基準</a>
+              </li>
+              <li><a href="#4-2">（二）　創造 本然 の知情意と創造 本然 の真美善</a>
+              </li>
+              <li><a href="#4-3">（三）　愛と美、善と悪、義と不義</a>
+                <ul>
+                  <li><a href="#4-3-1">(1)　愛　と　美</a></li>
+                  <li><a href="#4-3-2">(2)　善　と　悪</a></li>
+                  <li><a href="#4-3-3">(3)　義　と　不　義</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#5">第五節　被造世界の創造過程とその成長期間</a>
+            <ul>
+              <li><a href="#5-1">（一）　被造世界の創造過程</a>
+              </li>
+              <li><a href="#5-2">（二）　被造物の成長期間</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#6">第六節　人間を中心とする無形実体世界と有形実体世界</a>
+            <ul>
+              <li><a href="#6-1">（一）　無形実体世界と有形実体世界</a>
+              </li>
+              <li><a href="#6-2">（二）　被造世界における人間の位置</a>
+              </li>
+              <li><a href="#6-3">（三）　肉身と霊人体との相対的関係</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </details>
 
     <!-- St-HP-H -->
     <!-- En-HP-H -->
@@ -585,9 +605,9 @@
       　<span style="background-color:#FCD2E7">無形にいます神の<ruby>神性<rt>しんせい</rt>
         </ruby>を、我々はいかにして知ることができるだろうか。それは、被造世界を観察することによって、知ることができる。</span>そこで、<span
         style="background-color:#CCFFFF">パウロは、「神の見えない性質、すなわち、神の永遠の力と<ruby>神性<rt>しんせい</rt>
-        </ruby>とは、天地創造このかた、被造物において知られていて、明らかに認められるからである。したがって、彼らには弁解の余地がない」（ロマ一・<a
+        </ruby>とは、天地創造このかた、被造物において知られていて、明らかに認められるからである。したがって、彼らには弁解の余地がない」（<a
           href="../Bible_out/02_New Testament/06_romans/001.html#v20"
-          class="verse-link">20</a>）と記録している。あたかもすべての作品は、その作者の見えない<ruby>性稟<rt>せいひん</rt>
+          class="verse-link">ロマ一・20</a>）と記録している。あたかもすべての作品は、その作者の見えない<ruby>性稟<rt>せいひん</rt>
         </ruby>の実体的展開であるように、被造世界の<ruby>森羅万象<rt>しんらばんしょう</rt></ruby>は、それを創造し<ruby>給<rt>たも</rt></ruby>うた神の見えない<ruby>神性
           <rt>しんせい</rt>
         </ruby>の、その実体対象として展開されたものなのである。</span>それゆえ、<span style="background-color:#FCD2E7">作品を見てその作者の<ruby>性稟<rt>せいひん
@@ -600,11 +620,12 @@
       　さらに、原子も、陽性または陰性を帯びるようになるが、これらの二性性相が相対的関係を結ぶことによって、物質の分子を形成するのである。このように形成された物質は、また、互いに二性性相の相対的関係によって植物または動物に吸収されて、それらの栄養となるのである。<br />
       　<span style="background-color:#CCFFFF">さらに、すべての植物は各々<ruby>雄<rt>お</rt></ruby>しべと<ruby>雌<rt>め</rt>
         </ruby>しべとによって存続するし、また、すべての動物は各々<ruby>雄<rt>おす</rt></ruby>と<ruby>雌<rt>めす</rt>
-        </ruby>とによって繁殖、生存するのである。人間についての例を見ても、神は男性のアダムを創造されてのち、「人がひとりでいるのは良くない」（創二・<a
+        </ruby>とによって繁殖、生存するのである。人間についての例を見ても、神は男性のアダムを創造されてのち、「人がひとりでいるのは良くない」（<a
           href="../Bible_out/01_Old Testament/01_genesis/2.html#v18"
-          class="verse-link">18</a>）と言われ、その対象として女性のエバを創造なさったあと、初めて「はなはだ良（善）かった」（創一・<a
+          class="verse-link">創二・18</a>）と言われ、その対象として女性のエバを創造なさったあと、初めて「はなはだ良（善）かった」（<a
           href="../Bible_out/01_Old Testament/01_genesis/1.html#v31"
-          class="verse-link">31</a>）と言われたのである。</span>さらに、あたかも、電離した陽イオンや陰イオンが、各々陽子と電子との結合によって形成されているように、<ruby>雄<rt>お</rt>
+          class="verse-link">創一・31</a>）と言われたのである。</span>さらに、あたかも、電離した陽イオンや陰イオンが、各々陽子と電子との結合によって形成されているように、<ruby>雄<rt>お
+        </rt>
       </ruby>しべや<ruby>雌<rt>め</rt>
       </ruby>しべ、あるいは雄や雌もまた、各々それ自体の内部で、陽性と陰性の二性性相の相対的関係を結ぶことによって、初めて存在することができるのである。したがって、人間においても、男性には女性性相が、女性には男性性相が各々潜在しているのである。そればかりでなく、<span
         style="background-color:#FFFF99"><ruby>森羅万象<rt>しんらばんしょう</rt></ruby>の存在様相が、<ruby>表裏<rt>ひょうり</rt>
@@ -629,12 +650,10 @@
         style="background-color:#FFFF99">性相と形状とは、お互いにいかなる関係をもっているのであろうか。無形の内的な性相が原因となって、それが主体的な立場にあるので、その形状は有形の外的な結果となり、その対象の立場に立つようになる。したがってこの両者はお互いに、内的なものと外的なもの、原因的なものと結果的なもの、主体的なものと対象的なもの、縦的なものと横的なものとの相対的関係をもつようになるのである。これに対する例として、再び人間を取りあげてみることにしよう。心と体は、各々性相と形状に<ruby>該当
           <rt>がいとう</rt>
         </ruby>するもので、体は心に似ているというだけではなく、心の命ずるがままに動じ静ずる。それによって、人間はその目的を<ruby>指向<rt>しこう</rt>
-        </ruby>しつつ<ruby>指向<rt>しこう<ruby>生<rt>せい</rt></ruby>を</rt>
-        </ruby>維持するのである。</span>したがって、心と体とは、内外、原因と結果、主体と対象、縦と横などの相対的関係をもっているということができるのである。<br />
+        </ruby>しつつ生活を維持するのである。</span>したがって、心と体とは、内外、原因と結果、主体と対象、縦と横などの相対的関係をもっているということができるのである。<br />
       　このように、いかなる被造物にも、その次元こそ互いに異なるが、いずれも無形の性相、すなわち、人間における心のように、無形の内的な性相があって、それが原因または主体となり、人間における体のようなその形状的部分を動かし、それによってその個性体を、ある目的をもつ被造物として存在せしめるようになるのである。それゆえ、<span
         style="background-color:#FFFF99">動物にも、人間の心のようなものがあり、これがある目的を<ruby>指向<rt>しこう</rt>
-        </ruby>する主体的な原因となっているので、その肉体は、その個体の目的のために<ruby>指向<rt>しこう<ruby>生<rt>せい</rt></ruby>を</rt>
-        </ruby>営むようになるのである。植物にもやはりこのような<ruby>性相<rt>せいそう</rt></ruby>
+        </ruby>する主体的な原因となっているので、その肉体は、その個体の目的のために生存を営むようになるのである。植物にもやはりこのような<ruby>性相<rt>せいそう</rt></ruby>
         的な部分があって、それが、人間における心のような作用をするので、その個体は有機的な機能を維持するようになるのである。</span>そればかりでなく、人間が互いに結合するようになるのはそれらの中に各々結合しようとする心があるからであるのと同様、<span
         style="background-color:#FFFF99">陽イオンと陰イオンとが結合してある物質を形成するのも、この二つのイオンの中に、各々その分子形成の目的を<ruby>指向<rt>しこう</rt>
         </ruby>するある性相的な部分があるからである。</span>陽子を中心として電子が回転して原子を形成するのも、これまた、これらのものの中に、各々その原子形成の目的を<ruby>指向<rt>しこう</rt>
@@ -650,9 +669,9 @@
       の中和的主体として、すべての存在界の第一原因であられることが理解できるようになった。<br />
       　既に述べたように、存在するものはいかなるものでも、陽性と陰性の二性性相の相対的関係によって存在するという事実が明らかにされた。それゆえに、<span
         style="background-color:#FCD2E7"><ruby>森羅万象<rt>しんらばんしょう</rt></ruby>の第一原因としていまし<ruby>給<rt>たも</rt>
-        </ruby>う神も、また、陽性と陰性の二性性相の相対的関係によって存在せざるを得ないということは、当然の結論だといわなければならない。</span>創世記一章<a
+        </ruby>う神も、また、陽性と陰性の二性性相の相対的関係によって存在せざるを得ないということは、当然の結論だといわなければならない。</span><a
         href="../Bible_out/01_Old Testament/01_genesis/1.html#v27"
-        class="verse-link">27</a>節に「神は自分のかたちに人を創造された。すなわち、神のかたちに創造し、男と女とに創造された」と記録されているみ<ruby>言<rt>ことば</rt>
+        class="verse-link">創世記一章27節</a>に「神は自分のかたちに人を創造された。すなわち、神のかたちに創造し、男と女とに創造された」と記録されているみ<ruby>言<rt>ことば</rt>
       </ruby>を見ても、神は陽性と陰性の二性性相の中和的主体としてもいまし<ruby>給<rt>たも</rt></ruby>うということが、明らかに分かるのである。<br />
       　それでは、<span style="background-color:#CCFFFF">性相と形状の二性性相と、陽性と陰性の二性性相とは、互いにいかなる関係をもっているのだろうか。</span><span
         style="background-color:#FCD2E7">本来、神の<ruby>本性相<rt>ほんせいそう</rt></ruby>と<ruby>本形状<rt>ほんけいじょう</rt>
@@ -660,15 +679,14 @@
             ほんようせい</rt></ruby>と<ruby>本陰性<rt>ほんいんせい</rt></ruby>は、各々<ruby>本性相<rt>ほんせいそう</rt></ruby>と<ruby>本形状<rt>ほんけいじょう
           </rt></ruby>の属性である。</span>それゆえ、陽性と陰性とは、各々性相と形状との関係と同一なる関係をもっている。したがって、陽性と陰性とは、内外、原因と結果、主体と対象、または<ruby>縦<rt>たて
         </rt></ruby>と<ruby>横<rt>よこ</rt></ruby>との相対的関係をもっている。神が男性であるアダムの<ruby>肋骨<rt>あばらぼね</rt>
-      </ruby>を取って、その対象としての女性であるエバを創造されたと記録してある理由もここにあるのである（創二・<a
-        href="../Bible_out/01_Old Testament/01_genesis/2.html#v22"
-        class="verse-link">22</a>）。我々はここにおいて、神における陽性と陰性とを、各々男性と女性と称するのである。<br />
+      </ruby>を取って、その対象としての女性であるエバを創造されたと記録してある理由もここにあるのである（<a href="../Bible_out/01_Old Testament/01_genesis/2.html#v22"
+        class="verse-link">創二・22</a>）。我々はここにおいて、神における陽性と陰性とを、各々男性と女性と称するのである。<br />
       　<span
-        style="background-color:#FFFF99">神を中心として完成された被造世界は、ちょうど、心を中心として完成した人間の一個体のように、神の創造目的のままに、動じ静ずる、一つの完全な有機体である。したがって、この有機体も性相と形状とを備えなければならないわけで、その性相的な存在が神であり、その形状的存在が被造世界なのである。神が、被造世界の中心である人間を、神の形状である（創一・<a
+        style="background-color:#FFFF99">神を中心として完成された被造世界は、ちょうど、心を中心として完成した人間の一個体のように、神の創造目的のままに、動じ静ずる、一つの完全な有機体である。したがって、この有機体も性相と形状とを備えなければならないわけで、その性相的な存在が神であり、その形状的存在が被造世界なのである。神が、被造世界の中心である人間を、神の形状である（<a
           href="../Bible_out/01_Old Testament/01_genesis/1.html#v27"
-          class="verse-link">27</a>）と言われた理由もここにある。</span>したがって、被造世界が創造される前には、神は性相的な男性格主体としてのみおられたので、形状的な女性格対象として、被造世界を創造せざるを得なかったのである。コリント・一一章<a
-        href="../Bible_out/02_New Testament/07_1-corinthians/001.html#v7"
-        class="verse-link">７</a>節に、「男は、神のかたちであり栄光である」と記録されている聖句は、正にこのような原理を立証しているのである。このように、神は性相的な男性格主体であられるので、我々は神を父と呼んで、その格位を表示するのである。上述した内容を要約すれば、<span
+          class="verse-link">創一・27</a>）と言われた理由もここにある。</span>したがって、被造世界が創造される前には、神は性相的な男性格主体としてのみおられたので、形状的な女性格対象として、被造世界を創造せざるを得なかったのである。<a
+        href="../Bible_out/02_New Testament/07_1-corinthians/011.html#v7"
+        class="verse-link">コリント・一一章7節</a>に、「男は、神のかたちであり栄光である」と記録されている聖句は、正にこのような原理を立証しているのである。このように、神は性相的な男性格主体であられるので、我々は神を父と呼んで、その格位を表示するのである。上述した内容を要約すれば、<span
         style="background-color:#FCD2E7">神は<ruby>本性相<rt>ほんせいそう</rt></ruby>と<ruby>本形状<rt>ほんけいじょう</rt>
         </ruby>の二性性相の中和的主体であると同時に、<ruby>本性相<rt>ほんせいそう</rt></ruby>的男性と<ruby>本形状<rt>ほんけいじょう</rt>
         </ruby>的女性との二性性相の中和的主体としておられ、被造世界に対しては、性相的な男性格主体としていまし<ruby>給<rt>たも</rt></ruby>うという事実を知ることができる。</span><br />
@@ -686,15 +704,15 @@
           </rt></ruby>など、二性性相の相対的な関係をもっているのである。</span><br />
       　<span style="background-color:#FFFF99">今、我々は創造原理に立脚して、東洋哲学の中心である<ruby>易学<rt>えきがく</rt>
         </ruby>の根本について調べてみることにしよう。<ruby>易学<rt>えきがく</rt></ruby>では、宇宙の根本は<ruby>太極<rt>たいきょく</rt>
-        </ruby>（無極）であり、その太極から陰陽が、陰陽から<ruby>木火土金水<rt>もっかどごんすい</rt></ruby></ruby>の<ruby>五行<rt>ごぎょう</rt></ruby>が、<ruby>五行
+        </ruby>（無極）であり、その太極から陰陽が、陰陽から<ruby>木火土金水<rt>もっかどごんすい</rt></ruby>の<ruby>五行<rt>ごぎょう</rt></ruby>が、<ruby>五行
           <rt>ごぎょう</rt>
         </ruby>から万物が<ruby>生成<rt>せいせい</rt></ruby>されたと主張している。そして、陰陽を道と称し（<ruby>一陰一陽之謂道<rt>いちいんいちようこれみちという
           </rt></ruby>）、その道は、すなわちみ<ruby>言<rt>ことば</rt></ruby>（<ruby>道也者言也<rt>みちはことばなり</rt>
         </ruby>）であるといった。この内容を総合すれば、太極から陰陽、すなわちみ<ruby>言<rt>ことば</rt></ruby>が、このみ<ruby>言<rt>ことば</rt></ruby>から万物が<ruby>生成
           <rt>せいせい</rt>
         </ruby>されたという意味となる。したがって、太極は、すべての存在の第一原因として、陰陽の統一的核心であり、その中和的主体であることを意味するのである。</span><br />
-      　<span style="background-color:#FFFF99">このようにして、ヨハネ福音書一章<a
-          href="../Bible_out/02_New Testament/04_john/001.html#v1" class="verse-link">１</a>節から３節に記録されているように、み<ruby>言<rt>
+      　<span style="background-color:#FFFF99">このようにして、<a href="../Bible_out/02_New Testament/04_john/001.html#v1"
+          class="verse-link">ヨハネ福音書一章１節</a>から３節に記録されているように、み<ruby>言<rt>
             ことば</rt></ruby>はすなわち神であり、このみ<ruby>言<rt>ことば</rt>
         </ruby>から万物が創造されたというその内容と、これとを対照してみれば、陰陽の中和的な主体であるその太極は、二性性相の中和的主体である神を表示したものであるということを、知ることができるのである。</span><br />
       　創造原理を見ても、み<ruby>言<rt>ことば</rt></ruby>が二性性相から成り立っているがゆえに、そのみ<ruby>言<rt>ことば</rt>
@@ -757,18 +775,18 @@
       　<span
         style="background-color:#FFFF99">堕落というのは、人間と神との授受の関係が切れることによって一体となれず、サタンと授受の関係を結び、それと一体となったことを意味する。イエスは神と完全な授受の関係を結んで一体となられた、ただ一人のひとり子として来られたお方である。したがって、堕落した人間が、イエスと完全なる授受の関係を結んで一体となれば、創造<ruby>本性
           <rt>ほんせい</rt>
-        </ruby>を復帰して、神と授受作用をすることによって、神と一体となることができるのである。それゆえに、イエスは堕落人間の仲保となられると同時に、道であり、真理であり、また命でもあるのである。</span>したがって、イエスは命をささげ、愛と犠牲によって、すべてのものを与えるために来られたお方であるから、だれでも彼に信仰をささげる者は滅びることのない永遠の命を得るのである（ヨハネ三・<a
+        </ruby>を復帰して、神と授受作用をすることによって、神と一体となることができるのである。それゆえに、イエスは堕落人間の仲保となられると同時に、道であり、真理であり、また命でもあるのである。</span>したがって、イエスは命をささげ、愛と犠牲によって、すべてのものを与えるために来られたお方であるから、だれでも彼に信仰をささげる者は滅びることのない永遠の命を得るのである（<a
         href="../Bible_out/02_New Testament/04_john/003.html#v16"
-        class="verse-link">16</a>）。キリスト教は、愛と犠牲により、イエスを中心として、人間同士がお互いに横的な授受の回路を回復させることによって、神との縦的な授受の回路を復帰させようとする愛の宗教である。それゆえに、イエスの教訓と行跡とは、みなこの目的のためのものであったのである。例を挙げれば、イエスは、「人をさばくな。自分がさばかれないためである。あなたがたがさばくそのさばきで、自分もさばかれ」るであろう（マタイ七・<a
+        class="verse-link">ヨハネ三・16</a>）。キリスト教は、愛と犠牲により、イエスを中心として、人間同士がお互いに横的な授受の回路を回復させることによって、神との縦的な授受の回路を復帰させようとする愛の宗教である。それゆえに、イエスの教訓と行跡とは、みなこの目的のためのものであったのである。例を挙げれば、イエスは、「人をさばくな。自分がさばかれないためである。あなたがたがさばくそのさばきで、自分もさばかれ」るであろう（<a
         href="../Bible_out/02_New Testament/01_matthew/007.html#v1"
-        class="verse-link">１</a>、２）と言われた。また、「何事でも人々からしてほしいと望むことは、人々にもそのとおりにせよ」（マタイ七・<a
+        class="verse-link">マタイ七・１、２</a>）と言われた。また、「何事でも人々からしてほしいと望むことは、人々にもそのとおりにせよ」（<a
         href="../Bible_out/02_New Testament/01_matthew/007.html#v12"
-        class="verse-link">12</a>）と語られ、「だから人の前でわたしを受けいれる者を、わたしもまた、天にいますわたしの父の前で受けいれるであろう」（マタイ一〇・<a
+        class="verse-link">マタイ七・12</a>）と語られ、「だから人の前でわたしを受けいれる者を、わたしもまた、天にいますわたしの父の前で受けいれるであろう」（<a
         href="../Bible_out/02_New Testament/01_matthew/010.html#v32"
-        class="verse-link">32</a>）とも言われた。また、イエスは、「預言者の名のゆえに預言者を受けいれる者は、預言者の報いを受け、義人の名のゆえに義人を受けいれる者は、義人の報いを受けるであろう」（マタイ一〇・<a
+        class="verse-link">マタイ一〇・32</a>）とも言われた。また、イエスは、「預言者の名のゆえに預言者を受けいれる者は、預言者の報いを受け、義人の名のゆえに義人を受けいれる者は、義人の報いを受けるであろう」（<a
         href="../Bible_out/02_New Testament/01_matthew/010.html#v41"
-        class="verse-link">41</a>）と言われ、「わたしの弟子であるという名のゆえに、この小さい者のひとりに冷たい水一杯でも飲ませてくれる者は、よく言っておくが、決してその報いからもれることはない」（マタイ一〇・<a
-        href="../Bible_out/02_New Testament/01_matthew/010.html#v42" class="verse-link">42</a>）とも言われたのである。<br />
+        class="verse-link">マタイ一〇・41</a>）と言われ、「わたしの弟子であるという名のゆえに、この小さい者のひとりに冷たい水一杯でも飲ませてくれる者は、よく言っておくが、決してその報いからもれることはない」（<a
+        href="../Bible_out/02_New Testament/01_matthew/010.html#v42" class="verse-link">マタイ一〇・42</a>）とも言われたのである。<br />
       <br />
       <h4 id="2-3"><a href="11sozo.html#2-3"><span style="background-color:#FCD2E7">（三）　正分合作用による三対象目的を完成した<ruby>四位<rt>
                 よんい</rt></ruby>基台</span></a></h4>
@@ -854,8 +872,8 @@
         </ruby>の個体を構成するために、各々存在していることを知ることができる。</span>それゆえに、エネルギーの運動の目的は素粒子に、素粒子の目的は原子に、原子の目的は分子に、分子の目的は物質に、<span
         style="background-color:#FFFF99">すべての物質の目的は宇宙形成にあるのである。それでは、宇宙は何のためにあるのであり、その中心は何であるのだろうか。それは、まさしく人間である。ゆえに、神は人間を創造されたのち、被造世界を<ruby>主管
           <rt>しゅかん</rt>
-        </ruby>せよ（創一・<a href="../Bible_out/01_Old Testament/01_genesis/1.html#v28"
-          class="verse-link">28</a>）と言われた。</span>もしも、被造世界に人間が存在しないならば、その被造世界は、まるで、見物者のいない博物館のようなものとなってしまう。つまり、博物館のすべての陳列品は、それらを鑑賞し、愛し、喜んでくれる人間がいて初めて、歴史的な遺物として存在し得るところの因縁的な関係が、それらの間で結ばれ、各々その存在の価値を表すことができるのである。もしも、そこに、その中心となる人間が存在しないとすれば、それらはいったいいかなる存在意義をもつであろうか。人間を中心とする被造世界の場合も、これと少しも変わるところはない。すなわち、<span
+        </ruby>せよ（<a href="../Bible_out/01_Old Testament/01_genesis/1.html#v28"
+          class="verse-link">創一・28</a>）と言われた。</span>もしも、被造世界に人間が存在しないならば、その被造世界は、まるで、見物者のいない博物館のようなものとなってしまう。つまり、博物館のすべての陳列品は、それらを鑑賞し、愛し、喜んでくれる人間がいて初めて、歴史的な遺物として存在し得るところの因縁的な関係が、それらの間で結ばれ、各々その存在の価値を表すことができるのである。もしも、そこに、その中心となる人間が存在しないとすれば、それらはいったいいかなる存在意義をもつであろうか。人間を中心とする被造世界の場合も、これと少しも変わるところはない。すなわち、<span
         style="background-color:#FFFF99">人間が存在して、被造物を形成しているすべての物質の根本とその性格を明らかにし、分類することによって初めて、それらはお互いに、合目的的な関係を結ぶことができるのである。さらにまた、人間が存在することによって初めて、動植物や水陸万象や宇宙を形成しているすべての星座などの<ruby>正体
           <rt>しょうたい</rt>
         </ruby>が区別でき、それらが人間を中心として、合目的的な関係をもつことができるのである。それから物質は人間の肉体に吸収されて、その生理的な機能を維持させる要素となり、<ruby>森羅万象
@@ -883,8 +901,8 @@
         </ruby>するように導いてくれる本心の中心ともなるのである。</span>それゆえに、被造世界は、このように人間が完成されて、神を中心として夫婦となることによってつくられる<ruby>四位
         <rt>よんい</rt>
       </ruby>基台を中心に、合目的的な球形運動をするようになる。しかるに、<span
-        style="background-color:#FFFF99">被造世界は人間の堕落によってこの中心を失ったので、万物も実に切なる思いで、神の子たち、すなわち創造本性を復帰した人間たちが出現して、その中心となってくれる日を待ち望んでいるのである（ロマ八・<a
-          href="../Bible_out/02_New Testament/06_romans/008.html#v19" class="verse-link">19</a>〜22）。</span><br />
+        style="background-color:#FFFF99">被造世界は人間の堕落によってこの中心を失ったので、万物も実に切なる思いで、神の子たち、すなわち創造本性を復帰した人間たちが出現して、その中心となってくれる日を待ち望んでいるのである（<a
+          href="../Bible_out/02_New Testament/06_romans/008.html#v19" class="verse-link">ロマ八・19〜22</a>）。</span><br />
       <br />
       <h4 id="2-4"><a href="11sozo.html#2-4"><span style="background-color:#FFFF99">（四）　神 の <ruby>遍 在 性<rt>へんざいせい</rt>
             </ruby></span></a></h4><br />
@@ -930,12 +948,12 @@
       <h4 id="3-1"><a href="11sozo.html#3-1"><span style="background-color:#FCD2E7">（一）　被造世界を創造された目的</span></a></h4>
       <br />
       　<span style="background-color:#FCD2E7">被造物の創造が終わるごとに、神はそれを見て良しとされた、と記録されている創世記のみ<ruby>言<rt>ことば</rt>
-        </ruby>を見れば（創一・<a href="../Bible_out/01_Old Testament/01_genesis/1.html#v4"
-          class="verse-link">４</a>〜31）、神は自ら創造された被造物が、善の対象となることを願われたことが分かる。このように被造物が善の対象になることを願われたのは、神がそれを見て喜ばれるためである。</span>それでは、<span
+        </ruby>を見れば（<a href="../Bible_out/01_Old Testament/01_genesis/1.html#v4"
+          class="verse-link">創一・４〜31</a>）、神は自ら創造された被造物が、善の対象となることを願われたことが分かる。このように被造物が善の対象になることを願われたのは、神がそれを見て喜ばれるためである。</span>それでは、<span
         style="background-color:#CCFFFF">被造物がいかにすれば、神に一番喜ばれるのであろうか。神は万物世界を創造されたのち、最後に御自分の<ruby>性相<rt>せいそう</rt>
         </ruby>と形状のとおりに、喜怒哀楽の感性をもつ人間を創造され、それを見て楽しもうとされた。そこで、神はアダムとエバを創造なさったのち、<ruby>生育<rt>せいいく</rt>
-        </ruby>せよ、繁殖せよ、万物世界を<ruby>主管<rt>しゅかん</rt></ruby>せよ（創一・<a
-          href="../Bible_out/01_Old Testament/01_genesis/1.html#v28" class="verse-link">28</a>）と言われたのである。この三大祝福のみ<ruby>言
+        </ruby>せよ、繁殖せよ、万物世界を<ruby>主管<rt>しゅかん</rt></ruby>せよ（<a href="../Bible_out/01_Old Testament/01_genesis/1.html#v28"
+          class="verse-link">創一・28</a>）と言われたのである。この三大祝福のみ<ruby>言
           <rt>ことば</rt>
         </ruby>に従って、人間が神の国、すなわち天国をつくって喜ぶとき、神もそれを御覧になって、一層喜ばれるということはいうまでもない。</span><br />
       　<span style="background-color:#CCFFFF">それでは、神の三大祝福は、いかにして完成されるのだろうか。それは、創造の根本基台である<ruby>四位<rt>よんい</rt>
@@ -963,10 +981,10 @@
       　<span style="background-color:#CCFFFF">神の第一祝福は個性を完成することにある。人間が個性を完成しようとすれば、神の<ruby>二性性相<rt>にせいせいそう</rt>
         </ruby>の対象として分立された心と体とが、授受作用によって、<ruby>合性<rt>ごうせい</rt></ruby>一体化して、それ自体において、神を中心として個体的な<ruby>四位<rt>よんい</rt>
         </ruby>基台をつくらなければならない。</span><span style="background-color:#FFFF99">神を中心として心と体とが創造<ruby>本然<rt>ほんぜん</rt>
-        </ruby>の<ruby>四位<rt>よんい</rt></ruby>基台を完成した人間は、神の<ruby>宮<rt>みや</rt></ruby>となって（コリント・三・<a
+        </ruby>の<ruby>四位<rt>よんい</rt></ruby>基台を完成した人間は、神の<ruby>宮<rt>みや</rt></ruby>となって（<a
           href="../Bible_out/02_New Testament/07_1-corinthians/003.html#v16"
-          class="verse-link">16</a>）、神と一体となるので（ヨハネ一四・<a href="../Bible_out/02_New Testament/04_john/014.html#v20"
-          class="verse-link">20</a>）、<ruby>神性<rt>しんせい</rt></ruby>をもつようになり、神の心情を<ruby>体恤<rt>たいじゅつ</rt>
+          class="verse-link">コリント三・16</a>）、神と一体となるので（<a href="../Bible_out/02_New Testament/04_john/014.html#v20"
+          class="verse-link">ヨハネ一四・20</a>）、<ruby>神性<rt>しんせい</rt></ruby>をもつようになり、神の心情を<ruby>体恤<rt>たいじゅつ</rt>
         </ruby>することによって神のみ旨を知り、そのみ旨に従って生活をするようになる。このように個性を完成した人間は、神を中心としたその心の実体対象となり、したがって、神の実体対象となる。ここで、その心と神は、このような実体対象からくる刺激によって、それ自体の性相と形状とを相対的に感ずることができるので、喜びに満ちることができるのである。そうであるから、個性を完成した人間は、神の喜怒哀楽を直ちにそれ自体のものとして感ずるようになり、神が悲しむ犯罪行為をすることができなくなるので、絶対に堕落することがない。</span><br />
       　つぎに、<span style="background-color:#CCFFFF">神の第二祝福を成就するためには、神の二性性相が各々個性を完成した実体対象として分立されたアダムとエバが夫婦となり、<ruby>合性<rt>
             ごうせい</rt></ruby>一体化して子女を生み殖やし、神を中心として家庭的な<ruby>四位<rt>よんい</rt></ruby>基台をつくらなければならないのである。</span>このように、<span
@@ -1133,8 +1151,9 @@
 
       　<span
         style="background-color:#CCFFFF">被造世界の創造が終わるまで、六日、すなわち六段階の期間を要したという事実は、正に被造世界を構成している各個性体が完成されるに際しても、ある程度の期間が必要であったことを意味する。</span>また、創世記一章にある天地創造に関する記録を見ても、その日その日の創造が終わるたびごとに、その序数日数を明らかにしているが、この日数表示によっても、我々被造物の完成にはある期間が必要であったことを知ることができるのである。すなわち、<span
-        style="background-color:#FCD2E7">神は初めの日の創造が終わると、「夕となり、また朝となった。第一日である」（創一・<a
-          href="../Bible_out/01_Old Testament/01_genesis/1.html#v5" class="verse-link">５</a>）と言われた。</span><span
+        style="background-color:#FCD2E7">神は初めの日の創造が終わると、「夕となり、また朝となった。<a
+          href="../Bible_out/01_Old Testament/01_genesis/1.html#v5"
+          class="verse-link">第一日である（創一・５）</a>」と言われた。</span><span
         style="background-color:#CCFFFF">夕から夜が過ぎて、次の日の朝になれば、第二日であるにもかかわらず、第一日であると言われたのは、被造物が夜という成長期間を経て、朝になって完成したのち、初めて創造目的を完成した被造物として、創造理想を実現するための出発をするようになるからである。</span><br />
       　このように、被造世界で起こるすべての現象は、必ずある程度の時間が経過したのち、初めてその結果が現れるようになる。<span
         style="background-color:#FCD2E7">これは被造物が創造されるとき、一定の成長期間を経て完成できるように創造されたからである。</span><br />
@@ -1143,9 +1162,9 @@
       <br />
       　<span style="background-color:#CCFFFF">被造世界は神の<ruby>本性相<rt>ほんせいそう</rt></ruby>と<ruby>本形状<rt>ほんけいじょう</rt>
         </ruby>とが数理的な原則によって、実体的に展開されたものである。ここにおいて我々は、神は数理性をもっておられるということを推測できる。またさらに、神は絶対者でありながら、相対的な<ruby>二性性相<rt>
-            にせいせいそう</rt></ruby>の中和的存在であられるので、三数的な存在である。したがって、唯一なる神に似た被造物（創一・<a
+            にせいせいそう</rt></ruby>の中和的存在であられるので、三数的な存在である。したがって、唯一なる神に似た被造物（<a
           href="../Bible_out/01_Old Testament/01_genesis/1.html#v27"
-          class="verse-link">27</a>）はその存在様相やその運動、さらにまたその成長期間がみな三数過程を通じて現れるようになる。</span><br />
+          class="verse-link">創一・27</a>）はその存在様相やその運動、さらにまたその成長期間がみな三数過程を通じて現れるようになる。</span><br />
       　したがって、神の創造目的である<ruby>四位<rt>よんい</rt></ruby>基台は、神、アダムとエバ、そして子女の繁殖という三段階の過程を通じて、初めて完成するようになる。<ruby>四位<rt>よんい</rt>
       </ruby>基台を造成して円形運動をするには、必ず<ruby>正分合<rt>せいぶんごう</rt>
       </ruby>の三段階の作用を経て、三対象目的をつくり、三点を通過しなければならない。ゆえに、一つの物体が定着するには、最少限三点で支持されなければならない。またこのように、すべての<span
@@ -1164,8 +1183,8 @@
       </ruby>、三弟子、三大試練、ゲッセマネでの三度の祈り、ペテロのイエスに対する三度の否認、イエスの死の前の三時間の闇と三日目の復活など、その例は数多くある。<br />
       　それでは、<span
         style="background-color:#CCFFFF">人間始祖はいつ堕落したのだろうか。彼らは成長期間、すなわち未完成期において堕落したのである。</span>人間がもし、完成したのちに堕落したとすれば、我々は、神の全能性を信ずることができない。仮に、人間が善の完成体になってから堕落したとすれば、善自体も不完全なものとなるのである。したがって、善の主体であられる神も、やはり不完全な方であるという結論に到達せざるを得なくなる。<br />
-      　<span style="background-color:#FFFF99">創世記二章<a href="../Bible_out/01_Old Testament/01_genesis/2.html#v17"
-          class="verse-link">17</a>節を見れば、神はアダムとエバに、善悪を知る木の果を取って食べるときには、きっと死ぬであろう、と警告されたみ<ruby>言<rt>ことば</rt>
+      　<span style="background-color:#FFFF99"><a href="../Bible_out/01_Old Testament/01_genesis/2.html#v17"
+          class="verse-link">創世記二章17節</a>を見れば、神はアダムとエバに、善悪を知る木の果を取って食べるときには、きっと死ぬであろう、と警告されたみ<ruby>言<rt>ことば</rt>
         </ruby>がある。彼らは、神の警告を聞かないで死ぬこともできるし、あるいはその警告を受け入れて、死なずに済むこともできたことから推察してみるとき、彼らがいまだ未完成期にあったことは確かである。</span>万物世界が六日という期間を経て完成できるように創造されたので、被造物の一つである人間も、やはり、そのような原理を離れて創造される理由はないのである。<br />
       　そうであるならば、<span style="background-color:#FCD2E7">人間は成長期間のどの段階で堕落したのだろうか。それは<ruby>長成<rt>ちょうせい</rt>
         </ruby>期の完成級で堕落したのであった。</span>これは、人間始祖の堕落の前後の諸般の事情と、復帰摂理歴史の経緯が実証するもので、本書の前編と後編を研究することによって、そのことが明確に分かるようになるであろう。<br />
@@ -1178,8 +1197,8 @@
       　<span style="background-color:#FCD2E7">万物は原理自体の<ruby>主管性<rt>しゅかんせい</rt>
         </ruby>、または自律性により、成長期間（間接主管圏）を経過することによって完成する。けれども、人間は原理自体の<ruby>主管性<rt>しゅかんせい</rt>
         </ruby>や自律性だけでなく、それ自身の責任分担を全うしながら、この期間を経過して完成するように創造された。</span>すなわち、<span
-        style="background-color:#FFFF99">「それを取って食べると、きっと死ぬであろう」（創二・<a
-          href="../Bible_out/01_Old Testament/01_genesis/2.html#v17" class="verse-link">17</a>）と言われた神のみ<ruby>言<rt>ことば
+        style="background-color:#FFFF99">「それを取って食べると、きっと死ぬであろう」（<a
+          href="../Bible_out/01_Old Testament/01_genesis/2.html#v17" class="verse-link">創二・17</a>）と言われた神のみ<ruby>言<rt>ことば
           </rt></ruby>を見れば、人間始祖が神のこのみ<ruby>言<rt>ことば</rt></ruby>を信じて、取って食べずに完成するか、あるいはそのみ<ruby>言<rt>ことば</rt>
         </ruby>を信ぜずに、取って食べて堕落するかは、神の側に責任があるのではなく、人間自身の責任にかかっていたのである。</span>したがって、人間が完成するか否かは、神の創造の能力にだけかかっていたのではなく、人間自身の責任<ruby>遂行
         <rt>すいこう</rt>
@@ -1188,9 +1207,9 @@
       　このように、<span style="background-color:#CCFFFF">人間がそれ自身の責任分担を<ruby>完遂<rt>かんすい</rt>
         </ruby>して初めて完成されるように創造されたのは、人間が神も干渉できない責任分担を<ruby>完遂<rt>かんすい</rt>
         </ruby>することによって、神の創造性までも似るようにし、また、神の創造の偉業に加担させることによって、ちょうど<ruby>創造主<rt>そうぞうしゅ</rt></ruby>である神が人間を<ruby>主管<rt>
-            しゅかん</rt></ruby>なさるそのごとくに、人間も<ruby>創造主<rt>そうぞうしゅ</rt></ruby>の立場で万物を主管することができる主人の権限をもつようにするためであった（創一・<a
+            しゅかん</rt></ruby>なさるそのごとくに、人間も<ruby>創造主<rt>そうぞうしゅ</rt></ruby>の立場で万物を主管することができる主人の権限をもつようにするためであった（<a
           href="../Bible_out/01_Old Testament/01_genesis/1.html#v28"
-          class="verse-link">28</a>）。</span>人間が万物と違う点は、正にここにあるのである。<br />
+          class="verse-link">創一・28</a>）。</span>人間が万物と違う点は、正にここにあるのである。<br />
       　<span style="background-color:#CCFFFF">このように、人間が、自身の責任分担を<ruby>完遂<rt>かんすい</rt>
         </ruby>し、神の創造性を受け継ぐことによって、天使をはじめ、万物に対する<ruby>主管性<rt>しゅかんせい</rt>
         </ruby>をもつようになったとき、初めて完成するようになさるために、神は間接主管圏をおいて、人間を創造されたのである。</span><span
@@ -1202,12 +1221,13 @@
         </ruby>するに当たって、常に失敗を繰り返してきたからである。</span><br />
       　キリストの十字架による救いの<ruby>恩賜<rt>おんし</rt></ruby>がいくら大きくても、人間自身がその責任分担である信仰を立てなければ、彼らを探し求めてきた救いの摂理は<ruby>無為<rt>むい</rt>
       </ruby>に帰せざるを得なくなる。したがって、<span style="background-color:#FFFF99">イエスの十字架による復活の<ruby>恵沢<rt>けいたく</rt>
-        </ruby>を与えてくださったのは、神の責任分担であって、それを信じるか、それとも信じないかは、あくまでも、人間自身の責任分担なのである（ヨハネ三・<a
-          href="../Bible_out/02_New Testament/04_john/003.html#v16" class="verse-link">16</a>、エペソ二・<a
-          href="../Bible_out/02_New Testament/10_ephesians/002.html#v8" class="verse-link">８</a>、ロマ五・<a
-          href="../Bible_out/02_New Testament/06_romans/005.html#v1" class="verse-link">１</a>）。</span><br />
+        </ruby>を与えてくださったのは、神の責任分担であって、それを信じるか、それとも信じないかは、あくまでも、人間自身の責任分担なのである（<a
+          href="../Bible_out/02_New Testament/04_john/003.html#v16" class="verse-link">ヨハネ三・16</a>、<a
+          href="../Bible_out/02_New Testament/10_ephesians/002.html#v8" class="verse-link">エペソ二・８</a>、<a
+          href="../Bible_out/02_New Testament/06_romans/005.html#v1" class="verse-link">ロマ五・１</a>）。</span><br />
       <br />
-      <h4 id="5-2-3"><a href="11sozo.html#5-2-3"><span style="background-color:#FCD2E7">(3)　直接主管圏</span></a></h4><br />
+      <h4 id="5-2-3"><a href="11sozo.html#5-2-3"><span style="background-color:#FCD2E7">(3)　直接<ruby>主管<rt>しゅかん</rt>
+            </ruby>圏</span></a></h4><br />
       　<span style="background-color:#FCD2E7">直接主管圏とは何であり、またこれを創造された目的は、どこにあるのだろうか。神を中心として、ある主体と対象とが<ruby>合性<rt>ごうせい
           </rt></ruby>一体化して<ruby>四位<rt>よんい</rt>
         </ruby>基台をつくり、神と心情において一体となり、主体の意のままに愛と美を完全に授受して、善の目的を完成することを直接主管という。したがって、直接主管圏とは直に完成圏を意味する。</span>このように、直接主管は、あくまでも創造目的を成就するためであるので、これがなくてはならないのである。では、<span
@@ -1245,20 +1265,20 @@
         　<span style="background-color:#FFFF99">心との関係がなくては、体の行動があり得ないように、神との関係がなくては創造<ruby>本然<rt>ほんぜん</rt>
           </ruby>の人間の行動もあり得ない。したがって、無形世界との関係がなくては、有形世界が創造<ruby>本然<rt>ほんぜん</rt>
           </ruby>の価値を表すことはできないのである。</span></span>ゆえに、心を知らずには、その人格が分からないように、神を知らなくては、人生の根本意義を知ることはできない。また、無形世界がいかなるものであるかを知らなくては、有形世界がいかなるものであるかを完全に知ることはできないのである。それゆえに、<span
-        style="background-color:#FCD2E7">無形世界は主体の世界であり、有形世界は対象の世界であって、後者は前者の影のようなものである（ヘブル八・<a
+        style="background-color:#FCD2E7">無形世界は主体の世界であり、有形世界は対象の世界であって、後者は前者の影のようなものである（<a
           href="../Bible_out/02_New Testament/19_hebrews/008.html#v5"
-          class="verse-link">５</a>）。有形世界で生活した人間が肉身を脱げば、その霊人体は直ちに、無形世界に行って永住するようになる。</span><br />
+          class="verse-link">ヘブル八・５</a>）。有形世界で生活した人間が肉身を脱げば、その霊人体は直ちに、無形世界に行って永住するようになる。</span><br />
       <br />
       <h4 id="6-2"><a href="11sozo.html#6-2"><span style="background-color:#FCD2E7">（二）　被造世界における人間の位置</span></a></h4>
       <br />
-      　<span style="background-color:#FCD2E7">第一に、神は人間を被造世界の<ruby>主管者<rt>しゅかんしゃ</rt></ruby>として創造された（創一・<a
-          href="../Bible_out/01_Old Testament/01_genesis/1.html#v28" class="verse-link">28</a>）。</span><span
+      　<span style="background-color:#FCD2E7">第一に、神は人間を被造世界の<ruby>主管者<rt>しゅかんしゃ</rt></ruby>として創造された（<a
+          href="../Bible_out/01_Old Testament/01_genesis/1.html#v28" class="verse-link">創一・28</a>）。</span><span
         style="background-color:#CCFFFF">ところで被造世界は、神に対する内的な感性を備えていない。その結果、神はこの世界を直接主管なさらずに、この世界に対する感性を備えた人間を創造され、彼をして被造世界を直接主管するようになされたのである。</span>したがって、<span
         style="background-color:#FFFF99">人間を創造されるに当たって、有形世界を感じ、それを主管するようになさるために、それと同じ要素である水と土と空気で肉身を創造された。無形世界を感じ、それを主管するようになさるために、それと同じ霊的要素で、霊人体を創造された。</span><ruby>変貌山
         <rt>へんぼうさん</rt>
-      </ruby>上でのイエスの前に、既に一六〇〇余年前に亡くなったモーセと、九〇〇余年前に亡くなったエリヤが顕現したとあるが（マタイ一七・<a
+      </ruby>上でのイエスの前に、既に一六〇〇余年前に亡くなったモーセと、九〇〇余年前に亡くなったエリヤが顕現したとあるが（<a
         href="../Bible_out/02_New Testament/01_matthew/017.html#v3"
-        class="verse-link">３</a>）、これらはみな、彼らの霊人体であった。このように、<span
+        class="verse-link">マタイ一七・３</a>）、これらはみな、彼らの霊人体であった。このように、<span
         style="background-color:#CCFFFF">有形世界を主管できる肉身と、無形世界を主管できる霊人体とから構成された人間は、有形世界と無形世界をみな主管することができるのである。</span><br />
       　<span style="background-color:#FCD2E7">第二に、神は人間を被造世界の媒介体として、また<ruby>和動<rt>わどう</rt>
         </ruby>の中心体として創造された。</span><span style="background-color:#CCFFFF">人間の肉身と霊人体が授受作用により<ruby>合性<rt>ごうせい</rt>
@@ -1268,111 +1288,125 @@
         style="background-color:#CCFFFF">神はのちに創造なさる人間の性相と形状の実体的な展開として、先に被造世界を創造されたのである。したがって、霊人体の<ruby>性相<rt>せいそう</rt>
         </ruby>と形状の実体的な展開として、無形世界を創造されたので、霊人体は無形世界を総合した実体相である。また肉身の性相と形状の実体的な展開として有形世界を創造されたので、肉身は有形世界を総合した実体相となるのである。ゆえに、人間は天宙を総合した実体相となるので、</span><span
         style="background-color:#FCD2E7">しばしば人間を<ruby>小宇宙<rt>しょううちゅう</rt></ruby>という理由は、ここにあるのである。</span><br />
-      　ところが、<span style="background-color:#FFFF99">人間が堕落し、被造世界が自己を<ruby>主管<rt>しゅかん</rt></ruby>してくれる主人を失ったので、ロマ書八章<a
+      　ところが、<span style="background-color:#FFFF99">人間が堕落し、被造世界が自己を<ruby>主管<rt>しゅかん</rt></ruby>してくれる主人を失ったので、<a
           href="../Bible_out/02_New Testament/06_romans/008.html#v19"
-          class="verse-link">19</a>節に、被造物は神の子たち（復帰された創造<ruby>本然<rt>ほんぜん</rt>
-        </ruby>の人間）の出現を待ち望んでいると述べられている。それだけでなく、和動の中心体である人間が堕落して、有形、無形二つの世界の授受作用が切れたので、それらが一体となることができずに分離されたから、ロマ書八章<a
+          class="verse-link">ロマ書八章19節</a>に、被造物は神の子たち（復帰された創造<ruby>本然<rt>ほんぜん</rt>
+        </ruby>の人間）の出現を待ち望んでいると述べられている。それだけでなく、和動の中心体である人間が堕落して、有形、無形二つの世界の授受作用が切れたので、それらが一体となることができずに分離されたから、<a
           href="../Bible_out/02_New Testament/06_romans/008.html#v22"
-          class="verse-link">22</a>節には、被造物が嘆息している事実を明らかにしている。</span><br />
+          class="verse-link">ロマ書八章22節</a>には、被造物が嘆息している事実を明らかにしている。</span><br />
       　<span
-        style="background-color:#FFFF99">イエスは霊人体と肉身をもつ完全なアダムとして降臨された方である。したがって、彼は天宙を総合した実体相であったのである。それゆえに、万物をキリストの足もとに従わせたと言われた（コリント・一五・<a
-          href="../Bible_out/02_New Testament/07_1-corinthians/005.html#v27"
-          class="verse-link">27</a>）。</span>イエスは堕落人間が彼を信じ、彼と一体となって、彼と共に完成した人間とならしめるために降臨されたので、救い主であられるのである。<br />
+        style="background-color:#FFFF99">イエスは霊人体と肉身をもつ完全なアダムとして降臨された方である。したがって、彼は天宙を総合した実体相であったのである。それゆえに、万物をキリストの足もとに従わせたと言われた（<a
+          href="../Bible_out/02_New Testament/07_1-corinthians/015.html#v27"
+          class="verse-link">コリント・一五・27</a>）。</span>イエスは堕落人間が彼を信じ、彼と一体となって、彼と共に完成した人間とならしめるために降臨されたので、救い主であられるのである。<br />
       <br />
       <span style="background-color:#FCD2E7"><a href="11sozo.html#6-3">
           <h4 id="6-3">（三）　肉身と霊人体との相対的関係</h4>
 
-      <p id="6-3-1" class="highlight">
-        <a href="#6-3-1" class="anchor-link"> <span style="background-color:#FCD2E7">（１）　肉身の構成とその機能</span></a>
-      </p>
-      <br />
-      　<span style="background-color:#FCD2E7">肉身は<ruby>肉心<rt>にくしん</rt></ruby>（主体）と肉体（対象）の<ruby>二性性相<rt>にせいせいそう</rt>
-        </ruby>からなっている。</span><span
-        style="background-color:#CCFFFF">肉心とは肉体をして生存と繁殖と保護などのための生理的な機能を維持できるように導いてくれる作用部分をいうのである。動物における<ruby>本能性<rt>
-            ほんのうせい</rt></ruby>は、正にそれらの肉心に<ruby>該当<rt>がいとう</rt>
-        </ruby>するものである。肉身が円満に成長するためには、陽性の栄養素である無形の空気と光を吸収して、陰性の栄養素である有形の物質を万物から摂取して、これらが血液を中心として完全な授受作用をしなければならない。</span><br />
-      　<span style="background-color:#FCD2E7">肉身の<ruby>善行<rt>ぜんこう</rt></ruby>と<ruby>悪行<rt>あくぎょう</rt>
-        </ruby>に従って、霊人体も善化あるいは悪化する。</span><span
-        style="background-color:#CCFFFF">これは、肉身から霊人体にある要素を与えるからである。このように、肉身から霊人体に与えられる要素を、我々は<ruby>生力<rt>せいりょく</rt>
-        </ruby>要素という。</span><span
-        style="background-color:#FFFF99">我々は平素の生活において、肉身が善の行動をしたときには、心がうれしく、悪の行動をしたときには、心が不愉快さを経験するが、これは、その肉身の行動の善悪に従って、それに適応してできる生力要素が、そのまま霊人体へと回っていく証拠である。</span><br />
-      <br />
-      <p id="6-3-2" class="highlight">
-        <a href="#6-3-2" class="anchor-link"> <span style="background-color:#FCD2E7">（2）　霊人体の構成とその機能</span></a>
-      </p><br />
-      　<span style="background-color:#CCFFFF">霊人体は人間の肉身の主体として創造されたもので、霊感だけで感得され、神と直接通ずることができ、天使や無形世界を<ruby>主管<rt>しゅかん
-          </rt>
-        </ruby>できる無形実体としての実存体である。霊人体はその肉身と同一の様相であり、肉身を脱いだのちには無形世界（霊界）に行って永遠に生存する。人間が永存することを念願するのは、それ自体の内に、このような永存性をもつ霊人体があるからである。</span><br />
-      　<span style="background-color:#FCD2E7">この霊人体は<ruby>生心<rt>せいしん</rt></ruby>（主体）と霊体（対象）の<ruby>二性性相<rt>にせいせいそう</rt>
-        </ruby>からなっている。</span>そして<span
-        style="background-color:#CCFFFF">生心というのは、神が臨在される霊人体の中心部分をいうのである。霊人体は神からくる生素（陽性）と肉身からくる生力要素（陰性）の二つの要素が授受作用をする中で成長する。また霊人体は肉身から<ruby>生力
-          <rt>せいりょく</rt>
-        </ruby>要素を受ける反面、逆に肉身に与える要素もあり、我々はこれを、<ruby>生霊<rt>せいれい</rt></ruby>要素という。</span>人間が<ruby>神霊<rt>
-          しんれい</rt></ruby>に接することによって、無限の喜びと新しい力を得て、<ruby>持病<rt>じびょう</rt>
-      </ruby>が治っていくなど、その肉身に多くの変化を起こすようになるが、これは、その肉身が霊人体から生霊要素を受けるからである。<span
-        style="background-color:#FCD2E7">霊人体は肉身を土台にしてのみ成長する。それゆえに、霊人体と肉身との関係は、ちょうど実と木との関係と同じである。</span><span
-        style="background-color:#FFFF99">生心の要求のままに肉心が呼応し、生心が<ruby>指向<rt>しこう</rt>
-        </ruby>する目的に従って、肉身が動くようになれば、肉身は霊人体から生霊要素を受けて善化され、それに従って、肉身は良い生力要素を霊人体に与えることができて、霊人体は善のための正常的な成長をするようになるのである。<br />
-        　生心の要求するものが何であるかを教えてくれるのが真理である。</span>それゆえに、人間が真理で生心が要求するものを悟り、そのとおりに実践することによって、人間の責任分担を<ruby>完遂<rt>かんすい</rt>
-      </ruby>すれば、初めて生霊要素と生力要素とがお互いに善の目的のための授受作用をするようになる。ところで、生霊要素と生力要素とは各々<ruby>性相<rt>せいそう</rt>
-      </ruby>的なものと形状的なものとの関係をもっている。ゆえに、悪人においても、その本心が善を<ruby>指向<rt>しこう</rt>
-      </ruby>しているのは、その生霊要素が常に作用しているからである。けれども、人間が善なる生活をしない限り、その要素も肉身の善化のための役割をすることができないので、生力要素との間に正しい授受作用をすることもできなくなるのである。このように、<span
-        style="background-color:#FCD2E7">霊人体はどこまでも、地上の肉身生活においてのみ完成できるのである。</span><span
-        style="background-color:#CCFFFF">霊人体は肉身を土台として、生心を中心として、創造原理による秩序的三期間を通じて成長し、完成するようになっているが、<ruby>蘇生<rt>そせい</rt>
-        </ruby>期の霊人体を<ruby>霊形体<rt>れいけいたい</rt></ruby>といい、<ruby>長成<rt>ちょうせい</rt></ruby>期の霊人体を生命体、完成期の霊人体を<ruby>生霊体<rt>
-            せいれいたい</rt></ruby>という。</span><br />
-      　<span style="background-color:#CCFFFF">神を中心として、霊人体と肉身が完全な授受作用をして<ruby>合性<rt>ごうせい</rt></ruby>一体化することにより、<ruby>四位
-          <rt>よんい</rt>
-        </ruby>基台を完成すれば、その霊人体は<ruby>生霊体<rt>せいれいたい</rt>
-        </ruby>になるが、このような霊人体は無形世界のすべての事実をそのまま感ずることができる。</span>このように、霊人体に感じられるすべての霊的な事実は、そのまま肉身に共鳴され、生理的現象として現れるので、人間はすべての霊的な事実を肉身の五官で感じて分かるようになる。<span
-        style="background-color:#FFFF99"><ruby>生霊体<rt>せいれいたい</rt>
-        </ruby>を完成した人間が地上天国を実現して生活したのち、肉身を脱いで霊人として行って生活する所が、すなわち天上天国である。それゆえに、地上天国が先に実現したのち、初めて天上天国も実現できるのである。</span><br />
-      　<span style="background-color:#CCFFFF">霊人体のすべての感性も肉身生活の中で、肉身との相対的な関係によって育成されるので、人間は地上で完成され、神の愛を完全に<ruby>体恤<rt>
-            たいじゅつ</rt></ruby>して初めて、肉身を脱いだのちのその霊人体も神の愛を完全に<ruby>体恤<rt>たいじゅつ</rt>
-        </ruby>することができるようになるのである。</span>このように、霊人体のすべての<ruby>素性<rt>そせい</rt>
-      </ruby>は肉身のある間に形成されるので、堕落人間においては、霊人体の悪化は肉身生活の犯罪行為に由来するもので、同じく、その<span
-        style="background-color:#FCD2E7">霊人体の善化も、肉身生活の贖罪によってのみなされる。</span>罪悪人間を救うために、イエスが肉身をもって地上に降臨された理由はここにあるのである。それゆえに、<span
-        style="background-color:#FFFF99">我々は地上で善なる生活をしなければならない。したがって、救いの摂理の第一次的な目的が地上で実現されなければならないので、イエスは天国の門の鍵を地上のペテロに授けて（マタイ一六・<a
-          href="../Bible_out/02_New Testament/01_matthew/016.html#v19"
-          class="verse-link">19</a>）、地上でつなぐことは天でもみなつながれ、地上で解くことは、天でもみな解かれるであろうと言われたのである（マタイ一八・<a
-          href="../Bible_out/02_New Testament/01_matthew/018.html#v18" class="verse-link">18</a>）。</span><br />
-      　<span style="background-color:#FCD2E7">天国でも地獄でも、霊人体がそこに行くのは、神が定めるのではなく、霊人体自身が決定するのである。</span><span
-        style="background-color:#FFFF99">人間は元来、完成すれば、神の愛を完全に呼吸できるように創造されたので、犯罪行為によってもたらされた過ちのために、この愛を完全に呼吸することができなくなった霊人体は、完全な愛の主体である神の前に立つことが、かえって苦痛となるのである。</span>それゆえに、このような霊人体は、神の愛とは遠い距離にある地獄を自ら選択するようになる。また、<span
-        style="background-color:#CCFFFF">霊人体は肉身を土台にしてのみ成長できるように創造されたので、霊人体の繁殖はどこまでも肉身生活による肉身の繁殖に伴ってなされる。</span><br />
-      <br />
-      <p id="6-3-3" class="highlight">
-        <a href="#6-3-3" class="anchor-link"> <span style="background-color:#CCFFFF">（3）　<ruby>生心<rt>せいしん</rt>
-            </ruby>と<ruby>肉心<rt>にくしん</rt></ruby>との関係から見た人間の心</span></a>
-      </p><br />
-      　<span style="background-color:#CCFFFF">生心と肉心との関係は、<ruby>性相<rt>せいそう</rt>
-        </ruby>と形状との関係と同じく、それらが神を中心として授受作用をして<ruby>合性<rt>ごうせい</rt></ruby>一体化すれば、霊人体と肉身を<ruby>合性<rt>ごうせい</rt>
-        </ruby>一体化させて、創造目的を<ruby>指向<rt>しこう</rt>
-        </ruby>させる一つの作用体をつくる。これが正に人間の心である。</span>人間は堕落し、神を知ることができなくなるに従って、善の絶対的な基準も分からなくなったが、上述のように、創造された<ruby>本性<rt>
-          ほんせい</rt></ruby>により、<span style="background-color:#CCFFFF">人間の心は、常に自分が善であると考えるものを<ruby>指向<rt>しこう</rt>
-        </ruby>する。このような心を良心という。</span>しかし、<span
-        style="background-color:#FFFF99">堕落人間は善の絶対的な基準を知らず、良心の絶対的な基準をも立てることができないので、善の基準を異にするに従って、良心の基準も異なるものとなり、良心を主張する人たちの間にも、しばしば闘争が起こるようになる。</span><span
-        style="background-color:#CCFFFF">善を<ruby>指向<rt>しこう</rt></ruby>する心の性相的な部分を本心といい、その形状的な部分を良心という。</span><br />
-      　<span style="background-color:#CCFFFF">それゆえに、人間がその無知によって、創造<ruby>本然<rt>ほんぜん</rt>
-        </ruby>のものと基準を異にする善を立てるようになるときにも、良心はその善を<ruby>指向<rt>しこう</rt></ruby>するが、本心はこれに反発して、良心をその本心が<ruby>指向<rt>しこう</rt>
-        </ruby>する方へと引き戻す作用をする。サタンの拘束を受けている生心と肉心が授受作用をして<ruby>合性<rt>ごうせい</rt></ruby>一体化すれば、人間をして悪を<ruby>指向<rt>しこう</rt>
-        </ruby>させるまた一つの作用体をつくるが、これを我々は邪心という。</span>人間の本心や良心は、この邪心に反発し、人間をしてサタンを分立させ、神と相対することによって、悪を退け善を<ruby>指向<rt>しこう
-        </rt></ruby>するようにさせるのである。<br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br /></a></a></a>
+          <p id="6-3-1" class="highlight">
+            <a href="#6-3-1" class="anchor-link"> <span style="background-color:#FCD2E7">（１）　肉身の構成とその機能</span></a>
+          </p>
+          <br />
+          　<span style="background-color:#FCD2E7">肉身は<ruby>肉心<rt>にくしん</rt></ruby>（主体）と肉体（対象）の<ruby>二性性相<rt>にせいせいそう</rt>
+            </ruby>からなっている。</span><span
+            style="background-color:#CCFFFF">肉心とは肉体をして生存と繁殖と保護などのための生理的な機能を維持できるように導いてくれる作用部分をいうのである。動物における<ruby>本能性<rt>
+                ほんのうせい</rt></ruby>は、正にそれらの肉心に<ruby>該当<rt>がいとう</rt>
+            </ruby>するものである。肉身が円満に成長するためには、陽性の栄養素である無形の空気と光を吸収して、陰性の栄養素である有形の物質を万物から摂取して、これらが血液を中心として完全な授受作用をしなければならない。</span><br />
+          　<span style="background-color:#FCD2E7">肉身の<ruby>善行<rt>ぜんこう</rt></ruby>と<ruby>悪行<rt>あくぎょう</rt>
+            </ruby>に従って、霊人体も善化あるいは悪化する。</span><span
+            style="background-color:#CCFFFF">これは、肉身から霊人体にある要素を与えるからである。このように、肉身から霊人体に与えられる要素を、我々は<ruby>生力<rt>せいりょく</rt>
+            </ruby>要素という。</span><span
+            style="background-color:#FFFF99">我々は平素の生活において、肉身が善の行動をしたときには、心がうれしく、悪の行動をしたときには、心が不愉快さを経験するが、これは、その肉身の行動の善悪に従って、それに適応してできる生力要素が、そのまま霊人体へと回っていく証拠である。</span><br />
+          <br />
+          <p id="6-3-2" class="highlight">
+            <a href="#6-3-2" class="anchor-link"> <span style="background-color:#FCD2E7">（2）　霊人体の構成とその機能</span></a>
+          </p><br />
+          　<span style="background-color:#CCFFFF">霊人体は人間の肉身の主体として創造されたもので、霊感だけで感得され、神と直接通ずることができ、天使や無形世界を<ruby>主管<rt>
+                しゅかん
+              </rt>
+            </ruby>できる無形実体としての実存体である。霊人体はその肉身と同一の様相であり、肉身を脱いだのちには無形世界（霊界）に行って永遠に生存する。人間が永存することを念願するのは、それ自体の内に、このような永存性をもつ霊人体があるからである。</span><br />
+          　<span style="background-color:#FCD2E7">この霊人体は<ruby>生心<rt>せいしん</rt></ruby>（主体）と霊体（対象）の<ruby>二性性相<rt>にせいせいそう
+              </rt>
+            </ruby>からなっている。</span>そして<span
+            style="background-color:#CCFFFF">生心というのは、神が臨在される霊人体の中心部分をいうのである。霊人体は神からくる生素（陽性）と肉身からくる生力要素（陰性）の二つの要素が授受作用をする中で成長する。また霊人体は肉身から<ruby>生力
+              <rt>せいりょく</rt>
+            </ruby>要素を受ける反面、逆に肉身に与える要素もあり、我々はこれを、<ruby>生霊<rt>せいれい</rt></ruby>要素という。</span>人間が<ruby>神霊<rt>
+              しんれい</rt></ruby>に接することによって、無限の喜びと新しい力を得て、<ruby>持病<rt>じびょう</rt>
+          </ruby>が治っていくなど、その肉身に多くの変化を起こすようになるが、これは、その肉身が霊人体から生霊要素を受けるからである。<span
+            style="background-color:#FCD2E7">霊人体は肉身を土台にしてのみ成長する。それゆえに、霊人体と肉身との関係は、ちょうど実と木との関係と同じである。</span><span
+            style="background-color:#FFFF99">生心の要求のままに肉心が呼応し、生心が<ruby>指向<rt>しこう</rt>
+            </ruby>する目的に従って、肉身が動くようになれば、肉身は霊人体から生霊要素を受けて善化され、それに従って、肉身は良い生力要素を霊人体に与えることができて、霊人体は善のための正常的な成長をするようになるのである。<br />
+            　生心の要求するものが何であるかを教えてくれるのが真理である。</span>それゆえに、人間が真理で生心が要求するものを悟り、そのとおりに実践することによって、人間の責任分担を<ruby>完遂<rt>かんすい
+            </rt>
+          </ruby>すれば、初めて生霊要素と生力要素とがお互いに善の目的のための授受作用をするようになる。ところで、生霊要素と生力要素とは各々<ruby>性相<rt>せいそう</rt>
+          </ruby>的なものと形状的なものとの関係をもっている。ゆえに、悪人においても、その本心が善を<ruby>指向<rt>しこう</rt>
+          </ruby>しているのは、その生霊要素が常に作用しているからである。けれども、人間が善なる生活をしない限り、その要素も肉身の善化のための役割をすることができないので、生力要素との間に正しい授受作用をすることもできなくなるのである。このように、<span
+            style="background-color:#FCD2E7">霊人体はどこまでも、地上の肉身生活においてのみ完成できるのである。</span><span
+            style="background-color:#CCFFFF">霊人体は肉身を土台として、生心を中心として、創造原理による秩序的三期間を通じて成長し、完成するようになっているが、<ruby>蘇生<rt>そせい
+              </rt>
+            </ruby>期の霊人体を<ruby>霊形体<rt>れいけいたい</rt></ruby>といい、<ruby>長成<rt>ちょうせい</rt></ruby>期の霊人体を生命体、完成期の霊人体を<ruby>生霊体<rt>
+                せいれいたい</rt></ruby>という。</span><br />
+          　<span style="background-color:#CCFFFF">神を中心として、霊人体と肉身が完全な授受作用をして<ruby>合性<rt>ごうせい</rt>
+            </ruby>一体化することにより、<ruby>四位
+              <rt>よんい</rt>
+            </ruby>基台を完成すれば、その霊人体は<ruby>生霊体<rt>せいれいたい</rt>
+            </ruby>になるが、このような霊人体は無形世界のすべての事実をそのまま感ずることができる。</span>このように、霊人体に感じられるすべての霊的な事実は、そのまま肉身に共鳴され、生理的現象として現れるので、人間はすべての霊的な事実を肉身の五官で感じて分かるようになる。<span
+            style="background-color:#FFFF99"><ruby>生霊体<rt>せいれいたい</rt>
+            </ruby>を完成した人間が地上天国を実現して生活したのち、肉身を脱いで霊人として行って生活する所が、すなわち天上天国である。それゆえに、地上天国が先に実現したのち、初めて天上天国も実現できるのである。</span><br />
+          　<span style="background-color:#CCFFFF">霊人体のすべての感性も肉身生活の中で、肉身との相対的な関係によって育成されるので、人間は地上で完成され、神の愛を完全に<ruby>体恤
+              <rt>
+                たいじゅつ</rt>
+            </ruby>して初めて、肉身を脱いだのちのその霊人体も神の愛を完全に<ruby>体恤<rt>たいじゅつ</rt>
+            </ruby>することができるようになるのである。</span>このように、霊人体のすべての<ruby>素性<rt>そせい</rt>
+          </ruby>は肉身のある間に形成されるので、堕落人間においては、霊人体の悪化は肉身生活の犯罪行為に由来するもので、同じく、その<span
+            style="background-color:#FCD2E7">霊人体の善化も、肉身生活の贖罪によってのみなされる。</span>罪悪人間を救うために、イエスが肉身をもって地上に降臨された理由はここにあるのである。それゆえに、<span
+            style="background-color:#FFFF99">我々は地上で善なる生活をしなければならない。したがって、救いの摂理の第一次的な目的が地上で実現されなければならないので、イエスは天国の門の鍵を地上のペテロに授けて（<a
+              href="../Bible_out/02_New Testament/01_matthew/016.html#v19"
+              class="verse-link">マタイ一六・19</a>）、地上でつなぐことは天でもみなつながれ、地上で解くことは、天でもみな解かれるであろうと言われたのである（<a
+              href="../Bible_out/02_New Testament/01_matthew/018.html#v18"
+              class="verse-link">マタイ一八・18</a>）。</span><br />
+          　<span style="background-color:#FCD2E7">天国でも地獄でも、霊人体がそこに行くのは、神が定めるのではなく、霊人体自身が決定するのである。</span><span
+            style="background-color:#FFFF99">人間は元来、完成すれば、神の愛を完全に呼吸できるように創造されたので、犯罪行為によってもたらされた過ちのために、この愛を完全に呼吸することができなくなった霊人体は、完全な愛の主体である神の前に立つことが、かえって苦痛となるのである。</span>それゆえに、このような霊人体は、神の愛とは遠い距離にある地獄を自ら選択するようになる。また、<span
+            style="background-color:#CCFFFF">霊人体は肉身を土台にしてのみ成長できるように創造されたので、霊人体の繁殖はどこまでも肉身生活による肉身の繁殖に伴ってなされる。</span><br />
+          <br />
+          <p id="6-3-3" class="highlight">
+            <a href="#6-3-3" class="anchor-link"> <span style="background-color:#CCFFFF">（3）　<ruby>生心<rt>せいしん</rt>
+                </ruby>と<ruby>肉心<rt>にくしん</rt></ruby>との関係から見た人間の心</span></a>
+          </p><br />
+          　<span style="background-color:#CCFFFF">生心と肉心との関係は、<ruby>性相<rt>せいそう</rt>
+            </ruby>と形状との関係と同じく、それらが神を中心として授受作用をして<ruby>合性<rt>ごうせい</rt></ruby>一体化すれば、霊人体と肉身を<ruby>合性<rt>ごうせい</rt>
+            </ruby>一体化させて、創造目的を<ruby>指向<rt>しこう</rt>
+            </ruby>させる一つの作用体をつくる。これが正に人間の心である。</span>人間は堕落し、神を知ることができなくなるに従って、善の絶対的な基準も分からなくなったが、上述のように、創造された<ruby>本性
+            <rt>
+              ほんせい</rt>
+          </ruby>により、<span style="background-color:#CCFFFF">人間の心は、常に自分が善であると考えるものを<ruby>指向<rt>しこう</rt>
+            </ruby>する。このような心を良心という。</span>しかし、<span
+            style="background-color:#FFFF99">堕落人間は善の絶対的な基準を知らず、良心の絶対的な基準をも立てることができないので、善の基準を異にするに従って、良心の基準も異なるものとなり、良心を主張する人たちの間にも、しばしば闘争が起こるようになる。</span><span
+            style="background-color:#CCFFFF">善を<ruby>指向<rt>しこう</rt></ruby>する心の性相的な部分を本心といい、その形状的な部分を良心という。</span><br />
+          　<span style="background-color:#CCFFFF">それゆえに、人間がその無知によって、創造<ruby>本然<rt>ほんぜん</rt>
+            </ruby>のものと基準を異にする善を立てるようになるときにも、良心はその善を<ruby>指向<rt>しこう</rt></ruby>するが、本心はこれに反発して、良心をその本心が<ruby>指向<rt>しこう
+              </rt>
+            </ruby>する方へと引き戻す作用をする。サタンの拘束を受けている生心と肉心が授受作用をして<ruby>合性<rt>ごうせい</rt></ruby>一体化すれば、人間をして悪を<ruby>指向<rt>しこう
+              </rt>
+            </ruby>させるまた一つの作用体をつくるが、これを我々は邪心という。</span>人間の本心や良心は、この邪心に反発し、人間をしてサタンを分立させ、神と相対することによって、悪を退け善を<ruby>指向<rt>
+              しこう
+            </rt></ruby>するようにさせるのである。<br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </a></a></a>
     </div>
     </p>
 
 
 
   </div>
-  
 
-<script src="color_filter.js"></script>
 
-<script src="../theme/script.js"></script>
+  <script src="color_filter.js"></script>
+
+  <script src="../theme/script.js"></script>
 </body>
 
 
@@ -1467,91 +1501,111 @@
     opacity: .9;
   }
 
-        /* 折りたたみ可能な目次のスタイル */
-        .toc-collapsible {
-            margin: 2.5rem 0;
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            border-radius: 16px;
-            padding: 1.5rem 2rem;
-            background: #fbfbfb;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-        }
+  /* 折りたたみ可能な目次のスタイル */
+  .toc-collapsible {
+    margin: 2.5rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    background: #fbfbfb;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  }
 
-        .toc-header {
-            font-size: 1.8rem;
-            font-weight: 700;
-            cursor: pointer;
-            list-style: none;
-            user-select: none;
-            color: #111;
-            margin: 0;
-            padding: 0.5rem 0;
-        }
+  .toc-header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    color: #111;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
 
-        .toc-header::-webkit-details-marker {
-            display: none;
-        }
+  .toc-header::-webkit-details-marker {
+    display: none;
+  }
 
-        .toc-header::before {
-            content: '▶ ';
-            transition: transform 0.3s ease;
-            display: inline-block;
-            color: #667eea;
-            margin-right: 0.5rem;
-        }
+  .toc-header::before {
+    content: '▶ ';
+    transition: transform 0.3s ease;
+    display: inline-block;
+    color: #667eea;
+    margin-right: 0.5rem;
+  }
 
-        details[open].toc-collapsible .toc-header::before {
-            transform: rotate(90deg);
-        }
+  details[open].toc-collapsible .toc-header::before {
+    transform: rotate(90deg);
+  }
 
-        .toc-nav {
-            margin-top: 1.25rem;
-        }
+  .toc-nav {
+    margin-top: 1.25rem;
+  }
 
-        .toc-nav ul {
-            margin: 0;
-            padding-left: 0;
-            list-style: none;
-        }
+  .toc-nav ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
 
-        .toc-nav li {
-            margin: 0.2rem 0;
-            padding-left: 0;
-            position: relative;
-        }
+  .toc-nav li {
+    margin: 0.2rem 0;
+    padding-left: 0;
+    position: relative;
+  }
 
-        .toc-nav ul ul {
-            padding-left: 1.5rem;
-            margin-top: 0.2rem;
-            margin-bottom: 0.5rem;
-            border-left: 1px solid rgba(0, 0, 0, 0.05);
-        }
+  .toc-nav ul ul {
+    padding-left: 1.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+  }
 
-        .toc-nav a {
-            color: #444;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            display: block;
-            padding: 0.6rem 0.8rem;
-            border-radius: 8px;
-            font-size: 1.15rem;
-            line-height: 1.4;
-        }
+  .toc-nav a {
+    color: #444;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: block;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
 
-        .toc-nav a:hover {
-            color: #667eea;
-            background: rgba(102, 126, 234, 0.08);
-            transform: translateX(4px);
-        }
+  .toc-nav a:hover {
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.08);
+    transform: translateX(4px);
+  }
 
-  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
-  .typo-box summary::-webkit-details-marker { display: none; }
-  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
-  .typo-box[open] summary::before { transform: rotate(90deg); }
-  .typo-box[open] { padding-bottom: 1.5rem; }
+  .typo-box summary {
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+  }
 
-/* モダンなナビゲーションボタン用スタイル (Light Theme) */
-.page-nav {
+  .typo-box summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .typo-box summary::before {
+    content: '▶';
+    display: inline-block;
+    margin-right: 0.5rem;
+    transition: transform 0.2s;
+    font-size: 0.8em;
+  }
+
+  .typo-box[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .typo-box[open] {
+    padding-bottom: 1.5rem;
+  }
+
+  /* モダンなナビゲーションボタン用スタイル (Light Theme) */
+  .page-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1559,9 +1613,9 @@
     margin: 2rem 0;
     padding: 1rem 0;
     width: 100%;
-}
+  }
 
-.nav-btn {
+  .nav-btn {
     flex: 1;
     text-align: center;
     padding: 0.8rem 1rem;
@@ -1578,32 +1632,32 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-}
+  }
 
-.nav-btn:hover {
+  .nav-btn:hover {
     background: #f0f0f0;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-color: rgba(102, 126, 234, 0.3);
     color: #000;
-}
+  }
 
-.nav-btn span {
+  .nav-btn span {
     font-size: 1.2rem;
     line-height: 1;
-}
+  }
 
-@media (max-width: 600px) {
+  @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        gap: 0.75rem;
+      flex-direction: column;
+      gap: 0.75rem;
     }
-    .nav-btn {
-        width: 100%;
-        padding: 0.7rem 1rem;
-    }
-}
 
+    .nav-btn {
+      width: 100%;
+      padding: 0.7rem 1rem;
+    }
+  }
 </style>
 
 <script>
