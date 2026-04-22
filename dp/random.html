@@ -37,7 +37,7 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 60rem;
             margin: 0 auto;
             position: relative;
             z-index: 1;
@@ -137,7 +137,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 3px;
+            height: 0.1875rem;
             background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
             transform: scaleX(0);
             transform-origin: left;
@@ -190,7 +190,7 @@
             bottom: -2px;
             left: 0;
             width: 0;
-            height: 2px;
+            height: 0.125rem;
             background: linear-gradient(90deg, #667eea, #764ba2);
             transition: width 0.3s ease;
         }
@@ -283,7 +283,7 @@
             background-color: #fff3cd;
             padding: 0.1em 0.2em;
             border-radius: 3px;
-            scroll-margin-top: 1em;
+            
         }
 
         @keyframes fadeInDown {
@@ -308,7 +308,7 @@
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 48rem) {
             body {
                 padding: 1rem 0.75rem;
                 font-size: 1.1rem;
@@ -331,7 +331,7 @@
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 30rem) {
             body {
                 font-size: 1rem;
             }
@@ -344,7 +344,17 @@
                 font-size: 1.05rem;
             }
         }
-    </style>
+    
+        *[id] {
+            scroll-margin-top: 6rem;
+        }
+        .no1 {
+            margin-bottom: 1.5rem;
+        }
+        h2 .no1, h3 .no1 {
+            margin-bottom: 0;
+        }
+</style>
 <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png"/>    
     <link rel="stylesheet" href="../theme/style.css?v=202602241611">
 </head>
