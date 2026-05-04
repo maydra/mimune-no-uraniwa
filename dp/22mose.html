@@ -478,12 +478,136 @@
         h2 .no1, h3 .no1 {
             margin-bottom: 0;
         }
-</style>
+
+        /* --- Refined Expandable Sticky Header Styles --- */
+        .stacked-header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 3000;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .breadcrumb-view {
+            height: 28px;
+            pointer-events: auto;
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(10px) saturate(180%);
+            -webkit-backdrop-filter: blur(10px) saturate(180%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 0 1.2rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #777;
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(-100%);
+            visibility: hidden;
+        }
+
+        .breadcrumb-view.visible {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        .breadcrumb-view:hover {
+            background: rgba(255, 255, 255, 0.7);
+            color: #333;
+        }
+
+        .breadcrumb-view .separator {
+            margin: 0 0.5rem;
+            color: #aaa;
+            font-weight: 300;
+        }
+
+        .stacked-view {
+            pointer-events: auto;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(25px) saturate(200%);
+            -webkit-backdrop-filter: blur(25px) saturate(200%);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .stacked-header-container.is-expanded .stacked-view {
+            max-height: 100vh;
+            opacity: 1;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .stack-bar {
+            height: 32px;
+            line-height: 32px;
+            padding: 0 1.5rem;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #444;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: 'Noto Serif JP', serif;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s ease, padding-left 0.3s ease;
+        }
+
+        .stack-bar:hover {
+            background: rgba(102, 126, 234, 0.08);
+            color: #667eea;
+        }
+
+        /* Hierarchy-based Indentation for Expanded State */
+        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+
+        .stack-bar::before {
+            content: '▸';
+            margin-right: 0.5rem;
+            color: #667eea;
+            font-size: 0.7rem;
+        }
+        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+
+        @media (max-width: 48rem) {
+            .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
+            .stack-bar { height: 30px; font-size: 0.8rem; }
+            .stack-bar[data-level="2"] { padding-left: 1rem; }
+            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
+            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
+            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
+            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+        }
+            </style>
 
     <link rel="stylesheet" href="../theme/style.css?v=202602241611">
 </head>
 
 <body>
+    <div id="stacked-header-container" class="stacked-header-container">
+        <div id="breadcrumb-view" class="breadcrumb-view"></div>
+        <div id="stacked-view" class="stacked-view"></div>
+    </div>
     <div class="container">
         <h1>原理講論 モーセとイエスを中心とする復帰摂理</h1>
         <nav class="page-nav">
@@ -604,9 +728,9 @@
         <!-- St-HP-H -->
         <!-- En-HP-H -->
         
-        <h3>
+        <h1 class="chapter-title">
             <div class="no1">　<span style="background-color:#FCD2E7">第二章　モーセとイエスを中心とする復帰摂理</span><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
@@ -622,15 +746,15 @@
         <div class="no1"><hr /><br />
         </div>
         </p>
-        <h3 id="1"><a href="22mose.html#1">
+        <h2 id="1"><a href="22mose.html#1">
                 <div class="no1"><span style="background-color:#FCD2E7">第一節　サタン屈伏の典型的路程</span><br /></div>
-            </a></h3>
+            </a></h2>
         <p>
         <div class="no1">
             　<span
                 style="background-color:#FCD2E7">イサクの家庭を中心とする復帰摂理において、「実体基台」を立てる中心人物であったヤコブが、アベルの立場を確立して、「堕落性を脱ぐための蕩減条件」を立てるために、サタンを屈伏してきた全路程は、ヤコブによるその象徴路程を、形象的に歩まなければならないモーセ路程と、それを実体的に歩まなければならないイエス路程とを、あらかじめ示した典型路程であった。そして、この路程は、イスラエル民族と全人類が、摂理の目的を成就するために、サタンを屈伏させながら歩まなければならない、表示路程でもあるのである。</span></div>
-        <div class="no1"><h4 id="1-1"><a href="22mose.html#1-1"><span
-                        style="background-color:#FCD2E7">（一）イエスの典型路程としてヤコブ路程とモーセ路程とを立てられた理由</span></a></h4></div>
+        <div class="no1"><h3 id="1-1"><a href="22mose.html#1-1"><span
+                        style="background-color:#FCD2E7">（一）イエスの典型路程としてヤコブ路程とモーセ路程とを立てられた理由</span></a></h3></div>
         <div class="no1"><span
                 style="background-color:#FCD2E7">復帰摂理の目的は、究極的には人間自身がその責任分担として、サタンを自然屈伏させ、それを主管し得るようになることによって成就されるのである。イエスが、人間祖先として、メシヤの使命を負うて来られたのも、サタン屈伏の最終的路程を開拓し、すべての信徒たちをその路程に従わせることによって、サタンを自然屈伏させるためである。</span><br />
             　ところが、<span
@@ -645,8 +769,8 @@
                 style="background-color:#CCFFFF">モーセは、次に来られるイエスの模擬者となるのである（<a
                     href="../Bible_out/02_New Testament/05_acts/003.html#v22"
                     class="verse-link">使徒三・22</a>）。</span></div>
-        <div class="no1"><h4 id="1-2"><a href="22mose.html#1-2"><span
-                        style="background-color:#CCFFFF">（二）ヤコブ路程を見本として歩いたモーセ路程とイエス路程</span></a></h4></div>
+        <div class="no1"><h3 id="1-2"><a href="22mose.html#1-2"><span
+                        style="background-color:#CCFFFF">（二）ヤコブ路程を見本として歩いたモーセ路程とイエス路程</span></a></h3></div>
         <div class="no1"><span
                 style="background-color:#CCFFFF">ヤコブ路程は、とりもなおさず、サタンを屈伏してきた路程である。そして、サタンを屈伏させる路程は、サタンが侵入したその経路を、逆にたどっていかなければならない。そこで今ここに、我々は、ヤコブ路程を見本として歩まれた、モーセ路程とイエス路程について調べてみることにしよう。</span></div>
         <div class="no1"><span
@@ -746,9 +870,9 @@
             <hr /><br />
         </div>
         </p>
-        <h3 id="2"><a href="22mose.html#2">
+        <h2 id="2"><a href="22mose.html#2">
                 <div class="no1"><span style="background-color:#FCD2E7">第二節　モーセを中心とする復帰摂理</span><br /></div>
-            </a></h3>
+            </a></h2>
         <p>
         <div class="no1">
             <h4 id="2-1"><a href="22mose.html#2-1"><span style="background-color:#FCD2E7">（一）モーセを中心とする復帰摂理の概観</span></a>
@@ -802,8 +926,8 @@
                 style="background-color:#CCFFFF">第三に、アダムの家庭を中心とした摂理が、長い歴史の期間をかけて延長されるに従い、サタンが侵入して延長されたその摂理的な期間を、蕩減復帰する条件を立てなければならなかった。</span><span
                 style="background-color:#FFFF99">ところが、ノアが箱舟をもって「信仰基台」を立てるためには、「四十日サタン分立基台」が必要であった。そして、アブラハムも、四〇〇年期間を蕩減復帰する「四十日サタン分立基台」の上に立ったのち、初めて、「信仰基台」を立てるための「象徴献祭」をささげるようになったのである。また、イスラエル民族が、エジプトにおいて、四〇〇年間苦役するようになったのも、「四十日サタン分立基台」を蕩減復帰することにより、アブラハムの供え物の失敗によってサタンの侵入を受けたその「信仰基台」を蕩減復帰するためであった。</span>このように<span
                 style="background-color:#CCFFFF">復帰摂理時代においては、「四十日サタン分立基台」の上で、供え物の代わりに神のみ言を中心として立つことができさえすれば、それをもって「信仰基台」を復帰するようになっていたのである。</span></div>
-        <div class="no1"><h4 id="2-1-2"><a href="22mose.html#2-1-2"><span style="background-color:#FCD2E7">(2)　実　体　基　台</span></a>
-            </h4></div>
+        <div class="no1"><h3 id="2-1-2"><a href="22mose.html#2-1-2"><span style="background-color:#FCD2E7">(2)　実　体　基　台</span></a>
+            </h3></div>
         <div class="no1"><span
                 style="background-color:#FCD2E7">復帰基台摂理時代においては「家庭的な実体基台」を立てる摂理をなさった。しかし、復帰摂理時代になると、その次元が上がって、「民族的な実体基台」を立てる摂理をなさるようになるのである。</span>ところで、<span
                 style="background-color:#CCFFFF">「民族的な信仰基台」を復帰するに当たって、モーセは神の身代わりとなるので（<a
@@ -814,12 +938,12 @@
                 style="background-color:#CCFFFF">そのときのモーセも、父母でもあり、また子女でもあるという二つの立場に立っていたために、彼もまた、父母の立場で「信仰基台」を蕩減復帰するようになれば、同時に彼は、子女の立場で「実体献祭」をするためのアベルの位置を確立することができたのである。</span><br />
             　このようにして、<span
                 style="background-color:#FCD2E7">モーセがアベルの位置を確立したのち、イスラエル民族がカインの立場で、モーセを通じて「堕落性を脱ぐための民族的な蕩減条件」を立てるならば、そこに「実体基台」はつくられるのであった。</span></div>
-        <div class="no1"><h4 id="2-1-3"><a href="22mose.html#2-1-3"><span style="background-color:#FCD2E7">(3)　メシヤのための基台</span></a>
-            </h4></div>
+        <div class="no1"><h3 id="2-1-3"><a href="22mose.html#2-1-3"><span style="background-color:#FCD2E7">(3)　メシヤのための基台</span></a>
+            </h3></div>
         <div class="no1"><span
                 style="background-color:#FCD2E7">モーセが「民族的な信仰基台」を蕩減復帰して、モーセを中心とするイスラエル民族が、「民族的な実体基台」を蕩減復帰すれば、それがすなわち、「メシヤのための民族的基台」となるのである。</span>そして、イスラエル民族が、その基台の上に、将来来られるメシヤによって重生され、原罪を脱いで、神と心情的に一体となることにより創造本性を復帰すれば、「完成実体」となるようになっていたのである。</div>
-        <div class="no1"><h4 id="2-2"><a href="22mose.html#2-2"><span
-                        style="background-color:#FCD2E7">（二）モーセを中心とする民族的カナン復帰路程</span></a></h4></div>
+        <div class="no1"><h3 id="2-2"><a href="22mose.html#2-2"><span
+                        style="background-color:#FCD2E7">（二）モーセを中心とする民族的カナン復帰路程</span></a></h3></div>
         <div class="no1"><span
                 style="background-color:#FCD2E7">モーセがサタンの世界であるエジプトから、イスラエルの選民を奇跡をもって導きだし、紅海を渡り、荒野を巡って、神が約束された土地であるカナンに向かう路程は、将来、イエスがこの罪悪世界において、第二イスラエルであるキリスト教信徒を奇跡をもって導き、この罪悪世界の苦海を渡り、命の水が乾いた砂漠を巡って、神が約束された創造本然のエデンに復帰するその路程を、先に見せてくださったことにもなるのである。また、モーセを中心とする民族的カナン復帰路程が、イスラエル民族の不信によって、三次にわたって延長されたように、イエスを中心とする世界的カナン復帰路程も、ユダヤ人たちの不信によって、三次にわたって延長されたのであった。</span>煩雑を避けるために、ここでは、モーセ路程とイエス路程とを細密に対照した説明は省くことにする。しかしこれは、本節と次の節とを対照してみることによって明らかにされるのである。</div>
         <div class="no1"><h4 id="2-2-1"><a href="22mose.html#2-2-1"><span
@@ -1011,8 +1135,8 @@
                     href="../Bible_out/01_Old Testament/02_exodus/34.html#v1" class="verse-link">出エ三四・１</a>）。</span>このみ言を聞いたモーセが、再び四十日四十夜を断食したとき、神は彼の石板に再び十戒を記録してくださった（<a
                     href="../Bible_out/01_Old Testament/02_exodus/34.html#v28" class="verse-link">出エ三四・28</a>）。モーセがこの石板をもって、再びイスラエル民族の前に現れたとき、初めて彼らはモーセを信じ、彼に仕えるようになって、契約の箱をつくり、幕屋を建設したのである（<a
                     href="../Bible_out/01_Old Testament/02_exodus/35.html" class="verse-link">出エ三五～四〇</a>）。</span></div>
-        <div class="no1"><span id="2-2-2-3-1" style="background-color:#FCD2E7"><a href="#2-2-2-3-1"
-                    style="color:black;text-decoration:none;">(イ)　石板、幕屋、契約の箱などの意義とその目的</a></span><br>
+        <div class="no1"><h5 id="2-2-2-3-1" style="background-color:#FCD2E7"><a href="#2-2-2-3-1"
+                    style="color:black;text-decoration:none;">(イ)　石板、幕屋、契約の箱などの意義とその目的</a></h5>
             　<span style="background-color:#FCD2E7">石板は何を意味するものであろうか。</span><span
                 style="background-color:#FFFF99">モーセがみ言を記録した二つの石板を受けたということは、堕落によって、供え物を通してのみ神と対応できた復帰基台摂理時代が既に過ぎさり、堕落人間がみ言を復帰して、それをもって神と対応することができる復帰摂理時代に入ったということを、意味するのである。</span>そして、既に後編の緒論において明らかにしたように、み言によって創造されたアダムとエバは、完成したならば、み言の「完成実体」となるはずであった。しかし、彼らは堕落することによって、み言を失った存在となってしまったのである。<span
                 style="background-color:#FFFF99">ここにおいて、モーセが「四十日サタン分立期間」をもって、み言を記録した二つの石板を手にしたということは、サタンの世界から、失ったアダムとエバとを、象徴的なみ言の実体として復帰したということを意味するのである。</span>したがって、<span
@@ -1058,14 +1182,14 @@
                 style="background-color:#CCFFFF">したがって、モーセを中心とするイスラエル民族が、この幕屋をメシヤのように対し忠誠をもって信奉し、カナンの福地に復帰するならば、「民族的な実体基台」は、そのときに立てられるのであった。そして、もしイスラエルがみな不信に陥るとしても、モーセ一人だけでも残ってその幕屋を守るならば、その民族は再び蕩減条件を立てて、幕屋を信奉するモーセを中心として、その基台の上に復帰することができるのである。その上、もし更にモーセまでが不信に陥ったとしても、その民族の中のある一人がモーセを代理して最後まで幕屋を守るならば、また、彼を中心として、不信に陥った残りの全民族を復帰する摂理を再びなさることができたのであった。</span><br />
             　<span
                 style="background-color:#CCFFFF">第一次民族的カナン復帰路程において、もしイスラエル民族が不信に陥らなかったならば、モーセの家庭は幕屋の代理であり、モーセは石板と契約の箱の代理であり、また、モーセの家法は、天法を代理するはずであったから、彼らには、石板とか契約の箱とか幕屋とかが必要ではなく、そのままカナンに入って、神殿を建てるはずであったのである。ゆえに、石板と幕屋と契約の箱は、イスラエル民族が不信に陥ったので、彼らを救うための一つの方便として下さったものなのであった。</span>幕屋はイエスと聖霊の象徴的な表示体であるから、神殿を建てるときまで必要だったのであり、神殿はイエスと聖霊の形象的な表示体であるから、実体の神殿であられるメシヤが降臨されるときまで必要だったのである。</div>
-        <div class="no1"><span id="2-2-2-3-2" style="background-color:#FCD2E7"><a href="#2-2-2-3-2"
-                    style="color:black;text-decoration:none;">(ロ)　幕屋のための基台</a></span><br>
+        <div class="no1"><h5 id="2-2-2-3-2" style="background-color:#FCD2E7"><a href="#2-2-2-3-2"
+                    style="color:black;text-decoration:none;">(ロ)　幕屋のための基台</a></h5>
             　<span
                 style="background-color:#FCD2E7">メシヤを迎えるためには「メシヤのための基台」がつくられなければならないのと同様に、象徴的なメシヤである幕屋を迎えるためにも、「幕屋のための基台」がつくられなければならない。したがって、この基台を立てるためには、幕屋のための「信仰基台」と、幕屋のための「実体基台」とを立てなければならない、ということはいうまでもない。</span>それでは、モーセを中心とするイスラエル民族は、いかにしてこの二つの基台を立てることができたであろうか。<br />
             　<span
                 style="background-color:#FCD2E7">モーセが、幕屋のための神のみ言を信奉し、断食の祈りをもって「四十日サタン分立期間」をみ意にかなうように立てれば、幕屋のための「信仰基台」がつくられるようになっていたのである。また、イスラエル民族が、幕屋のための「信仰基台」の上で、幕屋理想を立てていくモーセに、信仰をもって従順に屈伏すれば、幕屋のための「堕落性を脱ぐための蕩減条件」が立てられ、したがって、幕屋のための「実体基台」もつくられるようになっていたのであった。ここにおいて、幕屋というのは、その中に入っている石板と契約の箱とを含めていうのである。</span></div>
-        <div class="no1"><span id="2-2-2-3-2-1" style="background-color:#FCD2E7"><a href="#2-2-2-3-2-1"
-                    style="color:black;text-decoration:none;">(a)　第一次　幕屋のための基台</a></span><br>
+        <div class="no1"><h6 id="2-2-2-3-2-1" style="background-color:#FCD2E7"><a href="#2-2-2-3-2-1"
+                    style="color:black;text-decoration:none;">(a)　第一次　幕屋のための基台</a></h6>
             　<span style="background-color:#FFFF99">人間は、六日目に創造されたみ言の実体である（<a
                     href="../Bible_out/02_New Testament/04_john/001.html#v3"
                     class="verse-link">ヨハネ一・３</a>）。したがって、このように創造されたあとで堕落した人間を復帰するために、再創造のみ言を下さる摂理をされるためには、サタンの侵入を受けた創造期間の六数を聖別しなければならないのである。そこで、神は六日間、主の栄光の雲をもってシナイ山を覆い聖別されたのち、七日目に、その雲の中に現れてモーセを呼ばれたのであった（<a
@@ -1082,8 +1206,8 @@
                 style="background-color:#CCFFFF">偶像をつくって踊り狂っているイスラエルの民を見るや否や、烈火のごとく憤ったモーセは、手に持っていた石板を山の下に投げつけて、壊してしまった（出エ三二・19）。そのためこれは、モーセが「四十日サタン分立期間」をもって立てたところの幕屋のための「信仰基台」に、サタンが侵入するという結果をもたらしてしまったのである。二つの石板は、既に前のところで明らかにしたように、後のアダムと後のエバとして復帰されるイエスと聖霊とを象徴している。モーセが、イエスと聖霊とを象徴する二つの石板を、イスラエルの不信仰によって壊してしまったということは、次にイエスが来られるときにも、もしユダヤ民族が不信仰に陥れば、イエスが十字架で亡くなられ、イエスと聖霊が神から受けた本来の使命を完遂することができないということを象徴的に見せてくださったのであった。</span><br />
             　モーセを中心として行われた<span
                 style="background-color:#FCD2E7">イスラエル民族のこのような不信仰は、モーセが「四十日サタン分立期間」を立てたのち、その民をしてモーセに従わせ、「幕屋のための基台」をつくろうとされた神の摂理を挫折させてしまったのである。したがって、「幕屋のための基台」をつくろうとされた摂理は、打ち続くイスラエルの不信仰により、二次から更に三次にまで延長されてきたのであった。</span></div>
-        <div class="no1"><span id="2-2-2-3-2-2" style="background-color:#FCD2E7"><a href="#2-2-2-3-2-2"
-                    style="color:black;text-decoration:none;">(b)　第二次　幕屋のための基台</a></span><br>
+        <div class="no1"><h6 id="2-2-2-3-2-2" style="background-color:#FCD2E7"><a href="#2-2-2-3-2-2"
+                    style="color:black;text-decoration:none;">(b)　第二次　幕屋のための基台</a></h6>
             　<span
                 style="background-color:#CCFFFF">モーセを中心とするイスラエル民族は、二つの石板を中心とする神の摂理に対して不信に陥ってしまった。しかし彼らは、既にレピデムにおいて石板の根である磐石の水を飲んだ基台の上に立っていたために（<a
                     href="../Bible_out/01_Old Testament/02_exodus/17.html#v6"
@@ -1107,8 +1231,8 @@
                     class="verse-link">民数一一・１</a>）。</span>イスラエルの民はそれでもなお悔い改めず、泣き叫びながら、マナのほかには、きゅうりもすいかもないとモーセに恨み言を言いつつ、エジプトの地を慕ったのであった（<a
                 href="../Bible_out/01_Old Testament/04_numbers/11.html#v4" class="verse-link">民数一一・４～６</a>）。したがって、<span
                 style="background-color:#FCD2E7">イスラエル民族が立てていかなければならなかった「幕屋のための基台」は、再びサタンの侵入を受ける結果となってしまったので、この基台を復帰しようとした摂理は、またも、第三次の延長を余儀なくされたのであった。</span></div>
-        <div class="no1"><span id="2-2-2-3-2-3" style="background-color:#FCD2E7"><a href="#2-2-2-3-2-3"
-                    style="color:black;text-decoration:none;">(c)　第三次　幕屋のための基台</a></span><br>
+        <div class="no1"><h6 id="2-2-2-3-2-3" style="background-color:#FCD2E7"><a href="#2-2-2-3-2-3"
+                    style="color:black;text-decoration:none;">(c)　第三次　幕屋のための基台</a></h6>
             　イスラエル民族が、再び不信に陥ったので、彼らを中心とする第二次の「幕屋のための基台」は、また、サタンの侵入を受けるようになってしまったのである。しかし、<span
                 style="background-color:#FCD2E7">モーセの変わらない信仰と忠誠とによって、その幕屋は、依然としてモーセを中心とする幕屋のための「信仰基台」の上に立っていたのであり、また、イスラエル民族は、既にレピデムで幕屋の中心である石板の根、すなわち、磐石の水を飲んだ（<a
                     href="../Bible_out/01_Old Testament/02_exodus/17.html#v6"
@@ -1132,25 +1256,25 @@
                     href="../Bible_out/01_Old Testament/04_numbers/14.html#v31"
                     class="verse-link">民数一四・31～34</a>）と言われたのである。</span>このように、<span
                 style="background-color:#FCD2E7">第三次の「幕屋のための基台」も復帰することができなくなったので、第二次の二十一カ月の荒野路程は、第三次の四十年荒野路程に延長されてしまった。</span></div>
-        <div class="no1"><h4 id="2-2-2-4"><a href="22mose.html#2-2-2-4"><span
-                        style="background-color:#FCD2E7">④　第二次民族的カナン復帰路程の失敗</span></a></h4></div>
+        <div class="no1"><h5 id="2-2-2-4"><a href="22mose.html#2-2-2-4"><span
+                        style="background-color:#FCD2E7">④　第二次民族的カナン復帰路程の失敗</span></a></h5></div>
         <div class="no1"><span
                 style="background-color:#FCD2E7">イスラエル民族の不信により、「幕屋のための基台」が、三次にわたってサタンの侵入を受けるようになったので、</span>第二次民族的カナン復帰路程における「堕落性を脱ぐための民族的な蕩減条件」は、立てることができなくなってしまった。したがって、<span
                 style="background-color:#FCD2E7">第二次に立てようとした「実体基台」を造成することができなくなり、第二次民族的カナン復帰路程は、再び失敗に終わってしまい、第三次民族的カナン復帰路程に延長されたのである。</span></div>
         <div class="no1"><h4 id="2-2-3"><a href="22mose.html#2-2-3"><span
                         style="background-color:#FCD2E7">(3)　第三次民族的カナン復帰路程</span></a></h4></div>
-        <div class="no1"><h4 id="2-2-3-1"><a href="22mose.html#2-2-3-1"><span style="background-color:#FCD2E7">①　信　仰　基　台</span></a>
-            </h4></div>
+        <div class="no1"><h5 id="2-2-3-1"><a href="22mose.html#2-2-3-1"><span style="background-color:#FCD2E7">①　信　仰　基　台</span></a>
+            </h5></div>
         <div class="no1"><span
                 style="background-color:#FCD2E7">イスラエル民族の不信仰により、第二次民族的カナン復帰路程が失敗に終わったので、モーセがこの路程の「信仰基台」を復帰するために立てたミデヤン荒野の四十年期間は、再び、サタンの侵入を受ける結果となってしまった。それゆえに、イスラエル民族が偵察四十日期間を、信仰と従順をもって立てることができなかったので、日を年に換算して、荒野を経てカデシバルネアに戻るまでの四十年期間は、モーセにおいては、第二次路程の「信仰基台」に侵入したサタンを分立して、第三次路程の「信仰基台」を蕩減復帰するための期間となった。したがって、この荒野の四十年間を、ひたすら信仰と忠誠をもって、幕屋を信奉しながら流浪したあと、カデシバルネアに再び戻ってきたモーセは、第三次民族的カナン復帰路程のための「信仰基台」を立てることができたのであり、それによってこの路程の、民族的な「実体献祭」のためのアベルの立場も確立するようになったのである。</span></div>
-        <div class="no1"><h4 id="2-2-3-2"><a href="22mose.html#2-2-3-2"><span style="background-color:#FCD2E7">②　実　体　基　台</span></a>
-            </h4></div>
+        <div class="no1"><h5 id="2-2-3-2"><a href="22mose.html#2-2-3-2"><span style="background-color:#FCD2E7">②　実　体　基　台</span></a>
+            </h5></div>
         <div class="no1"><span
                 style="background-color:#FFFF99">イスラエル民族が、偵察四十日路程を、信仰と従順とをもって立てることができず、不信と反逆をもって失敗したために、「幕屋のための基台」は、依然としてサタンの侵入を受けたものとなっていたから、第二次路程のための「実体基台」は造成されなかったのである。しかし、幕屋を忠誠をもって信奉した、モーセの幕屋のための「信仰基台」は、そのまま残っていたので、この基台の上でイスラエル民族が、荒野流浪の四十年期間を、変わらぬ信仰をもって幕屋を信奉しているモーセに、従順に屈伏することにより、偵察四十日に侵入したサタンを分立する基台を立てるならば、そのときに、幕屋のための「実体基台」が造成されると同時に、「幕屋のための基台」もつくられるようになるのである。そしてこの基台の上にイスラエル民族が、信仰と従順とをもって、幕屋を中心としてモーセに仕え、カナンに入るならば、そのときに、第三次民族的カナン復帰路程における「実体基台」がつくられるようになっていたのであった。</span><br />
             　したがって、<span
                 style="background-color:#FCD2E7">荒野の四十年流浪期間は、モーセにおいては、第三次路程における「信仰基台」を立てるための期間であったのであり、またイスラエル民族においては、「幕屋のための基台」を立てたのち、第二次路程で彼らがモーセに仕えて幕屋を建設した立場に戻ることによって、第三次路程の「出発のための摂理」をつくるための期間であったのである。</span></div>
-        <div class="no1"><span id="2-2-3-2-1" style="background-color:#FCD2E7"><a href="#2-2-3-2-1"
-                    style="color:black;text-decoration:none;">(イ)　モーセを中心とする実体基台</a></span><br />
+        <div class="no1"><h6 id="2-2-3-2-1"><a href="22mose.html#2-2-3-2-1"><span style="background-color:#FCD2E7">
+                    (イ)　モーセを中心とする実体基台</span></a></h6><br />
             　石板と幕屋と契約の箱は、イスラエル民族が荒野で不信に陥ったために受けるようになったということについては、既に論じたはずである。すなわち<span
                 style="background-color:#FFFF99">イスラエル民族が、彼らの第二次民族的カナン復帰路程において、神がその「出発のための摂理」として行われた三大奇跡を、信じない立場に立っていたので、それを蕩減復帰なさるために、神は彼らに四十日の試練期間を経させたのち、石板と幕屋と契約の箱という三大恩賜を下し給うたのであった。そしてまた、ヤコブがハランでカナンに復帰しようとしたとき、ラバンがヤコブを十回も欺いたのを（<a
                     href="../Bible_out/01_Old Testament/01_genesis/31.html#v7"
@@ -1174,14 +1298,14 @@
                     class="verse-link">民数二七・12～14</a>）。</span><br />
             　<span
                 style="background-color:#CCFFFF">我々はここで、磐石（岩）を一度だけ打たなければならなかった理由と、また、二度打ったのがなぜ罪となったのであるか、ということについて調べてみることにしよう。</span><span
-                style="background-color:#FFFF99">（<a href="../Bible_out/02_New Testament/27_revelation/002.html#v17"
-                    class="verse-link">黙二・17</a>）では、イエスを白い石で象徴しており、また、（<a
+                style="background-color:#FFFF99"><a href="../Bible_out/02_New Testament/27_revelation/002.html#v17"
+                    class="verse-link">黙示録2章17節</a>では、イエスを白い石で象徴しており、また、<a
                     href="../Bible_out/02_New Testament/07_1-corinthians/010.html#v4"
-                    class="verse-link">コリント・一〇章４</a>）を見れば、岩（磐石）はすなわちキリストであると記してあるのを発見できる。ところで、堕落論で明らかにしたように、キリストは生命の木として来られた方であるから（<a
+                    class="verse-link">コリント一・10章4節</a>を見れば、岩（磐石）はすなわちキリストであると記してあるのを発見できる。ところで、堕落論で明らかにしたように、キリストは生命の木として来られた方であるから（<a
                     href="../Bible_out/02_New Testament/27_revelation/022.html#v14"
-                    class="verse-link">黙二二・14</a>）、磐石は、すなわち生命の木ともなるのである。また、（<a
+                    class="verse-link">黙二二・14</a>）、磐石は、すなわち生命の木ともなるのである。また、<a
                     href="../Bible_out/01_Old Testament/01_genesis/02.html#v9"
-                    class="verse-link">創二・９</a>）の生命の木は、エデンの園において、将来、完成するはずのアダムを象徴したのであって、この生命の木もまた、磐石を意味するものでなければならないから、磐石は完成したアダムを象徴することにもなるのである。</span><br />
+                    class="verse-link">創世記2章9節</a>の生命の木は、エデンの園において、将来、完成するはずのアダムを象徴したのであって、この生命の木もまた、磐石を意味するものでなければならないから、磐石は完成したアダムを象徴することにもなるのである。</span><br />
             　ところで、サタンはエデンの園で、将来磐石となるはずであったアダムを打って堕落させた。そこでアダムは、生命の木となることができなかったので（創三・<a
                 href="../Bible_out/01_Old Testament/01_genesis/3.html#v24"
                 class="verse-link">24</a>）、彼はまた、神から流れている命の水を永遠にその子孫たちに飲ませ得る磐石（岩）ともなれなかったのである。それゆえに、　<span
@@ -1244,12 +1368,11 @@
                     href="../Bible_out/01_Old Testament/05_deuteronomy/34.html#v6"
                     class="verse-link">６</a>）。</span><span
                 style="background-color:#FFFF99">これは将来来られるイエスも、もしユダヤ人たちが不信に陥れば十字架にかけられなくてはならないこと、またそのとき、できることなら死の杯を免れて、世界的カナン復帰を成就させてくださるようにとの哀願の祈祷をなさるであろうが、結局はその目的を達成することができず、亡くなられるであろうということ、さらにまた、彼の死体も葬られたのちには、その行方を知る人が一人もいないであろうということなどを、あらかじめ表示してくださったのであった。</span></div>
-        <div class="no1"><span id="2-2-3-2-2" style="background-color:#FCD2E7"><a href="#2-2-3-2-2"
-                    style="color:black;text-decoration:none;">(ロ)　ヨシュアを中心とする実体基台</a></span><br />
+        <div class="no1"><h6 id="2-2-3-2-2"><a href="22mose.html#2-2-3-2-2"><span style="background-color:#FCD2E7">
+                    (ロ)　ヨシュアを中心とする実体基台</span></a></h6><br />
             　モーセが磐石を二度打つことによって、イスラエル民族が磐石を中心とする「出発のための摂理」をもってカナンに復帰しようとした目的は完遂されなかった。しかし、モーセが磐石を二度打つことによって（民数二〇・１～13）、サタンが外的には侵入したが、レピデムにおける磐石の水の基台によって、内的にはそのまま磐石の水を出し、イスラエル民族に飲ませることができたという事実から、先に明らかにしたように、次のような、神の摂理に対応する、いま一つの路程を見せてくださったのである。すなわち、イスラエル民族の中で、サタン世界であるエジプトにおいて出生し、荒野路程で不信に陥った、外的なイスラエルに属する人たちは、偵察四十日を信仰をもって立てたヨシュアとカレブを除いては、全部が荒野で倒れてしまい、磐石の水を飲み、幕屋を信奉する、荒野生活中に出生した内的なイスラエルだけが、モーセの代理であるヨシュアを中心として、カナンに入ったという事実である（民数三二・<a
                 href="../Bible_out/01_Old Testament/04_numbers/32.html#v11" class="verse-link">11</a>、12）。そして、<span
-                style="background-color:#CCFFFF">神はモーセに、彼はカナンの地に入ることができないと言われ、「神の霊のやどっているヌンの子ヨシュアを選び、あなたの手をその上におき、彼を祭司エレアザルと全会衆の前に立たせて、彼らの前で職に任じなさい。そして彼にあなたの権威を分け与え、イスラエルの人々の全会衆を彼に従わせなさい」（民数二七・<a
-                    style="background-color:#CCFFFF">神はモーセに、彼はカナンの地に入ることができないと言われ、「神の霊のやどっているヌンの子ヨシュアを選び、あなたの手をその上におき、彼を祭司エレアザルと全会衆の前に立たせて、彼らの前で職に任じなさい。そして彼にあなたの権威を分け与え、イスラエルの人々の全会衆を彼に従わせなさい」（<a
+                style="background-color:#CCFFFF">神はモーセに、彼はカナンの地に入ることができないと言われ、「神の霊のやどっているヌンの子ヨシュアを選び、あなたの手をその上におき、彼を祭司エレアザルと全会衆の前に立たせて、彼らの前で職に任じなさい。そして彼にあなたの権威を分け与え、イスラエルの人々の全会衆を彼に従わせなさい」（<a
                         href="../Bible_out/01_Old Testament/04_numbers/27.html#v18"
                         class="verse-link">民数二七・18～20</a>）と語られた。</span><br />
             　<span
@@ -1326,13 +1449,13 @@
                     href="../Bible_out/01_Old Testament/06_joshua/12.html#v9"
                     class="verse-link">ヨシュア一二・９～24</a>）、</span><span
                 style="background-color:#FFFF99">これも、イエスが王の王として来られ、他国の王たちをみな屈伏させて、その民を救い、地上天国を建設されるということを前もって見せてくださったのである。</span></div>
-        <div class="no1"><h4 id="2-2-3-3"><a href="22mose.html#2-2-3-3"><span
-                        style="background-color:#FCD2E7">③　メシヤのための基台</span></a></h4></div>
+        <div class="no1"><h5 id="2-2-3-3"><a href="22mose.html#2-2-3-3"><span
+                        style="background-color:#FCD2E7">③　メシヤのための基台</span></a></h5></div>
         <div class="no1">イスラエル民族は偵察四十日のサタン分立期間を立てることができず、第二次民族的カナン復帰路程に失敗し、この期間を再蕩減するために第三次民族的カナン復帰路程を出発して、荒野において四十年を流浪し、再びカデシバルネアに戻った。このときのモーセは、第三次路程のための「信仰基台」をつくったのであり、イスラエル民族は「幕屋のための基台」の上に立つことができたのである。
             　ところが、その後のイスラエルの不信と、それによって磐石を二度打ったことにより、この二つの基台はみなサタンの侵入を受けるようになったのである。そして、モーセを中心としてエジプトを出発した外的イスラエルは、一人残らず荒野で滅ぼされてしまったのであるが、ヨシュアとカレブだけは、モーセが立てた第二次路程の「信仰基台」と、幕屋のための「信仰基台」の上で、偵察四十日のサタン分立期間を信仰と忠誠をもって立てたので、「幕屋のための基台」が造成されたのである。このように、モーセを中心とした外的イスラエルは、全部荒野で倒れてしまったが、幕屋を信奉する荒野生活中に出生した内的イスラエルは、モーセの身代わりであるヨシュアを中心として忠誠を尽くし、契約の箱を信奉してヨルダン河を渡り、エリコの町を打ち破って、カナンに入ったのであった。このようにして、<span
                 style="background-color:#FCD2E7">第三次の民族的カナン復帰路程の「実体基台」がつくられ、その結果としてこの路程の「メシヤのための基台」が造成されることによって、アブラハムのときに立てられた「メシヤのための家庭的な基台」は、彼の供え物の失敗による四〇〇年エジプト苦役の蕩減路程を経たのち、初めて「メシヤのための民族的な基台」が造成されるようになったのである。ところが、既に後編第一章第三節（三）を通じて詳しく論じたように、そのとき既に、堕落人間たちが、サタンを中心として、エジプト王国などの強大な王国を建設し、天の側の復帰摂理と対決していたので、ヨシュアを中心として「メシヤのための民族的な基台」が立てられたといっても、その基台の上でサタンと対決することのできる天の側の王国が建設されるときまでは、メシヤは降臨なさることができなかったのである。ところで、カナンに入った内的イスラエルも、また不信に陥り、この摂理は、再び延長を重ねてイエスのときにまで至ったのである。</span></div>
-        <div class="no1"><h4 id="2-3"><a href="22mose.html#2-3"><span style="background-color:#CCFFFF">（三）モーセ路程が見せてくれた教訓</span></a>
-            </h4></div>
+        <div class="no1"><h3 id="2-3"><a href="22mose.html#2-3"><span style="background-color:#CCFFFF">（三）モーセ路程が見せてくれた教訓</span></a>
+            </h3></div>
         <div class="no1">モーセ以後今日に至るまで、悠久なる歴史路程を通じて神のみ旨を信奉してきた数多くの信徒たちが、モーセに関する聖書の記録を読んできた。しかし、それはただ、モーセ自身の歴史に関する記録であるとだけ考えてきたのであり、神が彼を通して、復帰摂理に関するある秘密を教えてくださろうとしたのだということを知る人は一人もいなかったのである。イエスもヨハネ福音書五章<a
                 href="../Bible_out/02_New Testament/04_john/005.html#v19"
                 class="verse-link">19</a>節で、子は父のなさることを見てする以外に、自分からは何事もすることができないという程度にしか言われず、モーセ路程の根本意義を明らかにされないまま、亡くなられたのであった（<a
@@ -1386,9 +1509,9 @@
             <hr /><br />
         </div>
         </p>
-        <h3 id="3"><a href="22mose.html#3">
+        <h2 id="3"><a href="22mose.html#3">
                 <div class="no1"><span style="background-color:#FCD2E7">第三節　イエスを中心とする復帰摂理</span><br /></div>
-            </a></h3>
+            </a></h2>
         <p>
         <div class="no1">
             　<span style="background-color:#FCD2E7">天使を主管すべきであったアダム（コリント・六・<a
@@ -1401,8 +1524,8 @@
                     class="verse-link">18</a>節に神はモーセに対して「わたしは彼らの同胞のうちから、おまえのようなひとりの預言者を彼らのために起して、わたしの言葉をその口に授けよう。彼はわたしが命じることを、ことごとく彼らに告げるであろう」と言われたみ言の中で、モーセのような一人の預言者と言われたのは、とりもなおさず、モーセのような路程を歩まなければならないイエスについて話されたのである。</span>そしてヨハネ福音書五章<a
                 href="../Bible_out/02_New Testament/04_john/005.html#v19"
                 class="verse-link">19</a>節を見れば、イエスは、神のなさることを見てする以外に、自分からは何事もすることができないと記録されているのであるが、これは、イエスが、神がモーセを立てられて見せてくださった表示路程を、そのまま歩まれるということを言われたのであった。詳細なことは、既にモーセを中心とする復帰摂理において論じたのであるが、モーセを中心とする三次の民族的カナン復帰路程と、イエスを中心とする三次の世界的カナン復帰路程の全体的な輪郭を比較対照しながら、イエスを中心とする復帰路程を論じてみることにしよう。</div>
-        <div class="no1"><h4 id="3-1"><a href="22mose.html#3-1"><span style="background-color:#FCD2E7">（一）第一次世界的カナン復帰路程</span></a>
-            </h4></div>
+        <div class="no1"><h3 id="3-1"><a href="22mose.html#3-1"><span style="background-color:#FCD2E7">（一）第一次世界的カナン復帰路程</span></a>
+            </h3></div>
         <div class="no1"><h4 id="3-1-1"><a href="22mose.html#3-1-1"><span style="background-color:#FCD2E7">(1)　信　仰　基　台</span></a>
             </h4></div>
         <div class="no1"><span
@@ -1455,12 +1578,12 @@
                     class="verse-link">マタイ一一・３</a>）、また、自分がエリヤとして来たのにもかかわらず、それを知らずに否認して（<a
                     href="../Bible_out/02_New Testament/04_john/001.html#v21"
                     class="verse-link">ヨハネ一・21</a>）、ユダヤ人たちがイエスの前に出ていく道をふさいだばかりでなく、彼らがイエスに逆らうような立場にまで押しやったのである。これによって洗礼ヨハネは、「実体基台」を立てるに当たってのアベルの位置を離れたのために、ユダヤ人たちは、「堕落性を脱ぐための世界的な蕩減条件」を立てることができなかったのである。このようにして、ユダヤ人たちが「実体基台」を立てることができなくなった結果、「メシヤのための基台」を造成することができなくなったために、第一次世界的カナン復帰路程は失敗に終わることとなり、これもモーセのときと同じく、二次から三次まで延長されたのである。</span></div>
-        <div class="no1"><h4 id="3-2"><a href="22mose.html#3-2"><span style="background-color:#FCD2E7">（二）第二次世界的カナン復帰路程</span></a>
-            </h4></div>
+        <div class="no1"><h3 id="3-2"><a href="22mose.html#3-2"><span style="background-color:#FCD2E7">（二）第二次世界的カナン復帰路程</span></a>
+            </h3></div>
         <div class="no1"><h4 id="3-2-1"><a href="22mose.html#3-2-1"><span style="background-color:#FCD2E7">(1)　信　仰　基　台</span></a>
             </h4></div>
-        <div class="no1"><h4 id="3-2-1-1"><a href="22mose.html#3-2-1-1"><span
-                        style="background-color:#FCD2E7">①　イエスが洗礼ヨハネの使命を代理する</span></a></h4></div>
+        <div class="no1"><h5 id="3-2-1-1"><a href="22mose.html#3-2-1-1"><span
+                        style="background-color:#FCD2E7">①　イエスが洗礼ヨハネの使命を代理する</span></a></h5></div>
         <div class="no1"><span style="background-color:#FCD2E7">洗礼ヨハネは、完成したアダムとして来られたイエスに対しては、復帰されたアダム型の人物であった。</span><span
                 style="background-color:#CCFFFF">ゆえに洗礼ヨハネは、そのときまでの摂理歴史上において、「信仰基台」と「実体基台」とを復帰するために来たすべての中心人物たちが完遂できなかった使命を、完全に成就して、「メシヤのための基台」をつくらなければならなかったのである。そして、この基台の上で彼を信じ、彼に従うユダヤ民族を導いて、全体的な摂理の基台と共に、イエスに引き渡したのち、信仰と忠誠をもって彼に従い彼に侍るべきであった。</span><br />
             　<span style="background-color:#FFFF99">洗礼ヨハネは、自分でも知らずに行ったことではあったが、ヨルダン河でイエスにバプテスマを行ったということは（<a
@@ -1481,8 +1604,8 @@
                 style="background-color:#FCD2E7">イエスは、メシヤであられるにもかかわらず、洗礼ヨハネの代理に復帰摂理路程を出発されたという事情のために、ペテロに向かい、自分がメシヤであるという事実をユダヤ人たちに証してはならぬと言われたのである（<a
                     href="../Bible_out/02_New Testament/01_matthew/016.html#v20"
                     class="verse-link">マタイ一六・20</a>）。</span></div>
-        <div class="no1"><h4 id="3-2-1-2"><a href="22mose.html#3-2-1-2"><span
-                        style="background-color:#FCD2E7">②　イエスの荒野四十日の断食祈祷と三大試練</span></a></h4></div>
+        <div class="no1"><h5 id="3-2-1-2"><a href="22mose.html#3-2-1-2"><span
+                        style="background-color:#FCD2E7">②　イエスの荒野四十日の断食祈祷と三大試練</span></a></h5></div>
         <div class="no1"><span
                 style="background-color:#FCD2E7">我々はまず、イエスの四十日断食祈祷と三大試練に対する、その遠因と近因について知っておく必要がある。</span>民族的カナン復帰路程において、磐石（岩）の前に立っていたモーセが不信に陥り、それを二度打ったために、イエスを象徴するその磐石（岩）（<a
                 href="../Bible_out/02_New Testament/07_1-corinthians/010.html#v4"
@@ -1553,8 +1676,8 @@
                 href="../Bible_out/02_New Testament/19_hebrews/001.html#v14"
                 class="verse-link">ヘブル一・14</a>）であって、自己を創造された神を崇拝し、神に仕えるようになっていたのである。したがって、堕落した天使であるサタンも、彼を拝し彼に仕えるのが原理であるために、<span
                 style="background-color:#CCFFFF">サタンは当然、創造主、神の体として現れたイエスにも屈伏して、彼を拝し彼に仕えるのが原理であるとイエスは答えられたのであった。しかもイエスは、既に二度の試練に勝利し、神の第一、第二の祝福を復帰し得る基台を造成しておられたので、その基台の上に神の第三祝福を復帰して、万物世界を主管するのが当然であったから、既に勝利の基台の上に立っている万物世界に対しては、それ以上試練を受けるべき余地がないという意味をもって原理的に答えられたのである。このように、イエスは第三の試練にも勝利され、被造世界に対する主管性を復帰し得る条件を立てることによって、神の第三祝福に対する復帰の基台を造成されたのであった。</span></div>
-        <div class="no1"><h4 id="3-2-1-3"><a href="22mose.html#3-2-1-3"><span
-                        style="background-color:#FCD2E7">③　四十日断食と三大試練とをもってサタンを分立した結果</span></a></h4></div>
+        <div class="no1"><h5 id="3-2-1-3"><a href="22mose.html#3-2-1-3"><span
+                        style="background-color:#FCD2E7">③　四十日断食と三大試練とをもってサタンを分立した結果</span></a></h5></div>
         <div class="no1">創造原理によれば、人間は正分合の三段階の過程を経て、四位基台をつくって初めて、神の創造目的を成就するようになっているのである。ところが、人間はその四位基台をつくっていく過程において、サタンの侵入を受け、創造目的を成就することができなかったために、神は、今までの復帰摂理路程を、これまた、三段階まで延長しながら、「四十日サタン分立基台」をつくることによって、失ったすべてのものを蕩減復帰しようとされたのである。ところで、イエスはメシヤであられると同時に、洗礼ヨハネの立場で三段階の試練に勝利され、「四十日サタン分立基台」を立てられたので、これによってイエスは、神の復帰摂理の歴史路程を通して、三段階に摂理を延長しながら、「四十日サタン分立基台」によって奪い返そうとした、次のようなすべての条件を、一時に蕩減復帰することができたのであった。すなわち、<span
                 style="background-color:#FCD2E7">第一に、イエスは洗礼ヨハネの立場で、第二次世界的カナン復帰のための「信仰基台」を蕩減復帰されたので、そのときまでの摂理路程において、「信仰基台」をつくるために立てようとされた、すべてのものを蕩減復帰することができたのである。</span>すなわち、<span
                 style="background-color:#CCFFFF">カインとアベルの献祭、ノアの箱舟、アブラハムの献祭、モーセの幕屋、ソロモンの神殿などを蕩減復帰されたのであった。</span>それだけでなく、<span
@@ -1579,8 +1702,8 @@
                 style="background-color:#FCD2E7">果たして、サタンは、不信に陥った祭司たちと律法学者たちを中心とするユダヤ民族、特に、イエスを売った弟子、イスカリオテのユダを通して、再びイエスの前に現れて、対立したのであった。</span><br />
             　<span
                 style="background-color:#FCD2E7">このようにユダヤ民族の不信によって、第二次世界的カナン復帰路程のための「実体基台」はつくり得なくなり、それに伴ってこの摂理のための「メシヤのための基台」もまた造成することができなくなったために、第二次世界的カナン復帰路程は、これまた失敗に終わってしまったのである。</span></div>
-        <div class="no1"><h4 id="3-3"><a href="22mose.html#3-3"><span style="background-color:#FCD2E7">（三）第三次世界的カナン復帰路程</span></a>
-            </h4></div>
+        <div class="no1"><h3 id="3-3"><a href="22mose.html#3-3"><span style="background-color:#FCD2E7">（三）第三次世界的カナン復帰路程</span></a>
+            </h3></div>
         <div class="no1"><h4 id="3-3-1"><a href="22mose.html#3-3-1"><span
                         style="background-color:#FCD2E7">(1)　イエスを中心とする霊的カナン復帰路程</span></a></h4></div>
         <div class="no1"><span
@@ -1592,9 +1715,9 @@
                     class="verse-link">ヨハネ二・19</a>）と言われた理由は、ここにあったのである。そうして二〇〇〇年間信仰を続けているうちに、あたかも<span
                     style="background-color:#FCD2E7">ヨシュアがモーセの使命を継承して、第三次民族的カナン復帰を完成したように、イエスは、再臨されることによって、初臨のときの使命を継承され、第三次世界的カナン復帰路程を、霊肉併せて完成されるようになるのである。</span><span
                     style="background-color:#CCFFFF">我々は、このような復帰摂理路程を見ても、イエスが、初臨のときと同じく、肉体をもって再臨されなければ、初臨のときに成就なさろうとされた復帰摂理の目的を受け継いで、完遂することができないということが分かってくるのである。</span></div>
-        <div class="no1"><h4 id="3-3-1-1"><a href="22mose.html#3-3-1-1"><span
+        <div class="no1"><h5 id="3-3-1-1"><a href="22mose.html#3-3-1-1"><span
                             style="background-color:#FCD2E7">①　霊的な信仰基台</span></a>
-                </h4></div>
+                </h5></div>
         <div class="no1">ユダヤ民族がイエスに逆らうことにより、第二次世界的カナン復帰路程は失敗に終わったので、イエスが洗礼ヨハネの立場で四十日の断食をもって立てられた「信仰基台」は、サタンに引き渡さなければならなくなってしまったのである。それゆえに、<span
                     style="background-color:#FCD2E7">イエスが十字架によってその肉身をサタンに引き渡したのち、霊的洗礼ヨハネの使命者としての立場から、四十日復活期間をもってサタン分立の霊的基台を立てることにより、第三次世界的カナン復帰の霊的路程のための、霊的な「信仰基台」を復帰されたのである。</span>イエスが十字架で亡くなられたのち、四十日の復活期間を立てられるようになった理由はここにあったということを知る人は、今日に至るまで一人もいなかったのである。それでは<span
                     style="background-color:#CCFFFF">イエスは、霊的な「信仰基台」を、どのようにして立てられたのであろうか。</span><br />
@@ -1613,9 +1736,9 @@
                         class="verse-link">ヨハネ二〇・19</a>）、エマオという村へ行く二人の弟子の前に突然現れて、長い間同行された。しかし彼らは、近づいてこられたイエスと一緒に歩きながらも、彼がだれであるかを知らなかったのであり（<a
                         href="../Bible_out/02_New Testament/03_luke/024.html#v15"
                         class="verse-link">ルカ二四・15、16</a>）、このように現れたイエスはまた、忽然としてどこかに去ってしまわれたのである。</span>イエスは、すべての人類を救われるために、その肉身を供え物として十字架に引き渡されたのち、このように復活四十日のサタン分立期間をもって、霊的な「信仰基台」を立てられることにより、万民の罪を贖罪し得る道を開拓されたのである。</div>
-        <div class="no1"><h4 id="3-3-1-2"><a href="22mose.html#3-3-1-2"><span
+        <div class="no1"><h5 id="3-3-1-2"><a href="22mose.html#3-3-1-2"><span
                             style="background-color:#FCD2E7">②　霊的な実体基台</span></a>
-                </h4></div>
+                </h5></div>
         <div class="no1"><span
                     style="background-color:#FCD2E7">イエスは、霊的な洗礼ヨハネ使命者の立場から、霊的な復活「四十日サタン分立基台」を造成なさることにより、霊的な真の父母の立場でもって霊的な「信仰基台」を復帰すると同時に、また、霊的な子女の立場でもって「堕落性を脱ぐための世界的な蕩減条件」を立てるための、霊的なアベルの位置をも確立されたのである。</span>そのようにして、イエスは、モーセがイスラエル民族を導いて荒野流浪の四十年蕩減期間を送ることにより、第三次民族的カナン復帰のための「信仰基台」を造成したように、第三次世界的カナン復帰のための、霊的な「信仰基台」を造成することができたのである。<br />
                 　<span
@@ -1624,17 +1747,17 @@
                         class="verse-link">16</a>～18）、「出発のための摂理」をされたのである。</span><br />
                 　<span
                     style="background-color:#FCD2E7">ここにおいて、カインの立場に立っていた信徒たちは、この「出発のための摂理」により、霊的な洗礼ヨハネ使命者として、霊的なアベルの立場におられる、復活されたイエスを信じ、彼に仕え、彼に従って、「堕落性を脱ぐための霊的な蕩減条件」を立てることにより、「霊的な実体基台」を復帰することができたのである。</span></div>
-        <div class="no1"><h4 id="3-3-1-3"><a href="22mose.html#3-3-1-3"><span
-                            style="background-color:#FCD2E7">③　メシヤのための霊的な基台</span></a></h4></div>
+        <div class="no1"><h5 id="3-3-1-3"><a href="22mose.html#3-3-1-3"><span
+                            style="background-color:#FCD2E7">③　メシヤのための霊的な基台</span></a></h5></div>
         <div class="no1"><span
                     style="background-color:#FCD2E7">イエスが十字架で亡くなられたのち、取り残された十一人の弟子たちはみな力を失って、四方に散らばってしまっていた。ところが、イエスは復活されるとまた、彼らを再びひとところに集められ、霊的カナン復帰の新しい摂理を始められたのである。弟子たちは、イスカリオテのユダの代わりにマッテヤを選んで、十二弟子の数を整え、復活されたイエスを命を懸けて信奉することにより、「霊的な実体基台」を造成し、それによって「メシヤのための霊的な基台」を復帰した。そこでイエスは、この基台の上で、霊的な洗礼ヨハネ使命者の立場から、霊的なメシヤの立場を確立し、聖霊を復帰することによって、霊的な真の父母となり、重生の摂理をされるようになったのである。</span>すなわち、<span
                     style="background-color:#CCFFFF">使徒行伝二章<a href="../Bible_out/02_New Testament/05_acts/002.html#v1"
                         class="verse-link">１</a>節から４節にかけて記録されているように、五旬節に聖霊が降臨されてのち、復活されたイエスは霊的な真の父として、霊的な真の母であられる聖霊と一つになって摂理されることにより、信徒たちを霊的に接がしめて、霊的に重生せしめる摂理をされて、霊的救いの摂理だけを成就するようになられたのである</span><a
                     href="14meshia.html#1-4">（前編第四章第一節（四））</a>。したがって、イエスが復活した圏内では、サタンの霊的讒訴条件が清算されているので、それは霊的面におけるサタンの不可侵圏となっているのである。<br />
                 　堕落人間は、キリストを信ずることによって、彼と一体となるとしても、キリスト自身がそうであったと同様に、その肉身はサタンの侵入した立場におかれているので、肉的救いは依然として全うされずに、そのまま残るようになったのである。しかしながら、我々が復活したイエスを信ずれば、彼と共に霊的にはサタンの不可侵圏内に入るようになるから、サタンの霊的讒訴条件を免れ、霊的救いのみが成就されるようになるのである。</div>
-        <div class="no1"><h4 id="3-3-1-4"><a href="22mose.html#3-3-1-4"><span
+        <div class="no1"><h5 id="3-3-1-4"><a href="22mose.html#3-3-1-4"><span
                             style="background-color:#FCD2E7">④　霊的カナン復帰</span></a>
-                </h4></div>
+                </h5></div>
         <div class="no1"><span
                     style="background-color:#FCD2E7">キリスト教信徒たちは「メシヤのための霊的基台」の上で霊的メシヤとして立たせられたイエスを信じ侍ることによって、霊的カナン復帰だけを完成するようになった。それゆえに、霊的カナン復帰の恵沢圏内にいる信徒たちの肉身は、ちょうど十字架によってサタンの侵入を受けたイエスの肉身と同じ立場に立つようになるので、（肉身の面から見れば）イエスが来られる前の状態と異なるところがなく、サタンの侵入を受けることにより、原罪は依然として元のままに残っているので（ロマ七・<a
                         href="../Bible_out/02_New Testament/06_romans/007.html#v25"
@@ -1705,9 +1828,9 @@
                     style="background-color:#FCD2E7">彼は、再臨される場合においても、その「メシヤのための基台」を、実体的に家庭的なものから出発して、順次、氏族的、民族的、国家的、世界的、天宙的なものとして復帰され、その基台の上に、天国を成就するところまで行かなければならないのである。</span><br />
                 　神は、将来、イエスが誕生されて、天国建設の目的をいちはやく成就させるために、第一イスラエル選民を立てることによってその土台を準備されたのであったが、彼らがそれに逆らったので、キリスト教信徒たちを第二イスラエルとして立てられたように、もしも、<span
                     style="background-color:#CCFFFF">再臨イエスの天国建設の理想のために第二イスラエルとして立たせられたキリスト教信徒たちが、またもや彼に背くならば、神はやむを得ず、その第二イスラエル選民をも捨てて新しく、第三イスラエル選民を選ばれるほか、致し方はないのである。それゆえに、終末に処しているキリスト教信徒たちは、イエスの初臨当時のユダヤ民族と同じく、最も幸福な環境の中におりながらも、また一方においては、最も不幸な立場に陥るかもしれない運命の岐路に立たされているとも考えられるのである。</span></div>
-        <div class="no1"><h4 id="3-4"><a href="22mose.html#3-4"><span
+        <div class="no1"><h3 id="3-4"><a href="22mose.html#3-4"><span
                             style="background-color:#CCFFFF">（四）イエスの路程が見せてくれた教訓</span></a>
-                </h4></div>
+                </h3></div>
         <div class="no1"><span style="background-color:#CCFFFF">　第一に、ここにおいても、み旨に対する神の予定が、どのようなものであるかということを見せてくださった。</span><span
                     style="background-color:#FFFF99">神はいつでもそのみ旨を絶対的なものとして予定され、それを成就していくために、洗礼ヨハネがその使命を完遂し得なかったとき、メシヤとして来られたイエス御自身が、その使命を代理されてまでも、その目的を達成しようとされたのであったし、またユダヤ人たちの不信によって地上天国が立てられないようになったとき、イエスは再臨されてまでも、そのみ旨を絶対的に成就しようとなさるのである。</span><br />
                 　つぎに、<span
@@ -1961,6 +2084,127 @@
     <script src="color_filter.js?v=202602241611"></script>
 
     <script src="../theme/script.js?v=202602241611"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('stacked-header-container');
+            const breadcrumb = document.getElementById('breadcrumb-view');
+            const stackedView = document.getElementById('stacked-view');
+            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const bars = {}; // To store bar elements for each level (2-6)
+
+            // Create bar elements for levels 2 to 6 in the expanded view
+            for (let i = 2; i <= 6; i++) {
+                const bar = document.createElement('div');
+                bar.className = 'stack-bar';
+                bar.dataset.level = i;
+                bar.innerHTML = '<span></span>';
+                stackedView.appendChild(bar);
+                bars[i] = {
+                    el: bar,
+                    text: bar.querySelector('span'),
+                    activeHeading: null
+                };
+
+                bar.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (bars[i].activeHeading) {
+                        const offset = 80;
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementRect = bars[i].activeHeading.getBoundingClientRect().top;
+                        const elementPosition = elementRect - bodyRect;
+                        const offsetPosition = elementPosition - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        container.classList.remove('is-expanded');
+                    }
+                });
+            }
+
+            // Toggle expansion
+            breadcrumb.addEventListener('click', (e) => {
+                e.stopPropagation();
+                container.classList.toggle('is-expanded');
+            });
+
+            // Collapse on click outside
+            document.addEventListener('click', () => {
+                container.classList.remove('is-expanded');
+            });
+
+            const updateHeader = () => {
+                const threshold = 100;
+                let current = null;
+
+                for (let i = headings.length - 1; i >= 0; i--) {
+                    if (headings[i].getBoundingClientRect().top <= threshold) {
+                        current = headings[i];
+                        break;
+                    }
+                }
+
+                if (window.scrollY < 250 || !current) {
+                    breadcrumb.classList.remove('visible');
+                    container.classList.remove('is-expanded');
+                    return;
+                }
+
+                breadcrumb.classList.add('visible');
+
+                // Build active path
+                const path = [];
+                let temp = current;
+                let tempLevel = parseInt(temp.tagName.substring(1));
+                path.unshift({ heading: temp, level: tempLevel });
+
+                let currentIndex = headings.indexOf(temp);
+                for (let i = currentIndex - 1; i >= 0; i--) {
+                    let level = parseInt(headings[i].tagName.substring(1));
+                    if (level < tempLevel) {
+                        path.unshift({ heading: headings[i], level: level });
+                        tempLevel = level;
+                    }
+                }
+
+                // Update Breadcrumb Text
+                const breadcrumbText = path.map(p => {
+                    return p.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                }).join('<span class="separator">/</span>');
+                
+                if (breadcrumb.innerHTML !== breadcrumbText) {
+                    breadcrumb.innerHTML = breadcrumbText;
+                }
+
+                // Update Stacked Bars
+                for (let i = 2; i <= 6; i++) {
+                    const barData = bars[i];
+                    const pathItem = path.find(p => p.level === i);
+
+                    if (pathItem) {
+                        barData.el.style.display = 'flex';
+                        barData.activeHeading = pathItem.heading;
+                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        if (barData.text.textContent !== cleanText) {
+                            barData.text.textContent = cleanText;
+                        }
+                    } else {
+                        barData.el.style.display = 'none';
+                        barData.activeHeading = null;
+                    }
+                }
+            };
+
+            const observer = new IntersectionObserver(() => {
+                updateHeader();
+            }, { rootMargin: '-5% 0px -90% 0px' });
+
+            headings.forEach(h => observer.observe(h));
+            window.addEventListener('scroll', updateHeader, { passive: true });
+            updateHeader();
+        });
+    </script>
 </body>
 
 

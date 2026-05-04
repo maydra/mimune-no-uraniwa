@@ -466,12 +466,137 @@
         h2 .no1, h3 .no1 {
             margin-bottom: 0;
         }
+
+        /* --- Refined Expandable Sticky Header Styles --- */
+        .stacked-header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 3000;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .breadcrumb-view {
+            height: 28px;
+            pointer-events: auto;
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(10px) saturate(180%);
+            -webkit-backdrop-filter: blur(10px) saturate(180%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 0 1.2rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #777;
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(-100%);
+            visibility: hidden;
+        }
+
+        .breadcrumb-view.visible {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        .breadcrumb-view:hover {
+            background: rgba(255, 255, 255, 0.7);
+            color: #333;
+        }
+
+        .breadcrumb-view .separator {
+            margin: 0 0.5rem;
+            color: #aaa;
+            font-weight: 300;
+        }
+
+        .stacked-view {
+            pointer-events: auto;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(25px) saturate(200%);
+            -webkit-backdrop-filter: blur(25px) saturate(200%);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .stacked-header-container.is-expanded .stacked-view {
+            max-height: 100vh;
+            opacity: 1;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .stack-bar {
+            height: 32px;
+            line-height: 32px;
+            padding: 0 1.5rem;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #444;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: 'Noto Serif JP', serif;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s ease, padding-left 0.3s ease;
+        }
+
+        .stack-bar:hover {
+            background: rgba(102, 126, 234, 0.08);
+            color: #667eea;
+        }
+
+        /* Hierarchy-based Indentation for Expanded State */
+        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+
+        .stack-bar::before {
+            content: '▸';
+            margin-right: 0.5rem;
+            color: #667eea;
+            font-size: 0.7rem;
+        }
+        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+
+        @media (max-width: 48rem) {
+            .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
+            .stack-bar { height: 30px; font-size: 0.8rem; }
+            .stack-bar[data-level="2"] { padding-left: 1rem; }
+            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
+            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
+            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
+            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+        }
 </style>
 
     <link rel="stylesheet" href="../theme/style.css?v=202602241611">
 </head>
 
 <body>
+    <div id="stacked-header-container" class="stacked-header-container">
+        <div id="breadcrumb-view" class="breadcrumb-view"></div>
+        <div id="stacked-view" class="stacked-view"></div>
+    </div>
+
     <div class="container">
         <h1>原理講論 復活論</h1>
         <nav class="page-nav">
@@ -963,6 +1088,126 @@
         h2 .no1, h3 .no1 {
             margin-bottom: 0;
         }
+
+        /* --- Refined Expandable Sticky Header Styles --- */
+        .stacked-header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 3000;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .breadcrumb-view {
+            height: 28px;
+            pointer-events: auto;
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(10px) saturate(180%);
+            -webkit-backdrop-filter: blur(10px) saturate(180%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 0 1.2rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #777;
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(-100%);
+            visibility: hidden;
+        }
+
+        .breadcrumb-view.visible {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        .breadcrumb-view:hover {
+            background: rgba(255, 255, 255, 0.7);
+            color: #333;
+        }
+
+        .breadcrumb-view .separator {
+            margin: 0 0.5rem;
+            color: #aaa;
+            font-weight: 300;
+        }
+
+        .stacked-view {
+            pointer-events: auto;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(25px) saturate(200%);
+            -webkit-backdrop-filter: blur(25px) saturate(200%);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .stacked-header-container.is-expanded .stacked-view {
+            max-height: 100vh;
+            opacity: 1;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .stack-bar {
+            height: 32px;
+            line-height: 32px;
+            padding: 0 1.5rem;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #444;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: 'Noto Serif JP', serif;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s ease, padding-left 0.3s ease;
+        }
+
+        .stack-bar:hover {
+            background: rgba(102, 126, 234, 0.08);
+            color: #667eea;
+        }
+
+        /* Hierarchy-based Indentation for Expanded State */
+        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+
+        .stack-bar::before {
+            content: '▸';
+            margin-right: 0.5rem;
+            color: #667eea;
+            font-size: 0.7rem;
+        }
+        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+
+        @media (max-width: 48rem) {
+            .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
+            .stack-bar { height: 30px; font-size: 0.8rem; }
+            .stack-bar[data-level="2"] { padding-left: 1rem; }
+            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
+            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
+            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
+            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+        }
 </style>
 
     <script>
@@ -1013,6 +1258,101 @@
     <script src="color_filter.js?v=202602241611"></script>
 
     <script src="../theme/script.js?v=202602241611"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('stacked-header-container');
+            const breadcrumb = document.getElementById('breadcrumb-view');
+            const stackedView = document.getElementById('stacked-view');
+            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const bars = {};
+
+            for (let i = 2; i <= 6; i++) {
+                const bar = document.createElement('div');
+                bar.className = 'stack-bar';
+                bar.dataset.level = i;
+                bar.innerHTML = '<span></span>';
+                stackedView.appendChild(bar);
+                bars[i] = { el: bar, text: bar.querySelector('span'), activeHeading: null };
+
+                bar.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (bars[i].activeHeading) {
+                        const offset = 80;
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementRect = bars[i].activeHeading.getBoundingClientRect().top;
+                        const elementPosition = elementRect - bodyRect;
+                        const offsetPosition = elementPosition - offset;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                        container.classList.remove('is-expanded');
+                    }
+                });
+            }
+
+            breadcrumb.addEventListener('click', (e) => {
+                e.stopPropagation();
+                container.classList.toggle('is-expanded');
+            });
+
+            document.addEventListener('click', () => {
+                container.classList.remove('is-expanded');
+            });
+
+            const updateHeader = () => {
+                const threshold = 100;
+                let current = null;
+                for (let i = headings.length - 1; i >= 0; i--) {
+                    if (headings[i].getBoundingClientRect().top <= threshold) {
+                        current = headings[i];
+                        break;
+                    }
+                }
+
+                if (window.scrollY < 250 || !current) {
+                    breadcrumb.classList.remove('visible');
+                    container.classList.remove('is-expanded');
+                    return;
+                }
+
+                breadcrumb.classList.add('visible');
+                const path = [];
+                let temp = current;
+                let tempLevel = parseInt(temp.tagName.substring(1));
+                path.unshift({ heading: temp, level: tempLevel });
+
+                let currentIndex = headings.indexOf(temp);
+                for (let i = currentIndex - 1; i >= 0; i--) {
+                    let level = parseInt(headings[i].tagName.substring(1));
+                    if (level < tempLevel) {
+                        path.unshift({ heading: headings[i], level: level });
+                        tempLevel = level;
+                    }
+                }
+
+                const breadcrumbText = path.map(p => p.heading.innerText.replace(/[◆▸▶]/g, '').trim()).join('<span class="separator">/</span>');
+                if (breadcrumb.innerHTML !== breadcrumbText) breadcrumb.innerHTML = breadcrumbText;
+
+                for (let i = 2; i <= 6; i++) {
+                    const barData = bars[i];
+                    const pathItem = path.find(p => p.level === i);
+                    if (pathItem) {
+                        barData.el.style.display = 'flex';
+                        barData.activeHeading = pathItem.heading;
+                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        if (barData.text.textContent !== cleanText) barData.text.textContent = cleanText;
+                    } else {
+                        barData.el.style.display = 'none';
+                        barData.activeHeading = null;
+                    }
+                }
+            };
+
+            const observer = new IntersectionObserver(() => updateHeader(), { rootMargin: '-5% 0px -90% 0px' });
+            headings.forEach(h => observer.observe(h));
+            window.addEventListener('scroll', updateHeader, { passive: true });
+            updateHeader();
+        });
+    </script>
 </body>
 
 
