@@ -54,18 +54,43 @@
       animation: fadeInDown 0.8s ease-out;
     }
 
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 900;
-      color: #111;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.05em;
-    }
+    .page-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
 
-    h1 a {
-      text-decoration: none;
-      color: #111;
-    }
+        .chapter-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-top: 2rem;
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+            text-decoration: none;
+            color: #111;
+        }
+
+        h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+            color: #000;
+        }
 
     h2 {
       font-size: 2.2rem;
@@ -105,10 +130,11 @@
         }
 
 
-    h2::before {
+    h1:not(.page-title)::before {
       content: '◆';
       color: #667eea;
       font-size: 0.8em;
+      margin-right: 0.5rem;
     }
 
     
@@ -374,9 +400,17 @@
         padding: 2rem;
       }
 
-      h1 {
-        font-size: clamp(2rem, 6vw, 3.5rem);
-      }
+      .page-title {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            .chapter-title {
+                font-size: clamp(1.8rem, 5vw, 3rem);
+            }
+
+            h1 {
+                font-size: 2.0rem;
+            }
 
       h2 {
         font-size: 1.8rem;
@@ -610,11 +644,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -622,16 +657,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -645,7 +681,7 @@
     </div>
 
   <div class="container">
-    <h1>原理講論　 堕落論</h1>
+    <h1 class="page-title">原理講論　 堕落論</h1>
     <nav class="page-nav">
       <a href="11sozo.html" class="nav-btn"><span>←</span> 前へ</a>
       <a href="index.html" class="nav-btn">目次</a>
@@ -744,11 +780,11 @@
     <!-- St-HP-H -->
     <!-- En-HP-H -->
     
-    <h3>
+    <div class="chapter-title">
       <div class="no1">
         <span style="background-color:#FCD2E7">第二章　堕　　落　　論</span><br />
       </div>
-    </h3>
+    </div>
     <p>
     <div class="no1">
       <hr /><br />
@@ -768,7 +804,7 @@
     </div>
     </p>
     <div class="no1">
-      <h3 id="1"><a href="12daraku.html#1"><span style="background-color:#FCD2E7">第一節　罪　　の　　根</span></a></h3><br />
+      <h1 id="1"><a href="12daraku.html#1"><span style="background-color:#FCD2E7">第一節　罪　　の　　根</span></a></h1><br />
     </div>
     <div class="no1">
       <hr /><br />
@@ -777,8 +813,8 @@
         style="background-color:#CCFFFF">善悪を知る木の果が、文字どおり木の果実であると信ずる信徒たちと、聖書の多くの部分がそうであるように、これもまた、あるものに対する象徴、あるいは<ruby>比喩
           <rt>ひゆ</rt>
         </ruby>に違いないと信ずる信徒たちとが、互いにその意見を異にし、それぞれに様々な解釈をしているだけで、今もってなお、これに対する完全な解明がなされていないというのが実情である。</span></div>
-        <div class="no1"><h3 id="1-1"><a href="12daraku.html#1-1"><span style="background-color:#FCD2E7"> （一）<ruby>生命<rt>いのち</rt>
-            </ruby>の木と善悪を知る木</span></a></h3>
+        <div class="no1"><h2 id="1-1"><a href="12daraku.html#1-1"><span style="background-color:#FCD2E7"> （一）<ruby>生命<rt>いのち</rt>
+            </ruby>の木と善悪を知る木</span></a></h2>
       <br />
 
       　<span
@@ -894,8 +930,8 @@
             class="verse-link">オリブの木（ロマ一一・17）</a>」に例えられているように、神は人間堕落の秘密を暗示なさるときにおいても、完成したアダムとエバとを、二つの木をもって<ruby>比喩<rt>ひゆ
             </rt>
           </ruby>されたのである。</span></div>
-        <div class="no1"><h3 id="1-2"><a href="12daraku.html#1-2"><span style="background-color:#FCD2E7">（二）<ruby>蛇<rt>へび</rt>
-              </ruby>の<ruby>正体<rt>しょうたい</rt></ruby></span></a></h3><br />
+        <div class="no1"><h2 id="1-2"><a href="12daraku.html#1-2"><span style="background-color:#FCD2E7">（二）<ruby>蛇<rt>へび</rt>
+              </ruby>の<ruby>正体<rt>しょうたい</rt></ruby></span></a></h2><br />
         　<span style="background-color:#FCD2E7">エバを誘惑して、罪を犯させたものは<ruby>蛇<rt>へび</rt></ruby>であったと聖書に記録されている（<a
             href="../Bible_out/01_Old Testament/01_genesis/3.html#v4" class="verse-link">創三・４、５</a>）。では、この<ruby>蛇<rt>へび
             </rt>
@@ -933,7 +969,7 @@
         　<ruby>蛇<rt>へび</rt></ruby>はその舌先が二つに分かれている。したがって、それは一つの舌をもって二つの言葉を話し、一つの心をもって二つの生活をする者の<ruby>表象<rt>ひょうしょう</rt>
         </ruby>となるのである。また、<ruby>蛇<rt>へび</rt></ruby>は自分の食物に体を巻きつけて食べるが、これは自己の利益のために他を誘惑する者の<ruby>表象<rt>ひょうしょう</rt>
         </ruby>となっている。それゆえに、聖書は人間を誘惑した天使を<ruby>蛇<rt>へび</rt></ruby>に例えたのであった。</div>
-        <div class="no1"><h3 id="1-3"><a href="12daraku.html#1-3">（三）天使の堕落と人間の堕落</a></h3><br />
+        <div class="no1"><h2 id="1-3"><a href="12daraku.html#1-3">（三）天使の堕落と人間の堕落</a></h2><br />
 
         　既に、我々は人間を誘惑して堕落させた<ruby>蛇<rt>へび</rt>
         </ruby>が、天使であったということ、また、この天使が罪を犯し堕落することによってサタンとなったという事実を知った。ではつぎに、天使と人間がいかなる罪を犯したかということについて調べてみることにしよう。</div>
@@ -1001,7 +1037,7 @@
             </rt>
           </ruby>されたという記録がある。</span>このような聖書の記録に基づいてみると、我々は、天使と人間との間に<ruby>淫行<rt>いんこう</rt>
         </ruby>関係が結ばれ、それが堕落の原因になったという事実を知ることができるのである。</div>
-        <div class="no1"><h3 id="1-4"><a href="12daraku.html#1-4"><span style="background-color:#FCD2E7"> （四）善悪の果</span></a></h3><br />
+        <div class="no1"><h2 id="1-4"><a href="12daraku.html#1-4"><span style="background-color:#FCD2E7"> （四）善悪の果</span></a></h2><br />
         　我々は既に、善悪を知る木が、完成したエバを<ruby>比喩<rt>ひゆ</rt></ruby>したものであるという事実を明らかにした。では、<span
           style="background-color:#FCD2E7">善悪の果とは何をいうのであろうか。すなわち、それはエバの愛を意味するのである。</span><ruby>果木<rt>かぼく</rt>
         </ruby>が、果実によって繁殖するように、エバは、<span
@@ -1020,7 +1056,7 @@
           href="../Bible_out/01_Old Testament/23_isaiah/14.html#v12" class="verse-link">イザヤ一四・12</a>、<a
           href="../Bible_out/02_New Testament/27_revelation/012.html#v9"
           class="verse-link">黙一二・９</a>）、神からの命の要素を受けることができず、罪悪の世界に陥って、悪の要素を受けながら生きていくということを意味するのである。</div>
-        <div class="no1"><h3 id="1-5"><a href="12daraku.html#1-5"><span style="background-color:#FCD2E7"> （五）罪の根</span></a></h3><br />
+        <div class="no1"><h2 id="1-5"><a href="12daraku.html#1-5"><span style="background-color:#FCD2E7"> （五）罪の根</span></a></h2><br />
         　我々は聖書によって明らかにされたことにより、罪の根は人間始祖が果実を取って食べたことにあったのではなく、<span style="background-color:#FCD2E7"><ruby>蛇<rt>へび</rt>
           </ruby>に表示された天使と不倫なる血縁関係を結んだところにあったということを知るようになった。したがって、彼らは神の善の血統を繁殖することができず、サタンの悪の血統を繁殖するようになったのである。</span><br />
         　さらにまた、我々は次のような事実から、人間の罪の根が淫乱にあったということを、より一層明確に知ることができるのである。罪の根が血縁関係によってつくられたので、この原罪は、子々孫々に遺伝されてきた。そして、<span
@@ -1037,18 +1073,18 @@
         </ruby>にあるということを如実に物語っているのである。<br />
         <hr /><br />
     </div>
-    <h3 id="2">
+    <h1 id="2">
       <a href="12daraku.html#2"><span style="background-color:#FCD2E7">
           第二節　堕落の動機と経路</span></a>
-    </h3><br />
+    </h1><br />
     <p>
     <div class="no1">
       <hr /><br />
     </div>
     　我々は既に、第一節において、<ruby>蛇<rt>へび</rt></ruby>はまさしくエバを堕落させた天使を<ruby>比喩<rt>ひゆ</rt>
     </ruby>したものであるということを明らかにした。このように、人間の堕落した動機は天使にあったから、その堕落の動機と経路を知るためには、まず、天使とは何かということを知らなければならない。</div>
-        <div class="no1"><h4 id="2-1"><a href="12daraku.html#2-1"> <span style="background-color:#FCD2E7">（一）天使の創造とその使命および人間との関係</span></a>
-    </h4>
+        <div class="no1"><h2 id="2-1"><a href="12daraku.html#2-1"> <span style="background-color:#FCD2E7">（一）天使の創造とその使命および人間との関係</span></a>
+    </h2>
     　すべての存在は神によって創造された。したがって当然天使もまた、神が創造し<ruby>給<rt>たも</rt></ruby>うた被造物であることはいうまでもない。<span
       style="background-color:#FCD2E7">神は天使世界を他のどの被造物よりも先に創造された。</span><a
       href="../Bible_out/01_Old Testament/01_genesis/1.html#v26"
@@ -1076,7 +1112,7 @@
           しゅかん</rt></ruby>するようにつくられているのである。</span><span style="background-color:#FFFF99"><a
         href="../Bible_out/02_New Testament/07_1-corinthians/006.html#v3"
         class="verse-link">コリント・六章３節</a>を見れば、人間は天使さえも審判できる権限があると書かれている。</span>そして、霊的に通ずるあらゆる人たちは、数多くの天使たちが、楽園にいる聖徒たちを擁護しているのを見るのであるが、これもまた、天使の人間に対する主従関係を説明する一つの良い例であるといえよう。</div>
-        <div class="no1"><h4 id="2-2"><a href="12daraku.html#2-2"> <span style="background-color:#FCD2E7"> （二）霊的堕落と肉的堕落</span></a></h4>
+        <div class="no1"><h2 id="2-2"><a href="12daraku.html#2-2"> <span style="background-color:#FCD2E7"> （二）霊的堕落と肉的堕落</span></a></h2>
 
     　<span
       style="background-color:#FCD2E7">神は霊的部分と肉的部分をもって、人間を創造されたがゆえに、堕落においても霊肉両面の堕落が成立した。天使とエバとの血縁関係による堕落が霊的堕落であり、エバとアダムとの血縁関係による堕落が肉的堕落である。</span><br />
@@ -1091,7 +1127,7 @@
         class="verse-link">創一八・８</a>）、また、ロトの家に訪ねてきた二人の天使が、彼の準備した「種いれぬパン」を食べただけでなく、その町の民たちが、天使たちを見て色情を起こし、ロトの家を取り囲んで、「今夜おまえの所に来た人々はどこにいるか。それをここに出しなさい。われわれは彼らを知るであろう」（<a
         href="../Bible_out/01_Old Testament/01_genesis/19.html#v1"
         class="verse-link">創一九・１〜５</a>）と叫んだ事実などは、みなこれに属する例である。</span></div>
-        <div class="no1"><h4 id="2-2-1"><a href="12daraku.html#2-2-1"> <span style="background-color:#FCD2E7">(1)　霊　的　堕　落</span></a></h4>
+        <div class="no1"><h3 id="2-2-1"><a href="12daraku.html#2-2-1"> <span style="background-color:#FCD2E7">(1)　霊　的　堕　落</span></a></h3>
     　<span style="background-color:#CCFFFF">神は天使世界を創造されてから（<a href="../Bible_out/01_Old Testament/01_genesis/1.html#v26"
         class="verse-link">創一・26</a>）、ルーシェル（明けの明星という意、<a href="../Bible_out/01_Old Testament/23_isaiah/14.html#v12"
         class="verse-link">イザヤ一四・12</a>）に天使長の位を与えられた。</span>それゆえに、あたかもアブラハムがイスラエルの祝福の<ruby>基<rt>もとい</rt>
@@ -1117,7 +1153,7 @@
         </rt></ruby>いたということに対する良心の<ruby>呵責<rt>かしゃく</rt></ruby>からくる恐怖心を受けたのであり、第二には、自分が本来対すべき創造<ruby>本然<rt>ほんぜん</rt>
       </ruby>の夫婦としての相対者は天使ではなく、アダムだったという事実を感得することのできる新しい知恵を、ルーシェルから受けるようになったのである。</span><span
       style="background-color:#FFFF99">当時、エバはまだ未完成期にいたのであった。したがって、そのときの彼女自体は、既に完成期にあった天使長に比べて、知恵が成熟していなかったために、彼女は天使長からその知恵を受けるようになったのである。</span></div>
-        <div class="no1"><h4 id="2-2-2"><a href="12daraku.html#2-2-2"><span style="background-color:#FCD2E7">(2)　肉　的　堕　落</span></a></h4>
+        <div class="no1"><h3 id="2-2-2"><a href="12daraku.html#2-2-2"><span style="background-color:#FCD2E7">(2)　肉　的　堕　落</span></a></h3>
     　アダムとエバは、共に完成して、神を中心とする永遠の夫婦となるべきであった。ところが、エバが未完成期において、天使長と不倫なる血縁関係を結んだのち、再びアダムと夫婦の関係を結んだためにアダムもまた未完成期に堕落してしまったのである。このように、時ならぬ時にサタンを中心としてアダムとエバとの間に結ばれた夫婦関係は、そのまま肉的堕落となってしまったのである。<br />
     　既に述べたように、エバは天使との霊的な堕落によって受けた良心の<ruby>呵責<rt>かしゃく</rt>
     </ruby>からくる恐怖心と、自分の原理的な相対者が天使長ではなくアダムであるということを悟る、新しい知恵とを受けるようになったのである。ここにおいて、<span
@@ -1131,17 +1167,17 @@
       style="background-color:#CCFFFF">アダムは、エバと一体となることによって、エバがルーシェルから受けたすべての要素を、そのまま受け継ぐようになったのである。そのようにして、この要素はその子孫に綿々と遺伝されるようになった。</span><span
       style="background-color:#FFFF99">エバが堕落したとしても、もしアダムが、罪を犯したエバを相手にしないで完成したなら、完成した主体が、そのまま残っているがゆえに、その対象であるエバに対する復帰摂理は、ごく容易であったはずである。しかし、アダムまで堕落してしまったので、サタンの血統を継承した人類が、今日まで生み殖えてきたのである。</span><br />
     <hr /><br /></p>
-    <h3 id="3">
+    <h1 id="3">
       <a href="12daraku.html#3"><span style="background-color:#FCD2E7">第三節　愛の力と原理の力および信仰のための<ruby>戒<rt>いまし
             </rt>
           </ruby>め</span></a>
-    </h3><br />
+    </h1><br />
     <p>
     <div class="no1">
       <hr /><br />
     </div>
-    <h4 id="3-1"><a href="12daraku.html#3-1"> <span style="background-color:#CCFFFF"> （一）愛の力と原理の力から見た堕落</span></a>
-    </h4>
+    <h2 id="3-1"><a href="12daraku.html#3-1"> <span style="background-color:#CCFFFF"> （一）愛の力と原理の力から見た堕落</span></a>
+    </h2>
     　<span
       style="background-color:#CCFFFF">人間は原理をもって創造され、原理軌道によって生存するように創造された。それゆえに、原理の力それ自体が、人間を原理軌道より脱線させ、堕落せしめることはあり得ないのである。</span><span
       style="background-color:#FFFF99">これはあたかも、レールや機関車に故障がない限り、汽車が自ら軌道を脱線するということがあり得ないのと同様である。しかし、汽車も自らの走る力よりも強い、ある<ruby>外力
@@ -1153,8 +1189,8 @@
       </ruby>基台の主体的な愛をいう。したがって、神の愛がなければ、人間創造の目的である<ruby>四位<rt>よんい</rt>
       </ruby>基台が成就されないために、愛は人間の幸福と命の源泉なのである。</span><span
       style="background-color:#CCFFFF">神は原理によって創造された人間を、愛によって主管しなければならないので、その愛が愛らしく存在するためには、愛の力は、あくまでも、原理の力以上に強いものでなければならない。</span>もし、愛の力が原理の力よりも弱いものであるとすれば、神は原理で創造された人間を、愛をもって主管できず、したがって、人間は神の愛よりも原理をより一層追求するようになるであろう。イエスが弟子たちを真理によって立たしめ、愛をもって救おうとされた理由は、正にここにあったのである。</div>
-        <div class="no1"><h4 id="3-2"><a href="12daraku.html#3-2"> <span style="background-color:#CCFFFF"> （二）信仰のための<ruby>戒<rt>いまし</rt>
-          </ruby>めを下さった目的</span></a></h4>
+        <div class="no1"><h2 id="3-2"><a href="12daraku.html#3-2"> <span style="background-color:#CCFFFF"> （二）信仰のための<ruby>戒<rt>いまし</rt>
+          </ruby>めを下さった目的</span></a></h2>
     　<span style="background-color:#CCFFFF">神が、アダムとエバに「食うべからず」という信仰のための<ruby>戒<rt>いまし</rt>
       </ruby>めを下さった目的は、どこにあったのだろうか。それは、愛の力が原理の力よりも強いため、まだ未完成期において神の直接的な愛の主管を受けることができずにいたアダムとエバが、もし天使長の相対的立場に立つようになれば、目的を異にする、その非原理的な愛の力によって堕落する可能性があったからである。天使長の非原理的な愛の力がいかに強くとも、アダムとエバが神の<ruby>戒
         <rt>いまし</rt>
@@ -1165,8 +1201,8 @@
       </ruby>をも得るようにさせたいからでもあったのである</span><a href="11sozo.html#5-2-2">（前編第一章第五節（二）(2)）</a>。<br />
     　<span style="background-color:#FFFF99">そして、この<ruby>戒<rt>いまし</rt></ruby>めを天使長に与え<ruby>給<rt>たま</rt>
       </ruby>わず、人間に与えられたというのは、神の子女としての立場から、天使までも主管しなければならない人間の創造原理的な資格と威信とを、立てさせようとされたからであった。</span></div>
-        <div class="no1"><h4 id="3-3"><a href="12daraku.html#3-3"> <span style="background-color:#CCFFFF"> （三）信仰のための<ruby>戒<rt>いまし</rt>
-          </ruby>めが必要な期間</span></a></h4>
+        <div class="no1"><h2 id="3-3"><a href="12daraku.html#3-3"> <span style="background-color:#CCFFFF"> （三）信仰のための<ruby>戒<rt>いまし</rt>
+          </ruby>めが必要な期間</span></a></h2>
     　<span style="background-color:#CCFFFF">それでは、神が人間始祖に、「食うべからず」と言われた信仰のための<ruby>戒<rt>いまし</rt>
       </ruby>めは、いつまでも必要であったのだろうか。愛を中心として見るとき、神の第二祝福完成は、アダムとエバが、神の愛を中心として夫婦となり、その子女が生み殖えることによって（<a
         href="../Bible_out/01_Old Testament/01_genesis/1.html#v28"
@@ -1176,15 +1212,15 @@
       style="background-color:#CCFFFF">「食うべからず」と言われた神の<ruby>戒<rt>いまし</rt>
       </ruby>めは、アダムとエバが未完成期にある場合に限ってのみ、必要であったのである。</span><br />
     <hr /><br /></p>
-    <h3 id="4"><a href="12daraku.html#4"><span style="background-color:#FCD2E7">
+    <h1 id="4"><a href="12daraku.html#4"><span style="background-color:#FCD2E7">
           第四節 人間堕落の結果
-        </span></a></h3><br />
+        </span></a></h1><br />
     <p>
     <div class="no1">
       <hr /><br />
     </div>
     　アダムとエバが、霊肉共に堕落することによって、人間と天使をはじめ、被造世界にいかなる結果を招来したのであろうか。我々はここで、この重要な問題を取り扱ってみることにしよう。</div>
-        <div class="no1"><h3 id="4-1"><a href="12daraku.html#4-1"><span style="background-color:#FCD2E7">（一）サタンと堕落人間</span></a></h3><br />
+        <div class="no1"><h2 id="4-1"><a href="12daraku.html#4-1"><span style="background-color:#FCD2E7">（一）サタンと堕落人間</span></a></h2><br />
     　<span
       style="background-color:#FCD2E7">堕落した天使長ルーシェルを、サタンと呼ぶということについては既に述べた。ルーシェルと人間始祖が血縁関係を結び、一体となったので、サタンを中心とする<ruby>四位
         <rt>よんい</rt>
@@ -1211,9 +1247,9 @@
         class="verse-link">ロマ書八章19節</a>には、「被造物は、実に、切なる思いで神の子たちの出現を待ち望んでいる」と記録されている。</span>これは、万物が完成した人間の主管を受けることができず、サタンの主管を受けているため、そのサタンを追い払って、自分たちを主管してくれる創造<ruby>本然
       <rt>ほんぜん</rt>
     </ruby>の人間が現れることを願っているという意味なのである。</div>
-        <div class="no1"><h3 id="4-2"><a href="12daraku.html#4-2"><span style="background-color:#FCD2E7">
+        <div class="no1"><h2 id="4-2"><a href="12daraku.html#4-2"><span style="background-color:#FCD2E7">
           （二）人間世界に対するサタンの活動
-        </span></a></h3><br />
+        </span></a></h2><br />
     　サタンは、ヨブを神の前に訴えるように（<a href="../Bible_out/01_Old Testament/18_job/1.html#v9"
       class="verse-link">ヨブ一・９</a>）、絶えずあらゆる人間を神の前に訴え、地獄に引いていこうとしているのである。しかし、<span
       style="background-color:#FCD2E7">サタンもその対象を取り立てて、相対基準を造成し、授受作用をしない限り、サタン的な活動をすることはできない。サタンの対象は、霊界にいる悪霊人たちである。そして、この悪霊人たちの対象は、地上にいる悪人たちの霊人体であり、地上にいる悪人たちの霊人体の活動対象は彼らの肉身である。したがって、サタンの勢力は悪霊人たちを通して地上人間の肉身の活動として現れる。</span>それゆえ、<span
@@ -1233,12 +1269,12 @@
         <rt>ことば</rt>
       </ruby>を探しだし、サタンを自然屈伏させてこそ、創造<ruby>本然<rt>ほんぜん</rt>
       </ruby>の人間に復帰することができるのである。</span>神はこのような原則によって摂理されるので、復帰摂理歴史は、このように長い年月にわたって、延長に延長を重ねてきたのである。</div>
-        <div class="no1"><h3 id="4-3">
+        <div class="no1"><h2 id="4-3">
       <a href="12daraku.html#4-3">
         <span style="background-color:#CCFFFF">
           （三）目的性から見た善と悪
         </span></a>
-    </h3><br />
+    </h2><br />
     　善と悪に対する定義は、既に、創造原理の中の「創造<ruby>本然<rt>ほんぜん</rt>
     </ruby>の価値」において論じ尽くした。今、ここにおいて、我々は、その目的性から見た善悪の意味を調べてみることにしよう。アダムとエバが、彼らに<ruby>賦与<rt>ふよ</rt>
     </ruby>された愛をもって、神を中心として<ruby>四位<rt>よんい</rt>
@@ -1272,13 +1308,13 @@
           てんちゅう</rt></ruby>的な理念なのである。</span>事実上、<span style="background-color:#CCFFFF">人類歴史は数多くの闘争と革命を重ねながら、本心が<ruby>指向
         <rt>しこう</rt>
       </ruby>するこの絶対的な善を探し求めて流れてきたのである。したがって、堕落した人間社会における闘争と革命とは、この絶対的な目的を追求し、絶対的な善の世界を成就するまで継続せざるを得ないのである。</span></div>
-        <div class="no1"><h3 id="4-4">
+        <div class="no1"><h2 id="4-4">
       <a href="12daraku.html#4-4">
         <span style="background-color:#CCFFFF">
           （四）<ruby>善神<rt>ぜんしん</rt></ruby>の<ruby>業<rt>わざ</rt></ruby>と<ruby>悪神<rt>あくしん</rt></ruby>の<ruby>業<rt>わざ</rt>
           </ruby>
         </span></a>
-    </h3><br />
+    </h2><br />
     　<span style="background-color:#CCFFFF"><ruby>善神<rt>ぜんしん</rt></ruby>というのは、神と、神の側にいる善霊人たちと、天使たちを総称する言葉であり、<ruby>悪神
         <rt>あくしん</rt>
       </ruby>というのは、サタンと、サタンの側にいる悪霊人たちを総称する言葉である。善と悪とがそうであるように、<ruby>善神<rt>ぜんしん</rt></ruby>の<ruby>業<rt>わざ
@@ -1296,12 +1332,12 @@
         <rt>た</rt>
       </ruby>えないことといわなければならない。</span>霊的な現象が次第に多くなる今日において、<ruby>善神<rt>ぜんしん</rt></ruby>と<ruby>悪神<rt>あくしん</rt>
     </ruby>との<ruby>業<rt>わざ</rt></ruby>の違いを十分に理解し、これを分立することができない限り、霊人たちを指導することはできないのである。</div>
-        <div class="no1"><h3 id="4-5">
+        <div class="no1"><h2 id="4-5">
       <a href="12daraku.html#4-5">
         <span style="background-color:#FCD2E7">
           （五）罪
         </span></a>
-    </h3><br />
+    </h2><br />
     　<span style="background-color:#FCD2E7">罪とは、サタンと相対基準を造成して授受作用をなすことができる条件を成立させることによって、<ruby>天法<rt>てんぽう</rt>
       </ruby>に違反するようになることをいう。その罪を分類してみれば、第一に原罪というものがあるが、</span><span
       style="background-color:#CCFFFF">これは人間始祖が犯した霊的堕落と肉的堕落による血統的な罪をいい、この原罪は、すべての罪の根となるのである。</span><br />
@@ -1317,12 +1353,12 @@
       </ruby>する原罪から生ずる。それゆえに、原罪を清算しない限りは、他の罪を根本的に清算することはできない。しかしながら、隠されているこの罪の根はいかなる人間も知ることができないもので、ただ人間の根として、また、<ruby>真
         <rt>まこと</rt>
       </ruby>の父母として降臨されるイエスのみがこれを知り、清算することができるのである。</span></div>
-        <div class="no1"><h3 id="4-6">
+        <div class="no1"><h2 id="4-6">
       <a href="12daraku.html#4-6">
         <span style="background-color:#FCD2E7">
           （六）<ruby>堕落性本性<rt>だらくせいほんせい</rt></ruby>
         </span></a>
-    </h3><br />
+    </h2><br />
     　<span style="background-color:#FCD2E7">天使が神に反逆して、エバと血縁関係を結んだとき、偶発的に生じたすべての<ruby>性稟<rt>せいひん</rt>
       </ruby>を、エバはそのまま継承したのであり、こうして天使長の立場におかれるようになったエバと、再び血縁関係を結んだアダムも、またこの<ruby>性稟<rt>せいひん</rt>
       </ruby>を受け継ぐようになった。そして、この<ruby>性稟<rt>せいひん</rt></ruby>が、堕落人間のすべての堕落性を誘発する根本的な<ruby>性稟<rt>せいひん</rt>
@@ -1357,21 +1393,21 @@
       <rt>だらくせいほんせい</rt>
     </ruby>から生ずる思いなのである。
     <hr /><br /></p>
-    <h3 id="5">
+    <h1 id="5">
       <a href="12daraku.html#5"><span style="background-color:#FCD2E7">
           第五節　自由と堕落
         </span></a>
-    </h3><br />
+    </h1><br />
     <p>
     <div class="no1">
       <hr /><br />
     </div>
-    <h3 id="5-1">
+    <h2 id="5-1">
       <a href="12daraku.html#5-1">
         <span style="background-color:#FCD2E7">
           （一）自由の原理的意義
         </span></a>
-    </h3><br />
+    </h2><br />
     　自由に対する原理的な性格を論ずるとき、<span style="background-color:#FCD2E7">第一に、我々は、原理を離れた自由はない、という事実を知らなければならない。</span>そして、<span
       style="background-color:#CCFFFF">自由とは、自由意志とこれに従う自由行動とを一括して表現した言葉なのである。前者と後者とは、性相と形状との関係にあり、これが一体となって初めて完全な自由が成立する。それゆえに、自由意志のない自由行動なるものはあり得ず、自由行動の伴わない自由意志というものも、完全なものとはなり得ないのである。自由行動は、自由意志によって現れるものであり、自由意志はあくまでも心の<ruby>発露
         <rt>はつろ</rt>
@@ -1385,12 +1421,12 @@
     　<span style="background-color:#FCD2E7">第三に、実績のない自由はない。</span><span
       style="background-color:#CCFFFF">人間が、自由をもって、自身の責任分担を<ruby>完遂<rt>かんすい</rt>
       </ruby>しようとする目的は、創造目的を完成して、神を喜ばせ得るような実績を上げようとするところにある。したがって、自由は常に実績を追求するがゆえに、実績のない自由はあり得ないのである。</span></div>
-        <div class="no1"><h3 id="5-2">
+        <div class="no1"><h2 id="5-2">
       <a href="12daraku.html#5-2">
         <span style="background-color:#FCD2E7">
           （二）自由と人間の堕落
         </span></a>
-    </h3><br />
+    </h2><br />
     　前項で詳述したように、<span
       style="background-color:#CCFFFF">自由は原理を離れてはあり得ない。したがって、自由は自らの創造原理的な責任を負うようになるし、また、神を喜ばせ得るような実績を追求するために、自由意志による自由行動は、善の結果のみをもたらすようになる。それゆえに</span><span
       style="background-color:#FCD2E7">人間は決して自由によって堕落することはできないのである。</span><a
@@ -1406,12 +1442,12 @@
       <rt>ほんせい</rt>
     </ruby>だけは、そのまま残っているので、神はこの自由を復帰する摂理を行うことができるのである。<span
       style="background-color:#FFFF99">歴史が流れるに従い、人間が己の命を犠牲にしてまでも、自由を求めようとする心情が高まるというのは、人間がサタンによって失った、この自由を再び奪い返していく証拠なのである。</span>ゆえに、人間が自由を求める目的は、自由意志による自由行動をもって、原理的な責任と実績をはっきりと立て、創造目的を完成しようとするところにあるのである。</div>
-        <div class="no1"><h3 id="5-3">
+        <div class="no1"><h2 id="5-3">
       <a href="12daraku.html#5-3">
         <span style="background-color:#CCFFFF">
           （三）自由と堕落と復帰
         </span></a>
-    </h3><br />
+    </h2><br />
     　天使は、人間に仕えるために創造された。したがって、人間が天使に対するのは、どこまでも人間の自由に属する問題なのである。しかし、天使から誘惑された当時のエバは、いまだ知的、あるいは心情的に、未完成期にいた。したがって、<span
       style="background-color:#CCFFFF">エバが天使の誘惑により、知的に迷わされ、心情的に<ruby>混沌<rt>こんとん</rt>
       </ruby>となって誘惑されたとき、彼女は責任と実績を追求する本心の自由によって生ずる不安を覚えたのであるが、より大きい天使との愛の力によって、堕落線を越えてしまったのである。</span>エバがいかに天使と自由に対したといっても、取って食うべからずと言われた神の<ruby>戒
@@ -1432,11 +1468,11 @@
     </ruby>の自由が完全に復帰されるときまでは、継続せざるを得ないのである。
 
     <hr /><br /></p>
-    <h3 id="6">
+    <h1 id="6">
       <a href="12daraku.html#6"><span style="background-color:#FCD2E7">
           第六節　神が人間始祖の堕落行為を干渉し給わなかった理由
         </span></a>
-    </h3><br />
+    </h1><br />
     <p>
     <div class="no1">
       <hr /><br />
@@ -1444,12 +1480,12 @@
     　<span
       style="background-color:#FCD2E7">神は全知全能であられるので人間始祖の堕落行為を知られなかったはずがない。</span>また彼らが堕落行為を行わないように、それを防ぐ能力がなかったわけでもない。それでは、<span
       style="background-color:#FCD2E7">神はなぜ、彼らの堕落行為を知っておられながら、それを干渉し防ぎ給わなかったのであろうか。</span>これは、今日まで人類歴史を通じて、解くことのできなかった重大な問題の中の一つである。我々は、神が人間の堕落行為を干渉なさらなかった理由として、次の三つの条件を挙げることができる。</div>
-        <div class="no1"><h3 id="6-1">
+        <div class="no1"><h2 id="6-1">
       <a href="12daraku.html#5-1">
         <span style="background-color:#FCD2E7">
           （一）創造原理の絶対性と完全無欠性のために
         </span></a>
-    </h3><br />
+    </h2><br />
 
     　<span style="background-color:#CCFFFF">創造原理によれば、神は人間が神の創造性に似ることによって、あたかも神御自身が人間を<ruby>主管<rt>しゅかん</rt>
       </ruby>されるように人間は万物世界を主管するように創造されたのである。そこで、人間が神の創造性に似るためには、人間自身がその責任分担を<ruby>遂行<rt>すいこう</rt>
@@ -1460,12 +1496,12 @@
       style="background-color:#CCFFFF">もし、神がこのような成長期間に、彼らの行為を干渉し、彼らを直接主管されるとすれば、神は彼らが完成したのちに初めて直接主管するというその創造原理を、自ら無視する立場に立たれることになるのである。このように原理が無視されるようになれば、同時に、原理の絶対性と完全無欠性は喪失されてしまう。神は絶対者であり、完全無欠なる<ruby>創造主
         <rt>そうぞうしゅ</rt>
       </ruby>であられるがゆえに、神が定められた創造原理も、また絶対的であり、完全無欠でなければならない。それゆえに、神は創造原理の絶対性と完全無欠性のために、未完成期にいた彼らの堕落行為に対して干渉されなかったのである。</span></div>
-        <div class="no1"><h3 id="6-2">
+        <div class="no1"><h2 id="6-2">
       <a href="12daraku.html#5-1">
         <span style="background-color:#FCD2E7">
           （二）神のみ創造主であらせられるために
         </span></a>
-    </h3><br />
+    </h2><br />
 
     　<span
       style="background-color:#CCFFFF">神は自ら創造された原理的な存在とその行動のみを干渉されるために、犯罪行為や地獄のような、御自分が創造されなかった非原理的な存在や行動には干渉し<ruby>給
@@ -1476,12 +1512,12 @@
         </rt>
       </ruby>されることになり、原理的なものとして認定せざるを得なくなるのである。</span>もしそうなれば、神は犯罪行為をも原理的なものとして認定されるという、もう一つの新しい原理を立てる結果をもたらすのである。このような結果をもたらすことは、どこまでもサタンが存在するためであり、そうなれば、<span
       style="background-color:#CCFFFF">サタンもまた、一つの新しい原理を創造したということになり、創造主の立場に立つことになる。したがって、独り神のみ創造主であらせられるためには、彼らの堕落行為に干渉することができなかったのである。</span></div>
-        <div class="no1"><h3 id="6-3">
+        <div class="no1"><h2 id="6-3">
       <a href="12daraku.html#5-1">
         <span style="background-color:#FCD2E7">
           （三）人間を万物の<ruby>主管位<rt>しゅかんい</rt></ruby>に立たせるために
         </span></a>
-    </h3><br />
+    </h2><br />
     　<span style="background-color:#FFFF99">神は人間を創造されてのち、「<a href="../Bible_out/01_Old Testament/01_genesis/1.html#v28"
         class="verse-link">万物を主管せよ（創一・28）</a>」と言われた。人間が神のみ<ruby>言<rt>ことば
         </rt>
@@ -1852,11 +1888,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -1864,16 +1901,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -1931,10 +1969,10 @@
             const container = document.getElementById('stacked-header-container');
             const breadcrumb = document.getElementById('breadcrumb-view');
             const stackedView = document.getElementById('stacked-view');
-            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const headings = Array.from(document.querySelectorAll('h1:not(.page-title), h2, h3, h4, h5, h6'));
             const bars = {};
 
-            for (let i = 2; i <= 6; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const bar = document.createElement('div');
                 bar.className = 'stack-bar';
                 bar.dataset.level = i;
@@ -1964,6 +2002,12 @@
             document.addEventListener('click', () => {
                 container.classList.remove('is-expanded');
             });
+
+            const getCleanText = (el) => {
+                const clone = el.cloneNode(true);
+                clone.querySelectorAll('rt, rp').forEach(r => r.remove());
+                return (clone.textContent || clone.innerText || '').replace(/[◆▸▶]/g, '').trim();
+            };
 
             const updateHeader = () => {
                 const threshold = 100;
@@ -1996,16 +2040,16 @@
                     }
                 }
 
-                const breadcrumbText = path.map(p => p.heading.innerText.replace(/[◆▸▶]/g, '').trim()).join('<span class="separator">/</span>');
+                const breadcrumbText = path.map(p => getCleanText(p.heading)).join('<span class="separator">/</span>');
                 if (breadcrumb.innerHTML !== breadcrumbText) breadcrumb.innerHTML = breadcrumbText;
 
-                for (let i = 2; i <= 6; i++) {
+                for (let i = 1; i <= 6; i++) {
                     const barData = bars[i];
                     const pathItem = path.find(p => p.level === i);
                     if (pathItem) {
                         barData.el.style.display = 'flex';
                         barData.activeHeading = pathItem.heading;
-                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        const cleanText = getCleanText(pathItem.heading);
                         if (barData.text.textContent !== cleanText) barData.text.textContent = cleanText;
                     } else {
                         barData.el.style.display = 'none';

@@ -64,18 +64,43 @@
       animation: fadeInDown 0.8s ease-out;
     }
 
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 900;
-      color: #111;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.05em;
-    }
+    .page-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
 
-    h1 a {
-      text-decoration: none;
-      color: #111;
-    }
+        .chapter-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-top: 2rem;
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+            text-decoration: none;
+            color: #111;
+        }
+
+        h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+            color: #000;
+        }
 
     h2 {
       font-size: 2.2rem;
@@ -115,10 +140,11 @@
         }
 
 
-    h2::before {
+    h1:not(.page-title)::before {
       content: '◆';
       color: #667eea;
       font-size: 0.8em;
+      margin-right: 0.5rem;
     }
 
     
@@ -384,9 +410,17 @@
         padding: 2rem;
       }
 
-      h1 {
-        font-size: clamp(2rem, 6vw, 3.5rem);
-      }
+      .page-title {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            .chapter-title {
+                font-size: clamp(1.8rem, 5vw, 3rem);
+            }
+
+            h1 {
+                font-size: 2.0rem;
+            }
 
       h2 {
         font-size: 1.8rem;
@@ -620,11 +654,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -632,16 +667,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -655,7 +691,7 @@
     </div>
 
   <div class="container">
-    <h1>原理講論 創造原理</h1>
+    <h1 class="page-title">原理講論 創造原理</h1>
     <nav class="page-nav">
       <a href="10sojo.html" class="nav-btn"><span>←</span> 前へ</a>
       <a href="index.html" class="nav-btn">目次</a>
@@ -743,11 +779,11 @@
 
     <!-- St-HP-H -->
     <!-- En-HP-H -->
-    <h3>
+    <div class="chapter-title">
       <div class="no1"></div>
         <div class="no1"><span style="background-color:#FCD2E7">第一章　創　造　原　理</span><br />
       </div>
-    </h3>
+    </div>
     <p>
     <div class="no1">
       <hr /><br />
@@ -765,8 +801,8 @@
     </p>
     <h3>
       <div class="no1">
-        <h3 id="1"><a href="11sozo.html#1"><span style="background-color:#FCD2E7">第一節　神の<ruby>二性性相<rt>にせいせいそう</rt>
-              </ruby>と被造世界</span></a></h3><br />
+        <h1 id="1"><a href="11sozo.html#1"><span style="background-color:#FCD2E7">第一節　神の<ruby>二性性相<rt>にせいせいそう</rt>
+              </ruby>と被造世界</span></a></h1><br />
       </div>
     </h3>
     <p>
@@ -774,7 +810,7 @@
       <hr />
       <br />
 
-      <h4 id="1-1"><a href="11sozo.html#1-1"><span style="background-color:#FCD2E7">（一）神の二性性相</span></a></h4><br />
+      <h2 id="1-1"><a href="11sozo.html#1-1"><span style="background-color:#FCD2E7">（一）神の二性性相</span></a></h2><br />
       　<span style="background-color:#FCD2E7">無形にいます神の<ruby>神性<rt>しんせい</rt>
         </ruby>を、我々はいかにして知ることができるだろうか。それは、被造世界を観察することによって、知ることができる。</span>そこで、<span
         style="background-color:#CCFFFF">パウロは、「神の見えない性質、すなわち、神の永遠の力と<ruby>神性<rt>しんせい</rt>
@@ -863,7 +899,7 @@
         style="background-color:#FCD2E7">神は<ruby>本性相<rt>ほんせいそう</rt></ruby>と<ruby>本形状<rt>ほんけいじょう</rt>
         </ruby>の二性性相の中和的主体であると同時に、<ruby>本性相<rt>ほんせいそう</rt></ruby>的男性と<ruby>本形状<rt>ほんけいじょう</rt>
         </ruby>的女性との二性性相の中和的主体としておられ、被造世界に対しては、性相的な男性格主体としていまし<ruby>給<rt>たも</rt></ruby>うという事実を知ることができる。</span></div>
-        <div class="no1"><h4 id="1-2"><a href="11sozo.html#1-2"><span style="background-color:#FCD2E7">（二）神と被造世界との関係</span></a></h4><br />
+        <div class="no1"><h2 id="1-2"><a href="11sozo.html#1-2"><span style="background-color:#FCD2E7">（二）神と被造世界との関係</span></a></h2><br />
       　以上の論述によって、<span style="background-color:#CCFFFF">被造物はすべて、無形の主体としていまし<ruby>給<rt>たも</rt>
         </ruby>う神の二性性相に似た実体に分立された、神の実体対象であることが分かった。このような実体対象を、我々は個性真理体と称する。人間は神の形象的な実体対象であるので、形象的個性真理体といい、人間以外の被造物は、象徴的な実体対象であるために、それらを象徴的個性真理体という。</span><br />
       　<span style="background-color:#FFFF99">個性真理体は、このように神の<ruby>二性性相<rt>にせいせいそう</rt>
@@ -901,8 +937,8 @@
     </div>
     </p>
     <div class="no1">
-      <h3 id="2"><a href="11sozo.html#2"><span style="background-color:#FCD2E7">第二節　万有原力と授受作用および<ruby>四位<rt>よんい</rt>
-            </ruby>基台</span></a></h3><br />
+      <h1 id="2"><a href="11sozo.html#2"><span style="background-color:#FCD2E7">第二節　万有原力と授受作用および<ruby>四位<rt>よんい</rt>
+            </ruby>基台</span></a></h1><br />
     </div>
     <p>
     <div class="no1">
@@ -910,12 +946,12 @@
       <br />
 
       <a href="11sozo.html#2-1">
-        <h4 id="2-1"><span style="background-color:#FCD2E7">（一）　万　有　原　力</span></h4>
+        <h2 id="2-1"><span style="background-color:#FCD2E7">（一）　万　有　原　力</span></h2>
       </a>
       　<span style="background-color:#FCD2E7">神はあらゆる存在の<ruby>創造主<rt>そうぞうしゅ</rt></ruby>として、時間と空間を超越して、永遠に<ruby>自存<rt>じそん
           </rt></ruby>する絶対者である。したがって、神がこのような存在としておられるための根本的な力も、永遠に<ruby>自存<rt>じそん</rt>
         </ruby>する絶対的なものであり、同時にこれはまた、被造物が存在するためのすべての力を発生せしめる力の根本でもある。このようなすべての力の根本にある力を、我々は万有原力と呼ぶ。</span></div>
-        <div class="no1"><h4 id="2-2"><a href="11sozo.html#2-2"><span style="background-color:#FCD2E7">（二）　授　受　作　用</span></a></h4><br />
+        <div class="no1"><h2 id="2-2"><a href="11sozo.html#2-2"><span style="background-color:#FCD2E7">（二）　授　受　作　用</span></a></h2><br />
       　<span
         style="background-color:#FCD2E7">あらゆる存在をつくっている主体と対象とが、万有原力により、相対基準を造成して、良く授け良く受ければ、ここにおいて、その存在のためのすべての力、すなわち、生存と繁殖と作用などのための力を発生するのである。このような過程を通して、力を発生せしめる作用のことを授受作用という。</span>ゆえに、<span
         style="background-color:#CCFFFF">万有原力と授受作用の力とは、各々原因的なものと結果的なもの、内的なものと外的なもの、主体的なものと対象的なものという、相対的な関係をもっている。したがって、万有原力は<ruby>縦的
@@ -958,12 +994,12 @@
         href="../Bible_out/02_New Testament/01_matthew/010.html#v41"
         class="verse-link">マタイ一〇・41</a>）と言われ、「わたしの弟子であるという名のゆえに、この小さい者のひとりに冷たい水一杯でも飲ませてくれる者は、よく言っておくが、決してその報いからもれることはない」（<a
         href="../Bible_out/02_New Testament/01_matthew/010.html#v42" class="verse-link">マタイ一〇・42</a>）とも言われたのである。</div>
-        <div class="no1"><h4 id="2-3"><a href="11sozo.html#2-3"><span style="background-color:#FCD2E7">（三）　正分合作用による三対象目的を完成した<ruby>四位<rt>
-                よんい</rt></ruby>基台</span></a></h4>
+        <div class="no1"><h2 id="2-3"><a href="11sozo.html#2-3"><span style="background-color:#FCD2E7">（三）　正分合作用による三対象目的を完成した<ruby>四位<rt>
+                よんい</rt></ruby>基台</span></a></h2>
 
 
 
-      <h4 id="2-3-1"><a href="11sozo.html#2-3-1"><span style="background-color:#FCD2E7">(1)　正　分　合　作　用</span></a></h4>
+      <h3 id="2-3-1"><a href="11sozo.html#2-3-1"><span style="background-color:#FCD2E7">(1)　正　分　合　作　用</span></a></h3>
       <br />
       　万有原力によって、神自体内の<ruby>二性性相<rt>にせいせいそう</rt>
       </ruby>が相対基準を造成して授受作用をするようになれば、その授受作用の力は繁殖作用を起こし、神を中心として二性性相の実体対象に分立される。このように分立された主体と対象が、再び万有原力により、相対基準を造成して授受作用をすれば、これらは再び、<ruby>合性
@@ -971,11 +1007,11 @@
       </ruby>一体化して、神のまた一つの対象となる。このように、<span style="background-color:#FCD2E7">神を正として、それより分立して、再び<ruby>合性
           <rt>ごうせい</rt>
         </ruby>一体化する作用を正分合作用と称する。</span></div>
-        <div class="no1"><h4 id="2-3-2"><a href="11sozo.html#2-3-2"><span style="background-color:#FCD2E7">(2)　三　対　象　目　的</span></a></h4>
+        <div class="no1"><h3 id="2-3-2"><a href="11sozo.html#2-3-2"><span style="background-color:#FCD2E7">(2)　三　対　象　目　的</span></a></h3>
       <br />
       　<span style="background-color:#FCD2E7">正分合作用により、正を中心として二性の実体対象に分立された主体と対象と、そしてその<ruby>合性体<rt>ごうせいたい</rt>
         </ruby>が、各自主体の立場をとるときには、各々残りのものを対象として立たせて、三対象基準を造成する。そうして、それらがお互いに授受作用をするようになれば、ここで、その主体を中心として、各々三対象目的を完成するようになる。</span></div>
-        <div class="no1"><h4 id="2-3-3"><a href="11sozo.html#2-3-3"><span style="background-color:#FCD2E7">(3)　四　位　基　台</span></a></h4>
+        <div class="no1"><h3 id="2-3-3"><a href="11sozo.html#2-3-3"><span style="background-color:#FCD2E7">(3)　四　位　基　台</span></a></h3>
       <br />
       　このように、<span style="background-color:#FCD2E7">正分合作用により、正を中心として、二性の実体対象に立たされた主体と対象と、またその合性体が各々三対象目的を完成すれば、<ruby>四位
           <rt>よんい</rt>
@@ -985,8 +1021,8 @@
         </ruby>基台は、その各位を中心として、各々三対象となるので、これらを総合すれば十二対象となる。ゆえに、十二数の根本ともなるのである。また、<ruby>四位<rt>よんい</rt>
         </ruby>基台は、創造目的を完成した善の根本的な基台でもあるので、神が運行できるすべての存在と、またそれらが存在するための、すべての力の根本的な基台ともなる。したがって、<ruby>四位<rt>よんい</rt>
         </ruby>基台は、神の永遠なる創造目的となるのである。</span></div>
-        <div class="no1"><h4 id="2-3-4"><a href="11sozo.html#2-3-4"><span style="background-color:#CCFFFF">(4)　<ruby>四位<rt>よんい</rt>
-            </ruby>基台の存在様相</span></h4></a><br />
+        <div class="no1"><h3 id="2-3-4"><a href="11sozo.html#2-3-4"><span style="background-color:#CCFFFF">(4)　<ruby>四位<rt>よんい</rt>
+            </ruby>基台の存在様相</span></h3></a><br />
       　<span style="background-color:#CCFFFF">正分合作用により三対象目的をつくって<ruby>四位<rt>よんい</rt>
         </ruby>基台を完成した存在は、いかなるものでも、円形、または球形運動をなして、立体として存在する。今、我々はその理由を調べてみることにしよう。</span><span
         style="background-color:#FFFF99">正分合作用により神の二性性相が、各々その実体対象に分立された主体と対象において、その対象が主体に対応して相対基準を造成すれば、その対象は主体を中心としてお互いに授ける力（遠心力）と、受ける力（求心力）とを交換しあって授受作用をするようになる。</span>このように、<span
@@ -1070,13 +1106,13 @@
       </ruby>基台を中心に、合目的的な球形運動をするようになる。しかるに、<span
         style="background-color:#FFFF99">被造世界は人間の堕落によってこの中心を失ったので、万物も実に切なる思いで、神の子たち、すなわち創造本性を復帰した人間たちが出現して、その中心となってくれる日を待ち望んでいるのである（<a
           href="../Bible_out/02_New Testament/06_romans/008.html#v19" class="verse-link">ロマ八・19〜22</a>）。</span></div>
-        <div class="no1"><h4 id="2-4"><a href="11sozo.html#2-4"><span style="background-color:#FFFF99">（四）　神 の <ruby>遍 在 性<rt>へんざいせい</rt>
-            </ruby></span></a></h4><br />
+        <div class="no1"><h2 id="2-4"><a href="11sozo.html#2-4"><span style="background-color:#FFFF99">（四）　神 の <ruby>遍 在 性<rt>へんざいせい</rt>
+            </ruby></span></a></h2><br />
       　上述のように、<ruby>正分合<rt>せいぶんごう</rt></ruby>作用によって三対象目的を完成した<ruby>四位<rt>よんい</rt>
       </ruby>基台は、神を中心として球形運動を起こし、神と一体となるので、それは、神が運行できるすべての存在の、また、その存在のためのすべての力の根本的な基台となるということを我々は知った。ところで、<span
         style="background-color:#FFFF99">創造目的を完成した世界においては、神の<ruby>本性相<rt>ほんせいそう</rt></ruby>と<ruby>本形状<rt>ほんけいじょう</rt>
         </ruby>の実体となっているすべての個性体は、みな、このように球形運動を起こし、神が運行できる根本的な基台を造成するようになっている。このようにして、神は一切の被造物の中に遍在されるようになるのである。</span></div>
-        <div class="no1"><h4 id="2-5"><a href="11sozo.html#2-5"><span style="background-color:#FFFF99">（五）　生 理 体 の 繁 殖</span></a></h4>
+        <div class="no1"><h2 id="2-5"><a href="11sozo.html#2-5"><span style="background-color:#FFFF99">（五）　生 理 体 の 繁 殖</span></a></h2>
       <br />
       　生理体が存続するためには、繁殖しなければならないし、その繁殖は授受作用による正分合作用によってなされる。これに対する例を挙げれば、植物は花の種子から花の<ruby>雄<rt>お</rt></ruby>しべと<ruby>雌
         <rt>め</rt>
@@ -1086,8 +1122,8 @@
       　ある目的を立てて、心が望むとおりに体が実践して、体と心とが授受作用をするようになれば、同志ができ、同志たちがお互いに良く授け、良く受ければ、もっと多くの同志を繁殖する。このような面から見れば、<span
         style="background-color:#FFFF99">被造世界は、無形の神の<ruby>本性相<rt>ほんせいそう</rt></ruby>と<ruby>本形状<rt>ほんけいじょう</rt>
         </ruby>が、その創造目的を中心として、授受作用をすることによって、それが実体的に展開されて繁殖したものであると見ることができる。</span></div>
-        <div class="no1"><h4 id="2-6"><a href="11sozo.html#2-6"><span style="background-color:#FFFF99">（六）　すべての存在が<ruby>二性性相<rt>にせいせいそう
-              </rt></ruby>になっている理由</span></a></h4><br />
+        <div class="no1"><h2 id="2-6"><a href="11sozo.html#2-6"><span style="background-color:#FFFF99">（六）　すべての存在が<ruby>二性性相<rt>にせいせいそう
+              </rt></ruby>になっている理由</span></a></h2><br />
       　<span
         style="background-color:#FFFF99">いかなるものでも、存在するためには、必ずある力を必要とするようになるが、その力は授受作用によってのみ起こる。けれども、いかなるものも単独で授受することはできないので、それが存在するための力を起こすには、必ず授受作用ができる主体と対象との二性性相として存在しなければならない。</span><br />
       　<span
@@ -1100,16 +1136,16 @@
       </a></a></a></a></a></a></a>
     </div>
     </p><a href="11sozo.html#3">
-      <h3 id="3">
+      <h1 id="3">
         <div class="no1"><span style="background-color:#FCD2E7">第三節　創造目的</span><br /></div>
-      </h3>
+      </h1>
     </a>
     <p>
     <div class="no1">
       <hr />
       <br />
 
-      <h4 id="3-1"><a href="11sozo.html#3-1"><span style="background-color:#FCD2E7">（一）　被造世界を創造された目的</span></a></h4>
+      <h2 id="3-1"><a href="11sozo.html#3-1"><span style="background-color:#FCD2E7">（一）　被造世界を創造された目的</span></a></h2>
       <br />
       　<span style="background-color:#FCD2E7">被造物の創造が終わるごとに、神はそれを見て良しとされた、と記録されている創世記のみ<ruby>言<rt>ことば</rt>
         </ruby>を見れば（<a href="../Bible_out/01_Old Testament/01_genesis/1.html#v4"
@@ -1129,7 +1165,7 @@
         style="background-color:#FFFF99">性相的な目的は全体のためにあり、形状的な目的はそれ自体のためにあるもので、前者と後者は、原因的なものと結果的なもの、内的なものと外的なもの、主体的なものと対象的なものという関係をもっている。それゆえに、全体的な目的を離れて、個体的な目的があるはずはなく、個体的な目的を保障しない全体的な目的もあるはずがない。したがって、<ruby>森羅万象
           <rt>しんらばんしょう</rt>
         </ruby>の被造物は、このような二重目的によって連帯しあっている一つの広大な有機体なのである。</span></div>
-        <div class="no1"><h4 id="3-2"><a href="11sozo.html#3-2"><span style="background-color:#FCD2E7">（二）　神の喜びのための善の対象</span></a></h4>
+        <div class="no1"><h2 id="3-2"><a href="11sozo.html#3-2"><span style="background-color:#FCD2E7">（二）　神の喜びのための善の対象</span></a></h2>
       <br />
       　神の創造目的に関する問題を詳細に知るためには、我々がどんな状態にいるときに、<span
         style="background-color:#FCD2E7">喜びが生ずるかという問題を先に知らなければならない。喜びは独自的に生ずるものではない。無形のものであろうと、実体であろうと、自己の性相と形状のとおりに展開された対象があって、それからくる刺激によって自体の性相と形状とを相対的に感ずるとき、ここに初めて喜びが生ずるのである。</span>一つの例を挙げれば、<span
@@ -1197,15 +1233,15 @@
     </div>
     </p>
     <div class="no1">
-      <h3 id="4"><a href="11sozo.html#4"><span style="background-color:#FCD2E7">第四節　創 造 本 然 の 価 値</span></a></h3><br />
+      <h1 id="4"><a href="11sozo.html#4"><span style="background-color:#FCD2E7">第四節　創 造 本 然 の 価 値</span></a></h1><br />
     </div>
     <p>
     <div class="no1">
       <hr />
       <br />
 
-      <h4 id="4-1"><a href="11sozo.html#4-1"><span style="background-color:#FCD2E7">（一）　創造<ruby>本然<rt>ほんぜん</rt>
-            </ruby>の価値の決定とその価値の基準</span></a></h4><br />
+      <h2 id="4-1"><a href="11sozo.html#4-1"><span style="background-color:#FCD2E7">（一）　創造<ruby>本然<rt>ほんぜん</rt>
+            </ruby>の価値の決定とその価値の基準</span></a></h2><br />
       　<span style="background-color:#FCD2E7">創造<ruby>本然<rt>ほんぜん</rt>
         </ruby>の価値はいかにして決定されるのだろうか。</span>ある対象がもっている価値は、その対象が存在する目的と、それに対する人間主体の欲求との相対的関係によって決定されるというのが、我々の今まで考えてきた一般的な価値観であった。<span
         style="background-color:#CCFFFF">しかし、ある個性体の創造<ruby>本然<rt>ほんぜん</rt>
@@ -1229,16 +1265,16 @@
       </ruby>基台をつくらなければならない。そうすれば、<span style="background-color:#FFFF99">絶対的な価値の基準である神に対して相対的に決定された万物の創造<ruby>本然<rt>
             ほんぜん</rt>
         </ruby>の価値も絶対的なものとなるのである。今まで、ある対象の価値が絶対的なものとならず、相対的であったのは、その対象と、それに対する堕落人間との間になされる授受の関係が、神の創造理想を中心としたものでなく、サタン的な目的と欲望を中心としたものであったからである。</span></div>
-        <div class="no1"><h4 id="4-2"><a href="11sozo.html#4-2"><span style="background-color:#CCFFFF">（二）　創造<ruby>本然<rt>ほんぜん</rt>
-            </ruby>の知情意と創造<ruby>本然<rt>ほんぜん</rt></ruby>の真美善</span></a></h4><br />
+        <div class="no1"><h2 id="4-2"><a href="11sozo.html#4-2"><span style="background-color:#CCFFFF">（二）　創造<ruby>本然<rt>ほんぜん</rt>
+            </ruby>の知情意と創造<ruby>本然<rt>ほんぜん</rt></ruby>の真美善</span></a></h2><br />
       　<span style="background-color:#CCFFFF">人間の心は、その作用において、知情意の三機能を発揮する。そうして人間の肉身は、その心の命令に<ruby>感応<rt>かんのう</rt>
         </ruby>して行動する。これを見ると、その肉身は心、すなわち知情意の<ruby>感応体<rt>かんのうたい</rt>
         </ruby>として、その行動は真美善の価値を追求するものとして表れるのである。神はどこまでも、人間の心の主体であるので、知情意の主体でもある。したがって、人間は創造<ruby>本然<rt>ほんぜん</rt>
         </ruby>の価値実現欲によって、心で神の<ruby>本然<rt>ほんぜん</rt></ruby>の知情意に<ruby>感応<rt>かんのう</rt>
         </ruby>し、体でこれを行動することによって、初めてその行動は、創造<ruby>本然<rt>ほんぜん</rt></ruby>の真美善の価値を表すようになるのである。</span></div>
-        <div class="no1"><h4 id="4-3"><a href="11sozo.html#4-3"><span style="background-color:#CCFFFF">（三）　愛と美、善と悪、義と不義</span></a></h4>
+        <div class="no1"><h2 id="4-3"><a href="11sozo.html#4-3"><span style="background-color:#CCFFFF">（三）　愛と美、善と悪、義と不義</span></a></h2>
 
-      <h4 id="4-3-1"><a href="11sozo.html#4-3-1"><span style="background-color:#CCFFFF">(1)　愛　と　美</span></a></h4><br />
+      <h3 id="4-3-1"><a href="11sozo.html#4-3-1"><span style="background-color:#CCFFFF">(1)　愛　と　美</span></a></h3><br />
       　<span style="background-color:#CCFFFF">神から分立された二性の実体が、相対基準を造成して授受作用をすることにより<ruby>四位<rt>よんい</rt>
         </ruby>基台をつくろうとするとき、それらが神の第三対象として<ruby>合性<rt>ごうせい</rt>
         </ruby>一体化するために、主体が対象に授ける情的な力を愛といい、対象が主体に与える情的な力を美という。ゆえに、愛の力は動的であり、美の刺激は静的である。</span><br />
@@ -1256,7 +1292,7 @@
         </ruby>基台の三対象の愛において、その主体的な愛が、まさしく神の愛なのである。それゆえ、神の愛は三対象の愛として現れ、<ruby>四位<rt>よんい</rt>
         </ruby>基台造成のための根本的な力となるのである。したがって、<ruby>四位<rt>よんい</rt></ruby>基台は神の愛を完全に受けて、これを<ruby>体恤<rt>たいじゅつ</rt>
         </ruby>できる完全な美の対象であり、また、完全な喜びの対象であるから、創造目的を完成した善の根本的な基台なのである。</span></div>
-        <div class="no1"><h4 id="4-3-2"><a href="11sozo.html#4-3-2"><span style="background-color:#CCFFFF">(2)　善　と　悪</span></a></h4><br />
+        <div class="no1"><h3 id="4-3-2"><a href="11sozo.html#4-3-2"><span style="background-color:#CCFFFF">(2)　善　と　悪</span></a></h3><br />
       　<span style="background-color:#CCFFFF">主体と対象が愛と美を良く授け、良く受けて<ruby>合性<rt>ごうせい</rt></ruby>一体化して神の第三対象となり、<ruby>四位
           <rt>よんい</rt>
         </ruby>基台を造成して、神の創造目的を成就する行為とか、その行為の結果を善といい、サタンを中心として<ruby>四位<rt>よんい</rt>
@@ -1270,7 +1306,7 @@
         </ruby>一体化して神の第三対象をつくり、主管的な<ruby>四位<rt>よんい</rt>
         </ruby>基台を造成して神の第三祝福を完成するようになるとき、その事物とか、または、その事物をつくるための行為を善という。サタンを中心として<ruby>四位<rt>よんい</rt>
         </ruby>基台を造成することによって上記のような神の三大祝福に反対の目的を成し遂げる行為、または、その行為の結果を悪というのである。</span></div>
-        <div class="no1"><h4 id="4-3-3"><a href="11sozo.html#4-3-3"><span style="background-color:#CCFFFF">(3)　義　と　不　義</span></a></h4>
+        <div class="no1"><h3 id="4-3-3"><a href="11sozo.html#4-3-3"><span style="background-color:#CCFFFF">(3)　義　と　不　義</span></a></h3>
       <br />
       　<span
         style="background-color:#CCFFFF">善の目的を成就していく過程において、その善の目的に役立つ生活的要素を義といい、悪（サタン）の目的を成就していく過程において、その悪の目的に役立つ生活的要素を不義という。</span>それゆえに、善の目的を成就するためには、必然的に、義の生活を必要とするようになるので、義が善の目的を追求する理由は、すなわちここにある。<br />
@@ -1280,7 +1316,7 @@
     </div>
     </p>
     <div class="no1">
-      <h3 id="5"><a href="11sozo.html#5"><span style="background-color:#FCD2E7">第五節　被造世界の創造過程とその成長期間　</span></a></h3>
+      <h1 id="5"><a href="11sozo.html#5"><span style="background-color:#FCD2E7">第五節　被造世界の創造過程とその成長期間　</span></a></h1>
       <br />
     </div>
     <p>
@@ -1288,7 +1324,7 @@
       <hr />
       <br />
 
-      <h4 id="5-1"><a href="11sozo.html#5-1"><span style="background-color:#FCD2E7">（一）　被造世界の創造過程</span></a></h4><br />
+      <h2 id="5-1"><a href="11sozo.html#5-1"><span style="background-color:#FCD2E7">（一）　被造世界の創造過程</span></a></h2><br />
       　創世記一章を見れば、天地創造は、地は形なく、むなしく、やみが<ruby>淵<rt>ふち</rt>
       </ruby>のおもてにあり、というところで、光を創造されることから出発して、その次には、おおぞらの下の水とおおぞらの上の水とを分けられ、その次に、陸と海とを分け、続いて、植物をはじめ、魚類、鳥類、ほ乳類、人類などを創造されるのに、六日という期間を要したと記録されている。これによって、<span
         style="background-color:#CCFFFF">我々は被造世界の創造が終わるまで、六日という時間的な過程があったということを知るのである。ここにおいて、我々は、聖書に記録された創造の過程が、今日、科学者たちの研究による宇宙の<ruby>生成
@@ -1304,7 +1340,7 @@
             せいせい</rt>
         </ruby>されるまでには、相当な時間を要したという事実を我々は知った。したがって、天地創造を完了するまでの六日というのは、実際は、日の出と日没の回数によって計算される六日ではなく、創造過程の六段階の期間を表示したものであることが分かる。</span></div>
         <div class="no1"><span style="background-color:#FCD2E7"><a href="11sozo.html#5-2">
-          <h4 id="5-2">（二）　被造物の成長期間</h4>
+          <h2 id="5-2">（二）　被造物の成長期間</h2>
         </a></span><br />
 
       　<span
@@ -1315,7 +1351,7 @@
         style="background-color:#CCFFFF">夕から夜が過ぎて、次の日の朝になれば、第二日であるにもかかわらず、第一日であると言われたのは、被造物が夜という成長期間を経て、朝になって完成したのち、初めて創造目的を完成した被造物として、創造理想を実現するための出発をするようになるからである。</span><br />
       　このように、被造世界で起こるすべての現象は、必ずある程度の時間が経過したのち、初めてその結果が現れるようになる。<span
         style="background-color:#FCD2E7">これは被造物が創造されるとき、一定の成長期間を経て完成できるように創造されたからである。</span></div>
-        <div class="no1"><h4 id="5-2-1"><a href="11sozo.html#5-2-1"><span style="background-color:#FCD2E7">(1)　成長期間の秩序的三段階</span></a></h4>
+        <div class="no1"><h3 id="5-2-1"><a href="11sozo.html#5-2-1"><span style="background-color:#FCD2E7">(1)　成長期間の秩序的三段階</span></a></h3>
       <br />
       　<span style="background-color:#CCFFFF">被造世界は神の<ruby>本性相<rt>ほんせいそう</rt></ruby>と<ruby>本形状<rt>ほんけいじょう</rt>
         </ruby>とが数理的な原則によって、実体的に展開されたものである。ここにおいて我々は、神は数理性をもっておられるということを推測できる。またさらに、神は絶対者でありながら、相対的な<ruby>二性性相<rt>
@@ -1345,8 +1381,8 @@
         </ruby>がある。彼らは、神の警告を聞かないで死ぬこともできるし、あるいはその警告を受け入れて、死なずに済むこともできたことから推察してみるとき、彼らがいまだ未完成期にあったことは確かである。</span>万物世界が六日という期間を経て完成できるように創造されたので、被造物の一つである人間も、やはり、そのような原理を離れて創造される理由はないのである。<br />
       　そうであるならば、<span style="background-color:#FCD2E7">人間は成長期間のどの段階で堕落したのだろうか。それは<ruby>長成<rt>ちょうせい</rt>
         </ruby>期の完成級で堕落したのであった。</span>これは、人間始祖の堕落の前後の諸般の事情と、復帰摂理歴史の経緯が実証するもので、本書の前編と後編を研究することによって、そのことが明確に分かるようになるであろう。</div>
-        <div class="no1"><h4 id="5-2-2"><a href="11sozo.html#5-2-2"><span style="background-color:#FCD2E7">(2)　間接<ruby>主管<rt>しゅかん</rt>
-            </ruby>圏</span></a></h4><br />
+        <div class="no1"><h3 id="5-2-2"><a href="11sozo.html#5-2-2"><span style="background-color:#FCD2E7">(2)　間接<ruby>主管<rt>しゅかん</rt>
+            </ruby>圏</span></a></h3><br />
       　<span style="background-color:#FCD2E7">被造物が成長期にある場合には、原理自体の<ruby>主管性<rt>しゅかんせい</rt>
         </ruby>、または自律性によって成長するようになっている。したがって、神は原理の<ruby>主管者<rt>しゅかんしゃ</rt></ruby>としていまし<ruby>給<rt>たま</rt>
         </ruby>い、被造物が原理によって成長する結果だけを見るという、間接的な主管をされるので、この期間を神の間接主管圏、または原理結果主管圏と称するのである。</span><br />
@@ -1381,8 +1417,8 @@
           href="../Bible_out/02_New Testament/04_john/003.html#v16" class="verse-link">ヨハネ三・16</a>、<a
           href="../Bible_out/02_New Testament/10_ephesians/002.html#v8" class="verse-link">エペソ二・８</a>、<a
           href="../Bible_out/02_New Testament/06_romans/005.html#v1" class="verse-link">ロマ五・１</a>）。</span></div>
-        <div class="no1"><h4 id="5-2-3"><a href="11sozo.html#5-2-3"><span style="background-color:#FCD2E7">(3)　直接<ruby>主管<rt>しゅかん</rt>
-            </ruby>圏</span></a></h4><br />
+        <div class="no1"><h3 id="5-2-3"><a href="11sozo.html#5-2-3"><span style="background-color:#FCD2E7">(3)　直接<ruby>主管<rt>しゅかん</rt>
+            </ruby>圏</span></a></h3><br />
       　<span style="background-color:#FCD2E7">直接主管圏とは何であり、またこれを創造された目的は、どこにあるのだろうか。神を中心として、ある主体と対象とが<ruby>合性<rt>ごうせい
           </rt></ruby>一体化して<ruby>四位<rt>よんい</rt>
         </ruby>基台をつくり、神と心情において一体となり、主体の意のままに愛と美を完全に授受して、善の目的を完成することを直接主管という。したがって、直接主管圏とは直に完成圏を意味する。</span>このように、直接主管は、あくまでも創造目的を成就するためであるので、これがなくてはならないのである。では、<span
@@ -1402,15 +1438,15 @@
     </div>
     </p>
     <div class="no1">
-      <h3 id="6"><a href="11sozo.html#6"><span style="background-color:#FCD2E7">第六節　人間を中心とする無形実体世界と有形実体世界</span></a>
-      </h3><br />
+      <h1 id="6"><a href="11sozo.html#6"><span style="background-color:#FCD2E7">第六節　人間を中心とする無形実体世界と有形実体世界</span></a>
+      </h1><br />
     </div>
     <p>
     <div class="no1">
       <hr />
       <br />
 
-      <h4 id="6-1"><a href="11sozo.html#6-1"><span style="background-color:#FCD2E7">（一）　無形実体世界と有形実体世界</span></a></h4>
+      <h2 id="6-1"><a href="11sozo.html#6-1"><span style="background-color:#FCD2E7">（一）　無形実体世界と有形実体世界</span></a></h2>
       <br />
       　<span style="background-color:#FCD2E7">被造世界は、神の<ruby>二性性相<rt>にせいせいそう</rt>
         </ruby>に似た人間を標本として創造されたので、あらゆる存在は、心と体からなる人間の基本形に似ないものは一つもない（<a href="11sozo.html#1-2">本章第一節（二）参照</a>）。<span
@@ -1423,7 +1459,7 @@
         style="background-color:#FCD2E7">無形世界は主体の世界であり、有形世界は対象の世界であって、後者は前者の影のようなものである（<a
           href="../Bible_out/02_New Testament/19_hebrews/008.html#v5"
           class="verse-link">ヘブル八・５</a>）。有形世界で生活した人間が肉身を脱げば、その霊人体は直ちに、無形世界に行って永住するようになる。</span></div>
-        <div class="no1"><h4 id="6-2"><a href="11sozo.html#6-2"><span style="background-color:#FCD2E7">（二）　被造世界における人間の位置</span></a></h4>
+        <div class="no1"><h2 id="6-2"><a href="11sozo.html#6-2"><span style="background-color:#FCD2E7">（二）　被造世界における人間の位置</span></a></h2>
       <br />
       　<span style="background-color:#FCD2E7">第一に、神は人間を被造世界の<ruby>主管者<rt>しゅかんしゃ</rt></ruby>として創造された（<a
           href="../Bible_out/01_Old Testament/01_genesis/1.html#v28" class="verse-link">創一・28</a>）。</span><span
@@ -1453,7 +1489,7 @@
           href="../Bible_out/02_New Testament/07_1-corinthians/015.html#v27"
           class="verse-link">コリント・一五・27</a>）。</span>イエスは堕落人間が彼を信じ、彼と一体となって、彼と共に完成した人間とならしめるために降臨されたので、救い主であられるのである。</div>
         <div class="no1"><span style="background-color:#FCD2E7"><a href="11sozo.html#6-3">
-          <h4 id="6-3">（三）　肉身と霊人体との相対的関係</h4>
+          <h2 id="6-3">（三）　肉身と霊人体との相対的関係</h2>
 
           <p id="6-3-1" class="highlight">
             <a href="#6-3-1" class="anchor-link"> <span style="background-color:#FCD2E7">（１）　肉身の構成とその機能</span></a>
@@ -1559,10 +1595,10 @@
             const container = document.getElementById('stacked-header-container');
             const breadcrumb = document.getElementById('breadcrumb-view');
             const stackedView = document.getElementById('stacked-view');
-            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const headings = Array.from(document.querySelectorAll('h1:not(.page-title), h2, h3, h4, h5, h6'));
             const bars = {};
 
-            for (let i = 2; i <= 6; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const bar = document.createElement('div');
                 bar.className = 'stack-bar';
                 bar.dataset.level = i;
@@ -1592,6 +1628,12 @@
             document.addEventListener('click', () => {
                 container.classList.remove('is-expanded');
             });
+
+            const getCleanText = (el) => {
+                const clone = el.cloneNode(true);
+                clone.querySelectorAll('rt, rp').forEach(r => r.remove());
+                return (clone.textContent || clone.innerText || '').replace(/[◆▸▶]/g, '').trim();
+            };
 
             const updateHeader = () => {
                 const threshold = 100;
@@ -1624,16 +1666,16 @@
                     }
                 }
 
-                const breadcrumbText = path.map(p => p.heading.innerText.replace(/[◆▸▶]/g, '').trim()).join('<span class="separator">/</span>');
+                const breadcrumbText = path.map(p => getCleanText(p.heading)).join('<span class="separator">/</span>');
                 if (breadcrumb.innerHTML !== breadcrumbText) breadcrumb.innerHTML = breadcrumbText;
 
-                for (let i = 2; i <= 6; i++) {
+                for (let i = 1; i <= 6; i++) {
                     const barData = bars[i];
                     const pathItem = path.find(p => p.level === i);
                     if (pathItem) {
                         barData.el.style.display = 'flex';
                         barData.activeHeading = pathItem.heading;
-                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        const cleanText = getCleanText(pathItem.heading);
                         if (barData.text.textContent !== cleanText) barData.text.textContent = cleanText;
                     } else {
                         barData.el.style.display = 'none';
@@ -2006,11 +2048,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -2018,16 +2061,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -2085,10 +2129,10 @@
             const container = document.getElementById('stacked-header-container');
             const breadcrumb = document.getElementById('breadcrumb-view');
             const stackedView = document.getElementById('stacked-view');
-            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const headings = Array.from(document.querySelectorAll('h1:not(.page-title), h2, h3, h4, h5, h6'));
             const bars = {};
 
-            for (let i = 2; i <= 6; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const bar = document.createElement('div');
                 bar.className = 'stack-bar';
                 bar.dataset.level = i;
@@ -2118,6 +2162,12 @@
             document.addEventListener('click', () => {
                 container.classList.remove('is-expanded');
             });
+
+            const getCleanText = (el) => {
+                const clone = el.cloneNode(true);
+                clone.querySelectorAll('rt, rp').forEach(r => r.remove());
+                return (clone.textContent || clone.innerText || '').replace(/[◆▸▶]/g, '').trim();
+            };
 
             const updateHeader = () => {
                 const threshold = 100;
@@ -2150,16 +2200,16 @@
                     }
                 }
 
-                const breadcrumbText = path.map(p => p.heading.innerText.replace(/[◆▸▶]/g, '').trim()).join('<span class="separator">/</span>');
+                const breadcrumbText = path.map(p => getCleanText(p.heading)).join('<span class="separator">/</span>');
                 if (breadcrumb.innerHTML !== breadcrumbText) breadcrumb.innerHTML = breadcrumbText;
 
-                for (let i = 2; i <= 6; i++) {
+                for (let i = 1; i <= 6; i++) {
                     const barData = bars[i];
                     const pathItem = path.find(p => p.level === i);
                     if (pathItem) {
                         barData.el.style.display = 'flex';
                         barData.activeHeading = pathItem.heading;
-                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        const cleanText = getCleanText(pathItem.heading);
                         if (barData.text.textContent !== cleanText) barData.text.textContent = cleanText;
                     } else {
                         barData.el.style.display = 'none';

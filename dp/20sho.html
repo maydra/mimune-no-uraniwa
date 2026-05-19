@@ -54,17 +54,42 @@
             animation: fadeInDown 0.8s ease-out;
         }
 
-        h1 {
+        .page-title {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 900;
             color: #111;
             margin-bottom: 1.5rem;
             letter-spacing: 0.05em;
+            text-align: center;
         }
 
-        h1 a {
+        .chapter-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-top: 2rem;
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
             text-decoration: none;
             color: #111;
+        }
+
+        h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+            color: #000;
         }
 
         h2 {
@@ -367,8 +392,16 @@
                 padding: 2rem;
             }
 
-            h1 {
+            .page-title {
                 font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            .chapter-title {
+                font-size: clamp(1.8rem, 5vw, 3rem);
+            }
+
+            h1 {
+                font-size: 2.0rem;
             }
 
             h2 {
@@ -603,11 +636,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -615,16 +649,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -638,7 +673,7 @@
     </div>
 
     <div class="container">
-        <h1>原理講論 緒論</h1>
+        <h1 class="page-title">原理講論 緒論</h1>
         <nav class="page-nav">
             <a href="17kirisu.html" class="nav-btn"><span>←</span> 前へ</a>
             <a href="index.html" class="nav-btn">目次</a>
@@ -681,17 +716,17 @@
         <!-- St-HP-H -->
         <!-- En-HP-H -->
         
-        <h3>
+        <div class="chapter-title">
             <div class="no1"><span style="background-color:#FCD2E7">緒　　　　論</span><br /></div>
-        </h3>
+        </div>
         <p>
         <div class="no1">
             　<span
                 style="background-color:#FCD2E7">復帰摂理とは、堕落した人間に創造目的を完成せしめるために、彼らを創造本然の人間に復帰していく神の摂理をいうのである。</span>前編で既に論証したように、<span
                 style="background-color:#FCD2E7">人間は長成期の完成級において堕落し、サタンの主管下におかれるようになってしまった。したがって、このような人間を復帰するためには、まず、サタンを分立する摂理をなさらなくてはならないのである。</span>しかし、既にキリスト論において詳しく論じたように、<span
                 style="background-color:#FCD2E7">堕落人間がサタンを分立して、堕落以前の本然の人間として復帰するには、原罪を取り除かなければならない。ところで、この原罪は、人間が、その真の父母として来られるメシヤによって重生されるのでなければ、取り除くことはできないのである。それゆえに、堕落した人間はサタン分立の路程を通して、アダムとエバが成長した基準、すなわち、長成期の完成級まで復帰した型を備えた基台の上でメシヤを迎え、重生することによって、アダムとエバの堕落以前の立場を復帰したのち、メシヤに従って更に成長し、そこで初めて創造目的を完成することができるのである。このように復帰摂理は、創造目的を再び成就するための再創造の摂理であるから、どこまでも原理によって摂理されなければならない。それゆえに、これを復帰原理というのである。</span>我々はここにおいて、復帰摂理がどのようにして成就されるかということについて調べてみることにしよう。</div>
-        <div class="no1"><h3 id="1"><a href="20sho.html#1"><span style="background-color:#FCD2E7">（一）蕩減復帰原理</span></a></h3><br />
-            <h4 id="1-1"><a href="20sho.html#1-1"><span style="background-color:#FCD2E7">(1)　蕩　減　復　帰</span></a></h4>
+        <div class="no1"><h2 id="1"><a href="20sho.html#1"><span style="background-color:#FCD2E7">（一）蕩減復帰原理</span></a></h2><br />
+            <h3 id="1-1"><a href="20sho.html#1-1"><span style="background-color:#FCD2E7">(1)　蕩　減　復　帰</span></a></h3>
             </div>
         <div class="no1">蕩減復帰原理に関する問題を論ずる前に、我々はまず、<span
                 style="background-color:#CCFFFF">人間がその堕落によって、神とサタンとの間において、どのような立場におかれるようになったかということを知らなければならない。</span><span
@@ -731,7 +766,7 @@
             　それでは、このような<span style="background-color:#FCD2E7">蕩減条件はだれが立てなければならないのであろうか。</span><span
                 style="background-color:#CCFFFF">既に、創造原理において明らかにしたように、人間はあくまでも自分の責任分担を全うすることによって完成し、天使までも主管しなければならなかったのである。しかし、人間始祖がその責任分担を全うすることができなかったために、逆にサタンの主管を受けなければならない立場に陥ってしまった。それゆえに、人間がサタンの主管を脱して、逆にサタンを主管し得る立場に復帰するためには、</span><span
                 style="background-color:#FCD2E7">人間の責任分担としてそれに必要な蕩減条件を、あくまでも人間自身が立てなければならないのである。</span></div>
-        <div class="no1"><h4 id="1-2"><a href="20sho.html#1-2"><span style="background-color:#FCD2E7">(2)　メシヤのための基台</span></a></h4>
+        <div class="no1"><h3 id="1-2"><a href="20sho.html#1-2"><span style="background-color:#FCD2E7">(2)　メシヤのための基台</span></a></h3>
             </div>
         <div class="no1">メシヤは人類の真の父母として来られなければならない。彼が人類の真の父母として来られなければならない理由は、堕落した父母から生まれた人類を重生させ、その原罪を贖ってくださらなければならないからである<a
                 href="17kirisu.html#4-1-1">（前編第七章第四節（一）(1)）</a>。したがって、<span
@@ -756,16 +791,16 @@
                     class="verse-link">エレミヤ一七・９</a>）、旧約以前の時代においては、供え物、あるいは、その供え物を代表する箱舟などの万物を条件物として立て、「信仰基台」をつくるようになったのである。</span>それゆえに「信仰基台」は、人間の不信によってサタンの侵入を受けた万物を復帰する基台ともなるのである。そして、<span
                 style="background-color:#CCFFFF">旧約時代においては律法のみ言、あるいはそれを代表する契約の箱、神殿、中心人物などが、この基台を造成するための条件物であった。また、新約時代においては福音のみ言、さらには、そのみ言の実体たるイエスが、「信仰基台」造成のための条件物であったのである。人間が堕落したのちにおけるこのような条件物は、人間の側から見れば、それは「信仰基台」を復帰するためのものであるが、神の側から見るときには、それはどこまでも所有を決定するためのものであったのである。</span><br />
             　<span
-                style="background-color:#FCD2E7">その第三は、そのために「数理的な蕩減期間」を、立てなければならないということである。</span>それでは、この摂理的な数による蕩減期間がなぜ存在しなければならないのであるか、また、どのような摂理的な数の蕩減期間を立てなければならないかという問題は、便宜上、後編の第三章第二節（四）において詳しく取り扱うことにした。<br />
+                style="background-color:#FCD2E7">その第三は、そのために「数理的な蕩減期間」を、立てなければならないということである。</span>それでは、この摂理的な数による蕩減期間がなぜ存在しなければならないのであるか、また、どのような摂理的な数の蕩減期間を立てなければならないかという問題は、便宜上、<a href="23kaku.html#2-4">後編の第三章第二節（四）</a>において詳しく取り扱うことにした。<br />
             　　<h4 id="1-2-2"><a href="20sho.html#1-2-2"><span style="background-color:#FCD2E7">②　実体基台</span></a></h4>
             </div>
         <div class="no1">堕落人間が創造目的を完成するためには、「信仰基台」を復帰した基台の上で、過去に人間始祖が成就し得なかった「完成実体」を成就しなければならない。しかし、<span
                 style="background-color:#FCD2E7">堕落人間は、どこまでもメシヤを通して原罪を取り除かなければ「完成実体」となることはできない。</span>ところで堕落人間は、上述した「信仰基台」を蕩減復帰した基台の上で、「実体基台」を立てることによって成就される「メシヤのための基台」があって、初めてその上でメシヤを迎えることができるのである。<span
                 style="background-color:#CCFFFF">堕落人間は、このようにしてメシヤを迎えて原罪を取り除き、人間始祖の堕落以前の立場に復帰したのちに、神の心情を中心としてメシヤと一体となり、人間始祖が堕落したため歩み得ず取り残された成長期間を、全部全うして初めて「完成実体」となることができるのである。</span>一方、「実体基台」を立てる場合においても、堕落人間が立てなければならないある蕩減条件が必要である。それがすなわち、「堕落性を脱ぐための蕩減条件」である。人間始祖は堕落して原罪をもつようになるに従って、創造本性を完成することができず、堕落性本性をもつようになった。ゆえに、<span
-                style="background-color:#FCD2E7">堕落人間がメシヤを迎えて、原罪を取り除き、創造本性を復帰するための「実体基台」を立てるためには、まずその「堕落性を脱ぐための蕩減条件」を立てなければならないのである。</span>この条件をどのようにして立てるかということに関しては、後編第一章第一節（二）において論ずることにする。</div>
-        <div class="no1"><h3 id="2"><a href="20sho.html#2"><span style="background-color:#FCD2E7">（二）復帰摂理路程</span></a></h3><br />
-            <h4 id="2-1"><a href="20sho.html#2-1"><span style="background-color:#FCD2E7">(1)　復帰摂理路程の時代的段階</span></a>
-            </h4></div>
+                style="background-color:#FCD2E7">堕落人間がメシヤを迎えて、原罪を取り除き、創造本性を復帰するための「実体基台」を立てるためには、まずその「堕落性を脱ぐための蕩減条件」を立てなければならないのである。</span>この条件をどのようにして立てるかということに関しては、<a href="21kidai.html#1-2">後編第一章第一節（二）</a>において論ずることにする。</div>
+        <div class="no1"><h2 id="2"><a href="20sho.html#2"><span style="background-color:#FCD2E7">（二）復帰摂理路程</span></a></h2><br />
+            <h3 id="2-1"><a href="20sho.html#2-1"><span style="background-color:#FCD2E7">(1)　復帰摂理路程の時代的段階</span></a>
+            </h3></div>
         <div class="no1"><span style="background-color:#FCD2E7">ここでは、アダム以後今日に至るまでの全歴史路程における、時代的段階について概観してみることにしよう。</span><span
                 style="background-color:#CCFFFF">堕落人間をして、「メシヤのための基台」を立てるようにし、その基台の上でメシヤを迎えさせることにより、創造目的を完成しようとした神の摂理は、既にアダムの家庭から始められたのであった。しかし、カインがアベルを殺害することによって、その摂理の目的は挫折してしまい、その後十代を経て、その摂理の目的は、再びノアの家庭に譲り移されたのである。四十日の洪水をもって悪の世代を審判なさったのは、ノアの家庭を中心として「メシヤのための家庭的基台」を立てさせ、その基台の上にメシヤを送ることによって、復帰摂理を完遂させるためであった。しかし、ノアの次子ハムの堕落行為によって、ノアの家庭と箱舟を立てるために聖別した十代と四十日をサタンに奪われてしまった。しかし、これらを再び天の側に蕩減復帰する期間、すなわち四〇〇年を経たのち、摂理の目的は再びアブラハムに譲り移されたのである。</span>それゆえに、もしアブラハムが「メシヤのための家庭的基台」を、み旨にかなうように立て得たならば、その基台を中心として「メシヤのための民族的基台」を造成して、その基台の上でメシヤを迎えるはずであった。しかるに、<span
                 style="background-color:#CCFFFF">アブラハムが象徴献祭に失敗することにより、その目的は再び挫折してしまったのである。</span>それゆえに、メシヤを迎えるための信仰の父を探し求めてきたアダム家庭からの二〇〇〇年の期間は、いったんサタンに奪われるほかはなかった。しかし、アブラハムがノアの立場と異なるのは、<span
@@ -775,7 +810,7 @@
                 style="background-color:#FCD2E7">アブラハムの象徴献祭の失敗によって、アダムからアブラハムに至るまでの二〇〇〇年の期間をサタンに奪われてしまったので、この期間を再び天の側に蕩減復帰する期間がなければならないのであるが、この期間がすなわちアブラハムからイエスが来られるときまでの二〇〇〇年期間であった。</span>もし、アブラハムが象徴献祭に失敗しなかったならば、その子孫たちによって立てられるはずの「メシヤのための民族的基台」の上にメシヤが来られたはずであったので、そのときに復帰摂理は成就されることになっていたのである。これと同じく、もしユダヤ民族が、イエスを信じかつ侍り奉って、彼を神の前に民族的な生きた供え物として、み旨にかなうように立てていたならば、そのときにおいても彼らが立てた「メシヤのための民族的基台」の上に来られたメシヤを中心として、復帰摂理は完成されることになっていたのである。<br />
             　しかし、<span
                 style="background-color:#FCD2E7">アブラハムが象徴献祭に失敗したのと同様、ユダヤ人たちもイエスを十字架につけることによって、その民族的な献祭に失敗したために、アブラハム以後イエスまでの二〇〇〇年の期間は、再びサタンに奪われる結果となってしまった。ゆえに、サタンに奪われたこの二〇〇〇年期間を、再び天の側に蕩減復帰する二〇〇〇年の期間が必要となったのであるが、この期間がすなわち、イエス以後今日に至るまでの二〇〇〇年の期間だったのである。</span>そして、この期間においては、イエスの十字架による復帰摂理によって、キリスト教信徒たちは「再臨主のための世界的基台」を立てなければならなかったのである。</div>
-        <div class="no1"><h4 id="2-2"><a href="20sho.html#2-2"><span style="background-color:#CCFFFF">(2)　復帰摂理路程の時代区分</span></a></h4>
+        <div class="no1"><h3 id="2-2"><a href="20sho.html#2-2"><span style="background-color:#CCFFFF">(2)　復帰摂理路程の時代区分</span></a></h3>
             </div>
         <div class="no1"><h4 id="2-2-1"><a href="20sho.html#2-2-1"><span
                         style="background-color:#CCFFFF">①　み言による摂理から見た時代区分</span></a></h4></div>
@@ -836,7 +871,7 @@
                 style="background-color:#CCFFFF">(ﾛ)　アブラハムからイエスまでの二〇〇〇年期間は、「メシヤのための基台」を復帰する蕩減条件を、形象的に立ててきた時代であったので、この時代を「形象的同時性の時代」という。</span></div>
         <div class="no1"><span
                 style="background-color:#CCFFFF">(ﾊ)　イエスからその再臨期までの二〇〇〇年期間は、「メシヤのための基台」を復帰する蕩減条件を、実体的に立ててきた時代であるので、この時代を「実体的同時性の時代」という。</span></div>
-        <div class="no1"><h3 id="3"><a href="20sho.html#3"><span style="background-color:#FCD2E7">（三）復帰摂理歴史と「私」</span></a></h3><br />
+        <div class="no1"><h2 id="3"><a href="20sho.html#3"><span style="background-color:#FCD2E7">（三）復帰摂理歴史と「私」</span></a></h2><br />
             　<span
                 style="background-color:#FCD2E7">「私」という個性体はどこまでも復帰摂理歴史の所産である。したがって、「私」はこの歴史が要求する目的を成就しなければならない「私」なのである。それゆえに「私」は歴史の目的の中に立たなければならないし、また、そのようになるためには、復帰摂理歴史が長い期間を通じて、縦的に要求してきた蕩減条件を、「私」自身を中心として、横的に立てなければならない。そうすることによって、初めて「私」は復帰摂理歴史が望む結実体として立つことができるのである。</span>したがって、我々は今までの歴史路程において、復帰摂理の目的のために立てられた預言者や義人たちが達成することのできなかった時代的使命を、今この「私」を中心として、一代において横的に蕩減復帰しなければならないのである。そうでなければ、復帰摂理の目的を完成した個体として立つことはできない。<span
                 style="background-color:#FCD2E7">我々がこのような歴史的勝利者となるためには、預言者、義人たちに対してこられた神の心情と、彼らを召命された神の根本的な目的、そして彼らに負わされた摂理的使命が、果たしてどのようなものであったかということを詳細に知らなければならないのである。しかし、堕落人間においては、自分一人でこのような立場に立ち得る人間は一人もいない。それゆえに、我々は、復帰摂理の完成者として来られる再臨主を通して、それらのことに関するすべてを知り、また彼を信じ、彼に侍り奉り、彼と一つになることによって、彼と共に、復帰摂理歴史の縦的な蕩減条件を横的に立て得た立場に立たなければならないのである。</span><br />
@@ -1127,11 +1162,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -1139,16 +1175,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -1206,10 +1243,10 @@
             const container = document.getElementById('stacked-header-container');
             const breadcrumb = document.getElementById('breadcrumb-view');
             const stackedView = document.getElementById('stacked-view');
-            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const headings = Array.from(document.querySelectorAll('h1:not(.page-title), h2, h3, h4, h5, h6'));
             const bars = {};
 
-            for (let i = 2; i <= 6; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const bar = document.createElement('div');
                 bar.className = 'stack-bar';
                 bar.dataset.level = i;
@@ -1239,6 +1276,12 @@
             document.addEventListener('click', () => {
                 container.classList.remove('is-expanded');
             });
+
+            const getCleanText = (el) => {
+                const clone = el.cloneNode(true);
+                clone.querySelectorAll('rt, rp').forEach(r => r.remove());
+                return (clone.textContent || clone.innerText || '').replace(/[◆▸▶]/g, '').trim();
+            };
 
             const updateHeader = () => {
                 const threshold = 100;
@@ -1271,16 +1314,16 @@
                     }
                 }
 
-                const breadcrumbText = path.map(p => p.heading.innerText.replace(/[◆▸▶]/g, '').trim()).join('<span class="separator">/</span>');
+                const breadcrumbText = path.map(p => getCleanText(p.heading)).join('<span class="separator">/</span>');
                 if (breadcrumb.innerHTML !== breadcrumbText) breadcrumb.innerHTML = breadcrumbText;
 
-                for (let i = 2; i <= 6; i++) {
+                for (let i = 1; i <= 6; i++) {
                     const barData = bars[i];
                     const pathItem = path.find(p => p.level === i);
                     if (pathItem) {
                         barData.el.style.display = 'flex';
                         barData.activeHeading = pathItem.heading;
-                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        const cleanText = getCleanText(pathItem.heading);
                         if (barData.text.textContent !== cleanText) barData.text.textContent = cleanText;
                     } else {
                         barData.el.style.display = 'none';

@@ -54,17 +54,42 @@
             animation: fadeInDown 0.8s ease-out;
         }
 
-        h1 {
+        .page-title {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 900;
             color: #111;
             margin-bottom: 1.5rem;
             letter-spacing: 0.05em;
+            text-align: center;
         }
 
-        h1 a {
+        .chapter-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-top: 2rem;
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
             text-decoration: none;
             color: #111;
+        }
+
+        h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+            color: #000;
         }
 
         h2 {
@@ -367,8 +392,16 @@
                 padding: 2rem;
             }
 
-            h1 {
+            .page-title {
                 font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            .chapter-title {
+                font-size: clamp(1.8rem, 5vw, 3rem);
+            }
+
+            h1 {
+                font-size: 2.0rem;
             }
 
             h2 {
@@ -603,11 +636,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -615,16 +649,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -638,7 +673,7 @@
     </div>
 
     <div class="container">
-        <h1>原理講論 復活論</h1>
+        <h1 class="page-title">原理講論 復活論</h1>
         <nav class="page-nav">
             <a href="14meshia.html" class="nav-btn"><span>←</span> 前へ</a>
             <a href="index.html" class="nav-btn">目次</a>
@@ -682,9 +717,9 @@
         <!-- St-HP-H -->
         <!-- En-HP-H -->
         
-        <h3>
+        <div class="chapter-title">
             <div class="no1">　<span style="background-color:#FCD2E7">第五章　復　　活　　論</span><br /></div>
-        </h3>
+        </div>
         <p>
         <div class="no1">
             <hr /><br />
@@ -700,17 +735,17 @@
         <div class="no1"><hr /><br />
         </div>
         </p>
-        <h3 id="1">
+        <h1 id="1">
             <div class="no1"><a href="15fukka.html#1"><span style="background-color:#FCD2E7">第一節　復　　　活</span></a><br />
             </div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
             　<span
                 style="background-color:#FCD2E7">復活というのは、再び活きるという意味である。再び活きるというのは、死んだからである。そこで、我々が復活の意義を知るためには、まず、死と生に対する聖書的な概念をはっきり知らなければならないのである。</span></div>
-        <div class="no1"><h4 id="1-1"><a href="15fukka.html#1-1"><span style="background-color:#FCD2E7">（一）死と生に対する聖書的概念</span></a>
-            </h4><br />
+        <div class="no1"><h2 id="1-1"><a href="15fukka.html#1-1"><span style="background-color:#FCD2E7">（一）死と生に対する聖書的概念</span></a>
+            </h2><br />
             　<span style="background-color:#FCD2E7"><a href="../Bible_out/02_New Testament/03_luke/009.html#v60"
                     class="verse-link">ルカ福音書九章60節</a>の記録を見れば、父親の葬式のために自分の家へ帰ろうとする弟子に、イエスは死人を葬ることは、死人に任せておくがよいと言われた。我々はこのイエスのみ言の中で、死と生に対して互いにその意義を異にする二つの概念があるということを知ることができる。第一は、葬られなければならない、その弟子の父親のように、肉身の寿命が切れた「死」に対する生死の概念である。このような死に対する生は、その肉身が生理的な機能を維持している状態を意味する。第二は、その死んだ父親の葬式をするために、集まって活動している人たちを指摘していう「死」に対する生死の概念である。</span>それではどうしてイエスは、現在その肉身を動かしている人たちを指摘して、死んだ人と言われたのだろうか。それは彼らがイエスに逆らって、神の愛から離れた位置、すなわちサタンの主管圏内にとどまっていたからである。ゆえに、<span
                 style="background-color:#FCD2E7">この死は肉身の寿命が切れる死を意味するのではなく、神の愛の懐を離れて、サタンの主管圏内に落ちこんだことを意味する死のことなのである。したがって、このような「死」に対する「生」の意義は、神の愛の主管圏内において、神のみ言のとおりに活動している状態をいうのである。</span>それゆえに、<span
@@ -724,7 +759,7 @@
             　また、<span style="background-color:#FFFF99">「自分の命を救おうとするものは、それを失い、それを失うものは、保つのである」と言われた、<a
                     href="../Bible_out/02_New Testament/03_luke/017.html#v33"
                     class="verse-link">ルカ福音書一七章33節</a>のみ言も、肉身を保存するために神のみ旨に背く者は、いくらその肉身が活動していても、彼は死んだ者であり、また、これと反対に神のみ旨のために肉身を犠牲にする者は、仮にその肉身は土の中に葬られて腐ってしまったとしても、その霊人体は神の愛に抱かれて永存できるのであるから、彼はすなわち、生きている者であるという意味である。</span></div>
-        <div class="no1"><h4 id="1-2"><a href="15fukka.html#1-2"><span style="background-color:#FCD2E7">（二）堕落による死</span></a></h4>
+        <div class="no1"><h2 id="1-2"><a href="15fukka.html#1-2"><span style="background-color:#FCD2E7">（二）堕落による死</span></a></h2>
             <br />
             　<span
                 style="background-color:#FCD2E7">我々は上述のごとく、互いにその意義を異にする二つの死があるということを知った。では、そのうちのいずれが、人間始祖の堕落によってもたらされた死なのだろうか。</span><br />
@@ -744,7 +779,7 @@
                     class="verse-link">ロマ書六章23節</a>には、「罪の支払う報酬は死である。しかし神の賜物は、わたしたちの主キリスト・イエスにおける永遠のいのちである」</span>と言われ、また、<a
                 href="../Bible_out/02_New Testament/06_romans/008.html#v6"
                 class="verse-link">ロマ書八章６節</a>には、「肉の思いは死であるが、霊の思いは、いのちと平安とである」と記録されているのである。</div>
-        <div class="no1"><h4 id="1-3"><a href="15fukka.html#1-3"><span style="background-color:#FCD2E7">（三）復活の意義</span></a></h4>
+        <div class="no1"><h2 id="1-3"><a href="15fukka.html#1-3"><span style="background-color:#FCD2E7">（三）復活の意義</span></a></h2>
             <br />
             　<span
                 style="background-color:#CCFFFF">我々はこれまで、人間の寿命が切れて、その肉身の土に帰ることが、堕落からきた死であるとばかり考えていた。したがって、このような死から再び生きることが、聖書の意味する復活であると解釈してきたので、既に他界した信徒たちの復活は、すなわち土に分解されてしまったその肉身が、再び原状どおりによみがえることによって成就されるものと信じていた。</span>しかし、創造原理によれば、このような死は、人間始祖の堕落によって招来されたものではなく、本来、人間は老衰すれば、その肉身は自然に土に帰るように創造されているので、いったん土に分解されてしまった肉身が、再び原状どおり復活することは不可能であるばかりでなく、霊界に行って永遠に生きるようになった霊人体が、再び肉身をとる必要もないのである。ゆえに、<span
@@ -754,8 +789,8 @@
                     class="verse-link">ヨハネ福音書五章24節</a>に「わたしの言葉を聞いて、わたしをつかわされたかたを信じる者は、永遠の命を受け、またさばかれることがなく、死から命に移っているのである」と記録されている。これは、イエスを信じることによって、サタンの懐から離れ、神の愛の懐に移ることが、すなわち復活であるということを意味するみ言である。</span>また、<a
                 href="../Bible_out/02_New Testament/07_1-corinthians/015.html#v22"
                 class="verse-link">コリント・一・一五章22節</a>には、「アダムにあってすべての人が死んでいるのと同じように、キリストにあってすべての人が生かされるのである」と記録されているが、これは、アダムによってサタンの血統を受け継ぐようになったのが死亡であり、この死亡からキリストによって天の血統に移されることが、復活であるということを意味するみ言である。</div>
-        <div class="no1"><h4 id="1-4"><a href="15fukka.html#1-4"><span
-                        style="background-color:#FCD2E7">（四）復活は人間にいかなる変化を起こすか</span></a></h4><br />
+        <div class="no1"><h2 id="1-4"><a href="15fukka.html#1-4"><span
+                        style="background-color:#FCD2E7">（四）復活は人間にいかなる変化を起こすか</span></a></h2><br />
             　<span style="background-color:#FCD2E7">善悪の果を取って食べる日には、きっと死ぬであろう（<a
                     href="../Bible_out/01_Old Testament/01_genesis/2.html#v17"
                     class="verse-link">創二・17</a>）と言われた神のみ言どおりに、善悪の果を取って食べて堕落したアダムとエバが、死んだのは事実であった。しかし、彼らには、外形的には何らの異変も起こらなかったのである。変わったことがあるとすれば、不安と恐怖によって、瞬間的に彼らの顔色が変わる程度であっただろう。ゆえに、堕落した人間が善悪の果を取って食べた以前の人間に復活するとしても、その外形上には何らの変化も起こらない。</span>聖霊により重生した人間は、重生する以前と比べて、確かに復活した人間には違いない。しかし今、彼と強盗とを比較すれば、一人は天の人間として、ある程度まで復活した立場におり、また一人は、地獄に行くべき人間として、死んだ立場にいるが、彼らの外形には何らの差異も認められないのである。既に例証したように、イエスのみ言に従って、神を信じる者は、死から命へと移されて、復活させられたのは事実である。しかし、彼がイエスを信じる前の死の状態にいるときも、イエスを信じて命に移されることによって復活したのちにも、彼の肉身上には、何らの変化も起こらないのである。<br />
@@ -765,23 +800,23 @@
             <hr /><br />
         </div>
         </p>
-        <h3 id="2">
+        <h1 id="2">
             <div class="no1"><a href="15fukka.html#2"><span
                         style="background-color:#FCD2E7">第二節　復　活　摂　理</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
-            <h4 id="2-1"><a href="15fukka.html#2-1"><span style="background-color:#FCD2E7">（一）復活摂理はいかになされるか</span></a>
-            </h4><br />
+            <h2 id="2-1"><a href="15fukka.html#2-1"><span style="background-color:#FCD2E7">（一）復活摂理はいかになされるか</span></a>
+            </h2><br />
             　<span
                 style="background-color:#FCD2E7">復活は、堕落人間が創造本然の姿に復帰する過程的な現象を意味するので、復活摂理は、すなわち、復帰摂理を意味する。復帰摂理はすなわち、再創造摂理なので、復活摂理はまた再創造摂理でもある。</span>したがって、復活摂理も、創造原理によって、次のように摂理されるのである。<span
                 style="background-color:#FCD2E7">第一に、復活摂理の歴史において、その使命的な責任をもった人物たちが、たとえ彼ら自身の責任分担を完遂できなかったとしても、彼らは天のみ旨のために忠誠を尽くしたので、それだけ堕落人間が、神と心情的な因縁を結ぶことができる基盤を広めてきたのである。したがって、後世の人間たちは、歴史の流れに従い、それ以前の預言者や義人が築きあげた心情的な基台によって、復帰摂理の時代的な恵沢をもっと受けるようになるのである。したがって、復活摂理は、このような時代的な恵沢の上に立ってなされるのである。第二に、創造原理によれば、</span>神の責任分担として創造された人間は、それ自身の責任分担として神から与えられたみ言を信じ実践するとき、初めて完成されるように創造されたのである。それゆえに、<span
                 style="background-color:#FCD2E7">復活摂理をなさるに当たっても、神の責任分担としての摂理のためのみ言がなければならないし、また、堕落人間がそれ自身の責任分担として、み言を信じ、実践して初めてそのみ旨が成し遂げられるようになっている。第三には、創造原理に照らしてみると、</span>人間の霊人体は、肉身を基盤にしてのみ成長し完成するように創造されている。したがって、<span
                 style="background-color:#FCD2E7">復帰摂理による霊人体の復活も、これまた地上の肉身生活を通じて、初めて成就されるようになっている。第四に、人間は創造原理に従い、</span>成長期間の秩序的な三段階を経て完成するように創造された。それゆえに、<span
                 style="background-color:#FCD2E7">堕落人間に対する復活摂理も、その摂理期間の秩序的な三段階を経て完成されるようになっている。</span></div>
-        <div class="no1"><h4 id="2-2"><a href="15fukka.html#2-2"><span style="background-color:#FCD2E7">（二）地上人に対する復活摂理</span></a>
-            </h4></div>
+        <div class="no1"><h2 id="2-2"><a href="15fukka.html#2-2"><span style="background-color:#FCD2E7">（二）地上人に対する復活摂理</span></a>
+            </h2></div>
         <div class="no1">神は、アダムの家庭から復活摂理を始められたのである。しかし、そのみ旨に仕える人物たちが、責任分担を完遂できなかったためその摂理は延長されてきたが、二〇〇〇年後に、信仰の祖アブラハムを立てて、初めてその摂理が始まった。したがって、<span
                 style="background-color:#FCD2E7">アダムからアブラハムまでの二〇〇〇年期間は、結果的には次の時代に入って、復活摂理ができるその基台を造成した時代となった。ゆえに、この時代を復活基台摂理時代と称するのである。</span></div>
         <div class="no1"><span
@@ -848,7 +883,7 @@
                     href="../Bible_out/02_New Testament/27_revelation/007.html#v4"
                     class="verse-link">黙示録七章４節</a>に記録されている十四万四千の群れなのである。</span><br />
             　神の復帰摂理路程において、家庭復帰の使命者であったヤコブは、十二の子息を中心として出発し、民族復帰のために出発したモーセは、十二部族を率いたが、この各部族が再び十二部族型に増えれば、一四四数になる。世界復帰の使命者として来られたイエスは、霊肉共に、この一四四数を蕩減復帰するために十二弟子を立てられたが、十字架につけられたので、霊的にのみこれを蕩減復帰してこられたのである。ゆえに、サタンに奪われたノアからヤコブまでの縦的な十二代を、横的に蕩減復帰するため、ヤコブが十二子息を立てたように、再臨主は初臨以後、霊的にのみ一四四部族型を立ててきた縦的な摂理路程を、霊肉共に横的に、一時に蕩減復帰されるため、一四四数に該当する一定の必要数の信徒たちを探し立てなければならないのである。</div>
-        <div class="no1"><h4 id="2-3"><a href="15fukka.html#2-3"><span style="background-color:#FCD2E7">（三）霊人に対する復活摂理</span></a></h4>
+        <div class="no1"><h2 id="2-3"><a href="15fukka.html#2-3"><span style="background-color:#FCD2E7">（三）霊人に対する復活摂理</span></a></h2>
             </div>
         <div class="no1">創造原理によれば、人間の霊人体は神から受ける生素と、肉身から供給される生力要素との授受作用によってのみ成長するように創造された。それゆえに、霊人体は肉身を離れては成長することも、また復活することもできない。したがって、<span
                 style="background-color:#FCD2E7">地上の肉身生活において、完成されずに他界した霊人たちが復活するためには、地上に再臨して自分たちが地上の肉身生活で完成されなかったその使命部分を、肉身生活をしている地上の聖徒たちに協助することによって、地上人たちの肉身を自分の肉身の身代わりに活用し、それを通して成し遂げるのである。</span>ユダ書14節に、終わりの日に、主は無数の聖徒たちを率いて来られると言われた理由はここにある。<br />
@@ -897,40 +932,40 @@
                 style="background-color:#CCFFFF">第一に、悪霊人をして、直接その地上人に接して悪の業をさせて、その地上人が自ら清算すべき罪に対する蕩減条件を立てていく方法である。第二には、その悪霊人がある地上人に直接働くのと同じ程度の犯罪を行おうとする、他の地上の悪人に、その悪霊人を再臨させ、この悪人が実体として、その地上人に悪の業をさせることによって、その地上人が自ら清算すべき罪に対する蕩減条件を立てていく方法である。</span><br />
             　このようなとき、その地上人が、この悪霊の業を当然のこととして喜んで受け入れれば、彼は自分かあるいはその祖先が犯した罪に対する蕩減条件を立てることができるのであるから、その罪を清算し、新しい時代の恵沢圏内に移ることができるのである。このようになれば、<span
                 style="background-color:#CCFFFF">悪霊人の業は、天の代わりに地上人の罪に対する審判の行使をした結果になるのである。それゆえに、その業によって、この悪霊人も、その地上人と同様な恵沢を受け、新しい時代の恵沢圏に入ることができるのである。</span></div>
-        <div class="no1"><h4 id="2-4"><a href="15fukka.html#2-4"><span style="background-color:#FCD2E7">（四）再臨復活から見た輪廻説</span></a>
-            </h4><br />
+        <div class="no1"><h2 id="2-4"><a href="15fukka.html#2-4"><span style="background-color:#FCD2E7">（四）再臨復活から見た輪廻説</span></a>
+            </h2><br />
             　神の復帰摂理は、その全体的な目的を完成なさるために、各個体を召され、その各個体に適合した使命を分担させてこられた。そして、人間がこの使命を継続的に彼と同一の型の個体へと伝承しながら、悠久なる歴史の期間を通じて、その分担された使命分野を漸次完遂するように導かれたのである。<br />
             　<span
                 style="background-color:#CCFFFF">復帰摂理は個人から出発して、家庭と民族を経て、世界を越え、天宙まで復帰していくのである。それゆえに、個人に任せられた使命は、たとえ部分的なものであっても、その型は個人型から始まって、家庭と民族と世界の各型へと、その範囲を広めてきたのである。聖書でその例を挙げれば、アブラハムは個人型または家庭型であり、モーセは民族型であり、イエスは世界型であった。</span><br />
             　ところで、<span
                 style="background-color:#FCD2E7">地上で自分の使命を完成できずに去った霊人たちは、各々自分たちが地上で受けもったのと同じ使命をもった同型の地上人に再臨して、そのみ旨が成就するように協助するのである。このときに、その協助を受ける地上人は、自分自身の使命を果たすと同時に、自分を協助する霊人の使命までも代理に成し遂げるのである。ゆえに、この使命を中心として見れば、その地上人の肉身は、彼を協助する霊人の肉身ともなるのである。このようになれば、その地上人は彼を協助している霊人の再臨者となるので、その地上人はしばしば彼を協助する霊人の名前で呼ばれるのである。このようなわけで、地上人はしばしば、霊人が輪廻転生した実体のように現れるようになるのである。</span><span
-                style="background-color:#FFFF99">聖書でこれに関する例を挙げてみれば、洗礼ヨハネはエリヤの協助を受けて、彼の目的を立てていったので、彼はエリヤが地上にいるとき完成できなかった使命まで、みな完遂してやらなければならなかった。したがって、洗礼ヨハネの肉身は、エリヤの肉身の代理でもあったので、イエスは、洗礼ヨハネをエリヤであると言われた</span>（本章第二節（三）(2)）。<br />
+                style="background-color:#FFFF99">聖書でこれに関する例を挙げてみれば、洗礼ヨハネはエリヤの協助を受けて、彼の目的を立てていったので、彼はエリヤが地上にいるとき完成できなかった使命まで、みな完遂してやらなければならなかった。したがって、洗礼ヨハネの肉身は、エリヤの肉身の代理でもあったので、イエスは、洗礼ヨハネをエリヤであると言われた</span><a href="15fukka.html#2-3-2">（<a href="15fukka.html#2-3-2">本章第二節（三）(2)</a>）</a>。<br />
             　終末において、世界型の分担使命を受けもった地上人たちは、各々過去に彼と同型の使命をもって、地上を経て行ったすべての霊人の責任分担を、みな継承して完遂すべき立場にいるのである。したがって、すべての霊人は地上人たちに再臨し、彼に協助することによって、彼らが地上にいるとき、完成できなかった使命を完遂させるのである。それゆえに、霊人たちの協助を受ける地上人は、彼に協助するすべての霊人たちの再臨者であり、したがって、その地上人はすべての霊人たちがよみがえったかのように見られるのである。<span
                 style="background-color:#CCFFFF">終わりの日に、自分が再臨のイエス、弥勒仏、釈迦、孔子、あるいはオリーブの木、あるいは生命の木などと自称する人たちが多く現れる理由はここにある。仏教で輪廻転生を主張するようになったのは、このような再臨復活の原理を知らないで、ただ、その現れる結果だけを見て判断したために生まれてきたのである。</span><br />
             <hr /><br />
         </div>
         </p>
-        <h3 id="3">
+        <h1 id="3">
             <div class="no1"><a href="15fukka.html#3"><span
                         style="background-color:#FCD2E7">第三節　再臨復活による宗教統一</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
-            <h4 id="3-1"><a href="15fukka.html#3-1"><span style="background-color:#FCD2E7">（一）再臨復活によるキリスト教統一</span></a>
-            </h4><br />
-            　既に、本章第二節（三）(2)で詳述したように、楽園にとどまっている生命体級の霊人たちは、再臨されたイエスを信じ侍ることによって、生霊体級の霊人体を完成することのできる地上の信徒たちに再臨するのである。それから、彼らをして復帰摂理のみ旨を成し遂げるように協助して、彼らと同じ恵沢を受け、天国に入るようになる。したがって、<span
+            <h2 id="3-1"><a href="15fukka.html#3-1"><span style="background-color:#FCD2E7">（一）再臨復活によるキリスト教統一</span></a>
+            </h2><br />
+            　既に、<a href="15fukka.html#2-3-2">本章第二節（三）(2)</a>で詳述したように、楽園にとどまっている生命体級の霊人たちは、再臨されたイエスを信じ侍ることによって、生霊体級の霊人体を完成することのできる地上の信徒たちに再臨するのである。それから、彼らをして復帰摂理のみ旨を成し遂げるように協助して、彼らと同じ恵沢を受け、天国に入るようになる。したがって、<span
                 style="background-color:#FCD2E7">イエスの再臨期には、楽園にいるすべての霊人たちが共に地上の信徒たちに再臨して、彼らに協助する摂理をしなければならなくなるのである。</span><br />
             　各個体の信仰態度と、彼がもっている天稟、また、み旨のために立てられた祖先の功績などにより、その時機は各々異なるが、前節で既に説明したような立場から、<span
                 style="background-color:#FCD2E7">地上の信徒たちは、楽園にいる霊人たちの協助によって、再臨主の前に出て、み旨のために献身せざるを得なくなるのである。ゆえに、キリスト教は自然に統一されるようになる。</span></div>
-        <div class="no1"><h4 id="3-2"><a href="15fukka.html#3-2"><span
-                        style="background-color:#FCD2E7">（二）再臨復活による他のすべての宗教の統一</span></a></h4><br />
+        <div class="no1"><h2 id="3-2"><a href="15fukka.html#3-2"><span
+                        style="background-color:#FCD2E7">（二）再臨復活による他のすべての宗教の統一</span></a></h2><br />
             　既に、終末論で論じたように、今まで同一の目的を指向してきたすべての宗教が、一つのキリスト教文化圏へ次第に吸収されつつある歴史的事実を、我々は否定することができない。それゆえに、<span
                 style="background-color:#CCFFFF">キリスト教はキリスト教だけのための宗教ではなく、過去歴史上に現れたすべての宗教の目的までも、共に成就しなければならない最終的な使命をもって現れた宗教である。それゆえに、キリスト教の中心として来られる再臨主は、結局、仏教で再臨すると信じられている弥勒仏にもなるし、儒教で顕現するといって待ち望んでいる真人にもなる。そして彼はまた、それ以外のすべての宗教で、各々彼らの前に顕現するだろうと信じられている、その中心存在ともなるのである。</span><br />
             　このように、<span
                 style="background-color:#FCD2E7">キリスト教で待ち望んでいる再臨のイエスは、他のすべての宗教で再臨すると信じられているその中心人物でもあるので、他の宗教を信じて他界した霊人たちも、彼がもっている霊的な位置に従って、それに適応する時機は各々異なるが、再臨復活の恵沢を受けるために、楽園にいる霊人たちと同じく再臨しなければならない。そして、各自が地上にいたとき信じていた宗教と同じ宗教をもつ地上の信徒たちを、再臨されたイエスの前に導いて、彼を信じ侍らせることによって、み旨を完成するように、協助せざるを得なくなるのである。したがって、すべての宗教は結局、キリスト教を中心として統一されるようになるのである。</span></div>
-        <div class="no1"><h4 id="3-3"><a href="15fukka.html#3-3"><span style="background-color:#FCD2E7">（三）再臨復活による非宗教人の統一</span></a>
-            </h4><br />
+        <div class="no1"><h2 id="3-3"><a href="15fukka.html#3-3"><span style="background-color:#FCD2E7">（三）再臨復活による非宗教人の統一</span></a>
+            </h2><br />
             　<span
                 style="background-color:#FCD2E7">いかなる宗教も信じないで、ただ、良心的に生活して他界した霊人たちも、再臨復活の恵沢を受けるために、各々彼らに許されている時機に、みな地上に再臨するので開。そして、彼らも良心的な地上人をして、再臨主を信じ侍って、そのみ旨を完成するように協助するようになるのである。</span><a
                 href="../Bible_out/02_New Testament/01_matthew/002.html#v2"
@@ -1225,11 +1260,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -1237,16 +1273,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -1304,10 +1341,10 @@
             const container = document.getElementById('stacked-header-container');
             const breadcrumb = document.getElementById('breadcrumb-view');
             const stackedView = document.getElementById('stacked-view');
-            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const headings = Array.from(document.querySelectorAll('h1:not(.page-title), h2, h3, h4, h5, h6'));
             const bars = {};
 
-            for (let i = 2; i <= 6; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const bar = document.createElement('div');
                 bar.className = 'stack-bar';
                 bar.dataset.level = i;
@@ -1337,6 +1374,12 @@
             document.addEventListener('click', () => {
                 container.classList.remove('is-expanded');
             });
+
+            const getCleanText = (el) => {
+                const clone = el.cloneNode(true);
+                clone.querySelectorAll('rt, rp').forEach(r => r.remove());
+                return (clone.textContent || clone.innerText || '').replace(/[◆▸▶]/g, '').trim();
+            };
 
             const updateHeader = () => {
                 const threshold = 100;
@@ -1369,16 +1412,16 @@
                     }
                 }
 
-                const breadcrumbText = path.map(p => p.heading.innerText.replace(/[◆▸▶]/g, '').trim()).join('<span class="separator">/</span>');
+                const breadcrumbText = path.map(p => getCleanText(p.heading)).join('<span class="separator">/</span>');
                 if (breadcrumb.innerHTML !== breadcrumbText) breadcrumb.innerHTML = breadcrumbText;
 
-                for (let i = 2; i <= 6; i++) {
+                for (let i = 1; i <= 6; i++) {
                     const barData = bars[i];
                     const pathItem = path.find(p => p.level === i);
                     if (pathItem) {
                         barData.el.style.display = 'flex';
                         barData.activeHeading = pathItem.heading;
-                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        const cleanText = getCleanText(pathItem.heading);
                         if (barData.text.textContent !== cleanText) barData.text.textContent = cleanText;
                     } else {
                         barData.el.style.display = 'none';

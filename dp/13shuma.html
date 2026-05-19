@@ -54,18 +54,43 @@
       animation: fadeInDown 0.8s ease-out;
     }
 
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 900;
-      color: #111;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.05em;
-    }
+    .page-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
 
-    h1 a {
-      text-decoration: none;
-      color: #111;
-    }
+        .chapter-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-top: 2rem;
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+            text-decoration: none;
+            color: #111;
+        }
+
+        h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+            color: #000;
+        }
 
     h2 {
       font-size: 2.2rem;
@@ -105,10 +130,11 @@
         }
 
 
-    h2::before {
+    h1:not(.page-title)::before {
       content: '◆';
       color: #667eea;
       font-size: 0.8em;
+      margin-right: 0.5rem;
     }
 
     
@@ -367,9 +393,17 @@
         padding: 2rem;
       }
 
-      h1 {
-        font-size: clamp(2rem, 6vw, 3.5rem);
-      }
+      .page-title {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            .chapter-title {
+                font-size: clamp(1.8rem, 5vw, 3rem);
+            }
+
+            h1 {
+                font-size: 2.0rem;
+            }
 
       h2 {
         font-size: 1.8rem;
@@ -603,11 +637,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -615,16 +650,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -638,7 +674,7 @@
     </div>
 
   <div class="container">
-    <h1>原理講論 人類歴史の終末論</h1>
+    <h1 class="page-title">原理講論 人類歴史の終末論</h1>
     <nav class="page-nav">
       <a href="12daraku.html" class="nav-btn"><span>←</span> 前へ</a>
       <a href="index.html" class="nav-btn">目次</a>
@@ -648,9 +684,9 @@
     <!-- St-HP-H -->
     <!-- En-HP-H -->
     
-    <h3>
+    <div class="chapter-title">
       <div class="no1">　<span style="background-color:#FCD2E7">第三章　人類歴史の終末論</span><br /></div>
-    </h3>
+    </div>
     <p>
     <div class="no1">
       <hr /><br />
@@ -759,12 +795,12 @@
         <div class="no1"><hr /><br />
     </div>
     </p>
-    <h3 id="1">
+    <h1 id="1">
       <div class="no1"><a href="13shuma.html#1"><span
             style="background-color:#FCD2E7">第一節　神の創造目的完成と人間の堕落</span></a><br /></div>
-    </h3>
+    </h1>
 
-    <h4 id="1-1"><a href="13shuma.html#1-1"><span style="background-color:#FCD2E7">（一）神の創造目的の完成</span></a></h4><br />
+    <h2 id="1-1"><a href="13shuma.html#1-1"><span style="background-color:#FCD2E7">（一）神の創造目的の完成</span></a></h2><br />
     　既に創造原理において詳細に論述したように、神が人間を創造された目的は人間を見て喜ばれるためであった。したがって、人間が存在する目的はあくまでも神を喜ばせるところにある。では、人間がどのようにすれば神を喜ばすことができ、その創造本然の存在価値を完全に現すことができるのであろうか。人間以外の被造物は自然そのままで神の喜びの対象となるように創造された。しかし人間は創造原理において明らかにされたように、自由意志と、それに基づく行動を通じて、神に喜びを返すべき実体対象として創造されたので、人間は神の目的を知って自ら努力し、その意志のとおり生活しなければ、神の喜びの対象となることはできないのである。それゆえに、<span
       style="background-color:#FCD2E7">人間はどこまでも神の心情を体恤してその目的を知り、その意志に従って生活できるように創造されたのであった。人間がこのような位置に立つようになることを個性完成というのである。</span>たとえ部分的であったとはいえ、堕落前のアダムとエバが、そして預言者たちが、神と一問一答できたということは、人間に、このように創造された素質があったからである。<br />
     　個性を完成した人間と神との関係は、体と心との関係をもって例えられる。体は心が住む一つの家であって、心の命令どおりに行動する。このように、<span
@@ -782,7 +818,7 @@
         href="../Bible_out/01_Old Testament/01_genesis/1.html#v28"
         class="verse-link">創一・28</a>）、個性を完成した人間たちは、科学を発達させて自然界を征服することによって、最高に安楽な社会環境をこの地上につくらなければならない。このような創造理想の実現された所が、すなわち地上天国なのである。</span>このように人間が完成して地上天国の生活を終えたのちに、肉身を脱ぎ捨てて霊界に行けば、そこに天上天国がつくられるのである。ゆえに、<span
       style="background-color:#FCD2E7">神の創造目的はどこまでも、まず、この地上において天国を建設なさるところにあるといわなければならない。</span></div>
-        <div class="no1"><h4 id="1-2"><a href="13shuma.html#1-2"><span style="background-color:#FCD2E7">（二）人間の堕落</span></a></h4><br />
+        <div class="no1"><h2 id="1-2"><a href="13shuma.html#1-2"><span style="background-color:#FCD2E7">（二）人間の堕落</span></a></h2><br />
     　創造原理で詳述したように、人間は成長期間において、未完成の立場にあるとき堕落したのであった。人間に、なぜ成長期間が必要であったか、また、人間始祖が未完成期に堕落したと考えざるを得ない根拠はどこにあるのか、という問題なども、既に創造原理において明らかにされている。<span
       style="background-color:#FCD2E7">人間は堕落することによって神の宮となることができず、サタンが住む家となり、サタンと一体化したために、神性を帯びることができず堕落性を帯びるようになった。このように、堕落性をもった人間たちが悪の子女を繁殖して、悪の家庭と悪の社会、そして悪の世界をつくったのであるが、これがすなわち、堕落人間たちが今まで住んできた地上地獄だったのである。</span><span
       style="background-color:#CCFFFF">地獄の人間たちは、神との縦的な関係が切れてしまったので、人間と人間との横的なつながりもつくることができず、したがって、隣人の苦痛を自分のものとして体恤することができないのために、ついには、隣人を害するような行為をほしいままに行うようになってしまったのである。人間は地上地獄に住んでいるので、肉身を脱ぎ捨てたのちにも、そのまま天上地獄に行くようになる。</span>このようにして、<span
@@ -793,13 +829,13 @@
         class="verse-link">この世の神（コリント・四・４）</a>」と呼ぶ理由は実にここにあるのである。</span><br />
     <hr /><br />
 
-    <h3 id="2">
+    <h1 id="2">
       <div class="no1"><a href="13shuma.html#2"><span style="background-color:#FCD2E7">第二節　救いの摂理</span></a><br /></div>
-    </h3>
+    </h1>
     <p>
     <div class="no1"><br />
-      <h4 id="2-1"><a href="13shuma.html#2-1"><span style="background-color:#FCD2E7">（一）救いの摂理はすなわち復帰摂理である</span></a>
-      </h4>
+      <h2 id="2-1"><a href="13shuma.html#2-1"><span style="background-color:#FCD2E7">（一）救いの摂理はすなわち復帰摂理である</span></a>
+      </h2>
       <br />
       　この罪悪の世界が、人間の悲しむ世界であることはいうまでもないが、神もまた悲しんでおられる世界であるということを、我々は知らなければならない（<a
         href="../Bible_out/01_Old Testament/01_genesis/6.html#v6"
@@ -822,7 +858,7 @@
           href="../Bible_out/02_New Testament/01_matthew/005.html#v48"
           class="verse-link">マタイ福音書五章48節</a>にイエスが、「それだから、あなたがたの天の父が完全であられるように、あなたがたも完全な者となりなさい」と弟子たちに言われたことも、とりもなおさず、創造本然の人間に復帰せよという意味であった。</span>なぜなら、<span
         style="background-color:#FCD2E7">創造本然の人間は、神と一体となることによって神性を帯びるようになるから、創造目的を中心として見るときには、神のように完全になるので、こう言われたのである。</span></div>
-        <div class="no1"><h4 id="2-2"><a href="13shuma.html#2-2"><span style="background-color:#CCFFFF">（二）復帰摂理の目的</span></a></h4><br />
+        <div class="no1"><h2 id="2-2"><a href="13shuma.html#2-2"><span style="background-color:#CCFFFF">（二）復帰摂理の目的</span></a></h2><br />
       　　それでは、<span
         style="background-color:#CCFFFF">復帰摂理の目的は何であろうか。それは本来神の創造目的であった、善の対象である天国をつくることにほほかならない。元来、神は人間を地上に創造なさり、彼らを中心として、まず地上天国を建設しようとされたのである。しかし、人間始祖の堕落によって、その目的を達成することができなかったので、復帰摂理の第一次的な目的も、また、地上天国を復帰することでなければならないのである。</span><span
         style="background-color:#FFFF99">復帰摂理の目的を完成するために来られたイエスは「<a
@@ -830,8 +866,8 @@
           class="verse-link">みこころが天に行われるとおり、地にも行われますように（マタイ六・10）</a>」と祈れと言われたり、「<a
           href="../Bible_out/02_New Testament/01_matthew/004.html#v17"
           class="verse-link">悔い改めよ、天国は近づいた（マタイ四・17）</a>」と言われたが、これらのみ言は、みな、復帰摂理の目的が、地上天国を復帰するところにあったということを立証するのである。</span></div>
-        <div class="no1"><h4 id="2-3"><a href="13shuma.html#2-3"><span style="background-color:#CCFFFF">（三）人類歴史はすなわち復帰摂理歴史である</span></a>
-      </h4>
+        <div class="no1"><h2 id="2-3"><a href="13shuma.html#2-3"><span style="background-color:#CCFFFF">（三）人類歴史はすなわち復帰摂理歴史である</span></a>
+      </h2>
       <br />
       　<span
         style="background-color:#CCFFFF">我々は既に、神の救いの摂理はすなわち復帰摂理であるということを明らかにした。このことからして、人類歴史は、堕落した人間を救い、彼らをして創造本然の善の世界に復帰させるためになされた摂理歴史であるといわなければならない。それでは、果たして人類歴史がすなわち復帰摂理の歴史であるかどうかということを、我々はここで、各方面から考察してみることにしよう。</span><br />
@@ -884,35 +920,35 @@
         <div class="no1"><hr /><br />
     </div>
     </p>
-    <h3 id="3">
+    <h1 id="3">
       <div class="no1"><a href="13shuma.html#3"><span style="background-color:#FCD2E7">第三節　終　　末</span></a><br /></div>
-    </h3>
+    </h1>
     <p>
     <div class="no1">
-      <h4 id="3-1"><a href="13shuma.html#3-1"><span style="background-color:#FCD2E7">（一）終末の意義</span></a></h4><br />
+      <h2 id="3-1"><a href="13shuma.html#3-1"><span style="background-color:#FCD2E7">（一）終末の意義</span></a></h2><br />
       　神が、人間始祖に与えられた三大祝福は、人間始祖の犯罪によって、神を中心としては成就されず、サタンを中心として非原理的に成就されたのだということを、我々は既に述べた。ところが、<span
         style="background-color:#FCD2E7">悪によって始められた人類歴史は、事実上、神の復帰摂理歴史であるがゆえに、サタン主権の罪悪世界はメシヤの降臨を転換点として、神を中心として三大祝福が成就される善主権の世界に変えられるようになるのである。</span><br />
       　<span
         style="background-color:#FCD2E7">このように、サタン主権の罪悪世界が、神主権の創造理想世界に転換される時代を終末（末世）という。したがって終末とは、地上地獄が地上天国に変わるときをいうのである。</span>それゆえにこのときは、今まで<span
         style="background-color:#CCFFFF">キリスト教信徒たちが信じてきたように、天変地異が起こる恐怖の時代ではなく、創世以後、悠久なる歴史路程を通して、人類が唯一の希望としてこいねがってきた喜びの日が実現されるときなのである。詳しくは、後編第一章に譲ることにするが、神は人間の堕落以来、罪悪世界を清算して創造本然の善の世界を復帰するための摂理を、幾度もしてこられたのであった。しかしそのたびごとに人間はその責任分担を完遂し得ず、その目的が成就されなかったので、結果的には、終末が幾度もあったかのように記されている事実を、我々は聖書を通して知ることができるのである。</span></div>
-        <div class="no1"><h4 id="3-1-1"><a href="13shuma.html#3-1-1"><span style="background-color:#CCFFFF">(1)　ノアの時も終末であった</span></a></h4>
+        <div class="no1"><h3 id="3-1-1"><a href="13shuma.html#3-1-1"><span style="background-color:#CCFFFF">(1)　ノアの時も終末であった</span></a></h3>
       <br />
       　<span style="background-color:#CCFFFF"><a href="../Bible_out/01_Old Testament/01_genesis/6.html#v13"
           class="verse-link">創世記六章13節</a>の記録を見れば、ノアのときも終末であったから、「わたしは、すべての人を絶やそうと決心した。彼らは地を暴虐で満たしたから、わたしは彼らを地とともに滅ぼそう」と言われたのである。</span>それでは<span
         style="background-color:#FFFF99">どうしてノアのときが終末であったのか。神は、人間始祖が堕落したために始まったサタンを中心とする堕落世界を、一六〇〇年の罪悪史を一期として、洪水審判をもって滅ぼし、神のみを信奉するノア家庭を立てることにより、その信仰の基台の上に、神主権の理想世界を、復帰なさろうとしたのであった。したがって、ノアのときは終末であったのである</span>（<a
         href="./23kaku.html#2">後編第三章第二節参照</a>）。しかし、ノアの次男ハムの堕落行為によって、彼が人間の責任分担を完遂できなかったために、この目的は達せられなかったのである（<a
         href="../Bible_out/01_Old Testament/01_genesis/9.html#v22" class="verse-link">創九・22</a>）。</div>
-        <div class="no1"><h4 id="3-1-2"><a href="13shuma.html#3-1-2"><span style="background-color:#CCFFFF">(2)　イエスの時も終末であった</span></a>
-        </h6>
+        <div class="no1"><h3 id="3-1-2"><a href="13shuma.html#3-1-2"><span style="background-color:#CCFFFF">(2)　イエスの時も終末であった</span></a>
+        </h3>
         <br />
         　復帰摂理の目的を完遂なさろうとする、そのみ旨に対する神の予定は、絶対的であるがゆえに変えることができないから<a href="16yotei.html">（前編第六章）</a>、<span
           style="background-color:#CCFFFF">ノアを中心とする復帰の摂理は成就されなかったのであるが、神は再び他の預言者を遣わして、信仰の基台を築いて、その基台の上にイエスを送ることにより、サタンを中心とする罪悪の世界を滅ぼして、神を中心とする理想世界を復帰なさろうとしたのであった。したがって、イエスのときも終末であったのである。それゆえにイエスは自ら審判主として来られたと言われたのであり（<a
             href="../Bible_out/02_New Testament/04_john/005.html#v22" class="verse-link">ヨハネ五・22</a>）、</span><span
           style="background-color:#FFFF99">そのときもまた、「<a href="../Bible_out/01_Old Testament/39_malachi/004.html#v1"
             class="verse-link">万軍の主は言われる、見よ、炉のように燃える日が来る。その時すべて高ぶる者と、悪を行う者とは、わらのようになる。その来る日は、彼らを焼き尽して、根も枝も残さない（マラキ四・１）</a>」と預言されていたのであった。</span>イエスはこのように、創造理想世界を復帰なさろうとして来られたのであるが、ユダヤ人たちが彼を信ぜず、人間の責任分担を完遂し得なかったので、この目的も達せられず、再臨のときまで再び延長されたのである。</div>
-        <div class="no1"><h4 id="3-1-3"><a href="13shuma.html#3-1-3"><span
+        <div class="no1"><h3 id="3-1-3"><a href="13shuma.html#3-1-3"><span
               style="background-color:#CCFFFF">(3)　イエスの再臨のときも終末である</span></a>
-          </h6><br />
+          </h3><br />
           　<span
             style="background-color:#CCFFFF">ユダヤ民族の不信に出会ったイエスは、十字架につけられて亡くなられることにより、霊的救いのみを成就されるようになったのである。したがってイエスは、再臨して初めて、霊肉合わせて、救いの摂理の目的を完遂され<a
               href="14meshia.html#1-4">（前編第四章第一節（四））</a>、地上天国を復帰するようになるので、イエスの再臨のときもまた終末である。</span>ゆえに<span
@@ -920,14 +956,14 @@
               class="verse-link">ノアの時にあったように、人の子の時にも同様なことが起こるであろう（ルカ一七・26）</a>」と言われたのであり、また御自身が再臨なさるときも、終末となり、天変地異が起こるであろうと預言されたのであった（<a
               href="../Bible_out/02_New Testament/01_matthew/024.html#v29"
               class="verse-link">マタイ二四・29</a>）。</span></div>
-        <div class="no1"><h4 id="3-2"><a href="13shuma.html#3-2"><span style="background-color:#CCFFFF">（二）終末の徴候に関する聖句</span></a></h4>
+        <div class="no1"><h2 id="3-2"><a href="13shuma.html#3-2"><span style="background-color:#CCFFFF">（二）終末の徴候に関する聖句</span></a></h2>
           <br />
           　既に上述したように、<span
             style="background-color:#CCFFFF">多くのキリスト教信徒たちは、聖書に記録されている文字どおりに、終末には天変地異が起こり、人間社会においても、現代人としては想像することもできない異変が起こるであろうと信じている。しかし、人類歴史が、神の創造本然の世界を復帰していく摂理歴史であるということを理解するならば、聖書に記録されている終末の徴候が、そのまま実際に、文字どおりに現れるのではないということを知ることができるのである。それでは、終末に関するすべての記録は、各々何を象徴したのであろうかということに関して、調べてみることにしよう。</span></div>
-        <div class="no1"><h4 id="3-2-1"><a href="13shuma.html#3-2-1"><span style="background-color:#CCFFFF">(1)　天と地を滅ぼして（<a
+        <div class="no1"><h3 id="3-2-1"><a href="13shuma.html#3-2-1"><span style="background-color:#CCFFFF">(1)　天と地を滅ぼして（<a
                   href="../Bible_out/02_New Testament/22_2-peter/003.html#v12" class="verse-link">ペテロ・三・12</a>、<a
                   href="../Bible_out/01_Old Testament/01_genesis/6.html#v13" class="verse-link">創六・13</a>）</span></a>
-          </h4><br />
+          </h3><br />
           　　　　　　　　<span style="background-color:#CCFFFF">新しい天と新しい地をつくられる（<a
               href="../Bible_out/02_New Testament/27_revelation/021.html#v1" class="verse-link">黙二一・１</a>、<a
               href="../Bible_out/02_New Testament/22_2-peter/003.html#v13" class="verse-link">ペテロ・三・13</a>、<a
@@ -941,9 +977,9 @@
             href="../Bible_out/02_New Testament/27_revelation/021.html#v1"
             class="verse-link">黙二一・１</a>）、新しい主権の国を建てるということを意味するのである。したがって、<span
             style="background-color:#CCFFFF">天と地とを滅ぼすということは、それを主管しているサタンの主権を滅ぼすことを意味するのであり、また、新しい天と新しい地をたてるということは、イエスを中心とする神主権下の新しい天地を復帰するということを意味するのである。</span></div>
-        <div class="no1"><h4 id="3-2-2"><a href="13shuma.html#3-2-2"><span style="background-color:#CCFFFF">(2)　天と地を火をもって審判される（<a
+        <div class="no1"><h3 id="3-2-2"><a href="13shuma.html#3-2-2"><span style="background-color:#CCFFFF">(2)　天と地を火をもって審判される（<a
                   href="../Bible_out/02_New Testament/22_2-peter/003.html#v12"
-                  class="verse-link">ペテロ・三・12</a>）</span></a></h6><br />
+                  class="verse-link">ペテロ・三・12</a>）</span></a></h3><br />
             　<span style="background-color:#CCFFFF"><a href="../Bible_out/02_New Testament/22_2-peter/003.html#v12"
                 class="verse-link">ペテロ・三章12節</a>を見ると、終末には「天は燃えくずれ、天体は焼けうせてしまう」と記録されている。また、<a
                 href="../Bible_out/01_Old Testament/39_malachi/004.html#v1"
@@ -974,10 +1010,10 @@
               class="verse-link">ルカ福音書一二章49節</a>に、「わたしは、火を地上に投じるためにきたのだ。火がすでに燃えていたならと、わたしはどんなに願っていることか」と書かれているのであるが、これは、イエスがみ言の実体として来られ（<a
               href="../Bible_out/02_New Testament/04_john/001.html#v14"
               class="verse-link">ヨハネ一・14</a>）、命のみ言を既に宣布なさったにもかかわらず、ユダヤ人たちがこれを受け入れないのを御覧になって、嘆きのあまり言われたみ言であった。</div>
-        <div class="no1"><h4 id="3-2-3"><a href="13shuma.html#3-2-3"><span style="background-color:#CCFFFF">(3)　墓から死体がよみがえる（<a
+        <div class="no1"><h3 id="3-2-3"><a href="13shuma.html#3-2-3"><span style="background-color:#CCFFFF">(3)　墓から死体がよみがえる（<a
                     href="../Bible_out/02_New Testament/01_matthew/027.html#v52" class="verse-link">マタイ二七・52</a>、<a
                     href="../Bible_out/02_New Testament/13_1-thessalonians/004.html#v16"
-                    class="verse-link">テサロニケ・四・16</a>）</span></a></h6><br />
+                    class="verse-link">テサロニケ・四・16</a>）</span></a></h3><br />
               　<span style="background-color:#CCFFFF"><a href="../Bible_out/02_New Testament/01_matthew/027.html#v52"
                   class="verse-link">マタイ福音書二七章52節</a>以下を見ると、イエスが亡くなられるとき、「墓が開け、眠っている多くの聖徒たちの死体が生き返った。そしてイエスの復活ののち、墓から出てきて、聖なる都にはいり、多くの人に現れた」と記録されているのであるが、これは、腐敗してしまった彼らの肉身が、再び生き返ったということを意味するものではないのである</span><a
                 href="15fukka.html#2-3">（前編第五章第二節（三））</a>。もし、<span
@@ -987,10 +1023,10 @@
                   class="verse-link">マタイ一七・３</a>）、</span><span
                 style="background-color:#CCFFFF">旧約時代の霊人たちが、再臨復活のために地上に再臨したのを霊的に見て<a
                   href="15fukka.html#2-3">（前編第五章第二節（三））</a>記録した言葉だったのである。では墓は何を意味するのであろうか。イエスによって開かれた楽園から見れば、旧約時代の聖徒たちがとどまっていた霊形体級の霊人の世界は、より暗い世界であるために、そこを称して墓と言ったのである。</span>旧約時代の霊人たちは、すべてこの霊界にいたのであるが、そのとき再臨復活して、地上信徒たちの前に現れたのであった。</div>
-        <div class="no1"><h4 id="3-2-4"><a href="13shuma.html#3-2-4"><span
+        <div class="no1"><h3 id="3-2-4"><a href="13shuma.html#3-2-4"><span
                     style="background-color:#CCFFFF">(4)　地上人間たちが引きあげられ空中で主に会う（<a
                       href="../Bible_out/02_New Testament/13_1-thessalonians/004.html#v17"
-                      class="verse-link">テサロニケ・四・17</a>）</span></a></h6><br />
+                      class="verse-link">テサロニケ・四・17</a>）</span></a></h3><br />
                 　<span
                   style="background-color:#CCFFFF">ここに記録されている空中とは、空間的な天を意味するのではない。大抵聖書において、地は堕落した悪主権の世界を意味し、天は罪のない善主権の世界を意味する。</span><span
                   style="background-color:#FFFF99">これは、あまねくいまし給う神である限り、地のいずこにも遍在すべきであるにもかかわらず、「天にいますわれらの父よ」（<a
@@ -999,10 +1035,10 @@
                     href="../Bible_out/02_New Testament/04_john/003.html#v13"
                     class="verse-link">ヨハネ三・13</a>）と言われたことを見ても、そのことが分かるのである。</span>それゆえに、<span
                   style="background-color:#CCFFFF">空中で主に会うということは、イエスが再臨されてサタンの主権を倒し、地上天国を復帰されることによってたてられる、その善主権の世界において、主と会うようになるということを意味するのである。</span></div>
-        <div class="no1"><h4 id="3-2-5"><a href="13shuma.html#3-2-5"><span
+        <div class="no1"><h3 id="3-2-5"><a href="13shuma.html#3-2-5"><span
                       style="background-color:#CCFFFF">(5)　日と月が光を失い星が空から落ちる（<a
                         href="../Bible_out/02_New Testament/01_matthew/024.html#v29"
-                        class="verse-link">マタイ二四・29</a>）</span></a></h6><br />
+                        class="verse-link">マタイ二四・29</a>）</span></a></h3><br />
                   　<span style="background-color:#CCFFFF"><a href="../Bible_out/01_Old Testament/01_genesis/37.html#v9"
                       class="verse-link">創世記三七章９節</a>以下を見れば、ヤコブの十二人の子供たちのうち、十一番目の息子であるヨセフが夢を見たとあり、その内容について「ヨセフはまた一つの夢を見て、それを兄弟たちに語って言った、『わたしはまた夢を見ました。日と月と十一の星とがわたしを拝みました』。彼はこれを父と兄弟たちに語ったので、父は彼をとがめて言った、『あなたが見たその夢はどういうのか。ほんとうにわたしとあなたの母と、兄弟たちとが行って地に伏し、あなたを拝むのか』」と記録されている。ところがヨセフが成長して、エジプトの総理大臣になったとき、まさしくこの夢のとおり、その父母と兄弟たちが彼を拝んだのである。</span><br />
                   　<span
@@ -1017,7 +1053,7 @@
                       class="verse-link">ヨハネ一六・13</a>）の光をいうのである。したがって、日と月が光を失うというのは、イエスと聖霊による新約のみ言が、光を失うようになるということを意味するのである。では何故、新約のみ言が、光を失うようになるのであろうか。それはちょうど、イエスと聖霊が来られて、旧約のみ言を成就するための新約のみ言を下さることにより、旧約のみ言が光を失うようになったと同様に、</span><span
                     style="background-color:#CCFFFF">イエスが再臨されて、新約のみ言を成就し、新しい天と新しい地とをたてられるので（<a
                       href="../Bible_out/02_New Testament/27_revelation/021.html#v1"
-                      class="verse-link">黙二一・１</a>）そのときの新しいみ言によって（本章第五節（一）参照）初臨のときに下さった新約のみ言はその光を失うようになるのである。ここにおいて、み言がその光を失うというのは、新しい時代がくることによって、そのみ言の使命期間が過ぎさるということを意味する。</span><br />
+                      class="verse-link">黙二一・１</a>）そのときの新しいみ言によって<a href="13shuma.html#5-1">（本章第五節（一）参照）</a>初臨のときに下さった新約のみ言はその光を失うようになるのである。ここにおいて、み言がその光を失うというのは、新しい時代がくることによって、そのみ言の使命期間が過ぎさるということを意味する。</span><br />
                   　<span
                     style="background-color:#CCFFFF">また、星が落ちるというのは、終末において、多くのキリスト教徒たちがつまずき落ちるようになる、ということを意味するのである。</span><span
                     style="background-color:#FFFF99">メシヤの降臨を熱望してきたユダヤ教の指導者たちが、メシヤとして来られたイエスを知らず、彼に反対して落ちてしまったように、イエスの再臨を熱望しているキリスト教徒たちも、十分注意しないと、その日にはつまずき落ちてしまうであろうということを預言されたのである</span>（<a
@@ -1030,10 +1066,10 @@
                   <hr /><br />
     </div>
     </p>
-    <h3 id="4">
+    <h1 id="4">
       <div class="no1"><a href="13shuma.html#4"><span style="background-color:#FCD2E7">第四節　終末 と 現 世</span></a><br />
       </div>
-    </h3>
+    </h1>
     <p>
     <div class="no1">
 
@@ -1052,7 +1088,7 @@
         style="background-color:#FFFF99">イエスは、「いちじくの木からこの譬を学びなさい。その枝が柔らかになり、葉が出るようになると、夏の近いことがわかる」（<a
           href="../Bible_out/02_New Testament/01_matthew/024.html#v32"
           class="verse-link">マタイ二四・32</a>）と、言われたのである。</span></div>
-        <div class="no1"><h4 id="4-1"><a href="13shuma.html#4-1"><span style="background-color:#FCD2E7">（一）第一祝福復帰の現象</span></a></h4><br />
+        <div class="no1"><h2 id="4-1"><a href="13shuma.html#4-1"><span style="background-color:#FCD2E7">（一）第一祝福復帰の現象</span></a></h2><br />
       　既に創造原理において論じたように、<span
         style="background-color:#FCD2E7">神がアダムとエバに約束された第一祝福は、彼らが個性を完成することを意味するのである。</span>堕落人間をして、個性完成した創造本然の人間へと復帰してこられた神の摂理が、その最終段階に至っているということは、次のような各種の現象を見ても知ることができる。<br />
       　<span style="background-color:#FCD2E7">第一に、堕落人間の心霊が復帰されていくのを見て、それを知ることができる。</span><span
@@ -1070,7 +1106,7 @@
       　<span style="background-color:#FCD2E7">第四に、堕落人間の本性の愛が復帰されていくという事実が、個性を完成していく終末のときの到来を更に証明してくれる。</span><span
         style="background-color:#CCFFFF">神の創造理想を完成した世界は、完成した一人の人間の姿の世界であって、その世界の人間は、みな神と縦的に一体となっているがゆえに、人間相互間においても横的に一体とならなければならないのである。したがって、この世界はもっぱら、神の愛をもって縦横に結ばれ、一つの体のようにならざるを得ないのである。</span>しかし、人間は堕落によって神との縦的な愛の関係を断たれてしまったので、人間同士の横的な愛も切断され、人類歴史は闘争のもつれによって流れてきた。しかし、<span
         style="background-color:#CCFFFF">現代に至っては博愛主義思想が高潮してくるに従い、人間が漸次、その本性愛を探し求めてきているのを見ても、現代は神の第一祝福を復帰することにより、神の愛を中心として個性を完成することができる終末に入っている、という事実を知ることができるのである。</span></div>
-        <div class="no1"><h4 id="4-2"><a href="13shuma.html#4-2"><span style="background-color:#FCD2E7">（二）第二祝福復帰の現象</span></a></h4><br />
+        <div class="no1"><h2 id="4-2"><a href="13shuma.html#4-2"><span style="background-color:#FCD2E7">（二）第二祝福復帰の現象</span></a></h2><br />
       　<span
         style="background-color:#FCD2E7">神の第二祝福は、アダムとエバが真の父母として完成し、善の子女を繁殖することにより、善主権の家庭と、社会と、世界を成就するようになるということを意味する。</span>しかし、アダムとエバは堕落して悪の父母となったので、全人類は悪の子女となり、悪主権に拘束された世界をつくってしまったのである。しかし神は一方に宗教を立てて摂理することにより、内的なサタン分立による心霊復帰の摂理をされ、また、他方においては、闘争と戦争による外的なサタン分立をすることにより、内外両面における主権復帰の摂理をしてこられたのである。このように<span
         style="background-color:#CCFFFF">人類歴史は、内外両面のサタン分立による復帰摂理を通じて、将来の真の親であられるイエスに仕えることのできる子女を探し求めて、神の第二祝福を復帰してきたから、それは宗教を中心とする文化圏の発展史と国家興亡史とに現れた内外両面における神の主権復帰の現象を見ることによって、現世がすなわち終末であるということを知ることができるのである。</span><br />
@@ -1100,7 +1136,7 @@
         style="background-color:#FFFF99">このように、善悪二つの主権の歴史路程が交差するときを終末という。そしてさらにこのときは、アダムとエバが堕落した長成期完成級の時期を、蕩減復帰するときであるから、あたかもエデンの園の人間始祖が、どこに中心をおくべきかを知らずに、混沌の中に陥っていったように、いかなる人間も思想の混乱を起こして、彷徨するようになるのである。</span><br />
       　復帰摂理路程において、このように終末を迎えて、善悪二つの主権が交差していたときは、幾度かあった。既に述べたように、ノアのときやイエスのときも終末であった。ゆえに、この二つの主権が互いに交差していたのである。しかしそのたびごとに、人間はその責任分担を完遂できず、悪主権を全滅することができなかったので、神は主権分立の摂理を再びなし給わなければならなかった。したがってイエスの再臨期に、いま一度、二つの主権の交差があるのである。復帰摂理路程は、このように、周期的に相似的な螺旋状を反復しながら、円形過程を通りつつ創造目的を指向してきたから、歴史上においては必然的に、同時性の時代が形成されてきたわけである（<a
         href="./23kaku.html#1">後編第三章第一節参照</a>）。</div>
-        <div class="no1"><h4 id="4-3"><a href="13shuma.html#4-3"><span style="background-color:#FCD2E7">（三）第三祝福復帰の現象</span></a></h4><br />
+        <div class="no1"><h2 id="4-3"><a href="13shuma.html#4-3"><span style="background-color:#FCD2E7">（三）第三祝福復帰の現象</span></a></h2><br />
       　<span
         style="background-color:#FCD2E7">神の第三祝福はアダムとエバが完成して、被造世界に対する主管性をもつようになることを意味する。そして、被造世界に対する人間の主管性には、内外両面の主管性がある。</span>人間は堕落によってこの両面の主管性を失ったのであるが、現代に至って、これが復帰されつつあるのを見て、現代が終末であるということを知ることができるのである。<br />
       　<span style="background-color:#FCD2E7">内的主管性というのは、心情的主管性を意味する。</span>すなわち<span
@@ -1119,14 +1155,14 @@
       <hr /><br />
     </div>
     </p>
-    <h3 id="5">
+    <h1 id="5">
       <div class="no1"><a href="13shuma.html#5"><span
             style="background-color:#FCD2E7">第五節　終末と新しいみ言と我々の姿勢</span></a><br />
       </div>
-    </h3>
+    </h1>
     <p>
     <div class="no1">
-      <h4 id="5-1"><a href="13shuma.html#5-1"><span style="background-color:#FCD2E7">（一）終末と新しい真理</span></a></h4><br />
+      <h2 id="5-1"><a href="13shuma.html#5-1"><span style="background-color:#FCD2E7">（一）終末と新しい真理</span></a></h2><br />
       　<span style="background-color:#FCD2E7">堕落人間は宗教により霊と真理をもって（<a
           href="../Bible_out/02_New Testament/04_john/004.html#v23"
           class="verse-link">ヨハネ四・23</a>）その心霊と知能とをよみがえらせ、その内的な無知を打開していくのである。さらに、真理においても、内的な無知を打開する宗教による内的真理と、外的な無知を打開する科学による外的真理との二つの面がある。</span>したがって<span
@@ -1169,7 +1205,7 @@
           class="verse-link">黙一〇・11</a>）と言われたのであった。それゆえにまた「神がこう仰せになる。終りの時には、わたしの霊をすべての人に注ごう。そして、あなたがたのむすこ娘は預言をし、若者たちは幻を見、老人たちは夢を見るであろう。その時には、わたしの男女の僕たちにもわたしの霊を注ごう。そして彼らも預言をするであろう」（<a
           href="../Bible_out/02_New Testament/05_acts/002.html#v17"
           class="verse-link">使徒二・17、18</a>）とも言われたのである。このようにどの方面から見ても、終末においては必ず、新しい真理が出現しなければならないのである。</span></div>
-        <div class="no1"><h4 id="5-2"><a href="13shuma.html#5-2"><span style="background-color:#FCD2E7">（二）終末に際して我々がとるべき態度</span></a></h4>
+        <div class="no1"><h2 id="5-2"><a href="13shuma.html#5-2"><span style="background-color:#FCD2E7">（二）終末に際して我々がとるべき態度</span></a></h2>
       <br />
       　復帰摂理歴史の流れを見ると、古いものが終わろうとするとき、新しいものが始まるということを、我々は発見することができる。したがって、古いものの終わる点が、すなわち新しいものの始まる点ともなるのである。それゆえに、<span
         style="background-color:#CCFFFF">古い歴史の終末期が、すなわち新しい歴史の創始期ということになるのである。</span>そして、このような時期は同じ点から出発して、各々その目的を異にし、世界的な実を結ぶようになった善と悪との二つの主権が、互いに交差する時期となるのである。ゆえに<span
@@ -1481,11 +1517,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -1493,16 +1530,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -1560,10 +1598,10 @@
             const container = document.getElementById('stacked-header-container');
             const breadcrumb = document.getElementById('breadcrumb-view');
             const stackedView = document.getElementById('stacked-view');
-            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const headings = Array.from(document.querySelectorAll('h1:not(.page-title), h2, h3, h4, h5, h6'));
             const bars = {};
 
-            for (let i = 2; i <= 6; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const bar = document.createElement('div');
                 bar.className = 'stack-bar';
                 bar.dataset.level = i;
@@ -1593,6 +1631,12 @@
             document.addEventListener('click', () => {
                 container.classList.remove('is-expanded');
             });
+
+            const getCleanText = (el) => {
+                const clone = el.cloneNode(true);
+                clone.querySelectorAll('rt, rp').forEach(r => r.remove());
+                return (clone.textContent || clone.innerText || '').replace(/[◆▸▶]/g, '').trim();
+            };
 
             const updateHeader = () => {
                 const threshold = 100;
@@ -1625,16 +1669,16 @@
                     }
                 }
 
-                const breadcrumbText = path.map(p => p.heading.innerText.replace(/[◆▸▶]/g, '').trim()).join('<span class="separator">/</span>');
+                const breadcrumbText = path.map(p => getCleanText(p.heading)).join('<span class="separator">/</span>');
                 if (breadcrumb.innerHTML !== breadcrumbText) breadcrumb.innerHTML = breadcrumbText;
 
-                for (let i = 2; i <= 6; i++) {
+                for (let i = 1; i <= 6; i++) {
                     const barData = bars[i];
                     const pathItem = path.find(p => p.level === i);
                     if (pathItem) {
                         barData.el.style.display = 'flex';
                         barData.activeHeading = pathItem.heading;
-                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        const cleanText = getCleanText(pathItem.heading);
                         if (barData.text.textContent !== cleanText) barData.text.textContent = cleanText;
                     } else {
                         barData.el.style.display = 'none';

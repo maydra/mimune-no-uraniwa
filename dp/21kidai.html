@@ -64,17 +64,42 @@
             animation: fadeInDown 0.8s ease-out;
         }
 
-        h1 {
+        .page-title {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 900;
             color: #111;
             margin-bottom: 1.5rem;
             letter-spacing: 0.05em;
+            text-align: center;
         }
 
-        h1 a {
+        .chapter-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-top: 2rem;
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
             text-decoration: none;
             color: #111;
+        }
+
+        h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+            color: #000;
         }
 
         h2 {
@@ -377,8 +402,16 @@
                 padding: 2rem;
             }
 
-            h1 {
+            .page-title {
                 font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            .chapter-title {
+                font-size: clamp(1.8rem, 5vw, 3rem);
+            }
+
+            h1 {
+                font-size: 2.0rem;
             }
 
             h2 {
@@ -627,11 +660,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -639,16 +673,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -661,7 +696,7 @@
         <div id="stacked-view" class="stacked-view"></div>
     </div>
     <div class="container">
-        <h1>原理講論 復帰基台摂理時代</h1>
+        <h1 class="page-title">原理講論 復帰基台摂理時代</h1>
         <nav class="page-nav">
             <a href="20sho.html" class="nav-btn"><span>←</span> 前へ</a>
             <a href="index.html" class="nav-btn">目次</a>
@@ -719,18 +754,18 @@
         </details>
 
         
-        <h3>
+        <div class="chapter-title">
             <div class="no1"> <span style="background-color:#FCD2E7">第一章　復帰基台摂理時代</span><br /></div>
-        </h3>
+        </div>
         <p>
         <div class="no1">
             <hr /><br />
         </div>
         </p>
-        <h3 id="1">
+        <h1 id="1">
             <div class="no1"><a href="21kidai.html#1"><span
                         style="background-color:#FCD2E7">第一節　アダムの家庭を中心とする復帰摂理</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             　堕落はたとえ人間自身の過ちから起きたものであるとしても、神がその堕落人間を救わなければならない理由については、既に<a
@@ -739,7 +774,7 @@
             　ゆえに、<span
                 style="background-color:#FCD2E7">アダムの家庭が「信仰基台」と「実体基台」とを復帰する蕩減条件を立てて、それによって「メシヤのための基台」をつくり、その上でメシヤを迎えるのでなければ、復帰摂理は成就できないのである。</span></div>
         <div class="no1"><hr /><br />
-            <h4 id="1-1"><a href="21kidai.html#1-1"><span style="background-color:#FCD2E7">（一）信仰基台</span></a></h4>
+            <h2 id="1-1"><a href="21kidai.html#1-1"><span style="background-color:#FCD2E7">（一）信仰基台</span></a></h2>
             <br /><span style="background-color:#FCD2E7">第一に、「信仰基台」を復帰するためには、それを蕩減復帰するための何らかの条件物がなければならない。</span><span
                 style="background-color:#CCFFFF">もともと、アダムは「信仰基台」を立てるための条件として下さった神のみ言を、その不信仰のために失ってしまったのである。それゆえ、もはやみ言を神から直接受けることができない立場にまで（価値を失い）堕落してしまったアダムであったので、その「信仰基台」を復帰するためには、彼が信仰によって、そのみ言の代わりとなる何らかの条件物を、神のみ意にかなうように立てなければならなかったのである。</span><span
                 style="background-color:#FCD2E7">アダムの家庭で立てなければならない、そのみ言の代わりの条件物とは、すなわち供え物であった。</span><br />
@@ -781,7 +816,7 @@
                 style="background-color:#FFFF99">神がカインの供え物を受けられなかったのは、カインが憎いからではなかったのである。ただ、カインはサタンが取ることのできる相対的な立場に立てられていたので、神がその供え物を取ることができるような何らかの条件をカイン自身が立てない限りは、神はそれを取ることができなかったからである。</span>神はこれによって、サタンと相対する立場にいる人間が、神の側に復帰するには、必ずその人自身が何らかの蕩減条件を立てなければならないことを教示されたのである。それでは<span
                 style="background-color:#FFFF99">カインは、どのような蕩減条件を立てなければならなかったのであろうか。それは正に、「堕落性を脱ぐための蕩減条件」であったが、</span>これに関しては、次項で詳しく解明することにしよう。</div>
         <div class="no1"><hr /><br />
-            <h4 id="1-2"><a href="21kidai.html#1-2"><span style="background-color:#FCD2E7">（二）実体基台</span></a></h4>
+            <h2 id="1-2"><a href="21kidai.html#1-2"><span style="background-color:#FCD2E7">（二）実体基台</span></a></h2>
             <br /><span
                 style="background-color:#FCD2E7">アダムの家庭において「実体基台」がつくられるためには、カインが「堕落性を脱ぐための蕩減条件」を立てることにより、神がその献祭を喜んで受け得るような条件を立てるべきだったのである。</span>では、「堕落性を脱ぐための蕩減条件」は、どのようにして立てるべきであったろうか。人間始祖は、天使長によって堕落し、それから堕落性を継承するようになったので、<span
                 style="background-color:#FCD2E7">堕落人間がその堕落性を脱ぐためには、蕩減復帰原理により、次に記録されているように、その堕落性本性をもつようになった経路と反対の経路をたどることによって、蕩減条件を立てなければならなかったのである。</span><br />
@@ -807,8 +842,8 @@
             　もし、アダムの家庭で、カインがアベルに従順に屈伏することによって「堕落性を脱ぐための蕩減条件」を立てたならば、彼らは既につくられた「信仰基台」の上に「実体基台」を立て、この二つの基台によってつくられる「メシヤのための家庭的基台」の上でメシヤを迎え、創造本然の四位基台を復帰したはずであった。しかるに、<span
                 style="background-color:#FCD2E7">カインがアベルを殺害することによって、天使長が人間を堕落せしめた堕落性本性を反復するようになり、アダムの家庭が立てるべきであった「実体基台」は立てられなかった。したがって、アダムの家庭を中心とする復帰摂理は成し遂げられなかったのである。</span></div>
         <div class="no1"><hr /><br />
-            <h4 id="1-3"><a href="21kidai.html#1-3"><span
-                        style="background-color:#FCD2E7">（三）アダムの家庭におけるメシヤのための基台とその喪失</span></a></h4><br /><span
+            <h2 id="1-3"><a href="21kidai.html#1-3"><span
+                        style="background-color:#FCD2E7">（三）アダムの家庭におけるメシヤのための基台とその喪失</span></a></h2><br /><span
                 style="background-color:#CCFFFF">「メシヤのための基台」は、「信仰基台」を蕩減復帰した基台の上で、「実体基台」を立てることによってつくられる。そして、献祭という観点から見れば、「信仰基台」は、「象徴献祭」を神のみ意にかなうようにささげることによって復帰され、「実体基台」は「実体献祭」を神のみ意にかなうようにささげることによってつくられるとも見ることができる。それでは、「象徴献祭」および「実体献祭」の意義とその目的は果たして何であるかということについて調べてみることにしよう。</span><br />
             　神の創造目的である三大祝福は、まずアダムとエバが各々個性を完成して夫婦とならなければならないということであり、つぎに、子女を殖やして家庭をつくり、更に進んで彼らが万物を主管することによって成就されるようになっていた。しかし、<span
                 style="background-color:#CCFFFF">堕落によってその三大祝福は達成されなかったので、これを復帰するためには、それと反対の経路に従って、まず、万物を復帰するための蕩減条件と、人間を復帰するための象徴的な蕩減条件とを同時に立てることができる「象徴献祭」をささげて、「信仰基台」を立てなければならない。つぎには、子女を復帰して、その上に、父母を復帰するための蕩減条件を、同時に立てることができる「実体献祭」をささげて、「実体基台」をつくって、「メシヤのための基台」を造成しなければならない。ゆえに、我々は「象徴献祭」の意義とその目的を二つに分けて考えることができる。</span>既に、堕落論で述べたように、<span
@@ -833,8 +868,8 @@
             　そうして、<span
                 style="background-color:#FFFF99">アベルがみ意にかなう献祭をささげることによって、アダムを中心とする「信仰基台」を蕩減復帰する条件と、「実体献祭」をささげる中心人物としてのアベルの立場が立てられたのであった。しかし、カインがアベルを殺したので、彼らは天使長がエバを堕落させたのと同じ立場に再び立つようになった。そのため「堕落性を脱ぐための蕩減条件」が立てられなくなり、「実体献祭」に失敗したので、「実体基台」をつくることができず、したがって、「メシヤのための基台」も造成することができなかったので、アダムの家庭を中心とする復帰摂理の完成は失敗に帰したのであった。</span></div>
         <div class="no1"><hr /><br />
-            <h4 id="1-4"><a href="21kidai.html#1-4"><span style="background-color:#FCD2E7">（四）アダムの家庭が見せてくれた教訓</span></a>
-            </h4><br /><span
+            <h2 id="1-4"><a href="21kidai.html#1-4"><span style="background-color:#FCD2E7">（四）アダムの家庭が見せてくれた教訓</span></a>
+            </h2><br /><span
                 style="background-color:#FCD2E7">アダムの家庭を中心とする復帰摂理の失敗は、結果的に見て、まず第一に、み旨成就に対する神の予定と人間の責任分担に対して、神がどのような態度をとられるかを見せてくれた。</span><span
                 style="background-color:#CCFFFF">元来、み旨成就に対する神の予定は、必ず、神の責任分担と人間の責任分担とが合わさり一つになって初めて完成できるようになっている。</span>それゆえに、<span
                 style="background-color:#FFFF99">カインがアベルを通して献祭するということは、彼らの責任分担に当たるものであって、神は彼らに、どのように献祭すべきかという点に関しては教示なさることができなかったのである。</span><br />
@@ -848,10 +883,10 @@
             <hr /><br /></a></a></a></a>
         </div>
         </p>
-        <h3 id="2">
+        <h1 id="2">
             <div class="no1"><a href="21kidai.html#2"><span
                         style="background-color:#FCD2E7">第二節　ノアの家庭を中心とする復帰摂理</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             　カインがアベルを殺害したため、アダムの家庭を中心とする復帰摂理は成就されなかった。しかし、<span
@@ -862,7 +897,7 @@
                     class="verse-link">創世記六章13節</a>に、「わたしは、すべての人を絶やそうと決心した。彼らは地を暴虐で満たしたから、わたしは彼らを地とともに滅ぼそう」と言われたとおり、洪水審判をされたのを見ると、そのときも終末であったことが明らかに分かる。</span>なぜなら、洪水審判後にノアの家庭を基盤としてメシヤを遣わし、創造目的を完成させようとなさったからである。ゆえに、<span
                 style="background-color:#FCD2E7">ノアの家庭も、まず「信仰基台」を復帰する蕩減条件を立て、その基台の上に、「実体基台」を復帰する蕩減条件を立てることによって、アダムの家庭が復帰できなかった「メシヤのための基台」を蕩減復帰しなければならなかったのである。</span></div>
         <div class="no1"><hr /><br />
-            <h4 id="2-1"><a href="21kidai.html#2-1"><span style="background-color:#FCD2E7">（一）信仰基台</span></a></h4>
+            <h2 id="2-1"><a href="21kidai.html#2-1"><span style="background-color:#FCD2E7">（一）信仰基台</span></a></h2>
             <br /><a id="2-1-1" href="#2-1-1" class="anchor-header"><span
                     style="background-color:#FCD2E7">(1)　信仰基台を復帰する中心人物</span></a><br />
             　<span
@@ -890,7 +925,7 @@
                 style="background-color:#FCD2E7">箱舟が完成されたのちに、神は四十日間の洪水審判をなさったが、この審判の目的は何であったのだろうか。</span>創造原理によれば、人間は一人の主人に対応するように創造されたので、淫乱に陥って、既にサタンと対応している人類を、神がもう一人の主人の立場で対応して、非原理的な摂理をなさることはできなかった。ゆえに、<span
                 style="background-color:#FCD2E7">神だけが対応して摂理することのできる対象を立てるために、サタンの相対となっている全人類を滅ぼす洪水審判の摂理をなさったのである。</span>それでは、<span
                 style="background-color:#CCFFFF">審判期間を四十日と定められた理由は、</span><span
-                style="background-color:#FFFF99">どこにあったのだろうか。</span>後編第三章第二節で論述するように、十数は帰一数である。ゆえに、神がアダム以後十代目にノアを選び立てた目的は、アダムを中心として完成できなかったみ旨を、ノアを中心に蕩減復帰して、神の方へ再び帰一させるための、十数復帰の蕩減期間を立てようとなさったところにあったのである。ゆえに、神は四位基台の目的を完成するために、四数を復帰する蕩減期間として、各代を立てる摂理を、ノアに至るまで十代にわたって続けてこられたのである。したがって、アダムからノアまでの期間は、四十数を復帰するための蕩減期間であった。しかし、当時の人間たちの淫乱によって、この四十数蕩減期間がサタンの侵入を受けたので、神はノアの箱舟を中心として、四位基台を完成する摂理を再びなさるため、<span
+                style="background-color:#FFFF99">どこにあったのだろうか。</span><a href="23kaku.html#2">後編第三章第二節</a>で論述するように、十数は帰一数である。ゆえに、神がアダム以後十代目にノアを選び立てた目的は、アダムを中心として完成できなかったみ旨を、ノアを中心に蕩減復帰して、神の方へ再び帰一させるための、十数復帰の蕩減期間を立てようとなさったところにあったのである。ゆえに、神は四位基台の目的を完成するために、四数を復帰する蕩減期間として、各代を立てる摂理を、ノアに至るまで十代にわたって続けてこられたのである。したがって、アダムからノアまでの期間は、四十数を復帰するための蕩減期間であった。しかし、当時の人間たちの淫乱によって、この四十数蕩減期間がサタンの侵入を受けたので、神はノアの箱舟を中心として、四位基台を完成する摂理を再びなさるため、<span
                 style="background-color:#CCFFFF">サタンの侵入を受けたこの四十数を復帰する蕩減期間として、四十日審判期間を立てて、「信仰基台」を復帰しようとされたのである。</span><br />
             　このようにして、<span
                 style="background-color:#FFFF99">四十数は、その後の蕩減復帰摂理路程において、「信仰基台」を復帰するためのサタン分立数として必要になった。その例を挙げれば、ノア審判四十日をはじめとして、ノアからアブラハムまでの四〇〇年、イスラエル民族のエジプト苦役四〇〇年、モーセの二度にわたる断食祈祷四十日、カナン偵察期間四十日、イスラエル民族の荒野流浪四十年、サウル王、ダビデ王、ソロモン王の在位期間各々四十年、エリヤ断食四十日、ニネベ滅亡に関するヨナの預言四十日、イエスの断食祈祷四十日と復活期間四十日などは、みなサタンを分立する蕩減期間であったのである。</span><br />
@@ -933,7 +968,7 @@
             　このように、<span
                 style="background-color:#FCD2E7">ノアの家庭は、審判四十日で「信仰基台」を復帰するための条件物である箱舟を、神のみ意にかなうようにささげ、この基台を蕩減復帰することができたのである。</span></div>
         <div class="no1"><hr /><br />
-            <h4 id="2-2"><a href="21kidai.html#2-2"><span style="background-color:#FCD2E7">（二）実体基台</span></a></h4>
+            <h2 id="2-2"><a href="21kidai.html#2-2"><span style="background-color:#FCD2E7">（二）実体基台</span></a></h2>
             <br /><span
                 style="background-color:#FCD2E7">ノアは、箱舟を神のみ旨にかなう供え物としてささげ、「象徴献祭」に成功することによって「信仰基台」を蕩減復帰した。</span>これによってノアは万物を復帰するための蕩減条件を立てると同時に、人間を復帰するための象徴的な蕩減条件をも立てたのである。<span
                 style="background-color:#FCD2E7">この基台の上で、ノアの子セムとハムとが、各々カインとアベルの立場から、「堕落性を脱ぐための蕩減条件」を立てて、「実体献祭」に成功すれば、「実体基台」が成就されるようになっていた。</span><br />
@@ -966,8 +1001,8 @@
             　では、<span
                 style="background-color:#FFFF99">裸を恥ずかしがることがだれにとっても罪になるのであろうか。そうではない。ノアは、アダムの身代わりとなって、アダムにサタンが侵入したすべての条件を除去すべき使命を担っていたのである。それゆえに、ノアの家庭は、裸を恥ずかしがらず、また、それを隠そうともしないという感性と行動とを見せることによって、サタンと血縁関係を結ぶ前の、アダムの家庭の立場を復帰するための蕩減条件を立てなければならなかった。したがって、裸を恥ずかしがらず、また、それを隠そうともしないというかたちでの蕩減条件は、アダムの家庭の代わりに立てられたノアの家庭だけが立てるべき条件だったのである。</span></div>
         <div class="no1"><hr /><br />
-            <h4 id="2-3"><a href="21kidai.html#2-3"><span style="background-color:#CCFFFF">（三）ノアの家庭が見せてくれた教訓</span></a>
-            </h4>
+            <h2 id="2-3"><a href="21kidai.html#2-3"><span style="background-color:#CCFFFF">（三）ノアの家庭が見せてくれた教訓</span></a>
+            </h2>
             <br />ノアが一二〇年間もかかって山の頂上に箱舟をつくったということは、だれでも容易に理解できるものではなかった。しかしながら、そのために激しい非難と嘲笑を浴びても、正にそのことによって、ノアの家庭が救いを受けたという事実は、ハムもよく分かっていたのである。このような過去の事実から推察して、<span
                 style="background-color:#FFFF99">ハムはたとえノアが裸になって寝ているのを自分では善くないことだと思ったとしても、（かつての箱舟の建造の場合のように、ここには何か深い訳があるのだということを賢明に悟って、分からずとも）あくまでそれを善いこととして見なければならなかったのである。</span><span
                 style="background-color:#CCFFFF">しかしハムは、自己を中心として（自己の基準で）天の側に立っているノアを批判し、またそのことを行動に表したので、神がアダムから一六〇〇年も待って、四十日洪水審判を行使して立てられたノアの家庭を中心とする摂理は、結局成し遂げられなかったのである。これは、我々が神への道を歩むに当たっては、どこまでも謙虚と従順と忍耐の心がなければならないということを見せてくださっているのである。</span></div>
@@ -978,17 +1013,17 @@
             <hr /><br /></a></a></a>
         </div>
         </p>
-        <h3 id="3">
+        <h1 id="3">
             <div class="no1"><a href="21kidai.html#3"><span
                         style="background-color:#FCD2E7">第三節　アブラハムの家庭を中心とする復帰摂理</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             　ハムの堕落行為によってノアの家庭を中心とする復帰摂理は完成されなかったのであるが、神は、御自身の創造目的を完成なさろうとするみ旨を絶対的なものとして予定し、かつ摂理なさるので、ノアが天に対して忠誠を尽くしたその心情の基台の上で、神はアブラハムを召命なさり、その家庭を中心とする復帰摂理を、再び行われるようになった。<br />
             　ゆえに、アブラハムは、ノアの家庭において完成できなかったメシヤのための基台を復帰して、その基台の上でメシヤを迎えなければならなかった。したがって、<span
                 style="background-color:#FCD2E7">アブラハムも、まず「信仰基台」を蕩減復帰し、その基台の上で、「実体基台」を蕩減復帰しなければならなかったのである。</span></div>
         <div class="no1"><hr /><br />
-            <h4 id="3-1"><a href="21kidai.html#3-1"><span style="background-color:#FCD2E7">（一）信仰基台</span></a></h4>
+            <h2 id="3-1"><a href="21kidai.html#3-1"><span style="background-color:#FCD2E7">（一）信仰基台</span></a></h2>
             <br /><a id="3-1-1" href="#3-1-1" class="anchor-header"><span
                     style="background-color:#FCD2E7">(1)　信仰基台を復帰する中心人物</span></a><br />
             　<span
@@ -1100,7 +1135,7 @@
                 style="background-color:#FCD2E7">どうして神は、アブラハムを再び立て、イサク献祭によって、彼の「象徴献祭」の失敗を蕩減復帰する摂理をなさることができたのだろうか。</span><br />
             　<span
                 style="background-color:#FCD2E7">第一に、「メシヤのための基台」を復帰なさろうとする神の摂理は、アダムの家庭を中心とした摂理が第一次であり、ノアの家庭を中心とした摂理が第二次で、アブラハムの家庭を中心とした摂理が第三次であった。しかるに、三数は完成数<a
-                    href="23kaku.html#2-4">（後編第三章第二節（四））</a>なので、「メシヤのための基台」を復帰なさろうとする摂理が、第三次まで延長されたアブラハムのときには、この摂理を完成すべき原理的な条件があったのである。</span>それゆえに、アブラハムは、その子イサクを実体献祭としてささげることにより、前よりもっと大きな価値のもので蕩減条件を立てるということをもって、「象徴献祭」の失敗のために象徴的に失ったすべてのものを、再び探し立てることができたのである。<br />
+                    href="23kaku.html#2-4">（<a href="23kaku.html#2">後編第三章第二節</a>（四））</a>なので、「メシヤのための基台」を復帰なさろうとする摂理が、第三次まで延長されたアブラハムのときには、この摂理を完成すべき原理的な条件があったのである。</span>それゆえに、アブラハムは、その子イサクを実体献祭としてささげることにより、前よりもっと大きな価値のもので蕩減条件を立てるということをもって、「象徴献祭」の失敗のために象徴的に失ったすべてのものを、再び探し立てることができたのである。<br />
             　<span
                 style="background-color:#FCD2E7">第二には、既に詳述したように、献祭をささげるアブラハムの立場は、すなわちアダムの立場であった。しかるに、サタンは、アダムとその子カインに侵入して、二代にわたって彼らを奪っていったので、蕩減復帰原則により、天の側でも、アブラハムとその子の二代にわたって、取り返してくる摂理をすることができたのである。</span><br />
             　<span
@@ -1157,7 +1192,7 @@
             羊を「象徴献祭」にささげたといっても、み旨から見れば彼と一体となって、彼の使命を継承したイサク自身が、献祭をした結果となるのである。このように、<span
                 style="background-color:#FCD2E7">イサクは、アブラハムの使命を受け継いで、彼の身代わりの立場で、「象徴献祭」に成功して、「信仰基台」を蕩減復帰したのである。</span></div>
         <div class="no1"><hr /><br />
-            <h4 id="3-2"><a href="21kidai.html#3-2"><span style="background-color:#FCD2E7">（二）実体基台</span></a></h4>
+            <h2 id="3-2"><a href="21kidai.html#3-2"><span style="background-color:#FCD2E7">（二）実体基台</span></a></h2>
             <br />このように、イサクは、アブラハムの代わりに、「信仰基台」を復帰する中心人物として、雄羊をもって「象徴献祭」をみ意にかなうようにささげて、「信仰基台」を立てることができた。ゆえに、<span
                 style="background-color:#FCD2E7">イサクを中心として、「メシヤのための基台」を立てるには、更に、彼の子エサウとヤコブとを、カインとアベルの立場に分立して、「実体献祭」をささげ、「堕落性を脱ぐための蕩減条件」を立てて、「実体基台」を完成しなければならなかった。</span><br />
             　<span
@@ -1191,7 +1226,7 @@
             　神はエサウを胎内より憎んだとロマ書九章<a href="../Bible_out/02_New Testament/06_romans/009.html#v11"
                 class="verse-link">11</a>節から13節までに記録されているが、このように彼はヤコブに従順に屈伏して、自分の責任分担を果たしたところから、復帰したカインの立場に立つようになり、ついに、神の愛を受けるようになった。したがって、神が彼を憎んだと記録されているのは、ただ、彼が復帰摂理の蕩減条件を立てていく過程において、サタンの側であるカインの立場であったために、憎しみを受けるべきその立場にあったということをこう表現されたものにすぎない。</div>
         <div class="no1"><hr /><br />
-            <h4 id="3-3"><a href="21kidai.html#3-3"><span style="background-color:#FCD2E7">（三）メシヤのための基台</span></a></h4>
+            <h2 id="3-3"><a href="21kidai.html#3-3"><span style="background-color:#FCD2E7">（三）メシヤのための基台</span></a></h2>
             <br /><span
                 style="background-color:#FCD2E7">アダムの家庭から立てようとした「メシヤのための基台」は、復帰摂理の中心人物たちが彼らの責任分担を全うできなかったので、三時代にわたって延長され、アブラハムにまで至ったのである。しかしながら、み旨を完成しなければならないアブラハムが、また「象徴献祭」に失敗したので、このみ旨は、更にイサクにまで延長された。ゆえに、イサクの家庭を中心として、「信仰基台」と「実体基台」がつくられて、初めて「メシヤのための基台」が造成されたのである。したがって、メシヤは当然、このときに降臨なさらなければならない。</span><br />
             　ところで、我々はここで、「メシヤのための基台」というものの性格を中心として見たとき、メシヤを迎えるためのこの基台の社会的背景はどのようなものでなければならないかということを、知らなければならない。<span
@@ -1221,8 +1256,8 @@
             　<span
                 style="background-color:#FCD2E7">ヤコブは、このような路程をたどって、カナンへ帰ってきたのち、初めて、「堕落性を脱ぐための蕩減条件」を立てたので、サタンを屈伏させる典型路程において成功したのである。</span>この典型路程に従って、モーセも、イエスも歩まれ、イスラエル民族も、また行かなければならなかった。ゆえに、イスラエル民族史は、サタンを民族的に屈伏させてきた典型路程の史料となるのである。イスラエル民族史が、復帰摂理歴史の中心史料となる理由もここにあった。</div>
         <div class="no1"><hr /><br />
-            <h4 id="3-4"><a href="21kidai.html#3-4"><span
-                        style="background-color:#CCFFFF">（四）アブラハムを中心とする復帰摂理が我々に見せてくれた教訓</span></a></h4><br /><span
+            <h2 id="3-4"><a href="21kidai.html#3-4"><span
+                        style="background-color:#CCFFFF">（四）アブラハムを中心とする復帰摂理が我々に見せてくれた教訓</span></a></h2><br /><span
                 style="background-color:#CCFFFF">アブラハムを中心とする復帰摂理は、第一に、み旨成就に対する神の予定がどんなものであるかを、我々に見せてくれた。復帰摂理は、神の力によってのみ成就されるのでなく、人間の責任分担と一つになって初めて完成される。</span>したがって、神は、アブラハムを呼んで、復帰摂理の目的を完成なさろうとされたが、彼が自分の責任分担を果たさなかったので、そのみ旨は、成就されなかったのである。<br />
             　<span
                 style="background-color:#CCFFFF">第二には、人間に対する神の予定が、どのようなものであるかということを見せてくださった。</span>神は、アブラハムを信仰の祖として予定なさったが、アブラハムが自分自身の責任分担を全うしなかったために、彼の使命は、イサクを経て、ヤコブヘ移されたのである。<br />
@@ -1247,10 +1282,10 @@
             const container = document.getElementById('stacked-header-container');
             const breadcrumb = document.getElementById('breadcrumb-view');
             const stackedView = document.getElementById('stacked-view');
-            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const headings = Array.from(document.querySelectorAll('h1:not(.page-title), h2, h3, h4, h5, h6'));
             const bars = {};
 
-            for (let i = 2; i <= 6; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const bar = document.createElement('div');
                 bar.className = 'stack-bar';
                 bar.dataset.level = i;
@@ -1280,6 +1315,12 @@
             document.addEventListener('click', () => {
                 container.classList.remove('is-expanded');
             });
+
+            const getCleanText = (el) => {
+                const clone = el.cloneNode(true);
+                clone.querySelectorAll('rt, rp').forEach(r => r.remove());
+                return (clone.textContent || clone.innerText || '').replace(/[◆▸▶]/g, '').trim();
+            };
 
             const updateHeader = () => {
                 const threshold = 100;
@@ -1312,16 +1353,16 @@
                     }
                 }
 
-                const breadcrumbText = path.map(p => p.heading.innerText.replace(/[◆▸▶]/g, '').trim()).join('<span class="separator">/</span>');
+                const breadcrumbText = path.map(p => getCleanText(p.heading)).join('<span class="separator">/</span>');
                 if (breadcrumb.innerHTML !== breadcrumbText) breadcrumb.innerHTML = breadcrumbText;
 
-                for (let i = 2; i <= 6; i++) {
+                for (let i = 1; i <= 6; i++) {
                     const barData = bars[i];
                     const pathItem = path.find(p => p.level === i);
                     if (pathItem) {
                         barData.el.style.display = 'flex';
                         barData.activeHeading = pathItem.heading;
-                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        const cleanText = getCleanText(pathItem.heading);
                         if (barData.text.textContent !== cleanText) barData.text.textContent = cleanText;
                     } else {
                         barData.el.style.display = 'none';
@@ -1618,11 +1659,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -1630,16 +1672,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 

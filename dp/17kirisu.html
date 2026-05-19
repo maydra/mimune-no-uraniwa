@@ -54,17 +54,42 @@
             animation: fadeInDown 0.8s ease-out;
         }
 
-        h1 {
+        .page-title {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 900;
             color: #111;
             margin-bottom: 1.5rem;
             letter-spacing: 0.05em;
+            text-align: center;
         }
 
-        h1 a {
+        .chapter-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-top: 2rem;
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
             text-decoration: none;
             color: #111;
+        }
+
+        h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+            color: #000;
         }
 
         h2 {
@@ -367,8 +392,16 @@
                 padding: 2rem;
             }
 
-            h1 {
+            .page-title {
                 font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            .chapter-title {
+                font-size: clamp(1.8rem, 5vw, 3rem);
+            }
+
+            h1 {
+                font-size: 2.0rem;
             }
 
             h2 {
@@ -603,11 +636,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -615,16 +649,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -638,7 +673,7 @@
     </div>
 
     <div class="container">
-        <h1>原理講論 キリスト論</h1>
+        <h1 class="page-title">原理講論 キリスト論</h1>
         <nav class="page-nav">
             <a href="16yotei.html" class="nav-btn"><span>←</span> 前へ</a>
             <a href="index.html" class="nav-btn">目次</a>
@@ -675,9 +710,9 @@
         <!-- St-HP-H -->
         <!-- En-HP-H -->
         
-        <h3>
+        <div class="chapter-title">
             <div class="no1"><span style="background-color:#FCD2E7">第七章　キ　リ　ス　ト　論</span><br /></div>
-        </h3>
+        </div>
         <p>
         <div class="no1">
             <hr /><br />
@@ -690,10 +725,10 @@
         <div class="no1"><hr /><br />
         </div>
         </p>
-        <h3 id="1">
+        <h1 id="1">
             <div class="no1"><a href="17kirisu.html#1"><span
                         style="background-color:#FCD2E7">第一節　創造目的を完成した人間の価値</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
@@ -727,15 +762,15 @@
             <hr /><br />
         </div>
         </p>
-        <h3 id="2">
+        <h1 id="2">
             <div class="no1"><a href="17kirisu.html#2"><span
                         style="background-color:#FCD2E7">第二節　創造目的を完成した人間とイエス</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
-            <h4 id="2-1"><a href="17kirisu.html#2-1"><span
-                        style="background-color:#FCD2E7">（一）生命の木復帰から見た完成したアダムとイエス</span></a></h4><br />
+            <h2 id="2-1"><a href="17kirisu.html#2-1"><span
+                        style="background-color:#FCD2E7">（一）生命の木復帰から見た完成したアダムとイエス</span></a></h2><br />
             　<span style="background-color:#FCD2E7">人類歴史は、エデンの園で失った生命の木を（<a
                     href="../Bible_out/01_Old Testament/01_genesis/3.html#v24"
                     class="verse-link">創三・24</a>）、歴史の終末の世界で復帰して（<a
@@ -758,9 +793,9 @@
                 style="background-color:#FCD2E7">エデンの園の生命の木として象徴されている、完成されたアダムと、<a
                     href="../Bible_out/02_New Testament/27_revelation/022.html#v14"
                     class="verse-link">黙示録二二章14節</a>に、生命の木として例えられているイエスとは、いずれも創造理想を完成した男性であるということからして、その点から見れば互いに何ら異なることがないということを、我々は知ることができる。したがって、創造本然の価値においても、その間に、何らの差異もあるはずがないのである。</span></div>
-        <div class="no1"><h4 id="2-2"><a href="17kirisu.html#2-2"><span
-                        style="background-color:#FCD2E7">（二）創造目的の完成から見た人間とイエス</span></a></h4><br />
-            　我々は、既に本章第一節で、完成した人間の価値がどんなものであるかを説明した。そこで、<span
+        <div class="no1"><h2 id="2-2"><a href="17kirisu.html#2-2"><span
+                        style="background-color:#FCD2E7">（二）創造目的の完成から見た人間とイエス</span></a></h2><br />
+            　我々は、既に<a href="17kirisu.html#1">本章第一節</a>で、完成した人間の価値がどんなものであるかを説明した。そこで、<span
                 style="background-color:#FCD2E7">我々は、ここにおいて、完成した人間とイエスとは、いかなる差異があるかという点を考察してみることにしよう。</span>これまで述べたことによって分かるように、完成した人間は、創造目的から見れば、神が完全であられるように完全になって（<a
                 href="../Bible_out/02_New Testament/01_matthew/005.html#v48" class="verse-link">マタイ五・48</a>）、<span
                 style="background-color:#FCD2E7">神のような神性をもつはずの価値的な存在である。</span>神が永遠なるお方であるので、その実体対象として創造された人間も、やはり、完成すれば、永遠なるものとして存在せざるを得ない。その上、<span
@@ -777,8 +812,8 @@
                     class="verse-link">使徒行伝一七章31節</a>には、「神は、義をもってこの世界をさばくためその日を定め、お選びになったかたによってそれをなし遂げようとされている」と言い、<a
                     href="../Bible_out/02_New Testament/03_luke/017.html#v26"
                     class="verse-link">ルカ福音書一七章26節</a>には、「ノアの時にあったように、人の子の時にも同様なことが起るであろう」と言われた。このように聖書は、どこまでも、イエスが人間であることを明らかに示している。特にイエスは人類を新たに生み直してくださる真の父母として来られる方であるから、その点から見ても、人間として降臨なさらなければならないのである。</span></div>
-        <div class="no1"><h4 id="2-3"><a href="17kirisu.html#2-3"><span
-                        style="background-color:#FCD2E7">（三）イエスは神御自身であられるのだろうか</span></a></h4><br />
+        <div class="no1"><h2 id="2-3"><a href="17kirisu.html#2-3"><span
+                        style="background-color:#FCD2E7">（三）イエスは神御自身であられるのだろうか</span></a></h2><br />
             　<span
                 style="background-color:#FCD2E7">ピリポがイエスに、神を見せてくださいと言ったとき、イエスはピリポに、「わたしを見た者は、父を見たのである。どうして、わたしたちに父を示してほしいと、言うのか。わたしが父におり、父がわたしにおられることをあなたは信じないのか」（<a
                     href="../Bible_out/02_New Testament/04_john/014.html#v9"
@@ -819,10 +854,10 @@
             <hr /><br />
         </div>
         </p>
-        <h3 id="3">
+        <h1 id="3">
             <div class="no1"><a href="17kirisu.html#3"><span
                         style="background-color:#FCD2E7">第三節　堕落人間とイエス</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
@@ -851,19 +886,19 @@
             <hr /><br />
         </div>
         </p>
-        <h3 id="4">
+        <h1 id="4">
             <div class="no1"><a href="17kirisu.html#4"><span
                         style="background-color:#FCD2E7">第四節　重生論と三位一体論</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
             　<span
                 style="background-color:#FCD2E7">三位一体論は、今日に至るまで、神学界で一番解決し難い問題の中の一つとして論じられてきた。</span>そして、だれもがよく分かっているようで、実際には、その根本的な意味を知らないままに過ぎてきた問題の中の一つが、すなわち本項で扱う<span
                 style="background-color:#FCD2E7">重生論である。</span></div>
-        <div class="no1"><h4 id="4-1"><a href="17kirisu.html#4-1"><span style="background-color:#FCD2E7">（一）重生論</span></a></h4><br />
-            <h4 id="4-1-1"><a href="17kirisu.html#4-1-1"><span
-                        style="background-color:#FCD2E7">(1)　重生の使命から見たイエスと聖霊</span></a></h4></div>
+        <div class="no1"><h2 id="4-1"><a href="17kirisu.html#4-1"><span style="background-color:#FCD2E7">（一）重生論</span></a></h2><br />
+            <h3 id="4-1-1"><a href="17kirisu.html#4-1-1"><span
+                        style="background-color:#FCD2E7">(1)　重生の使命から見たイエスと聖霊</span></a></h3></div>
         <div class="no1"><span style="background-color:#FCD2E7">イエスは、自分を訪ねてきたユダヤ人の官吏ニコデモに、新たに生まれなければ、神の国を見ることはできないと言われた（<a
                     href="../Bible_out/02_New Testament/04_john/003.html#v3"
                     class="verse-link">ヨハネ三・３</a>）。重生とは二度生まれるという意味である。</span>では、人間はなぜ新たに生まれなければならないのであろうか。我々はここで、堕落人間が重生しなければならない理由について調べてみることにしよう。<br />
@@ -891,8 +926,8 @@
                     href="../Bible_out/02_New Testament/08_2-corinthians/001.html#v3"
                     class="verse-link">コリント後書一章３節</a>）、エバが犯した罪を蕩減復帰されるので、
                 罪の悔い改めの業をしなければならないのである。さらに、イエスは男性であられるので、天（陽）において、また、聖霊は女性であられるので、地（陰）において、業（役事）をなさるのである。</span></div>
-        <div class="no1"><h4 id="4-1-2"><a href="17kirisu.html#4-1-2"><span
-                        style="background-color:#FCD2E7">(2)　ロゴスの二性性相から見たイエスと聖霊</span></a></h4></div>
+        <div class="no1"><h3 id="4-1-2"><a href="17kirisu.html#4-1-2"><span
+                        style="background-color:#FCD2E7">(2)　ロゴスの二性性相から見たイエスと聖霊</span></a></h3></div>
         <div class="no1"><span style="background-color:#FCD2E7">ロゴスという言葉はギリシャ語で、み言、あるいは理法という意味をもっている。</span><a
                 href="../Bible_out/02_New Testament/04_john/001.html#v1"
                 class="verse-link">ヨハネ福音書一章１節</a>以下を見ると、ロゴスは神の対象で、神と授受をなすような関係の位置をとっているという意味のことが書かれている。ところで、ロゴスの主体である神が、二性性相としておられるので、その対象であるロゴスも、やはり二性性相とならざるを得ない。もし、ロゴスが二性性相になっていないならば、ロゴスで創造された被造物（<a
@@ -908,13 +943,13 @@
                     class="verse-link">黙二二・14</a>）、人類の真の父として来られたのである。このように考えてくると、ここに後のエバとして、善悪を知る木の使命をもった人類の真の母が（<a
                     href="../Bible_out/02_New Testament/27_revelation/022.html#v17"
                     class="verse-link">黙二二・17</a>）、当然いなければならないということになる。これがすなわち、堕落した人間を、再び生んでくださる真の母として来られる聖霊なのである。</span></div>
-        <div class="no1"><h4 id="4-1-3"><a href="17kirisu.html#4-1-3"><span
-                        style="background-color:#FCD2E7">(3)　イエスと聖霊による霊的重生</span></a></h4></div>
+        <div class="no1"><h3 id="4-1-3"><a href="17kirisu.html#4-1-3"><span
+                        style="background-color:#FCD2E7">(3)　イエスと聖霊による霊的重生</span></a></h3></div>
         <div class="no1">父母の愛がなくては、新たな命が生まれることはできない。それゆえ、我々が<span style="background-color:#FCD2E7"><a
                     href="../Bible_out/02_New Testament/07_1-corinthians/012.html#v3"
                     class="verse-link">コリント前書一二章３節</a>に記録されているみ言のように、</span>聖霊の感動によって、
             イエスを救い主として信じるようになれば、霊的な真の父であるイエスと、霊的な真の母である聖霊との授受作用によって生ずる霊的な真の父母の愛を受けるようになる。そうすればここで、彼を信じる信徒たちは、その愛によって新たな命が注入され、新しい霊的自我に重生されるのである。これを霊的重生という。</div>
-        <div class="no1"><h4 id="4-2"><a href="17kirisu.html#4-2"><span style="background-color:#FCD2E7">（二）三位一体論</span></a></h4>
+        <div class="no1"><h2 id="4-2"><a href="17kirisu.html#4-2"><span style="background-color:#FCD2E7">（二）三位一体論</span></a></h2>
             <br />
             　創造原理によれば、正分合作用により、三対象目的を達成した四位基台の基盤なくしては、神の創造目的は完成されないことになっている。したがって、その目的を達成するためには、イエスと聖霊も、神の二性性相から実体的に分立された対象として立って、お互いに授受作用をして合性一体化することにより、神を中心とする四位基台をつくらなければならない。<span
                 style="background-color:#FCD2E7">このとき、イエスと聖霊は、神を中心として一体となるのであるが、これがすなわち三位一体なのである。</span><br />
@@ -1208,11 +1243,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -1220,16 +1256,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -1287,10 +1324,10 @@
             const container = document.getElementById('stacked-header-container');
             const breadcrumb = document.getElementById('breadcrumb-view');
             const stackedView = document.getElementById('stacked-view');
-            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const headings = Array.from(document.querySelectorAll('h1:not(.page-title), h2, h3, h4, h5, h6'));
             const bars = {};
 
-            for (let i = 2; i <= 6; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const bar = document.createElement('div');
                 bar.className = 'stack-bar';
                 bar.dataset.level = i;
@@ -1320,6 +1357,12 @@
             document.addEventListener('click', () => {
                 container.classList.remove('is-expanded');
             });
+
+            const getCleanText = (el) => {
+                const clone = el.cloneNode(true);
+                clone.querySelectorAll('rt, rp').forEach(r => r.remove());
+                return (clone.textContent || clone.innerText || '').replace(/[◆▸▶]/g, '').trim();
+            };
 
             const updateHeader = () => {
                 const threshold = 100;
@@ -1352,16 +1395,16 @@
                     }
                 }
 
-                const breadcrumbText = path.map(p => p.heading.innerText.replace(/[◆▸▶]/g, '').trim()).join('<span class="separator">/</span>');
+                const breadcrumbText = path.map(p => getCleanText(p.heading)).join('<span class="separator">/</span>');
                 if (breadcrumb.innerHTML !== breadcrumbText) breadcrumb.innerHTML = breadcrumbText;
 
-                for (let i = 2; i <= 6; i++) {
+                for (let i = 1; i <= 6; i++) {
                     const barData = bars[i];
                     const pathItem = path.find(p => p.level === i);
                     if (pathItem) {
                         barData.el.style.display = 'flex';
                         barData.activeHeading = pathItem.heading;
-                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        const cleanText = getCleanText(pathItem.heading);
                         if (barData.text.textContent !== cleanText) barData.text.textContent = cleanText;
                     } else {
                         barData.el.style.display = 'none';

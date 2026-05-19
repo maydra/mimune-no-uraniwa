@@ -54,17 +54,42 @@
             animation: fadeInDown 0.8s ease-out;
         }
 
-        h1 {
+        .page-title {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 900;
             color: #111;
             margin-bottom: 1.5rem;
             letter-spacing: 0.05em;
+            text-align: center;
         }
 
-        h1 a {
+        .chapter-title {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-top: 2rem;
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
             text-decoration: none;
             color: #111;
+        }
+
+        h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+            color: #000;
         }
 
         h2 {
@@ -367,8 +392,16 @@
                 padding: 2rem;
             }
 
-            h1 {
+            .page-title {
                 font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            .chapter-title {
+                font-size: clamp(1.8rem, 5vw, 3rem);
+            }
+
+            h1 {
+                font-size: 2.0rem;
             }
 
             h2 {
@@ -603,11 +636,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -615,16 +649,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -638,7 +673,7 @@
     </div>
 
     <div class="container">
-        <h1>原理講論 予定論</h1>
+        <h1 class="page-title">原理講論 予定論</h1>
         <nav class="page-nav">
             <a href="15fukka.html" class="nav-btn"><span>←</span> 前へ</a>
             <a href="index.html" class="nav-btn">目次</a>
@@ -658,9 +693,9 @@
         <!-- St-HP-H -->
         <!-- En-HP-H -->
         
-        <h3>
+        <div class="chapter-title">
             <div class="no1"><span style="background-color:#FCD2E7">第六章　予　定　論</span><br /></div>
-        </h3>
+        </div>
         <p>
         <div class="no1">
             <hr /><br />
@@ -698,10 +733,10 @@
         <div class="no1"><hr /><br />
         </div>
         </p>
-        <h3 id="1">
+        <h1 id="1">
             <div class="no1"><a href="16yotei.html#1"><span
                         style="background-color:#FCD2E7">第一節　み旨に対する予定</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
@@ -732,10 +767,10 @@
             <hr /><br />
         </div>
         </p>
-        <h3 id="2">
+        <h1 id="2">
             <div class="no1"><a href="16yotei.html#2"><span
                         style="background-color:#FCD2E7">第二節　み旨成就に対する予定</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
@@ -757,10 +792,10 @@
             <hr /><br />
         </div>
         </p>
-        <h3 id="3">
+        <h1 id="3">
             <div class="no1"><a href="16yotei.html#3"><span
                         style="background-color:#FCD2E7">第三節　人間に対する予定</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
@@ -780,17 +815,17 @@
             <hr /><br />
         </div>
         </p>
-        <h3 id="4">
+        <h1 id="4">
             <div class="no1"><a href="16yotei.html#4"><span
                         style="background-color:#FCD2E7">第四節　予定説の根拠となる聖句の解明</span></a><br /></div>
-        </h3>
+        </h1>
         <p>
         <div class="no1">
             <hr /><br />
             　我々は、神の予定に関するいろいろの問題について解明した。しかし、次に解くべき問題は、本章の序言において挙げた聖句のように、<span
                 style="background-color:#CCFFFF">すべてが、神の絶対的な予定だけでなされるように記録されている聖句を、いかに解明すべきかということなのである。まず、<a
                     href="../Bible_out/02_New Testament/06_romans/008.html#v29"
-                    class="verse-link">ロマ書八章29節から30節</a>に記録されているように、</span>「神はあらかじめ知っておられる者たちを……あらかじめ定め……あらかじめ定めた者たちを更に召し、召した者たちを更に義とし、義とした者たちには、更に栄光を与えて下さる」というみ言を解明してみよう。神は全知であられるから、いかなる人間が復帰摂理の中心人物になり得る条件（本章第三節）を備えているかを御存じである。そこで神は復帰摂理の目的を成し遂げるために、このように、あらかじめ知っておられる人物を予定して、召命なさるのである。しかし、召命なさる神の責任分担だけでは、彼が義とされて、栄光に浴するところにまで至ることはできない。彼は召命された立場で自分の責任を完遂するとき、初めて義とされることができる。義とされたのちに、初めて神が下さる栄華に浴することができる。それゆえ、<span
+                    class="verse-link">ロマ書八章29節から30節</a>に記録されているように、</span>「神はあらかじめ知っておられる者たちを……あらかじめ定め……あらかじめ定めた者たちを更に召し、召した者たちを更に義とし、義とした者たちには、更に栄光を与えて下さる」というみ言を解明してみよう。神は全知であられるから、いかなる人間が復帰摂理の中心人物になり得る条件<a href="16yotei.html#3">（本章第三節）</a>を備えているかを御存じである。そこで神は復帰摂理の目的を成し遂げるために、このように、あらかじめ知っておられる人物を予定して、召命なさるのである。しかし、召命なさる神の責任分担だけでは、彼が義とされて、栄光に浴するところにまで至ることはできない。彼は召命された立場で自分の責任を完遂するとき、初めて義とされることができる。義とされたのちに、初めて神が下さる栄華に浴することができる。それゆえ、<span
                 style="background-color:#CCFFFF">神が下さる栄華も人間が責任分担を果たすことによってのみ、受けることができるように予定されるのである。</span>ただ、聖句には人間の責任分担に対するみ言が省略されているために、それらが、ただ、神の絶対的な予定だけでなされるように見えるのである。<br />
             　つぎに、<a href="../Bible_out/02_New Testament/06_romans/009.html#v15"
                 class="verse-link">ロマ書九章15節から16節</a>には「『わたしは自分のあわれもうとする者をあわれみ、いつくしもうとする者を、いつくしむ』。ゆえに、それは人間の意志や努力によるのではなく、ただ神のあわれみによるのである」との記録がある。既に解明したように、復帰摂理の目的を完成するためにどんな人物が一番適合するかということは、神だけがあらかじめ知っていて召命なさるのである。<span
@@ -1087,11 +1122,12 @@
         }
 
         /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="2"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="3"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="4"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="5"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="6"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
+        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
+        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
+        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
+        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
+        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
 
         .stack-bar::before {
             content: '▸';
@@ -1099,16 +1135,17 @@
             color: #667eea;
             font-size: 0.7rem;
         }
-        .stack-bar[data-level="2"]::before { content: '◆'; font-size: 0.9rem; }
+        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
 
         @media (max-width: 48rem) {
             .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
             .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="2"] { padding-left: 1rem; }
-            .stack-bar[data-level="3"] { padding-left: 1.8rem; }
-            .stack-bar[data-level="4"] { padding-left: 2.6rem; }
-            .stack-bar[data-level="5"] { padding-left: 3.4rem; }
-            .stack-bar[data-level="6"] { padding-left: 4.2rem; }
+            .stack-bar[data-level="1"] { padding-left: 1rem; }
+        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
+        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
+        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
+        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
+        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
         }
 </style>
 
@@ -1166,10 +1203,10 @@
             const container = document.getElementById('stacked-header-container');
             const breadcrumb = document.getElementById('breadcrumb-view');
             const stackedView = document.getElementById('stacked-view');
-            const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'));
+            const headings = Array.from(document.querySelectorAll('h1:not(.page-title), h2, h3, h4, h5, h6'));
             const bars = {};
 
-            for (let i = 2; i <= 6; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const bar = document.createElement('div');
                 bar.className = 'stack-bar';
                 bar.dataset.level = i;
@@ -1199,6 +1236,12 @@
             document.addEventListener('click', () => {
                 container.classList.remove('is-expanded');
             });
+
+            const getCleanText = (el) => {
+                const clone = el.cloneNode(true);
+                clone.querySelectorAll('rt, rp').forEach(r => r.remove());
+                return (clone.textContent || clone.innerText || '').replace(/[◆▸▶]/g, '').trim();
+            };
 
             const updateHeader = () => {
                 const threshold = 100;
@@ -1231,16 +1274,16 @@
                     }
                 }
 
-                const breadcrumbText = path.map(p => p.heading.innerText.replace(/[◆▸▶]/g, '').trim()).join('<span class="separator">/</span>');
+                const breadcrumbText = path.map(p => getCleanText(p.heading)).join('<span class="separator">/</span>');
                 if (breadcrumb.innerHTML !== breadcrumbText) breadcrumb.innerHTML = breadcrumbText;
 
-                for (let i = 2; i <= 6; i++) {
+                for (let i = 1; i <= 6; i++) {
                     const barData = bars[i];
                     const pathItem = path.find(p => p.level === i);
                     if (pathItem) {
                         barData.el.style.display = 'flex';
                         barData.activeHeading = pathItem.heading;
-                        const cleanText = pathItem.heading.innerText.replace(/[◆▸▶]/g, '').trim();
+                        const cleanText = getCleanText(pathItem.heading);
                         if (barData.text.textContent !== cleanText) barData.text.textContent = cleanText;
                     } else {
                         barData.el.style.display = 'none';
