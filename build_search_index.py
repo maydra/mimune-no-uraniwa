@@ -3,121 +3,77 @@ import json
 import re
 from bs4 import BeautifulSoup
 
-# Configuration
+# 設定
+BASE_DIR = r"E:\mimune-no-uraniwa\mimune-no-uraniwa"
+OUTPUT_FILE = os.path.join(BASE_DIR, "data", "search-index.json")
 BASE_URL = "https://maydra.github.io/mimune-no-uraniwa/"
-ROOT_DIR = "."
-OUTPUT_DIR = "data"
-OUTPUT_FILE = "search-index.json"
 
-# Files/Dirs to ignore
-IGNORE_DIRS = {
-    ".git", ".github", ".vscode", "data", "images", "css", "js", "pdf", "zip", 
-    "pagefind", "brain" # Exclude artifacts if any
-}
-IGNORE_EXTENSIONS = {
-    ".css", ".js", ".json", ".png", ".jpg", ".jpeg", ".gif", ".pdf", ".zip", 
-    ".xml", ".txt", ".py", ".md"
-}
-IGNORE_FILES = {
-    "search.html", "google4950bff256850b5a.html"
-}
+# スキャン対象ディレクトリのリスト
+TARGET_DIRS = [
+    "peacemessage", "Bible_out", "seikonmondou", "kansha_suru_faith", "tijyouseikatu_reikai",
+    "tumito_tougennfukki", "utyu", "utyuuno_konnpon", "tenitikoku", "tensoukan", "tf_inori",
+    "syougairotei_1", "syougairotei_2", "syougairotei_3", "syougairotei_4", "syougairotei_5",
+    "syougairotei_6", "syougairotei_7", "syougairotei_8", "syougairotei_9", "syougairotei_10",
+    "syougairotei_11", "syuku_&_risoutengoku", "syukufuku_katei", "syukufukuto_nyuuseki",
+    "syukuga_sennpu", "sokoku_koufuku", "sokokukoufuku_nyuuseki", "souzokutekimesiya",
+    "reikon", "reisetutogisiki", "seinenno_kibou", "seiyakujinno_miti", "sekaiheiwa",
+    "sensyuu55", "sijyosidou", "sikkutati", "nippon", "niseinomiti", "ouza", "msge",
+    "nanboku_heiwa", "nanbokutouitu", "makotonokatei", "makotonokatei-kateimeisei", "malsum",
+    "mimuneto_umi", "mimunetosekai", "library", "makotonarusijyonomiti", "makotono_ai",
+    "makotono_kami", "makotonofubo", "kann_taiheiyou", "kitou", "kounoseikatu", "kunkyou",
+    "kunkyou2", "kyouiku_tetugaku", "heiwa_miti", "heiwasisou", "hitonosyougai", "honkyou",
+    "houkansyuu_dansei", "houkansyuu_jyosei", "kamisamaoukensokuisiki", "dendou_hand", "dp",
+    "bokkaisyanomiti"
+]
 
 def clean_text(text):
-    """Normalize whitespace and remove zero-width characters."""
     return re.sub(r'\s+', ' ', text).strip()
 
 def extract_content(soup):
-    """
-    Extract main content from soup. 
-    Priority: <main> -> <article> -> #content -> .content -> body
-    """
-    # Remove unwanted elements
+    # 不要な要素を削除
     for selector in ["nav", "header", "footer", "aside", ".toc", ".sidebar", "script", "style", "noscript", "iframe"]:
         for tag in soup.select(selector):
             tag.decompose()
+    return clean_text(soup.get_text())
 
-    content_root = None
-    
-    # Priority list
-    if soup.find("main"):
-        content_root = soup.find("main")
-    elif soup.find("article"):
-        content_root = soup.find("article")
-    elif soup.select_one("#content"):
-        content_root = soup.select_one("#content")
-    elif soup.select_one(".content"):
-        content_root = soup.select_one(".content")
-    else:
-        content_root = soup.body
+index_data = []
 
-    if not content_root:
-        return ""
+# 各ディレクトリをスキャン
+for target in TARGET_DIRS:
+    target_path = os.path.join(BASE_DIR, target)
+    if os.path.exists(target_path):
+        print(f"スキャン中: {target}")
+        for root, _, files in os.walk(target_path):
+            for file in files:
+                if file.endswith(".html"):
+                    file_path = os.path.join(root, file)
+                    
+                    try:
+                        with open(file_path, "r", encoding="utf-8", errors='ignore') as f:
+                            soup = BeautifulSoup(f.read(), "html.parser")
+                        
+                        # タイトル抽出（欠落時はファイル名）
+                        if soup.title and soup.title.string:
+                            title = soup.title.string.strip()
+                        else:
+                            title = file
+                            
+                        text = extract_content(soup)
+                        
+                        if text:
+                            # 相対パスからURLを作成
+                            rel_path = os.path.relpath(file_path, BASE_DIR).replace("\\", "/")
+                            index_data.append({
+                                "url": BASE_URL + rel_path,
+                                "title": title,
+                                "text": text
+                            })
+                    except Exception as e:
+                        print(f"エラー発生 ({file}): {e}")
 
-    return clean_text(content_root.get_text())
+# JSON書き出し
+os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    json.dump(index_data, f, ensure_ascii=False)
 
-def build_index():
-    index_data = []
-    
-    # Ensure output directory exists
-    if not os.path.exists(OUTPUT_DIR):
-        os.makedirs(OUTPUT_DIR)
-
-    print(f"Scanning directory: {os.path.abspath(ROOT_DIR)}")
-
-    for root, dirs, files in os.walk(ROOT_DIR):
-        # Modify dirs in-place to skip ignored directories
-        dirs[:] = [d for d in dirs if d not in IGNORE_DIRS]
-        
-        for file in files:
-            if file in IGNORE_FILES:
-                continue
-            
-            _, ext = os.path.splitext(file)
-            if ext.lower() not in [".html", ".htm"]:
-                continue
-            
-            file_path = os.path.join(root, file)
-            
-            # Read file
-            try:
-                with open(file_path, "r", encoding="utf-8") as f:
-                    content = f.read()
-            except Exception as e:
-                print(f"Error reading {file_path}: {e}")
-                continue
-
-            soup = BeautifulSoup(content, "html.parser")
-            
-            # Extract Title
-            title = soup.title.string if soup.title else file
-            title = clean_text(str(title))
-            
-            # Extract Text
-            text = extract_content(soup)
-            
-            if not text:
-                continue
-
-            # Generate URL
-            # Rel path from root
-            rel_path = os.path.relpath(file_path, ROOT_DIR)
-            # Convert backslashes to slashes for URL
-            url_path = rel_path.replace(os.sep, "/")
-            full_url = BASE_URL + url_path
-
-            index_data.append({
-                "url": full_url,
-                "title": title,
-                "text": text
-            })
-            
-    # Write JSON
-    output_path = os.path.join(OUTPUT_DIR, OUTPUT_FILE)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(index_data, f, ensure_ascii=False, separators=(',', ':')) # Minified
-        
-    print(f"Index generated: {output_path}")
-    print(f"Total pages: {len(index_data)}")
-
-if __name__ == "__main__":
-    build_index()
+print(f"更新完了！ {len(index_data)} ページを {OUTPUT_FILE} に保存しました。")
