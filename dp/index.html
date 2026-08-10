@@ -278,6 +278,97 @@
         h2 .no1, h3 .no1 {
             margin-bottom: 0;
         }
+
+        /* スマホ表示時のUI改善 */
+        @media (max-width: 767px) {
+                body {
+                        padding: 2rem 0.5rem;
+                }
+                .container {
+                        padding: 2rem 1.5rem;
+                }
+                h1 {
+                        margin-bottom: 2rem;
+                }
+                .volume-item {
+                        margin-top: 2rem;
+                        margin-bottom: 1rem;
+                }
+                .volume-title {
+                        font-size: 1.3rem;
+                        padding-bottom: 0.4rem;
+                        margin-bottom: 0.8rem;
+                }
+                .chapter-list {
+                        padding-left: 0;
+                }
+                .chapter-item {
+                        margin-bottom: 0.5rem;
+                        padding: 0.3rem 0;
+                }
+                .chapter-link {
+                        font-size: 1rem;
+                }
+                .section-list {
+                        padding-left: 0.5rem;
+                }
+                .section-link {
+                        font-size: 0.9rem;
+                        opacity: 0.85;
+                }
+                .section-link::before {
+                        margin-right: 0.2rem;
+                }
+                .section-item.indent-1 {
+                        margin-left: 0.8rem;
+                        padding-left: 0.6rem;
+                        margin-top: 0.2rem;
+                }
+                .section-item.indent-2 {
+                        margin-left: 1.6rem;
+                        padding-left: 0.6rem;
+                        margin-top: 0.2rem;
+                }
+                .section-item.indent-3 {
+                        margin-left: 2.4rem;
+                        padding-left: 0.6rem;
+                        margin-top: 0.1rem;
+                }
+                .section-item.indent-4 {
+                        margin-left: 3.2rem;
+                        padding-left: 0.6rem;
+                        margin-top: 0.1rem;
+                }
+                .section-item.indent-5 {
+                        margin-left: 4.0rem;
+                        padding-left: 0.6rem;
+                        margin-top: 0.1rem;
+                }
+                .nav-links {
+                        margin-top: 3rem;
+                        padding-top: 1.5rem;
+                }
+                .nav-links a {
+                        padding: 0.8rem 2rem;
+                        font-size: 0.95rem;
+                }
+                details {
+                        margin-bottom: 1rem;
+                }
+                summary {
+                        padding: 1rem 1.2rem;
+                        font-size: 1.1rem;
+                }
+                summary::after {
+                        font-size: 1rem;
+                }
+                .details-content {
+                        padding: 0 1.2rem 1.2rem;
+                }
+                *[id] {
+                        scroll-margin-top: 5rem;
+                }
+        }
 </style>
 
         <link rel="stylesheet" href="../theme/style.css?v=202602241611">
