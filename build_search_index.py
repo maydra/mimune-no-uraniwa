@@ -31,7 +31,7 @@ def clean_text(text):
 
 def extract_content(soup):
     # 不要な要素を削除
-    for selector in ["nav", "header", "footer", "aside", ".toc", ".sidebar", "script", "style", "noscript", "iframe"]:
+    for selector in ["nav", "header", "footer", "aside", ".toc", ".sidebar", ".typo-box", "script", "style", "noscript", "iframe"]:
         for tag in soup.select(selector):
             tag.decompose()
     return clean_text(soup.get_text())

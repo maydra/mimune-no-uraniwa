@@ -34,7 +34,7 @@ def get_paragraphs(soup):
     Returns a list of strings.
     """
     # Remove unwanted elements
-    for selector in ["nav", "header", "footer", "aside", ".toc", ".sidebar", "script", "style", "noscript", "iframe"]:
+    for selector in ["nav", "header", "footer", "aside", ".toc", ".sidebar", ".typo-box", "script", "style", "noscript", "iframe"]:
         for tag in soup.select(selector):
             tag.decompose()
 
