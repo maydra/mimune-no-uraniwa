@@ -4,7 +4,7 @@ import re
 from bs4 import BeautifulSoup
 
 # 設定
-BASE_DIR = r"E:\mimune-no-uraniwa\mimune-no-uraniwa"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FILE = os.path.join(BASE_DIR, "data", "search-index.json")
 BASE_URL = "https://maydra.github.io/mimune-no-uraniwa/"
 
@@ -23,7 +23,7 @@ TARGET_DIRS = [
     "makotono_kami", "makotonofubo", "kann_taiheiyou", "kitou", "kounoseikatu", "kunkyou",
     "kunkyou2", "kyouiku_tetugaku", "heiwa_miti", "heiwasisou", "hitonosyougai", "honkyou",
     "houkansyuu_dansei", "houkansyuu_jyosei", "kamisamaoukensokuisiki", "dendou_hand", "dp",
-    "bokkaisyanomiti"
+    "bokkaisyanomiti", "heiwa_sekaijin"
 ]
 
 def clean_text(text):
