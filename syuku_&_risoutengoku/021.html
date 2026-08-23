@@ -314,7 +314,56 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+  /* 管理人が補記した注記（ふきだし表示） */
+  .admin-note {
+    color: #ffd966;
+    border-bottom: 1px dashed #ffd966;
+    cursor: help;
+    position: relative;
+  }
+  .admin-note:hover::after,
+  .admin-note:focus::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(20, 20, 30, 0.95);
+    color: #fff;
+    font-size: 0.85em;
+    padding: 0.5em 0.8em;
+    border-radius: 6px;
+    white-space: normal;
+    max-width: 340px;
+    max-width: min(340px, 80vw);
+    width: max-content;
+    margin-bottom: 6px;
+    z-index: 20;
+    pointer-events: none;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+  .admin-note:hover::before,
+  .admin-note:focus::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(20, 20, 30, 0.95);
+    margin-bottom: 2px;
+    z-index: 20;
+    pointer-events: none;
+  }
+  @media (max-width: 768px) {
+    .admin-note:hover::after,
+    .admin-note:focus::after {
+      white-space: normal;
+      max-width: min(300px, 88vw);
+    }
+  }
+  </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202602241611">
 </head>
@@ -348,9 +397,9 @@
 <br/>
 　けれども、統一教会の文先生はこのような原則、天倫の公約を中心として秩序を立てることのできる基準を知ったので、この基準に従って、このような理想を中心として、神様の保護のもとで真の父母として皆さんのお父さん、お母さんに代わって皆さんの結婚を執り持つことができるというのが、理論的創造理想です。これが統一教会の結婚観です。（1）<br/>
 <br/>
-　相対基準を自分勝手に決定することは、絶対にあってはなりません。そのような決定権限を神様から引き継いでこられる方が、まさに再臨主です。ですから、理想相対の決定権をもたれた方が現れる時には、本心に近い人であればあるほど、その方の前に立てば、説明しなくても我知らず、心情的に引かれるようになります。<br/>
+　相対基準を自分勝手に決定することは、絶対にあってはなりません。そのような決定権限を神様から引き継いでこられる方が、まさに再臨主です。ですから、理想相対の決定権をもたれた方が現れる時には、本心に近い人であればあるほど、その方の前に立てば、説明しなくても我知らず、心情的に引かれるようになります。<span class="admin-note" data-tip="元の書籍では誤字のためか(2)が存在しない。文脈から推察して管理人が(2)をここに追加しました">（2）</span><br/>
 <br/>
-　祝福を受ける場合に「私は誰それとなればうれしい」と、このように心の中で、自分の好きな相手と結んでくれることを願う人がいるとするならば、その人は神様を冒Bする人です。エデンの園でアダムとエバが堕落した時と同じです。アダムとエバが長成期完成級で堕落した時、互いが自分の相対であることを、はっきり知らなかったというのです。はっきりと知りませんでした。知らない立場でサタンの誘惑によって、知らず知らずの間にそのような結果をもたらしたというのです。皆さんは、そのような道を避けていかなければならないのです。<br/>
+　祝福を受ける場合に「私は誰それとなればうれしい」と、このように心の中で、自分の好きな相手と結んでくれることを願う人がいるとするならば、その人は神様を冒瀆する人です。エデンの園でアダムとエバが堕落した時と同じです。アダムとエバが長成期完成級で堕落した時、互いが自分の相対であることを、はっきり知らなかったというのです。はっきりと知りませんでした。知らない立場でサタンの誘惑によって、知らず知らずの間にそのような結果をもたらしたというのです。皆さんは、そのような道を避けていかなければならないのです。<br/>
 <br/>
 　ですから、祝福される前に自分の相対が分かって祝福を受けにいくことができ、祝福される前に自分の相対を決定していけるはずがないというのです。祝福の相対の決定は、天がなさるのです。父母がなさるのです。すなわち、アダムの父たる神がなさるのです。こういうことを見るとき、韓国の伝統婚礼式が天法に該当する結婚方法だというのです。父母の承諾がなくては、絶対に結婚できないというのです。これは絶対的です。<br/>
 <br/>
