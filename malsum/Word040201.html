@@ -429,6 +429,9 @@
     <input type="hidden" id="whenIso" name="whenIso">
     <input type="hidden" id="userAgent" name="userAgent">
 
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
     <div class="typo-row">
       <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
       <span id="typoStatus" class="typo-status" aria-live="polite"></span>
@@ -551,6 +554,25 @@
         padding: 0.7rem 1rem;
     }
 }
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
 </style>
 
 <script>
