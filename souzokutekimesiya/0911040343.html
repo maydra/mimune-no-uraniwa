@@ -1,6 +1,599 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202602241611" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>宗族的メシヤ_四　王権復帰と氏族的メシヤ</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+</style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202602241611">
+</head>
+<body><div class="container">
+<h1 id="宗族的メシヤ_四-王権復帰と氏族的メシヤ"><a href="#宗族的メシヤ_四-王権復帰と氏族的メシヤ">宗族的メシヤ_四　王権復帰と氏族的メシヤ</a></h1>
+<nav class="page-nav">
+  <a href="0911030336.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="0911050346.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">宗族的メシヤ</a></li><li class="toc-b"><a href="#002">四　王権復帰と氏族的メシヤ</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<p><br/>
+</p>
+<blockquote>
+<b><br/>
+</b>
+<div align="left">
+<b id="001"><a href="#001">宗族的メシヤ<br/>
+</a></b>　
+
+</div>
+<hr/>
+<br/>
+<b id="002"><a href="#002">四　王権復帰と氏族的メシヤ</a></b>
+<p>P343<br/>
+      1　設定日時<p>
+　本来、アダムが完成するならば天国の父が完成し、エバが完成するならば天国の母が完成し、そして家庭の主人になるならば、家庭的天国の王権が生ずるのです。それゆえにアダム・エバは個人的王であり、家庭的王であり、氏族的王であり、民族的王であり、国家的王であり、世界的王になるのです。今やこのような国家基準を乗り越えることのできる時に来たので、サタン世界の王権をみな踏み、天の世界の王権を設定することができるのです。その日がきょう一九九〇年三月二十七日だというのです。こうすることによって、世界は今やレバレンド・ムーンが風を巻き起こすとおりに回っていくようになっているのです。（一九九〇・三・二七、ベルベディア修練所）
+<p>
+2　王権復帰設定が可能な理由
+<p>
+　私たちにおいて一番目とは何ですか？　神側に立つのです。その次に何ですか？　家庭が天側に立つのです。そのようになるならば、どちらにせよ御父母様を中心として世界的版図が全部連結されるのです。また、復帰の内容を見るならば、一番目は兄弟権復帰が終わり、二番目は父母権復帰が終わりました。三番目は、王権復帰です。
+<p>
+　さあ、故郷は一つであり得ますか？　元来の故郷は、先生が生まれた所ですが、その次のすべての氏族の故郷は、定州ではありません。それは、皆さんが生まれた所にならなければならないのです。分かりますか？　故郷が間違い、サタンが占領したのですが、皆さんの故郷で天を中心とした父母が生まれるので、そこがエデンの園だというのです。そうして、堕落しなかった本然の園を中心として生まれた皆さんの善の後孫は、その世界に向かって広がっていくのです。この垂直線を中心として、先生の一族を中心として皆さんが全部連結されるのです。縦的なものを、自分の一族よりももっと愛さなければなりません。縦的なものが先ですから、これを愛し、その次に自分の一族を愛するのです。そうであればサタンが占領できないのです。このようなことが成立することによって、今では王権復帰が可能なのです。（一九九〇・三・二七、べルベディア修練所）
+<p>
+3　氏族的メシヤと王権
+<p>
+　統一教会は、宗教です。宗教は、永世の道を探し求めていくのです。永遠であられる神様が、愛の対象として人を造りました。永遠なる愛は、愛の対象が自分よりもできが良いことを願うのです。息子、娘が自分より良くなることを願うのと同じようにです。それは神様に似たのです。ですから、私たち人間の価値というものは、神様よりも良くなることができる愛の対象であると見るとき、このような永遠な真の愛における永生の論理は、自然的な論理なのです。永生の道を築いていくのです。永生の個人心情版図、永生の世界で歓迎することのできる家庭的版図、氏族的版図、民族的、国家的版図を成していかなければならないのです。
+<p>
+　祝福を受けた家庭の前に世の中があり得ません。アダムの前に世の中がありましたか？　あるのは自分が率いた家庭と、神様に侍ること以外にはありません。それと同じなのです。よこしまで邪悪な悪の世界を中心とした習慣性を、きれいに清算しなければなりません。解放された姿をもって、本然の長子権を純粋に受け継ぐことのできる息子の自負心を、その息子がもつことのできる父母権復帰なのです。長子権を経て家庭を成して、息子、娘をもってこそ父母権が復帰されるのです。アダム時代に、父母権を失ったのです。
+<p>
+　氏族的メシヤを中心として、父母権を復帰することにより、本郷の地を故郷の地へ設定することのできる天の祝福を受けたこの価値を見ても分からない、滅びる種子たち！　先生は通りすがりの一人の客として語ったのではないのです。一家の長として、一国の長として、一天下の中心存在として霊通力で語っているのです。
+<p>
+　氏族的メシヤを軸として王権が連結され、国が連結されるのです。世界と国の基準をみな築いておきました。垂直に立っています。皆さんは、東西南北を中心として連結させる蘇生の個人であり、長成の家庭であり、完成の氏族なのです。こうして国家的基準を中心としなければなりません。（一九八九・一〇・一七、漢南洞公館）
+<p>
+　氏族的メシヤがしなければならない責任とは何かといえば、アダムとエバが堕落したのと同じ立場の自分の父母を、結婚したその父をアダムの代身の位置に、自分の族長として立てておくことであり、そうすることによって初めて地上で直接主管圏に同参できる恵沢圏内に入ってくるのです。サタン世界の個人、家庭、氏族、民族、このように逆に発展したすべてのことを蕩減した勝利の条件は、先生を通じて立ててきたので、先生に絶対侍って一つになる立場で、アダム家庭一族にならなければなりません。アダム一族にならなければならないのです。分かりますか？
+<p>
+　個人アダムは天の息子の位置であり、息子たる彼らの家庭の主人になり、家庭の王になり、その氏族の王になり、氏族の中心になり……。このようになるのです。アダムが霊界に行っても、霊界の王になるのです。王権を占めることのできる方がアダムだというのです。このように個人的王権、家庭的王権、氏族的王権、民族的王権、国家的王権……。アダムが個人から世界的王権の代表者になりそこなったのを総蕩減する価値的内容を、先生が世界の版図で全部探し求めてきたのです。サタン世界、天上世界に行って探し求めて戻ってきて全部積んでおいたので、皆さんの家庭、氏族さえ連結されるならば、国家と世界は連結されるようになっているのです。
+<p>
+　ですから、統一国が顕現するのです。ただのどんぶり勘定式ではないのです。サタンと神様の間に大使を通じた会議の決議を経て、その結果の一致点に従わずしては統一世界は出てくることができないのです。(一九八九・一〇・三、リトル・エンジェルス芸術会館）
+<p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p>
+</blockquote>
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+
+</div>
+
+
+<script src="../theme/script.js?v=202602241611"></script>
+</body>
 
 
 
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
 
 
 
@@ -13,5 +606,12 @@
     };
   }
 </script>
+<nav class="page-nav">
+  <a href="0911030336.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="0911050346.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
 
 <script src="../theme/script.js?v=202602241611"></script>
+</body>
+</html>
