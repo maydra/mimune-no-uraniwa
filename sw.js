@@ -1,4 +1,5 @@
-const CACHE_NAME = 'mimune-cache-v1';
+// バージョンを上げると、古いキャッシュは activate 時に全部消える
+const CACHE_NAME = 'mimune-cache-v2';
 const STATIC_URLS = [
     './index.html',
     './theme/style.css',
@@ -22,15 +23,54 @@ self.addEventListener('activate', event => {
                 cacheNames.filter(name => name !== CACHE_NAME)
                     .map(name => caches.delete(name))
             );
-        })
+        }).then(() => self.clients.claim())
     );
-    self.clients.claim();
 });
 
+// HTML かどうか（ページ本体か、ただの部品か）
+function isPageRequest(request) {
+    if (request.mode === 'navigate') return true;
+    const accept = request.headers.get('accept') || '';
+    if (accept.includes('text/html')) return true;
+    const path = new URL(request.url).pathname;
+    return path.endsWith('/') || path.endsWith('.html') || path.endsWith('.htm');
+}
+
 self.addEventListener('fetch', event => {
+    const request = event.request;
+
+    // GET 以外と外部ドメイン（Google Fonts / gtag など）には触らない
+    if (request.method !== 'GET') return;
+    if (new URL(request.url).origin !== self.location.origin) return;
+
+    if (isPageRequest(request)) {
+        // ページ本体はネットワーク優先。
+        // これがないと、ページを直しても一度読んだ人には永久に古いままになる
+        event.respondWith(
+            fetch(request)
+                .then(response => {
+                    if (response && response.ok) {
+                        const copy = response.clone();
+                        caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
+                    }
+                    return response;
+                })
+                .catch(() => caches.match(request).then(cached => cached || Promise.reject()))
+        );
+        return;
+    }
+
+    // CSS / JS / 画像などは、キャッシュを返しつつ裏で更新しておく
     event.respondWith(
-        caches.match(event.request).then(response => {
-            return response || fetch(event.request);
+        caches.match(request).then(cached => {
+            const network = fetch(request).then(response => {
+                if (response && response.ok) {
+                    const copy = response.clone();
+                    caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
+                }
+                return response;
+            }).catch(() => cached);
+            return cached || network;
         })
     );
 });
