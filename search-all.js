@@ -1,179 +1,111 @@
+/* サイト内一括検索 — pagefind (pagefind/) を使う。
+   以前は data/search-index.json を丸ごと（約57MB）取りに行っていた。 */
 (function () {
-    const INDEX_URL = 'data/search-index.json';
-    let searchIndex = null;
-    let isLoading = false;
+    const PAGE_SIZE = 20;
 
     const input = document.getElementById('search-input');
     const btn = document.getElementById('search-btn');
     const resultsContainer = document.getElementById('search-results');
     const statsContainer = document.getElementById('search-stats');
 
-    // Trigger search on Enter
-    input.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            loadAndSearch();
+    let pagefind = null;
+    let loading = null;
+    let pending = [];
+    let shown = 0;
+
+    // pagefind は pagefind.js の置き場所から baseUrl を割り出して
+    // result.url に付けてくれる（/mimune-no-uraniwa/... になる）ので、そのまま使う
+
+    function loadPagefind() {
+        if (pagefind) return Promise.resolve(pagefind);
+        if (!loading) {
+            loading = import('./pagefind/pagefind.js').then(async (mod) => {
+                await mod.init();
+                pagefind = mod;
+                return mod;
+            });
         }
-    });
+        return loading;
+    }
 
-    btn.addEventListener('click', () => {
-        loadAndSearch();
-    });
-
-    function loadAndSearch() {
+    async function runSearch() {
         const query = input.value.trim();
         if (!query) return;
 
-        if (isLoading) return;
-
-        if (!searchIndex) {
-            isLoading = true;
-            statsContainer.textContent = 'データ読み込み中 (約50MB)... しばらくお待ち下さい...';
-
-            fetch(INDEX_URL)
-                .then(response => {
-                    if (!response.ok) throw new Error('Index not found');
-                    return response.json();
-                })
-                .then(data => {
-                    searchIndex = data;
-                    isLoading = false;
-                    performSearch(query);
-                })
-                .catch(err => {
-                    console.error(err);
-                    isLoading = false;
-                    statsContainer.textContent = 'エラー: 検索データを読み込めませんでした。ローカルサーバー(http.server)等で実行してください。';
-                });
-        } else {
-            performSearch(query);
-        }
-    }
-
-    function performSearch(query) {
-        const rawKeywords = query.trim().split(/\s+/).filter(k => k.length > 0);
-
+        resultsContainer.innerHTML = '';
+        shown = 0;
         statsContainer.textContent = '検索中...';
 
-        // Use timeout to allow UI to update "Searching..." text
-        setTimeout(() => {
-            const keywords = rawKeywords.map(k => k.normalize('NFKC').toLowerCase());
-            const results = [];
-
-            for (const item of searchIndex) {
-                const title = (item.title || '').normalize('NFKC');
-                const text = (item.text || '').normalize('NFKC');
-                const titleLower = title.toLowerCase();
-                const textLower = text.toLowerCase();
-
-                let totalHits = 0;
-                let allKeywordsFound = true;
-
-                for (const kw of keywords) {
-                    let hits = 0;
-                    hits += (titleLower.split(kw).length - 1) * 2;
-                    hits += (textLower.split(kw).length - 1);
-
-                    if (hits === 0) {
-                        allKeywordsFound = false;
-                        break;
-                    }
-                    totalHits += hits;
-                }
-
-                if (allKeywordsFound) {
-                    results.push({
-                        item: item,
-                        hits: totalHits,
-                        originalTitle: item.title,
-                        originalText: item.text
-                    });
-                }
-            }
-
-            results.sort((a, b) => b.hits - a.hits);
-            renderResults(results, keywords);
-        }, 10);
-    }
-
-    function renderResults(results, keywords) {
-        statsContainer.textContent = `${results.length} 件見つかりました (描画中...)`;
-        resultsContainer.innerHTML = '';
-
-        if (results.length === 0) {
-            resultsContainer.innerHTML = '<p>該当するページが見つかりませんでした。</p>';
-            statsContainer.textContent = '0 件見つかりました';
+        let pf;
+        try {
+            pf = await loadPagefind();
+        } catch (e) {
+            statsContainer.textContent = '検索データを読み込めませんでした。';
             return;
         }
 
-        const CHUNK_SIZE = 50;
-        let currentIndex = 0;
-
-        function renderChunk() {
-            const fragment = document.createDocumentFragment();
-            const chunkEnd = Math.min(currentIndex + CHUNK_SIZE, results.length);
-
-            for (let i = currentIndex; i < chunkEnd; i++) {
-                const res = results[i];
-                const div = document.createElement('div');
-                div.className = 'result-item';
-
-                const snippet = generateSnippet(res.originalText, keywords);
-                const title = highlightText(res.originalTitle, keywords);
-
-                div.innerHTML = `
-                    <div class="result-title"><a href="${res.item.url}">${title}</a></div>
-                    <div class="result-snippet">${snippet}</div>
-                `;
-                fragment.appendChild(div);
-            }
-
-            resultsContainer.appendChild(fragment);
-            currentIndex += CHUNK_SIZE;
-
-            if (currentIndex < results.length) {
-                statsContainer.textContent = `${results.length} 件見つかりました (描画中... ${currentIndex}/${results.length})`;
-                // Use setTimeout to yield logic to browser for render
-                setTimeout(renderChunk, 0);
-            } else {
-                statsContainer.textContent = `${results.length} 件見つかりました`;
-            }
+        let search;
+        try {
+            search = await pf.search(query);
+        } catch (e) {
+            statsContainer.textContent = '検索に失敗しました。';
+            return;
         }
 
-        renderChunk();
+        pending = search.results;
+        if (pending.length === 0) {
+            statsContainer.textContent = `「${query}」に一致するページはありませんでした。`;
+            return;
+        }
+        statsContainer.textContent = `「${query}」の検索結果: ${pending.length}件`;
+        await showMore();
     }
 
-    function generateSnippet(text, keywords) {
-        if (!text) return '';
-        const lowerText = text.normalize('NFKC').toLowerCase();
+    async function showMore() {
+        const batch = pending.slice(shown, shown + PAGE_SIZE);
+        shown += batch.length;
 
-        let bestIndex = -1;
-        const firstKw = keywords[0];
-        bestIndex = lowerText.indexOf(firstKw);
+        const data = await Promise.all(batch.map(r => r.data()));
+        for (const d of data) {
+            const item = document.createElement('div');
+            item.className = 'result-item';
 
-        if (bestIndex === -1) bestIndex = 0;
+            const title = document.createElement('div');
+            title.className = 'result-title';
+            const link = document.createElement('a');
+            link.href = d.url;
+            link.textContent = (d.meta && d.meta.title) ? d.meta.title : d.url;
+            title.appendChild(link);
 
-        const start = Math.max(0, bestIndex - 60);
-        const end = Math.min(text.length, bestIndex + 60 + firstKw.length);
+            const snippet = document.createElement('div');
+            snippet.className = 'result-snippet';
+            snippet.innerHTML = d.excerpt; // pagefind が <mark> を付けて返す
 
-        let snippet = text.substring(start, end);
-        if (start > 0) snippet = '...' + snippet;
-        if (end < text.length) snippet = snippet + '...';
+            item.appendChild(title);
+            item.appendChild(snippet);
+            resultsContainer.appendChild(item);
+        }
 
-        return highlightText(snippet, keywords);
+        const old = document.getElementById('search-more');
+        if (old) old.remove();
+
+        if (shown < pending.length) {
+            const more = document.createElement('button');
+            more.id = 'search-more';
+            more.textContent = `さらに表示（残り ${pending.length - shown}件）`;
+            more.addEventListener('click', () => {
+                more.disabled = true;
+                showMore();
+            });
+            resultsContainer.appendChild(more);
+        }
     }
 
-    function highlightText(text, keywords) {
-        if (!text) return '';
-        const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') runSearch();
+    });
+    btn.addEventListener('click', runSearch);
 
-        let html = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
-        keywords.forEach(kw => {
-            const pattern = new RegExp(`(${escapeRegExp(kw)})`, 'gi');
-            html = html.replace(pattern, '<mark>$1</mark>');
-        });
-
-        return html;
-    }
-
+    // 入力を始めた時点で裏読みしておくと、Enter を押した瞬間に結果が出る
+    input.addEventListener('focus', () => { loadPagefind().catch(() => { }); }, { once: true });
 })();
