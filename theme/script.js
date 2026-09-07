@@ -1,17 +1,33 @@
 /* theme/script.js */
 (function () {
-    console.log('Theme script loading...');
-
     // Smarter DP check: look for 'dp' as a directory segment
     const pathSegments = window.location.pathname.split(/[/\\]/);
     const isDP = pathSegments.includes('dp');
 
-    console.log('Is DP page:', isDP, 'Path:', window.location.pathname);
+    // theme/style.css owns the look of #theme-toggle. A handful of old pages
+    // (malsum/ など) never link it, so give those the same rules inline.
+    function ensureToggleStyles() {
+        if (document.querySelector('link[href*="theme/style.css"]')) return;
+        if (document.getElementById('theme-toggle-style')) return;
+        const style = document.createElement('style');
+        style.id = 'theme-toggle-style';
+        style.textContent = [
+            '#theme-toggle{position:fixed;top:20px;right:20px;z-index:9999;',
+            'width:44px;height:44px;border-radius:50%;',
+            'background:rgba(255,255,255,0.2);backdrop-filter:blur(10px);',
+            'border:1px solid rgba(255,255,255,0.3);',
+            'display:flex;align-items:center;justify-content:center;',
+            'cursor:pointer;font-size:20px;transition:all 0.3s ease;',
+            'box-shadow:0 4px 15px rgba(0,0,0,0.2);}',
+            'body.light-mode #theme-toggle{background:rgba(0,0,0,0.05);',
+            'border-color:rgba(0,0,0,0.1);}',
+            '#theme-toggle:hover{transform:scale(1.1);}'
+        ].join('');
+        document.head.appendChild(style);
+    }
 
     function applyTheme(theme) {
-        console.log('Applying theme:', theme);
         if (isDP) {
-            console.log('Force Light Mode for DP');
             document.body.classList.remove('dark-mode');
             document.body.classList.add('light-mode');
             return;
@@ -23,20 +39,16 @@
         const toggle = document.getElementById('theme-toggle');
         if (toggle) {
             toggle.innerHTML = theme === 'light' ? '🌙' : '☀️';
-            // Debug styling
-            toggle.style.border = '2px solid red';
         }
     }
 
     function init() {
-        console.log('Theme script init started');
         let savedTheme = null;
 
         try {
             savedTheme = localStorage.getItem('theme');
-            console.log('LocalStorage theme:', savedTheme);
         } catch (e) {
-            console.error('LocalStorage access failed:', e);
+            // private mode などで読めないときは既定値にフォールバックする
         }
 
         if (!savedTheme) {
@@ -50,51 +62,39 @@
             } else {
                 savedTheme = 'dark';
             }
-            console.log('Using default theme based on path:', savedTheme);
         }
 
         applyTheme(savedTheme);
 
         if (!isDP) {
             if (!document.getElementById('theme-toggle')) {
-                console.log('Creating theme-toggle button');
+                ensureToggleStyles();
+
                 const toggle = document.createElement('div');
                 toggle.id = 'theme-toggle';
                 toggle.setAttribute('aria-label', 'テーマ切り替え');
+                toggle.setAttribute('role', 'button');
+                toggle.setAttribute('tabindex', '0');
                 toggle.innerHTML = savedTheme === 'light' ? '🌙' : '☀️';
-                // Inline styles for absolute certainty
-                Object.assign(toggle.style, {
-                    position: 'fixed',
-                    top: '20px',
-                    right: '20px',
-                    zIndex: '10000',
-                    width: '44px',
-                    height: '44px',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'pointer',
-                    fontSize: '24px',
-                    border: '2px solid red', // DEBUG BORDER
-                    background: 'white',
-                    boxShadow: '0 4px 15px rgba(0,0,0,0.5)'
-                });
 
                 document.body.appendChild(toggle);
-                console.log('Button appended to body');
 
-                toggle.addEventListener('click', () => {
+                const switchTheme = () => {
                     const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
                     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                    console.log('Switching to:', newTheme);
                     try {
                         localStorage.setItem('theme', newTheme);
                     } catch (e) { }
                     applyTheme(newTheme);
+                };
+
+                toggle.addEventListener('click', switchTheme);
+                toggle.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        switchTheme();
+                    }
                 });
-            } else {
-                console.log('Button already exists');
             }
         }
     }
