@@ -270,12 +270,13 @@
       <label><input type="radio" name="search-mode" value="or" /> どれかの語を含む（OR）</label>
     </div>
     <button id="search-btn">検索実行</button>
-    <div class="search-hint">語と語のあいだはスペースで区切ります。「祝福 家庭」で AND、OR に切り替えるとどちらかを含むページが出ます。<br />
+    <div class="search-hint">打った言葉はその並びのまま探します（「愛はない」なら、そう書かれているページ）。<br />
+      語と語をスペースで区切ると、AND は全部を含むページ、OR はどれかを含むページが出ます。<br />
       「祝福 OR 家庭」「祝福 | 家庭」と書けば、選択に関係なく OR で検索します。</div>
     <div id="search-stats"></div>
   </div>
   <div id="search-results"></div>
-  <script src="search-all.js?v=202609082030"></script>
+  <script src="search-all.js?v=202609082130"></script>
 
   <script src="theme/script.js?v=202602241611"></script>
 </body>

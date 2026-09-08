@@ -37,7 +37,11 @@
     // ブラウザの切り方（ICU）と索引の切り方（pagefind）は完全には一致しない。
     // 例えば「神様」は ICU では1語、索引では「神」＋「様」。0件だったときだけ、
     // 索引に無い語を探して1文字ずつに割り、もう一度引く。
-    async function searchJapanese(pf, query) {
+    //
+    // これは「切った語がページのどこかにあれば当たる」引き方なので、
+    // 「愛はない」と打つと「愛」「は」「ない」がばらばらにあるページまで出る
+    // （1375件）。並びのまま探す searchPhrase で駄目だったときの保険に使う。
+    async function searchLoose(pf, query) {
         const words = segment(query);
         if (!words.length) return await pf.search(query);
 
@@ -59,6 +63,21 @@
         return await pf.search(retry.join(' '));
     }
 
+    // 打った通りの並びで探す。pagefind は問い合わせ全体が " " で囲まれていると
+    // 語の連続として扱う（「愛 は ない」がその順で並んでいるページだけ）。
+    // 索引の切り方と合わなければ0件になるので、そのときは null を返す。
+    async function searchPhrase(pf, term) {
+        const words = segment(term);
+        if (!words.length) return null;
+        const result = await pf.search(`"${words.join(' ')}"`);
+        return result.results.length ? result.results : null;
+    }
+
+    // 1語ぶんの検索。まず並びのまま、駄目なら語をばらして。
+    async function searchTerm(pf, term) {
+        return (await searchPhrase(pf, term)) || (await searchLoose(pf, term)).results;
+    }
+
     // --- AND / OR ---------------------------------------------------------
     // 語の区切りは半角/全角スペース・読点・カンマ。
     // 「祝福 | 家庭」「祝福 OR 家庭」「祝福 または 家庭」と書いたときは、
@@ -68,8 +87,9 @@
 
     function parseQuery(raw, mode) {
         // 「|」「または」は前後にスペースが無くても区切りとして扱う
+        // 引用符は pagefind に渡す前に自分で付けるので、打たれていても取る
         const tokens = raw.replace(/[|｜]/g, ' | ').replace(/または/g, ' | ')
-            .split(TERM_SEP).filter(Boolean);
+            .split(TERM_SEP).map(t => t.replace(/["'“”「」]/g, '')).filter(Boolean);
         const hasOrMark = tokens.some(t => OR_MARK.test(t));
         const terms = [...new Set(tokens.filter(t => !OR_MARK.test(t)))];
 
@@ -81,13 +101,39 @@
         return { mode: or ? 'or' : 'and', terms };
     }
 
+    // AND: 語ごとに引いて、全部に出てきたページだけ残す。
+    // 「男女 愛はない」なら、両方がその並びで載っているページ。
+    async function searchEvery(pf, terms) {
+        let kept = null;
+        for (const term of terms) {
+            const list = await searchTerm(pf, term);
+            const byId = new Map(list.map(r => [r.id, r]));
+
+            if (kept === null) {
+                kept = new Map(list.map(r => [r.id, { result: r, score: r.score || 0 }]));
+                continue;
+            }
+            for (const [id, cur] of kept) {
+                const r = byId.get(id);
+                if (!r) { kept.delete(id); continue; }
+                cur.score += r.score || 0;
+                // 抜粋はいちばん強く当たった語のものを出す
+                if ((r.score || 0) > (cur.result.score || 0)) cur.result = r;
+            }
+            if (!kept.size) break;
+        }
+        return [...kept.values()]
+            .sort((a, b) => b.score - a.score)
+            .map(v => v.result);
+    }
+
     // OR: 語ごとに引いて結果を混ぜる。
     // 多くの語に当たったページほど上、同数ならスコア順。
     async function searchAny(pf, terms) {
         const found = new Map();
         for (const term of terms) {
-            const res = await searchJapanese(pf, term);
-            for (const r of res.results) {
+            const list = await searchTerm(pf, term);
+            for (const r of list) {
                 const cur = found.get(r.id);
                 if (!cur) {
                     found.set(r.id, { result: r, score: r.score || 0, hits: 1 });
@@ -162,10 +208,21 @@
 
         const parsed = parseQuery(query, currentMode());
         let results;
+        let note = '';
         try {
             results = parsed.mode === 'or'
                 ? await searchAny(pf, parsed.terms)
-                : (await searchJapanese(pf, parsed.terms.join(' '))).results;
+                : await searchEvery(pf, parsed.terms);
+
+            // 全部の語が載っているページが無いときは、語をばらして探し直す。
+            // 黙って広げると件数の意味が変わるので、そのことを画面に書く。
+            if (!results.length && parsed.terms.length > 1) {
+                const loose = await searchLoose(pf, parsed.terms.join(' '));
+                if (loose.results.length) {
+                    results = loose.results;
+                    note = '（そのままの並びでは見つからないので、語をばらして探しました）';
+                }
+            }
         } catch (e) {
             statsContainer.textContent = '検索に失敗しました。';
             return;
@@ -181,8 +238,9 @@
             statsContainer.textContent = `${label}に一致するページはありませんでした。${how}`;
             return;
         }
-        statsContainer.textContent = `${label}の検索結果: ${results.length}件${how}`;
-        await renderAll(results, `${label}の検索結果: ${results.length}件${how}`, token);
+        const stats = `${label}の検索結果: ${results.length}件${note || how}`;
+        statsContainer.textContent = stats;
+        await renderAll(results, stats, token);
     }
 
     // 抜粋に入るタグは <mark> だけ。当たった語の手前から MAX_EXCERPT_CHARS 字を残す。
