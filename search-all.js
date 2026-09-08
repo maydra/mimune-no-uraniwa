@@ -3,6 +3,51 @@
 (function () {
     const PAGE_SIZE = 20;
 
+    // 索引（pagefind）は日本語を単語に切って持っている（「み旨」→「み」「旨」）。
+    // ところが検索側の wasm は日本語を切らないので、「み旨」と打つとその6文字が
+    // 丸ごと1語として探され、どこにも無いので0件になる。ここで問い合わせ側も
+    // 同じように切ってから渡す。
+    const CJK = /[぀-ヿ㐀-䶿一-鿿豈-﫿ｦ-ﾟ]/;
+
+    function segment(query) {
+        if (typeof Intl !== 'undefined' && Intl.Segmenter) {
+            const seg = new Intl.Segmenter('ja', { granularity: 'word' });
+            const words = Array.from(seg.segment(query))
+                .filter(s => s.isWordLike)
+                .map(s => s.segment);
+            if (words.length) return words;
+        }
+        // Intl.Segmenter が無いブラウザ: 日本語は1文字ずつに割る
+        return query.split(/\s+/)
+            .flatMap(w => (CJK.test(w) ? Array.from(w) : [w]))
+            .filter(Boolean);
+    }
+
+    // ブラウザの切り方（ICU）と索引の切り方（pagefind）は完全には一致しない。
+    // 例えば「神様」は ICU では1語、索引では「神」＋「様」。0件だったときだけ、
+    // 索引に無い語を探して1文字ずつに割り、もう一度引く。
+    async function searchJapanese(pf, query) {
+        const words = segment(query);
+        if (!words.length) return await pf.search(query);
+
+        const result = await pf.search(words.join(' '));
+        if (result.results.length) return result;
+
+        const retry = [];
+        let changed = false;
+        for (const word of words) {
+            if (word.length > 1 && CJK.test(word) &&
+                (await pf.search(word)).results.length === 0) {
+                retry.push(...Array.from(word));
+                changed = true;
+            } else {
+                retry.push(word);
+            }
+        }
+        if (!changed) return result;
+        return await pf.search(retry.join(' '));
+    }
+
     const input = document.getElementById('search-input');
     const btn = document.getElementById('search-btn');
     const resultsContainer = document.getElementById('search-results');
@@ -46,7 +91,7 @@
 
         let search;
         try {
-            search = await pf.search(query);
+            search = await searchJapanese(pf, query);
         } catch (e) {
             statsContainer.textContent = '検索に失敗しました。';
             return;
