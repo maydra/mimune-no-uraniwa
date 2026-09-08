@@ -146,6 +146,35 @@
       opacity: 0.7;
     }
 
+    .search-mode {
+      margin-top: 0.75em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em 1.5em;
+      font-size: 0.95em;
+    }
+
+    .search-mode label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      cursor: pointer;
+    }
+
+    .search-mode input[type="radio"] {
+      width: 1.1em;
+      height: 1.1em;
+      accent-color: var(--link-color);
+      cursor: pointer;
+    }
+
+    .search-hint {
+      margin-top: 0.75em;
+      font-size: 0.85em;
+      line-height: 1.6;
+      color: var(--stats-color);
+    }
+
     #search-stats {
       margin-top: 0.5em;
       font-size: 0.9em;
@@ -236,11 +265,17 @@
   <h1 id="サイト内一括検索"><a href="#サイト内一括検索">サイト内一括検索</a></h1>
   <div class="search-container">
     <input autofocus="" id="search-input" placeholder="キーワードを入力してEnter または 検索ボタン" type="text" />
+    <div class="search-mode">
+      <label><input type="radio" name="search-mode" value="and" checked /> すべての語を含む（AND）</label>
+      <label><input type="radio" name="search-mode" value="or" /> どれかの語を含む（OR）</label>
+    </div>
     <button id="search-btn">検索実行</button>
+    <div class="search-hint">語と語のあいだはスペースで区切ります。「祝福 家庭」で AND、OR に切り替えるとどちらかを含むページが出ます。<br />
+      「祝福 OR 家庭」「祝福 | 家庭」と書けば、選択に関係なく OR で検索します。</div>
     <div id="search-stats"></div>
   </div>
   <div id="search-results"></div>
-  <script src="search-all.js?v=202609081404"></script>
+  <script src="search-all.js?v=202609081930"></script>
 
   <script src="theme/script.js?v=202602241611"></script>
 </body>

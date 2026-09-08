@@ -1,5 +1,5 @@
 // バージョンを上げると、古いキャッシュは activate 時に全部消える
-const CACHE_NAME = 'mimune-cache-v2';
+const CACHE_NAME = 'mimune-cache-v3';
 const STATIC_URLS = [
     './index.html',
     './theme/style.css',
