@@ -1,7 +1,18 @@
 /* サイト内一括検索 — pagefind (pagefind/) を使う。
    以前は data/search-index.json を丸ごと（約57MB）取りに行っていた。 */
 (function () {
-    const PAGE_SIZE = 20;
+    // 結果は全部出す。ただし本文の抜粋は1件ずつ取りに行くので、
+    // この数ずつ描いては画面に返し、待たされている感じを減らす。
+    const CHUNK = 25;
+
+    // 抜粋の長さ（語数）。pagefind の既定は 30 で、日本語だと40字ほどにしか
+    // ならない。4〜5行ぶんの前後関係が見えるように広げる。
+    const EXCERPT_LENGTH = 140;
+
+    // 日本語の区切りが入っていないページでは、pagefind が本文をまるごと
+    // 抜粋として返してくることがある（1万字を超えることもある）。
+    // 見出しに当たった語の周りだけを残す。
+    const MAX_EXCERPT_CHARS = 300;
 
     // 索引（pagefind）は日本語を単語に切って持っている（「み旨」→「み」「旨」）。
     // ところが検索側の wasm は日本語を切らないので、「み旨」と打つとその6文字が
@@ -115,8 +126,7 @@
 
     let pagefind = null;
     let loading = null;
-    let pending = [];
-    let shown = 0;
+    let renderToken = 0;
 
     // pagefind は pagefind.js の置き場所から baseUrl を割り出して
     // result.url に付けてくれる（/mimune-no-uraniwa/... になる）ので、そのまま使う
@@ -125,6 +135,7 @@
         if (pagefind) return Promise.resolve(pagefind);
         if (!loading) {
             loading = import('./pagefind/pagefind.js').then(async (mod) => {
+                await mod.options({ excerptLength: EXCERPT_LENGTH });
                 await mod.init();
                 pagefind = mod;
                 return mod;
@@ -137,8 +148,8 @@
         const query = input.value.trim();
         if (!query) return;
 
+        const token = ++renderToken; // 前の検索の描画を止める
         resultsContainer.innerHTML = '';
-        shown = 0;
         statsContainer.textContent = '検索中...';
 
         let pf;
@@ -160,58 +171,98 @@
             return;
         }
 
-        pending = results;
         const label = parsed.mode === 'or'
             ? parsed.terms.map(t => `「${t}」`).join('と')
             : `「${parsed.terms.join(' ')}」`;
         const how = parsed.terms.length > 1
             ? (parsed.mode === 'or' ? '（どれかを含む）' : '（すべて含む）')
             : '';
-        if (pending.length === 0) {
+        if (results.length === 0) {
             statsContainer.textContent = `${label}に一致するページはありませんでした。${how}`;
             return;
         }
-        statsContainer.textContent = `${label}の検索結果: ${pending.length}件${how}`;
-        await showMore();
+        statsContainer.textContent = `${label}の検索結果: ${results.length}件${how}`;
+        await renderAll(results, `${label}の検索結果: ${results.length}件${how}`, token);
     }
 
-    async function showMore() {
-        const batch = pending.slice(shown, shown + PAGE_SIZE);
-        shown += batch.length;
+    // 抜粋に入るタグは <mark> だけ。当たった語の手前から MAX_EXCERPT_CHARS 字を残す。
+    function trimExcerpt(html) {
+        const parts = html.split(/(<\/?mark>)/);
+        let plainLen = 0;
+        let markAt = -1;
+        for (const p of parts) {
+            if (p === '<mark>') { if (markAt < 0) markAt = plainLen; continue; }
+            if (p === '</mark>') continue;
+            plainLen += p.length;
+        }
+        if (plainLen <= MAX_EXCERPT_CHARS) return html;
 
-        const data = await Promise.all(batch.map(r => r.data()));
-        for (const d of data) {
-            const item = document.createElement('div');
-            item.className = 'result-item';
+        const start = Math.max(0, Math.max(markAt, 0) - Math.floor(MAX_EXCERPT_CHARS / 3));
+        const end = start + MAX_EXCERPT_CHARS;
 
-            const title = document.createElement('div');
-            title.className = 'result-title';
-            const link = document.createElement('a');
-            link.href = d.url;
-            link.textContent = (d.meta && d.meta.title) ? d.meta.title : d.url;
-            title.appendChild(link);
-
-            const snippet = document.createElement('div');
-            snippet.className = 'result-snippet';
-            snippet.innerHTML = d.excerpt; // pagefind が <mark> を付けて返す
-
-            item.appendChild(title);
-            item.appendChild(snippet);
-            resultsContainer.appendChild(item);
+        let out = '';
+        let pos = 0;
+        for (const p of parts) {
+            if (p === '<mark>' || p === '</mark>') {
+                if (pos >= start && pos <= end) out += p;
+                continue;
+            }
+            const from = Math.max(start, pos);
+            const to = Math.min(end, pos + p.length);
+            if (to > from) out += p.slice(from - pos, to - pos);
+            pos += p.length;
         }
 
-        const old = document.getElementById('search-more');
-        if (old) old.remove();
+        // 切ったところで <mark> が開きっぱなし／閉じっぱなしになるのを直す
+        const opens = (out.match(/<mark>/g) || []).length;
+        const closes = (out.match(/<\/mark>/g) || []).length;
+        if (opens > closes) out += '</mark>';
+        if (closes > opens) out = '<mark>' + out;
 
-        if (shown < pending.length) {
-            const more = document.createElement('button');
-            more.id = 'search-more';
-            more.textContent = `さらに表示（残り ${pending.length - shown}件）`;
-            more.addEventListener('click', () => {
-                more.disabled = true;
-                showMore();
-            });
-            resultsContainer.appendChild(more);
+        return (start > 0 ? '…' : '') + out + (end < plainLen ? '…' : '');
+    }
+
+    function buildItem(d) {
+        const item = document.createElement('div');
+        item.className = 'result-item';
+
+        const title = document.createElement('div');
+        title.className = 'result-title';
+        const link = document.createElement('a');
+        link.href = d.url;
+        link.textContent = (d.meta && d.meta.title) ? d.meta.title : d.url;
+        title.appendChild(link);
+
+        const snippet = document.createElement('div');
+        snippet.className = 'result-snippet';
+        snippet.innerHTML = trimExcerpt(d.excerpt); // pagefind が <mark> を付けて返す
+
+        item.appendChild(title);
+        item.appendChild(snippet);
+        return item;
+    }
+
+    // 全件出す。抜粋は1件ずつ取りに行くので、少しずつ描いて画面を返す。
+    async function renderAll(results, stats, token) {
+        let shown = 0;
+        for (let i = 0; i < results.length; i += CHUNK) {
+            if (token !== renderToken) return; // 新しい検索が始まった
+            const batch = results.slice(i, i + CHUNK);
+            const data = await Promise.all(batch.map(r => r.data().catch(() => null)));
+            if (token !== renderToken) return;
+
+            const frag = document.createDocumentFragment();
+            for (const d of data) {
+                if (d) frag.appendChild(buildItem(d));
+            }
+            resultsContainer.appendChild(frag);
+            shown += batch.length;
+
+            if (shown < results.length) {
+                statsContainer.textContent = `${stats} — ${shown}件目まで表示中...`;
+            } else {
+                statsContainer.textContent = stats;
+            }
         }
     }
 
