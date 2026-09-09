@@ -326,3 +326,141 @@ body.dark-mode [data-bible-nav] a:hover {
     box-shadow: 0 0 20px rgba(165, 180, 252, 0.15);
     transform: translateY(-2px);
 }
+
+/* --- iOS で横向きにしたときの勝手な文字拡大を止める --- */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* --- 目次（mokuji / dp）の見出し・節リンク ---------------------------------
+   各ページの style は暗い背景を前提に書かれていて、区切り線やインデントの
+   ガイド線が rgba(255,255,255,0.0x) になっている。原理講論は script.js が
+   light-mode を強制するので、それらが白地に白で全部消えていた。
+   ここで明るいときの色を入れ直し、あわせて折り返しとタップ領域を直す。 */
+
+/* 節リンクをブロックにして、ぶら下げインデント＋タップしやすい高さにする。
+   これまでは inline だったので、折り返した2行目が「・」の下まで戻って
+   階層が読めなくなっていた。 */
+body .section-link {
+    display: block;
+    padding: 0.35em 0.4em 0.35em 1.2em;
+    text-indent: -1.2em;
+    border-radius: 6px;
+}
+
+body .section-link::before {
+    content: '・';
+    margin-right: 0.2em;
+}
+
+body .section-item {
+    margin-bottom: 0;
+}
+
+/* 節（第一節…）は章の中の見出しなので、下の階層より少し強く見せる */
+body .section-list > .section-item:not([class*="indent-"]) > .section-link {
+    font-weight: 600;
+}
+
+/* インデントのガイド線を全階層で同じ濃さにする（元は 0.08〜0.005 でほぼ不可視） */
+body .section-item[class*="indent-"] {
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+body.light-mode .section-item[class*="indent-"] {
+    border-left-color: rgba(0, 0, 0, 0.14);
+}
+
+/* 明るいときに消えていた区切り線・枠線を戻す */
+body.light-mode .chapter-item {
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .details-content {
+    border-top-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .nav-links {
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .chapter-link {
+    border-bottom-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 「目次へ戻る」などのボタンが白地に白で沈んでいた */
+body.light-mode .nav-links a {
+    background: #f0f0f0 !important;
+    border: 1px solid #d5d5d5 !important;
+    color: #333333 !important;
+}
+
+body.light-mode .nav-links a:hover {
+    background: #e4e4e4 !important;
+}
+
+/* マウスのない端末では :hover が触ったあと残るので、動かさない */
+@media (hover: hover) {
+    body .section-link:hover {
+        background: rgba(102, 126, 234, 0.12);
+    }
+}
+
+@media (hover: none) {
+
+    body .chapter-link:hover,
+    body .section-link:hover,
+    body .links-list a:hover {
+        transform: none;
+    }
+}
+
+/* --- スマホの目次 ---------------------------------------------------------
+   幅が狭いほど深い階層が苦しくなるので、左右の余白を削って本文幅を稼ぎ、
+   行の高さは指で押せるところまで上げる。 */
+@media (max-width: 767px) {
+    body .details-content {
+        padding: 0 0.7rem 1rem;
+    }
+
+    body .section-list {
+        padding-left: 0.2rem;
+    }
+
+    body .section-link {
+        font-size: 0.95rem;
+        padding: 0.5em 0.3em 0.5em 1.2em;
+        opacity: 1;
+    }
+
+    body .section-item[class*="indent-"] {
+        padding-left: 0.5rem;
+    }
+
+    body .section-item.indent-1 {
+        margin-left: 0.7rem;
+    }
+
+    body .section-item.indent-2 {
+        margin-left: 1.4rem;
+    }
+
+    body .section-item.indent-3 {
+        margin-left: 2.1rem;
+    }
+
+    body .section-item.indent-4 {
+        margin-left: 2.8rem;
+    }
+
+    body .section-item.indent-5 {
+        margin-left: 3.5rem;
+    }
+
+    /* 章の「➡ この章の本文を読む」も同じくタップしやすく */
+    body .details-content .chapter-link {
+        display: inline-block;
+        padding: 0.4em 0;
+    }
+}
