@@ -327,6 +327,64 @@ body.dark-mode [data-bible-nav] a:hover {
     transform: translateY(-2px);
 }
 
+/* --- 「この書籍の中で検索」ボタン（各書籍の index.html） -------------------
+   飛び先は search-all.html?book=<フォルダ名>。本文は書籍ごとに分けてあるので、
+   その1冊ぶん（数百KB）だけ読んで探す。 */
+.book-search {
+    margin: 1.2rem 0 2rem;
+}
+
+.book-search-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.7em 1.4em;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    background: rgba(128, 128, 128, 0.12);
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+.book-search-btn::before {
+    content: '🔍';
+    font-size: 1.05em;
+    line-height: 1;
+}
+
+body.light-mode .book-search-btn {
+    background: #f0f0f0;
+    border-color: #d5d5d5;
+    color: #333333 !important;
+}
+
+body.light-mode .book-search-btn:hover {
+    background: #e4e4e4;
+    border-color: #bbbbbb;
+    color: #000000 !important;
+}
+
+body.dark-mode .book-search-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .book-search-btn:hover {
+    background: rgba(165, 180, 252, 0.18);
+    border-color: rgba(165, 180, 252, 0.45);
+    color: #ffffff !important;
+}
+
+@media (hover: hover) {
+    .book-search-btn:hover {
+        transform: translateY(-2px);
+    }
+}
+
 /* --- iOS で横向きにしたときの勝手な文字拡大を止める --- */
 html {
     -webkit-text-size-adjust: 100%;
