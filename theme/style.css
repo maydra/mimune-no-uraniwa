@@ -463,4 +463,30 @@ body.light-mode .nav-links a:hover {
         display: inline-block;
         padding: 0.4em 0;
     }
+
+}
+
+/* --- スマホの「前へ／目次／次へ」 ------------------------------------------
+   各ページの CSS は 600px 以下で .page-nav を縦積みにしていて、
+   たった3語のために画面を3行ぶん使っていた。横1行に戻す。
+   （ブレークポイントは各ページ側の 600px = 37.5rem に合わせる） */
+@media (max-width: 600px) {
+    body .page-nav {
+        flex-direction: row;
+        gap: 0.4rem;
+        margin: 1.2rem 0;
+        padding: 0;
+    }
+
+    body .page-nav .nav-btn {
+        width: auto;
+        padding: 0.6rem 0.3rem;
+        font-size: 0.95rem;
+        gap: 0.25rem;
+        white-space: nowrap;
+    }
+
+    body .page-nav .nav-btn span {
+        font-size: 1.05rem;
+    }
 }
