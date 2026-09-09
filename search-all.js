@@ -109,24 +109,59 @@
         return { mode: or ? 'or' : 'and', terms };
     }
 
+    // --- 関連度 -----------------------------------------------------------
+    // 語の並びをそのまま探す引き方だと、pagefind はスコアを全部 1 で返す。
+    // それだと順位が付かず、索引の順（＝聖書から）に並んでしまうので、
+    // 当たった回数・ページの長さ・その語の珍しさから、こちらで点を付ける。
+    //
+    // 考え方は検索でよく使われる BM25 と同じ:
+    //   ・同じ語が何度も出るほど強い。ただし効きは頭打ちにする（K1）
+    //   ・長いページは語が出て当たり前なので割り引く（B）
+    //   ・どのページにも載っている語は弱く、珍しい語は強く（idf）
+    //   ・見出しに入っていれば大きく足す
+    const K1 = 1.2;
+    const B = 0.75;
+    const TITLE_WEIGHT = 2.5;
+
+    // 珍しさ。df = その語が載っているページ数。
+    function idf(df) {
+        const n = totalPages || 1;
+        return Math.log(1 + (n - df + 0.5) / (df + 0.5));
+    }
+
+    function scoreOne(r, term, df) {
+        const page = pages[r.id];
+        const len = (page && page[2]) || avgWords;
+        const tf = Array.isArray(r.words) ? r.words.length : 1;
+        const body = (tf * (K1 + 1)) /
+            (tf + K1 * (1 - B + B * (len / (avgWords || len || 1))));
+        const inTitle = page && page[1] && page[1].indexOf(term) >= 0;
+        return idf(df) * (body + (inTitle ? TITLE_WEIGHT : 0));
+    }
+
     // AND: 語ごとに引いて、全部に出てきたページだけ残す。
     // 「男女 愛はない」なら、両方がその並びで載っているページ。
     async function searchEvery(pf, terms) {
         let kept = null;
         for (const term of terms) {
             const list = await searchTerm(pf, term);
+            const df = list.length;
             const byId = new Map(list.map(r => [r.id, r]));
 
             if (kept === null) {
-                kept = new Map(list.map(r => [r.id, { result: r, score: r.score || 0 }]));
+                kept = new Map(list.map(r => {
+                    const s = scoreOne(r, term, df);
+                    return [r.id, { result: r, score: s, best: s }];
+                }));
                 continue;
             }
             for (const [id, cur] of kept) {
                 const r = byId.get(id);
                 if (!r) { kept.delete(id); continue; }
-                cur.score += r.score || 0;
+                const s = scoreOne(r, term, df);
+                cur.score += s;
                 // 抜粋はいちばん強く当たった語のものを出す
-                if ((r.score || 0) > (cur.result.score || 0)) cur.result = r;
+                if (s > cur.best) { cur.best = s; cur.result = r; }
             }
             if (!kept.size) break;
         }
@@ -136,19 +171,22 @@
     }
 
     // OR: 語ごとに引いて結果を混ぜる。
-    // 多くの語に当たったページほど上、同数ならスコア順。
+    // 多くの語に当たったページほど上、同数なら関連度順。
     async function searchAny(pf, terms) {
         const found = new Map();
         for (const term of terms) {
             const list = await searchTerm(pf, term);
+            const df = list.length;
             for (const r of list) {
+                const s = scoreOne(r, term, df);
                 const cur = found.get(r.id);
                 if (!cur) {
-                    found.set(r.id, { result: r, score: r.score || 0, hits: 1 });
+                    found.set(r.id, { result: r, score: s, best: s, hits: 1 });
                 } else {
                     cur.hits += 1;
-                    if ((r.score || 0) > cur.score) {
-                        cur.score = r.score || 0;
+                    cur.score += s;
+                    if (s > cur.best) {
+                        cur.best = s;
                         cur.result = r; // 抜粋はいちばん強く当たった語のものを出す
                     }
                 }
@@ -164,18 +202,33 @@
     const resultsContainer = document.getElementById('search-results');
     const statsContainer = document.getElementById('search-stats');
     const modeInputs = Array.from(document.querySelectorAll('input[name="search-mode"]'));
+    const bibleInput = document.getElementById('exclude-bible');
 
     const MODE_KEY = 'mimune-search-mode';
+    const BIBLE_KEY = 'mimune-search-exclude-bible';
+
+    // 聖書は 3,329 ページのうち 1,189 ページ。語によっては結果がここで埋まる。
+    const BIBLE_PREFIX = 'Bible_out/';
 
     function currentMode() {
         const checked = modeInputs.find(el => el.checked);
         return checked ? checked.value : 'and';
     }
 
+    function excludingBible() {
+        return !!(bibleInput && bibleInput.checked);
+    }
+
+    function isBible(r) {
+        const page = pages[r.id];
+        return !!(page && page[0].indexOf(BIBLE_PREFIX) === 0);
+    }
+
     try {
         const saved = localStorage.getItem(MODE_KEY);
         const target = modeInputs.find(el => el.value === saved);
         if (target) target.checked = true;
+        if (bibleInput) bibleInput.checked = localStorage.getItem(BIBLE_KEY) === '1';
     } catch (e) { /* localStorage が使えない環境は既定のまま */ }
 
     let pagefind = null;
@@ -237,17 +290,28 @@
             return;
         }
 
+        // 聖書を外す。全部が聖書だったときのために、外した件数を出しておく。
+        let dropped = 0;
+        if (excludingBible()) {
+            const kept = results.filter(r => !isBible(r));
+            dropped = results.length - kept.length;
+            results = kept;
+        }
+
         const label = parsed.mode === 'or'
             ? parsed.terms.map(t => `「${t}」`).join('と')
             : `「${parsed.terms.join(' ')}」`;
         const how = parsed.terms.length > 1
             ? (parsed.mode === 'or' ? '（どれかを含む）' : '（すべて含む）')
             : '';
+        const minus = dropped ? `（聖書の${dropped}件を除く）` : '';
         if (results.length === 0) {
-            statsContainer.textContent = `${label}に一致するページはありませんでした。${how}`;
+            statsContainer.textContent = dropped
+                ? `${label}に一致するのは聖書の${dropped}件だけでした。`
+                : `${label}に一致するページはありませんでした。${how}`;
             return;
         }
-        const stats = `${label}の検索結果: ${results.length}件${note || how}`;
+        const stats = `${label}の検索結果: ${results.length}件${note || how}${minus}`;
         statsContainer.textContent = stats;
         renderAll(results, stats, token);
     }
@@ -294,16 +358,24 @@
     const BASE = new URL('.', document.currentScript
         ? document.currentScript.src : location.href).pathname;
 
-    let titles = null;
+    // { avgWords: 平均語数, pages: { id: [URL, タイトル, 語数] } }
+    let pages = {};
+    let avgWords = 1;
+    let totalPages = 0;
     let titlesLoading = null;
 
     function loadTitles() {
-        if (titles) return Promise.resolve(titles);
         if (!titlesLoading) {
             titlesLoading = fetch(TITLES_URL)
                 .then(r => (r.ok ? r.json() : null))
-                .then(json => { titles = json || {}; return titles; })
-                .catch(() => { titles = {}; return titles; }); // 無ければ後から補う
+                .then(json => {
+                    if (json && json.pages) {
+                        pages = json.pages;
+                        avgWords = json.avgWords || 1;
+                        totalPages = Object.keys(pages).length;
+                    }
+                })
+                .catch(() => { /* 無ければタイトルは抜粋と一緒に取りに行く */ });
         }
         return titlesLoading;
     }
@@ -356,7 +428,7 @@
         const item = document.createElement('div');
         item.className = 'result-item';
 
-        const known = titles ? titles[r.id] : null;
+        const known = pages[r.id];
 
         const title = document.createElement('div');
         title.className = 'result-title';
@@ -406,10 +478,19 @@
     });
     btn.addEventListener('click', runSearch);
 
-    // AND / OR を切り替えたら、いま出ている結果をその場で引き直す
+    // AND / OR や聖書の有無を切り替えたら、いま出ている結果をその場で引き直す
     for (const el of modeInputs) {
         el.addEventListener('change', () => {
             try { localStorage.setItem(MODE_KEY, el.value); } catch (e) { }
+            if (input.value.trim()) runSearch();
+        });
+    }
+
+    if (bibleInput) {
+        bibleInput.addEventListener('change', () => {
+            try {
+                localStorage.setItem(BIBLE_KEY, bibleInput.checked ? '1' : '0');
+            } catch (e) { }
             if (input.value.trim()) runSearch();
         });
     }

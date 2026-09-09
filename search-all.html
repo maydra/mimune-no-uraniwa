@@ -161,11 +161,19 @@
       cursor: pointer;
     }
 
-    .search-mode input[type="radio"] {
+    .search-mode input[type="radio"],
+    .search-mode input[type="checkbox"] {
       width: 1.1em;
       height: 1.1em;
       accent-color: var(--link-color);
       cursor: pointer;
+    }
+
+    /* 聖書を外すチェックは AND/OR とは別の話なので、少し離して置く */
+    .search-filter {
+      margin-top: 0.5em;
+      padding-top: 0.5em;
+      border-top: 1px solid var(--btn-border);
     }
 
     .search-hint {
@@ -275,6 +283,9 @@
       <label><input type="radio" name="search-mode" value="and" checked /> すべての語を含む（AND）</label>
       <label><input type="radio" name="search-mode" value="or" /> どれかの語を含む（OR）</label>
     </div>
+    <div class="search-mode search-filter">
+      <label><input type="checkbox" id="exclude-bible" /> 聖書の検索結果を除く</label>
+    </div>
     <button id="search-btn">検索実行</button>
     <div class="search-hint">打った言葉はその並びのまま探します（「愛はない」なら、そう書かれているページ）。<br />
       語と語をスペースで区切ると、AND は全部を含むページ、OR はどれかを含むページが出ます。<br />
@@ -282,7 +293,7 @@
     <div id="search-stats"></div>
   </div>
   <div id="search-results"></div>
-  <script src="search-all.js?v=202609090832"></script>
+  <script src="search-all.js?v=202609090840"></script>
 
   <script src="theme/script.js?v=202602241611"></script>
 </body>
