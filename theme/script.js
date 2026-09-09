@@ -99,6 +99,66 @@
         }
     }
 
+    // --- ルビ（<rt>）を含む本文のコピー対策 ---------------------------------
+    // 各ページの CSS は rt に user-select:none を掛けているが、これはブラウザと
+    // 貼り付け先によっては親文字（漢字）ごとコピーから落ちる。コピー内容を
+    // こちらで組み立てて、親文字は必ず残し、ふりがなだけを外す。
+    // ついでに <ruby> の中に入っている改行（"苦悶<rt>くもん</rt>\n" の \n）も
+    // 取り除く。そのままだとルビ語のうしろに余計な空白が入ってコピーされる。
+    function cleanRuby(root) {
+        const rubies = root.querySelectorAll ? root.querySelectorAll('ruby') : [];
+
+        for (const ruby of rubies) {
+            for (const annotation of ruby.querySelectorAll('rt, rp')) {
+                annotation.remove();
+            }
+            // 残った親文字から整形用の改行・インデントを落として、
+            // <ruby> の入れ物ごとただの文字に置き換える
+            const base = ruby.textContent.replace(/[\s　]+/g, '');
+            ruby.replaceWith(document.createTextNode(base));
+        }
+
+        return root;
+    }
+
+    function handleCopy(e) {
+        const selection = window.getSelection();
+        if (!selection || selection.isCollapsed || selection.rangeCount === 0) return;
+        if (!e.clipboardData) return;
+
+        // 入力欄の中のコピーには手を出さない
+        const active = document.activeElement;
+        if (active && /^(INPUT|TEXTAREA)$/.test(active.tagName)) return;
+
+        const holder = document.createElement('div');
+        let hasRuby = false;
+
+        for (let i = 0; i < selection.rangeCount; i++) {
+            const fragment = selection.getRangeAt(i).cloneContents();
+            if (fragment.querySelector('ruby')) hasRuby = true;
+            holder.appendChild(fragment);
+        }
+
+        // ルビが入っていない選択は既定の動作のままでよい
+        if (!hasRuby) return;
+
+        cleanRuby(holder);
+
+        // innerText は画面に出ている要素でないと改行を拾わないので、
+        // 見えない場所に一度置いてから読む
+        holder.style.cssText = 'position:fixed;left:-9999px;top:0;';
+        document.body.appendChild(holder);
+        const plain = holder.innerText;
+        const html = holder.innerHTML;
+        document.body.removeChild(holder);
+
+        e.clipboardData.setData('text/plain', plain);
+        e.clipboardData.setData('text/html', html);
+        e.preventDefault();
+    }
+
+    document.addEventListener('copy', handleCopy);
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
