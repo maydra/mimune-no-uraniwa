@@ -1,9 +1,10 @@
 """目次ページを検索の対象外にする。
 
-サイト内検索（pagefind）は目次ページも普通のページとして索引に入れる。
-目次には収録されている全部の題が並んでいるので、何を検索しても目次ばかりが
-先に出てきてしまう。目次の <body> に data-pagefind-ignore を付けておくと、
-pagefind はそのページを索引に入れない。
+サイト内検索は目次ページも普通のページとして扱う。目次には収録されている
+全部の題が並んでいるので、何を検索しても目次ばかりが先に出てきてしまう。
+目次の <body> に data-pagefind-ignore を付けておくと、検索の本文から外れる。
+（属性の名前は以前 pagefind を使っていた名残。今は tools/build_fulltext.py
+が同じ印を見ている。）
 
 対象:
   - ファイル名が index*.html / Index*.html / mokuji*.html / *_mokuji.html
@@ -13,8 +14,8 @@ pagefind はそのページを索引に入れない。
   python tools/mark_search_ignore.py          # 付ける
   python tools/mark_search_ignore.py --check  # 付ける対象を数えるだけ
 
-付けたあとは索引の作り直しが必要:
-  npx pagefind@1.3.0 --site .
+付けたあとは検索用の本文を作り直すこと:
+  python tools/build_fulltext.py
 """
 
 import os

@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# 検索用の本文。改行がページの区切りなので、CRLF に変換されると
+# ページの位置が1文字ずつずれて検索が壊れる。ここだけ git に触らせない。
+data/fulltext/*.txt -text
