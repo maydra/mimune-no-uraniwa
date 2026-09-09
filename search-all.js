@@ -1,9 +1,10 @@
 /* サイト内一括検索 — pagefind (pagefind/) を使う。
    以前は data/search-index.json を丸ごと（約57MB）取りに行っていた。 */
 (function () {
-    // 結果は全部出す。ただし本文の抜粋は1件ずつ取りに行くので、
-    // この数ずつ描いては画面に返し、待たされている感じを減らす。
-    const CHUNK = 25;
+    // 結果は全部、一度に出す。抜粋は1件ずつ取りに行くしかないので、
+    // 直列で待たずに一気に投げて、揃ってから画面に描く。
+    // 同時に投げる数（多すぎるとブラウザが詰まる）。
+    const PARALLEL = 60;
 
     // 抜粋の長さ（語数）。pagefind の既定は 30 で、日本語だと40字ほどにしか
     // ならない。4〜5行ぶんの前後関係が見えるように広げる。
@@ -300,28 +301,37 @@
         return item;
     }
 
-    // 全件出す。抜粋は1件ずつ取りに行くので、少しずつ描いて画面を返す。
+    // 全件出す。抜粋は1件ずつ取りに行くので、PARALLEL 件ずつ同時に投げて、
+    // 全部そろってから一度だけ画面に足す（少しずつ足すとパラパラ出て見える）。
     async function renderAll(results, stats, token) {
-        let shown = 0;
-        for (let i = 0; i < results.length; i += CHUNK) {
-            if (token !== renderToken) return; // 新しい検索が始まった
-            const batch = results.slice(i, i + CHUNK);
-            const data = await Promise.all(batch.map(r => r.data().catch(() => null)));
-            if (token !== renderToken) return;
+        const data = new Array(results.length);
+        let done = 0;
+        let next = 0;
 
-            const frag = document.createDocumentFragment();
-            for (const d of data) {
-                if (d) frag.appendChild(buildItem(d));
-            }
-            resultsContainer.appendChild(frag);
-            shown += batch.length;
-
-            if (shown < results.length) {
-                statsContainer.textContent = `${stats} — ${shown}件目まで表示中...`;
-            } else {
-                statsContainer.textContent = stats;
+        async function worker() {
+            while (true) {
+                const i = next++;
+                if (i >= results.length) return;
+                if (token !== renderToken) return; // 新しい検索が始まった
+                data[i] = await results[i].data().catch(() => null);
+                done += 1;
+                if (token === renderToken && done % 25 === 0) {
+                    statsContainer.textContent = `${stats} — 読み込み中 ${done}/${results.length}`;
+                }
             }
         }
+
+        await Promise.all(
+            Array.from({ length: Math.min(PARALLEL, results.length) }, worker)
+        );
+        if (token !== renderToken) return;
+
+        const frag = document.createDocumentFragment();
+        for (const d of data) {
+            if (d) frag.appendChild(buildItem(d));
+        }
+        resultsContainer.appendChild(frag);
+        statsContainer.textContent = stats;
     }
 
     input.addEventListener('keypress', (e) => {
