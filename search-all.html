@@ -271,12 +271,35 @@
     #search-results {
       color: var(--text);
     }
+
+    /* .search-mode などは display を持っているので、hidden を効かせる */
+    [hidden] {
+      display: none !important;
+    }
+
+    /* 「1冊の中だけを探しています」の帯 */
+    #search-scope {
+      margin-bottom: 1.5em;
+      padding: 0.7em 1em;
+      border-radius: 8px;
+      background-color: var(--input-bg);
+      border: 1px solid var(--item-border);
+      color: var(--stats-color);
+      font-size: 0.9em;
+    }
+
+    #search-scope a {
+      margin-left: 0.8em;
+      color: var(--link-color);
+      font-weight: 500;
+    }
   </style>
 </head>
 
 <body>
   <a class="nav-link" href="index.html">← トップページに戻る</a>
   <h1 id="サイト内一括検索"><a href="#サイト内一括検索">サイト内一括検索</a></h1>
+  <div id="search-scope" hidden></div>
   <div class="search-container">
     <input autofocus="" id="search-input" placeholder="キーワードを入力してEnter または 検索ボタン" type="text" />
     <div class="search-mode">
@@ -293,7 +316,7 @@
     <div id="search-stats"></div>
   </div>
   <div id="search-results"></div>
-  <script src="search-all.js?v=202609090908"></script>
+  <script src="search-all.js?v=202609092100"></script>
 
   <script src="theme/script.js?v=202602241611"></script>
 </body>

@@ -8,11 +8,19 @@
    切り方と合わない言葉が取りこぼされ、抜粋を出すのにページごとの通信が
    必要だった。本文が手元にあれば、どちらもいらない。
 
+   ?book=<フォルダ名> を付けると、その書籍の中だけを探す。本文は書籍ごとに
+   分けてあるので、読み込むのもその1冊ぶんだけで済む（数百KB）。各書籍の
+   目次にある「この書籍の中で検索」がここへ来る。
+
    本文の作り方は tools/build_fulltext.py。 */
 (function () {
     const MANIFEST_URL = 'data/fulltext/manifest.json';
     const SHARD_DIR = 'data/fulltext/';
     const CACHE_NAME = 'mimune-fulltext-v1';
+
+    // ?book=dp なら原理講論の中だけ。無ければサイト全体。
+    let scopeBook = new URLSearchParams(location.search).get('book') || '';
+    let scopeTitle = '';
 
     // 抜粋は当たった所の前後をこれだけ切り出す
     const EXCERPT_BEFORE = 110;
@@ -79,13 +87,28 @@
         if (loading) return loading;
         loading = (async () => {
             const man = await (await fetch(MANIFEST_URL)).json();
-            totalChars = man.chars;
-            totalPages = man.pages;
-            totalBytes = man.shards.reduce((a, s) => a + s.bytes, 0);
+
+            // 書籍を指定されていたら、その1冊ぶんのシャードだけを読む。
+            // 知らない名前だったときはサイト全体に落とす。
+            const book = (man.books || []).find(b => b.id === scopeBook);
+            const wantedShards = book
+                ? man.shards.filter(s => s.book === book.id)
+                : man.shards;
+            if (book) {
+                scopeTitle = book.title || book.id;
+                totalChars = book.chars;
+                totalPages = book.pages;
+            } else {
+                totalChars = man.chars;
+                totalPages = man.pages;
+            }
+            totalBytes = wantedShards.reduce((a, s) => a + s.bytes, 0);
+            if (book) { showScope(); } else { scopeBook = ''; clearScope(); }
 
             const cache = await openCache();
             if (cache) {
-                // 作り直しで消えたシャードを捨てる
+                // 作り直しで消えたシャードを捨てる。1冊だけ読むときも、
+                // 判断は manifest 全体で行う（他の書籍のぶんを消さない）。
                 const wanted = new Set(man.shards.map(
                     s => SHARD_DIR + s.file + '?v=' + s.hash));
                 try {
@@ -97,7 +120,7 @@
                 } catch (e) { }
             }
 
-            await Promise.all(man.shards.map(async (s) => {
+            await Promise.all(wantedShards.map(async (s) => {
                 const sh = await fetchShard(cache, s);
                 shards.push(sh);
                 loadedBytes += s.bytes;
@@ -260,9 +283,56 @@
         return checked ? checked.value : 'and';
     }
 
+    // 1冊の中を探しているときは、聖書を外すも何もない
     function excludingBible() {
-        return !!(bibleInput && bibleInput.checked);
+        return !scopeBook && !!(bibleInput && bibleInput.checked);
     }
+
+    // --- 「1冊の中だけ」の見せ方 -------------------------------------------
+    const headingLink = document.querySelector('h1 a');
+    const backLink = document.querySelector('a.nav-link');
+    const bibleRow = bibleInput ? bibleInput.closest('.search-filter') : null;
+    const scopeNote = document.getElementById('search-scope');
+
+    function showScope() {
+        if (!scopeBook) return;
+        const name = scopeTitle ? `『${scopeTitle}』` : 'この書籍';
+        if (headingLink) headingLink.textContent = name + 'の中から検索';
+        document.title = `み旨の裏庭 | ${name}の中から検索`;
+        if (backLink) {
+            backLink.textContent = `← ${name}の目次に戻る`;
+            backLink.setAttribute('href', encodeURI(scopeBook) + '/index.html');
+        }
+        if (bibleRow) bibleRow.hidden = true;
+        if (scopeNote) {
+            scopeNote.innerHTML = '';
+            scopeNote.appendChild(document.createTextNode(
+                name + 'の中だけを探しています。'));
+            const all = document.createElement('a');
+            all.href = 'search-all.html';
+            all.textContent = 'サイト全体から探す';
+            scopeNote.appendChild(all);
+            scopeNote.hidden = false;
+        }
+    }
+
+    // 知らない書籍名だったとき。サイト全体の見た目に戻す。
+    function clearScope() {
+        if (headingLink) headingLink.textContent = 'サイト内一括検索';
+        document.title = 'み旨の裏庭 | サイト内一括検索';
+        if (backLink) {
+            backLink.textContent = '← トップページに戻る';
+            backLink.setAttribute('href', 'index.html');
+        }
+        if (bibleRow) bibleRow.hidden = false;
+        if (scopeNote) {
+            scopeNote.hidden = true;
+            scopeNote.innerHTML = '';
+        }
+    }
+
+    // タイトルが分かるのは manifest が届いてからなので、まず入れ物だけ整える
+    showScope();
 
     try {
         const saved = localStorage.getItem(MODE_KEY);

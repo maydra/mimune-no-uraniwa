@@ -1,5 +1,7 @@
 // バージョンを上げると、古いキャッシュは activate 時に全部消える
-const CACHE_NAME = 'mimune-cache-v3';
+// v4: 全文検索の本文を書籍ごとに分け直してファイル名が総入れ替えになった。
+// 古い manifest.json が残っていると、もう無いシャードを探しに行ってしまう。
+const CACHE_NAME = 'mimune-cache-v4';
 const STATIC_URLS = [
     './index.html',
     './theme/style.css',
