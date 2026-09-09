@@ -1,10 +1,17 @@
 /* サイト内一括検索 — pagefind (pagefind/) を使う。
    以前は data/search-index.json を丸ごと（約57MB）取りに行っていた。 */
 (function () {
-    // 結果は全部、一度に出す。抜粋は1件ずつ取りに行くしかないので、
-    // 直列で待たずに一気に投げて、揃ってから画面に描く。
-    // 同時に投げる数（多すぎるとブラウザが詰まる）。
-    const PARALLEL = 60;
+    // タイトルと URL だけの小さな対応表（tools/build_page_titles.py が作る）。
+    // これがあれば、結果の一覧は通信ゼロで一度に全部描ける。
+    const TITLES_URL = 'data/page-titles.json';
+
+    // 本文の抜粋は pagefind の断片ファイルに入っていて、1ページ = 1リクエスト。
+    // 全件ぶん取ると「祝福」で 1,008回・12.8MB かかるので、
+    // 画面に入ってきた項目のぶんだけ、この数ずつ取りに行く。
+    const EXCERPT_PARALLEL = 8;
+
+    // 画面に入る手前どれくらいから取り始めるか
+    const EXCERPT_AHEAD = '800px';
 
     // 抜粋の長さ（語数）。pagefind の既定は 30 で、日本語だと40字ほどにしか
     // ならない。4〜5行ぶんの前後関係が見えるように広げる。
@@ -201,7 +208,8 @@
 
         let pf;
         try {
-            pf = await loadPagefind();
+            const both = await Promise.all([loadPagefind(), loadTitles()]);
+            pf = both[0];
         } catch (e) {
             statsContainer.textContent = '検索データを読み込めませんでした。';
             return;
@@ -241,7 +249,7 @@
         }
         const stats = `${label}の検索結果: ${results.length}件${note || how}`;
         statsContainer.textContent = stats;
-        await renderAll(results, stats, token);
+        renderAll(results, stats, token);
     }
 
     // 抜粋に入るタグは <mark> だけ。当たった語の手前から MAX_EXCERPT_CHARS 字を残す。
@@ -281,57 +289,116 @@
         return (start > 0 ? '…' : '') + out + (end < plainLen ? '…' : '');
     }
 
-    function buildItem(d) {
+    // ページの置き場所（GitHub Pages では /mimune-no-uraniwa/）。
+    // 対応表の URL は先頭の / を取ってあるので、ここを前に足す。
+    const BASE = new URL('.', document.currentScript
+        ? document.currentScript.src : location.href).pathname;
+
+    let titles = null;
+    let titlesLoading = null;
+
+    function loadTitles() {
+        if (titles) return Promise.resolve(titles);
+        if (!titlesLoading) {
+            titlesLoading = fetch(TITLES_URL)
+                .then(r => (r.ok ? r.json() : null))
+                .then(json => { titles = json || {}; return titles; })
+                .catch(() => { titles = {}; return titles; }); // 無ければ後から補う
+        }
+        return titlesLoading;
+    }
+
+    // 抜粋を取りに行く順番待ち。画面に入った順に、EXCERPT_PARALLEL 件ずつ。
+    let queue = [];
+    let running = 0;
+
+    function pump() {
+        while (running < EXCERPT_PARALLEL && queue.length) {
+            const job = queue.shift();
+            if (job.token !== renderToken) continue; // 新しい検索が始まった
+            running += 1;
+            job.result.data()
+                .then(d => { if (job.token === renderToken) fillItem(job.item, d); })
+                .catch(() => { })
+                .then(() => { running -= 1; pump(); });
+        }
+    }
+
+    function fillItem(item, d) {
+        const snippet = item.querySelector('.result-snippet');
+        snippet.innerHTML = trimExcerpt(d.excerpt); // pagefind が <mark> を付けて返す
+        snippet.classList.remove('result-snippet-loading');
+
+        // 対応表に無かったページは、ここで初めて本当のタイトルが分かる
+        const link = item.querySelector('.result-title a');
+        if (link && link.dataset.placeholder === '1') {
+            link.textContent = (d.meta && d.meta.title) ? d.meta.title : d.url;
+            link.href = d.url;
+            delete link.dataset.placeholder;
+        }
+    }
+
+    const observer = ('IntersectionObserver' in window)
+        ? new IntersectionObserver((entries, obs) => {
+            for (const e of entries) {
+                if (!e.isIntersecting) continue;
+                obs.unobserve(e.target);
+                const job = pending.get(e.target);
+                if (job) { pending.delete(e.target); queue.push(job); }
+            }
+            pump();
+        }, { rootMargin: EXCERPT_AHEAD })
+        : null;
+
+    const pending = new Map();
+
+    function buildItem(r, token) {
         const item = document.createElement('div');
         item.className = 'result-item';
+
+        const known = titles ? titles[r.id] : null;
 
         const title = document.createElement('div');
         title.className = 'result-title';
         const link = document.createElement('a');
-        link.href = d.url;
-        link.textContent = (d.meta && d.meta.title) ? d.meta.title : d.url;
+        if (known) {
+            link.href = BASE + known[0];
+            link.textContent = known[1] || known[0];
+        } else {
+            // 対応表に無い（索引を作り直した直後など）。抜粋と一緒に取ってくる
+            link.href = '#';
+            link.textContent = '読み込み中...';
+            link.dataset.placeholder = '1';
+        }
         title.appendChild(link);
 
         const snippet = document.createElement('div');
-        snippet.className = 'result-snippet';
-        snippet.innerHTML = trimExcerpt(d.excerpt); // pagefind が <mark> を付けて返す
+        snippet.className = 'result-snippet result-snippet-loading';
 
         item.appendChild(title);
         item.appendChild(snippet);
+
+        const job = { result: r, item: item, token: token };
+        if (observer) {
+            pending.set(item, job);
+            observer.observe(item);
+        } else {
+            queue.push(job); // IntersectionObserver が無いブラウザは順に取る
+        }
         return item;
     }
 
-    // 全件出す。抜粋は1件ずつ取りに行くので、PARALLEL 件ずつ同時に投げて、
-    // 全部そろってから一度だけ画面に足す（少しずつ足すとパラパラ出て見える）。
-    async function renderAll(results, stats, token) {
-        const data = new Array(results.length);
-        let done = 0;
-        let next = 0;
-
-        async function worker() {
-            while (true) {
-                const i = next++;
-                if (i >= results.length) return;
-                if (token !== renderToken) return; // 新しい検索が始まった
-                data[i] = await results[i].data().catch(() => null);
-                done += 1;
-                if (token === renderToken && done % 25 === 0) {
-                    statsContainer.textContent = `${stats} — 読み込み中 ${done}/${results.length}`;
-                }
-            }
-        }
-
-        await Promise.all(
-            Array.from({ length: Math.min(PARALLEL, results.length) }, worker)
-        );
-        if (token !== renderToken) return;
+    // 全件を一度に描く。タイトルと URL は対応表から取るので通信ゼロ。
+    // 本文の抜粋だけ、画面に入ったものから後追いで埋める。
+    function renderAll(results, stats, token) {
+        pending.clear();
+        queue = [];
 
         const frag = document.createDocumentFragment();
-        for (const d of data) {
-            if (d) frag.appendChild(buildItem(d));
-        }
+        for (const r of results) frag.appendChild(buildItem(r, token));
         resultsContainer.appendChild(frag);
         statsContainer.textContent = stats;
+        pump();
     }
 
     input.addEventListener('keypress', (e) => {
@@ -348,5 +415,8 @@
     }
 
     // 入力を始めた時点で裏読みしておくと、Enter を押した瞬間に結果が出る
-    input.addEventListener('focus', () => { loadPagefind().catch(() => { }); }, { once: true });
+    input.addEventListener('focus', () => {
+        loadPagefind().catch(() => { });
+        loadTitles();
+    }, { once: true });
 })();
