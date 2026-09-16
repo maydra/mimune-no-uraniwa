@@ -62,11 +62,32 @@
   .sectoc > summary::before{content:"▸";transition:transform .15s;font-size:12px}
   .sectoc[open] > summary::before{transform:rotate(90deg)}
   .sectoc > summary .cnt{color:var(--muted);font-weight:400}
+  /* 出す段の深さを選ぶ。深い節（モーセ路程は5段・28行）を大づかみにするため */
+  .sectoc .lv{display:flex;gap:4px;margin-left:auto;align-items:center}
+  .sectoc .lv .lvT{color:var(--muted);font-weight:400;font-size:12px}
+  .sectoc .lv button{font:inherit;font-size:12px;font-weight:700;line-height:1.5;
+    padding:1px 8px;border-radius:6px;border:1px solid var(--line);
+    background:var(--bg);color:var(--muted);cursor:pointer}
+  .sectoc .lv button[aria-pressed="true"]{background:var(--accent);color:#fff;
+    border-color:var(--accent)}
   .toclist{padding:0 8px 10px}
   .tocrow{display:grid;gap:10px;padding:6px 6px;border-top:1px solid var(--line);
     border-radius:6px;cursor:pointer;font-size:14px;line-height:1.6}
   .tocrow:first-child{border-top:none}
   .tocrow:hover{background:var(--mark)}
+  /* 段の深さを字の大きさでも見せる。いちばん上の段は少し離して、太い線で区切る */
+  .tocrow[data-d="0"]{border-top:2px solid var(--markline);margin-top:9px}
+  .tocrow[data-d="0"]:first-child{margin-top:0}
+  .tocrow[data-d="0"] .t{font-size:15px;font-weight:700}
+  .tocrow[data-d="1"] .t{font-weight:600}
+  .tocrow[data-d="2"] .t{font-size:13.5px}
+  .tocrow[data-d="3"] .t,.tocrow[data-d="4"] .t,.tocrow[data-d="5"] .t{font-size:13px;opacity:.92}
+  /* 段の数だけ縦線を引く（木の枝）。どこにぶら下がっているかが、字を読まなくても分かる */
+  .tocrow .t{position:relative}
+  .tocrow .t::before{content:"";position:absolute;left:0;top:1px;bottom:1px;
+    width:calc(var(--d,0) * 1.4em);pointer-events:none;
+    background-image:repeating-linear-gradient(to right,
+      var(--line) 0 1px, transparent 1px 1.4em)}
   .tocrow .no{display:flex;flex-direction:column;align-items:flex-end;gap:1px;
     color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;
     user-select:none;-webkit-user-select:none}
@@ -227,7 +248,7 @@
       hint: "段落をクリックで印 ／ ↑↓ で読み進める ／ ←→ で節を移動",
       hintTouch: "段落をタップで印 ／ ◀ ▶ で節を移動",
       pos: (i, n, p) => `${i} / ${n}　${p} 段落`,
-      secToc: "この節の目次", secTocT: "小見出しへ跳ぶ",
+      secToc: "この節の目次", secTocT: "小見出しへ跳ぶ", secTocLv: "段",
       loading: "読み込み中…",
       nodata: "データがありません（python scripts/align.py を実行してください）",
       none: "（この節は未収録）",
@@ -261,7 +282,7 @@
       hint: "문단을 클릭하면 표시 ／ ↑↓ 로 읽어 나가기 ／ ←→ 로 절 이동",
       hintTouch: "문단을 누르면 표시 ／ ◀ ▶ 로 절 이동",
       pos: (i, n, p) => `${i} / ${n}　${p} 문단`,
-      secToc: "이 절의 차례", secTocT: "소제목으로 이동",
+      secToc: "이 절의 차례", secTocT: "소제목으로 이동", secTocLv: "단계",
       loading: "읽는 중…",
       nodata: "자료가 없습니다 (python scripts/align.py 을 실행하십시오)",
       none: "(이 절은 실려 있지 않습니다)",
@@ -295,7 +316,7 @@
       hint: "Click a paragraph to mark it / ↑↓ to read on / ←→ to change section",
       hintTouch: "Tap a paragraph to mark it / ◀ ▶ to change section",
       pos: (i, n, p) => `${i} / ${n}　${p} paragraphs`,
-      secToc: "Contents of this section", secTocT: "Jump to a subheading",
+      secToc: "Contents of this section", secTocT: "Jump to a subheading", secTocLv: "Levels",
       loading: "Loading…",
       nodata: "No data (run python scripts/align.py)",
       none: "(not posted for this section)",
@@ -730,34 +751,64 @@
     const wantOpen = store.get("sectoc", !narrow());
     box.open = wantOpen;
     box.ontoggle = () => { if (box.open !== wantOpen) store.set("sectoc", box.open); };
-    $("#sectocSum").innerHTML = esc(t.secToc) + `<span class="cnt">${heads.length}</span>`;
-    body.innerHTML = "";
     const lv = tocLevels(heads.map((r, i) =>
       (i === 0 ? tocLead(s, { id: "ko" }) : "") || (cellAt(s, { id: "ko" }, r) || {}).t || ""));
+    const maxD = Math.max(0, ...lv.depth);
     const gut = lv.deep ? Math.min(104, 34 + lv.wide * 8) + "px" : "34px";
-    heads.forEach((r, i) => {
-      const row = document.createElement("div");
-      row.className = "tocrow";
-      row.style.gridTemplateColumns = `${gut} ${shown.map(() => "1fr").join(" ")}`;
-      row.title = t.secTocT;
-      const no = document.createElement("span");
-      no.className = "no";
-      no.innerHTML = (lv.deep && lv.path[i] ? `<span class="p">${esc(lv.path[i])}</span>` : "")
-        + `<span class="r">${r + 1}</span>`;
-      row.appendChild(no);
-      shown.forEach((L) => {
-        const c = cellAt(s, L, r);
-        const txt = (i === 0 ? tocLead(s, L) : "") || (c && c.t) || "";
-        const cell = document.createElement("span");
-        cell.className = "t";
-        cell.lang = L.id;
-        if (lv.depth[i]) cell.style.paddingLeft = (lv.depth[i] * 1.15) + "em";
-        cell.innerHTML = `<b>${L.tag}</b>` + esc(txt.replace(/\s+/g, " ").trim() || "—");
-        row.appendChild(cell);
+    // 出す段の深さ。深い節は大づかみにできたほうが読みやすい（モーセ路程は5段・28行）
+    let show = Math.min(store.get("sectoclv", 99), maxD + 1);
+
+    function drawLv() {
+      if (maxD < 1) { $("#sectocSum").innerHTML = esc(t.secToc)
+        + `<span class="cnt">${heads.length}</span>`; return; }
+      const btn = [];
+      for (let n = 1; n <= maxD + 1; n++)
+        btn.push(`<button type="button" data-lv="${n}" aria-pressed="${n === show}">${n}</button>`);
+      const seen = lv.depth.filter((d) => d < show).length;
+      $("#sectocSum").innerHTML = esc(t.secToc)
+        + `<span class="cnt">${seen < heads.length ? seen + " / " : ""}${heads.length}</span>`
+        + `<span class="lv"><span class="lvT">${esc(t.secTocLv)}</span>${btn.join("")}</span>`;
+      $("#sectocSum").querySelectorAll("[data-lv]").forEach((b) => {
+        b.onclick = (e) => {
+          e.preventDefault(); e.stopPropagation();     // 目次をたたまずに切り替える
+          show = +b.dataset.lv;
+          store.set("sectoclv", show > maxD ? 99 : show);
+          draw();
+        };
       });
-      row.onclick = () => { cur = r; mark(); showCur(); };
-      body.appendChild(row);
-    });
+    }
+
+    function draw() {
+      drawLv();
+      body.innerHTML = "";
+      heads.forEach((r, i) => {
+        if (lv.depth[i] >= show) return;
+        const row = document.createElement("div");
+        row.className = "tocrow";
+        row.style.gridTemplateColumns = `${gut} ${shown.map(() => "1fr").join(" ")}`;
+        row.title = t.secTocT;
+        row.dataset.d = lv.depth[i];
+        row.style.setProperty("--d", lv.depth[i]);
+        const no = document.createElement("span");
+        no.className = "no";
+        no.innerHTML = (lv.deep && lv.path[i] ? `<span class="p">${esc(lv.path[i])}</span>` : "")
+          + `<span class="r">${r + 1}</span>`;
+        row.appendChild(no);
+        shown.forEach((L) => {
+          const c = cellAt(s, L, r);
+          const txt = (i === 0 ? tocLead(s, L) : "") || (c && c.t) || "";
+          const cell = document.createElement("span");
+          cell.className = "t";
+          cell.lang = L.id;
+          if (lv.depth[i]) cell.style.paddingLeft = (lv.depth[i] * 1.4 + 0.5) + "em";
+          cell.innerHTML = `<b>${L.tag}</b>` + esc(txt.replace(/\s+/g, " ").trim() || "—");
+          row.appendChild(cell);
+        });
+        row.onclick = () => { cur = r; mark(); showCur(); };
+        body.appendChild(row);
+      });
+    }
+    draw();
   }
 
   // 行番号の欄。番号のとなりに、その段落を開くリンクを配るボタンを置く
