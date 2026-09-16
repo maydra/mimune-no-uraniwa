@@ -52,6 +52,28 @@
   h1 .linkbtn{font-size:13px;margin-left:10px;vertical-align:middle}
 
   /* 対訳の本体は 1 枚のグリッド。英語は複数行にまたがる */
+  /* 節の中の目次。小見出しだけを並べて、押すとその段落へ跳ぶ */
+  .sectoc{margin:12px 0 0;border:1px solid var(--line);border-radius:10px;
+    background:color-mix(in srgb,var(--panel) 60%,transparent)}
+  .sectoc[hidden]{display:none}
+  .sectoc > summary{cursor:pointer;list-style:none;padding:9px 14px;font-size:14px;
+    font-weight:700;color:var(--accent);display:flex;align-items:center;gap:8px}
+  .sectoc > summary::-webkit-details-marker{display:none}
+  .sectoc > summary::before{content:"▸";transition:transform .15s;font-size:12px}
+  .sectoc[open] > summary::before{transform:rotate(90deg)}
+  .sectoc > summary .cnt{color:var(--muted);font-weight:400}
+  .toclist{padding:0 8px 10px}
+  .tocrow{display:grid;gap:10px;padding:6px 6px;border-top:1px solid var(--line);
+    border-radius:6px;cursor:pointer;font-size:14px;line-height:1.6}
+  .tocrow:first-child{border-top:none}
+  .tocrow:hover{background:var(--mark)}
+  .tocrow .no{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;
+    user-select:none;-webkit-user-select:none}
+  .tocrow .t{min-width:0;overflow-wrap:anywhere}
+  .tocrow .t b{display:block;font-size:10px;letter-spacing:.14em;color:var(--muted);
+    font-weight:700;user-select:none;-webkit-user-select:none}
+  @media (max-width:760px){ .tocrow{grid-template-columns:1fr !important;gap:2px} }
+
   main{padding:8px var(--pad) 50vh;max-width:1600px;margin:0 auto;
     display:grid;column-gap:var(--gap);align-items:start}
   .cell{font-size:var(--fs);line-height:var(--lh);overflow-wrap:anywhere;
@@ -197,6 +219,10 @@
   <h1 id="secTitle">…</h1>
   <div class="sub" id="secSub"></div>
   <div id="secWarn"></div>
+  <details class="sectoc" id="sectoc" hidden>
+    <summary id="sectocSum"></summary>
+    <div class="toclist" id="sectocBody"></div>
+  </details>
 </div>
 
 <main id="body"></main>
@@ -226,6 +252,7 @@
       hint: "段落をクリックで印 ／ ↑↓ で読み進める ／ ←→ で節を移動",
       hintTouch: "段落をタップで印 ／ ◀ ▶ で節を移動",
       pos: (i, n, p) => `${i} / ${n}　${p} 段落`,
+      secToc: "この節の目次", secTocT: "小見出しへ跳ぶ",
       loading: "読み込み中…",
       nodata: "データがありません（python build.py を実行してください）",
       none: "（この節はまだありません）",
@@ -259,6 +286,7 @@
       hint: "문단을 클릭하면 표시 ／ ↑↓ 로 읽어 나가기 ／ ←→ 로 절 이동",
       hintTouch: "문단을 누르면 표시 ／ ◀ ▶ 로 절 이동",
       pos: (i, n, p) => `${i} / ${n}　${p} 문단`,
+      secToc: "이 절의 차례", secTocT: "소제목으로 이동",
       loading: "읽는 중…",
       nodata: "자료가 없습니다 (python build.py 을 실행하십시오)",
       none: "(이 절은 실려 있지 않습니다)",
@@ -292,6 +320,7 @@
       hint: "Click a paragraph to mark it / ↑↓ to read on / ←→ to change section",
       hintTouch: "Tap a paragraph to mark it / ◀ ▶ to change section",
       pos: (i, n, p) => `${i} / ${n}　${p} paragraphs`,
+      secToc: "Contents of this section", secTocT: "Jump to a subheading",
       loading: "Loading…",
       nodata: "No data (run python build.py)",
       none: "(not posted for this section)",
@@ -578,6 +607,8 @@
     if ((s.cells.en || []).some((c) => c.mv)) warn.push(t.wMoved);
     $("#secWarn").innerHTML = warn.map((w) => `<span class="warn">${esc(w)}</span>`).join(" ");
 
+    buildSecToc(s, shown);
+
     const src = [];
     shown.forEach((L) => {
       if (L.id === "ja" && s.urls.jaMimune)
@@ -626,6 +657,53 @@
     document.documentElement.style.setProperty(
       "--headh", document.querySelector("header").offsetHeight + "px");
     mark();
+  }
+
+  // ---- 節の中の目次 ----
+  // 本文に埋まっている小見出し（`k` の付いた段落）だけを拾って、節の頭に並べる。
+  // 出す言語は本文と同じものに合わせる。押すとその段落に印が付いて、そこまで動く。
+  // 小見出しの無い節（60節のうち18節）では丸ごと隠す。
+  function plainText(html) {
+    const d = document.createElement("div");
+    d.innerHTML = html || "";
+    d.querySelectorAll("rt, rp").forEach((x) => x.remove());   // ルビの読みは題に混ぜない
+    return d.textContent.replace(/\s+/g, " ").trim();
+  }
+
+  function buildSecToc(s, shown) {
+    const box = $("#sectoc"), body = $("#sectocBody"), t = T();
+    const heads = [];
+    for (let r = 0; r < s.n; r++) {
+      const c = (s.cells.ko || []).find((x) => x.r === r);
+      if (c && c.k) heads.push(r);
+    }
+    box.hidden = heads.length === 0;
+    if (box.hidden) return;
+    box.open = store.get("sectoc", true);
+    box.ontoggle = () => store.set("sectoc", box.open);
+    $("#sectocSum").innerHTML = esc(t.secToc)
+      + `<span class="cnt">${heads.length}</span>`;
+    body.innerHTML = "";
+    heads.forEach((r) => {
+      const row = document.createElement("div");
+      row.className = "tocrow";
+      row.style.gridTemplateColumns = `34px ${shown.map(() => "1fr").join(" ")}`;
+      row.title = t.secTocT;
+      const no = document.createElement("span");
+      no.className = "no";
+      no.textContent = r + 1;
+      row.appendChild(no);
+      shown.forEach((L) => {
+        const c = (s.cells[L.id] || []).find((x) => x.r === r);
+        const cell = document.createElement("span");
+        cell.className = "t";
+        cell.lang = L.id;
+        cell.innerHTML = `<b>${L.tag}</b>` + esc(plainText(c && c.h) || "—");
+        row.appendChild(cell);
+      });
+      row.onclick = () => { cur = r; mark(); showCur(); };
+      body.appendChild(row);
+    });
   }
 
   // 行番号の欄。番号のとなりに、その段落を開くリンクを配るボタンを置く
