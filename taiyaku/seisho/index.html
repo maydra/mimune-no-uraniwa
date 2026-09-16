@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>聖書 三か国語対訳</title>
+<style>
+  :root{
+    --bg:#faf8f4; --panel:#fff; --ink:#1d1b17; --muted:#7a736c;
+    --line:#e6e0d6; --accent:#8a5a2b; --mark:#fff4d6; --markline:#dfae55;
+    --pad:20px; --fs:20px; --lh:1.9; --gap:26px;
+  }
+  html[data-theme="dark"]{
+    --bg:#15140f; --panel:#1f1e17; --ink:#ece7dc; --muted:#9a9287;
+    --line:#34312a; --accent:#dba867; --mark:#3b3118; --markline:#8b6c2b;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,"Malgun Gothic","Noto Sans KR",sans-serif}
+
+  header{position:sticky;top:0;z-index:30;background:var(--panel);
+    border-bottom:1px solid var(--line);box-shadow:0 1px 10px rgba(0,0,0,.07)}
+  .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:9px var(--pad)}
+  .bar + .bar{padding-top:0}
+  #tools.closed{display:none}
+  .brand{font-weight:700;color:var(--accent);white-space:nowrap;letter-spacing:.05em}
+  select,button,input{font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);
+    border-radius:8px;padding:6px 10px;cursor:pointer}
+  #sec{max-width:min(48vw,440px)}
+  button:hover{border-color:var(--accent)}
+  button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .grp{display:flex;gap:6px;align-items:center}
+  /* 画面の言語。本文の言語ボタンと取り違えないよう、地球の印と区切り線を付ける */
+  .uigrp{padding-left:10px;border-left:1px solid var(--line)}
+  .spacer{flex:1}
+  .hint{color:var(--muted);font-size:13px}
+  .pos{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px;white-space:nowrap}
+
+  .sechead{padding:22px var(--pad) 10px;max-width:1600px;margin:0 auto}
+  .sechead h1{font-size:clamp(19px,2.2vw,27px);margin:0 0 10px;line-height:1.4}
+  .sechead .sub{color:var(--muted);font-size:14px;line-height:1.8}
+  .sechead .sub > div{display:flex;gap:6px;align-items:baseline}
+  .sechead .sub b{color:var(--accent);flex:0 0 auto}
+  .sechead .sub span{flex:1 1 auto;min-width:0}
+  .warn{display:inline-block;margin:10px 8px 0 0;padding:5px 12px;border-radius:999px;
+    background:var(--mark);border:1px solid var(--markline);font-size:13px}
+  /* 節番号がずれている章の断り。ほかの断りより強く出す */
+  .warn.hard{background:#fbe3dc;border-color:#c86a4e;color:#7a2f18;font-weight:700}
+  html[data-theme="dark"] .warn.hard{background:#4a2118;border-color:#c86a4e;color:#f0c4b4}
+  /* 節ごと・言語ごとのリンクを配るボタン */
+  .linkbtn{font-size:12px;line-height:1.5;padding:2px 9px;border-radius:999px;
+    color:var(--muted);flex:0 0 auto;white-space:nowrap}
+  .linkbtn:hover{color:var(--accent)}
+  h1 .linkbtn{font-size:13px;margin-left:10px;vertical-align:middle}
+
+  /* 対訳の本体は 1 枚のグリッド。英語は複数行にまたがる */
+  main{padding:8px var(--pad) 50vh;max-width:1600px;margin:0 auto;
+    display:grid;column-gap:var(--gap);align-items:start}
+  .cell{font-size:var(--fs);line-height:var(--lh);overflow-wrap:anywhere;
+    padding:12px 12px 14px;border-top:1px solid var(--line);border-radius:8px}
+  /* 列の札と行番号は画面の飾りなので、本文と一緒にコピーされないようにする */
+  .cell .tag{display:block;font-size:10px;letter-spacing:.14em;color:var(--muted);
+    font-weight:700;margin-bottom:5px;user-select:none;-webkit-user-select:none}
+  .rowno{user-select:none;-webkit-user-select:none}
+  .cell.span{background:color-mix(in srgb,var(--panel) 55%,transparent)}
+  .cell.on{background:var(--mark);box-shadow:inset 4px 0 0 var(--markline)}
+  .rowno{font-size:11px;color:var(--muted);padding-top:14px;border-top:1px solid var(--line);
+    font-variant-numeric:tabular-nums;display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+  /* 段落ごとのリンク。ふだんは薄く、指で触る端末では触らなくても見えるようにする */
+  .rowno .lk{cursor:pointer;font-size:11px;line-height:1;opacity:0;transition:opacity .15s;
+    padding:2px 3px;border-radius:6px}
+  .rowno:hover .lk,.rowno .lk:focus-visible{opacity:.85}
+  .rowno.here .lk{opacity:.85}
+  @media (pointer:coarse){ .rowno .lk{opacity:.45;padding:5px 7px;font-size:13px} }
+  .empty{color:var(--muted)}
+  .cell ruby rt{font-size:.5em;color:var(--muted);user-select:none;-webkit-user-select:none}
+  /* 版で節の切り方が違うだけの所。本文が無いわけではないので斜線にしない */
+  .cell.merged .empty{font-size:.72em;letter-spacing:.02em;opacity:.75}
+  /* 聖句へのリンク。本文の流れを切らない程度に */
+  .cell a{color:inherit;text-decoration:underline;text-decoration-color:var(--markline);
+    text-underline-offset:3px}
+  .cell a:hover{color:var(--accent)}
+  .cell.gap{background:repeating-linear-gradient(135deg,transparent,transparent 7px,
+    color-mix(in srgb,var(--markline) 16%,transparent) 7px,
+    color-mix(in srgb,var(--markline) 16%,transparent) 14px)}
+
+  /* 横3列（縦積み）: 1 行ぶんをひとかたまりにして、行の切れ目を太い線で見せる */
+  .rowbox{border-top:2px solid var(--line);padding-top:2px;margin-top:14px;
+    scroll-margin-top:calc(var(--headh,60px) + 12px)}
+  .rowbox .rowno{padding:8px 12px 0;border-top:none;flex-direction:row;align-items:baseline;gap:10px}
+  .rowbox .cell{border-top:none;padding-top:4px}
+
+  #q{min-width:170px;cursor:text}
+  .hits{position:absolute;top:100%;left:0;right:0;max-height:52vh;overflow:auto;
+    background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+  .hit{padding:9px var(--pad);border-top:1px solid var(--line);cursor:pointer;font-size:14px;line-height:1.6}
+  .hit:hover{background:var(--mark)}
+  .hit b{color:var(--accent);margin-right:8px;font-variant-numeric:tabular-nums}
+  .hit mark{background:var(--mark);color:inherit;font-weight:700;padding:0 2px}
+  footer{padding:18px var(--pad);color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+  /* コピーしたことの知らせ。段落ごとのボタンは小さいので、その場で字を変えずここに出す */
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:60;
+    background:var(--accent);color:#fff;padding:9px 18px;border-radius:999px;font-size:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .18s;
+    max-width:min(92vw,560px);text-align:center}
+  .toast.on{opacity:1}
+  a{color:var(--accent)}
+
+  /* スマホ: 縦3列は1行2〜3字になって読めないので、初めて開いたときは横3列にして
+     上のバーもたたんでおく（下の JS）。ここでは詰めて、指で押せる大きさにする */
+  @media (max-width:760px){
+    :root{--gap:0px;--pad:12px}
+    .bar{gap:6px;padding:7px var(--pad)}
+    select,button{padding:8px 11px}
+    #sec{max-width:100%;flex:1 1 150px;min-width:0}
+    #q{flex:1 1 140px;min-width:0}
+    .uigrp{padding-left:8px}
+    .sechead{padding:14px var(--pad) 6px}
+    .warn{font-size:12px;padding:5px 10px}
+    .cell{padding:10px 10px 12px}
+    .rowbox .rowno{padding:8px 10px 0}
+    .linkbtn{padding:4px 10px}
+  }
+  @media (max-width:480px){ .brand{display:none} }
+  @media print{
+    header,footer,.hint,.linkbtn{display:none}
+    body{background:#fff;color:#000}
+    .cell{break-inside:avoid}
+    .cell.on{background:none;box-shadow:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <span class="brand" id="brand">聖書 対訳</span>
+    <select id="book"></select>
+    <select id="chap"></select>
+    <button id="prev">◀</button>
+    <button id="next">▶</button>
+    <div class="spacer"></div>
+    <span class="pos" id="pos"></span>
+    <button id="toggle" aria-expanded="true">▴</button>
+  </div>
+  <div id="tools">
+    <div class="bar">
+      <div class="grp" id="langs"></div>
+      <input id="q" autocomplete="off">
+      <div class="spacer"></div>
+      <div class="grp">
+        <button id="layout">横3列</button>
+        <button id="small">A−</button>
+        <button id="big">A＋</button>
+        <button id="theme">◐</button>
+      </div>
+      <div class="grp uigrp">
+        <select id="ui">
+          <option value="ja">🌐 日本語</option>
+          <option value="ko">🌐 한국어</option>
+          <option value="en">🌐 English</option>
+        </select>
+      </div>
+    </div>
+    <div class="bar">
+      <span class="hint" id="hint"></span>
+    </div>
+  </div>
+  <div class="hits" id="hits" hidden></div>
+</header>
+
+<div class="sechead">
+  <h1 id="secTitle">…</h1>
+  <div class="sub" id="secSub"></div>
+  <div id="secWarn"></div>
+</div>
+
+<main id="body"></main>
+
+<footer id="foot"></footer>
+
+<script src="books.js"></script>
+<script>
+(() => {
+  const LANGS = [
+    { id: "ko", label: "한국어",  tag: "KO" },
+    { id: "ja", label: "日本語",  tag: "JA" },
+    { id: "en", label: "English", tag: "EN" },
+  ];
+
+  // ---- 画面の言葉。本文の言語（LANGS）とは別で、右上のプルダウンで選ぶ ----
+  const UI = {
+    ja: {
+      title: "聖書 三か国語対訳", brand: "聖書 対訳",
+      bookSel: "書を選ぶ", chapSel: "章を選ぶ", prev: "前の章", next: "次の章",
+      openT: "上のバーを出す", closeT: "上のバーをたたむ",
+      langsT: "表示する言語", q: "この書から語句を探す",
+      rows: "横3列", cols: "縦3列", layoutT: "縦3列（横並び） / 横3列（縦積み）",
+      smallT: "文字を小さく", bigT: "文字を大きく", themeT: "配色", uiT: "画面の言語",
+      hint: "節をクリックで印 ／ ↑↓ で読み進める ／ ←→ で章を移動",
+      hintTouch: "節をタップで印 ／ ◀ ▶ で章を移動",
+      pos: (i, n, v) => `${i} / ${n}　${v} 節`,
+      loading: "読み込み中…",
+      nodata: "データがありません（python build.py を実行してください）",
+      chapter: (n) => `第${n}章`,
+      name: { ko: "韓国語", ja: "日本語", en: "英語" },
+      link: "リンク", copied: "コピーしました",
+      copyFail: "コピーできませんでした。アドレス欄のURLを使ってください",
+      linkSecT: "この章を開くリンクをコピー",
+      linkRowT: (n) => `${n}節を開くリンクをコピー`,
+      linkLangT: (l) => `${l}だけを出してこの章を開くリンクをコピー`,
+      wEmpty: (l) => `この章は${l}の本文がありません`,
+      wGap: (l, n) => `節の切り方が版で違う所が ${n} あります（${l}はその本文を前後の節に入れています）`,
+      merged: "この版では前後の節にまとめられています",
+      wShift: (l, n) => `⚠ この章は ${n}節から ${l}の節番号がずれている疑いがあります。`
+        + `${l}の欄は1つ先の節を出しているかもしれません`,
+      noHit: "見つかりませんでした",
+      searchAll: "ほかの書も探す",
+      searching: (n) => `${n} 書を読み込んでいます…`,
+      foot: (links) => `本文: ${links}。`
+        + `節は章と節の番号でそのまま並べています（推定ではありません）。`,
+    },
+    ko: {
+      title: "성경 3개국어 대역", brand: "성경 대역",
+      bookSel: "책 고르기", chapSel: "장 고르기", prev: "이전 장", next: "다음 장",
+      openT: "위 막대 펴기", closeT: "위 막대 접기",
+      langsT: "표시할 언어", q: "이 책에서 낱말 찾기",
+      rows: "가로 3줄", cols: "세로 3단", layoutT: "세로 3단(나란히) / 가로 3줄(쌓기)",
+      smallT: "글자 작게", bigT: "글자 크게", themeT: "배색", uiT: "화면 언어",
+      hint: "절을 클릭하면 표시 ／ ↑↓ 로 읽어 나가기 ／ ←→ 로 장 이동",
+      hintTouch: "절을 누르면 표시 ／ ◀ ▶ 로 장 이동",
+      pos: (i, n, v) => `${i} / ${n}　${v} 절`,
+      loading: "읽는 중…",
+      nodata: "자료가 없습니다 (python build.py 을 실행하십시오)",
+      chapter: (n) => `${n}장`,
+      name: { ko: "한국어", ja: "일본어", en: "영어" },
+      link: "링크", copied: "복사했습니다",
+      copyFail: "복사하지 못했습니다. 주소창의 URL을 사용해 주십시오",
+      linkSecT: "이 장을 여는 링크를 복사",
+      linkRowT: (n) => `${n}절을 여는 링크를 복사`,
+      linkLangT: (l) => `${l}만 켜고 이 장을 여는 링크를 복사`,
+      wEmpty: (l) => `이 장은 ${l} 본문이 없습니다`,
+      wGap: (l, n) => `절을 나눈 방식이 판마다 다른 곳이 ${n}군데 있습니다 (${l}는 그 본문을 앞뒤 절에 넣었습니다)`,
+      merged: "이 판에서는 앞뒤 절에 합쳐져 있습니다",
+      wShift: (l, n) => `⚠ 이 장은 ${n}절부터 ${l} 절 번호가 어긋난 것으로 보입니다. `
+        + `${l} 칸이 한 절 뒤의 본문을 보이고 있을 수 있습니다`,
+      noHit: "찾지 못했습니다",
+      searchAll: "다른 책도 찾기",
+      searching: (n) => `${n}권을 읽고 있습니다…`,
+      foot: (links) => `본문: ${links}. `
+        + `절은 장·절 번호로 그대로 짝지었습니다 (추정이 아닙니다).`,
+    },
+    en: {
+      title: "The Bible — Three-Language Parallel", brand: "Bible Parallel",
+      bookSel: "Choose a book", chapSel: "Choose a chapter",
+      prev: "Previous chapter", next: "Next chapter",
+      openT: "Show the toolbar", closeT: "Hide the toolbar",
+      langsT: "Languages to show", q: "Search this book",
+      rows: "3 rows", cols: "3 columns", layoutT: "3 columns (side by side) / 3 rows (stacked)",
+      smallT: "Smaller text", bigT: "Larger text", themeT: "Color scheme",
+      uiT: "Interface language",
+      hint: "Click a verse to mark it / ↑↓ to read on / ←→ to change chapter",
+      hintTouch: "Tap a verse to mark it / ◀ ▶ to change chapter",
+      pos: (i, n, v) => `${i} / ${n}　${v} verses`,
+      loading: "Loading…",
+      nodata: "No data (run python build.py)",
+      chapter: (n) => `Chapter ${n}`,
+      name: { ko: "Korean", ja: "Japanese", en: "English" },
+      link: "Link", copied: "Copied",
+      copyFail: "Could not copy - use the URL in the address bar",
+      linkSecT: "Copy a link that opens this chapter",
+      linkRowT: (n) => `Copy a link that opens verse ${n}`,
+      linkLangT: (l) => `Copy a link that opens this chapter with only ${l} showing`,
+      wEmpty: (l) => `This chapter has no ${l} text`,
+      wGap: (l, n) => `${n} places where the editions divide the verses differently (${l} carries that text in a neighbouring verse)`,
+      merged: "joined to a neighbouring verse in this edition",
+      wShift: (l, n) => `⚠ From verse ${n} the ${l} verse numbering in this chapter looks off by one; `
+        + `the ${l} column may be showing the next verse`,
+      noHit: "Nothing found",
+      searchAll: "Search the other books too",
+      searching: (n) => `Loading ${n} books…`,
+      foot: (links) => `Text: ${links}. `
+        + `Verses are joined by chapter and verse number - not by estimation.`,
+    },
+  };
+
+  const HEAD = window.BIBLEBOOKS || { books: [], edition: {} };
+  const $ = (s) => document.querySelector(s);
+  const esc = (t) => String(t).replace(/[&<>"]/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  // ebible.org の頁は USFM の綴りの書コードを使う（JOH ではなく JHN）。
+  // 対応は books.js が持っている（作るときに一度だけ決める）
+  const ebible = (dir, s, ch) =>
+    `https://ebible.org/${dir}/${s.usfm || s.code}${String(ch).padStart(2, "0")}.htm`;
+
+  // ---- 書ごとの本文は、その書を開いたときだけ読み込む ----
+  // 素で13MBあるので一度には読まない。<script> の差し込みなので file:// でも動く
+  const LOADED = {};
+  const waiting = {};
+  window.BIBLE = {
+    put(code, payload) {
+      LOADED[code] = payload;
+      (waiting[code] || []).forEach((fn) => fn());
+      delete waiting[code];
+    },
+  };
+  function load(code, then) {
+    if (LOADED[code]) return then();
+    if (waiting[code]) return waiting[code].push(then);
+    waiting[code] = [then];
+    const s = document.createElement("script");
+    s.src = `data/${code}.js`;
+    s.onerror = () => { LOADED[code] = { names: {}, urls: {}, ch: {} }; window.BIBLE.put(code, LOADED[code]); };
+    document.head.appendChild(s);
+  }
+
+  // 章を一列に並べる（書をまたいで ◀ ▶ で進めるように）
+  const data = [];
+  HEAD.books.forEach((b) => (b.chapters || []).forEach((ch) => data.push({
+    key: `${b.code}-${ch}`, code: b.code, usfm: b.usfm, ch, part: b.part, names: b.names,
+  })));
+
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem("bible." + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+    set(k, v) { try { localStorage.setItem("bible." + k, JSON.stringify(v)); } catch {} },
+  };
+  const narrow = () => matchMedia("(max-width:760px)").matches;
+  const touch = () => matchMedia("(pointer:coarse)").matches;
+
+  let on = store.get("langs", ["ko", "ja", "en"]);
+  let langsPicked = store.get("langsPicked", false);
+  let idx = Math.min(Math.max(store.get("sec", 0), 0), Math.max(data.length - 1, 0));
+  let fs = store.get("fs", 20);
+  let theme = store.get("theme", "light");
+  let tools = store.get("tools", !narrow());
+  let cur = -1;
+
+  const layoutKey = () => (narrow() ? "stacked.narrow" : "stacked.wide");
+  const readLayout = () => { const v = store.get(layoutKey(), null); return v === null ? narrow() : v; };
+  let stacked = readLayout();
+
+  // 画面の言葉。自分で選んだときだけ、配るリンクに乗る
+  const qs = new URLSearchParams(location.search);
+  let uiPicked = store.get("uiPicked", false);
+  let ui = qs.get("ui") || (uiPicked ? store.get("ui", "ja") : null)
+        || ((navigator.language || "ja").slice(0, 2).toLowerCase());
+  if (!UI[ui]) ui = "ja";
+  if (qs.get("ui")) { uiPicked = true; store.set("uiPicked", true); store.set("ui", ui); }
+  const T = () => UI[ui];
+
+  // ---- URL。「? が出し方、# が場所」 ----
+  function parseHash() {
+    const raw = decodeURIComponent(location.hash.replace(/^#/, ""));
+    if (!raw) return;
+    const [place, langs] = raw.split("/");
+    if (langs) {
+      const want = langs.split("+").filter((x) => LANGS.some((L) => L.id === x));
+      if (want.length) { on = want; langsPicked = true; store.set("langs", on); store.set("langsPicked", true); }
+    }
+    const m = /^([A-Za-z0-9]+)-(\d+)(?:-(\d+))?$/.exec(place);
+    if (!m) return;
+    const i = data.findIndex((s) => s.code === m[1].toUpperCase() && s.ch === m[2]);
+    if (i >= 0) { idx = i; cur = m[3] ? +m[3] : -1; }
+  }
+  const wantLangs = () => (langsPicked ? on : null);
+  function shareURL(key, langs, verse) {
+    const u = new URL(location.href);
+    u.search = uiPicked ? `?ui=${ui}` : "";
+    u.hash = key + (verse ? "-" + verse : "") + (langs ? "/" + langs.join("+") : "");
+    return u.toString();
+  }
+  function syncHash() {
+    const s = data[idx];
+    if (!s) return;
+    const h = s.key + (cur > 0 ? "-" + cur : "") + (langsPicked ? "/" + on.join("+") : "");
+    history.replaceState(null, "", "#" + h);
+  }
+  function toast(msg) {
+    let el = $(".toast");
+    if (!el) { el = document.createElement("div"); el.className = "toast"; document.body.appendChild(el); }
+    el.textContent = msg; el.classList.add("on");
+    clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 1600);
+  }
+  function copyLink(url) {
+    const byExec = () => {
+      const ta = document.createElement("textarea");
+      ta.value = url; document.body.appendChild(ta); ta.select();
+      let ok = false; try { ok = document.execCommand("copy"); } catch {}
+      document.body.removeChild(ta);
+      toast(ok ? T().copied : T().copyFail);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(() => toast(T().copied), byExec);
+    } else { byExec(); }
+  }
+
+  const bookName = (s) => (s.names && (s.names[ui] || s.names.ja)) || s.code;
+  const secTitle = (s) => `${bookName(s)} ${T().chapter(s.ch)}`;
+
+  // ---- 書と章のプルダウン ----
+  const bookSel = $("#book"), chapSel = $("#chap");
+  function fillBooks() {
+    bookSel.innerHTML = "";
+    HEAD.books.forEach((b) => {
+      const o = document.createElement("option");
+      o.value = b.code;
+      o.textContent = (b.names && (b.names[ui] || b.names.ja)) || b.code;
+      bookSel.appendChild(o);
+    });
+  }
+  function fillChapters(code) {
+    const b = HEAD.books.find((x) => x.code === code);
+    chapSel.innerHTML = "";
+    (b ? b.chapters : []).forEach((ch) => {
+      const o = document.createElement("option");
+      o.value = ch; o.textContent = ch;
+      chapSel.appendChild(o);
+    });
+  }
+  bookSel.onchange = () => {
+    const i = data.findIndex((s) => s.code === bookSel.value);
+    if (i >= 0) { idx = i; cur = -1; go(); }
+  };
+  chapSel.onchange = () => {
+    const i = data.findIndex((s) => s.code === data[idx].code && s.ch === chapSel.value);
+    if (i >= 0) { idx = i; cur = -1; go(); }
+  };
+  function go() { store.set("sec", idx); paint(); syncHash(); window.scrollTo(0, 0); }
+  function move(d) { idx = Math.min(Math.max(idx + d, 0), data.length - 1); cur = -1; go(); }
+
+  // ---- 本文の言語の出し入れ ----
+  const langBox = $("#langs");
+  LANGS.forEach((L) => {
+    const b = document.createElement("button");
+    b.textContent = L.label; b.dataset.lang = L.id;
+    b.onclick = () => {
+      on = on.includes(L.id) ? on.filter((x) => x !== L.id)
+                             : LANGS.map((x) => x.id).filter((x) => on.includes(x) || x === L.id);
+      if (!on.length) on = [L.id];
+      store.set("langs", on);
+      langsPicked = true; store.set("langsPicked", true);
+      paint(); syncHash();
+    };
+    langBox.appendChild(b);
+  });
+
+  function applyUI() {
+    const t = T();
+    document.documentElement.lang = ui;
+    document.title = t.title;
+    $("#brand").textContent = t.brand;
+    bookSel.title = t.bookSel; chapSel.title = t.chapSel;
+    $("#prev").title = t.prev; $("#next").title = t.next;
+    $("#toggle").title = tools ? t.closeT : t.openT;
+    $("#toggle").textContent = tools ? "▴" : "▾";
+    $("#toggle").setAttribute("aria-expanded", String(tools));
+    langBox.title = t.langsT;
+    $("#q").placeholder = t.q;
+    $("#layout").title = t.layoutT;
+    $("#small").title = t.smallT; $("#big").title = t.bigT;
+    $("#theme").title = t.themeT;
+    $("#ui").title = t.uiT; $("#ui").setAttribute("aria-label", t.uiT);
+    $("#ui").value = ui;
+    $("#hint").textContent = touch() ? t.hintTouch : t.hint;
+  }
+
+  function paint() {
+    const t = T();
+    applyUI();
+    document.documentElement.dataset.theme = theme;
+    $("#tools").classList.toggle("closed", !tools);
+    document.documentElement.style.setProperty("--fs", fs + "px");
+    $("#layout").textContent = stacked ? t.cols : t.rows;
+    $("#layout").setAttribute("aria-pressed", String(stacked));
+    langBox.querySelectorAll("button").forEach((b) =>
+      b.setAttribute("aria-pressed", String(on.includes(b.dataset.lang))));
+
+    const s = data[idx];
+    const main = $("#body");
+    main.innerHTML = "";
+    if (!s) { $("#secTitle").textContent = t.nodata; return; }
+
+    fillBooks(); bookSel.value = s.code;
+    fillChapters(s.code); chapSel.value = s.ch;
+
+    if (!LOADED[s.code]) {
+      $("#secTitle").textContent = t.loading;
+      load(s.code, () => paint());
+      return;
+    }
+    const book = LOADED[s.code];
+    const rows = (book.ch && book.ch[s.ch]) || [];
+    const shown = LANGS.filter((L) => on.includes(L.id));
+    const col = { ja: 1, ko: 2, en: 3 };
+    const hasText = {};
+    LANGS.forEach((L) => { hasText[L.id] = rows.some((r) => r[col[L.id]]); });
+
+    $("#secTitle").innerHTML = esc(secTitle(s))
+      + `<button class="linkbtn" data-share="" title="${esc(t.linkSecT)}">🔗 ${esc(t.link)}</button>`;
+    $("#secSub").innerHTML = LANGS.map((L) => {
+      const nm = (s.names && s.names[L.id]) || s.code;
+      // 章の呼び方はその欄の言語で出す（KO なら「1장」、EN なら「Chapter 1」）
+      return `<div><b>${L.tag}</b><span>${esc(nm)} ${esc(UI[L.id].chapter(s.ch))}</span>`
+        + `<button class="linkbtn" data-share="${L.id}" title="${esc(t.linkLangT(t.name[L.id]))}">🔗</button></div>`;
+    }).join("");
+    $(".sechead").querySelectorAll("[data-share]").forEach((b) => {
+      b.onclick = () => copyLink(shareURL(s.key, b.dataset.share ? [b.dataset.share] : wantLangs()));
+    });
+
+    const warn = [];
+    // 節番号が途中からずれている章。空欄より悪い（別の節が並ぶ）ので先に出す
+    const shift = (book.shift && book.shift[s.ch]) || {};
+    shown.forEach((L) => {
+      if (shift[L.id]) warn.push(t.wShift(t.name[L.id], shift[L.id]));
+    });
+    shown.forEach((L) => {
+      const miss = rows.filter((r) => !r[col[L.id]]).length;
+      if (rows.length && miss === rows.length) warn.push(t.wEmpty(t.name[L.id]));
+      else if (miss) warn.push(t.wGap(t.name[L.id], miss));
+    });
+    $("#secWarn").innerHTML = warn.map((w) =>
+      `<span class="warn${w.startsWith("⚠") ? " hard" : ""}">${esc(w)}</span>`).join(" ");
+
+    const src = [];
+    shown.forEach((L) => {
+      if (L.id === "ja" && book.urls && book.urls[s.ch])
+        src.push(`<a href="${book.urls[s.ch]}" target="_blank" rel="noopener">JA み旨の裏庭・口語訳</a>`);
+      if (L.id === "ko")
+        src.push(`<a href="${ebible("kor", s, s.ch)}" target="_blank" rel="noopener">KO ebible.org</a>`);
+      if (L.id === "en")
+        src.push(`<a href="${ebible("engwebp", s, s.ch)}" target="_blank" rel="noopener">EN ebible.org</a>`);
+    });
+    $("#foot").innerHTML = t.foot(src.join(" ・ "));
+    $("#pos").textContent = t.pos(idx + 1, data.length, rows.length);
+
+    if (stacked) {
+      main.style.gridTemplateColumns = "1fr";
+      main.style.gridTemplateRows = "";
+      rows.forEach((r) => {
+        const box = document.createElement("div");
+        box.className = "rowbox";
+        box.appendChild(rownoEl(s, r[0]));
+        shown.forEach((L) => box.appendChild(cellEl(L, r[col[L.id]], r[0], hasText[L.id])));
+        main.appendChild(box);
+      });
+    } else {
+      main.style.gridTemplateColumns = `44px ${shown.map(() => "1fr").join(" ")}`;
+      main.style.gridTemplateRows = `repeat(${rows.length}, auto)`;
+      rows.forEach((r, i) => {
+        const nm = rownoEl(s, r[0]);
+        nm.style.gridColumn = "1"; nm.style.gridRow = String(i + 1);
+        main.appendChild(nm);
+        shown.forEach((L, ci) => {
+          const el = cellEl(L, r[col[L.id]], r[0], hasText[L.id]);
+          el.style.gridColumn = String(ci + 2); el.style.gridRow = String(i + 1);
+          main.appendChild(el);
+        });
+      });
+    }
+    document.documentElement.style.setProperty(
+      "--headh", document.querySelector("header").offsetHeight + "px");
+    mark();
+  }
+
+  function rownoEl(s, v) {
+    const el = document.createElement("div");
+    el.className = "rowno";
+    el.dataset.r = v; el.dataset.span = 1;
+    const n = document.createElement("span");
+    n.textContent = v;
+    const lk = document.createElement("span");
+    lk.className = "lk"; lk.textContent = "\u{1F517}"; lk.tabIndex = 0;
+    lk.title = T().linkRowT(v);
+    lk.onclick = (e) => { e.stopPropagation(); copyLink(shareURL(s.key, wantLangs(), v)); };
+    lk.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); lk.onclick(e); } };
+    el.append(n, lk);
+    el.onclick = () => { cur = (cur === v ? -1 : v); mark(); syncHash(); };
+    return el;
+  }
+
+  function cellEl(L, text, v, hasText) {
+    const el = document.createElement("div");
+    // 空でも、その章にその言語の本文があるなら「無い」のではなく、版で節の
+    // 切り方が違って前後の節に入っているだけ。斜線にせず、そう書く
+    const merged = !text && hasText;
+    el.className = "cell" + (text ? "" : (merged ? " merged" : " gap"));
+    el.lang = L.id;
+    el.dataset.r = v; el.dataset.span = 1;
+    el.innerHTML = `<span class="tag">${L.tag}</span>`
+      + (text ? esc(text) : `<span class="empty">${merged ? esc(T().merged) : "—"}</span>`);
+    el.onclick = () => { cur = (cur === v ? -1 : v); mark(); syncHash(); };
+    return el;
+  }
+
+  function mark() {
+    document.querySelectorAll(".cell, .rowno").forEach((el) => {
+      const r = +el.dataset.r;
+      const here = el.classList.contains("rowno");
+      el.classList.toggle(here ? "here" : "on", r === cur);
+      if (here) el.style.color = (r === cur) ? "var(--accent)" : "";
+    });
+    const box = document.querySelector(`.rowno.here, .cell.on`);
+    if (box && cur > 0) box.scrollIntoView({ block: "center", behavior: "smooth" });
+  }
+
+  // ---- 語句を探す。読み込んだ書の中だけ。ほかの書は押されたら読みに行く ----
+  const q = $("#q"), hits = $("#hits");
+  let lastTerm = "";
+  function search(term, all) {
+    lastTerm = term;
+    if (!term) { hits.hidden = true; return; }
+    const low = term.toLowerCase();
+    const codes = all ? HEAD.books.map((b) => b.code) : [data[idx].code];
+    const todo = codes.filter((c) => !LOADED[c]);
+    if (all && todo.length) {
+      hits.hidden = false;
+      hits.innerHTML = `<div class="hit">${esc(T().searching(todo.length))}</div>`;
+      todo.forEach((c) => load(c, () => { if (!codes.some((x) => !LOADED[x])) search(term, true); }));
+      return;
+    }
+    const found = [];
+    for (const code of codes) {
+      const book = LOADED[code];
+      if (!book) continue;
+      for (const ch of Object.keys(book.ch)) {
+        for (const r of book.ch[ch]) {
+          for (const L of LANGS) {
+            if (!on.includes(L.id)) continue;
+            const text = r[{ ja: 1, ko: 2, en: 3 }[L.id]] || "";
+            const at = text.toLowerCase().indexOf(low);
+            if (at < 0) continue;
+            found.push({
+              code, ch, v: r[0], lang: L.tag,
+              label: `${(book.names && (book.names[ui] || book.names.ja)) || code} ${ch}:${r[0]}`,
+              snip: text.slice(Math.max(0, at - 30), at + term.length + 60),
+              at: Math.min(at, 30), len: term.length,
+            });
+            if (found.length > 300) break;
+          }
+        }
+      }
+    }
+    hits.hidden = false;
+    if (!found.length) {
+      hits.innerHTML = `<div class="hit">${esc(T().noHit)}</div>`
+        + (all ? "" : `<div class="hit" data-all="1"><b>${esc(T().searchAll)}</b></div>`);
+    } else {
+      hits.innerHTML = found.map((h, i) => {
+        const a = esc(h.snip.slice(0, h.at)), b = esc(h.snip.slice(h.at, h.at + h.len));
+        const c = esc(h.snip.slice(h.at + h.len));
+        return `<div class="hit" data-i="${i}"><b>${esc(h.label)} ${h.lang}</b>…${a}<mark>${b}</mark>${c}…</div>`;
+      }).join("") + (all ? "" : `<div class="hit" data-all="1"><b>${esc(T().searchAll)}</b></div>`);
+    }
+    hits.querySelectorAll("[data-i]").forEach((el) => {
+      el.onclick = () => {
+        const h = found[+el.dataset.i];
+        const i = data.findIndex((s) => s.code === h.code && s.ch === h.ch);
+        if (i >= 0) { idx = i; cur = h.v; hits.hidden = true; go(); }
+      };
+    });
+    const allBtn = hits.querySelector("[data-all]");
+    if (allBtn) allBtn.onclick = () => search(lastTerm, true);
+  }
+  let timer;
+  q.oninput = () => { clearTimeout(timer); timer = setTimeout(() => search(q.value.trim(), false), 220); };
+
+  // ---- ボタンと鍵 ----
+  $("#prev").onclick = () => move(-1);
+  $("#next").onclick = () => move(1);
+  $("#layout").onclick = () => { stacked = !stacked; store.set(layoutKey(), stacked); paint(); };
+  $("#small").onclick = () => { fs = Math.max(13, fs - 1); store.set("fs", fs); paint(); };
+  $("#big").onclick = () => { fs = Math.min(34, fs + 1); store.set("fs", fs); paint(); };
+  $("#theme").onclick = () => { theme = theme === "dark" ? "light" : "dark"; store.set("theme", theme); paint(); };
+  $("#toggle").onclick = () => { tools = !tools; store.set("tools", tools); paint(); };
+  $("#ui").onchange = () => { ui = $("#ui").value; uiPicked = true; store.set("ui", ui); store.set("uiPicked", true); paint(); syncHash(); };
+
+  document.addEventListener("keydown", (e) => {
+    if (e.target === q) { if (e.key === "Escape") { q.blur(); hits.hidden = true; } return; }
+    if (e.key === "/") { e.preventDefault(); tools = true; store.set("tools", true); paint(); q.focus(); return; }
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const rows = ((LOADED[data[idx].code] || {}).ch || {})[data[idx].ch] || [];
+    const nums = rows.map((r) => r[0]);
+    if (e.key === "ArrowLeft") { e.preventDefault(); move(-1); }
+    else if (e.key === "ArrowRight") { e.preventDefault(); move(1); }
+    else if (e.key === "ArrowDown") { e.preventDefault(); cur = nums[Math.min(nums.indexOf(cur) + 1, nums.length - 1)] ?? nums[0]; mark(); syncHash(); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); cur = nums[Math.max(nums.indexOf(cur) - 1, 0)] ?? nums[0]; mark(); syncHash(); }
+  });
+  addEventListener("hashchange", () => { parseHash(); paint(); });
+  addEventListener("resize", () => { const v = readLayout(); if (v !== stacked) { stacked = v; paint(); } });
+
+  parseHash();
+  paint();
+})();
+</script>
+</body>
+</html>
