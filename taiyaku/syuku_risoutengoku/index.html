@@ -67,8 +67,11 @@
     border-radius:6px;cursor:pointer;font-size:14px;line-height:1.6}
   .tocrow:first-child{border-top:none}
   .tocrow:hover{background:var(--mark)}
-  .tocrow .no{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;
+  .tocrow .no{display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+    color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;
     user-select:none;-webkit-user-select:none}
+  .tocrow .no .p{color:var(--accent);font-weight:700;white-space:nowrap}
+  .tocrow .no .r{font-size:11px;opacity:.75}
   .tocrow .t{min-width:0;overflow-wrap:anywhere;white-space:normal}
   .tocrow .t b{display:block;font-size:10px;letter-spacing:.14em;color:var(--muted);
     font-weight:700;user-select:none;-webkit-user-select:none}
@@ -654,6 +657,65 @@
     return (s.cells[L.id] || []).find((x) => x.r <= r && r < x.r + (x.span || 1));
   }
 
+  // ---- 小見出しの深さと通し番号 ----
+  // 本は「Ⅰ → 1 → (1) → ㉠ → ⓐ」の順に細かくなる。見出しの頭の番号の**形**で
+  // 深さが決まるので、それを読んで目次に段差を付ける。日本語（（三）／(1)）や
+  // 英語（2.3.1）は書き方が違うが、韓国語（原典）の形で決めれば三言語で同じ段に並ぶ。
+  // 章によっては「1.」から始まる（Ⅰ. が無い）ので、その節でいちばん浅い形を 0 に寄せる。
+  const NUM_FORMS = [
+    [/^\s*([Ⅰ-Ⅹ]+)\s*[.．、)）]/, 0],          // Ⅰ Ⅱ Ⅲ
+    [/^\s*([IVX]{1,4})\s*[.．]/, 0],                      // I II III（英字）
+    [/^\s*([0-9０-９]{1,2})\s*[.．、]/, 1],                 // 1. 2.
+    [/^\s*[(（]\s*([0-9０-９]{1,2})\s*[)）]/, 2],           // (1) (2)
+    [/^\s*([㉠-㉿])\s*[.．、)）]?/, 3],            // ㉠ ㉡
+    [/^\s*([ⓐ-ⓩ])\s*[.．、)）]?/, 4],            // ⓐ ⓑ
+  ];
+
+  function numToken(text) {
+    for (const [re, lv] of NUM_FORMS) {
+      const m = re.exec(text || "");
+      if (m) return { tok: m[1], lv };
+    }
+    return null;
+  }
+
+  // 見出しの並び（韓国語の字）から、段差と「Ⅲ-1」のような通し番号を出す
+  function tocLevels(texts) {
+    const got = texts.map(numToken);
+    const lvs = got.filter(Boolean).map((g) => g.lv);
+    const base = lvs.length ? Math.min(...lvs) : 0;
+    // 番号の無い見出しの段は、**その下にぶら下がる番号**から決める。
+    // 「제2차 민족적 가나안 복귀노정」は直前が (3) なので「一つ下」にすると深くなりすぎる
+    // が、次に来るのは (1) なのでその親、つまり (1) の一つ上が正しい
+    const nextLv = new Array(got.length).fill(null);
+    for (let i = got.length - 1, n = null; i >= 0; i--) {
+      nextLv[i] = n;
+      if (got[i]) n = Math.max(0, got[i].lv - base);
+    }
+    const depth = [], path = [], stack = [], auto = [];
+    let lastNum = -1;                 // 直前の「番号のある見出し」の段
+    got.forEach((g, i) => {
+      let d, tok;
+      if (g) {
+        d = Math.max(0, g.lv - base);
+        tok = g.tok;
+        lastNum = d;
+      } else {
+        d = (nextLv[i] !== null && nextLv[i] >= 1) ? nextLv[i] - 1
+                                                   : Math.max(0, lastNum + 1);
+        auto[d] = (auto[d] || 0) + 1;   // 番号が無いので、こちらで数えて振る
+        tok = String(auto[d]);
+      }
+      stack.length = d;
+      stack[d] = tok;
+      for (let k = d + 1; k < auto.length; k++) auto[k] = 0;   // 親が変われば数え直す
+      depth.push(d);
+      path.push(stack.filter(Boolean).join("-"));
+    });
+    return { depth, path, deep: Math.max(0, ...depth) > 0,
+             wide: Math.max(0, ...path.map((p) => p.length)) };
+  }
+
   function buildSecToc(s, shown) {
     const box = $("#sectoc"), body = $("#sectocBody"), t = T();
     const heads = [];
@@ -662,18 +724,26 @@
     if (heads[0] !== 0) heads.unshift(0);          // 1番（節の題）を先頭に
     box.hidden = heads.length < 2;
     if (box.hidden) return;
-    box.open = store.get("sectoc", true);
-    box.ontoggle = () => store.set("sectoc", box.open);
+    // 既定は「パソコンでは開く・スマホでは閉じる」。**自分で開け閉めしたときだけ**憶える。
+    // toggle は後から飛んでくるので、こちらで入れた値と同じなら書かない。そうしないと
+    // 初めて開いた端末の幅が、その人の憶えとして焼き付いてしまう
+    const wantOpen = store.get("sectoc", !narrow());
+    box.open = wantOpen;
+    box.ontoggle = () => { if (box.open !== wantOpen) store.set("sectoc", box.open); };
     $("#sectocSum").innerHTML = esc(t.secToc) + `<span class="cnt">${heads.length}</span>`;
     body.innerHTML = "";
+    const lv = tocLevels(heads.map((r, i) =>
+      (i === 0 ? tocLead(s, { id: "ko" }) : "") || (cellAt(s, { id: "ko" }, r) || {}).t || ""));
+    const gut = lv.deep ? Math.min(104, 34 + lv.wide * 8) + "px" : "34px";
     heads.forEach((r, i) => {
       const row = document.createElement("div");
       row.className = "tocrow";
-      row.style.gridTemplateColumns = `34px ${shown.map(() => "1fr").join(" ")}`;
+      row.style.gridTemplateColumns = `${gut} ${shown.map(() => "1fr").join(" ")}`;
       row.title = t.secTocT;
       const no = document.createElement("span");
       no.className = "no";
-      no.textContent = r + 1;
+      no.innerHTML = (lv.deep && lv.path[i] ? `<span class="p">${esc(lv.path[i])}</span>` : "")
+        + `<span class="r">${r + 1}</span>`;
       row.appendChild(no);
       shown.forEach((L) => {
         const c = cellAt(s, L, r);
@@ -681,6 +751,7 @@
         const cell = document.createElement("span");
         cell.className = "t";
         cell.lang = L.id;
+        if (lv.depth[i]) cell.style.paddingLeft = (lv.depth[i] * 1.15) + "em";
         cell.innerHTML = `<b>${L.tag}</b>` + esc(txt.replace(/\s+/g, " ").trim() || "—");
         row.appendChild(cell);
       });
