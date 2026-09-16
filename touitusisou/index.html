@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202602241611" rel="icon" type="image/png"/>
+<title>統一思想要綱 | 目次 | み旨の裏庭</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Crimson+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../theme/style.css?v=202602241611" rel="stylesheet"/>
+<style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 3rem 1rem;
+            line-height: 1.8;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 56.25rem;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(25px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.05em;
+        }
+
+        h1 a { text-decoration: none; color: inherit; }
+
+        .lead {
+            text-align: center;
+            font-size: 0.98rem;
+            opacity: 0.75;
+            margin-bottom: 2rem;
+            line-height: 1.9;
+        }
+
+        .index-list { list-style: none; padding: 0; }
+
+        .volume-item { margin-top: 2.5rem; margin-bottom: 1.5rem; }
+
+        .volume-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.4);
+            padding-bottom: 0.5rem;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .volume-title a { color: #fff; text-decoration: none; }
+        .volume-title a:hover { text-decoration: underline; }
+
+        .chapter-list { list-style: none; padding-left: 0.5rem; }
+
+        .chapter-item {
+            margin-bottom: 0.6rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .chapter-link {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .chapter-link:hover { color: #a5b4fc; transform: translateX(5px); }
+
+        .section-list { list-style: none; padding-left: 1.5rem; margin-top: 0.4rem; }
+
+        .section-item { margin-bottom: 0.2rem; }
+
+        .section-link {
+            font-size: 0.95rem;
+            color: #b0c4de;
+            opacity: 0.85;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .section-link:hover { opacity: 1; color: #fff; }
+
+        .section-item.indent-1 {
+            margin-left: 1.5rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.14);
+            padding-left: 0.8rem;
+            margin-top: 0.3rem;
+        }
+
+        .section-item.indent-2 {
+            margin-left: 3.0rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.14);
+            padding-left: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .section-item.indent-3 {
+            margin-left: 4.5rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.14);
+            padding-left: 0.8rem;
+            margin-top: 0.1rem;
+        }
+
+        .nav-links {
+            margin-top: 4rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.9rem 2.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        details {
+            margin-bottom: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+
+        details[open] {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        summary {
+            padding: 1.2rem 1.8rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            color: #fff;
+            transition: background 0.2s;
+        }
+
+        summary:hover { background: rgba(255, 255, 255, 0.05); }
+
+        summary::-webkit-details-marker { display: none; }
+
+        summary::after {
+            content: '＋';
+            font-size: 1.1rem;
+            color: #667eea;
+            transition: transform 0.3s;
+            flex: 0 0 auto;
+        }
+
+        details[open] summary::after { content: '－'; transform: rotate(180deg); }
+
+        .details-content {
+            padding: 0 1.8rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0;
+        }
+
+        .details-content .chapter-item { border-bottom: 1px solid rgba(255, 255, 255, 0.03); }
+        .details-content .chapter-item:last-child { border-bottom: none; }
+
+        .read-chapter { margin: 1rem 0 1.2rem; }
+
+        .read-chapter a {
+            font-size: 1.05rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .source-note {
+            margin-top: 2.5rem;
+            font-size: 0.9rem;
+            line-height: 1.9;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 767px) {
+            body { padding: 1.5rem 0.6rem; }
+            .container { padding: 1.5rem 1rem; }
+            summary { padding: 1rem 1.1rem; font-size: 1.05rem; }
+            .details-content { padding: 0 0.7rem 1rem; }
+        }
+</style>
+</head>
+<body class="dark-mode" data-pagefind-ignore>
+<div class="container">
+<h1>統一思想要綱</h1>
+<p class="lead">統一思想研究院『統一思想要綱（頭翼思想）』の全文です。章の名前を押すと節の一覧が開きます。</p>
+<div class="book-search"><a class="book-search-btn" href="../search-all.html?book=touitusisou">この書籍の中で検索</a></div>
+<div class="index-list">
+<div class="chapter-item">
+<details>
+<summary>第一章　原相論</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="01.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="01.html#1">一　原相の内容</a></li>
+<li class="section-item indent-1"><a class="section-link" href="01.html#1-1">（一）　神　相</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#1-1-1">(1)　性相と形状</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#1-1-2">(2)　陽性と陰性</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#1-1-3">(3)　個別相</a></li>
+<li class="section-item indent-1"><a class="section-link" href="01.html#1-2">（二）　神　性</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#1-2-1">(1)　心　情</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#1-2-2">(2)　ロゴス</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#1-2-3">(3)　創造性</a></li>
+<li class="section-item"><a class="section-link" href="01.html#2">二　原相の構造</a></li>
+<li class="section-item indent-1"><a class="section-link" href="01.html#2-1">（一）　授受作用と四位基台</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#2-1-1">(1)　性相と形状の授受作用</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#2-1-2">(2)　四位基台の形成および主体と対象</a></li>
+<li class="section-item indent-1"><a class="section-link" href="01.html#2-2">（二）　四位基台の構成</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#2-2-1">(1)　四位基台の構成要素</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#2-2-2">(2)　内的四位基台と外的四位基台</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#2-2-3">(3)　原相の二段構造と存在の二段構造</a></li>
+<li class="section-item indent-1"><a class="section-link" href="01.html#2-3">（三）　四位基台の種類</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#2-3-1">(1)　内的自同的四位基台</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#2-3-2">(2)　外的自同的四位基台</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#2-3-3">(3)　内的発展的四位基台</a></li>
+<li class="section-item indent-2"><a class="section-link" href="01.html#2-3-4">(4)　外的発展的四位基台</a></li>
+<li class="section-item indent-1"><a class="section-link" href="01.html#2-4">（四）　正分合作用</a></li>
+<li class="section-item indent-1"><a class="section-link" href="01.html#2-5">（五）　原相構造の統一性</a></li>
+<li class="section-item indent-1"><a class="section-link" href="01.html#2-6">（六）　創造理想</a></li>
+<li class="section-item"><a class="section-link" href="01.html#3">三　従来の本体論と統一思想</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>第二章　存在論</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="02.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="02.html#1">一　個性真理体</a></li>
+<li class="section-item indent-1"><a class="section-link" href="02.html#1-1">（一）　性相と形状</a></li>
+<li class="section-item indent-1"><a class="section-link" href="02.html#1-2">（二）　陽性と陰性</a></li>
+<li class="section-item indent-1"><a class="section-link" href="02.html#1-3">（三）　個性真理体の個別相</a></li>
+<li class="section-item"><a class="section-link" href="02.html#2">二　連　体</a></li>
+<li class="section-item indent-1"><a class="section-link" href="02.html#2-1">（一）　連体とは何か</a></li>
+<li class="section-item indent-1"><a class="section-link" href="02.html#2-2">（二）　主体と対象</a></li>
+<li class="section-item indent-1"><a class="section-link" href="02.html#2-3">（三）　存在様相</a></li>
+<li class="section-item indent-2"><a class="section-link" href="02.html#2-3-1">(1)　円環運動</a></li>
+<li class="section-item indent-2"><a class="section-link" href="02.html#2-3-2">(2)　自転運動と公転運動</a></li>
+<li class="section-item indent-2"><a class="section-link" href="02.html#2-3-3">(3)　円環運動の諸形態</a></li>
+<li class="section-item indent-2"><a class="section-link" href="02.html#2-3-4">(4)　成長と発展運動</a></li>
+<li class="section-item indent-1"><a class="section-link" href="02.html#2-4">（四）　存在格位</a></li>
+<li class="section-item indent-1"><a class="section-link" href="02.html#2-5">（五）　宇宙の法則</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>第三章　本性論</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="03.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="03.html#1">一　神相的存在</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#1-1">（一）　性相と形状の統一体</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#1-2">（二）　陽性と陰性の調和体</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#1-3">（三）　個性体</a></li>
+<li class="section-item"><a class="section-link" href="03.html#2">二　神性的存在</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#2-1">（一）　心情的存在</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#2-2">（二）　ロゴス的存在</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#2-3">（三）　創造的存在</a></li>
+<li class="section-item"><a class="section-link" href="03.html#3">三　格位的存在</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#3-1">（一）　対象格位と主体</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#3-2">（二）　主体格位と対象</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#3-3">（三）　連体意識と民主主義</a></li>
+<li class="section-item"><a class="section-link" href="03.html#4">四　結　論</a></li>
+<li class="section-item"><a class="section-link" href="03.html#5">五　統一思想から見た実存主義人間観</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#5-1">（一）　キルケゴール</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#5-2">（二）　ニーチェ</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#5-3">（三）　ヤスパース</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#5-4">（四）　ハイデッガー</a></li>
+<li class="section-item indent-1"><a class="section-link" href="03.html#5-5">（五）　サルトル</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>第四章　価値論</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="04.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="04.html#1">一　価値論および価値の意味</a></li>
+<li class="section-item"><a class="section-link" href="04.html#2">二　価値論の原理的根拠</a></li>
+<li class="section-item"><a class="section-link" href="04.html#3">三　価値の種類</a></li>
+<li class="section-item"><a class="section-link" href="04.html#4">四　価値の本質</a></li>
+<li class="section-item"><a class="section-link" href="04.html#5">五　現実的価値の決定と価値基準</a></li>
+<li class="section-item"><a class="section-link" href="04.html#6">六　従来の価値観の脆弱性</a></li>
+<li class="section-item"><a class="section-link" href="04.html#7">七　新しい価値観の定立</a></li>
+<li class="section-item"><a class="section-link" href="04.html#8">八　価値観の歴史的変遷</a></li>
+<li class="section-item indent-1"><a class="section-link" href="04.html#8-1">（一）　ギリシア時代の価値観</a></li>
+<li class="section-item indent-1"><a class="section-link" href="04.html#8-2">（二）　ヘレニズム・ローマ時代の価値観</a></li>
+<li class="section-item indent-1"><a class="section-link" href="04.html#8-3">（三）　中世の価値観</a></li>
+<li class="section-item indent-1"><a class="section-link" href="04.html#8-4">（四）　近世の価値観</a></li>
+<li class="section-item indent-1"><a class="section-link" href="04.html#8-5">（五）　新しい価値観の出現の必要性</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>第五章　教育論</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="05.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="05.html#1">一　統一教育論の原理的根拠</a></li>
+<li class="section-item indent-1"><a class="section-link" href="05.html#1-1">（一）　神への相似性と三大祝福</a></li>
+<li class="section-item indent-1"><a class="section-link" href="05.html#1-2">（二）　人間の成長過程</a></li>
+<li class="section-item indent-1"><a class="section-link" href="05.html#1-3">（三）　教育の三大理念</a></li>
+<li class="section-item"><a class="section-link" href="05.html#2">二　教育の三形態</a></li>
+<li class="section-item indent-1"><a class="section-link" href="05.html#2-1">（一）　心情教育</a></li>
+<li class="section-item indent-1"><a class="section-link" href="05.html#2-2">（二）　規範教育</a></li>
+<li class="section-item indent-1"><a class="section-link" href="05.html#2-3">（三）　主管教育（知識教育、技術教育、体育）</a></li>
+<li class="section-item"><a class="section-link" href="05.html#3">三　被教育者の理想像</a></li>
+<li class="section-item"><a class="section-link" href="05.html#4">四　従来の教育観</a></li>
+<li class="section-item"><a class="section-link" href="05.html#5">五　統一教育論から見た従来の教育観</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>第六章　倫理論</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="06.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="06.html#1">一　統一倫理論の原理的根拠</a></li>
+<li class="section-item"><a class="section-link" href="06.html#2">二　倫理と道徳</a></li>
+<li class="section-item"><a class="section-link" href="06.html#3">三　秩序と平等</a></li>
+<li class="section-item"><a class="section-link" href="06.html#4">四　統一倫理論から見た従来の倫理観</a></li>
+<li class="section-item indent-1"><a class="section-link" href="06.html#4-1">（一）　カント</a></li>
+<li class="section-item indent-1"><a class="section-link" href="06.html#4-2">（二）　ベンサム</a></li>
+<li class="section-item indent-1"><a class="section-link" href="06.html#4-3">（三）　分析哲学の倫理観</a></li>
+<li class="section-item indent-1"><a class="section-link" href="06.html#4-4">（四）　プラグマティズム</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>第七章　芸術論</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="07.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="07.html#1">一　芸術論の原理的根拠</a></li>
+<li class="section-item"><a class="section-link" href="07.html#2">二　芸術と美</a></li>
+<li class="section-item"><a class="section-link" href="07.html#3">三　芸術活動の二重目的と創作および鑑賞</a></li>
+<li class="section-item"><a class="section-link" href="07.html#4">四　創作の要件</a></li>
+<li class="section-item indent-1"><a class="section-link" href="07.html#4-1">（一）　主体の要件</a></li>
+<li class="section-item indent-1"><a class="section-link" href="07.html#4-2">（二）　対象の要件</a></li>
+<li class="section-item"><a class="section-link" href="07.html#5">五　創作の技巧、素材、様式</a></li>
+<li class="section-item"><a class="section-link" href="07.html#6">六　鑑賞の要件</a></li>
+<li class="section-item"><a class="section-link" href="07.html#7">七　芸術の統一性</a></li>
+<li class="section-item"><a class="section-link" href="07.html#8">八　芸術と倫理</a></li>
+<li class="section-item"><a class="section-link" href="07.html#9">九　美の類型</a></li>
+<li class="section-item indent-1"><a class="section-link" href="07.html#9-1">（一）　統一思想から見た愛と美の類型</a></li>
+<li class="section-item indent-1"><a class="section-link" href="07.html#9-2">（二）　従来の美の類型</a></li>
+<li class="section-item"><a class="section-link" href="07.html#10">十　社会主義リアリズム批判</a></li>
+<li class="section-item indent-1"><a class="section-link" href="07.html#10-1">（一）　社会主義リアリズム</a></li>
+<li class="section-item indent-1"><a class="section-link" href="07.html#10-2">（二）　社会主義リアリズムに対する批判</a></li>
+<li class="section-item indent-1"><a class="section-link" href="07.html#10-3">（三）　作家による共産主義の告発</a></li>
+<li class="section-item indent-1"><a class="section-link" href="07.html#10-4">（四）　統一思想から見た共産主義芸術論の誤り</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>第八章　歴史論</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="08.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="08.html#1">一　統一史観の基本立場</a></li>
+<li class="section-item"><a class="section-link" href="08.html#2">二　創造の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#2-1">（一）　相対性の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#2-2">（二）　授受作用の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#2-3">（三）　相克の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#2-4">（四）　中心の主管の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#2-5">（五）　三段階完成の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#2-6">（六）　六数期間の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#2-7">（七）　責任分担の法則</a></li>
+<li class="section-item"><a class="section-link" href="08.html#3">三　復帰の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#3-1">（一）　蕩減の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#3-2">（二）　分立の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#3-3">（三）　四数復帰の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#3-4">（四）　条件的摂理の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#3-5">（五）　偽と真の先後の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#3-6">（六）　縦の横的展開の法則</a></li>
+<li class="section-item indent-1"><a class="section-link" href="08.html#3-7">（七）　同時性摂理の法則</a></li>
+<li class="section-item"><a class="section-link" href="08.html#4">四　歴史の変遷</a></li>
+<li class="section-item"><a class="section-link" href="08.html#5">五　従来の歴史観</a></li>
+<li class="section-item"><a class="section-link" href="08.html#6">六　摂理史観と唯物史観と統一史観の比較</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>第九章　認識論</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="09.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="09.html#1">一　従来の認識論</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#1-1">（一）　認識の起源</a></li>
+<li class="section-item indent-2"><a class="section-link" href="09.html#1-1-1">(1)　経験論</a></li>
+<li class="section-item indent-2"><a class="section-link" href="09.html#1-1-2">(2)　理性論</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#1-2">（二）　認識の対象の本質</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#1-3">（三）　方法から見た認識論</a></li>
+<li class="section-item indent-2"><a class="section-link" href="09.html#1-3-1">(1)　カントの先験的方法</a></li>
+<li class="section-item indent-2"><a class="section-link" href="09.html#1-3-2">(2)　マルクス主義の認識論</a></li>
+<li class="section-item"><a class="section-link" href="09.html#2">二　統一認識論</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#2-1">（一）　統一認識論の概要</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#2-2">（二）　認識における内容と形式</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#2-3">（三）　原意識、原意識像および範疇</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#2-4">（四）　認識の方法</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#2-5">（五）　認識の過程</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#2-6">（六）　認識過程と身体的条件</a></li>
+<li class="section-item"><a class="section-link" href="09.html#3">三　統一認識論から見たカントとマルクス主義の認識論</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#3-1">（一）　カントの認識論の批判</a></li>
+<li class="section-item indent-1"><a class="section-link" href="09.html#3-2">（二）　マルクス主義認識論の批判</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>第十章　論理学</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="10.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="10.html#1">一　従来の論理学</a></li>
+<li class="section-item indent-1"><a class="section-link" href="10.html#1-1">（一）　形式論理学</a></li>
+<li class="section-item indent-2"><a class="section-link" href="10.html#1-1-1">(1)　思考の原理</a></li>
+<li class="section-item indent-2"><a class="section-link" href="10.html#1-1-2">(2)　概　念</a></li>
+<li class="section-item indent-2"><a class="section-link" href="10.html#1-1-3">(3)　判　断</a></li>
+<li class="section-item indent-2"><a class="section-link" href="10.html#1-1-4">(4)　推　理</a></li>
+<li class="section-item indent-1"><a class="section-link" href="10.html#1-2">（二）　ヘーゲル論理学</a></li>
+<li class="section-item indent-1"><a class="section-link" href="10.html#1-3">（三）　マルクス主義論理学</a></li>
+<li class="section-item indent-1"><a class="section-link" href="10.html#1-4">（四）　記号論理学</a></li>
+<li class="section-item indent-1"><a class="section-link" href="10.html#1-5">（五）　先験的論理学</a></li>
+<li class="section-item"><a class="section-link" href="10.html#2">二　統一論理学</a></li>
+<li class="section-item indent-1"><a class="section-link" href="10.html#2-1">（一）　基本的立場</a></li>
+<li class="section-item indent-1"><a class="section-link" href="10.html#2-2">（二）　原相の論理構造</a></li>
+<li class="section-item indent-1"><a class="section-link" href="10.html#2-3">（三）　思考過程の二段構造と四位基台形成</a></li>
+<li class="section-item"><a class="section-link" href="10.html#3">三　統一論理学から見た従来の論理学</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>第十一章　方法論</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="11.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="11.html#1">一　史的考察</a></li>
+<li class="section-item"><a class="section-link" href="11.html#2">二　統一方法論（授受法）</a></li>
+<li class="section-item indent-1"><a class="section-link" href="11.html#2-1">（一）　授受法の種類</a></li>
+<li class="section-item indent-1"><a class="section-link" href="11.html#2-2">（二）　授受法の範囲</a></li>
+<li class="section-item indent-1"><a class="section-link" href="11.html#2-3">（三）　授受法の類型</a></li>
+<li class="section-item indent-1"><a class="section-link" href="11.html#2-4">（四）　授受法の特徴</a></li>
+<li class="section-item"><a class="section-link" href="11.html#3">三　統一方法論から見た従来の方法論</a></li>
+</ul>
+</div>
+</details>
+</div>
+<div class="chapter-item">
+<details>
+<summary>付　録</summary>
+<div class="details-content">
+<div class="read-chapter"><a class="chapter-link" href="12.html">➡ この章の本文を読む</a></div>
+<ul class="section-list">
+<li class="section-item"><a class="section-link" href="12.html#1">一　共生共栄共義主義</a></li>
+<li class="section-item indent-1"><a class="section-link" href="12.html#1-1">（一）　共生主義</a></li>
+<li class="section-item indent-1"><a class="section-link" href="12.html#1-2">（二）　共栄主義</a></li>
+<li class="section-item indent-1"><a class="section-link" href="12.html#1-3">（三）　共義主義</a></li>
+<li class="section-item"><a class="section-link" href="12.html#2">二　三大主体思想</a></li>
+<li class="section-item"><a class="section-link" href="12.html#3">三　四大心情圏と三大王権の意義</a></li>
+<li class="section-item indent-1"><a class="section-link" href="12.html#3-1">（一）　四大心情圏</a></li>
+<li class="section-item indent-1"><a class="section-link" href="12.html#3-2">（二）　三大王権</a></li>
+<li class="section-item indent-1"><a class="section-link" href="12.html#3-3">（三）　三大王権の表現が必要な理由</a></li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+<p class="source-note">底本は統一思想研究院『新版 統一思想要綱（頭翼思想）』。本文は <a href="https://m.cafe.daum.net/ckatkfkdrhdqn/W5lI/1" rel="noopener" target="_blank">Daum カフェ「천일국 경전방」</a> に連載された日本語版から、見出しの立て方は <a href="https://utitokyo.org/contents-2/" rel="noopener" target="_blank">統一思想研究院が公開している目次</a> に合わせました。原文の図版もそのまま収めています。</p>
+<div class="nav-links">
+<a href="../index.html">トップページへ戻る</a>
+<a href="01.html">最初から読む</a>
+</div>
+</div>
+
+<script src="../theme/script.js?v=202602241611"></script>
+</body>
+</html>
