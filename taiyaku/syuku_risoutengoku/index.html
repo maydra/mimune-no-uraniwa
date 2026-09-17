@@ -7,12 +7,12 @@
 <style>
   :root{
     --bg:#faf8f4; --panel:#fff; --ink:#1d1b17; --muted:#7a736c;
-    --line:#e6e0d6; --accent:#8a5a2b; --mark:#fff4d6; --markline:#dfae55;
+    --line:#e6e0d6; --accent:#8a5a2b; --mark:#fff4d6; --markline:#dfae55; --add:#b3261e;
     --pad:20px; --fs:20px; --lh:1.9; --gap:26px;
   }
   html[data-theme="dark"]{
     --bg:#15140f; --panel:#1f1e17; --ink:#ece7dc; --muted:#9a9287;
-    --line:#34312a; --accent:#dba867; --mark:#3b3118; --markline:#8b6c2b;
+    --line:#34312a; --accent:#dba867; --mark:#3b3118; --markline:#8b6c2b; --add:#ff9b91;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -125,6 +125,41 @@
     color-mix(in srgb,var(--markline) 16%,transparent) 14px)}
   /* 翻訳版の掲載順から動かして並べた所。目障りにならない程度の小さな断り */
   .mvtag{color:var(--markline);letter-spacing:0;cursor:help;margin-left:6px}
+  /* 英訳が原文をはしょっている所。⚠ を押すと、英語に出ていない原文の文が開く */
+  .wtag{color:var(--markline);letter-spacing:.02em;margin-left:8px;cursor:pointer;
+    font:inherit;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;
+    border:1px solid color-mix(in srgb,var(--markline) 60%,transparent);
+    background:color-mix(in srgb,var(--mark) 70%,transparent);vertical-align:2px}
+  .wtag:hover,.wtag[aria-expanded="true"]{background:var(--markline);color:#fff;
+    border-color:var(--markline)}
+  @media (pointer:coarse){ .wtag{font-size:13px;padding:6px 13px} }
+  .cell.brief{box-shadow:inset 3px 0 0 color-mix(in srgb,var(--markline) 55%,transparent)}
+  .wbox{display:none;margin-top:10px;padding:9px 11px;border-radius:8px;white-space:normal;
+    background:color-mix(in srgb,var(--mark) 55%,transparent);
+    border:1px solid color-mix(in srgb,var(--markline) 45%,transparent)}
+  .wbox.open{display:block}
+  /* 英語に無い文を、その場へ赤で挿し込んだもの。公式訳ではないので括弧と札で断る */
+  .cell ins{text-decoration:none;color:var(--add);font-style:normal;
+    background:color-mix(in srgb,var(--add) 9%,transparent);border-radius:4px;padding:0 3px}
+  .wmore{background:none;border:0;padding:0;margin-top:8px;cursor:pointer;font:inherit;
+    font-size:calc(var(--fs) * .8);color:var(--accent);text-decoration:underline}
+  .wbox h4{margin:0 0 7px;font-size:10px;letter-spacing:.14em;color:var(--markline);font-weight:700}
+  /* 原文（英語に出ていない文だけ蛍光ペン）。紙の蛍光ペンなので配色が暗くても色は同じ */
+  .worig-wrap{display:none;margin-top:8px;padding-top:8px;
+    border-top:1px dashed color-mix(in srgb,var(--markline) 45%,transparent)}
+  .worig-wrap.open{display:block}
+  .wbox .worig{font-size:calc(var(--fs) * .86);line-height:1.7;white-space:pre-wrap;
+    color:var(--muted)}
+  .wbox mark{background:#ffe680;color:#2b2417;border-radius:3px;padding:1px 2px}
+  .wbox mark sup{font-size:9px;font-weight:700;margin-left:2px;vertical-align:5px}
+  .wbox .wg{margin:9px 0 0;padding:0 0 0 22px;font-size:calc(var(--fs) * .86);line-height:1.55}
+  .wbox .wg li{margin:0 0 6px}
+  .wbox .wg li::marker{color:var(--markline);font-weight:700}
+  .wbox u{display:block;text-decoration:none;color:var(--markline);
+    font-size:10px;letter-spacing:.06em;margin-top:7px}
+  .wbox .n{margin-top:9px;padding-top:8px;font-size:calc(var(--fs) * .86);line-height:1.6;
+    border-top:1px dashed color-mix(in srgb,var(--markline) 45%,transparent)}
+  .wbox .n b{color:var(--markline);font-size:10px;letter-spacing:.14em;margin-right:6px}
 
   /* 横3列（縦積み）: 1 行ぶんをひとかたまりにして、行の切れ目を太い線で見せる */
   .rowbox{border-top:2px solid var(--line);padding-top:2px;margin-top:14px;
@@ -264,6 +299,13 @@
       wAisec: (l) => `${l}版はこの節が投稿されていません。${l}の欄は全文が韓国語からの AI 参考訳です（公式訳ではありません。「AI訳」ボタンで消せます）`,
       wMoved: "⇄印の英語は、対訳のため翻訳版の掲載順から移動してあります",
       spanTag: (n) => `・ ${n}段落ぶん`,
+      wTag: "⚠ 原文より短い",
+      wTagT: "英語に出ていない原文の文を見る",
+      wHead: "英語に出ていない原文",
+      wNote: "補足",
+      wRed: "※ 赤字は英語版に無い部分。韓国語からの AI 訳で、公式の英訳ではありません",
+      wMore: "原文（韓国語）を見る",
+      wLess: "原文を閉じる",
       mvTag: "⇄ 順番移動",
       mvTitle: "対訳のため、翻訳版に掲載されていた順番から移動してあります",
       noHit: "見つかりませんでした",
@@ -298,6 +340,13 @@
       wAisec: (l) => `${l}판에는 이 절이 올라와 있지 않습니다. ${l} 칸은 전문이 한국어에서 옮긴 AI 참고 번역입니다 (공식 번역이 아닙니다. 「AI 번역」 단추로 숨길 수 있습니다)`,
       wMoved: "⇄ 표시가 붙은 영어는 대역을 맞추기 위해 번역판의 실린 순서에서 옮긴 것입니다",
       spanTag: (n) => `・ ${n}문단 분량`,
+      wTag: "⚠ 원문보다 짧음",
+      wTagT: "영어에 나오지 않는 원문 문장을 봅니다",
+      wHead: "영어에 나오지 않는 원문",
+      wNote: "보충",
+      wRed: "※ 붉은 글씨는 영어판에 없는 부분. 한국어에서 옮긴 AI 번역이며 공식 번역이 아닙니다",
+      wMore: "원문 보기",
+      wLess: "원문 접기",
       mvTag: "⇄ 순서 이동",
       mvTitle: "대역을 맞추기 위해, 번역판에 실려 있던 순서에서 옮겼습니다",
       noHit: "찾지 못했습니다",
@@ -332,6 +381,13 @@
       wAisec: (l) => `This section was never posted in ${l}. The whole ${l} column is an AI reference translation from the Korean (not the official text; hide it with the "AI" button)`,
       wMoved: "English cells marked ⇄ were moved out of the order of the translated post so that they line up",
       spanTag: (n) => `· ${n} paragraphs`,
+      wTag: "⚠ shorter than the original",
+      wTagT: "Show the Korean sentences that the English leaves out",
+      wHead: "In the Korean, not in the English",
+      wNote: "Note",
+      wRed: "* The red text is missing from the English post — translated here from the Korean, not the official text",
+      wMore: "Show the Korean",
+      wLess: "Hide the Korean",
       mvTag: "⇄ moved",
       mvTitle: "Moved out of the order in which it appeared in the translated post, so that it lines up",
       noHit: "Nothing found",
@@ -842,10 +898,91 @@
     el.innerHTML = `<span class="tag">${c.ai
         ? AITAG[L.id]
         : L.tag + (c.span > 1 ? ` ${t.spanTag(c.span)}` : "")
-        + (c.mv ? `<span class="mvtag" title="${esc(t.mvTitle)}">${t.mvTag}</span>` : "")}</span>`
-      + (c.t ? esc(c.t) : '<span class="empty">—</span>');
+        + (c.mv ? `<span class="mvtag" title="${esc(t.mvTitle)}">${t.mvTag}</span>` : "")
+        + (c.w ? `<button class="wtag" aria-expanded="false"
+             title="${esc(t.wTagT)}">${t.wTag}</button>` : "")}</span>`
+      + (c.t ? `<span class="body">${esc(c.t)}</span>`
+             : '<span class="empty">—</span>')
+      + (c.w ? briefBox(c.w, t, ui) : "");
+    if (c.w) {
+      el.classList.add("brief");
+      const btn = el.querySelector(".wtag"), box = el.querySelector(".wbox");
+      const body = el.querySelector(".body"), more = el.querySelector(".wmore");
+      const orig = el.querySelector(".worig-wrap");
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        const open = box.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        if (body) body.innerHTML = open ? filled(c.w, c.t) : esc(c.t);
+        if (orig) orig.classList.remove("open");    // 原文はいったん畳む
+      };
+      if (more && orig) {
+        more.onclick = (e) => {
+          e.stopPropagation();
+          const open = orig.classList.toggle("open");
+          more.textContent = open ? T().wLess : T().wMore;
+        };
+      }
+    }
     el.onclick = () => { cur = (cur === r ? -1 : r); mark(); };
     return el;
+  }
+
+  /* 英訳が落としている原文。韓国語の文と、読む人の言葉での訳を並べて見せる。
+
+     画面の言葉が日本語なら日本語（公式訳）、それ以外なら英語（AI参考訳。英語版に
+     その文が無いのだから、公式の英訳は存在しない）。一言も画面の言葉に合わせる。 */
+  /* ⚠ を押したときに出る所。赤で挿し込んだ文の断り、一言、それと畳んである原文。 */
+  function briefBox(w, t, ui) {
+    const en = ui !== "ja";
+    const note = en ? (w.ne || w.n) : (w.n || w.ne);
+    const noteLang = en ? (w.ne ? "en" : "ja") : (w.n ? "ja" : "en");
+    const lang = en ? "en" : "ja";
+    return `<div class="wbox"><u>${esc(t.wRed)}</u>`
+      + (note ? `<div class="n" lang="${noteLang}"><b>${esc(t.wNote)}</b>${esc(note)}</div>` : "")
+      + (w.ko ? `<button class="wmore">${esc(t.wMore)}</button>`
+              + `<div class="worig-wrap"><h4>${esc(t.wHead)}</h4>`
+              + `<div class="worig" lang="ko">${marked(w)}</div>`
+              + `<ol class="wg">` + w.d.map((d) => {
+                  const g = en ? d.en : d.ja;
+                  return `<li lang="${lang}">${g ? esc(g) : ""}</li>`;
+                }).join("") + `</ol></div>` : "")
+      + `</div>`;
+  }
+
+  /* 英文に、英語へ出ていない文を元の並びの所へ挿し込む。後ろから挿して位置をずらさない。
+
+     **挿すのは画面の言葉によらず必ず英語**。ここは英訳の欄で、赤字は「英訳が全部訳して
+     いたらこう書いてあったはず」を補うもの。日本語を混ぜると英文として読めなくなる。
+     日本語で読みたい人には日本語の列があり、畳んである原文の所に番号つきの訳も出る。 */
+  function filled(w, text) {
+    const put = w.d.map((d, i) => ({ at: d.at || 0, i, s: d.en || d.ja || d.ko }))
+      .filter((x) => x.s).sort((a, b) => b.at - a.at || b.i - a.i);
+    let out = text;
+    for (const x of put) {
+      out = out.slice(0, x.at) + " " + x.s + "" + out.slice(x.at);
+    }
+    return esc(out)
+      .replace(/ /g, ' <ins lang="en">〈 ')
+      .replace(//g, " 〉</ins>");
+  }
+
+  /* 原文まるごとに、英語へ出ていない文だけ蛍光ペンを引く。番号は下の訳と対で読む。 */
+  function marked(w) {
+    const at = [];
+    w.d.forEach((d, i) => {
+      const p = (d.p >= 0) ? d.p : w.ko.indexOf(d.ko);       // 位置は組み立てのときに出す
+      if (p >= 0) at.push({ p, end: d.e || (p + d.ko.length), n: i + 1 });
+    });
+    at.sort((a, b) => a.p - b.p);
+    let out = "", was = 0;
+    for (const x of at) {
+      if (x.p < was) continue;                       // 重なった所は先に見つけた方を残す
+      out += esc(w.ko.slice(was, x.p))
+        + `<mark>${esc(w.ko.slice(x.p, x.end))}<sup>${x.n}</sup></mark>`;
+      was = x.end;
+    }
+    return out + esc(w.ko.slice(was));
   }
 
   function mark() {
