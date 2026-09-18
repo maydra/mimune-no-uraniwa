@@ -12,7 +12,7 @@
    分けてあるので、読み込むのもその1冊ぶんだけで済む（数百KB）。各書籍の
    目次にある「この書籍の中で検索」がここへ来る。
 
-   本文の作り方は tools/build_fulltext.py。 */
+   本文の作り方は _tools/build_fulltext.py。 */
 (function () {
     const MANIFEST_URL = 'data/fulltext/manifest.json';
     const SHARD_DIR = 'data/fulltext/';

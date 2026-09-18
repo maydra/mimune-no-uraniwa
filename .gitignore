@@ -1,0 +1,8 @@
+# Python の中間生成物と、エディタ・OS のゴミ。
+# サイト本体は静的 HTML なので、生成物をここに増やさないこと。
+__pycache__/
+*.pyc
+*.bak
+*.tmp
+Thumbs.db
+.DS_Store
