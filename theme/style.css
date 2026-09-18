@@ -164,6 +164,13 @@ body.dark-mode a.verse-link {
     color: #fca5a5 !important;
 }
 
+/* 本文見出しの自己リンク（.bh a）は見出しの色のまま。
+   上の a への一括色指定に負けないように !important で継承させる */
+body.light-mode .bh a,
+body.dark-mode .bh a {
+    color: inherit !important;
+}
+
 /* Navigation buttons */
 body.light-mode .nav-btn,
 body.light-mode .back-link,

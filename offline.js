@@ -110,5 +110,11 @@
 
     state = readReg()[book] ? 'saved' : 'idle';
     label();
-    btn.hidden = false;
+
+    // スマホ・タブレット（タッチ端末）だけに出す。PC で押しても
+    // 「何が起きたか分からない」ので、マウス環境では隠しておく。
+    // ただし PC で保存済みの記録があるときは、解除できるように出す。
+    var coarse = false;
+    try { coarse = matchMedia('(pointer: coarse)').matches; } catch (e) { }
+    if (coarse || state === 'saved') btn.hidden = false;
 })();
