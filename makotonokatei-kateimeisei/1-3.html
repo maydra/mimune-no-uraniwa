@@ -309,17 +309,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head><body><div class="container">
-<section><h1 id="真の家庭と家庭明誓-第１章-家庭盟誓宣布と前提条件"><a href="#真の家庭と家庭明誓-第１章-家庭盟誓宣布と前提条件">真の家庭と家庭明誓　第１章　家庭盟誓宣布と前提条件</a></h1>
+<section><h1>真の家庭と家庭明誓　第１章　家庭盟誓宣布と前提条件</h1>
 <nav class="page-nav">
   <a href="1-2.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="2-1.html" class="nav-btn">次へ <span>→</span></a>
 </nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-level-2"><a href="#section3-1">一) 真の家庭の理想と価値</a></li><li class="toc-level-3"><a href="#section3-1-1">(1)真の家庭は創造本然の家庭</a></li><li class="toc-level-3"><a href="#section3-1-2">(2)真の家庭は、本然の血統と真の愛が連結されなければならない</a></li><li class="toc-level-2"><a href="#section3-2">二) 真の家庭と家庭生活</a></li><li class="toc-level-3"><a href="#section3-2-1">(1)侍ることによって生活の天国化を実現</a></li><li class="toc-level-3"><a href="#section3-2-2">(2)家庭生活の中心は真の父母</a></li></ul></div></section><hr/>
-<section><h1 id="三-祝福家庭と家庭盟誓"><a href="#三-祝福家庭と家庭盟誓">三 祝福家庭と家庭盟誓</a></h1>
+<section><h1>三 祝福家庭と家庭盟誓</h1>
 </section>
 <section><h2 id="section3-1"><a href="#section3-1">一) 真の家庭の理想と価値</a></h2>
 </section>
@@ -387,7 +407,7 @@
 <p>これは驚くべき提案です。そのような内容が宗教界から出てきたという事実は、神様にとっては、限りなくうれしい知らせです。福音の中の福音です。このように見るとき、仏教を立てられたお方も神様であり、儒教を立てられたお方も神様であり、イスラム教を立てられたお方も神様であり、キリスト教を立てられたお方も神様なので、すべての宗教が、もろ手を挙げて歓迎しなければならないのです。</p>
 <p>皆さんが真の父母と完全に一つになる時、国家があるのであり、氏族もあるのであり、民族もあるのであり、家庭もあるのです。天地のあらゆる栄光の価値を総合した実体基準が、真の父母です。真の父母を世の中のお金と換えることができますか。自分の生命と取り替えることができますか。それゆえに、昔とは違うのです。皆さんがどこに行ったとしても、真の父母に侍るために大韓民国を訪ねてこなければなりません。皆さんの息子、娘も、千代、万代の後孫も、そのようにしなければなりません。それゆえに、統一教会は違うのです。</p>
 </section>
-<section><h1 id="section3-3"><a href="#section3-3">三) 真の家庭の伝統と家法を正しく立てよう</a></h1>
+<section><h1>三) 真の家庭の伝統と家法を正しく立てよう</h1>
 <p>先生が心配していることは、いかにすれば統一教会の名を後世に残すことができるかということではなく、いかにすれば先生の伝統を受け継いだ人々を後世に残すことができるかということです。ですから、今まで、伝統を重要視しなさいという教育をしてきているのです。 今まで私たちは、いい加減に生きてきたのであり、言葉もいい加減に使ってきました。しかし、今から、私たち祝福家庭も規律を立てなければなりません。腹が立ったからといって、父母が子女を自分勝手に棒でたたき、「この駄目息子」という世俗的な卑しい言葉を使ってはいけません。今からは、すべてが一新されなければなりません。神様を中心として、言葉から、態度から、生活から、一新した立場に立たなければなりません。</p>
 <p>個人生活はどのようにしなければならないかということを、はっきり糾明しなければなりません。また、家庭生活はどのようにしなければならないかということも、はっきり糾明しなければなりません。過ぎし日に漠然と生きてきた生活を改め、これからは具体的に生きていかなければなりません。</p>
 <p>父母は、子供のために存在します。もし父母のために父母がいるとすれば、「父母」という言葉は出てきません。今後、統一教会の原理を中心として、倫理観が形成されなければなりません。父母は、どのようにあるべきですか。子女を生む父母は、子女のために存在しなければなりません。それが倫理の第一条です。それには、説明が必要ありません。息子のために存在しようとする立場は、不幸な立場ではなく、幸福な立場です。</p>

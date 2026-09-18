@@ -314,34 +314,54 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="人間の生と霊魂の世界"><a href="#人間の生と霊魂の世界">人間の生と霊魂の世界</a></h1>
+<h1>人間の生と霊魂の世界</h1>
 <nav class="page-nav">
   <a href="mokuji.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="reikon_002.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">人間の生と霊魂の世界</a></li><li class="toc-b"><a href="#002">第一章　人生の行くべき道</a></li><li class="toc-b"><a href="#003">一　私たちの人生の道</a></li><li class="toc-b"><a href="#004">１．一寸先も見通すことのできない人生</a></li><li class="toc-b"><a href="#005">２．私たちはどこに進んでいるのか</a></li><li class="toc-b"><a href="#006">３．一生は霊界へ行く準備期間</a></li><li class="toc-b"><a href="#007">４．生涯はあまりにも短い</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">人間の生と霊魂の世界</a></li><li class="toc-b lv1"><a href="#002">第一章　人生の行くべき道</a></li><li class="toc-b lv2"><a href="#003">一　私たちの人生の道</a></li><li class="toc-b lv3"><a href="#004">１．一寸先も見通すことのできない人生</a></li><li class="toc-b lv3"><a href="#005">２．私たちはどこに進んでいるのか</a></li><li class="toc-b lv3"><a href="#006">３．一生は霊界へ行く準備期間</a></li><li class="toc-b lv3"><a href="#007">４．生涯はあまりにも短い</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">人間の生と霊魂の世界</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">人間の生と霊魂の世界</a></h2>
 　
 
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">第一章　人生の行くべき道</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第一章　人生の行くべき道</a></h2>
 <br/>
-　<b id="003"><a href="#003">一　私たちの人生の道</a></b><br/>
+　<h3 class="bh" id="003"><a href="#003">一　私たちの人生の道</a></h3>
 <br/>
-<b id="004"><a href="#004">　１．一寸先も見通すことのできない人生</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">１．一寸先も見通すことのできない人生</a></h4>
 <br/>
 　人々はしばしば、「人間は来ては逝くものだ」と言います。古来より、いくら立派な聖賢君子も来ては逝きました。このような歴史の動き、このような天倫の動きは、この瞬間、私にも続いているということを考えなければなりません。来ては逝くべき私たち自身です。何の因縁と関係しているのかは分かりませんが、この地に来て、この万象と、あるいはある理念的な形態の中で身もだえして逝くことをよく知っています。では、私たち人間は何のために来て、何の目的のために逝くのでしょうか。これを数多くの哲人たち、数多くの宗教人たちが心血を傾けて解決しようとしました。しかし、解決できないままに、人類歴史はそれによる寂しさとともに今まで動いてきました。また今も、ずっと動いていっています。<br/>
 　　　　　　　　　　　　　＊<br/>
@@ -363,7 +383,7 @@
 　出発を誤れば、とんでもない所へ行くのです。それゆえに船が大海を航海しても、出発した港から羅針盤を中心として、行くべき目的地に向かって方向性を描いておいてこそ行くのです。それでは、人間が出発した港はどこでしょうか。分からずにいます。羅針盤をもって彼岸の世界に到達できる、目的地を描いて行くことのできる方向性はどこにあるでしょうか。ないのです。これがくねくねと、自分勝手に行ったり来たりしました。このように考えると、人間はいくらやってみたとしても、人間として終わるのです。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="005"><a href="#005">　２．私たちはどこに進んでいるのか</a></b><br/>
+<h4 class="bh" id="005"><a href="#005">２．私たちはどこに進んでいるのか</a></h4>
 <br/>
 　人生をこのように生きていく目的は何でしょうか。この問題を再び考えてみなければならないのです。動機が自分によるものではなかったので、目的も私だけのものではないに相違ないのです。暮らすことにおいて幸福な立場を嫌う者はいないし、豪華絢爛な立場で生きたくない者はいないと思いますが、思いのままにできないのが私です。しかし、また自分自身を誇ってみたいし、思いのままに生きたいし、思いのままに残りたい私です。このような心情の交差点をもった私だというのです。<br/>
 　　　　　　　　　　　　　＊<br/>
@@ -402,7 +422,7 @@
 　私たち統一教会の食口たちは、どのような道を行かなければならないのでしょうか。神様が願う道に従って行かなければならないのです。天意の道に従って行こうというのです。天意とは何ですか。天意には個人が行くべき天意の道があり、家庭が行くべき天意の道があります。そして、社会が、国家が、世界が、霊界まで……。皆さんは霊界を知らないでしょう。その分野の専門家が文先生です。霊界は間違いなくあるのです。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="006"><a href="#006">　３．一生は霊界へ行く準備期間</a></b><br/>
+<h4 class="bh" id="006"><a href="#006">３．一生は霊界へ行く準備期間</a></h4>
 <br/>
 　いくら考えても自然世界の摂理はやむを得ないのです。皆さんも死なないことを願うでしょう。死なない自信がありますか。自然が調節するのです。霊界の法に従っていかなければならないのです。それと同じ道理です。<br/>
 　　　　　　　　　　　　　＊<br/>
@@ -437,7 +457,7 @@
 　人間生活が便利に、どこでも移動できるようになるのです。そのような小さなものを車一つにすべて積んで、行き来しながら暮らすことのできる時代にならなければなりません。そうなれば、いいでしょう。韓国を離れて七十、八十歳まで世界一周をしながらですね。そのような時代が間違いなく来るのです。先生は、そこに対する準備をしているのです。<br/>
 <a name="004"></a><br/>
 <br/>
-<b id="007"><a href="#007">　４．生涯はあまりにも短い</a></b><br/>
+<h4 class="bh" id="007"><a href="#007">４．生涯はあまりにも短い</a></h4>
 <br/>
 　人間の一生は短いのです。生涯において十年がいつ過ぎたのか知らないのです。結婚して三十年以内に、すべてのものが決定されるのです。それゆえに、人生の道はいつも待っていません。忙しいのです。そして、一回ずつみな死ななくてはなりません。死なないですか。死なない自信がありますか。死ななくてはなりませんね。死ねばどこへ行きますか。霊界があることを知っていますか。先生は霊界を知っているがゆえに一生をかけてこの仕事をしています。世界をすべて料理しながらです。この世はつかの間です。十カ月の腹中生活と同じです。<br/>
 　　　　　　　　　　　　　＊<br/>

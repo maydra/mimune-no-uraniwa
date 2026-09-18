@@ -314,31 +314,51 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="環太平洋摂理"><a href="#環太平洋摂理">環太平洋摂理</a></h1>
+<h1>環太平洋摂理</h1>
 <nav class="page-nav">
   <a href="006_taiheiyou.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="008_taiheiyou.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">環太平洋摂理</a></li><li class="toc-b"><a href="#002">二　人間と趣味生活</a></li><li class="toc-b"><a href="#003">１．未来世界は趣味生活の時代</a></li><li class="toc-b"><a href="#004">２．趣味産業は平和世界へ導いていく近道</a></li><li class="toc-b"><a href="#005">３．趣味産業時代のために準備しなければならない</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">環太平洋摂理</a></li><li class="toc-b lv2"><a href="#002">二　人間と趣味生活</a></li><li class="toc-b lv3"><a href="#003">１．未来世界は趣味生活の時代</a></li><li class="toc-b lv3"><a href="#004">２．趣味産業は平和世界へ導いていく近道</a></li><li class="toc-b lv3"><a href="#005">３．趣味産業時代のために準備しなければならない</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">環太平洋摂理</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">環太平洋摂理</a></h2>
 　
 </div>
 <hr/>
 <br/>
-　<b id="002"><a href="#002">二　人間と趣味生活</a></b><br/>
+　<h3 class="bh" id="002"><a href="#002">二　人間と趣味生活</a></h3>
 <br/>
-　<b id="003"><a href="#003">　１．未来世界は趣味生活の時代</a></b><br/>
+　<h4 class="bh" id="003"><a href="#003">１．未来世界は趣味生活の時代</a></h4>
 <br/>
 　これからの世界は、新しい国際経済機構および秩序の誕生によって飛躍的な経済発展が可能になり、人類は充足した経済生活に伴う時間的余裕をレジャーに利用できるのです。これを通じて人類は、大自然を理解し、学び、その中で神様に感謝し、人種と国籍を超越してお互いに愛し、「ため」に生きて、正しい生活を楽しむ理想世界が、必ず来るということを本人は確信しています。<br/>
 　　　　　　　　　　　　　＊<br/>
@@ -355,7 +375,7 @@
 　趣味生活、神様はそれを喜びます。皆さんの趣味が創造と連結するのです。すべての趣味が私を待っています。疲れません。趣味生活を重ねていくことによって自動的に神様の世界と近づくのです。これが、人間が願う最高の生活です。<br/>
 <a name="002"></a><br/>
 <br/>
-　<b id="004"><a href="#004">　２．趣味産業は平和世界へ導いていく近道</a></b><br/>
+　<h4 class="bh" id="004"><a href="#004">２．趣味産業は平和世界へ導いていく近道</a></h4>
 <br/>
 　趣味生活をしなければなりません。神様が創造される時、無理やりに造ったのではありません。喜びを感じるように造ったというのです。創造される時の神様の立場を、私たちは再び感じなければなりません。誰かが「しなさい」と言うからするのではなく、せざるを得ないのです。眠る時間にも眠らずにそれをしなければいけないというのです。そこにどうしてお金が介在し、環境が介在しますか。それゆえに、趣味生活、趣味産業、趣味研究などが、神様と共に喜ぶ中で一つになってなされたものであってこそ、神様に所有されるものとなり、神様が愛する息子、娘たちが愛用できるものになるのです。そうでなければ、サタンのものだというのです。お金を目的にこれをするのではありません。私は、お金を与えながらこのことをしているのです。<br/>
 　　　　　　　　　　　　　＊<br/>
@@ -370,7 +390,7 @@
 　今、成約時代において、私たちがしなければならないことは、このような大人員を動員することです。大人員が必要です。国境を超越し、文化背景を越えて世界の人々を連結させることができる産業とは何ですか。もちろん、教会活動も必要ですが、対内と対外の活動を兼ねて連結させることができる事業は、趣味産業しかないというのです。<br/>
 <a name="003"></a><br/>
 <br/>
-　<b id="005"><a href="#005">　３．趣味産業時代のために準備しなければならない</a></b><br/>
+　<h4 class="bh" id="005"><a href="#005">３．趣味産業時代のために準備しなければならない</a></h4>
 <br/>
 　先生は、趣味産業、ホビー・ビジネス（hobby business：趣味事業）という言葉を今、新しく使っているのです。それは利権のためにするのではありません。それゆえに、都市集中時代は間もなく終わって、すべて分散します。分散させる方法は、これしかないのです。趣味産業を開発しなければなりません。先生が今、「趣味産業」と叫んでいるのです。人は趣味を中心として生きるようになっています。<br/>
 　　　　　　　　　　　　　＊<br/>

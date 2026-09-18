@@ -308,12 +308,32 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="地上生活と霊界"><a href="#地上生活と霊界">地上生活と霊界</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">地上生活と霊界</a></li><li class="toc-b"><a href="#002">はじめに</a></li><li class="toc-b"><a href="#003">日本語版発刊によせて</a></li></ul></div>
+<h1>地上生活と霊界</h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">地上生活と霊界</a></li><li class="toc-b lv0"><a href="#002">はじめに</a></li><li class="toc-b lv0"><a href="#003">日本語版発刊によせて</a></li></ul></div>
 <body background="bgs_003.gif">
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -324,7 +344,7 @@
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">はじめに</a></b><br/>
+<h2 class="bh bh0" id="002"><a href="#002">はじめに</a></h2>
 <br/>
 　真の御父母様が訓読会を定めてくださったのは、天国家庭の伝統として家庭に神様を迎えて暮らすためだと思います。訓読とは、み言を通して神様の深いみ意を悟り、真の御父母様の勝利の聖業と役事を知ることによって、み言の内容と一致させようとするところにあります。み言は真の御父母様が一生の間、千辛万苦によって探し出されたダイヤモンドの鉱山のようなものです。真の御父母様は、一つしかない貴い宝物、億千万のお金を払っても買うことのできない貴い宝物がたくさん埋められているとおっしゃいました。<br/>
 <br/>
@@ -344,7 +364,7 @@
 <hr/>
 <a name="002"></a><br/>
 <br/>
-<b id="003"><a href="#003">日本語版発刊によせて</a></b><br/>
+<h2 class="bh bh0" id="003"><a href="#003">日本語版発刊によせて</a></h2>
 <br/>
 <br/>
 　歴史を通して洋の東西を問わず「人間は死後どうなるのか?」という素朴な疑問は、多くの人々の心を悩ませてきました。この疑問にどう結論をつけるかで、その人の人生観が大きく変わってきます。<br/>

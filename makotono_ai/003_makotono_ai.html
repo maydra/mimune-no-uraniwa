@@ -314,31 +314,51 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の愛"><a href="#真の愛">真の愛</a></h1>
+<h1>真の愛</h1>
 <nav class="page-nav">
   <a href="002_makotono_ai.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="004_makotono_ai.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の愛</a></li><li class="toc-b"><a href="#002">三　父母の愛</a></li><li class="toc-b"><a href="#003">１．父母の愛は本質の愛である</a></li><li class="toc-b"><a href="#004">２．分け与え、また分け与えても完全な愛</a></li><li class="toc-b"><a href="#005">四　夫婦の愛</a></li><li class="toc-b"><a href="#006">１．夫婦の愛は全宇宙の花</a></li><li class="toc-b"><a href="#007">２．夫婦の愛は分散すれば不完全</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の愛</a></li><li class="toc-b lv2"><a href="#002">三　父母の愛</a></li><li class="toc-b lv3"><a href="#003">１．父母の愛は本質の愛である</a></li><li class="toc-b lv3"><a href="#004">２．分け与え、また分け与えても完全な愛</a></li><li class="toc-b lv2"><a href="#005">四　夫婦の愛</a></li><li class="toc-b lv3"><a href="#006">１．夫婦の愛は全宇宙の花</a></li><li class="toc-b lv3"><a href="#007">２．夫婦の愛は分散すれば不完全</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の愛</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の愛</a></h2>
 　
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　三　父母の愛</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">三　父母の愛</a></h3>
 <br/>
-<b id="003"><a href="#003">　　１．父母の愛は本質の愛である</a></b><br/>
+<h4 class="bh" id="003"><a href="#003">１．父母の愛は本質の愛である</a></h4>
 <br/>
 　子供は父母の愛の実現体であり、投入体です。父母の生命の延長体です。また父母の理想の具現体です。子供を生んで愛したことのある人たちは分かるでしょう。それで愛する息子に対して「これは私の愛の実体であり、生命の延長体であり、理想の具現体だ。第二の私だ」と言うのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -401,7 +421,7 @@
 　創造主がいるならば、なぜそのように造ったのでしょうか。それを見れば赤ちゃんがどれほど重要か、愛がどれほど重要かということが分かります。愛が最高のものであり、赤ちゃんが最高のものだということを見せるための一つの表現として、鮭をつくったのだろうという理論は極めて当然な言葉です。鮭の一生は本当に驚くべき人間の教材です。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">　　２．分け与え、また分け与えても完全な愛</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">２．分け与え、また分け与えても完全な愛</a></h4>
 <br/>
 　子女をなぜ愛するのでしょうか。なぜ愛さざるを得ないのでしょうか。それは神様の創造の偉業を、私たちが横的な実体圏から受け継いだのと同じだからです。アダムとエバを造っておいて神様が喜んだ、その喜びを私たちも感じるのです。神様の愛を受け継いで、神様の創造的権限を受け継ぐのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -428,9 +448,9 @@
 　父母が貴いのは子供のために与えるからです。それがあとで入れ替わるのです。父母は年が多くなれば、また子供になるのです。昔は父母が子供の先生でしたが、年が七十、八十歳になると再び子供になるのです。その時は子供が父母を身代わりするのです。父母が自分を育ててくれた代わりに、子供がその父母を愛さなければなりません。それが天地の道理です。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="005"><a href="#005">　四　夫婦の愛</a></b><br/>
+<h3 class="bh" id="005"><a href="#005">四　夫婦の愛</a></h3>
 <br/>
-<b id="006"><a href="#006">　　１．夫婦の愛は全宇宙の花</a></b><br/>
+<h4 class="bh" id="006"><a href="#006">１．夫婦の愛は全宇宙の花</a></h4>
 <br/>
 　男性は神様の陽性的形状であり、女性は神様の陰性的形状です。夫婦は天下を一つのふろしきに包んだようなものです。それゆえに、夫婦は神様の理想的な愛の心情を感じることができます。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -471,7 +491,7 @@
 　男性と女性が祝福を受けて完全な愛を交わし、喜びを分かつ時、神様の目には地上に咲いた花のようだというのです。また彼らの愛によって成されるすべての造化万象は、神様には香水のようなものです。このような美しい香りの中に神様は住みたくて訪ねてこられるのです。神様の愛が訪ねてくることのできる土台が正に夫婦の愛の場です。その場は万物と宇宙が和動する場となるのです。<br/>
 <a name="004"></a><br/>
 <br/>
-<b id="007"><a href="#007">　　２．夫婦の愛は分散すれば不完全</a></b><br/>
+<h4 class="bh" id="007"><a href="#007">２．夫婦の愛は分散すれば不完全</a></h4>
 <br/>
 　人間は本性的に、自分に対する相対の愛が分散することを願いません。夫婦間の横的な愛の関係は、親子間の縦的な愛の関係と違って、分散すれば既にその完全性が破壊されます。それは、夫婦間に絶対的な愛の一体を成すようになっている創造原理のゆえです。人には自分の相対に絶対に尽くし、「ため」に生きなければならない愛の責任性があります。<br/>
 　　　　　　　　　　　　＊<br/>

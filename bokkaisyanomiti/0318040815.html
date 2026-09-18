@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="牧会者の道_四-手本となる者としての牧会者"><a href="#牧会者の道_四-手本となる者としての牧会者">牧会者の道_四　手本となる者としての牧会者</a></h1>
+<h1>牧会者の道_四　手本となる者としての牧会者</h1>
 <nav class="page-nav">
   <a href="0318030806.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="0319010819.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">四　手本となる者としての牧会者</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv2"><a href="#001">四　手本となる者としての牧会者</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -332,7 +352,7 @@
 </p>
 <blockquote>
 <br/>
-<b id="001"><a href="#001">四　手本となる者としての牧会者</a></b>
+<h3 class="bh" id="001"><a href="#001">四　手本となる者としての牧会者</a></h3>
 <p>P815<br/>
       １　手本を見せなければならない牧会者<p>
 　手本となる生活の基本は何でしょうか？　神様を探し求めていくのに必要な人、私たちの歴史を明らかにするのに必要な人、この時代を開拓するのに必要な人、未来の基盤を築くのに参与する人になることです。そういう現実的基準で私が荷を背負って押し出なければなりません。そうして十年なら十年の期間に成し遂げておいたその業績を、歴史時代において自分の所有として残しておくことができる財産にすることも必要なことです。皆さんはそれを確実に分からなければなりません。（二一―二三二）

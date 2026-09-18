@@ -314,28 +314,48 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="成約人への道"><a href="#成約人への道">成約人への道</a></h1>
+<h1>成約人への道</h1>
 <nav class="page-nav">
   <a href="3-2.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="3-4.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">成約人への道</a></li><li class="toc-b"><a href="#002">三　人類の中心思想は真の愛主義</a></li><li class="toc-b"><a href="#003">１．アダム主義は父母主義</a></li><li class="toc-b"><a href="#004">２．父母主義は真の愛主義</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">成約人への道</a></li><li class="toc-b lv2"><a href="#002">三　人類の中心思想は真の愛主義</a></li><li class="toc-b lv3"><a href="#003">１．アダム主義は父母主義</a></li><li class="toc-b lv3"><a href="#004">２．父母主義は真の愛主義</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <div align="left">
-<b id="001"><a href="#001">成約人への道</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">成約人への道</a></h2>
 <a href="3-3.html" style="color : red;" target="_top">（全面表示）</a>　　<a onclick="history.back();" style="color : red;text-decoration : underline;cursor : pointer;">戻る</a>
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　三　人類の中心思想は真の愛主義</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">三　人類の中心思想は真の愛主義</a></h3>
 <br/>
 <b id="003"><a href="#003">　　１．アダム主義は父母主義<br/>
 </a></b><br/>
@@ -358,7 +378,7 @@
 　父母主義とは何でしょうか。地上でアダムとエバが完成した真の父母主義です。その次に、神主義とは何でしょうか。真の父母は横的な父母なので、縦的な父母が必要だというのです。ですから縦的な父母主義が神主義です。ゆえに頭翼思想という言葉は真の父母主義であり、ゴッディズム（Godism：神主義）とは縦的な神主義です。このようになるのです。横的な真の父母と縦的な神主義の、縦横が一つになって、天の生命、地の生命、天の愛、地の愛、天の血統、地の血統が連結されて人間が生まれたので、人間は二重存在になっているというのです。内的な人と、外的な人になっています。内的な人は縦的な私であり、体的な人は横的な私だというのです。実となるのです。<br/>
 <br/>
 <br/>
-<b id="004"><a href="#004">　　２．父母主義は真の愛主義</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">２．父母主義は真の愛主義</a></h4>
 <br/>
 　神様が一番好まれるのは愛の文化です。神様にお金や権力、知識などが必要ですか。いい家を設計し、建てるためには、れんがも必要だし、ドアも必要だし、多くの材料が必要ですが、その中でも一番重要なものは、その家を完成させる総合的な完成美を備えることです。人間に対して神様が願われる最も大きな願いは、お金が多いこと、学者になることではありません。聖書のみ言のとおり、思いを尽くし、心を尽くし、精神を尽くして主なるあなたの神を愛せよと言われましたが、それが第一の戒めです。第二は、あなたの体を愛するように隣り人を愛せよと言われました。驚くべきみ言です。<br/>
 　　　　　　　　　　　　＊<br/>

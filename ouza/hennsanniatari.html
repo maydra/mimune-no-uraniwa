@@ -314,26 +314,46 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="韓日対訳本を編纂するにあたり/天宙の王座"><a href="#韓日対訳本を編纂するにあたり/天宙の王座">韓日対訳本を編纂するにあたり/天宙の王座</a></h1>
+<h1>韓日対訳本を編纂するにあたり/天宙の王座</h1>
 <nav class="page-nav">
   <a href="hajimeni.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="mokuji.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">天宙の王座</a></li><li class="toc-b"><a href="#002">韓日対訳本を編纂するにあたり</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">天宙の王座</a></li><li class="toc-b lv0"><a href="#002">韓日対訳本を編纂するにあたり</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
-<b id="001"><a href="#001">天宙の王座</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">天宙の王座</a></h2>
 　　<a href="index.html" style="color : red;" target="_top">INDEXへ</a>
 <hr/>
 <br/>
-<b id="002"><a href="#002">韓日対訳本を編纂するにあたり</a></b><br/>
+<h2 class="bh bh0" id="002"><a href="#002">韓日対訳本を編纂するにあたり</a></h2>
 <br/>
 　本講演文は、平和世界である天一国時代を迎え、平和王国を建設するために、全世界的に特別に講演なさったみ言です。特に天一国の伝統を立てるために統一教会の４つの骨となる思想についてのみ言(2002.7.15.宣布、1.家庭盟誓、2.神様王権即位式のみ言、3.天地父母統一安着宣布のみ言、4.霊界五大宗教代表の決意文）、および平和天国憲法のみ言（1.再創造の主人、2.新たな国境線撤廃と平和世界、3.平和国連を通して平和天国を完成しよう）など、主要なみ言が編集されています。<br/>
 <br/>

@@ -314,31 +314,51 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の愛"><a href="#真の愛">真の愛</a></h1>
+<h1>真の愛</h1>
 <nav class="page-nav">
   <a href="006_makotono_ai.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="008_makotono_ai.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の愛</a></li><li class="toc-b"><a href="#002">第四章　愛と家庭</a></li><li class="toc-b"><a href="#003">一　愛の理想実現は家庭から</a></li><li class="toc-b"><a href="#004">二　家庭は天国生活のための愛の訓練場</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の愛</a></li><li class="toc-b lv1"><a href="#002">第四章　愛と家庭</a></li><li class="toc-b lv2"><a href="#003">一　愛の理想実現は家庭から</a></li><li class="toc-b lv2"><a href="#004">二　家庭は天国生活のための愛の訓練場</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の愛</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の愛</a></h2>
 　
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　第四章　愛と家庭</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第四章　愛と家庭</a></h2>
 <br/>
-<b id="003"><a href="#003">　一　愛の理想実現は家庭から</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">一　愛の理想実現は家庭から</a></h3>
 <br/>
 　家庭は、万古普遍の起源であり礎です。これは父も変えることができないし、兄弟も変えることができないし、どの国も、どのような制度でも変えることができません。また世界的にも変えることができないし、天地も、神様も変えることができません。ですから、家庭というものには永遠に革命という名詞が必要ないのです。家庭は愛の場なので、革命が必要ないというのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -399,7 +419,7 @@
 　愛を中心とした家庭で、父母は国の代表者です。神様の代表者だと見るのです。それを訓練するための第一段階の訓練舞台が家庭です。地上で天国を成せる第一教化場が家庭で、そして国家が第二教化場です。ここに愛国者が必要なのです。その次に第三教化場が世界です。ここに聖人が必要です。霊界は第四教化場です。その次には神様の息子、娘になるのです。聖人といっても、神様の息子、娘ではありません。それで、すべてが神様の息子、娘にならなければならないのです。聖者の位置に入り、神様の愛と一つになって、永遠に神様を所有できる位置に入るようになります。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">　二　家庭は天国生活のための愛の訓練場</a></b><br/>
+<h3 class="bh" id="004"><a href="#004">二　家庭は天国生活のための愛の訓練場</a></h3>
 <br/>
 　天国は愛の世界です。神様のためにある世界、神様のために生きる世界です。<br/>
 　　　　　　　　　　　　＊<br/>

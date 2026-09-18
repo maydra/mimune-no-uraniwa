@@ -314,29 +314,49 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="訓読：天一国主人の生活"><a href="#訓読：天一国主人の生活">訓読：天一国主人の生活</a></h1>
+<h1>訓読：天一国主人の生活</h1>
 <nav class="page-nav">
   <a href="03-1.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="04-1.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">天一国主人の生活</a></li><li class="toc-b"><a href="#002">三　神様を解放する真の父母</a></li><li class="toc-b"><a href="#003">四　真の父母は天国への通路</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">天一国主人の生活</a></li><li class="toc-b lv2"><a href="#002">三　神様を解放する真の父母</a></li><li class="toc-b lv2"><a href="#003">四　真の父母は天国への通路</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <br/>
 <div align="left">
-<b id="001"><a href="#001">天一国主人の生活</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">天一国主人の生活</a></h2>
 <a href="03-2.html" style="color : red;" target="_top">（全面表示）</a>　　<a onclick="history.back();" style="color : red;text-decoration : underline;cursor : pointer;">戻る</a>
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">三　神様を解放する真の父母</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">三　神様を解放する真の父母</a></h3>
 <br/>
 　悲惨にも、神様が理想とされた真の家庭は実現されませんでした。エデンの園で蛇はエバを誘惑し、エバはアダムを誘惑して、利己的な偽りの愛をこの世に植えました。人類の罪と不幸は、人間の先祖アダムとエバがサタンを動機として結ばれた不倫なる愛の結果から始まりました。<br/>
 <br/>
@@ -421,7 +441,7 @@
 　それで、神様を完成させて、神様自体を永遠にサタンから解放しなければなりません。自然監獄に閉じ込められたのと同じように、捕らわれの身になったことを解放することができる息子にならなければなりません。それでこそ、家庭で解放されなかった恨を抱かれたかわいそうな神様が、終わりの日に世界と天宙で解放され、初めて自分の姿勢を備え、神様を中心とした家庭愛、氏族愛、民族愛、国家愛、天宙愛の法度を中心とした主権を立てることができるのです。<br/>
 <a name="004"></a><br/>
 <br/>
-<b id="003"><a href="#003">四　真の父母は天国への通路</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">四　真の父母は天国への通路</a></h3>
 <br/>
 　アダムとエバの位置が、神様に代わる位置であり父母の位置ならば、先生も霊的に見れば父母の位置、神様に代わって地上を代表した位置にいるのです。この地を通して霊界に行ったすべての霊人たちは、アダムとエバを追いかけていったのです。ですから、先に行った霊人たちは天使世界に属しています。したがって、皆さんを思いのままに後援することができるというのです。<br/>
 <br/>

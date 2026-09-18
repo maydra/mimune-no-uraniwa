@@ -314,29 +314,49 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="第二章-神様はどのように人間を教育されたのか/文鮮明先生の教育哲学/御旨の裏道"><a href="#第二章-神様はどのように人間を教育されたのか/文鮮明先生の教育哲学/御旨の裏道">第二章　神様はどのように人間を教育されたのか/文鮮明先生の教育哲学/御旨の裏道</a></h1>
+<h1>第二章　神様はどのように人間を教育されたのか/文鮮明先生の教育哲学/御旨の裏道</h1>
 <nav class="page-nav">
   <a href="001.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="003.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">文鮮明先生の教育哲学</a></li><li class="toc-b"><a href="#002">第二章　神様はどのように人間を教育されたのか</a></li><li class="toc-b"><a href="#003">一　神様が人間を教育された理由は</a></li><li class="toc-b"><a href="#004">二　神様の恨は人間を教育できなかったこと</a></li><li class="toc-b"><a href="#005">三　伝統・教育・実践の三大綱領</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">文鮮明先生の教育哲学</a></li><li class="toc-b lv1"><a href="#002">第二章　神様はどのように人間を教育されたのか</a></li><li class="toc-b lv2"><a href="#003">一　神様が人間を教育された理由は</a></li><li class="toc-b lv2"><a href="#004">二　神様の恨は人間を教育できなかったこと</a></li><li class="toc-b lv2"><a href="#005">三　伝統・教育・実践の三大綱領</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
-<b id="001"><a href="#001">文鮮明先生の教育哲学</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">文鮮明先生の教育哲学</a></h2>
 　　<a href="index.html" style="color : red;" target="_top">INDEXへ</a>
 <b><marquee behavior="slide" bgcolor="#990000" scrolldelay="12" style="color : white;">　世界平和と統一に関する文鮮明先生のビジョンと実践　3</marquee></b>
 <hr/>
 <br/>
-<b id="002"><a href="#002">第二章　神様はどのように人間を教育されたのか</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第二章　神様はどのように人間を教育されたのか</a></h2>
 <br/>
-<b id="003"><a href="#003">一　神様が人間を教育された理由は</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">一　神様が人間を教育された理由は</a></h3>
 <br/>
 　神様は、四千年の歴史を通して、繰り返し受難の道を歩まれながらも、将来、イエス様のみ旨を受け継ぐことができる世界的な基盤ができることを願われながら、イスラエル選民を育ててこられました。しかし、そのようなイスラエル選民は、専門家であられるイエス様の前で、希望をもつことができない立場に立ってしまいました。このようなイエス様は、御自身が専門家としての権威をもった立場に立たれながらも、そのようなイエス様に対し得る相対がいなかったので、これを地上で新たに模索しなければなりませんでした。それゆえに、彼らを再び教育しなければならない立場に立つようになったのです。（二九−八三、一九七〇・二・二五）<br/>
 <br/>
@@ -391,7 +411,7 @@
 　神様がこの宇宙を創造される時は、人類の愛の対象として父母の立場に立たれたのであり、その次には、この人間たちが愛の理想の立場に到達することができるようにするために、「これこれこのように歩まなければならない」という原則的路程を中心として教育し、訓示し、そして完全に成長したのちには、「父母の立場を代理し、師の立場を代理して永遠の中心の立場を守る主人となりなさい」ということを願われたのです。主人となってくれることを願われたというのです。（一九八−六一、一九九〇・一・二一）<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">二　神様の恨は人間を教育できなかったこと</a></b><br/>
+<h3 class="bh" id="004"><a href="#004">二　神様の恨は人間を教育できなかったこと</a></h3>
 <br/>
 　神様が教育することができなかった、息子、娘と、兄弟と、夫婦と、父母の伝統を受け継がなければなりません。それが、四位基台の完成であり、創造目的です。神様のみ旨の完成とは何かというと、創造理想の完成です。神様の創造理想の完成とは、四位基台の完成です。四位基台の完成とは何でしょうか。神様の真の愛を中心として、子女として教育し、兄弟として教育して、それから夫婦として教育しなければなりません。また、その家庭における父母として、神様の伝統を受け継ぐ教育を受けることができなかったことが恨なので、それを再現して、一つの王族的基準を皆さん各自の家庭から出発させなければなりません。そのようにすることによって、神様の再創造が完成した地上世界となるのです！　（二二三−二〇一、一九九一・一一・一〇）<br/>
 <br/>
@@ -428,7 +448,7 @@
 　この四大教育をすることができなかったのです。この教育を受けた人たちが息子、娘を生んで家庭訓練をすることができなければならず、また一族を従えた長となって霊界に入っていかなければなりません。霊界に入っていくときは、子女の完成、兄弟の完成、夫婦の完成、父母の完成をすべて成し遂げなければならないというのです。（二二六−一五六、一九九二・二・四）<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="005"><a href="#005">三　伝統・教育・実践の三大綱領</a></b><br/>
+<h3 class="bh" id="005"><a href="#005">三　伝統・教育・実践の三大綱領</a></h3>
 <br/>
 　皆さんは、伝統を受け継ぐだけでなく、教育をしなければなりません。誰にですか。皆さんの息子、娘と、皆さんの夫、皆さんの妻に教育をしなければなりません。「私の夫は素晴らしい方だ」、「私の妻は素晴らしい方だ」と言って、尊敬しなければなりません。夫婦がそのようになって、息子、娘たちを教育しなければなりません。その次には、正しく教育するだけでなく、正しく実践しなければなりません。これが三大原則です。伝統・教育・実践、それだけが今後残るものです。<br/>
 <br/>

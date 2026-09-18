@@ -314,30 +314,50 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の神様の祖国光復"><a href="#真の神様の祖国光復">真の神様の祖国光復</a></h1>
+<h1>真の神様の祖国光復</h1>
 <nav class="page-nav">
   <a href="009_sokoku_koufuku.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="011_sokoku_koufuku.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の神様の祖国光復</a></li><li class="toc-b"><a href="#002">五　霊界の協助と確信</a></li><li class="toc-b"><a href="#003">六　我々の本郷と天国入籍の道</a></li><li class="toc-b"><a href="#004">１．故郷は創造本然の世界</a></li><li class="toc-b"><a href="#005">２．天国に入籍するには</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の神様の祖国光復</a></li><li class="toc-b lv2"><a href="#002">五　霊界の協助と確信</a></li><li class="toc-b lv2"><a href="#003">六　我々の本郷と天国入籍の道</a></li><li class="toc-b lv3"><a href="#004">１．故郷は創造本然の世界</a></li><li class="toc-b lv3"><a href="#005">２．天国に入籍するには</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の神様の祖国光復</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の神様の祖国光復</a></h2>
 　
 
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　五　霊界の協助と確信</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">五　霊界の協助と確信</a></h3>
 <br/>
 　今は霊界が極めて近くに来ているので、善なる霊人たちが地上に定住する時代が来ることでしょう。来て住むということです。それがどういうことか分かりますか。今まではサタン、悪魔が地上をすべて分割して主管してきたのです。しかしこれからは善なる霊人たちがその地域を奪い返して主管するのです。そのために統一教会員は涙を流し、血の汗を流してホーム・チャーチ（家庭教会）運動をしなければならないのです。精誠を尽くさなければならないのです。キリスト教が精誠を尽くした以上に、イスラム教、仏教、どの宗教よりも切なる心情をもって祈祷しなければならないのです。「あなた方を中心として地上に実体基盤が復帰されましたので、霊的基盤を中心とした霊界圏を通して統一教会は前進します」と祈祷するのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -382,9 +402,9 @@
 　今霊界にいる霊人たちは、真の父母を通して生まれたのではなく、偽りの父母を通して生まれたがゆえに、真の父母に協助することはできないのです。しかし天使長の失敗したすべてのことを蕩減し、子女の立場で、アダムとエバが成長しているという立場においては、いくらでも後援することができるようになっています。それゆえ霊界が協助することによって、世の中が遠からず徐々に崩れていくのです。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="003"><a href="#003">　六　我々の本郷と天国入籍の道</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">六　我々の本郷と天国入籍の道</a></h3>
 <br/>
-<b id="004"><a href="#004">　　１．故郷は創造本然の世界</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">１．故郷は創造本然の世界</a></h4>
 <br/>
 　人間の力、人間の知恵、人間の文化、その何をもっても真なる意味の平和の世界や、一つの統一された世界を望むことのできない時点にあるということを私たちは知っています。このような立場において、世界文化を解決するにあたって、最も中心的な問題となるのは何でしょうか。神はいるか、いないかという問題をはっきりと解明することが、何よりも重要な問題だと考えるのです。<br/>
 　もしも神様がいるということを全人類が知ったならば、神様のみ旨が何を志向しているかということがはっきりと分かるでしょうし、その志向するみ旨を知るとするならば、その世界はそれこそ、ほかならぬ一つの世界であり、平和の世界であり、理想の世界なのです。<br/>
@@ -411,7 +431,7 @@
 　自分が行き来するのも、その国を復帰するため、祖国光復のための建国の功臣となるために使命を帯びてのことであり、天の密使としての指令を受け、今日の悪なる世に来てこのようなことをしているという事実を考えながら生きていくべきです。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="005"><a href="#005">　　２．天国に入籍するには</a></b><br/>
+<h4 class="bh" id="005"><a href="#005">２．天国に入籍するには</a></h4>
 <br/>
 　皆さんは、そのままでは御父母様の前に直接行くことはできません。皆さんは血統が違いますね。入籍する前に相続権を受けることはできません。皆さんはまだ入籍していません。先生の族譜に入籍しましたか。祝福を受けたからといって、入籍したことにはなりません。祝福を受ける位置は長成期完成級、その位置です。七段階の完成級七年路程が残っているのです。それが原理です。その原理を中心として復帰していくのです。<br/>
 　　　　　　　　　　　　＊<br/>

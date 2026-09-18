@@ -314,30 +314,50 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="成約人への道"><a href="#成約人への道">成約人への道</a></h1>
+<h1>成約人への道</h1>
 <nav class="page-nav">
   <a href="4-6.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <div style="flex:1"></div>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">成約人への道</a></li><li class="toc-b"><a href="#002">七　愛の皇族となれ</a></li><li class="toc-b"><a href="#003">１．天国は皇族の名誉をもって行くところ</a></li><li class="toc-b"><a href="#004">２．愛の人になれ</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">成約人への道</a></li><li class="toc-b lv2"><a href="#002">七　愛の皇族となれ</a></li><li class="toc-b lv3"><a href="#003">１．天国は皇族の名誉をもって行くところ</a></li><li class="toc-b lv3"><a href="#004">２．愛の人になれ</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <div align="left">
-<b id="001"><a href="#001">成約人への道</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">成約人への道</a></h2>
 <a href="4-7.html" style="color : red;" target="_top">（全面表示）</a>　　<a onclick="history.back();" style="color : red;text-decoration : underline;cursor : pointer;">戻る</a>
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　七　愛の皇族となれ</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">七　愛の皇族となれ</a></h3>
 <br/>
-<b id="003"><a href="#003">　　１．天国は皇族の名誉をもって行くところ</a></b><br/>
+<h4 class="bh" id="003"><a href="#003">１．天国は皇族の名誉をもって行くところ</a></h4>
 <br/>
 　天国は神様の愛を中心として王子、王女となって王と王女の愛を受けた皇族たちが入るところです。今日キリスト教では、イエスを信じて天国に行くと言うでしょう。どのようになるか行ってみろというのです。文総裁の言葉が合っているか、合っていないか、見てみろというのです。それは理論に合わないのです。今まですべての宗教は理論に合わなかったのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -397,7 +417,7 @@
 　そのように皆さんが生きて死ぬときは、神様が祝福してくれるでしょうし、神様が息子、娘を連れて歓迎しに出てくることでしょう。そのときには、指輪がはめられなかった手であるならば、天の国のダイヤモンドをはめてくれるでしょうし、服が着られなかったなら、天の国の皇族たちが着る最高の服を着せてくれることでしょう。<br/>
 <br/>
 <br/>
-<b id="004"><a href="#004">　　２．愛の人になれ</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">２．愛の人になれ</a></h4>
 <br/>
 　愛で和合して喜ぶことができるものは、昔創世前の時代の神様の喜びと、創世以降の相対的実体たちが出会って同化して感じる刺激的な愛の衝撃とは、天地の間の差があるのです。踊りを千年、万年踊っても終わることがないというのです。神様一人で踊りを踊ることができますか。神様一人で歌を歌うことができますか。一人でうれしいと言って笑うことができますか。香りをかぐことができますか。愛のために生まれて、愛のために生き、愛のために宇宙世界を統一して占領することができる主人の相対になるのです。その次に、愛を中心として私も主人の位置に立つことができるのです。<br/>
 　神様が愛する相対が神様よりもっと素晴らしくなると、創造した所望的基準から見るとき、神様より高い位置に立っているのです。ですから私が「神様！」と言えば訪ねてくるし、私が「ようこそ」と言うと神様は後ろからついてきながらも不平を言いません。千里、万里ついていっても、いつも神様は喜びながらついてくるようになっているのです。子供についていく親の喜びというものは、口で言い表すことができないものです。天地が和動して自分以上に歓迎をするのを見るとき、父母の満足した細胞全体が、笑いのふろしきとなり、どっとはちきれて出てくるのです。<br/>

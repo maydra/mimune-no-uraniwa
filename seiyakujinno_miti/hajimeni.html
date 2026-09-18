@@ -308,23 +308,43 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="成約人への道"><a href="#成約人への道">成約人への道</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">成約人への道</a></li><li class="toc-b"><a href="#002">はじめに</a></li><li class="toc-b"><a href="#003">日本語版発刊によせて</a></li></ul></div>
+<h1>成約人への道</h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">成約人への道</a></li><li class="toc-b lv0"><a href="#002">はじめに</a></li><li class="toc-b lv0"><a href="#003">日本語版発刊によせて</a></li></ul></div>
 <body background="bgs_002.gif">
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <div align="left">
-<b id="001"><a href="#001">成約人への道</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">成約人への道</a></h2>
 <a href="hajimeni.html" style="color : red;" target="_top">（全面表示）</a>　　<a onclick="history.back();" style="color : red;text-decoration : underline;cursor : pointer;">戻る</a>
 </div>
 <hr/>
 <br/>
-　<b id="002"><a href="#002">はじめに</a></b><br/>
+　<h2 class="bh bh0" id="002"><a href="#002">はじめに</a></h2>
 <br/>
 　成約時代は、天地父母様が地上にお座りになることによって、子女たちが完成し、神人愛一体の愛の理想が成就する時です。<br/>
 　真の御父母様は早くからみ言を通じ、神様と人間は親子の関係だということを明らかにされ、その関係を連結する根本の力が真の愛の心情であると教えてこられました。<br/>
@@ -340,7 +360,7 @@
 <br/>
 <hr/>
 <br/>
-　<b id="003"><a href="#003">日本語版発刊によせて</a></b><br/>
+　<h2 class="bh bh0" id="003"><a href="#003">日本語版発刊によせて</a></h2>
 <br/>
 　文鮮明先生は「人間が、①神様について明確に分かっていれば、②真の御父母様がどのような方なのか明確に分かっていれば、③霊界について明確に分かっていれば、④罪を犯したら蕩減復帰の道を歩まなければならないことに対して確かに分かっていれば、その人はどこでどんな環境の中で暮らしても罪を犯さずに生きることができるでしょう。いや、この中の一つでも確かに分かっていれば、その人は善なる人になるでしょう」と語られています。<br/>
 　このみ言を基に七つのテーマを設定し編集したのが本シリーズです。<br/>

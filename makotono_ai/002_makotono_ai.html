@@ -314,33 +314,53 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の愛"><a href="#真の愛">真の愛</a></h1>
+<h1>真の愛</h1>
 <nav class="page-nav">
   <a href="001_makotono_ai.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="003_makotono_ai.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の愛</a></li><li class="toc-b"><a href="#002">第二章　愛の実際</a></li><li class="toc-b"><a href="#003">一　神様の愛</a></li><li class="toc-b"><a href="#004">１．愛は神様から始まる</a></li><li class="toc-b"><a href="#005">２．愛の目的は、神人愛一体理想</a></li><li class="toc-b"><a href="#006">二　真の父母の愛</a></li><li class="toc-b"><a href="#007">１．原罪のない真の先祖、人類の救世主</a></li><li class="toc-b"><a href="#008">２．真の愛で人類を生んでくださる</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の愛</a></li><li class="toc-b lv1"><a href="#002">第二章　愛の実際</a></li><li class="toc-b lv2"><a href="#003">一　神様の愛</a></li><li class="toc-b lv3"><a href="#004">１．愛は神様から始まる</a></li><li class="toc-b lv3"><a href="#005">２．愛の目的は、神人愛一体理想</a></li><li class="toc-b lv2"><a href="#006">二　真の父母の愛</a></li><li class="toc-b lv3"><a href="#007">１．原罪のない真の先祖、人類の救世主</a></li><li class="toc-b lv3"><a href="#008">２．真の愛で人類を生んでくださる</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の愛</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の愛</a></h2>
 　
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　第二章　愛の実際</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第二章　愛の実際</a></h2>
 <br/>
-<b id="003"><a href="#003">　一　神様の愛</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">一　神様の愛</a></h3>
 <br/>
-<b id="004"><a href="#004">　　１．愛は神様から始まる</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">１．愛は神様から始まる</a></h4>
 <br/>
 　神様は、愛の神様です。パウロは「キリストの中にある神様の愛の綱を誰が切るか」と言いました。キリストも、神様の愛がなければ何でもありません。それで神様の愛を何よりも好むのです。神様の愛は生命の源泉であり、幸福の源泉であり、平和の源泉です。霊的体験をしてみれば、これが分かります。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -425,7 +445,7 @@
 　愛だけは万有において直短距離を通れるようになっています。ですから上にあるものが下に降りてくる時、直短距離で降りてきますが、その場が垂直です。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="005"><a href="#005">　　２．愛の目的は、神人愛一体理想</a></b><br/>
+<h4 class="bh" id="005"><a href="#005">２．愛の目的は、神人愛一体理想</a></h4>
 <br/>
 　天地の中心と宇宙の根本とは何でしょうか。神秘的な境地に入って神様に祈ってみると、父と息子、娘の関係、すなわち「親子の関係である」と言われました。知らない人たちは、肉親の父、母、息子、娘の関係だと思っていますが、それは神様との根本関係を言うのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -454,9 +474,9 @@
 　堕落していないアダム・エバの体は、神様が臨在できる家です。アダム・エバが神様を心の中心として真の愛によって永遠に統一された愛の体、生命の体、血統の体になったならば、今日私たちの心と体は闘わなかったことでしょう。堕落とは悪魔の愛を中心として、悪魔の生命体と血筋を引き継いだことです。ですからこの血筋を改造しなければなりません。オリーブの木を真のオリーブの木に改造してこそ、救援摂理の完成が成されます。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="006"><a href="#006">　二　真の父母の愛</a></b><br/>
+<h3 class="bh" id="006"><a href="#006">二　真の父母の愛</a></h3>
 <br/>
-<b id="007"><a href="#007">　　１．原罪のない真の先祖、人類の救世主</a></b><br/>
+<h4 class="bh" id="007"><a href="#007">１．原罪のない真の先祖、人類の救世主</a></h4>
 <br/>
 　今日まで、歴史は何を求めてきたのでしょうか。時代は何を求めてきたのでしょうか。未来は何を求めていくべきでしょうか。真の父母です。ですから全体がここに帰結されずしては、幸福の基準は歴史過程や宇宙の中では見つけることができません。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -489,7 +509,7 @@
 　真の父母とは何ですか。肉親の父母と真の父母と、何が違いますか。真の父母とは何ですか。何をするのが真の父母ですか。愛を中心として言う時、その肉親の父母と真の父母とは何が違いますか。愛に対する概念が違います。愛の概念が違うのです。肉的父母は肉身を中心とした愛を教えてくれるのであり、霊的父母は霊的な世界を中心とした愛を教えてくれるのです。内容が違うのです。<br/>
 <a name="004"></a><br/>
 <br/>
-<b id="008"><a href="#008">　　２．真の愛で人類を生んでくださる</a></b><br/>
+<h4 class="bh" id="008"><a href="#008">２．真の愛で人類を生んでくださる</a></h4>
 <br/>
 　皆さんは真の父母と関係のない場で、天の前から追い出された偽りの父母の血筋を受けて生まれたので、真の父母の血筋に生まれ変わるためには、偽りの血筋を踏みつぶし、完全に抜き取ってしまわなければなりません。そうして血統を根本的に替えずしては天の国に行くことができません。<br/>
 　　　　　　　　　　　　＊<br/>

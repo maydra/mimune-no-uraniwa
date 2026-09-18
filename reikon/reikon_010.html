@@ -314,31 +314,51 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="人間の生と霊魂の世界"><a href="#人間の生と霊魂の世界">人間の生と霊魂の世界</a></h1>
+<h1>人間の生と霊魂の世界</h1>
 <nav class="page-nav">
   <a href="reikon_009.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="reikon_011.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">人間の生と霊魂の世界</a></li><li class="toc-b"><a href="#002">二　真の御父母様と天国建設</a></li><li class="toc-b"><a href="#003">１．真の父母になるためにみ印を受けなければならない</a></li><li class="toc-b"><a href="#004">２．天国建設と地上、天上世界の統一</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">人間の生と霊魂の世界</a></li><li class="toc-b lv2"><a href="#002">二　真の御父母様と天国建設</a></li><li class="toc-b lv3"><a href="#003">１．真の父母になるためにみ印を受けなければならない</a></li><li class="toc-b lv3"><a href="#004">２．天国建設と地上、天上世界の統一</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">人間の生と霊魂の世界</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">人間の生と霊魂の世界</a></h2>
 　
 
 </div>
 <hr/>
-<b id="002"><a href="#002">二　真の御父母様と天国建設</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">二　真の御父母様と天国建設</a></h3>
 <br/>
-<b id="003"><a href="#003">　１．真の父母になるためにみ印を受けなければならない</a></b><br/>
+<h4 class="bh" id="003"><a href="#003">１．真の父母になるためにみ印を受けなければならない</a></h4>
 <br/>
 　再臨主になるためにはどのようにしなければならないでしょうか。霊界に入っていってイエス様を中心としてすべての宗教関係にある原理の内容、天地はこうですべての原則がこのようになったという道理を解いて霊界で承認を受けなければならないのです。その内容を発表しなければなりません。<br/>
 　これは霊界でも分からない話なのです。神様とサタンだけが知っている内容ですが、これをすべて発表するので霊界で反対が起こるのです。それで、四十日間霊界の混乱時代が来ます。サタンが神様を否定する条件を立てて反対するので……。そこで霊界の半分が別れて反対しました。ですから混乱が起こるのです。最後に至っては神様が「どれが真なのか」ということで判決しなければなりません。それで、真の父母が霊界を完全に屈服させて、神様のみ印を受けて地上に降りてくるのです。<br/>
@@ -377,7 +397,7 @@
 　生きて祝福を受けた皆さんは、霊界に行って復活した数百万、数千万、数億の人々やその教主たちよりも高い位置にいるということを知っていますか。今までむやみに生きてきました。それを知らなければなりません。先生は自分勝手に暮らしているようですが、どこに行って座ろうが、どこに行って何をしようが、神様の法度を守って霊的に整理して座っています。法を守るからそうだというのです。皆さんはむやみに生きているでしょう。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">　２．天国建設と地上、天上世界の統一</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">２．天国建設と地上、天上世界の統一</a></h4>
 <br/>
 　一国を見れば、国が形成されるためには、その国の主権がなければならないのです。民がいなければならないのです。国土がなければならないのです。そのような観点から地上に天国を実現するという問題を見てみる時、天国の主人は誰ですか。主権者は誰ですか。間違いなく神様が主権者です。そして、民とは誰ですか。民とは万民です。では、国土はどこでしょうか。地球星です。<br/>
 　　　　　　　　　　　　　＊<br/>

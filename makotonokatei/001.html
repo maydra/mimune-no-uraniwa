@@ -314,30 +314,50 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の家庭"><a href="#真の家庭">真の家庭</a></h1>
+<h1>真の家庭</h1>
 <nav class="page-nav">
   <a href="../makotonofubo/1009070264.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="002.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の家庭</a></li><li class="toc-b"><a href="#002">第一章　創造本然の真の家庭</a></li><li class="toc-b"><a href="#003">◆一　アダムとエバを通じた神様のみ旨</a></li><li class="toc-b"><a href="#004">◆二　神様が絶対に必要とするもの</a></li><li class="toc-b"><a href="#005">◆三　神様の永遠なる愛の相対者</a></li><li class="toc-b"><a href="#006">◆四　アダムとエバを創造なさった目的</a></li><li class="toc-b"><a href="#007">◆五　アダムとエバの初愛の時期</a></li><li class="toc-b"><a href="#008">◆六　すべての存在は愛を通じてのみ完成する</a></li><li class="toc-b"><a href="#009">◆七　人間たちが誇ることのできる最も大きな自慢の種</a></li><li class="toc-b"><a href="#010">◆八　真の家庭として伝統を立てるべきだったアダム家庭</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の家庭</a></li><li class="toc-b lv1"><a href="#002">第一章　創造本然の真の家庭</a></li><li class="toc-b lv2"><a href="#003">◆一　アダムとエバを通じた神様のみ旨</a></li><li class="toc-b lv2"><a href="#004">◆二　神様が絶対に必要とするもの</a></li><li class="toc-b lv2"><a href="#005">◆三　神様の永遠なる愛の相対者</a></li><li class="toc-b lv2"><a href="#006">◆四　アダムとエバを創造なさった目的</a></li><li class="toc-b lv2"><a href="#007">◆五　アダムとエバの初愛の時期</a></li><li class="toc-b lv2"><a href="#008">◆六　すべての存在は愛を通じてのみ完成する</a></li><li class="toc-b lv2"><a href="#009">◆七　人間たちが誇ることのできる最も大きな自慢の種</a></li><li class="toc-b lv2"><a href="#010">◆八　真の家庭として伝統を立てるべきだったアダム家庭</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <br/>
-<b id="001"><a href="#001">真の家庭</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の家庭</a></h2>
 <a href="001.html" target="_parent">（全面表示）</a>　<a onclick="history.back();" style="cursor : pointer;text-decoration : underline;">戻る</a>
 <hr/>
 <br/>
-<b id="002"><a href="#002">第一章　創造本然の真の家庭</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第一章　創造本然の真の家庭</a></h2>
 <a name="01"></a><br/>
 <br/>
-<b id="003"><a href="#003">◆一　アダムとエバを通じた神様のみ旨</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">◆一　アダムとエバを通じた神様のみ旨</a></h3>
 <br/>
 　多くの人たちが神様のみ旨について語っています。しかし、この話は簡単なようで、いざ「神様のみ旨とは何か」という質問を受けた場合、答えるのは非常に難しいものです。<br/>
 <br/>
@@ -360,7 +380,7 @@
 　ここにおいて男性であるアダムは天を代表し、女性であるエバは地を代表します。それゆえ彼らは二人ですが、彼らが横的に一つになれば、天と地が統一されるのです。神様の愛を中心に二人が統一されれば、天宙は自動的に統一されるのです。（祝福家庭と理想天国Ｉ−二九九）<br/>
 <a name="02"></a><br/>
 <br/>
-<b id="004"><a href="#004">◆二　神様が絶対に必要とするもの</a></b><br/>
+<h3 class="bh" id="004"><a href="#004">◆二　神様が絶対に必要とするもの</a></h3>
 <br/>
 　神様はなぜ彼造世界を創造されたのですか。神様は被造世界を通して喜びを味わおうとされたのです。神様がいくら絶対者だといっても、喜びを一人で感じることはできません。喜びは相対がいてこそ生じるからです。<br/>
 <br/>
@@ -402,7 +422,7 @@
 　アダムとエバを創造されたその日から、神様は永遠無窮に、アダムとエバをどんなに見ても、もっと見たいし、どんなに一緒にいても、もっといたいし、どんなに一緒に住んでも、もっと住みたいという対象として愛したかったのです。そのような対象をもつことが神様の創造理想です。（祝福家庭と理想天国Ｉ−三〇六）<br/>
 <a name="04"></a><br/>
 <br/>
-<b id="006"><a href="#006">◆四　アダムとエバを創造なさった目的</a></b><br/>
+<h3 class="bh" id="006"><a href="#006">◆四　アダムとエバを創造なさった目的</a></h3>
 <br/>
 　私たちが旧約聖書創世記第一章二十七節を見ると、神の形どおりに人間をつくり、一男一女をつくられたという聖句があります。<br/>
 <br/>
@@ -423,7 +443,7 @@
 　神様がアダムとエバをつくったのは知識を与えるためでもなく、権力を与えるためでもなく、多くの財物を与えてよい生活ができるようにするためでもありません。彼らを創造した目的は愛の実体として立てるためだったのです。（祝福家庭と理想天国Ｉ−三〇八）<br/>
 <a name="05"></a><br/>
 <br/>
-<b id="007"><a href="#007">◆五　アダムとエバの初愛の時期</a></b><br/>
+<h3 class="bh" id="007"><a href="#007">◆五　アダムとエバの初愛の時期</a></h3>
 <br/>
 　神様がアダムとエバを見て「取って食べるな」と言ったのは、彼らが愛することのできる時機になっていなかったからです。彼らは成長期にいたので成熟するまで待てとの戒めだったのです。（祝福家庭と理想天国Ｉ−三一〇）<br/>
 <br/>
@@ -442,7 +462,7 @@
 　ところがアダムとエバにおいてはそうではありませんでした。彼らの愛はどういう愛でしたか。天地のすべての万物を統一させることのできる位置での愛ではありませんでした。主体的な愛ではありませんでした。彼らの愛は主体的で必然的な愛でなければなりませんでした。ところが彼らは必然的な愛で愛することができなかったのです。（祝福家庭と理想天国Ｉ−三一七）<br/>
 <a name="06"></a><br/>
 <br/>
-<b id="008"><a href="#008">◆六　すべての存在は愛を通じてのみ完成する</a></b><br/>
+<h3 class="bh" id="008"><a href="#008">◆六　すべての存在は愛を通じてのみ完成する</a></h3>
 <br/>
 　個体完成とは、心と体が本来神様がつくられた愛の型に従って、完全に一つとなった中で成長し成熟するように、授受作用を永続させていくことを言います。愛を中心にして出発し、愛を中心に成熟し、その上に愛の芽が出、実を結んでこそ完成するのです。このように愛の基台が立つようになれば、その中に神様は愛の因縁をもって臨在されるのです。愛が成熟しなければ、実を結ぶことのできる型を造成できないのです。<br/>
 <br/>
@@ -463,7 +483,7 @@
 　ところがここで脱線しました。脱線しなかったならば完全に一つになったでしょう。このように一つになったなら、神様も離れられず、アダムとエバも離れられなかったはずです。そして子々孫々に連結され、氏族、民族、世界を形成したことでしょう。ここが素晴らしい世界、地上天国になるのです。（祝福家庭と理想天国Ｉ−三一二）<br/>
 <a name="07"></a><br/>
 <br/>
-<b id="009"><a href="#009">◆七　人間たちが誇ることのできる最も大きな自慢の種</a></b><br/>
+<h3 class="bh" id="009"><a href="#009">◆七　人間たちが誇ることのできる最も大きな自慢の種</a></h3>
 <br/>
 　神様は一人の男性と一人の女性を創造されました。そして彼らが完成した状態に至った後に、彼らをして天的な結婚生活をするようにされ、一双の天的夫婦として立てようとされました。神様はアダムとエバをして、最初の夫と最初の妻になるようにされ、天国建設を始めようと計画されたのです。万一それが実現されたならば、「生育し繁殖せよ」と言われた神様の祝福はそのときに成されたはずでした。<br/>
 <br/>
@@ -480,7 +500,7 @@
 　その家庭は、神様が創造したアダムとエバの理想を完成するために、愛の結合によって一体になることのできる基となったことでしょう。（祝福家庭と理想天国Ｉ−三二〇）<br/>
 <a name="08"></a><br/>
 <br/>
-<b id="010"><a href="#010">◆八　真の家庭として伝統を立てるべきだったアダム家庭</a></b><br/>
+<h3 class="bh" id="010"><a href="#010">◆八　真の家庭として伝統を立てるべきだったアダム家庭</a></h3>
 <br/>
 　人間始祖が堕落しなかったならば、皆さんは誰の息子・娘として生まれたでしょうか。当然神様の息子・娘として生まれたのです。<br/>
 <br/>

@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="御旨と世界/23_摂理的歴史の光の中にあって"><a href="#御旨と世界/23_摂理的歴史の光の中にあって">御旨と世界/23_摂理的歴史の光の中にあって</a></h1>
+<h1>御旨と世界/23_摂理的歴史の光の中にあって</h1>
 <nav class="page-nav">
   <a href="22.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="24.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#020">摂理的歴史の光の中にあって</a></li><li class="toc-b"><a href="#021">1977年2月23日</a></li><li class="toc-level-2"><a href="#001">◆人間としての誇り</a></li><li class="toc-level-2"><a href="#002">◆善悪の判断</a></li><li class="toc-level-2"><a href="#003">◆歴史発展のパターン</a></li><li class="toc-level-2"><a href="#004">◆新しい宗教運動</a></li><li class="toc-level-2"><a href="#005">◆試練を受ける者</a></li><li class="toc-level-2"><a href="#006">◆私の唯一の誇り</a></li><li class="toc-level-2"><a href="#007">◆記念すべき一九七六年</a></li><li class="toc-level-2"><a href="#008">◆終末時代の現象</a></li><li class="toc-level-2"><a href="#009">◆恵みの橋渡し</a></li><li class="toc-level-2"><a href="#010">◆復帰歴史の流れ</a></li><li class="toc-level-2"><a href="#011">◆心をつなぐ運動</a></li><li class="toc-level-2"><a href="#012">◆人権問題は反共産主義から</a></li><li class="toc-level-2"><a href="#013">◆真実の発言</a></li><li class="toc-level-2"><a href="#014">◆すべてを経験</a></li><li class="toc-level-2"><a href="#015">◆歴史に生命を</a></li><li class="toc-level-2"><a href="#016">◆世界に耐える家庭基盤を</a></li><li class="toc-level-2"><a href="#017">◆七十二年度からの講演</a></li><li class="toc-level-2"><a href="#018">◆喜びの年を迎える</a></li><li class="toc-level-2"><a href="#019">◆摂理的歴史の完成</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#020">摂理的歴史の光の中にあって</a></li><li class="toc-b lv0"><a href="#021">1977年2月23日</a></li><li class="toc-level-2"><a href="#001">◆人間としての誇り</a></li><li class="toc-level-2"><a href="#002">◆善悪の判断</a></li><li class="toc-level-2"><a href="#003">◆歴史発展のパターン</a></li><li class="toc-level-2"><a href="#004">◆新しい宗教運動</a></li><li class="toc-level-2"><a href="#005">◆試練を受ける者</a></li><li class="toc-level-2"><a href="#006">◆私の唯一の誇り</a></li><li class="toc-level-2"><a href="#007">◆記念すべき一九七六年</a></li><li class="toc-level-2"><a href="#008">◆終末時代の現象</a></li><li class="toc-level-2"><a href="#009">◆恵みの橋渡し</a></li><li class="toc-level-2"><a href="#010">◆復帰歴史の流れ</a></li><li class="toc-level-2"><a href="#011">◆心をつなぐ運動</a></li><li class="toc-level-2"><a href="#012">◆人権問題は反共産主義から</a></li><li class="toc-level-2"><a href="#013">◆真実の発言</a></li><li class="toc-level-2"><a href="#014">◆すべてを経験</a></li><li class="toc-level-2"><a href="#015">◆歴史に生命を</a></li><li class="toc-level-2"><a href="#016">◆世界に耐える家庭基盤を</a></li><li class="toc-level-2"><a href="#017">◆七十二年度からの講演</a></li><li class="toc-level-2"><a href="#018">◆喜びの年を迎える</a></li><li class="toc-level-2"><a href="#019">◆摂理的歴史の完成</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -334,9 +354,9 @@
 <p>　<br/>
 <hr/>
 <br/>
-<b id="020"><a href="#020">摂理的歴史の光の中にあって</a></b><br/>
+<h2 class="bh bh0" id="020"><a href="#020">摂理的歴史の光の中にあって</a></h2>
 <br/>
-<b id="021"><a href="#021">1977年2月23日</a></b></p>
+<h2 class="bh bh0" id="021"><a href="#021">1977年2月23日</a></h2></p>
 <br/><br/>
 ニューヨーク　ワールド・ミッション・センター<br/><br/>
 <p><h2 id="001"><a href="#001">◆人間としての誇り</a></h2><br/>

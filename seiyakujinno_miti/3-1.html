@@ -314,31 +314,51 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="成約人への道"><a href="#成約人への道">成約人への道</a></h1>
+<h1>成約人への道</h1>
 <nav class="page-nav">
   <a href="2-5.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="3-2.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">成約人への道</a></li><li class="toc-b"><a href="#002">第三章　国家、世界観</a></li><li class="toc-b"><a href="#003">一　人類が追求してきた一つの国家、世界</a></li><li class="toc-b"><a href="#004">１．アダム主義、アダム国家、アダムの世界</a></li><li class="toc-b"><a href="#005">２．その国は私たちすべての願い</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">成約人への道</a></li><li class="toc-b lv1"><a href="#002">第三章　国家、世界観</a></li><li class="toc-b lv2"><a href="#003">一　人類が追求してきた一つの国家、世界</a></li><li class="toc-b lv3"><a href="#004">１．アダム主義、アダム国家、アダムの世界</a></li><li class="toc-b lv3"><a href="#005">２．その国は私たちすべての願い</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <div align="left">
-<b id="001"><a href="#001">成約人への道</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">成約人への道</a></h2>
 <a href="3-1.html" style="color : red;" target="_top">（全面表示）</a>　　<a onclick="history.back();" style="color : red;text-decoration : underline;cursor : pointer;">戻る</a>
 </div>
 <hr/>
-<b id="002"><a href="#002">　第三章　国家、世界観</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第三章　国家、世界観</a></h2>
 <hr/>
-<b id="003"><a href="#003">　一　人類が追求してきた一つの国家、世界</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">一　人類が追求してきた一つの国家、世界</a></h3>
 <br/>
-<b id="004"><a href="#004">　　１．アダム主義、アダム国家、アダムの世界</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">１．アダム主義、アダム国家、アダムの世界</a></h4>
 <br/>
 　本来、人間始祖アダムとエバが堕落しなかったならば、どのようになっていたでしょうか。アダム家庭でのアダムは、族長になるのです。族長になると同時に民族長になるのです。また国家の代表者となり、アダム王となるのです。それゆえ、この世界はアダム主義で一つに統一されるのです。つまらなくみっともない主義たちは、ほうり出さなければならないのです。くだらない主義が現れて世界を攪乱させているので、私たちはこのような主義を根こそぎ全部引っこ抜いてしまわなければならないのです。<br/>
 　主義もアダム主義、言語もアダム言語、文化もアダム文化、伝統もアダムの伝統、生活方式もアダムの生活方式、制度もアダムの制度、すべてのものがアダム国家の理念制度にならなければならなかったのです。このような主義は「神主義」です。神様の心によって神様と一つにならなければならないので「神主義」と言うのです。<br/>
@@ -366,7 +386,7 @@
 　結婚をなぜするのでしょうか。神様の愛を中心として、神様に侍り、男性、女性を統一するためです。天下の起源、平和の起源はここから始まるのです。真の愛の本質は父と母のために生き、母が父のために生き、兄が弟のために生き、このように「ため」に生きることです。「ため」に生きる愛によって、もつれてしまったそこに永遠な神様の愛が臨在することにより、その家庭は永遠無窮の永生的家庭になるのです。これを統一思想と言います。<br/>
 <br/>
 <br/>
-<b id="005"><a href="#005">　　２．その国は私たちすべての願い</a></b><br/>
+<h4 class="bh" id="005"><a href="#005">２．その国は私たちすべての願い</a></h4>
 <br/>
 　私たちは、神様の国を慕い仰ぎます。そこは、愛があるところだからです。一時的な愛ではなく、時間を超越した永遠なる愛が存続することができるところです。また、自分自らを高めることができるところであり、自分の価値を一〇〇パーセント認定してくれるところだというのです。すなわち、永遠に幸福なところです。ですから人間は、天国を慕いあこがれるのです。<br/>
 　　　　　　　　　　　　＊<br/>

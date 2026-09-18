@@ -300,6 +300,26 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
@@ -316,151 +336,119 @@
 <b>　礼節と儀式</b><br/>
 <hr align="left" noshade="" size="1" width="80%"/>
 <br/>
-<b><a href="001syou.html#002">第一章　神様に対して侍る礼法</a></b><br/>
-<br/>
-<a href="001syou.html#004">　一　神様に侍って生きるべし<br/>
-      　　１．神様と人間は親子の関係</a><br/>
-      　　<a href="001syou.html#005">２．一体となった生活をしなければならない</a><br/>
-<br/>
-<a href="001syou.html#007">　二　侍る心構えと態度<br/>
-      　　１．侍ることによって生活の天国化を成す</a><br/>
-<a href="001syou.html#008">　　２．法度に背けば怒られる</a><br/>
-<br/>
-<a href="001syou.html#009">　三　真の御父母様が神様に仕える法<br/>
-      　　１．至誠感天</a><br/>
-<a href="001syou.html#011">　　２．孝子の道</a><br/>
-<br/>
-<b><a href="002syou.html#002">第二章　真の御父母様に対して侍る礼法</a></b><br/>
-<br/>
-<a href="002syou.html#004">　一　真の御父母様は祝福家庭の中心<br/>
-      　　１．真の御父母様の息子、娘になるには</a><br/>
-<a href="002syou.html#005">　　２．真の御父母様にどれほど侍ってみましたか</a><br/>
-<br/>
-<a href="002syou.html#007">　二　真の御父母様を愛し誇ろう<br/>
-      　　１．真の御父母様は人類全体の希望</a><br/>
-<a href="002syou.html#008">　　２．家庭ごとに真の御父母様のお写真に侍る</a><br/>
-<br/>
-<a href="002syou.html#009">　三　真の御父母様に侍るにも法度がある<br/>
-      　　１．侍義時代の法は最高の法</a><br/>
-<a href="002syou.html#011">　　２．人間が貴いのは人倫道徳のため</a><br/>
-<br/>
-<b><a href="003syou.html#002">第三章　礼拝と教会生活礼節</a></b><br/>
-<br/>
-<a href="003syou.html#004">　一　教会に対する正しい認識<br/>
-      　　１．教会はみ言と人格を総合するところ</a><br/>
-<a href="003syou.html#005">　　２．教会は家庭の延長である</a><br/>
-<br/>
-<a href="003syou.html#006">　二　礼拝は神様に最高の敬意を表す儀式<br/>
-      　　１．礼拝時間は神様に出会う時</a><br/>
-<a href="003syou.html#008">　　２．夜の礼拝（夕拝）、早朝集会、徹夜精誠</a><br/>
-<br/>
-<a href="003syou.html#010">　三　教役者（牧会者）がもつべき姿勢<br/>
-      　　１．教役者（牧会者）は公的でなければならない</a><br/>
-<a href="003syou.html#011">　　２．食口の指導は精誠によって</a><br/>
-<a href="003syou.html#012">　　３．男女問題、公金に厳格でなければならない</a><br/>
-<br/>
-<a href="003syou.html#013">　四　説教は恵みと感動がなければならない<br/>
-      　　１．説教の実際</a><br/>
-<a href="003syou.html#015">　　２．真のお父様の説教</a><br/>
-<br/>
-<a href="003syou.html#016">　五　献金は法度に合うように捧げるべし<br/>
-      　　１．十分の一献金を捧げる法</a><br/>
-<a href="003syou.html#018">　　２．生活にも十分の一献金がある</a><br/>
-<a href="003syou.html#019">　　３．蕩減基金</a><br/>
-<br/>
-<a href="003syou.html#021">　六　神様は公的な祈祷を受けられる<br/>
-      　　１．あいさつをするにも方法があるのではないか</a><br/>
-<a href="003syou.html#022">　　２．真の父母様のみ名を通し祈祷する</a><br/>
-<br/>
-<a href="003syou.html#024">　七　伝道は愛を探す運動である<br/>
-      　　１．伝道は第二の私をつくること</a><br/>
-<a href="003syou.html#025">　　２．修練過程と七日断食</a><br/>
-<br/>
-<a href="003syou.html#027">　八　蕩減と奉仕と献身的な生活<br/>
-      　　１．蕩減の道を行かなければならない</a><br/>
-<a href="003syou.html#028">　　２．奉仕と献身</a><br/>
-<br/>
-<a href="003syou.html#030">　九　食口間の法度と礼節<br/>
-      　　１．食口は天情で結ばれた因縁</a><br/>
-<a href="003syou.html#031">　　２．食口の間にカイン・アベルの関係がある</a><br/>
-<a href="003syou.html#032">　　３．誰がアベルで誰がカインなのか</a><br/>
-<br/>
-<a href="003syou.html#034">　十　他人との人間関係<br/>
-      　　１．人にむやみに対するな</a><br/>
-<a href="003syou.html#035">　　２．他人との人間関係</a><br/>
-<br/>
-<b><a href="004syou.html#002">第四章　祝福家庭の伝統と生活礼節</a></b><br/>
-<br/>
-<a href="004syou.html#004">　一　祝福家庭の生活法度（方式）<br/>
-      　　１．家法と礼節がしっかり立たなければならない</a><br/>
-<a href="004syou.html#005">　　２．めちゃくちゃな生活をしてはいけない</a><br/>
-<br/>
-<a href="004syou.html#007">　二　信仰生活で模範となる家庭<br/>
-      　　１．信仰生活が子女教育になる</a><br/>
-<a href="004syou.html#008">　　２．祈祷生活は御飯を食べることよりも重要</a><br/>
-<a href="004syou.html#009">　　３．祝福家庭は族長</a><br/>
-<br/>
-<a href="004syou.html#011">　三　真の愛で「ため」に生きる生活<br/>
-      　　１．なぜ「ため」に生きなければならないのか</a><br/>
-<a href="004syou.html#012">　　２．「ため」に生きる者が中心である</a><br/>
-<br/>
-<a href="004syou.html#013">　四　父母が立てるべき愛の法度<br/>
-      　　１．父母は友達よりも近く</a><br/>
-<a href="004syou.html#015">　　２．伝統を相続させてくれる父母</a><br/>
-<br/>
-<a href="004syou.html#017">　五　夫婦が守るべき礼節<br/>
-      　　１．夫婦は生活の同伴者</a><br/>
-<a href="004syou.html#018">　　２．夫婦は信仰の同役者</a><br/>
-<br/>
-<a href="004syou.html#020">　六　子女を信仰的に育てる<br/>
-      　　１．懐に抱いて天法を教えなければ</a><br/>
-<a href="004syou.html#021">　　２．信仰教育がもっと重要</a><br/>
-<br/>
-<a href="004syou.html#022">　七　兄弟間の友愛</a><br/>
-<br/>
-<br/>
-<a href="004syou.html#023">　八　勤倹節約、質素な家庭生活<br/>
-      　　１．質素な生活</a><br/>
-<a href="004syou.html#025">　　２．節約精神</a><br/>
-<br/>
-<a href="004syou.html#026">　九　日常生活の礼節<br/>
-      　　１．服</a><br/>
-<a href="004syou.html#028">　　２．顔</a><br/>
-<a href="004syou.html#029">　　３．頭</a><br/>
-<a href="004syou.html#030">　　４．手の爪と足の爪</a><br/>
-<a href="004syou.html#031">　　５．歩き方</a><br/>
-<a href="004syou.html#032">　　６．座る格好</a><br/>
-<a href="004syou.html#033">　　７．寝方</a><br/>
-<a href="004syou.html#034">　　８．健康</a><br/>
-<a href="004syou.html#035">　　９．言葉</a><br/>
-<br/>
-<a href="004syou.html#037">　十　純潔に対する教え<br/>
-      　　１．思春期の戒律をよく守れ</a><br/>
-<a href="004syou.html#038">　　２．私は天の子女</a><br/>
-<br/>
-<a href="004syou.html#039">　十一　聖別儀式の生活化<br/>
-      　　１．聖塩</a><br/>
-<a href="004syou.html#041">　　２．聖なるろうそく<br/>
-      　　　①　心情のろうそく</a><br/>
-<a href="004syou.html#043">　　　②　お産のろうそく</a><br/>
-<a href="004syou.html#044">　　　③　愛天のろうそく</a><br/>
-<a href="004syou.html#045">　　　④　統一のろうそく</a><br/>
-<br/>
-<a href="004syou.html#046">　十二　祝福家庭の日常生活儀礼<br/>
-      　　１．敬拝式</a><br/>
-<a href="004syou.html#048">　　２．家庭礼拝</a><br/>
-<a href="004syou.html#049">　　３．訓読会</a><br/>
-<a href="004syou.html#050">　　４．家庭盟誓</a><br/>
-<a href="004syou.html#051">　　５．祭祀（祭事）（先祖供養）</a><br/>
-<br/>
-<a href="004syou.html#052">　十三　祝福家庭の生涯儀礼<br/>
-      　　１．出産、奉献式</a><br/>
-<a href="004syou.html#054">　　２．祝福、祝福式</a><br/>
-<a href="004syou.html#055">　　３．昇華、昇華式</a><br/>
-<br/>
-<a href="004syou.html#056">　十四　記念日を迎える心の姿勢<br/>
-      　　１．記念儀式の意義</a><br/>
-<a href="004syou.html#058">　　２．儀式のための礼服は端正に</a><br/>
+<ul class="toc-tree">
+<li class="lv1"><a href="001syou.html#002">第一章　神様に対して侍る礼法</a></li>
+<li class="lv2"><a href="001syou.html#003">一　神様に侍って生きるべし</a></li>
+<li class="lv3"><a href="001syou.html#004">１．神様と人間は親子の関係</a></li>
+<li class="lv3"><a href="001syou.html#005">２．一体となった生活をしなければならない</a></li>
+<li class="lv2"><a href="001syou.html#006">二　侍る心構えと態度</a></li>
+<li class="lv3"><a href="001syou.html#007">１．侍ることによって生活の天国化を成す</a></li>
+<li class="lv3"><a href="001syou.html#008">２．法度に背けば怒られる</a></li>
+<li class="lv2"><a href="001syou.html#009">三　真の御父母様が神様に仕える法</a></li>
+<li class="lv3"><a href="001syou.html#010">１．至誠感天</a></li>
+<li class="lv3"><a href="001syou.html#011">２．孝子の道</a></li>
+<li class="lv1"><a href="002syou.html#002">第二章　真の御父母様に対して侍る礼法</a></li>
+<li class="lv2"><a href="002syou.html#003">一　真の御父母様は祝福家庭の中心</a></li>
+<li class="lv3"><a href="002syou.html#004">１．真の御父母様の息子、娘になるには</a></li>
+<li class="lv3"><a href="002syou.html#005">２．真の御父母様にどれほど侍ってみましたか</a></li>
+<li class="lv2"><a href="002syou.html#006">二　真の御父母様を愛し誇ろう</a></li>
+<li class="lv3"><a href="002syou.html#007">１．真の御父母様は人類全体の希望</a></li>
+<li class="lv3"><a href="002syou.html#008">２．家庭ごとに真の御父母様のお写真に侍る</a></li>
+<li class="lv2"><a href="002syou.html#009">三　真の御父母様に侍るにも法度がある</a></li>
+<li class="lv3"><a href="002syou.html#010">１．侍義時代の法は最高の法</a></li>
+<li class="lv3"><a href="002syou.html#011">２．人間が貴いのは人倫道徳のため</a></li>
+<li class="lv1"><a href="003syou.html#002">第三章　礼拝と教会生活礼節</a></li>
+<li class="lv2"><a href="003syou.html#003">一　教会に対する正しい認識</a></li>
+<li class="lv3"><a href="003syou.html#004">１．教会はみ言と人格を総合するところ</a></li>
+<li class="lv3"><a href="003syou.html#005">２．教会は家庭の延長である</a></li>
+<li class="lv2"><a href="003syou.html#006">二　礼拝は神様に最高の敬意を表す儀式</a></li>
+<li class="lv3"><a href="003syou.html#007">１．礼拝時間は神様に出会う時</a></li>
+<li class="lv3"><a href="003syou.html#008">２．夜の礼拝（夕拝）、早朝集会、徹夜精誠</a></li>
+<li class="lv2"><a href="003syou.html#009">三　教役者（牧会者）がもつべき姿勢</a></li>
+<li class="lv3"><a href="003syou.html#010">１．教役者（牧会者）は公的でなければならない</a></li>
+<li class="lv3"><a href="003syou.html#011">２．食口の指導は精誠によって</a></li>
+<li class="lv3"><a href="003syou.html#012">３．男女問題、公金に厳格でなければならない</a></li>
+<li class="lv2"><a href="003syou.html#013">四　説教は恵みと感動がなければならない</a></li>
+<li class="lv3"><a href="003syou.html#014">１．説教の実際</a></li>
+<li class="lv3"><a href="003syou.html#015">２．真のお父様の説教</a></li>
+<li class="lv2"><a href="003syou.html#016">五　献金は法度に合うように捧げるべし</a></li>
+<li class="lv3"><a href="003syou.html#017">１．十分の一献金を捧げる法</a></li>
+<li class="lv3"><a href="003syou.html#018">２．生活にも十分の一献金がある</a></li>
+<li class="lv3"><a href="003syou.html#019">３．蕩減基金</a></li>
+<li class="lv2"><a href="003syou.html#020">六　神様は公的な祈祷を受けられる</a></li>
+<li class="lv3"><a href="003syou.html#021">１．あいさつをするにも方法があるのではないか</a></li>
+<li class="lv3"><a href="003syou.html#022">２．真の父母様のみ名を通し祈祷する</a></li>
+<li class="lv2"><a href="003syou.html#023">七　伝道は愛を探す運動である</a></li>
+<li class="lv3"><a href="003syou.html#024">１．伝道は第二の私をつくること</a></li>
+<li class="lv3"><a href="003syou.html#025">２．修練過程と七日断食</a></li>
+<li class="lv2"><a href="003syou.html#026">八　蕩減と奉仕と献身的な生活</a></li>
+<li class="lv3"><a href="003syou.html#027">１．蕩減の道を行かなければならない</a></li>
+<li class="lv3"><a href="003syou.html#028">２．奉仕と献身</a></li>
+<li class="lv2"><a href="003syou.html#029">九　食口間の法度と礼節</a></li>
+<li class="lv3"><a href="003syou.html#030">１．食口は天情で結ばれた因縁</a></li>
+<li class="lv3"><a href="003syou.html#031">２．食口の間にカイン・アベルの関係がある</a></li>
+<li class="lv3"><a href="003syou.html#032">３．誰がアベルで誰がカインなのか</a></li>
+<li class="lv2"><a href="003syou.html#033">十　他人との人間関係</a></li>
+<li class="lv3"><a href="003syou.html#034">１．人にむやみに対するな</a></li>
+<li class="lv3"><a href="003syou.html#035">２．他人との人間関係</a></li>
+<li class="lv1"><a href="004syou.html#002">第四章　祝福家庭の伝統と生活礼節</a></li>
+<li class="lv2"><a href="004syou.html#003">一　祝福家庭の生活法度（方式）</a></li>
+<li class="lv3"><a href="004syou.html#004">１．家法と礼節がしっかり立たなければならない</a></li>
+<li class="lv3"><a href="004syou.html#005">２．めちゃくちゃな生活をしてはいけない</a></li>
+<li class="lv2"><a href="004syou.html#006">二　信仰生活で模範となる家庭</a></li>
+<li class="lv3"><a href="004syou.html#007">１．信仰生活が子女教育になる</a></li>
+<li class="lv3"><a href="004syou.html#008">２．祈祷生活は御飯を食べることよりも重要</a></li>
+<li class="lv3"><a href="004syou.html#009">３．祝福家庭は族長</a></li>
+<li class="lv2"><a href="004syou.html#010">三　真の愛で「ため」に生きる生活</a></li>
+<li class="lv3"><a href="004syou.html#011">１．なぜ「ため」に生きなければならないのか</a></li>
+<li class="lv3"><a href="004syou.html#012">２．「ため」に生きる者が中心である</a></li>
+<li class="lv2"><a href="004syou.html#013">四　父母が立てるべき愛の法度</a></li>
+<li class="lv3"><a href="004syou.html#014">１．父母は友達よりも近く</a></li>
+<li class="lv3"><a href="004syou.html#015">２．伝統を相続させてくれる父母</a></li>
+<li class="lv2"><a href="004syou.html#016">五　夫婦が守るべき礼節</a></li>
+<li class="lv3"><a href="004syou.html#017">１．夫婦は生活の同伴者</a></li>
+<li class="lv3"><a href="004syou.html#018">２．夫婦は信仰の同役者</a></li>
+<li class="lv2"><a href="004syou.html#019">六　子女を信仰的に育てる</a></li>
+<li class="lv3"><a href="004syou.html#020">１．懐に抱いて天法を教えなければ</a></li>
+<li class="lv3"><a href="004syou.html#021">２．信仰教育がもっと重要</a></li>
+<li class="lv2"><a href="004syou.html#022">七　兄弟間の友愛</a></li>
+<li class="lv2"><a href="004syou.html#023">八　勤倹節約、質素な家庭生活</a></li>
+<li class="lv3"><a href="004syou.html#024">１．質素な生活</a></li>
+<li class="lv3"><a href="004syou.html#025">２．節約精神</a></li>
+<li class="lv2"><a href="004syou.html#026">九　日常生活の礼節</a></li>
+<li class="lv3"><a href="004syou.html#027">１．服</a></li>
+<li class="lv3"><a href="004syou.html#028">２．顔</a></li>
+<li class="lv3"><a href="004syou.html#029">３．頭</a></li>
+<li class="lv3"><a href="004syou.html#030">４．手の爪と足の爪</a></li>
+<li class="lv3"><a href="004syou.html#031">５．歩き方</a></li>
+<li class="lv3"><a href="004syou.html#032">６．座る格好</a></li>
+<li class="lv3"><a href="004syou.html#033">７．寝方</a></li>
+<li class="lv3"><a href="004syou.html#034">８．健康</a></li>
+<li class="lv3"><a href="004syou.html#035">９．言葉</a></li>
+<li class="lv2"><a href="004syou.html#036">十　純潔に対する教え</a></li>
+<li class="lv3"><a href="004syou.html#037">１．思春期の戒律をよく守れ</a></li>
+<li class="lv3"><a href="004syou.html#038">２．私は天の子女</a></li>
+<li class="lv2"><a href="004syou.html#039">十一　聖別儀式の生活化</a></li>
+<li class="lv3"><a href="004syou.html#040">１．聖塩</a></li>
+<li class="lv3"><a href="004syou.html#041">２．聖なるろうそく</a></li>
+<li class="lv3"><a href="004syou.html#042">①　心情のろうそく</a></li>
+<li class="lv3"><a href="004syou.html#043">②　お産のろうそく</a></li>
+<li class="lv3"><a href="004syou.html#044">③　愛天のろうそく</a></li>
+<li class="lv3"><a href="004syou.html#045">④　統一のろうそく</a></li>
+<li class="lv2"><a href="004syou.html#046">十二　祝福家庭の日常生活儀礼</a></li>
+<li class="lv3"><a href="004syou.html#047">１．敬拝式</a></li>
+<li class="lv3"><a href="004syou.html#048">２．家庭礼拝</a></li>
+<li class="lv3"><a href="004syou.html#049">３．訓読会</a></li>
+<li class="lv3"><a href="004syou.html#050">４．家庭盟誓</a></li>
+<li class="lv3"><a href="004syou.html#051">５．祭祀（祭事）（先祖供養）</a></li>
+<li class="lv2"><a href="004syou.html#052">十三　祝福家庭の生涯儀礼</a></li>
+<li class="lv3"><a href="004syou.html#053">１．出産、奉献式</a></li>
+<li class="lv3"><a href="004syou.html#054">２．祝福、祝福式</a></li>
+<li class="lv3"><a href="004syou.html#055">３．昇華、昇華式</a></li>
+<li class="lv2"><a href="004syou.html#056">十四　記念日を迎える心の姿勢</a></li>
+<li class="lv3"><a href="004syou.html#057">１．記念儀式の意義</a></li>
+<li class="lv3"><a href="004syou.html#058">２．儀式のための礼服は端正に</a></li>
+</ul>
 <br/>
 <br/>
 <br/>

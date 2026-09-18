@@ -314,28 +314,48 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="宇宙の根本"><a href="#宇宙の根本">宇宙の根本</a></h1>
+<h1>宇宙の根本</h1>
 <nav class="page-nav">
   <a href="2-4-1.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="2-4-3.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">宇宙の根本</a></li><li class="toc-b"><a href="#002">２．生殖器の主人がお互いに入れ替わった</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">宇宙の根本</a></li><li class="toc-b lv3"><a href="#002">２．生殖器の主人がお互いに入れ替わった</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <div align="left">
-<b id="001"><a href="#001">宇宙の根本</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">宇宙の根本</a></h2>
 <a href="2-4-2.html" style="color : red;" target="_top">（全面表示）</a>　　<a onclick="history.back();" style="color : red;text-decoration : underline;cursor : pointer;">戻る</a>
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　２．生殖器の主人がお互いに入れ替わった</a></b><br/>
+<h4 class="bh" id="002"><a href="#002">２．生殖器の主人がお互いに入れ替わった</a></h4>
 <br/>
 　男性の宝物は、男性自身はもっていません。男性の宝物は女性がもっていて、女性の宝物は男性がもっているというのです。取り替えてもっているのです。女性のセクシュアル・オーガン（生殖器）は女性のものではありません。男性のものだということを知らなければなりません。自分のものではありません。男性も同じです。したがって、自分の思いどおりにできないのです。米国の女性たちは、自分がもっている生理的五官が自分のものだと思って自由に行動して、ありとあらゆることをします。男性たちもありとあらゆる行動をします。皆さんは管理人です。管理人が主人のように振る舞っているというのです。<br/>
 　女性に尋ねますが、皆さんがいつ、その主人に出会いましたか。主人は夫です。また、男性は、男性のものが自分のものですか。それでは、結婚とは何でしょうか。お互いに主人を訪ね求めていくためのものが結婚だというのです。陰電気と陽電気とが飛び交って、雷を落とすのが愛です。それと同じだというのです。女性が結婚するのは、男性の顔よりも、それのためです。男性が結婚するのは女性の手ではなく、それのために結婚するのです。男性や女性同士で結婚する男性同性愛者や女性同性愛者など、そのようなものがどこにありますか。それはなくなるのです。百年も続かず、一代ですべて終わるのです。このように見る時、結婚をすべきですか、すべきではありませんか。結婚はなぜするのですか。このようになっているので、結婚をしなければならないのです。絶対に結婚しなければなりません。<br/>

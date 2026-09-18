@@ -308,24 +308,44 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="Untitled"><a href="#Untitled">Untitled</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">本　郷</a></li><li class="toc-b"><a href="#002">推薦の辞</a></li><li class="toc-b"><a href="#003">愛する六五〇〇家庭の皆様！</a></li><li class="toc-b"><a href="#004">まえがき</a></li></ul></div>
+<h1>Untitled</h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">本　郷</a></li><li class="toc-b lv0"><a href="#002">推薦の辞</a></li><li class="toc-b lv0"><a href="#003">愛する六五〇〇家庭の皆様！</a></li><li class="toc-b lv0"><a href="#004">まえがき</a></li></ul></div>
 <body bgcolor="#ffffbb">
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
-<b id="001"><a href="#001">本　郷</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">本　郷</a></h2>
 真の愛による交差祝福と国境撤廃<br/>
 　　<a href="index.html" style="color : red;" target="_top">INDEXへ</a>
 <hr/>
 <br/>
-<b id="002"><a href="#002">推薦の辞</a></b><br/>
+<h2 class="bh bh0" id="002"><a href="#002">推薦の辞</a></h2>
 <br/>
-<b id="003"><a href="#003">　愛する六五〇〇家庭の皆様！</a></b><br/>
+<h2 class="bh bh0" id="003"><a href="#003">愛する六五〇〇家庭の皆様！</a></h2>
 <br/>
 　皆様の家庭のために生きる指針として下さったみ言を、一冊の本として出版するようになったことを心より祝賀申し上げます。今までに祝福家庭会を中心としてこのような御言集を刊行するということは、初めてではないかと思います。そうした意味からも、先駆的で、とても喜ばしいことです。<br/>
 <br/>
@@ -342,7 +362,7 @@
 <hr/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">まえがき</a></b><br/>
+<h2 class="bh bh0" id="004"><a href="#004">まえがき</a></h2>
 <br/>
 　真のご父母様が人類に下さったみ言は、本当にたくさんあります。その中で、六五〇〇家庭の祝福を中心とした国際祝福家庭に下さったみ言も多くあります。このように多くのみ言を下さったのは、六五〇〇家庭が、過去において怨讐国家であった韓国と日本の兄弟姉妹を交差祝福して結んでくださった国際家庭であり、そこに摂理的なみ旨があり、生きて超えていかなければならない環境が多いことをご存じの真のご父母様が、激励と愛の忠告をしてくださったと見ることができます。<br/>
 <br/>

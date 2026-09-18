@@ -308,22 +308,42 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="罪と蕩減復帰"><a href="#罪と蕩減復帰">罪と蕩減復帰</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">罪と蕩減復帰</a></li><li class="toc-b"><a href="#002">はじめに</a></li><li class="toc-b"><a href="#003">日本語版発刊によせて</a></li></ul></div>
+<h1>罪と蕩減復帰</h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">罪と蕩減復帰</a></li><li class="toc-b lv0"><a href="#002">はじめに</a></li><li class="toc-b lv0"><a href="#003">日本語版発刊によせて</a></li></ul></div>
 <body background="bgs_005.gif">
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
-<b id="001"><a href="#001">罪と蕩減復帰</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">罪と蕩減復帰</a></h2>
 　
 
 <hr/>
 <br/>
-<b id="002"><a href="#002">はじめに</a></b><br/>
+<h2 class="bh bh0" id="002"><a href="#002">はじめに</a></h2>
 <br/>
 　今、この時代は神様のみ旨が地上に実現する成約時代です。真の御父母様によって、もつれた歴史の中に存在する数多くの曲折と複雑な事情が一つ一つ解明され、解怨されながら、新世紀への歴史移行が成される時です。根源的な神様の実存から、人間始祖の堕落、復帰摂理上の未知なる事実などが天意を中心として明らかにされつつ、新時代が開かれるのです。<br/>
 <br/>
@@ -345,7 +365,7 @@
 <hr width="75%"/>
 <a name="002"></a><br/>
 <br/>
-<b id="003"><a href="#003">日本語版発刊によせて</a></b><br/>
+<h2 class="bh bh0" id="003"><a href="#003">日本語版発刊によせて</a></h2>
 <br/>
 　『原理講論』には「蕩減」について次のように述べられています。<br/>
 <br/>

@@ -314,32 +314,52 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="天総官-文興進様/第一章-真の御父母様の御家庭と興進様"><a href="#天総官-文興進様/第一章-真の御父母様の御家庭と興進様">天総官　文興進様/第一章　真の御父母様の御家庭と興進様</a></h1>
+<h1>天総官　文興進様/第一章　真の御父母様の御家庭と興進様</h1>
 <nav class="page-nav">
   <div style="flex:1"></div>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="002.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">天総官　文興進様</a></li><li class="toc-b"><a href="#002">第一章　真の御父母様の御家庭と興進様</a></li><li class="toc-b"><a href="#003">一　真の御父母様の御家庭の来歴</a></li><li class="toc-b"><a href="#004">１　真の御父母様の家庭的信仰基盤</a></li><li class="toc-b"><a href="#005">２　真のお父様の性格</a></li><li class="toc-b"><a href="#006">二　真のお母様の二番目の息子、興進様</a></li><li class="toc-b"><a href="#007">＊真の御父母様の真の孝子、興進様</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">天総官　文興進様</a></li><li class="toc-b lv1"><a href="#002">第一章　真の御父母様の御家庭と興進様</a></li><li class="toc-b lv2"><a href="#003">一　真の御父母様の御家庭の来歴</a></li><li class="toc-b lv3"><a href="#004">１　真の御父母様の家庭的信仰基盤</a></li><li class="toc-b lv3"><a href="#005">２　真のお父様の性格</a></li><li class="toc-b lv2"><a href="#006">二　真のお母様の二番目の息子、興進様</a></li><li class="toc-b lv3"><a href="#007">＊真の御父母様の真の孝子、興進様</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
 <div align="left">
-<b id="001"><a href="#001">天総官　文興進様</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">天総官　文興進様</a></h2>
 　　<a href="index.html" style="color : red;" target="_top">INDEXへ</a>
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">第一章　真の御父母様の御家庭と興進様</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第一章　真の御父母様の御家庭と興進様</a></h2>
 <br/>
-<b id="003"><a href="#003">一　真の御父母様の御家庭の来歴</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">一　真の御父母様の御家庭の来歴</a></h3>
 <br/>
-<b id="004"><a href="#004">１　真の御父母様の家庭的信仰基盤</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">１　真の御父母様の家庭的信仰基盤</a></h4>
 <br/>
 　先生の家門に代々伝わってきた伝統は、おなかをすかせた人を手ぶらで帰してはならないというものです。お客さんが訪ねてくれば、絶対にそのままでは帰しません。祝宴の日に訪ねてくる人をそのまま帰してはならないという、そのような家訓があります。<br/>
 <br/>
@@ -422,7 +442,7 @@
 　その妹も、兄に対して絶対的でした。ですから、兄として、妹が喜ぶことならばどのようなことでもしてあげなければならないと考えていたのですが、その基台までもすべて切ってしまいました。妹だけでなく、愛する弟も連れていきました。また、先生の子女の中からも、聖進の弟である喜進も連れていきました。息子で見れば、二番目を連れていったということでしょう。娘も、二番目を連れていきました。このようなことを見るとき、蕩減には許しがありません。先生だからといって例外ではありません。（二九−二〇八、一九七〇・二・四）<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="005"><a href="#005">２　真のお父様の性格</a></b><br/>
+<h4 class="bh" id="005"><a href="#005">２　真のお父様の性格</a></h4>
 <br/>
 　皆さんは、人生を生きていくにおいて、このようなことあのようなこと、すべて百科事典に記入できる材料を取得しなければなりません。先生が小さい時は、たくさんけんかをしました。村に行き、大きな者が小さな者にこぶしを振り回せば、私が代わりに引き受けて闘いました。先生は、一度けんかすれば絶対に後退しません。どれほど体格が大きな者であろうと、私に「悪かった」と謝って退くのです。一日だけけんかするのではなく、一年中、三百六十五日けんかをしました。このようにすさまじい人なのです。<br/>
 <br/>
@@ -519,7 +539,7 @@
 　また、テストをしてみても、このようにすれば悪魔が退いて神様が歓迎するのですが、これを誰も認めてくれませんでした。それを認めてくれるようになるまでに四十年以上かかりました。（一七一−六九）<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="006"><a href="#006">二　真のお母様の二番目の息子、興進様</a></b><br/>
+<h3 class="bh" id="006"><a href="#006">二　真のお母様の二番目の息子、興進様</a></h3>
 <br/>
 　一度、興進がとてもひどいインフルエンザにかかりました。熱が四一度まで上がり、下がってこないのです。その時はどのようにするのかといえば、赤ん坊を愛さなければなりません。赤ん坊を愛するのですが、原理的に愛さなければなりません。もしそのような立場に、私の赤ん坊とカインの赤ん坊がいるならば、どちらを愛するのでしょうか。どちらに同情するのでしょうか。そのような心が生じるのです。したがって、そのような心が起きて赤ん坊を愛すれば、自分の赤ん坊は間違いなく治るのです。それが原理原則です。（六〇−二一六、一九七二・八・一七）<br/>
 <br/>
@@ -542,7 +562,7 @@
 　しかし、先生が韓国で勝共決起大会を通して勝利したので、彼らは先生をそれ以上侵犯することができませんでした。したがって、韓国で勝利を収めたのと同じ時刻に、興進を犠牲の祭物として要求したのです。（一三〇−二二八、一九八四・二・七）<br/>
 <a name="004"></a><br/>
 <br/>
-<b id="007"><a href="#007">＊真の御父母様の真の孝子、興進様</a></b>（朴普煕総裁、昇華辞において）<br/>
+<h4 class="bh" id="007"><a href="#007">＊真の御父母様の真の孝子、興進様</a></h4>（朴普煕総裁、昇華辞において）<br/>
 <br/>
 　興進様は、一九六六年陰暦十月二十三日、午前零時三十三分、韓国ソウル市青坡洞においてお生まれになりました。お生まれになる時、ほかの子女様方とは違って特別な苦痛を経られ、三日間、その生死を約束し難い境地において、既に幼い体で十字架の三日路程を経ていかれました。<br/>
 <br/>

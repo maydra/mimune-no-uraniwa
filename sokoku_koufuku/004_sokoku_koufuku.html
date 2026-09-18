@@ -314,32 +314,52 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の神様の祖国光復"><a href="#真の神様の祖国光復">真の神様の祖国光復</a></h1>
+<h1>真の神様の祖国光復</h1>
 <nav class="page-nav">
   <a href="003_sokoku_koufuku.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="005_sokoku_koufuku.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の神様の祖国光復</a></li><li class="toc-b"><a href="#002">三　家庭教会の活動展開</a></li><li class="toc-b"><a href="#003">１．宗族的メシヤの資格を賦与する条件</a></li><li class="toc-b"><a href="#004">２．訪問、奉仕、教育など多様な活動を展開</a></li><li class="toc-b"><a href="#005">四　三百六十軒家庭教会完成</a></li><li class="toc-b"><a href="#006">１．三百六十軒の数理的な意味</a></li><li class="toc-b"><a href="#007">２．家庭教会は摂理の終着地</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の神様の祖国光復</a></li><li class="toc-b lv2"><a href="#002">三　家庭教会の活動展開</a></li><li class="toc-b lv3"><a href="#003">１．宗族的メシヤの資格を賦与する条件</a></li><li class="toc-b lv3"><a href="#004">２．訪問、奉仕、教育など多様な活動を展開</a></li><li class="toc-b lv2"><a href="#005">四　三百六十軒家庭教会完成</a></li><li class="toc-b lv3"><a href="#006">１．三百六十軒の数理的な意味</a></li><li class="toc-b lv3"><a href="#007">２．家庭教会は摂理の終着地</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の神様の祖国光復</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の神様の祖国光復</a></h2>
 　
 
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　三　家庭教会の活動展開</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">三　家庭教会の活動展開</a></h3>
 <br/>
-<b id="003"><a href="#003">　　１．宗族的メシヤの資格を賦与する条件</a></b><br/>
+<h4 class="bh" id="003"><a href="#003">１．宗族的メシヤの資格を賦与する条件</a></h4>
 <br/>
 　今まで宗教というのは、個人の救いを目標にしてきましたが、統一教会の救いの目標は、氏族の救いだというのです。一度に氏族が救われようというのです。「私は死んで天国に行くのではなく、生きて氏族が天国に入ることのできる公義のチケットをもらおう！」この運動がホーム・チャーチ運動であることを知らなければなりません。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -368,7 +388,7 @@
 　お母さん、お父さんもそうです。これからは文総裁に反対できない環境へと、世界がだんだん押されていくのです。「いい」と言うようになっています。あっという間に回っていくのです。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">　　２．訪問、奉仕、教育など多様な活動を展開</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">２．訪問、奉仕、教育など多様な活動を展開</a></h4>
 <br/>
 　今まで長年の間活動してきたホーム・チャーチ（家庭教会）がなくなったのではありません。ホーム・チャーチ基盤はカインの基盤であり、自分の一族はアベルの基盤です。ホーム・チャーチの基盤で涙と血と汗を流した功績をもてば、自分の一族は自動的に回っていきます。ホーム・チャーチを通して百名さえ伝道して自分の一族のところに行けば、「英雄の息子が帰ってきた」と言って、その村が一朝一夕にして一度に復帰されるのです。闘った経歴を報告するのです。他のことをするなというのです。三百六十軒をみな配当しなければなりません。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -406,9 +426,9 @@
 　これからは自分の霊の息子、娘たちをみな連れて、教育しなければなりません。親族です。霊的な信仰の息子、娘たちを中心として一つになって、宗族的メシヤ圏を復帰することによって、霊界の他の族属たちも後援するのです。そうなれば、連合的前線が展開されるのです。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="005"><a href="#005">　四　三百六十軒家庭教会完成</a></b><br/>
+<h3 class="bh" id="005"><a href="#005">四　三百六十軒家庭教会完成</a></h3>
 <br/>
-<b id="006"><a href="#006">　　１．三百六十軒の数理的な意味</a></b><br/>
+<h4 class="bh" id="006"><a href="#006">１．三百六十軒の数理的な意味</a></h4>
 <br/>
 　ホーム・チャーチとは何ですか。家庭教会とは何ですか。すべての歴史時代の摂理を中心として国境とか社会制度をすべて捨てて、家庭教会の中で一つになれば、すべてのことを復帰するのです。<br/>
 　三百六十家庭は三百六十族属です。それをなぜやるのでしょうか。三十六とは、十二数の三倍です。そうでしょう。十二数というのは、天理の度数です。これは霊界の十二真珠門をいうのです。三十六家庭数と同じだというのです。旧約時代、新約時代、成約時代の三段階の運勢を連結させることができるのです。それは天道を解くためにすべて出てきたのです。<br/>
@@ -426,7 +446,7 @@
 どこでも三百六十軒のホーム・チャーチ運動をしなければなりません。それは氏族です。特定氏族です。氏族を解放しなければ、特定氏族が生じ得ません。これは元来、三次七年路程が終わってやることです。そのことを三次七年内にやっているということを知らなければなりません。皆さんには夢のような話ですが、事実なのです。<br/>
 <a name="004"></a><br/>
 <br/>
-<b id="007"><a href="#007">　　２．家庭教会は摂理の終着地</a></b><br/>
+<h4 class="bh" id="007"><a href="#007">２．家庭教会は摂理の終着地</a></h4>
 <br/>
 　このようなことを宣布することができるということは、摂理史において、偉大な飛躍だというのです。では、家庭教会で勝利すれば、皆さんは何になるのでしょうか。その時にはメシヤになるのです。メシヤ。宗族的メシヤになって、民族に対してもその民族を救うことのできる責任者になるのです。<br/>
 　皆さんがどのように完成するのでしょうか。皆さんには父母がいて、息子がいて、万物がありますが、家庭教会はこのようなものを拡大したものです。アダムが堕落することによって、この三つを失ってしまいました。ですから、この三つを一度に取り戻して、神様の前に捧げなければなりません。失ったものを取り戻して真の父母を通じて神様の前に捧げようというのです。<br/>

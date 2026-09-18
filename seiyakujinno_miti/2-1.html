@@ -314,31 +314,51 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="成約人への道"><a href="#成約人への道">成約人への道</a></h1>
+<h1>成約人への道</h1>
 <nav class="page-nav">
   <a href="1-5.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="2-2.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">成約人への道</a></li><li class="toc-b"><a href="#002">第二章　家庭観</a></li><li class="toc-b"><a href="#003">一　理想的な家庭とはどのような家庭か</a></li><li class="toc-b"><a href="#004">１．なぜ家庭が良いのか</a></li><li class="toc-b"><a href="#005">２．家庭において社会愛、民族愛、人類愛が芽生える</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">成約人への道</a></li><li class="toc-b lv1"><a href="#002">第二章　家庭観</a></li><li class="toc-b lv2"><a href="#003">一　理想的な家庭とはどのような家庭か</a></li><li class="toc-b lv3"><a href="#004">１．なぜ家庭が良いのか</a></li><li class="toc-b lv3"><a href="#005">２．家庭において社会愛、民族愛、人類愛が芽生える</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <div align="left">
-<b id="001"><a href="#001">成約人への道</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">成約人への道</a></h2>
 <a href="2-1.html" style="color : red;" target="_top">（全面表示）</a>　　<a onclick="history.back();" style="color : red;text-decoration : underline;cursor : pointer;">戻る</a>
 </div>
 <hr/>
-<b id="002"><a href="#002">　第二章　家庭観</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第二章　家庭観</a></h2>
 <hr/>
-<b id="003"><a href="#003">　一　理想的な家庭とはどのような家庭か</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">一　理想的な家庭とはどのような家庭か</a></h3>
 <br/>
-<b id="004"><a href="#004">　　１．なぜ家庭が良いのか</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">１．なぜ家庭が良いのか</a></h4>
 <br/>
 　家庭とは、神様の理想が顕現し得る起点であり、人類の幸福が顕現する起点なのです。人間におけるすべてのことが果たされる場であり、神様においても、すべてが完成する場なのです。なぜ家庭が良いのでしょうか。それは、父母の愛を中心とした自由な活動の基地となるためです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -389,7 +409,7 @@
 　　　　　　　　　　　　＊<br/>
 　愛のふろしきとは、どんなふろしきでしょうか。本郷の国へ行って、そのふろしきを開いてみると、理想的な夫が飛び出してくるし、理想的な妻が飛び出してきます。また、理想的な家庭が飛び出してくる福袋です。ここから出てくるものは、一等復帰です。ですから、個人も一等、家庭も一等、氏族も一等、民族も一等、国家も一等、世界も一等なのです。すべてが一等ならば、高い低いということはありません。ですから、兄弟も、家庭も復帰されるのです。このように統一的基盤を造成していくために、宝の壺である愛のふろしきが必要なのです。<br/>
 <br/>
-<b id="005"><a href="#005">　　２．家庭において社会愛、民族愛、人類愛が芽生える</a></b><br/>
+<h4 class="bh" id="005"><a href="#005">２．家庭において社会愛、民族愛、人類愛が芽生える</a></h4>
 <br/>
 　神様を中心として一つとなるとき、千態万状の様相で回るようになるのです。それゆえ、兄弟の間で愛するときも、親が子を愛するのに倣って、兄が弟を愛さなければなりません。そのように愛して一元化した家庭には、家庭愛の花が咲きます。そして、これが社会愛にもなります。そしてさらには、これが民族を愛する民族愛となります。このように愛すれば、世界になるのです。ところが、今日それが漠然としているのです。<br/>
 　　　　　　　　　　　　＊<br/>

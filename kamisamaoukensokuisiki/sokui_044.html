@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="◆３．第二次大戦以後における神様の摂理の展開◆/み旨の道"><a href="#◆３．第二次大戦以後における神様の摂理の展開◆/み旨の道">◆３．第二次大戦以後における神様の摂理の展開◆/み旨の道</a></h1>
+<h1>◆３．第二次大戦以後における神様の摂理の展開◆/み旨の道</h1>
 <nav class="page-nav">
   <a href="sokui_038.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="sokui_052.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">神様王権即位式</a></li><li class="toc-b"><a href="#002">３．第二次大戦以後における神様の摂理の展開</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">神様王権即位式</a></li><li class="toc-b lv3"><a href="#002">３．第二次大戦以後における神様の摂理の展開</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -335,7 +355,7 @@
 </div>
 <hr/>
 <br/>
-      　　<b id="002"><a href="#002">３．第二次大戦以後における神様の摂理の展開</a></b><br/>
+      　　<h4 class="bh" id="002"><a href="#002">３．第二次大戦以後における神様の摂理の展開</a></h4>
 <br/>
       　家庭的基盤にならなければならない、そのような出発とともに、氏族、民族、国家、世界にまで行かなければならず、すべてのみ旨の理想的な踏み台にならなければならないイスラエル民族が、イエス様を殺すことによって、ここにおいてアダム家庭で失ってしまったそれ以上の悲しい堕落の痛みを感じたという事実を知らなければなりません。<br/>
       　このようにして、イエス様がこの地に来て、み旨を成し遂げることができず、再臨という二千年後に延長された歴史を約束したのです。そして、新しい選民圏をつくるために霊的世界と肉的世界を分割し、霊的地上天国理想を成すためにイエス様と聖霊が代を引き継いで始めたこととは何でしょうか。失ってしまったイスラエル圏、その霊的世界のみを連結させてきたのが今までのキリスト教文化圏世界です。<br/>

@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の父母_五）真の父母と永生"><a href="#真の父母_五）真の父母と永生">真の父母_五）真の父母と永生</a></h1>
+<h1>真の父母_五）真の父母と永生</h1>
 <nav class="page-nav">
   <a href="1005040112.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="1005060116.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の父母</a></li><li class="toc-b"><a href="#002">五）真の父母と永生</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の父母</a></li><li class="toc-b lv0"><a href="#002">五）真の父母と永生</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -334,13 +354,13 @@
 <blockquote>
 <br/>
 <div align="left">
-<b id="001"><a href="#001">真の父母</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の父母</a></h2>
 <a href="1005050114.html" style="color : red;" target="_parent">(全面表示)</a>　
 
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">五）真の父母と永生</a></b>
+<h2 class="bh bh0" id="002"><a href="#002">五）真の父母と永生</a></h2>
 <p>P.114<br/>
       皆さんが、相手に会って愛することができる子女をもらうためには、父母に従わなければなりません。そう、子女を得たら家庭だけでなく「ああ、私が天国に行って天国の一門を率い、天国を率い、天国全体を率いることができる道のために従う」と言うべきなのです。それが、どれほど素晴らしいですか！　地上世界でも同様なのです。家庭を持って統一教会を受け、氏族を受け、統一世界を受け、一つになった世界で統一の天を受けるため行くのです。
       <p>なぜ、真の父母に従うべきなのか？　この宇宙全体を相続するために、従うべきなのです。どれほど素晴らしいかというのです。神様と真の父母は、すべてを持っているのです。（拍手） これが真の父母主義というものです。天宙主義、愛情主義、真の父母主義が、このように立派なものだというのです。

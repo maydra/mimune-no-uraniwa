@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="牧会者の道_四-講師が留意すべき点"><a href="#牧会者の道_四-講師が留意すべき点">牧会者の道_四　講師が留意すべき点</a></h1>
+<h1>牧会者の道_四　講師が留意すべき点</h1>
 <nav class="page-nav">
   <a href="0314030526.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="0315010539.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">四　講師が留意すべき点</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv2"><a href="#001">四　講師が留意すべき点</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -332,7 +352,7 @@
 </p>
 <blockquote>
 <br/>
-<b id="001"><a href="#001">四　講師が留意すべき点</a></b>
+<h3 class="bh" id="001"><a href="#001">四　講師が留意すべき点</a></h3>
 <p>P535<br/>
       　天が個性真理体を必要としていることを切実に知っています。「あー自分自身が完成を見ないならば、天は動いてくれない！」。自分自身が完成することができる位置に入っていくことができないならば、心情をもって内外が一つにならずしては、天が動かないということは天理の原則です。私たちの原理の教えは、間違いない事実です。私たちの統一教会の教会長たちは原理講義をすることを、ただ習慣的にぶーぶーぶーぶー、（鳴らすように）話してしまうのです。生命が一緒に働かない所においては、動くようにはなりません。寝ても覚めてもその講演時間になります。「寝ても覚めても？　二十四時間、全中心をそこに結びつけなければなりません。御飯を食べても、寝ても、起きても、水を飲んでも、どこへ行っても、皆さんがどこへ行ってどんな自然を見ても、考えはその自然にあるのではなく、全部その講演時間に集中しなければなりません。甚だしくは寝る時間までも、寝ても覚めても、夢の中でもそのことが展開するのです。あるいは、祈祷の中、回想の中でもそうなのです。そのようになれば、あすの聴衆がみな現れてきます。<p>
 　このようになれば、その中で、ある人は「あー、どのようにしたらこのようにもぴったり合うのか」と、その聴衆は完全に参っていくのです。分かりますか、何のことか。（はい）。完全に参っても、自分のために、自分の権威と自らの実力に自信をもって人の前に立つような時は、失敗なのです。

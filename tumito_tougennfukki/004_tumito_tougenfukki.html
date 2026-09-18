@@ -314,29 +314,49 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="罪と蕩減復帰"><a href="#罪と蕩減復帰">罪と蕩減復帰</a></h1>
+<h1>罪と蕩減復帰</h1>
 <nav class="page-nav">
   <a href="003_tumito_tougenfukki.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="005_tumito_tougenfukki.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">罪と蕩減復帰</a></li><li class="toc-b"><a href="#002">五　堕落の恨、神様の復帰の心情</a></li><li class="toc-b"><a href="#003">１．愛の怨讐、堕落の恨</a></li><li class="toc-b"><a href="#004">２．サタンの讒訴条件</a></li><li class="toc-b"><a href="#005">六　真の父母の祝福と血統復帰</a></li><li class="toc-b"><a href="#006">１．メシヤとして真の父母が必要だ</a></li><li class="toc-b"><a href="#007">２．再臨思想の核心は血統復帰</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">罪と蕩減復帰</a></li><li class="toc-b lv2"><a href="#002">五　堕落の恨、神様の復帰の心情</a></li><li class="toc-b lv3"><a href="#003">１．愛の怨讐、堕落の恨</a></li><li class="toc-b lv3"><a href="#004">２．サタンの讒訴条件</a></li><li class="toc-b lv2"><a href="#005">六　真の父母の祝福と血統復帰</a></li><li class="toc-b lv3"><a href="#006">１．メシヤとして真の父母が必要だ</a></li><li class="toc-b lv3"><a href="#007">２．再臨思想の核心は血統復帰</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
-<b id="001"><a href="#001">罪と蕩減復帰</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">罪と蕩減復帰</a></h2>
 　
 
 <hr/>
 <br/>
-<b id="002"><a href="#002">　五　堕落の恨、神様の復帰の心情</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">五　堕落の恨、神様の復帰の心情</a></h3>
 <br/>
-<b id="003"><a href="#003">　　１．愛の怨讐、堕落の恨</a></b><br/>
+<h4 class="bh" id="003"><a href="#003">１．愛の怨讐、堕落の恨</a></h4>
 <br/>
 　堕落したという事実は、長男長女を追い出したということと連結されます。長男というのはひとり子です。長女はひとり娘です。アダムとエバは、神様の億万代のひとり子、ひとり娘として生まれました。善悪の実を取って食べて、その億万代のひとり子を追放したと考えてみてください。皆さん、息子を一人もち、娘を一人もっていて、息子一人が死んだというとき、父母の痛みはどれほど大きいでしょうか。<br/>
 七代のひとり子の死は町内とそのすべての村と知り合いたちがみな痛哭するという言葉があります。七代のひとり子を失った父母の悲しみは推し量ることができないので、周辺にあるすべての家庭をもった父母たちと子供たちと兄弟たちが同情するということを考えるとき、これは何代のひとり子ですか。億万代です。億万代。それで、父子の関係が成されませんでした。億万代のひとり子を失った神様がそれを再び取り戻すためには、億万代の苦痛を越えずしては取り戻す道がないというのです。そのような天の父母がいたということを知りませんでした。<br/>
@@ -362,7 +382,7 @@
 　先生がこの道を備えてくるには、先生の愛する妻までもサタン魁首に抱かせてあげ、祝福してあげることのできる心がなければならないというのです。何のことか分かりますか。神様がそのような立場に立ったのです。悪魔は愛の姦夫です。怨讐ですが、終わりの日になってメシヤになることのできる資格者ならば、自分の新婦までも犠牲にしてサタンに与え、神様を解放しようとすることのできる立場に立たなければ、神様を解放できないのです。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">　　２．サタンの讒訴条件</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">２．サタンの讒訴条件</a></h4>
 <br/>
 　神様の愛の姦夫が悪魔です。今まで愛の悪魔である姦夫が讒訴するとき、彼を相手にしてきたのです。彼を人類の前に、全体の人間たちの前に、愛したという条件を取り戻すために今まで耐えてきたのが神様の心情だというのです。なぜですか。堕落しなかったら天使長でしたが、天使長も神様が愛してこそ天国に入るのです。神様と神様の息子、娘たち、天使長を愛した人たちが天国に入るのです。それでサタンが讒訴するというのです。「私は悪魔になったとしても、あなたの創造原理、本然の原則的基準は残っているので、神様も私を愛し、神様の息子、娘も私を愛さなければ天国に行けないのが原則ではありませんか」と言うとき、「うーん！」と言うのです。ここに襟首をつかんで今まで讒訴してきたのです。<br/>
 　　　　　　　　　　　＊<br/>
@@ -395,9 +415,9 @@
 　神様の前に孝子がいなかったし、神様の前に忠臣の道理、神様の前に聖人の道理、神様の前に聖子の道理、その国を守ることのできる主流の愛の体制がなくなったので、神様が立つ位置がないというのです。今まで囹圄（牢獄）の身として軟禁状態にとどまった神様になっているというのです。天の国は完全に廃虚となって空いています。その痛みを感じているかわいそうな神様であられます。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="005"><a href="#005">　六　真の父母の祝福と血統復帰</a></b><br/>
+<h3 class="bh" id="005"><a href="#005">六　真の父母の祝福と血統復帰</a></h3>
 <br/>
-<b id="006"><a href="#006">　　１．メシヤとして真の父母が必要だ</a></b><br/>
+<h4 class="bh" id="006"><a href="#006">１．メシヤとして真の父母が必要だ</a></h4>
 <br/>
 　皆さんは真なる父母と関係のない立場で天の前に追い出された偽りの父母の血筋を受けて生まれたので、この血筋から抜け出すためには血筋を踏んで踏んで、引き抜いてしまわなければなりません。そうして血統を根本的に変えなければ天の国に行くことができません。<br/>
 　　　　　　　　　　　＊<br/>

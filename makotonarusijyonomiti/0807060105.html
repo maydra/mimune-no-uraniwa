@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真なる子女の道_ｽ-勉強する姿勢とは"><a href="#真なる子女の道_ｽ-勉強する姿勢とは">真なる子女の道_ｽ　勉強する姿勢とは</a></h1>
+<h1>真なる子女の道_ｽ　勉強する姿勢とは</h1>
 <nav class="page-nav">
   <a href="0807050104.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="0807070107.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">ｽ　勉強する姿勢とは</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">ｽ　勉強する姿勢とは</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -333,7 +353,7 @@
 </p>
 <blockquote>
 <br/>
-<b id="001"><a href="#001">ｽ　勉強する姿勢とは</a></b>
+<h2 class="bh bh0" id="001"><a href="#001">ｽ　勉強する姿勢とは</a></h2>
 <p>P.105<br/>
       　勉強をする時には、ただ学科の時間に教室に入って座って、勉強することだとは思わないでください。すべてこのような課題を中心として、競争することであると思いなさい。なぜかというと、皆さんは運動会の時のスタートラインに立っているのと同じなのです。「パーン」というピストルの音で走り出すのと同じなのです。皆、そのような立場にいるのです。
       <p>　勉強の時間になると、世界中の学生たちと共に一つの出発点に立って、誰が一番速く走るのかという、立場に立っているということを忘れてはなりません。

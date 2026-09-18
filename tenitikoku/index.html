@@ -300,6 +300,26 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
@@ -314,44 +334,42 @@
 <b>天一国主人の生活</b><br/>
 <hr align="left" width="45%"/>
 <br/>
-<b><a href="hajimeni.html#002">はじめに</a></b><br/>
-<br/>
-<a href="01-1.html#003"><b>第一章　創造の原動力は神様の真の愛</b><br/>
-      　一　真の愛は神様のみ旨がとどまる中心</a><br/>
-<a href="01-1.html#004">　二　神様と真の父母と一体を成し遂げるための真の愛</a><br/>
-<a href="01-1.html#005">　三　神様の愛の絶対対象は人類の先祖アダムとエバ</a><br/>
-<a href="01-1.html#006">　四　真の愛の初舞台は真の家庭</a><br/>
-<br/>
-<a href="02-1.html#003"><b>第二章　天国と真の家庭</b><br/>
-      　一　神様の創造理想は四位基台と真の家庭</a><br/>
-<a href="02-1.html#004">　二　真の家庭は天国の民の生産工場</a><br/>
-<a href="02-1.html#005">　三　天国の民の教育は真の家庭で</a><br/>
-<a href="02-1.html#006">　四　天国の基盤は真の家庭から</a><br/>
-<br/>
-<a href="03-1.html#003"><b>第三章　神様と真の父母</b><br/>
-      　一　真の父母は神様と人類の希望</a><br/>
-<a href="03-1.html#004">　二　神様は縦的父母、真の父母は横的父母</a><br/>
-<a href="03-2.html#002">　三　神様を解放する真の父母</a><br/>
-<a href="03-2.html#003">　四　真の父母は天国への通路</a><br/>
-<br/>
-<a href="04-1.html#003"><b>第四章　天一国の民となる道</b><br/>
-      　一　人類に対する神様の希望</a><br/>
-<a href="04-1.html#004">　二　天一国は本然の故郷</a><br/>
-<a href="04-1.html#005">　三　天一国の民の態度と資格</a><br/>
-<a href="04-2.html#002">　四　天国の所有権を得ようとすれば天の民を大勢連れていかなければならない</a><br/>
-<a href="04-2.html#004">　五　天一国主人の生活<br/>
-      　　１．一心、一体、一念、一和</a><br/>
-<a href="04-2.html#005">　　２．純潔の八段階</a><br/>
-<a href="04-2.html#005">　　３．神様と真の父母に侍る生活</a><br/>
-<a href="04-3.html#002">　六　天宙天地真の御父母様の勝利圏相続<br/>
-      　　１．名前</a><br/>
-<a href="04-3.html#004">　　２．み言</a><br/>
-<a href="04-3.html#005">　　３．実績</a><br/>
-<a href="04-3.html#006">　七　天地父母様天一国開門祝福聖婚式と天宙天地真の父母様平和統一祝福家庭王即位式<br/>
-      　　１．天地父母様天一国開門祝福聖婚式の祈祷</a><br/>
-<a href="04-3.html#008">　　２．天地父母様天一国開門祝福聖婚式の祝祷</a><br/>
-<a href="04-3.html#009">　　３．天宙天地真の父母様平和統一祝福家庭王即位式の祈祷</a><br/>
-<a href="04-3.html#010">　　４．天宙天地真の父母様平和統一祝福家庭王即位式の祝祷</a><br/>
+<ul class="toc-tree">
+<li class="lv0"><a href="hajimeni.html#002">はじめに</a></li>
+<li class="lv1"><a href="01-1.html#002">第一章　創造の原動力は神様の真の愛</a></li>
+<li class="lv2"><a href="01-1.html#003">一　真の愛は神様のみ旨がとどまる中心</a></li>
+<li class="lv2"><a href="01-1.html#004">二　神様と真の父母と一体を成し遂げるための真の愛</a></li>
+<li class="lv2"><a href="01-1.html#005">三　神様の愛の絶対対象は人類の先祖アダムとエバ</a></li>
+<li class="lv2"><a href="01-1.html#006">四　真の愛の初舞台は真の家庭</a></li>
+<li class="lv1"><a href="02-1.html#002">第二章　天国と真の家庭</a></li>
+<li class="lv2"><a href="02-1.html#003">一　神様の創造理想は四位基台と真の家庭</a></li>
+<li class="lv2"><a href="02-1.html#004">二　真の家庭は天国の民の生産工場</a></li>
+<li class="lv2"><a href="02-1.html#005">三　天国の民の教育は真の家庭で</a></li>
+<li class="lv2"><a href="02-1.html#006">四　天国の基盤は真の家庭から</a></li>
+<li class="lv1"><a href="03-1.html#002">第三章　神様と真の父母</a></li>
+<li class="lv2"><a href="03-1.html#003">一　真の父母は神様と人類の希望</a></li>
+<li class="lv2"><a href="03-1.html#004">二　神様は縦的父母、真の父母は横的父母</a></li>
+<li class="lv2"><a href="03-2.html#002">三　神様を解放する真の父母</a></li>
+<li class="lv2"><a href="03-2.html#003">四　真の父母は天国への通路</a></li>
+<li class="lv1"><a href="04-1.html#003">第四章　天一国の民となる道</a></li>
+<li class="lv2"><a href="04-1.html#003">一　人類に対する神様の希望</a></li>
+<li class="lv2"><a href="04-1.html#004">二　天一国は本然の故郷</a></li>
+<li class="lv2"><a href="04-1.html#005">三　天一国の民の態度と資格</a></li>
+<li class="lv2"><a href="04-2.html#002">四　天国の所有権を得ようとすれば天の民を大勢連れていかなければならない</a></li>
+<li class="lv2"><a href="04-2.html#003">五　天一国主人の生活</a></li>
+<li class="lv3"><a href="04-2.html#004">１．一心、一体、一念、一和</a></li>
+<li class="lv3"><a href="04-2.html#005">２．純潔の八段階</a></li>
+<li class="lv3"><a href="04-2.html#005">３．神様と真の父母に侍る生活</a></li>
+<li class="lv2"><a href="04-3.html#002">六　天宙天地真の御父母様の勝利圏相続</a></li>
+<li class="lv3"><a href="04-3.html#003">１．名前</a></li>
+<li class="lv3"><a href="04-3.html#004">２．み言</a></li>
+<li class="lv3"><a href="04-3.html#005">３．実績</a></li>
+<li class="lv2"><a href="04-3.html#006">七　天地父母様天一国開門祝福聖婚式と天宙天地真の父母様平和統一祝福家庭王即位式</a></li>
+<li class="lv3"><a href="04-3.html#007">１．天地父母様天一国開門祝福聖婚式の祈祷</a></li>
+<li class="lv3"><a href="04-3.html#008">２．天地父母様天一国開門祝福聖婚式の祝祷</a></li>
+<li class="lv3"><a href="04-3.html#009">３．天宙天地真の父母様平和統一祝福家庭王即位式の祈祷</a></li>
+<li class="lv3"><a href="04-3.html#010">４．天宙天地真の父母様平和統一祝福家庭王即位式の祝祷</a></li>
+</ul>
 </div>
 <!-- removed duplicate script -->
 </body>

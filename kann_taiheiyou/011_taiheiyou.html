@@ -314,31 +314,51 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="環太平洋摂理"><a href="#環太平洋摂理">環太平洋摂理</a></h1>
+<h1>環太平洋摂理</h1>
 <nav class="page-nav">
   <a href="010_taiheiyou.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="012_taiheiyou.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">環太平洋摂理</a></li><li class="toc-b"><a href="#002">三　エバ国家としての日本の使命</a></li><li class="toc-b"><a href="#003">１．日本はエバ国家である</a></li><li class="toc-b"><a href="#004">２．日本をエバ国家に選んだ理由</a></li><li class="toc-b"><a href="#005">３．母の国としての日本の使命</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">環太平洋摂理</a></li><li class="toc-b lv2"><a href="#002">三　エバ国家としての日本の使命</a></li><li class="toc-b lv3"><a href="#003">１．日本はエバ国家である</a></li><li class="toc-b lv3"><a href="#004">２．日本をエバ国家に選んだ理由</a></li><li class="toc-b lv3"><a href="#005">３．母の国としての日本の使命</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">環太平洋摂理</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">環太平洋摂理</a></h2>
 　
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　三　エバ国家としての日本の使命</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">三　エバ国家としての日本の使命</a></h3>
 <br/>
-　<b id="003"><a href="#003">　１．日本はエバ国家である</a></b><br/>
+　<h4 class="bh" id="003"><a href="#003">１．日本はエバ国家である</a></h4>
 <br/>
 　摂理の完成とは何ですか。アダムとエバが完成して、その周辺の三人の天使長が一つになるはずだったのです。今、どのようになっているのかといえば、アメリカ、中共、ソ連が三人の天使長です。<br/>
 　アダムは韓国、エバは日本、これが残っています。本然の世界は、アダムとエバ、そして三人の天使長が一つになる世界です。ところが、天使世界とエバが一つになってアダムを追放しました。本来のエデンにおいて、三人の天使長とエバが一つになってアダムを追放したのです。<br/>
@@ -365,7 +385,7 @@
 　そのような血統的因縁によって、ここで再び父の精子を受け継いで、赤ん坊の種を受けて再び生む運動をしなければなりません。しかし、大きくなってから再び生むことはできないので、接ぎ木しなければならないのです。<br/>
 <a name="002"></a><br/>
 <br/>
-　<b id="004"><a href="#004">　２．日本をエバ国家に選んだ理由</a></b><br/>
+　<h4 class="bh" id="004"><a href="#004">２．日本をエバ国家に選んだ理由</a></h4>
 <br/>
 　韓国の文先生が、日本をエバ国家に定めたことがなぞです。日本には、文先生を尊敬する学者がたくさんいるのです。東京大のある有名な学者が「先生、なぜ日本がエバ国家なのですか。気分が悪いです」と言うので、「何年かのちに、そのようになっているかいないか見ていなさい」と言ったのです。<br/>
 　　　　　　　　　　　　　＊<br/>
@@ -423,7 +443,7 @@
 　なぜ日本がエバ国家ですか。第二次大戦以後に、イギリスがエバ国家としての使命を果たせないことによってサタンが占領したので、最も弱い反対側のエバを再び取り戻し、最も悪辣なドイツを再び探し立てたのです。それは、荒廃して灰になった国です。何もないのです。来られる再臨主は、これを再び収拾して立て、第二次大戦に勝利したイギリス、アメリカ、フランスが天下統一した基準を蕩減復帰しなければ、新しい歴史は出発することができないのです。先生が四十年間でそれをするのです。<br/>
 <a name="003"></a><br/>
 <br/>
-　<b id="005"><a href="#005">　３．母の国としての日本の使命</a></b><br/>
+　<h4 class="bh" id="005"><a href="#005">３．母の国としての日本の使命</a></h4>
 <br/>
 　日本をエバ国家に選んだので、エバは、カイン、アベルを再び生まなければならないのです。それゆえに、日本には二つの韓国僑胞がいます。韓国僑胞と北朝鮮僑胞、カイン、アベルがいます。この韓国僑胞と北朝鮮僑胞、カイン、アベルが闘っています。これを一つにしなければなりません。これは、先生がエバ国家に選んだので不回避なことなのです。これができなければエバ国家になれません。腹中でこれを一つにしなければならず、エバは右翼世界と左翼世界を一つにして抱かなければならないのです。<br/>
 　　　　　　　　　　　　　＊<br/>

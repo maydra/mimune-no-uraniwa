@@ -314,28 +314,48 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="祝福と入籍/(付録)"><a href="#祝福と入籍/(付録)">祝福と入籍/(付録)</a></h1>
+<h1>祝福と入籍/(付録)</h1>
 <nav class="page-nav">
   <a href="005.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="hajimeni.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">祝福と入籍</a></li><li class="toc-b"><a href="#002">(付録)</a></li><li class="toc-b"><a href="#003">(1)160家庭と160数</a></li><li class="toc-b"><a href="#004">(2)160数、180数</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">祝福と入籍</a></li><li class="toc-b lv0"><a href="#002">(付録)</a></li><li class="toc-b lv3"><a href="#003">(1)160家庭と160数</a></li><li class="toc-b lv3"><a href="#004">(2)160数、180数</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
-<b id="001"><a href="#001">祝福と入籍</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">祝福と入籍</a></h2>
 　　<a href="index.html" style="color : red;" target="_top">INDEXへ</a>
 <hr/>
 <br/>
-<b id="002"><a href="#002">(付録)</a></b><br/>
+<h2 class="bh bh0" id="002"><a href="#002">(付録)</a></h2>
 <br/>
-<b id="003"><a href="#003">　(1)160家庭と160数</a></b><br/>
+<h4 class="bh" id="003"><a href="#003">(1)160家庭と160数</a></h4>
 <br/>
 　なぜ160家庭かというと、これを世界に連結させるためなのです。ヤコブは12家庭、モーセは72長老、イエス様は120門徒、再臨主は160使頭なのです。使徒の頭なのです。イエス様は使徒だと言ったのです。使頭は今回私が初めて使う言葉です。誰も知らない言葉です。日本がエバ国家だから、先生が知っている秘密はみな教えてあげました。韓国の人、責任者でも知らないことをみな教えてあげました。そうです。責任を果たせなければ首が飛ぶのです。<br/>
 <br/>
@@ -370,7 +390,7 @@
 　私は霊界に行ってから、皆さんの責任は持てません。私は160か国に宣教部を作りました。それなのに皆さんは160家庭を成就することができないと言うのですか？　水晶体にならなければなりません。水晶体にならなければならないのです。先生に似なければなりません。どんな面であれ、似ることによって父子関係が築かれるのです。160の国家を立てるために、先生は迫害を受けながら死の峠を越えてきたのです。皆さんは歓迎される立場にあるのに、どうしてできないのでしょうか？　皆さんの一族は歓迎するのです。先生が６回も監獄で体験した、死に直面するような体験を、皆さんの一族は皆さんにさせないというのです。(260−87)<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">　(2)160数、180数</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">(2)160数、180数</a></h4>
 <br/>
 　ですから入籍しなければなりません。入籍はただでできるのではありません。160家庭、あるいは180家庭を完了しなければならないのです。これができない人は脱落するのです。36家庭だとか、何だとか主張する時代は過ぎていくのです。平等化時代に入ったので、ここではその数に誰が先に入っていくかが問題になるのです。統一教会では氏族が多いほど恵沢を受けるのです。(286−250)<br/>
 <br/>

@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="宗族的メシヤ_八-尊影（注:御父母様のお写真）に侍ること、統一旗掲揚、入会願書提出"><a href="#宗族的メシヤ_八-尊影（注:御父母様のお写真）に侍ること、統一旗掲揚、入会願書提出">宗族的メシヤ_八　尊影（注:御父母様のお写真）に侍ること、統一旗掲揚、入会願書提出</a></h1>
+<h1>宗族的メシヤ_八　尊影（注:御父母様のお写真）に侍ること、統一旗掲揚、入会願書提出</h1>
 <nav class="page-nav">
   <a href="0910070301.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="0910090318.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">宗族的メシヤ</a></li><li class="toc-b"><a href="#002">八　尊影（注:御父母様のお写真）に侍ること、統一旗掲揚、入会願書提出</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">宗族的メシヤ</a></li><li class="toc-b lv2"><a href="#002">八　尊影（注:御父母様のお写真）に侍ること、統一旗掲揚、入会願書提出</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -340,7 +360,7 @@
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">八　尊影（注:御父母様のお写真）に侍ること、統一旗掲揚、入会願書提出</a></b>
+<h3 class="bh" id="002"><a href="#002">八　尊影（注:御父母様のお写真）に侍ること、統一旗掲揚、入会願書提出</a></h3>
 <p>P315<br/>
       　私たち統一教会は、歴史を再編成するのです。新しい天の国家を再編成するのです。そうしようとするならば、まず、何からしなければならないのでしょうか？　国民がいて、公務員がいなければならないのですね。み旨から見るならば、統一教会の信徒は公務員になるし、入会願書を出す人たちは国民になります。使命が違います。<p>
 　今、統一教会で入会願書を出した人たちは、判こを押しました。ところが人々は、六・二五動乱のとき、判こを押して首が飛んでいき、虐殺され、一族が虐殺されるのを見たので、判こを押すことを一番恐れるのです。

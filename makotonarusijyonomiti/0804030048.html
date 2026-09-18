@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真なる子女の道_ｺ-本性の方向に合わせる"><a href="#真なる子女の道_ｺ-本性の方向に合わせる">真なる子女の道_ｺ　本性の方向に合わせる</a></h1>
+<h1>真なる子女の道_ｺ　本性の方向に合わせる</h1>
 <nav class="page-nav">
   <a href="0804020045.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="0804040051.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">ｺ　本性の方向に合わせる</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">ｺ　本性の方向に合わせる</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -333,7 +353,7 @@
 </p>
 <blockquote>
 <br/>
-<b id="001"><a href="#001">ｺ　本性の方向に合わせる</a></b>
+<h2 class="bh bh0" id="001"><a href="#001">ｺ　本性の方向に合わせる</a></h2>
 <p>P.48<br/>
       　皆さんは、統一教会の運勢によって生まれた人々です。統一教会の運勢で生まれたので、統一教会の内容と本質に接することのできるものを持てば、これからすべてのことが皆うまくいくのです。今は二十代なので、大学に通っていて、よく分からないのです。昔は道人と言われた人々や、野生の高麗人参を探している人々は皆、霊的なアンテナを立てて、高麗人参がどこにあるのかちゃんと分かって探したのです。そういうことがいくらでもあったのです。それがなぜ必要なのかというと、そうすることによって、自分が被害を受けることを避け、利益になることにいくらでも連結できるからです。そのような道を探すのです。無駄に時間を消耗するわけにはいかないのです。（一九八二・一〇・二〇）
       <p>　そのような素質を持って皆さんが生まれたことを知り、皆さん自身が、お父さんお母さんたちが考える前に、二十歳になる前に、自分の行くべき道をすべて選んでおきなさいというのです。そのような心を持っていれば、もし違うほうへ行った時も、自分の行くべき道に体が帰ってくるのです。全部、教えてくれるのです。明日の朝になったら東に行こうと思って、東に向かって寝たとしても、東に行くことがよくなければ、いつの間にか、南に向かって寝ているのです。なぜそうなのかというと、南に行かなければならないからです。ですから、あらゆるものが皆、南に向かうのです。体自体が分かっているのです。そのように鋭敏になっているのです。

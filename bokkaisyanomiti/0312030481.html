@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="牧会者の道_-三-講義時間の三倍祈祷した安昌成講師"><a href="#牧会者の道_-三-講義時間の三倍祈祷した安昌成講師">牧会者の道_　三　講義時間の三倍祈祷した安昌成講師</a></h1>
+<h1>牧会者の道_　三　講義時間の三倍祈祷した安昌成講師</h1>
 <nav class="page-nav">
   <a href="0312020477.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="0312040482.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">三　講義時間の三倍祈祷した安昌成講師</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv2"><a href="#001">三　講義時間の三倍祈祷した安昌成講師</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -332,7 +352,7 @@
 </p>
 <blockquote>
 <br/>
-<b id="001"><a href="#001">　三　講義時間の三倍祈祷した安昌成講師</a></b>
+<h3 class="bh" id="001"><a href="#001">三　講義時間の三倍祈祷した安昌成講師</a></h3>
 <p>P481<br/>
       　皆さんはみ言を伝える時、涙を流さなければなりません。安昌成講師が話したはずです。二時間講義しようとすれば、その講義時間の三倍祈祷しなさいと言いました。<p>
 　講義をするそこには、再創造の力が投入されなければなりません。再創造の力だけではなく、愛の力も投入されなければなりません。なぜですか？　創造の出発は愛の対象者のためである以上、愛を成就させるのです。それで自分のすべての知識と天稟的要素はもちろんですが、心情の要素まで愛を中心として投入しなければなりません。それが創造の正常的な原則でした。

@@ -314,18 +314,38 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="◆三人の霊の子女◆"><a href="#◆三人の霊の子女◆">◆三人の霊の子女◆</a></h1>
+<h1>◆三人の霊の子女◆</h1>
 <nav class="page-nav">
   <a href="dendou01-07.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="dendou02-02.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">伝道ハンドブック
-み言に学ぶ伝道の姿勢</a></li><li class="toc-b"><a href="#002">第二章　項目別のみ言から</a></li><li class="toc-b"><a href="#003">一、三人の霊の子女</a></li><li class="toc-b"><a href="#004">三人伝道</a></li><li class="toc-b"><a href="#005">十二の真珠門</a></li><li class="toc-b"><a href="#006">信仰の三人の子女</a></li><li class="toc-b"><a href="#007">一カ月に一人伝道</a></li><li class="toc-b"><a href="#008">十二人は死んでも伝道しなければならない</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">伝道ハンドブック
+み言に学ぶ伝道の姿勢</a></li><li class="toc-b lv1"><a href="#002">第二章　項目別のみ言から</a></li><li class="toc-b lv2"><a href="#003">一、三人の霊の子女</a></li><li class="toc-b lv2"><a href="#004">三人伝道</a></li><li class="toc-b lv2"><a href="#005">十二の真珠門</a></li><li class="toc-b lv2"><a href="#006">信仰の三人の子女</a></li><li class="toc-b lv2"><a href="#007">一カ月に一人伝道</a></li><li class="toc-b lv2"><a href="#008">十二人は死んでも伝道しなければならない</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -336,23 +356,23 @@
 　
 </div>
 <hr/>
-<b id="002"><a href="#002">第二章　項目別のみ言から</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第二章　項目別のみ言から</a></h2>
 <br/>
 <br/>
-<b id="003"><a href="#003">一、三人の霊の子女</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">一、三人の霊の子女</a></h3>
 <br/>
-      　　<b id="004"><a href="#004">三人伝道</a></b><br/>
+      　　<h3 class="bh" id="004"><a href="#004">三人伝道</a></h3>
 <br/>
       　我々統一教会は何をするかといえば、天国を創造する。天国建設を目標としている。天国をつくるには、父母を中心とした家庭基準をつくらなければならない。だから堕落圏内の三人を霊の子供として立てる。また、神から見れば、アダム、イエス、再臨主は三人の子供だよ。その三代の復帰路程の世界的象徴蕩減として我々が全体を蕩減したという基準を立てることができる。だから、最低三人は伝道しなければならない。三人を選ぶには十二人、十二人は死んでも伝道しなければならない。それから、十二人を越えて七十人、一二〇人をやっていく先生は、今まで生涯をかけてそのために闘ってきたんだよ。<br/>
 <br/>
 <br/>
-      　　<b id="005"><a href="#005">十二の真珠門</a></b><br/>
+      　　<h3 class="bh" id="005"><a href="#005">十二の真珠門</a></h3>
 <br/>
       　家庭基準をつくるには、イエス様を中心として四位基台、そして、聖霊を中心として四位基台をつくらなければならない。それがアダム家庭で失った八人家族である。それを蕩減しなければならない。そのための身代わりがノアの八人家族である。だから天において、家庭の蕩減条件を完全に越えたという基準に立つには、八人の家庭でなくてはならない。だからあなたたちは三人以上伝道しなければならない。三人伝道したといっても、それは天国に入る一方でしかない。だから十二人。<br/>
 <br/>
       　霊界には十二の真珠門があるだろう。地上には十二弟子、それが七十人くらいにならないと氏族にならない。そして、氏族を中心として一二〇人、一二〇人は十二の十倍である。十倍というのは、家庭を中心として民族、国家、世界へ出発する。あなたたちも本当に天の前に神様の子供となり、イエス様以上にならなければならないんだよ。イエス様は、長成基準をやったんだから、あなたたちは完成基準を目指してやるんだよ。<br/>
 <br/>
-      　　<b id="006"><a href="#006">信仰の三人の子女</a></b><br/>
+      　　<h3 class="bh" id="006"><a href="#006">信仰の三人の子女</a></h3>
 <br/>
       　家庭において、信仰の三人の息子、娘を立てて、腹の中にいる息子たちから整頓していかなければなりません。腹の中にいる子供よ、早く誕生するようにと言える、そのような信仰の息子と娘をもたなければなりません。そうしなければ完全蕩減にはならないのです。<br/>
 <br/>
@@ -364,7 +384,7 @@
 <br/>
       　イエス様を中心として一体となるべき弟子が、イエス様を裏切るような立場になったのだから、これを復帰しなければならない我々の路程である。我々においては、三人の信仰の子供を立て、それを中心として十二人、七十人、一二〇人の門徒を立てなければならない。<br/>
 <br/>
-      　　<b id="007"><a href="#007">一カ月に一人伝道</a></b><br/>
+      　　<h3 class="bh" id="007"><a href="#007">一カ月に一人伝道</a></h3>
 <br/>
       　統一教会においては、我々は父母をもっている。兄弟ももっている。血肉を共に受け継いで生まれたより以上の兄弟をもたなければならない。だから我々は、国を越えて超国家的心情基準を備えている資格ありや。天国は、超国家である。それを果たせない者は天国に入れない。天国をつくり得る者になれない。先生は、その道を過ぎた。あなたたちは今から十二弟子を組め。七十二弟子を組まなければ天国はつくれない。それがあなたたちに残されたものである。<br/>
 <br/>
@@ -374,7 +394,7 @@
 <br/>
       　各自が一人ずつ、一カ月に伝道するところに、その実績の基台に天国は社会的に開かれる。これは間違いない原理の原則である。七年間は行かなければならない。一カ月に一人ずつ伝道すれば、七年費やしてこそ、初めて八十四人の条件的な基準がつくられるから、それは至上命令として下したのである。<br/>
 <br/>
-      　　<b id="008"><a href="#008">十二人は死んでも伝道しなければならない</a></b><br/>
+      　　<h3 class="bh" id="008"><a href="#008">十二人は死んでも伝道しなければならない</a></h3>
 <br/>
       　女が女を三人伝道して、男が男を三人伝道したとして、その六人が夫婦になって、霊の親同士も夫婦になったとするならば、父母を中心とした八人になるだろう。そういう条件が、サタンに奪われた家庭を復帰したという基準だよ。それから、その家庭を中心とした親戚をもたなければならない。それが七十二家庭。そして一二〇家庭を中心として国家へと進む基準、民族の出発の起点をつくる。あなたたちはそれを四十年間やらなければならない。<br/>
 <br/>

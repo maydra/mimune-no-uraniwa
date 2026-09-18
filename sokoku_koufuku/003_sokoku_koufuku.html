@@ -314,32 +314,52 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の神様の祖国光復"><a href="#真の神様の祖国光復">真の神様の祖国光復</a></h1>
+<h1>真の神様の祖国光復</h1>
 <nav class="page-nav">
   <a href="002_sokoku_koufuku.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="004_sokoku_koufuku.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の神様の祖国光復</a></li><li class="toc-b"><a href="#002">第二章　家庭教会は摂理的な内的基盤</a></li><li class="toc-b"><a href="#003">一　家庭教会とは何か</a></li><li class="toc-b"><a href="#004">二　家庭教会活動の始まり</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の神様の祖国光復</a></li><li class="toc-b lv1"><a href="#002">第二章　家庭教会は摂理的な内的基盤</a></li><li class="toc-b lv2"><a href="#003">一　家庭教会とは何か</a></li><li class="toc-b lv2"><a href="#004">二　家庭教会活動の始まり</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の神様の祖国光復</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の神様の祖国光復</a></h2>
 　
 
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">第二章　家庭教会は摂理的な内的基盤</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第二章　家庭教会は摂理的な内的基盤</a></h2>
 <br/>
-<b id="003"><a href="#003">　一　家庭教会とは何か</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">一　家庭教会とは何か</a></h3>
 <br/>
 　皆さんは「ホーム・チャーチ」という言葉を聞いたことがありますか。家庭教会というのでしょう。ところで家庭教会というのは、昔はいくら家庭教会という名詞を知っていたとしても、事実それを迎えることはできなかったのです。なぜでしょうか。時が来ていなかったからです。そのような蕩減条件が、歴史の前に神様とサタンと歴史を代表した責任者との決定がなされていなかったので、いくらホーム・チャーチに入って、「これを世界の祭壇に完結させて捧げます」と言っても受けることができないというのです。サタンも認定しないというのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -389,7 +409,7 @@
 　統一教会の指導体制が、もう今は私が引っ張っていく時が過ぎたというのです。平面的拡大時代になったので、家庭理想をもった自体の氏族を中心として拡大すれば、世界は自然に復帰されるのです。その氏族拡大の方法とは何かというと、統一教会でいういわゆるホーム・チャーチだというのです。このような総決算的公判の場ができたというのです。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">　二　家庭教会活動の始まり</a></b><br/>
+<h3 class="bh" id="004"><a href="#004">二　家庭教会活動の始まり</a></h3>
 <br/>
 　一九七八年十一月十二日を期して、皆さんすべてをメシヤの資格者として、ホーム・チャーチの区域に出ていけと命令したのです。どうしますか。出ていこうという人、手を挙げてください。それでは、これからそこに出ていくのです。家庭教会をつくるまでは、帰ってくることができないということを知らなければなりません。死ぬまで帰ってくることができません。霊的に帰ってくることができないのです。<br/>
 　　　　　　　　　　　　＊<br/>

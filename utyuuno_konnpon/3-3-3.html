@@ -314,28 +314,48 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="宇宙の根本"><a href="#宇宙の根本">宇宙の根本</a></h1>
+<h1>宇宙の根本</h1>
 <nav class="page-nav">
   <a href="3-3-2.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="3-3-4.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">宇宙の根本</a></li><li class="toc-b"><a href="#002">３．血統復帰は祝福を通して成される</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">宇宙の根本</a></li><li class="toc-b lv3"><a href="#002">３．血統復帰は祝福を通して成される</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <div align="left">
-<b id="001"><a href="#001">宇宙の根本</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">宇宙の根本</a></h2>
 <a href="3-3-3.html" style="color : red;" target="_top">（全面表示）</a>　　<a onclick="history.back();" style="color : red;text-decoration : underline;cursor : pointer;">戻る</a>
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　３．血統復帰は祝福を通して成される</a></b><br/>
+<h4 class="bh" id="002"><a href="#002">３．血統復帰は祝福を通して成される</a></h4>
 <br/>
 　すべての天の秘密は、文総裁が明らかにした内容でなければ解決する道がありません。ここにいる二人の人が私を紹介する時、「真の父母になった」と言いましたが、真の父母とはいったい何ですか。真の父母はどこにいるのですか。天にいます。神様が真の父母です。今日の人類、堕落した世界のすべての宗教は、神様のことを「父」と言います。天地を創造されたその主人が正に父です。誰の父ですか。私の父です。私の父なのですが、父の内容の中で、何を中心として父子関係になりましたか。神様の愛です。そして、神様を中心として、堕落していないアダムとエバの生命が愛に連結されるのです。<br/>
 　神様の本然の愛を中心として、私たちの本然の先祖である堕落していないアダムとエバが、神様の愛に燃えて一体となるのですが、男性と女性を一つにすることができるのは、男性でもなく、女性でもありません。男性と女性を必ず一つにすることができるのは、絶対的に必要な愛だけです。これが一つになってこそ一つになるのです。神様は、絶対、唯一、永遠、不変であられるお方です。絶対的な神様の愛は、二つではありません。<br/>

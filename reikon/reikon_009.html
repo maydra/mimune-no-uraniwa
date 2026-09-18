@@ -314,33 +314,53 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="人間の生と霊魂の世界"><a href="#人間の生と霊魂の世界">人間の生と霊魂の世界</a></h1>
+<h1>人間の生と霊魂の世界</h1>
 <nav class="page-nav">
   <a href="reikon_008.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="reikon_010.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">人間の生と霊魂の世界</a></li><li class="toc-b"><a href="#002">第三章　真の御父母様と霊界</a></li><li class="toc-b"><a href="#003">一　真の御父母様の権限と使命</a></li><li class="toc-b"><a href="#004">１．真の御父母様は肉体をつけられた神様</a></li><li class="toc-b"><a href="#005">２．宇宙の中心軸、地上・天上の統治者</a></li><li class="toc-b"><a href="#006">３．真の御父母様を通して天国に行く</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">人間の生と霊魂の世界</a></li><li class="toc-b lv1"><a href="#002">第三章　真の御父母様と霊界</a></li><li class="toc-b lv2"><a href="#003">一　真の御父母様の権限と使命</a></li><li class="toc-b lv3"><a href="#004">１．真の御父母様は肉体をつけられた神様</a></li><li class="toc-b lv3"><a href="#005">２．宇宙の中心軸、地上・天上の統治者</a></li><li class="toc-b lv3"><a href="#006">３．真の御父母様を通して天国に行く</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">人間の生と霊魂の世界</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">人間の生と霊魂の世界</a></h2>
 　
 
 </div>
 <hr/>
-<b id="002"><a href="#002">第三章　真の御父母様と霊界</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第三章　真の御父母様と霊界</a></h2>
 <br/>
-<b id="003"><a href="#003">　一　真の御父母様の権限と使命</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">一　真の御父母様の権限と使命</a></h3>
 <br/>
-<b id="004"><a href="#004">　１．真の御父母様は肉体をつけられた神様</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">１．真の御父母様は肉体をつけられた神様</a></h4>
 <br/>
 　神様は無形でいらっしゃるので霊界に行っても見えません。それゆえに神様は体をもった父にならなければならないのです。体をもった父になることによって、無形と有形が一つになるのです。それは宇宙が一つになることを象徴します。神様は体をもつためにアダムとエバを造りました。体をもつには愛だけが可能です。愛があってこそ神様の形状に似た体を備えるようになります。アダムとエバが神様の体を備えれば、彼らの心の中に神様がいらっしゃって、地上世界と無形世界を統治するというのです。神様の王国をつくるのです。神様の王国は愛の王国だというのです。愛を中心としてこそ霊と肉が一つになるのであって、他のものでは一つになることができないのです。<br/>
 　　　　　　　　　　　　　＊<br/>
@@ -363,7 +383,7 @@
 　天国に王宮がありますか、ありませんか。そこの王は民主主義の王でしょうか。どのような王でしょうか。霊界は真の愛を中心とした所なので、霊界の王は一度中心になれば永遠です。それゆえに、高い所、低い所を一つと見るのです。全体を球形と見るのであって、分離されたものとしては見ないというのです。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="005"><a href="#005">　２．宇宙の中心軸、地上・天上の統治者</a></b><br/>
+<h4 class="bh" id="005"><a href="#005">２．宇宙の中心軸、地上・天上の統治者</a></h4>
 <br/>
 　霊界に行けばアダムとエバが家庭の王であり、氏族の王であり、民族の王であり、国家の王であり、世界の王であり、天宙の王なのです。ですから、霊界に行っては神様の代身者となるのです。神様は無形の神であるので見えません。あの世に行っても神様は見えないのです。しかし神様も体が必要です。それで、神様が造った万物世界は体をもっています。無形の神が体をもつことのできる相対的な存在を必要として万物を創造したがゆえに、完成したアダムとエバは神様の体になるのです。<br/>
 　　　　　　　　　　　　　＊<br/>
@@ -380,7 +400,7 @@
 　アダムとエバが堕落しないで完成し、人間の責任分担を果たせば、この地上世界と天上世界に地上天国と天上天国が成されて、愛を中心として一つの世界になるというのです、真の愛を中心として。結局は最初であると同時に最後になる日は何ですか。「真の父母の日」です。「真の父母」と言えば、神様は縦的な父母をいい、真の父母は横的な父母をいうのです。縦的な神様は霊界を代表し、横的な真の父母は地上世界を代表して一つになるのです。真の愛によって一つになる世界です。その二つの核心的な内容が真の父母です。真の父母の中に縦的父母と横的父母があることを知らなければなりません。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="006"><a href="#006">　３．真の御父母様を通して天国に行く</a></b><br/>
+<h4 class="bh" id="006"><a href="#006">３．真の御父母様を通して天国に行く</a></h4>
 <br/>
 　宇宙の中心が何かというと、霊肉の真の父母です。その基準を中心としてそこから東西南北が生じ、家庭が生じ、氏族が生じ、民族が生じ、国家が生じ、世界が生じるのです。これが、宇宙の根本です。これを中心として霊界が生じるのです。これが、九〇度、三六〇度になってこの中に宇宙が入るのです。<br/>
 　　　　　　　　　　　　　＊<br/>

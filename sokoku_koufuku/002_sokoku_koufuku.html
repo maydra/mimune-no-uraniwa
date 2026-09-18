@@ -314,30 +314,50 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の神様の祖国光復"><a href="#真の神様の祖国光復">真の神様の祖国光復</a></h1>
+<h1>真の神様の祖国光復</h1>
 <nav class="page-nav">
   <a href="001_sokoku_koufuku.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="003_sokoku_koufuku.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の神様の祖国光復</a></li><li class="toc-b"><a href="#002">三　祖国光復の旗手</a></li><li class="toc-b"><a href="#003">四　私たちは祖国光復のための独立軍</a></li><li class="toc-b"><a href="#004">五　祖国光復は真の愛によって</a></li><li class="toc-b"><a href="#005">六　祖国光復のためにもつべき信念と姿勢</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の神様の祖国光復</a></li><li class="toc-b lv2"><a href="#002">三　祖国光復の旗手</a></li><li class="toc-b lv2"><a href="#003">四　私たちは祖国光復のための独立軍</a></li><li class="toc-b lv2"><a href="#004">五　祖国光復は真の愛によって</a></li><li class="toc-b lv2"><a href="#005">六　祖国光復のためにもつべき信念と姿勢</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の神様の祖国光復</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の神様の祖国光復</a></h2>
 　
 
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　三　祖国光復の旗手</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">三　祖国光復の旗手</a></h3>
 <br/>
 　皆さんが責任を遂行するために誓い、三千里半島で新たな旗手になろうと誓って立ち上がるとき、大韓民国は私たちの懐に帰ってくることでしょう。それゆえ、輝く瞳をもっているならば、その瞳は栄光の祖国を直視する瞳と化さなければなりません。才能と力があるならば、それを祖国光復のために用いることのできる勇士となって、皆さん自身が堂々とした姿で、祖国光復のための聖別された責任者に代わる者となろうという信念を感じながら前進することができなければなりません。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -359,7 +379,7 @@
 　女性が先頭に立たなければなりません。ですから今、韓国でも祝福を受けた家庭の女性をすべて一線に追い出しました。先に動員したのです。韓国が本部国家なので、祝福を受けた皆さんの先輩家庭はみな一線に出ました。それを知らなければなりません。ですから世界に散らばっているムーニーの女性すべては、それに従って一線に向かって出ていくのです。アーメン。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="003"><a href="#003">　四　私たちは祖国光復のための独立軍</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">四　私たちは祖国光復のための独立軍</a></h3>
 <br/>
 　皆さんが決心すべきこととは何でしょうか。祖国光復の一日を迎えることです。今日、私たち韓国の民は、八月十五日を光復節として記念しています。解放の日として記念しているのです。第二次世界大戦以降、多くの弱小民族が、自分の一つの国を中心として光復と解放と独立を記念しています。ところで神様を中心として、天地の光復の日と独立をたたえることのできる日はいつ来るのでしょうか。考えたことはありますか。その日が来なければならないのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -388,7 +408,7 @@
 　過去の人、現在の人、未来の人、霊界に行った人も、祖国光復のために協助することのできる時が来ました。ですから多くの人々の先祖が入ってきて、統一教会に行かなければ薬を与えて病気にするようなことが起こるのです。文総裁の力でそうなるのではありません。神様と先祖、天使世界と先祖が一つとなって、地上をすべてコーナーに追い込むのです。家庭問題を中心としてコーナーで手をつけることはできません。唯一文総裁だけが全権をもって行使することができるという驚くべき事実を、この民族が喜望峰として、その国の、祖国の基盤として歓迎するときには、天下無敵の国となるのです。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="004"><a href="#004">　五　祖国光復は真の愛によって</a></b><br/>
+<h3 class="bh" id="004"><a href="#004">五　祖国光復は真の愛によって</a></h3>
 <br/>
 　天の国、天国を建設する祖国光復において独立軍として戦いに出た女性は、歴史上どれだけ立派なことでしょうか。歴史上どれだけたたえられることでしょうか。堕落したエバ一人によって、歴史的に女性がどれほど呪われてきたことでしょうか。しかし、今復帰時代において、女性が先頭に立って祖国光復のために勝利的基盤を築いたならば、それはどんなにたたえるべきことか、考えてみてください。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -423,7 +443,7 @@
 　愛を中心として絶対信仰です。愛を完成するためには絶対服従しなければならないのです。死んで、百回死んでも愛を必要とするがゆえに、その道をよく求めていかなければならないのです。それゆえ、霊界に行くということは死ぬことではなく、神様の愛を求めていく道だということです。神様が愛のために死ぬという道をつくったのです。それ以上の心をもっていなければ、愛を復帰することはできません。<br/>
 <a name="004"></a><br/>
 <br/>
-<b id="005"><a href="#005">　六　祖国光復のためにもつべき信念と姿勢</a></b><br/>
+<h3 class="bh" id="005"><a href="#005">六　祖国光復のためにもつべき信念と姿勢</a></h3>
 <br/>
 　これから新しい時代を迎えて、どんな姿勢をもつべきなのでしょうか。祖国光復のための信念が、何よりももっと高く胸の中で燃えていなければなりません。言い換えれば、六千年間神様が待ちわびてきた祖国を建設する旗手となり、先鋒に立った精鋭部隊の一員として開拓者になるという、このとてつもない使命に責任をもっているという自負心を感じなければなりません。来ては去っていった多くの人が手に入れたいと願ってはきたものの、手に入れようにも手に入れることのできなかった、たった一つしかない、この時にしかない特権的な使命を背負っているという厳粛な責任感をもつべきです。<br/>
 　　　　　　　　　　　　＊<br/>

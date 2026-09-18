@@ -314,30 +314,50 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="成約人への道"><a href="#成約人への道">成約人への道</a></h1>
+<h1>成約人への道</h1>
 <nav class="page-nav">
   <a href="3-3.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="3-5.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">成約人への道</a></li><li class="toc-b"><a href="#002">四　民主世界と共産世界の未来</a></li><li class="toc-b"><a href="#003">１．民主世界と共産世界を一つに</a></li><li class="toc-b"><a href="#004">２．宗教と哲学を収拾する頭翼思想</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">成約人への道</a></li><li class="toc-b lv2"><a href="#002">四　民主世界と共産世界の未来</a></li><li class="toc-b lv3"><a href="#003">１．民主世界と共産世界を一つに</a></li><li class="toc-b lv3"><a href="#004">２．宗教と哲学を収拾する頭翼思想</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <div align="left">
-<b id="001"><a href="#001">成約人への道</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">成約人への道</a></h2>
 <a href="3-4.html" style="color : red;" target="_top">（全面表示）</a>　　<a onclick="history.back();" style="color : red;text-decoration : underline;cursor : pointer;">戻る</a>
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　四　民主世界と共産世界の未来</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">四　民主世界と共産世界の未来</a></h3>
 <br/>
-<b id="003"><a href="#003">　　１．民主世界と共産世界を一つに</a></b><br/>
+<h4 class="bh" id="003"><a href="#003">１．民主世界と共産世界を一つに</a></h4>
 <br/>
 　神主義とは何ですか。先祖主義です。第一先祖主義、その次には頭翼思想です。共産主義と民主主義が闘うのをやめさせる、父母主義のようなものです。父母主義です。頭翼思想とは何かと言えば、それは真の父母主義です。愛を中心とした父母を知るようになるときは、この手も闘っていたのがすべて解かれ、一つになるのです。座る位置、立つ位置、方位を備えて、誰も指導しなくても天理の大道を守って生きることができる人をつくれば、すべて終わるのではありませんか。人が問題です。お金はいくらでもあり、国はいくらでもあります。何が問題ですか。人なのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -371,7 +391,7 @@
 　自分の物、自分の息子、自分の夫婦自体が自分のものではありません。天使長の立場にいるので、絶対否定の立場、所有権を否定する時代を超えなければなりません。そのような時代に行くので、社会主義や共産主義というものは個人の所有がありません。国家の所有、社会の所有を言っているのです。大韓民国もそのようになるでしょう。お金をもうけてもみな取られるではありませんか。そうでしょう。そのような時代に入るのです。<br/>
 <br/>
 <br/>
-<b id="004"><a href="#004">　　２．宗教と哲学を収拾する頭翼思想</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">２．宗教と哲学を収拾する頭翼思想</a></h4>
 <br/>
 　哲学において観が違い、物質が先だとすることによって共産主義が生じ、心が先だとした観から民主世界ができたのです。唯心史観と唯物史観が起こったのです。このようにして歴史が変わり、目的が変わったのですが、それが正しくないので全部壊してしまわなければなりません。心と体というのが主体と対象の関係になっていることを知らなかったのです。これを別々に切り離して考えたので、行く道がないのです。そのような意味で今、文総裁が主張する神主義や頭翼思想というこのようなものが問題になるのです。主体自体が生じるとき、主体自体のためにできたのではなかったのです。<br/>
 　　　　　　　　　　　　＊<br/>

@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="牧会者の道_三-十一条"><a href="#牧会者の道_三-十一条">牧会者の道_三　十一条</a></h1>
+<h1>牧会者の道_三　十一条</h1>
 <nav class="page-nav">
   <a href="0309020293.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="0309040312.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">三　十一条</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv2"><a href="#001">三　十一条</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -332,7 +352,7 @@
 </p>
 <blockquote>
 <br/>
-<b id="001"><a href="#001">三　十一条</a></b>
+<h3 class="bh" id="001"><a href="#001">三　十一条</a></h3>
 <p>P300<br/>
       １　献金に対する本来の基準<p>
 　創造された当時には、すべての万物は、アダムの所有として決定されたのですが、堕落した以後には、アダムの所有決定権はないので……。しかし、有り難いことには、蕩減というものがあるのです。蕩減するためには、蕩減条件が必要なので、アダムの蕩減条件のための所有物が必要だというのです。その条件を立てるために、統一教会は、もてる精誠を尽くすのです。迫害を受け、悪口を言われ、鞭を打たれ、鼻血が飛び散り、骨が折れ、生死の境に入ったとしても、そこで精誠を尽くして、血と涙を流す。そのようにして所有権を獲得していかなければなりません。

@@ -314,30 +314,50 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="成約人への道"><a href="#成約人への道">成約人への道</a></h1>
+<h1>成約人への道</h1>
 <nav class="page-nav">
   <a href="1-4.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="2-1.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">成約人への道</a></li><li class="toc-b"><a href="#002">五　真の人間が行く道</a></li><li class="toc-b"><a href="#003">１．人間が求めて行くべき道</a></li><li class="toc-b"><a href="#004">２．真の人間の行く道</a></li><li class="toc-b"><a href="#005">３．「ため」に生きる法度を立てた理由</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">成約人への道</a></li><li class="toc-b lv2"><a href="#002">五　真の人間が行く道</a></li><li class="toc-b lv3"><a href="#003">１．人間が求めて行くべき道</a></li><li class="toc-b lv3"><a href="#004">２．真の人間の行く道</a></li><li class="toc-b lv3"><a href="#005">３．「ため」に生きる法度を立てた理由</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
 <div align="left">
-<b id="001"><a href="#001">成約人への道</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">成約人への道</a></h2>
 <a href="1-5.html" style="color : red;" target="_top">（全面表示）</a>　　<a onclick="history.back();" style="color : red;text-decoration : underline;cursor : pointer;">戻る</a>
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　五　真の人間が行く道</a></b><br/>
+<h3 class="bh" id="002"><a href="#002">五　真の人間が行く道</a></h3>
 <br/>
-<b id="003"><a href="#003">　　１．人間が求めて行くべき道</a></b><br/>
+<h4 class="bh" id="003"><a href="#003">１．人間が求めて行くべき道</a></h4>
 <br/>
 　本性の心が行く道を行けば、宇宙が一つに広がります。そのような何かがなければなりません。そのような境地に入れば、自分の心と話をするようになるのです。そのような境地では、心と話をするのです。何かをしようと思えば、既に答えが出てくるのです。そのような境地まで進むのです。そのような境地にいる人が、自分の行く道が分からないでしょうか。もう行く道が確実で宇宙のすべての作用の力が助けるのです。手を引っ張って試験場へ入れば、既にすべてのものが協助するのです。そうしてこそ大きいことができるのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -380,7 +400,7 @@
 　どのように統一されるのでしょうか。先生がどのように統一するのでしょうか。何によって？　こぶしによって、力によって、お金によって、権力によって、知識によって？　愛を中心とした「ため」に生きる立場で万事が解決するのです。結論は簡単でしょう。真の愛を中心として「ため」に生きていくところに、悪魔の世界が天の国へ再創造されていくという結論です。それは理論的です。<br/>
 <br/>
 <br/>
-<b id="004"><a href="#004">　　２．真の人間の行く道</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">２．真の人間の行く道</a></h4>
 <br/>
 　自分を中心として作用しようというのは悪をもたらしますが、全体のために作用しようというのは発展をもたらすのです。これを知るべきです。全体のために行くところは、すべてのものが門を開くのです。個人も門を開けるし、家庭も門を開けるし、氏族も門を開けるし、民族も門を開けるし、世界も門を開くし、天の国も門を開くし、愛の道や、すべての道が門を開いて歓迎するというのです。<br/>
 　そのような道とは何でしょうか。これを私たちは考えなければなりません。それで統一教会はこのような観点で「ため」に行く道を取れ、「ため」に生きよ、と「ため」に生まれたという天理を教えるのです。<br/>
@@ -398,7 +418,7 @@
 　宇宙を造った神様とは、宇宙の法度を立てた神様とはどんな方でしょうか。全宇宙を通じて、誰よりも「ため」に生きる代表的な立場に立った方です。その方が神様だというのです。ですからその方に出会うには「ため」に生きなければならないのです。その方は知識の大王でありながら、「知識をもって神様の前に来い」とは言いません。能力の大王ですが、「能力をもってこい」とは言いません。権力に対する、お金に対する、物質に対する主人であり、大王ですが、「それをもってこい」とは言わないのです。「ため」に生きてくれば、すべてがついてくるというのです。<br/>
 <br/>
 <br/>
-<b id="005"><a href="#005">　　３．「ため」に生きる法度を立てた理由</a></b><br/>
+<h4 class="bh" id="005"><a href="#005">３．「ため」に生きる法度を立てた理由</a></h4>
 <br/>
 　私たちが思うに、愛とか理想とか幸福とか平和とかという言葉は、一人では成立しません。これは相対的な関係で成立する言葉なので、いくら絶対者神様がいらっしゃるとしても、その神様が願う理想と幸福と平和は一人で成すことはできないのです。神様の理想を成就させることができ、神様の愛を成就することができ、神様の幸福と平和を完結させられる対象が人間だ、という事実を私たちは考えることができなかったのです。神様一人で愛すれば何をし、神様一人で理想をもって何をしますか。相対的な人間を通じずにはこのような要件を成就させることはできないということは、当然の結論です。<br/>
 　　　　　　　　　　　　＊<br/>

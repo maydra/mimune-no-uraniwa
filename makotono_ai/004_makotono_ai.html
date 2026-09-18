@@ -314,31 +314,51 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の愛"><a href="#真の愛">真の愛</a></h1>
+<h1>真の愛</h1>
 <nav class="page-nav">
   <a href="003_makotono_ai.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="005_makotono_ai.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の愛</a></li><li class="toc-b"><a href="#002">五　性愛</a></li><li class="toc-b"><a href="#003">１．性は愛の本宮、天の至聖所</a></li><li class="toc-b"><a href="#004">２．愛の法は習って知るものではない</a></li><li class="toc-b"><a href="#005">六　子女の愛</a></li><li class="toc-b"><a href="#006">１．子女は父母の愛の結集体</a></li><li class="toc-b"><a href="#007">２．真なる子女の道理は「孝」</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の愛</a></li><li class="toc-b lv2"><a href="#002">五　性愛</a></li><li class="toc-b lv3"><a href="#003">１．性は愛の本宮、天の至聖所</a></li><li class="toc-b lv3"><a href="#004">２．愛の法は習って知るものではない</a></li><li class="toc-b lv2"><a href="#005">六　子女の愛</a></li><li class="toc-b lv3"><a href="#006">１．子女は父母の愛の結集体</a></li><li class="toc-b lv3"><a href="#007">２．真なる子女の道理は「孝」</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の愛</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の愛</a></h2>
 　
 </div>
 <hr/>
 <br/>
-　<b id="002"><a href="#002">五　性愛</a></b><br/>
+　<h3 class="bh" id="002"><a href="#002">五　性愛</a></h3>
 <br/>
-<b id="003"><a href="#003">　　１．性は愛の本宮、天の至聖所</a></b><br/>
+<h4 class="bh" id="003"><a href="#003">１．性は愛の本宮、天の至聖所</a></h4>
 <br/>
 　神様の至聖所とはどこでしょうか。愛が宿る男女の性です。ここが天の至聖所です。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -414,7 +434,7 @@
 　エデンの園でアダムとエバが、青少年期に木陰で淫乱によって堕落しフリーセックスを植えたので、収穫期である終わりの日には必ず、世界的に青少年たちのフリーセックスの風潮が蔓延する現象が現れるのです。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">　　２．愛の法は習って知るものではない</a></b><br/>
+<h4 class="bh" id="004"><a href="#004">２．愛の法は習って知るものではない</a></h4>
 <br/>
 　皆さんは家庭で愛する法を習いました。どこのお父さんが子供に、お父さんから愛する法を習いなさいと言いますか。またお母さんも子供に、お母さんから愛する法を習いなさいと言いますか。また、父母が子供に対する愛し方を誰かに習いましたか。新郎新婦はこのように愛さなければならないと誰かから習いましたか。習ったことがありませんが、よく知っています。それは本当に神秘的なことです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -431,9 +451,9 @@
 　結婚して、年老いて死ぬまで子供をもつことができなければ、子供に対する愛は千年、万年たっても知ることができません。子女に対する愛を千年、万年勉強しても知ることができませんが、息子、娘が生まれるや否や、瞬時に知るようになります。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="005"><a href="#005">　六　子女の愛</a></b><br/>
+<h3 class="bh" id="005"><a href="#005">六　子女の愛</a></h3>
 <br/>
-<b id="006"><a href="#006">　　１．子女は父母の愛の結集体</a></b><br/>
+<h4 class="bh" id="006"><a href="#006">１．子女は父母の愛の結集体</a></h4>
 <br/>
 　愛する父母の前に、子供というものは極めて世界的な代表です。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -461,7 +481,7 @@
 　そのような意味でも、女性が情緒的な分野において高く貴い位置を所有しているのであって、父親がいくら子供を愛するといっても母親ほどに子供に対する愛は分かりません。ですから天国に行くならば、女性が心情の天国に行くでしょう。そのような観点から見れば、女性として生まれたことは悪くありません。また神様は公平だということも分かります。<br/>
 <a name="004"></a><br/>
 <br/>
-<b id="007"><a href="#007">　　２．真なる子女の道理は「孝」</a></b><br/>
+<h4 class="bh" id="007"><a href="#007">２．真なる子女の道理は「孝」</a></h4>
 <br/>
 　父母を知ったなら父母の前に何をしなければならないでしょうか。孝行をしなければなりません。孝子にならなければならず、また父母を中心としてその国の忠臣にならなければなりません。父母が国を抱え、世界を抱えてきたからです。忠臣になる前に、孝子にならなければならず、孝子になる前に、真なる兄弟を愛せる食口（家族）にならなければなりません。食口とは、兄弟間で褒めたたえ合える圏を立てた者の名前です。そうではありませんか。<br/>
 　　　　　　　　　　　　＊<br/>

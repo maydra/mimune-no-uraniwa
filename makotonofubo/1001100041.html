@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の父母_A-真の父母という言葉は誇るべきでありとてつもない"><a href="#真の父母_A-真の父母という言葉は誇るべきでありとてつもない">真の父母_A 真の父母という言葉は誇るべきでありとてつもない</a></h1>
+<h1>真の父母_A 真の父母という言葉は誇るべきでありとてつもない</h1>
 <nav class="page-nav">
   <a href="1001090040.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="1001110043.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の父母</a></li><li class="toc-b"><a href="#002">A 真の父母という言葉は誇るべきでありとてつもない</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の父母</a></li><li class="toc-b lv0"><a href="#002">A 真の父母という言葉は誇るべきでありとてつもない</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -334,13 +354,13 @@
 <blockquote>
 <br/>
 <div align="left">
-<b id="001"><a href="#001">真の父母</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の父母</a></h2>
 <a href="1001100041.html" style="color : red;" target="_parent">(全面表示)</a>　
 
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">A 真の父母という言葉は誇るべきでありとてつもない</a></b>
+<h2 class="bh bh0" id="002"><a href="#002">A 真の父母という言葉は誇るべきでありとてつもない</a></h2>
 <p>P.41<br/>
       今まで我々継代の立場は、我々千万代の先祖たちが皆復活して、その復活した栄光を褒めたたえるとしても、それは堕落圏を脱しえない栄光であり、褒めたたえでした。
       <p>しかし、今日統一教会で言う真の父母というその言葉は、皆さんの立場は悲惨であっても、数限りない先祖たちとともに、あるいはこの地に勝利をもたらして万民解放圏を持った栄光の位置で褒めたたえる以上の価値を持った、誇るべき言葉であるという事実を皆さんは知るべきです。父母様に会った中で、神様に会うことができる道が連結するのであり、統一教会に出会ったこの位置は、遠くない将来に、神の国と父母様の願う祖国を探しうる道が連結しているという事実を知るべきです。

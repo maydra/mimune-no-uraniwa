@@ -309,18 +309,38 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head><body><div class="container">
 <hr/>
-<section><h1 id="真の家庭と家庭明誓-第１章-家庭盟誓宣布と前提条件"><a href="#真の家庭と家庭明誓-第１章-家庭盟誓宣布と前提条件">真の家庭と家庭明誓　第１章　家庭盟誓宣布と前提条件</a></h1>
+<section><h1>真の家庭と家庭明誓　第１章　家庭盟誓宣布と前提条件</h1>
 <nav class="page-nav">
   <div style="flex:1"></div>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="1-2.html" class="nav-btn">次へ <span>→</span></a>
 </nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-level-2"><a href="#section1-1">一) 今は個人ではなく家庭時代</a></li><li class="toc-level-2"><a href="#section1-2">二) 成約時代安着と家庭時代の出発</a></li><li class="toc-level-2"><a href="#section1-3">三) 「世界平和家庭連合」の創立、世界家庭化時代へ</a></li><li class="toc-level-2"><a href="#section1-4">四) 家庭盟誓を立てた理由</a></li></ul></div></section>
-<section><h1 id="section1"><a href="#section1">一 家庭盟誓が出てくるようになった背景</a></h1>
+<section><h1>一 家庭盟誓が出てくるようになった背景</h1>
 </section>
 <section><h2 id="section1-1"><a href="#section1-1">一) 今は個人ではなく家庭時代</a></h2>
 <p>今まで統一教会では、個人的に「私の誓い」を暗唱してきました。一九五二年を中心として、新婦文化圏であるキリスト教文化圏が新郎と神様を迎え、世界的舞台において天上天国と地上天国を完結すべきだったのですが、それに失敗したので、再びこれを四十年間で蕩減してくる歴史を経てきたのです。</p>

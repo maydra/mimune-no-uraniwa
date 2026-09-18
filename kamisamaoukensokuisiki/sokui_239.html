@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="神様王権即位式／み旨の裏道／み旨の道"><a href="#神様王権即位式／み旨の裏道／み旨の道">神様王権即位式／み旨の裏道／み旨の道</a></h1>
+<h1>神様王権即位式／み旨の裏道／み旨の道</h1>
 <nav class="page-nav">
   <a href="sokui_233.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="sokui_249.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">神様王権即位式</a></li><li class="toc-b"><a href="#002">５．宗教摂理の終結と家庭時代の定着</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">神様王権即位式</a></li><li class="toc-b lv3"><a href="#002">５．宗教摂理の終結と家庭時代の定着</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -335,7 +355,7 @@
 </div>
 <hr/>
 <br/>
-      　　<b id="002"><a href="#002">５．宗教摂理の終結と家庭時代の定着</a></b><br/>
+      　　<h4 class="bh" id="002"><a href="#002">５．宗教摂理の終結と家庭時代の定着</a></h4>
 <br/>
       　宗教を中心とした既存の価値体系は、なぜ崩壊していきましたか。それは、宗教自体が本来の任務を忘れたまま、分裂と紛争がやむ暇がなく、それで現実に対する指導力を喪失したからです。既存の宗教が神様と人生と宇宙について明確に教えることができなかった結果、善と悪、義と不義の区別をはっきりさせることができず、特に神様が存在するかどうかということに対する質問に明快な答えを与えることができませんでした。<br/>
       　宗教が無力化すると同時に、物質は、人間の前に手段ではなく目的と化したのであり、享楽が当然なこととなり、人間性は肉欲と物欲によって麻痺し、動物化したので、このような土壌の上に真なる愛と奉仕、そして義や神聖などの既存の価値観が引き続き存立することができないのです。なおかつ、現代社会の組織化、大型化、機械化の傾向は、非人間化、あるいは人間疎外の現象を加速化し、個人の矮小化、部品化の趨勢をあおりたてています。<br/>

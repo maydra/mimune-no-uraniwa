@@ -364,7 +364,27 @@
     }
 }
 
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
@@ -373,7 +393,7 @@
   <a href="index.html" class="nav-btn">目次</a>
   <a href="002.html" class="nav-btn">次へ <span>→</span></a>
 </nav>
-<h1 id="感謝する信仰-推薦の言葉"><a href="#感謝する信仰-推薦の言葉">感謝する信仰 推薦の言葉</a></h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-level-2"><a href="#推薦の言葉">推薦の言葉</a></li></ul></div>
+<h1>感謝する信仰 推薦の言葉</h1><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-level-2"><a href="#推薦の言葉">推薦の言葉</a></li></ul></div>
 <h2 id="推薦の言葉"><a href="#推薦の言葉"><p>　推薦の言葉</p></a></h2>
 <p>　統一教会の草創期から今日まで真のご父母様から直接多くのみ言と訓練を受け、神様のみ旨を完成するために歩んできた先輩の祝福家庭の皆さんは、真のご父母様の勝利を一つひとつ相続してこられた方々です。その信仰生活の一コマ一コマには、統一教会の歴史が刻まれています。神様と真のご父母様はもとより、人類にとっても貴重な宝物"です。このような先輩の祝福家庭の皆さんの歩みが出版物や映像を通して、後輩や二世などに正しく伝授されるならば、そのことによって世界中の教会員が霊的・精神的に大きく復興することになるでしょう。</p>
 <p>　本書は、統一教会の開拓時代から真のご父母様と共に苦労の道を歩み、今日の統一運動の世界的な基盤の礎を築いてこられた、<ruby>鄭壽源<rt>チョンスウォン</rt></ruby> 韓日人教会中央会会長が韓国と日本で祝福家庭に語った説教をまとめたものです。</p>

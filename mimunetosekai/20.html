@@ -314,17 +314,37 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="御旨と世界/20_歴史の転換点"><a href="#御旨と世界/20_歴史の転換点">御旨と世界/20_歴史の転換点</a></h1>
+<h1>御旨と世界/20_歴史の転換点</h1>
 <nav class="page-nav">
   <a href="19.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="21.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#022">歴史の転換点</a></li><li class="toc-b"><a href="#023">1975年12月1日</a></li><li class="toc-level-2"><a href="#001">◆人間の責任</a></li><li class="toc-level-2"><a href="#002">◆ヤコブの勝利</a></li><li class="toc-level-2"><a href="#003">◆勝利的伝統の確立</a></li><li class="toc-level-2"><a href="#004">◆モーセとイスラエル</a></li><li class="toc-level-2"><a href="#005">◆歴史発展の公式</a></li><li class="toc-level-2"><a href="#006">◆国家的転換点</a></li><li class="toc-level-2"><a href="#007">◆転換は地上において</a></li><li class="toc-level-2"><a href="#008">◆サタンが打ってきた歴史</a></li><li class="toc-level-2"><a href="#009">◆再び来られるメシヤ</a></li><li class="toc-level-2"><a href="#010">◆神の基点となる国</a></li><li class="toc-level-2"><a href="#011">◆イスラエルの条件</a></li><li class="toc-level-2"><a href="#012">◆再臨主の行かれる道</a></li><li class="toc-level-2"><a href="#013">◆再創造の過程</a></li><li class="toc-level-2"><a href="#014">◆祝福家庭の出現</a></li><li class="toc-level-2"><a href="#015">◆一八〇〇双の祝福</a></li><li class="toc-level-2"><a href="#016">◆最高の転換点</a></li><li class="toc-level-2"><a href="#017">◆天国実現の時</a></li><li class="toc-level-2"><a href="#018">◆ヤンキー・スタジアム</a></li><li class="toc-level-2"><a href="#019">◆すべてをかけて成そう</a></li><li class="toc-level-2"><a href="#020">◆霊界を総動員して</a></li><li class="toc-level-2"><a href="#021">◆先生は深刻である</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#022">歴史の転換点</a></li><li class="toc-b lv0"><a href="#023">1975年12月1日</a></li><li class="toc-level-2"><a href="#001">◆人間の責任</a></li><li class="toc-level-2"><a href="#002">◆ヤコブの勝利</a></li><li class="toc-level-2"><a href="#003">◆勝利的伝統の確立</a></li><li class="toc-level-2"><a href="#004">◆モーセとイスラエル</a></li><li class="toc-level-2"><a href="#005">◆歴史発展の公式</a></li><li class="toc-level-2"><a href="#006">◆国家的転換点</a></li><li class="toc-level-2"><a href="#007">◆転換は地上において</a></li><li class="toc-level-2"><a href="#008">◆サタンが打ってきた歴史</a></li><li class="toc-level-2"><a href="#009">◆再び来られるメシヤ</a></li><li class="toc-level-2"><a href="#010">◆神の基点となる国</a></li><li class="toc-level-2"><a href="#011">◆イスラエルの条件</a></li><li class="toc-level-2"><a href="#012">◆再臨主の行かれる道</a></li><li class="toc-level-2"><a href="#013">◆再創造の過程</a></li><li class="toc-level-2"><a href="#014">◆祝福家庭の出現</a></li><li class="toc-level-2"><a href="#015">◆一八〇〇双の祝福</a></li><li class="toc-level-2"><a href="#016">◆最高の転換点</a></li><li class="toc-level-2"><a href="#017">◆天国実現の時</a></li><li class="toc-level-2"><a href="#018">◆ヤンキー・スタジアム</a></li><li class="toc-level-2"><a href="#019">◆すべてをかけて成そう</a></li><li class="toc-level-2"><a href="#020">◆霊界を総動員して</a></li><li class="toc-level-2"><a href="#021">◆先生は深刻である</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -334,9 +354,9 @@
 <p>　<br/>
 <hr/>
 <br/>
-<b id="022"><a href="#022">歴史の転換点</a></b><br/>
+<h2 class="bh bh0" id="022"><a href="#022">歴史の転換点</a></h2>
 <br/>
-<b id="023"><a href="#023">1975年12月1日</a></b></p>
+<h2 class="bh bh0" id="023"><a href="#023">1975年12月1日</a></h2></p>
 <br/><br/>
 ニューヨーク　ベルベディア<br/>
 <br/><h2 id="001"><a href="#001">◆人間の責任</a></h2><br/>

@@ -314,31 +314,51 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="六五〇〇双結婚式後の御言/本郷/真の愛による交差祝福と国境撤廃"><a href="#六五〇〇双結婚式後の御言/本郷/真の愛による交差祝福と国境撤廃">六五〇〇双結婚式後の御言/本郷/真の愛による交差祝福と国境撤廃</a></h1>
+<h1>六五〇〇双結婚式後の御言/本郷/真の愛による交差祝福と国境撤廃</h1>
 <nav class="page-nav">
   <a href="004.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="006.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">本　郷</a></li><li class="toc-b"><a href="#002">六五〇〇双結婚式後の御言</a></li><li class="toc-b"><a href="#003">「七千人を捜し立てる摂理史」</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">本　郷</a></li><li class="toc-b lv0"><a href="#002">六五〇〇双結婚式後の御言</a></li><li class="toc-b lv0"><a href="#003">「七千人を捜し立てる摂理史」</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><br/>
-<b id="001"><a href="#001">本　郷</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">本　郷</a></h2>
 真の愛による交差祝福と国境撤廃<br/>
 　　<a href="index.html" style="color : red;" target="_top">INDEXへ</a>
 <hr/>
 <br/>
-<b id="002"><a href="#002">六五〇〇双結婚式後の御言</a></b><br/>
+<h2 class="bh bh0" id="002"><a href="#002">六五〇〇双結婚式後の御言</a></h2>
 日時：1988年10月31日　場所：一和メッコール工場<br/>
 <hr/>
 <br/>
-<b id="003"><a href="#003">「七千人を捜し立てる摂理史」</a></b><br/>
+<h2 class="bh bh0" id="003"><a href="#003">「七千人を捜し立てる摂理史」</a></h2>
 <br/>
 　今度、祝福を受けた日本人で四千人は韓国に動員しなければなりません。それから、ヨーロッパから、世界各国からの三千人と合わせて、七千人は韓国の地に来て、汗を流し、涙を汲みつつ、生命を抱えるような実績を残さなければ、韓国を通して今まで摂理してきた神様の恵沢を受けることができません。だから、韓国の歴史に通じ、韓国の今の環境に通じながら、歴史的心情圏、現在的心情圏を結束しなければならない摂理的な意義があるのです。<br/>
 <br/>

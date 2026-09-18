@@ -300,6 +300,26 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
@@ -313,223 +333,214 @@
 <hr/>
 <b>統一教会と食口たち</b>
 <hr/>
-<a href="maegaki.html#002"><b>まえがき</b></a><br/>
-<br/>
-<a href="1-1.html"><b>第一章　宗教の意義と使命<br/>
-      第一節　宗教の意義と目的<br/>
-      　一　宗教の意義</b><br/>
-      　　1.宗教の語義<br/>
-      　　2.宗教の根本となる教えは<br/>
-      　　3.真なる宗教とは</a><br/>
-<a href="1-1.html#008"><b>　二　宗教の必要性</b><br/>
-      　　1.宗教が必要な理由<br/>
-      　　2.宗教は万民に必要</a><br/>
-<a href="1-1.html#011">　<b>三　宗教の目的</b><br/>
-      　　1.宗教の目的は<br/>
-      　　2.宗教が指向する最高の目的点</a><br/>
-<br/>
-<a href="1-2.html"><b>第二節　宗教の役割と使命<br/>
-      　一　宗教に与えられた使命と目標</b><br/>
-      　　1.宗教は絶対者と因縁を結ぶ方便<br/>
-      　　2.宗教とは善の一つの中心を探していく歴史的な道<br/>
-      　　3.宗教が提示すべき重要な基準</a><br/>
-<a href="1-2.html#002">　<b>二　宗教とは故障した人間を再生する所</b><br/>
-      　　1.宗教とは故障した人間を修理する修理工場<br/>
-      　　2.故障した人間を再生する再生倉庫<br/>
-      　　3.統一教会は総合修理工場</a><br/>
-<a href="1-2.html#011">　<b>三　神様のみ意の世界をつくる所</b></a><br/>
-<a href="1-2.html#012">　<b>四　本郷の法度を教えてあげて訓練させる所</b></a><br/>
-<br/>
-<a href="2-1.html#004"><b>第二章　統一教会<br/>
-      第一節　統一教会成立とその背景</b><br/>
-      　<b>一　統一教会の公式名称</b></a><br/>
-<a href="2-1.html#005">　<b>二　統一の真なる意味</b></a><br/>
-<a href="2-1.html#006">　<b>三　世界基督教統一神霊協会とは</b></a><br/>
-<a href="2-1.html#007">　<b>四　神霊とは</b></a><br/>
-<a href="2-1.html#008">　<b>五　統一教会の旗</b></a><br/>
-<br/>
-<a href="2-2.html"><b>第二節　統一教会の主張と思想<br/>
-      　一　統一教会が追求するもの</b><br/>
-      　　1.統一教会出現の目的<br/>
-      　　2.統一教会が追求してきたもの<br/>
-      　　3.統一教会の目的</a><br/>
-<a href="2-2.html#002">　<b>二　統一教会教理の骨子</b></a><br/>
-<a href="2-2.html#008">　<b>三　統一教会が提示するもの</b><br/>
-      　　1.真の父母の思想を提示<br/>
-      　　2.家庭を提示する<br/>
-      　　3.サタンに公認される方法を教えてくれる</a><br/>
-<a href="2-2.html#004">　<b>四　統一教会が教えてくれるもの</b><br/>
-      　　1.原理原則を教えてくれる<br/>
-      　　2.神様を教えてくれる<br/>
-      　　3.神様のみ旨を教えてくれる<br/>
-      　　4.神様の愛と心情を教えてくれる<br/>
-      　　5.真の父母との関係を教えてくれる<br/>
-      　　6.神様の孝子・孝女になれと教えてくれる</a><br/>
-<a href="2-2.html#005">　<b>五　統一教会の思想</b><br/>
-      　　1.統一思想の根源<br/>
-      　　2.統一教会は何主義か<br/>
-      　　3.統一教会の主流思想<br/>
-      　　4.統一思想の理解<br/>
-      　　5.天宙主義の解説</a><br/>
-<a href="2-2.html#006">　<b>六　統一教会の偉力［威力］</b></a><br/>
-<br/>
-<a href="2-3.html#003"><b>第三節　統一教会の使命<br/>
-      　一　世界の三大難問題と統一教会</b></a><br/>
-<a href="2-3.html#002">　<b>二　摂理的使命</b><br/>
-      　　1.復帰を通した救援の使命<br/>
-      　　2.イエス様の恨みを解いて差し上げようという宗教<br/>
-      　　3.三時代の使命を完結すべき統一教会</a><br/>
-<a href="2-3.html#003">　<b>三　宗教統一</b><br/>
-      　　1.全ての宗教が求めていく目的は一つ<br/>
-      　　2.神様のみ旨は宗派や教派の救いではなくこの世の救い<br/>
-      　　3.宗教統一の必然性<br/>
-      　　　イ）絶対的神は一つ<br/>
-      　　　ロ）神はいろいろな宗教を必要としない<br/>
-      　　　ハ）最後には全ての宗教が一つとなってこそ<br/>
-      　　4.宗教統一の方案<br/>
-      　　5.霊界の協助と宗教統一<br/>
-      　　6.宗派間の和睦は世界平和に向かう必須条件</a><br/>
-<a href="2-3.html#004">　<b>四　世界の救いと世界統一</b><br/>
-      　　1.世界を救う使命<br/>
-      　　2.東西文明の結束を通した中和文明の創建<br/>
-      　　3.五色人種を一つの兄弟姉妹として<br/>
-      　　4.神様を中心とした一つの世界建設</a><br/>
-<a href="2-3.html#005">　<b>五　地上天国建設</b><br/>
-      　　1.神様のみ旨は地上に天国の王権を立てること<br/>
-      　　2.教会の目的は国を救うところにある<br/>
-      　　3.祖国光復をなすべき統一教会<br/>
-      　　4.私たちは国を持った国民とならなければならない<br/>
-      　　5.天の国の市民にしようとする所</a><br/>
-<br/>
-<a href="2-4.html#002"><b>第四節　統一教会の活動<br/>
-      　一　この世との差</b></a><br/>
-<a href="2-4.html#004">　<b>二　反対と迫害</b><br/>
-      　　1.反対の結果<br/>
-      　　2.迫害の価値<br/>
-      　　3.<br/>
-      　　4.統一教会は悪口もたくさん言われた</a><br/>
-<a href="2-4.html#008">　<b>三　神様の作戦</b><br/>
-      　　1.神様はどのように作戦なさるのか<br/>
-      　　2.打たれながら勝利する<br/>
-      　　3.追われながら発展した</a><br/>
-<a href="2-4.html#004">　<b>四　統一教会の活動目的</b><br/>
-      　　1.統一教会を立てた目的<br/>
-      　　2.統一教会は何のために働くのか<br/>
-      　　3.統一教会は人のために働いている<br/>
-      　　4.統一教会は国と世界のために<br/>
-      　　5.統一教会の活動</a><br/>
-<a href="2-4.html#018">　<b>五　統一教会の能力</b></a><br/>
-<br/>
-<a href="3-1.html"><b>第三章　統一教会員<br/>
-      第一節　統一教会員とは<br/>
-      　一　統一教会員の入教背景</b><br/>
-      　　1.み旨的な背景<br/>
-      　　2.先祖達の功績の結実<br/>
-      　　3.私たちは善なる先祖株式会社の社長<br/>
-      　　4.先祖たちの協助と再臨復活</a><br/>
-<a href="3-1.html#002">　<b>二　入教後の望ましい姿勢</b><br/>
-      　　1.統一教会に入った目的<br/>
-      　　2.入教後現れる現象<br/>
-      　　3.入教後備えるべき姿勢<br/>
-      　　4.入教後、注意すべき点</a><br/>
-<a href="3-1.html#014">　<b>三　食口とは何か</b><br/>
-      　　1.統一教会で言う食口とは<br/>
-      　　2.食口という言葉の設定背景<br/>
-      　　3.だれが真の食口であろうか</a><br/>
-<a href="3-1.html#018">　<b>四　本然の食口が持つべき姿勢</b></a><br/>
-<a href="3-1.html#005">　<b>五　統一教会の価値</b><br/>
-      　　1.私たちは歴史的結実体である<br/>
-      　　2.計り知れない恩賜の立場に置かれた私たち<br/>
-      　　3.見事で誇らしい<br/>
-      　　4.幸福なる立場である<br/>
-      　　5.幸福なる所である<br/>
-      　　6.食口の価値</a><br/>
-<a href="3-1.html#026">　<b>六　統一教会を信じてから離れて休む場合</b><br/>
-      　　1.休むのは分からないから<br/>
-      　　2.離れてもまた入ってくる<br/>
-      　　3.離れて休む食口たちの事例</a><br/>
-<br/>
-<a href="3-2.html#002"><b>第二節　統一教会員の道<br/>
-      　一　三つの類形の道</b><br/>
-      　　1.善悪を中心とした三つの類型の道<br/>
-      　　2.三つの愛をなしていく本然の人生の道</a><br/>
-<a href="3-2.html#002">　<b>二　統一教会員が行くべき道</b><br/>
-      　　1.神様と統一教会員の道<br/>
-      　　2.統一教会員が行くべき運命の道<br/>
-      　　3.復帰の道と原理の道<br/>
-      　　　イ）復帰の道とは<br/>
-      　　　ロ）復帰の道を行くためには<br/>
-      　　　ハ）復帰は個人から<br/>
-      　　　ニ）復帰の道は決められている<br/>
-      　　　ホ）三段階の復帰の公式<br/>
-      　　　ヘ）復帰の道は開拓していく道<br/>
-      　　　ト）原理の道は一つだけ<br/>
-      　　4.七年路程</a><br/>
-<a href="3-2.html#003">　<b>三　天の道を行くための私たちの姿勢</b><br/>
-      　　1.先生が見られた統一教会員の道<br/>
-      　　2.統一教会員の道は難しい道<br/>
-      　　3.天の道を行く時、取るべき心の姿勢<br/>
-      　　4.天の道を行く秘訣</a><br/>
-<br/>
-<a href="3-3.html#002"><b>第三節　統一教会員の使命と時<br/>
-      　一　統一教会の連中とは何か</b></a><br/>
-<a href="3-3.html#004">　<b>二　内的使命とその使命の価値</b><br/>
-      　　1.内的使命<br/>
-      　　2.とてつもない私たちの使命</a><br/>
-<a href="3-3.html#003">　<b>三　統一教会員の使命</b><br/>
-      　　1.サタンを追放しなければならない使命<br/>
-      　　2.イエス様が関係した使命<br/>
-      　　3.愛の秩序を立てるべき使命<br/>
-      　　4.五色人種を連結させるべき使命<br/>
-      　　5.宗派統一の使命<br/>
-      　　6.思想統一の使命<br/>
-      　　7.その国を訪ねる使命</a><br/>
-<a href="3-3.html#015">　<b>四　私たちと時</b><br/>
-      　　1.今の時<br/>
-      　　2.時の兆し<br/>
-      　　3.自分の時を一致させよ<br/>
-      　　4.時を失わない方法<br/>
-      　　5.今は活動する時</a><br/>
-<br/>
-<a href="3-4.html"><b>第四節　統一教会員の信仰生活<br/>
-      　一　真なる信仰生活</b><br/>
-      　　1.信仰者の願い<br/>
-      　　2.信仰の基準が必要な理由<br/>
-      　　3.望ましい信仰の基準<br/>
-      　　4.信仰生活の意味<br/>
-      　　5.信仰生活の目的<br/>
-      　　6.信仰生活の第一条</a><br/>
-<a href="3-4.html#010">　<b>二　統一教会の信仰の特性</b><br/>
-      　　1.信仰生活の三大要素(絶対信仰、絶対否定、絶対愛)<br/>
-      　　2.体恤信仰<br/>
-      　　3.統一教会をなぜ信ずるのか</a><br/>
-<a href="3-4.html#003">　<b>三　真なる信仰姿勢</b><br/>
-      　　1.信仰者の態度<br/>
-      　　　イ）待ち焦がれる心情が必要である<br/>
-      　　　ロ）負債を負った者の姿勢を持つべき<br/>
-      　　　ハ）固い覚悟を持たなければ<br/>
-      　　　ニ）ぴんと張った心情的態度が必要<br/>
-      　　2.忍耐が尊い<br/>
-      　　3.克服が貴い<br/>
-      　　4.平凡なことに感謝しなければ</a><br/>
-<br/>
-<a href="3-5.html#002"><b>第五節　統一教会員の生活<br/>
-      　一　生活の意味と目標</b><br/>
-      　　1.私たちの生活が持つ意味<br/>
-      　　2.生活統一</a><br/>
-<a href="3-5.html#002"><b>　二　真なる生活</b><br/>
-      　　1.統一教会員のの生活観<br/>
-      　　2.生活の法度<br/>
-      　　3.真なる生活<br/>
-      　　4.生活の基準と基盤<br/>
-      　　5.神様と共に生きなければ<br/>
-      　　6.一日の生活の重要性</a><br/>
-<a href="3-5.html#003"><b>　三　生活方法</b><br/>
-      　　1.どのようなことが豊かに暮らすことか<br/>
-      　　2.中心を探し生活しなければ<br/>
-      　　3.為にする生活をしなければ<br/>
-      　　4.愛の中心は犠牲<br/>
-      　　5.福は苦労から</a><br/>
+<ul class="toc-tree">
+<li class="lv0"><a href="maegaki.html#002">まえがき</a></li>
+<li class="lv1"><a href="1-1.html#002">第一章　宗教の意義と使命</a></li>
+<li class="lv1"><a href="1-1.html#003">第一節　宗教の意義と目的</a></li>
+<li class="lv2"><a href="1-1.html#004">一　宗教の意義</a></li>
+<li class="lv3"><a href="1-1.html">1.宗教の語義</a></li>
+<li class="lv3"><a href="1-1.html">2.宗教の根本となる教えは</a></li>
+<li class="lv3"><a href="1-1.html">3.真なる宗教とは</a></li>
+<li class="lv2"><a href="1-1.html#008">二　宗教の必要性</a></li>
+<li class="lv3"><a href="1-1.html#008">1.宗教が必要な理由</a></li>
+<li class="lv3"><a href="1-1.html#008">2.宗教は万民に必要</a></li>
+<li class="lv2"><a href="1-1.html#011">三　宗教の目的</a></li>
+<li class="lv3"><a href="1-1.html#011">1.宗教の目的は</a></li>
+<li class="lv3"><a href="1-1.html#011">2.宗教が指向する最高の目的点</a></li>
+<li class="lv1"><a href="1-2.html#002">第二節　宗教の役割と使命</a></li>
+<li class="lv2"><a href="1-2.html#003">一　宗教に与えられた使命と目標</a></li>
+<li class="lv3"><a href="1-2.html">1.宗教は絶対者と因縁を結ぶ方便</a></li>
+<li class="lv3"><a href="1-2.html">2.宗教とは善の一つの中心を探していく歴史的な道</a></li>
+<li class="lv3"><a href="1-2.html">3.宗教が提示すべき重要な基準</a></li>
+<li class="lv2"><a href="1-2.html#007">二　宗教とは故障した人間を再生する所</a></li>
+<li class="lv3"><a href="1-2.html#002">1.宗教とは故障した人間を修理する修理工場</a></li>
+<li class="lv3"><a href="1-2.html#002">2.故障した人間を再生する再生倉庫</a></li>
+<li class="lv3"><a href="1-2.html#002">3.統一教会は総合修理工場</a></li>
+<li class="lv2"><a href="1-2.html#011">三　神様のみ意の世界をつくる所</a></li>
+<li class="lv2"><a href="1-2.html#012">四　本郷の法度を教えてあげて訓練させる所</a></li>
+<li class="lv1"><a href="2-1.html#002">第二章　統一教会</a></li>
+<li class="lv1"><a href="2-1.html#004">第一節　統一教会成立とその背景</a></li>
+<li class="lv2"><a href="2-1.html#004">一　統一教会の公式名称</a></li>
+<li class="lv2"><a href="2-1.html#005">二　統一の真なる意味</a></li>
+<li class="lv2"><a href="2-1.html#006">三　世界基督教統一神霊協会とは</a></li>
+<li class="lv2"><a href="2-1.html#007">四　神霊とは</a></li>
+<li class="lv2"><a href="2-1.html#008">五　統一教会の旗</a></li>
+<li class="lv1"><a href="2-2.html#002">第二節　統一教会の主張と思想</a></li>
+<li class="lv2"><a href="2-2.html#003">一　統一教会が追求するもの</a></li>
+<li class="lv3"><a href="2-2.html">1.統一教会出現の目的</a></li>
+<li class="lv3"><a href="2-2.html">2.統一教会が追求してきたもの</a></li>
+<li class="lv3"><a href="2-2.html">3.統一教会の目的</a></li>
+<li class="lv2"><a href="2-2.html#002">二　統一教会教理の骨子</a></li>
+<li class="lv2"><a href="2-2.html#008">三　統一教会が提示するもの</a></li>
+<li class="lv3"><a href="2-2.html#008">1.真の父母の思想を提示</a></li>
+<li class="lv3"><a href="2-2.html#008">2.家庭を提示する</a></li>
+<li class="lv3"><a href="2-2.html#008">3.サタンに公認される方法を教えてくれる</a></li>
+<li class="lv2"><a href="2-2.html#012">四　統一教会が教えてくれるもの</a></li>
+<li class="lv3"><a href="2-2.html#004">1.原理原則を教えてくれる</a></li>
+<li class="lv3"><a href="2-2.html#004">2.神様を教えてくれる</a></li>
+<li class="lv3"><a href="2-2.html#004">3.神様のみ旨を教えてくれる</a></li>
+<li class="lv3"><a href="2-2.html#004">4.神様の愛と心情を教えてくれる</a></li>
+<li class="lv3"><a href="2-2.html#004">5.真の父母との関係を教えてくれる</a></li>
+<li class="lv3"><a href="2-2.html#004">6.神様の孝子・孝女になれと教えてくれる</a></li>
+<li class="lv2"><a href="2-2.html#019">五　統一教会の思想</a></li>
+<li class="lv3"><a href="2-2.html#005">1.統一思想の根源</a></li>
+<li class="lv3"><a href="2-2.html#005">2.統一教会は何主義か</a></li>
+<li class="lv3"><a href="2-2.html#005">3.統一教会の主流思想</a></li>
+<li class="lv3"><a href="2-2.html#005">4.統一思想の理解</a></li>
+<li class="lv3"><a href="2-2.html#005">5.天宙主義の解説</a></li>
+<li class="lv2"><a href="2-2.html#006">六　統一教会の偉力［威力］</a></li>
+<li class="lv1"><a href="2-3.html#002">第三節　統一教会の使命</a></li>
+<li class="lv2"><a href="2-3.html#003">一　世界の三大難問題と統一教会</a></li>
+<li class="lv2"><a href="2-3.html#004">二　摂理的使命</a></li>
+<li class="lv3"><a href="2-3.html#002">1.復帰を通した救援の使命</a></li>
+<li class="lv3"><a href="2-3.html#002">2.イエス様の恨みを解いて差し上げようという宗教</a></li>
+<li class="lv3"><a href="2-3.html#002">3.三時代の使命を完結すべき統一教会</a></li>
+<li class="lv2"><a href="2-3.html#008">三　宗教統一</a></li>
+<li class="lv3"><a href="2-3.html#003">1.全ての宗教が求めていく目的は一つ</a></li>
+<li class="lv3"><a href="2-3.html#003">2.神様のみ旨は宗派や教派の救いではなくこの世の救い</a></li>
+<li class="lv3"><a href="2-3.html#003">3.宗教統一の必然性</a></li>
+<li class="lv3"><a href="2-3.html#012">イ）絶対的神は一つ</a></li>
+<li class="lv3"><a href="2-3.html#003">ロ）神はいろいろな宗教を必要としない</a></li>
+<li class="lv3"><a href="2-3.html#003">ハ）最後には全ての宗教が一つとなってこそ</a></li>
+<li class="lv3"><a href="2-3.html#003">4.宗教統一の方案</a></li>
+<li class="lv3"><a href="2-3.html#003">5.霊界の協助と宗教統一</a></li>
+<li class="lv3"><a href="2-3.html#003">6.宗派間の和睦は世界平和に向かう必須条件</a></li>
+<li class="lv2"><a href="2-3.html#018">四　世界の救いと世界統一</a></li>
+<li class="lv3"><a href="2-3.html#004">1.世界を救う使命</a></li>
+<li class="lv3"><a href="2-3.html#004">2.東西文明の結束を通した中和文明の創建</a></li>
+<li class="lv3"><a href="2-3.html#004">3.五色人種を一つの兄弟姉妹として</a></li>
+<li class="lv3"><a href="2-3.html#004">4.神様を中心とした一つの世界建設</a></li>
+<li class="lv2"><a href="2-3.html#023">五　地上天国建設</a></li>
+<li class="lv3"><a href="2-3.html#005">1.神様のみ旨は地上に天国の王権を立てること</a></li>
+<li class="lv3"><a href="2-3.html#005">2.教会の目的は国を救うところにある</a></li>
+<li class="lv3"><a href="2-3.html#005">3.祖国光復をなすべき統一教会</a></li>
+<li class="lv3"><a href="2-3.html#005">4.私たちは国を持った国民とならなければならない</a></li>
+<li class="lv3"><a href="2-3.html#005">5.天の国の市民にしようとする所</a></li>
+<li class="lv1"><a href="2-4.html#002">第四節　統一教会の活動</a></li>
+<li class="lv2"><a href="2-4.html#003">一　この世との差</a></li>
+<li class="lv2"><a href="2-4.html#004">二　反対と迫害</a></li>
+<li class="lv3"><a href="2-4.html#004">1.反対の結果</a></li>
+<li class="lv3"><a href="2-4.html#004">2.迫害の価値</a></li>
+<li class="lv3"><a href="2-4.html#004">3.</a></li>
+<li class="lv3"><a href="2-4.html#004">4.統一教会は悪口もたくさん言われた</a></li>
+<li class="lv2"><a href="2-4.html#008">三　神様の作戦</a></li>
+<li class="lv3"><a href="2-4.html#008">1.神様はどのように作戦なさるのか</a></li>
+<li class="lv3"><a href="2-4.html#008">2.打たれながら勝利する</a></li>
+<li class="lv3"><a href="2-4.html#008">3.追われながら発展した</a></li>
+<li class="lv2"><a href="2-4.html#012">四　統一教会の活動目的</a></li>
+<li class="lv3"><a href="2-4.html#004">1.統一教会を立てた目的</a></li>
+<li class="lv3"><a href="2-4.html#004">2.統一教会は何のために働くのか</a></li>
+<li class="lv3"><a href="2-4.html#004">3.統一教会は人のために働いている</a></li>
+<li class="lv3"><a href="2-4.html#004">4.統一教会は国と世界のために</a></li>
+<li class="lv3"><a href="2-4.html#004">5.統一教会の活動</a></li>
+<li class="lv2"><a href="2-4.html#018">五　統一教会の能力</a></li>
+<li class="lv1"><a href="3-1.html#002">第三章　統一教会員</a></li>
+<li class="lv1"><a href="3-1.html#003">第一節　統一教会員とは</a></li>
+<li class="lv2"><a href="3-1.html#004">一　統一教会員の入教背景</a></li>
+<li class="lv3"><a href="3-1.html">1.み旨的な背景</a></li>
+<li class="lv3"><a href="3-1.html">2.先祖達の功績の結実</a></li>
+<li class="lv3"><a href="3-1.html">3.私たちは善なる先祖株式会社の社長</a></li>
+<li class="lv3"><a href="3-1.html">4.先祖たちの協助と再臨復活</a></li>
+<li class="lv2"><a href="3-1.html#009">二　入教後の望ましい姿勢</a></li>
+<li class="lv3"><a href="3-1.html#002">1.統一教会に入った目的</a></li>
+<li class="lv3"><a href="3-1.html#002">2.入教後現れる現象</a></li>
+<li class="lv3"><a href="3-1.html#002">3.入教後備えるべき姿勢</a></li>
+<li class="lv3"><a href="3-1.html#002">4.入教後、注意すべき点</a></li>
+<li class="lv2"><a href="3-1.html#014">三　食口とは何か</a></li>
+<li class="lv3"><a href="3-1.html#014">1.統一教会で言う食口とは</a></li>
+<li class="lv3"><a href="3-1.html#014">2.食口という言葉の設定背景</a></li>
+<li class="lv3"><a href="3-1.html#014">3.だれが真の食口であろうか</a></li>
+<li class="lv2"><a href="3-1.html#018">四　本然の食口が持つべき姿勢</a></li>
+<li class="lv2"><a href="3-1.html#005">五　統一教会の価値</a></li>
+<li class="lv3"><a href="3-1.html#005">1.私たちは歴史的結実体である</a></li>
+<li class="lv3"><a href="3-1.html#005">2.計り知れない恩賜の立場に置かれた私たち</a></li>
+<li class="lv3"><a href="3-1.html#005">3.見事で誇らしい</a></li>
+<li class="lv3"><a href="3-1.html#005">4.幸福なる立場である</a></li>
+<li class="lv3"><a href="3-1.html#005">5.幸福なる所である</a></li>
+<li class="lv3"><a href="3-1.html#005">6.食口の価値</a></li>
+<li class="lv2"><a href="3-1.html#026">六　統一教会を信じてから離れて休む場合</a></li>
+<li class="lv3"><a href="3-1.html#026">1.休むのは分からないから</a></li>
+<li class="lv3"><a href="3-1.html#026">2.離れてもまた入ってくる</a></li>
+<li class="lv3"><a href="3-1.html#026">3.離れて休む食口たちの事例</a></li>
+<li class="lv1"><a href="3-2.html#002">第二節　統一教会員の道</a></li>
+<li class="lv2"><a href="3-2.html#002">一　三つの類形の道</a></li>
+<li class="lv3"><a href="3-2.html#002">1.善悪を中心とした三つの類型の道</a></li>
+<li class="lv3"><a href="3-2.html#002">2.三つの愛をなしていく本然の人生の道</a></li>
+<li class="lv2"><a href="3-2.html#006">二　統一教会員が行くべき道</a></li>
+<li class="lv3"><a href="3-2.html#002">1.神様と統一教会員の道</a></li>
+<li class="lv3"><a href="3-2.html#002">2.統一教会員が行くべき運命の道</a></li>
+<li class="lv3"><a href="3-2.html#002">3.復帰の道と原理の道</a></li>
+<li class="lv3"><a href="3-2.html#010">イ）復帰の道とは</a></li>
+<li class="lv3"><a href="3-2.html#011">ロ）復帰の道を行くためには</a></li>
+<li class="lv3"><a href="3-2.html#012">ハ）復帰は個人から</a></li>
+<li class="lv3"><a href="3-2.html#002">ニ）復帰の道は決められている</a></li>
+<li class="lv3"><a href="3-2.html#002">ホ）三段階の復帰の公式</a></li>
+<li class="lv3"><a href="3-2.html#015">ヘ）復帰の道は開拓していく道</a></li>
+<li class="lv3"><a href="3-2.html#016">ト）原理の道は一つだけ</a></li>
+<li class="lv3"><a href="3-2.html#002">4.七年路程</a></li>
+<li class="lv2"><a href="3-2.html#018">三　天の道を行くための私たちの姿勢</a></li>
+<li class="lv3"><a href="3-2.html#003">1.先生が見られた統一教会員の道</a></li>
+<li class="lv3"><a href="3-2.html#003">2.統一教会員の道は難しい道</a></li>
+<li class="lv3"><a href="3-2.html#003">3.天の道を行く時、取るべき心の姿勢</a></li>
+<li class="lv3"><a href="3-2.html#003">4.天の道を行く秘訣</a></li>
+<li class="lv1"><a href="3-3.html#002">第三節　統一教会員の使命と時</a></li>
+<li class="lv2"><a href="3-3.html#003">一　統一教会の連中とは何か</a></li>
+<li class="lv2"><a href="3-3.html#004">二　内的使命とその使命の価値</a></li>
+<li class="lv3"><a href="3-3.html#004">1.内的使命</a></li>
+<li class="lv3"><a href="3-3.html#004">2.とてつもない私たちの使命</a></li>
+<li class="lv2"><a href="3-3.html#007">三　統一教会員の使命</a></li>
+<li class="lv3"><a href="3-3.html#003">1.サタンを追放しなければならない使命</a></li>
+<li class="lv3"><a href="3-3.html#003">2.イエス様が関係した使命</a></li>
+<li class="lv3"><a href="3-3.html#003">3.愛の秩序を立てるべき使命</a></li>
+<li class="lv3"><a href="3-3.html#003">4.五色人種を連結させるべき使命</a></li>
+<li class="lv3"><a href="3-3.html#003">5.宗派統一の使命</a></li>
+<li class="lv3"><a href="3-3.html#003">6.思想統一の使命</a></li>
+<li class="lv3"><a href="3-3.html#003">7.その国を訪ねる使命</a></li>
+<li class="lv2"><a href="3-3.html#015">四　私たちと時</a></li>
+<li class="lv3"><a href="3-3.html#015">1.今の時</a></li>
+<li class="lv3"><a href="3-3.html#015">2.時の兆し</a></li>
+<li class="lv3"><a href="3-3.html#015">3.自分の時を一致させよ</a></li>
+<li class="lv3"><a href="3-3.html#015">4.時を失わない方法</a></li>
+<li class="lv3"><a href="3-3.html#015">5.今は活動する時</a></li>
+<li class="lv1"><a href="3-4.html#002">第四節　統一教会員の信仰生活</a></li>
+<li class="lv2"><a href="3-4.html#003">一　真なる信仰生活</a></li>
+<li class="lv3"><a href="3-4.html">1.信仰者の願い</a></li>
+<li class="lv3"><a href="3-4.html">2.信仰の基準が必要な理由</a></li>
+<li class="lv3"><a href="3-4.html">3.望ましい信仰の基準</a></li>
+<li class="lv3"><a href="3-4.html">4.信仰生活の意味</a></li>
+<li class="lv3"><a href="3-4.html">5.信仰生活の目的</a></li>
+<li class="lv3"><a href="3-4.html">6.信仰生活の第一条</a></li>
+<li class="lv2"><a href="3-4.html#010">二　統一教会の信仰の特性</a></li>
+<li class="lv3"><a href="3-4.html#010">1.信仰生活の三大要素(絶対信仰、絶対否定、絶対愛)</a></li>
+<li class="lv3"><a href="3-4.html#010">2.体恤信仰</a></li>
+<li class="lv3"><a href="3-4.html#010">3.統一教会をなぜ信ずるのか</a></li>
+<li class="lv2"><a href="3-4.html#014">三　真なる信仰姿勢</a></li>
+<li class="lv3"><a href="3-4.html#003">1.信仰者の態度</a></li>
+<li class="lv3"><a href="3-4.html#016">イ）待ち焦がれる心情が必要である</a></li>
+<li class="lv3"><a href="3-4.html#017">ロ）負債を負った者の姿勢を持つべき</a></li>
+<li class="lv3"><a href="3-4.html#018">ハ）固い覚悟を持たなければ</a></li>
+<li class="lv3"><a href="3-4.html#019">ニ）ぴんと張った心情的態度が必要</a></li>
+<li class="lv3"><a href="3-4.html#003">2.忍耐が尊い</a></li>
+<li class="lv3"><a href="3-4.html#003">3.克服が貴い</a></li>
+<li class="lv3"><a href="3-4.html#003">4.平凡なことに感謝しなければ</a></li>
+<li class="lv1"><a href="3-5.html#002">第五節　統一教会員の生活</a></li>
+<li class="lv2"><a href="3-5.html#003">一　生活の意味と目標</a></li>
+<li class="lv3"><a href="3-5.html#002">1.私たちの生活が持つ意味</a></li>
+<li class="lv3"><a href="3-5.html#002">2.生活統一</a></li>
+<li class="lv2"><a href="3-5.html#006">二　真なる生活</a></li>
+<li class="lv3"><a href="3-5.html#002">1.統一教会員のの生活観</a></li>
+<li class="lv3"><a href="3-5.html#002">2.生活の法度</a></li>
+<li class="lv3"><a href="3-5.html#002">3.真なる生活</a></li>
+<li class="lv3"><a href="3-5.html#002">4.生活の基準と基盤</a></li>
+<li class="lv3"><a href="3-5.html#002">5.神様と共に生きなければ</a></li>
+<li class="lv3"><a href="3-5.html#002">6.一日の生活の重要性</a></li>
+<li class="lv2"><a href="3-5.html#013">三　生活方法</a></li>
+<li class="lv3"><a href="3-5.html#003">1.どのようなことが豊かに暮らすことか</a></li>
+<li class="lv3"><a href="3-5.html#003">2.中心を探し生活しなければ</a></li>
+<li class="lv3"><a href="3-5.html#003">3.為にする生活をしなければ</a></li>
+<li class="lv3"><a href="3-5.html#003">4.愛の中心は犠牲</a></li>
+<li class="lv3"><a href="3-5.html#003">5.福は苦労から</a></li>
+</ul>
 <br/>
 
 <blockquote><br/>

@@ -314,31 +314,51 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="真の愛"><a href="#真の愛">真の愛</a></h1>
+<h1>真の愛</h1>
 <nav class="page-nav">
   <a href="005_makotono_ai.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="007_makotono_ai.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の愛</a></li><li class="toc-b"><a href="#002">第三章　愛と結婚</a></li><li class="toc-b"><a href="#003">一　真の結婚は宇宙的合一の愛を成すこと</a></li><li class="toc-b"><a href="#004">二　男女の愛、互いが必要とする愛</a></li><li class="toc-b"><a href="#005">三　祝福結婚式は神様の愛の伝授式</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の愛</a></li><li class="toc-b lv1"><a href="#002">第三章　愛と結婚</a></li><li class="toc-b lv2"><a href="#003">一　真の結婚は宇宙的合一の愛を成すこと</a></li><li class="toc-b lv2"><a href="#004">二　男女の愛、互いが必要とする愛</a></li><li class="toc-b lv2"><a href="#005">三　祝福結婚式は神様の愛の伝授式</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の愛</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">真の愛</a></h2>
 　
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　第三章　愛と結婚</a></b><br/>
+<h2 class="bh" id="002"><a href="#002">第三章　愛と結婚</a></h2>
 <br/>
-<b id="003"><a href="#003">　一　真の結婚は宇宙的合一の愛を成すこと</a></b><br/>
+<h3 class="bh" id="003"><a href="#003">一　真の結婚は宇宙的合一の愛を成すこと</a></h3>
 <br/>
 　結婚はなぜするのでしょうか。神様の姿に似るためです。神様は二性性相としていらっしゃる方であり、各一性が合体化した一体的な存在であられ、神様の分性的な人格が男女なのでこれらが合成一体化して種のようになって、神様の本性の立場に戻らなければなりません。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -399,7 +419,7 @@
 　韓国の民法では同姓同系の結婚を禁じ、異族結婚を奨励していますが、これは統一を思慕する民族だからそうなのです。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">　二　男女の愛、互いが必要とする愛</a></b><br/>
+<h3 class="bh" id="004"><a href="#004">二　男女の愛、互いが必要とする愛</a></h3>
 <br/>
 　成長の中で最も花のような時、最も美しい時が青春時代です。その青春時代の姿が最高のつぼみのような時期です。それをしっかりと愛することのできる人がいるなら、その人は神様の家の奥座敷にでも招待される人です。そのような愛を授受することのできる男性と女性は神様の福を受けることができ、神様の奥座敷にまでも招待されるはずです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -448,7 +468,7 @@
 　青少年として堕落して汚れず、染まらずに、聖なる純潔を大切に保管して、これをどこにもっていくのでしょうか。天が最も喜ぶことのできる祭壇に掲げて神様が喜ぶ、そのような純潔をもった男性と女性が出会って一つに結ばれる貴い基台が、新郎新婦の出会う場にならなければなりません。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="005"><a href="#005">　三　祝福結婚式は神様の愛の伝授式</a></b><br/>
+<h3 class="bh" id="005"><a href="#005">三　祝福結婚式は神様の愛の伝授式</a></h3>
 <br/>
 　統一教会では、結婚することを「祝福」と表現します。<br/>
 　　　　　　　　　　　　＊<br/>

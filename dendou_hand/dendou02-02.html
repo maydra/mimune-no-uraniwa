@@ -314,18 +314,38 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="◆氏族伝道◆"><a href="#◆氏族伝道◆">◆氏族伝道◆</a></h1>
+<h1>◆氏族伝道◆</h1>
 <nav class="page-nav">
   <a href="dendou02-01.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="dendou02-03.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">伝道ハンドブック
-み言に学ぶ伝道の姿勢</a></li><li class="toc-b"><a href="#002">二、氏族伝道</a></li><li class="toc-b"><a href="#003">両親に仕える</a></li><li class="toc-b"><a href="#004">両親と親戚を救わなければならない</a></li><li class="toc-b"><a href="#005">氏族伝道</a></li><li class="toc-b"><a href="#006">十日に一度手紙を書く</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">伝道ハンドブック
+み言に学ぶ伝道の姿勢</a></li><li class="toc-b lv0"><a href="#002">二、氏族伝道</a></li><li class="toc-b lv0"><a href="#003">両親に仕える</a></li><li class="toc-b lv0"><a href="#004">両親と親戚を救わなければならない</a></li><li class="toc-b lv0"><a href="#005">氏族伝道</a></li><li class="toc-b lv0"><a href="#006">十日に一度手紙を書く</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
@@ -336,15 +356,15 @@
 　
 </div>
 <hr/>
-<b id="002"><a href="#002">二、氏族伝道</a></b><br/>
+<h2 class="bh bh0" id="002"><a href="#002">二、氏族伝道</a></h2>
 <br/>
-      　　<b id="003"><a href="#003">両親に仕える</a></b><br/>
+      　　<h2 class="bh bh0" id="003"><a href="#003">両親に仕える</a></h2>
 <br/>
       　世の中で初めて新しい運動をした時には、いろいろな非難が起こるんだよ。それはまあ、当然のことなんだ。何も知らずに、調べてみないで、まるきり反対することしか知らない。だから、あなたたちの父母も心配する。だからあなたたちは家庭に帰ったら一〇〇パーセント生まれ変わった男の子、女の子になれというんだね。何か言われても黙って聞く。親はね、子供がかわいくてしようがない。そういう心情には弱いんだよ。<br/>
 <br/>
       　たとえ、親が息子を殴ったとしても、親の心はそれによって痛むんだね。殴られても、夜どうかなるんじゃないか、家を飛び出すんじゃないかと心配するんだね。だから、殴られたら、そういう親に対して仕えていくんだよ。反対の方向をとるんだ。そうすれば感動する。だから悪い心をもつな。もし、親が分かってくれたならば、自分以上に素晴らしいことだ。親より以上の愛情をもって親の前に立つ息子、娘とならなければならない。愛が必ず勝つ。何かあった時、自分のためにおじさんなどから、お小遣いをもらったなら、それを使わないで、お父さんのためにプレゼントを買っていくとか、弟のために夜遅くまで寝ないで手伝うとか、そういうことをやるんだよ。<br/>
 <br/>
-      　　<b id="004"><a href="#004">両親と親戚を救わなければならない</a></b><br/>
+      　　<h2 class="bh bh0" id="004"><a href="#004">両親と親戚を救わなければならない</a></h2>
 <br/>
       　君たちは家族に対していくら伝道しても、サタンのほうから条件を立たせることができない段階を越えました。これは先生がサタンに対して、果たし得た勝利の段階をもう過ぎているからです。だから今からは君たちは自分の父母と親戚に対してこれを救わなければならない。そういう時代である。<br/>
 <br/>
@@ -366,13 +386,13 @@
 <br/>
       　このような認識に立って教会と個人の問題に責任をもって解決するようにしてください。先生が今までたどってきた道において、そうやらなければならない重大な点を言っておきましたから、どうぞそういう方面に力を尽くして天に対して親孝行をなし、忠誠を尽くすことを願うものです。<br/>
 <br/>
-      　　<b id="005"><a href="#005">氏族伝道</a></b><br/>
+      　　<h2 class="bh bh0" id="005"><a href="#005">氏族伝道</a></h2>
 <br/>
       　君たちは氏族伝道をしなければならない。これはイエス様の身代わりだ。イエス様は氏族伝道圏を得られなかったため死んだのだから、イエス様以上の基準を復帰できなければ神の子供になれません。本当は氏族伝道基台の上で祝福されるんだよ。今まで君たちが何もないのに祝福を受けることができたのは、先生が統一氏族圏をつくり、先生が直接責任をもっているからであり、そうでなければ絶対祝福はできません。<br/>
 <br/>
       　イエス様は、自分の家族や氏族を伝道できませんでしたが、皆さんは家族や氏族を伝道しなければなりません。イエス様は自分の氏族をもつことができませんでしたが、皆さんは祝福された氏族をもっています。公生涯に立つため、イエス様は家庭を捨てなければなりませんでしたが、その立場を復帰するために、先生も第一次七年路程において、自分の親族に手を差し伸べることができなかったのです。したがって第一次七年路程では、先生と共にみ旨をなす親族は一人もいませんでした。皆さんは今、自分の親族に手を差し伸べることのできる例えようもない恵まれた立場にあるのです。復帰摂理の目的は神の家庭を復帰することです。その神の目的を成就するためには、自分に一番近い親族を伝道しなければなりません。<br/>
 <br/>
-      　　<b id="006"><a href="#006">十日に一度手紙を書く</a></b><br/>
+      　　<h2 class="bh bh0" id="006"><a href="#006">十日に一度手紙を書く</a></h2>
 <br/>
       　今から先生は命令します。十日に一度ずつ自分の親、兄弟に手紙を出しなさい。君たちが社会に向けて活動する三分の一の努力があったなら氏族伝道は可能である。天国づくりは氏族基台を中心として、それから社会につながる十二弟子と七十二門徒である。それがなければ社会を率いることはできない。世界的になりたければ一二〇人立てよ。先生はそれをやってきた。<br/>
 <br/>

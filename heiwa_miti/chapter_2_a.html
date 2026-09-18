@@ -314,30 +314,50 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
 </head>
 <body><div class="container">
-<h1 id="◆世界平和宗教連合創設大会・世界平和のための宗教の使命◆"><a href="#◆世界平和宗教連合創設大会・世界平和のための宗教の使命◆">◆世界平和宗教連合創設大会・世界平和のための宗教の使命◆</a></h1>
+<h1>◆世界平和宗教連合創設大会・世界平和のための宗教の使命◆</h1>
 <nav class="page-nav">
   <a href="chapter_2.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="chapter_2_c.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">南北統一と世界平和への道</a></li><li class="toc-b"><a href="#002">世界平和宗教連合創設大会</a></li><li class="toc-b"><a href="#003">世界平和のための宗教の使命</a></li><li class="toc-b"><a href="#004">1991年8月27日　　韓国・ソウル</a></li><li class="toc-b"><a href="#005">真の愛によってのみ実現する理想世界</a></li><li class="toc-b"><a href="#006">為政者の使命</a></li><li class="toc-b"><a href="#007">宗教の使命</a></li><li class="toc-b"><a href="#008">神の摂理の方向</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">南北統一と世界平和への道</a></li><li class="toc-b lv0"><a href="#002">世界平和宗教連合創設大会</a></li><li class="toc-b lv0"><a href="#003">世界平和のための宗教の使命</a></li><li class="toc-b lv0"><a href="#004">1991年8月27日　　韓国・ソウル</a></li><li class="toc-b lv0"><a href="#005">真の愛によってのみ実現する理想世界</a></li><li class="toc-b lv0"><a href="#006">為政者の使命</a></li><li class="toc-b lv0"><a href="#007">宗教の使命</a></li><li class="toc-b lv0"><a href="#008">神の摂理の方向</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote>
 <div align="left">
-<b id="001"><a href="#001">南北統一と世界平和への道</a></b><br/>
+<h2 class="bh bh0" id="001"><a href="#001">南北統一と世界平和への道</a></h2>
 　
 </div>
 <hr/>
-<b id="002"><a href="#002">世界平和宗教連合創設大会</a></b><br/>
+<h2 class="bh bh0" id="002"><a href="#002">世界平和宗教連合創設大会</a></h2>
 <br/>
-<b id="003"><a href="#003">世界平和のための宗教の使命</a></b><br/>
-      　　　　　　　　　　　　　　　　　　　　<b id="004"><a href="#004">1991年8月27日　　韓国・ソウル</a></b><br/>
+<h2 class="bh bh0" id="003"><a href="#003">世界平和のための宗教の使命</a></h2>
+      　　　　　　　　　　　　　　　　　　　　<h2 class="bh bh0" id="004"><a href="#004">1991年8月27日　　韓国・ソウル</a></h2>
 <hr size="1"/>
 　「世界平和宗教連合」創設大会は、世界二十数か国から約一二〇名の各宗団の最高指導者や教主らが参加し、宗派の違いを越えて世界平和に対する内的・精神的責任を果たしていく決意を内外に表明しました。<br/>
       　文師はこの基調講演で、「すべての宗教は自身の利益を離れ、神が願う世界救済のみ旨に従って、世の中の貧困と病気と犯罪をなくす仕事の先頭に立たなければなりません」と強調されました。
@@ -352,7 +372,7 @@
       　今は、世界の宗教が世界平和の実現のための中心的責任を切実に感じ、積極的な実践隊列にいで立つ時です。幸福な人類の未来は、物質的繁栄を追求することのみによって成すことはできず、宗教間の理解、精神的な和合を通して、思想と文化と人種間のH藤を克服してこそ迎えることができるのです。ここに私は「世界平和のための宗教の使命」という主題でもって、「世界平和宗教連合」創設メッセージに代えようと思います。<br/>
 <a name="01"></a><br/>
 <br/>
-      　<b id="005"><a href="#005">真の愛によってのみ実現する理想世界</a></b><br/>
+      　<h2 class="bh bh0" id="005"><a href="#005">真の愛によってのみ実現する理想世界</a></h2>
 <br/>
       　神の真の愛を中心とした「為に存在する」為他主義的創造理想は、心と体が調和一体を成した理想体としての個人を通して、理想的な家庭、社会、国家、さらに進んで理想世界を成すことができるのです。<br/>
 <br/>
@@ -365,14 +385,14 @@
       　創造理想によれば、心と体が理想的な神様の真の愛でもって個体の内で和合一体を成すのと同じく、心と体の拡大連結である心的世界と体的世界も、相克闘争関係ではなく、神の真の愛でもって調和を成さなければなりません。心的世界を代表するのが宗教と思想の領域であるならば、体的世界を代表するものは政治と経済の領域です。ところで人間において心が主体であり、体が対象であるように、宗教と政治の関係も主体と対象の立場で調和、統一圏を神様の真の愛でもって成してこそ、理想社会が到来するようになるのです。<br/>
 <a name="02"></a><br/>
 <br/>
-      　<b id="006"><a href="#006">為政者の使命</a></b><br/>
+      　<h2 class="bh bh0" id="006"><a href="#006">為政者の使命</a></h2>
 <br/>
       　神が聖者や預言者たちを地上に送った目的は何でしょうか。神が願われる人格と生活の手本を見せながら、神の真の愛のみ旨を万民に教育するためなのです。特に為政者や指導者たちに天道を教育し、実践するようにすることによって、心の世界と体の世界が神様の真の愛のみ旨を中心として和合を成すためです。しかし、あたかも良心が願うとおりに体が従わないように、多くの為政者たちが聖賢を見分けられず、その教えを受けず、警告を黙殺してきました。<br/>
 <br/>
       　価値観の混乱、道徳的腐敗、麻薬中毒、テロ、人種差別等、現代社会の惨状と病弊をだれが責任を負うことができるでしょうか。政治家が公権力によって、このような問題を完全に解決することができますか。特にいかなる時代よりも多元化したこの社会、また国際的に互いに絡み合っているこの時代に、政治家たちの判断と選択に伴う責任がいかばかり重大なものでしょうか。為政者たちが重要事項を決定するときは、謙虚に天からくる声に耳を傾け、天道に従って解決の道を探し求めなければなりません。<br/>
 <a name="03"></a><br/>
 <br/>
-      　<b id="007"><a href="#007">宗教の使命</a></b><br/>
+      　<h2 class="bh bh0" id="007"><a href="#007">宗教の使命</a></h2>
 <br/>
       　一方で私たちは、心の世界を代表する宗教自体が平和の世界を成すための主体的責任を果たせなかったことを反省しなければならないと思います。宗教が現実世界を指導し、浄化する生命力を備えることができず、むしろ本来の使命に逆行していることを否認することができないのです。<br/>
 <br/>
@@ -385,7 +405,7 @@
       　世の中は変わらなければなりません。各宗教は自浄努力でもって新しい改革の主役にならなければなりません。すべての宗教は自身の利益を離れ、神が願う世界救援のみ旨に従って、世の中の貧困と疾病と犯罪をなくす仕事に先頭に立って、終わりの日の暗黒世界の光明となり、政治、経済、社会の各界の指導者を訓導しなければなりません。<br/>
 <a name="04"></a><br/>
 <br/>
-      　<b id="008"><a href="#008">神の摂理の方向</a></b><br/>
+      　<h2 class="bh bh0" id="008"><a href="#008">神の摂理の方向</a></h2>
 <br/>
       　尊敬する宗教界の指導者の皆様。私は神の摂理方向に従って、世界を改革し、地上に神の真の愛の理想を回復する仕事にすべての精誠を尽くしてきました。<br/>
 <br/>
