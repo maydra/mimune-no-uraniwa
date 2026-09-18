@@ -103,10 +103,10 @@
   .cell{font-size:var(--fs);line-height:var(--lh);white-space:pre-wrap;overflow-wrap:anywhere;
     padding:12px 12px 14px;border-top:1px solid var(--line);border-radius:8px}
   .cell .tag{display:block;font-size:10px;letter-spacing:.14em;color:var(--muted);
-    font-weight:700;margin-bottom:5px}
+    font-weight:700;margin-bottom:5px;user-select:none;-webkit-user-select:none}
   .cell.span{background:color-mix(in srgb,var(--panel) 55%,transparent)}
   .cell.on{background:var(--mark);box-shadow:inset 4px 0 0 var(--markline)}
-  .rowno{font-size:11px;color:var(--muted);padding-top:14px;border-top:1px solid var(--line);
+  .rowno{user-select:none;-webkit-user-select:none;font-size:11px;color:var(--muted);padding-top:14px;border-top:1px solid var(--line);
     font-variant-numeric:tabular-nums;display:flex;flex-direction:column;align-items:flex-end;gap:3px}
   /* 段落ごとのリンク。ふだんは薄く、指で触る端末では触らなくても見えるようにする */
   .rowno .lk{cursor:pointer;font-size:11px;line-height:1;opacity:0;transition:opacity .15s;
@@ -947,11 +947,11 @@
       .filter((x) => x.s).sort((a, b) => b.at - a.at || b.i - a.i);
     let out = text;
     for (const x of put) {
-      out = out.slice(0, x.at) + " " + x.s + "" + out.slice(x.at);
+      out = out.slice(0, x.at) + "\u0000" + x.s + "\u0001" + out.slice(x.at);
     }
     return esc(out)
-      .replace(/ /g, ' <ins lang="en">〈 ')
-      .replace(//g, " 〉</ins>");
+      .replace(/\u0000/g, ' <ins lang="en">〈 ')
+      .replace(/\u0001/g, " 〉</ins>");
   }
 
   /* 原文まるごとに、英語へ出ていない文だけ蛍光ペンを引く。番号は下の訳と対で読む。 */
