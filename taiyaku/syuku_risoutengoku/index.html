@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>/* data.js のパースを待たずに、保存済みのダーク設定だけ先に当てて白フラッシュを消す */
+try{if(JSON.parse(localStorage.getItem("hoondok.theme"))==="dark")document.documentElement.dataset.theme="dark";}catch(e){}</script>
 <title>訓読 対訳ビューア</title>
 <style>
   :root{
@@ -247,7 +250,7 @@
 </header>
 
 <div class="sechead">
-  <h1 id="secTitle">…</h1>
+  <h1 id="secTitle">読み込み中… / Loading…</h1>
   <div class="sub" id="secSub"></div>
   <div id="secWarn"></div>
   <details class="sectoc" id="sectoc" hidden>
@@ -260,9 +263,9 @@
 
 <footer id="foot"></footer>
 
-<script src="data.js?v=202609182108"></script>
+<script src="data.js?v=202609182108" defer></script>
 <script>
-(() => {
+document.addEventListener("DOMContentLoaded", () => {
   const LANGS = [
     { id: "ko", label: "한국어",  tag: "KO" },
     { id: "ja", label: "日本語",  tag: "JA" },
@@ -1077,7 +1080,7 @@
 
   paint();
   if (want) { cur = want - 1; want = 0; mark(); showCur(); }
-})();
+});
 </script>
 </body>
 </html>
