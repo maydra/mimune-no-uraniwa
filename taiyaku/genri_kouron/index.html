@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script>/* data.js のパースを待たずに、保存済みのダーク設定だけ先に当てて白フラッシュを消す */
+<script>/* 本文のパースを待たずに、保存済みのダーク設定だけ先に当てて白フラッシュを消す */
 try{if(JSON.parse(localStorage.getItem("dp.theme"))==="dark")document.documentElement.dataset.theme="dark";}catch(e){}</script>
 <title>原理講論 三か国語対訳</title>
 <style>
@@ -256,7 +256,7 @@ try{if(JSON.parse(localStorage.getItem("dp.theme"))==="dark")document.documentEl
 
 <footer id="foot"></footer>
 
-<script src="data.js?v=202609182259" defer></script>
+<script src="book.js?v=202609190017" defer></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const LANGS = [
@@ -298,6 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mvTag: "⇄ 順番移動",
       mvTitle: "対訳のため、翻訳版に掲載されていた順番から移動してあります",
       noHit: "見つかりませんでした",
+      searching: (n) => `${n} 節を読み込んでいます…`,
       foot: (links) => `出典: ${links}。`
         + `段落は principle.study が言語をまたいで振っている段落の番号でそのまま結んでいます（推定ではありません）。`,
     },
@@ -332,6 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mvTag: "⇄ 순서 이동",
       mvTitle: "대역을 맞추기 위해, 번역판에 실려 있던 순서에서 옮겼습니다",
       noHit: "찾지 못했습니다",
+      searching: (n) => `${n}개 절을 읽고 있습니다…`,
       foot: (links) => `출처: ${links}. `
         + `문단은 principle.study 가 언어를 가로질러 붙여 놓은 문단 번호로 그대로 짝지었습니다 (추정이 아닙니다).`,
     },
@@ -366,6 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mvTag: "⇄ moved",
       mvTitle: "Moved out of the order in which it appeared in the translated post, so that it lines up",
       noHit: "Nothing found",
+      searching: (n) => `Loading ${n} sections…`,
       foot: (links) => `Source: ${links}. `
         + `Paragraphs are joined by the cross-language paragraph ids that principle.study assigns — not by estimation.`,
     },
@@ -380,6 +383,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const BOOK = window.DPBOOK || { sections: [] };
   const data = BOOK.sections;
   const $ = (s) => document.querySelector(s);
+
+  // ---- 節の本文は、開いたときだけ読み込む ----
+  // 一枚の data.js だと素で 3.7MB あり、スマホでは数秒の白画面になる。
+  // <script> の差し込みなので file:// でも動く（聖書版と同じ作り）
+  const waiting = {};
+  window.DP = {
+    put(key, payload) {
+      const s = data.find((x) => x.key === key);
+      if (s) { s.cells = payload.cells || {}; s.miss = payload.miss || []; }
+      (waiting[key] || []).forEach((fn) => fn());
+      delete waiting[key];
+    },
+  };
+  function load(s, then) {
+    if (s.cells) return then();
+    if (waiting[s.key]) return waiting[s.key].push(then);
+    waiting[s.key] = [then];
+    const el = document.createElement("script");
+    el.src = `data/${s.key}.js` + (BOOK.v ? `?v=${BOOK.v}` : "");
+    el.onerror = () => window.DP.put(s.key, { cells: {} });
+    document.head.appendChild(el);
+  }
   // 探すときに使う素のテキスト。本文の HTML から剥がして、一度作ったら憶えておく
   const plain = (c) => (c._t !== undefined ? c._t : (c._t = String(c.h || "")
     .replace(/<[^>]+>/g, "").replace(/&(amp|lt|gt|quot|nbsp);/g,
@@ -610,6 +635,16 @@ document.addEventListener("DOMContentLoaded", () => {
     main.innerHTML = "";
     if (!s) { $("#secTitle").textContent = t.nodata; return; }
 
+    if (!s.cells) {                  // 本文がまだ来ていない節。届いたら描き直す
+      $("#secTitle").textContent = t.loading;
+      $("#secSub").innerHTML = "";
+      $("#secWarn").innerHTML = "";
+      $("#pos").textContent = "";
+      $("#sectoc").hidden = true;
+      load(s, () => { paint(); if (cur >= 0) showCur(); });
+      return;
+    }
+
     const shown = LANGS.filter((L) => on.includes(L.id));
     // 節の題と、節ぜんぶを開くリンク
     $("#secTitle").innerHTML = esc(secTitle(s))
@@ -684,6 +719,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.style.setProperty(
       "--headh", document.querySelector("header").offsetHeight + "px");
     mark();
+    // 次の節を先に取り寄せておく（▶ を押したとき待たせない）
+    if (data[idx + 1]) load(data[idx + 1], () => {});
   }
 
   // ---- 節の中の目次 ----
@@ -929,6 +966,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const t = q.value.trim();
     hitList = [];
     if (t.length < 2) { hits.hidden = true; return; }
+    const todo = data.filter((s) => !s.cells);
+    if (todo.length) {               // 本文がまだそろっていない。そろったら探し直す
+      hits.innerHTML = `<div class="hit">${esc(T().searching(todo.length))}</div>`;
+      hits.hidden = false;
+      todo.forEach((s) => load(s, () => { if (!data.some((x) => !x.cells)) search(); }));
+      return;
+    }
     const low = t.toLowerCase();
     outer:
     for (let si = 0; si < data.length; si++) {
