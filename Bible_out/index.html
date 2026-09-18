@@ -185,7 +185,7 @@ h2 {
 </head>
 <body data-pagefind-ignore>
 <h1>聖書 - 目次</h1>
-<div class="book-search"><a class="book-search-btn" href="../search-all.html?book=Bible_out">この書籍の中で検索</a></div>
+<div class="book-search"><a class="book-search-btn" href="../search-all.html?book=Bible_out">この書籍の中で検索</a><button class="book-search-btn" id="offline-save-btn" data-book="Bible_out" hidden>📥 この本をオフライン保存</button></div>
 
 <div class="stats">
 <h3>📖 全66書 - 1,189章</h3>
@@ -2270,5 +2270,6 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
 <script src="../theme/script.js?v=202609182108"></script>
+<script src="../offline.js" defer></script>
 </body>
 </html>

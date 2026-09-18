@@ -401,7 +401,7 @@
 <body data-pagefind-ignore>
         <div class="container">
                 <h1>原理講論</h1>
-<div class="book-search"><a class="book-search-btn" href="../search-all.html?book=dp">この書籍の中で検索</a></div>
+<div class="book-search"><a class="book-search-btn" href="../search-all.html?book=dp">この書籍の中で検索</a><button class="book-search-btn" id="offline-save-btn" data-book="dp" hidden>📥 この本をオフライン保存</button></div>
                 <div class="toc-controls">
                         <button type="button" id="toc-open-all">すべて開く</button>
                         <button type="button" id="toc-close-all">すべて閉じる</button>
@@ -1478,6 +1478,7 @@
                 });
         })();
         </script>
+<script src="../offline.js" defer></script>
 </body>
 
 </html>
