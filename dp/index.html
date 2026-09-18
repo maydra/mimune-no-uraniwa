@@ -371,6 +371,30 @@
         }
 </style>
 
+        <style>
+                /* 目次の一括開閉。dp はライト固定なので明るい配色で書く */
+                .toc-controls {
+                        margin: 0 0 1.5rem;
+                        display: flex;
+                        gap: 0.6rem;
+                }
+
+                .toc-controls button {
+                        padding: 0.45rem 1.1rem;
+                        border-radius: 999px;
+                        cursor: pointer;
+                        font: inherit;
+                        font-size: 0.95rem;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        background: #f0f0f0;
+                        color: #333;
+                }
+
+                .toc-controls button:hover {
+                        background: #e4e4e4;
+                }
+        </style>
+
         <link rel="stylesheet" href="../theme/style.css?v=202609182108">
 </head>
 
@@ -378,6 +402,10 @@
         <div class="container">
                 <h1>原理講論</h1>
 <div class="book-search"><a class="book-search-btn" href="../search-all.html?book=dp">この書籍の中で検索</a></div>
+                <div class="toc-controls">
+                        <button type="button" id="toc-open-all">すべて開く</button>
+                        <button type="button" id="toc-close-all">すべて閉じる</button>
+                </div>
                 <div class="index-list">
                         <h2 class="volume-title"
                                 style="margin-top: 2.5rem; border-bottom: 2px solid rgba(102,126,234,0.4); padding-bottom:0.5rem; color:#fff;">
@@ -1425,6 +1453,31 @@
         </div>
 
         <script src="../theme/script.js?v=202609182108"></script>
+        <script>
+        // 章の開閉を覚える。前は毎回すべて閉じた状態に戻り、本文から
+        // 「目次」で戻るたびに読んでいた章を探し直しになっていた。
+        (function () {
+                var KEY = 'dp.toc.open';
+                var all = Array.prototype.slice.call(document.querySelectorAll('.chapter-item details'));
+                var saved = [];
+                try { saved = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { }
+                all.forEach(function (d, i) {
+                        if (saved.indexOf(i) >= 0) d.open = true;
+                        d.addEventListener('toggle', remember);
+                });
+                function remember() {
+                        var open = [];
+                        all.forEach(function (d, i) { if (d.open) open.push(i); });
+                        try { localStorage.setItem(KEY, JSON.stringify(open)); } catch (e) { }
+                }
+                document.getElementById('toc-open-all').addEventListener('click', function () {
+                        all.forEach(function (d) { d.open = true; });
+                });
+                document.getElementById('toc-close-all').addEventListener('click', function () {
+                        all.forEach(function (d) { d.open = false; });
+                });
+        })();
+        </script>
 </body>
 
 </html>
