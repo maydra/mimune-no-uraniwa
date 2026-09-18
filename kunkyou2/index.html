@@ -300,6 +300,16 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
@@ -317,45 +327,46 @@
 
 
 <br/>
-<a href="hajimeni.html#003" style="color : black;text-decoration : none;">01.はじめに<br/>
-      02.日本語版発刊に寄せて</a><br/>
-<br/>
-      03.<a href="003.html#003" style="color : black;text-decoration : none;">任命された人々</a><br/>
-      04.<a href="004.html#003" style="color : black;text-decoration : none;">天が尋ねきた道</a><br/>
-      05.<a href="005.html#003" style="color : black;text-decoration : none;">明日を迎えよう</a><br/>
-      06.<a href="006.html#003" style="color : black;text-decoration : none;">手本になろう</a><br/>
-      07.<a href="007.html#003" style="color : black;text-decoration : none;">良い人々</a><br/>
-      08.<a href="008.html#003" style="color : black;text-decoration : none;">感謝の生活</a><br/>
-      09.<a href="009.html#003" style="color : black;text-decoration : none;">真を探して</a><br/>
-      10.<a href="010.html#003" style="color : black;text-decoration : none;">体恤信仰が必要</a><br/>
-      11.<a href="011.html#003" style="color : black;text-decoration : none;">真の人々</a><br/>
-      12.<a href="012.html#003" style="color : black;text-decoration : none;">私たちの願い</a><br/>
-      13.<a href="013.html#003" style="color : black;text-decoration : none;">前進と停止</a><br/>
-      14.<a href="014.html#003" style="color : black;text-decoration : none;">興亡の分岐点</a><br/>
-      15.<a href="015.html#003" style="color : black;text-decoration : none;">天国の拠点はどこか</a><br/>
-      16.<a href="016.html#003" style="color : black;text-decoration : none;">模範を打ち立てるべき地上時代</a><br/>
-      17.<a href="017.html#003" style="color : black;text-decoration : none;">人間の価値と天国の起源</a><br/>
-      18.<a href="018.html#003" style="color : black;text-decoration : none;">完全復帰</a><br/>
-      19.<a href="019.html#003" style="color : black;text-decoration : none;">統一方案と私</a><br/>
-      20.<a href="020.html#003" style="color : black;text-decoration : none;">み旨と私たちの生涯</a><br/>
-      21.<a href="021.html#003" style="color : black;text-decoration : none;">神様に対する体恤と私たちの自覚</a><br/>
-      22.<a href="022.html#003" style="color : black;text-decoration : none;">摂理の十字路</a><br/>
-      23.<a href="023.html#003" style="color : black;text-decoration : none;">因縁の行路</a><br/>
-      24.<a href="024.html#003" style="color : black;text-decoration : none;">三時代のための責任</a><br/>
-      25.<a href="025.html#003" style="color : black;text-decoration : none;">真なる人と罪</a><br/>
-      26.<a href="026.html#003" style="color : black;text-decoration : none;">み旨の完成と私たちの使命</a><br/>
-      27.<a href="027.html#003" style="color : black;text-decoration : none;">侍る生活</a><br/>
-      28.<a href="028.html#003" style="color : black;text-decoration : none;">相続者</a><br/>
-      29.<a href="029.html#003" style="color : black;text-decoration : none;">心の鐘の音</a><br/>
-      30.<a href="030.html#003" style="color : black;text-decoration : none;">必ず行かなければならない運命の道</a><br/>
-      31.<a href="031.html#003" style="color : black;text-decoration : none;">模範生活</a><br/>
-      32.<a href="032.html#003" style="color : black;text-decoration : none;">真なる世界へ</a><br/>
-      33.<a href="033.html#003" style="color : black;text-decoration : none;">理想的焦点を合わせよう</a><br/>
-      34.<a href="034.html#003" style="color : black;text-decoration : none;">故　郷</a><br/>
-      35.<a href="035.html#003" style="color : black;text-decoration : none;">根本思想</a><br/>
-      36.<a href="036.html#003" style="color : black;text-decoration : none;">神人思想の完成</a><br/>
-      37.<a href="037.html#003" style="color : black;text-decoration : none;">真の統一と一つの世界</a><br/>
-      38.<a href="038.html#003" style="color : black;text-decoration : none;">女性解放</a><br/>
+<ul class="toc-tree">
+<li class="lv1"><a href="hajimeni.html#003">01.はじめに</a></li>
+<li class="lv1"><a href="hajimeni.html#003">02.日本語版発刊に寄せて</a></li>
+<li class="lv1"><a href="003.html#003">03.任命された人々</a></li>
+<li class="lv1"><a href="004.html#003">04.天が尋ねきた道</a></li>
+<li class="lv1"><a href="005.html#003">05.明日を迎えよう</a></li>
+<li class="lv1"><a href="006.html#003">06.手本になろう</a></li>
+<li class="lv1"><a href="007.html#003">07.良い人々</a></li>
+<li class="lv1"><a href="008.html#003">08.感謝の生活</a></li>
+<li class="lv1"><a href="009.html#003">09.真を探して</a></li>
+<li class="lv1"><a href="010.html#003">10.体恤信仰が必要</a></li>
+<li class="lv1"><a href="011.html#003">11.真の人々</a></li>
+<li class="lv1"><a href="012.html#003">12.私たちの願い</a></li>
+<li class="lv1"><a href="013.html#003">13.前進と停止</a></li>
+<li class="lv1"><a href="014.html#003">14.興亡の分岐点</a></li>
+<li class="lv1"><a href="015.html#003">15.天国の拠点はどこか</a></li>
+<li class="lv1"><a href="016.html#003">16.模範を打ち立てるべき地上時代</a></li>
+<li class="lv1"><a href="017.html#003">17.人間の価値と天国の起源</a></li>
+<li class="lv1"><a href="018.html#003">18.完全復帰</a></li>
+<li class="lv1"><a href="019.html#003">19.統一方案と私</a></li>
+<li class="lv1"><a href="020.html#003">20.み旨と私たちの生涯</a></li>
+<li class="lv1"><a href="021.html#003">21.神様に対する体恤と私たちの自覚</a></li>
+<li class="lv1"><a href="022.html#003">22.摂理の十字路</a></li>
+<li class="lv1"><a href="023.html#003">23.因縁の行路</a></li>
+<li class="lv1"><a href="024.html#003">24.三時代のための責任</a></li>
+<li class="lv1"><a href="025.html#003">25.真なる人と罪</a></li>
+<li class="lv1"><a href="026.html#003">26.み旨の完成と私たちの使命</a></li>
+<li class="lv1"><a href="027.html#003">27.侍る生活</a></li>
+<li class="lv1"><a href="028.html#003">28.相続者</a></li>
+<li class="lv1"><a href="029.html#003">29.心の鐘の音</a></li>
+<li class="lv1"><a href="030.html#003">30.必ず行かなければならない運命の道</a></li>
+<li class="lv1"><a href="031.html#003">31.模範生活</a></li>
+<li class="lv1"><a href="032.html#003">32.真なる世界へ</a></li>
+<li class="lv1"><a href="033.html#003">33.理想的焦点を合わせよう</a></li>
+<li class="lv1"><a href="034.html#003">34.故　郷</a></li>
+<li class="lv1"><a href="035.html#003">35.根本思想</a></li>
+<li class="lv1"><a href="036.html#003">36.神人思想の完成</a></li>
+<li class="lv1"><a href="037.html#003">37.真の統一と一つの世界</a></li>
+<li class="lv1"><a href="038.html#003">38.女性解放</a></li>
+</ul>
 <br/>
 <br/>
 

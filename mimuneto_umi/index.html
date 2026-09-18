@@ -300,6 +300,16 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
@@ -314,46 +324,35 @@
 <br/>
 <b>　　　</b><b>目　次</b><br/>
 <br/>
-<b><a href="umi_jyobunn.html">◇序　文</a></b><br/>
-<br/>
-<a href="01_maguronomiti.html"><b>1.マグロの道<br/>
-      　　　1980年7月13日　ベルベディア<br/>
-<br/>
-</b></a><a href="02_seturiti.html"><b>2.オーシャン・チャーチの設立<br/>
-      　　　</b>1980年10月 1日　モーニング・ガーデン</a><br/>
-<br/>
-<a href="03_amerika.html"><b>3.オーシャン・チャーチとアメリカ</b><br/>
-      　　　1982年 8月28日　プロビンス・タウン</a><a href="04_naze_hituyounanoka.html"><br/>
-<br/>
-<b>4.なぜオーシャン・チャーチが必要なのか</b><br/>
-      　　　1982年 9月 5日　イースト・ガーデン</a><br/>
-<br/>
-<a href="05_kidai.html#002"><b>5.オーシャン・チャーチの基台</b><br/>
-      　　　1983年 6月10日　グロースター</a><a href="06_uketugu.html"><br/>
-<br/>
-<b>6.誰が海を受け継ぐのか</b><br/>
-      　　　1983年 7月 3日　グロースター</a><a href="07_toriniikuka.html"><br/>
-<br/>
-<b>7.なぜ我々はマグロを捕りに行くか</b><br/>
-      　　　1983年 8月31日　グロースター</a><a href="08_hajimemasyou.html"><br/>
-<br/>
-<b>8.新たに始めましょう</b><br/>
-      　　　1984年 2月 8日　ワールド・ミッション・センター</a><a href="09_kunrensurunoka.html"><br/>
-<br/>
-<b>9.なぜ我々は海の訓練をするのか</b><br/>
-      　　　1984年 7月 2日　モーニング・ガーデン</a><a href="10_seikatuyousiki.html"><br/>
-<br/>
-<b>10.マグロ釣りと生活様式</b><br/>
-      　　　1984年 7月 5日　モーニング・ガーデン</a><a href="11_tougen.html"><br/>
-<br/>
-<b>11.真の父母と蕩減</b><br/>
-      　　　1984年 8月　　バークレイ</a><a href="12_sinjyouto_seisin.html"><br/>
-<br/>
-<b>12.魚釣りの心情と精神</b><br/>
-      　　　1986年 7月 3日　モーニング・ガーデン</a><a href="13_uminomiti.html"><br/>
-<br/>
-<b>13.海の道</b><br/>
-      　　　1986年 8月28日　モーニング・ガーデン</a><a href="14_syupan.html#002"><br/>
+<ul class="toc-tree">
+<li class="lv0"><a href="umi_jyobunn.html">◇序　文</a></li>
+<li class="lv1"><a href="01_maguronomiti.html">1.マグロの道</a></li>
+<li class="lv2"><a href="01_maguronomiti.html">1980年7月13日　ベルベディア</a></li>
+<li class="lv1"><a href="02_seturiti.html">2.オーシャン・チャーチの設立</a></li>
+<li class="lv2">1980年10月 1日　モーニング・ガーデン</li>
+<li class="lv1"><a href="03_amerika.html">3.オーシャン・チャーチとアメリカ</a></li>
+<li class="lv2"><a href="04_naze_hituyounanoka.html">1982年 8月28日　プロビンス・タウン</a></li>
+<li class="lv1">4.なぜオーシャン・チャーチが必要なのか</li>
+<li class="lv2">1982年 9月 5日　イースト・ガーデン</li>
+<li class="lv1"><a href="05_kidai.html#002">5.オーシャン・チャーチの基台</a></li>
+<li class="lv2"><a href="06_uketugu.html">1983年 6月10日　グロースター</a></li>
+<li class="lv1">6.誰が海を受け継ぐのか</li>
+<li class="lv2"><a href="07_toriniikuka.html">1983年 7月 3日　グロースター</a></li>
+<li class="lv1">7.なぜ我々はマグロを捕りに行くか</li>
+<li class="lv2"><a href="08_hajimemasyou.html">1983年 8月31日　グロースター</a></li>
+<li class="lv1">8.新たに始めましょう</li>
+<li class="lv2"><a href="09_kunrensurunoka.html">1984年 2月 8日　ワールド・ミッション・センター</a></li>
+<li class="lv1">9.なぜ我々は海の訓練をするのか</li>
+<li class="lv2"><a href="10_seikatuyousiki.html">1984年 7月 2日　モーニング・ガーデン</a></li>
+<li class="lv1">10.マグロ釣りと生活様式</li>
+<li class="lv2"><a href="11_tougen.html">1984年 7月 5日　モーニング・ガーデン</a></li>
+<li class="lv1">11.真の父母と蕩減</li>
+<li class="lv2"><a href="12_sinjyouto_seisin.html">1984年 8月　　バークレイ</a></li>
+<li class="lv1">12.魚釣りの心情と精神</li>
+<li class="lv2"><a href="13_uminomiti.html">1986年 7月 3日　モーニング・ガーデン</a></li>
+<li class="lv1">13.海の道</li>
+<li class="lv2"><a href="14_syupan.html#002">1986年 8月28日　モーニング・ガーデン</a></li>
+</ul>
 <br/>
 <b>14.既に出版されている御言葉からの抜粋</b><br/>
       　　　1974年〜1983年<br/>

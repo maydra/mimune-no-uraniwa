@@ -300,6 +300,16 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
@@ -314,38 +324,36 @@
 <hr/>
 　　<b>成約人への道</b><br/>
 <hr/>
-<a href="hajimeni.html#003" style="text-decoration : none;color : black;"><b>はじめに<br/>
-      日本語版発刊によせて</b></a><br/>
-<br/>
-<a href="1-1.html#003" style="color : black;text-decoration : none;"><b>第一章　人生観<br/>
-      　</b>一　人生とは何か</a><br/>
-<a href="1-2.html#002" style="color : black;text-decoration : none;">　二　人間は原因たる存在ではない</a><br/>
-<a href="1-3.html#002" style="color : black;text-decoration : none;">　三　人間の価値は偉大である</a><br/>
-<a href="1-4.html#002" style="color : black;text-decoration : none;">　四　人間本性の真なる生活</a><br/>
-<a href="1-5.html#002" style="color : black;text-decoration : none;">　五　真の人間が行く道</a><br/>
-<br/>
-<a href="2-1.html#003" style="color : black;text-decoration : none;"><b>第二章　家庭観</b><br/>
-      　一　理想的な家庭とはどのような家庭か</a><br/>
-<a href="2-2.html#002" style="color : black;text-decoration : none;">　二　家庭は天国完成の基本単位</a><br/>
-<a href="2-3.html#002" style="color : black;text-decoration : none;">　三　真の家庭の理想と価値</a><br/>
-<a href="2-4.html#002" style="color : black;text-decoration : none;">　四　天国は家庭単位で行く所</a><br/>
-<a href="2-5.html#002" style="color : black;text-decoration : none;">　五　家庭盟誓</a><br/>
-<br/>
-<a href="3-1.html#003" style="color : black;text-decoration : none;"><b>第三章　国家、世界観</b><br/>
-      　一　人類が追求してきた一つの国家、世界</a><br/>
-<a href="3-2.html#002" style="color : black;text-decoration : none;">　二　理想社会、国家、世界の構造</a><br/>
-<a href="3-3.html#002" style="color : black;text-decoration : none;">　三　人類の中心思想は真の愛主義</a><br/>
-<a href="3-4.html#002" style="color : black;text-decoration : none;">　四　民主世界と共産世界の未来</a><br/>
-<a href="3-5.html#002" style="color : black;text-decoration : none;">　五　神様を中心とした主権が復帰されれば</a><br/>
-<br/>
-<a href="4-1.html#003" style="color : black;text-decoration : none;"><b>第四章　成約人への道</b><br/>
-      　一　真の御父母様の勝利圏確定</a><br/>
-<a href="4-2.html#002" style="color : black;text-decoration : none;">　二　摂理的総決算と真の御父母様の大宣布</a><br/>
-<a href="4-3.html#002" style="color : black;text-decoration : none;">　三　ジャルジン七大宣言と新エデン創建</a><br/>
-<a href="4-4.html#002" style="color : black;text-decoration : none;">　四　世界平和統一家庭連合<br/>
-</a><a href="4-5.html" style="color : black;text-decoration : none;">　五　堕落の峠を越えるためには</a><a href="4-4.html#002" style="color : black;text-decoration : none;"><br/>
-</a><a href="4-6.html#002" style="color : black;text-decoration : none;">　六　第四次アダム圏、自由自主の時代<br/>
-</a><a href="4-7.html#002" style="color : black;text-decoration : none;">　七　愛の皇族となれ</a><a href="4-6.html#002" style="color : black;text-decoration : none;"><br/>
+<ul class="toc-tree">
+<li class="lv0"><a href="hajimeni.html#002">はじめに</a></li>
+<li class="lv0"><a href="hajimeni.html#003">日本語版発刊によせて</a></li>
+<li class="lv1"><a href="1-1.html#002">第一章　人生観</a></li>
+<li class="lv2"><a href="1-1.html#003">一　人生とは何か</a></li>
+<li class="lv2"><a href="1-2.html#002">二　人間は原因たる存在ではない</a></li>
+<li class="lv2"><a href="1-3.html#002">三　人間の価値は偉大である</a></li>
+<li class="lv2"><a href="1-4.html#002">四　人間本性の真なる生活</a></li>
+<li class="lv2"><a href="1-5.html#002">五　真の人間が行く道</a></li>
+<li class="lv1"><a href="2-1.html#002">第二章　家庭観</a></li>
+<li class="lv2"><a href="2-1.html#003">一　理想的な家庭とはどのような家庭か</a></li>
+<li class="lv2"><a href="2-2.html#002">二　家庭は天国完成の基本単位</a></li>
+<li class="lv2"><a href="2-3.html#002">三　真の家庭の理想と価値</a></li>
+<li class="lv2"><a href="2-4.html#002">四　天国は家庭単位で行く所</a></li>
+<li class="lv2"><a href="2-5.html#002">五　家庭盟誓</a></li>
+<li class="lv1"><a href="3-1.html#002">第三章　国家、世界観</a></li>
+<li class="lv2"><a href="3-1.html#003">一　人類が追求してきた一つの国家、世界</a></li>
+<li class="lv2"><a href="3-2.html#002">二　理想社会、国家、世界の構造</a></li>
+<li class="lv2"><a href="3-3.html#002">三　人類の中心思想は真の愛主義</a></li>
+<li class="lv2"><a href="3-4.html#002">四　民主世界と共産世界の未来</a></li>
+<li class="lv2"><a href="3-5.html#002">五　神様を中心とした主権が復帰されれば</a></li>
+<li class="lv1"><a href="4-1.html#002">第四章　成約人への道</a></li>
+<li class="lv2"><a href="4-1.html#003">一　真の御父母様の勝利圏確定</a></li>
+<li class="lv2"><a href="4-2.html#002">二　摂理的総決算と真の御父母様の大宣布</a></li>
+<li class="lv2"><a href="4-3.html#002">三　ジャルジン七大宣言と新エデン創建</a></li>
+<li class="lv2"><a href="4-4.html#002">四　世界平和統一家庭連合</a></li>
+<li class="lv2"><a href="4-5.html">五　堕落の峠を越えるためには</a></li>
+<li class="lv2"><a href="4-6.html#002">六　第四次アダム圏、自由自主の時代</a></li>
+<li class="lv2"><a href="4-7.html#002">七　愛の皇族となれ</a></li>
+</ul>
 <br/>
 </a>
 <p><br/>

@@ -298,6 +298,16 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182259">
@@ -313,45 +323,47 @@
 <hr/>
 <b>　御旨と世界</b>
 <hr/>
-<p><a href="00.html#002">序文</a><br/>
-<a href="01.html#001">１.復帰と祝福</a><br/>
-<a href="02.html#001">２.理想相対</a><br/>
-<a href="03.html">３.生涯において何をなすべきか</a><br/>
-<a href="04.html#023">４.血統的転換</a><br/>
-<a href="05.html#012">５.勝敗と現在</a><br/>
-<a href="06.html#006">６.統一戦線守護</a><br/>
-<a href="07.html#009">７.復帰の道</a><br/>
-<a href="08.html#034">８.真の父母と我々</a><br/>
-<a href="09.html#010">９.我らはなぜ苦労しなければならないか</a><br/>
-<a href="10.html">10.年頭のみことば(一九七三年）</a><br/>
-<a href="11.html#007">11.勝祝日の制定にあたって</a><br/>
-<a href="12.html#004">12.一心不乱一生懸命</a><br/>
-<a href="13.html#001">13.人間に対する神の希望</a><br/>
-<a href="14.html#001">14.アメリカに対する神の希望</a><br/>
-<a href="15.html#001">15.キリスト教の将来</a><br/>
-<a href="16.html#012">16.伝統の旗手</a><br/>
-<a href="17.html#022">17.キリスト教の新しい未来</a><br/>
-<a href="18.html">18.総解怨式のみことば</a><br/>
-<a href="19.html#014">19.私自身</a><br/>
-<a href="20.html#022">20.歴史の転換点</a><br/>
-<a href="21.html">21.統一式のみことば</a><br/>
-<a href="22.html#007">22.新しい宇宙的な春は永遠に繁栄する</a><br/>
-<a href="23.html#020">23.摂理的歴史の光の中にあって</a><br/>
-<a href="24.html#017">24.歴史的父母の日</a><br/>
-<a href="25.html#027">25.創立以前の内的教会史</a><br/>
-<a href="26.html#023">26.再会の心情</a><br/>
-<a href="27.html#011">27.刺激と冒険</a><br/>
-<a href="28.html">28.愛の相続</a><br/>
-<a href="29.html">29.祝福を迎える一日</a><br/>
-<a href="30.html">30.七七七双祝福八周年記念によせて</a><br/>
-<a href="31.html#013">31.私たち自身を知ろう</a><br/>
-<a href="32.html#008">32.神の祖国</a><br/>
-<a href="33.html#002">33.摂理と昔今の私</a><br/>
-<a href="34.html">34.全体蕩減</a><br/>
-<a href="35.html#008">35.信仰の三子女と本然の家庭基盤</a><br/>
-<a href="36.html#001">36.私を中心とした父母と子女と万物世界</a><br/>
-<a href="37.html#001">37.愛勝日の必要性</a><br/>
-<a href="38.html#001">38.真の愛を中心とした本然のエデン</a><br/>
+<ul class="toc-tree">
+<li class="lv0"><a href="00.html#002">序文</a></li>
+<li class="lv3"><a href="01.html#001">１.復帰と祝福</a></li>
+<li class="lv3"><a href="02.html#001">２.理想相対</a></li>
+<li class="lv3"><a href="03.html">３.生涯において何をなすべきか</a></li>
+<li class="lv3"><a href="04.html#023">４.血統的転換</a></li>
+<li class="lv3"><a href="05.html#012">５.勝敗と現在</a></li>
+<li class="lv3"><a href="06.html#006">６.統一戦線守護</a></li>
+<li class="lv3"><a href="07.html#009">７.復帰の道</a></li>
+<li class="lv3"><a href="08.html#034">８.真の父母と我々</a></li>
+<li class="lv3"><a href="09.html#010">９.我らはなぜ苦労しなければならないか</a></li>
+<li class="lv3"><a href="10.html">10.年頭のみことば(一九七三年）</a></li>
+<li class="lv3"><a href="11.html#007">11.勝祝日の制定にあたって</a></li>
+<li class="lv3"><a href="12.html#004">12.一心不乱一生懸命</a></li>
+<li class="lv3"><a href="13.html#001">13.人間に対する神の希望</a></li>
+<li class="lv3"><a href="14.html#001">14.アメリカに対する神の希望</a></li>
+<li class="lv3"><a href="15.html#001">15.キリスト教の将来</a></li>
+<li class="lv3"><a href="16.html#012">16.伝統の旗手</a></li>
+<li class="lv3"><a href="17.html#022">17.キリスト教の新しい未来</a></li>
+<li class="lv3"><a href="18.html">18.総解怨式のみことば</a></li>
+<li class="lv3"><a href="19.html#014">19.私自身</a></li>
+<li class="lv3"><a href="20.html#022">20.歴史の転換点</a></li>
+<li class="lv3"><a href="21.html">21.統一式のみことば</a></li>
+<li class="lv3"><a href="22.html#007">22.新しい宇宙的な春は永遠に繁栄する</a></li>
+<li class="lv3"><a href="23.html#020">23.摂理的歴史の光の中にあって</a></li>
+<li class="lv3"><a href="24.html#017">24.歴史的父母の日</a></li>
+<li class="lv3"><a href="25.html#027">25.創立以前の内的教会史</a></li>
+<li class="lv3"><a href="26.html#023">26.再会の心情</a></li>
+<li class="lv3"><a href="27.html#011">27.刺激と冒険</a></li>
+<li class="lv3"><a href="28.html">28.愛の相続</a></li>
+<li class="lv3"><a href="29.html">29.祝福を迎える一日</a></li>
+<li class="lv3"><a href="30.html">30.七七七双祝福八周年記念によせて</a></li>
+<li class="lv3"><a href="31.html#013">31.私たち自身を知ろう</a></li>
+<li class="lv3"><a href="32.html#008">32.神の祖国</a></li>
+<li class="lv3"><a href="33.html#002">33.摂理と昔今の私</a></li>
+<li class="lv3"><a href="34.html">34.全体蕩減</a></li>
+<li class="lv3"><a href="35.html#008">35.信仰の三子女と本然の家庭基盤</a></li>
+<li class="lv3"><a href="36.html#001">36.私を中心とした父母と子女と万物世界</a></li>
+<li class="lv3"><a href="37.html#001">37.愛勝日の必要性</a></li>
+<li class="lv3"><a href="38.html#001">38.真の愛を中心とした本然のエデン</a></li>
+</ul>
 <br/>
 <br/>
 <br/></p>
