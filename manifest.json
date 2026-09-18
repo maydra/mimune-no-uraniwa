@@ -1,20 +1,16 @@
 {
-  "name": "みむねのうらにわ",
-  "short_name": "みむねのうらにわ",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#0f0c29",
-  "theme_color": "#302b63",
-  "icons": [
-    {
-      "src": "favicon.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "favicon.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+    "name": "み旨の裏庭",
+    "short_name": "み旨の裏庭",
+    "description": "み言を記録するアーカイブ。原理講論・家庭盟誓・天聖経収録などの資料を、オフラインでも読める形で掲載。",
+    "lang": "ja",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#302b63",
+    "theme_color": "#302b63",
+    "icons": [
+        { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+        { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    ]
 }

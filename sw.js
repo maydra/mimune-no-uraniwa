@@ -1,150 +1,113 @@
-// バージョンを上げると、古いキャッシュは activate 時に全部消える
-// v4: 全文検索の本文を書籍ごとに分け直してファイル名が総入れ替えになった。
-// 古い manifest.json が残っていると、もう無いシャードを探しに行ってしまう。
-const CACHE_NAME = 'mimune-cache-v4';
-const STATIC_URLS = [
-    './index.html',
-    './theme/style.css',
-    './theme/script.js',
-    './favicon.png',
-    './manifest.json',
-    './pages.json',
-    './search-all.html',
-    './search-all.js',
-    './gacha.html'
-];
+/* み旨の裏庭 service worker v5
+ *
+ * 方針: ふだんの閲覧は今までどおりネットワークから（SW が壊れても
+ * サイトは壊れない）。開いたページは通りすがりに保存しておき、
+ * オフラインのときだけキャッシュから出す。
+ *
+ * 「この本をオフライン保存」(offline.js) は CACHE_BOOK メッセージで
+ * 書籍の全ページをまとめて取りに来る。進捗は postMessage で返す。
+ *
+ * 検索の本文 (data/fulltext/) は search-all.js が自前の Cache API
+ * (mimune-fulltext-v1) で管理しているので、ここでは一切触らない。
+ * 触ると「サイト更新のたびに検索が壊れる」事故になる（v4 の失敗）。
+ */
+const VERSION = 'v5';
+const PAGES = 'mimune-pages-' + VERSION;   // HTML（見たページ＋保存した本）
+const ASSETS = 'mimune-assets-' + VERSION; // CSS/JS/画像
+const OFFLINE_URL = 'offline.html';
 
-self.addEventListener('install', event => {
-    self.skipWaiting();
+self.addEventListener('install', (event) => {
+    event.waitUntil((async () => {
+        const cache = await caches.open(ASSETS);
+        await cache.put(OFFLINE_URL, await fetch(OFFLINE_URL, { cache: 'reload' }));
+        await self.skipWaiting();
+    })());
 });
 
-self.addEventListener('activate', event => {
-    event.waitUntil(
-        caches.keys().then(cacheNames => {
-            return Promise.all(
-                cacheNames.filter(name => name !== CACHE_NAME)
-                    .map(name => caches.delete(name))
-            );
-        }).then(() => self.clients.claim())
-    );
+self.addEventListener('activate', (event) => {
+    event.waitUntil((async () => {
+        for (const key of await caches.keys()) {
+            const stale =
+                (key.startsWith('mimune-pages-') && key !== PAGES) ||
+                (key.startsWith('mimune-assets-') && key !== ASSETS) ||
+                key.startsWith('mimune-cache-'); // 旧世代（v4 以前）
+            if (stale) await caches.delete(key);
+        }
+        await self.clients.claim();
+    })());
 });
 
-// HTML かどうか（ページ本体か、ただの部品か）
-function isPageRequest(request) {
-    if (request.mode === 'navigate') return true;
-    const accept = request.headers.get('accept') || '';
-    if (accept.includes('text/html')) return true;
-    const path = new URL(request.url).pathname;
-    return path.endsWith('/') || path.endsWith('.html') || path.endsWith('.htm');
-}
+self.addEventListener('fetch', (event) => {
+    const req = event.request;
+    if (req.method !== 'GET') return;
+    const url = new URL(req.url);
+    if (url.origin !== location.origin) return;            // フォント等は素通し
+    if (url.pathname.includes('/data/fulltext/')) return;  // 検索が自前管理
 
-self.addEventListener('fetch', event => {
-    const request = event.request;
-
-    // GET 以外と外部ドメイン（Google Fonts / gtag など）には触らない
-    if (request.method !== 'GET') return;
-    if (new URL(request.url).origin !== self.location.origin) return;
-
-    if (isPageRequest(request)) {
-        // ページ本体はネットワーク優先。
-        // これがないと、ページを直しても一度読んだ人には永久に古いままになる
-        event.respondWith(
-            fetch(request)
-                .then(response => {
-                    if (response && response.ok) {
-                        const copy = response.clone();
-                        caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
-                    }
-                    return response;
-                })
-                .catch(() => caches.match(request).then(cached => cached || Promise.reject()))
-        );
+    // ページ: ネットワーク優先。届いたら保存、届かなければキャッシュ→案内ページ
+    if (req.mode === 'navigate') {
+        event.respondWith((async () => {
+            try {
+                const res = await fetch(req);
+                if (res.ok) {
+                    const copy = res.clone();
+                    caches.open(PAGES).then((c) => c.put(req, copy)).catch(() => { });
+                }
+                return res;
+            } catch (err) {
+                const hit = await caches.match(req, { ignoreSearch: true });
+                return hit || await caches.match(OFFLINE_URL);
+            }
+        })());
         return;
     }
 
-    // CSS / JS / 画像などは、キャッシュを返しつつ裏で更新しておく
-    event.respondWith(
-        caches.match(request).then(cached => {
-            const network = fetch(request).then(response => {
-                if (response && response.ok) {
-                    const copy = response.clone();
-                    caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
-                }
-                return response;
-            }).catch(() => cached);
-            return cached || network;
-        })
-    );
-});
-
-// Message handler to trigger caching
-self.addEventListener('message', event => {
-    if (event.data && event.data.type === 'CACHE_ALL') {
-        event.waitUntil(
-            cacheAllFiles(event.source)
-        );
-    }
-});
-
-async function cacheAllFiles(client) {
-    try {
-        const cache = await caches.open(CACHE_NAME);
-
-        // 1. Cache static files first
-        await cache.addAll(STATIC_URLS);
-
-        // 2. Fetch pages.json to get all content pages
-        const response = await fetch('./pages.json');
-        if (!response.ok) throw new Error('Failed to fetch pages.json');
-
-        const pages = await response.json();
-
-        // 3. Cache all pages from pages.json
-        // We'll do this in chunks to avoid overwhelming the network/browser
-        const total = pages.length;
-        let count = 0;
-
-        // Helper to post progress
-        const postProgress = (current, total) => {
-            if (client) {
-                client.postMessage({
-                    type: 'CACHE_PROGRESS',
-                    current,
-                    total
-                });
+    // CSS/JS/画像: キャッシュ優先（?v= が変われば URL ごと変わる）、裏で更新
+    event.respondWith((async () => {
+        const hit = await caches.match(req);
+        const refresh = fetch(req).then((res) => {
+            if (res && res.ok) {
+                const copy = res.clone();
+                caches.open(ASSETS).then((c) => c.put(req, copy)).catch(() => { });
             }
-        };
+            return res;
+        }).catch(() => null);
+        if (hit) return hit;
+        const res = await refresh;
+        if (res) return res;
+        return (await caches.match(req, { ignoreSearch: true })) || Response.error();
+    })());
+});
 
-        // Cache in batches
-        const BATCH_SIZE = 20;
-        for (let i = 0; i < pages.length; i += BATCH_SIZE) {
-            const batch = pages.slice(i, i + BATCH_SIZE);
-            const promises = batch.map(url => {
-                // Normalize URL: remove leading slash if present, though pages.json seems to not have them
-                // pages.json has "bokkaisyanomiti/0301010041.html" format
-                const targetUrl = url.startsWith('/') ? url.substring(1) : url;
-                // Ensure we encode it if needed, but fetch usually handles it.
-                // However, some file names might have spaces or special chars.
-                return cache.add(targetUrl).catch(err => {
-                    console.warn(`Failed to cache ${targetUrl}:`, err);
-                    // We continue even if one fails
-                });
-            });
+// --- 「この本をオフライン保存」 -------------------------------------------
+self.addEventListener('message', (event) => {
+    const msg = event.data || {};
+    const reply = (m) => { if (event.source) event.source.postMessage(m); };
 
-            await Promise.all(promises);
-            count += batch.length;
-            postProgress(Math.min(count, total), total);
-        }
-
-        // 4. Notify completion
-        if (client) {
-            client.postMessage({ type: 'CACHE_COMPLETE' });
-        }
-
-    } catch (err) {
-        console.error('Caching failed:', err);
-        if (client) {
-            client.postMessage({ type: 'CACHE_ERROR', error: err.toString() });
-        }
+    if (msg.type === 'CACHE_BOOK') {
+        event.waitUntil((async () => {
+            const cache = await caches.open(PAGES);
+            const urls = msg.urls || [];
+            let done = 0;
+            let failed = 0;
+            const CHUNK = 8; // 一斉に投げると帯域を食い合うので少しずつ
+            for (let i = 0; i < urls.length; i += CHUNK) {
+                await Promise.all(urls.slice(i, i + CHUNK).map(async (u) => {
+                    try {
+                        const res = await fetch(u, { cache: 'no-cache' });
+                        if (res.ok) await cache.put(u, res); else failed += 1;
+                    } catch (err) { failed += 1; }
+                    done += 1;
+                }));
+                reply({ type: 'BOOK_PROGRESS', book: msg.book, done: done, total: urls.length });
+            }
+            reply({ type: 'BOOK_DONE', book: msg.book, failed: failed, total: urls.length });
+        })());
+    } else if (msg.type === 'REMOVE_BOOK') {
+        event.waitUntil((async () => {
+            const cache = await caches.open(PAGES);
+            for (const u of msg.urls || []) await cache.delete(u);
+            reply({ type: 'BOOK_REMOVED', book: msg.book });
+        })());
     }
-}
+});

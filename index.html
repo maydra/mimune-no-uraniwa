@@ -11,6 +11,9 @@
     </script>
 
     <link href="/mimune-no-uraniwa/favicon.png?v=202609182108" rel="icon" type="image/png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <meta name="theme-color" content="#302b63" />
     <meta charset="utf-8" />
     <title>み旨の裏庭 | サイト目次</title>
     <meta content="『み旨の裏庭』は、信仰と霊的真理に関する資料を集めた記録サイトです。家庭盟誓や原理講論の霊的解釈をわかりやすく掲載しています。" name="description" />
@@ -544,6 +547,19 @@
                 </ul>
             </div>
 
+            <div class="section-card featured-section" id="pwa-card">
+                <h2>📱 アプリのように使う・オフラインで読む</h2>
+                <p style="margin-bottom: 1.2rem; font-size: 1.15rem;">
+                    このサイトはホーム画面に追加して、アプリのように開けます。
+                    さらに、各書籍の目次にある「<b>📥 この本をオフライン保存</b>」を押しておくと、
+                    飛行機の中など電波のない場所でもその本を読めます。</p>
+                <div class="search-links" style="justify-content: flex-start; margin-top: 0;">
+                    <button id="install-btn" class="search-btn" hidden
+                        style="cursor: pointer; border-width: 1px; font-family: inherit;">📲 ホーム画面に追加する</button>
+                </div>
+                <p id="install-hint" style="font-size: 1.05rem; opacity: 0.85; margin-top: 0.6rem;"></p>
+            </div>
+
             <div class="section-card">
                 <h2 class="long-title">韓日英三か国語対訳（試験中）</h2>
                 <ul class="links-list">
@@ -571,5 +587,40 @@
     </script>
 
     <script src="theme/script.js?v=202609182108"></script>
+    <script>
+        // 「ホーム画面に追加」。対応ブラウザ(Android/PC の Chrome・Edge)では
+        // ワンタップのボタンを出し、iPhone/iPad には手順を文章で見せる。
+        (function () {
+            var btn = document.getElementById('install-btn');
+            var hint = document.getElementById('install-hint');
+            if (!btn || !hint) return;
+            var deferred = null;
+            window.addEventListener('beforeinstallprompt', function (e) {
+                e.preventDefault();
+                deferred = e;
+                btn.hidden = false;
+                hint.textContent = '';
+            });
+            btn.addEventListener('click', function () {
+                if (!deferred) return;
+                deferred.prompt();
+                deferred = null;
+                btn.hidden = true;
+            });
+            window.addEventListener('appinstalled', function () {
+                btn.hidden = true;
+                hint.textContent = '✓ ホーム画面に追加しました。';
+            });
+            var standalone = false;
+            try { standalone = matchMedia('(display-mode: standalone)').matches || !!navigator.standalone; } catch (e) { }
+            if (standalone) {
+                hint.textContent = '✓ すでにアプリとして開いています。';
+            } else if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+                hint.textContent = 'iPhone・iPad は、Safari 下部の共有ボタン（四角に↑）→「ホーム画面に追加」でインストールできます。';
+            } else {
+                hint.textContent = 'Android・PC の Chrome / Edge では、少し待つと上にボタンが出ます。出ない場合はブラウザのメニュー（⋮）→「ホーム画面に追加」から。';
+            }
+        })();
+    </script>
 </body>
 </html>

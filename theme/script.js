@@ -165,4 +165,27 @@
     } else {
         init();
     }
+
+    // --- PWA ---------------------------------------------------------------
+    // この script.js はほぼ全ページが読んでいるので、ここで一度だけ
+    // service worker を登録すればサイト全体がオフライン対応になる。
+    // サイトの根は script.js 自身の URL（…/theme/script.js）から割り出す。
+    try {
+        if ('serviceWorker' in navigator && document.currentScript && document.currentScript.src) {
+            const root = new URL('..', document.currentScript.src);
+            navigator.serviceWorker.register(new URL('sw.js', root)).catch(function () { });
+            if (!document.querySelector('link[rel="manifest"]')) {
+                const m = document.createElement('link');
+                m.rel = 'manifest';
+                m.href = new URL('manifest.json', root).href;
+                document.head.appendChild(m);
+            }
+            if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+                const a = document.createElement('link');
+                a.rel = 'apple-touch-icon';
+                a.href = new URL('icons/icon-192.png', root).href;
+                document.head.appendChild(a);
+            }
+        }
+    } catch (e) { }
 })();

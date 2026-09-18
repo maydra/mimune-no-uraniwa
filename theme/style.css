@@ -332,6 +332,26 @@ body.dark-mode [data-bible-nav] a:hover {
    その1冊ぶん（数百KB）だけ読んで探す。 */
 .book-search {
     margin: 1.2rem 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+/* 「この本をオフライン保存」は button 要素なので、a との見た目の差を埋める */
+button.book-search-btn {
+    font: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button.book-search-btn[disabled] {
+    opacity: 0.6;
+    cursor: progress;
+}
+
+.book-search-btn[hidden] {
+    display: none !important;
 }
 
 .book-search-btn {
@@ -349,7 +369,8 @@ body.dark-mode [data-bible-nav] a:hover {
     transition: all 0.2s ease;
 }
 
-.book-search-btn::before {
+/* 🔍 は検索リンク（a）だけ。オフライン保存の button には付けない */
+a.book-search-btn::before {
     content: '🔍';
     font-size: 1.05em;
     line-height: 1;

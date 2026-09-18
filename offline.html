@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>オフラインです | み旨の裏庭</title>
+<style>
+    :root {
+        --bg: #ffffff; --ink: #222222; --muted: #666666;
+        --card: #f5f5f7; --accent: #4a5bb0;
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg: #1a1a2e; --ink: #e0e0e0; --muted: #9aa0ad;
+            --card: #24243e; --accent: #a5b4fc;
+        }
+    }
+    * { box-sizing: border-box; }
+    body {
+        margin: 0; padding: 2rem 1rem; min-height: 100vh;
+        background: var(--bg); color: var(--ink);
+        font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', serif;
+        line-height: 1.9; display: flex; justify-content: center;
+    }
+    main { max-width: 34em; width: 100%; }
+    h1 { font-size: 1.6rem; margin: 0 0 1rem; }
+    p { margin: 0.6rem 0; }
+    .muted { color: var(--muted); font-size: 0.95rem; }
+    ul { list-style: none; padding: 0; margin: 1rem 0; }
+    li a {
+        display: block; padding: 0.8rem 1rem; margin-bottom: 0.6rem;
+        background: var(--card); border-radius: 10px;
+        color: var(--accent); text-decoration: none; font-weight: 600;
+    }
+    button {
+        margin-top: 1rem; padding: 0.6rem 1.4rem; font: inherit;
+        border: 1px solid var(--muted); border-radius: 999px;
+        background: transparent; color: var(--ink); cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<main>
+    <h1>📡 オフラインです</h1>
+    <p>このページはまだ端末に保存されていません。電波のある場所で開くと読めます。</p>
+    <div id="saved-wrap" hidden>
+        <p><b>この端末に保存済みの本</b>（オフラインでも読めます）:</p>
+        <ul id="saved-list"></ul>
+    </div>
+    <p class="muted">各書籍の目次にある「📥 この本をオフライン保存」を押しておくと、電波のない場所でもその本を読めるようになります。</p>
+    <button onclick="location.reload()">もう一度読み込む</button>
+</main>
+<script>
+    // 保存済みの本の一覧（offline.js が localStorage に記録している）
+    try {
+        var reg = JSON.parse(localStorage.getItem('mimune.offline.books') || '{}');
+        var names = Object.keys(reg);
+        if (names.length) {
+            var ul = document.getElementById('saved-list');
+            names.forEach(function (book) {
+                var a = document.createElement('a');
+                a.href = '/mimune-no-uraniwa/' + encodeURI(book) + '/index.html';
+                a.textContent = (reg[book] && reg[book].title) || book;
+                var li = document.createElement('li');
+                li.appendChild(a);
+                ul.appendChild(li);
+            });
+            document.getElementById('saved-wrap').hidden = false;
+        }
+    } catch (e) { }
+</script>
+</body>
+</html>
