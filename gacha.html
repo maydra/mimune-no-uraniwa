@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="ja">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
@@ -13,12 +13,14 @@
 </script>
 
 <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>🔮 ランダムページに移動中...</title>
-    
+
     <link rel="stylesheet" href="theme/style.css?v=202609182108">
 </head>
 <body>
-<h1 id="🔮-ランダムなページを選んでいます..."><a href="#🔮-ランダムなページを選んでいます...">🔮 ランダムなページを選んでいます...</a></h1>
+<h1>🔮 ランダムなページを選んでいます...</h1>
+<noscript><p>この機能は JavaScript が必要です。<a href="index.html">トップページに戻る</a></p></noscript>
 <script>
   // 常に randomScroll=true を付けたいなら true 固定でもOK
   const wantRandomScroll = true;
@@ -48,13 +50,22 @@
       }
 
       const randomPage = filteredPages[Math.floor(Math.random() * filteredPages.length)];
-      const basePath = "/mimune-no-uraniwa/";
-      const fullURL = basePath + randomPage + (wantRandomScroll ? "?randomScroll=true" : "");
-      location.href = fullURL;
+      // gacha.html はサイトの根に置いてあるので、相対パスのままで
+      // GitHub Pages でもローカル確認でも同じように飛べる
+      const fullURL = randomPage + (wantRandomScroll ? "?randomScroll=true" : "");
+      // replace: 履歴にこのページを残さない。href だと着地先で「戻る」を押した
+      // 瞬間ここへ戻って再抽選され、元のページに帰れなくなる
+      location.replace(fullURL);
     })
     .catch(err => {
       console.error("ページ取得失敗:", err);
-      document.body.innerHTML += "<p style='color:red;'>ページ取得に失敗しました。</p>";
+      const p = document.createElement("p");
+      p.textContent = "ページ取得に失敗しました。";
+      p.style.fontWeight = "bold";
+      const back = document.createElement("a");
+      back.href = "index.html";
+      back.textContent = "トップページに戻る";
+      document.body.append(p, back);
     });
 </script>
 
