@@ -46,6 +46,9 @@
     let totalBytes = 0;
     let loading = null;
     let ready = false;
+    // 「聖書を除く」のあいだは読まずに取っておく聖書のシャード。
+    // チェックを外されたら、そのときに読みに行く。
+    let skippedBible = [];
 
     function openCache() {
         if (!('caches' in window)) return Promise.resolve(null);
@@ -83,6 +86,16 @@
         return { docs: docs, body: body, starts: starts, lower: null };
     }
 
+    async function loadShardSet(list, onProgress) {
+        const cache = await openCache();
+        await Promise.all(list.map(async (s) => {
+            const sh = await fetchShard(cache, s);
+            shards.push(sh);
+            loadedBytes += s.bytes;
+            if (onProgress) onProgress();
+        }));
+    }
+
     function loadCorpus(onProgress) {
         if (loading) return loading;
         loading = (async () => {
@@ -91,9 +104,16 @@
             // 書籍を指定されていたら、その1冊ぶんのシャードだけを読む。
             // 知らない名前だったときはサイト全体に落とす。
             const book = (man.books || []).find(b => b.id === scopeBook);
-            const wantedShards = book
+            let wantedShards = book
                 ? man.shards.filter(s => s.book === book.id)
                 : man.shards;
+
+            // 「聖書を除く」のあいだは聖書の5シャード（約5.5MB）を落とさない。
+            // 既定で捨てるものを既定でダウンロードしない。
+            if (!book && excludingBible()) {
+                skippedBible = wantedShards.filter(s => s.book === 'Bible_out');
+                wantedShards = wantedShards.filter(s => s.book !== 'Bible_out');
+            }
             if (book) {
                 scopeTitle = book.title || book.id;
                 totalChars = book.chars;
@@ -130,6 +150,18 @@
             if (onProgress) onProgress();
         })();
         return loading;
+    }
+
+    // 「聖書を除く」を外されたら、取っておいた聖書のシャードを読み足す
+    function loadSkippedBible() {
+        if (!skippedBible.length) return;
+        const list = skippedBible;
+        skippedBible = [];
+        totalBytes += list.reduce((a, s) => a + s.bytes, 0);
+        ready = false;
+        loadShardSet(list, progress)
+            .then(() => { ready = true; progress(); })
+            .catch(() => { statsContainer.textContent = '聖書の本文を読み込めませんでした。'; });
     }
 
     // --- 探す -------------------------------------------------------------
@@ -452,7 +484,11 @@
     // 読み込みの途中経過。検索済みなら、揃った時点で出し直す。
     function progress() {
         if (resultsContainer.children.length || renderToken) {
-            if (ready && input.value.trim()) runSearch();
+            if (ready && input.value.trim()) { runSearch(); return; }
+            // 検索済みでまだ途中: 件数表示の末尾の「読み込み中（n%）」だけ進める。
+            // 前はここで何もしなかったので、%が最初の検索の時点で止まって見えた
+            statsContainer.textContent = statsContainer.textContent
+                .replace(/読み込み中（\d+%）/, `読み込み中（${pct()}%）`);
             return;
         }
         statsContainer.textContent = ready ? '' : `本文を読み込み中... ${pct()}%`;
@@ -475,10 +511,19 @@
             try {
                 localStorage.setItem(BIBLE_KEY, bibleInput.checked ? '1' : '0');
             } catch (e) { }
+            if (!bibleInput.checked) loadSkippedBible();
             if (input.value.trim()) runSearch();
         });
     }
 
-    // ページを開いた時点で裏で読み始める。打ち終わる頃には揃っている。
-    loadCorpus(progress).catch(() => { });
+    // 1冊指定（数百KB）のときだけ開いてすぐ読み始める。サイト全体（十数MB）は
+    // 検索する素振り（入力欄に触れる・打ち始める）があってから読み始める。
+    // スマホ回線で、開いただけのページに全文を落とさないため。
+    if (scopeBook) {
+        loadCorpus(progress).catch(() => { });
+    } else {
+        const kick = () => { loadCorpus(progress).catch(() => { }); };
+        input.addEventListener('focus', kick, { once: true });
+        input.addEventListener('input', kick, { once: true });
+    }
 })();

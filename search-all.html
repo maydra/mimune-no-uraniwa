@@ -301,13 +301,13 @@
   <h1 id="サイト内一括検索"><a href="#サイト内一括検索">サイト内一括検索</a></h1>
   <div id="search-scope" hidden></div>
   <div class="search-container">
-    <input autofocus="" id="search-input" placeholder="キーワードを入力してEnter または 検索ボタン" type="text" />
+    <input id="search-input" placeholder="キーワードを入力してEnter または 検索ボタン" type="text" />
     <div class="search-mode">
       <label><input type="radio" name="search-mode" value="and" checked /> すべての語を含む（AND）</label>
       <label><input type="radio" name="search-mode" value="or" /> どれかの語を含む（OR）</label>
     </div>
     <div class="search-mode search-filter">
-      <label><input type="checkbox" id="exclude-bible" /> 聖書の検索結果を除く</label>
+      <label><input type="checkbox" id="exclude-bible" checked /> 聖書の検索結果を除く</label>
     </div>
     <button id="search-btn">検索実行</button>
     <div class="search-hint">打った文字列をそのまま探します。<br />
