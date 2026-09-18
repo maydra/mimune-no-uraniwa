@@ -524,6 +524,38 @@ body.light-mode .nav-links a:hover {
 
 }
 
+/* --- ライトモードの救済（各ページのダーク前提CSSからの漏れ） ---------------
+   本文の区切り線 hr は rgba(255,255,255,0.2) 直書きのページが2100件あり、
+   白地では完全に消えていた。 */
+body.light-mode hr {
+    border-top-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 誤字報告フォームは class="typo-box dark-theme" がハードコードされていて、
+   上の body.light-mode button { color:#111 } が紫グラデのボタンまで黒文字に
+   していた（コントラスト3.3:1）。ボタンは白文字のまま、入力欄は白地に戻す。 */
+body.light-mode .typo-btn {
+    color: #ffffff !important;
+}
+
+body.light-mode .typo-textarea,
+body.light-mode .typo-input {
+    background: #ffffff !important;
+    color: #111111 !important;
+    border: 1px solid rgba(0, 0, 0, 0.25) !important;
+}
+
+/* --- スマホのテーマ切り替えボタン ------------------------------------------
+   右上固定のままだと h1 の末尾やスクロール中の本文1行目に必ず重なるので、
+   狭い画面では右下に置く。 */
+@media (max-width: 768px) {
+    #theme-toggle {
+        top: auto;
+        bottom: 18px;
+        right: 14px;
+    }
+}
+
 /* --- スマホの「前へ／目次／次へ」 ------------------------------------------
    各ページの CSS は 600px 以下で .page-nav を縦積みにしていて、
    たった3語のために画面を3行ぶん使っていた。横1行に戻す。

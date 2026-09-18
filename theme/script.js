@@ -21,7 +21,8 @@
             'box-shadow:0 4px 15px rgba(0,0,0,0.2);}',
             'body.light-mode #theme-toggle{background:rgba(0,0,0,0.05);',
             'border-color:rgba(0,0,0,0.1);}',
-            '#theme-toggle:hover{transform:scale(1.1);}'
+            '#theme-toggle:hover{transform:scale(1.1);}',
+            '@media (max-width:768px){#theme-toggle{top:auto;bottom:18px;right:14px;}}'
         ].join('');
         document.head.appendChild(style);
     }
