@@ -314,31 +314,47 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次（試作） */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182238">
 </head>
 <body><div class="container">
-<h1 id="真の神様"><a href="#真の神様">真の神様</a></h1>
+<h1>真の神様</h1>
 <nav class="page-nav">
   <a href="002_makotono_kamisama.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="004_makotono_kamisama.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の神様</a></li><li class="toc-b"><a href="#002">六　愛によって遍在される</a></li><li class="toc-b"><a href="#003">１．愛だけが境界を出入りする</a></li><li class="toc-b"><a href="#004">２．宇宙には愛がない所がない</a></li><li class="toc-b"><a href="#005">七　既存神観の問題点</a></li><li class="toc-b"><a href="#006">１．既存神観は二律背反的である</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の神様</a></li><li class="toc-b lv2"><a href="#002">六　愛によって遍在される</a></li><li class="toc-b lv3"><a href="#003">１．愛だけが境界を出入りする</a></li><li class="toc-b lv3"><a href="#004">２．宇宙には愛がない所がない</a></li><li class="toc-b lv2"><a href="#005">七　既存神観の問題点</a></li><li class="toc-b lv3"><a href="#006">１．既存神観は二律背反的である</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の神様</a></b><br/>
+<h2 class="bh bh0" id="001">真の神様</h2>
 　
 </div>
 <hr/>
 <b><br/>
-</b><b id="002"><a href="#002">　六　愛によって遍在される</a></b><br/>
+</b><h3 class="bh" id="002">六　愛によって遍在される</h3>
 <br/>
-<b id="003"><a href="#003">　　１．愛だけが境界を出入りする</a></b><br/>
+<h4 class="bh" id="003">１．愛だけが境界を出入りする</h4>
 <br/>
 　神様の心は神様のみ言の中だけにあるのではなく、神様が造られた万物の中にもあるのです。天地のどこに行ってもそこに神様の心があるというのです。ですから天はいらっしゃらないところがないのです。すなわち遍在すると言いました。神様の心の中にいることを願うのなら、皆さんが眺める物の中に神様の心があるので、その物を自分の物として、天地のすべての存在物を私の物として抱こうとする心をもたなければなりません。それが天の心です。最高の道に通じた人がいたとすれば神様の心に所有された人です。自分が鳥一羽、香りを放つ花一束を見ても、永遠を歌うことができる境地に入る心をもった人は、万物の中にあるのではなく、神様の心の中にあるのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -359,7 +375,7 @@
 　自分が描いた作品を持って、夜も昼も酔い、眺めて涙を流し感嘆する人がいれば、それを描いた画家は気分が悪いでしょうか。そのような人がいれば連れてきて、部屋に招待し「どうしたのですか」と言いながら、その理由を話させるのではないですか。「ああ、とてもいい。ああ懐かしい。ああ、一緒にいたい」と言ったからといって、狂ったと言うでしょうか。皆さんは神様を知らなくても、神様が全宇宙にいっぱいに満ちている遍在性を知識的な主体としておられるよりも、愛としておられるので「私がどのように同感権を各分野で体恤することができるのか」という立場で神様を再認識し、再発見しなさいというのです。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="004"><a href="#004">　　２．宇宙には愛がない所がない</a></b><br/>
+<h4 class="bh" id="004">２．宇宙には愛がない所がない</h4>
 <br/>
 　神様は絶対的な神様ですが、なぜ絶対的なのでしょうか。愛に絶対服従するからです。気分がいいですか。悪いですか。また神様は遍在します。遍在。神様の愛がない所がありません。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -376,9 +392,9 @@
 　この宇宙にすべての人々の心を満たしてくれる一つの主体があるとすれば、それはどんな主体でしょうか。絶対的な一つの中心者でないわけにはいかないのです。どのような心の位置にも愛をいっぱいに満たすことができる絶対者がいなければなりません。ですから彼は無限な絶対者でなければなりません。今日、数十億になる人類の心をすべて満たしてあげなければならない神様のその愛の量が、どれほどでしょうか。それは絶対的でなければなりません。全知全能で遍在という言葉が、だから必要なのです。その言葉は神様に必要な単語だというのです。これは理論的です。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="005"><a href="#005">　七　既存神観の問題点</a></b><br/>
+<h3 class="bh" id="005">七　既存神観の問題点</h3>
 <br/>
-<b id="006"><a href="#006">　　１．既存神観は二律背反的である</a></b><br/>
+<h4 class="bh" id="006">１．既存神観は二律背反的である</h4>
 <br/>
 　宗教の教えに対する反問にはいろいろあります。「神様は果たしているのでしょうか」。「神様が全知、全能、遍在し、至善、至美で、愛であり、審判の主であり、人類の父などと表現しますが、そうだということをどうやって知ることができますか」。「じっとしていてもいいはずの神様が、なぜ宇宙を創造したのでしょうか」。「神様の創造の目的は何なのか」。「創造には方法があったであろうが、その方法は何なのか」。「絶対的な神様が創造した世界に、なぜ弱肉強食という現状が起こっているのか」。「人間が堕落して罪の世界ができたと言うが、完全な神様が創造した人間がなぜ堕落するようになったのか」などがそれです。<br/>
 　　　　　　　　　　　　＊<br/>

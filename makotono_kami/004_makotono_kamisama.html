@@ -314,33 +314,49 @@
   .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
   .typo-box[open] summary::before { transform: rotate(90deg); }
   .typo-box[open] { padding-bottom: 1.5rem; }
-</style>
+
+        /* 階層つき目次（試作） */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+
+    </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182238">
 </head>
 <body><div class="container">
-<h1 id="真の神様"><a href="#真の神様">真の神様</a></h1>
+<h1>真の神様</h1>
 <nav class="page-nav">
   <a href="003_makotono_kamisama.html" class="nav-btn"><span>←</span> 前へ</a>
   <a href="index.html" class="nav-btn">目次</a>
   <a href="005_makotono_kamisama.html" class="nav-btn">次へ <span>→</span></a>
-</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b"><a href="#001">真の神様</a></li><li class="toc-b"><a href="#002">第二章　神様と創造の役事</a></li><li class="toc-b"><a href="#003">一　神様の創造の動機は愛</a></li><li class="toc-b"><a href="#004">１．創造の役事は完全投入</a></li><li class="toc-b"><a href="#005">２．愛を通じた創造理想の実現</a></li><li class="toc-b"><a href="#006">二　人間を創造された目的</a></li><li class="toc-b"><a href="#007">１．神様の愛の対象として造った</a></li><li class="toc-b"><a href="#008">２．愛と生命の核心をすべて投入</a></li></ul></div>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv0"><a href="#001">真の神様</a></li><li class="toc-b lv1"><a href="#002">第二章　神様と創造の役事</a></li><li class="toc-b lv2"><a href="#003">一　神様の創造の動機は愛</a></li><li class="toc-b lv3"><a href="#004">１．創造の役事は完全投入</a></li><li class="toc-b lv3"><a href="#005">２．愛を通じた創造理想の実現</a></li><li class="toc-b lv2"><a href="#006">二　人間を創造された目的</a></li><li class="toc-b lv3"><a href="#007">１．神様の愛の対象として造った</a></li><li class="toc-b lv3"><a href="#008">２．愛と生命の核心をすべて投入</a></li></ul></div>
 
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 <blockquote><b><br/>
 </b>
 <div align="left">
-<b id="001"><a href="#001">真の神様</a></b><br/>
+<h2 class="bh bh0" id="001">真の神様</h2>
 　
 </div>
 <hr/>
 <br/>
-<b id="002"><a href="#002">　第二章　神様と創造の役事</a></b><br/>
+<h2 class="bh" id="002">第二章　神様と創造の役事</h2>
 <br/>
-<b id="003"><a href="#003">　一　神様の創造の動機は愛</a></b><br/>
+<h3 class="bh" id="003">一　神様の創造の動機は愛</h3>
 <br/>
-<b id="004"><a href="#004">　　１．創造の役事は完全投入</a></b><br/>
+<h4 class="bh" id="004">１．創造の役事は完全投入</h4>
 <br/>
 　神様の天地創造は生命の接着を目的としたものではありません。愛の理想を同化させるためのものです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -378,7 +394,7 @@
 　神様の願いは真に与えることのできる世界的な足場をもつことです。神様は与えることにおいて誰も讒訴することはできず、受けることにおいても誰も条件を提示することができない、自由で平和で幸福な場を望んでいます。そのような立場を世界的に広げて、万民をそこで生きるようにすることが、神様の得ようとされる所期の目的です。<br/>
 <a name="002"></a><br/>
 <br/>
-<b id="005"><a href="#005">　　２．愛を通じた創造理想の実現</a></b><br/>
+<h4 class="bh" id="005">２．愛を通じた創造理想の実現</h4>
 <br/>
 　愛の実現のためにこの世を創造された神様でした。人間と万物が神様の愛を中心として一つとなり、和気あいあいとした愛の世界を築くのを見て喜ぶために、そして人間が神様の愛を中心として真の夫婦の因縁を結び、真の愛の家庭と氏族、民族、世界を築くのを見て喜ぶために、そしてそのような人間と愛によって一つとなることで愛の喜びを味わうために被造世界を創造した神様でした。正にこれが神様の創造の理想だったのです。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -403,9 +419,9 @@
 　愛を占領しようとするならば、投入しては忘れ、投入しては忘れなければなりません。なぜそのような愛をもたなければならないのでしょうか。愛は動けば動くほど大きくなるものだからです。力学の世界での自然現象は、動かせば動かすほど、作用すれば作用するほど小さくなります。自然世界は動けば動くほど小さくなりますが、真の愛の世界は動けば動くほど大きくなっていくのです。神様はそれを知っていたので、真の愛を中心に創造を始めることができたのです。<br/>
 <a name="003"></a><br/>
 <br/>
-<b id="006"><a href="#006">　二　人間を創造された目的</a></b><br/>
+<h3 class="bh" id="006">二　人間を創造された目的</h3>
 <br/>
-<b id="007"><a href="#007">　　１．神様の愛の対象として造った</a></b><br/>
+<h4 class="bh" id="007">１．神様の愛の対象として造った</h4>
 <br/>
 　神様は人間を愛ゆえに造りました。人間はなぜ造られたのでしょうか。愛ゆえに造られました。人間が万物と違うのは、神様の息子、娘として造られたことです。神様の直系の愛を受けることのできる対象者として造られたのです。これが人間の特権です。<br/>
 　　　　　　　　　　　　＊<br/>
@@ -435,7 +451,7 @@
 　神様はなぜ人を造ったのでしょうか。好きで造ったのでしょうか。違います。見るために造ったのでもありません。愛を求め得るために造ったのです。それが分からなければなりません。<br/>
 <a name="004"></a><br/>
 <br/>
-<b id="008"><a href="#008">　　２．愛と生命の核心をすべて投入</a></b><br/>
+<h4 class="bh" id="008">２．愛と生命の核心をすべて投入</h4>
 <br/>
 　神様はあらゆる万物を造り、その万物の主人公として人間始祖をエデンの園に造られました。人間を造るのに、神様がいたずらに造られたのではありませんでした。趣味で造られたのではありませんでした。人間を造り、万物を代表する中心として立てるまでの神様の苦労と精誠は、言葉では到底表すことができないという事実を私たちは知らなければなりません。神様が人間を造るとき、ありとあらゆる精誠を尽くし、心血と、御自身の生命の核心をすべて注いで造り、愛と心情をそっくりそのまま注いで造られました。どんな力をもっても離すことができず、離れようにも離れることのできない因縁の中で造られたのです。このように造られた人間であるゆえ、その人間を見つめられる神様に初めて平和が宿るのであり、すべての情と幸福はその人間を通してのみ宿ることができるのです。<br/>
 　　　　　　　　　　　　＊<br/>

@@ -300,6 +300,22 @@
             border-radius: 3px;
             scroll-margin-top: 1em;
         }
+    
+        /* 階層つき目次（試作） */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609182238">
@@ -311,87 +327,84 @@
 <!-- St-HP-H -->
 <!-- En-HP-H -->
 
-<hr align="left" width="80%"/>
-　真の神様
-<hr align="left" width="80%"/>
-<a href="001_makotono_kamisama.html#003"><b>第一章　神様の本体</b><br/>
-      一　神様は無形の主体であられる<br/>
-      　１．無形でおられる神様</a><br/>
-<a href="001_makotono_kamisama.html#005">　２．本来は自然に分かるようになっていた</a><br/>
-<a href="001_makotono_kamisama.html#007">二　無形の神様は体が必要<br/>
-      　１．体をもつためにアダムとエバを創造</a><br/>
-<a href="001_makotono_kamisama.html#008">　２．アダムは宗の祖先、有形の神様</a><br/>
-<a href="001_makotono_kamisama.html#010">三　神様は人格的な神<br/>
-      　１．神様は知情意をもった人格神</a><br/>
-<a href="001_makotono_kamisama.html#011">　２．神人一体の人格神を要求</a><br/>
-<a href="002_makotono_kamisama.html#003">四　神様は父であられる<br/>
-      　１．神様と人間は父子の関係</a><br/>
-<a href="002_makotono_kamisama.html#004">　２．神様は一番近くにいらっしゃる方</a><br/>
-<a href="002_makotono_kamisama.html#006">五　法度の中での全知全能である<br/>
-      　１．原則的基盤の上での全知全能である</a><br/>
-<a href="002_makotono_kamisama.html#007">　２．愛のみが絶対基準である</a><br/>
-<a href="002_makotono_kamisama.html#008">　３．神様も愛の前には絶対服従である</a><br/>
-<a href="003_makotono_kamisama.html#003">六　愛によって遍在される<br/>
-      　１．愛だけが境界を出入りする</a><br/>
-<a href="003_makotono_kamisama.html#004">　２．宇宙には愛がない所がない</a><br/>
-<a href="003_makotono_kamisama.html#006">七　既存神観の問題点<br/>
-      　１．既存神観は二律背反的である</a><br/>
-<br/>
-<a href="004_makotono_kamisama.html#004"><b>第二章　神様と創造の役事</b><br/>
-      一　神様の創造の動機は愛<br/>
-      　１．創造の役事は完全投入</a><br/>
-<a href="004_makotono_kamisama.html#005">　２．愛を通じた創造理想の実現</a><br/>
-<a href="004_makotono_kamisama.html#007">二　人間を創造された目的<br/>
-      　１．神様の愛の対象として造った</a><br/>
-<a href="004_makotono_kamisama.html#008">　２．愛と生命の核心をすべて投入</a><br/>
-<a href="005_makotono_kamisama.html#003">三　アダムとエバを通じた愛の理想<br/>
-      　１．アダムは無形の神様の体として造った</a><br/>
-<a href="005_makotono_kamisama.html#004">　２．夫婦は第二創造主の位置</a><br/>
-<a href="005_makotono_kamisama.html#005">四　愛の理想は家庭を中心に完成する<br/>
-      　１．神様の創造理想は四位基台完成</a><br/>
-<a href="005_makotono_kamisama.html#007">　２．創造理想は家庭完成によってなされる</a><br/>
-<a href="006_makotono_kamisama.html#002">五　神様が万物世界を造られた目的<br/>
-      　１．万物を造られた目的</a><br/>
-<a href="006_makotono_kamisama.html#004">　２．神秘の宇宙、その規模と構造</a><br/>
-<a href="006_makotono_kamisama.html#005">　３．自然は愛の理想を教えてくれる教材</a><br/>
-<a href="006_makotono_kamisama.html#006">　４．自然に対する私たちの姿勢</a><br/>
-<a href="006_makotono_kamisama.html#007">　５．自然を愛し、人を愛しなさい</a><br/>
-<br/>
-<a href="007_makotono_kamisama.html#002"><b>第三章　復帰摂理歴史と神観の変化</b><br/>
-      一　旧約時代、神様は天使であった<br/>
-      　１．旧約時代は僕の時代であった</a><br/>
-<a href="007_makotono_kamisama.html#005">　２．旧約時代は天使が神様に代わって役事した</a><br/>
-<a href="007_makotono_kamisama.html#006">　３．天使がなぜ人間の救いに加担するのか</a><br/>
-<a href="007_makotono_kamisama.html#008">二　主なる神の正体<br/>
-      　１．主なる神の属性</a><br/>
-<a href="007_makotono_kamisama.html#009">　２．宗教には新婦宗教と天使長宗教がある</a><br/>
-<a href="008_makotono_kamisama.html#002">三　イエス様が「父子関係の神観」明かす<br/>
-      　１．新約時代は養子の時代</a><br/>
-<a href="008_makotono_kamisama.html#004">　２．養子は父と呼ぶことができる</a><br/>
-<a href="008_makotono_kamisama.html#006">四　成約完成時代は神人一体の時代<br/>
-      　１．真の子女は血統転換、重生を経なければならない</a><br/>
-<a href="008_makotono_kamisama.html#008">五　創世以来初めて神様が顕現<br/>
-      　１．初めて神様が姿を現される</a><br/>
-<br/>
-<a href="009_makotono_kamisama.html#004"><b>第四章　真のお父様の見た神様</b><br/>
-      一　歴史的な恨、苦痛の神様<br/>
-      　１．人間の堕落により父母の立場を失う</a><br/>
-<a href="009_makotono_kamisama.html#005">　２．復帰の恨、子女を訪ねて六千年</a><br/>
-<a href="009_makotono_kamisama.html#006">二　息子を失った衝撃、悲しみの神様<br/>
-      　１．永遠のひとり子を失った神様</a><br/>
-<a href="009_makotono_kamisama.html#008">　２．神様の歴史的に悲惨な姿</a><br/>
-<a href="009_makotono_kamisama.html#011">三　拘束された神様、囹圄(れいご・ぎょ)の神様<br/>
-      　１．神様が立つ瀬を失った</a><br/>
-<a href="009_makotono_kamisama.html#012">　２．神様が神様の本分を果たせずにいる</a><br/>
-<a href="010_makotono_kamisama.html#002">四　サタンを処断できない理由<br/>
-      　１．サタンが讒訴する理由</a><br/>
-<a href="010_makotono_kamisama.html#004">　２．神様は法度を守られる</a><br/>
-<a href="011_makotono_kamisama.html#002">五　神様を解放してさしあげよう<br/>
-      　１．神様は囹圄の立場</a><br/>
-<a href="011_makotono_kamisama.html#005">　２．神様の解放は人間がしなければならい</a><br/>
-<a href="011_makotono_kamisama.html#007">六　神様の解怨と孝子の道<br/>
-      　１．真のお父様が歩み来られた復帰の道</a><br/>
-<a href="011_makotono_kamisama.html#008">　２．神様の解放のための生涯</a><br/>
+<ul class="toc-tree">
+<li class="lv0"><a href="001_makotono_kamisama.html#001">真の神様</a></li>
+<li class="lv1"><a href="001_makotono_kamisama.html#002">第一章　神様の本体</a></li>
+<li class="lv2"><a href="001_makotono_kamisama.html#003">一　神様は無形の主体であられる</a></li>
+<li class="lv3"><a href="001_makotono_kamisama.html#004">１．無形でおられる神様</a></li>
+<li class="lv3"><a href="001_makotono_kamisama.html#005">２．本来は自然に分かるようになっていた</a></li>
+<li class="lv2"><a href="001_makotono_kamisama.html#006">二　無形の神様は体が必要</a></li>
+<li class="lv3"><a href="001_makotono_kamisama.html#007">１．体をもつためにアダムとエバを創造</a></li>
+<li class="lv3"><a href="001_makotono_kamisama.html#008">２．アダムは宗の祖先、有形の神様</a></li>
+<li class="lv2"><a href="001_makotono_kamisama.html#009">三　神様は人格的な神</a></li>
+<li class="lv3"><a href="001_makotono_kamisama.html#010">１．神様は知情意をもった人格神</a></li>
+<li class="lv3"><a href="001_makotono_kamisama.html#011">２．神人一体の人格神を要求</a></li>
+<li class="lv2"><a href="002_makotono_kamisama.html#002">四　神様は父であられる</a></li>
+<li class="lv3"><a href="002_makotono_kamisama.html#003">１．神様と人間は父子の関係</a></li>
+<li class="lv3"><a href="002_makotono_kamisama.html#004">２．神様は一番近くにいらっしゃる方</a></li>
+<li class="lv2"><a href="002_makotono_kamisama.html#005">五　法度の中での全知全能である</a></li>
+<li class="lv3"><a href="002_makotono_kamisama.html#006">１．原則的基盤の上での全知全能である</a></li>
+<li class="lv3"><a href="002_makotono_kamisama.html#007">２．愛のみが絶対基準である</a></li>
+<li class="lv3"><a href="002_makotono_kamisama.html#008">３．神様も愛の前には絶対服従である</a></li>
+<li class="lv2"><a href="003_makotono_kamisama.html#002">六　愛によって遍在される</a></li>
+<li class="lv3"><a href="003_makotono_kamisama.html#003">１．愛だけが境界を出入りする</a></li>
+<li class="lv3"><a href="003_makotono_kamisama.html#004">２．宇宙には愛がない所がない</a></li>
+<li class="lv2"><a href="003_makotono_kamisama.html#005">七　既存神観の問題点</a></li>
+<li class="lv3"><a href="003_makotono_kamisama.html#006">１．既存神観は二律背反的である</a></li>
+<li class="lv1"><a href="004_makotono_kamisama.html#002">第二章　神様と創造の役事</a></li>
+<li class="lv2"><a href="004_makotono_kamisama.html#003">一　神様の創造の動機は愛</a></li>
+<li class="lv3"><a href="004_makotono_kamisama.html#004">１．創造の役事は完全投入</a></li>
+<li class="lv3"><a href="004_makotono_kamisama.html#005">２．愛を通じた創造理想の実現</a></li>
+<li class="lv2"><a href="004_makotono_kamisama.html#006">二　人間を創造された目的</a></li>
+<li class="lv3"><a href="004_makotono_kamisama.html#007">１．神様の愛の対象として造った</a></li>
+<li class="lv3"><a href="004_makotono_kamisama.html#008">２．愛と生命の核心をすべて投入</a></li>
+<li class="lv2"><a href="005_makotono_kamisama.html#002">三　アダムとエバを通じた愛の理想</a></li>
+<li class="lv3"><a href="005_makotono_kamisama.html#003">１．アダムは無形の神様の体として造った</a></li>
+<li class="lv3"><a href="005_makotono_kamisama.html#004">２．夫婦は第二創造主の位置</a></li>
+<li class="lv2"><a href="005_makotono_kamisama.html#005">四　愛の理想は家庭を中心に完成する</a></li>
+<li class="lv3"><a href="005_makotono_kamisama.html#006">１．神様の創造理想は四位基台完成</a></li>
+<li class="lv3"><a href="005_makotono_kamisama.html#007">２．創造理想は家庭完成によってなされる</a></li>
+<li class="lv2"><a href="006_makotono_kamisama.html#002">五　神様が万物世界を造られた目的</a></li>
+<li class="lv3"><a href="006_makotono_kamisama.html#003">１．万物を造られた目的</a></li>
+<li class="lv3"><a href="006_makotono_kamisama.html#004">２．神秘の宇宙、その規模と構造</a></li>
+<li class="lv3"><a href="006_makotono_kamisama.html#005">３．自然は愛の理想を教えてくれる教材</a></li>
+<li class="lv3"><a href="006_makotono_kamisama.html#006">４．自然に対する私たちの姿勢</a></li>
+<li class="lv3"><a href="006_makotono_kamisama.html#007">５．自然を愛し、人を愛しなさい</a></li>
+<li class="lv1"><a href="007_makotono_kamisama.html#002">第三章　復帰摂理歴史と神観の変化</a></li>
+<li class="lv2"><a href="007_makotono_kamisama.html#003">一　旧約時代、神様は天使であった</a></li>
+<li class="lv3"><a href="007_makotono_kamisama.html#004">１．旧約時代は僕の時代であった</a></li>
+<li class="lv3"><a href="007_makotono_kamisama.html#005">２．旧約時代は天使が神様に代わって役事した</a></li>
+<li class="lv3"><a href="007_makotono_kamisama.html#006">３．天使がなぜ人間の救いに加担するのか</a></li>
+<li class="lv2"><a href="007_makotono_kamisama.html#007">二　主なる神の正体</a></li>
+<li class="lv3"><a href="007_makotono_kamisama.html#008">１．主なる神の属性</a></li>
+<li class="lv3"><a href="007_makotono_kamisama.html#009">２．宗教には新婦宗教と天使長宗教がある</a></li>
+<li class="lv2"><a href="008_makotono_kamisama.html#002">三　イエス様が「父子関係の神観」明かす</a></li>
+<li class="lv3"><a href="008_makotono_kamisama.html#003">１．新約時代は養子の時代</a></li>
+<li class="lv3"><a href="008_makotono_kamisama.html#004">２．養子は父と呼ぶことができる</a></li>
+<li class="lv2"><a href="008_makotono_kamisama.html#005">四　成約完成時代は神人一体の時代</a></li>
+<li class="lv3"><a href="008_makotono_kamisama.html#006">１．真の子女は血統転換、重生を経なければならない</a></li>
+<li class="lv2"><a href="008_makotono_kamisama.html#007">五　創世以来初めて神様が顕現</a></li>
+<li class="lv3"><a href="008_makotono_kamisama.html#008">１．初めて神様が姿を現される</a></li>
+<li class="lv1"><a href="009_makotono_kamisama.html#002">第四章　真のお父様の見た神様</a></li>
+<li class="lv2"><a href="009_makotono_kamisama.html#003">一　歴史的な恨、苦痛の神様</a></li>
+<li class="lv3"><a href="009_makotono_kamisama.html#004">１．人間の堕落により父母の立場を失う</a></li>
+<li class="lv3"><a href="009_makotono_kamisama.html#005">２．復帰の恨、子女を訪ねて六千年</a></li>
+<li class="lv2"><a href="009_makotono_kamisama.html#006">二　息子を失った衝撃、悲しみの神様</a></li>
+<li class="lv3"><a href="009_makotono_kamisama.html#007">１．永遠のひとり子を失った神様</a></li>
+<li class="lv3"><a href="009_makotono_kamisama.html#008">２．神様の歴史的に悲惨な姿</a></li>
+<li class="lv2"><a href="009_makotono_kamisama.html#011">三　拘束された神様、囹圄(れいご・ぎょ)の神様</a></li>
+<li class="lv3"><a href="009_makotono_kamisama.html#011">１．神様が立つ瀬を失った</a></li>
+<li class="lv3"><a href="009_makotono_kamisama.html#012">２．神様が神様の本分を果たせずにいる</a></li>
+<li class="lv2"><a href="010_makotono_kamisama.html#002">四　サタンを処断できない理由</a></li>
+<li class="lv3"><a href="010_makotono_kamisama.html#003">１．サタンが讒訴する理由</a></li>
+<li class="lv3"><a href="010_makotono_kamisama.html#004">２．神様は法度を守られる</a></li>
+<li class="lv2"><a href="011_makotono_kamisama.html#002">五　神様を解放してさしあげよう</a></li>
+<li class="lv3"><a href="011_makotono_kamisama.html#002">１．神様は囹圄の立場</a></li>
+<li class="lv3"><a href="011_makotono_kamisama.html#005">２．神様の解放は人間がしなければならい</a></li>
+<li class="lv2"><a href="011_makotono_kamisama.html#006">六　神様の解怨と孝子の道</a></li>
+<li class="lv3"><a href="011_makotono_kamisama.html#007">１．真のお父様が歩み来られた復帰の道</a></li>
+<li class="lv3"><a href="011_makotono_kamisama.html#008">２．神様の解放のための生涯</a></li>
+</ul>
 <br/>
 <br/>
 <br/>
