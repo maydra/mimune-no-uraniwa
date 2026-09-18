@@ -561,7 +561,7 @@
     }
     document.documentElement.style.setProperty(
       "--headh", document.querySelector("header").offsetHeight + "px");
-    mark();
+    mark(true);
   }
 
   function rownoEl(s, v) {
@@ -594,13 +594,16 @@
     return el;
   }
 
-  function mark() {
+  // scroll は節へ「移動してきた」ときだけ true にする。表示中の節を
+  // クリックして印を付けただけで画面が飛ばないように、既定では寄せない
+  function mark(scroll) {
     document.querySelectorAll(".cell, .rowno").forEach((el) => {
       const r = +el.dataset.r;
       const here = el.classList.contains("rowno");
       el.classList.toggle(here ? "here" : "on", r === cur);
       if (here) el.style.color = (r === cur) ? "var(--accent)" : "";
     });
+    if (!scroll) return;
     const box = document.querySelector(`.rowno.here, .cell.on`);
     if (box && cur > 0) box.scrollIntoView({ block: "center", behavior: "smooth" });
   }
@@ -621,6 +624,9 @@
       return;
     }
     const found = [];
+    // 300件で全ループを打ち切る。前は最内の break だけだったので、頻出語の
+    // 全書検索が数万件を DOM に流してブラウザが固まっていた
+    outer:
     for (const code of codes) {
       const book = LOADED[code];
       if (!book) continue;
@@ -637,7 +643,7 @@
               snip: text.slice(Math.max(0, at - 30), at + term.length + 60),
               at: Math.min(at, 30), len: term.length,
             });
-            if (found.length > 300) break;
+            if (found.length >= 300) break outer;
           }
         }
       }
@@ -677,6 +683,7 @@
   $("#ui").onchange = () => { ui = $("#ui").value; uiPicked = true; store.set("ui", ui); store.set("uiPicked", true); paint(); syncHash(); };
 
   document.addEventListener("keydown", (e) => {
+    if (e.target.tagName === "SELECT") return;
     if (e.target === q) { if (e.key === "Escape") { q.blur(); hits.hidden = true; } return; }
     if (e.key === "/") { e.preventDefault(); tools = true; store.set("tools", true); paint(); q.focus(); return; }
     if (e.metaKey || e.ctrlKey || e.altKey) return;
@@ -684,8 +691,8 @@
     const nums = rows.map((r) => r[0]);
     if (e.key === "ArrowLeft") { e.preventDefault(); move(-1); }
     else if (e.key === "ArrowRight") { e.preventDefault(); move(1); }
-    else if (e.key === "ArrowDown") { e.preventDefault(); cur = nums[Math.min(nums.indexOf(cur) + 1, nums.length - 1)] ?? nums[0]; mark(); syncHash(); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); cur = nums[Math.max(nums.indexOf(cur) - 1, 0)] ?? nums[0]; mark(); syncHash(); }
+    else if (e.key === "ArrowDown") { e.preventDefault(); cur = nums[Math.min(nums.indexOf(cur) + 1, nums.length - 1)] ?? nums[0]; mark(true); syncHash(); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); cur = nums[Math.max(nums.indexOf(cur) - 1, 0)] ?? nums[0]; mark(true); syncHash(); }
   });
   addEventListener("hashchange", () => { parseHash(); paint(); });
   addEventListener("resize", () => { const v = readLayout(); if (v !== stacked) { stacked = v; paint(); } });
