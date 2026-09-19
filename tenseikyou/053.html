@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609191458" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第四篇　真の人間／第三節　堕落の結果</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609191458">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第四篇　真の人間</h1>
+<nav class="page-nav">
+  <a href="052.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="054.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第四篇　真の人間／第二章　人間の責任分担と堕落</a></li><li class="toc-b lv2"><a href="#002">第三節　堕落の結果</a></li><li class="toc-b lv3"><a href="#003">サタンの血統を受け継いだ人間</a></li><li class="toc-b lv3"><a href="#004">一番重要なことは、堕落したということです。サタンの血統が入ってきて、心臓から動脈、静脈がサタンの血によって動き、すべての細胞が使えなくなったのです。血統がめちゃくちゃになったので、実体世界の歴史を知らない無知に陥り、悲惨になったのです。エバは自分を中心として自覚をもちました。未完成の圏内で、自分を中心として自覚して対処し、天宙をひっくり返して打ち込んでしまったため、その自覚を新たにしなければならないのです。「堕落世界を私の手で完全に消化してしまおう。全世界を私の権限のもとに置いても消化して余りある。神様が信じなければ、信じられるようにしてさしあげよう」と言いながら、そのようにするのです。</a></li><li class="toc-b lv3"><a href="#005">堕落世界と終末現象</a></li><li class="toc-b lv3"><a href="#006">その次の問題は、人間が原罪をもっていることです。聖書によれば、人類の先祖が善悪の実を取って食べたというのですが、それがどれほどひどい罪であれば、人類が数千年間、その罪を継承しなければならなくなるのかというのです。いまだにこの原罪の根を抜くことができていません。この原罪の根があるために、悪魔サタンはこの世の君になることができるのです。</a></li><li class="toc-b lv3"><a href="#007">私たちの本当の父は神様なのですが、サタンが父の振る舞いをしているのです。ですから、ヨハネによる福音書第八章四十四節で、イエス様は「その父の欲望どおりを行おうと思っている」と、とがめたのです。サタンの血を受けたやるせない事実を知ったならば、悔しい思いが湧き上がり、自分の体を刀で切って、汚れた偽りの血を抜いてしまいたいという義侠心が起こらなければなりません。</a></li><li class="toc-b lv3"><a href="#008">神様を中心にして言えば、お前、あなた、彼、家庭という観念がないのです。相対的な存在がなくなってしまったのです。ですから、人間の堕落以後、神様はただ独りで存在してきたのです。創造される前よりも、もっと悲惨なのです。創造を始められたのちには、万物が相対的な基準の上で待っていたのですが、その中心である人間が堕落したため、すべて失ってしまったのです。完全に相対圏を失った神様の立場になったのです。堕落というのは、そのように恐ろしいのです。</a></li><li class="toc-b lv3"><a href="#009">フリーセックスを誰が始めましたか。アダムとエバです。堕落したので、フリーセックスの先祖はアダムとエバなのです。</a></li><li class="toc-b lv3"><a href="#010">堕落人間を見つめられる神様の心情</a></li><li class="toc-b lv3"><a href="#011">世の中でも、父母が還暦を越えて生んだ七代続きの一人息子が死ぬと考えれば、絶望の中の絶望でしょう。若ければまた生むこともできますが、晩年になって生まれた七代続きの一人息子が元気に育たずに死ぬとなれば、七代圏を継承しようとしていた先祖たちはどれほどつらいでしょうか。先祖たちは自分の子孫、自分の血統を通して、世界にない万福を受けたいと思うのです。ですから、子女が死ぬとなれば、父母はそれを追って死にたいと思うのです。</a></li><li class="toc-b lv3"><a href="#012">ところが、アダムは七代続きの一人息子ではなく、永遠の一人息子です。一人しかいないアダムを、家庭を築かせ、創造の大業を成し遂げた立場に立てようとしたのですが、そのアダムが死んでしまったので、神様の心はいかばかりだったでしょうか。</a></li><li class="toc-b lv3"><a href="#013">そのような神様が、アダムとエバが善悪の実を取って食べているとき、見物していただけだっただろうかというのです。刀があれば歴史を斬り、この天下を斬り裂いてしまいたい気持ちでしたが、そのようにできない立場を自ら嘆かざるを得なかった神様でした。ですから、神様がどれほど寂しく、悲惨で、哀れだったでしょうか。歴史上の誰よりも寂しく、誰よりも哀れで、誰よりも悲惨だったのです。アダムとエバが善悪の実を取って食べる瞬間、心臓が爆発するような悲痛な心情をもたれた方でした。しかし、神様は、彼らを愛さずにはいられなかったのです。</a></li><li class="toc-b lv3"><a href="#014">もちろん、幼くて堕落したのですが、その年齢の幼さが堕落の動機になったのではなく、心情が及ばずして堕落したのです。「あの方は私のためにいる。あの方は私と共にいる。あの方は私と一つである。あの方は永遠に、私と離れようにも離れることができない」と言いながら、神様が一切の問題に関係していることをアダムとエバが感じることができていれば、彼らは堕落できなかったでしょう。</a></li><li class="toc-b lv3"><a href="#015">結局、心情の一致点をもつことができず、神様の願いと自分たちの願いが食い違い、自分の考える方向が神様の考えるものと違ったために、そうすることがそれほど大きな問題になるかが分からず、そうなれば生命の死活問題がどうなるかということを骨肉にしみるほど感じることができずに堕落したのです。</a></li><li class="toc-b lv3"><a href="#016">再び造るようにはなっていません。愛はアルファでありオメガ、初めであり永遠です。そのような理想的基準になっているので、その愛の対象的人間は打つことができないのです。</a></li><li class="toc-b lv3"><a href="#017">皆さんが子女という立場を追求するためには、公的な涙を流さなければなりません。天のお父様に出会い、「お父様、あなたの息子である私を、私たちの先祖を失ってしまったとき、あなたの心にどれほど悲しみがしみわたったことでしょうか。その子孫を通じて、今まで歴史過程において受けられた屈辱と苦痛と困難が、どれほど多かったでしょうか」と慰労してさしあげながら、限りなく涙を流すことができなければなりません。</a></li><li class="toc-b lv3"><a href="#018">愛する息子を怨讐に差し出すしかなかった神様です。権限や能力がないからではなく、天理原則として立てておいた愛の天道を自ら踏みにじることはできなかったので、涙で耐えて待ちながら、復帰摂理を進めてこられた私たちの父でいらっしゃいます。創造主であられた御自身までも否定しなければならない辱めを受けながら、子女を探して六千年の道を歩んでこられた方です。全知全能の神様も、真の血統を復帰するため、このように地獄よりもさらに大変な路程を経なければならなかったのです。</a></li><li class="toc-b lv3"><a href="#019">宇宙とも取り替えることのできない真の愛の実体相対を失うことによって、万物万象までもすべて失ってしまい、創造理想全体が崩れてしまうような悲しみの神様になられたのです。天宙の王座を怨讐に奪われた、無念な神様になられたのです。絶対信仰、絶対愛、絶対服従の原理に従いながら真の愛を投入したので、堕落の結果に対して、さらにもどかしく思わざるを得ない神様になられたのです。神様は御自身の理想を奪われ、愛する息子、娘を奪われ、天宙の王権を奪われ、しかもサタンからは讒訴されてきたのです。</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第四篇　真の人間／第二章　人間の責任分担と堕落</a></b><br/>
+<hr/>
+<br/>
+<h3 class="bh" id="002"><a href="#002">第三節　堕落の結果</a></h3>
+<br/>
+      1　堕落した結果、人間は死亡圏内に落ちました。神様が、「善悪を知る木からは取って食べてはならない。それを取って食べると、きっと死ぬであろう」(創世記二・１１)と言われたみ言のように、死亡圏内に落ちていったのです。堕落した結果どうなったのでしょうか。ヨハネによる福音書第八章四十四節を見れば、悪魔サタンが人類の父になったと、イエス様が指摘しました。神様を父として侍るべきアダムとエバが堕落することにより、悪擁サタンを父として侍るようになったというこの口惜しく恨めしい事実が、堕落の報いです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">サタンの血統を受け継いだ人間</a></h4>
+<br/>
+      2　堕落とは血統が変わったことです。家庭がなくなってしまい、国がなくなってしまいました。ですから、血統を整備しなければなりません。何であれ、動機から結果までを知らなければ、新しい動機と方向、そして、結果を得ることができないのです。そのためサタンの秘密を知らなければ、正すことができません。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">一番重要なことは、堕落したということです。サタンの血統が入ってきて、心臓から動脈、静脈がサタンの血によって動き、すべての細胞が使えなくなったのです。血統がめちゃくちゃになったので、実体世界の歴史を知らない無知に陥り、悲惨になったのです。エバは自分を中心として自覚をもちました。未完成の圏内で、自分を中心として自覚して対処し、天宙をひっくり返して打ち込んでしまったため、その自覚を新たにしなければならないのです。「堕落世界を私の手で完全に消化してしまおう。全世界を私の権限のもとに置いても消化して余りある。神様が信じなければ、信じられるようにしてさしあげよう」と言いながら、そのようにするのです。</a></h4>
+<br/>
+      3　堕落とは血統を転換したことです。血統が問題です。神様は、変わってしまった血統をどうにもできません。神様の体になり、神様の実体を中心とした父母の血肉を受けた直系の子女にならなければならないのに、怨讐に奪われ、神様が計画したすべてを失ってしまいました。天の国や地上天国の理念を中心として、愛の柱が建てられなければならなかったのですが、その柱がすべて崩れてしまったというのです。<br/>
+<br/>
+      4　神様を一代とすれば、アダムは二代ですが、三代が連結されませんでした。その三代が連結されなければなりません。アダムとエバが神様の愛を中心とした絶対生命、絶対血統を連結できなかったのです。そこまで戻るのです。袖様は息子、娘を抱くことはできましたが、孫と孫娘を抱いてみることができなかったのです。血統が途切れてしまいました。それを理論的に否定することができません。神様の愛の結実体、生命の結実体、血統の結実体として孫と孫娘を抱いてみたことがないというのです。ですから、全世界の人類が神様の愛と関係なくなってしまったのです。<br/>
+<br/>
+      5　アダムとエバは、堕落のゆえに血統が変わりました。神様の怨讐であり姦夫であるサタンの愛によって、サタンの生命体になったのです。男性の生命体と女性の生命体にサタンの愛が入り混じって一つになり、その二人によって結実したのが息子、娘です。ですから、その息子、娘はサタンの愛、サタンの生命、サタンの血統を継承しているのです。<br/>
+<br/>
+      6　今まで宗教は断食と苦行をしてきました。なぜ体を打つのですか。サタンの血、神様の怨讐の血を受けたからです。神様の怨讐は姦夫です。神様の愛の怨讐です。その姦夫の血を受けたのです。天の国の王権を受け継いで王妃になれるはずだったエバが悪魔の配偶者になり、僕の相対になったというのです。これは天地の秘密ですが、先生の時代になって初めて暴露されたので、サタン世界は退かなければなりません。<br/>
+<br/>
+      7　アダムとエバの偽りの愛により、偽りの生命になりました。愛と生命にサタンの血統が連結されました。誰もそれを知りませんが、否定することのできない事実です。アダムとエバは、堕落したあとに神様のみ前から追い出されました。彼らが追い出されるときは息子、娘がいませんでした。彼らは追い出されたあとに息子、娘を生み、サタンの血統が連結されたのです。理論的に否定できません。堕落したあとに完成の概念を知りました。どのように神様の愛と生命、そして、血統に戻れるかということが問題です。堕落によって人類が神様の愛と生命、そして、血統から断絶され、サタンの愛と生命、そして、血統に連結されました。人間の先祖アダムとエバが堕落したということは、偽りの父母の血統が相続され、実を結んだということです。それをどのようにひっくり返して打ち込むかということが問題です。一八〇度、変わらなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">堕落世界と終末現象</a></h4>
+<br/>
+      8　サタンがエバをそそのかし、エバはアダムをそそのかして、互いにだまし合う悲劇の歴史が出発しました。それで彼らは、悪魔サタンを中心とした罪悪性をもった夫婦になり、そこから罪のある息子、娘を生んだのです。ですから、罪ある父母の伝統から、罪ある子女の伝統へと続いてきたのです。そうして罪のある兄弟、罪のある氏族、罪のある民族、罪のある国家、罪のある世界に至るまで、全世界を悪魔サタンが主管するようになったので、この世界は名実共に地上地獄にならざるを得ません。サタンが個人的に怨讐にし、家庭的に怨讐にし、氏族、民族、国家、世界的にすべて分裂させたので、誰も天の側に帰ることができないよう、すべて追い出されたのです。<br/>
+<br/>
+      9　創世記第六章六節を見れば、アダムとエバが堕落したあと、神様が人間を創造したことを悔いたとありますが、これが神様の本意ではないことは間違いありません。人間が堕落することにより、神様と関係が結ばれるのではなく、その関係が切れ、神様によってエデンの園から追い出されたというのです。そのため、堕落したこの世は、神様のみ旨のとおりになった世界ではありません。神様のみ旨のとおりにならず、悪魔サタンの思いどおりの世界になったのです。<br/>
+<br/>
+      10　悪魔サタンが人類始祖を堕落させることにより、何になったのですか。聖書のヨハネによる福音書第十二章三十一節を見れば、「この世の君」になったとあります。この宇宙を造った主人公が神様であるにもかかわらず、その主人公を押しのけて、どうしてサタンが人類を主管し、世界を支配できる「君」になったのかというのです。ですから、この世界は、善の神様が主管する善主権の世界ではなく、悪のサタンが主管する悪主権の世界です。人間は悪主権、サタンの手下として支配を受けているのです。これが第一の問題です。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">その次の問題は、人間が原罪をもっていることです。聖書によれば、人類の先祖が善悪の実を取って食べたというのですが、それがどれほどひどい罪であれば、人類が数千年間、その罪を継承しなければならなくなるのかというのです。いまだにこの原罪の根を抜くことができていません。この原罪の根があるために、悪魔サタンはこの世の君になることができるのです。</a></h4>
+<br/>
+      11　天理大道の基準、愛の元軸、天地の軸とならなければならなかった中心点が、堕落によって破壊されました。女性が自覚をし、天使長が自分に目覚めることによって因縁が結ばれ、宇宙の根本を撃破し、恨みのどん底が生じたのです。それは、王妃となる人を僕が支配したということです。ですから、宇宙の大道の原則となる根本基準が狂ってしまったのです。結局、その悪魔とは何ですか。愛の天の国の王宮を根本的に破綻させた魁首です。<br/>
+<br/>
+      12　人類は、父母を失った孤児と同じです。神様が自分の本当の父母だということが分かれば、どれほどうれしいでしょうか。孤児として歴史的にひどい扱いを受けてきた恨よりも、父母を貴重視するのです。皆さんと先生が違うのがそれです。神様とは誰かを知り、道を歩くにも、どこに行くにも、尊重するのです。それには誰もついてこられません。<br/>
+<br/>
+      13　ある観念が一度頭の中で位置を占めれば、抜くのは大変です。ですから、宗教が必要なのです。宗教がない所は滅びます。私たちは、絶対者である神様を父として侍っています。私たちは神様の息子、娘です。サタンは神様の愛を踏みにじった姦夫です。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">私たちの本当の父は神様なのですが、サタンが父の振る舞いをしているのです。ですから、ヨハネによる福音書第八章四十四節で、イエス様は「その父の欲望どおりを行おうと思っている」と、とがめたのです。サタンの血を受けたやるせない事実を知ったならば、悔しい思いが湧き上がり、自分の体を刀で切って、汚れた偽りの血を抜いてしまいたいという義侠心が起こらなければなりません。</a></h4>
+<br/>
+      14　人間先祖が堕落したのちは、神様の家庭と神様の相対がいませんでした。神様が第一代、アダムは第二代だと言いますが、その関係が結ばれなかったのです。アダムとエバが祝福を受けられませんでした。祝福を受けることで、愛によって神様と関係が結ばれるはずだったのに、そのようにできず、完全に断絶されたため、神様は独りになったのです。アダムとエバが血統的に連結される、いかなる内容もなかったのです。すべて分かれてしまいました。<br/>
+<br/>
+      　　<h4 class="bh" id="008"><a href="#008">神様を中心にして言えば、お前、あなた、彼、家庭という観念がないのです。相対的な存在がなくなってしまったのです。ですから、人間の堕落以後、神様はただ独りで存在してきたのです。創造される前よりも、もっと悲惨なのです。創造を始められたのちには、万物が相対的な基準の上で待っていたのですが、その中心である人間が堕落したため、すべて失ってしまったのです。完全に相対圏を失った神様の立場になったのです。堕落というのは、そのように恐ろしいのです。</a></h4>
+<br/>
+      15　淫行によって堕落したので、終わりの日にはそのとおりになります。青少年がすべて堕落してしまうのです。先祖がそのように種を蒔いたので、収穫期にはそのように青少年の堕落が世界的に蔓延し、世界を滅亡させているのです。今日がそうなのです。それを否定できません。<br/>
+<br/>
+      　　<h4 class="bh" id="009"><a href="#009">フリーセックスを誰が始めましたか。アダムとエバです。堕落したので、フリーセックスの先祖はアダムとエバなのです。</a></h4>
+<br/>
+      16　真の愛は貴いものなので、真の愛を蹂躙するというのは宇宙的な犯罪になります。不倫と青少年の淪落、家庭破綻、近親相姦、同性恋愛、形容し難い性犯罪など、今日の現実は神様を悲しませています。創造理想は、崇高で、永遠の愛を中心とした家庭理想の成就にあるのですが、なぜこのような結果がもたらされたのでしょうか。それは、終末を迎え、人類の先祖が堕落した結果がそのまま結実することにより、植えたとおりに収める世紀末的様相を呈するからだと言えます。<br/>
+<br/>
+      17　今、アメリカにおける青少年の淪落問題をアメリカ政府が解決できますか。軍事力をもって、経済力をもって、科学技術をもってしてはできません。最近では「性解放だ」と言って、ありとあらゆる邪悪なことが起こっていますが、愛とはそのようなものですか。永遠の生命をもつことができる真の愛がこのようにまでなってしまったので、ここに何の希望がありますか。絶望です。男性と出くわしても絶望であり、息子と出くわしても絶望であり、父母と会っても絶望であり、どこに行こうと、会えば絶望なのです。<br/>
+<br/>
+      18　最近では、独身生活を強調します。また同性愛のようなものが問題になっています。そのようにならざるを得ない内容とは何かというのです。近親相姦によってそのようになったのです。祖父が孫娘を蹂躙するのです。自ら進んで蹂躙するのです。父親が自分の娘を蹂躙するのです。性解放という時代、フリーセックス時代が来て、思いのままに接触しているのです。接触するのですが、それが遠くの町の知らない人ではありません。最も近い親戚関係において起きるのです。<br/>
+<br/>
+      19　最も深刻なのは家庭の問題です。青少年問題、家庭破綻問題が最後です。サタンの全権を神様が許しました。サタンが「アダムとエバを思いどおりに抱いて愛したその基準を、人間世界の終わりの日において私に許さなければなりません。そのように蒔いたので、よこしまな愛を中心として全体を破綻させる全権の行使を、私に許さなければなりません。そうしてこそ私の願いどおりにすべてを行い、神様のみ前に要求するものがなくなるので、讒訴が断ち切れるのではないですか」と言うので、神様は「そうだ」と言ってサタンの全権時代を許したというのです。神様の愛の中において性解放はあり得ず、同性愛はあり得ないのです。<br/>
+<br/>
+      20　サタンはどのような武器を利用しましたか。空気の武器を利用しました。それがたばこです。次に、液体の武器は酒です。それから固体の武器は麻薬です。このようにして神様まですべて腐らせるのです。体を腐らせ、精神を腐らせ、鼻の穴から肺をすべて腐らせるのです。ですから、私たちは酒を飲まず、たばこを吸いません。これは人類を滅亡させるためのサタンの武器です。神様と通じる精神を妨善する要素であるこの三つが、怨讐の最高の武器です。その次は愛です。フリーセックス、愛の秩序を破綻させるのです。そのようなものを先生の手で、すべて整備するのです。<br/>
+<br/>
+      　　<h4 class="bh" id="010"><a href="#010">堕落人間を見つめられる神様の心情</a></h4>
+<br/>
+      21　父母が愛する子女を信じているにもかかわらず、子女が裏切るとき、その信頼に比例して、父母が受ける衝撃と苦衷、そして、悲惨さは、言葉に言い表せません。また生命を懸けて互いに愛し合った人が裏切り、排斥して不信するときも、やはり言葉にできないほど悲惨なのです。そのような立場で身もだえしながら味わう苦痛は、経験してみたことがない人には分からないのです。言葉だけでは分かりません。これは世の中の出来事を見て知ることができます。それでは、神様はどのようにして悲惨になったのでしょうか。神様は漠然とした神様ではなく、具体的な神様です。人間とは最高の関係をもった神様です。神様が喜ぶことがあるとすれば、それは人間と共に喜びで出発し、終わりのない永遠に向かって進み続けることのできる出発の起点を目にすることです。ところが、その出発の起点を、人間によって失ってしまったのです。<br/>
+<br/>
+      22　人間は堕落しました。これは、千年間の恨で蕩減できるものではありません。億千万年において限りなく多くの民が死の峠に引っ掛かる罠になることを御存じの神様だったので、どれほど悲痛だったでしょうか。そのような悲惨な傷を負わせた人間です。このようなことを考えてみるとき、人間は何も言えない存在です。<br/>
+<br/>
+      　　<h4 class="bh" id="011"><a href="#011">世の中でも、父母が還暦を越えて生んだ七代続きの一人息子が死ぬと考えれば、絶望の中の絶望でしょう。若ければまた生むこともできますが、晩年になって生まれた七代続きの一人息子が元気に育たずに死ぬとなれば、七代圏を継承しようとしていた先祖たちはどれほどつらいでしょうか。先祖たちは自分の子孫、自分の血統を通して、世界にない万福を受けたいと思うのです。ですから、子女が死ぬとなれば、父母はそれを追って死にたいと思うのです。</a></h4>
+<br/>
+      　　<h4 class="bh" id="012"><a href="#012">ところが、アダムは七代続きの一人息子ではなく、永遠の一人息子です。一人しかいないアダムを、家庭を築かせ、創造の大業を成し遂げた立場に立てようとしたのですが、そのアダムが死んでしまったので、神様の心はいかばかりだったでしょうか。</a></h4>
+<br/>
+      23　本来、創造原則から見ると、愛の一体理想圏内に行けば、永遠の所有主が、愛を中心とした主体者が中心となるのです。ところが、神様がそのような中心となるべきだったのに、サタンが中心になったのです。天地が地天となり、すべてが反対になったのです。神様御自身が真の理想として願った愛の理想、真の愛を中心として一体となり、一つの体となったものは、分かつことができてはならず、その血統も神様の直系の子女になるべきなのですが、それがねじれることによって反対になったのです。<br/>
+<br/>
+      24　アダムとエバが善悪の実を取って食べようとするとき、神様が「私が心配したとおりになったな。そのままもう少しやりなさい」と言ったでしょうか。違います。心臓が縮み、すべての感覚が一カ所に吸い込まれていく立場でした。「それを取って食べてはならない」と、血を流しながら震え、形容できない哀切なもどかしさのゆえに、何も考えられない立場に立たざるを得なかった神様だったのです。<br/>
+<br/>
+      　　<h4 class="bh" id="013"><a href="#013">そのような神様が、アダムとエバが善悪の実を取って食べているとき、見物していただけだっただろうかというのです。刀があれば歴史を斬り、この天下を斬り裂いてしまいたい気持ちでしたが、そのようにできない立場を自ら嘆かざるを得なかった神様でした。ですから、神様がどれほど寂しく、悲惨で、哀れだったでしょうか。歴史上の誰よりも寂しく、誰よりも哀れで、誰よりも悲惨だったのです。アダムとエバが善悪の実を取って食べる瞬間、心臓が爆発するような悲痛な心情をもたれた方でした。しかし、神様は、彼らを愛さずにはいられなかったのです。</a></h4>
+<br/>
+      25　神様のみ前に立っていたアダムとエバが、神様の内情を探ることができていれば、堕落しようにも堕落できなかったはずです。父母は父母として、子女に対して愛の心をもっているのに、子女は父母の深い心情までは分からなかったというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="014"><a href="#014">もちろん、幼くて堕落したのですが、その年齢の幼さが堕落の動機になったのではなく、心情が及ばずして堕落したのです。「あの方は私のためにいる。あの方は私と共にいる。あの方は私と一つである。あの方は永遠に、私と離れようにも離れることができない」と言いながら、神様が一切の問題に関係していることをアダムとエバが感じることができていれば、彼らは堕落できなかったでしょう。</a></h4>
+<br/>
+      　　<h4 class="bh" id="015"><a href="#015">結局、心情の一致点をもつことができず、神様の願いと自分たちの願いが食い違い、自分の考える方向が神様の考えるものと違ったために、そうすることがそれほど大きな問題になるかが分からず、そうなれば生命の死活問題がどうなるかということを骨肉にしみるほど感じることができずに堕落したのです。</a></h4>
+<br/>
+      26　私たちは、神様の心情に背いた、堕落した子孫です。私たちの先祖が何に背いたと思いますか。取って食べるなという善悪の実を一つ取って食べたことだと思いますか。とんでもないことです。心情に背いたのです。神様の心情に背いたのです。問題はそこにあります。神様の創造理想の心情、希望の心情に背いたのです。<br/>
+<br/>
+      27　なぜサタンを一度に取り去ってしまうことができないのですか。なぜ神様は多くの能力がありながらも、一度に取り去ってしまうことができないのですか。血統が連結されているからです。一度に引き抜いて消してしまえば、人類をすべて絶滅させなければなりません。サタンの血を受けたものを一度に引き抜けば、人類がいなくならなければなりません。アダムとエバまでいなくなります。たたき潰さなければなりません。なぜ神様は、アダムとエバをたたき潰して再び造れないのですか。<br/>
+<br/>
+      　　<h4 class="bh" id="016"><a href="#016">再び造るようにはなっていません。愛はアルファでありオメガ、初めであり永遠です。そのような理想的基準になっているので、その愛の対象的人間は打つことができないのです。</a></h4>
+<br/>
+      28　世の中の父母も自分の息子、娘が罪を犯して絞首刑に処されることになれば、その子が死ぬことを願う父母はいません。自分の思いどおりに子を生かすことができるならば、百回でも千回でも生かしてあげたいのが父母の心です。母親の気持ちはなおさらそうです。堕落した世界の女性の心もそうであるのに、全知全能の神様がいったい何ゆえに、終わりの日になって審判をしなければならないのかというのです。神様がなぜ赦してあげられないのかというのです。神様はどれほど愛するでしょうか。イエス様が七回ずつ七十倍赦すとすれば、神様は七十回ずつ、七千回以上赦さなければならないでしょう。神様の心はそうだというのです。<br/>
+<br/>
+      29　全知全能の権限で、全世界とサタンまでも審判してしまうことのできる神様であり、能力をもっていながらも、今でもそのように苦労する立場で、手をつけようにもつけることができず、神様御自身がもつべき環境をもてないまま、独り孤独にサタンに讒訴され、サタン世界に足場をすべて奪われて苦しまれる神様の立場を考えると、言葉も出ないのです。このような神様に同情しながら、どれほど涙を流してみましたか。問題はここに帰結するのです。<br/>
+<br/>
+      30　皆さんは、神様のためにどれほど涙を流してみましたか。神様のなされた苦労の前に、代わりに苦労するため、四肢が裂かれるような道でも訪ねていこうともがいてみましたか。できなかったというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="017"><a href="#017">皆さんが子女という立場を追求するためには、公的な涙を流さなければなりません。天のお父様に出会い、「お父様、あなたの息子である私を、私たちの先祖を失ってしまったとき、あなたの心にどれほど悲しみがしみわたったことでしょうか。その子孫を通じて、今まで歴史過程において受けられた屈辱と苦痛と困難が、どれほど多かったでしょうか」と慰労してさしあげながら、限りなく涙を流すことができなければなりません。</a></h4>
+<br/>
+      31　人間より、もっと大きな苦痛と悲哀の中に落ちた方が神様です。御自身の創造理想を奪われ、愛する息子、娘を奪われ、真の愛の理想の国として創造した地球星まで、怨讐サタンの寵絡の基地として差し出してしまったので、どれほどやるせなく、悲痛な恨の心情だったでしょうか。言葉にならないのです。皆さんはこのような神様の立場に対してどれほど多くの慰労の涙を流してみましたか。<br/>
+<br/>
+      　　<h4 class="bh" id="018"><a href="#018">愛する息子を怨讐に差し出すしかなかった神様です。権限や能力がないからではなく、天理原則として立てておいた愛の天道を自ら踏みにじることはできなかったので、涙で耐えて待ちながら、復帰摂理を進めてこられた私たちの父でいらっしゃいます。創造主であられた御自身までも否定しなければならない辱めを受けながら、子女を探して六千年の道を歩んでこられた方です。全知全能の神様も、真の血統を復帰するため、このように地獄よりもさらに大変な路程を経なければならなかったのです。</a></h4>
+<br/>
+      32　本然の真の父母の位置にいらっしゃるべきだった神様が、父母の位置を奪われたのですから、どれほど悲痛でしょうか。偽りの父母である怨讐サタンの血統を譲り受け、真の父母が分からない堕落した子女を見つめなければならない神様の心情は、どれほど痛ましいでしょうか。人間の悲惨な状況を瞬間ごとに見つめられる神様の心情、父母の心情はどうでしょうか。<br/>
+<br/>
+      　　<h4 class="bh" id="019"><a href="#019">宇宙とも取り替えることのできない真の愛の実体相対を失うことによって、万物万象までもすべて失ってしまい、創造理想全体が崩れてしまうような悲しみの神様になられたのです。天宙の王座を怨讐に奪われた、無念な神様になられたのです。絶対信仰、絶対愛、絶対服従の原理に従いながら真の愛を投入したので、堕落の結果に対して、さらにもどかしく思わざるを得ない神様になられたのです。神様は御自身の理想を奪われ、愛する息子、娘を奪われ、天宙の王権を奪われ、しかもサタンからは讒訴されてきたのです。</a></h4>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609191458"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="052.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="054.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609191458"></script>
+</body>
+</html>

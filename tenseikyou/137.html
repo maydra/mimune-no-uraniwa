@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609191458" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第九篇　家庭教会と氏族的メシヤ／第四節　還故郷と氏族的メシヤ</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609191458">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第九篇　家庭教会と氏族的メシヤ</h1>
+<nav class="page-nav">
+  <a href="136.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="138.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第九篇　家庭教会と氏族的メシヤ／第二章　氏族的メシヤ</a></li><li class="toc-b lv2"><a href="#002">第四節　還故郷と氏族的メシヤ</a></li><li class="toc-b lv3"><a href="#003">真の故郷と先祖の役割</a></li><li class="toc-b lv3"><a href="#004">それでは、そこは、どのような所でしょうか。すべての条件が備わっている所です。心と体が少しも不足を感じない完全無欠な所です。そこを人類は今、追求して進んでいるのです。しかし、いくら故郷に行くといっても、喜んでくれる人がいなければむなしいのです。</a></li><li class="toc-b lv3"><a href="#005">それでは、どこで団結するのですか。真の父母様を慕い、父母様を愛し、真の父母様のみ旨を解怨成就するために、歴史をかけて涙と血と汗をすべて捧げ、本然の基準に和合し、神様の愛の花を咲かせられる自分自身を探し出そうという皆さんですが、どこでその花を咲かせるのですか。これが問題です。</a></li><li class="toc-b lv3"><a href="#006">先生は、一段階、高い位置に行かなければなりません。南北を統一して故郷に帰らなければなりません。皆さんは、子女の立場なので一段階低いのです。父母様が歴史時代の個人的、家庭的、氏族的、民族的、国家的蕩減路程を歩みながら、とめどない涙と血と汗を流してきたすべての事実を、父母様の代わりに背負い、父母様が北朝鮮の地に入って天のみ前に勝利と感謝を捧げる心情を身代わりし、皆さんの故郷の地を父母様の代わりに涙でぬらし、血と汗でぬらさなければならない責任が残っているのです。</a></li><li class="toc-b lv3"><a href="#007">故郷では歓迎されないとあるのに、「今はもう故郷で歓迎を受ける時が来た」と語るのです。それは、先生のみ言であり、間違いなく天の経綸の中で現れるべき言葉です。ですから、故郷に行きなさいというのです。</a></li><li class="toc-b lv3"><a href="#008">その中で、どこであってもためらうことなく、血統に従って共に暮らすことができる土台だと言える希望の基台が断たれてしまったのです。それを連結させなければなりません。連結させて戻っていくには、どこに戻るのでしょうか。アダムとエバが堕落して悪い種を蒔き、偽りの根が出てきました。偽りの先祖が出発したのです。ですから、皆さんを追い込んで、真の先祖の位置にもっていき、植えなければなりません。それで、還故郷しなければならないのです。</a></li><li class="toc-b lv3"><a href="#009">堕落によって偽りの根が生じました。本然の心情ではありません。本然の心情に背くサタン的な根を片づけて抜いてしまい、これを腐らせてしまわなければなりません。腐った根の上に真の種を植え、本然の故郷の地の上に新しい心情圏が芽生えなければなりません。真の父母と真の神様の愛が皆さんの家庭から、金氏であれば金氏、文氏であれば文氏、皆さんの村と家から、新たに出発しなければなりません。ですから、還故郷をしなければならないというのです。</a></li><li class="toc-b lv3"><a href="#010">これから皆さんは、故郷の水を飲まなければならず、故郷で生産する米を炊いた御飯を食べ、そこで暮らしながら精誠を尽くさなければなりません。先生が世界的勝利の基盤を築いたのであれば、皆さんは氏族的勝利の基盤を築かなければならないのです。皆さんは何ももっていてはいけません。モーセの時代と同じです。皆さんの一族を身一つで訪ねていき、養っていこうと考えなければなりません。先祖にならなければならないのです。</a></li><li class="toc-b lv3"><a href="#011">還故郷の深い意味</a></li><li class="toc-b lv3"><a href="#012">千万回の天地開闢があるとしても、祖父、祖母、母、父、息子、娘の三代が一つになって金城鉄壁のように固く団結し、そこに神様を核として迎えれば、私たちがいる所は、どこであっても天国を実現できる一つの種になるのです。そのような存在になるのです。これは、神様の愛の種、神様の生命の種であり、血統の根源だと言えるのです。これを探し求めていかなければなりません。そのようにしなければ、地上天国、平和の天国、幸福と自由の世界という願いはあり得ません。</a></li><li class="toc-b lv3"><a href="#013">どの家にでも入っていって、「あなたは、真の父母の歴史を知っていますか。聞いてください」と言わなければなりません。真の父母の歴史には、夫婦が二人で座って開けば、痛哭する事情があるのです。皆さんには、氏族的メシヤとして故郷を天国基地に入籍させる責任があるので、「還故郷しなさい」と言ったのです。</a></li><li class="toc-b lv3"><a href="#014">エジプト世界から故郷に帰ってきて、永遠に豊かに暮らせる幸福な家庭をつくり、新しい氏族を編成して国に接ぎ木しなければならないというのです。ですから、故郷に帰らなければなりません。宗教の歴史に、故郷から出てきなさいという言葉や出家しなさいという言葉はありましたが、このように「故郷に帰りなさい」という言葉はなかったのです。</a></li><li class="toc-b lv3"><a href="#015">今まで宗教世界に、国を離れ、家を離れなさいという言葉や出家という言葉はありましたが、「還故郷」という言葉はありませんでした。故郷に帰って困難をすべて背負い、新しい社会を建設しなさいというのです。そこでは天地が支援するのです。滅びません。</a></li><li class="toc-b lv3"><a href="#016">神様に侍ることのできる驚くべき立場であるにもかかわらず、これを無視する人々はどこに行くでしょうか。滅びなければなりません。ですから、教えてあげたことを骨髄の奥深くに刻みつけ、あすの行動を考えなければなりません。</a></li><li class="toc-b lv3"><a href="#017">これからは、横的な行動ではなく、縦的な度数を合わせていきながら行動しなければなりません。この縦的基点に対して九〇度でなければならず、どこかに立つときは、平行線に立った神様の代身者として行動できる人にならなければ、天の国に残ることができません。</a></li><li class="toc-b lv3"><a href="#018">アダムとエバが誤ったことに対して、今まで恨みに思わなかった人類の子孫が、この地のどこにいるでしょうか。たった一つのビルを手にして、故郷を売り飛ばすのですか。そのようなことをしては、逆族の息子になり、千年、万年恨みを抱いて、行こうにも行けず、同情票を得ようにも得られず、どこにも足の置き場がない人になってしまうのです。</a></li><li class="toc-b lv3"><a href="#019">それで、カナン七族の中で裕福に暮らす家を見て、「あの人たちと結婚すれば良いな。いいものを食べたい」と思ったのです。心を奪われたというのです。反対するとき、心を奪われたのです。</a></li><li class="toc-b lv3"><a href="#020">皆さんがこれから還故郷するときは、心を奪われてはいけません。カナン七族を屈服させ、自由に結束させられる自由環境を開拓し、メシヤとして主人の役割を担いなさいというのです。</a></li><li class="toc-b lv3"><a href="#021">統一教会の祝福を受けた家庭は、エバの立場にいます。ここでは、争わない自分の息子、娘を抱いて救いに行くのです。アダム家庭が堕落し、氏族が誤って繁栄したものを、氏族的メシヤの責任をもって救いに行くのです。その息子、娘を前に立て、父が後ろに立たなければ、父の行く道がありません。天の国にある新しい生命の種を受け継ぐことができません。家庭の愛、家庭の生命、家庭の血統基盤はできていますが、氏族的神様の愛、神様の生命、神様の血統はできていません。これを連結しなければなりません。それさえすれば、先生が中央に立っているので、接ぎ木できるのです。</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第九篇　家庭教会と氏族的メシヤ／第二章　氏族的メシヤ</a></b><br/>
+<hr/>
+<br/>
+<h3 class="bh" id="002"><a href="#002">第四節　還故郷と氏族的メシヤ</a></h3>
+<br/>
+      1　私たちは、還故郷して真の故郷に帰っていかなければなりませんが、故郷とはどこでしょうか。真の故郷は、愛のある所です。故郷は、「私」の動脈の血が歴史と共に動く所です。私が成長するとき、その地方のすべての要素を吸収して大きくなったからです。私の細胞と共に、血と共に、心臓の鼓動と共に躍動する所です。愛の感情を抜き去ることのできない、深い内容が隠れている所が故郷です。故郷に行けば、誰を訪ねていくのでしょうか。故郷を訪ねるときは、父母の懐が慕わしくて訪ねていくのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">真の故郷と先祖の役割</a></h4>
+<br/>
+      2　宗教は、人間が故郷を追求することに対して、多大な貢献をしました。天国に行こう、あるいは理想世界に行こう、極楽世界に行こうと言いますが、そこは私たちが暮らしているこのような所ではありません。私たちが永遠に暮らせる本郷の地です。正にこのような面において、宗教は本郷を追求することに貢献したのです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">それでは、そこは、どのような所でしょうか。すべての条件が備わっている所です。心と体が少しも不足を感じない完全無欠な所です。そこを人類は今、追求して進んでいるのです。しかし、いくら故郷に行くといっても、喜んでくれる人がいなければむなしいのです。</a></h4>
+<br/>
+      3　この地球星には、いまだ真の故郷が生まれていません。宗教的に見れば、そうなのです。真の故郷が生まれていないのです。ですから、真の故郷には真の父母がいなければなりません。真の故郷の家において主人になるべき方は真の父母であり、その真の父母は、真の男性と真の女性が、真の愛を柱として結ばれた夫婦を意味します。愛の柱に縛られて自分の思いどおりにできず、一生の間、それをつかんで暮らす父母がいなければなりません。そのような真の父母でなければなりません。真の父母がいて、真の愛で愛してこそ、真の息子、娘が出てくることができるのです。<br/>
+<br/>
+      4　堕落によって、天の側が次子の悲しみの立場に立ったので、人間たちのために長子権を回復させるのですが、神様の思いどおりにはできないのです。この氏族を世界個人的長子権復帰、世界家庭的長子権復帰、世界氏族的長子権復帰、世界民族的長子権復帰、世界国家的長子権復帰、世界的長子権復帰をしてこそ、堕落していないエデンの園においてサタンの讒訴圏を抜け出した本然の家庭出発が始まるのです。これを見れば、私たちは故郷を失った民です。故郷を失った民が、故郷を訪ねて帰るのですが、これほど難しいとは思いもしなかったというのです。<br/>
+<br/>
+      5　蕩減復帰路程において、メシヤが来てすべきこととは何でしょうか。世界史的な蕩減基準を越えたところから、アダムの堕落圏以上のところから神様の摂理が出発するようになっているのであって、アダムが堕落した以下のところから神様の摂理が出発することはできないのです。今まで故郷に帰れる道が、アダムの堕落によって塞がっていたので、故郷に帰ろうとすれば、アダムの代身者が来て、個人から家庭、氏族、民族、国家、世界的な蕩減条件を設定しなければなりません。そのようにしなければ、帰ることができないのです。<br/>
+<br/>
+      6　今までは、サタンが故郷を占領し、主人の振る舞いをしながら私たちを追い出したのですが、今からは皆さんが故郷に行くので、皆さんがサタンを追い出さなければなりません。それは自動的です。そのようになれば、善の霊たちが皆さんの故郷に来て守るのです。悪の霊をすべて打ってしまうのです。それが原理観であり、先生の観です。これは歴史に記録されることです。先生は、世界に還故郷を宣布できるその時を見つめて歩んできました。父母が霊界に逝かれたことを思えば、言葉を失います。しかし、皆さんの故郷で皆さんの数多くの親戚が、私の母、父、兄弟の代わりに解放されることを思いながら、そのことを忘れて祝福してあげるのです。<br/>
+<br/>
+      7　祝福家庭は杖と同じです。世界的な死亡の世界を渡っていける橋であり、そのような道に導く杖です。家庭がそうなのです。皆さんが伝道に行くべき所は故郷です。故郷に帰りなさい、還故郷せよというのです。皆さんは、先生よりも福のある立場にいます。先生は、いまだに故郷に行けません。先生の故郷は北朝鮮なので、国家が統一されるまでは故郷に行けないのです。橋を渡れません。還故郷できないというのです。しかし、皆さんは、還故郷できるではないかというのです。愛する父母、妻子、兄弟を抱きかかえて、涙を流しながら痛哭することができ、永遠に滅びざるを得ない民族を心配する立場で、自分の父母、兄弟を抱きかかえて痛哭の涙を流し、彼らを感動させられる環境をもっているではないかというのです。<br/>
+<br/>
+      8　今は、統一教会の歓迎時代です。昔、父母が「こいつ！家庭を滅ぼし、村を滅ぼし、国を滅ぼして逃げ出したやつめ！」と言ったのは、サタンの代弁をした言葉だったというのです。神様の名によって勝利の盾をもち、還故郷する皆さんは、昔とは違います。その村が歓迎することができ、大韓民国が歓迎することができ、世界が歓迎できる時代に入ったので、皆さんの村は、すべて歓迎しなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">それでは、どこで団結するのですか。真の父母様を慕い、父母様を愛し、真の父母様のみ旨を解怨成就するために、歴史をかけて涙と血と汗をすべて捧げ、本然の基準に和合し、神様の愛の花を咲かせられる自分自身を探し出そうという皆さんですが、どこでその花を咲かせるのですか。これが問題です。</a></h4>
+<br/>
+      9　神様の心情を知り、先生の心情を知らなければなりません。皆さんが故郷の村に入り、この心情圏を再び植えなければなりません。蕩減ではありません。過去は、蕩減して流れていってしまいました。今は、真のもので植えなければならないというのです。父母様の故郷を訪ねていく前に、皆さんの故郷を先に訪ねることができる恵沢を受けているという事実を知らなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">先生は、一段階、高い位置に行かなければなりません。南北を統一して故郷に帰らなければなりません。皆さんは、子女の立場なので一段階低いのです。父母様が歴史時代の個人的、家庭的、氏族的、民族的、国家的蕩減路程を歩みながら、とめどない涙と血と汗を流してきたすべての事実を、父母様の代わりに背負い、父母様が北朝鮮の地に入って天のみ前に勝利と感謝を捧げる心情を身代わりし、皆さんの故郷の地を父母様の代わりに涙でぬらし、血と汗でぬらさなければならない責任が残っているのです。</a></h4>
+<br/>
+      10　イエス様は、「預言者は、自分の郷里では歓迎されないものである」(ルカ四・二四)と言いました。ところが統一教会の先生は、皆さんに、どこへ行きなさいと言いましたか。故郷に行って先祖になりなさいというのです。そのような歴史はありませんでした。聖書にそのような教えはありません。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">故郷では歓迎されないとあるのに、「今はもう故郷で歓迎を受ける時が来た」と語るのです。それは、先生のみ言であり、間違いなく天の経綸の中で現れるべき言葉です。ですから、故郷に行きなさいというのです。</a></h4>
+<br/>
+      11　エデンの園で、神様は、アダムとエバを健やかに育て、成熟したその場で、「お前は私の永遠の家である。お前の家庭は、千年、万年、全世界に砂粒のように満ちあふれ、天の星のように広がるだろう」と言われたでしょう。<br/>
+<br/>
+      　　<h4 class="bh" id="008"><a href="#008">その中で、どこであってもためらうことなく、血統に従って共に暮らすことができる土台だと言える希望の基台が断たれてしまったのです。それを連結させなければなりません。連結させて戻っていくには、どこに戻るのでしょうか。アダムとエバが堕落して悪い種を蒔き、偽りの根が出てきました。偽りの先祖が出発したのです。ですから、皆さんを追い込んで、真の先祖の位置にもっていき、植えなければなりません。それで、還故郷しなければならないのです。</a></h4>
+<br/>
+      　　<h4 class="bh" id="009"><a href="#009">堕落によって偽りの根が生じました。本然の心情ではありません。本然の心情に背くサタン的な根を片づけて抜いてしまい、これを腐らせてしまわなければなりません。腐った根の上に真の種を植え、本然の故郷の地の上に新しい心情圏が芽生えなければなりません。真の父母と真の神様の愛が皆さんの家庭から、金氏であれば金氏、文氏であれば文氏、皆さんの村と家から、新たに出発しなければなりません。ですから、還故郷をしなければならないというのです。</a></h4>
+<br/>
+      12　故郷に帰らなければなりません。今や、サタン世界から長子権を復帰されなければなりません。皆さんは、真の愛を伝授され、故郷に帰って真の父母様の伝統を植えなければなりません。そのようにすることによって神様が共にあり、神様のすべての相続権が万民に祝福となり、万福が横的に宿る福のある韓国の地になるというのです。<br/>
+<br/>
+      13　摂理のみ旨と一致する氏族的メシヤの使命を心情を中心として果たせば、誰も抜くことはできません。先生がすべて打ち込んでおいたからです。氏族的メシヤを先生が打ち込んでおいたので、抜く者がいません。ですから、統一教会で祝福を受けた人たちは、故郷に帰りなさいというのです。先生の代わりにすべてのものを捨て、故郷に行かなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="010"><a href="#010">これから皆さんは、故郷の水を飲まなければならず、故郷で生産する米を炊いた御飯を食べ、そこで暮らしながら精誠を尽くさなければなりません。先生が世界的勝利の基盤を築いたのであれば、皆さんは氏族的勝利の基盤を築かなければならないのです。皆さんは何ももっていてはいけません。モーセの時代と同じです。皆さんの一族を身一つで訪ねていき、養っていこうと考えなければなりません。先祖にならなければならないのです。</a></h4>
+<br/>
+      　　<h4 class="bh" id="011"><a href="#011">還故郷の深い意味</a></h4>
+<br/>
+      14　世の中は、故郷を失った世界です。故郷を失った民の世界版図となったこの人類を、どのようにまとめて帰郷させるのでしょうか。これを御存じの神様がメシヤをこの地に送り、故郷を失った民を帰郷させるのが天の摂理です。帰郷したのちには、宗教でも何でも、すべて必要ありません。父母を愛し、慕いながら涙を流すのが礼拝の中の礼拝であり、すべてのみ旨の完成です。<br/>
+<br/>
+      　　<h4 class="bh" id="012"><a href="#012">千万回の天地開闢があるとしても、祖父、祖母、母、父、息子、娘の三代が一つになって金城鉄壁のように固く団結し、そこに神様を核として迎えれば、私たちがいる所は、どこであっても天国を実現できる一つの種になるのです。そのような存在になるのです。これは、神様の愛の種、神様の生命の種であり、血統の根源だと言えるのです。これを探し求めていかなければなりません。そのようにしなければ、地上天国、平和の天国、幸福と自由の世界という願いはあり得ません。</a></h4>
+<br/>
+      15　統一教会は、神様を知ったので、打たれて復帰してくる作戦をするのです。今はもう長子権復帰をしたので、反対に適用する時が来ました。<br/>
+<br/>
+      　　<h4 class="bh" id="013"><a href="#013">どの家にでも入っていって、「あなたは、真の父母の歴史を知っていますか。聞いてください」と言わなければなりません。真の父母の歴史には、夫婦が二人で座って開けば、痛哭する事情があるのです。皆さんには、氏族的メシヤとして故郷を天国基地に入籍させる責任があるので、「還故郷しなさい」と言ったのです。</a></h4>
+<br/>
+      16　アダムとエバは、堕落せずに、サタンのいない場で神様と愛の関係を結ばなければならないのですが、それを結べなかったので、初めてこれを条件的に立てました。それを基準として拡大すれば、それが大きくなります。そのような条件を立てたので、先生は皆さんに、「故郷に帰りなさい」と言うのです。父母様が勝利の主権をもったので、皆さんはカナン復帰をしなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="014"><a href="#014">エジプト世界から故郷に帰ってきて、永遠に豊かに暮らせる幸福な家庭をつくり、新しい氏族を編成して国に接ぎ木しなければならないというのです。ですから、故郷に帰らなければなりません。宗教の歴史に、故郷から出てきなさいという言葉や出家しなさいという言葉はありましたが、このように「故郷に帰りなさい」という言葉はなかったのです。</a></h4>
+<br/>
+      17　堕落した世界を救うということ、宗教をつくって救援摂理を行うということは、新たに帰っていくためのものです。救援摂理歴史は、復帰歴史です。復帰歴史は、再創造歴史です。神様の人間創造は、根本的に愛を投入するその世界から始まりました。黙ってそれをすることによって、その家の愛の女王になり、愛の王になるのです。彼らのために、皆さんが先祖になりなさいというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="015"><a href="#015">今まで宗教世界に、国を離れ、家を離れなさいという言葉や出家という言葉はありましたが、「還故郷」という言葉はありませんでした。故郷に帰って困難をすべて背負い、新しい社会を建設しなさいというのです。そこでは天地が支援するのです。滅びません。</a></h4>
+<br/>
+      18　「還故郷しなさい」という言葉は、福のある言葉です。イスラエル民族がカナンの福地に帰っても、そこは故郷の地ではありません。そこには、闘うべき未来の世界的版図が残っているのです。世界版図圏を越えて、今や故郷に帰り、南北を中心として統一した位置にいれば、私を追い出せる人など誰もいません。万国が入ってきて侍り、万民があがめる位置です。<br/>
+<br/>
+      　　<h4 class="bh" id="016"><a href="#016">神様に侍ることのできる驚くべき立場であるにもかかわらず、これを無視する人々はどこに行くでしょうか。滅びなければなりません。ですから、教えてあげたことを骨髄の奥深くに刻みつけ、あすの行動を考えなければなりません。</a></h4>
+<br/>
+      　　<h4 class="bh" id="017"><a href="#017">これからは、横的な行動ではなく、縦的な度数を合わせていきながら行動しなければなりません。この縦的基点に対して九〇度でなければならず、どこかに立つときは、平行線に立った神様の代身者として行動できる人にならなければ、天の国に残ることができません。</a></h4>
+<br/>
+      19　故郷に帰ることができなかった人々が、故郷に帰ってもよいという許しを受けて、その日を自分が迎えたというとき、どれほどうれしいでしょうか。「明洞に二十階建てのビルを買ったので、もう私は故郷だとか何だとか、そのようなものは嫌だ！」と言っていては、千年、万年、子孫に恨みを継承して、その胸に大きな釘を打ち込む悪党の群れになるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="018"><a href="#018">アダムとエバが誤ったことに対して、今まで恨みに思わなかった人類の子孫が、この地のどこにいるでしょうか。たった一つのビルを手にして、故郷を売り飛ばすのですか。そのようなことをしては、逆族の息子になり、千年、万年恨みを抱いて、行こうにも行けず、同情票を得ようにも得られず、どこにも足の置き場がない人になってしまうのです。</a></h4>
+<br/>
+      20　昔、イスラエル民族がカナン復帰をするときは、乞食の群れとして入っていきました。四十年間、荒野で毎日のように飢え、マナとうずらだけを食べたのですから、みすぼらしい姿だったでしょう。顔を見て、姿を見れば、今にも死にそうな人々だというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="019"><a href="#019">それで、カナン七族の中で裕福に暮らす家を見て、「あの人たちと結婚すれば良いな。いいものを食べたい」と思ったのです。心を奪われたというのです。反対するとき、心を奪われたのです。</a></h4>
+<br/>
+      　　<h4 class="bh" id="020"><a href="#020">皆さんがこれから還故郷するときは、心を奪われてはいけません。カナン七族を屈服させ、自由に結束させられる自由環境を開拓し、メシヤとして主人の役割を担いなさいというのです。</a></h4>
+<br/>
+      21　先生は、皆さんに仕事をさせるとき、誓わせたのちにさせます。誓ったならば実践しなければなりません。先生は、それ以上にやりました。氏族的メシヤだけでなく、国家的、世界的メシヤの責任を今、行っているのです。先生が世界的メシヤであれば、皆さんは「国家的メシヤになろう」と言ってこそ希望があるのであって、「氏族的メシヤにもなれない」と言ってはいけないのです。<br/>
+<br/>
+      22　還故郷できる秘法の内容は、第一に、神様と絶対的に一つになった真の愛です。第二に、その真の愛と絶対に一つになった生命です。第三に、その生命と絶対に一つになった血統です。氏族的メシヤが故郷に帰っていくには、愛をもたなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="021"><a href="#021">統一教会の祝福を受けた家庭は、エバの立場にいます。ここでは、争わない自分の息子、娘を抱いて救いに行くのです。アダム家庭が堕落し、氏族が誤って繁栄したものを、氏族的メシヤの責任をもって救いに行くのです。その息子、娘を前に立て、父が後ろに立たなければ、父の行く道がありません。天の国にある新しい生命の種を受け継ぐことができません。家庭の愛、家庭の生命、家庭の血統基盤はできていますが、氏族的神様の愛、神様の生命、神様の血統はできていません。これを連結しなければなりません。それさえすれば、先生が中央に立っているので、接ぎ木できるのです。</a></h4>
+<br/>
+      23　還故郷するのに、どこに行くのでしょうか。還故国ではありません。還故郷です。還故家です。自分の本家に帰っていくのです。人類歴史を考えるとき、還故郷の本家はどこでしょうか。還故郷は、堕落したアダムとエバを基準とするのではありません。私たちのする還故郷は、堕落していない本然的完成アダムとエバの故郷を意味するのです。そこには神様がいらっしゃるのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609191458"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="136.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="138.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609191458"></script>
+</body>
+</html>

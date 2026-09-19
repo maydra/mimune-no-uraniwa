@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609191458" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第三篇　真の愛／第二節　真の愛の根源</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609191458">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第三篇　真の愛</h1>
+<nav class="page-nav">
+  <a href="034.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="036.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第三篇　真の愛／第一章　真の愛の根源</a></li><li class="toc-b lv2"><a href="#002">第二節　真の愛の根源</a></li><li class="toc-b lv3"><a href="#003">ですから、男性がいれば女性がいなければならず、右側があれば左側がなければならず、上があれば下がなければなりません。上下、前後、左右がなければならないのです。これらが連結して一つの球形が形成されます。創造の前から、神様にも心と体がありました。心と体が一つになった立場で、衝突することのない愛の中で、理想的な愛の世界の実現を夢見ながら生きていらっしゃったというのです。それで、神様は、ほのかな愛ではなく、爆発的な愛、三六〇度を回転させることのできる愛を願われます。そのような愛の相対を求め、つくるために天地創造をしました。</a></li><li class="toc-b lv3"><a href="#004">神様は真の愛の根源</a></li><li class="toc-b lv3"><a href="#005">昼も夜も犠牲になりながらも、ために生きて愛し、また愛し、また愛し、どんな立場に行っても、忘れることなく、もっとやってあげようとして、二十四時間、空間を超越してその人のために生きようとする愛が、本質的な愛に近いのです。このような愛の起源があるので、人間を救うことができ、救援できる基礎を取り戻すことができるのです。</a></li><li class="toc-b lv3"><a href="#006">相対のために無限に投入する真の愛</a></li><li class="toc-b lv3"><a href="#007">神様は、昔も今も、東洋にも西洋にも変わらない愛をもっているので、東洋と西洋を克服することができ、過去、現在、未来を克服できるのです。それは、過去も現在も未来も克服できるので、いつも発展でき、東洋と西洋を克服するので、東洋と西洋を統一できるというのです。これは、愛でのみ可能なのです。</a></li><li class="toc-b lv3"><a href="#008">ですから、真の愛で愛する人は、自分の生命を与えても、もっと与えたいと思い、千年を生きても、もっと与えたいと思う心の本性をもっています。神様が自分の相対を、その限界にまで素晴らしく造りたいと思い、もっと造りたいと思う、そのような論理をもっているので、その神様を占領するためには、神様以上に投入しなければなりません。真の愛は、自分の生命までも投入して忘れようとするところに根拠地があるのです。</a></li><li class="toc-b lv3"><a href="#009">愛には、相続権があり、同居権と同参権があるので、その活動舞台は「私」のものです。そのように見れば、神様は、本当に知恵の王です。なぜ投入して忘れるのでしょうか。そうしてこそ、投入しても、さらに投入できるからです。自動的な循環原理を通して、永遠の回転が始まるので、永生の論理が設定されます。投入し、投入し、さらに投入するところに永生の論理が展開します。</a></li><li class="toc-b lv3"><a href="#010">真の愛の本質は人のために施すこと</a></li><li class="toc-b lv3"><a href="#011">このように縦横の要素に責任をもっているのが父母の愛なので、自分の貴いものをそのまま子女に与えようとするのです。そのまま受けさせて、横的に広げようとするのです。愛の本質は、そのようなものです。なぜ愛の本質はそのようになっているのでしょうか。相対的な関係からできているのが愛なので、そのようにならざるを得ません。主体と対象の関係は、そうでなければならないのです。主体と対象の間は、お互いに授け受けして円形を描くのです。主体は縦的であり、対象は横的なので、これが九〇度の角度になって円形を描くようになります。</a></li><li class="toc-b lv3"><a href="#012">真の愛は生命よりも貴い存在の起源</a></li><li class="toc-b lv3"><a href="#013">「私」が生まれるようになった最初の動機は、母親と父親の生命ではありません。その母親と父親の生命が愛によって連結され、血統を通して生まれます。母親の血と父親の骨を受けて血肉を連結させ、十カ月が過ぎ、血統に従って母親と父親の生命力をもって生まれます。生まれた「私」の根本は、皆さん自身ではありません。根本は母親の生命であり、父親の生命です。その生命を一つにしたものは、生命に先立つ愛なのです。ですから、この世の中のすべての存在の起源、創造された存在の起源は愛から始まったというのです。</a></li><li class="toc-b lv3"><a href="#014">真の愛の中で暮らすことが人間の願い</a></li><li class="toc-b lv3"><a href="#015">愛の心が宿るようになると、すべての感覚は、一カ所で衝動を受けて作用するようになります。一度に作用するというのです。目は目なりに、耳は耳なりに、鼻は鼻なりに、手は手なりに、すべてがこのように作用します。そのようになるのは、「私」のためではなく、愛する人のためなのです。</a></li><li class="toc-b lv3"><a href="#016">母親のおなかの中でも空気を吸収しなければならず、出てからも空気を吸収しなければなりません。母親のおなかの中から地上へと、方向が変わっただけであって、空気を吸収しなければならないことは同じなのです。それでは、人にとって第一の生命要素は何でしょうか。それは愛です。</a></li><li class="toc-b lv3"><a href="#017">ダーウィンの「弱肉強食」という言葉は、このような真の愛の論理で、もう一度解釈されなければなりません。ですから、ありや小さな虫までも真の愛を願うだけでなく、自分を愛する主人のところに行って死のうとするのです。このような原則から、神様の愛の最も高い対象として造られた人間は、すべての万物を食べて摂取できる立場にいます。このすべてのものを食べて摂取するときに、これらを造られた神様の真の愛の心で、食べて摂取しなければなりません。</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第三篇　真の愛／第一章　真の愛の根源</a></b><br/>
+<hr/>
+<br/>
+<h3 class="bh" id="002"><a href="#002">第二節　真の愛の根源</a></h3>
+<br/>
+      1　真の愛は、どこから始まるのでしょうか。皆さんから始まるのではありません。神様から始まりました。その真の愛を中心とした神様は、真の愛の理想相対が必要なので、この世の中を造られたのです。天地創造も、真の愛から始まったのです。愛の概念は、必ず相対的世界で成し遂げられます。相対の観念を離れては、愛を求めることができません。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">ですから、男性がいれば女性がいなければならず、右側があれば左側がなければならず、上があれば下がなければなりません。上下、前後、左右がなければならないのです。これらが連結して一つの球形が形成されます。創造の前から、神様にも心と体がありました。心と体が一つになった立場で、衝突することのない愛の中で、理想的な愛の世界の実現を夢見ながら生きていらっしゃったというのです。それで、神様は、ほのかな愛ではなく、爆発的な愛、三六〇度を回転させることのできる愛を願われます。そのような愛の相対を求め、つくるために天地創造をしました。</a></h4>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">神様は真の愛の根源</a></h4>
+<br/>
+      2　皆さんの中で神秘的な体験をした人がいれば、その人は、宇宙の根本を尋ね求め、宇宙の根本は何かを知りたいと思うでしょう。このような問題を提示して宇宙の根本を尋ねていく時、宇宙の根本とは、この万象の世界を代表している人間なのです。それでは、人間の根本とは何でしょうか。生命です。生命の根本とは何でしょうか。愛です。愛がなければ、生命は生じません。それでは、愛の根本とは何でしょうか。ここでは、人間以上のものに上がっていきます。そのような方が神様です。それで、神様は、愛だというのです。神様が愛という言葉を掲げて出てこられる時、その愛という言葉は、一人では成立しない言葉です。愛は、必ず相対的関係をもつ時に、使える言葉なのです。<br/>
+<br/>
+      3　愛という言葉は、相対的関係で成立する言葉です。どれほど全能であられる神様だとしても、神様お独りでは、愛は成立しません。必ず相対的関係があってこそ愛は成立するのです。ですから、アダムとエバを造った目的がどこにあるかといえば、喜ぶためです。何を中心として喜ぶのでしょうか。見て喜ぶのではなく、話して喜ぶのではなく、触って喜ぶのではありません。愛を中心として喜ぶのです。したがって、喜びを得るために万物創造を始めたのです。<br/>
+<br/>
+      4　愛は、「私」から始まるものではありません。愛は、相対から来るのです。ですから、その愛を受けようとすれば、「私」が門を大きく開けて、そのために投入しなければなりません。押してあげなければなりません。天地を創造された神様、真の愛をもつ神様は、世の中を造る時、自分のためではなく、相対のために造られたのです。相対のために神様は、全体を投入されたのです。<br/>
+<br/>
+      5　真の愛は、ために生きるところから出てきます。神様が宇宙を創造された時、愛の理想をかけて始められたので、神様御自身も、造られたもののために数千年の歴史を経てきながら、人類に何度も裏切られ、何度も辱めを受けましたが、それを忘れて、さらに、さらに、さらに、さらに統けて愛を下さるのです。そのような愛がこの地上に、堕落した人間世界に残っていますが、それが父母の愛です。それでは、真の父母の愛とは何でしょうか。子女を愛する時、「ああ、私はすべて利子をつけて返してもらおう！」という心をもった父母は、真の父母ではありません。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">昼も夜も犠牲になりながらも、ために生きて愛し、また愛し、また愛し、どんな立場に行っても、忘れることなく、もっとやってあげようとして、二十四時間、空間を超越してその人のために生きようとする愛が、本質的な愛に近いのです。このような愛の起源があるので、人間を救うことができ、救援できる基礎を取り戻すことができるのです。</a></h4>
+<br/>
+      6　愛は、自分を中心とした立場では、成立しません。相対を身代わりして、相対の立場を擁護して敬うところから、相対の立場を立てるところから、愛という言葉が初めて成立するのです。愛する人に、「こいつ！お前は私の僕だ」と言いますか。相対を誰よりも尊敬し、誰よりも相対のために生き、相対を通して存在しようとするところで愛は成立するのです。「私」を中心として「お前は私の言うとおりにしなさい」と言うなら、それは愛ではありません。<br/>
+<br/>
+      7　神様が被遣世界を創造したのは、神様も独りでは幸福になれないからです。幸福という言葉は、相対的な関係から始まります。愛という言葉も、相対的関係から起こり、楽しいという言葉も、相対的関係から起こります。自分独りで幸福だという人がいますか。独りで楽しいという人は狂った人です。喜び、愛、幸福、希望というものは、より次元の高い相対的関係を求めるときに必要とするのです。そこから、幸福の条件の等級を満たす位置が決定されるのです。<br/>
+<br/>
+      8　愛は、自分を中心とするようにはなっていません。愛は、「私」から来るのではないのです。愛は、相対を通してのみ関係が結ばれるのであり、相対がなければ成り立ちません。ですから、男性も女性も相対が必要なのです。それは、自分のものではないからです。それは共有物です。宇宙全体を抱くことができる力です。その愛は、自分から来るものではなく、必ず相対を通して来るので、相対がいなくなる時には愛を感じることができず、作用もしないのです。<br/>
+<br/>
+      9　父母の愛が良く、夫婦の愛が良いというとき、真の愛は、自分を中心とした愛ではありません。愛というものは、「私」から始まるものではなく、相対から始まるのです。夫、妻から愛が生じ、息子、兄弟から愛は始まるのです。また、愛は自分独りでいるところから始まるのではなく、相対から始まります。ですから、愛の主人は相対です。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">相対のために無限に投入する真の愛</a></h4>
+<br/>
+      10　神様の真の愛は、相対のために無限に与えようとするものです。愛の心をもった父母は、すべての子女が父母よりもっと立派になることを願うので、子女のために大きく与え、さらにもっと大きく与えようとします。愛し合う夫と妻も、やはり相手が自分よりもっと素晴らしい人間になることを願うので、相対のために投入し、また投入して忘れます。このように、真の愛は、相対のために投入し、また投入しようとするところからその作用が誘発されるのです。神様は、人間のために真の愛の主体的な立場から与え、また与え、また与える作用を続けることによって、永存されるのです。<br/>
+<br/>
+      11　神様も、人間のために投入しました。神様は、人間のために存在するのです。ですから、人間は、千年、万年、神様についていこうとするのです。ために生きる天理の存在世界の前で、自分自らの存在位置を維持するためには、何かのために存在しなければなりません。ために生きることが、古今東西に通じることができるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">神様は、昔も今も、東洋にも西洋にも変わらない愛をもっているので、東洋と西洋を克服することができ、過去、現在、未来を克服できるのです。それは、過去も現在も未来も克服できるので、いつも発展でき、東洋と西洋を克服するので、東洋と西洋を統一できるというのです。これは、愛でのみ可能なのです。</a></h4>
+<br/>
+      12　自分の愛の相対が、自分の息子、娘が、自分よりも劣ることを願う人はいません。そのような心はどこから来ましたか。神様から来ました。神様も同じなのです。自分の愛の相対が、自分の息子、娘が、神様よりも優れていることを願うのです。ですから、その優れた息子、娘、優れた愛の相対を造る時には、自分以上のものを投入しなければなりません。千倍投入しても忘れ、一万倍投入しても忘れてしまわなければなりません。投入するという概念がない時には、それ以上の相対は出てきません。<br/>
+<br/>
+      　　<h4 class="bh" id="008"><a href="#008">ですから、真の愛で愛する人は、自分の生命を与えても、もっと与えたいと思い、千年を生きても、もっと与えたいと思う心の本性をもっています。神様が自分の相対を、その限界にまで素晴らしく造りたいと思い、もっと造りたいと思う、そのような論理をもっているので、その神様を占領するためには、神様以上に投入しなければなりません。真の愛は、自分の生命までも投入して忘れようとするところに根拠地があるのです。</a></h4>
+<br/>
+      13　神様は、全知全能の方なので、自分以上の一千倍、一万倍を思い描きながら投入できる自主的力をもった方です。投入しては忘れてしまいます。愛は無限に投入するので、無限の価値が生じます。投入してみると、自動的に上がっていくのです。循環運動をするのです。循環する球形の範囲の中にあるものは、自分の所有とすることができ、天上世界の愛の所有権を相続することができます。<br/>
+<br/>
+      　　<h4 class="bh" id="009"><a href="#009">愛には、相続権があり、同居権と同参権があるので、その活動舞台は「私」のものです。そのように見れば、神様は、本当に知恵の王です。なぜ投入して忘れるのでしょうか。そうしてこそ、投入しても、さらに投入できるからです。自動的な循環原理を通して、永遠の回転が始まるので、永生の論理が設定されます。投入し、投入し、さらに投入するところに永生の論理が展開します。</a></h4>
+<br/>
+      14　愛して忘れ、もっと愛そうとするところに、生命を投入しても忘れ、もっと投入するところに真の愛が住むようになります。価値のあるものを一度に、すべてあげても忘れてしまうのです。なぜ忘れなければならないのでしょうか。もっと与えようとするので、忘れなければならないのです。母親の愛は与えて、それを忘れてしまう愛です。それをすべて帳簿につけて、見返りを受け取ろうとはしないのです。自分のお乳を、生命を分け与えてあげながらも喜びます。堕落した母親でもそのような心情なのですから、皆さんは、それ以上にならなければなりません。すべてのものを投入しても忘れてしまう人の中には、真の愛が永遠に存在するのです。<br/>
+<br/>
+      15　真の愛は、自分を完全に投入するところから生じます。自分の生命も忘れてしまう時まで、すべて犠牲になるところから真の愛は引き継がれます。生命を投入した以上の立場で、真の愛は相続されるのです。真の愛が生命の根源だからです。生命以上に投入しなければ、真の愛として引き継がれる道がありません。真の愛は生命の根源なので、自分のすべてを犠牲にしなければ、本来の立場に帰っていくことができません。<br/>
+<br/>
+      16　愛は、与えれば与えるほど生じるものであり、終わりのないものです。さらに加重して与えることができる余裕が生じるのです。しかし、他のものはすべて終わりが来ます。お金も、知識も、権力も、終わりがあります。世の中のあらゆる人間の事情や人情を通したものは、すべて終わりがありますが、永遠の真の愛は、どれほど与えても終わりがないのです。もっと無限に近い内容が永続的に続く、驚くぺきものです。ですから、この力をもてば宇宙に作用して余りあるというのです。<br/>
+<br/>
+      17　偽りの愛と真の愛は、どのように違うのでしょうか。偽りの愛は、始まってからどんどん下がって落ちていく愛であり、真の愛は、始まってだんだん上がっていく愛です。とても大きいので、どこまで上がっていくかといえば、大きな世界までです。どんどん包括するのです。そのような無限な抱擁の心、かき抱いてあげる抱擁の心、「もっとかき抱こう。もっとかき抱こう」という心の本質作用をもっているものは、愛以外にはありません。真の愛以外にはないというのです。<br/>
+<br/>
+      18　愛というものは、行っても行っても終わりがありません。父母が子女を愛することには終わりがないというのです。父母がすべての精誠を尽くして子女によく食べさせ、よく着せ、内外に思い残すことなく育てたとしても、もしその子女が死んだなら、「私はお前のためにすべて与えた」と言う父母はいません。愛の道とは、本当に良いものを与えても、恥ずかしさを感じるものなのです。良いものを与えても、それを自慢の条件と考えるのではなく。頭を下げて恥ずかしさを感じるのが愛なのです。<br/>
+<br/>
+      　　<h4 class="bh" id="010"><a href="#010">真の愛の本質は人のために施すこと</a></h4>
+<br/>
+      19　真の愛とは、どのような愛でしょうか。真の愛の本質は、受けようという愛ではなく、人のために、全体のために先に与える愛です。与えても、与えたという事実自体を記憶せず、絶えず与える愛です。喜んで与える愛です。ですから、母親は赤ちゃんを胸に抱いてお乳を飲ませ、喜びと愛の心情を感じるのです。子女が父母に孝行して喜びを感じる、そのような犠牲的な愛です。<br/>
+<br/>
+      20　真の愛とは、ために生きる愛です。真の愛は、愛する人が自分よりも気高いことを願うのです。自分の愛する妻や子女が、自分よりも立派になることを願うのが、すべての愛の本質です。人間の世界においてそうなのです。愛する人が父母よりも気高く、神様のように気高いことを願うのです。神様も同じです。神様のみ前に相対的な立場にいる人間を、神様は自分よりもっと愛するのです。神様は、投入して忘れてしまいます。これが神様の本然的な愛なのです。<br/>
+<br/>
+      21　愛の本質的な性格は、自分のために生きるのではありません。ために生きようとするところに、愛は繁殖します。自分を中心とした愛は消耗しますが、ために生きる愛は繁殖するのです。大きくなっていくのです。ために生きて愛そうとするところでは、繁殖が起きてどんどん拡張しますが、自分のために生きようとする愛には、ますます縮小が起きます。愛の本質は、ために生きようとする時は大きくなりますが、自分のために生きようとする時は、だんだん小さくなっていくのです。<br/>
+<br/>
+      22　真の愛は、与えて記憶するものではありません。自分のために生きるのではありません。真の愛は相対のためにあります。ですから、愛するのに、「まず自分を考えてから、お前のことを愛そう」というような立場に立ってはいけないのです。愛したあとも恥ずかしさを感じる人、それ以上に多くのことを感じる人は、愛の原則の合格者になることができますが、「私がお前を愛したので、お前も私を愛さなければならない」という人は、理想的な愛の原則に符合しないのです。<br/>
+<br/>
+      23　子女を愛する父母は、子女を愛する時、「私は、お前にいついつの日にゴム靴を買ってあげ、服を買ってあげ、お前のために血と汗を流したが、その価値はいくらだ」と言いながら、帳簿に記したりしません。父母が子女を愛するところでは、世の中のどんな王宮の王子、王女よりもよくしてあげたいと思う心から、「私が精誠を尽くしても、これくらいしかしてあげることができなくて申し訳ない」と言いながら与えるのです。それ以上に、もっと良いことをしてあげたいと思う心を父母はもっています。ですから、父母の愛を喜ぶのです。父母の愛は、与えても不足さを感じて、愛してもまだ愛していないことがないだろうかと思ってもっと愛したい心、与えたあとにも「不足で残念だ」と思う心があるので、永遠の愛と通じるのです。それが愛の出発の伝統的な動機です。<br/>
+<br/>
+      24　真の愛は、誰でも願うものですが、愛というものは、ために生きてあげることによって可能になるというのが原則です。相対のために奉仕し、犠牲にならなければなりません。「私のために生きよ」という心で人に対するようになれば、皆が逃げてしまいます。利己的な個人主義は、サタンの戦略であり、目的であり、道具です。その結果は、地獄です。全体のために生きなければなりません。人のために、全体のために犠牲になり、奉仕するようになれば、皆が来て「私」を愛してくれるのです。<br/>
+<br/>
+      25　父母の愛はなぜ貴いのですか。これは、縦的な愛ですが、縦的な愛で終わるのではなく、横的な愛が宿るように努力するからです。父母の愛は、子女が間違った道を行かないかと、生活を通して子女の手本になろうとする内容を備えています。縦的な愛は、必ず横的な愛を創造するようになっています。父母の愛も、このような原則によって神様の愛を中心として、縦横に集約してできているのです。<br/>
+<br/>
+      　　<h4 class="bh" id="011"><a href="#011">このように縦横の要素に責任をもっているのが父母の愛なので、自分の貴いものをそのまま子女に与えようとするのです。そのまま受けさせて、横的に広げようとするのです。愛の本質は、そのようなものです。なぜ愛の本質はそのようになっているのでしょうか。相対的な関係からできているのが愛なので、そのようにならざるを得ません。主体と対象の関係は、そうでなければならないのです。主体と対象の間は、お互いに授け受けして円形を描くのです。主体は縦的であり、対象は横的なので、これが九〇度の角度になって円形を描くようになります。</a></h4>
+<br/>
+      26　神様の愛は、縦的な愛です。しかし、神様の愛は、縦的な愛だけで終わるのではなく、横的な内容をも備える愛なので、横的な息子、娘の前に現れるのです。その息子、娘が縦的な基準で広がるだけではなく、横的にも広がっていくことによって、そこで万有の存在が縦的な環境を中心として、横的な環境に広がっていくようになり、世界と天宙にまで広がっていきます。この愛の心が動機になって、世界を治めよう、何をもとう、何をすればよいという考えをもつようになります。それは、私たちが知らない中で、縦横の愛が自分の本質的な心の根本に描かれているからです。その本質的な欲求によって、人間の欲望が充足される、という事実を否定することはできません。<br/>
+<br/>
+      　　<h4 class="bh" id="012"><a href="#012">真の愛は生命よりも貴い存在の起源</a></h4>
+<br/>
+      27　父母は、子女が死ぬ境地にいれば、その子女を救うために自分の家にあるすべての宝物を、その子女の生命と取り替えようとするでしょう。このようなことを見るとき、宝物よりも貴いものが生命です。それでは、愛と生命では、どちらが貴いでしょうか。夫婦で暮らしていて、夫が妻に愛をもって買ってあげる宝物は、千年、万年もっていたいと思いますが、愛のこもっていない宝物をもらっても、もっていたいとは思いません。宝物は、環境が変わるに従って変わる内容をもっているのです。宇宙の中で千年、万年変わらない愛を中心とした夫婦がいるなら、それは生命よりも貴いのです。ですから、愛のために生命を捧げるのです。生命のために愛を捨てることはありませんが、愛のためには生命までも捨ててしまうのです。<br/>
+<br/>
+      28　世の中には、ダイヤモンドや真珠のような宝石があります。なぜ、それらのものは宝石なのでしょうか。ダイヤモンドは、硬さにおいて誰も侵犯することができず、変わらない特性をもっています。真珠は、優雅な光において最高です。何ものももつことのできない、千年、万年過ぎても変わらない優雅な光をもっています。黄金は、なぜ良いのでしょうか。黄金は、黄金色の光において変わることがありません。千年、万年過ぎても、それを支配できるものはありません。このように、変わらないという性質をもっているので、人間世界で宝物として扱われているのです。このような宝物と取り替えられないものとは何でしょうか。宝物には生命がありません。愛する人の生命は、宝物と取り替えることができないのです。<br/>
+<br/>
+      29　天の国で定める第一の価値決定の基準は、愛です。生命ではなく愛です。その愛とは、唯一、不変、永遠の愛です。その基準を中心として、万事の価値基準を決定するのです。神様はそれ以上考えることができないので、それが決定基準になることは、極めて当然の結論です。「あの人は人格者だ。あの人は価値のある存在だ」というのは、そのような基準から見るのです。<br/>
+<br/>
+      30　すべての存在の共通分母とは、生命です。生命は愛から出てきました。ですから、生命よりも愛が貴いのです。生命を求めて愛を犠牲にするという人と、愛を求めて生命を犠牲にするという人のうち、どちらがより中心でしょうか。どちらがより真に近いのでしょうか。愛を求めて生命を犠牲にするのがより中心であり、真に近いのです。生命を求めて愛を犠牲にするのは自分中心ですが、愛を求めて生命を捧げるのは、自分中心ではないからです。<br/>
+<br/>
+      31　愛は生命を屈服させます。生命を左右できる力が愛にはあります。しかし、生命は愛を左右することができません。それでは、生命の主体であり、愛の主体である神様は、どうなのでしょうか。神様も愛の前では弱いのです。生命の絶対的な基準それ自体だとしても、神様よりもっと強力な愛があるなら、その愛の前には屈服するのです。生命の力までも動かす力があるとするならば、それは愛の力です。<br/>
+<br/>
+      32　真の愛とは、どのようなものでしょうか。人間世界では、神様と出会うことができなかったので「分からない」と言います。母親が子女を愛する以上の愛、真の初愛に燃えて生死も忘れて突進できる力が爆発する、それ以上の愛をもって出発する道が、真の愛の道です。死の境地にいる子女を、父母が自分の生命を捨ててまでも保護しようとする愛の心は、天の愛に通じるのです。そこから天の愛は出発するのです。<br/>
+<br/>
+      33　全知全能の神様は、真の愛の主人公であるにもかかわらず、愛の根を御自分に下ろそうとはされません。愛の対象になり得る人間に、根を下ろそうと考えるというのです。ですから、真の愛を神様がもっているとしても、真の愛で愛することができる人に、すべてのものを投入しようというのです。投入するのに、悪いものから投入するのではありません。神様は、良いものから投入するのです。神様にとって最も良いものは真の愛です。その真の愛を、愛する人のために完全に投入するのです。<br/>
+<br/>
+      34　宇宙生成の根本動機は神様ですが、その動機の中心が、真の愛の道を立てようとするところにあったので、神様は、御自身だけを考えません。御自身を考える前に、愛の相対を尊重して、すべてのものを、その前に投入したというのです。それでは、愛の結実体とは誰でしょうか。神様御自身ではなく、投入したものに愛の結実が実らなければなりません。これは驚くべき思想です。これが宇宙生成、宇宙の始まりの根源です。それを端的に分かりやすい言葉で言えば、神様がなぜ天地を創造したのかということです。哲学的な問題です。なぜ天地を創造したのかといえば、見て喜ぶために創造したのですが、それよりも、愛を愛らしくするために天地を創造したのです。<br/>
+<br/>
+      35　原因のないところから結果が出てくることはありません。体と心は父母から出てきます。母親と父親の愛によって、母親と父親の生命体が和合するようになります。愛は、すべてのものを調和させます。母親の内的な体と心、父親の内的な体と心が、真の愛を通してお互いに調和します。生命力が一つの扇の要のようになって、愛を中心として血統が連結されます。<br/>
+<br/>
+      　　<h4 class="bh" id="013"><a href="#013">「私」が生まれるようになった最初の動機は、母親と父親の生命ではありません。その母親と父親の生命が愛によって連結され、血統を通して生まれます。母親の血と父親の骨を受けて血肉を連結させ、十カ月が過ぎ、血統に従って母親と父親の生命力をもって生まれます。生まれた「私」の根本は、皆さん自身ではありません。根本は母親の生命であり、父親の生命です。その生命を一つにしたものは、生命に先立つ愛なのです。ですから、この世の中のすべての存在の起源、創造された存在の起源は愛から始まったというのです。</a></h4>
+<br/>
+      36　神様がアダムとエバを造った時、愛という概念がなかったなら、どうなったでしょうか。神様の愛の概念に合うように生まれたのがアダムとエバです。凸と凹は創造された時からそのようになっていたのです。ここには進化がありません。進化が成立しないのです。愛という概念のために雄と雌が生じたという事実は、進化を超越した概念なのです。<br/>
+<br/>
+      37　皆さんは、愛と生命と血統という、重要な三つの本宮をもっています。どのようにしてこの三つを完全に一つにするか、ということが本宮の目的です。それは、愛によって一つにするのであって、それ以外の他の道はありません。その場は、最も秘密になっていて、神聖な所です。ところが、なぜ悪化してしまったのでしょうか。堕落したからです。堕落したので、愛の王宮を破壊し、生命の王宮を破壊し、血統の王宮を破壊しました。そうして、その場は、かえって最も悪いものになり、恥ずかしい場所になったのです。<br/>
+<br/>
+      　　<h4 class="bh" id="014"><a href="#014">真の愛の中で暮らすことが人間の願い</a></h4>
+<br/>
+      38　愛と関係のある所に対しては、私のすべての神経が衝撃的な刺激を起こします。すなわち愛は、私をして最も近い所にいさせようとします。愛というものは、最も近いと同時に、私と離すことができない関係をもっています。そして、私に喜びの刺激と衝動を伝達してくれます。ですから、私たちは、懇切な心をもって「会いたい」と言い、懇切な心をもって「行きたい」と言うのです。<br/>
+<br/>
+      39　愛は、すべての感覚を集中させて、一点に結ぶ力として現れます。目は「ああ、見たい」と言い、耳は「ああ、聞きたい」と言い、口は「ああ、食べたい。話したい。学びたい」と言うでしょう。これだけではなく、すべての細胞が、そこに動いていこうとするのです。高い頂で避雷針が雷に合うのと同じように、神経のすべての感覚を避雷針のように束ねるための作用が愛の作用です。<br/>
+<br/>
+      　　<h4 class="bh" id="015"><a href="#015">愛の心が宿るようになると、すべての感覚は、一カ所で衝動を受けて作用するようになります。一度に作用するというのです。目は目なりに、耳は耳なりに、鼻は鼻なりに、手は手なりに、すべてがこのように作用します。そのようになるのは、「私」のためではなく、愛する人のためなのです。</a></h4>
+<br/>
+      40　自然は人間の母親です。ですから、その母親から供給を受けて生きるようになっています。このように供給を受けて大きくなるのです。腹中で水の中で生きていたのと同じように、地上で空気の中で生きるようになります。それでは、何を中心として生きるのでしょうか。愛を中心として生きます。ですから、いつも愛が問題です。父母の愛、妻・夫の愛、息子、娘の愛ですが、この愛が問題です。生命の一要紫は空気です。<br/>
+<br/>
+      　　<h4 class="bh" id="016"><a href="#016">母親のおなかの中でも空気を吸収しなければならず、出てからも空気を吸収しなければなりません。母親のおなかの中から地上へと、方向が変わっただけであって、空気を吸収しなければならないことは同じなのです。それでは、人にとって第一の生命要素は何でしょうか。それは愛です。</a></h4>
+<br/>
+      41　なぜ人間が生まれたのでしょうか。「愛のために生まれた」という一言がすべてです。その愛が真の愛です。真の愛とは、堕落した世界の愛を超えた愛です。すべての宗教は、真の愛の世界に到達するのが目的なので、宗教の中の宗教であるキリスト教が語る愛は、世の中の愛の限界線を超えたものであると主張しています。それで、イエス様も、「だれでも、父、母、妻、子、兄弟、姉妹、さらに自分の命までも捨てて、わたしのもとに来るのでなければ、わたしの弟子となることはできない」(ルカ一四・二六)と言いました。自分の父母や妻子、あるいは誰よりもイエス様をもっと愛するまではイエス様の弟子になることができないとは、どういうことでしょうか。弟子というのは子女を意味するので、堕落線を乗り越えなければ天と関係を結べないということです。<br/>
+<br/>
+      42　真の愛は、横的な水平関係だけではなく、縦的な垂直関係も成り立ちます。真の愛の横的関係が縦的にだんだんその次元を高めると、結局、その頂点に到達するようになりますが、その場が真の人の王である神様の立場です。その立場では、すべてのものが結合して、抱かれ、愛と化して花開くことができるからです。ですから、宇宙の中にあるすべての存在は、愛で和合することを願い、愛の中で生きることを願うというのです。愛のために生まれ、愛のために生き、愛のために死ぬというのです。<br/>
+<br/>
+      43　真の愛は、人間だけでなく、すべての万物も願います。万物の霊長である人間には、神様が造られた傑作を抱いて愛するだけではなく、すべての万物に愛することを教えてあげなければならない責任があります。万物は、このような主人を求めています。このような基準から私たち自身を照らして見ながら、自分を恥ずかしく思うことができなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="017"><a href="#017">ダーウィンの「弱肉強食」という言葉は、このような真の愛の論理で、もう一度解釈されなければなりません。ですから、ありや小さな虫までも真の愛を願うだけでなく、自分を愛する主人のところに行って死のうとするのです。このような原則から、神様の愛の最も高い対象として造られた人間は、すべての万物を食べて摂取できる立場にいます。このすべてのものを食べて摂取するときに、これらを造られた神様の真の愛の心で、食べて摂取しなければなりません。</a></h4>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609191458"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="034.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="036.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609191458"></script>
+</body>
+</html>

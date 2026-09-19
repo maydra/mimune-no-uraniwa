@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609191458" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第九篇　家庭教会と氏族的メシヤ／第五節　教会長と伝道</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609191458">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第九篇　家庭教会と氏族的メシヤ</h1>
+<nav class="page-nav">
+  <a href="141.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="143.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第九篇　家庭教会と氏族的メシヤ／第三章　教会長の道</a></li><li class="toc-b lv2"><a href="#002">第五節　教会長と伝道</a></li><li class="toc-b lv3"><a href="#003">心情基準をまず立てなければならない</a></li><li class="toc-b lv3"><a href="#004">純粋な立場で、それが善であったかどうかを批判しなければならず、現在はそのような立場に立っているのかを批判しなければなりません。また、私が望む願いが純粋なのかを批判しなければなりません。</a></li><li class="toc-b lv3"><a href="#005">純粋な善の立場とは何でしょうか。自分のために生きるところでは、純粋な善は存続できません。善は自分を強化させるところでは存続しないのです。善は、神様に侍るための基台だからです。善の中で神様に侍るということは、善の主人である神様に侍るということです。善の主人は、堕落した人間ではなく神様です。</a></li><li class="toc-b lv3"><a href="#006">なぜでしょうか。人の心霊の程度は徐々に発展します。初めて原理を聞いたときと、一年後の立場は違うというのです。一年が過ぎれば、原理の内外に対する立体的な内容を理解するようになります。それを理解すれば理解するほど、原理について知りたい気持ちがより強くなるのです。それで、自分を指導できる人と接近したいと思うようになるのです。このような人に時間をもっと投入し、細かい計画を立て、内面的に渇望するその心を解決してあげなければなりません。</a></li><li class="toc-b lv3"><a href="#007">皆さんは、ある一人の人に対して祈り、一度実験してみなさいというのです。ある一人の人をこの上なく愛し、その人をみ旨の前に立たせるために、苦しい心情をもって涙を流してみなさいというのです。そして、研究してみなければなりません。本当にその人の父母が愛する立場以上の場に、「私」がどのようにして行くのかということが問題です。これが闘いです。その人の父母以上の心をもち、私がどのようにしてその人を占領していくのか、これが問題です。</a></li><li class="toc-b lv3"><a href="#008">ですから、自分の困難なことや大変なことよりも、それ以上に驚くべき愛を与えなければなりません。自分が全体のためにいると考えるときは、全体のために与えようとすれば、その人が全体の前に主体となります。再創造になるのです。投入するのです。再創造がすべて終わったあとに、自分が主体になるのです。その主体の前には、全体が喜んで頭を下げるのです。</a></li><li class="toc-b lv3"><a href="#009">伝道方法と姿勢</a></li><li class="toc-b lv3"><a href="#010">ですから、一人が伝道されたのであれば、その次は伝道されたその人に、「あなたも自分の親戚に対して、私があなたにしたように精誠を尽くしながら伝道しなさい」と言わなければなりません。そのような伝統を立てて指導すれば、間違いないのです。このように、一ヶ月に一人ずつ伝道する一律的な方法で行けば、一人からその次の人につながる横的な伝道が展開し、食口が限りなく増えるのです。</a></li><li class="toc-b lv3"><a href="#011">ですから、一番の怨讐はサタンではありません。自分が一番の怨讐です。自分が怨讐の立場に立っているので、怨讐のサタンが飛びついてくるのです。したがって、皆さんは、いつも自分が怨讐だと考えなさいというのです。怨讐は、私たちの体を通して現れるからです。すなわち、血統を通してサタンと連結されているので、自分の体が怨讐の立場にいるのです。</a></li><li class="toc-b lv3"><a href="#012">そのようなことを皆さんが生活を通して体験し、「ああ、天がこのようなところには共にいらっしゃり、このようなところには共にいらっしゃらないのだなあ！」ということを実験しながら判別していってこそ、皆さんが発展し、人格修養にもなり、神様の心情世界に到達できるのです。欲心ばかりを抱いたまま、あぐらをかいて座り、自分の利益だけを考えていてはいけないのです。</a></li><li class="toc-b lv3"><a href="#013">しかし、そのようにできず、昔よりもっと低い立場で、きのうよりも良くない心で出発すれば、必ず後退の一路を歩むようになるのです。そのような環境の中で続けて歩めば歩むほど、破局を自ら招くことになります。また、それが一方的ではなく、四方にそのような後退の感情を起こしていけば、いくら目的が大きく、いくら自ら固く決意するとしても、それは停止状態として、動こうにも動けない、完全に固着した立場を体験するようになるのです。</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第九篇　家庭教会と氏族的メシヤ／第三章　教会長の道</a></b><br/>
+<hr/>
+<br/>
+<h3 class="bh" id="002"><a href="#002">第五節　教会長と伝道</a></h3>
+<br/>
+      1　統一教会の現在の立場を見れば、今まで責任者たちがしてきた活動方法をもってしては、これから革新的な発展を期待できません。昔の考え方と昔の生活態度、もしくは昔の伝道方法や信仰姿勢をただそのままもっていてはいけないのです。今までそのようにして歩んできましたが、今日、期待するほどの結果をもたらせなかったからです。良い結果をもたらしたのであれば分かりませんが、そのようにできなかったことを見るとき、過去のような信仰姿勢と生活態度、伝道方法から抜け出し、新たに変化した姿にならなければなりません。そのため、私たちが新しい信仰姿勢、新しい生活態度、新しい行動を提示しなければ、新しい発展をもたらすことは難しいのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">心情基準をまず立てなければならない</a></h4>
+<br/>
+      2　発展は、私たちに最も必要なものです。しかし、その発展を追求する前に、自分自体内の純粋さをどのように造成するかということがもっと問題です。ですから、皆さんには、祈る時間が必要であり、精誠を捧げる時間が必要です。精誠は何となく捧げてはいけません。過去を清算して捧げなければならないのです。過去の意識が残っていれば、その意識が「私」をどこに引っ張っていくかということを考えなければなりません。過去の意識に私が陶酔し、どれほど強力な立場に立っているかという問題を中心として、過去は純粋だったのかと批判してみなければならないというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">純粋な立場で、それが善であったかどうかを批判しなければならず、現在はそのような立場に立っているのかを批判しなければなりません。また、私が望む願いが純粋なのかを批判しなければなりません。</a></h4>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">純粋な善の立場とは何でしょうか。自分のために生きるところでは、純粋な善は存続できません。善は自分を強化させるところでは存続しないのです。善は、神様に侍るための基台だからです。善の中で神様に侍るということは、善の主人である神様に侍るということです。善の主人は、堕落した人間ではなく神様です。</a></h4>
+<br/>
+      3　地方に出ていって伝道するとき、まずその村の人々と内的な面で一体にならなければなりません。内的な一体とは、心情統一を意味します。その次に生活統一、理念統一の基準を連結させていかなければなりません。現実的な舞台において、神様を中心として心と体が一つにならなければなりません。すなわち、神様と一体となった心に、体が屈服しなければならないということです。そうしてこそ、蘇生、長成、完成の三点を連結させることができます。個人的にそのように歩むだけでなく、この民族をそのように導いていかなければなりません。<br/>
+<br/>
+      4　牧会者の中に、自分が天的完成基準に立ったと考え、自分に侍って敬意を表することを要求する人がいます。それは大きな誤りです。侍られるより、侍ってあげ、与えるのが父母の立場です。兄弟の立場で見れば、アベルです。父母の立場で見れば、父子関係です。自分はアベルなので、カインが侍らなければならないと考えるのは、大きな誤りです。何のためのアベルかというと、父母の立場を復帰するためのアベルです。ですから、父母の心情を先にもたなければ、アベルになれません。それが原則です。兄弟同士でアベルだと考え、父母としての立場を忘れてしまう人が多いのです。その欠陥を早く一掃しなければなりません。<br/>
+<br/>
+      5　私たちは発展できる内容を十分にもっています。時代的な条件と環境も、完全に具備されています。ところが、発展できないのはなぜでしょうか。この時代と立場、現在の置かれた環境、村であれば村に、プラスになっていないからです。利益を与えていないからです。もし物質的な面で利益を与えられなかったとしても、精神的な面ででも、誰もが利益を受けているという事実を切実に感じるようになれば、「教会に来るな」と言っても来るようになっているのです。<br/>
+<br/>
+      6　教会が発展できない原因は、どこにあるのでしょうか。それは、伝道した人に、最後まで関心をもってあげられないからです。伝道した人に対して、時がたつにつれてだんだんと、さらに関心をもたなければならないにもかかわらず、伝道するときは関心をもっても、伝道をしてからは無関心になるというのです。少なくとも三年までは、どのようなときでも関心をもってあげなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">なぜでしょうか。人の心霊の程度は徐々に発展します。初めて原理を聞いたときと、一年後の立場は違うというのです。一年が過ぎれば、原理の内外に対する立体的な内容を理解するようになります。それを理解すれば理解するほど、原理について知りたい気持ちがより強くなるのです。それで、自分を指導できる人と接近したいと思うようになるのです。このような人に時間をもっと投入し、細かい計画を立て、内面的に渇望するその心を解決してあげなければなりません。</a></h4>
+<br/>
+      7　教会が発展できないのはなぜでしょうか。それは責任者が、他のために生きるという内容をもって生きることができていないからです。ですから、霊界から協助しないのです。責任者は、食口に命令することは知っていますが、食口の使いをすることは知らないというのです。問題はそこにあります。自分の生活の九五パーセントを人のために生きようという責任者がいないので、発展できないのです。<br/>
+<br/>
+      8　伝道とは、サタン世界を捨てて、喜びながら天の道に従ってくるようにすることです。天の国に導くのです。皆さんを見れば、伝道すると言って、その人が喜ぼうが喜ぶまいが、ただ無理やり「来なさい、来なさい」と言っていますが、それではいけません。人は霊的存在です。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">皆さんは、ある一人の人に対して祈り、一度実験してみなさいというのです。ある一人の人をこの上なく愛し、その人をみ旨の前に立たせるために、苦しい心情をもって涙を流してみなさいというのです。そして、研究してみなければなりません。本当にその人の父母が愛する立場以上の場に、「私」がどのようにして行くのかということが問題です。これが闘いです。その人の父母以上の心をもち、私がどのようにしてその人を占領していくのか、これが問題です。</a></h4>
+<br/>
+      9　アベルがプラスならば、カインはマイナスです。サタン世界に対して私がプラス、アベルの位置にいるのです。伝道は、サタン世界のプラスが天の世界のマイナスになるように、服従させることです。創造するのです。私と一つになれるようにする再創造です。嫌々やってはいけません。喜んでしなければなりません。神様は、天地創造をするときに喜びでもって造られたのです。悲しみで造られたのではありません。<br/>
+<br/>
+      　　<h4 class="bh" id="008"><a href="#008">ですから、自分の困難なことや大変なことよりも、それ以上に驚くべき愛を与えなければなりません。自分が全体のためにいると考えるときは、全体のために与えようとすれば、その人が全体の前に主体となります。再創造になるのです。投入するのです。再創造がすべて終わったあとに、自分が主体になるのです。その主体の前には、全体が喜んで頭を下げるのです。</a></h4>
+<br/>
+      　　<h4 class="bh" id="009"><a href="#009">伝道方法と姿勢</a></h4>
+<br/>
+      10　どのように伝道をすべきでしょうか。毎日のように、がむしやらに歩き回るのではなく、百軒回ったらそのうちの十軒を選び、その中から再び一軒を選んで、集中的にみ言を伝えなければなりません。一ヶ月に一人伝道することを目標に動いてみなさいというのです。そのようにして一ヶ月で一人伝道したならば、その人が一ヶ月間、精誠を捧げ、苦労したということは、間違いのない事実です。<br/>
+<br/>
+      　　<h4 class="bh" id="010"><a href="#010">ですから、一人が伝道されたのであれば、その次は伝道されたその人に、「あなたも自分の親戚に対して、私があなたにしたように精誠を尽くしながら伝道しなさい」と言わなければなりません。そのような伝統を立てて指導すれば、間違いないのです。このように、一ヶ月に一人ずつ伝道する一律的な方法で行けば、一人からその次の人につながる横的な伝道が展開し、食口が限りなく増えるのです。</a></h4>
+<br/>
+      11　皆さんは、「出ていって伝道する」と言いますが、伝道とは何でしょうか。道を教えてあげることです。皆さんは、世界のために、神様のところに帰っていく道を教えてあげるのですから、それはどれほど偉大なことでしょうか。本性の人間を見て、「お前はどこに行くのか」と尋ねれば、「いやあ！世界を通じて天の国に帰っていかなければならない」と言うのです。その道を開拓してあげるのですから、どれほど素晴らしいでしょうか。<br/>
+<br/>
+      12　今まで宗教は、自分の救いという問題を中心にしてきました。そのような宗教は必ず滅亡します。終わりが来ます。今は、いくら世界的になっているとしても、それは必ずもう一度復活しなければなりません。自分一人の生命を救うための宗教と、キリスト教を信じる信徒の目的はどこにありますか。自分が救いを受けて、天国に行こうと言いますが、それではいけません。天国に行くのですが、一人で行って何をしますか。万民を連れていくために、信仰しなければなりません。ですから、「伝道してはいけない」と言っても、伝道せざるを得ないのです。「善を行ってはいけない」と言っても、行わざるを得ないのです。<br/>
+<br/>
+      13　伝道に出るのは、「私」も生き、カインも生かすためです。言い換えれば、伝道は、神様とサタンに認証書をもらって、実践するために歩む道です。私が闘うのは、認証書をもらうために立てておいた条件のとおりに実践するためです。皆さんはそれを知って道を歩まなければなりませんが、今までそのように歩んだ人がいますか。何も知らずに行ったり来たりしたというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="011"><a href="#011">ですから、一番の怨讐はサタンではありません。自分が一番の怨讐です。自分が怨讐の立場に立っているので、怨讐のサタンが飛びついてくるのです。したがって、皆さんは、いつも自分が怨讐だと考えなさいというのです。怨讐は、私たちの体を通して現れるからです。すなわち、血統を通してサタンと連結されているので、自分の体が怨讐の立場にいるのです。</a></h4>
+<br/>
+      14　「私」が生命を捧げて悪を屈服させれば、生命を探し出すことのできる神様の愛が私のところに来ます。これは公式です。秤の重りと同じです。片方が下がれば、もう片方は上がります。悪を多く取り除けば善が上がり、悪を多くもてば善が下がるのです。これと同じです。悪を取り除いた分だけ、愛をくれるのです。ですから、神様は、誰よりも神様を愛しなさいと言ったのです。神様をもっと愛しなさいというのは、神様をより愛した分だけ、神様の愛をさらに受けるということです。すなわち、神様を愛したので、神様の愛を受けるということです。<br/>
+<br/>
+      15　伝道するときは、必ず精誠を捧げ、天を抱き締めて涙を流しながら、「私が、きょう出会う人との縁を破綻させる天倫の反逆者にならず、すべての人に歓迎され、ここに動機を呼び起こすことのできる人になるようにしてください」と言わなければなりません。そのような心で伝道に出てみてください。そのようにしないで、晴れない気持ちのままで、村で一番良い人を訪ねていけば、冷遇され、迫い出されるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="012"><a href="#012">そのようなことを皆さんが生活を通して体験し、「ああ、天がこのようなところには共にいらっしゃり、このようなところには共にいらっしゃらないのだなあ！」ということを実験しながら判別していってこそ、皆さんが発展し、人格修養にもなり、神様の心情世界に到達できるのです。欲心ばかりを抱いたまま、あぐらをかいて座り、自分の利益だけを考えていてはいけないのです。</a></h4>
+<br/>
+      16　伝道は、無限に与えながらするようになっています。もし、皆さんがそのようにしたにもかかわらず、彼らが応じなければ、天の呼び出し命令が下されるのです。許されません。善は、蒔いて収めることができないということがあってはならないので、善の人が呼ぶとき、そこに応えることができなければ罰を受けるのです。善が手を広げたのにもかかわらず、その結果が出てこなければ、その村と隣の村まで、サタンの手に巻き込まれていくので、善の縁をもった先祖たちはそのような所へ行き、伝道しようとする人が要求する基準にふさわしい対象者を、自分の子孫の中からかき集めてでも立てようとするのです。これが原則なので、夢の中ででも子孫に教えてあげるのです。<br/>
+<br/>
+      17　皆さんは、伝道対象者のために、夜を徹して痛哭し、祈ってみましたか。自分の父母が死んだとき以上に悲しみながら、あるいは愛する恋人が死んだとき以上に悲しみながら、痛哭してみたのかというのです。そのようにしたことがなければ、してみなければなりません。夜を徹しながら、痛哭しなければなりません。一つの命を生かすことさえできれば、何も惜しいものがないというのです。お金や服、家が問題ではありません。人を愛することに夢中にならなければなりません。<br/>
+<br/>
+      18　伝道しようとすれば、人の心理を研究しなければなりません。表情や歩き方だけを見ても、あの人が喜ぶか、嫌がるか、分からなければならないのです。その人の感情を公式的に鑑定できなければなりません。自分の妻の足音を聞いただけでも、彼女にいいことがあるのか、悪いことがあるのか、分かるのです。妻が部屋に入ってくれば、「あなたはなぜ機嫌が良くないのか」と言うのです。そうすれば妻は、見たわけでもないのに、既に夫がすべて知っているので、何も言えないのです。そのような物差しをもって暮らさなければなりません。関心をもって祈れば、その人が「私」に関心をもつようになるのです。<br/>
+<br/>
+      19　私たちが伝道するときも、きのう伝道するときの心と、きょう伝道するときの心が、出発するときから違わなげればなりません。言い換えれば、「過去にはこれこれこのような心で出発したが、きょうは新たな心をもってやらなければ」という覚悟で、出発の動機からそのように異なる覚悟で出ていけば、間違いなく良い結果をもたらすというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="013"><a href="#013">しかし、そのようにできず、昔よりもっと低い立場で、きのうよりも良くない心で出発すれば、必ず後退の一路を歩むようになるのです。そのような環境の中で続けて歩めば歩むほど、破局を自ら招くことになります。また、それが一方的ではなく、四方にそのような後退の感情を起こしていけば、いくら目的が大きく、いくら自ら固く決意するとしても、それは停止状態として、動こうにも動けない、完全に固着した立場を体験するようになるのです。</a></h4>
+<br/>
+      20　人間であれば誰もが、み言を中心として復帰の道を行かなければなりません。「私」が国家的基準を蕩減できる位置に入っていこうとすれば、国家的基準の前に氏族的蕩減をしなければならないのですが、それを代行できる人を立てておけば、氏族の反対をその人が防いでくれるのです。家庭においてもそのような人を立てておけば、家庭の反対を防ぐことができます。氏族の代表を立てておけば、すべて防げるのです。それで伝道をするのです。私が高く上がっていっても、後継者を立てて、その人が私の行く道に同参(一緒に参加すること)し、反対を防いでくれる土台を広げようとすれば、伝道が必要です。<br/>
+<br/>
+      21　私たちは、武器をもって伝道するのではなく、愛をもって伝道するのです。アベルが愛によってカインを救う勝利の基台を通して、偽りの愛によって占領されたものを真の愛によって復帰しなければなりません。そうしてこそ、衝突することのない本然の世界に帰っていけるのです。他の手段や方法を通してすれば、再びサタンがあらゆる手段や方法をもって出てくるのです。イエス様は、死の道の上でも、生命が途切れる最後の瞬間までも、愛の道理を立ててきました。完全なカインの救いの道理を立てられなかったので、カインの救いの道理の門を開くことのできる道を、死を通して見せてくれたのです。<br/>
+<br/>
+      22　伝道するのは、統一教会自体のためではありません。統一教会を生かすためではなく、国を生かすために伝道するのです。世界を生かすために伝道するのです。キリスト教とは目的が違います。彼らは、自分の教派の発展のために伝道しますが、統一教会は、私たち自体のための伝道ではありません。統一教会が完成した位置に立ったとしても、統一教会が究極的に訪ねていくべきところは国です。教会を捨ててでも、国の完成の道を行けば、一段階高い位置で完成の道を迎えるようになるのです。その道がより価値のある道なので、教会を犠牲にしてでも国を探し出さなければなりません。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609191458"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="141.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="143.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609191458"></script>
+</body>
+</html>

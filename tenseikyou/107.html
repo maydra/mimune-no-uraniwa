@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609191458" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第七篇　地上生活と霊界／第一節　末世と再臨復活</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609191458">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第七篇　地上生活と霊界</h1>
+<nav class="page-nav">
+  <a href="106.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="108.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第七篇　地上生活と霊界／第四章　再臨復活と神霊の役事</a></li><li class="toc-b lv2"><a href="#002">第一節　末世と再臨復活</a></li><li class="toc-b lv3"><a href="#003">終わりの日の現象</a></li><li class="toc-b lv3"><a href="#004">再臨できる全体的蕩減路程を先生が歩んだのです。先生が、神様を身代わりしたアベルの王です。本然のアダム家庭において、カインがアベルの命を奪いましたが、歴史時代において、それが継続して今まで下ってきたのです。ですから、神様がサタンの血統の世界に対して干渉することができません。霊界に行った聖人たちや先人たちも、なぜ終わりの日になって、一時にこのようにすべてひっくり返るのでしょうか。それは避けることができません。一度にひっくり返ったというのです。</a></li><li class="toc-b lv3"><a href="#005">人間は、サタンの言葉に引かれて越えていったので、堕落世界のすべての人々は、再臨主のみ言、彼のメッセージに導かれて越えてくることができます。ですから、彼のみ言は、天使長の言葉より優れていなければなりません。そして、神様が認める位置に立たなければなりません。ですから、権威をもってすべての人間を導くのです。</a></li><li class="toc-b lv3"><a href="#006">いかなる指導者も、「私」の生命を救ってくれません。そのような時が来ます。そのような時を先に迎えた地域、国家、教団、社会では、混乱が起こります。互いに信じられないというのです。牧師が長老を信じられず、長老が牧師を信じられず、一般信者が党会(牧師と長老からなる議決機関)を信じられず、教派は教派同士で信じられず、社会や政党も互いに信じられません。国民が大統領を信じられず、大統領が国民を信じられず、民が国を信じられない中で身もだえするのです。四方を見つめれば、信じられない混乱した世の中です。その中で自分が自分を信じ、天が認めることができる信仰の位置を探しなさいというのです。（010-203,　1960.10.02）</a></li><li class="toc-b lv3"><a href="#007">ですから、霊界がこの地球星に向かって襲来します。気が狂った人のことを、霊に取りつかれたと言うではないですか。霊が何をしようと人に入ってくるのですか。利用してしまおうというのです。良心的な人々、さらには文人や芸術家のような人々は、普通の人よりセンスが良いのです。アンテナが高いというのです。ですから、今日そのような人々がそれに先に接して、ノイローゼ現象や世界的な終わりの日の現象が起きるのです。（030-176、1970.3.22）</a></li><li class="toc-b lv3"><a href="#008">高いアンテナにはピッピッと音が出てきます。それがノイローゼ現象です。最も恐ろしいのは、悪霊だけを動員して地上を攻略してくることです。そのような場合に、どうするのかが問題です。いくら人が地球上にいっぱいになったとしても、悪霊に攻略されてしまいます。それで、神様はそこまで準備していらっしゃいます。善霊たちを中心として霊界の基台を広げてきているのです。（055-30、1972.04.23）</a></li><li class="toc-b lv3"><a href="#009">霊人の再臨復活</a></li><li class="toc-b lv3"><a href="#010">霊人は、必ずその時代ごとに再臨現象を経て現れるので、それぞれの段階が輪廻、すなわち生まれ変わる現象として見えるのです。皆さんも同様です。皆さんが個人的にただ信じて死ぬようになれば、家庭をもてなかったので、家庭基準、氏族基準、民族基準、国家基準、世界基準といった段階をすべて越えていかなければなりません。ですから、何億万年かかるかもしれないのです。それは無限に相当します。</a></li><li class="toc-b lv3"><a href="#011">ですから、霊界も神様を中心として霊界の方向に進み、地上も地上を中心として先に進むのではなく、本然の基準を中心として長子権を復帰し、神様、天宙父母と地上の再臨主、天地父母が新たな主義で祝福を中心として血統の決着をつけることによって、ここから平面的に進むのです。そのようにして、自動的に地上天国と天上天国が開門されます。ですから、ここでひっくり返して霊界全体が下りてくるようになります。</a></li><li class="toc-b lv3"><a href="#012">ですから、まず地上に復活した人が出てこなければなりません。霊界には、地獄と中間霊界と楽園と天国がありますが、今まで天に忠誠を尽くした人々は、すべて楽園に行っています。イエス様も楽園に行っています。復活の目的を果たすにおいて、間接目的地は霊界であり、直接目的地は地上です。霊界は復活させるべきところであり、地上は復活すべき所です。ですから、まず地上で、「私は復活した。復活の目的を終結した」と言うことができてこそ、天上天国に行くことができます。</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第七篇　地上生活と霊界／第四章　再臨復活と神霊の役事</a></b><br/>
+<hr/>
+<br/>
+<h3 class="bh" id="002"><a href="#002">第一節　末世と再臨復活</a></h3>
+<br/>
+      1　今の時は、どのような時でしょうか。全世界を見れば、たくさんの人たちにノイローゼ現象が起きています。霊的世界と肉的世界が交差するので、そのようになります。これが交差するときは、先に善の人に来るのではありません。ニュースを早く知るのは誰ですか。善の人が先に知るのではなく、反対する怨讐が先に知るのです。善の側のニュースを、怨讐たちが早く把握しようとするのです。それと同じように、霊的世界が地上に臨むときに、善霊たちが先に地上に臨むのではなく、悪霊たちが先に地上に臨むのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">終わりの日の現象</a></h4>
+<br/>
+      2　エデンの園で堕落することによって、天使長を中心としてエバが怨讐になり、エバを中心としてアダムが怨讐になりました。お互いが怨讐になりました。すべて怨讐です。ですから、皆さんの子女も怨讐です。信じられないのです。終末になれば母親、父親までも怨讐になります。兄弟間が怨讐になります。国同士が怨讐になり、すべての関係がばらばらになる時が来ます。その時になれば、人倫道徳がどこにあるでしょうか。世界の風潮がそのように吹きすさんで方向が分からなくなり、どのようなものが善で、どのようなものが偽りなのか、判断できない時が来れば、その時が終末だということを知らなければなりません。その時が正に今です。<br/>
+<br/>
+      3　この世の終わりの日とは、どのような時代でしょうか。全世界の人類が個人的な愛を絶対視する時代になれば、この世の終わりの日だというのです。堕落した愛を中心として見てみるとき、そのような結論が出てきます。世界的に個人的な愛を中心とする時代が終わりの日です。国の愛や、民族の愛や、あるいは家庭の愛などというものが、すべて否定された立場で自分の愛のみを中心としていき、人間の倫理や道徳観念に立つのではなく、動物的愛の道を行く時代を言うのです。<br/>
+<br/>
+      4　皆さんの心と体も闘い、夫婦も闘い、父と子も闘っています。すべてが終わりの日になって混乱が起こります。先生のみ言を中心として、霊界自体が、今まで自分が信じてきた信仰で大混乱が起こります。地上に再臨するためには、統一教会の皆さんと子孫たちに実績がなければなりません。実績がなければ再臨することができません。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">再臨できる全体的蕩減路程を先生が歩んだのです。先生が、神様を身代わりしたアベルの王です。本然のアダム家庭において、カインがアベルの命を奪いましたが、歴史時代において、それが継続して今まで下ってきたのです。ですから、神様がサタンの血統の世界に対して干渉することができません。霊界に行った聖人たちや先人たちも、なぜ終わりの日になって、一時にこのようにすべてひっくり返るのでしょうか。それは避けることができません。一度にひっくり返ったというのです。</a></h4>
+<br/>
+      5　今のこの時は、神様のみ旨がこの地上に現れる時です。今日、この地上にはカインとアベルがいます。マタイによる福音書第十三章にあるみ言のように、この地上には毒麦と麦があります。またヨハネによる福音書第十章のみ言のように、門に入っていく真の羊飼いがいると同時に、門を通らずに別の所に越えていく偽りの羊飼いがいます。ですから、間違えれば、私たちの教会でも、まさしくそのような現象が現れることを直視しなければなりません。（003-207,　 1957.11.01）<br/>
+<br/>
+      6　聖書では、終末にメシヤが来ると教えています。メシヤという言葉は、三つを復帰すべき人を意味します。それは、永遠の真理、永遠の人格、そして、真の父母として子女のために生きる真の愛です。それで、イエス様が「新郎として来た、自分の新婦を求めるために来た」と主張されたのです。末世において、再臨主は堕落と反対の経路を行かなければなりません。<br/>
+<br/>
+      7　主とは主体です。それで、その主が堕落した世界に来られる時は、真理を語らなければなりません。人がその真理を聞けば、心と体がその主に属するようになるでしょう。人間が堕落した時、彼らは泣きながら、悲しみの涙を流しながらサタンに引かれていきました。しかし、彼らが帰ってくる時は、喜びをもって神様のところに導かれていかなければなりません。そのような運動が終わりの日に起きなければならないのです。すなわち正反対のことです。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">人間は、サタンの言葉に引かれて越えていったので、堕落世界のすべての人々は、再臨主のみ言、彼のメッセージに導かれて越えてくることができます。ですから、彼のみ言は、天使長の言葉より優れていなければなりません。そして、神様が認める位置に立たなければなりません。ですから、権威をもってすべての人間を導くのです。</a></h4>
+<br/>
+      8　終わりの日には、髪に油を塗って密室に入って祈りなさいと言いました。人の言うことを聞いてはいけない時です。新郎の言うことだけを聞かなければならない時です。牧師も、信仰の同志も、最後の峠に行けば「私」の後援者になりません。「私」は天国に行き、彼は地獄に行くようになっていれば、地獄に行くその人が「私」にしがみつきます。愛する友人が水に溺れた時、助けようと水に入っていけば、その人がしがみついてくるのと同じです。その時は、同情してあげることができない時です。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">いかなる指導者も、「私」の生命を救ってくれません。そのような時が来ます。そのような時を先に迎えた地域、国家、教団、社会では、混乱が起こります。互いに信じられないというのです。牧師が長老を信じられず、長老が牧師を信じられず、一般信者が党会(牧師と長老からなる議決機関)を信じられず、教派は教派同士で信じられず、社会や政党も互いに信じられません。国民が大統領を信じられず、大統領が国民を信じられず、民が国を信じられない中で身もだえするのです。四方を見つめれば、信じられない混乱した世の中です。その中で自分が自分を信じ、天が認めることができる信仰の位置を探しなさいというのです。（010-203,　1960.10.02）</a></h4>
+<br/>
+      9　今、地上に霊界の混乱が起こります。混乱する霊界が地上を襲ってくるというのです。ですから、最近、ノイローゼ現象が起きたり、半精神病患者や半分気が狂った人が多いのです。ぶつぶつ独り言を言う人々が次第に多くなります。数千億の霊人のいる霊界が、この地球星に襲来するというのです。なぜ襲来するのでしょうか。宗教が自分の位置を探すことができなかったからです。宗教が自分の位置を確立できず、人々が水平線となり、天を中心として垂直に立つようになっているのに、すべて倒れたというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">ですから、霊界がこの地球星に向かって襲来します。気が狂った人のことを、霊に取りつかれたと言うではないですか。霊が何をしようと人に入ってくるのですか。利用してしまおうというのです。良心的な人々、さらには文人や芸術家のような人々は、普通の人よりセンスが良いのです。アンテナが高いというのです。ですから、今日そのような人々がそれに先に接して、ノイローゼ現象や世界的な終わりの日の現象が起きるのです。（030-176、1970.3.22）</a></h4>
+<br/>
+      10　今から、数千億の霊人たちが、地上を占領するために攻略を仕掛けてきます。ノイローゼ現象がその一つです。さらには、二〇〇〇年代を超えると、その時は悪霊に通じ、善霊に通じたりなどして、すべて霊的に通じるかもしれません。戦争をするなと言っても闘わざるを得ません。そのような時が来るかもしれません。それを防備することが「統一原理」の使命です。<br/>
+<br/>
+      　　<h4 class="bh" id="008"><a href="#008">高いアンテナにはピッピッと音が出てきます。それがノイローゼ現象です。最も恐ろしいのは、悪霊だけを動員して地上を攻略してくることです。そのような場合に、どうするのかが問題です。いくら人が地球上にいっぱいになったとしても、悪霊に攻略されてしまいます。それで、神様はそこまで準備していらっしゃいます。善霊たちを中心として霊界の基台を広げてきているのです。（055-30、1972.04.23）</a></h4>
+<br/>
+      　　<h4 class="bh" id="009"><a href="#009">霊人の再臨復活</a></h4>
+<br/>
+      11　皆さんが地上で自分が備えるべきものをすべて備えることができず、サタンにそっくりそのまま心を奪われた立場で霊界に行けば、実体の行動をどのように展開させることができるでしょうか。それは、非常に難しいのです。もし皆さんが、この地で責任を果たせないときは、皆さんの子孫を代わりに立てなければなりません。自分を救ってくれるメシヤのような立場にその子孫を立て、彼らを助け、彼らの事情を見ていきながら協助してあげなければなりません。彼らをして、皆さんが生きている時にできなかった責任分担を成し遂げることができるように協助しなければならない立場に置かれるのです。これが再臨復活の現象です。<br/>
+<br/>
+      12　本来の人間は、サタンの支配を受けず、神様の直接主管圏内で暮らさなければならないのですが、堕落することによって堕落圏に暮らすようになったので、そこから抜け出すためには、個人として蕩減し、家庭として蕩減しなければなりません。これを蕩減せずには、抜け出すことができません。<br/>
+<br/>
+      　　<h4 class="bh" id="010"><a href="#010">霊人は、必ずその時代ごとに再臨現象を経て現れるので、それぞれの段階が輪廻、すなわち生まれ変わる現象として見えるのです。皆さんも同様です。皆さんが個人的にただ信じて死ぬようになれば、家庭をもてなかったので、家庭基準、氏族基準、民族基準、国家基準、世界基準といった段階をすべて越えていかなければなりません。ですから、何億万年かかるかもしれないのです。それは無限に相当します。</a></h4>
+<br/>
+      13　イエス様が死を通して、天と地の前に望みのすべてを実在的に証したことを、私たちはよく知っています。最後の十字架の途上で、「もしできることでしたらどうか、この杯をわたしから過ぎ去らせてください。しかし、わたしの思いのままにではなく、みこころのままになさって下さい」(マタイ二六・三九)と祈ったイエス様は、その心に死の恐怖が襲えぱ襲うほど、望みの日が近づいてくることを、誰よりも感じていたのです。肉身の死が過ぎたのちには、新たな望みの世界が展開することを感じ、その世界を憧憬したというのです。肉身の死以後に永遠の自由の体で復活することを願ってそれを憧憬したので、死んだのちに復活の栄光を受けることができました。<br/>
+<br/>
+      14　先生に中心の根、中心の幹、中心の芽が連結されています。それを個人的に、家庭的に主流にして、中心の枝、中心の根、中心の幹、中心の芽がすべて一貫した流れになっています。生きているというのです。再臨復活をしたのです。枝として再臨主に連結すれば、すべて生きるようになります。こうすることによって、アダム家庭から世界基準まで、一度に復活した立場に立つというのです。数万年の間に繁殖したものを数年間で接ぎ木して完成させるので、地上の個人天国から家庭天国、天上天国まで、一度にすべて完成することができるのです。<br/>
+<br/>
+      15　先生が霊界と地上界の二重の仕事を一度にすることはできないので、霊的基準を中心として興進君を霊界の司令官として立てました。神様を中心として再臨主が地上に来るのと反対に、先生を中心として地上から天国の再臨主の立場で送るのです。先生が分かれた霊界と肉界を統一し、霊界に真の父母の愛の関係をもてなかったことを中心として、息子に命じて祝福の権限をもたせ、生きている父の代身者として霊界の復活圏の役事をさせるのです。重生式、復活式、永生式ができるようになり、地上に覇権的基盤ができたので、この基盤を中心として第一イスラエルの国、第二イスラエルのアメリカ、第三イスラエルの韓国を中心として、その境界線を撤廃してしまうのです。<br/>
+<br/>
+      16　今はもう先生が心配することがありません。放っておいても、そのまま進みます。その代わり、霊界から再臨するのです。三時代の霊界、旧約時代、新約時代、成約時代に、救援するための神様の摂理のみ旨が成し遂げられなかったのですが、それがひっくり返ることによって自動的に成し遂げられます。旧約完成、新約完成、成約完成をすることによって、自動的に摂理が方向を定めていきます。<br/>
+<br/>
+      　　<h4 class="bh" id="011"><a href="#011">ですから、霊界も神様を中心として霊界の方向に進み、地上も地上を中心として先に進むのではなく、本然の基準を中心として長子権を復帰し、神様、天宙父母と地上の再臨主、天地父母が新たな主義で祝福を中心として血統の決着をつけることによって、ここから平面的に進むのです。そのようにして、自動的に地上天国と天上天国が開門されます。ですから、ここでひっくり返して霊界全体が下りてくるようになります。</a></h4>
+<br/>
+      17　私たちは、復活の日を待ち望まなければなりません。地上を通じて、天を復活させなければなりません。私たちは、復活の根拠地が天上だと思っていますが、違います。この地です。この地が中心です。復活の根拠地も解決点も、この地にあります。この地で復活が成し遂げられなければ、天上の復活、人間の復活、万物の復活、地獄の人間の復活も、単なる言葉で終わってしまいます。<br/>
+<br/>
+      　　<h4 class="bh" id="012"><a href="#012">ですから、まず地上に復活した人が出てこなければなりません。霊界には、地獄と中間霊界と楽園と天国がありますが、今まで天に忠誠を尽くした人々は、すべて楽園に行っています。イエス様も楽園に行っています。復活の目的を果たすにおいて、間接目的地は霊界であり、直接目的地は地上です。霊界は復活させるべきところであり、地上は復活すべき所です。ですから、まず地上で、「私は復活した。復活の目的を終結した」と言うことができてこそ、天上天国に行くことができます。</a></h4>
+<br/>
+      18　天地開闢とは何ですか。最初の復活に同参できる資格を備えた人々とは、どのような人々ですか。祝福の門を通過した人々です。ですから、八十歳の老人たちも再び春を迎えなければなりません。不思議に思うかもしれませんが、祖母や祖父たちも、再び結婚しなければならないという話です。なぜならば、第三イスラエル国家をつくり、また第三イスラエル国家の民になるためには、祝福の門を通らなければならないからです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609191458"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="106.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="108.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609191458"></script>
+</body>
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609191458" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第二篇　真の父母／第三節　長子権・父母権・王権復帰</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609191458">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第二篇　真の父母</h1>
+<nav class="page-nav">
+  <a href="022.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="024.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第二篇　真の父母／第三章　真の父母と重生</a></li><li class="toc-b lv2"><a href="#002">第三節　長子権・父母権・王権復帰</a></li><li class="toc-b lv3"><a href="#003">長子権復帰の過程</a></li><li class="toc-b lv3"><a href="#004">アダムとエバは、長子であり長女でした。長子、長女が、原理結果主管圏を通して直接主管圏まで、長子権の愛を中心として連結されるのであって、次子の愛をもっては連結されません。ですから、この位置に戻って長子権を復帰して、一段階、一段階上がっていかなければなりません。この闘いをするのです。</a></li><li class="toc-b lv3"><a href="#005">双子の兄弟を中心として入れ替えたのですが、まだ腹中では入れ善ることができていませんでした。それで、どのようなことが起きるのでしょうか。その条件を立てたのはヤコブの四番目の息子のユダです。ユダには、息子が三人いました。また、その長男の嫁がタマルという女性です。タマルは、神様の祝福を受けた血族がどれほど貴いかを知っていました。それで、その血族を受け継ぐためには、どのようなことでもしようとしたのです。</a></li><li class="toc-b lv3"><a href="#006">長子権復帰は愛によって</a></li><li class="toc-b lv3"><a href="#007">そして皆さんが出ていって闘い、サタン世界を愛で屈服させたという条件の上に立たなければなりません。「私は怨讐をみなたたき潰したのではなく、怨讐を愛で屈服させて長子権を回復するようになった」と言わなければなりません。</a></li><li class="toc-b lv3"><a href="#008">父母権復帰</a></li><li class="toc-b lv3"><a href="#009">そのような点で、先生は、涙をたくさん流した大王です。歴史を代表して、真理の道を探すために涙を流し、血肉を裂きながら受難の路程に打ち勝ってきた代表だということを知らなければなりません。そのような驚くべき父母に、皆さんは侍っているのです。これが最後の峠です。ですから、父母権復帰基準とともに、次子権を一つつくらなければなりません。先生を中心として、長子権、父母権がすべて立てられました。王権まですべて備えて一つになれば、母と次子で母子協助基盤を築くことによって終わるのです。</a></li><li class="toc-b lv3"><a href="#010">王権復帰</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第二篇　真の父母／第三章　真の父母と重生</a></b><br/>
+<hr/>
+<br/>
+<h3 class="bh" id="002"><a href="#002">第三節　長子権・父母権・王権復帰</a></h3>
+<br/>
+      1　息子とは、愛の結実です。神様は、原理の神様です。原理的な立場で見れば、先に生まれた息子も神様の息子にならなければならず、次に生まれた息子も神様の息子にならなければなりません。ところが、堕落以降、先に生まれた息子はサタン側であり、次に生まれた息子は天の側です。非原理型が深く入り込んでいます。原理的になろうとすれば、最初に生まれた息子も天の側にならなければならず、二番日に生まれた息子も天の側にならなければなりません。神側の息子が先に出てこなければなりません。サタン側の息子が先に出てくるのが原理ではありません。ですから、原理的な神様が堕落した人間を救援するためには、先に生まれた位置の息子を愛さなければならないのです。神様が愛する息子になるようにしようとすれば、先に生まれた位置に立てておかなければなりません。<br/>
+<br/>
+      2　アダムの息子たちは愛の実なので、神様も主管することができ、サタンも主管することができる立場にいます。ですから、カインとアベルを、それぞれ天の側とサタン側に分けて立てなければならないのです。それで、最初の愛は天使長とエバの愛なので、長子であるカインを、その愛の表示体としてサタン側に立て、二番目の愛はエバとアダムの愛なので、次子であるアベルを、その愛の表示体として神側に立てるようになりました。本来は、神側に立っていたアダムが、神様の愛を中心として原理的な主管権をもってエバと天使長を主管し、天理の原則を立てなければなりませんでした。ところが、アダムが堕落することによって、創造原理的立場では神様がアダムを取ることができる立場なのですが、愛を中心としては、サタンがアダムを取ることができる立場に置かれるようになりました。これを、天の側で再び取り戻すためには、どのようにしなければならないのでしょうか。主管されるべき天使長が、逆にアダムを主管したので、反対に主管される位置に入っていって、本来の基準を復帰しなければなりません。それで、サタン側に立てられたカインが、神側に立てられたアベルに逆に屈服しなければならないのです。屈服しなければ、復帰になりません。<br/>
+<br/>
+      3　根本復帰をするためには、重生しなければなりません。重生するためには、堕落していない父、結婚する前の父の骨髄の中から出発しなければなりません。歴史を通じて、一番目は長子権復帰、二番目は父母権復帰、三番日は王権復帰、四番目は皇族圏の復帰をしなければなりません。そのためには、血統を転換しなければなりません。それで、リベカを中心としては兄弟同士で争い、タマルを中心としては、子宮で入れ替わって生まれた息子を中心として、そこから新しいイスラエル選民が出てきたのです。イエス様が来る時まで、国家基準を中心としてマリヤを通して分別したのです。今、再臨時代まで、そのようなことを拡大して、血統を清めてきました。国家基準でそのような過程を経なければならないので、イエス様もやはり、マリヤの腹中を通して再び分別され、懐妊されると同時に神様が主管できる息子になったのです。ひとり子という言葉が、そこから出てくるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">長子権復帰の過程</a></h4>
+<br/>
+      4　イエス様は、いつ血統的に転換されたのでしょうか。これが問題です。カインとアベルを中心として血統的に見れば、どのようになっているでしょうか。血統を転換させるためには、母のおなかの中に入らなければなりません。サタン側の長子が先に出てきて天理の大道に背いたので、これを腹中で転換させなければなりません。それで、カインとアベルの歴史は、弟が兄の長子権をひっくり返す歴史です。生んでひっくり返します。世界の人々をすべて生んで転換しておき、少しずつ範囲を狭めていかなければなりません。それを、もう少し近い段繕で転換したのが何かといえば、エサウとヤコブです。双子を中心として転換するので、転換しやすいのです。<br/>
+<br/>
+      5　堕落圏を越えて、長子権も神側の長子権を、次子権も神側の次子権を取り戻してこそ、堕落していない本然の世界に立つことができます。これが、本来の創造理想です。神様が絶対的である以上、その理想も絶対的なものとして残っているので、これを再び取り戻してくるための歴史過程を経て蕩減復帰し、ある一時でも、これを越えなければなりません。<br/>
+<br/>
+      6　長手権復帰はどれほど大変でしょうか。このために宗教人たちが数限りなく犠牲になり、キリスト教がローマ帝国において四百年間苦労し、サタン世界の版図を越えるために血を流したのです。ローマに行けば、カタコンベという洞窟があります。先祖の死体を棚に置き、その臭いを喫ぎながら暮らしました。そうせざるを得なかったのであって、誰がそのようなことをしたくてするでしょうか。人間としてはできないことです。したがって、天がどれほど苦労しましたか。歴史におけるその功を、皆さんは知りません。<br/>
+<br/>
+      7　皆さんを立てたのは、長子権の一族を設定するためです。自分たちが福を受けるのは、長子権を立てたその長子が福を分け与えるときに、受けられるのです。その長子権は、自分がもっているのではありません。来られる主を中心として、縦的な天上世界と関係を結ばなければなりません。横的世界だけではできません。先生がこの道を知ったので、「ために生きなさい1」という論理を立てざるを得ませんでした。生まれたのも、ために生きるために生まれたのです。男性も女性のために生まれました。「私」というものがありません。<br/>
+<br/>
+      8　個人、家庭、氏族、民族、国家、世界、天宙まで七段階、神様まで行くためには七段階を越えなければなりません。七段階の過程的長子復帰の基盤を通して、堕落していない本来の長子の位置に行かなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">アダムとエバは、長子であり長女でした。長子、長女が、原理結果主管圏を通して直接主管圏まで、長子権の愛を中心として連結されるのであって、次子の愛をもっては連結されません。ですから、この位置に戻って長子権を復帰して、一段階、一段階上がっていかなければなりません。この闘いをするのです。</a></h4>
+<br/>
+      9　アダムとエバが堕落したので、カインとアベルが縦的に一つになる道がなくなりました。カインとアベルを通して、アダムとエバの失敗を復帰する立場に立っているので、アダムとエバが縦的に関係を結ぶことができる基準はありません。アダムとエバにはこれがなくなったので、嫡子権を願っている私たちにおいては、縦的に結ばれる父母とその子女が一つになった条件が立てられなければなりません。養子の立場では、一つになって上がっていくことができません。堕落していない嫡子の立場に立たなければ、神様と一つになって完成基準に上がっていくことができないように、人間はその段階を通過しなければなりません。いくら神様の子女になったと言っても、いくらカインとアベルが一つになったと言っても、堕落していない父母の基台を復帰しなければ縦的に上がる道は生じません。ですから、神様は、今まで真の父母の基準を立てさせなければなりませんでした。<br/>
+<br/>
+      10　カインとアベルの時もそうでしたが、エサウとヤコブの時にも二人が腹中で争いました。そのとき、二人の子供が腹中で争うので、「こんなことでは、わたしはどうなるでしょう」(創世記二五・二二)と言ってリベカが神様に祈ると、神様が、「二つの国民があなたの胎内にあり、二つの民があなたの腹から別れて出る。一つの民は他の民よりも強く、兄は弟に仕えるであろう」(創世記二五・二三)と、このように知らせてあげたのです。次子を通して長子復帰をする闘いの路程を経ていかなければなりません。<br/>
+<br/>
+      11　エサウとヤコブの兄弟が双子で生まれたので、心情圏においてはすべて通じるのです。双子は、弟が悲しめば兄も悲しむようになっています。それほど通じるのです。そのような近い立場である双子を中心として復帰するのです。復帰は誰がするのかといえば、母がしなければなりません。堕落して、母がカインを生んだので、復帰過程でも、母がしなければなりません。母子協助を中心としてしなければなりません。ここにおいて母は、ヤゴブを中心としてエサウを欺いたのです。<br/>
+<br/>
+      12　母子が協助することによって、長子権を取り戻すのです。兄エサウが狩りに行つて帰ってきたとき、弟ヤコブにバンとレンズ豆のあつもので長子権を売ったので、復帰の条件に引っ掛かったのです。売ったため、実際に行動をするときには屈服しなければなりません。亮っていなければ、欺くことができません。条件がなければできません。ここで初めて、イスラエルという名前をもつ契機になったのです。初めて長子権を復帰したイスラエル圏になったのです。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">双子の兄弟を中心として入れ替えたのですが、まだ腹中では入れ善ることができていませんでした。それで、どのようなことが起きるのでしょうか。その条件を立てたのはヤコブの四番目の息子のユダです。ユダには、息子が三人いました。また、その長男の嫁がタマルという女性です。タマルは、神様の祝福を受けた血族がどれほど貴いかを知っていました。それで、その血族を受け継ぐためには、どのようなことでもしようとしたのです。</a></h4>
+<br/>
+      13　タマルが懐妊した二人の子供が争うので、神様に祈ると、神様は、エサウとヤコブの僻リベカに言った言葉と全く同じように、「お前の腹中には二つの国があり、大きい者が小さい者に侍るだろう」とおっしゃいました。このようにして、ペレヅとゼラが生まれました。ところが、兄であるゼラの手が先に出てきました。ゼラの手が先に出てきた時、産婆がその手に赤い糸を結びつけました。これは、後代に関することを印で見せてくれたものです。後代に必ず共産主義が出てくることを予告したのです。長子の権限を回復できるペレヅが、腹中で兄を押しのけて先に生まれることによって、ここで初めて次子が長子復帰をするようになるのです。それで、押しのけて出てきたという意味でペレヅという名前をつけてあげたのです。このように、リベカの伝統歴史、タマルの伝統歴史、すなわち血統転換の闘争路程を通して、腹中で長子を次子にし、次子を長子にすることによって、ここで初めてイスラエルの歴史過程における長子権が始まったのです。ですから、常に神様が助けることができるのです。これを滅ぼそうとすれば、天が打つのです。イスラエルの歴史は、イスラエル民族を打とうとするすべての異邦の民族を、無慈悲に打った歴史です。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">長子権復帰は愛によって</a></h4>
+<br/>
+      14　自分が勝利しようとすれば、出ていかなければなりません。出ていって長子権を復帰しなければなりません。その長子が、弟の次子を兄として侍り、「祝福はお前によって受ける」と言えるようにならなければなりません。そうして、長子が次子の立場になり、次子が長子の立場に上がらなければなりません。そうして長子が、「お前が私の代わりに上がりなさい」と押し上げてこそ、長子権氏族から長子様民族へと進むようになります。このようにして一段階ずつ上がっていくのです。長子が代わりに押し上げてくれてこそ、上がっていくのです。そのままでは上がっていけません。このような原理的な内容があるので、長子権復帰基準を完成しなければなりません。そのようにしなければ、神様の摂理を成し遂げることができないというのが宗教歴史の秘密です。それで、真の宗教の道を行くためには家を離れなければなりません。国を捨て、家を捨てて出家しなければならないという話は、このようにして出てきたのです。<br/>
+<br/>
+      15　サタン側はカインです。兄です。天の側はアベルです。この闘いです。神様は、長男を愛したのちに次子を愛するようになっています。カインである長男は、サタン側です。長男がサタン側になったというのです。その長男を救うために、アベルを立てたのです。アペルを立てて、長子権を復帰するのです。長子権を復帰するのに、拳で責め立ててするのではなく、愛で感動させなければなりません。愛で溶かして復帰しなければなりません。愛したという立場に立たなければ、愛して彼らが振り向くまでは、自分の息子、娘を愛することができません。神様は絶対的な神様なので、創造理想から見るとき、本来、長子が先に愛を受けるようになっているのであって、次子が先に愛を受けるようにはなっていません。<br/>
+<br/>
+      16　先生は、自分の妻よりも、子供よりも、サタン世界をもっと愛したかどうかが問題になります。妻や子供をより愛してはいけません。神様は、アベル圏を愛する前に、カインを先に愛さなければなりません。そして、カインを愛する以上にアベルを愛してはいけないのです。最初の息子をもっと愛さなければなりません。長男がサタン側に行ったので問題なのです。ですから、救援歴史がこのように長くかかったのです。血統を通して、血が系統を通して連続的につながっているので、血統を浄化して長男を愛し、その愛する位置にすべての天の側の人々が立たなければ、天国に行くことができません。ですから、救援摂理が今まで延長されてきたのです。<br/>
+<br/>
+      17　蕩減復帰歴史で、長子を屈服させる秘法とは何でしょうか。サタンは、「神様も完全な神様であり、神様が求めるアダムとエバも完全なアダムとエバなのですから、堕落していなければ、アダムとエバは、本然の天使長である私を愛するのが原理の基準です。ですから、私は堕落して悪い立場にいるとはいえ、あなた方が善良で正しい立場にいれば、私を愛したという条件を立てなければなりません。そのようにしなければ、私の前で神様の本分を果たすことはできません！」と主張するのです。それが問題です。<br/>
+<br/>
+      18　個人基準の長子復帰をしたなら、家庭基準の長子復帰をしなければなりません。そのためには、必ずサタンが迫害して命を奪おうとする最前線に出ていって闘い、愛で屈服させ、私たちのすべてのことを教えてあげなければなりません。そうして、彼らが私たちの伝統が良いことを知り、自然に心に感動を覚えて涙で悔い改め、生命を捧げてあなたのために祭物になりますと宣誓しなければ、カイン世界の祝福権を取り戻してくることができません。<br/>
+<br/>
+      19　愛でなければサタンを屈服させることはできません。天国に入っていける家庭となるためには、神様も堕落した天使長を愛したという立場に立たなければならず、神様の息子、娘の家庭も、サタンを愛したという条件を立てなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">そして皆さんが出ていって闘い、サタン世界を愛で屈服させたという条件の上に立たなければなりません。「私は怨讐をみなたたき潰したのではなく、怨讐を愛で屈服させて長子権を回復するようになった」と言わなければなりません。</a></h4>
+<br/>
+      20　神様は、怨讐を打ち砕くのではなく、怨讐を愛したという条件と、怨讐であるサタンを、アダムの身代わりの位置に立った人によって愛したという条件を立てなければなりません。迫害を受けながら、涙と血の汗にすべて打ち勝ち、耐えに耐えて自然屈伏させ、神様の愛を抱いて戻ってきて、初めて祝福を受けることができます。そこで、サタンは解き放ってくれるのです。「あなたはこれから天国に行ける子女になれる！」という公認を受けなければなりません。誰がサインしなければならないかというと、サタンがしなければなりません。サタンがしたあとで皆さんがサインし、皆さんがサインしたものを真の父母様がサインしなければなりません。真の父母様のサインを通してこそ、神様のみ前に立てるのです。それが天国です。<br/>
+<br/>
+      21　世界的にサタンを愛したという条件さえ立てれば、私に従うすべての人は、サタンが連れていくことができないのです。そうすれば、カインとアベルが入れ替わります。アベル圏は、今までは追われる立場にありましたが、今、天国の長子権をもってここに立ったので、愛を中心とするこの前から、サタンの天下は崩れていかなければなりません。一路後退するしかありません。ここに対峙する、何ものもありません。対峙すれば、木っ端みじんになるのです。それが原理観です。<br/>
+<br/>
+      　　<h4 class="bh" id="008"><a href="#008">父母権復帰</a></h4>
+<br/>
+      22　先生は、今まで家庭を取り戻すのに苦労し、教会を取り戻すのに苦労し、その次には、キリスト教の方向を定めるのに苦労し、滅んでいく自由世界の方向を正すのに苦労し、滅んでいく共産世界の方向を正すのに苦労しました。それで、結論は何かというと、先生によって、長子権が復帰されました。本来、アダムが堕落していなければ、アダム自身が長子権をもったでしょう。また、アダム自身が真の父母になります。その次には、アダム自身が王の中の王になるのです。<br/>
+<br/>
+      23　人間は、堕落によって長子権を失ってしまいました。天地の大きな事業と財産を相続する、その長子の権限を失ってしまいました。悪魔のために失ってしまいました。それだけでなく、神様の愛と、神様の生命と、神様の血統を中心として、天地の創造主である父母に侍ることができ、永遠の血族になるべきであるにもかかわらず、アダムが真の父母になるべき権限を失ってしまいました。堕落していなければ、一つのアダム文化です。アダム一族です。このようになれば、一つの王権なのです。<br/>
+<br/>
+      24　長子権復帰をするためには、八定式を終わらせなければなりません。その次に、天父主義時代、父母権復帰時代です。父母になるのです。カインとアベルが一つになっているので、父母が来るのです。父母権とは何でしょうか。アダム父母とイエス父母は失敗しました。このアダム父母、イエス父母、再臨主父母の三代の父母権を、先生の時代に来て、すべて完成しました。先生の代に来て、アダムも完成し、イエス様も完成し、再臨主も完成したのです。<br/>
+<br/>
+      25　蕩減や、長子権復帰や、父母権復帰や、王権復帰といったものが、なぜ必要なのでしょうか。サタンの愛とサタンの生命とサタンの血統が問題です。本来、神様から出発しなければならなかったのですが、悪魔から出発しました。その悪魔は、愛という途方もないものを中心として出発しました。愛ゆえに宇宙ができました。創造は、すべての創造の起源となる愛を中心としてなされました。その根本をサタンがひっくり返したのです。ですから、ひっくり返された根本を、元に戻さなければなりません。<br/>
+<br/>
+      26　神様の創造理想は、真の父母の名で、天国の王国と地上の王国を築くことです。真の父母の名をもたずには、地上天国と天上天国は生まれません。今日、キリスト教徒たちに、「イエス様は神様の愛する長子であり息子ですが、どうして天国ではなく楽園に行っているのですか」と尋ねてみれば、答えられません。天上天国と地上天国は、真の父母の完成と愛の基盤を通してのみ形成されます。霊界に行って王国を統一することが、真の父母の使命であって、他の人の使命ではないのです。イエス様は真の父母になることができなかったので楽園にいるのです。<br/>
+<br/>
+      27　復帰が困難なので、歴史峙代において苦労しながら今まで延長してきたのであって、能力のある神様が、なぜこのように苦労してきたのかというのです。教えてあげられるものならば、もう既に教えていたのです。アダムが知らなかったので、アダムが責任を取って探さなければなりません。天地をかき分けて探さなければなりません。そのようにしようとするので、どれほど多くの涙を流したでしょうか。涙を流して追い出されたので、復帰路程で、どれほど涙を流したでしょうか。<br/>
+<br/>
+      　　<h4 class="bh" id="009"><a href="#009">そのような点で、先生は、涙をたくさん流した大王です。歴史を代表して、真理の道を探すために涙を流し、血肉を裂きながら受難の路程に打ち勝ってきた代表だということを知らなければなりません。そのような驚くべき父母に、皆さんは侍っているのです。これが最後の峠です。ですから、父母権復帰基準とともに、次子権を一つつくらなければなりません。先生を中心として、長子権、父母権がすべて立てられました。王権まですべて備えて一つになれば、母と次子で母子協助基盤を築くことによって終わるのです。</a></h4>
+<br/>
+      　　<h4 class="bh" id="010"><a href="#010">王権復帰</a></h4>
+<br/>
+      28　本来、アダムが完成すれば、天国の父が完成し、エバが完成すれば、天国の母が完成し、それで家庭の主人になれば、家庭的天国の王権が生まれるのです。ですから、アダムとエバは、個人的王であり、家庭的王であり、氏族的王であり、民族的王であり、国家的王であり、世界的王になるのです。このように国家基準を越えることができる時が来たので、サタン世界の王権を踏み越えて、天の世界の王権を設定することができるのです。その日が、一九九〇年三月二十七日 (第三十一回父母の日）です。<br/>
+<br/>
+      29　先生は、世界的な家庭迫害を解消するために七年路程を行きました。家庭解放のために、十字架の道を行ったのです。ですから、先生が家庭の王にならなければならないのです。家庭で、長子の王、父母の王、家庭の王になることが、創造理想と摂理観的な立場でアダムに任せられた責任でした。一つの家庭で天国全体の理想的基準を立て、天国の型にはめようとしたことが失敗したので、すべてなくなりました。アダム一代から数千代、今まですべてが空になったのです。偽りの父母が空にしたものを、真の父母が来て、神様に代わって主人となり、再び成し遂げなければなりません。真の父母になり、真の神様の愛を中心として、真の生命を中心とする祝福の基盤を連結し、血統を転換することによって、サタンと関係のないアダム家庭完成型をつくるのです。<br/>
+<br/>
+      30　天父主義とは何でしょうか。第一は兄弟権復帰、第二は父母権復帰、第三は王権復帰です。民主世界には王という概念がありません。民主世界は兄弟主義です。平面的に見るのです。兄弟主義ですが、兄弟主義の世界ではお互いに闘います。「あなたのもの、私のもの」と言いながら、争奪が繰り広げられるのです。民主主義は闘いの概念です。与党と野党が闘います。その内容は、王権を互いにもとうとすることです。大統領は、王権ではありませんか。これが行ったり来たりして搾取しようとするので、うまくいかないのであって、絶対的な王が現れれば、問題ではありません。絶対的な平和の世界が訪れるのです。<br/>
+<br/>
+      31　民主世界の政治体制は、闘争の体制です。ですから、私たちが父母の位置に上がらなければなりません。そうすれば、争いを止めることができます。すべての兄弟が、父母を中心として一つになるのです。そのように一つになるところから平和の世界が展開します。そのようにしなければ、他の方法はありません。まず真の父母を取り戻してこそ、そこから真の子女、真の国家、真の平和を含むすべてのものを取り戻すことができます。それ以外に他の方法はありません。<br/>
+<br/>
+      32　天父主義、神主義を中心として統一するのです。真の父母は、家庭の王です。家庭は、様々なほかの家庭と交わって、自動的に氏族になります。そうすれば、氏族の王が出てきます。また氏族は、様々なほかの氏族と一つになって民族になり、民族の王が出てくるのです。国家、世界、天宙もみな同じです。このように王たちがつながり、神様までつながるのです。ですから、神様は、万王の王になるのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609191458"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="022.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="024.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609191458"></script>
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609191458" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第三篇　真の愛／第四節　子女の愛</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609191458">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第三篇　真の愛</h1>
+<nav class="page-nav">
+  <a href="040.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="042.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第三篇　真の愛／第二章　真の愛の類型</a></li><li class="toc-b lv2"><a href="#002">第四節　子女の愛</a></li><li class="toc-b lv3"><a href="#003">父子関係は宇宙の根本</a></li><li class="toc-b lv3"><a href="#004">子女にとって、父母と向き合う喜びは、それこそ世界を代表する喜びにならなければならず、父母にとって、子女と向き合う喜びは、世界を代表する欲望を充足させる喜びでなければなりません。</a></li><li class="toc-b lv3"><a href="#005">外的な他の問題をすべて失ってしまうことがあったとしても、幸福に生きることができる希望の場は、父母の前には子女しかありません。</a></li><li class="toc-b lv3"><a href="#006">「私」はどこから生まれたのかというと、父母の愛が限りなく花開く場から生まれました。宇宙を総合した男性と女性として生まれた、その母親と父親が愛の花を咲かせるその場、喜びの場から一つの種として植えられたのが子女です。</a></li><li class="toc-b lv3"><a href="#007">私たちは、腹中から父母の愛を受けます。「私」が愛の本質によって腹中に宿ったその時間から、父母の愛と、すべての関心が集中するようになっています。なぜでしょうか。愛の結実だからです。ですから、愛で生まれ、愛から生命を引き継ぎ、愛を受けながら大きくなって、相対を迎えることができる時になれば、相対を迎えるようになるのです。</a></li><li class="toc-b lv3"><a href="#008">父母の愛の同参者</a></li><li class="toc-b lv3"><a href="#009">「私」というものは、なぜ貴いのでしょうか。生命をもっているから貴いのではなく、母親と父親の愛に同参したので貴いのです。愛は父母がしたのですが、愛の結実は「私」です。初めと結実をもって生まれたのが、母親と父親ではなく正に「私」なので貴いのです。</a></li><li class="toc-b lv3"><a href="#010">それでは、天国で残れる子女は、どのような子女でしょうか。父母の愛を通して受けた恩は、自分自らが返さなければなりません。父母が年を取って老いたときは、自分が幼いときに大小便を拭いてくれた父母の心で、すべてのことに耐え、困難を困難と感じることなく、父母に侍ってこそ孝子になるのです。</a></li><li class="toc-b lv3"><a href="#011">真の子女の道理は孝</a></li><li class="toc-b lv3"><a href="#012">皆、男性と女姓が結婚して夫婦となり、家庭を率いて父母の前に孝行した以上の孝行をしなければなりません。結婚しなければ、真の孝子、孝女になることはできません。真の孝子、孝女には、結婚したのちに初めてなることができるのです。結婚して夫婦となり、その父母の前で、夫の孝行の心に妻の孝行の心をプラスして、父母に侍る孝行の心の基盤を備えてこそ、真の孝道圏を成立させることができるのです。</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第三篇　真の愛／第二章　真の愛の類型</a></b><br/>
+<hr/>
+<br/>
+<h3 class="bh" id="002"><a href="#002">第四節　子女の愛</a></h3>
+<br/>
+      1　父母が愛の原因ならば、その子女は愛の実であり、結実です。結実と原因は、遠く離れたところから出発したのではありません。結実と原因は、一つの場所から出発したのです。父母の愛が原因ですが、その愛の中で「私」が結実として現れたというのは、どのような意味でしょうか。父母の愛の結果として登場したのが「私」だということです。ですから、愛と共に一体化した原因と結果の立場を対等にもって生まれたのが、父子関係における子女だというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">父子関係は宇宙の根本</a></h4>
+<br/>
+      2　父子関係は、血統が連結されたものです。父という言葉の中には愛が介在しており、血統が介在しているのです。直系の子女になるためには、愛によって一体とならなければなりません。血統によって連結されなければなりません。血は、生命を構成するものです。父母の伝統を受け継いだ生命をもつのです。それは正に愛によってです。<br/>
+<br/>
+      3　父子関係が、それこそ宇宙の根本でなければなりません。喜びはそこから芽を出し、そこから悲しみが始まるなら、それ以上の悲しみの場はないのです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">子女にとって、父母と向き合う喜びは、それこそ世界を代表する喜びにならなければならず、父母にとって、子女と向き合う喜びは、世界を代表する欲望を充足させる喜びでなければなりません。</a></h4>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">外的な他の問題をすべて失ってしまうことがあったとしても、幸福に生きることができる希望の場は、父母の前には子女しかありません。</a></h4>
+<br/>
+      4　息子、娘は、父母の愛の同参者です。それでは、息子、娘はどこから出発するのでしょうか。父母の愛から出発するのです。ですから、その存在の世界で息子、娘は、父母の愛が一つになるその場に同参して、存在し始めるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">「私」はどこから生まれたのかというと、父母の愛が限りなく花開く場から生まれました。宇宙を総合した男性と女性として生まれた、その母親と父親が愛の花を咲かせるその場、喜びの場から一つの種として植えられたのが子女です。</a></h4>
+<br/>
+      5　「私」は、父母の本然的な愛の出発の根源に同参した者であり、父母の愛の結実として登場した者です。これは、原因と結果が一つの場所から出発したので、離そうとしても離すことができません。原因的な父母の愛と、結果的な「私」の生命の愛の根源は、一つです。そのような意味から見るとき、愛を中心として「父子一身」という言葉が成立するのです。愛を除いては、一身、一体という言葉はあり得ません。愛が原因です。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">私たちは、腹中から父母の愛を受けます。「私」が愛の本質によって腹中に宿ったその時間から、父母の愛と、すべての関心が集中するようになっています。なぜでしょうか。愛の結実だからです。ですから、愛で生まれ、愛から生命を引き継ぎ、愛を受けながら大きくなって、相対を迎えることができる時になれば、相対を迎えるようになるのです。</a></h4>
+<br/>
+      6　子女は、父母の愛、すなわち夫婦の愛の最高の同参者の権威をもって生まれた存在です。言い換えると、子女は、そのような共通の内容をもち、不変で統一的な内容の属性をもった愛を中心として出発した人間として植えられたのです。ですから、父母と子女の関係は、切ろうとしても切ることができないというのです。父母の愛と父母の生命の主体牲をもっているのが子女なので、これを切れば、自分を否定し、自分の生命を否定する立場に立つようになるので、その愛の結実を否定することができないというのです。ですから、父母は子女のために生命を捨てることができる、という論理を見いだせます。<br/>
+<br/>
+      　　<h4 class="bh" id="008"><a href="#008">父母の愛の同参者</a></h4>
+<br/>
+      7　私たちが生まれるようになったのは、母親と父親の愛からです。母親と父親の愛から出てきました。生命の連結の前に、血統の前に、愛によって血統が引き継がれ、愛によって生命が引き継がれたのです。<br/>
+<br/>
+      　　<h4 class="bh" id="009"><a href="#009">「私」というものは、なぜ貴いのでしょうか。生命をもっているから貴いのではなく、母親と父親の愛に同参したので貴いのです。愛は父母がしたのですが、愛の結実は「私」です。初めと結実をもって生まれたのが、母親と父親ではなく正に「私」なので貴いのです。</a></h4>
+<br/>
+      8　「私」は、父親と母親の二人の生命が一つに結合した生命の連結体だというだけではなく、父母の愛の同参者であり、父母の愛と一体です。さらに、「私」は父母の理想とも一体です。理想には、幸福や平和というすべてのものが入ります。父母としては、自分が世の中で成功した時の喜びが大きいとしても、失った子女に会った時の喜びとは比較にならないのです。子女は、父母の最高の理想と一体です。<br/>
+<br/>
+      9　「私」には、母親と父親の生命のひもが連結されていて、愛のひもが連結されていて、そして理想のひもが連結されていますが、このひもは、誰も切ることができません。神様も切ることができず、宇宙も切ることができません。かえって宇宙のすべての力は、それを擁護しようとするのです。私がどこに行っても、母親と父親がついてくるようになります。あの霊界でも、母親と父親はいつも一緒にいようとするのです。ですから、母親と父親が同行するのを嫌うのは最も大きな罪です。この宇宙を破綻させる破壊行為です。父母に侍っていくことを嫌うのは、既にその人が原則を外れて堕落していくことを意味します。ですから、父母を自分の体のように考え、愛し、父母に孝行することが、人間にとって最高に価値のあることです。それで「和睦した家庭に福が来る」という言葉もあるのです。<br/>
+<br/>
+      10　子女がいなければ、孤独な人だといいます。愛を中心として、万宇宙を造られた主体であられる神様の心情的事情を、体験するためのものが子女だからです。子女は、「私」が動機になって生まれましたが、その子女を生んで愛することによって、「ああ、神様は、人間をこのように愛したのだなあ」と分かるようになります。子女を生んでみてこそ、父母に孝行しなさいと教えなくても、それを悟ることができるのです。<br/>
+<br/>
+      11　皆さんは、父母の愛に報いなければなりません。父母は、子女を育てる時、食べる物があれば、自分が食べられなくても、自分の飢えたおなかを握り締め、舌をかみ締めて、それを子女に与えます。その愛は、父母に対して同じようにできる子女として育てるためです。父母がまず苦労の路程を行ってこそ、父母のその苦労が土台になって、子女が父母を慰労できる苦労の路程を行くのです。皆さんがまず父母を慰労できる心情をもってこそ、皆さんの息子、娘もそのような息子、娘となり、そのような息子、娘を生んでこそ善の血族として残されるのです。自分自身だけのために生きて父母を知らないというなら、その人は絶対に孝子になることはできません。<br/>
+<br/>
+      12　どのような人を孝子と言いますか。父母が「私」のために生きたことを、父母に対しても同じようにできるとき、その子女は孝子だと言うことができます。それは、天とも通じます。父母は、精誠を込めて育てたにもかかわらず、その子女が「自分は父母のことは知らない」と言うなら、その家は滅ぶのです。与え合う道理によって相対的基準が造成されてこそ回ってくるのであり、また、そのようになってこそ、神様がその場に臨在され、天国を成し遂げていけるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="010"><a href="#010">それでは、天国で残れる子女は、どのような子女でしょうか。父母の愛を通して受けた恩は、自分自らが返さなければなりません。父母が年を取って老いたときは、自分が幼いときに大小便を拭いてくれた父母の心で、すべてのことに耐え、困難を困難と感じることなく、父母に侍ってこそ孝子になるのです。</a></h4>
+<br/>
+      　　<h4 class="bh" id="011"><a href="#011">真の子女の道理は孝</a></h4>
+<br/>
+      13　孝子とは何でしょうか。生涯父母のために自分のすべてを犠牲にし、自分の主体性を主張しない立場で犠牲になる人が孝子です。そうすれば、父母の真の愛が残るのです。真の愛の圏が残るようにしたので、孝が連結されます。その孝は、宇宙に向かって橋を架けることができるからです。<br/>
+<br/>
+      14　父母に孝行しなければなりません。孝子にならなければなりません。父母を中心として国の忠臣にならなければなりません。父母が、国を率い、世界を率いてきたからです。忠臣になる前に孝子にならなければならず、孝子になる前に真の兄弟を誇れる家族にならなければなりません。家族とは、兄弟間で褒めたたえることができる圏内を中心とする名称です。<br/>
+<br/>
+      　　<h4 class="bh" id="012"><a href="#012">皆、男性と女姓が結婚して夫婦となり、家庭を率いて父母の前に孝行した以上の孝行をしなければなりません。結婚しなければ、真の孝子、孝女になることはできません。真の孝子、孝女には、結婚したのちに初めてなることができるのです。結婚して夫婦となり、その父母の前で、夫の孝行の心に妻の孝行の心をプラスして、父母に侍る孝行の心の基盤を備えてこそ、真の孝道圏を成立させることができるのです。</a></h4>
+<br/>
+      15　孝子になろうとすれば、いつでも父母の心の方向と一致しなければなりません。孝子の道を行く人は、父母とかけ離れた行動をする人ではありません。父母が東に行けば東に行かなければならず、父母が西に行けば西に行かなければなりません。行く途中で回れ右をすれば、一緒に回れ右をしなければなりません。そこに異議があってはいけません。十度行き、十度回れ右をしたとしても、また回れ右して従っていかなければなりません。<br/>
+<br/>
+      16　家庭で「孝行をしなさい」と言うのですが、これは、父母を中心として、父母が行かなければならない愛の道の同参者になりなさいということです。父母の真の愛の道には、天倫がついていきます。父母だけが行くのではなく、見えない縦的な天倫がここに関係づけられて、共に行くのです。父母と一つになりなさいというのは、縦的な歴史と横的な歴史の心情圏をつなげていきなさいということです。これが父母に孝行することです。<br/>
+<br/>
+      17　皆さんは、父親に捧げる贈り物がたくさんあります。たとえ持っているものがなく、備えたものがなくても、神様に捧げることができる贈り物があります。それは、世の中の人々が楽しむようなものではなく、神様のために血を流し、涙を流し、汗を流す姿です。それが苦痛の父、悲しみの父、無念の父には、最大の贈り物なのです。<br/>
+<br/>
+      18　家庭を中心として見るとき、父母に孝行することが、息子、娘としての責任です。なぜ孝行しなければならないのでしょうか。孝行する道は、国に対する忠臣の道と連結されるのです。国に忠誠を誓う人は、世界に対して聖人の道を行かなければなりません。それが一つの直総にならなければならないのです。このように見る時に、孝行はできなくても、国の忠臣になれば、その父母が「お前は私に孝行をしなかった」と言うことはできないのです。「本当によくやった」と言うのです。父母を捨て、家を出て親不孝をしたとしても、国の忠臣になるときは、母親や父親が死んで霊界に行っても、「やあ、本当にお前はよくやった」と褒めるというのです。<br/>
+<br/>
+      19　どれほど愚かでも、父母と子女の間は直接に通じなければなりません。そのようにできなければ、父母ではなく、子女ではありません。孝子とは、父母の前で、得になることばかりをやって愛を受ける人ではありません。孝子とは、父母の悲しみに責任をもつために、困難な場を訪ねていって責任を果たすことにより、父母に喜びを捧げる人です。父母が十くらい働いて、子女が十五も努力すれば、父母はその五に該当する喜びを感じるようになるのです。そのような分野をどのように補充し、父母のために捧げることができるかを考えながら努力する人が孝子です。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609191458"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="040.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="042.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609191458"></script>
+</body>
+</html>

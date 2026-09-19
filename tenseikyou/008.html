@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609191458" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第一篇　神様／第一節　神様の創造</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609191458">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第一篇　神様</h1>
+<nav class="page-nav">
+  <a href="007.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="009.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第一篇　神様／第三章　創造主であられる神様</a></li><li class="toc-b lv2"><a href="#002">第一節　神様の創造</a></li><li class="toc-b lv3"><a href="#003">創造とは何か</a></li><li class="toc-b lv3"><a href="#004">完全投入を通した創造</a></li><li class="toc-b lv3"><a href="#005">原則と法則による創造</a></li><li class="toc-b lv3"><a href="#006">現在の世界は、このような理想世界とは、その出発を異にした世界です。神様の創造原則のうち、最も貴い真の愛の秩序から人間が離れた、堕落の結果が拡大してきた世界です。神様の創造秩序を度外視したまま、人為的な組織形態や法則、秩序だけを重視する現在の世界は、理想的な個人、家庭、そして民族を養成することはできません。</a></li><li class="toc-b lv3"><a href="#007">神様の臨在と顕現</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第一篇　神様／第三章　創造主であられる神様</a></b><br/>
+<hr/>
+<br/>
+<h3 class="bh" id="002"><a href="#002">第一節　神様の創造</a></h3>
+<br/>
+      1　宇宙は、単純に物質に根源があるものであったり、自然発生的にできたりしたものではありません。宇宙の第一原因者であられる創造主、神様はいらっしゃいます。そのお方は絶対者であり、永遠不変であられ、善であられます。宇宙万象は、そのお方の基本設計である創造目的によって造られた被造物です。心情の本体であられる神様の創造目的は、喜びを享受されることです。しかし、喜びは一人では感じることができません。ある主体が喜びを感じるためには、必ずその対象の実体が必要です。喜びの中でも最高の喜びは、主体と対象が愛を与え合うときに感じるようになります。<br/>
+<br/>
+      2　宇宙は本来、一つのみ旨の中から生じました。この宇宙を中心とした天の父母様がいらっしゃって、その父母に由来して今日の、この被造世界が生じました。宇宙の父母である中心存在が神様です。ですから、存在世界と神様、「私」と神様は二つではなく、一つです。一つは、中心の位置に立つために、上から地に向かって垂直線で下りてきているのであり、もう一つは、平面の水準を通して中心と結びつこうとしています。そのような神様のみ旨があります。<br/>
+<br/>
+      3　神様が最初に天地を創造される時、この天地と御自身の内的基準と、永遠の関係を結ぶことを願われる宇宙観と創造理想と創造目的がありました。そのようなものの中心は、正に神様の心情でした。宇宙の根源はあくまでも神様自体ですが、宇宙の創造という現象を起こすようにした最初の根拠は神様の心情であり、その心情を中心として一体化することのできる理想圏がありました。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">創造とは何か</a></h4>
+<br/>
+      4　アダムとエバは神様の体であり、見える神様です。アダムとエバは見える神様の立場です。神様はエネルギーの本体なので、霊界に行っても見ることはできません。体がありません。ですから、実体世界を指導し主管するためには、実体をまとわなければなりません。アダムとエバは、堕落せずに完成して地上で生きて天上に行けば、形状をまとった神様になります。見えない神様と、見えるアダムとエバが一つになるのです。そのようになれば、アダムとエバが「ははは」と笑うのは、神様が「ははは」と笑うことなので、それは正に宇宙が「ははは」と笑うことです。無形の神様が実体をまとった神様として登場するためのものが、被造世界の創造です。この世界を創造したのは、無形の神が実体の神様として登場するためなのです。<br/>
+<br/>
+      5　神様は人の母体であり、万有の核です。なぜあらゆる存在の核であられる神様が天地創造をされなければならなかったのでしょうか。それは、核が一人だけでは核自体が滅びてなくなるからです。電気で言えば、いくら完全なブラスだとしても、プラスだけがあってマイナスがないときは、「なくなるな」と言ってもなくなります。そのプラスがなくならないためには、なくならない原則に従わなければならないので、創造の役事を経て完全なマイナスが生じるのです。それは、互いが与え合うことで、初めて存在が決定されるからです。<br/>
+<br/>
+      6　天地万物を創造された神様は、その内的な心の世界で感じるあらゆるもので、外的な世界に完全な対象の実体を立てて、それと共に与え合うようになります。責任をもつことができる位置で、完全に与え合える対象を造っておこうとして造ったのが人です。ですから、神様が造られた被造万物の中で最も好むのが人です。また、人が最も好むのは神様です。神様を尊重するのです。ですから、人は神様を訪ねていくようになり、神様は人を訪ねていくようになるのです。<br/>
+<br/>
+      7　「神様が主人だ。天地を創造した創造主だ」というとき、その創造主という言葉は、根源を意味する言葉であり、主体を意味する言葉です。創造物は対象だということです。画家で言えば、自分の傑作を作ろうと構想したとすれば、その構想どおりにそのまま展開させて気に入ったものができなければなりません。気に入るということは、目で気に入り、鼻で気に入り、耳で気に入り、口で気に入り、無数にある自分の細胞まですべて和合して気に入る、ということです。それは全身が気に入った存在なので、自分の体を身代わりにしたものです。そのように見れば、心と体は本来一つになるようになっています。私たちの霊人体は霊的な五官をもっていて、肉体も肉的な五官をもっていますが、これが互いに和合して、理想的な和動が広がらなければなりません。それは食べることで広がるのではありません。体と心の和動は真の愛によって始まるのです。<br/>
+<br/>
+      8　神様は天地を創造した主体です。その主体であられる神様は、息子、娘である人類と向き合っていらっしゃるお方ですが、「人間のために私はいる」と言うのが原則です。そうだとすれば、人間は幸せな人になるのです。それ以上、望むものはありません。この原則は、私たち人間が本来もつべきものでしたが、もつことができなかったので、最高のものを望んでいます。その最高のものが神様の愛です。<br/>
+<br/>
+      9　創造は、根対的存在を造ったということです。本来、神様が力を大量に投入したのは、神様御自身のために、神様が良くなるためにではありません。自分が良くなるためではなく、先に相対を造るために苦労しました。先に投入して理想相対の追求という表題のもと、すべての天地万物を造っていったというのです。<br/>
+<br/>
+      10　存在と生命のうち、どちらが先でしょうか。哲学というものは、存在から始めるようになります。初めから生命を扱えません。それでは、生命はどこから出てくるのでしょうか。生命は独りで自ら出てくるのではなく、父母の愛から出てきます。生命の世界と愛の世界は、神様が管理する世界です。それ以下のものを扱ってきたのが哲学思想です。ですから、存在よりも生命が先です。存在を動かすのは生命です。生命を動かすのは何でしょうか。愛だけが生命を動かすことができます。愛によって出発したので、愛の関係に従って動き、愛の結果を訪ねていくのが生命の行く道です。このように、情緒的な問題が宇宙創造の根本です。<br/>
+<br/>
+      11　いくら偉大な神様だとしても、愛の情緒を感じられない立場なら、孤独な神様です。ですから、猫でも懐に抱き、「私は猫をうまく作ったな。私が耳をこのように作ったとき、気持ちが本当に良かった。この足の爪も、ねずみを取って食べやすいように、このように作ったのだ。はっはっは、気持ちが良い」と言わなければなりません。その良いというのは、情緒的な動機を中心として、あらゆることが関係しています。<br/>
+<br/>
+      12　神様は、今も創造の能力をもって、古い環境を片づけて新しい環境をつくろうとされます。そうすることのできる能力をもったお方です。それが不可能なのは、堕落圏だからです。ある条件の提示が成立しなければ不可能です。それでしないのであって、できないのではありません。環境的条件さえ提示され、天が活動できる内容さえ提示されるようになるときには、新しい歴史は、新しく創造される環境は、いつの時でも、どのような時代でも連結することができます。創造当時の神様も、歴史過程を経てきた今日の神様も、未来の神様も、創造主としての権限は、いつももっています。<br/>
+<br/>
+      13　神様が創造するときに、神様のみ旨がありました。神様の考えがありました。神様の考えとともに計画がありました。人間を創造して、これこれこのような人間世界を造ろうという、本来の神様のみ旨と計画があったというのです。ですから、いくら人間が堕落したとしても、今日、神様の救援摂理圏の人間は、神様のみ旨と計画圏内に立たなければなりません。そうでなければいけません。ですから、神様は、人間を御自身のみ旨と計画圏内に入れるように準備されるのです。神様の計画とそのみ旨を中心として、環境と与件を開拓しながら、人間を計画圏内に立てるために前面に立てたのが、歴史時代に現れた数多くの宗教です。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">完全投入を通した創造</a></h4>
+<br/>
+      14　神様が天地万物を創造されるとき、なぜ人間を造ったのでしょうか。相対がいない神様としては刺激を受けることができないので、相対を造って理想の愛と生命と希望の刺激を感じるために造りました。聖書で見るように、神様が人間を造るとき、「おい！人よ、現れよ」と言って簡単に造ったのではありません。神様は、あらゆる生命と愛と希望を懸けて人間を造りました。結局、神様と人間の関係においては、投入という言葉、無条件投入という言葉、全体投入という言葉を語ることができます。ここから、神様が真の愛を成すための方向性を探ることができます。相対に一〇〇パーセント投入したのです。投入する過程は、神様自体の消耗です。しかし、完全投入したという日には、問題が異なります。一〇〇パーセント投入して完成する日には、百を投入したものは百のものが完成して、そこに相対的な愛がプラスされて神様に帰ってくるというのです。ここに相対的な愛の権限、相対的な特権の価値、自分が投入したすべての内容がブラスされて登場するようになるのです。そうすることで、神様は初めて刺激的な幸福を感じられるというのです。<br/>
+<br/>
+      15　父母は愛する子女に対して、全体を投入しようとします。神様と同じです。神様は、神様のために投入したのではありません。神様のために存在するのではなく、相対のために存在しようという、相対のための神様の位置に立とうというのです。神様が神様のために存在しようといえば、それは真の愛ではありません。自分をすべて子女に投入して、その子女と共にいようとするところにおいて、愛と生命と希望が成り立ちます。結局、真の愛と真の生命と真の希望をもったそのお方が最初に人間に与えたいと思うのは、真の愛と真の生命と真の希望です。それを与えるときに、自分の立場で与えたのではなく、相手の立場に立って与えたというのです。<br/>
+<br/>
+      16　真なる神様は、相対を造るときに、完全投入することによって、より価値のある理想的な完全形を展開したのです。神様は、アダムとエバを造れば、アダムとエバのために生きようとするのです。神様のためではありません。自分のためにいた時から、相対のために生きる時へと展開していくのです。理想的存在というものは、自分を中心とはしません。理想的存在は、他のために生きるところに、対象のために生きるところに存在します。この原則が字宙の根本です。<br/>
+<br/>
+      17　聖書では、神様は全知全能なので、言葉一つで、「このような天地になれ」と言ってそうなったとあります。しかし、そのようにはなっていないのです。神様は、あらゆるものを投入したというのです。もっている力をすべて投入しました。もっている愛の力をすべて投入して、未来に、御自身の愛する息子、娘、御自身の愛する家庭のための贈り物として万物を造ったというのです。<br/>
+<br/>
+      18　創造とは力の投入を意味します。この世の中に芸術家がいるなら、その芸術家は傑作を作ることを願います。芸術家は、傑作を作るために、ありとあらゆる思いと精誠を投入します。すべてを投入するところからのみ完全な傑作が生まれます。不完全投入ではありません。完全投入、それ以上できないというときに初めて傑作が生まれます。精誠を尽くさず、血と肉を投入していないものを愛することができますか。「私」の骨の中の骨であり、肉の中の肉であり、私の思想の中の思想であり、私の全体の中の全体を投入したので、希望の対象とすることができるのです。ですから、創造自体が投入から始まったというのです。力を投入しなければなりません。力を投入しなければ何も生じません。完全な投入をするところで完全な対象が成立するという原則を中心として見てみるとき、神様は主体として対象に対して完全に投入したというのです。神様御自身が自らのために存在するのではなく、対象のために存在するという運動を始めたのが創造の役事です。<br/>
+<br/>
+      19　万物を創造するということは、自分の本質を取り出すことです。結局は、エネルギーを投入したということであり、エネルギーを投入したということは自分の本質の投入を意味するのです。投入するのです。対象を創造する理念の世界は愛によってなされたので、そのみ旨を成し遂げるために神様は投入されたのです。投入するのは、それが自分に結実するようにするためではなく、相対に結実させるためです。ですから、愛で造りました。それで、投入して神様が願うことを感じるのではなく、満足を感じることができたのです。それが原則になることによって、愛の伝統においては父母の愛の本質が残りました。自分を投入して自己意識を感じるのではなく、自己意識を忘れて、より相対的な目的が成し遂げられる価値を追求することに、自分のすべてが吸収されていくのです。結局は、神様も創造した人のために生きる立場に立つということです。それが創造の原則です。<br/>
+<br/>
+      20　力学世界では、入力が出力より大きいのです。しかし、真の愛の世界は、入力が出力より小さいのです。ですから、これが平面に展開して永遠の宇宙が存在するのです。消耗すればすべてなくなります。運動するからです。しかし、無限に投入する愛の力が作用するので、消耗なく大きくなるのです。神様が、愛を中心として存続する立場に戻るのです。反復作用によって循環作用を継続する形態をもって、永遠に存続するようになっています。ですから、家庭から氏族、氏族から民族、民族から世界まで同位、等価の基準で拡大し、一人の人間の頭で構想した宇宙のように、人類と宇宙を、合性体と同様に、理想世界、統一世界、平和の一体圏、統一圏にすることができるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">原則と法則による創造</a></h4>
+<br/>
+      21　神様は、アダムとエバには相対的立場で命令され、相対的な立場で信仰の条件を見て彼らに対されましたが、これからは実体を求められるようになります。ですから、相対的な立場ではなく、「私」の心と体が一体になることによって、自分の一つの実体を求めなければなりません。このような実体を求めるためには、創造の法則を通さなければなりません。<br/>
+<br/>
+      22　聖書を見ると、天地を創造したことが簡単に述べられています。み言によって天地万物を創造したというのです。「おい、何々」と呼べば、「はい」と言って現れたというのです。「星よ、生まれよ」と言うと星が生じ、「地球星よ、生まれよ」と言うと生じたということになっています。しかし、ここにおいては、無限な秩序と法度に従って前進するという原則を継承させ、小さなものから大きなものへと発展させてきたのです。<br/>
+<br/>
+      23　人間の生活の中で、ために生きる真の愛があらゆる相関関係の基本ですが、これは父母の真の愛を動機として体恤するものです。神の真の愛を根とした父母の真の愛は、人間の個体を完成させるようになります。完成した個体が真の愛の理想的な夫婦となった家庭において、彼らの子女に真の愛を伝授するようになるのが創造の秩序です。地上の理想世界は、完全な一人から、真の愛による家庭、社会、国家、世界に拡大していきます。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">現在の世界は、このような理想世界とは、その出発を異にした世界です。神様の創造原則のうち、最も貴い真の愛の秩序から人間が離れた、堕落の結果が拡大してきた世界です。神様の創造秩序を度外視したまま、人為的な組織形態や法則、秩序だけを重視する現在の世界は、理想的な個人、家庭、そして民族を養成することはできません。</a></h4>
+<br/>
+      24　神様は、天地を創造されるときに、万物を造られ、人を神様の対象として造られました。対象として造られたのですが、授け受けする授受作用の原則が天地の作用として、運動法則になっているので、すべてを完全に与えるまでは戻ってきません。これが原則です。妻が夫を完全に愛そうとすれば、夫から完全に愛されたというその日になってこそ、「夫を本当に愛そう」このようになるのです。完全に愛されるようになるときに、完全に与え始めるのです。それが天地の原則です。主体から完全に受けてこそ、完全に返すのです。それを受ける前に返し始めれば、完全なものは戻ってきません。それが愛を中心とした授受作用、原理原則を中心とした宇宙の原則です。<br/>
+<br/>
+      25　神様の創造過程を中心として見てみると、三段階の原則があります。先に神様の考えがあり、その次に心を通してその考えを現し、その次にそれが実現します。そのような三段階を経て創造物が形成されたのです。もちろん、み言を実践するに当たっても、心だけではできません。そこでも、やはり神様を中心として神様の心と神様の体が一つにならなければなりません。そうして「このようになれ。このように創造されるのだ」と言うとき、初めて創造が実現するのです。<br/>
+<br/>
+      26　神様の創造過程を見ると、最初に極めて小さいものを造るその動機から相対的観念をもち、目的を具現したその目的体に新しい動機を加え、より大きなものに発展させてきました。そうして、その段階を高めて目的に動機を加え、相対的観念を加えて目的を具現し、またその目的が動機となり、だんだんと次元を高めて人間まで創造してきたのです。<br/>
+<br/>
+      27　神様が創造主として、歴史的で内情的な原則を中心として、存在の起源から今まで成長した過程を、実体的に展開してきたのがアダムとエバの創造過程です。それでは、どこから連結されるのでしょうか。細胞が一つになって大きくなるのと同様に、赤ん坊が十ヵ月間の成長過程を経て、男性と女性の形態に分かれていくのと同じではないかというのです。そうでなければ、生命の遺伝をどのように展開させるのかという論理に対して、解釈する方法がありません。言い換えれば、主体には相対圏が必要だということです。統一教会の言葉で言えば、性相には形状が必要だということなのです。<br/>
+<br/>
+      28　内的な性相は、あらゆる根源的な面において外的な形状と一致することもでき、通じることもできる関係があります。ですから、人が生まれて育つその過程は、見えない無形の神様が実体を見るためのものだったのです。ですから、自分の内的なあらゆる存在が表現されるので、愛さざるを得ないというのです。それが「私」です。「私」が現れた実体です。無形の実体が有形の実体として展開される以上、そこにすべてを投入しなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">神様の臨在と顕現</a></h4>
+<br/>
+      29　神様は、どこにとどまりたいと思われるのでしょうか。アダムとエバが堕落しないで完成し、真の愛を中心として一つになるとき、神様はそこに臨まれます。結婚した日に初愛が植えられる、そこにおいて中心となって出会おうというのです。神様の血と愛と生命を、どこに植えますか。内的なものと外的なもの、プラスとマイナスが同化して一体にならなければならないのです。ですから、初愛が最も貴いのです。縦的な永遠の愛の主人が神様であり、横的な永遠の愛の主人が夫婦です。<br/>
+<br/>
+      30　神様は、神様と人間が主体と対象として縦的な愛の関係を完成することだけを目標とされたのではありませんでした。縦的な愛を完成して、アダムとエバの横的な愛の結実をもたらそうとされました。その瞬間が、正に内的父母であられる神様が、外的父母であるアダムとエバと完全一体となるために臨在される愛の理想成就の瞬間です。無形の父母であられる神様が、アダムとエバの形状をまとって有形世界に永存する父母になるのです。この時、アダムとエバは真の父母、真の先祖になるのです。<br/>
+<br/>
+      31　神様が天地を創造されるときには、復帰は必要ありませんでした。神様が創造本来の世界でアダムを中心として願ったことは、今日、復帰すべき世の中で待ち望む願いとは本質的に違います。アダムとエバを創造したすべての願いは、何よりもまず神様御自身を顕現させることでした。言い換えれば、アダムとエバを通して神様の内的な要素を外的実体として展開させ、神様が願われる遠大な希望と人間の願いが一致した一時を迎えることを願われたのです。<br/>
+<br/>
+      32　神様が被造世界を造られた目的は共に生きることですが、今日、人間と万物、あらゆる存在物が神様と共に生きることができる圏内にいません。堕落によってそのようになったのです。堕落したために、神様が臨在できる根拠地が消えるようになったというのです。そうだとすれば、神様がアダムとエバを失ったその日から今日まで、人間を探し求めるのは何のためでしょうか。それは、人間が神様の宮になり、神様の体になり、神様と一体となって、天と地を身代わりした一つの実体存在になれば、人間の喜びが神様の喜びになり、神様の喜びが人間を通して万物に連結されるからです。すなわち、人間が神様と万物を結びつける中間媒介体だからです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609191458"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="007.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="009.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609191458"></script>
+</body>
+</html>

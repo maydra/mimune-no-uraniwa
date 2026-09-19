@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609191458" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第十篇　平和思想／第一節　平和の概念</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609191458">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第十篇　平和思想</h1>
+<nav class="page-nav">
+  <a href="143.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="145.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第十篇　平和思想／第一章　平和とは何か</a></li><li class="toc-b lv2"><a href="#002">第一節　平和の概念</a></li><li class="toc-b lv3"><a href="#003">平和の正しい意味</a></li><li class="toc-b lv3"><a href="#004">このように、「平和」という言葉は、不義を実現する手段として何度も利用されてきたのです。真の平和は、知識や富、そして社会的地位や政治的権力のような外的な条件にかかっているのではありません。世の中では、世界的関心事を公平に判断する絶対的基準がないので、変化する世界の中で衝突する利害関係に縛られ、真の平和の維持が不可能なのです。真の平和は、真の愛の基盤の上にのみ立てられるのであり、愛の関係は、人類を一つに結ぶ神様を中心とした絶対価値を理解するときにこそ、体験することができるのです。</a></li><li class="toc-b lv3"><a href="#005">喜びと幸福というものは、一人を対象として語る言葉ではありません。幸福も、相対的関係を対象として語る言葉です。母と子の間において、二人が一つになるところに幸福があるのです。「平和」という文字自体が、平らに和合するということであり、既に相対性を含んでいるのです。</a></li><li class="toc-b lv3"><a href="#006">「平和」や「幸福」という言葉は、独自的な立場を対象として語る言葉ではなく、相対圏との関係を対象として語る言葉なのです。</a></li><li class="toc-b lv3"><a href="#007">平和と愛</a></li><li class="toc-b lv3"><a href="#008">宇宙の存在の根源とは何でしょうか。絶対的な存在ではなく、絶対的な存在を一つにすることができる絶対的な愛が宇宙の存在の根源となり、起源になれば、この天地は平和の世界を造成できる、という結論を禺すことができるのです。そのような愛ゆえに、すべてのものが宇宙に存続し始めたという結論を出せば、愛ゆえに平和と理想も顕現するという論理が、自動的に出てくるのです。</a></li><li class="toc-b lv3"><a href="#009">神様は、真の愛の土台の上で生命をもち、真の愛の土台の上で全知全能でなければなりません。それでこそ、神様は歴史を超越した立場に立った理想的な主体になることができるのであって、生命の力だけで主体的立場に立つならば、すべての万物が一つになることはできません。小さな動物や植物も、すべて愛の主人が自分を育てることを願って、愛の手を差し伸べてくれるのを喜ぶというのです。</a></li><li class="toc-b lv3"><a href="#010">神様も人間も、神様に似た理想的な生活、理想的な世界を願っています。神様が願い、人間の本心が願う理想的な人間は、創造的であると同時に、神様を中心とした愛を実践する善の人間です。また、神様と人間が望む理想的な世界は、環境を改善する創造的活動がなされながら、個人と個人、国家と国家の間に愛が満ちあふれる、大調和の統一世界です。このような新しいタイプの人間が、新しい統一世界で生活できるようになる時、永らく人間を困らせてきた一切の悲しみ、苦痛、争いは、初めて永遠に跡形もなく消えるようになるのです。</a></li><li class="toc-b lv3"><a href="#011">平和の境地も、男性と女性が一つになるところで成り立ちます。男性と女性が一つになるというのは、背丈が同じだからではありません。背丈を中心として見れば、男性は大きくて女性は小さいのです。力を見ても、男性は強くて女性は弱いのです。外的な面では、水平になることはできません。それでは、何を中心として相対的水平圏を成し遂げるのでしょうか。それは、何かの力でもなく、知識でもありません。知識は、いくら学識が広いといっても、高低の違いがあります。平等の立場を成し遂げ得るただ一つのものがあるとすれば、それは愛しかないのです。</a></li><li class="toc-b lv3"><a href="#012">平和と幸福</a></li><li class="toc-b lv3"><a href="#013">神様は、私たち人類が願う真の希望の中心であり、真の幸福の中心であり、真の平和の中心であり、真の愛の中心であり、真の理想の中心です。神様は、愛の王であり、理想と幸福と平和の王です。神様と私たち人間が同じ願いの基準、同じ希望の位置、苦楽を共にできる位置に行くためには、神様を中心として、真の愛がどこから始まり、真の理想と真の幸福と真の平和がどこから始まるのかという根源を、はっきりと知らなければなりません。</a></li><li class="toc-b lv3"><a href="#014">それでは、本当に理想的な父母とは、どのような父母でしょうか。自らのために存在し、自らのために生涯を送ろうとするのではなく、子女のために生まれ、その子女たちのために存在してきたと考える父母、子女たちのために生命を捧げて生涯を終えようという父母がいるとすれば、そのような父母こそ、真の父母です。このような父母こそ、真の平和、真の幸福、真の理想の父母です。</a></li><li class="toc-b lv3"><a href="#015">子女は、自分が生まれたのも父母のために生まれたのであり、生きるのも父母のために生きるのであり、死ぬのも父母のために死ぬとすれば、その子女は孝子です。真の愛を受けることができる、真の幸福と真の平和と真の理想の子女にならざるを得ないのです。</a></li><li class="toc-b lv3"><a href="#016">この結論とは、天国です。天国を意味するのです。平和の世界、中心をもった平和の世界です。そのような所が天国です。その中心は、歴史性を克服しなければならず、宗派性を克服しなければならず、その次に民族性、人種性など、あらゆるものを克服しなければなりません。そのような立場において、変わらない一つの中心として残り得る所にならなければならないのです。</a></li><li class="toc-b lv3"><a href="#017">同じ基盤で動く心情を引き出して幸福の園を成し遂げる世界、幸福を感じられる社会的な基準、幸福感を味わえる宗教的な意識、このようなものがこの地上にはないのでしょうか。もし、ないと断定すれば、神様はどこに存在するのでしょうか。神様は、人類と共にいらっしゃらないという結論が下されるのです。</a></li><li class="toc-b lv3"><a href="#018">平和と自由</a></li><li class="toc-b lv3"><a href="#019">このようなすべての根本問題について考えてみるとき、心と体が完全に一つになる場においてのみ、自由を占有することができるというのです。心と体が一つになる場においてのみ、平和の基盤が生じるのです。心と体が一つになるところにおいてのみ、幸福が展開するのです。夫の心と妻の心、夫の体と妻の体が一つになるところでのみ、家庭の平和を中心として、世界に対する夢を見ることができるというのです。</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第十篇　平和思想／第一章　平和とは何か</a></b><br/>
+<hr/>
+<br/>
+<h3 class="bh" id="002"><a href="#002">第一節　平和の概念</a></h3>
+<br/>
+      1　今、この世界における最も緊迫した課題とは何でしょうか。世界戦争は始まっても終わります。国家間の争いも終わりの日になれば終わるのですが、永遠に続く戦争は、心と体の闘いです。心を中心として体を完全に征服する、そこに平和の基準があるのです。父母が永遠に一つになり、夫婦が永遠に一つになり、父子が永遠に一つになり、一族が永遠に一つになる平和の基地ができるのです。その平和の基地が個人を越え、氏族を越え、民族を越え、人種を越えて、世界の果てまでできてこそ、世界平和が実現されるのです。ですから、人間改造革命が必要なのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">平和の正しい意味</a></h4>
+<br/>
+      2　平和を成し遂げるというのは、主体と対象が互いに一つになることをいいます。「平」の字は英語ではホリゾンタル(Horizontal)であり、「和」の字はハーモニー(Harmony)という言葉です。それは中心と相対が相反するのではなく、和合していくことなのです。<br/>
+<br/>
+      3　歴史始まって以来、人類は、平和を念願してきましたが、この地には、依然として戦争が存続しています。不幸にも、強大国や権力者たちは、時として「平和」という言葉を誤用してきました。彼らは、平和を語りながらも、実際には、人々を平和でないものによって苦しめてきました。特に共産主義者たちは、挑発しながらも、「平和」という言葉を口癖のように使ってきました。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">このように、「平和」という言葉は、不義を実現する手段として何度も利用されてきたのです。真の平和は、知識や富、そして社会的地位や政治的権力のような外的な条件にかかっているのではありません。世の中では、世界的関心事を公平に判断する絶対的基準がないので、変化する世界の中で衝突する利害関係に縛られ、真の平和の維持が不可能なのです。真の平和は、真の愛の基盤の上にのみ立てられるのであり、愛の関係は、人類を一つに結ぶ神様を中心とした絶対価値を理解するときにこそ、体験することができるのです。</a></h4>
+<br/>
+      4　和平や平和というものは、今まで長い歴史の期間を通して、全世界があらゆる手段、方法を動員し、ありとあらゆる努力を注いできましたが、ある一国家の政治力や経済力、軍事力だけでは、完全に解決できる問題ではありませんでした。問題は、最も近い家庭から氏族、民族、国家、そして世界を越えて天宙までも含めて通用する根本的な真理、すなわち平和の思想がなければならないのです。<br/>
+<br/>
+      5　平和というものは、どこにおいても、しわ一つない平らな状態のことをいいます。すべて平らなものとして和合するということです。一〇〇パーセント和合すれば、円形になります。土をこねて転がし続けていけば、丸くなります。ぱんぱんに張って丸くなるので、結局は最高の円形が作られるのです。しわがなく、何であろうといっぱいに満ちていないものがなく、完全に充満して円形を作るのです。<br/>
+<br/>
+      6　神様は、絶対者であられ、唯一の方です。その唯一の方は、完成の基準を自分お一人におかれたのでしょうか。そのようにしたとすれば、大変なことになるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">喜びと幸福というものは、一人を対象として語る言葉ではありません。幸福も、相対的関係を対象として語る言葉です。母と子の間において、二人が一つになるところに幸福があるのです。「平和」という文字自体が、平らに和合するということであり、既に相対性を含んでいるのです。</a></h4>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">「平和」や「幸福」という言葉は、独自的な立場を対象として語る言葉ではなく、相対圏との関係を対象として語る言葉なのです。</a></h4>
+<br/>
+      7　「平和」とは、相対的な言葉です。二つは和合することによって平らになるのであって、「独平」ではありません。相手と同等の立場において、お互いに好意をもってこそ幸福だというのです。「自由だ」と言っても、愛を除いて自由がありますか。愛があってこそ無限の自由があります。そして、愛をもってむち打つ独裁者のような人になったとしても、それは誇らしいことなのです。<br/>
+<br/>
+      8　平和は、水平になって和合することをいいます。平和は、独りで成し遂げることができません。これは、上下関係、左右関係など、すべてが和合して喜ぶことができ、すべてのものが片寄らないで円満でなければなりません。そうしてこそ、平和だというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">平和と愛</a></h4>
+<br/>
+      9　神様も、独りでいれば不幸です。私たちと同様に、独りでは寂しいのです。ですから、神様も絶対的な真の愛を好むといえば、理論に合います。神様より高い愛、絶対的な存在より高い愛を望むというのです。神様が一番必要なものとして、より絶対的で高い愛を願うとすれば、そこに神様も絶対的に服従しなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="008"><a href="#008">宇宙の存在の根源とは何でしょうか。絶対的な存在ではなく、絶対的な存在を一つにすることができる絶対的な愛が宇宙の存在の根源となり、起源になれば、この天地は平和の世界を造成できる、という結論を禺すことができるのです。そのような愛ゆえに、すべてのものが宇宙に存続し始めたという結論を出せば、愛ゆえに平和と理想も顕現するという論理が、自動的に出てくるのです。</a></h4>
+<br/>
+      10　生命の源泉であられる神様は、どのような基盤の上で生きることを願うのでしょうか。平和の基盤の上で生きることを願うでしょう。平和の基盤は、生命が設定するものではありません。主体と対象が高低を超越し、共通的価値を認定できる秩序的段階を超越した、その何かです。それが真の愛です。<br/>
+<br/>
+      　　<h4 class="bh" id="009"><a href="#009">神様は、真の愛の土台の上で生命をもち、真の愛の土台の上で全知全能でなければなりません。それでこそ、神様は歴史を超越した立場に立った理想的な主体になることができるのであって、生命の力だけで主体的立場に立つならば、すべての万物が一つになることはできません。小さな動物や植物も、すべて愛の主人が自分を育てることを願って、愛の手を差し伸べてくれるのを喜ぶというのです。</a></h4>
+<br/>
+      11　今日まで人間は、輝かしい科学の発展を遂げることによって、創造的な生活面においては神様に似るようになったということができますが、愛の生活においては、全く神様に似ることができていません。ですから、悲しみと苦痛と不幸が継続しているのです。愛は調和なので、愛がないところに調和はあり得ず、調和がないところに平和や幸福もまたあり得ません。ここから数々の悲惨な光景が展開するようになるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="010"><a href="#010">神様も人間も、神様に似た理想的な生活、理想的な世界を願っています。神様が願い、人間の本心が願う理想的な人間は、創造的であると同時に、神様を中心とした愛を実践する善の人間です。また、神様と人間が望む理想的な世界は、環境を改善する創造的活動がなされながら、個人と個人、国家と国家の間に愛が満ちあふれる、大調和の統一世界です。このような新しいタイプの人間が、新しい統一世界で生活できるようになる時、永らく人間を困らせてきた一切の悲しみ、苦痛、争いは、初めて永遠に跡形もなく消えるようになるのです。</a></h4>
+<br/>
+      12　何を中心としてこの世界を収拾するのでしょうか。今日、これについて、歴史家たちも主張し、現在の知性人たちも主張していますが、まず世界を指導できる人が必要です。それでは、何を指導するのでしょうか。経済力を中心として指導できる能力のある人は、いくらでもいます。政治的な立場を中心として指導できる能力のある人も、いくらでもいます。お金がなくて、それができないのではなく、政治体制がなくて、それができないのでもありません。神様と神様の理想に通じる、愛の秩序がないのです。本然の愛の秩序が世界的基盤の上で成長する真理を模索できるならば、そこで初めて平和の起源ができ、人間の本心が安息し始めるのです。<br/>
+<br/>
+      13　「平等」は、一つのものを中心として語る言葉ではありません。左右という観念で、二つが一つの水平を形成してこそ平等になります。「平和」という言葉自体が、必ず相対的関係をおいて語る言葉です。東西を中心として平和を語るのです。東側だけを中心とした平和は一方的な平和であって、全体の平和を身代わりすることはできません。「平」の字が入った「平準」「平衡」という言葉は、すべて相対的概念です。二つ以上のものを中心として、連結されるところで成立する言葉です。<br/>
+<br/>
+      　　<h4 class="bh" id="011"><a href="#011">平和の境地も、男性と女性が一つになるところで成り立ちます。男性と女性が一つになるというのは、背丈が同じだからではありません。背丈を中心として見れば、男性は大きくて女性は小さいのです。力を見ても、男性は強くて女性は弱いのです。外的な面では、水平になることはできません。それでは、何を中心として相対的水平圏を成し遂げるのでしょうか。それは、何かの力でもなく、知識でもありません。知識は、いくら学識が広いといっても、高低の違いがあります。平等の立場を成し遂げ得るただ一つのものがあるとすれば、それは愛しかないのです。</a></h4>
+<br/>
+      14　「平」という基準は、どこで求めることができるのでしょうか。愛を中心とした基準でのみ可能です。愛は、男性でも女性でも、私たちのあらゆる細胞が要求する、絶対的な理想の頂点です。その理想の頂点を中心として一つになる基準、全体を代表した基準として立つので、「平均」や平等という言葉は、力や形を中心としたものではありません。愛を中心として語る言葉なのです。<br/>
+<br/>
+      15　私たちは、どこに向かっているのでしょうか。理想世界に向かっているのです。また、平和世界、統一世界に向かっています。理想や統一や平和というものは、一つになった世界なのです。その一つの世界の中心とは何でしょうか。このすべてのものは、愛が中心となっていなければならないのです。共産世界が平和の世界ですか。民主世界が平和の世界ですか。いくら組織が統一されたとしても、愛がなければ、それは統一世界になりません。愛がなければならないのです。<br/>
+<br/>
+      16　千年、万年、不変な本質があるとすれば、その本質を中心として平和が成り立ってこそ永遠の平和が広がるのであり、幸福も、そのような本質を中心として広がってこそ永遠の幸福が成就するのです。そのようなことが真の愛から始まります。真の愛を中心として主張する自由は、永遠の自由であり、その真の愛を中心として始まる平和は、永遠の平和であり、そのような幸福は、永遠の幸福であり、それを中心として全体が統一されれば、それが永遠の統一になるという結論が出てきます。そうなれば、永遠の平和が永遠の社会、世界まで連結されるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="012"><a href="#012">平和と幸福</a></h4>
+<br/>
+      17　神様の愛を受ける人になるとすれば、どうなるでしょうか。心と体はうれしいでしょうか、うれしくないでしょうか。そのような人は、不幸ではありません。神様が永遠であられるように、「私」も永遠に生きることができます。神様は、永遠の生命の主体であり、すべてのものを備えた方であり、私はその備えた方の愛の対象である以上、その方が悲しまない限り、私も悲しむことができず、その方が喜ぶ限り、私も永遠に喜ぶことができます。ですから、人間が完成するというのは簡単です。幸福であることです。平和で幸福であることなのです。それ以上は必要ありません。それは、すべてのものがいっぱいに満たされている立場をいいます。もちろん、その中には自由があるのです。また、願うものがすべて実現するのです。<br/>
+<br/>
+      18　不幸な人とは、どのような人でしょうか。与えようとしても与えることができず、受けようとしても受けることができない人が不幸な人です。一人では、幸福はあり得ません。一人では、平和はあり得ません。平和というものは、相対的関係において展開するのです。「愛」や「幸福」や「平和」という言葉は、絶対に一人でいるときに成立するものではありません。相対的観念において成立する言葉なので、その相対が完全な相対でなければ、完全な幸福はあり得ず、完全な平和と、完全な愛はあり得ません。<br/>
+<br/>
+      19　人間は、様々な努力をしてみましたが、人間が真に要求する真の人や、真の理想や、真の幸襯や、真の平和といったものを願ったにもかかわらず、そのような要件を成就できる希望さえ喪失してしまった悲惨な状況に置かれています。この変わる人間像を超えて、永遠でもあり、不変でもあり、絶対的でもあるそのような方がいらっしゃるとすれば、その方こそ、私たちが知っている神様です。<br/>
+<br/>
+      　　<h4 class="bh" id="013"><a href="#013">神様は、私たち人類が願う真の希望の中心であり、真の幸福の中心であり、真の平和の中心であり、真の愛の中心であり、真の理想の中心です。神様は、愛の王であり、理想と幸福と平和の王です。神様と私たち人間が同じ願いの基準、同じ希望の位置、苦楽を共にできる位置に行くためには、神様を中心として、真の愛がどこから始まり、真の理想と真の幸福と真の平和がどこから始まるのかという根源を、はっきりと知らなければなりません。</a></h4>
+<br/>
+      20　今日、世界人類は、自分たちも気づかずに、平和の世界、幸福の世界を追求しています。また、自由を追求しています。これはすなわち、根本的な自由の基盤の上に立つことができず、平和と幸福の根本となる位置に立てなかったからだ、ということを証明するものです。神様は、絶対者であられ、全能であられる方なので、その方によって造られたすべての万物は言うまでもなく、その神様が自由であられるならば、私たち人間も自由でなければならず、神様が平和な位置にいれば、私たちもその方と同じ位置に立たなければならないのです。<br/>
+<br/>
+      21　自分自身というものは卑しいものだと思っていましたが、私たち個々人によらなければ神様の愛を完成させることができないという事実、「私」自体でなければ、神様の理想を成就させることはできないという事実、神様の幸福と神様の平和を完成させるには、人間でなければならないという明確な事実を、今まで知りませんでした。不足な私ですが、神様の愛を完結させ、理想を完結させ、神様の幸福と平和を完結させることができる高次元的な価値の存在なのです。<br/>
+<br/>
+      22　相手のために生きながら暮らしていこうという原則さえ掲げていけば、家庭では平和の家庭、自由の家庭、幸福な家庭、愛の家庭、社会でも平和の社会、自由の社会、幸福な社会が形成されるでしょう。国家と世界でも同じです。いかなるところでも、この原則を中心としていけば、幸福と自由と平和と愛が宿らざるを得ないという結論は当然なのです。<br/>
+<br/>
+      23　人のために生きようとする男性と女性が夫婦になったとすれば、そのような夫婦こそ、理想的な夫婦なのです。そのような夫婦こそ、真の平和の基準を求めることができます。そのような夫婦が、本当に幸福な夫婦だというのです。そのような夫婦こそ、永遠不変の真の愛の主体者となることができるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="014"><a href="#014">それでは、本当に理想的な父母とは、どのような父母でしょうか。自らのために存在し、自らのために生涯を送ろうとするのではなく、子女のために生まれ、その子女たちのために存在してきたと考える父母、子女たちのために生命を捧げて生涯を終えようという父母がいるとすれば、そのような父母こそ、真の父母です。このような父母こそ、真の平和、真の幸福、真の理想の父母です。</a></h4>
+<br/>
+      　　<h4 class="bh" id="015"><a href="#015">子女は、自分が生まれたのも父母のために生まれたのであり、生きるのも父母のために生きるのであり、死ぬのも父母のために死ぬとすれば、その子女は孝子です。真の愛を受けることができる、真の幸福と真の平和と真の理想の子女にならざるを得ないのです。</a></h4>
+<br/>
+      24　平和の起源、幸福の起源はどこに立てるのでしょうか。今、自分自身を中心として、「私は、自分のために生まれたのではなく、相対のために生まれた」ということを発見すれば、宇宙のすべての難問題は解決されるでしょう。堕落の原因は、アダムとエバが自分の自覚と自己主張をしたところにあります。神様のために生き、神様を主張しなければならないのに、反対になったというのです。ここにおいて、皆さんに一つの公式を提示することができます。ために生きるところでのみ、真の理想と幸福と永遠の世界が存続するというのです。<br/>
+<br/>
+      25　いくら優れた男性でも、その男性は、男性のために生まれたのではありません。女性のために生まれました。いくら素晴らしい美女も、自らのために生まれたのではありません。男性のために生まれたというのです。ですから、存在の起源は、ために生まれることから始まったと考えざるを得ません。神様が理想世界を創造した公式を、ここから探し出すことができます。ために生きるところでのみ神様の真の愛が出発でき、神様の理想的相対が顕現し、平和が成し遂げられ、幸福が成し遂げられるというのです。<br/>
+<br/>
+      26　今日、世界の混乱状態を迎えた全人類は、国家を超越して平和世界を追求しています。しかし、人を中心とした平和は、今まで実現しませんでした。人々が願ったすべての平和は実現しなかったので、今、一つの可能性があり、希望を与えるところがあるとすれば、それは神様を中心とした世界平和の論理を提唱するところです。そこにおいてのみ、混乱した世界に新しい方向性、新しい歴史性を提示できる、その何かがあるはずです。このような結論は、論理的に追求するときに得られる、堂々とした結論です。<br/>
+<br/>
+      　　<h4 class="bh" id="016"><a href="#016">この結論とは、天国です。天国を意味するのです。平和の世界、中心をもった平和の世界です。そのような所が天国です。その中心は、歴史性を克服しなければならず、宗派性を克服しなければならず、その次に民族性、人種性など、あらゆるものを克服しなければなりません。そのような立場において、変わらない一つの中心として残り得る所にならなければならないのです。</a></h4>
+<br/>
+      27　宗教が行く道、倫理を中心として行く道、あるいは哲学が指向する真理の道において、幸福の世界を紹介できる平和と自由を、どのように求めなければならないのでしょうか。人の心情は、誰でもみな同じです。数千年前にもった心情も、億千万年後に現れる心情も、すべて同じです。心情の世界は変わらないのです。<br/>
+<br/>
+      　　<h4 class="bh" id="017"><a href="#017">同じ基盤で動く心情を引き出して幸福の園を成し遂げる世界、幸福を感じられる社会的な基準、幸福感を味わえる宗教的な意識、このようなものがこの地上にはないのでしょうか。もし、ないと断定すれば、神様はどこに存在するのでしょうか。神様は、人類と共にいらっしゃらないという結論が下されるのです。</a></h4>
+<br/>
+      28　人類を抱き、摂理と倫理道徳を立てて善を指向させる天倫があるとすれば、天は必ず私たちと関係するあらゆることを解明してくれるのはもちろん、老若男女を問わず、これを心情的に肯定できるひと日が来るでしょう。そのような立場で和合して動じながら、この幸福が私たちの幸福であり、この平和が私たちの平和であり、この自由が私たちの自由だと声高に語ることのできるひと時が現れなければならないでしょう。そうでなければ、神様も、いかなる偉大な思想家も、私たちとは何の関係もありません。<br/>
+<br/>
+      　　<h4 class="bh" id="018"><a href="#018">平和と自由</a></h4>
+<br/>
+      29　世界人類は、平和を待ち望んでいます。さらには、自由を享受する個人となり、自由の社会、自由の国、自由の世界で生きることを、誰彼を問わず願っています。「私」の心に平和がなく、私の心に自由がなければ、真の幸福はあり得ません。真の人生の道を歩もうという人がいるとすれば、彼は、真の平和の中で真の自由を謳歌し、真の幸福を享受することを願うでしょう。今日、優れた人も愚かな人も異口同音に、「この世界は平和の世界になっていない」と言っています。自由を叫んでいますが、自分の心情のままに生きられる自由な環境になっていないことを自認しています。ですから、人間は、理念的に待ち望む幸福の自分になり得ていないという事実を否定できないのです。<br/>
+<br/>
+      30　あらゆるものは、起源が良いものを訪ねていきます。また自由な所を訪ねていくのです。幸福なものを訪ねていくのです。自由は自由なりに、幸福は幸福なりに、平和は平和なりに、別々の道を行くのではありません。歩調を合わせていかなければなりません。それでは、平和の中に自由がなければならないのでしょうか、自由の中に平和がなければならないのでしょうか。平和の中に自由がなければならないのであって、自由の中に平和はあり得ません。平和は、二人が互いに和合することです。それは、お互いが譲歩するときに可能なのです。<br/>
+<br/>
+      31　サタン世界の愛を中心としては、自由がありません。平和がありません。幸福がありません。希望がありません。永遠の生命がありません。それを蕩減復帰しなければなりません。物権、人権、愛権を復帰することによって、そこから自由が生じるのです。ですから、心と体が一つにならなければなりません。人権を本来の姿に戻しなさいというのです。心と体が一つに統一された基準でのみ自由があります。祖父と孫の嫁が一つになれば、秘密裏にドアを開けて入ろうと、どこに行こうとかまいません。壁がなくなるというのです。そのように一つになってこそ、自由があります。自由がなければ平和はないのです。<br/>
+<br/>
+      32　統一された基盤の上に立たなければ、自由はあり得ません。心と体が闘っているのに、自由のふろしきを持ってきて、その自由にしがみついて「うれしい」と言うことができますか。自由が生じるのかというのです。とんでもないというのです。また、平和がどこにありますか。平和というものは、平坦な状態で、すべてのものが欠如することなく満ち足りていて自由なのです。ところが、心と体が闘っているのに、平和がとどまる所がありますか。幸福も同様です。心と体が闘っているのに、幸福を求めることができますか。とんでもないというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="019"><a href="#019">このようなすべての根本問題について考えてみるとき、心と体が完全に一つになる場においてのみ、自由を占有することができるというのです。心と体が一つになる場においてのみ、平和の基盤が生じるのです。心と体が一つになるところにおいてのみ、幸福が展開するのです。夫の心と妻の心、夫の体と妻の体が一つになるところでのみ、家庭の平和を中心として、世界に対する夢を見ることができるというのです。</a></h4>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609191458"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="143.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="145.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609191458"></script>
+</body>
+</html>
