@@ -636,3 +636,15 @@ body.light-mode .typo-input {
         font-size: 1.05rem;
     }
 }
+
+/* 本文が移されていない章。題は目次に残すが、押せるようには見せない
+   （行き先が無いリンクにすると、押した人が何も無い所へ落ちる） */
+.not-yet {
+    opacity: 0.55;
+    cursor: default;
+}
+
+.not-yet small {
+    font-size: 0.8em;
+    margin-left: 0.4em;
+}

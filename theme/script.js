@@ -1,9 +1,5 @@
 /* theme/script.js */
 (function () {
-    // Smarter DP check: look for 'dp' as a directory segment
-    const pathSegments = window.location.pathname.split(/[/\\]/);
-    const isDP = pathSegments.includes('dp');
-
     // theme/style.css owns the look of #theme-toggle. A handful of old pages
     // (malsum/ など) never link it, so give those the same rules inline.
     function ensureToggleStyles() {
@@ -27,76 +23,86 @@
         document.head.appendChild(style);
     }
 
-    function applyTheme(theme) {
-        if (isDP) {
-            document.body.classList.remove('dark-mode');
-            document.body.classList.add('light-mode');
-            return;
-        }
+    // 明暗は三つの状態で持つ。`system` が既定で、端末の設定（OS の外観、
+    // ブラウザの設定）にそのまま従う。利用者がボタンを押したときだけ
+    // `light` / `dark` を覚えて、そちらを優先する。
+    //
+    // 以前は「dp と聖書は明るい、ほかは暗い」と**道の名前で決め打ち**していた。
+    // 端末が明るい設定の人にも 2,137ページが暗く出ていて、原理講論に至っては
+    // 明るさ固定で切り替えボタンも無かった。
+    const THEMES = ['system', 'light', 'dark'];
+    const MEDIA = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    const ICON = { system: '🌓', light: '☀️', dark: '🌙' };
+    const LABEL = {
+        system: '表示：端末の設定に合わせる',
+        light: '表示：明るい',
+        dark: '表示：暗い'
+    };
 
+    function systemTheme() {
+        return MEDIA && MEDIA.matches ? 'dark' : 'light';
+    }
+
+    function readChoice() {
+        let v = null;
+        try {
+            v = localStorage.getItem('theme');
+        } catch (e) {
+            // private mode などで読めないときは端末の設定に従う
+        }
+        return THEMES.indexOf(v) >= 0 ? v : 'system';
+    }
+
+    function applyTheme(choice) {
+        const theme = choice === 'system' ? systemTheme() : choice;
         document.body.classList.remove('light-mode', 'dark-mode');
         document.body.classList.add(theme + '-mode');
 
         const toggle = document.getElementById('theme-toggle');
         if (toggle) {
-            toggle.innerHTML = theme === 'light' ? '🌙' : '☀️';
+            toggle.innerHTML = ICON[choice];
+            toggle.title = LABEL[choice];
+            toggle.setAttribute('aria-label', LABEL[choice]);
         }
     }
 
     function init() {
-        let savedTheme = null;
+        let choice = readChoice();
+        applyTheme(choice);
 
-        try {
-            savedTheme = localStorage.getItem('theme');
-        } catch (e) {
-            // private mode などで読めないときは既定値にフォールバックする
+        // 端末の設定が変わったら（日没で暗くなる設定など）その場で追いかける。
+        // 自分で選んだ人は動かさない
+        if (MEDIA) {
+            const follow = function () { if (readChoice() === 'system') applyTheme('system'); };
+            if (MEDIA.addEventListener) MEDIA.addEventListener('change', follow);
+            else if (MEDIA.addListener) MEDIA.addListener(follow);
         }
 
-        if (!savedTheme) {
-            const path = window.location.pathname.toLowerCase();
-            // Default logic
-            if (path.includes('/bible_out/') ||
-                path.includes('/seikonmondou/') ||
-                path.includes('/dp/') ||
-                path.includes('family_pledge.html')) {
-                savedTheme = 'light';
-            } else {
-                savedTheme = 'dark';
-            }
-        }
+        if (!document.getElementById('theme-toggle')) {
+            ensureToggleStyles();
 
-        applyTheme(savedTheme);
+            const toggle = document.createElement('div');
+            toggle.id = 'theme-toggle';
+            toggle.setAttribute('role', 'button');
+            toggle.setAttribute('tabindex', '0');
+            document.body.appendChild(toggle);
+            applyTheme(choice);          // 札の絵と説明を入れる
 
-        if (!isDP) {
-            if (!document.getElementById('theme-toggle')) {
-                ensureToggleStyles();
+            const switchTheme = () => {
+                choice = THEMES[(THEMES.indexOf(choice) + 1) % THEMES.length];
+                try {
+                    localStorage.setItem('theme', choice);
+                } catch (e) { }
+                applyTheme(choice);
+            };
 
-                const toggle = document.createElement('div');
-                toggle.id = 'theme-toggle';
-                toggle.setAttribute('aria-label', 'テーマ切り替え');
-                toggle.setAttribute('role', 'button');
-                toggle.setAttribute('tabindex', '0');
-                toggle.innerHTML = savedTheme === 'light' ? '🌙' : '☀️';
-
-                document.body.appendChild(toggle);
-
-                const switchTheme = () => {
-                    const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                    try {
-                        localStorage.setItem('theme', newTheme);
-                    } catch (e) { }
-                    applyTheme(newTheme);
-                };
-
-                toggle.addEventListener('click', switchTheme);
-                toggle.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        switchTheme();
-                    }
-                });
-            }
+            toggle.addEventListener('click', switchTheme);
+            toggle.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    switchTheme();
+                }
+            });
         }
     }
 
