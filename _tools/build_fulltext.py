@@ -44,7 +44,7 @@ SKIP_DIRS = {".git", "pagefind", "node_modules", "__pycache__", "theme",
 
 # 読み物ではないページ。検索ページ自身が結果に出ると邪魔になる。
 SKIP_NAMES = {"search-all.html", "gacha.html", "random.html",
-              "test_output.html", "404.html"}
+              "test_output.html", "404.html", "offline.html"}
 SKIP_NAME_RE = re.compile(r"^google[0-9a-f]{16}\.html$", re.IGNORECASE)
 
 # これより短い本文は中身が無い（「ランダムページに移動中...」など）
