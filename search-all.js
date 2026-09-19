@@ -19,7 +19,12 @@
     const CACHE_NAME = 'mimune-fulltext-v1';
 
     // ?book=dp なら原理講論の中だけ。無ければサイト全体。
-    let scopeBook = new URLSearchParams(location.search).get('book') || '';
+    const params = new URLSearchParams(location.search);
+    let scopeBook = params.get('book') || '';
+    // 1冊の中をさらに絞る。天聖經（増補版）のように、1フォルダに
+    // 何篇も入っている本のため。題に入っている篇の名前で絞る
+    const scopePart = params.get('part') || '';
+    const scopeBack = params.get('back') || 'index.html';
     let scopeTitle = '';
 
     // 抜粋は当たった所の前後をこれだけ切り出す
@@ -328,12 +333,14 @@
 
     function showScope() {
         if (!scopeBook) return;
-        const name = scopeTitle ? `『${scopeTitle}』` : 'この書籍';
+        const name = scopeTitle
+            ? `『${scopeTitle}${scopePart ? '　' + scopePart : ''}』`
+            : (scopePart ? `『${scopePart}』` : 'この書籍');
         if (headingLink) headingLink.textContent = name + 'の中から検索';
         document.title = `み旨の裏庭 | ${name}の中から検索`;
         if (backLink) {
             backLink.textContent = `← ${name}の目次に戻る`;
-            backLink.setAttribute('href', encodeURI(scopeBook) + '/index.html');
+            backLink.setAttribute('href', encodeURI(scopeBook) + '/' + encodeURI(scopeBack));
         }
         if (bibleRow) bibleRow.hidden = true;
         if (scopeNote) {
@@ -445,6 +452,12 @@
 
         const parsed = parseQuery(query, currentMode());
         let results = runQuery(parsed.terms, parsed.mode);
+
+        // 篇を指定されていたら、その篇のページだけにする（題に篇が入っている）
+        if (scopePart) {
+            results = results.filter(e =>
+                (e.hit.sh.docs[e.hit.di][1] || '').indexOf(scopePart) >= 0);
+        }
 
         // 聖書を外す。全部が聖書だったときのために、外した件数を出す。
         let dropped = 0;

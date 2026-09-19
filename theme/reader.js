@@ -349,13 +349,21 @@
 
         // 道具（この本の目次・この書籍の中で検索）
         var tools = drawer.querySelector('.tools');
+        var src = tocHref();
         var toc = document.createElement('a');
-        toc.href = 'index.html'; toc.textContent = 'この本の目次';
+        toc.href = src;
+        toc.textContent = 'この本の目次';
         tools.appendChild(toc);
         var slug = bookSlug();
         if (slug) {
+            // 目次が篇ごとに分かれている本では、検索もその篇の中だけにして、
+            // 戻り先もその篇の目次にする。篇の名前は題（「…／第一篇　神様／…」）から
+            var part = (document.title || '').match(/第[〇一二三四五六七八九十]+篇/);
             var q = document.createElement('a');
-            q.href = '../search-all.html?book=' + encodeURIComponent(slug);
+            q.href = '../search-all.html?book=' + encodeURIComponent(slug)
+                + (part && src !== 'index.html'
+                    ? '&part=' + encodeURIComponent(part[0]) + '&back=' + encodeURIComponent(src)
+                    : '');
             q.textContent = 'この書籍の中で検索';
             tools.appendChild(q);
         }
