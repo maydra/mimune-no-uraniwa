@@ -239,7 +239,7 @@
             '#reader-drawer .tools a{flex:1 1 auto;text-align:center;padding:.5em .7em;border-radius:8px;',
             'font-size:.82rem;text-decoration:none;background:rgba(127,127,127,.14);color:inherit !important}',
             '#reader-drawer .side{margin-top:1.2rem;border-top:1px solid rgba(127,127,127,.25);padding-top:.7rem}',
-            '#reader-drawer .side a{display:block;padding:.45em .5em;font-size:.82rem;text-decoration:none;color:inherit !important}',
+            '#reader-drawer .side a{display:block;padding:.5em .5em;font-size:.82rem;line-height:1.5;','text-decoration:none;color:inherit !important;border-radius:7px}','#reader-drawer .side a:hover{background:rgba(127,127,127,.14)}','#reader-drawer .side a>span{display:block;opacity:.55;font-size:.74rem}','#reader-drawer .side a>em{display:block;opacity:.6;font-size:.74rem;font-style:normal}','#reader-drawer .side a>b{display:block;font-weight:600}',
             '#reader-drawer .side span{opacity:.6;font-size:.74rem}',
             '#reader-resume{pointer-events:auto;position:fixed;left:50%;transform:translateX(-50%);bottom:1.1rem;',
             'z-index:10001;display:none;align-items:center;gap:.6em;padding:.55em .8em .55em 1em;border-radius:999px;',
@@ -362,34 +362,58 @@
         }
     }
 
-    // 前後のページの題は、本の目次ページを1回だけ読んで拾う（本ごとに覚える）
+    // 前後のページの見出しは、本の目次ページを1回だけ読んで拾う（本ごとに覚える）。
+    // 節の名前だけだと「第三節」がどの篇のどの章の話か分からないので、目次の中で
+    // その行より上にある浅い段（篇・章）を親として一緒に出す。
     function titles(side) {
         var links = side.querySelectorAll('a[data-role]');
         if (!links.length) return;
         var key = 'reader.titles.' + bookSlug();
+
         var apply = function (map) {
             Array.prototype.forEach.call(links, function (a) {
                 var file = (a.getAttribute('href') || '').split('/').pop().split('#')[0];
-                var name = map[file];
-                if (!name) return;
-                a.innerHTML = '<span>' + a.dataset.role + '</span><br>' + name;
+                var it = map[file];
+                if (!it) return;
+                a.innerHTML = '<span>' + a.dataset.role + '</span>'
+                    + (it.up ? '<em>' + esc(it.up) + '</em>' : '')
+                    + '<b>' + esc(it.name) + '</b>';
                 var real = document.querySelector('.page-nav a[href="' + a.getAttribute('href') + '"]');
-                if (real) real.title = name;
+                if (real) real.title = (it.up ? it.up + ' / ' : '') + it.name;
             });
         };
+
         try {
             var cached = sessionStorage.getItem(key);
             if (cached) { apply(JSON.parse(cached)); return; }
         } catch (e) { }
+
         fetch('index.html').then(function (r) { return r.ok ? r.text() : null; }).then(function (html) {
             if (!html) return;
             var doc = new DOMParser().parseFromString(html, 'text/html');
             var map = {};
-            Array.prototype.forEach.call(doc.querySelectorAll('a[href]'), function (a) {
-                var f = a.getAttribute('href').split('/').pop().split('#')[0];
+            var stack = [];
+            var clean = function (el) {
+                var c = el.cloneNode(true);
+                Array.prototype.forEach.call(c.querySelectorAll('rt,rp'), function (r) { r.remove(); });
+                return (c.textContent || '').replace(/\s+/g, ' ').trim();
+            };
+            Array.prototype.forEach.call(doc.querySelectorAll('li'), function (li) {
+                var m = (li.className || '').match(/lv(\d)/);
+                var lv = m ? +m[1] : 9;
+                var text = clean(li);
+                if (!text) return;
+                var a = li.querySelector('a[href]');
+                if (!a) {                       // 見出しの行（篇・章）。親として覚える
+                    stack = stack.filter(function (s) { return s.lv < lv; });
+                    stack.push({ lv: lv, text: text });
+                    return;
+                }
+                var f = (a.getAttribute('href') || '').split('/').pop().split('#')[0];
                 if (!/\.html?$/i.test(f) || map[f]) return;
-                var t = (a.textContent || '').replace(/\s+/g, ' ').trim();
-                if (t) map[f] = t.slice(0, 60);
+                var up = stack.filter(function (s) { return s.lv < lv; })
+                    .map(function (s) { return s.text; }).join(' ／ ');
+                map[f] = { up: up.slice(0, 80), name: text.slice(0, 60) };
             });
             try { sessionStorage.setItem(key, JSON.stringify(map)); } catch (e) { }
             apply(map);
