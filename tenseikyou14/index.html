@@ -316,6 +316,48 @@
         .bh a:hover { text-decoration: underline; }
         .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
 
+        /* 篇から篇への行き来。本文ページと同じ見た目にそろえる */
+        .page-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 1rem 0;
+            width: 100%;
+        }
+
+        .nav-btn {
+            flex: 1;
+            text-align: center;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .nav-btn span {
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
     </style>
     
     <link rel="stylesheet" href="../theme/style.css?v=202609192031">
@@ -328,7 +370,6 @@
 <!-- En-HP-H -->
 <nav class="page-nav">
   <a href="../tenseikyou13/index.html" class="nav-btn"><span>←</span> 前の篇</a>
-  <a href="https://maydra.github.io/mimune-no-uraniwa/index.html" class="nav-btn">篇の一覧</a>
   <div style="flex:1"></div>
 </nav>
 <ul class="toc-tree">
