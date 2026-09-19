@@ -1,5 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- saved from url=(0057)http://furuta65.fc2web.com/001/syougairotei_5/mokuji.html -->
 <html>
  <head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
@@ -612,12 +611,7 @@
     </tr>
    </tbody>
   </table>
-  <!-- St-HP-F -->
-  <div id="popup-container">
-  </div>
   
-  <div id="glasp-extension-toast-container" style="position: fixed; top: 32px; right: 16px; z-index: 2147483647; display: none; flex-direction: column; align-items: flex-end; height: 0px; width: auto; margin: 0px; padding: 0px;">
-  </div>
  
 
 
@@ -625,47 +619,6 @@
 
 
 </div>
-<script>
-   (function() {
-    const STORAGE_KEY = 'popupDismissed';
-    const excludedDomain = 'www.fc2web.com';
-    if (
-        localStorage.getItem(STORAGE_KEY) === 'true' ||
-        window.location.hostname === excludedDomain
-    ) {
-        return;
-    }
-    const container = document.getElementById('popup-container');
-    const shadow = container.attachShadow({ mode: 'open' });
-
-    shadow.innerHTML = `
-        
-        <div class="overlay">
-        <div class="popup">
-            <p>
-<h4>サービス終了のお知らせ</h4>
-FC2WEB は 2025年6月30日 (月) をもって、<br>
-サービスを終了とさせていただくこととなりました。<br>
-これまでのご愛顧に対し、深くお礼申しあげます。<br>
-詳しくは <a href="http://www.fc2web.com/" target="_blank" rel="noopener">FC2WEBポータル</a>をご確認ください。
-            </p>
-            <label><input type="checkbox" id="dont-show"> 今後このお知らせを表示しない</label>
-            <button id="close-btn">閉じる</button>
-        </div>
-        </div>
-    `;
-
-    const closeBtn = shadow.getElementById('close-btn');
-    const checkbox = shadow.getElementById('dont-show');
-
-    closeBtn.addEventListener('click', () => {
-        if (checkbox.checked) {
-        localStorage.setItem(STORAGE_KEY, 'true');
-        }
-        container.remove();
-    });
-    })();
-  </script>
 <script>
   const params = new URLSearchParams(window.location.search);
   if (params.get("randomScroll") === "true") {
