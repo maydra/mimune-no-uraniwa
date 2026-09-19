@@ -306,6 +306,21 @@
         h.appendChild(span);
     }
 
+    // そのページの「目次」ボタンが指している所。本によっては本の目次が
+    // 篇ごとに分かれているので、index.html と決め打ちしない
+    function tocHref() {
+        var nav = document.querySelector('.page-nav');
+        var hit = 'index.html';
+        if (nav) {
+            Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) {
+                if ((a.textContent || '').replace(/[\s　]/g, '') === '目次') {
+                    hit = a.getAttribute('href') || hit;
+                }
+            });
+        }
+        return hit;
+    }
+
     function bookSlug() {
         var seg = location.pathname.split('/').filter(Boolean);
         return seg.length >= 2 ? seg[seg.length - 2] : '';
@@ -368,7 +383,8 @@
     function titles(side) {
         var links = side.querySelectorAll('a[data-role]');
         if (!links.length) return;
-        var key = 'reader.titles.' + bookSlug();
+        var src = tocHref();
+        var key = 'reader.titles.' + bookSlug() + '.' + src;
 
         var apply = function (map) {
             Array.prototype.forEach.call(links, function (a) {
@@ -388,7 +404,7 @@
             if (cached) { apply(JSON.parse(cached)); return; }
         } catch (e) { }
 
-        fetch('index.html').then(function (r) { return r.ok ? r.text() : null; }).then(function (html) {
+        fetch(src).then(function (r) { return r.ok ? r.text() : null; }).then(function (html) {
             if (!html) return;
             var doc = new DOMParser().parseFromString(html, 'text/html');
             var map = {};
