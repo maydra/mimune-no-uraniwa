@@ -125,18 +125,52 @@
         heads = [];
         // ページの題と同じ見出し（多くの本は <h1> が <title> の写し）は道筋に出さない。
         // 「第一節　…／真の御父母様の生涯路程 7」と毎回出ても場所の手がかりにならない
-        var pageTitle = (document.title || '').replace(/[\s　]/g, '');
+        // 題は「第一節　…　家庭教会は私の天国/真の御父母様の生涯路程 7」のように
+        // 「節の名前／書名」で書かれている。書名の方は、どのページでも同じなので
+        // 場所の手がかりにならない。書名だけの見出しは並べず、節の名前に
+        // くっついている書名は切り落とす
+        var parts = (document.title || '').split('/');
+        var book = parts.length > 1 ? parts[parts.length - 1].trim() : '';
+        var flatBook = book.replace(/[\s　]/g, '');
         var all = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
         Array.prototype.forEach.call(all, function (h) {
             if (h.closest(NOT_BODY) || h.classList.contains('page-title')) return;
             var t = clean(h);
             if (!t) return;
-            // ページの先頭にある「題そのもの」の見出しは道筋にも目次にも要らない。
-            // 多くの本は <h1> が <title> の写し、その下に書名だけの <h2> が続く
             var flat = t.replace(/[\s　]/g, '');
-            var isTitle = heads.length < 3 && pageTitle && flat.length > 3 &&
-                (pageTitle.indexOf(flat) >= 0 || flat.indexOf(pageTitle) >= 0);
+            var isTitle = flatBook.length > 3 && flat === flatBook;
+            if (!isTitle && flatBook.length > 3 && flat.length > flatBook.length &&
+                flat.slice(-flatBook.length) === flatBook) {
+                t = t.replace(/[\s　]*[\/／][\s　]*[^\/／]*$/, '').trim() || t;
+            }
             heads.push({ el: h, level: +h.tagName.substring(1), text: t, isTitle: !!isTitle });
+        });
+        // ページの頭では、同じ節の名前が二度書いてあることがある（<h1> が <title> の
+        // 写しで、少し下に同じ名前が <h2> で入る。題の方は切れていることもある）。
+        // 書名だけの見出しを飛ばして並べ直し、隣り合う二つが同じ言い換えなら前を落とす
+        var live = heads.filter(function (h) { return !h.isTitle; }).slice(0, 4);
+        for (var i = 0; i < live.length - 1; i++) {
+            var a = live[i].text.replace(/[\s　]/g, '');
+            var b = live[i + 1].text.replace(/[\s　]/g, '');
+            if (a.length < 6 || b.length < 6) continue;
+            if (a.indexOf(b) === 0 || b.indexOf(a) === 0) live[i].isTitle = true;
+        }
+        depths();
+    }
+
+    // 見出しの深さは、そのページに出てくる段だけで数え直す。
+    // 本によって始まりが <h2> だったり <h4> だったりするので、タグの数字を
+    // そのまま使うと、一番浅い見出しが深い所から始まってしまう
+    function depths() {
+        var used = [];
+        heads.forEach(function (h) {
+            if (h.isTitle) return;
+            if (used.indexOf(h.level) < 0) used.push(h.level);
+        });
+        used.sort(function (a, b) { return a - b; });
+        heads.forEach(function (h) {
+            var d = used.indexOf(h.level);
+            h.depth = d < 0 ? 0 : Math.min(d, 4);
         });
     }
 
@@ -185,12 +219,22 @@
             'box-shadow:-8px 0 28px rgba(0,0,0,.18);padding:1rem .9rem 3rem}',
             'body.dark-mode #reader-drawer .panel{background:#1a1a2e;color:#e6e6f0}',
             '#reader-drawer h4{margin:.2rem 0 .7rem;font-size:.95rem;opacity:.75;font-weight:600}',
-            '#reader-drawer a.item{display:block;padding:.42em .5em;border-radius:7px;text-decoration:none;',
-            'color:inherit !important;font-size:.88rem;line-height:1.45}',
+            '#reader-drawer a.item{display:block;position:relative;padding:.42em .5em;border-radius:7px;',
+            'text-decoration:none;color:inherit !important;font-size:.88rem;line-height:1.45}',
             '#reader-drawer a.item:hover{background:rgba(127,127,127,.14)}',
-            '#reader-drawer a.item.here{background:rgba(99,102,241,.16);font-weight:700}',
-            '#reader-drawer .lv2{padding-left:.9em}#reader-drawer .lv3{padding-left:2em}',
-            '#reader-drawer .lv4{padding-left:3.1em}#reader-drawer .lv5,#reader-drawer .lv6{padding-left:4.2em}',
+            '#reader-drawer a.item.here{background:rgba(99,102,241,.16)}',
+            '#reader-drawer a.item.here::after{content:"";position:absolute;left:-.55rem;top:.5em;bottom:.5em;',
+            'width:3px;border-radius:2px;background:#6366f1}',
+            // 段が深くなるほど左へ下げ、字を小さく薄くする。縦線で親子を見せる
+            '#reader-drawer .d0{font-weight:700;margin-top:.55em}',
+            '#reader-drawer .d0:first-child{margin-top:0}',
+            '#reader-drawer .d1,#reader-drawer .d2,#reader-drawer .d3,#reader-drawer .d4{',
+            'border-left:1px solid rgba(127,127,127,.3)}',
+            '#reader-drawer .d1{margin-left:.55em;padding-left:.85em;font-size:.855rem}',
+            '#reader-drawer .d2{margin-left:1.5em;padding-left:.85em;font-size:.83rem;opacity:.88}',
+            '#reader-drawer .d3{margin-left:2.45em;padding-left:.85em;font-size:.81rem;opacity:.8}',
+            '#reader-drawer .d4{margin-left:3.4em;padding-left:.85em;font-size:.79rem;opacity:.74}',
+            '#reader-drawer a.item.here{opacity:1;font-weight:700}',
             '#reader-drawer .tools{margin:.2rem 0 1rem;display:flex;flex-wrap:wrap;gap:.4rem}',
             '#reader-drawer .tools a{flex:1 1 auto;text-align:center;padding:.5em .7em;border-radius:8px;',
             'font-size:.82rem;text-decoration:none;background:rgba(127,127,127,.14);color:inherit !important}',
@@ -204,6 +248,14 @@
             '#reader-resume button{font:inherit;color:#fff;background:rgba(255,255,255,.18);border:0;',
             'border-radius:999px;padding:.35em .9em;cursor:pointer}',
             '#reader-resume .x{background:none;padding:.2em .5em;opacity:.7}',
+            // 本文ページの題。各ページの <style> が clamp(2rem,6vw,3.5rem)・太さ900 で
+            // 出していて、30字を超える節の名前には大きすぎる。読み物のページだけ抑える
+            // （書籍の目次ページは今までどおり大きく出す）
+            'body.reader-on h1{font-size:clamp(1.35rem,2.4vw,1.95rem) !important;line-height:1.4 !important;',
+            'letter-spacing:.02em !important;margin-bottom:1rem !important;text-shadow:none !important}',
+            // 題の後ろに付いている書名は、小さく下の行へ回す
+            'body.reader-on h1 .reader-book{display:block;font-size:.58em;font-weight:600;opacity:.72;margin-top:.3em}',
+            'body.reader-on h1 .reader-book .sep{display:none}',
             '@media print{#reader-ui,#reader-drawer,#reader-resume{display:none !important}}'
         ].join('');
         document.head.appendChild(s);
@@ -232,6 +284,28 @@
         fillDrawer();
     }
 
+    // ページの題が「節の名前／書名」になっているとき、書名を小さい行へ回す。
+    // 字は1文字も変えず、後ろ半分を <span> で包むだけ
+    function splitTitle() {
+        var h = document.querySelector('h1');
+        if (!h || h.closest(NOT_BODY) || h.childNodes.length !== 1) return;
+        var node = h.firstChild;
+        if (!node || node.nodeType !== 3) return;
+        var m = node.nodeValue.match(/^([\s\S]*\S)([\s　]*[\/／][\s　]*)(\S[\s\S]*)$/);
+        if (!m || m[1].length < 4 || m[3].length < 4) return;
+        var span = document.createElement('span');
+        span.className = 'reader-book';
+        // 区切りの「／」は行が分かれるので見せない。ただし字は残す
+        // （h1 の textContent は今までどおり「節の名前／書名」のまま）
+        var sep = document.createElement('i');
+        sep.className = 'sep';
+        sep.textContent = m[2];
+        span.appendChild(sep);
+        span.appendChild(document.createTextNode(m[3]));
+        node.nodeValue = m[1];
+        h.appendChild(span);
+    }
+
     function bookSlug() {
         var seg = location.pathname.split('/').filter(Boolean);
         return seg.length >= 2 ? seg[seg.length - 2] : '';
@@ -242,7 +316,7 @@
         items = heads.map(function (h, i) {
             if (h.isTitle) return null;            // 題そのものの見出しは並べない
             var a = document.createElement('a');
-            a.className = 'item lv' + h.level;
+            a.className = 'item d' + h.depth;
             a.href = '#';
             a.textContent = h.text;
             a.addEventListener('click', function (e) {
@@ -453,7 +527,9 @@
         // dp の古い現在位置バーは、こちらと二重になるので引っ込める
         var old = document.getElementById('stacked-header-container');
         if (old) old.style.display = 'none';
+        document.body.classList.add('reader-on');
         css();
+        splitTitle();
         build();
         onScroll();
         offerResume();
