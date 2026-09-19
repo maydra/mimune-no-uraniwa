@@ -189,3 +189,18 @@
         }
     } catch (e) { }
 })();
+
+/* 読書支援（進捗バー・現在位置・目次・しおり・拡大時の位置保持）は theme/reader.js。
+   3,417ページが既にこの script.js を読んでいるので、HTML には手を入れずここから足す。
+   自分の src に付いている ?v= をそのまま渡して、同じ版が届くようにする。 */
+(function () {
+    try {
+        var me = document.currentScript;
+        if (!me || !me.src) return;
+        var url = new URL('reader.js' + (me.src.indexOf('?') >= 0 ? me.src.slice(me.src.indexOf('?')) : ''), me.src);
+        var s = document.createElement('script');
+        s.src = url.href;
+        s.defer = true;
+        document.head.appendChild(s);
+    } catch (e) { }
+})();

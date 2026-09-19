@@ -171,6 +171,34 @@ body.dark-mode .bh a {
     color: inherit !important;
 }
 
+/* 蛍光ペン。本文に直接 background-color が書いてある span がそれで、
+   原理講論など3,300か所ある（#CCFFFF 水色・#FCD2E7 桃色・#FFFF99 黄色）。
+   **色は紙のまま残す**（薄めると三色の見分けが付かない）。地が明るいので、
+   暗い配色のときは、その上の字だけ黒に戻す。白い字のままだと淡い色に溶ける。
+   対訳ビューアも同じ決まりで作ってある（taiyaku/genri_kouron の #1d1b17）。 */
+body.dark-mode [style*="background-color"],
+body.dark-mode [style*="background-color"] * {
+    color: #1d1b17 !important;
+    -webkit-text-fill-color: #1d1b17 !important;
+}
+
+/* 蛍光ペンの上のリンクは、黒に埋もれないように濃い色で残す */
+body.dark-mode [style*="background-color"] a {
+    color: #123a8a !important;
+    -webkit-text-fill-color: #123a8a !important;
+}
+
+body.dark-mode [style*="background-color"] a.verse-link {
+    color: #9b1c1c !important;
+    -webkit-text-fill-color: #9b1c1c !important;
+}
+
+/* ルビの読みは本文より薄く。黒の上なので灰色にする */
+body.dark-mode [style*="background-color"] rt {
+    color: #5d5a52 !important;
+    -webkit-text-fill-color: #5d5a52 !important;
+}
+
 /* Navigation buttons */
 body.light-mode .nav-btn,
 body.light-mode .back-link,
