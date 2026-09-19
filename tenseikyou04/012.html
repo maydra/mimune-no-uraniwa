@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第四篇　真の人間／第一節　人間の本性の道</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第四篇　真の人間</h1>
+<nav class="page-nav">
+  <a href="011.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="013.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第四章　真の人間が行くべき生涯路程</a></li><li class="toc-b lv2"><a href="#002">第一節　人間の本性の道</a></li><li class="toc-b lv3"><a href="#003">人生の目標と準備</a></li><li class="toc-b lv3"><a href="#004">神様の息子、娘になれ</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第四章　真の人間が行くべき生涯路程</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第一節　人間の本性の道</a></h3>
+<br/>
+      1　「私」はなぜ来て、なぜ生きなければならず、どこに行かなければならないのでしょうか。皆さん自ら生まれたと考えてはいけません。生まれはしましたが、自分が生まれた動機と目的が分からない私たちです。生まれることは生まれましたが、「私」が生まれようとして生まれたのではなく、生きていることは生きていますが、「私」が生きようとして生きているのではなく、死ぬことは死にますが、「私」が死のうとして死ぬのではないのです。それなのに、自分の何を誇るのでしょうか。自分自身が生まれたくて生まれることもできず、何かをもって生きることもできず、死の道を避けることもできない自分を誇ってみても、哀れで寂しいだけです。生まれたので生きなければならない運命であり、またそのように生きて逝くべき運命なのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">人生の目標と準備</a></h4>
+<br/>
+      2　世の中では「人生とは何か」と言いますが、人生観、国家観、世界観の確立、その次には宇宙観の確立、さらには神観の確立が問題になります。これをどのように確立するのでしょうか。系統的な段階の秩序をどこに置かなければならず、その次元的系列をどのように連結させるのか、これは深刻な問題です。<br/>
+<br/>
+      ために存在するという原則から見るとき、最も価値のある人生観は、自分が全人類のためにあり、全世界のためにあり、国家のためにあり、社会のためにあり、家庭のためにあり、妻のためにあり、子女のためにあるという立場で幸福な自分を発見できるなら、これ以上の人生観はありません。<br/>
+<br/>
+      3　出発を誤れば、とんでもない所に行きます。ですから、船が大海を航海するにしても、出発した港から、羅針盤を中心として行くべき目的地を描いておいて進むのです。人間は出発した港がどこなのか分からずにいます。羅針盤をもって彼岸の世界に到達でき、目的地を描いていくことのできる方向性がないというのです。これがくねくねと、自分勝手に行ったりきたりしたのです。人間がいくらやっても、人間で終わるというのです。<br/>
+<br/>
+      4　自分はどんなことをやろうという、そのような見方がなければなりません。もう二十代になったのであれば、そのような見方をもって何をすると定め、一生の間、闘っていってこそ、歴史的な人物になり、何か一つでも残せるのです。次に、その目的のためにはいかなる困難があったとしても、闘争していける勇猛な心がなければなりません。それを嫌だと言わず、消化できる度胸がなければなりません。<br/>
+<br/>
+      5　一番重要な時が、十八歳から二十四歳までの期間です。二十四歳までには、完全に全人生を懸ける目標を定めなければなりません。それは修養をして精誠を込めれば、分かるようになっています。統一教会で赤ん坊として生まれて、正常な信仰生活をすれば、自分が何をしなければならないか、すぐに分かるようになっているのです。自分を中心として生き、自分の考えを中心として行動する人には分かりません。<br/>
+<br/>
+      自分が自らの分野を分からないという事実は、深刻なことです。重要な一生の問題について、天と共に深刻に折り合いをつけなければなりません。そして、自分自ら、環境的に与えられた条件に適応しなければなりません。それはいずれにせよ、自分がしなければならないのです。<br/>
+<br/>
+      6　先生は十六歳のとき、既に深刻でした。どこに行くにしても、行きたくない所には行かないのです。行けば必ず事故が起こります。今もそうです。ですから、怨讐が多い世界で今まで生き残ったのです。大きな人物になるほど、本当に困難が多いのです。それを越えるためには、自分が行く道をある程度選ばなければなりません。<br/>
+<br/>
+      先生に向かって「先生、大変です。問題が起こりました」と言えば、既にすべて分かっているのです。そうでなくては、これから大きな指導者になれません。皆さんは平面的に考えますが、立体的な考えをもたなければなりません。平面は立体圏内に無限に入るのです。<br/>
+<br/>
+      そのようなものがあるので、いくら優れていても、良心がまっすぐでない人は、先生の前に来ると、ただ圧倒されてしまうのです。説明が必要ありません。もちろん知識的な実力もなければなりませんが、霊界やこれからの世界は、修道の世界なので、心霊が成長しなければなりません。<br/>
+<br/>
+      7　人は落ち着けば、心の深い所に心が静まる場所があります。心が眠ることのできるその場所まで、自分の心が入っていかなければなりません。そこで眠って自覚めるときには、鋭敏になっているのです。そのときに、雑多な考えをもたずに精神を集中すれば、すべてが通じるのです。ですから、修養と祈りが必要です。いつも精誠を込めなければなりません。<br/>
+<br/>
+      精誠は一度込めて、使い回すものではありません。静かに心の位置をつかんでおかなければなりません。そのようにすれば、自分のすべきことがすべて分かるというのです。それをしなければなりません。方向をつかみ、その方向を中心としてついていかなければなりません。方向は突き出ていて、一つしかありません。それは難しいことではなく、簡単なのです。<br/>
+<br/>
+      今、万全の準備をしなければならず、整備をしなければなりません。毎日のように、それを自ら押していける推進力を生み出さなければなりません。それは、自分一人ではできないことです。<br/>
+<br/>
+      8　十八歳になれば、自分がどのような人間かということがすべて分かります。力ではできません。だから焦りやすいのです。友達の力が必要になるとか、師が必要になるとか、神様の力が必要になるのです。先生も、先生自身が今もっている力より、もっと大きい世界的なことを行うときは深刻です。より大きな力が必要なときは、それをどこからもってくるかということが問題になります。もってこられないときは後退しなければならないのですが、それはできません。ですから、祈りが必要であり、神様が必要なのです。それだからこそ、心情の世界が必要なのです。<br/>
+<br/>
+      愛の世界は、いくら引っ張り出しても終わりがありません。物質の世界は終わりがあり、知識の世界も終わりがあり、権力の世界も崩壊することがあるのですが、心情の世界は無限です。そのため、心情の世界を中心として動かなければなりません。心情の世界の中央に行けば、軸を中心として上下する運動をするのです。心情の中心の真ん中に入ってみなさいというのです。そこから無限な力が伝わります。九〇度さえつくれば、無限な力を九〇度で維持できるのです。ですから、道を修めていかなければなりません。精誠を込め、世の中のすべての面において深い心霊世界を体験しなさいというのです。<br/>
+<br/>
+      9　自分の最も近い先生は、自分の心です。一番親しい友人よりも貴いのが自分の心であり、父母よりもっと貴いのが自分の心です。ですから、心に尋ねてみるのです。その心には神様が入っていらっしゃいます。その声を聞くことができなければなりません。心の声を聞くことのできる境地まで入っていかなければなりません。<br/>
+<br/>
+      「天上天下(てんげ)唯我独尊」とお釈迦様が言いましたが、それは、「私」が「私」に尋ねれば、「私」に神様が入ってきていることが分かるということです。そのようになれば、できないことがないのです。<br/>
+<br/>
+      ですから、自分の心を明るくしなければなりません。心が先生よりも優れているのです。心は永遠の私の主人です。ですから、よこしまな心をもたず、公理に属した、公的立場に立った心をもたなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">神様の息子、娘になれ</a></h4>
+<br/>
+      10　人間は本来、宇宙の王予です。「神様が私の父であり、父のものである天と地は私のものだ」と言うこともできるのです。神様を占領してこそ、安息することができます。神様の心情を占領すれば、神様を占領することになるのです。<br/>
+<br/>
+      神様の心情を中心として万物万象を抱いてこそ、他のどんな人も占領することができなくなり、そこで初めて天運が動き、天下の福がとどまるようになり、エデンの園が開かれるのです。神様と人間と万物、また天と人と地、この三つが心情的に合わさった所が地上天国です。心情でなくてはならないのです。<br/>
+<br/>
+      11　人間は、神様の息子、娘にならなければなりません。神様は主体としていらっしゃり、私たちはその対象ですが、たとえ堕落したとしても、そのような本性の基準は今に至るまで残っているため、その本性の基準を通して本然の主体的な理想圏を願わざるを得ないのです。その作用は良心作用よりも強く、夜も昼も「そこに行きなさい」と人間を促し、強制的に追い立てるのです。そのような力が皆さんの良心の背後にあります。堕落はしたとしても、そこに向かつて進みなさいというのです。<br/>
+<br/>
+      12　磁石にはプラス極(N極)とマイナス極(S極)がありますが、その極の間に絶縁体や紙のような妨げとなる物質があれば、それを貫いて作用します。それがだんだん厚くなれば、作用はだんだんと鈍くなります。さらに厚くしておけば、作用しないように見えるのです。しかし、作用はしているというのです。<br/>
+<br/>
+      それと同じように、人間が堕落したために神様と人間の間に何かが挟まっています。これがすべて塞がってしまったように思えるのですが、良心はそこに向かつていつでも作用するのです。これを開け放つ日には、その作用が強くなるのです。その間の絶縁体を一つ一つ取り除いてしまえば、だんだんと強くなるのです。それをすべて取り除いたときには、完全に通じてしまいます。学ばなくても、すべて分かるようになるというのです。<br/>
+<br/>
+      13　人間始祖がエデンの園で犯した堕落の動機とは何でしょうか。自分を中心としたことです。それで神様の息子の位置で息子になることができず、神様の娘の位置で娘になることができませんでした。サタンの侵犯を受けたのです。そのために、すべて失ってしまいました。侵犯されることを避ければ息子になり、娘になります。<br/>
+<br/>
+      したがって、「絶対的な神様は私の父である」という自覚が、アダムよりも強くなければなりません。その父は、天上世界の中心であり、地上世界の中心です。その父と一つにならなければなりません。そのようにすることによって「私」は、絶対的な中心と一つになるのであり、天地を主管なさる絶対的な主管者と一つになるのです。これを、どのように自覚するかということが問題です。その価値がどれほど絶対的かを確実に知るまでは、清算する道理がありません。「父と私の価値がどれほど貴いか！その父は、世界の主管者であられる！その父は、世界とも取り替えることができず、全天下とも取り替えることができない！私は、その父の息子、娘だ！間違いなく息子、娘だ！」という自覚をもたなければなりません。堕落する前のアダムとエバ以上の立場に立たなければならないのです。<br/>
+<br/>
+      14　父母と自分が一つの場所から共に出発したという事実は、驚くべきことです。父母の愛は「私」の愛であり、父母の生命は「私」の生命であり、父母の理想は「私」の理想として決定することができるのです。<br/>
+<br/>
+      父母は、子女を見つめるとき、「これは私の愛する息子、娘だ」と言います。これは自分の愛と自分の生命、そして自分の理想の実体であることを父母は感じ、悟り、知っているのです。愛する息子、娘とは、一日会わないだけも会いたくなり、ついさっき会ってもまた会いたいのです。それは、どんなに離そうとしても離すことができない骨の中の骨であり、肉の中の肉です。そこには、すべての理想がかかっているのです。<br/>
+<br/>
+      今日、堕落によって真の愛と真の生命、そして、真の理想をもつことができなかった人間世界に生まれた父母であっても、そのように子女を愛することを知っているのに、そのような父母の主体であられる神様は、それよりもっと愛するというのです。本来、堕落していないアダムとエバは、神様の直系の息子、娘であり、神様の王孫でした。アダムとエバは、天上天国と地上天国を受け継げる王子、王女だったのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="011.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="013.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>

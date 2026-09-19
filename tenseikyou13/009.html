@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第十三篇　平和メッセージ／第三節　天一国時代の摂理</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第十三篇　平和メッセージ</h1>
+<nav class="page-nav">
+  <a href="008.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="010.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第三章　真の父母と天一国時代</a></li><li class="toc-b lv2"><a href="#002">第三節　天一国時代の摂理</a></li><li class="toc-b lv3"><a href="#003">「天宙平和連合」の出現</a></li><li class="toc-b lv3"><a href="#004">人類平和のためのプロジエクト</a></li><li class="toc-b lv3"><a href="#005">歴史の中の摂理的結実</a></li><li class="toc-b lv3"><a href="#006">後天開闢時代の宣布</a></li><li class="toc-b lv3"><a href="#007">後天開闢時代の私たちの使命</a></li><li class="toc-b lv3"><a href="#008">平和理想世界王国時代の到来</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第三章　真の父母と天一国時代</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第三節　天一国時代の摂理</a></h3>
+<br/>
+      1　二十一世紀に入った今日の人類は、実に歴史的な大転換期に置かれています。永遠の世界平和を定着させることができるのか、あるいは二十世紀まで反復してきた暗鬱な戦争と対決の歴史を再び繰り返すのか、これを決定せざるを得ない時点に来ています。皆様も御存じのように、私は、二十世紀に入って本格化した植民地争奪戦と、第一次、第二次世界大戦、韓半島での六・二五動乱、東西冷戦など、絶えず繰り返されてきた戦争と反目の時代を通し、生涯の全過程を神様の平和理想世界王国具現のために捧げてきました。その過程において私は、第二次世界大戦が終わって創設された国際連合が、永遠の世界平和を実現するため、神様のみ旨を受け入れることができる平和機構となるよう切に祈ってきました。<br/>
+<br/>
+      2　一九四五年に創設された国連に、世界平和のために貢献した素晴らしい業績がないわけではありませんが、創設六十周年を超えた今日の姿は、その本来の創設目的を遂行するにおいて、深刻な困難に直面していることを、自他共に認めています。加盟国が二百カ国に追っていますが、自国の権益ばかりを代弁し、主張する国連代表部の姿は、世界紛争の解決と世界平和の具現において、創設当時からの限界を露呈しています。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">「天宙平和連合」の出現</a></h4>
+<br/>
+      3　人類は今まで、歴史を通して、絶えず人間を中心とする平和運動のみを展開してきました。その良い例が民主と共産の対決です。個人の権益と自由をどれくらいより認定し保障するか、その程度の差だけであって、民主主義も共産主義も、すべて父母を失った子女たちがカインとアベルに分かれて争う、兄弟間の紛争の範疇を抜け出すことができませんでした。不完全な人間ばかりを中心として展開する平和運動は、歴史的に常にその限界にぶつかり、挫折してしまったのです。世界平和実現の華やかな夢を抱いて出発した国際連合が、今日その生まれながらにしてもつ限界点にぶつかり、人類にこれ以上希望を与えることができずにいるのも、正にこのような理由のためです。<br/>
+<br/>
+      一言で言えば、天が直接運行し、歴史を摂理できる時を迎えられなかったということです。<br/>
+<br/>
+      4　神様の永遠の創造理想である平和理想世界を実現するために、カイン格である既存の国連を更新するとともに、新しい次元で平和理想世界王国の機能を発揮できる天宙的次元のアベル格の国連の姿が、正に「天宙平和連合」です。今、皆様と共に誕生した「天宙平和連合」は、神様の勝利であり、真の父母様の血と汗と涙の結実であり、皆様の希望であり願いです。カイン的な既存の国連の前に、天一国を代表するアベル的王国の使命を果たすようになるでしょう。<br/>
+<br/>
+      5　「天宙平和連合」は、既存の国連のアベル的位置に立ち、民族的で国粋的な国連代表部の角逐の場となるのではなく、汎世界的で超世界的な天宙的次元で、人類の平和と福祉のために崇高な革命を遂行していくでしょう。外的で形式的なスローガンに縛られる国連ではなく、より根本的で実質的な次元で、真に人類のためのメシヤ的使命を果たすようになるでしょう。<br/>
+<br/>
+      そのような目的のもとに、私は、既に二〇〇五年の十月二十日、「天宙平和連合」の創設メッセージを世界百二十カ国に伝播する世界巡回路程の中、ウクライナにおいて「世界平和王国警察」と「世界平和王国軍」の創設を満天下に宣布しました。この組織は、今から私たちの体の赤血球と白血球のような役割を果たし、世界の至る所で天の血統に接ぎ木され、新しい出発をした祝福家庭を保護し、一方では、神様が下さったエデンの園、すなわちこの美しく有り難い地球星を守り、保護し、育てあげる警備隊の役割を果たすようになるでしょう。<br/>
+<br/>
+      6　この地球星を神様が願われる理想天国にするため、五大洋六大州を連結し、巡回しながら疾走できる「世界平和超高速道路」建設の一環としてベーリング海峡にトンネルを通す、世界最大のプロジェクトを進めています。世界平和具現の崇高な志を抱いて出発した国際連合が、有名無実な機構に転落した現実を無視することができず、私は国連の刷新を推進しています。それと並行して、「新しいぶどう酒は新しい皮袋に入れるべきだ」という考えから、私は、人類を天宙平和神文明開闢時代へと導く新しい「平和国連」、すなわちアベル国連(「天宙平和連合」)を創設し、世界百二十カ国以上の国々から支持を受けています。<br/>
+<br/>
+      7　世界人口の七四パーセントを占めている蒙古斑同族は、世界で最も大きい単一同族体です。五十億に近いこれらの人々を糾合し、この地球星に真の愛の台風を起こさなければなりません。皆様と先生は、同じ韓半島で生まれ、同じ文化圏を享有しています。皆様は、私の教えである真の愛、真の生命、真の血統を通じた真の家庭完成の真理を伝播し、教育する平和大使であり、天の密使です。平和大便になった皆様は、今から天の真理をもって、死の道も恐れない預言者的な信念と誇りで奔走しなければなりません。天の密使になって奔走する皆様の永生は、天が必ず責任をもってくださるでしょう。<br/>
+<br/>
+      8　私たち全員が共有している蒙古斑は、単純にモンゴリアンを表示するために生じた生理的な斑点ではありません。後天開闢の時代が訪れる時、真の父母様を中心として全人類を糾合し、統一する求心点とするために、いち早く天が下さった東夷（とうい）族の証票です。さらには、蒙古斑同族の中心軸の位置に立っている韓民族は、六十五億の人類の先頭に立ち、真の父母様の伝統を伝授する代身者としての使命を果たさなければならない選民です。<br/>
+<br/>
+      9　皆様は、「天宙平和連合」の崇高な志に従い、天のために、そして人類のために、誇らしい「平和王国警察」と「平和王国軍」の隊列に進み出なければなりません。二百八十の姓を超える韓国のすべての姓氏たちは、自らの姓氏と宗親の壁を越えて一つになり、天がこの時代に選び立てた選民としての位置を立てなければなりません。これが正に、倍達(ぺだる)民族(韓民族の別称)である韓民族の宗親代表指導者の皆様に下された天命であることを肝に銘じてくださるように願います。<br/>
+<br/>
+      10　皆様は、後天開闢時代を導いていく世界百二十万の平和大使を代表する指導者の位置に立っていらっしゃいます。今後、人類の平和と幸福に責任をもち、「平和王国警察」と「平和王国軍」の使命を完遂しなければならない天の密使なので、四大聖人はもちろん、数十、数百代にわたる皆様の先祖たちまでが総動員され、皆様の一挙手一投足を見守っています。したがって、皆様の使命は、今、火を見るよりも明らかになりました。まずは、皆様の宗親たちと知人たちに、後天開闢の時代、すなわち天一国創建の時が来たことを周知させなければなりません。天がこの時代に、真の父母様を中心として全世界的次元で展開していらっしゃる摂理的内容を、教育する責任が皆様にあるということです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">人類平和のためのプロジエクト</a></h4>
+<br/>
+      11　人種、国境、宗教の壁を越え、このように数十、数百のNGO(非政府機構)と各国の大使、そして宗教指導者が一堂に会し、「お一人の神様のもとの一つの家族」の夢を実現するため、真の愛の革命の隊列に参加された皆様の姿を拝見でき、感慨無量です。<br/>
+<br/>
+      12　私は、生涯、神様の真の愛を実践するために生きる人生の道理を教えてきました。これは、個人だけでなく、家庭と社会、国家、このようにすべての次元で適用されなければならない基本原理です。<br/>
+<br/>
+      13　世界の指導者の皆様、私は、きょう貴い神様の摂理歴史的完成の場をお借りして、もう一度、神様と人類の摂理的最後の目的である平和天国創建のために、そして、神様の祖国と本郷の創設のために、実に摂理的で革命的な新プロジェクトを宣布しようと思います。<br/>
+<br/>
+      14　歴史的に、サタンによって東と西、南と北に分けられ、地理的には、北アメリカ大陸とロシア大陸を分けるベーリング海峡に橋梁を建設し、海底トンネルを通そうというのです。そうして、アフリカの喜望峰からチリのサンティアゴまで、イギリスのロンドンからアメリカのニューヨークまで、自動車で全世界を巡回しながら疾走できる「世界平和超高速道路」を連結する「ワールド・ピース・キング・ブリッジ・アンド・トンネル」を完成し、世界を解放、釈放する一日生活圏にしようというのです。これ以上の分断と分裂は容認できないというのが天の警告です。全世界を一日生活圏で結び、サタンがつくった人種、文化、宗教、国家の壁を崩し、神様が何よりも願ってこられた平和理想世界王国を、この地球星に創建しようというのです。<br/>
+<br/>
+      15　アメリカとロシアが一つになり、ヨーロッパ大陸、中国、インド、日本、ブラジルなど、世界のすべての国家、そしてすべての宗教が一つになり、共に力を合わせ、この歴史的なプロジェクトを成功させなければなりません。この事業の成功こそ、人類にとって、これ以上戦争と分断が必要ない平和理想世界王国を創建するにおいて、決定的な役割を果たすでしょう。<br/>
+<br/>
+      16　皆様、このような途方もないプロジェクトを完成できるのかと、疑問をもつ人もいるでしょう。しかし、神様のみ旨がある所には、必ず道があります。二十一世紀の現代科学技術は、今、ベーリング海峡にトンネルを通す程度のことは問題にならない水準にまで発展しています。工事費用も問題になりません。世界が戦争という名のもとに費やしているお金がいくらでしょうか。人類は今、歴史と後代の前に、実に恐るべき罪を犯していることを自覚すべき時です。<br/>
+<br/>
+      17　一つの例を挙げましょう。アメリカが過去四年余りの間、イラク戦争につぎ込んだ戦費がどのくらいになるか御存じですか。約四十兆円(四千億ドル)に迫っています。それだけの予算があれば、ベーリング海峡プロジェクトを完成しても余ります。なぜ私たちが、互いに殺し合う戦争に、このように途方もないお金をつぎ込む愚かな蛮行を続けなければならないのでしょうか。聖書のイザヤ書第二章四節に「彼らはそのつるぎを打ちかえて、すきとし、そのやりを打ちかえて、かまとし」とあるように、今はその教えのとおりにしなければならない時です。人類はもうこれ以上、戦争のための戦争に子女たちの命を犠牲にし、天文学的なお金を費やす悪業を繰り返してはなりません。世界のすべての国家の力を総動員し、大宇宙の主人である神様が願われる平和理想世界王国創建に、総邁進すべき時が来たのです。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">歴史の中の摂理的結実</a></h4>
+<br/>
+      18　私たちは、二〇〇九年一月一日と十五日、三十一日の三回にわたって歴史的な「万王の王神様の新しい解放圏と戴冠式および金婚式」を挙行しました。特に一月三十一日には、東洋圏を代表した韓国の天正宮博物館と西洋圏を代表したアメリカ・ニューヨークの二カ所で、同じ日に歴史上空前絶後の摂理的行事を天に奉献するという記録を打ち立てました。<br/>
+<br/>
+      19　二〇〇九年四月以降の時は、私たち夫婦が聖婚式を挙げて五十回目になる時です。独裁に対して抵抗、拒否して叫ぶ、若い学生たちの絶叫が韓半島に響き渡った一九六〇年陰暦三月十六日、私たち夫婦は、聖婚式を通して天から印を受け、人類の真の父母、真の師、真の王の険しい復帰摂理路程を出発したのです。それから五十年、神様を完全に解放、釈放してさしあげ、万王の王としてお迎えするまで、私たち夫婦が歩んできた蕩減復帰摂理の路程のすべてを、どうして筆舌によって説明できるでしょうか。はるかのちに歴史家たちが証明し、記録することになるでしょう。<br/>
+<br/>
+      20　皆様はよく御存じではないと思いますが、真の父母様の戴冠式と金婚式のもつ摂理的意味は実に途方もないものです。人間始祖の堕落によって神様の真の血統がなくなり、サタンの偽りの血統が人類歴史を支配してきたという事実は、皆様も原理を学んで御存じでいらっしゃると思います。血統が入れ替わった人類の歴史は、結果的に肉界はもちろん霊界までも、徹底して善悪のカインとアベルの相克的対立闘争の関係でもつれてしまったではないですか。このような悲惨な歴史に対して、誰一人としてその解決法を見いだすことができないまま、今まで放置された状態で歴史は流れてきたのです。<br/>
+<br/>
+      21　これからは時代が変わります。真の父母様の戴冠式と金婚式を契機として、カイン・アベルの完全一体圏の門が開かれつつあるのです。神様の本性的心情を相続して共有する完成、完結の段階、すなわち堕落の痕跡すらない原状の人間へと復帰される恩賜圏に進入する新しい時代なのです。「○」と「x」の原理的次元から考えてみても、それは、「○」の立場であられる神様の善主権が、「x」の立場であるサタンの悪主権を痕跡も残さず、丸ごと包容して消化する時代圏を意味するのです。もうこれ以上、実体の神様として役事なさる真の父母様と無形の神様を区別する必要のない地上天国と天上天国が、実体的に皆様の目の前に広がる新しい時代圏が開かれつつあるのです。<br/>
+<br/>
+      22　このような特別な意義をもっているこの時、私たちは、去る四月二十一日からの十三日間、私たち夫婦の戴冠式と金婚式を慶祝し、今後人類の平和の祭典としてオリンピックを凌駕するであろう「圓球ピースカップ・カイン・アベル天宙連合大会」を盛大に開催しました。特に今回の第一回大会は、真の父母様の招請によって、万事を後回しにして駆けつけてきたブラジルのソロカバ・サッカーチームが、大きな役割を果たしてくれました。二〇〇八年度ブラジル・サンパウロ地域のFAカップ優勝チームであるソロカバ・チームは、今回短い期間でしたが、韓国、日本、北朝鮮、そして中国を代表する四カ国のチームと競技を行い、南米サッカーの神髄を教え、見せてくれる立派な競技を繰り広げました。皆様、ソロカバ・チームのために激励の拍手を送ってくださいませんか。<br/>
+<br/>
+      23　皆様は、今や祝福結婚と結実の時代を迎えています。神様の創造理想である地上天国、すなわち平和王国が皆様の目の前で創建されつつあります。真の父母として、八十年以上の生涯を、血と汗と涙で綴られた一本道として、ただ天の道だけを歩んできた私の人生が、今では六十五億人類のための勝利的結実を収めているのです。霊界でも、四大聖人はもちろん、数千、数万の聖賢たちと皆様の善の先祖たちが地上界に降りてきています。皆様の一挙手一投足を見守り、天道に背く人を罰して、多くの人の戒めとされるでしょう。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">後天開闢時代の宣布</a></h4>
+<br/>
+      24　天一国七年が始まると同時に、神様と人類が、数千年の歴史上、ただの一度も経験できなかった摂理的次元の禧年を宣布しました。天がこの年を大きく祝福されたのです。数千、数万年の歴史を通して神様の胸を苦しめ、人類を束縛の沼から抜け出せないようにしていたサタン主管権、すなわち悪主権の先天時代がついに終わり、この年を頂点として、今から人類は、神様を中心にお迎えし、新しい善主権の時代である後天開闢の時代を大きく開いていけるようになったのです。このような途方もない天の摂理が、皆様の知らない間に進行しているのであり、今では、世界百八十五カ国で、私の教えを相続し、天がこの時代に下さった特命を遂行するために、昼夜を分かたず奔走している平和大使たちの数が、数百万になっています。<br/>
+<br/>
+      25　皆様、サタンの秘密を暴いたレバレンド・ムーンの人生は、言葉では表すことのできない迫害と苦難、すなわち恨の生涯とならざるを得ませんでした。しかし、今では万難に打ち勝ち、勝利して、天の権勢が現れる「後天開闢時代」を宣布しました。その基盤の上に、世界人口の七八パーセントを超える宗教圏と国家圏を糾合し、新しい世界的次元のアベル圏を立てつつあります。併せて、新しい世界的次元のカイン圏を確立するために、全世界の人口の七四パーセントを占めている蒙古斑同族圏を糾合しつつあります。<br/>
+<br/>
+      26　今や超世界的次元で、この二つのアベル圏とカイン圏が一つになり、アベル王国の立場で出帆した「天宙平和連合」と一体にならなければなりません。そして、この地に平和理想世界王国を創建するために、超宗教超国家的な次元で、すべての国境と垣根を撤廃しなければなりません。そうして、全人類が本然の創造理想世界に入ることができ、アダムとエバの堕落によって失ってしまった本然の所有権までも探し立てる宿命的責任があるという事実を、いま一度、皆様に想起していただきたいのです。<br/>
+<br/>
+      27　皆様、しかし今では、時が変わりました。過去八十年以上の歳月を捧げ、ただ天の道だけを歩んで勝利した先生の勝利的基台の上に、ついに後天開闢の時代が宣布されました。罪悪と束縛の沼で苦しんでいた人類を解放、釈放させ、自由と幸福の世界である創造本然の理想世界を創建する天運の時が、私たちと共にあるのです。<br/>
+<br/>
+      28　天が先生に人類の真の父母としての印を押され、新時代を開いてくださったことには、いくつかの明確な理由があります。第一に、ために生きる人生、すなわち真の愛の人生の価値を実践して勝利し、人類に伝授してあげたその勝利的基台のためです。人間は、誰もがために生きるように生まれました。しかし、堕落による無知のために、正反対の道である利己的個人主義に陥ってしまったのです。歴史上、初めてこのような天の秘密を明らかにし、人類を教育してきた先生の波瀾万丈の人生を、神様はよく御存じでいらっしゃいます。<br/>
+<br/>
+      29　第二に、私は、一生を捧げて万難を克服し、勝利的基台を立てたのであり、真の愛の実践教育を通して、神様と人間が父子の関係を再び回復し、定立できるすべての条件を充足させたのです。愛の怨讐である姦夫サタンの子女となり、偽りの愛、偽りの生命、偽りの血統の奴隷になって生きていた人類に、真の愛の根源であられる神様の真の血統に再び復活重生される道を開いてあげました。真の愛の人生を通して個人完成を実現し、真の家庭、真の氏族、真の民族、真の国家、真の世界を立てる道を完全に開いてあげたのです。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">後天開闢時代の私たちの使命</a></h4>
+<br/>
+      30　皆様、天地開闢の後天時代は、明らかに天と真の父母様が開門してくださいました。しかし、この福多き栄光の時代を花咲かせ、実を結ばせることは、今皆様の手にかかっています。後天時代は、真の父母様から受けた祝福結婚を通して、アダムが堕落によって失ってしまった真の血統を取り戻さなければならない時代だと言いました。個人、家庭、氏族、民族、国家、このように五段階を経て祝福摂理を完成すべき時代だというのです。<br/>
+<br/>
+      31　皆様は、今、摂理的四次アダム心情圏の時代である解放、釈放時代、すなわち後天開闢の時代に入っています。後天開闢時代は、蕩減復帰で染まっていた旧約、新約、成約時代までの先天時代を勝利した、影のない正午定着時代であり、アダムの堕落以前の本然の理想世界を創建していく時代です。それだけでなく、後天開闢時代は、平和の王、真の父母を中心として、霊界と肉界が一体圏を形成した全体、全般、全権、全能の真の愛の心情圏の時代、すなわち天宙平和統一国の時代を意味するのです。<br/>
+<br/>
+      32　人類は、真の父母様が許諾された聖酒式を通して、血統転換して新しく祝福を受け、真の家庭を探し立てることのできる道が大きく開かれました。交叉祝福結婚を通して絶対「性」の人生を完成することこそ、この地に平和理想世界を実現する究極的方法であり、手段であることを、はっきりと教えてあげることが皆様の召命的使命です。さらには、皆様は、今から概念的で意識的な次元を越え、真の父母様の実体的代身者であり相続者となった召命的責任を果たさなければなりません。<br/>
+<br/>
+      33　歴史上、空前絶後のこの後天開闢の貴い時代を、肉身を土台とする五感にばかり頼って暮らしている皆様には、直接感知できないことが本当に残念に思います。一日も早く霊的な五感を開き、天の摂理が今この時代にどのように成し遂げられていっているのかを、はっきりと認知して生きていける皆様になることを願います。皆様の立場から見れば代価なく受けたこの天運の時ですが、絶対的基準で設定した摂理的プログラムは、ただ皆様を待ってくれるばかりではないという点を肝に銘じてください。<br/>
+<br/>
+      34　倍達民族の精神を保全し、白衣民族の気概を守ってきたこの韓民族の平和大使の代表でいらっしゃる皆様は、今、一つに団結すべき時が来ました。これ以上無駄にする時間はありません。金氏ならどうで、朴氏ならどうだというのですか。慶尚道と全羅道が一つになれない理由がどこにあるのですか。民団と朝鮮総連も、みな同じ韓半島に根を置いています。韓国と北朝鮮はどうですか。みな同じ一つの血統を分かち合った兄弟姉妹の関係ではないですか。私たちは、白衣民族の子孫であり、「弘益人間」(広く人間世界に利益を与えること)の崇高な志を立てて準備された天孫であり、後天開闢時代に平和王国創建の先鋒に立てるために、天が選び立てた選民の血族であることを肝に銘じるべき時です。<br/>
+<br/>
+      　　<h4 class="bh" id="008"><a href="#008">平和理想世界王国時代の到来</a></h4>
+<br/>
+      35　今、有史以来、最も恵まれた貴い時代に生きています。歴史の中で、誕生しては逝った数千億に達する皆様の先祖たちが、霊界で何よりも待ち望んだ後天開闢の時代、すなわち「平和理想世界王国時代」の出帆を宣布いたします。四大聖人たちはもちろん、数千億の善の先祖たちが総再臨し、皆様を天の道へと導いています。悪の人たちが裕福に暮らすような、不条理で腐敗した世界が幅を利かせる、そのような時代はもう過ぎ去っていくのです。<br/>
+<br/>
+      36　私たち全員の究極的な目標は、神様を中心にお迎えして生きる「神の国と神の義」を探し立てることです。「神の国」とは、どのような国でしょうか。三代が調和し、お互いに信じ、尊敬し、頼り、愛で一つになって暮らす真の理想家庭の姿と同じ平和理想王国を意味するのです。すなわち、人類が今までユートピアとして願ってきた神様主権の国が、正に「神の国」だというのです。<br/>
+<br/>
+      37　「神の義」とは何に対して語られたみ言ですか。天道と天理を意味するのです。あらゆる権謀術数が支配しているこの邪悪な世界を、天的な真の愛の権勢によって審判し、正義と真理に基づく解放、釈放の、真の愛と平和の理想世界を創建せよという至上命令です。人類は、どのみち一つの家族になります。現代科学の目覚ましい発展も、一つの地球村家族を編成していくことを大きく後押ししています。白人と黒人が、東洋と西洋が、みな一つの家族として交わって調和を形成し、美しい平和理想王国をこの地球星に創建するようになります。<br/>
+<br/>
+      38　人類が一つの家族となり、お互いに心の壁を崩し、天宙的次元で国家間の国境までも除去しようという共生共栄共義社会の実現運動も、このように一つの家庭から始まるのです。したがって、私たちが真の家庭を探し立てることは、この地において天宙平和王国創建を早める摂理的召命であることを肝に銘じなければなりません。<br/>
+<br/>
+      39　世界の火薬庫と言われる中東でも、先生の平和思想の影響を受け、ユダヤ教、キリスト教、イスラームが、新しい次元の平和的対話を行っています。東西間の冷戦に終止符を打つ決定的役割を果たしたのも、先生の「統一思想」でした。私の祖国、韓半島統一のための実質的な背後での作業も、今、先生の主導のもとで急速に進行しています。しかし、私は決してここで満足することはできません。天命を受けて出発した私の生涯です。天から印を受け、人類の真の父母として顕現した私が天と交わした約束は、必ず成し遂げなければなりません。この地球星に毒きのこのように君臨してきたあらゆる国境と壁を完全に撤廃し、万人が共に手を取って暮らせる平和理想世界王国を創建しなければなりません。<br/>
+<br/>
+      40　天の印を受け、人類の真の父母として、また万人の平和の王として顕現した先生は、天との約束を必ずや果たすでしょう。したがって、真の父母であられる平和の王をお迎えし、この地上に永遠の「平和理想世界王国」を創建する主役たちが、正にきょうこの席にお集まりになった皆様だという点を、肝に銘じてくださるようお願いします。<br/>
+<br/>
+      アベル国連の旗を掲げて、全世界の不条理と悪を神様の真の愛で一掃しましょう。誇らしい「天宙平和連合」の「平和王国警察」と「平和王国軍」になり、世界中の祝福家庭を守り、祝福の地、この地球星を守る警備隊の役割を完遂いたしましょう。億兆蒼生の平和の王であられる神様を真の父母としてお迎えして暮らす、真の王子、王女になってください。真の孝子、忠臣、聖人、聖子の家庭の道理を果たし、太平聖代の平和王国を創建しましよう。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="008.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="010.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>

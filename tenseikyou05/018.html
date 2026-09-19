@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第五篇　真の家庭／第六節　真の家庭と家庭天国</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第五篇　真の家庭</h1>
+<nav class="page-nav">
+  <a href="017.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="../tenseikyou06/001.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第四章　真の子女の教育と家庭天国</a></li><li class="toc-b lv2"><a href="#002">第六節　真の家庭と家庭天国</a></li><li class="toc-b lv3"><a href="#003">堕落と家庭復帰のための路程</a></li><li class="toc-b lv3"><a href="#004">真の家庭と家庭天国</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第四章　真の子女の教育と家庭天国</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第六節　真の家庭と家庭天国</a></h3>
+<br/>
+      1　堕落がどこから始まりましたか。家庭で堕落したというのはどういうことでしょうか。家庭的に堕落が可能だということは、愛が原因であることは間違いありません。善悪を知る木の実を取って食べて堕落するでしょうか。善悪を知る木の実を取って食べて原罪が生じますか。善悪を知る木の実を取って食べたことが罪だと言いますが、善悪を知る木の実が何だからといって、千代、万代の子孫が罪人になるのでしょうか。これは血統的関係です。血統的に罪の根を植えておけば、遺伝の法則によって永遠に続くのです。そのようになるのは愛の問題だけです。誤った愛が堕落の原因なのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">堕落と家庭復帰のための路程</a></h4>
+<br/>
+      2　アダムとエバが堕落することにより、神様は彼らに、人類の真実の先祖として、人類の父母として、御自身の息子、娘として接することができなくなりました。アダムとエバは、神様にとって唯一の息子、娘であるにもかかわらず、神様が息子、娘として接することができない立場に立ってしまったのです。神様はまた、アダムとエバが成長したあとには、夫婦として祝福し、慰労の対象にしようとしました。しかし、彼らは、息子、娘としての慰労の対象になれなかったのはもちろん、新郎新婦としても慰労の対象になれませんでした。<br/>
+<br/>
+      神様も願われていた希望が大きかったため、彼らに無限の価値を賦与して見つめていたのですが、彼らが堕落することにより、神様は、子女として慰労の心情を感じることができず、新郎新婦として、すなわち夫婦として慰労の心情を感じることができなかったというのです。神様は、アダムとエバが未来の希望の先祖として、全人類の前に一人の君王として、神様のみ前に忠孝の道理を立てる立場になることを願っていたのです。<br/>
+<br/>
+      3　神様は、愛の王であられ、主人であられます。もし愛の王になられ、新郎になられたお方が神様ならば、相対者である皇后が必要だという話は、絶対的な原理です。神様のみ前に、絶対的なそのお方の前に愛の相対になることができるのは、真の人間だというのです。皆さんはお金を必要とし、知識を必要とし、権力を必要としますが、妻がいないとすれば、みな無駄なことです。夫には妻が必要であり、子女が必要であり、妻には夫が必要であり、子女が必要なのです。そのような愛の対象が暮らす所が家庭です。<br/>
+<br/>
+      神様の愛の対象である男性と女性が一つになって、その愛で息子、娘をもって幸せに暮らせるその家庭こそ、神様の真の愛を中心とした地上天国の最初の出発の基地になります。私たち人間も愛する相対が自分より何千万倍、無限大の価値ある存在として現れることを願うのと同じように、神様も自分の愛する相対が無限の価値の存在になることを願うのです。そのような人が真の人間です。そのような男性と女性が正にアダムとエバだったのです。<br/>
+<br/>
+      4　堕落によって神様は、アダム家庭の真の父母と息子、娘たちをすべて失ってしまいました。神様がもつことのできる真の息子、娘がいませんでした。神様の真の愛を中心として、血統的な関係をもてる神様の家庭がなかったというのです。堕落した父母によって、偽りの愛と、偽りの生命と、偽りの血統を結ぶことによって、私たちの心と体の闘いが起こり、アダムとエバが怨讐になりました。そして、アダムの息子、娘たちの間に殺戮戦が起こりました。神様がこれを復帰するための救援摂理が復帰摂理です。<br/>
+<br/>
+      ですから、失ってしまった真の心と体が一つになった息子、娘となり、絶対的に一つになった夫婦にならなければならず、息子、娘が絶対的に神様の真の愛を中心として完全に一つとなって、神様と永遠に共に暮らせる真の家庭を完成して、新婦格であるキリスト教と連結させ、神様と血縁関係を結ばなければなりません。そのようにして、神様の真の愛で統一された家庭、氏族、民族、国家、世界を再び編成することが神様の救援摂理の完成なのです。<br/>
+<br/>
+      5　神様が宗教を立てた目的とは何でしょうか。神様が最も愛する息子、娘、神様の骨と肉が一つになる、そのような愛する息子、娘を中心とした家庭、氏族、民族、国家を形成することが神様のみ旨です。<br/>
+<br/>
+      それでは、メシヤはいかなるお方でしょうか。永遠な神様の真の愛を根として地上に来られ、すべての宗教が願う理想を完成すべきお方が再臨のメシヤです。そのようにして、失った真の愛を中心として、真の生命と真の血統を全地上に連結させ、理想家庭として取り戻そうというのが、神様の救援摂理の目的だったのです。<br/>
+<br/>
+      6　万物は人のために存在しますが、歴史全体は何に帰結するのでしょうか。物質と子女と父母、言い換えれば家庭の基準に帰結します。これが宇宙の根本です。父母がいなくて子女が生まれることができません。父母から生まれた子女が、父母を中心として万物を主管しなければなりません。アダムとエバも万物を主管しなければなりません。これがすべて一度に適用されるのです。<br/>
+<br/>
+      7　人類の先祖であるアダム家庭が破壊されたので、これを復旧しなければなりません。イエス様は、堕落していないアダムの代身として来なければなりません。ですから、イエス様は、二番目のアダムとして来られたお方です。人類の最初の先祖であるアダムは堕落した先祖になったので、神様は本然のみ旨を立てるために、堕落していない真の先祖としてイエス様を送ったのです。そのような真の先祖を中心としてアダム家庭を復帰しなければならないのです。<br/>
+<br/>
+      8　あらゆる事件が家庭から起こりました。すなわちアダムとエバの家庭から起こったというのです。神様をアダムとエバの家庭から追い出しました。男性と女性が誤って一つになったことによって、追い出したというのです。<br/>
+<br/>
+      また、天使世界も男性と女性が誤って出会ったので、追放されました。万物世界を失い、それから人間の価値を失い、人間の愛を失った、このすべてのことは、男性と女性が誤って出会ったためなのです。<br/>
+<br/>
+      9　復帰の家庭とは、どのような家庭でしょうか。歴史的な願いの実体です。神様は今まで六千年の間、この一つの家庭を取り戻すために摂理されました。この歴史的な願いの実体がどこで完成されなければならないのでしょうか。正にこの現実社会で完成されなければなりません。未来に完成されてはいけません。現世に完成されなければなりません。それが完成される時が終わりの日です。これが歴史的な願いの基準であり、現世の万民の願いの基準です。人類の過去、現在、未来の願いの基準です。人間に生まれてきては逝った数多くの聖人、賢人も、この家庭を慕ったのです。<br/>
+<br/>
+      10　来られる主が新婦を迎えることによって、初めて復帰の家庭という言葉が現れます。再び探し出すべき復帰の家庭、それは人類が希望する家庭です。六千年の歴史の中で信じてきた数多くの宗教指導者が、数多くの怨讐の執権者たちや為政者たちに犠牲になりながらも懇切に希望したのは、主が来られて彼らの恨を解くということでした。<br/>
+<br/>
+      しかし、彼らの恨みを解くには、主お一人ではできません。一人でできたなら、既にしていたでしょう。ですから、天の家庭が出てこなければなりません。天の家庭が編成され、この地上に新しい足場を固めなければなりません。そうして、心情の爆弾をもってサタン世界を爆破させることができなければならないのです。<br/>
+<br/>
+      11　私たちの恨とは何でしょうか。アダムとエバがエデンの園で、真の父母として、真の家庭を完成して歴史を出発することができなかったことです。これは、人類の恨である前に神様の恨です。神様が人間を造られた目的は、そのような家庭を立てて、この地上に平和の王国を創建することでした。それにもかかわらず、その家庭が壊れていくことによって、神様は六千年という長い歳月の間、恨を抱かれ復帰の歴史を繰り返してこられました。その過程で、数多くの恨の峠道を数えきれないほど踏み越えて、今までの歴史を歩んでこられたのです。そのような歴史に責任を負い、解決するために来られるお方が再臨主です。それでは、再臨主は何をしなければならないのでしょうか。家庭を完成しなければなりません。家庭を完成するのも空中でではなく、地で完成しなければなりません。それでこそ、そこから氏族が現れ、民族が現れ、国家が現れ、世界が現れるのです。<br/>
+<br/>
+      12　来られるイエス様は、必ず神様が願う家庭を立てなければなりませんが、その家庭は真の家庭でなければなりません。今まで人類は、真の愛を追求してきました。どのみち偽りの愛の形態が、家庭や社会に存在してはいけないのです。ですから、万民が共有できる神様の愛を中心とした、人類全体が願う最大の愛を中心とした一つの真の家庭が出現しなければなりません。<br/>
+<br/>
+      そのような家庭が現れなければ氏族を編成できず、そのような民族が現れなければ国家や世界を形成することができません。ですから、神様が人類の前に提示した救援摂理において、人間が対することのできる最高の基準と、神様が願う最高の理想的基準点は家庭にあるのです。<br/>
+<br/>
+      13　歴史時代のすべての宗教は、今まで一人の男性を求めてきました。今までの宗教は、相対をもつことを許諾せず、新しいものを許諾しませんでした。そのようにしていては、滅びることになります。一人の男性を求めてきた歴史時代において、男性を探し出したと言える基準まで行けば、そののちには女性を探し出さなければなりません。女性を探し出すための運動を提示したのが統一教会です。ですから、統一教会は家庭を探し出す教会なのです。<br/>
+<br/>
+      14　今までの宗教の目的は、個人を救うことでした。しかし、統一教会は個人の救いよりも家庭の救いを目的とします。救うとしても家庭を救い、天国に行くとしても自分一人では行きません。統一教会の救援観は、夫は天国に送り、妻は地獄に送ろうというものではありません。二人とも天国に行こうというものです。また父母を地獄に送るのではなく、父母に侍り、また息子、娘も連れて天国に行こうというものです。<br/>
+<br/>
+      統一教会は、自分が愛する家庭、自分が愛する氏族まで、一切を連れて天国に行ける道理を教える所なので、ほかの宗教とは次元が違います。今までの宗教は独身生活を強調しましたが、統一教会は家庭を重要視します。家庭を中心として行くのです。その家庭は、世界のための家庭であり、神様のための家庭です。これが、統一教会の教会員たちが行くべき道であり、今後、皆さんが生活していくべき道なのです。<br/>
+<br/>
+      15　法を超越し、制度を超越し、環境のすべての背景を超越し、自分まで超越して永遠に共にいたいと思う関係を結ぼうとするのが父母の愛であり、夫婦の愛であり、子女の愛です。これを無視する社会制度はあり得ず、これを無視した国家は形成されません。ですから、統一教会は、個人救援を望むのではなく、家庭救援を望むのです。統一教会は、個人救援を目的とするのではなく、家庭救援を成し遂げようというのです。統一教会はこの点が違うのです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">真の家庭と家庭天国</a></h4>
+<br/>
+      16　天宙主義の天宙とは、天地です。内的な面と外的な面で、神様と一つになった人、すなわち心は天を象徴し、体は地を象徴しますが、これが神様を中心として一つになる主義を意味するのです。元来、エデンの園で心と体が一つになったアダムと、心と体が一つになったエバが、神様を中心として一つにならなければなりませんでした。こうして、神側の家庭を完成すれば、神様がアダム家庭に臨在するはずだったのです。<br/>
+<br/>
+      17　人類歴史は、文化を通して発展していきます。文化世界を形成する背後の目的は、一つの人格を中心とした真理体を探し出すことです。すなわち真理を中心とした人格体を求めていくことです。ですから、人類歴史は真理を求めていく歴史です。すなわち真のみ言と真の道理を求めていくのです。<br/>
+<br/>
+      それでは、主義や思想とは何でしょうか。最初からいかなる主義も思想もあり得ません。強いてその主義や思想に名前をつけるならば、それはアダム主義であり、アダム思想です。アダム主義は、共産主義や民主主義ではありません。父母主義なのです。<br/>
+<br/>
+      18　本来、アダムとエバが堕落せずに神様を中心として出発し、神様を父として侍り、その息子と娘になったとすれば、これらを中心とした主義は神主義です。神様を中心としたその主義は、万民が主体と和動することができ、全体を肯定することができ、全体を吸収することができ、自らを吸収させることができる主義として、そこにはいかなる分派もあり得ません。しかし、人間が堕落してそのような主義が出てこなかったので、再び求めていくのです。これが神主義です。また神様を中心とした息子と娘の主義です。<br/>
+<br/>
+      統一教会では天宙主義を語ります。天宙主義とは、息子と娘が神様を中心として夫婦になって家庭をつくることを意味します。天宙主義という時の「宙」の字は、家という意味です。家を意味する「宙」の字を使う理由は、家は家庭、すなわち夫婦を意味するものだからです。<br/>
+<br/>
+      19　世界を本当に愛するには、先に人を愛さなければなりません。人を本当に愛するには、自分の相対を本当に愛さなければなりません。男性は女性を愛し、女性は男性を愛さなければなりません。それが夫婦です。夫婦になった人たちは、自分の相対を愛する心をもって世界を愛さなければなりません。言い換えれば、女性は自分の相対を愛する気持ちで世界の男性を愛し、また自分が男性から愛される価値のある存在であることを知って、世界の女性を自分と同じ価値のある存筏として愛さなければなりません。男性も同じです。世界の女性たちを自分の妻のように貴い女性として愛し、また世界の男性を、妻が愛する自分と同じ立場に立てて愛さなければなりません。愛の道は、このようにたどっていかなければならないのです。漠然としていてはいけません。ですから、家庭は国家形成の基準になります。いくら大きな世界を形成するとしても、家庭が基準になります。このような立場で、今日、統一教会は天宙主義を叫ぶのです。天の家庭主義だというのです。天宙、天の家だというのです。<br/>
+<br/>
+      20　統一教会の教会貴たちは、今から天宙主義で生きなければなりません。天宙主義は神様の家主義です。神様の家主義なので、その家の暮らしは神主義の暮らしです。神様は世界の王であり、世界のための暮らしを主導していく主体なので、そのような暮らしをしなければなりません。<br/>
+<br/>
+      ですから、天宙主義の思想圏内にいる統一教会の祝福家庭は、自分のために生きてはいけません。自分の夫や自分の妻だけのために生きてはいけません。そのようにはなっていないのです。昔とは違います。ですから、私たちは家庭を本意として進んでいくのです。<br/>
+<br/>
+      私たちは救援を受けますが、一人では救援を受けることができません。一人では絶対に天国に行けないのです。一人で天国に行く道理がありません。そのような理念の土台をこの地上で新しく出発させたのが統一教会です。ですから、今後、何が主人なのでしょうか。家庭が主人です。伝統的家庭です。<br/>
+<br/>
+      21　統一教会の主義は天宙主義です。主義という話は、堕落世界において渡っていく船と同じです。過程的な時代において必要なものです。収拾するための方便の言葉です。これを中心として一つになって結びつくようになっています。天宙の「宙」は家という意味ですが、なぜ家を意味する字をつけたのでしょうか。家がなければ天国を建設することができないからです。第三イスラエル民族になるためには、家を通過しなければなりません。家庭を通過しなければならないのです。エデンに天国がつくられるためには、アダム家庭を通さなければなりません。その家庭の家が、家庭の法度、家庭の秩序、家庭の理念に従っていき、千秋万代の子孫が、その法度を相続して横的に世界化するようになる時に、天国が形成されるのです。<br/>
+<br/>
+      22　天宙主義とは、真の父母主義です。結局、この二つの主義は父母主義です。これは私たちの家主義であり、私たちの国主義であり、皆さん個人の主義です。人間が堕落していなければ、世界は誰の主義になるのでしょうか。アダムの主義になるはずでした。そのアダム主義が正に真の父母主義です。父と母の主義だというのです。ほかに、これ以上の思想はありません。ですから、統一教会は、この本然の理想的な家庭の枠の中で、真の父母という理念を中心として心情的な問題が天の主義とつながるようにしなければなりません。このような理念で制度化された家庭が残っている限り、統一教会は滅びることはありません。<br/>
+<br/>
+      23　天国は、どこからつくられるのでしょうか。私たちの家庭からつくられます。私たちは何主義でしょうか。家庭主義です。私たちが標榜する天宙主義は、「天」という字に家を意味する「宙」の字、すなわち「天の家主義」だというのです。このようになってこそ、天宙という意味が明確になります。ですから、聖書六十六巻はすべて、理想的な家庭を願ったみ言です。<br/>
+<br/>
+      また、万民が願うこととは何でしょうか。理想的な妻を迎えることです。女性が最も願うことは、理想的な夫に出会うことです。女性は、博士になって世界に向かって大きなことを言ったとしても、その願いは、理想的な男性に出会うことです。愛することのできる理想的な男性に出会って、福の多い息子、娘を生むことです。これが幸福の根本です。統一教会の理想は、ほかのところにあるのではありません。出発も家庭であり、結論も家庭なのです。<br/>
+<br/>
+      24　神様の理想とは、漠然と神様の心の中で成されるのではありません。神様の観念の中で成就されるのではなく、今人間が生きている現実的な生活の基点において成就されます。その生活というものは、私たち個人を中心とした、男性なら男性、女性なら女性の日常生活ではありません。<br/>
+<br/>
+      神様は、家庭的生活基盤を標準にした理想の実現を計画したのです。その理想の実現が完成するとき、そこにおいて真の理想的な子女が形成され、その子女の形成を中心として氏族が編成され、氏族と民族と国家と世界が形成されて、神様の理想世界が完成されます。神様のみ旨はこの理想世界を実現することです。その出発点はあくまでも「私」ではなく、家庭なのです。<br/>
+<br/>
+      25　男性が行く道、女性が行く道はどのような道でしょうか。それは一つの家庭を通して行く道です。男性と女性が一つになる最初の道が家庭という基盤です。そこから出発するようになります。その家庭の一致が実現しない隈り、すべてのことがぱらぱらになるのです。<br/>
+<br/>
+      男性の理想と女性の理想が違ってはいけません。男性の理想も女性の理想も、それが一つになって神様の理想と一致する、すなわちこの三代のすべての基準が一つの人間を中心として、家庭という一つの出発点を中心として一致するところにおいて、神様の理想の実現が始まるのであり、男性としての理想の実現が成就するのであり、女性としての理想が実現するのです。<br/>
+<br/>
+      26　どこから愛の理想を実現するのでしょうか。世界からしなければならないのでしょうか、国からしなければならないのでしょうか。愛という言葉は相対的なので、個人的ではありません。それは私たちの家からしなければなりません。世界をいくら統一したとしても、自分の家を統一できない人は不幸な人です。天国は家から始まるのです。<br/>
+<br/>
+      イエス様が「悔い改めよ、天国は近づいた。みな独身者だけ集まれば天国になる」と言ったのでしょうか。違います。イエス様は何をどのように言いましたか。「私は新郎であり、あなた方は新婦である」という立場で語られた話は、家庭を標準として語った話です。<br/>
+<br/>
+      再臨するのは新婦を訪ねてくるためだと言うのですが、それが私たちの家です。イエス様の家をつくるために来るというのです。神様の原則的理想家庭が形成されなかったので、イエス様によってこのようなモデル家庭を歴史上につくり、それを教本として万民に教育をしようというのです。そのようにして、その家庭を連結させて世界化するのが地上天国の理念です。<br/>
+<br/>
+      27　家庭を中心として幸福を歌い、自由と理想を歌い、世界を抱くことができるのです。それが理想世界であり、満たされた世界です。何一つ足りないものがありません。家庭を探し出して心情的にも物質的にも満足を享受して、感謝と栄光を天に返すのです。そのようにしてこそ、天国に入ることができます。<br/>
+<br/>
+      天国はどのような人が入るのでしょうか。家庭で父母に侍り、兄弟と共に幸福と自由と理想と満足を感じ、天下をつかんで号令できる喜びの立場で栄光を返す勝利者になってこそ、天国に入ることができるのです。<br/>
+<br/>
+      28　神様が理想とする、理想の決定的基盤がこの地上です。それでは、この地上のどのようなところでしょうか。男性と女性が一つになって、神様を中心として愛で成り立った家庭です。ですから、天国といえば、皆さんはどのような観念をもたなければならないのでしょうか。天国は神様と「私」と家庭が一つになったものだという観念を、いつでももたなければなりません。もし天国に行ったとしても、神様がいないとすれば天国になりません。神様が必ずいなければなりません。神様だけがいて天国ができるでしょうか。皆さんの理想相対がいなければ、その神様の愛も「私」には必要ありません。ですから、霊界に行ってみれば、この世で理想的な夫婦生活をした人が、神様のみ前に近いというのです。<br/>
+<br/>
+      29　父母を愛することは天地を愛することであり、子女を愛することは人類を愛することであり、万物を愛することは万宇宙を愛することです。私たちは、旧常生活で父母と子女と万物を愛さなければなりません。これは、この宇宙を縮小したものです。私たちの家庭にこの伝統を立てなければなりません。家庭を中心として伝統を立てることが絶対に必要です。家庭復帰あ債統、理想世界を求める伝統を家庭に立てなければなりません。堕落していなければ、自分の夫を愛し、妻を愛し、子女まで愛して完全に一つになるのです。そうすれば、そのまま天国に行くのです。<br/>
+<br/>
+      30　今日の世界を見てみるときに、数多くの人々が「世界は一つにならなければならない」と言います。平和の世界が来ることを望んでいます。幸福の世界が来ることを望み、さらに宗教的な言葉を挙げていうならば、「地上天国をつくらなければならない」、あるいは「理想世界を建設しなければならない」と言っています。このように需いますが、どんなに大きな世界がそのようになることを望み、またどんなに努力するとしても、それができる基盤がどこかというと、家庭なのです。ですから、家庭から理想を謳歌し、家庭から平和を建設し、家庭から愛と幸福の歌を歌うことのできる基盤を世界的に備えない限り、いくら理想世界、あるいは天国、地上天国を夢見ても、その世界は到来しないというのです。<br/>
+<br/>
+      31　家庭天国は、どのように生まれるのでしょうか。父母が完全に一つになって愛し合えば、息子たちは母のような花嫁を得たいと言い、娘たちは父のような花婿を得たいと言うのです。ですから、その父母がプラスとなり、息子、娘がマイナスとなり、完全に一つになって家庭が一つになれば、そこが家庭天国になります。家庭天国を完成する所で、初めて地上に天国が、神様が理想とするものが定着するようになります。これが四位基台にならなければなりません。創造理想の完成は、四位基台の完成だと原理では言うのです。<br/>
+<br/>
+      32　統一教会は観が明確です。ですから、今日、統一教会の理念をもってどこに行っても引っ掛かりません。このような自信をもってあすの天国を建設しなければなりません。生活天国は「私」の手から、心情天国は「私」の家庭からつくっていこうというのです。すなわち、「私」の家庭を中心としては心情天国をつくり、「私」の手を通しては環境天国をつくろうというのです。<br/>
+<br/>
+      神様がこの地上に臨在しようと、永遠の福地の楽園をつくろうとされたのを、私たちの一代で神様と拍子を合わせ、神様に永遠の福地を成し遂げてさしあげようというのです。物質を備えて神様を称賛し、息子、娘をもって神様を称賛し、自分の兄弟をもって神様を称賛して生きなければなりません。そうでなければ、創造原則である四位基台の理念を備えて生きる息子、娘だということができません。<br/>
+<br/>
+      33　真の愛とは何でしょうか。父母の愛、夫婦の愛、子女の愛です。愛は、互いに犠牲となる伝統が備わっていなければ、長く続くことなく壊れてしまうものです。父母は子女のために犠牲となるので、父母が子女を愛する関係は壊れません。そして、真の父母の愛を受けて育った息子、娘であるならば、絶対に自分の父母に親不孝をすることはできません。また、夫は妻に、妻は夫に対して「あなたは私のために生きた」という立場で、お互いに一層ために生き、一層犠牲となる立場が広がれば、その家庭には恵みが訪れるのです。そのような家庭が、神様の訪ねてこられる福地です。<br/>
+<br/>
+      34　一つ一つの家庭を中心として、再度収拾しなければなりません。統一教会の組織は家庭組織です。家庭を主とするというのです。個人を主としてきたものから、家庭を主とするというのです。今まで皆さんは家庭を軽んじてきました。軽んじていた家庭は、分かってみると皆さんに必要な家庭だったというのです。皆さんが今まで無価値に感じた家庭が、今や絶対的な権威をもって現れる時が来たというのです。ですから、祝福が貴いのです。<br/>
+<br/>
+      35　祝福家庭を中心として、氏族が形成されていくようになります。ですから、皆さんは、氏族的なメシヤとしての使命を果たさなければなりません。これからの教会は、族長を中心として成り立ちます。祝福を受けた人々は、すべて族長たちです。<br/>
+<br/>
+      これからは、統一教会で礼拝を捧げるのも、説教形式ではなく、報告形式でしなければなりません。報告の内容は、その家庭が誇れることでなければなりません。ですから、家庭全体が来て、礼拝を捧げなければならないのです。そのようにしながら、模範的な家庭の報告は手本にし、難しい家庭の報告はうまくいくように導いてあげなければなりません。そして、家庭天国を建設しようというのです。家庭天国を先につくることができなければ、地上天国はできません。<br/>
+<br/>
+      36　天国には、互いに愛し合う夫婦だけが入れます。ですから、この地でそのような思想をもって互いに愛し合う夫婦は、いつも天国生活をしています。イエス様は、「神の国は、実にあなたがたのただ中にある」(ルカ一七・二一)と書いましたが、統一教会では「あなたの家庭に天国がある」と言うのです。家庭で天国をつくることができないときは、統一教会の旨が成就されます。このような観点から、皆さんは原理を中み旨が成されません。しかし、それができるときは、そのみ心として正道を選別して歩んでいかなければならないのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="017.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="../tenseikyou06/001.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>

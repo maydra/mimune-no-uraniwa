@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第六篇　真の万物／第三節　今は海洋時代</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第六篇　真の万物</h1>
+<nav class="page-nav">
+  <a href="014.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="016.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第四章　自然と海についてのビジョン</a></li><li class="toc-b lv2"><a href="#002">第三節　今は海洋時代</a></li><li class="toc-b lv3"><a href="#003">海から学ぶ</a></li><li class="toc-b lv3"><a href="#004">海は無限な資源の宝庫</a></li><li class="toc-b lv3"><a href="#005">海と人類の食糧問題解決</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第四章　自然と海についてのビジョン</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第三節　今は海洋時代</a></h3>
+<br/>
+      1　生命の先祖のようなものが水です。神様の代わりに水を愛さなければならないと考えるべきです。海を愛さなければなりません。景色の良い所は水がなければならず、樹林がなければなりません。それが水の調和です。水は形態をもっていません。絶対的な個性をもっていますが、形態をもっていません。何に入れても、そこに合わせるのです。水に対する哲学さえ会得すれば、聖書六十六巻を完成することができ、みな神様の息子、娘になることができます。そのような言葉が成り立つというのです。<br/>
+<br/>
+      2　洗礼儀式は、水に入って再び生まれなさいということです。水はすべての生命の源泉なので、そこできれいになって再び生まれなさいという意味もあります。水を毎日のように目にし、このように動くのを見れば、自然に「私」の心も動くので、「私」の体の血も浄化されるというのです。<br/>
+<br/>
+      水が流れていくとき、「水と共に、私の心も流れていく」と言って、汚れたものがすべてきれいに洗われるのを感じてみましたか。ですから、水を愛そうというのです。水を愛することは、生命をもったすべての人間や、すべての万物がそこにぶら下がっているので、万物を愛することになるのです。これは根本的な考えです。水を愛するとき、茶碗の水を愛しますか、湖の水を愛しますか、海の水を愛しますか。毎日のように海に出掛けなければなりませんか、出掛けてはいけませんか。風が吹いて波が起きるのですが、船に乗ればざぶざぶと揺れるので、血が腐ることがないのです。すべて浄化されるというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">海から学ぶ</a></h4>
+<br/>
+      3　川がいくら多く、大きいとしても、川はいずれ大海に入っていくのです。大海に入れば、すべて混ざるようになっています。五大洋を中心として見てみれば、太平洋には黒潮というものがあり、四千マイルを回っています。もちろん、月の引力によることもありますが、このように回る黒潮があるので、五大洋全体を動かせるのです。それが海の柱の役割をしているのです。汚いものでも何であっても、入ってくれば、それをすべて混ぜ合わせ、一つの姿になろうとするのが海です。いくら大きな川が何万年も続けて淡水を投入したとしても、それをすべて吸収して余りある余裕があるので、海に権威があるのです。海は、どれほど入っていっても変わらない姿勢を備えているので、偉大だというのです。<br/>
+<br/>
+      4　自然は、だますということがありません。高ければ高く、低ければ低いのです。高い所にいれば、異議なく供給してあげるのです。先生はそれを学んで、高い所にいれば異議なく供給してあげるのです。異国の地に行っても、私よりも貧しければ、先生の倉庫を開き、米が底をつくことになっても、すべて分け与えるのです。水平になるようにするのです。それはすべて、水から学んだことです。ですから、水を好むのです。そこに棲む魚は、裁きを受けていません。<br/>
+<br/>
+      先生は、神様のみ前に祭物を擦げます。最初に捕まえた魚は、大きくても小さくても、すべて放してあげるのです。先生だけは、最初に捕まえた物が大きくても小さくても、放してあげるのです。それは、どれほどすてきなことか分かりません。<br/>
+<br/>
+      5　海が穏やかなときは、神秘的です。魅惑的な神秘の女王のような美女となり、すべての人々を引き込む力があります。海は銀色にも見えますが、翡翠(ひすい)色にも見えます。千態万象です。そこにそよそよと風が吹けば、その波の美しさは、舞姫がいくら上手に踊っても、それに比べることはできないのです。また、そこにかもめが飛んでいると考えてみてください。留まっているものがいるかと思えば飛んでいるものがおり、そのときはかもめの鳴き声が、悲しくて鳴こうとも、うれしくて鳴こうとも、すべて美しく思われるのです。そして、大きな波が高くそびえ立って落ちるとき、どれほどすてきか分かりません。全色のような水の滴が飛び散り、その水滴は日の光を浴びて、きらきら輝くのです。そのようなものを見れば、変化無双だというのです。<br/>
+<br/>
+      6　海には美女のような、舞姫のような性質があるかと思えば、一度怒れば荒野で飛びかかってくるライオンよりも、もっと恐ろしいのです。何十メートルもの波が押し寄せ、引いていくときは、かもめが鳴いても相手になりません。「お前がいくら上手に歌おうと、お前がいくら素晴らしい喜劇俳優だとしても、雄壮な私の気勢の前にはかなわない！」と言うのです。威風堂々としています。<br/>
+<br/>
+      7　自然の力は偉大です。ですから、海を愛する人は、驕慢になることができません。海にはそのような偉大さがあります。海には無尽蔵の魚がいます。黄金から金色、青色と、ない色がないほど多くの魚が棲んでいます。<br/>
+<br/>
+      陸地と海の中を比較してみれば、どちらがより美しいでしょうか。陸地にも花と蝶、そして美しい鳥がいますが、それらのものは単調です。花は動きません。海にいる豪華絢爛な色をもった美しいすべての生き物は、踊りながら活動するのです。陸地が美しいでしょうか、海が美しいでしょうか。海が美しいのです。神様はなぜ水を造ったのでしょうか。神様が鑑賞するための特別装置が水だと言うこともできます。そっと隠しておいて公開しなかったというのです。神様は、陸地より、海により多くの関心をもっているはずです。<br/>
+<br/>
+      8　愛の世界は、どこに行こうと、すべて通じます。太平洋の水が、「私は太平洋の水だ。アジアの水はすべて汚染されているので嫌だ」と考えるでしょうか。水がどこから流れてこようと、すべて自分のものにするのです。そこに悪いものがあれば、それを混ぜて早く解消させ、同じ道を行こうと努力するのです。ですから、太平洋の水は、いくら公害がひどくても、人類がいなくなることがあっても、変わらずに青々としていることは間違いありません。いくら試練を受けて紆余曲折の過程を経たとしても、海の水の青い色が占領されないのと同じように、愛の権威と愛の内容と愛の力は、いつでも青々としているのです。<br/>
+<br/>
+      9　台風が吹くときは、どれほど波が憎らしく、風が恐ろしいか分かりますか。しかし、風も、自分の使命を果たしていると考えるのです。もし風が吹かず、海に波がなければ、魚が棲むことができません。風が吹くのは、海に酸素を供給するためです。波は酸素を供給するのです。ですから、波が激しく怒り狂っていても、どれほど風が吹いてこようとも、それを味わいながら、「お前の味を失っていないな！」と思わなければなりません。海は塩辛い味がするのです。そのように思えば、波を憎いとは思わず、押し寄せる大波も憎いとは思わないというのです。海にはどれほど多くの哲学があるか分かりません。陸地だけで生活した人は、あの世に行って理想的な活動をするにおいて、相当多くの支障があるのです。<br/>
+<br/>
+      10　海に通ってみれば、本当に学ぶことがたくさんあります。一日に何度も変化します。世の中では、「人心は朝夕に変わる」と言いますが、海は、朝夕ではなく時間ごとです。時間ごとに変わるのです。じっと見てみれば、いくら天候が良い時でも、ある場所では風がないのですが、他の場所に行くと風が吹くのです。強い風ではありませんが、すべて異なるのです。人の顔が異なるのと同じです。水があって山があれば、山の高低によって気候が変わります。海は千態万象の妙味をもっているのです。<br/>
+<br/>
+      11　先生は、時間さえあれば海に出掛けました。海に行って、もまれるのです。しかし、それが精神を整えて大きな闘いをするための試練であり、準備だと考えるのです。睡眠も取れず本当に疲れますが、精神をまっすぐに正し、自らそのような標準を定め、この平衡が取れた状態から他の所に傾かないような生活をしているのです。<br/>
+<br/>
+      12　海の世界を知らない人は、それだけ幸福の領域が制限されるという結論が出ます。創造主がいれば、陸地を知り、海をよく知って、海の神秘性を思い、陸地の美しさを思いながら賛美するのを喜ぶのであって、一面だけをもって喜んだりしないだろうというのは極めて理論的な話です。<br/>
+<br/>
+      13　海を見るとしても、海をただ海としてだけ見るのではありません。父が「私」に下さった贈り物として見るのです。再創造をする過程において、すべての物を再び感じ取るというのです。ここで偉大な革命が起こります。偉大な勝利の旗がここから芽生えてくるのです。ですから、すべての万物は、誰のものになることを願うのですか。神様の愛を受ける人のものになりたいと思うのです。それが真理です。神様の愛を受ける人のものになりたいのです。微生物からすべての植物まで、神様の愛を受ける人の所有になりたいと思うのです。<br/>
+<br/>
+      14　先生は、刺激的なことが好きです。変動の多い所から切り開いていくのです。そのようにするためには、陸地よりも海がもっと良いのです。海は風も吹き、穏やかでもあり、波風が何度も起こって変化します。ですから、陸地の旅行よりも、海の旅行が良いというのです。<br/>
+<br/>
+      陸地は、歩き回っても朝の考えはそのままで、変動がありません。陸地はいくら歩き回っても、手をつけずにおとなしく行くことができますが、海はそうではありません。「私」がこのように行こうと思っても、あっちに行ったりこっちに行ったりするのです。そのように変わります。変化するときに、本当に刺激的な変化があるのです。穏やかなときは、陸地が顔負けするほどです。本当に不思議なほど穏やかなのです。<br/>
+<br/>
+      あるときは、その海面がガラスの板に思えるときがあります。あまりにも美しくて、触ったり食べたりしたいと思うときがあります。ですから、「海は限りなく変化するが、それでも私は行く」という一念で前進していくのです。そのような刺激がなければ、大きなことを成し遂げることはできません。<br/>
+<br/>
+      15　先生は、今まで開拓者でした。開拓して先生が先頭に立ちました。私たちの会社で船を造り、船長がいなければ、先生がすべて連れて海に出ていくのです。「風よ、吹け。波よ、打て。男の行く道を塞ぐのか。天と人類のために、後代に生命を引き継ぐ食糧問題を、ここで解決する」という思いをもっています。それは素晴らしい男でしょう?先生は、そのような男がよいのです。<br/>
+<br/>
+      そこから、今後、生きたサバイバル映画のようなものができ、歴史の渦がそこから解かれるでしょう。悲喜劇が交差し、素晴らしい男たちが憧れながら行くべき道だというのです。それで、世界を越えていける基地がそこにあるというのです。これによって、海に出ていく数多くの若者たちに希望を与えることができます。あすの海の世界に対する夢を描ける一つの源泉が、ここから爆発するのです。<br/>
+<br/>
+      16　先生は熱心に海に出掛けますが、その心を忘れてしまえば問題が生じます。精誠というものは、千年、万年続けなければなりません。海に出ていって精誠を尽くすとき、楽に座ってやれば蕩減条件が立ちません。きのうよりもきょうが良くなり、きょうよりもあすが良くならなければなりません。今後、先生が飢え死にする人々を救ってあげる時まで、その精誠を尽くすなら、先生が死んだとしても、そのみ旨はこの地上に成し遂げられると思うのです。<br/>
+<br/>
+      17　神様が絶対愛のために創造した万物を見れば、神様が楽しみながら造ったというのです。未来の福地天国を中心とした家庭において、十分に生活必須要件を備えられるよう、すべて造っておいたので、どれほど楽しさを感じるだろうかというのです。流れる水も、天地が機能するためのものです。海から水蒸気になり、雨を降らせて循環しながら万物を蘇生させるのです。すべてが協同圏内で、相反することなく全体が協力し、人間の理想を完成できるようになっているというのです。神様の生活舞台であるこの地上で、神様の息子、娘を育て、天国に移譲しようというのです。<br/>
+<br/>
+      18　西洋人は、先生が韓国人でも、韓国だけのために仕事をしているとは思っていません。世界のために仕事をしているという観念が強いのです。それで、陸地においても海においても、迫害を受けながらも雄々しく、勇敢に世界的な協会を構成しているのです。<br/>
+<br/>
+      そのような意味で、一般の思想を中心として行っているのではなく、宗教という背景を中心としてこのような体制を整え、「オーシャンチャーチ(海洋教会)というタイトルを掲げたということは驚くべき宣言です。これは、先生の驚くべき課題設定です。<br/>
+<br/>
+      今後、海洋教会をして何をするのでしょうか。海に出ていって訓練するという、その程度のものではありません。海を占領し、海を愛するのです。海を占領するといっても、何をどうするというのではありません。創造主の本意に合うように海を管理し、海を愛する意味から、海を中心に世界を結束できる舞台にしようというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">海は無限な資源の宝庫</a></h4>
+<br/>
+      19　海を好きにならなければなりません。開拓しなければなりません。陸地の三倍にもなる海を無視することはできません。これから、誰が海底にある資源を開発するのでしょうか。地上には、金銀財宝や石油があるといいますが、海は陸地より三倍も広いので、その三倍が埋まっているのです。それを開発できずにいたのですが、今から水産資源の開発に着手しなければなりません。<br/>
+<br/>
+      20　水には、決まった顔、形がありません。入れたとおりに、どこでも、間違いなくそこを満たしてくれます。千万の表情をもつことができます。小さな器に入れれば小さくなり、大きなタンクに入れれば大きなタンクになり、家全体よりももっと大きな所も隙間なく満たします。<br/>
+<br/>
+      あのように大きな海も、一つの顔として見るのです。太平洋、大西洋、インド洋など五大洋がありますが、一つの顔と同じです。いくつもの形をもっています。<br/>
+<br/>
+      地球星の金銀財宝は、海底に多くあります。海の中に多いのです。先生は、そこに関心があります。他の人が手をつけたものは願いません。<br/>
+<br/>
+      海底のすべての金銀財宝を、いくらでも掘り出すことができます。最近は科学が発達したので、島から海底まで何十里と穴を掘り、何でもすることができます。ですから、海を愛するのが重要なのです。<br/>
+<br/>
+      21　深刻な飢餓問題を解決できる代案は、どこにありますか。地球星の七五パーセントを占めている海洋圏こそ、新しい資源の宝庫です。海は、各種の公害と資源の枯渇によって死んでいく地球星を生き返らせ、人類の明るい未来を約束してくれる、新たな原材料の宝庫です。<br/>
+<br/>
+      22　海の資源がどれほど膨大かというと、この陸地は問題になりません。今後の燃料問題を考えるとき、油類燃料や石炭燃料、電気を中心とした時代は過ぎ去ります。電気も限界があるのです。今やエネルギーの補給源は海にしかありません。水素を開発する道しかないのです。<br/>
+<br/>
+      23　今後は、科学的に食糧を無尽蔵に作ることができます。今はなぜそれを作れないかというと、原価が多くかかるからです。燃料費が多くかかります。今後、水素エネルギーを解決すれば、エネルギーは無尽蔵です。エネルギーがあまりにも多くて処理しきれないほどになります。ですから、食べ物もいくらでも、食べきれないほど作れるのです。そのようになれば、独りで食べるのがつまらないので、通りがかりの人に、「ちょっと食べていきなさい。そして、ちょっと話をしましょう」と言う時が来るかもしれません。ですから、今から準備しようというのです。私たちは、子孫が豊かに暮らせるようにしてあげなければなりません。<br/>
+<br/>
+      24　海に行ってみると、海は単調です。水平線しかありません。しかし、その中はどれほど複雑か分かりません。また資源にしても、陸地より多くの資源をもっています。そこには無尽蔵の宝物があるのです。人間の好きなあらゆる宝物がそこに沈んでいます。このような海を占領しようとすれば、何が必要でしょうか。アメリカの開拓時代に、西部の鉱山を見つけるために危険を顧みることなく冒険したことを考えてみてください。そのとき、冒険的で勇猛だった人にそれを所有する特権があったのと同じように、冒険の峠を何度も越えていかなければ宝物を手に入れることはできません。今までは、船が行ったり来たりするための航路を手に入れる争いをしましたが、海の中の物を所有するための闘争はしなかったのです。<br/>
+<br/>
+      25　今後、誰が海の主人になるのでしょうか。地球に大変動が起これば、海の中に陸地が発生し、陸地が海になるかもしれません。もし、太平洋の真ん中にアメリカよりも大きな陸地が生じれば、その土地は誰の土地になるのでしょうか。そのようにならないとは言い切れません。いつそのようになるか、誰も分かりません。海の底だからといって、火山脈がないわけではありません。それで、「二百海里以内はどこも私のものだ」と主張する人がいればいいのですが、そのような人がいません。間違いなく、時が来るでしょう。海を中心として闘う時代が来るのです。その時、海を所有できる人は勇猛で開拓精神がなければなりません。そうでなければ海の主人になれないのです。<br/>
+<br/>
+      26　これから世界を指導できる人は、海を守れる人です。海底の宝、財宝を、人類が自分たちのすべての権力と文化的背景、伝統と国力を投入して開発する時代が来ます。それを開発するためには、海洋地域を誰が先に占領するかという問題が鍵になります。このような問題を見るとき、真の父母の名をもった歴史的な責任者として、今後統一教会がとどまる基地として、どのような所を残してあげるのでしょうか。それは海辺です。今後、海水を利用した水産業、養殖業は無限なのです。<br/>
+<br/>
+      27　北極には八百メートルの雪が積もっています。それはきれいな水です。千年前に積もった、澄んだ水だというのです。公害がありません。その水は万年後にもきれいな水です。南極も同じです。氷の下に、人工的に氷の文化都市、ニューヨークのような都市を造ったとすれば、多くの人々が観光に行くでしょうか、行かないでしょうか。それを造るのは問題ありません。考えるだけでも気分が良いのです。トンネルを一度造っておけば万年トンネルとなり、崩れることはありません。一年に一度ずつ冷水をまいておけば、かちかちに凍るので、どんどん丈夫になっていくのです。だんだんと強くなるのです。<br/>
+<br/>
+      28　氷の下で農業ができる時代が来ました。そこに、花も咲くのです。アラスカのような所に行くと、高い山中には万年雪があり、その中間には草が生えていて、その下には花が咲き、その下では釣りをしているというのです。どれほど美しい仙境か分かりません。美しく、水は澄み、空気はきれいで、すべての生態的条件をくまなく備えた環境です。一度行って味を占めてしまうと、そこで暮らしたいと思うようになり、出ていきたいと思わなくなるのです。今、先生がこのように努力するのも、そのようなものがある所だからです。<br/>
+<br/>
+      29　若い人たちは、海に関心をもたなければなりません。先生が二十四時間、海に出掛けるのは、海を愛したという伝統を立てるためです。船乗りは海に出ると、六カ月から一年は帰ってこないので、女性たちは船乗りを嫌います。ですから、船乗りが次第に少なくなっているのが世界的な傾向です。私たちがこれを引き継がなければなりません。これから世界の海上権を正しく管理しなければなりません。今後、陸地よりも海に力を注ぐ時が来るのです。それで、先生は海に関心をもっているのです。先生が海に関心をもつのは、そのような目的のためだということを理解して、皆さんも海に関心をもちなさいというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">海と人類の食糧問題解決</a></h4>
+<br/>
+      30　海は、原料市場の中で、三分の二を占める世界の宝庫です。海の中にはダイヤモンドの鉱山があるでしょうか、ないでしょうか。陸地の二倍以上あるでしょう。神様のみ旨の中で先生が神様の復帰摂理をしているので、二倍以上はあると考えるのです。それから、海には海草があり、魚がいます。これらがすべて食糧になります。海草が生えている面積は、この陸地の面積の二倍ほどになります。そこにまた、無数の魚がいます。このようなことを考える人が、そこに関心をもたないでしょうか。陸地より、もっと多くの関心をもつのです。<br/>
+<br/>
+      31　陸地の資源には限界がありますが、海の資源は無限です。一匹の魚が何十万個も産卵します。ですから、海の資源は無限なのです。これを人工的にふ化させれば、一〇〇パーセント近くふ化させることができます。餌や飼料などをしっかり調節さえすれば、無限の資源を補給することができます。そのような所は海しかないので、海洋問題について考えているのです。<br/>
+<br/>
+      これからは、一家族が水中に入って暮らすこともできる潜水艇を考えなければなりません。水中でも養殖ができるようにするのです。このように考えるとき、環境条件を無限に発展させることができ、拡張させることができるのです。<br/>
+<br/>
+      32　今後、人類の食糧問題を解決する方策は、養殖以外にありません。これから海辺に数十階、数百階のビルを造り、ボタン一つで養殖ができるようになるのです。百坪もあれば、一つの世帯が、子女たちを大学で勉強させながら暮らせるのです。今の時代は科学が非常に発達しているので、何十里、何百里、何千里離れた所からでも海水を引いてくることができます。山の中に、養殖ビルをいくらでも建てて養殖ができるのです。そのようにしなければ、人類の食糧問題を解決できません。ですから、先生は深刻なのです。<br/>
+<br/>
+      33　淡水魚と海水魚を入れ換えるやり方で魚を育てるのです。さけは、海に棲んでいますが、淡水に上がってきて子を産みます。養殖場を造って淡水魚を海水で育て、海水魚を淡水で育てることが必要です。なぜでしょうか。害虫を一匹ずつ取り除くことはできないからです。害虫を駆除するにはどうするのでしょうか。海水に棲んでいたものを淡水に移し、一カ月間そのままにしておけば、すべて死んでしまうのです。それは簡単なことです。二週間だけ取り替えてしまえば、いくらでもできるのです。その調整は可能です。ですから、陸地で行う牧場で得る収獲とは比較になりません。<br/>
+<br/>
+      34　釣り場に魚がいなければ、養殖場を造って魚を養殖しなければなりません。魚を養殖してどこへでも運送し、釣りができる時代になりました。気候が合い、温度が合う場所に養殖場を造って養殖をすれば、どこでも、どんな魚でも釣り場に入れることができます。船で運搬して放し、釣ることもできます。獣も、虎のハンティングまでできる時代が来ます。おおかみを育てて猟場に放ち、ハンティングをすることもできます。熊のハンティングもでき、どんな動物でも飼育してハンティングができるのです。<br/>
+<br/>
+      35　先生はまぐろに目をつけ、これから人類の食糧問題に対処しようと思っています。まぐろは、大量に育てて海に送り返しても、速いので、二ヵ月間だけ育てて放せば、絶対に捕まって食べられることはありません。普通、まぐろの平均速度は三十五マイルで、速く泳ぐときは六十マイルにもなります。海で最も速い魚の一つです。これがいかに格好いいかというと、泳いでいく時には背びれを小さくたたみますが、腹びれを大きく広げれば他の魚がそれに引っ掛かります。ある種の魚雷や爆弾のようになっているのです。まぐろは五大洋を舞台にして生きる魚です。これを無尽蔵に産卵させて海に送り返せば、人類の食糧問題が解決し、公害問題が解決すると考えるのです。それで先生は、これを開発しているのです。<br/>
+<br/>
+      36　南極に行けば、小さなえび、赤いえびがいます。一億五千万トンのえびが毎年死んでいきます。人類が魚を獲って食べるその量が、一億四千万トンになりません。高たんぱく質が最も多いのがえびです。魚とは比較になりません。ですから、えびをどのように処理するかということを先生は考えたのです。それで、粉を作るのです。えびは一年もあれば死にます。それは、神様が魚の餌として作ったのです。ところが、すべて捕まえて食べることはできないので、たくさん死んでいくのです。毎年そのような大量の死骸が海に流れていきます。また、それが公害と直結するのです。この問題をどのように解決しますか。先生が長年研究して、フィッシュバウダーを生産したのです。<br/>
+<br/>
+      37　世界で飢えて死んでいく二千万の人々のために、先生は養殖場を造りました。公害によるオゾン層破壊の問題を、人類の代表として解決できる人は先生しかいません。そのように、各方面に関心をもって進まなければなりません。先生が行けなければ、皆さんが涙を流し、汗を流しながらでも行かなければなりません。先生の足跡の上に自分も足跡を残そうという心をもたなければなりません。原理の道は、そのままたどっていく道です。越えていく道ではありません。何千代の子孫も、原理の道は同じなので、それと全く同じように行かなければなりません。ですから、蕩減の道なのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="014.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="016.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>

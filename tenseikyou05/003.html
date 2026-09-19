@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第五篇　真の家庭／第三節　家庭は真の愛の訓練場</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第五篇　真の家庭</h1>
+<nav class="page-nav">
+  <a href="002.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="004.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第一章　神様のみ旨から見た真の家庭</a></li><li class="toc-b lv2"><a href="#002">第三節　家庭は真の愛の訓練場</a></li><li class="toc-b lv3"><a href="#003">家庭は真の愛の定着地</a></li><li class="toc-b lv3"><a href="#004">家庭を中心とした三対象の愛</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第一章　神様のみ旨から見た真の家庭</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第三節　家庭は真の愛の訓練場</a></h3>
+<br/>
+      1　神様の愛は、父母の愛、夫婦の愛、そして子女の愛、この三つの愛が一つになったところに現れます。これらが絶対的に一つになったところには、神様が絶対的に永遠に共にいらっしゃいます。変わらない父母の愛、変わらない夫婦の愛、そして変わらない子女の愛、この三つの愛が存在するところには、いつも神様がいらっしゃるのです。統一教会の四位基台の理論は、このような基盤から現れたのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">家庭は真の愛の定着地</a></h4>
+<br/>
+      2　理想的な愛は、家庭で形成されます。しかし、神様は、真の息子、娘をもつことができませんでした。真の夫婦をもつことができず、父母になれませんでした。このようなことを成就しようとするのが、神様のみ旨です。そのみ旨が成就されるところであってこそ、愛がとどまることができます。このような愛が形成されるところには、人々が世の中のあらゆることを捨てて、訪ねてくるのです。最も重要なのは愛なのです。<br/>
+<br/>
+      3　皆さんは「神は愛である」ハネI四・八)という言葉を知っているでしょう。その愛がどこに現れなければならないのでしょうか。すべての人々は自分に現れることを願います。しかし、その愛が一人に現れるとすれば、個人で終わってしまいます。男性なら男性、女性なら女性にだけ現れるとすれば、一世紀だけ過ぎれば、すべて刈り取られて終わってしまうのです。言い換えれば、一人がその愛を相続することができずに死んでしまえば、一代で終わる愛にしかならないというのです。<br/>
+<br/>
+      それでは、いかにして永遠の血統的な愛の基準を立てるのでしょうか。一人の男性と女性に現れた神様の愛でつくられた家庭において、血縁関係を結んだ子女にその愛を植えることができるとすれば、永遠の愛が人間に現れるのです。すなわち無形の神様の愛が実体として顕現する基点が現れるというのです。神様の愛を完成できる基盤は、結局、家庭だというのです。<br/>
+<br/>
+      4　アダムはエバのために、エバはアダムのために、そしてアダムとエバは家庭のために存在します。愛を中心としてそのようになっているのです。このような一つのモデル、訓練場をつくり、それを再現し、感じて体験した事実を横的に拡大させるのが、国家の形成であり、世界の形成であり、天国の形成なのです。<br/>
+<br/>
+      5　縦的な三代と横的な三代を中心として暮らさなければなりません。一家族で三代が連結されて暮らさなければならないというのです。縦的にも、横的にも、三代が連結されなければなりません。息子、娘の相対を探すときは、祖父母がいて、父母がいて、そして息子、娘がいる円満な家庭から相対を探さなければなりません。男性が妻を得るとしても、そのような家庭から得なければなりません。そのようにすることによって、夫も円満だというのです。そして、低いものも知り、高いものも知って、前後左右をすべて測れる円熟した夫と妻になります。円満な球形の心情圏を互いに訓練するのです。そのような愛の訓練、心情の訓練をするのです。<br/>
+<br/>
+      6　皆さんが内外で互いに愛し合うことのできる家庭にならなければなりません。家庭での愛は、国の愛を縮小させたものであり、世界の愛を縮小させたものです。ですから、家庭で皆さんが心情的な訓練を受け、皆さんによって本質的に生活化され、神様のみ旨を成就しようという切実な心情に同化されて、その心を氏族に適用するだけでなく国家的にも適用しなければならないのです。<br/>
+<br/>
+      7　まず、「私」が父母を誰よりも一層愛さなければならず、兄弟を誰よりも一層愛さなければなりません。家庭をもったなら、互いに最高に愛し合わなければなりません。そうして花の中の花であり、香りの中でも一番の香りとして、宇宙を代表した価値の結実がそこで結ばれることを慕わしく思いながら、お互いが一つに結集する、その関係が強固にされなければなりません。そうしてこそ、そこで完全な種が発芽するのです。生命の起源もそのような愛から、存在価値の起源もそのような内在的な愛を基盤としたところから始まります。人格的な価値は、相対を中心として決定されるというのです。<br/>
+<br/>
+      8　実というものは、一年十二カ月の間、風霜を経たすべての要素が圧縮されて実を結びます。それでは、愛はどのように結実しなければならないのでしょうか。それが分からなかったので、今日、世の中がよこしまな世の中になってしまいました。家庭の破綻が生じたというのです。<br/>
+<br/>
+      父母が中途半端に必要なのではありません。愛を中心として見てみるとき、絶対的に必要です。子女も中途半端に必要なのではありません。絶対的に必要です。妻と夫も中途半端に必要なのではなく、絶対的に必要です。兄弟も絶対的に必要です。その人々が互いの愛を鍛錬するところが家庭であり、その愛を実現する場が天国なのです。<br/>
+<br/>
+      9　統一教会では、神様が人間の家庭の中で、人と一緒に喜んで暮らすことを願われると言います。私たちが愛を授け受けするのを学ぶ所も、調和の喜びを創出し、育成し、体恤する所も正に家庭なのですが、これが信仰の核心です。家庭的な愛の養育なしには、幼児期と青年期を通して、いかなる人も配偶者や子女を愛する能力を啓発できないのです。<br/>
+<br/>
+      10　愛を宇宙に適応させるためには、家庭が絶対的に必要です。家庭で父母を愛することができてこそ父母のような年齢の人々を愛することができ、家庭で祖父母を愛してみてこそ、そのような年齢の人々を愛することができます。それから、小姑を愛してみてこそ、小姑のような人々を愛することができ、夫の弟と夫の兄を愛することができてこそ、夫の弟と夫の兄のような人々を愛することができます。それでこそ、全世界の人類を愛することができるというのです。<br/>
+<br/>
+      11　真の愛の理想的な訓練を、どこでするのでしょうか。真の愛の理想的な基礎訓練の道場とはどこかといえば、家庭です。自分の父はどこから来ましたか。天の国から、大きな世界から来たと考えなければなりません。天の国から来たと考えなければならないというのです。それから「世界から来た」、「国から来た。国のある氏族を通して来た。そのようにして、私の父として現れた」という観念をもちなさいというのです。母に対しても同じです。母はどこから来ましたか。「私の母は天の国の代表だ。私の母は世界の代表だ。私の母は国の代表だ。私の母は氏族の代表だ。それで私たちの家に派遣されてきた」と考えなさいというのです。<br/>
+<br/>
+      12　家庭は、人間が天国に入るための愛の修練所であり、教材です。そこには、祖父母、父母、夫婦、そして兄弟姉妹たちがいます。その祖父母、父母、夫と妻、そして息子、娘の関係が拡大したものが世界の人類です。人類を祖父や祖母のように愛し、父や母のように愛し、夫や妻のように愛し、息子、娘のように思いやることのできる家庭だけが、天国を相続することができます。神様が造られた天と地のすべての権勢を相続できる特権がそこにあります。<br/>
+<br/>
+      世の中でも、昔、官吏の家庭で、祖父母や父母などいくら大勢の家族がいても、その家でより苦労し、よりために生き、より家庭を愛した人が相続者になりました。同じ理屈です。それが愛の特権です。<br/>
+<br/>
+      無限で永遠であられる神様だとしても、神様と愛の関係を結ぶようになるときは、即時に同位権と同参権をもつようになります。それだけでなく、宇宙の相続権を受け継ぐことができるのです。<br/>
+<br/>
+      13　夫婦間で互いが横的な愛を求めなければ、神様の縦的な愛も探し出す道がありません。人間始祖が堕落しなかったとすれば、天国は家庭から始まったでしょう。家庭を拡大したものが世界の人類だからです。ですから、家庭は天国に入るようにする愛の修練所です。神様の愛を所有した人だけが、天地の権勢を相続できる特権を得るようになります。<br/>
+<br/>
+      生命が先か、愛が先かというとき、愛が先です。家庭でも父母の愛によって子女が生まれます。ですから、子女は、父母の愛に同参(一緒に参加すること)した立場で、生命を受け継げる特権をもつようになります。愛の関係を結べば、対等な立場、同じ位置に立つことができるのです。<br/>
+<br/>
+      14　家庭に祖父母、父母、自分の夫婦、そして息子、娘がいます。これを拡大すれば、国になり、世界になります。これを縦横に結んで一カ所に集めたものが家庭です。それゆえに、三代が住んでいる家は、世界を縮小させたものです。<br/>
+<br/>
+      世界を見れば、祖父や祖母、父や母、夫や妻、そして息子、娘のような人々が暮らしています。ですから、このような家庭は、世界万民と和合できる一つの共同訓練所です。世界と心情的な絆を結び、超国家的、超人種的に和合し、和動できる相対と主体の権限をもつための訓練場です。愛を中心として訓練するのです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">家庭を中心とした三対象の愛</a></h4>
+<br/>
+      15　神様は愛の神様です。その神様の愛が人間の中で父母の愛として現れ、夫婦の愛として現れ、そして子女の愛として現れます。いくら優れた人だとしても、男性は女性を求めていくものであり、女性は男性を求めていくようになっています。そうして、子女を生まなければならないのです。<br/>
+<br/>
+      16　神様のみ旨は、創造目的の完成であり、創造目的の完成は愛を中心として行います。その愛は、どのようにして完成されるのでしょうか。言い換えると、愛を中心とした創造目的の完成は、いかにして成就されるのでしょうか。それは四位基台の完成です。ですから、原理の本で創造目的の完成を、四位基台の完成だといったのです。<br/>
+<br/>
+      それでは、四位基台の完成とは何でしょうか。父の愛は母の愛であり、母の愛は父の愛であり、父母の愛は子女の愛であり、子女の愛は父母の愛であり、兄弟の愛です。すべてが一つです。愛はどこにでも通じます。縦的に見れば三段階になっているのですが、平面的な基準では、互いが一つに統一されます。そこはどこでしょうか。父母です。父母が中心です。ですから、父母の愛を中心として男女の愛が一つになり、その次には神様の愛が一つになるのです。<br/>
+<br/>
+      17　完全な夫婦の愛が完成すれば、一つの球形のように四方が丸くなります。幸福と満足は、愛の要素に接するところでのみ可能です。愛を除けば、すべてのものが終わります。「統一原理」では、創造目的の完成は四位基台の完成ですが、父母の二人だけが完成しても駄目だというのです。その父母が一つになって神様の愛が臨在すると同時に、その神様の愛が父母を通して子女にまで行くことができるように、絶対的に愛さなければならないというのです。<br/>
+<br/>
+      「私がこの子を育ててこそ、老いて死ぬときに気が楽だ」ということで愛するのではありません。天から出発した軌道が家庭を通じて、今後、終着点に向かう息子、娘の前に、間違いなく同じ軌道で愛の包みが移されるようにしなければならない責任があるのです。<br/>
+<br/>
+      そのようにするためには、息子、娘に対して神様に仕えることを教えてあげなければならず、神様を愛することを見せてあげなければなりません。妻は、夫と息子、娘を愛するのを見せてあげなければならず、夫は、妻と息子、娘を愛するのを見せてあげなければなりません。それを統一教会では三対象の愛の完成といいます。<br/>
+<br/>
+      18　愛が自分から訪れる道理はありません。愛というものは、相手から訪れるのです。相手がいなくなるときは、愛が訪れることができません。神様も私たち人間を中心として見れば、相対的です。男性には女性も相対的であり、また父母には子女も相対的です。愛というものは相手がなければ成り立たないのです。それを統一教会では三対象の愛といいます。<br/>
+<br/>
+      三対象の愛を体恤きない人は、神様の愛を体験したという位置に立つことはできません。「神様がアダムとエバを造っておいて喜ばれたように、私も息子、娘を生んでそのように喜ぼう！」というのが「統一原理」の教えです。<br/>
+<br/>
+      アダムとエバを造っておかれて、「これから世界を主管するだろう。私たちの家が世界の中心家庭になるだろう。早く大きくなれ、早く大きくなれ！」と言いながら、神様は、希望をもって保護、育成する中で喜びと満足を感じつつ、彼らが育って結婚することを望みました。それと同じように、父母は息子、娘をよく育て、立派な相対を選んで、良い夫婦の縁を結んであげなければならないと考えるのです。良い夫婦の縁を結んであげれば、その家は栄えるのです。<br/>
+<br/>
+      19　本来、アダムが完成し、エバが完成して夫婦になっていたならば、その夫婦を中心として愛が成立し、その次にはその愛の中で息子、娘が生まれたでしょう。そのように見ると、夫婦の愛が成立する前には、兄弟の愛の圏内にいながらだんだんと個人が完成し、その次には、夫婦の愛を中心として父母の愛に発展していくのです。個人は、兄弟の愛から夫婦の愛を経て子女の愛まで体験できる道を通して、初めて神様のみ前に完全な息子、娘として完成するのです。<br/>
+<br/>
+      本来、神様を中心としてアダムとエバが兄弟から夫婦になり、子女まで生んで完成していたならば、もう行くところはありません。これ以上のものがあり得ないというのです。アダムとエバが完成し、夫婦となって息子、娘を生んで、完成した父母となってその息子、娘を愛したといえる立場に立ち、神様がそのような全体を愛することによって、創造のすべての愛が出発できていたのです。<br/>
+<br/>
+      20　誰でも育つときは、男性や女性、兄や弟、妹として一軒の家で育ちますが、生理的に見るとき、あらゆる生活が異なります。男性たちは開拓精神が旺盛で荒々しいのですが、女性たちはおとなしくてつつましいのです。女性たちは、動かずに愛を受けようとし、垣根の中だけで生きようとします。ですから、その二人が一つにならなければなりません。そのようにすれば、父母の心情圏を中心として子女の心情圏、兄弟の心情圏の上に、夫と妻の心情圏が爆発するのです。<br/>
+<br/>
+      21　兄弟のように愛し、兄弟として互いに愛し合う相対になって、夫婦の愛を完成するようになれば、互いに離れようとしても離れることができません。そのようになれば、父母の心情が実を結び、兄弟の心情が実を結び、そして男性と女性の心情が完成して、神様の創造理想である愛を中心として一つになるように直行するのです。愛の道は直短距離を通るので、直線です。曲線では行きません。<br/>
+<br/>
+      その二人がどこに行ってぶつかるかといえば、垂直に行ってぶつかります。男性が一歩進めば、女性も一歩進み、結局、離れたくないのでぶつかるようになります。愛することにおいて、男性は女性に負けたくないと思い、女性も男性に負けたくないと思うので、対等な立場になります。家庭には愛の核があり、ここに父母の愛が結ばれ、兄弟の愛が結ばれ、そして、夫婦の愛が結ばれているのです。<br/>
+<br/>
+      22　愛が全体の基準に符合できる根本なので、相対性をもった夫や妻がいなければ、神様のみ前に完全な存在として、完成した合格品として立つことができません。父母がいなくても同じであり、子女がいなくても同じです。息子だけでも娘だけでもいけません。<br/>
+<br/>
+      なぜ息子だけいる人は娘を生みたいと思うのですか。息子だけ生んだ人は娘を下さいと言います。それはなぜでしょうか。相対性をもっているからです。人は父母の愛、夫婦の愛、そして子女の愛の中にいなければなりません。父の愛も受けてみなければならず、母の愛も受けてみなければならず、そして夫の愛も受けてみなければならず、妻の愛も受けてみなければなりません。息子を愛してみたり、娘を愛してみたりしなければならないのです。<br/>
+<br/>
+      23　父母、夫と妻、息子と娘が本来の位置にいることが天宙の公法です。それが宇宙を構成する理想的で根本的な標準なので、これに完全に符合するとき、その内容と完全に一致するとき、うれしく思うのです。この原則に符合できないときに不幸が宿るのであり、その原則に完全に符合するとき、喜びがやって来るのです。この原則に符合することが善なのです。そして、この善にプラスする人が善の人であり、悪を増加させる人と、善を減少させる人は悪の人なのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="002.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="004.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>

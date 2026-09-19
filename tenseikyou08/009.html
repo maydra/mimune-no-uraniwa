@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第八篇　信仰生活と修練／第四節　心の修練</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第八篇　信仰生活と修練</h1>
+<nav class="page-nav">
+  <a href="008.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="010.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第二章　心と体の修練</a></li><li class="toc-b lv2"><a href="#002">第四節　心の修練</a></li><li class="toc-b lv3"><a href="#003">心は父母の中の父母</a></li><li class="toc-b lv3"><a href="#004">心の指向性</a></li><li class="toc-b lv3"><a href="#005">信仰と祈り、精誠の道</a></li><li class="toc-b lv3"><a href="#006">祭物になって分立する道</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第二章　心と体の修練</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第四節　心の修練</a></h3>
+<br/>
+      1　心は永遠を伴い、体は一生を伴います。心は生涯を調整して現れ、体は生活を調整して現れます。生活と生涯は異なります。生涯とは一生について語ることであり、生活とは一日について語ることです。このように、私たちの心と体は、それ自体が異なります。人間は、心が生涯を主管し、体が生活を主管するようになっています。ですから、一日一日の生活で食べなければ、体は死ぬようになります。しかし、心は食べるには食べますが、生涯の観点から外れる立場で食べてはいけないというのです。このような意味から見るとき、心が望む観念がより大きいというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">心は父母の中の父母</a></h4>
+<br/>
+      2　私たちがほかの人と和合できない心をもっているとすれば、私たちは、その心を動かして、すべての人に一〇〇パーセント合わせることができる心の修練をしなければなりません。そうでなければ、サタンは終わりの日に皆さんを審判台の上に立てておき、「誰それよ、お前はこのような不備な条件があるではないか」と言って、そのようにできない点を掲げて讒訴するのです。<br/>
+<br/>
+      3　心は、宇宙の神様を身代わりしているので、父母の中の父母です。師の中の師であり、主人の中の主人です。ですから、純潔さをもっている「私」の心は、世の中の母よりもっと近い母であり、父母です。世の中のどんなに立派な先生よりも、私に一番近い先生です。また、世の中のどんな主人よりも、自分の僕たちを正しく導いてくれる主人の立場に立っているのが心なのです。<br/>
+<br/>
+      4　心と体は異なります。心はどこからもらいましたか。神様からもらいました。心は神様から来るのです。皆さんの心は天、体は父母から来ました。体は地から来たので、地から出るものを食べるのです。皆さんは、地の世話になっているのです。この地は物質です。人は、男性でなければ女性です。神様が創造されたアダムとエバの延長が正に「私」です。人といえば、そこには既に実体があるのです。人の中に何種類のものが入っていますか。地が入っていて、人が入っていて、神様が入っています。昔から「天、地、人」という言葉があります。心は天であり、体は地であり、人は人なのです。<br/>
+<br/>
+      5　「私」一人には、神様が入っていて、地が入っていて、人が入っています。心が主体となり、体は対象になります。心は、体の中心になるので、意志がなければならず、観念がなければならず、主張がなければなりません。これが一つに一致した人を人格者といいます。心の命令どおりに体が動く良心的な人を、人格者というのです。自分の一身を思いどおりにできる人が人格者です。ですから、心が中心です。心は神様の代身であり、体は人の代身です。神様は、人の心を治め、人の心は人の体を治め、人の体は万物を治めるのです。<br/>
+<br/>
+      6　人間には心と体があります。父母からもらった体、地から体の要素になる物質を供給された体をもっています。しかし、心が問題になっています。神様は、その心と体を不変の心情の基台の上に立てたいと思われるのです。そのようにすることが、神様が人間を創造された目的であり、堕落した人間に対して摂理される目的です。いくら心が喜び平安だとしても、その心は心情の家に入って休むことができずにいるだけでなく、体もやはりそうだというのです。<br/>
+<br/>
+      7　今まで人間は、何を求めて苦労してきましたか。人倫の心の代わりとなる天倫の心情を求めて、その心情と私たちの心が一つになるようにと、今まで骨を折ってきました。一つになったその心は、絶対的な心と関係を結んだので、その心は誰かが切り取ろうとしても切り取ることはできません。ですから、このようにどんな理念と、どんな主義主張をもってしても、決して侵すことはできない心を、私たちは、今まで求めているのです。ですから、もしこれを探し出せないとすれば、決して悲しみと悲哀を免れることはできません。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">心の指向性</a></h4>
+<br/>
+      8　心は、自然の道理に符合します。善に向かって無限に動こうとします。それは、羅針盤が南と北を示すのと同じです。自然の道理が、方向を失って善を避けていくことはありません。そのような現象はないのです。人間の心もやはり、ある目的に向かって動こうとします。生命に向かって動く心、心情を通して動く心、真理を分別する心、全体と和合したいと思う心、全体のある理念に和合して生きたいと思う心、この心が、天が善の方向を指示できる基盤なのです。<br/>
+<br/>
+      9　私たちには心があります。その心は、より大きな理念に向かって、寝ても覚めても時間と空間を越えて、「私」をある方向に押し出そうとしています。しかし、このような動きが連続する歴史とともに動いていこうとする事実を感じながらも、そのような面をもっている自らを解明できずにいます。<br/>
+<br/>
+      皆さんは、自分を分かってほしい、自分を信じてほしいと言いたいでしょう。そして、私が考え、私が主張するすべてのことが、そのある動きと関係を結ぶことを願いながら今まで生きてきたという事実も、否定できないでしょう。それでは、私を信じ、私を分かってほしいと求めるとき、自らを確定して、天倫の大きな目的と関係を結んだ立場に自らを立ててから、そのような要求をしたかというと、そうではありません。<br/>
+<br/>
+      このように見るとき、私の価値は、どこで決定されるのでしょうか。万象を動かせる主体、あるいは主動体となることを心で望み、生活で、行動で動いて成し遂げようとする自らを、もう一度分析して、冷静に批判する過程を経るまでは、大きな目的を成し遂げることはできません。天は天倫の目的を成し遂げようとされますが、自らがそのようにすることができなければ、天のみ前に堂々と立つことはできません。天倫の前に頭を上げることはできないというのです。<br/>
+<br/>
+      10　天は、生命の主体であり、理念の主体であり、愛の主体であって、私たちの心と体の主体です。ですから、私が天と接触する瞬間には、私の体は自分の体ではありません。私の心は自分の心でなく、私の心情は自分の心情ではないのです。私の理念は自分の理念ではありません。その時こそ、神様を身代わりした体になるので、万物の主人公になるのです。その時に、私の心が神様と同じ心になるので、私の心は神様を身代わりすることができるのです。その時に初めて私の生命は、万宇宙を動かせる生命の権限をもつのです。私の心情は、神様の心情を身代わりして現れることができ、私の理念であり、父の理念だというのです。それでこそ、私たちの心的な願いのすべての目的が終結するのです。<br/>
+<br/>
+      11　心は、刺激的で苦痛な現実の環境を避け、理想に向かって進むことを促しています。どんな指導者でも、この現実と闘わなければなりません。しかし、理想を指向し、待ち望み、催促するこの心について知っている人は、一人もいません。その心の命令に従って行動しなければなりません。<br/>
+<br/>
+      歴代の数多くの預言者たちも、その心に抵抗しませんでした。今後、どんな人でも同じです。その心に応じるべきであって、誰かがどのようにするからといって、できるのではありません。抵抗できない、自ら応じるべき運命に置かれている自分たちであることを心から認めるとすれば、今日、この世界は、理想世界ではなく、私たちが夢見て希望する理想世界と関係を結んでいないというのです。それは堕落したからなのです。<br/>
+<br/>
+      12　神様が私たちのために受けたあらゆることは、私たちの心と体に反映されます。体が行動する一つ一つに、心は善の目標を指向するように環境を管理し、休む暇もなく努力します。また、体がその目的と方向を失い、死亡のどん底に陥るようになった時、心は体に向かって、善のものを見つめなさいと勧告します。ですから、「私」自身から解決しなければなりません。私たちの心が天を身代わりするならば、心が望む目標と天が望む目標が一致しなければならないのです。<br/>
+<br/>
+      13　神様が私たちの心の中心ならば、その神様が望む目標と、私たちの心が望む目標とが一致しなければなりません。また、心と体が一つになるために、体はこの地の理想的な基準と一致しなければならず、心は神様が目標とする方向と一致しなければなりません。歴史的な最後の終末時代、善の理想世界は必ず訪れるものなので、「私」の体が生活において善の理念世界と接する関係をもっていなければなりません。心の基準が神様の基準と分かれるとき、苦衷が生じるようになり、体の生活基準が世界的な理念と相反するとき、また、苦衷が生じるのです。それでは、どこから是正するのでしょうか。それは相対圏ではなく、私自身にかかっています。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">信仰と祈り、精誠の道</a></h4>
+<br/>
+      14　きょう、死を覚悟して新しい信仰の道に立ち上がった皆さんが、絶対的な信仰で神様の希望に向かっていけば、そのような信仰路程を通して神様と同じ価値を探し出すことができます。このような信仰をもって責任感をもたなければならず、このような信仰をもって実践する真の息子、娘たちにならなければなりません。そのようにならなければ、到底父の前に立てません。絶対的な父の前に真の息子、娘として、忠臣の姿として立ち得ないのです。<br/>
+<br/>
+      15　天は歴史的に何を通して人間を訪ねてくださったかというと、信仰という条件をもって訪ねてくださいました。天は人間をして、この信仰の条件を立てさせる一方、人間に対して実践を求めました。天と「私」が関係を結び、悲しみの心情を除去することのできる一つの足場を立てるためには、信仰を中心として一つの実践的な行路が生じなければなりません。そうしてこそ、歴史的な関係を立てることができるのです。<br/>
+<br/>
+      16　不都合な立場を解消するためには、自分自身に対して率直に告げなければなりません。「私は本来、このような人です」と率直に通告し、「私はこのように悪い人だが、あなたは善の人なので、私のような人に同情して、行くべき道を模索できる方案があれば、私に哀れみを施してください」と言わなければなりません。<br/>
+<br/>
+      祈る心で人と向き合えば、自由な環境が広がります。しかし、ただそのまま踏みとどまっていては、いくら自分がやっても、心では収拾がつきません。環境を収拾できないというのです。ですから、「私はこのような人間ですが、あなたと関係を結びたいのです。ですから、哀れみを施してください」と率直に告げなければなりません。それが祈りです。<br/>
+<br/>
+      祈りは、自分が行く方向が間違ったとき、正しい方向に行くよう導いてくれます。皆さんの生活を見れば、言葉一つ、行動一つ、感じ方一つによって、二転三転しています。皆さん自身が、今日、現実の中で息をしながら生きているこの瞬間に、このように秤にかけています。その秤の目盛りを合わせることにおいては、率直でなければならないのです。<br/>
+<br/>
+      17　先生の祈りは、一般の人が聞いても分かりません。百回読んでみてこそ通じます。天の神秘の声を聞いて、そこに共鳴できる心と体で体恤する境地が必要なので、自然と通じ、すべてに通じなければなりません。通じなければ、分かりません。釈迦牟尼も言いました。「天上天下唯我独尊」という言葉は、その境地で語った言葉です。境界線を越えるようになれば、必ずそのようになるのです。<br/>
+<br/>
+      18　皆さんに必要なことは、祈りと精誠です。自分が自ら復活した位置に立ったのでしょうか。復話した位置に立てなかったとすれば、切実に求める位置に立ったでしょうか。信仰をもちながら、環境に責任をもち得る自らになったでしょうか。私たちは、そのようにはなっていません。<br/>
+<br/>
+      ですから、祈りが重要です。祈りは、生死の基準を動かす能動性をもっています。そのような祈りを捧げるのは、大変なことです。「私」が見上げるほど高く、広い塔を積むとすれば、どれほど忙しいでしょうか。広くて高い塔を積もうとすれば、どれほど忙しいかというのです。それを五十年なら五十年の間に、すべて積み上げなければならないと誓ったとすれば、休む暇がないのです。<br/>
+<br/>
+      19　先生は、祈りが最も威力のあるものと信じています。不可能を可能にすることができるからです。統一教会では祈りを強調しますが、ほかの特別な方法で祈るのではありません。しかし、その内容は異なるのです。「自分自身のために祈ってはいけない」というのが先生の教えです。自らの使命のために、そして他の人のために、また自分の祈りが慰労の言葉として神様に伝えられるようにしなさい、と教えています。<br/>
+<br/>
+      20　難しい問題があるときは、祈りを捧げて解決していかなければなりません。それでは、祈りはなぜするのでしょうか。祈りとは、神様の心情的基準を中心として関係を結ぶものです。ある問題を中心として、真の意味で国を心配し、神様を心配する思いで祈りを捧げれば、神様は、必ず前後を教えてくれるようになっています。そのような役事は、いくらでもあるのです。<br/>
+<br/>
+      21　私たちは、外的に伸びていくことよりも、精神を統一して内的に深く追求していく道を模索しなければなりません。これが今日、キリスト教で言う「祈りの生活」です。皆さんが目的を立てておき、それを成就させようとする祈りよりも、神様の考えに接して、神様が語りたいと思われるみ言を体恤し、それを実践するという祈りが、より貴重なのです。ですから、祈りを捧げるために、静かな所を訪ねていくのです。<br/>
+<br/>
+      22　祈りの生活をすれば、形容できない喜びが訪れます。その境地が、創世前の神様の心の境地です。皆さんがそのような境地で、「こうだ！」という内容をもって説明できる立場に立つとすれば、その立場は、正に神様が天地万物を創造された立場だというのです。神様がみ言で被造物を創造された立場です。そのような境地でみ言を宣布しなければなりません。そうすれば、人々も必ずそのようなみ言に触れようとするのです。<br/>
+<br/>
+      23　皆さんが祈りを捧げようとすれば、一日の日課を始める前にしなければなりません。ですから、最も重要な時間が早朝です。早朝が最も重要なのです。この時間が一日の勝敗を左右する重要な時間帯です。この時に祈らなければなりません。深い祈りをするときに、自分が今まで全く感じてみたことのない分野を感じてみるためには、自分を中心とした祈りをしてはいけません。国家なら国家、世界なら世界という、大きな目的を中心として祈らなければならないのです。<br/>
+<br/>
+      24　深く根を張った祈りの生活を、たくさんしなければなりません。み旨に徹した生活をしなさいというのです。そして、神様が行かれる道と教会が行く道に、自分がどれほど呼吸を合わせて生きるかを、常に考えなければなりません。そうしようとすれば、「教会の便りが気になって死にそうだ」と言いながら、直接、訪ねていけなければ、「電話してでも知りたい」と思う気持ちがなければなりません。そのような心を前面に立てて暮らす家庭なら、神様が共にいなこ理はありません。そのような根もないのに植えておけば死んでしまうので、植えないことより良くないというのです。皆さんは、このような原則を知り、生活を再整備して、そのような基盤を築き上げなければなりません。<br/>
+<br/>
+      25　祈りは、御飯を食べることより重要です。ですから、先生も自然を好み、一人で過ごす時間は心が満たされます。静かな夜が本当に好きです。生活の豊かな底辺基盤を築くことができるのは、祈り以外に道がありません。その世界、その場で愛を感じ、愛を体験できるのであって、普通のところでは難しいのです。そのような基盤の上で、自分自体が力を補強できる立場に立ってこそ、皆さんの信仰の道を皆さん自身が行けるのであって、いつもこのように先生が導いてあげていては、先生がいないときはどうするのですか。そのような背後の生活を備えるためには、祈りが必要です。夜も昼も全体のために祈ってこそ、それが生きた祈りになります。そうしてこそ、何年かごとに、自分が願う祈りが変わり、題目が変化するとともに発展するのです。ですから、今の時がどんな時なのかを知らなければなりません。そのような背後の生活を、皆さんは、祈りの生活を通して備えなければならないのです。<br/>
+<br/>
+      26　祈りは、自分の気が散るような所でするものではありません。奥深い所、天を代表する所、境界線から遠い中央の地に行って祈らなければなりません。ですから、どのように祈るのでしょうか。自分の生涯の切実で重要な問題を祈るためには、自分自身を清め、この境界線と関係のない、永遠にサタンと関係のない所で祈らなければなりません。ある人は、「神様のみ前にいくら祈ってみても、応答がなかった」と言いますが、それは応答するようにはなっていません。サタン側で祈っているのに、神様がそのような祈りを聞いてくださるでしょうか。<br/>
+<br/>
+      27　心は丸く、心門というものがあります。祈れば、いつもうまくいくわけではありません。そこにも、春夏秋冬と同様の、自分の性稟による型があります。天の方向と心の方向がぴったり合う時があります。その時を逃してはいけません。そのような時が来れば、すぐに分かるのです。祈りの生活をすれば、直ちに「何か起こる」ということが分かります。その時のために、しっかりと準備しなければなりません。その時には、百事に備え、この心の門を開いて、そこを掘り下げれば、非常に大きな力と、非常に大きな神様の愛が、どのようなものかを感じられる段階に入るのです。<br/>
+<br/>
+      28　涙を流しながら祈りをたくさんしなければならない時が、終わりの日です。また、涙だけでなく、血を注ぎながらでも祈らなければなりません。私たちは、涙の峠、十字架の峠を越えてきました。イエス様はゲッセマネの園で血のしたたりのように汗を流して、涙の祈りを捧げられました。民族を胸に抱いて涙を流されました。そのような祈りは、サタンの権限を抑えることができるのです。<br/>
+<br/>
+      29　皆さんは、自らの心を通して祈れる人にならなければなりません。皆さんが体を通して現す言葉や行動が、皆さんの心の中心と連結された時、その言葉や行動は、神様とサタン、またはどんな人の前でも恥ずかしくなく、堂々としているでしょう。神様は、正にこのような存在を求めていらっしゃるのです。<br/>
+<br/>
+      30　心で祈り、すべての面で戒律を立て、天に向かって訴える祈りは成就するようになっています。今日の祈る人たちのような祈りを数十年したところで、成就しません。真の愛の心情をもって、約束する位置で祈りを捧げなければなりません。一度祈って三十年、四十年待てる、切実な心をもたなければならないのです。三十年、四十年過ぎても忘れない、切実な思いで祈って待ってみるのです。成就するというのです。多くの祈りは必要ありません。<br/>
+<br/>
+      31　祈るときには、涙を流しながら祈り、汗を流しながら祈らなければなりません。「何かがぶつかっても、私を突き抜けるのであって、私は倒れない」、このような信念をもって祈りを捧げなければなりません。迫害があり、反対が起こっても、祈りを成就してくれるための、神様の時が近づいたことを知らなければなりません。統一教会を信じていくとともに、だんだんと大変になれば大変になるほど、時が近づいたことを知らなければなりません。<br/>
+<br/>
+      32　神様だけを主として、自らが新しいものを刺激できる生活を直接経験しなければなりません。そのような心情を感じながら活動をすれば、そこには必ず繁殖が起こります。そのようになれば、発展するのです。生きている木には新芽が出てくるのです。きのうときょうが違うというのです。そこには必ず生命力が躍動するのです。皆さんがこのような感情を失う日には、生死を懸けて祈りなさいというのです。徹夜の祈りを捧げてでも精誠を積んでいかなければなりません。<br/>
+<br/>
+      神様は、皆さんがそのような生活をしようとすれば、わざとその時間を奪っていこうとするかもしれません。そのときは、いくら努力しても、希望を見いだそうとしても見いだすことができません。努力すればするほど、一層真っ暗な窮地に陥るときもあります。ですから、付きまとうサタンまでも「私」に屈服させて、神様に仕えなければならないという気持ちをもって、より一層強く闘うことができなければならないのです。<br/>
+<br/>
+      33　私たちが行くべき道は、いずれにせよ突破していくべき道であることを考えれば考えるほど、これは私たちの力だけでは不可能です。ですから、信仰者は祈りを捧げなければなりません。個人として神様のみ旨と一致する伝統を受け継ぐ道を見いだせなくなる時は、彼がいくら努力をし、いくら忠誠を尽くしながら行くといっても、その結果は、必ず神様のみ旨に背く立場に帰結するようになります。そのような観点から、現在の「私」の位置がどれほど重要かということを知らなければなりません。<br/>
+<br/>
+      34　皆さんは、息子、娘のために祈る前に、まず天界にいる、今まで苦労した歴史的な先祖たちのために祈らなければなりません。自分が幸せに暮らすことを願う前に、この地の人類が幸せに暮らすことを願う心をもたなければなりません。「私」が踊りを踊る前に、まず嘆息圏内にいる万民を見つめて心配できなければなりません。また、うれしくても、うれしい表情をすることができず、楽しもうとしても、楽しむ行為ができなかったイエス様の事情を身代わりできる心をもたなければならないのです。<br/>
+<br/>
+      35　自分の思いを中心として祈ってみなさいというのです。いくら夜を明かして祈っても、神様とは関係がありません。一生を否定し、一生をつかみ、その一生のために行かなければなりません。例えば、家庭を否定し、国を抱きなさいというのです。より大きなもののために生きること、それが公的です。そうしてこそ、残るのです。自分の欲望を中心として、家庭を中心として行くこと、それはあとのことです。より大きな目的を中心として行かなければならないのです。<br/>
+<br/>
+      36　堕落した人間は、生まれる時、喜びの中で生まれても、逝く時は涙を流しながら逝くのです。しかし、今、かわいそうな民族のために泣く者は、民族の福を受けるのであり、かわいそうな教団のために泣く者は、教団の福を受けるのであり、かわいそうな世界のために泣く者は、世界の福を受けるでしょう。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">祭物になって分立する道</a></h4>
+<br/>
+      37　皆さんは、まず、皆さん自体を天のみ前に、誓いの条件物として立てようとしなければなりません。イエス様も世界のために、天地のために、あるいは多くの人のために、ただ一度誓いの条件を立てましたが、それが何かといえば十字架です。イエス様は、この十字架を通して、数多くの先知先烈(先駆けて道を悟った先人、義のために命を捧げた烈士)が命を捧げて苦労してきたその基準を一時に乗り越えたのです。ですから、皆さんは、宇宙的な生の価値を実現するために、今後、ある一時、天の前や世界の前に、または個人の前に捧げられる一つの誓いの祭物になろうという観念を、はっきりともたなければなりません。<br/>
+<br/>
+      38　統一教会自体を見ると、神様のみ旨と、先生のみ旨と、皆さんのみ旨が一致しなければなりません。まず、そのようにならなければならないのです。そのあとに方向を定め、条件物を提示しなければなりません。それが一致しなければ、いくら時が熟したとしても、み旨の成就は絶対に不可能です。祖父母、父母、自分、三代が合わさって、一つの祭物と同じ立場に立たなければなりません。宇宙史的な全体を中心として見るとき、一つになる道しかないのです。<br/>
+<br/>
+      39　祭物というものは、所有物を決定する条件物です。先生は、そのようなことをみな知っているので、このような定義を下しました。善に所有されるか、悪に所有されるかという問題は、何を中心として決定されるのでしょうか。サタンと神様が愛の心情を中心として取り引きしていることを、誰も知りませんでした。愛の道を開発し、愛の道を開拓するみ旨を立て、愛の人を求める立場に立ち、高い愛の基準を天のみ前に返すまでは、サタン世界の愛の基準の物が、天の所有物として登場することはできません。天の所有物として登場しなければ、神様が人間と共に一つになった物を所有できる道がないというのです。ですから、祭物は犠牲になり、人を身代わりして所有させるのです。<br/>
+<br/>
+      40　人類が遭遇するあらゆる苦痛を自分の苦痛として、人類が喜ぶあらゆることを自分の喜びとして感じられる立場に立っていらっしゃるのが神様なので、そのような神様のみ前に祭物の場に出ていく存在は、人類が喜び、神様が喜ぶことのできるその場に歩調を合わせなければなりません。人類と神様がプラスされるところに歩調を合わせてみると、自分はマイナスにならなければなりません。自分は犠牲にならなければならないのです。これが堕落によって失ったすべてを回復させられる、一つの助力部隊です。一つの祭物的条件物だというのです。<br/>
+<br/>
+      41　本質的愛を離れて、公的な愛を離れて、異質で自主的な覚醒をしたところから堕落が始まりました。自己を中心としたところから堕落が始まったので、自分を中心として愛を論じるその世界は、サタンの着陸基地がただそのまま延長されていくというのです。しかし、神様の愛、公的な愛を中心として自分の個人的な愛までも犠牲にさせてサタンを分立しようと、これを踏み越えるところでは、サタンの侵食基地が零になってしまうのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="008.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="010.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>

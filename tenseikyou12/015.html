@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第十二篇　天一国／第三節　天一国時代の私たちの責任</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第十二篇　天一国</h1>
+<nav class="page-nav">
+  <a href="014.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="../tenseikyou13/001.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第四章　天一国のビジョンと責任</a></li><li class="toc-b lv2"><a href="#002">第三節　天一国時代の私たちの責任</a></li><li class="toc-b lv3"><a href="#003">――真のお母様のみ言―</a></li><li class="toc-b lv3"><a href="#004">新しい摂理の出発</a></li><li class="toc-b lv3"><a href="#005">これから私たちが行く道</a></li><li class="toc-b lv3"><a href="#006">未来を約束する蕩減</a></li><li class="toc-b lv3"><a href="#007">神霊と真理、愛の教会</a></li><li class="toc-b lv3"><a href="#008">感謝の生活</a></li><li class="toc-b lv3"><a href="#009">伝道と環境創造</a></li><li class="toc-b lv3"><a href="#010">後天時代の女性の役割。</a></li><li class="toc-b lv3"><a href="#011">七十億人類を天の父母様の民に</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第四章　天一国のビジョンと責任</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第三節　天一国時代の私たちの責任</a></h3>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">――真のお母様のみ言―</a></h4>
+<br/>
+      1　きょう、私たちは、実に重要な神様の摂理的経綸の中において、あとにも先にもない歴史的で革命的な大転換期を迎えています。人類の善の血統の根として来られた再臨主、メシヤ、救世主、そして真のお父様は、今や霊界に旅立たれました。したがって、私たちは、真の父母様の勝利圏を相続し、平和理想王国を創建すべき摂理的出発点に立つようになったのです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">新しい摂理の出発</a></h4>
+<br/>
+      2　真のお父様の聖和は、一生涯を共に歩んできた私たち全員にとって、量り知れない苦痛と悲しみです。人類の永遠の愛の本体であられ、真の父母であられる神様の心情も、到底、量り知ることができません。しかし、もう一方から見れば、太初の天地創造から神様が立てた天法に従い、この地で人類歴史が始まって以来、誰一人として成就できなかった摂理的課題を完成、完結、完了され、霊肉界を主管されるために、今や霊界へと生を移されたということです。そうして、新しい次元の摂理を開かれる希望の時でもあります。人間が知る、どのような言葉や文章でも表現できません。このような万感迫る中、きょう私たちは、摂理的転換期を迎えたのです。<br/>
+<br/>
+      3　真のお父様は、「基元節」を私たちにとって最も重要な日として宣布してくださいました。「基元節」のために、「神様王権即位武」から十二年間、多くの摂理的な活動をしてこられたのです。偶然に、簡単に訪れた日々ではありません。神様が復帰摂理をされながら選民思想を立て、準備してきた国がイスラエルです。イスラエル民族は、救世主が来るのを待ちました。救世主が来れば、すべてのことが解決されると期待しました。その救世主が華やかに来ると思ったのですが、彼らは蕩減というものを知りませんでした。復帰摂理歴史には責任があるのです。その責任を果たせなければ、蕩減が伴います。この時代においても同じです。<br/>
+<br/>
+      4　これから真のお父様は、天法に従って霊界を拠点とされ、自由自在に霊界と肉界を往来されながら、天一国の拡張のために摂理されるでしょう。真のお父様と私は、一心、一体、一和、一念の境地で摂理を経綸することになるでしょう。「基元節」の勝利を通して、本然のエデンの園をこの地上に創建するために、皆さんと共にいらっしゃるでしょう。天の摂理歴史は立ち止まることができないからです。<br/>
+<br/>
+      5　天も干渉できない蕩減復帰の摂理路程において、真のお父様と私が経た苦痛は、想像を絶するものでした。私たちは、真の家庭の四人の子女を摂理の祭物として捧げました。その険難な蕩減復帰の路程を、誰が畏れ多くも量り知れるというのでしょうか。私は、生涯を捧げ、真のお父様の伴侶として苦楽を共にし、万難をかき分けてきました。その勝利的基盤の上に、真のお父様と私は、天が下さった摂理的次元の同等権、同居権、同位権をもつようになったのです。<br/>
+<br/>
+      6　真のお父様は、生前、内外に多くのことをされました。今やその遣業を継承、発展させる仕事が残っています。その責任を私が先頭に立ってしようと思います。これは、本当に大変な仕事です。内外に整備するのは、簡単な仕事ではありません。皆さんが各自の場所で責任を果たすことによって、私を協助してくれなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">これから私たちが行く道</a></h4>
+<br/>
+      7　これから私は、このような歴史的摂理の新しい転換期を迎え、真のお父様の勝利的基盤を相続して、この地を中心とした摂理を主導し、先鋒に立つことを明らかにしながら、次の幾つかのお願いを皆さんにしたいと思います。<br/>
+<br/>
+      8　第一に、私たちは、真の父母様が立ててくださった伝統を絶対に生命視しなければならず、子孫万代まで相続、伝承させなければなりません。真の父母様は、愛と心情の伝統、み言と規定、規範の伝統、心情文化の伝統を立ててくださいました。特に真の父母様の蕩減復帰摂理路程の結晶体であるみ言を訓読する訓読会の伝統は、各家庭ではもちろん、教会、そして天を中心とした集会で、最も中心的内容となるようにしなければなりません。併せて、私たちは、この地に新しい秩序を立てていかなければなりません。ですから、組職の秩序と伝統も、真の父母様を中心とした真の家庭とアベルを中心とする中で、一糸乱れず統一体を築いていくのが、真の父母様の伝統であることを肝に銘じてくださるようにお願いします。<br/>
+<br/>
+      9　第二に、天が祝福された祝福家庭の理想を完成しなければなりません。家庭は、真の愛、真の生命、真の血統の揺りかごであり、神様の創造目的を実現する基盤です。「家庭盟誓」の八大事項を中心として歩みながら、善の血統の伝統を絶対信仰によって守らなければなりません。私たちの平和のビジョンは、「純潔な愛、幸福な家庭、平和な世界」です。夫婦が絶対愛で天に侍り、一体になる伝統の中で、子女を愛とみ言によって養育しなければなりません。家庭において、訓読会を通して天一国の秩序がしっかりと定着するようにしなければならず、正午定着の基準で縦的、横的に心情的伝統が定着する祝福の理想を完成しなければなりません。<br/>
+<br/>
+      10　第三に、皆さんは、氏族的メシヤの祝福を受けたので、この地に天一国が完成するときまで、その使命と責任を果たさなければなりません。氏族的メシヤは、真の父母が下さる祝福の中で最も大きな祝福です。蕩減復帰摂理の勝利的基台でなければ、堕落人間を氏族のメシヤとして立てることはできないからです。ですから、真の父母様の生涯の摂理的経綸の中では、常に氏族的メシヤの使命が強調されてきたのです。天一国の天宙的完成は、氏族的メシヤたちがその責任を果たし、各氏族にみ言と祝福とために生きる生活を相続させ、善の主権を立てて平和な世界、人類大家族理想の実現を通してこそ可能になるのです。<br/>
+<br/>
+      11　第四に、私たち全員は、真の父母様と真の家庭を中心として、和合と統一の心情文化共同体を築いていかなければなりません。皆さんは、全員例外なく天の選択と先祖の功績、そして自らの後天的天稟によってみ旨の道と縁が結ばれました。そして、数多くの迫害を顧みずに真の父母様のあとに従い、今日の勝利圏まで迎えるようになりました。<br/>
+<br/>
+      ですから、私たちは、唯一の父母を中心とした一家族心情共同体です。世の中は、いまだに分裂と葛藤が満ちあふれていますが、私たち統一家は、人種、国境、およびいかなる障壁も軽く飛び越え、一つの兄弟姉妹になれるのです。ために生きる人生の手本を見せるならば、必ず成し遂げられる夢です。特にこのような摂理の大転換期には、私たち全員が真の父母様と一つにならなければならないことを肝に銘じてくださるようにお願いします。<br/>
+<br/>
+      12　真のお父様は今、霊界にいらっしゃいますが、私たちと常に共にいらっしゃいます。ただ無形でいらっしゃるだけであって、一瞬たりとも私たちの傍らを離れることはありません。今、真のお父様は、私たちに何を願っていらっしゃるのでしょうか。正に、中断なき前進を願われているはずです。神様の摂理は、全世界に真の父母を中心として愛と平和が満ちあふれ、心情文化が定着し、新しい秩序が定着するときまで続かなければなりません。特に、「基元節」の勝利を土台として、さらに一路邁進し、天と真の父母様に大きな栄光をお捧げし、世界と歴史に大きな希望を抱かせてあげなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">未来を約束する蕩減</a></h4>
+<br/>
+      13　神様の摂理歴史は、蕩減を経なければ発展がありません。蕩減は悪いことばかりではないのです。未来を約束してくれるからです。蕩減復帰摂理は、簡単に完成するものではなく、段階的に蕩減を払っていかなければ、発展していかないというのです。歴史始まって以来、その当代において「すべて成し遂げた。神様を解放してさしあげ、私が完成、完結、完了した。今から摂理歴史は新しく出発する」と宣布して天命を完遂された方が、この世の中にいたでしょうか。皆さんは今、摂理の中心に立っています。祝福された位置だというのです。<br/>
+<br/>
+      14　真のお父様は、生涯にわたって、夜も昼も休まずに働かれました。私も真のお父様に侍って生活しながら、三時間以上、寝たことがありません。ですから、一日中疲れていました。今は霊界に行かれたので、時空を超越してさらに奔走され、動かれるでしょう。眠る時間もないと思います。皆さんが責任を果たせなかったとすれば、これから死生決断、全力投球をしなければなりません。今まで生活した、その態度とやり方ではいけません。何か新しい転機をつくらなければなりません。私たちにとって最後の機会です。<br/>
+<br/>
+      15　きょう、聖和四十日礼拝の日は、新しい摂理の出発点です。真のお父様は、この四十日期間、霊界を隅々まで回られました。摂理史に登場した人物たちにも会われ、また、神様が天地を創造される時の状況も直接体恤されました。私も四十日間、真のお父様と同じ心情で、心の中の対話をしながら過ごしました。そして、準備しました。真のお父様の考えであると同時に私の考えになり、私の考えであると同時に真のお父様の考えになりました。今から一心不乱に、一つの心、一つの志で、原理を中心にして進んでいかなければなりません。<br/>
+<br/>
+      16　私たちに中断はありません。前進があるのみです。全世界の真の家庭の皆さんが、絶対信仰、絶対愛、絶対服従によって新氏族的メシヤの使命を果たし、天の大いなる恩賜と天運を相続する勝利者になることをお祈りいたします。天は、私たちに途方もない祝福を下さいました。その責任は、必ず私たちが、皆さんが、二世たちが完成しなければなりません。<br/>
+<br/>
+      17　真のお父様に初めてお会いしたとき、私は「蕩減復帰摂理歴史を私の当代にすべて終わらせる。神様の創造理想世界具現という大きなみ旨を成し遂げてさしあげる」という二つの目標を立てました。誰も私に、「今後このように、あのようにしなければならない」とは教えてくれず、真のお父様もみ言を下さいませんでした。しかし、このことを私が整理できなければ、後代がもっと大変になることが分かりました。それで、私に与えられた使命を完遂するために実践躬行し、今日に至ったのです。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">神霊と真理、愛の教会</a></h4>
+<br/>
+      18　統一教会は本来、神霊と真理によって出発し、歳月が流れながら心情が湧き出る、愛のあふれる教会として発展しました。それで、草創期に真のお父様が牧会をされるとき、食口が一度教会に訪ねてくれば、そこを離れるのを嫌ったのです。真の父母様と夜を徹しながら一緒にいたいと思い、真の父母様が願われることであれば、どのようなことをしてでも、それを成就してさしあげたいと思ったのです。誰が強要しなくても、自ら侍っていたのが草創期の信仰生活でした。小さな教会でしたが、真の愛があふれ、互いに一つになりながら、非常に難しい時代を克服していったのです。同じように、今日、各教会でも原理講義が途絶えてはいけません。み言によって生まれ変わらなければなりません。そうして、真の愛を実践できる個人になり、家庭、社会、氏族、国家になれば、それが天一国であり、地上天国です。<br/>
+<br/>
+      19　聖日礼拝の説教は、三十分以内に終わらせなければなりません。説教が長くなれば、食口が何の内容か分からず、早く帰りたいと思うのです。そして、説教で受けた感動が一週間以上、続かなければなりません。説教が終わったあとには、食口の活動報告を聞いたり、新しく伝道された人を祝ってあげたり、心霊指導をするプログラムをもてば良いでしょう。<br/>
+<br/>
+      そのようにすれば、本当に生き生きと息づく教会になるでしょう。生き生きと躍動する教会になるでしょう。そうして、食口や新しく伝道された人たちが、「一週間も侍てるだろうか。早く教会に行きたい」、このような思いを何度ももつようにしなければなりません。教会では、霊肉共に与える場をつくらなければなりません。食口にみ言のエキスを飲ませてあげ、食口を愛によって抱く雰囲気をつくっていけば、教会がより大きく発展するのです。<br/>
+<br/>
+      20　真のお父様のみ言や、すべての行跡は、原石と同じです。宝石です。私は、その宝石を最高に価値があるものにし、常に間近で愛せるよう、持ち歩きたいのです。皆さんも、同じだと思います。それで、その第一段階として『天聖経』に、二〇〇〇年以降に語られたみ言を加えて整理整頓し、皆さんの手から一瞬も離すことができない宝石にします。皆さんが一生を終える日、その宝石を抱いて霊界に行ける姿になることを願う心で、これを進めているのです。<br/>
+<br/>
+      21　キリスト教は、聖書一冊で全世界にその志を展開しました。真のお父様のみ言もそのようにしなければならないのですが、み言が整理整頓されていなければ、未来に混乱が訪れるでしょう。み言集を整備することが急がれています。それで、元老会議の監修のもとで編纂を行い、後代の人によって欠陥を指摘される所がないようにしようと思います。根も一つであり、幹も一つであり、実も一つである永遠のみ言として残さなければなりません。すべての人にとって、一日の生活から人生を生きていくにおいての基準になり、目印になり、指針にならなければなりません。しかし、み言が整理整頓されていないので、とても残念に思ったのです。<br/>
+<br/>
+      22　真のお父様のみ言集を新たに作るたびに、編纂委員会の監修過程を経て出版するようになるでしょう。これは、すべて皆さんと後代のためです。皆さんが天命を果たして霊界に行くとき、この本を抱いていけるようにするためです。真のお父様に誇ってください。「私は、地上で生きている間、真のお母様の教育を受けて、真のお父様のみ言を愛し、抱いてきました」とお伝えしなさいというのです。<br/>
+<br/>
+      23　皆さんには、真の父母様がいらっしゃり、原理とみ言があります。今から真のお父様の生き様を全世界に知らせなければなりません。私たちの未来は明るいのです。私は、教会が活性化するようにします。教会は、生き生きとしていなければなりません。ですから、私たち祝福家庭が模範を見せて、隣人と氏族がついてくるようにしなければなりません。<br/>
+<br/>
+      24　真のお父様は、何年前から韓国語を勉強しなさいと語られましたか。近い国、日本がエバの使命を果たさなければなりません。これからも皆さんに通訳がついて回って、補助しなければなりませんか。ですから、皆さんは、韓国語を学ばなければなりません。これからは、真のお父様のみ言を実践しなければならないのです。<br/>
+<br/>
+      　　<h4 class="bh" id="008"><a href="#008">感謝の生活</a></h4>
+<br/>
+      25　私たちが神様に侍り、天一国を完成するに当たって、最初に始めなければならないことは、自分自身を省みることです。天一国は、二人が一つになってつくるものであると、真のお父様は語られました。ですから、心と体が一〇〇パーセント統一された立場で生活するのが、信仰生活において最も重要な目標にならなければなりません。<br/>
+<br/>
+      どのようにして、そのような立場で生活できますか。私はこのように話しました。「皆さんは、誰かの善し悪しを批判する前に、まず純粋な心で天の前に『ありがとうございます』という言葉から口にしなさい」。個人において、家庭において、教会において、氏族において、国において統一された立場に立てば、神様を中心とした一つの世界が自動的に成し遂げられるのです。そのような心構えをもって生きれば、成し遂げようとするすべてのことにおいて、天が共にいらっしゃり、祝福が与えられるでしょう。<br/>
+<br/>
+      26　皆さん、心を空にして悔い改めなければなりません。心から悔い改めなければなりません。高い位置にいる人は、心から低い位置に降りていかなければなりません。すべてのことに対して悔い改める心をもつように諭してくださった天に感謝し、自分自身が新たに出発できるようになったことを感謝しなければなりません。きょう一日においても、これまで責任を果たせなかったことについて、最善を尽くさせてくださいと祈らなければなりません。感謝の心で生きれば、周囲がすべて美しく見えます。幸せになります。そして、これを一人だけでしまっておくことができず、他の人々に伝えるようになるのです。伝道をせざるを得ないというのです。<br/>
+<br/>
+      　　<h4 class="bh" id="009"><a href="#009">伝道と環境創造</a></h4>
+<br/>
+      27　皆さんは、数十回、数百回、原理講義を聞いたでしょう。それにもかかわらず、それが心に響かず、行動に移せないことが本当に残念です。環境創造は、神様の天地創造のときだけにあったのではありません。復帰摂理の過程においてもあったのです。私は後代のための環境創造を一生懸命にしました。皆さんの父母はどうだったでしょうか。責任を果たしましたか。皆さんのための環境創造をしてくれましたか。<br/>
+<br/>
+      二世の皆さんは、今統一家の中心に立っています。皆さんは、根をはっきりと知らなければならず、環境を創造しなければなりません。環境創造とは、簡単に言えば伝道です。伝道しなければならないというのです。その道だけが、皆さんが讒訴を受けなこであり方法です。皆さんが世の中の名誉とともに何をもって霊界に行くとしても、み旨の中で揺らぐことなく生きたとしても、地上において讒訴条件を残せば、霊界に行って自由でいることができないのです。それを知らなければなりません。ですから、皆さんには継続して刺激が必要です。私たちは、七十億の人類を考えなければなりません。私たちの環境はまだ狭いのです。<br/>
+<br/>
+      28　真のお父様は、蕩減復帰摂理を完成、完了してくださいました。天一国を開いてくださったのです。しかし、天一国のための環境は今、私たちがつくらなければなりません。すぐに天地開闢になるのではありません。私たちが精誠を尽くして、どれほど私の兄弟と私の氏族、私の国と隣人を愛で抱いたかということが重要であり、それが伝道の実として残るのです。食べて寝ることを忘れ、一つの生命でも天に捧げようと思いなさいというのです。皆さんは、祝福を受けて子女がいるはずですが、一つの生命が生まれるとき、どれほど神秘的で待ち遠しいでしょうか。天の祝福を感じるのです。皆さんの努力によって、一日に生命を一つずつ誕生させられるとすれば、大きな祝福を受けるでしょう。<br/>
+<br/>
+      29　天地人真の父母様に出会ったということは、皆さんの家門の栄光だけにとどまるでしょうか。七十億の人類の前に誇らしい存在です。しかし、肝に銘じるべきことは、責任が伴うということです。責任を果たせなければ、蕩減が伴います。それを知らなければなりません。そのため、皆さんは、この時点においては、真の母と完全に一つにならなければなりません。完全に一つになって、一つの志で進まなければなりません。よそ見をしてはいけません。それが皆さんに福を与えることです。霊界は、愛の空気で息をする所です。皆さんがどれほどたくさん愛を植えていくかということが、伝道なのです。<br/>
+<br/>
+      30　摂理歴史の中で、天が選択した人物や民族が責任を果たせなければ、必ず蕩減を払うようになります。真のお父様は、協会の創設以降、六十年間、公的な活動をしてこられました。その中の四十年間は、アメリカで全生涯を送られたと言っても過言ではありません。<br/>
+<br/>
+      私たちの永遠の祖国は大韓民国ですが、アメリカのためにもっとたくさん投入されたのです。世界人類のことを思われたからです。長子国という途方もない祝福を受けたアメリカが、兄弟を一つにまとめて真の父母様の前に来なければならないのです。<br/>
+<br/>
+      31　アメリカは代表的なキリスト教国家です。神様は、イエス様が十字架で亡くなったのち、二千年間、キリスト教を育ててこられ、アメリカに大きな使命を与えられました。この国は、アメリカ国民だけの国ではありません。世界平和のために多くの活動をしなければなりませんが、その責任を果たせませんでした。真のお父様が早くからアメリカの使命を諭してくださったにもかかわらず、真のお父様と、どのように向き合いましたか。無実であるにもかかわらず、ダンベリーの監獄にまで送りました。いつ、この国が天の前に犯した罪を蕩減するのですか。今、アメリカは外的に崖のふちに立った立場です。皆さんの使命が大きいことを知らなければなりません。<br/>
+<br/>
+      32　皆さん自らが責任感をもち、生き生きと息づく活動をしなさいというのです。そのようになれば、霊界が一〇〇パーセント協助するというのです。霊界の願いは何であり、私たちの願いは何でしょうか。地上天国と天上天国、天一国です。それを私たちが当代で成し遂げられるというのは、どれほど興奮し、うれしく、有り難いことでしょうか。これを実感して生きるならば、どうしてじっと座っていられるでしょうか。どうして皆さんが努力をせずにいられるでしょうか。<br/>
+<br/>
+      私たちの目標は、「基元節」までで終わりではありません。全人類を祝福しなければなりません。天一国の民にしなければなりません。そのためには、どのようにすべきでしょうか。過去と大きく変わることもなく、ただやりなさいと言われたとおりにやるという態度では、霊界の協助は受けられません。毎日、天に報告し、天と共に動く自分たちになりなさいというのです。そうして、二十四時間では足りないと思って活動しなければなりません。<br/>
+<br/>
+      33　毎日、家庭で訓読会をして一日を出発してください。このように言うのは、二世たちの教育が急がれており、重要だからです。皆さんは、公的な仕事をしているために、子女たちに対して、そのような時間を割けなかったと思います。それでも、子女たちと一緒に訓読会をしながら、一日を出発しなさいというのです。そうして、二世をよく養育しなければなりません。どの位置にいるとしても、後代のことを考えなければならないのです。<br/>
+<br/>
+      　　<h4 class="bh" id="010"><a href="#010">後天時代の女性の役割。</a></h4>
+<br/>
+      34　父親よりは、母親が子女を訓育するときに、より強くなければなりません。それで私は、嫁たちを座らせ、「夫よりも、あなたたちがもっと伝統を立てなければならず、あなたたちがもっと強くならなければならない」と話しました。イスラエル民族が、困難な環境で蕩減を払いながら今日まで来ることができたのは、母親の役割が大きかったのです。統一家も同じです。女性が先頭に立ってすべてのものを収拾して整理し、男性を支援すべき責任があるというのです。<br/>
+<br/>
+      35　皆さんがどんな地位、どんな職責をもっているとしても、私たちの目標は一つです。全世界の人類を天一国の民にすることです。これが私たちの祝福であり目的です。地位にこだわらないでください。行動し、実践するのがもっと重要です。特に二世たちは、そのようなことで峠を越えることができなければ、これ以上発展できません。<br/>
+<br/>
+      「基元節」は、天一国を実体的に出発する日です。天地が崩れる日ではありません。全世界の人類を天一国の民にするまで、休んではいけません。今から出発です。植えてもいないのにどうして実を結びますか。植えてこそ、収めることができるのです。そのためには、皆さんが最大の力を発揮して、「基元節」を天と世の中に現せるよう、今から努力しなければなりません。そして、私たちの環境を大きく広げていきましょう。<br/>
+<br/>
+      36　「基元節」以降は、皆さんはどのように進むのでしょうか。歴史に一度しかない、途方もない天地開闢時代です。この時を迎え、果たして誰が孝子であり、誰が忠臣でしょうか。天は、皆さんにみ言も下さり、機会も下さいました。絶対信仰、絶対愛、絶対服従の姿勢で進まなければなりません。自分というものがあってはいけません。謙遜でなければなりません。自分が立派だと考えてはいけません。自分の周辺のすべての人に学ばなければならないのです。神様のみ前に立派な人はいません。天地人真の父母様の前に立派な息子、娘はいません。いまだ成長過程なのです。それを知らなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="011"><a href="#011">七十億人類を天の父母様の民に</a></h4>
+<br/>
+      37　神様を中心とした一つの世界は、どのように成し遂げられるのでしょうか。それは、真の愛を中心とした祝福理想家庭の完成です。私たちは、立ち止まることができません。前進し続けることだけが、この地上に天一国を定着させる道です。そのため、祝福理想家庭の完成は、皆さんが責任を果たすかどうかにかかっているのです。<br/>
+<br/>
+      38　旧約時代には、神様を「ヤハウェ」と呼びました。新約時代には、「父なる神」と呼びました。「基元節」は、神様の夢が成し遂げられる日です。それで、今から名称を変えようと思います。祈るときは、「神様」を「天の父母様」に変えなければなりません。英語で「ヘブンリー・ペアレンツ (Heavenly　Parents)」です。英語で言っても聞きやすく、韓国語で言っても意味があります。神様は、天の父母様です。祈るとき、一番初めに出てくる単語が「天の父母様」、その次に「愛する天地人真の父母様」、このようにならなければなりません。そして、これから「統一教」という名称を「世界平和統一家庭連合」に変更します。<br/>
+<br/>
+      39　天の父母様の願いと私たちの願いは、地の果てまで天の父母様を知らない人がいないようにすることです。それが私たちの責任です。天の父母様のために、死生決断、全力投球することによって、孝子、忠臣と呼ばれるようにならなければなりません。<br/>
+<br/>
+      40　私たちは、天のみ前に罪人です。天の恩賜の前に、あまりにも責任を果たせませんでした。「私はすべて成し遂げた」と誇れる人がいますか。歴史始まって以来、初めて迎える、あとにも先にもない「基元節」は祝福の日です。今度も皆さんは、代価なく受けるつもりですか、息子、娘の資格で受けるつもりですか。もう一度、先に行かれた真のお父様を思いながら、私たちは、麻の服を着た気持ちで悔い改めなければなりません(韓国の風習では喪に服する時に麻の服を着る)。<br/>
+<br/>
+      互いに赦す心がなければなりません。歴史の背後で苦難の蕩減復帰摂理歴史を導かれた天の父母様に、あまりにも面目がありません。すべてのものを惜しむことなく与えてくださり、誇らしい天一国の民になることを願われる真の父母様に対しても、私たちは、あまりにも資格がありません。あまりにも準備ができていません。どのようにしなければなりませんか。皆さん自身が、謙虚な姿勢で悔い改めの心をもち、再び天の哀れみを願う立場で「基元節」を迎えなければなりません。<br/>
+<br/>
+      41　全世界の祝福家庭は、天の前に一点の恥ずかしさもない期間をもたなければなりません。私は、「基元節」を通してあらゆる門を大きく開きました。真の父母様を中心にお迎えし、絶対信仰、絶対愛、絶対服従で命が尽きる最後の瞬間まで、一片丹心、不屈の姿で忠孝烈の隊列に必ず立とうと決意しながら、行動によって実践する人には、誰彼を問わず、彼らのために大きく門を開いたのです。そのように決心して進み出れば、私たちの未来には蕩減がないでしょう。蕩減のない天一国時代を準備しなければなりません。そのようにするためには、責任を果たさなければならないのです。<br/>
+<br/>
+      42　皆さん全員が、忠孝烈の隊列に同参することを切に願います。私たちは、天一国の民を誕生させ、養育して国を広げていかなければなりません。この国だけではありません。全世界、七十億の人類を再び生み変えるときまで、死生決断、全力投球の姿勢で進まなければなりません。私たちは、天に奉献してさしあげなければならない国があります。まず、南北統一が成就されなければなりません。<br/>
+<br/>
+      ですから、私たち女性の役割が、どれほど重要でしょうか。特に、今からは娘の使命より母親の使命を果たさなければなりません。生命を生んであげ、養育しなければなりません。真のお父様が非常に大きな家を造ってくださったので、私たちが整理整頓し、家の中の模様をすべて整えなければなりません。それは私たちの責任なのです。<br/>
+<br/>
+      43　皆さんの精誠が、天には栄光であり、地には喜びになることを願います。永遠の天一国時代に、愛を受け、認められる天一国の民になることをお祈りいたします。私たちは、七十億の人類が天の父母様の民となるよう導くために最善を尽くし、その期間を早めることをもう一度決意しましょう。それでこそ、霊界に行ったときにも自由になれるのです。讒訴がない世界で暮らせるのです。地上で責任を果たせなければ、永遠の世界にまで讒訴が続きます。霊界では愛によって息をするというのですが、責任を果たせなければ、息をするのが苦しくなります。地上に体をもってとどまっているときに、責任を果たしてください。永遠の世界で自由に、天の父母様と真の父母様の前に進み出て、誇り得る皆さんになるようにお願いします。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="014.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="../tenseikyou13/001.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>

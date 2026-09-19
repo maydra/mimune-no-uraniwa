@@ -20,6 +20,10 @@ books = {}
 for d in sorted(ROOT.iterdir()):
     if not d.is_dir() or d.name in SKIP_DIRS:
         continue
+    idx = d / 'index.html'
+    # 引っ越したあとの転送だけが残っているフォルダは、保存しても仕方がない
+    if idx.exists() and 'location.replace(' in idx.read_text(encoding='utf-8', errors='ignore'):
+        continue
     files = sorted(str(f.relative_to(ROOT)).replace('\\', '/')
                    for f in d.rglob('*.html'))
     if files:

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第十篇　平和思想／第四節　超宗教運動と世界技術平準化</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第十篇　平和思想</h1>
+<nav class="page-nav">
+  <a href="013.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="015.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第四章　世界は平和のための構想</a></li><li class="toc-b lv2"><a href="#002">第四節　超宗教運動と世界技術平準化</a></li><li class="toc-b lv3"><a href="#003">超宗教、超人種、超国家運動</a></li><li class="toc-b lv3"><a href="#004">キリスト教とイスラームの和解</a></li><li class="toc-b lv3"><a href="#005">世界の技術平準化を提案</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第四章　世界は平和のための構想</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第四節　超宗教運動と世界技術平準化</a></h3>
+<br/>
+      1　今までは、分裂的な基準に立っていましたが、今や、時は民族的な観念を超越し、天的に見れば兄弟社会国家時代に入るようになります。ですから、すべて、国連機構のもとに兄弟です。ところが、兄弟がけんかをするのです。カインとアベルが争ってきました。今や、平和的な兄弟にさえなれば終わるのです。それで、世界は兄弟という同等な立場にあるので、アメリカがもつ財産を分けようというのです。その財産は自分たちがつくったものではなく、父母から相続したので分けてあげるのです。残り物を分け与えれば与えるほど、災いになります。ですから、今の時は、必ず天を第一とした心情の世界にならなければなりません。<br/>
+<br/>
+      2　人類が生きるためには、白人と黄色人種が一つになって黒人を生かす運動をしなければなりません。そのようにしなければ、平和の世界が訪れることはできません。それを、これから統一教会がしなければなりません。霊界に行くようになるとき、白人が別々に行き、黄色人種が別々に行き、黒人が別々に行くのではありません。一つになるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">超宗教、超人種、超国家運動</a></h4>
+<br/>
+      3　神様の愛を「私」が所有できる栄光の立場を訪ねていこうとするので、怨讐までも愛するのです。神様には国境がないので、国境をなくさなければなりません。ここにおいてのみ、一つの世界が広がるようになります。ここにおいてのみ平和が広がります。ここにおいてのみ、霊界と肉界が一つになって、通じることのできる道が生じるのです。<br/>
+<br/>
+      4　人間を手先にして操ってきたいかなる主義、思想、いかなる宗教理念によっても、世界の平和と統一を成し遂げることはできません。このように、すべて道が塞がっているので、真の仏教徒も待ち望み、真のキリスト教徒も待ち望み、真の哲学者も待ち望み、真の思想家たちも待ち望む一つの理念、社会、国家、世界、天下を統一できる一つの理想が出てこなければならないのです。<br/>
+<br/>
+      5　今、一カ国主義の時代は過ぎ去りました。民族主義の時代は過ぎ去りました。人間がいくらあがいても、神様が行く統一の公式路程を完成するためには、一つの民族だけではいけないのです。連合民族、総合民族を通して成し遂げられるというのです。<br/>
+<br/>
+      一つの平和世界は、単一民族に従うのではありません。そして、宗教もやはり、民族を越えてアジアと世界、天地をすべて包容できる能力がなければならないという結論が出てくるのです。<br/>
+<br/>
+      6　世界的に教団が一つになって、今、平和の理想世界、統一された天国の世界を望むというとき、それは絶対的な神様の願いなので、二つということはあり得ないのです。絶対的な一つの世界であるはずなのですが、その世界を中心とした天国理念は、超国家的、超人種的にすべてのものを勝利して超えた位置で成し遂げられるのです。<br/>
+<br/>
+      7　宗教は今、天の国を追求し、理想世界と極楽を望んでいます。神様と人間が最大に幸福で、最大に平和な所を、平和の世、天国だというならば、その天国の主権者は誰かというのです。その主権者は神様です。その次に、その民は超人種的な民です。そこにおいては、髪の色や顔の色が問題ではありません。神様は、超人種的な国の大王なのです。<br/>
+<br/>
+      8　宗教者たちがすべきことは、平和の世界を成し遂げることです。一つの平和世界をつくらなければなりません。ムスリムでもクリスチャンでも、誰彼を問わず、皆が平和の世界をつくって、永遠に一つの希望的な人類として残らなければなりません。この思いだけは一致しています。<br/>
+<br/>
+      9　宗教を見ると、自分の教派第一主義を中心として、すべて排他的です。このような環境になっては、これから世界にとても困難な時代が来るというのです。これから一つの平和世界を構成するときに、宗教が何かの助けになるでしょうか。この宗教の壁を崩さなければ、宗教が人類の平和に莫大な被害をもたらすだろうと考えるので、超教派的なことをするのです。<br/>
+<br/>
+      宗教は、国境を越え、数千年の文化背景を超え、超民族的に信者たちを包容しているので、この壁を崩すのはこの上なく難しいことです。四大宗教であるキリスト教、イスラーム、仏教、儒教は、みな数千年の歴史を経てきました。これから、これらが対立して争うようになると、世界の平和は破壊され、人類は滅亡するというのです。このような各教団に、いかにして闘わずに一つの平和の世界に向かい、互いに交流しながら連合体制をとらせるかということが問題です。これは、私たち人間よりも、天が、霊界がそのように志向することを願うので、その願いに従って先生は、統一教会を中心として、世界的な運動を展開しているのです。<br/>
+<br/>
+      10　心と体、超宗教圏と超政治圏が一つにならなければなりません。超宗教超国家連合です。「超」というのは、今までの世の中とは異なります。今までは、横的な基準を中心として人間同士で考えたのであって、神様は含まれませんでした。しかし、超宗教には神様が入るのです。神様を中心として統一するのです。神様の願いは宗教の統一です。国家の統一です。ですから、国家と宗教を統一するのです。宗教と国家を統一して、心情一体圏で全天宙を代表した、天地を代表した、全体を代表した一つの結実体として、解放された地上に着地しようというのです。<br/>
+<br/>
+      11　真の家庭の神様の息子、娘、神様を中心とした家庭ならば、絶対的なその家庭自体が超教派、超宗派、超国家理念をもつのです。世の中にあるものを超越する超宗教超国家連合です。今までの宗教圏では、世界の問題を解決できません。今までの国家の名前では世界を収拾できません。「超」という言葉を入れて、超宗教、超国家をいうのです。神様を中心とした内情的な実像が、現実社会と一致できる実体的な基準を中心として、最適に体系化されるものが現れてこそ、解決方法になるのです。<br/>
+<br/>
+      12　「世界平和超宗教超国家連合」は、国連を動かすことができる最高の立場にあり、その責任を果たさなければなりません。統一教会が今から世界に対することのできる最後のプログラムがそれです。言論機関、その次には大学連盟、その次には金融界です。このように四つです。これは、最後にこの世界を収拾できる柱なので、「世界平和超宗教超国家連合」に属する問題なのです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">キリスト教とイスラームの和解</a></h4>
+<br/>
+      13　イエス様の死によって、左翼、右翼、バラバとイエス様の四大怨讐圏が対決するようになりました。再臨の時には、その世界が統一されなければならないので、左翼と右翼を一つにし、バラバ圏を一つにしなければなりません。イスラームとキリスト教を一つにして戻っていかなければなりません。このように、全体を取り戻して平和統一の道に戻っていかなければならないのです。しかし、右側のものが左側に行き、左側のものが右側に行くこともあるのです。反対したキリスト教が共産党に負けてしまう場合もあります。反対したキリスト教がイスラームに負けてしまうこともあるのです。<br/>
+<br/>
+      ですから、聖書の「先の者はあとになり、あとの者は先になるであろう」(マタイ一九・三〇)という言葉は、正に終わりの日について語った言葉なのです。これらが回れ右をするには、共産党が反対し、イスラームが反対し、そして民主社会が反対しても回れ右ができません。どのようなことをしてでも、平和統一して回れ右をしなければなりません。そのようにすることによって、神様の玉座に向かって行く道が生じるのです。<br/>
+<br/>
+      14　イエス様が死ぬことによって、サタンが世界を占領しました。それが歴史において再現されるのが再臨時代です。終わりの日に左翼と右翼が現れて、互いに争うというのです。それが共産世界と民主世界です。イエス様が死ぬことによって、左翼と右翼が現れて世界まで拡張されたのです。アメリカを中心とした右翼と共庭世界を中心とした左翼がそれです。イエス様の時と同じです。再臨の時に世界的な基盤に拡張されます。再臨の時、民主世界が一つになり、共産世界が一つになり、そしてイスラーム世界まで一つになるのです。それが再臨の時の使命なのです。<br/>
+<br/>
+      15　再臨王は、民主世界を収拾し、共産世界を収拾し、イスラーム圏を収拾しなければなりません。現在、バラバ圏がイエス様の体を占有しています。イエス様が死ぬことによって、イスラームが、祝福されたイスラエルの十二支派民族圏を占領したのです。バラバが、イエス様の代わりに生きるようになりました。生き残ったバラバ圏のアラブ圏、イスラーム圏が占領したのです。キリスト教と怨讐であり、イスラエルと怨讐です。イエス様の体を占有してすべてのものを受け継いだというのです。終わりの日になって、これを統一して反対に向くことによって、一つの天国の平和世界に行くことができるのです。<br/>
+<br/>
+      16　先生の使命は、第二次世界大戦の時に分かれた二つの世界を統一することです。すべて分かれました。韓国も二つの世界に分かれ、イスラエルも還故郷をしましたが、二つの世界に分かれました。アメリカも人本主義の世界、神様を離れた世界に分かれていきました。先生を中心として、第二イスラエルのキリスト教と第三イスラエルの韓国を統一することによって、アメリカを中心として世界統一圏が広がり、イスラエルの問題と韓半島の問題が解決されます。今、世界的に韓半島とイスラエル、第一次と第三次のアダム国家が問題です。これさえ統一すれば、平和世界が訪れるようになります。それを全うすべき責任が統一教会と先生に残っているのです。<br/>
+<br/>
+      17　イスラームとキリスト教の戦いをそのまま放っておけば、人類は滅亡します。原子爆弾も使い、その次には生物化学兵器まで使うとすれば、世界大戦どころではありません。一個人が部落を滅ぼし、一人が都市全体を滅ぼし得る時代に突入しました。力をもってしては駄目です。いくら闘っても、それで終わることのできない時代が来ました。<br/>
+<br/>
+      ですから、今まで数十年の間、宗教界の連合活動をしてきました。「イスラエルの神様とムスリムの神様は違う方ではない。ほかの宗教の神様もキリスト教の神様も同じだ」という「神様会議」を通して一つにするのです。そのように超宗教運動を世界的にしてきたのであり、超民族運動を今までしてきたのです。<br/>
+<br/>
+      18　イスラーム圏が、長子権をもって故郷に帰ってくるイスラエルに反対しました。ですから、イスラエルとイスラームを一つにしなければ、世界に平和がありません。国家同士も歴史的に二つに分かれています。今、世界は、宗教を中心とした中近東のイスラエル地域の問題と、民主主義思想と共産主義思想を中心とした韓半島の問題があります。それで、宗教と思想を背景にした二大陣営の衝突によって第三次世界大戦が起こるとすれば、地上の人類は全滅するようになります。そのような危機の渦中に立っています。これを誰が平和の世界に収拾するのでしょうか。先生のほかには、収拾できる材料をもっている人がいないのです。<br/>
+<br/>
+      19　左翼と右翼が転換できる契機を先生がつくったのは歴史的事実です。誰も否定できません。世界で一番の問題がイスラエルのユダヤ教、キリスト教、イスラームの争いです。これを誰が和解させるのでしょうか。今まで、これに手をつけた人がいませんでしたが、初めて先生を中心として連結されるのです。ですから、世界平和の問題が根本的に解決されていくという事実を、知らなければなりません。歴史的転換時期に立っているのです。<br/>
+<br/>
+      20　イエス様を中心として左側の強盗と右側の強盗がいました。左翼と右翼、一方は「神様はいない」と言い、一方は「神様はいる」と言います。今は、右翼と左翼がみな崩れましたが、バラバが残っています。これはサタン側の代表宗教です。これを主が来て、天の側の宗教に吸収しなければなりません。共産主義を天の側の国に吸収しなければなりません。それで、先生が「世界平和宗教連合」をつくったのです。これをつくって、先生がシリアのようなイスラーム圏を中心として、平和を主張できる条件を既にみな立てたのです。<br/>
+<br/>
+      21　キリスト教とイスラームが争うようになる時は、民主世界と共産世界の紛争は問題ではありません。宗教は恐ろしいものです。今、悪魔は、宗教戦争を起こそうとしています。そうして、キリスト教文化圏をはじめとして、霊的な基盤をすべて自分の側に引き込もうというのです。このようなことが起こる前に、それを防御するために、平和主義者として先生が背後で通じ合うようにするのです。<br/>
+<br/>
+      22　バラバ圏がイスラームです。イスラーム圏がユダヤの国の十二支派を占領しました。イエス様が死ぬ時にこれができたので、イエス様が再び来る時は、右翼を収拾し、イスラームを収拾して平和の世界に行けるようになってこそ、この地上にイエス様の復活的統一と平和の理念が成就されるのです。<br/>
+<br/>
+      その次に、何でもって統一するのでしょうか。「頭翼思想」です。左翼と右翼を消化できるのは真の愛だけです。その次には何をするのでしょうか。教育です。家庭において神様が教育できなかった子女教育、兄弟教育、夫婦教育、その次に父母教育をしなければなりません。そのようにして、平和な天の国の祝福を受けることができる家庭にならなければならないのです。<br/>
+<br/>
+      23　今はイスラーム圏の国同士で争いますが、キリスト教圏が激昂することによって、イスラーム地域が一つになれば、宗教戦争に発展します。このようになれば、問題が大きいというのです。今回の中東会談は、先生とイスラーム圏のイスラーム指導者グランド・ムフティと二人で提案しました。発起人が二人です。それが今、世界的に知られ、イスラーム世界にも知られています。結論は簡単です。宗教者たちが先頭に立って、平和の世界を成し遂げなければなりません。それは間違いない結論です。それが、先生が今まで自由世界と宗教世界に対して下した決定的な結論なのです。<br/>
+<br/>
+      24　宗教が国の上にあるのがアラブ圏です。それと一時に糾合すればキリスト教圏とイスラーム圏の間に戦争が起こるのです。そうなれば、右側の強盗と神側がサタンを打った立場になるので、世界平和の門が崩れるのです。それで「絶対争うな」という厳命を下したのです。それで、アラブ圏のイスラーム責任者であるグランド・ムフティ、シリア、イエメンなどの教団長たちに緊急会議を指示したのです。キリスト教と争ってはいけません。それを平和の基点にすることを、イスラームの頂点で教えてあげなければなりません。そうしてこそ、その指導者たちがキリスト教と争うという主張を防御できるので、それをさせているのです。<br/>
+<br/>
+      25　世界平和という目的を中心として見る時、人類が受ける被害が大きいので、ペルシャ湾での争いを収拾しようというのです。数日間ですべて殲滅して焦土化させ、アメリカが勝ったとしても、何の利益があるのかというのです。歴史的な汚点となって、キリスト教文化圏とイスラーム文化圏を決裂させかねない刺激的な材料になるだけであって、何の利益もないというのです。先生は世界平和の問題を中心として、先端に立っているので、これを考えざるを得ないのです。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">世界の技術平準化を提案</a></h4>
+<br/>
+      26　技術というものは人類のものです。ある特定の国のものではありません。ドイツの技術、日本の技術、アメリカの技術、これらを世界の技術として拡大させる責任があり、それが正義の旗を掲げて前進する男の行くべき道だと考え、人類が望む平和の基地を築く道だと考えるので、十年前に世界平和のために技術の平準化を主張して立ち上がったのです。中国に、「オープンにしなさい。私が準備したドイツの技術、日本の最高の電子科学技術をあなたたちのところにもっていくつもりだ」と言っても、信じませんでした。しかし、三年かけて研究してみて、事実だということが分かったのです。<br/>
+<br/>
+      27　先生は、科学技術で世界の王者の立場に立ちました。ドイツで一九八〇年から一九八五年まで、五年の間に四大工場を買いました。ドイツ最高の技術をすべて連結させるために、工場を買わなければならないと考えたのです。「科学の統一に関する国際会議」の時、中国の技術平準化の促進問題を中心として、宣布したとおりに即時に買いました。また、国際平和高速道路を即時に建設するために日韓トンネルを掘り始めたのです。<br/>
+<br/>
+      28　今や、政策の方向が必要ない時が来ます。先進国家と後進国家が必要ないというのです。知識はすべて宇宙のものであって、自分たち、一つの国のものにはなり得ません。それで、先生が一九八〇年代から技術平準化、知識平準化、次には物々平準化、お金の平準化、金融機関の平準化を主張したのです。最近は、教育の平準化、技術平準化を主張してきたのです。<br/>
+<br/>
+      ドイツを中心として技術センターをつくって、たくさんの、国々が競争しています。小さな一つの付属品を開発するために、各国が競争をします。これを公式化させて、原材料を供給し、時間さえ投入すればよいことなのに、無限の損失を被っています。このような世界の国際的な分割経済時代を再考しなければなりません。ですから、統一世界にならなければならないのです。<br/>
+<br/>
+      29　ドイツの今後を心配する人々が調査をしてみると、文先生以上にドイツのことを考える人はいないというのです。十年前からずっと話してきたことを録音しておいたテープを聞いてみると、その時には、その人が先生だったということを知りませんでした。その時語った、その内容が科学技術の平準化運動です。ドイツを越えて平和の世界に連結するのです。彼らには分からない話です。そのようにずっと話した内容を聞いてみると、反対することは何もないというのです。尊敬する内容しかないのです。<br/>
+<br/>
+      30　神様が万民の平和の武器として下さった科学技術を、特定の一国民のみが使用して世界を貪り、幸福になることを神様は容赦されません。万民の幸福のために人間に下さったのが科学技術です。特定の白人だけがその恵沢を享受し、平和を無視した武器として使用することはできません。そのような観点から、先生は技術の平準化を語るのです。<br/>
+<br/>
+      31　中国は今、先生の側に抱き込まれるようになっています。今、中国は、重工業化が必要であり、中小企業の発展が緊急に必要です。それで、先生と手を結ばなければ世界的に効果を得る道がないことをよく知っています。先生と手を結べば、三十年飛躍し、文先生と手を結ばなければ大変なことになります。日本と外交を結んでつくった合弁会社制度では何十年もかかります。日本は科学技術を譲渡しません。アメリカもそうであり、先進資本主義の国々は、それが不可能です。<br/>
+<br/>
+      そのような世界の現状の中で、一九八一年、第十一回「科学の統一に関する国際会議」で先生は、科学技術の平準化を世界に提唱しました。私がもっているすべてのものを中国に譲渡してあげようというのです。なぜでしょうか。アメリカも中国を消化できず、ソ連も消化できませんでした。誰も消化できなかった中国を、先生は科学技術によって消化するのです。<br/>
+<br/>
+      32　先生は、世界の全域にかけて築いた科学技術の基盤を中心として世界を助けようというのです。それで、世界の科学技術の平準化のために、一九八一年に、「先端科学技術は一国家に属するものではなく、世界平和のために全世界の人類に属している」と宣言したことがあります。アメリカのような一国を中心として科学技術を準備するのではなく、全世界的な目的に従って、それを使わなければならないというのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="013.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="015.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>

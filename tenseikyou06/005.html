@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第六篇　真の万物／第二節　宇宙の作用と存在原則</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第六篇　真の万物</h1>
+<nav class="page-nav">
+  <a href="004.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="006.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第二章　宇宙の根本と秩序</a></li><li class="toc-b lv2"><a href="#002">第二節　宇宙の作用と存在原則</a></li><li class="toc-b lv3"><a href="#003">主体と対象の関係で存在する宇宙と万物</a></li><li class="toc-b lv3"><a href="#004">ペア・システムが宇宙の存在原則</a></li><li class="toc-b lv3"><a href="#005">存在様相と作用の原則</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第二章　宇宙の根本と秩序</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第二節　宇宙の作用と存在原則</a></h3>
+<br/>
+      1　宇宙は存在世界です。それは、誰もがみな認めています。存在するためには力がなければなりません。力が先か、存在が先かということが問題です。力がなければ存在もありません。力は作用がなければ現れません。力が存在する前に必ず作用が必要です。作用しようとすれば、力の前に先行条件として主体と対象が絶対に必要であることを否定できません。主体と対象が授け受けするところから作用が始まり、作用が始まることによって力が存続するのです。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">主体と対象の関係で存在する宇宙と万物</a></h4>
+<br/>
+      2　被造世界を見ると、動物世界もそうであり、植物世界もそうであり、感覚もない鉱物世界も、すべて陰陽の道理に従って主体と対象の関係をもっています。分子を見れば、陽イオンと陰イオンがあります。世界の学者たちは、「宇宙は力でできている」と言います。漠然と力でできていると言うのです。<br/>
+<br/>
+      それでは、力が一度に出てくるのでしょうか。力が先にあって出てくるのでしょうか、それとも力が存在する前に作用が先にあったのでしょうか。卵が先か、鶏が先かという問題と同じです。力は作用を通して現れるのであり、その過程を通して段階的に見えるようになるのです。電気の作用は、電気の力ではありません。電気自体ではありません。プラスとマイナスは、与えたり受けたりする作用をしますが、そこに電気という力の流れはまだできていないのです。作用を通して力が出てくるというのです。<br/>
+<br/>
+      3　宇宙は、必ず力によって形成されるのですが、力が存在する前に作用があります。電気の力が存在するためには、プラスとマイナスの作用がなければなりません。プラスとマイナスの電気作用を集合すれば力になります。ここに電球をぶら下げておけば、私たちが使用する光に変わるのです。ですから、力が存在する前に作用があり、作用が存在する前に主体と対象があるのです。<br/>
+<br/>
+      神様がこの世界を造るとき、人間のための環境として造りました。環境には必ず主体と対象があります。これは存在の法則です。これが備わらなければ、存在できないのです。中性があると言いますが、中性にも相対があります。正午になれば、影が見えなくなります。しかし、影が消えるわけではありません。自分自体の中に入っただけです。すべて相対的関係をもっているというのです。<br/>
+<br/>
+      4　宇宙の形成において力が先か、作用が先かと言うとき、必ず作用が先になります。作用するときは、独自的にするのではありません。作用するためには、必ず相関関係にならなければなりません。その相関関係が同じレベルではいけません。「私」が後退するだろうというのでは作用しないのです。相手が発展するだろうという立場で主体的に与えても喜ぶことができ、プラスになる環境条件を見つめながら、与えなければなりません。そのような観点で、主体と対象の関係が形成されるのです。主体とは何でしょうか。先に与えるのです。ですから、主体は責任をもたなければならず、保護しなければならず、育成しなければなりません。ですから、作用が存在する前に、先に主体と対象の関係を認定しなければならないのです。<br/>
+<br/>
+      5　宇宙で最も神秘的なものは何でしょうか。創造するとき、神様が最初に抱いた観念は何でしょうか。それは愛です。愛という観念をもって宇宙を造ったので、すべての存在は愛を中心として相対的な基準をもたなければならないのです。ですから、環境には相対圏がなければなりません。主体と対象の相対圏がなければならないのです。<br/>
+<br/>
+      相対圏は必ず対応するようになっていて、その対応圏は家庭だけでなく、氏族、国家、世界とつながります。そうして、それが主体として立てば、そこに歩調を合わせる対象が生じるのです。自らが大きな立場に立った場合は、向こうが相対圏に立って直ちに歩調を合わせる方法を取ることにより、宇宙が衝突なく授受作用をして、平和的で円満な運動を続けるようになるのです。<br/>
+<br/>
+      6　宇宙の根本である力は、物質世界において授け受けする愛の関係と同じ形態の作用によって生成されます。ですから、いかなる存在でも、主体と対象の関係をもたなければこの宇宙に存在することができません。一番貴いのが愛なので、愛を中心として与えようとしても与えることができず、受けようとしても受けることができなくなるときに最も悲しく、哀れになるのです。<br/>
+<br/>
+      神様は、なぜ宇宙を創造されたのでしょうか。愛が必要で宇宙を創造されたというのは当然の結論です。ですから、人は愛によって生まれ、愛によって生き、愛によって死ぬようになっています。<br/>
+<br/>
+      それでは、最大の愛はどこから来るのでしょうか。主体と対象が完全に一つになるところから来ます。いかなる力によっても引き離すことができないように永遠に一つとなるとき、最大の愛は訪ねてくるのです。愛があることによって統一が始まり、愛があることによって生命が連結し、愛があることによって理想が実現するのです。<br/>
+<br/>
+      7　主体と対象の作用は、力をもってしてはできません。お金をもってしてもできません。知識をもってしてもできません。ただ、二人が喜ぶことのできる内容、愛という概念が必要なのです。なぜ鉱物世界を、プラスとマイナスにして造ったのでしょうか。それらの愛を中心として連結するためには、その作用が必要なのです。植物世界にも、雄しべと雌しべがあります。植物の花が作用するのに、生命力で生きる前に、主体と対象の概念があることを知らなかったのです。動物世界は、雄と雌で成り立っています。最も大きいものから小さいものまで、すべて雄と雌になっていることを知らなければなりません。<br/>
+<br/>
+      8　知恵の王であられ、全体の中心であられる神様は、真の愛や真の理想、真の幸福や真の平和の起源を、主体と対象、この両者の間のどこに置くのでしょうか。これが問題にならざるを得ないのです。主体がいて対象がいるのですが、主体のために生きる道と対象のために生きる道、この二つの道の中で理想の要件をどこに置くかということが、創造主であられる神様として問題にならざるを得ないのです。<br/>
+<br/>
+      真の理想、真の愛、真の平和において、主体を中心として対象が主体のために生きるところに理想的起源を置くのでしょうか、対象を中心として主体が対象のために生きるところに起源を置くのでしょうか。神様が、主体である御自身に対して対象がために生きなさいという立場に、その理想的起源を立てたならば、神様がそのようにすると同時に、すべての人も、自分がある対象の前に主体の立場にいれば、「自分のために生きなさい」と言う立場に立つでしょう。そのようになれば、一つになる道が塞がってしまうのです。<br/>
+<br/>
+      9　自然世界には、循環しながら発展するという原則があります。今まで、数億年間続いてきた永遠の自然法則とは何かを、一度考えてみましょう。その共通法則、共通性は雄と雌でできていることです。人も男性と女性になっています。すべて相対的になっているのです。鉱物世界もそうであり、植物世界もそうであり、動物世界も雄と雌で組み合わさっています。雄と雌を中心とする関係が千年、万年、何億万年変わりなく続いていくのです。それが何かというと、次元は違いますが、愛という概念なのです。<br/>
+<br/>
+      愛という概念を中心として後継者を残していくのは、このすべての自然界に残っている中心法則です。人も同じだというのです。人も男性と女性になっているので、愛を中心として、これからより素晴らしい子孫を残すのは、変わることのない原則です。これだけは誰も占領できません。これだけは革命できないのです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">ペア・システムが宇宙の存在原則</a></h4>
+<br/>
+      10　万物は、鉱物世界も植物世界も、愛を土台とした主体と対象の関係を通じ、理想的な分母をもって生まれました。万物は結果の存在です。結果の存在は、原因的な内容がなければ生まれることができません。私たちは、その原因的存在を神様と言います。それで、神様を中心とした愛の圏内で東西南北、上下、前後、左右を問わず、いつでも和合して和動するために、鉱物世界もペア・システム、主体と対象の関係によって存在するのです。このようにペア・システムで構成されています。鉱物世界も動物世界も、植物世界も人間世界も同じです。<br/>
+<br/>
+      11　宇宙はすべて、プラスとマイナスになっています。分子を見ても、プラスイオンとマイナスイオンになっています。すべて相対圏になっているのです。原子を見ても、陽子と電子になっています。宇宙構成の根本がそのようになっているのです。植物は雄しべと雌しべ、動物は雄と雌、人は男性と女性、すべてが相対的になっています。そのように相対的になって、結局、一つの体制圏に収拾されなければなりません。神様が主体なので、神様を中心として収拾されなければならないのです。その創造の意志と一体化した相対圏がつくられなかったとすれば、神様の創造の喜びはあり得ないのです。<br/>
+<br/>
+      12　すべての存在が生じたのは人間完成のためです。そのために動員されたのです。ですから、完成体を形成するために、その細胞一つ一つがすべてペア・システムになっています。男性も女性も、その体に栄要素をすべて備えて補給されるので、どれ一つとして抜くものがないというのです。すべて薬材であり、必要なものです。道端にたんぽぽがたくさんあるからといって、いい加減に扱うなというのです。個性真理体としての自分の役目を果たすため、千年、万年、人類歴史が変化しても自分の種の区別は変化せず、拡大するのです。<br/>
+<br/>
+      13　すべての被造世界は、ペアの組織体制で連結されています。鉱物世界もそうです。すべてのものがプラスとマイナスの作用をするのです。重力をもった地球星(ぼし)の上でも、強い引力関係をもっている磁石は、その引力が地球の重力よりも強いために作用が表面上に現れるだけであって、磁石以外のすべての要素もプラスとマイナスの作用をするのです。すべての運動も、同じようにプラスとマイナスの作用を通して広がるのです。<br/>
+<br/>
+      ペア・システムの中央には、自ら二つを連結して保護できる中心軸があるのですが、その軸が正に愛の軸です。ですから、鉱物世界の元素も相対基準が合うもの同士は自ら一つになりますが、相反した元素同士では、いくら神様が命令し、またどんな実験室の主人が命令して千年の精魂を込めたとしても、一つにならないのです。<br/>
+<br/>
+      14　皆さんが環境圏をつくらなければなりません。神様も、環境圏として太陽、地球、空気、水を造りました。環境圏には、いつも主体と対象があります。それが公式です。すべての被造万物は、ペア・システムになっているのです。鉱物世界もそうであり、動物世界もそうであり、人間世界もそうです。なぜ主体と対象になっているのでしょうか。真の愛の完成のためです。主体と対象がなければ、愛を中心として完成できません。これが公式です。そのように完成した先祖が、今まではこの地球上にいなかったのです。<br/>
+<br/>
+      15　この世界、宇宙を見てください。鉱物世界もプラスとマイナス、植物世界も雄しべと雌しべ、動物世界も雄と雌がいます。近頃は、細菌まで雌と雄があると言っています。すべてのものは、愛を中心として、それぞれのレベルを中心として一つになるようになっています。<br/>
+<br/>
+      このようなペア・システムの宇宙を見れば、これらは人間の理想的な愛が天地を代表して一つになるとき、共に連結されて支えるために、そのようになっているというのです。家を建てようとすれば、初めに基礎をつくるのと同じように、人のためにこのようなペア・システムをつくったのです。動物も、雄と雌が一緒に歩いていて、雌が被害を受けるようになれば、雄が命を懸けて守るのを見たことがあるでしょう。子を産めば、親は子のために命を差し出すのです。愛の道理はそのようになっています。本来、根本がそのようになっているからです。<br/>
+<br/>
+      16　真の愛の深い境地に入っていけば、万物と通じます。岩とも通じ、万物とも通じます。真の愛の世界は、通じないものがありません。ペア・システムになったのは、神様に属するように、愛と関係を結んで一つになる作用ができるからです。真の愛は、共鳴するようになっています。そのような真の愛の圏内に入れば、神様の内的な世界と外的な世界を感じることができます。<br/>
+<br/>
+      ですから、誰かが教えてくれなくても霊界が分かり、神様が分かり、この地において父母にどのように侍らなければならず、また国王にどのように仕えなければならないかなど、すべてのことが自然に分かるようになるのです。愛の行く道は、いい加減に行くようになっていません。公式になっているのです。愛が行く道は一つしかありません。<br/>
+<br/>
+      17　誰が愛を教えてくれるのでしょうか。自然が教えてくれるのです。野山を走る動物を見れば雄と雌、蝶を見ても雄と雌、すべてペア・システムになっています。花が咲いた美しい国には、鳥が「ピーチクパーチク」とさえずっています。鳥はなぜ鳴くのでしょうか。雄の鳥、雌の鳥がさえずるのは何のためですか。<br/>
+<br/>
+      鳥が鳴くのには三つの理由があります。一つはおなかがすいて鳴くのであり、一つは愛のために鳴くのであり、一つは子を呼んでいるのです。その三つの理由です。それは愛のゆえにそのようにするのです。<br/>
+<br/>
+      18　真の愛が行く道においては、すべてのものが自動的に一つになります。被造世界を見れば、いくら微小なものでもペアになっています。数千年の歴史が流れても、そのようにペアになっているのは変わりません。種のペア概念は、いかなる被造物も変えることができません。それは永遠なものです。そのように、周囲にある現象が教えてくれています。堕落していない本然の現象が教えてくれているのです。<br/>
+<br/>
+      木を見れば、成長を止めることがありません。休まずにいます。すべての生き物は、四季、昼夜の区別なく、成長を止めないのです。すべての被造世界は、そのような本然の道を歩んでいます。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">存在様相と作用の原則</a></h4>
+<br/>
+      19　与えるとなぜ栄え、与えることによってなぜ大きくなるのでしょうか。それは、神様が宇宙を創造した当時の根本と通じるからです。神様が創造するというのは、受けようとするのではなく、与えることです。与えれば、ひたすら大きくなるのです。すべてのものが与える概念に変われば、だんだんと大きくなります。ひたすら受けてばかりいれば、すべてのものが小さくなるのです。なぜ、そのようになっているのでしょうか。神様の創造原則に同伴できるので、宇宙が「私」を協助するのです。宇宙が「私」を協助するからです。<br/>
+<br/>
+      20　宇宙万物が存在しようとすれば、力がなければなりません。力はただそのままで存在するのではありません。力が存在しようとすれば、継続して作用しなければなりません。作用を続けてこそ力が存続するのですが、作用を続けようとすれば、どのようにしなければなりませんか。一人では作用できません。必ず主体と対象がいなければなりません。これが鉄則です。主体と対象が作用するときは、ただそのまま作用するのではありません。主体と対象の位置より、さらに良くなる場所が発見されるところにおいてのみ、作用するのです。これが原則です。<br/>
+<br/>
+      21　物事は、必ず二重構造になっています。すべて二重構造になっています。神様が内的な愛を中心としてために生きれば、無限に自分を忘れて投入し、投入するところに大きな宇宙の核が生じるのです。例えば、太陽系の数千億倍にもなるという大宇宙は、すべて球形になっているというのです。ですから、そこの核に従って動くのです。愛も同じです。人間の愛は、神様の心情圏からこの宇宙全体の軸の位置に立ち、神様の完成と創造理想完成のために、今まで歴史性をもった運動を継続してきているのです。霊界に行ってもそうです。すべて、愛の雰囲気の中で主体と対象の関係になっています。<br/>
+<br/>
+      22　発展するためには、必ず自分よりさらに良い場所を探し求めていくのです。すなわち、プラスになるところでのみ作用するのであって、マイナスになるところでは作用をしないというのです。二つが一つになってこそ発展があるのであって、二つが一つにならなければ絶対に発展がありません。それが宇宙の鉄則です。<br/>
+<br/>
+      互いがプラスになる価値を発見してこそ一つになるのです。作用してマイナスになるにもかかわらず一つになる、それが原則であれば、この世の中はなくなるのです。小さくなる原則と一つになるという道理があるなら、この世の中は逆さまになるのです。世の中の原則がそうだとすれば、世の中の一方は形成されても、もう一方は崩れていくのです。そのような原則はありません。<br/>
+<br/>
+      23　主体と対象が授け受けするときは、より良くなる何かを発見するところにおいてのみ作用するのであって、そうでないところでは作用しません。これが宇宙の鉄則です。化学実験において、ある元素とある元素を一つにするために藥品を入れ、ありとあらゆることをすべてしても、合わさらないものがあるのです。それは、合わさったとしてもマイナスになります。作用するようになれば互いにマイナスになるので、絶対に作用しないのです。神様も絶対に作用させません。それが原則です。<br/>
+<br/>
+      しかし、ある元素同士は、考えなくても作用するのです。互いに作用すれば必ずより大きなものが形成され、よりプラスになる立場になるので、作用するのです。それはいくら妨げようとしても作用するというのです。これが宇宙形成の原則です。<br/>
+<br/>
+      24　原子を見るとき、原子においては、陽子を中心として電子が回っています。それもやはり、二つの目的を結合できる、授け受けする位置にあるため、それが一つの原子の形を形成するのです。ですから、電子の目的と陽子の目的を兼ねた目的を中心として一つになっているのです。<br/>
+<br/>
+      大きく見れば、神様も存在者です。神様も存在するならば、実存体としていらっしゃるのです。そうだとすれば、神様もやはり主体と対象の関係になっていて、完全に授け受けできる二重目的性を中心として結合した立場に立たなければ、永遠に存在することができません。それはどういうことでしょうか。神様も結局は、主体性と対象性が合わさり、お一人の神様としていらっしゃるということです。<br/>
+<br/>
+      25　すべての主体と対象が完全に、永遠の愛に一つつになっているとき、この宇宙には永遠に保護する責任があります。これを破綻させようと第三の力が介在するときは、宇宙の力が取り除くというのが現象世界存続の道理です。原理原則は同じです。愛の世界においても、同じ結論なのです。霊界に行っても、この結論は正しいのであり、地上世界の現実的な舞台においても、正しいのです。したがって、どこにおいても現実化できるのが宇宙の法度です。ですから、原理原則に従って生きなければなりません。<br/>
+<br/>
+      26　創造において、直線上では調和するのが大変です。線は二点を連結したものです。直線上においては調和がありません。これは、行けば行くほど遠くなるのです。帰ってくることができません。ですから、この世の中、この宇宙の出発は、直線ではありません。三点の出発が偉大だというのです。三点を合わせてついていけば、球形が生じます。<br/>
+<br/>
+      直線運動から、どのように円形を回って三点基盤を見つけたのでしょうか。これは、運動する物自体がすることはできません。ここには第三の力が介入したことを認めなければならないので、創造主がいることを公認する論理が形成されます。<br/>
+<br/>
+      そして、宇宙創造の起源においては、受ける作用であろうと与える作用であろうと、必ず作用があったはずですが、どのような作用を先にしたのでしょうか。神様が受ける作用をしたのであれば、創造した宇宙がすべて神様にくっついてしまいます。神様しかいないのですから、受けようとばかりしていれば、永遠に存在できないのです。<br/>
+<br/>
+      27　宇宙の運動は、どのように始まるのでしょうか。直線上では運動できません。二点を連結したものが直線なので、直線上では調和は不可能です。三点から創造の調和が始まります。三点から放物線を通して、円形が描かれるのです。三点を通して回れば、連結されます。運動は、押すところから始まったのでしょうか、引くところから始まったのでしょうか。これを解決できなければ、宇宙の根本を解決する道がありません。運動は押すところからです。どちらが簡単でしょうか。押すほうが簡単です。引くのは二重の力になるので、理論的に矛盾です。ですから、「私」から投入するのです。<br/>
+<br/>
+      28　世界は丸くなっています。月も丸く、太陽も丸いのです。原子世界と分子世界もすべて丸いのです。丸いのですが、一人で丸くなることはできません。一人では絶対に丸くなれません。主体と対象の関係が円満に調和して発展しようとするので、丸くなるしかないのです。<br/>
+<br/>
+      すべての存在は理想圏を必要とし、そこに作用して関係を結ぼうとするので、自然に丸くなるのです。人間の中で円満な人は、どのような人でしょうか。丸く円満な人は、東に方向を向けたあとに西に方向を向けても、ぶつかりません。てっべんを押せば、そのまま他の所に入っていって出てくるのであって、それ自体は変わらないのです。<br/>
+<br/>
+      29　宇宙は、空気さえも円形を抱こうとするのであって、角のあるものを抱こうとはしません。円形をかき抱くようになっているのです。それが理想形なので、そこには消耗が起こりません。その根本原因とは何でしょうか。円形であるほど、丸いほど、長く続くのです。丸くないものは、回れば回るほど摩擦によって削られるか、消耗するのです。ですから、人間は円満を願うのです。円満というのは、平面ではなく球形を意味します。目もいっぱいに満ちていて、鼻もいっぱいに満ちていて、口もいっぱいに満ちていて、体全体がすべていっぱいに満ちていて、一つの円形を形成するのと同じです。<br/>
+<br/>
+      30　世の中を見れば、すべて回るようになっています。力の作用が直線に伸びていけば、永遠に消耗です。神様が被造世界を創造された第一の原則的目的はどこにあるかというと、直線で進む力を回すためでした。したがって、世の中の道理は、回転する道理であり、それと同時に運動する道理なのです。<br/>
+<br/>
+      皆さんが化学を勉強しようとすれば、物質を研究、分析し、運動して作用するすべての現象を観察することになるのですが、その道理から外れた存在はないことが分かります。そのすべてが三六〇度を回っているのです。宇宙も回り、社会も回り、「私」の心も回っています。全宇宙の中心である神様の心情を中心として回れる人は、神様が回ればその人も回るでしょう。神様が回る限り、この宇宙も回るでしょう。神様が回れば私たちが回り、万物が回ることになるのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="004.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="006.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>

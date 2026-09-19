@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第四篇　真の人間／第二節　真の人間の心と体</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第四篇　真の人間</h1>
+<nav class="page-nav">
+  <a href="001.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="003.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第一章　神様が創造された真の人間</a></li><li class="toc-b lv2"><a href="#002">第二節　真の人間の心と体</a></li><li class="toc-b lv3"><a href="#003">心と体とは何か</a></li><li class="toc-b lv3"><a href="#004">心は第二の神様</a></li><li class="toc-b lv3"><a href="#005">心身一体を成し遂げる道</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第一章　神様が創造された真の人間</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第二節　真の人間の心と体</a></h3>
+<br/>
+      1　被造世界には二つの軸があります。二つの軸があるのですが、見える軸と見えない軸の二重構造になっています。一つの主体を中心として回り、その主体自身も回るのです。体と心が授け受けすれば、回るようになるのと同じです。すべての存在物は、このような原則によって存在します。同様に、堕落した人間世界における復帰の道も、軸を直さなければなりません。人間において体の中心は心です。心を中心として体が連結されているため、体は心を中心として回るのです。心の命令に体が動くのです。心が「東に行きなさい！」と言えば東に行かなければならず、「西に行きなさい！」と言えば西に行かなければなりません。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">心と体とは何か</a></h4>
+<br/>
+      2　心とは何でしょうか。縦的であり創造主である父の愛を受け継いだものが心です。そして、横的な父母の愛を通して受け継いだものがこの体です。そのため、心は縦的な「私」であり、体は横的な私です。主体と対象の関係です。私という存在において心と体が焦点を合わせることにより、初めて環境的に縦横の一致が起きるのです。<br/>
+<br/>
+      愛を中心として、縦横において、縦的なプラスと横的なマイナスが九〇度で焦点を合わせる理想的な結着点が中央点です。中央点には何もないのですが、すべての力がその一つの焦点を通るのです。反対がありません。ジャンプ、ダイビングして入ってくるのです。台風のように入ってきます。それを防ぐ方法がありません。ですから、神様は知恵の王です。<br/>
+<br/>
+      この中心は真空状態です。真空状態では、引き寄せる力がそれに比例し、何百倍も強くなります。そのため、「来なさい」と言わなくても、引き寄せられるようになっているのです。引く力が強いので、その前にあるものは高い山でも何でも、すべて崩すのです。<br/>
+<br/>
+      3　心は、縦的な主人です。神様の血統を受け継いだので、縦的な主人です。体は、完成したアダム、横的な血統を受けた「私」です。私には二人の主人がいるのです。そのうちの一人は、垂直に受け継いだ神様の血統です。神様の血統だけがあってもいけません。神様の血統を中心とした垂直の前を横切って、水平線が連結されなければなりません。それで、分かれた東酉南北が中央に通じることができなければならないのです。垂直の前に水平線が連結され、九〇度になるのです。東、西、南、北が九〇度、垂直を中心として距離が同じ円形を形成するときは、すべて同じなのです。<br/>
+<br/>
+      4　心と体を見れば、心は主体であり、体は対象です。この二つが闘うのですが、なぜ闘うようになったのですか。体がプラスになったからです。主体である心の前に、体が永遠な対象にならなければならないのですが、これがもう一つの主体になりました。それが堕落です。<br/>
+<br/>
+      5　神様の愛が垂直的な愛だとすれば、水平的な愛がなければなりませんが、その水平的な愛は誰が占めることができますか。誰が占めるべき愛の場所でしょうか。その場は、堕落せずに完成し、本然の真の愛と和合しなければならない真の先祖の位置です。そのようにして一つになっていたならば、その愛を通し、神様の心と体に似て、父母の心と体に似て生まれることができたでしょう。これが「私」という存在です。<br/>
+<br/>
+      6　心は垂直な「私」であり、体は水平な「私」です。垂直の父母と水平の父母が一緒に私を造ったのです。彼らから真の愛、真の生命、さらには真の血統を受け継いだのです。私はそのようになっています。真の愛で一つになって造られたのが私です。私は宇宙の中心であり、愛を代表した存在です。また公式の中心です。私は、水平の愛の中心存在だというのです。水平の愛と垂直の愛が合わさって一つになった、真の愛の中心存在です。それが正に私なのです。<br/>
+<br/>
+      7　自分を見れば、心は縦的な面を代表し、体は横的な面を代表します。「心が正しい」という言葉を使います。正しいというのは何かというと、垂直にも合い、水平にも合うということです。言い換えれば、立てておけば垂直線にも合い、寝かせれば水平線にも合うということです。心が縦的ならば体は横的です。したがって、心が願うとおりに体が良く授け受けすれば、心の苦痛がなくなります。そのようなとき、よく育つのです。肉体的苦痛も苦痛ですが、心の苦痛がより恐ろしいのです。それは、縦的なものが中心だからです。<br/>
+<br/>
+      8　私たちの体と心は、置かれている位置が違います。心は縦的であり、体は横的です。これが一つにならなければ、水平にならなければ、本質的な神様の絶対的愛の方向に一致できる垂直線を引くことはできません。この垂直線は、二つではなく一つです。それゆえ、一番努力しなければならないこと、特に信仰生活をする私たちが努力しなければならないことは、心を中心として、どのように体を一つにするかということです。<br/>
+<br/>
+      9　人は体と心の二重になっていますが、心は縦的な面を身代わりしており、体は横的な面を身代わりしています。「あの人は心が正しい」と言うとき、それは水平を中心として見たということです。垂直に見て語る言葉ではありません。「その人は正しい」と言うとき、その「正しい」というのは、水平に対して語る言葉です。<br/>
+<br/>
+      仏教では、参禅を通して、心とは何かを研究してきましたが、いまだに心が何か分からずにいます。心は縦的な「私」です。また体は横的な「私」です。ですから、横的な私と縦的な私が統一される場で、私という人格が完成するのです。何を中心としてこの縦的なものと横的なものが統一されるのでしょうか。共鳴できる本質を通して一つになる所において、完成を論じることができます。それはお金でもなく、知識でもなく、権力でもありません。ただ、神様の真の愛によってのみ共鳴するのです。<br/>
+<br/>
+      10　体は水平を象徴し、心は垂直を象徴します。垂直と水平が九〇度を備えなければなりません。この九〇度が四つ合わさって三六〇度にならなければならないのです。そのようにならなければ、完全な人になれません。ですから、垂直を中心として一つにならなければなりません。体と心が一つになるとき、体を中心として一つになることはできません。心が移動することはできないのです。水平の体が調整して、垂直の心と完全に一つになり、九〇度で一つになれる「私」を求めなければなりません。その私というものは、人間が成熟して初めて愛を知るときに見つかるのです。東で暮らす人が塀を越えて西を眺め、西に住む人が塀を越えて東を眺めるためには、成熟しなければならないのです。<br/>
+<br/>
+      11　心は、天地の道理に従って縦的な人格の観をもっています。そのため、心は高いのです。心が広いと言いますが、広いという概念の中には、高いという概念が入っているのです。皆さんの心は広く、高いというのです。まっすぐなことにおいてはどこまでも、天の果てから地の果てまで、垂直にならなければなりません。運動する世界、円形の大宇宙圏内も、垂直は一つです。一つでなければなりません。すべての万物が願い、すべての存在が理想として願う垂直があれば、それは一つでなければならないのです。それが真の愛です。真の愛という垂直は、この宇宙に二つあってはいけません。東洋人や西洋人、過去、現在、未来を問わず、真の愛の垂直はただ一つです。その垂直の前に神様もぶら下がっており、その一つの垂直の前に愛の作用が広がるため、神様が願う理想もその垂直圏内に連結されるのです。そのような軸が、そのような垂直が、この地上に生まれなかったというのです。<br/>
+<br/>
+      12　私たちはよく、心がまっすぐだと言います。一直線に垂直に立ったものを、まっすぐと言います。木も横に傾いたものは、まっすぐとは言いません。心がまっすぐだというのは、垂直に立っているという意味です。ですから、人は立って歩くのです。垂直になってこそまっすぐなのです。自分の心を完全に垂直にしなければなりません。そこにおいて、体が水平線になるのです。このように垂直と水平が私たちの内部で形成されるとき、垂直において引く力と水平において押す力がバランスを取るようになり、求心力と遠心力が形成されるのです。<br/>
+<br/>
+      13　私たちには体と心があります。その体と心が一つになったときは苦痛を感じません。体と心が一つになっていないとき、苦痛を感じるのです。心が高くても一大事であり、体が高くても一大事です。しかし、体と心が一つになっているときは、苦痛を感じないのです。体と心が一つになっているときは苦痛を感じませんが、体と心が垂直になったときは、作動するのです。躍動するというのです。そのため、すべてが垂直に合わせなければなりません。水平と垂直がいつでも調和しなければならないのです。<br/>
+<br/>
+      14　天国は男性と女性の愛から始まります。神様の愛を中心に、垂直線を中心として水平線が統一されている所が本然の天国です。神様がいらっしゃるのですが、その中で男性と女性が核になり、体と心が共にびたりと丸くなるのです。そこにおいて、心は垂直的な「私」です。体は水平的な「私」です。明確なのです。垂直的な心は神様であり、水平的な体は真の父母です。それが一つになるのです。<br/>
+<br/>
+      15　心は見えませんが垂直です。体は見えますが水平です。人間は大宇宙の縮小体です。人の中に霊界があります。霊が入っています。それが心です。見えない心、見える体は世界の代表です。二つが中心を中心として、完全に四方を歩き回っても、ひと所を離れなければ理想的な人になるのです。見えない心と見える体が真の愛の核を中心に一つになるとき、これが理想的な男性と女性、個人の完成になるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">心は第二の神様</a></h4>
+<br/>
+      16　十人の友人の中で、「私のために生きろ」という人からは、友人がすべて離れていきます。しかし、九人のために自分の生命まで捧げようとする人は、その中心者になるのです。ですから、ために生きるようになれば、滅びるのではありません。主人になるのであり、師になるのであり、父母になるのです。<br/>
+<br/>
+      神様は遠くにいらっしゃるのではありません。「私」の中にいらっしゃいます。心が皆さんの主人です。夜に悪いことをしようとしても、現れて「してはいけない」と言い、いつでも現れて主人の役割を果たし、どこでも母のように、師のように教えてくれるのです。<br/>
+<br/>
+      17　良心は第二の神様です。第一の神様はプラスであり、心はマイナスで第二の神様です。そのような概念をもたなければなりません。心が第二の神様です。第二の神様は常に「私」と共にいます。良心の深い所で、愛と生命と血統の深い所で、私と関係を結んでいるのです。すべてのものを整理して収拾し、取り除いて、私をしきりに高い場所に導くのです。ですから、本然の良心は絶えず上がっていくのです。その力が肉身を主管するのです。これがプラスとマイナスとして一つになって自動的に統一され、完成します。私の良心は第二の神様であり、この強い力がいつでも一つの中心として、すべて主管するのです。<br/>
+<br/>
+      18　皆さんの心には師が必要ありません。心は第二の神様です。師についていかないで、皆さんの心に侍りなさいというのです。心はどうですか。朝早く一人起きて、ねずみの音も聞こえず、はえの音も聞こえない静かなときに、「ああ、私はこういうことをしなければならない。良いことをしなければならない」と言えば、心が「よし！よし！早くやりなさい！」と言いますが、悪いことを考えれば、心が「こいつ！」と言うのです。心はそうです。心はよく知っているのです。<br/>
+<br/>
+      19　心は、皆さんの番人となって夜も昼も皆さんを守ってくれ、皆さんが休むことができないほど、しきりに「善を行いなさい。善を行いなさい！」と言います。ですから、どれほど疲れるでしょうか。意識することができ、社会環境においてすべての制度を分析できる知能が生じたその日から、一生ついて回りながら、自分の師もついていくことはできず、父母もついていけませんが、生まれたその日から死ぬ時まで、良心は永遠に「私」に対して命命するというのです。「神様に似なさい、聖人に似なさい、愛国者に似なさい、孝子に似なさい」と言うのです。常に体に向かって「体よ、お前は私に似なさい！」と言うのです。<br/>
+<br/>
+      20　自分自身に偉大な師がいることを知りませんでした。心は偉大な父母の代身です。父母が心に逆らって訓示することはありません。心が父母のように訓戒するときは、服従することができなければなりません。このような秩序のある環境において、起源になることのできる道義的な結論が出ていません。そのような公式が出ていないというのです。心は先生の代身、父母の代身、神様の代身です。ですから、心を教えることのできる師はいません。<br/>
+<br/>
+      21　良心は神様に優ります。良心は「私」がいる前からありました。神様に優り、父母に優り、王に優るのです。そのような貴いものが心です。悪いことをしようとするとき、「早くしなさい！」という心の声はありません。皆さんが悪いことをしようとすれば、心が「おい、こいつ。やめなさい！」と言うのです。良心の言葉を絶対に聞かなければなりません。そうしてこのように育んでいければ、良心と「私」が言葉を交わすのです。<br/>
+<br/>
+      22　祈るときは、心に対して祈らなければなりません。どれほど心が願うとおりにしたでしょうか。心を後回しにしていくら神様を呼び求めても、通じません。心と一つになってこそ、通じるようになっている神様です。そのため、心の命令を中心として考えなければなりません。いつでも心を見つめて尋ねなさいというのです。父母に尋ねる代わりに、永遠の良心に尋ねてみなさいというのです。<br/>
+<br/>
+      良心は父母に優っています。父母と分かれることもでき、離別することもできますが、心とは分かれることができません。師と分かれることはできますが、心とは分かれることができません。主人と分かれることはできますが、心とは分かれることができません。その三大主体に侍って暮らす心を無視するのは、途方もない罪です。父母を無視することであり、師を無視することであり、宇宙の主人である神様を無視することです。<br/>
+<br/>
+      23　心と楽しむ時間をもたなければなりません。世の中から見れば寂しい立場のようですが、それは心と友達になる時間なのです。座って瞑想でもしてみなさいというのです。深い祈りの境地に入っていきます。他人の分からない深い世界に入っていくのです。そのようなことが必要です。<br/>
+<br/>
+      24　心は「私」の主人です。「私」の師です。心に似た体を生んだので、心は私の体の根源です。そのため、心は平面的に父母の代身です。心は父母の代身であり、師の代身であり、主人の代身です。<br/>
+<br/>
+      25　心の価値、私にとって心がどれほど高価なものかを考えてみましたか。心は体が間違った所に行こうとすれば、いっでも忠告し、「こうしてはいけない」と、すべて制裁を加えるのです。しかし、体はいつも心を攻撃し、無視し、踏みつけて、自分勝手にするのです。迫害を受けながらも、死ぬときまで私にとっての戦友のように、師のように、主体的使命を担うべく犠牲を払っていくのが、体についている心です。<br/>
+<br/>
+      26　ある人を見れば、その人がどんな人かということを心は直ちに分かるのです。すぐにそれが分かるというのです。一番近い先生が自分の心です。ですから、その心を苦しめず、悲しませてはいけないというのです。それは先生を悲しませることであり、天宙の主人を悲しませることです。心が「私」の一生の主人です。ですから、心を悲しませるのは、「私」の一生の主人を悲しませることなのです。心が喜べる道を行かなければなりません。<br/>
+<br/>
+      27　皆さんの心は父母より先であり、師より先です。その心は永遠に、「私」と共に一つになっています。しかし、父母は永遠に一つではなく、師も永遠に一つではなく、主人も永遠に一つではありません。ですから、心に偉大な価値があるというのです。そのため、父母様に尋ねる前に、心と相談しなければなりません。そうすれば尋ねる必要がないのです。それは神様と直結しているので、共鳴圏に入ることによって、体が願うことについて尋ねれば、周波が同じなので答えが来るのです。「あす、これこれこのような人に会いに行くのだが、どうしようか」と心に向かって尋ねてみれば、心は喜んだり、嫌がったりするというのです。行って会うのが良いのか悪いのか、心が分かります。嫌ならば、心が縮こまってしまうのです。<br/>
+<br/>
+      28　真を求めていくならば、絶対的に心のために生きる体にならなければなりません。これが一つになって、神様を中心として九〇度で天地に連結されれば、東西南北、上下、どこに行っても分かるのです。自動的に霊界と通じ、学ばなくてもすべて分かるのです。<br/>
+<br/>
+      先生はどのようにして天地の秘密をすべて知ったのでしょうか。その境地に入ったので、すべて分かるようになったのです。真の愛を中心として体と心が共鳴する境地に入ってみると、すべて見えたというのです。神様も見え、天上世界も見え、歴史も見え、すべて見えるのです。真の愛を通して関係を結び、縁を結んで、理想的な生活をすることのできる環境的要件が本来の神様の創造理想の原則だったので、その境地に入ってみると、通じない所がないのです。霊界の先祖も、呼べばさっと出てきて会い、何でも尋ねることができるのです。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">心身一体を成し遂げる道</a></h4>
+<br/>
+      29　良心は、体が間違ったことをすれば、いくら夜中であっても「こいつ、やめなさい！」と言います。悪いことをしようとすれば、すぐに良心が呵責を受けるのです。死んでいた神様が生き返り、死んでいた師が生き返り、死んでいた父母が生き返るのです。ですから、良心が願うとおりにせざるを得ません。<br/>
+<br/>
+      人間が堕落する前にも、良心と体が闘ったかというと、そうではないのです。神様は良心と体が闘っていないのに、そのような神様の息子、娘になれなかったので、心と体が闘うのです。根源がすべて変わってしまいました。簡単な原理ですが、聖人や賢人もこれを解決できませんでした。先生もこの問題にぶつかって、どれほど身もだえしたか分かりません。それで「宇宙主管を願う前に自己主管を完成せよ」と言うのです。この体が宇宙の怨讐です。<br/>
+<br/>
+      30　すべての人間は、それぞれ自分の中に最も貴重な師を、一生の間もち続けています。それにもかかわらず、その師を不当に待遇し、踏みつけて濫用するのです。その師が正に、人間の良心です。私たちの良心は常に、私たち自身に助けになるように話し掛け、私たちを真の愛と連結してあげようとします。私たちの良心は父母のように、私たちが善で、非利己的な人になるように促し、神様のみ旨に従って行動するように導いてくれます。しかし、私たちには良心の声にいつも逆らう反乱者がいます。その反乱者が正に肉体です。<br/>
+<br/>
+      31　堕落した世界の父母と師と主人は知ることができますが、人間として知ることのできないその主人が良心です。神様の本然の父母の根、師の根、主人の根を人間に植えてくれたのが良心です。これを先生が知って驚いたのです。先生が探し求めてきたすべてのものの最後の終結、隠された家が良心でした。「私には神様に責任を追及する何ものもない。私の良心の使命を果たすことを追求するしかない。責任を追及する場所がないのだから、私が責任をもとう」と進み出たのが、先生の立場です。そこにおいて、神様は先生を愛さざるを得ないのです。<br/>
+<br/>
+      32　良心革命は、良心の声に絶対服従しなければならないという内的革命です。皆さんの中に、いまだ善を指向する良心の命令と、肉身の欲望を求める肉心の誘惑が、絶え間ない葛藤を続けています。そのような恥ずかしい内面の闘いを終息させるためには、良心の位置と作用を確実に知らなければなりません。<br/>
+<br/>
+      良心は皆さんの一挙手一投足、さらには皆さんの考えまでも、一点一画の加減なく把握しています。皆さんの師よりも先に分かるのです。皆さんの父母よりも先に分かります。神様よりも先に分かるのです。そのような良心の命令に逆らえば、皆さん自身が呵責を受けます。皆さんの魂にほこりがたまり、垢がつき、傷ができるというのです。その傷は、永遠に消すことができず、そのまま霊界に背負っていかなければならない重荷となります。したがって、革命的な次元で自分の肉身を抑制し、良心の案内を受けて神様のみ前に進みゆくその日まで、傷のない、澄んだ、きれいな魂を保ちなさいというのです。<br/>
+<br/>
+      33　本来、心と体は、切り離そうにも切り離すことのできない一つのものでした。人間の心は神様の心であり、人間の体はその心を入れる器でした。ところが、人間の堕落により、人間の体を悪魔に差し出したのです。そのときから人間の体は、悪魔の僕になりました。<br/>
+<br/>
+      人間の良心は、神様を代表する心です。良心は、「私」のために存在するのではありません。天の義のために存在するのです。良心は常に、善に向かって走ろうとします。これに体は反抗します。体は自分だけが安らかでいようとし、利己的で本能的要求に従って肉欲を満たそうとします。良心はこの体を叱責し、心に順応させようとします。ここから、常に血のにじむ葛藤と闘争が、一つの体において起こるようになるのです。<br/>
+<br/>
+      34　すべての宗教は、自らの体を打つ道を教えてきました。宗教は、肉欲を制御し、体を心に屈服させる道場なのです。宗教は、人間を創造本然の人間へと引っ張っていく道場です。しかし、神様を自分の中に迎え入れなければ、自らの体を征服する者は誰もいません。ただ神様の真の愛と真理の力を中心として、主体の心は対象の体を従わせ、神様と一体理想を成し遂げるようになっているのです。これが、宗教の語る完成した人間です。<br/>
+<br/>
+      35　人間の貴重な価値を満点にするのは、真の愛と一体となるときに可能です。心身一体とは、良心と肉身が共鳴圏に立っていることを意味します。音叉の振動数が同じとき、一つをたたけば、その反対の音叉が響きます。それと同じように、真の愛によって良心をたたけば、肉身が響きます。真の愛で肉身をたたけば、良心が共鳴圏をつくるようになるのです。そこには教育が必要ありません。その真ん中に入っていけば、教えるべきすべてのことが分かるようになっているのです。<br/>
+<br/>
+      36　人間自体を見れば、体と心が闘っています。それは今日、この時代に始まったことではありません。私たちの宗主である先祖から、墾書に記録されたアダムとエバが堕落した直後から、このような作用が起きているのです。歴史上の聖賢の中で、「私は人類歴史において人間を代表し、体と心が闘わず、完全に統一を成し遂げたので、私を手本にしなさい！」と言った人がいましたか。<br/>
+<br/>
+      心も重要で、体も重要です。より重要なことは、「私」の体と心の統一圏です。それが重要です。それが形成されていない人は、いくら世界が統一されたとしても不幸な人なのです。統一された世界で不幸な闘いをする自分自身は、その世界に吸収、消化されません。反発を受けるのです。追放されるというのです。ですから、世界の統一に先立ち、新しい世界の理想的ビジョンを成就する前に、私自身がそれを受けて消化し、和合できる自分を発見できなければならないのです。<br/>
+<br/>
+      37　統一教会の人は、どんなことがあっても心身一体圏を形成しなければなりません。この生涯の間に心身一体圏を形成できない人が、愛を考え、理想を考えるということは恥ずかしいことです。天運に反するのです。そのようなものを完成した自分自身を目指すところに、新たな希望の道が連結されるのであって、ただそのままの基準では、新たな希望の天国に連結される道が現れません。<br/>
+<br/>
+      38　創造本然の人間は、その心と体に神様の真の愛をもち、そのまま感応しながら生きるようになっています。心は真の愛を中心として神様に感応し、体は自動的に心に共鳴するのです。体と心が闘うことのない真の統一の起源は、神様の真の愛をそのまま受け継いで体感する所にあります。心と体が統一体になるという人間の理想は、神様の真の愛を完全に所有するときに成し遂げられるのです。心と体が真の愛を中心として統一されるところから、真の自由と平和の理想が出発できます。そして、心と体が統一された基盤の上で、自由で平和な個人、家庭、氏族、民族、国家、世界を成し遂げることができるのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="001.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="003.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>

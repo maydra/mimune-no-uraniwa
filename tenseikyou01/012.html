@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image"/>
+<link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png"/>
+
+<meta charset="utf-8"/>
+<title>天聖經（増補版）／第一篇　神様／第二節　再創造される神様</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 a {
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #f093fb;
+            border-bottom-color: #f093fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 2em 0;
+        }
+
+        ul, ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.9;
+        }
+
+        b, strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 0;
+        }
+
+        .links-list li {
+            position: relative;
+            padding-left: 1.6rem;
+        }
+
+        .links-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .links-list li:hover::before {
+            transform: translateX(3px);
+        }
+
+        .links-list a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            line-height: 1.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: none;
+        }
+
+        .links-list a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .links-list a:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .links-list a:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .links-list a {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .links-list a {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* 聖書の節リンク用スタイル（既存のものを保持） */
+        a.verse-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        a.verse-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+            border-bottom-color: transparent;
+        }
+
+        [id^="v"]:target {
+            background-color: #fff3cd;
+            padding: 0.1em 0.2em;
+            border-radius: 3px;
+            scroll-margin-top: 1em;
+        }
+    
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+        /* 階層つき目次 */
+        .toc ul, .toc-tree { list-style: none; padding-left: 0; margin: 0.5em 0; }
+        .toc li, .toc-tree li { margin: 0.3em 0; padding-left: 0; }
+        .toc li::before, .toc-tree li::before { content: none; }
+        li.lv0 { font-weight: 700; }
+        li.lv1 { margin-top: 1em; font-weight: 700; }
+        li.lv2 { margin-left: 1.5em; }
+        li.lv3 { margin-left: 3em; font-size: 0.95em; }
+        /* 本文見出し（<b id> の自己リンクから変換） */
+        .bh { display: block; line-height: 1.5; margin: 2.2em 0 0.8em; }
+        .bh::before { content: none; }
+        h2.bh { font-size: 1.7rem; border-left: 5px solid #667eea; padding-left: 0.5em; }
+        h3.bh { font-size: 1.35rem; }
+        h4.bh { font-size: 1.15rem; }
+        /* 見出しは自分へのリンク。押すと URL にその節の #番号が付く */
+        .bh a { color: inherit; text-decoration: none; border-bottom: none; }
+        .bh a:hover { text-decoration: underline; }
+        .bh a:hover::after { content: " 🔗"; font-size: 0.6em; opacity: 0.7; }
+
+    </style>
+    
+    <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+</head>
+<body><div class="container">
+<h1>天聖經（増補版）／第一篇　神様</h1>
+<nav class="page-nav">
+  <a href="011.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="013.html" class="nav-btn">次へ <span>→</span></a>
+</nav><div class="toc" id="toc"><h2>目次</h2><ul><li class="toc-b lv1"><a href="#001">第四章　解放してさしあげるべき神様</a></li><li class="toc-b lv2"><a href="#002">第二節　再創造される神様</a></li><li class="toc-b lv3"><a href="#003">復帰摂理歴史の足跡</a></li><li class="toc-b lv3"><a href="#004">旧約時代、新約時代、成約時代の意味</a></li><li class="toc-b lv3"><a href="#005">旧約時代までの復帰摂理</a></li><li class="toc-b lv3"><a href="#006">新約時代の復帰摂理</a></li><li class="toc-b lv3"><a href="#007">成約時代の復帰摂理</a></li></ul></div>
+
+<!-- St-HP-H -->
+<!-- En-HP-H -->
+<blockquote>
+<div align="left">
+<b id="001"><a href="#001" style="color : blue;text-decoration : none;">第四章　解放してさしあげるべき神様</a></b><br/>
+</div>
+<hr/>
+<h3 class="bh" id="002"><a href="#002">第二節　再創造される神様</a></h3>
+<br/>
+      1　神様は、人間の堕落によって、六日の創造期間、すなわち最初の日から六日目までに創造したあらゆるものを失いました。人のゆえにすべて失ったというのです。神様は、これを再び取り戻すために、六千年の歴史を摂理してこられました。この六千年を中心として、七千年の歴史へと越えていくのです。キリスト教では千年王国を主張していますが、一日が千年になり得ます。千年王国というのは、世界的な復活圏を意味します。<br/>
+<br/>
+      　　<h4 class="bh" id="003"><a href="#003">復帰摂理歴史の足跡</a></h4>
+<br/>
+      2　皆さんは、皆さん個人の生活的な面で、永遠の生や世界的な生と関係を結ぶことのできる、生の足場を立てなければなりません。そうでなければ、皆さんの今の生が世界的な生を経て、永遠の生になることはできません。このような字宙的な生を立てるべき人間の先祖アダムとエバが、堕落することによってそれを失ったので、これを再び復帰するために神様が六千年間苦労してこられましたが、神様のこのような苦労の歴史を復帰摂理歴史といいます。<br/>
+<br/>
+      3　神様を中心として人間が完成していたならば、人間の楽しみが神様の楽しみとなり、人間が享受する栄光が神様の栄光になったはずですが、人間が自らの楽しみと自らの栄光を神様が望まれる基準で享受できなかったがゆえに、人間には悲しみが始まりました。そして、罪を犯した人間であるがゆえに、その理想の園とはあまりにも遠い距離にまで落ちてしまいました。このように落ちた人間を、再び取り戻すための苦労の歴史が復帰摂理歴史です。<br/>
+<br/>
+      4　歴史始まって以来、今まで、「人類歴史は復帰歴史である」ということを知った人はいませんでした。歴史の背後関係を「復帰」という概念で定義を下したというのは、統一教会が歴史に残した大きな功績です。歴史の根本となるのは神様であり、またその神様が責任を負い、今まで歴史をずっと治めて発展させてこられました。そのため、復帰の使命を担った数多くの個人、家庭、氏族、民族、国家があり、それによって歴史は段階的に発展してきました。<br/>
+<br/>
+      5　神側から見れば、歴史が始まって以降、今まで完全に勝利してその勝利の日を称賛したことがありません。アダムとエバが堕落したその日から数千年の間、復帰摂理歴史をたどってきましたが、神様の創造理想を見てみるとき、天が勝利した、あるいは天が栄光を占有したという位置には未到達の過程にあります。<br/>
+<br/>
+      神様が望むことは、あくまでも真の勝利、すなわち真が絶対的な権威をもち、その権限を行使することです。その行使は、一時だけではなく、歴史性をもち、過去もそうでなければならず、現在もそうでなければならず、未来にも連結される勝利として、天を中心として行われるのです。それにもかかわらず、神様はそのような時をいまだに迎えることができていません。復帰摂理路程、あるいは歴史時代のある一部分では勝利したことがありますが、その勝利もまた、再び歴史過程を経てくるときには、失敗の結果として帰結されたというのです。<br/>
+<br/>
+      6　復帰摂理歴史は、アダムとエバを造った基台の上で、縦的関係によって今まで役事してきたのです。人間は神様を中心として、「神様！神様！私たちの完成の基準をお立てください」と言って、僕の僕から僕、僕から養子、養子の立場を経て、直系子女の立場を経て、父母の立場にまで上がらなければなりません。<br/>
+<br/>
+      旧約前の時代である僕の僕から、ヤコブ以降の時代である僕を経て、ずっと上がるのです。ですから、養子の立場を経て、患子、娘の立場を経て、息子、娘が初めて真の父母であられるメシヤに出会って人類の父母の位置に立つようになれば、僕の僕の時代から僕の時代、養子の時代、息子の時代、父母の時代を迎えて救援されるのです。<br/>
+<br/>
+      7　歴史的な希望と信仰で求めてきた天国、すなわち勝利の園を取り戻すべき私たちです。皆さんは、天が喜ぶ個体を求め、天が喜ぶ家庭を求めて天国に入らなければなりません。しかし、その家庭を求めようとすれば真の父母を求めなければならず、真の夫婦、真の兄弟を求めなければなりません。これを求めるためのものが、神様の摂理歴史です。ですから、希望を象徴した時代は旧約時代であり、信仰を象徴した時代は新約峙代です。これからは愛を象徴する時代が来ますが、その時代は成約時代と言うことができます。ですから、そのような関係が天上から地上世界にまで広がっています。<br/>
+<br/>
+      8　本来、一つのみ旨として立てられていた創造理想世界は、堕落することによって築くことができませんでした。しかし、神様は絶対的な権限をもった方なので、外的な世の中がすべて変化したとしても、御自身は絶対的に変わることはできません。悪魔にアダムとエバを奪われ、万物をすべて譲り渡しましたが、神様はやはり神様であり、絶対的なお方なので、本来は天使長である悪魔サタンまでも自然屈伏させなければなりません。いてもいないのと同様の立場において、絶対的な神様の権威を立てなければなりません。<br/>
+<br/>
+      善なる神様は、悪なるサタンを先に打つことはできません。善なる神様の愛の本質世界に、先に打てる原因、動機がありません。怨讐に対してまでも、ために生きなければなりませ<br/>
+<br/>
+      ん。万物のために投入に投入を重ね、ために生き、またために生きる神様の威信とその絶対的な権威は、いくら悪魔が生まれ、反対しても崩れません。そのような立場で、ために生き、またために生きながら来てみると、神様の救援摂理は、このように数千年の歴史を経てくるようになりました。そのようにしながら自然屈伏させてきたのです。<br/>
+<br/>
+      9　人類歴史は、善悪の闘争史です。神様は、真の愛を中心とした真の父母、真の子女、真の家庭、真の国家、真の世界、そして真の天宙を立てて、真の愛の理想で主管しようとされましたが、サタンが偽りの愛を中心として偽りの父母、偽りの子女、偽りの家庭、偽りの国家、偽りの世界、そして偽りの天宙を立てて支配してきました。これを取り戻そうとするので、人類歴史は、善悪の闘争史として繰り返されてきたのです。すなわち、個人から永遠の世界に至るまで、サタンは神様の原理的歴史発展に従っていきながら、原理的世界をまねて、真のものが来る前に真のものであるかのように先手を打ちながら、原理の世界を破壊しようとするので、善悪の闘争を避けられなくなったのです。<br/>
+<br/>
+      神様は、利他主義の立場で再創造摂理をされながら、ために生き、また、ために生きながら、打たれて奪ってくる作戦を取る一方、サタンは自分中心の立場で、先に打っては損害賠償までしなければならない道を歩んできたのです。神様の作戦は、打たれて奪ってくる作戦であり、サタンは打って滅びていくのです。このように、善の側は打たれ、追害され、犠牲を払いながら発展していきますが、サタンはその反対です。<br/>
+<br/>
+      　　<h4 class="bh" id="004"><a href="#004">旧約時代、新約時代、成約時代の意味</a></h4>
+<br/>
+      10　歴史的な復帰路程を総括的に見ると、神様は今まで、蘇生、長成、完成の三段階を通して摂理してこられたことが分かります。旧約時代の僕の時代、新約時代の養子の時代、成約時代の真の子女の時代を超えて、真の父母の時代になるのが復帰路程です。<br/>
+<br/>
+      11　人類歴史を見ると、旧約時代、新約時代、成約時代、このように三時代があります。旧約時代までは、祭物を犠牲にして子女を救う時代です。神様の息子が来る準備をするのです。新約時代は、イエス様が祭物となって父母を迎える時代です。ですから、再臨時代を迎えて新郎新婦を立て、父母を迎えるための準備をしてきました。成約時代に先生が中心となり、真の父母という名をもって今まで四十年間以上苦労してきたのは、神様を地上に迎えるためです。そして、神人一体となるのです。<br/>
+<br/>
+      12　恨が宿った六千年の歴史過程は、どのように続いてきたのでしょうか。神様とサタンと人間を中心として、ある条件を立ててくるものなのですが、これがすなわち祭物の峠です。六千年の摂理歴史を回顧してみるとき、旧約時代までは万物を通して祭物の峠を越え、新約時代にはイエス・キリストの実体を通して祭物の峠を越えました。<br/>
+<br/>
+      それでは、成約時代には何を基準として祭物の峠を越えるようになるのでしょうか。聖徒たち、すなわち皆さん自身を通して越えるようになります。このように、全体的な摂理歴史は祭物を中心として成されますが、旧約時代までは万物を通して祭物の峠を越えなければならず、新約時代はイエス・キリスト、すなわち神様の息子を中心として祭物の峠を越えなければなりませんでした。しかし、成約時代である今は、新郎新婦の名前を身代わりする皆さん自身を条件として、祭物の峠を越えなければなりません。皆さんがそのような祭物の峠を越えるまでは、この地上に真の平和と自由と理想の世界は成就されないのです。<br/>
+<br/>
+      13　旧約時代までは万物を犠牲にし、新約時代は息子を犠牲にし、成約時代は父母を犠牲にするのです。万物を犠牲にさせたのは、所有権を否定する立場で息子、娘を取り戻すためです。息子を否定したのは、父母を取り戻すためであり、父母様が十字架を負ったのは、神様に侍ってさしあげるためです。ですから、旧約時代は行義時代、その次に、新約時代は信義時代、その次の成約時代は侍義時代です。<br/>
+<br/>
+      14　旧約時代までは万物を犠牲にし、新約時代には息子を犠牲にし、成約時代には父母を犠牲にして神様を迎えたので、今からは何をすべきでしょうか。皆さんが父母を身代わりする立場に立たなければなりません。万物は旧約時代であり、息子、娘は新約時代です。<br/>
+<br/>
+      15　復帰の途上においては、僕の僕の時代から僕の時代を経て、養子の時代、直系の時代に上がっていかなければなりません。それでは、完全に僕の僕の時代を経て僕の時代、養子の時代を経て直系子女の時代へと関係を結ぶことができるでしょうか。直系の時代と関係を結ぶ場合は、そのまま結ぶことはできません。必ず原理によって「信仰基台」を経て、「実体基台」を経て、「メシヤのための基台」を経なければなりません。つまり、メシヤを迎えなければならないのです。メシヤは神様の真の息子です。養子と真の息子とは、血統的な関係が違います。ですから、血統転換が必要です。<br/>
+<br/>
+      16　皆さんが蕩減復帰していくのに、根本問題とは何でしょうか。旧約を完成しなければならず、新約を完成しなければならず、成約を完成しなければなりません。成約の完成は、全世界が神様の統治圏内に入ることです。これが成約時代の完成です。旧約時代までは万物を復帰するための時代であり、新約時代は天の国の民を復帰するための時代であり、成約時代は天の国の主権を復帰するための時代です。世界の主権を復帰しなければならないというのです。世界の民を復帰しなければならないのがイエス様の使命です。すなわち、世界の万民を一つの国の民として復帰しなければならないのがキリスト教の使命であり、世界を一つの主権に復帰しなければならないのが再臨主の使命です。<br/>
+<br/>
+      　　<h4 class="bh" id="005"><a href="#005">旧約時代までの復帰摂理</a></h4>
+<br/>
+      17　旧約時代は僕の時代でした。僕の僕の立場にある人間を、僕の立場に復帰させてきた時代でした。ですから、アブラハムも僕だったのであり、息子にはなれませんでした。神様は、僕の僕を立てて忠誠の道理を立てられました。そのようにして、この歴史的な世界人類を導いて糾合させ、世界的な悪の舞台を天の側に占有させるとともに、神様の摂理を発展させてきました。ヤコブも神様の息子として勝利したのではなく、僕の立場で勝利したのです。神様がこのように僕の僕から僕の位置に復帰し、僕の位置から養子の位置へと復帰しながら摂理してこられたのです。<br/>
+<br/>
+      18　旧約時代の全人類に対する救援摂理は、僕の立場での救援でした。ですから、この時代には最初の最初から最後の最後まで残って勝利できる中心を立てなければ、僕としての復帰基台を立てることができませんでした。それで、神様はノアやアブラハムなどの中心人物をお立てになって、四千年という歴史を導いてきながら、数多くの犠牲を払ったのです。<br/>
+<br/>
+      19　人類歴史は、宗教と共に出発し、宗教は人類と共に流れ動いています。希望の道を発見しなければならないからです。神様は、人間が堕落したその日から、御自身が創造した責任を負い、堕落した人間を救援する摂理を展開されるために、歴史過程を経て、今まで苦労してこられました。<br/>
+<br/>
+      堕落することによって推し量ることのできない状況に落ちてしまった人間は、サタンの支配を受けていますが、サタンを中心として愛する人になってはいけないので、サタンまでも失う立場に落ちるようにさせるのです。ですから、神様は、僕の僕以下に落ちた立場から救援歴史をされるのです。神様が数多くの宗教を通して僕の僕の道理を教えていく摂理をしてこられたのは、そのような理由のためです。ですから、人類のために奉仕しなさいというのです。僕の僕の立場にある人間には、仕えてもらう資格がないので、無条件に従順に服従する道以外には方法がありません。僕の僕の立場は主人がいないので、僕が主人の役割をする立場です。<br/>
+<br/>
+      20　旧約時代を中心として見てみるとき、それ以前の人類は僕の僕の立場にいましたが、旧約時代に入ると僕の立場に立つようになり、そのようになることによって、初めて主人をもつことができるようになりました。<br/>
+<br/>
+      僕の僕の立場から僕の立場に来るためには、人間自らが開拓することはできないので、神様が開拓者の使命を果たしてこられました。僕の僕よりも、もっと悪なる一族を教育しなければならなかったのが神様の事情でした。しかし、神様は無形でいらっしゃるので、人間の前に現れたとしても見ることができない立場なので、特定の人、すなわち預言者を立てて教育してこられたのです。その預言者は、神様の身代わりとしてこの地上に来ましたが、人間として神様の命令に従って順応しなければならない立場でした。<br/>
+<br/>
+      21　預言者は、人間に何を教えなければならなかったのでしょうか。神様のみ旨に従おうとすれば、従順の道理を立て、歴史をさかのぼる摂理をしなければならないことを教えなければなりませんでした。ですから、サタンの前に忠誠を尽くす、それ以上に神様のために忠誠を尽くす人が出てこなければならなかったのです。そのような道理を神様が教えなければなりません。そうして僕の法度を立て、一つの編成を備えたあとに、個人、家庭、氏族、民族圏を形成して、摂理のみ旨に相対できる環境をつくらなければなりません。ところが、僕の立場ではこれを立てることができないので、新しいメシヤ思想を提示して、今後、救世主を送ってくださるという約束を立てて役事をしてこられたのです。それが正に、イスラエル民族を中心とした摂理でした。<br/>
+<br/>
+      22　旧約前の時代は、祭物を犠牲にして、神様が僕の僕として使うことのできる人を準備する時代です。これが旧約前時代です。人が万物よりも低くなりました。人が万物よりも悪くなったので、神様のみ前により近い万物を二つに裂いて、あなたの所有物、「私」の所有物、このようにして分けて立てました。このように分別された祭物を立てなければならなかった事実は、誰のせいでしょうか。神様のせいでもなく、サタンのせいでもありません。人間が責任分担を果たせなかったからです。サタンの血統を受け継いだのは、人間が責任分担を果たせなかったからなのです。<br/>
+<br/>
+      23　人間は堕落しましたが、神様に背くことはできないので、僕の僕の立場にまで下りていかなければなりませんでした。僕の僕とは、主人がいないことを意味します。堕落した人間は、僕の僕の立場から神様に忠誠を尽くさなければなりません。サタンは天使長だったのであり、神様の僕でした。その僕の前に引かれていった人間なので、人間が神様のみ前に戻ってくるためには、僕の僕の立場から、神様に忠誠を尽くしたという基準を立てなければなりません。<br/>
+<br/>
+      24　旧約前の時代には、使いのような立場の使命者として立てられたノアとアブラハムを通して、神様のみ旨を伝えてきました。暗闇に沈むこの地上の万民たちを、父が相対する立場にまで引き上げるために、アブラハム一族を選び、イスラエル民族を立てられました。それによって、イスラエル民族を通して、人間が徐々に神様のみ前に進む道を切り開いてきました。そうして、天は、天使たちに役事させる一つの基準を立てられました。そうしてから、アダムとエバに対する神様のみ旨を完成したという基準を備えることによって、父に直接、相対できる勝利的な土台を造成するために、イエス様が来る時まで、四千年の間御苦労されたのです。<br/>
+<br/>
+      　　<h4 class="bh" id="006"><a href="#006">新約時代の復帰摂理</a></h4>
+<br/>
+      25　神様の約束を成し遂げるために、神様のみ旨を中心としてこの地上に来られたお方がイエス・キリストです。彼は、過去の歴史時代において、人間が僕の立場にいるときに神様がなされた約束を成し遂げて、養子と、真の息子の立場を立てるために来られたのです。僕が忠臣の道理を果たすときは、養子の位置に立つことができるというのです。ですから、復帰摂理歴史を経てくるとともに、イスラエル民族をして僕として忠誠を尽くすことのできる土台を築くことで、養子の関係を結んでいくようにしたのです。<br/>
+<br/>
+      26　養子の関係は、どのように結ぶのでしょうか。神様の息子がこの地上に来る前には、不可能です。神様の息子がこの地上に来なければならず、その息子の命令を聞いて、そこに順応して、初めて養子の関係を結ぶことができます。これが旧約時代と新約時代が連結される役事です。<br/>
+<br/>
+      旧約を信じてきた人々は、僕として養子の恩恵を受けることを願いますが、それが正にメシヤが来ることを願う理由です。すなわち、メシヤによって僕の悲しい身の上を越え、養子圏の立場に進むことが彼らの希望だというのです。養子の位置は、直系の息子、娘がいなくなるとき、父母から相続を受けることのできる関係が成立する立場です。<br/>
+<br/>
+      ですから、僕の立場を超越して、神様のみ旨を迎える恩恵を受けることを願ってくるようにしたのが、僕の旧約時代を指導してこられた神様のみ旨です。したがって、彼らが僕の身の上を免れて、神様の相続を受けられる圏内に入る、特権的な一時を望んで出てきたのであり、それがイスラエルの選民思想です。<br/>
+<br/>
+      27　イエス様は、一段階高めて神様の愛を紹介しました。旧約時代には、モーセは愛の神様を紹介することができず、権能の神様、能力の神様、審判の神様だけを紹介しました。しかしイエス様は、愛を紹介しました。愛の神様を紹介し、愛のイエス様を紹介しましたが、当時の人間は受け入れませんでした。<br/>
+<br/>
+      28　今から二干年前、ユダヤ教を中心として、その時代において世界的宗教圏をつくり、ローマに反対されながら、天の側に立ってローマを消化できる宗教運動の主軸として立てるために、イエス様を送りました。ユダヤ教が待っていたメシヤを送られたのです。<br/>
+<br/>
+      そのメシヤは、どのようなメシヤでしょうか。ユダヤ教のメシヤです。ユダヤ教のメシヤとして来て、世界的メシヤ路程を開拓しようとして、途中で亡くなられました。すると、ユダヤ教は、どのようになるのでしょうか。今までのユダヤ教のためだけの神様として仕える、そのような神様であってはいけません。<br/>
+<br/>
+      それでは、イエス様がこの地上に来て教えるべきこととは何でしょうか。旧約聖書で教えてくれた神様を、ただそのまま教えてはいけません。新約時代の神様として教えてあげなければならないのです。<br/>
+<br/>
+      29　僕のイスラエルをつくり、僕の国と僕の民族をつくり、ここに神様の息子が来て、その息子を信じ、イエス様のみ言を信じることによって僕から養子になり、イエス様が一段階上がるようになれば、イエス様を信じる人は息子になるのです。<br/>
+<br/>
+      イエス様は、何によって一段階上がるのでしょうか。この地の人間が堕落することによって人類の先祖がいなくなったので、先祖の立場に上がるようになれば、イスラエル民族は養子の立場で接ぎ木され、神様のみ前で相続権に対し得る、息子の名分をもつようになります。ですから、ローマ人への手紙第八章二十三節に、「御霊の最初の実を持っているわたしたち自身も、心の内でうめきながら、子たる身分を授けられること、すなわち、からだのあがなわれることを待ち望んでいる」とあり、「あなたがたは再び恐れをいだかせる奴隷の霊を受けたのではなく、子たる身分を授ける霊を受けたのである。その霊によって、わたしたちは『アバ、父よ』と呼ぶのである」(ローマ八・一五)とあります(訳注：韓国語の聖書では「子たる身分」が「養子」となっている)。養子にしかなれません。今、キリスト教徒たちは養子です。養子は血統が違うのです。<br/>
+<br/>
+      30　養子になろうとすれば、どのようにしなければならないのでしょうか。これが問題です。養子は僕よりも優れていなければなりません。神側の僕よりも優れていなければならず、サタン側を見ると、サタンは悪の世界の王ですが、そのサタンよりも優れていなければなりません。サタンは本来、天使長でしたが、その天使長は僕だったので、その僕よりも劣る人は養子になることができません。これは原理的です。<br/>
+<br/>
+      また、このサタン世界を自分の手で征服するという信念をもたなければなりません。そうでなくては養子になれません。神様のために生きる道があるとすれば、歴史が始まって以降、どのような人よりも、誰よりも神様のために生き得る代表者が出てきてこそ、養子の出発をすることができます。そのような歴史を標準として、長久な歴史時代、縦的な歴史を経て、一つの民族を動員してこのような養子圏をつくるために、神様は苦労をしなければならないのです。その養子が出てくる目的は、神様を父母として、相続権を受け継ぐためです。<br/>
+<br/>
+      31　神様に本来息子がいるのに、養子を立てることはありません。息子がいないので養子が必要なのであって、息子がいれば、養子は必要ありません。その養子を立てる目的は、真の息子を探すためなのです。その養子は自分が神様の相続を受けても、それは自分のものではなく、神様御自身の本来の息子、娘の前に返してあげるべき相続だという思想をもたなければなりません。そのような養子をつくらなければなりません。養子は、将来来る息子、娘のために、自分が死ぬとしても、生命を尽くし、自らのあらゆるものを犠牲にしても、神様が願われる直系の息子、娘が生まれることを願い、いつもそのために準備する心をもたなければなりません。養子の名を立てなければ、息子と関係を結ぶことができないのです。<br/>
+<br/>
+      　　<h4 class="bh" id="007"><a href="#007">成約時代の復帰摂理</a></h4>
+<br/>
+      32　成約とは何でしょうか。約束を成したということです。神様が創造理想を完成するという話です。それでは、成約時代とは何でしょうか。創造理想を完成した息子、娘、エデンから追い出して失ったそのアダムとエバが、世界的舞台の上で代表的な王権を身代わりできる神側の息子、娘として帰ってこなければならないというのです。ですから、堕落がなかったように歓迎できる個人から、歓迎できる家庭、歓迎できる氏族、歓迎できる民族、歓迎できる国家、歓迎できる世界にならなければなりません。<br/>
+<br/>
+      33　成約時代とは何でしょうか。地上において、家庭を中心として、父母様の愛を中心として理想世界に向かう過程、サタンが讒訴できない新しい世界に前進する過程が成約時代です。成約時代は、原理的に見れば、責任分担を完成した父母圏を意味するのです。<br/>
+<br/>
+      約束とは責任分担です。責任分担の約束を未完成にしたのが堕落です。旧約は昔の約束です。新約は新しい約束であり、成約は約束を成す時です。約束を成すというのは、世界の万民たちが責任分担を完遂することです。しかし、責任分担を果たせなかったために、個人、家庭、氏族、民族、国家、世界、天宙の責任分担が残されたのです。サタン世界まで生じたのです。責任分担を果たせないことによってサタンが生じたので、この責任分担を果たさなければなりません。<br/>
+<br/>
+      34　神様の摂理を見ると、三段階に分かれます。旧約時代、新約時代、成約時代です。キリスト教では、旧約と新約ですべて終わったと思っていますが、違います。成約時代が残っていることを知らずにいます。イエス様が再び来てみ旨を成し遂げなければなりませんが、それが成約時代です。旧約があり、新しい約束があったので、その約束が成し遂げられなければならないのではないですか。再臨主がこの地上に来て、み旨を成就するのです。<br/>
+<br/>
+      35　成約時代は、成し遂げる時代です。個人的に成し遂げ、家庭的に成し遂げ、氏族、民族、国家、世界的に成し遂げるのです。神様の愛と、神様の生命と、神様の血統を中心として連結します。単一の血統、単一の愛、単一の生命の伝統です。このようになれば、サタンは離れていかなければなりません。接ぎ木することによって、サタンの血統的因縁がなくなるのです。<br/>
+<br/>
+      36　旧約時代までには、万物を犠牲にして息子の行くべき道を整え、新約時代には、息子を犠牲にして再臨主、真の父母が来る道を整えたのです。成約時代には、真の父母が犠牲になることによって縦的な神様を地上に迎えるのです。神様は人類の前に真の愛を中心とした縦的な父母であり、真の父母は真の愛を中心として、その縦的な父母の前に横的に九〇度の角度を合わせた横的な父母です。ですから、縦横の愛を中心として、初めて神様の愛と神様の生命が動くのです。神人合徳(和合)が動き、真の父母の愛を中心として、新しい血族が広がっていきます。そうなることによって、人類歴史の中で初めて本然的原理基準を中心として、神様の愛の中で出発した生命の種が地上に顕現するのです。<br/>
+<br/>
+      37　旧約時代までは、万物を犠牲にして息子、娘を取り戻す時代です。新約時代は、息子、娘を犠牲にして父母が来る道を築く時代です。父母がこの地に来て、神様が来ることのできる道を築くのです。縦的父の水平世界を、万民世界を越えてつくらなければならないのが真の父母の使命です。ですから、この水平の父の心情圏がつくられるようになれば、縦的な父の心情圏は、自然にここに来て定着します。そうして縦的、横的な愛を抱ける位置に行けば、ついに世界を越えて神様は核の位置に行き、本然の理想の権限を再び編成したことによって、「すべて成し遂げた」と言うことのできる時代に越えていくというのです。<br/>
+<br/>
+      38　私たちは、神様を希望の主人公として見つめ、信仰の主人公として見つめています。また愛の主人公として見つめています。この希望と信仰と愛の主人公としていらっしゃる神様は、人間をして歴史過程で希望を身代わりした旧約時代、信仰を身代わりした新約時代を経るようにされたので、これからは愛を身代わりした成約時代を経なければなりません。<br/>
+<br/>
+      それでは、今、そのような成約時代、すなわち再臨時代において、永遠不変の一つの中心要素として残されるものとは何でしょうか。それは神様の愛です。それは、全体の中心要素であると同時に、全体理想の要素にもなります。ですから、今まで人間は、この愛のために希望の摂理路程と、信仰の摂理路程を経てきました。<br/>
+<br/>
+      しかし、今、愛の摂理路程を皆さんが歩まないとすれば、神様がこの地上に愛を中心として成すべき統一の足場は、崩壊してしまうというのです。<br/>
+<br/>
+</blockquote>
+</div>
+
+<script src="../theme/script.js?v=202609192031"></script>
+
+
+<details id="typo-report" class="typo-box dark-theme">
+  <summary class="typo-title">誤植・修正提案</summary>
+  <p class="typo-desc">コメント感覚で送れます（匿名OK）。ページURLは自動で添付されます。</p>
+  <form id="typoForm"
+        action="https://script.google.com/macros/s/AKfycbzKaBDjVMe5wZgmZ1yQ5We6u3W3E3PGVLthOniv3TQvuopr2bWU_yrYQ1oQucz5NdwH8w/exec"
+        method="POST"
+        target="typoSink">
+
+    <label class="typo-label" for="typoText">内容（必須）</label>
+    <textarea id="typoText" name="typoText" class="typo-textarea" rows="4" required
+      placeholder="例：誤字、脱字、年号違い…"></textarea>
+
+    <label class="typo-label" for="typoQuote">該当箇所（任意）</label>
+    <textarea id="typoQuote" name="typoQuote" class="typo-textarea" rows="2"
+      placeholder="該当文をコピペ（任意）"></textarea>
+
+    <input type="hidden" id="pageUrl" name="pageUrl">
+    <input type="hidden" id="whenIso" name="whenIso">
+    <input type="hidden" id="userAgent" name="userAgent">
+
+    <label class="typo-label" for="replyEmail">返信が欲しい方は、メールアドレスを入力ください（任意）</label>
+    <input type="email" id="replyEmail" name="replyEmail" class="typo-input" placeholder="例：name@example.com">
+
+    <div class="typo-row">
+      <button type="submit" id="typoSubmit" class="typo-btn">送信</button>
+      <span id="typoStatus" class="typo-status" aria-live="polite"></span>
+    </div>
+  </form>
+  <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
+</details>
+
+<style>
+  .typo-box.dark-theme{
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+  }
+  .dark-theme .typo-title{ cursor: pointer;  margin: 0 0 .5rem 0; font-size: 1.2rem; color: #fff; font-weight: 700; }
+  .dark-theme .typo-desc{ margin: 0 0 1.2rem 0; opacity: .7; font-size: 0.95rem; }
+  .dark-theme .typo-label{ display:block; font-weight:600; margin:.8rem 0 .4rem 0; color: #ccc; font-size: 0.9rem; }
+  .dark-theme .typo-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  .dark-theme .typo-textarea:focus{
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.5);
+  }
+  .dark-theme .typo-row{
+    margin-top: 1.2rem;
+    display:flex;
+    gap: 1rem;
+    align-items:center;
+  }
+  .dark-theme .typo-btn{
+    padding: .7rem 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dark-theme .typo-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  .dark-theme .typo-btn[disabled]{ opacity:.5; cursor:not-allowed; transform: none; box-shadow: none; }
+  .dark-theme .typo-status{ font-size: .95rem; opacity:.9; color: #667eea; }
+
+  .typo-box summary { cursor: pointer; list-style: none; outline: none; }
+  .typo-box summary::-webkit-details-marker { display: none; }
+  .typo-box summary::before { content: '▶'; display: inline-block; margin-right: 0.5rem; transition: transform 0.2s; font-size: 0.8em; }
+  .typo-box[open] summary::before { transform: rotate(90deg); }
+  .typo-box[open] { padding-bottom: 1.5rem; }
+
+/* モダンなナビゲーションボタン用スタイル (Dark Theme) */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}
+
+.nav-btn span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .nav-btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+  .typo-input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:.7rem .75rem;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font:inherit;
+    line-height:1.5;
+    background:#fff;
+    color:#111;
+  }
+  .typo-box.dark-theme .typo-input{
+    border-color:rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+  }
+
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector("#typo-report.dark-theme") || document.getElementById("typo-report");
+  if(!root) return;
+  const form = root.querySelector("#typoForm");
+  const sink = root.querySelector("#typoSink");
+  const statusEl = root.querySelector("#typoStatus");
+  const btn = root.querySelector("#typoSubmit");
+
+  function fillHidden() {
+    const pUrl = root.querySelector("#pageUrl");
+    const wIso = root.querySelector("#whenIso");
+    const uAgent = root.querySelector("#userAgent");
+    
+    if(pUrl) pUrl.value = location.href;
+    if(wIso) wIso.value = new Date().toISOString();
+    if(uAgent) uAgent.value = navigator.userAgent;
+  }
+  fillHidden();
+
+  if(form) {
+    form.addEventListener("submit", () => {
+      fillHidden();
+      if(btn) btn.disabled = true;
+      if(statusEl) statusEl.textContent = "送信中…";
+    });
+  }
+
+  if(sink) {
+    sink.addEventListener("load", () => {
+      if(btn) btn.disabled = false;
+      if(statusEl) statusEl.textContent = "送信しました。ありがとうございます！";
+      setTimeout(() => { if(form) form.reset(); }, 200);
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("randomScroll") === "true") {
+    window.onload = () => {
+      const y = Math.floor(Math.random() * document.body.scrollHeight);
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+  }
+</script>
+<nav class="page-nav">
+  <a href="011.html" class="nav-btn"><span>←</span> 前へ</a>
+  <a href="index.html" class="nav-btn">目次</a>
+  <a href="013.html" class="nav-btn">次へ <span>→</span></a>
+</nav>
+
+<script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>
