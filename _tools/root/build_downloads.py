@@ -1,26 +1,30 @@
 # -*- coding: utf-8 -*-
-"""1冊を1つのファイルにまとめて download/ に書き出す（HTML と TXT）。
+"""1冊を1つのファイルにまとめて download/ に書き出す（HTML）。
 
 「この本をオフライン保存」(sw.js) はブラウザの保存領域に頼るので、
 iPhone では Safari とホーム画面のアイコンで保存先が別だったり、
 しばらく開かないと消されたりして、機内で開けないことがある。
 こちらは端末にファイルとして残るので、ファイルアプリから必ず開ける。
 
-- download/<book>.html … CSS も中に入った1ページ。目次・ルビ・蛍光ペンの色が残る
-- download/<book>.txt  … 文字だけ。ルビは 暗闇《くらやみ》 の形
+download/<book>.html は CSS も中に入った1ページ。目次・ルビ・蛍光ペンの色が残る。
 
-ページの順番は、各ページの「次へ」をたどって決める。
+ページの順番は、本の目次（index.html）に載っている順。
 同じ本の中へのリンクはページ内リンクに直し、ほかの本へのリンクはサイトの URL にする。
 
 リポジトリの根から:
     python _tools/root/build_downloads.py dp kitou   # 指定した本だけ
     python _tools/root/build_downloads.py            # 全部
 """
+import hashlib
 import json
+import os
 import pathlib
 import re
 import sys
-from urllib.parse import unquote, urljoin, urlparse
+from collections import Counter
+from urllib.parse import quote, unquote, urljoin, urlparse
+
+from html import escape
 
 from bs4 import BeautifulSoup, Comment
 
@@ -94,25 +98,29 @@ def slug(name):
     return re.sub(r'[^0-9A-Za-z_-]', '_', name.rsplit('.', 1)[0])
 
 
+def rel(path):
+    return path.relative_to(ROOT).as_posix()
+
+
 def local_target(href, page, book_dir):
     """href が同じ本のページを指していれば (ファイル名, #の後) を返す。"""
     if not href or href.startswith(('mailto:', 'javascript:', 'tel:')):
         return None
     if href.startswith('#'):
         return page.name, unquote(href[1:])
-    url = urljoin(SITE + f'{book_dir.name}/{page.name}', href)
+    url = urljoin(SITE + quote(f'{rel(book_dir)}/{page.name}'), href)
     p = urlparse(url)
     if not url.startswith(SITE):
         return None
-    rel = unquote(p.path[len(urlparse(SITE).path):])
-    target = ROOT / rel
+    path = unquote(p.path[len(urlparse(SITE).path):])
+    target = ROOT / path
     if target.parent == book_dir and target.suffix == '.html':
         return target.name, unquote(p.fragment)
     return None
 
 
 def absolute(href, page, book_dir):
-    return urljoin(SITE + f'{book_dir.name}/{page.name}', href)
+    return urljoin(SITE + quote(f'{rel(book_dir)}/{page.name}'), href)
 
 
 def moved(page):
@@ -121,70 +129,150 @@ def moved(page):
     return 'location.replace(' in head or '移動しました' in head
 
 
+def natural(name):
+    """1.html, 2.html, …, 10.html の順に並べるためのキー"""
+    return [int(x) if x.isdigit() else x for x in re.split(r'(\d+)', name)]
+
+
 def reading_order(book_dir):
+    """読む順番。本の目次（index.html）に載っている順が基本。
+
+    各ページの「次へ」は途中で目次に戻ってしまう本が多いので、順番の
+    よりどころにはしない。
+    """
     pages = {p.name: p for p in book_dir.glob('*.html')
              if p.name not in SKIP_PAGES and not moved(p)}
-    order = []
-
-    def next_of(name):
-        soup = read(pages[name])
-        for a in soup.select('nav.page-nav a'):
-            if '次へ' in a.get_text():
-                t = local_target(a.get('href'), pages[name], book_dir)
-                return t[0] if t else None
-        return None
-
-    # 目次（index.html）で最初に出てくる本文ページから、「次へ」をたどる
-    start = None
     index = book_dir / 'index.html'
+    linked = []
     if index.exists():
         for a in read(index).find_all('a', href=True):
             t = local_target(a['href'], index, book_dir)
-            if t and t[0] in pages:
-                start = t[0]
-                break
-    name = start or (sorted(pages)[0] if pages else None)
-    while name and name in pages and name not in order:
-        order.append(name)
-        name = next_of(name)
-    # 鎖から漏れたページは最後に名前順で足す（落とさない）
-    order += sorted(n for n in pages if n not in order)
-    return [pages[n] for n in order]
+            if t and t[0] in pages and t[0] not in linked:
+                linked.append(t[0])
+
+    # 中身がまったく同じページ（父の祈りの fp1_mokuji と framepage1 など）は1つにまとめ、
+    # 目次に載っている方を残す。alias は元の名前 → 残した名前
+    alias, first = {}, {}
+    for n in linked + sorted((n for n in pages if n not in linked), key=natural):
+        key = hashlib.sha1(text_of(read(pages[n]).body).encode('utf-8')).hexdigest()
+        alias[n] = first.setdefault(key, n)
+    pages = {n: p for n, p in pages.items() if alias[n] == n}
+    order = []
+    for n in linked:
+        if alias[n] not in order:
+            order.append(alias[n])
+
+    # 目次に載っていないページは、そこへリンクしているページのすぐ後ろに差し込む。
+    # 目次に載っているページ（父の祈りの各編の目次など）からはどのリンクでも、
+    # 差し込んだページからは「次へ」だけをたどる（本文中の参照で先の章を
+    # 引っぱってこないように）
+    listed = set(order)
+    i = 0
+    while i < len(order):
+        page = pages[order[i]]
+        found = []
+        for a in read(page).find_all('a', href=True):
+            label = a.get_text()
+            if '前' in label or (order[i] not in listed and ('次' not in label or '目次' in label)):
+                continue
+            t = local_target(a['href'], page, book_dir)
+            n = alias.get(t[0]) if t else None
+            if n and n not in order and n not in found:
+                found.append(n)
+        order[i + 1:i + 1] = found
+        i += 1
+    # それでも決まらないページは最後に名前順で足す（落とさない）
+    order += [n for n in sorted(pages, key=natural) if n not in order]
+    return [pages[n] for n in order], alias
 
 
-def page_title(soup):
-    h = soup.select_one('.container h1, h1')
-    if h and h.get_text(strip=True):
-        return h.get_text(' ', strip=True)
-    return soup.title.get_text(strip=True) if soup.title else ''
+def text_of(el):
+    return re.sub(r'[\s　]+', ' ', el.get_text(' ', strip=True)).strip() if el else ''
 
 
-def short_title(t, book_title):
-    """「原理講論 総序」「はじめに/天一国時代の祈祷」から本の名前を外す"""
-    s = re.sub(r'^' + re.escape(book_title) + r'[\s　/／:：]*', '', t)
-    s = re.sub(r'[\s　]*[/／|｜][\s　]*' + re.escape(book_title) + r'$', '', s)
-    return s.strip() or t
+def chapter_titles(soups, book_title):
+    """各ページの章の名前。
+
+    <title> と最初の h1 のうち、ページごとに違いのある方を元にする（統一思想要綱は
+    h1 が全ページ本の名前で、<title> に章名がある）。全ページに共通する頭と尻
+    （「訓教経/(上)」「 - 統一思想要綱」）を削り、「/」で区切った各部分と、
+    ページ内の目次・見出しを候補にする。候補のうち、半分より多くのページに出てくる
+    もの（「み旨の道」「文鮮明先生のみ言集」など）と、番号だけのものは使わない。
+    """
+    by_title = [text_of(s.title) for s in soups]
+    by_h1 = [text_of(s.find('h1')) for s in soups]
+    raw = by_title if len(set(by_title)) > len(set(by_h1)) else by_h1
+    raw = [r or t for r, t in zip(raw, by_title)]
+    trimmed = raw
+    if len(raw) >= 3:
+        # 語の途中で切らないよう、区切り（空白・/・-）のところまで戻す
+        pre = re.sub(r'[^\s/／\-|｜]*$', '', os.path.commonprefix(raw))
+        suf = re.sub(r'^[^\s/／\-|｜]*', '', os.path.commonprefix([r[::-1] for r in raw])[::-1])
+        trimmed = [r[len(pre):len(r) - len(suf)] for r in raw]
+
+    def clean(t):
+        t = t.replace('◆', '').strip()
+        t = re.sub(r'^' + re.escape(book_title) + r'[\s:：]*', '', t)
+        return t.strip(' _-')
+
+    cands = []
+    for soup, t in zip(soups, trimmed):
+        c = re.split(r'\s*(?:[/／|｜]| - )\s*', t)
+        c += [text_of(a) for a in soup.select('#toc a[href^="#"], .toc a[href^="#"]')]
+        c += [text_of(h) for h in soup.find_all(['h2', 'h3', 'h4'])]
+        c = [clean(x) for x in c]
+        cands.append([x for x in c if x and not re.fullmatch(r'[\d０-９]+', x)
+                      and x not in ('目次', book_title, '誤植・修正提案')])
+    common = set()
+    if len(soups) >= 3:
+        count = Counter(x for c in cands for x in set(c))
+        common = {x for x, n in count.items() if n > len(soups) / 2}
+    out = []
+    for c, r in zip(cands, raw):
+        good = [x for x in c if x not in common]
+        out.append(good[0] if good else (c[0] if c else clean(r) or r))
+    # 同じ名前が並ぶページ（生涯路程11の「第二節 …」が3ページ続くなど）は、
+    # ページの中で最初に出てくる、その名前以外の見出しで区別する
+    count = Counter(out)
+    # 見出しタグが無いページ（父の祈り）は、太字の1行目を見出し代わりにする
+    heads = [[clean(text_of(h)) for h in s.find_all(['h2', 'h3', 'h4'])]
+             + [clean(text_of(b)) for b in s.find_all(['b', 'strong'])[:1]] for s in soups]
+    seen_in = Counter(h for hs in heads for h in set(hs))
+    for i, hs in enumerate(heads):
+        if count[out[i]] > 1:
+            # ほかのページには出てこない見出しだけを使う
+            hs = [h for h in hs if h and seen_in[h] == 1 and h != out[i] and h != book_title]
+            if hs:
+                out[i] = hs[0]
+    return out
 
 
-def build(book):
-    book_dir = ROOT / book
-    pages = reading_order(book_dir)
+def link_names(index):
+    """目次のページで、フォルダ → リンクの文字（＝本の名前）"""
+    names = {}
+    for a in read(index).find_all('a', href=True):
+        t = unquote(urlparse(urljoin(SITE + quote(rel(index)), a['href'])).path)
+        name = a.get_text(' ', strip=True)
+        if name and t.startswith(urlparse(SITE).path):
+            folder = t[len(urlparse(SITE).path):].rsplit('/', 1)[0]
+            names.setdefault(folder, name)
+    return names
+
+
+def build(book_dir, out, title):
+    """book_dir の全ページを download/<out>.html にまとめる"""
+    pages, alias = reading_order(book_dir)
     if not pages:
-        print(f'{book}: ページが無い')
+        print(f'{out}: ページが無い')
         return
-    index = book_dir / 'index.html'
-    title = ''
-    if index.exists():
-        t = read(index).title
-        title = t.get_text(strip=True).split('|')[0].split('｜')[0].strip() if t else ''
-    title = re.sub(r'\s*[/／]\s*目次$', '', title) or book
-    known = {p.name for p in pages}
+    book = rel(book_dir)
+    soups = [read(p) for p in pages]
+    known = set(alias)
+    titles = chapter_titles(soups, title)
 
-    toc_items, chapters, texts = [], [], []
-    for page in pages:
-        soup = read(page)
-        raw_title = page_title(soup)
-        ptitle = short_title(raw_title, title)
+    toc_items, chapters = [], []
+    for page, soup, ptitle in zip(pages, soups, titles):
+        heads = {text_of(soup.title), text_of(soup.find('h1')), title}
         sid = slug(page.name)
         # ページ内の目次（あれば）を小見出しとして使う
         subs = []
@@ -200,7 +288,8 @@ def build(book):
                 parent = a.parent
                 a.decompose()
                 # 案内リンクだけが入っていた箱は、箱ごと消す
-                while parent is not None and parent.name in ('p', 'div', 'li')                         and not parent.get_text(strip=True) and not parent.find(['img', 'hr']):
+                while parent is not None and parent.name in ('p', 'div', 'li') \
+                        and not parent.get_text(strip=True) and not parent.find(['img', 'hr']):
                     nxt = parent.parent
                     parent.decompose()
                     parent = nxt
@@ -208,7 +297,7 @@ def build(book):
             c.extract()
         # ページ先頭の h1（＝章名）は自前で出すので外す
         first = body.find('h1')
-        if first and first.get_text(' ', strip=True) == raw_title:
+        if first and text_of(first) in heads:
             first.decompose()
         # 見出しが自分自身へのリンクになっているもの（サイトの共有用）は、ただの見出しに
         for h in body.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
@@ -221,82 +310,152 @@ def build(book):
         for a in body.find_all('a', href=True):
             t = local_target(a['href'], page, book_dir)
             if t and t[0] in known:
-                a['href'] = f'#{slug(t[0])}' + (f'--{t[1]}' if t[1] else '')
+                a['href'] = f'#{slug(alias[t[0]])}' + (f'--{t[1]}' if t[1] else '')
             elif not a['href'].startswith('#'):
                 a['href'] = absolute(a['href'], page, book_dir)
                 a['target'] = '_blank'
 
         inner = ''.join(str(x) for x in body.contents)
+        ptitle = escape(ptitle)
         chapters.append(
             f'<section class="chapter" id="{sid}">'
             f'<h2 class="chapter-title">{ptitle}</h2>{inner}'
             f'<p class="chapter-end"><a href="#top">▲ 目次へ</a></p></section>')
         if subs:
-            lis = ''.join(f'<li><a href="#{i}">{t}</a></li>' for i, t in subs)
+            lis = ''.join(f'<li><a href="#{i}">{escape(t)}</a></li>' for i, t in subs)
             toc_items.append(f'<li><details><summary><a href="#{sid}">{ptitle}</a></summary>'
                              f'<ul>{lis}</ul></details></li>')
         else:
             toc_items.append(f'<li><a href="#{sid}">{ptitle}</a></li>')
-        texts.append(to_text(ptitle, body))
 
-    online = SITE + f'{book}/index.html'
+    # 元のページに無い場所（#top など）へのリンクは、その章の頭へ
+    joined = ''.join(chapters)
+    ids = set(re.findall(r' id="([^"]+)"', joined)) | {'top'}
+
+    def fix(m):
+        return m.group(0) if m.group(1) in ids else f'href="#{m.group(2)}"'
+    joined = re.sub(r'href="#(([^"]+?)--[^"]*)"', fix, joined)
+    toc = re.sub(r'href="#(([^"]+?)--[^"]*)"', fix, ''.join(toc_items))
+
+    index = book_dir / 'index.html'
+    online = SITE + quote(f'{book}/' + (index.name if index.exists() else pages[0].name))
     html = f"""<!doctype html>
 <html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title}｜み旨の裏庭</title>
+<meta name="robots" content="noindex">
+<title>{escape(title)}｜み旨の裏庭</title>
 <style>{CSS}</style></head>
 <body><main id="top">
-<h1 class="book-title">{title}</h1>
+<h1 class="book-title">{escape(title)}</h1>
 <p class="book-note">み旨の裏庭 ｜ オフライン用の1ファイル版 ｜ <a href="{online}">サイトで開く</a></p>
-<details class="book-toc" open><summary>目次</summary><ol>{''.join(toc_items)}</ol></details>
-{''.join(chapters)}
+<details class="book-toc" open><summary>目次</summary><ol>{toc}</ol></details>
+{joined}
 </main>
 <div class="tools"><button id="smaller" aria-label="文字を小さく">A−</button><button id="bigger" aria-label="文字を大きく">A＋</button><a href="#top" aria-label="目次へ">▲</a></div>
 <script>{JS}</script>
 </body></html>
 """
-    OUT.mkdir(exist_ok=True)
-    (OUT / f'{book}.html').write_text(html, encoding='utf-8')
-    txt = f'{title}\n（み旨の裏庭 {online}）\n\n' + '\n\n'.join(texts) + '\n'
-    (OUT / f'{book}.txt').write_text(txt, encoding='utf-8')
-    kb = lambda p: f'{p.stat().st_size / 1024:,.0f} KB'
-    print(f'{book}: {len(pages)} ページ → {book}.html {kb(OUT / f"{book}.html")}, '
-          f'{book}.txt {kb(OUT / f"{book}.txt")}')
+    h = OUT / f'{out}.html'
+    h.parent.mkdir(parents=True, exist_ok=True)
+    h.write_text(html, encoding='utf-8')
+    print(f'{out} [{title}]: {len(pages)} ページ → {h.stat().st_size / 1024:,.0f} KB')
 
 
-def to_text(ptitle, body):
-    body = BeautifulSoup(str(body), 'html.parser')
-    for r in body.find_all('ruby'):
-        rts = [rt.extract().get_text(strip=True) for rt in r.find_all('rt')]
-        for rp in r.find_all('rp'):
-            rp.extract()
-        base = r.get_text()
-        r.replace_with(f'{base}《{"".join(rts)}》' if rts else base)
-    # 段落の切れ目と <br> に目印を置いてから文字を取り出す。ソースの改行は
-    # 整形のためのものなので、和文の途中では詰める
-    BR, BLOCK = ' ', ' '
-    for br in body.find_all('br'):
-        br.replace_with(BR)
-    for el in body.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'li',
-                             'blockquote', 'hr', 'tr', 'section', 'table']):
-        el.insert_before(BLOCK)
-        el.insert_after(BLOCK)
-    s = re.sub(r'[ \t]*[\r\n]\s*', '', body.get_text())
-    s = re.sub(r'[ \t]+', ' ', s)
-    blocks = []
-    for b in s.split(BLOCK):
-        b = '\n'.join(x.strip() for x in b.split(BR)).strip()
-        b = re.sub(r'\n{2,}', '\n', b)
-        if b:
-            blocks.append(b)
-    bar = '━' * 20
-    return f'{bar}\n{ptitle}\n{bar}\n\n' + '\n\n'.join(blocks)
+def buttons(href_base, out, title, cls):
+    name = re.sub(r'[\\/:*?"<>|]', '', title)  # 保存するときのファイル名
+    return (f'<a class="{cls}" href="{href_base}{quote(out)}.html" download="{escape(name)}.html">📄 1ファイルで保存</a>')
+
+
+def add_buttons(targets_list):
+    """各本の目次ページに保存ボタンを置く（もう置いてあれば置き直す）。
+
+    ふつうの本は「この本をオフライン保存」ボタンの後ろ。聖書は書ごとの
+    章番号の並びの上に置く。
+    """
+    marker = re.compile(r'<a class="(?:book-search-btn(?: dl-file)?|dl-btn)" href="[^"]*download/[^"]*"[^>]*>[^<]*</a>')
+    bible = {}
+    for d, out, title in targets_list:
+        if out.startswith('bible/'):
+            bible[rel(d)] = (out, title)
+            continue
+        index = d / 'index.html'
+        s = index.read_bytes().decode('utf-8')  # 改行コードを変えないように
+        s2 = marker.sub('', s).replace(NO_ICON, '')
+        m = re.search(r'<button class="book-search-btn" id="offline-save-btn"[^>]*>[^<]*</button>', s2)
+        if not m:
+            print(f'{out}: 保存ボタンの置き場所が見つからない')
+            continue
+        # 検索ボタン用の 🔍（a.book-search-btn::before）が付かないように打ち消す
+        s2 = (s2[:m.end()] + buttons('../download/', out, title, 'book-search-btn dl-file')
+              + NO_ICON + s2[m.end():])
+        if s2 != s:
+            index.write_bytes(s2.encode('utf-8'))
+    if bible:
+        index = ROOT / 'Bible_out' / 'index.html'
+        s = index.read_bytes().decode('utf-8')  # 改行コードを変えないように
+        s2 = re.sub(r'<div class="dl-row">.*?</div>', '', s)
+
+        def put(m):
+            first = re.search(r'href="([^"]+)"', m.group(0))
+            folder = 'Bible_out/' + unquote(first.group(1)).rsplit('/', 1)[0] if first else ''
+            if folder not in bible:
+                return m.group(0)
+            out, title = bible[folder]
+            return f'<div class="dl-row">{buttons("../download/", out, title, "dl-btn")}</div>' + m.group(0)
+        s2 = re.sub(r'<div class="chapter-links">.*?</a>', put, s2, flags=re.S)
+        if 'dl-btn' not in s2.split('</style>')[0]:
+            s2 = s2.replace('</style>', DL_CSS + '</style>', 1)
+        if s2 != s:
+            index.write_bytes(s2.encode('utf-8'))
+
+
+NO_ICON = '<style>a.book-search-btn.dl-file::before{content:none!important}</style>'
+
+DL_CSS = """
+.dl-row { display:flex; gap:.5rem; flex-wrap:wrap; margin:.2rem 0 .6rem; }
+.dl-btn { font-size:.85rem; padding:.3rem .7rem; border:1px solid currentColor; border-radius:6px;
+  text-decoration:none; opacity:.85; }
+"""
+
+
+def clean_title(t):
+    """index.html の <title> から「目次」などの飾りを外す（トップに名前が無い本の予備）"""
+    t = re.split(r'[|｜]', t)[0]
+    t = re.sub(r'[◆]', '', t)
+    t = re.sub(r'_?Index\d*$|[\s　/／]*(総合)?(目次|もくじ)[\s　/／]*', ' ', t)
+    return re.sub(r'[\s　]+', ' ', t).strip(' /／')
+
+
+def targets():
+    """(フォルダ, 出力名, 本の名前) の一覧。聖書は1書ずつ download/bible/ に分ける"""
+    man = json.loads((ROOT / 'data' / 'offline-manifest.json').read_text(encoding='utf-8'))
+    names = link_names(ROOT / 'index.html')
+    for book in man['books']:
+        d = ROOT / book
+        if book == 'Bible_out':
+            bible = {}  # 目次のリンクは章番号なので、書の名前は .book-title から
+            for item in read(d / 'index.html').select('.book-item'):
+                a = item.select_one('a.chapter-link')
+                name = item.select_one('.book-title')
+                if a and name:
+                    bible[f'{book}/' + unquote(a['href']).rsplit('/', 1)[0]] = name.get_text(strip=True)
+            for sub in sorted(p for p in d.glob('*/*') if p.is_dir()):
+                yield sub, f'bible/{sub.name}', bible.get(rel(sub), sub.name)
+            continue
+        # 1ページだけの本（seikonmondou）と対訳ビューア（taiyaku）は対象外
+        if book == 'taiyaku' or not (d / 'index.html').exists():
+            continue
+        index = read(d / 'index.html')
+        own = clean_title(index.title.get_text()) if index.title else ''
+        # 天聖經（増補版）の各篇は、トップでは篇の名前だけで並んでいる
+        name = own if book.startswith('tenseikyou') and own else names.get(book)
+        yield d, book, name or own or book
 
 
 if __name__ == '__main__':
-    books = sys.argv[1:]
-    if not books:
-        man = json.loads((ROOT / 'data' / 'offline-manifest.json').read_text(encoding='utf-8'))
-        books = list(man['books'])
-    for b in books:
-        build(b)
+    want = set(sys.argv[1:])  # 本のフォルダ名（聖書は bible/01_genesis か Bible_out）
+    todo = [t for t in targets()
+            if not want or want & {t[1], rel(t[0]), rel(t[0]).split('/')[0]}]
+    for d, out, title in todo:
+        build(d, out, title)
+    add_buttons(todo)

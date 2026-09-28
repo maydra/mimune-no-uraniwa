@@ -14,3 +14,10 @@ _tools の中で実行すると何も見つからないか、間違った場所�
 
 HTML を書き換えるスクリプトを回したあとは `python _tools/root/cache_bust.py` で
 `?v=` を打ち直すこと（これを忘れると、直しても利用者に届かない）。
+
+## 1ファイル版（download/）
+
+`python _tools/root/build_downloads.py` で、各本を1つの HTML にまとめて `download/` に書き出し、
+各本の目次に「📄 1ファイルで保存」ボタンを置く（聖書は書ごと）。
+「この本をオフライン保存」はブラウザの保存領域に頼るので、機内で開けないことがある。こちらは端末にファイルとして残る。
+本文を直したら、その本だけ作り直す: `python _tools/root/build_downloads.py dp kitou`

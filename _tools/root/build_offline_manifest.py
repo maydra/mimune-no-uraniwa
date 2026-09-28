@@ -14,7 +14,8 @@ import pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 OUT = ROOT / 'data' / 'offline-manifest.json'
 
-SKIP_DIRS = {'_tools', 'data', 'theme', 'icons', 'music', '.git', 'Index', 'library'}
+SKIP_DIRS = {'_tools', 'data', 'theme', 'icons', 'music', '.git', 'Index', 'library',
+             'download'}  # download/ は build_downloads.py が書き出す1ファイル版
 
 books = {}
 for d in sorted(ROOT.iterdir()):

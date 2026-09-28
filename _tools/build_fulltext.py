@@ -40,7 +40,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "data" / "fulltext"
 
 SKIP_DIRS = {".git", "pagefind", "node_modules", "__pycache__", "theme",
-             "data", "tools", "Bible_out_backup", "out"}
+             "data", "tools", "Bible_out_backup", "out", "download"}
 
 # 読み物ではないページ。検索ページ自身が結果に出ると邪魔になる。
 SKIP_NAMES = {"search-all.html", "gacha.html", "random.html",
