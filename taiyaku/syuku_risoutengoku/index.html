@@ -170,6 +170,11 @@ try{if(JSON.parse(localStorage.getItem("hoondok.theme"))==="dark")document.docum
   .rowbox .rowno{padding:8px 12px 0;border-top:none;flex-direction:row;align-items:baseline;gap:10px}
   .rowbox .cell{border-top:none;padding-top:4px}
 
+  /* 「区切り」: キリの良いところに引く太線。縦3列では全列をまたぐ1行ぶんを取って引く */
+  .brk{grid-column:1 / -1;border-top:4px solid color-mix(in srgb,var(--ink) 45%,transparent);
+    margin:22px 0 6px;border-radius:2px}
+  .rowbox + .brk{margin-top:26px}
+
   #q{min-width:170px;cursor:text}
   .hits{position:absolute;top:100%;left:0;right:0;max-height:52vh;overflow:auto;
     background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.18)}
@@ -229,6 +234,7 @@ try{if(JSON.parse(localStorage.getItem("hoondok.theme"))==="dark")document.docum
       <div class="spacer"></div>
       <div class="grp">
         <button id="layout">横3列</button>
+        <button id="brk">区切り</button>
         <button id="small">A−</button>
         <button id="big">A＋</button>
         <button id="theme">◐</button>
@@ -280,6 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
       openT: "上のバーを出す", closeT: "上のバーをたたむ",
       langsT: "表示する言語", q: "全体から語句を探す",
       rows: "横3列", cols: "縦3列", layoutT: "縦3列（横並び） / 横3列（縦積み）",
+      brk: "区切り", brkT: "キリの良いところ（小見出しと、み言の出典の切れ目）に太線を引く",
       smallT: "文字を小さく", bigT: "文字を大きく", themeT: "配色",
       ai: "AI訳", aiT: "訳の無い所へ入れた参考訳を出し入れする",
       uiT: "画面の言語",
@@ -316,6 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
       openT: "위 막대 펴기", closeT: "위 막대 접기",
       langsT: "표시할 언어", q: "전체에서 낱말 찾기",
       rows: "가로 3줄", cols: "세로 3단", layoutT: "세로 3단(나란히) / 가로 3줄(쌓기)",
+      brk: "구분선", brkT: "끊기 좋은 곳(소제목과 말씀 출처가 바뀌는 곳)에 굵은 선을 긋습니다",
       smallT: "글자 작게", bigT: "글자 크게", themeT: "배색",
       ai: "AI 번역", aiT: "번역이 없는 곳에 넣은 참고 번역을 보이거나 숨깁니다",
       uiT: "화면 언어",
@@ -352,6 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
       openT: "Show the toolbar", closeT: "Hide the toolbar",
       langsT: "Languages to show", q: "Search every section",
       rows: "3 rows", cols: "3 columns", layoutT: "3 columns (side by side) / 3 rows (stacked)",
+      brk: "Breaks", brkT: "Draw a heavy line at natural breaks (subheadings and changes of source)",
       smallT: "Smaller text", bigT: "Larger text", themeT: "Color scheme",
       ai: "AI", aiT: "Show or hide the AI reference translations filled into missing paragraphs",
       uiT: "Interface language",
@@ -453,6 +462,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (tools === null) tools = !narrow();    // スマホでは初めからたたんでおく
   let theme   = store.get("theme", "light");
   let showAI  = store.get("ai", true);      // 訳の無い所へ入れた参考訳を出すか
+  let showBrk = store.get("brk", false);    // キリの良いところに太線を引くか
   // 画面の言葉は ?ui=en のようにリンクでも渡せる。強い順に「リンク → 憶え → 端末の言語」
   const qUi = new URLSearchParams(location.search).get("ui");
   if (UI[qUi]) store.set("ui", qUi);
@@ -622,6 +632,8 @@ document.addEventListener("DOMContentLoaded", () => {
     langBox.title = t.langsT;
     $("#q").placeholder = t.q;
     $("#layout").title = t.layoutT;
+    $("#brk").textContent = t.brk;
+    $("#brk").title = t.brkT;
     $("#small").title = t.smallT;
     $("#big").title = t.bigT;
     $("#theme").title = t.themeT;
@@ -640,6 +652,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.toggle("hideai", !showAI);
     $("#tools").classList.toggle("closed", !tools);
     $("#ai").setAttribute("aria-pressed", String(showAI));
+    $("#brk").setAttribute("aria-pressed", String(showBrk));
     document.documentElement.style.setProperty("--fs", fs + "px");
     $("#layout").textContent = stacked ? t.cols : t.rows;
     $("#layout").setAttribute("aria-pressed", String(stacked));
@@ -694,11 +707,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     buildSecToc(s, shown);
 
+    const brk = showBrk ? breaksOf(s) : new Set();
+    const brkEl = () => { const d = document.createElement("div"); d.className = "brk"; return d; };
     if (stacked) {
       // 横3列: 1 行ぶんの各言語をひとかたまりにして上から並べる（スマホ・プロジェクタ用）
       main.style.gridTemplateColumns = "1fr";
       main.style.gridTemplateRows = "";
       for (let r = 0; r < s.n; r++) {
+        if (brk.has(r)) main.appendChild(brkEl());
         const box = document.createElement("div");
         box.className = "rowbox";
         box.appendChild(rownoEl(s, r));
@@ -709,19 +725,29 @@ document.addEventListener("DOMContentLoaded", () => {
         main.appendChild(box);
       }
     } else {
+      // 太線は1行ぶんのグリッドの行を取って引く。段落 r のグリッドの行は、
+      // その前に入った線の数だけ下へずれる
+      const at = [];
+      for (let r = 0, k = 0; r <= s.n; r++) { if (brk.has(r)) k++; at.push(r + 1 + k); }
       main.style.gridTemplateColumns = `34px ${shown.map(() => "1fr").join(" ")}`;
-      main.style.gridTemplateRows = `repeat(${s.n}, auto)`;
+      main.style.gridTemplateRows = `repeat(${s.n + brk.size}, auto)`;
+      brk.forEach((r) => {
+        const d = brkEl();
+        d.style.gridRow = String(at[r] - 1);
+        main.appendChild(d);
+      });
       for (let r = 0; r < s.n; r++) {
         const nm = rownoEl(s, r);
         nm.style.gridColumn = "1";
-        nm.style.gridRow = String(r + 1);
+        nm.style.gridRow = String(at[r]);
         main.appendChild(nm);
       }
       shown.forEach((L, ci) => {
         (s.cells[L.id] || []).forEach((c) => {
           const el = cellEl(L, c, c.r);
+          const end = Math.min(c.r + c.span, s.n);
           el.style.gridColumn = String(ci + 2);
-          el.style.gridRow = `${c.r + 1} / span ${c.span}`;
+          el.style.gridRow = `${at[c.r]} / ${at[end] - (brk.has(end) ? 1 : 0)}`;
           main.appendChild(el);
         });
       });
@@ -761,6 +787,56 @@ document.addEventListener("DOMContentLoaded", () => {
   function cellAt(s, L, r) {
     // その行を抱えているセル。言語によっては1つのセルが何行にもまたがる
     return (s.cells[L.id] || []).find((x) => x.r <= r && r < x.r + (x.span || 1));
+  }
+
+  // ---- 「区切り」の太線をどこに引くか ----
+  // 手本は Daum の WF1u（投稿者が人手で韓日英を並べた連載）の1回ぶんの切れ目。あれは
+  //   1. 小見出しの前では必ず切る
+  //   2. その間は、み言の出典（「…입니다. 177)」「미래의 주인공 243」「(9) 83-11-12」）で
+  //      終わる段落の後ろでしか切らない。同じ説教からの引用を途中で割らない
+  //   3. 1回ぶんは韓国語で 500 字ほど（4段落前後）
+  // で出来ているので、同じ決まりで 1 と 2 の切れ目から 3 に近くなる組を選ぶ。
+  // 1-1・1-2 で WF1u の切れ目 75 か所と比べて 65 か所が一致する（2026-10-05）。
+  // どこかの言語の欄が何段落ぶんもまたいでいる所は、線が欄を横切るので切らない
+  const BRK_LEN = 500, BRK_MIN = 150;
+  const citeEnd = (t) => {
+    const m = /[.?!。」”"'’]\s*([^.?!。」”]{0,40})$/.exec((t || "").trim());
+    return /\d/.test(m ? m[1] : (t || "").trim().slice(-20));
+  };
+  function breaksOf(s) {
+    if (s.brk) return s.brk;
+    const ko = [];
+    (s.cells.ko || []).forEach((c) => { ko[c.r] = c; });
+    const len = [];
+    for (let r = 0; r < s.n; r++) len.push(((ko[r] && ko[r].t) || "").replace(/\s/g, "").length);
+    const inside = new Set();                    // 欄がまたいでいて、線を引けない所
+    LANGS.forEach((L) => (s.cells[L.id] || []).forEach((c) => {
+      for (let r = c.r + 1; r < c.r + (c.span || 1); r++) inside.add(r);
+    }));
+    const out = new Set();
+    const fixed = [0];
+    for (let r = 1; r < s.n; r++) if (ko[r] && ko[r].k && !inside.has(r)) { fixed.push(r); out.add(r); }
+    fixed.push(s.n);
+    for (let f = 0; f + 1 < fixed.length; f++) {
+      const a = fixed[f], b = fixed[f + 1];
+      const pts = [a];
+      for (let r = a + 1; r < b; r++)
+        if (!inside.has(r) && ko[r - 1] && !ko[r - 1].k && citeEnd(ko[r - 1].t)) pts.push(r);
+      pts.push(b);
+      // 切れ目の組を、1回ぶんの字数が BRK_LEN に近くなるように選ぶ（ひとつ前の切れ目からの DP）
+      const cost = [0], from = [-1];
+      for (let j = 1; j < pts.length; j++) {
+        cost[j] = Infinity;
+        for (let i = 0; i < j; i++) {
+          let n = 0;
+          for (let r = pts[i]; r < pts[j]; r++) n += len[r];
+          const c = cost[i] + ((n - BRK_LEN) / BRK_LEN) ** 2 + (n < BRK_MIN ? 5 : 0);
+          if (c < cost[j]) { cost[j] = c; from[j] = i; }
+        }
+      }
+      for (let j = from[pts.length - 1]; j > 0; j = from[j]) out.add(pts[j]);
+    }
+    return (s.brk = out);
   }
 
   // ---- 小見出しの深さと通し番号 ----
@@ -1046,6 +1122,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#small").onclick = () => { fs = Math.max(fs - 2, 13); store.set("fs", fs); paint(); };
   $("#theme").onclick = () => { theme = theme === "dark" ? "light" : "dark"; store.set("theme", theme); paint(); };
   $("#ai").onclick    = () => { showAI = !showAI; store.set("ai", showAI); paint(); };
+  $("#brk").onclick   = () => { showBrk = !showBrk; store.set("brk", showBrk); paint(); if (cur >= 0) showCur(); };
   $("#ui").onchange   = () => {
     ui = $("#ui").value; uiPicked = true; store.set("ui", ui); search(); paint();
   };
