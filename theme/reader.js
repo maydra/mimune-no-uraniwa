@@ -7,8 +7,9 @@
  *   ・現在位置バー（見出しの道筋。押すと目次が開く）
  *   ・目次の引き出し（見出し一覧＋いま読んでいる所を光らせる）
  *   ・しおり（前回の続きへ。トップと本の目次に「続きから読む」）
+ *   ・手で挟むしおり（目次の引き出しの「ここにしおり」か b。トップと本の目次に一覧）
  *   ・拡大縮小しても読んでいた場所を保つ
- *   ・キーボード（← → で前後のページ、j k で見出し送り、t で目次）
+ *   ・キーボード（← → で前後のページ、j k で見出し送り、t で目次、b でしおり）
  *
  * **位置は「画面の一番上にある文字が、本文の何文字目か」で持つ。**
  * 本文が <br> 区切りで段落タグの無い本が多く（生涯路程7は <p> が0個で <br> が647個）、
@@ -26,6 +27,7 @@
     var TOP = 96;              // 「画面の上」とみなす高さ
     var MIN_CHARS = 2500;      // これより短いページには出さない
     var STORE = 'reader.pos.';
+    var MARKS = 'reader.marks';    // 手で挟むしおり。何か所でも。新しい順
     var RECENT = 'reader.recent';  // ページをまたいだ「最後に読んだ所」。本ごとに1件、新しい順
     // サイトの根（/mimune-no-uraniwa/）。自分が theme/ の下にいることから割り出す
     var ROOT = (function () {
@@ -257,6 +259,20 @@
             '#reader-resume button{font:inherit;color:#fff;background:rgba(255,255,255,.18);border:0;',
             'border-radius:999px;padding:.35em .9em;cursor:pointer}',
             '#reader-resume .x{background:none;padding:.2em .5em;opacity:.7}',
+            '#reader-drawer .tools a.pin{flex:1 1 100%;font-weight:700;background:rgba(99,102,241,.18)}',
+            '#reader-drawer .marks{margin:0 0 1rem}',
+            '#reader-drawer .marks:empty{display:none}',
+            '#reader-drawer .mark{display:flex;align-items:flex-start;gap:.3em;border-radius:7px}',
+            '#reader-drawer .mark:hover{background:rgba(127,127,127,.14)}',
+            '#reader-drawer .mark a{flex:1 1 auto;padding:.42em .5em;text-decoration:none;color:inherit !important;',
+            'font-size:.84rem;line-height:1.45}',
+            '#reader-drawer .mark a span{display:block;opacity:.55;font-size:.74rem}',
+            '#reader-drawer .mark button{flex:0 0 auto;font:inherit;font-size:.9rem;background:none;border:0;',
+            'color:inherit;opacity:.5;padding:.4em .6em;cursor:pointer}',
+            '#reader-toast{position:fixed;left:50%;transform:translateX(-50%);bottom:1.1rem;z-index:10002;display:none;',
+            'padding:.55em 1.1em;border-radius:999px;font-size:.85rem;background:rgba(30,30,40,.92);color:#fff;',
+            'box-shadow:0 4px 18px rgba(0,0,0,.28)}',
+            '#reader-toast.on{display:block}',
             // 本文ページの題。各ページの <style> が clamp(2rem,6vw,3.5rem)・太さ900 で
             // 出していて、30字を超える節の名前には大きすぎる。読み物のページだけ抑える
             // （書籍の目次ページは今までどおり大きく出す）
@@ -265,7 +281,7 @@
             // 題の後ろに付いている書名は、小さく下の行へ回す
             'body.reader-on h1 .reader-book{display:block;font-size:.58em;font-weight:600;opacity:.72;margin-top:.3em}',
             'body.reader-on h1 .reader-book .sep{display:none}',
-            '@media print{#reader-ui,#reader-drawer,#reader-resume{display:none !important}}'
+            '@media print{#reader-ui,#reader-drawer,#reader-resume,#reader-toast{display:none !important}}'
         ].join('');
         document.head.appendChild(s);
     }
@@ -281,6 +297,7 @@
         drawer = document.createElement('div');
         drawer.id = 'reader-drawer';
         drawer.innerHTML = '<div class="veil"></div><div class="panel"><div class="tools"></div>'
+            + '<div class="marks"></div>'
             + '<h4>このページの見出し</h4><div class="list"></div><div class="side"></div></div>';
         document.body.appendChild(drawer);
 
@@ -358,6 +375,12 @@
 
         // 道具（この本の目次・この書籍の中で検索）
         var tools = drawer.querySelector('.tools');
+        var pin = document.createElement('a');
+        pin.href = '#';
+        pin.className = 'pin';
+        pin.textContent = '🔖 ここにしおり';
+        pin.addEventListener('click', function (e) { e.preventDefault(); closeDrawer(); addMark(); });
+        tools.appendChild(pin);
         var src = tocHref();
         var toc = document.createElement('a');
         toc.href = src;
@@ -453,7 +476,7 @@
         }).catch(function () { });
     }
 
-    function openDrawer() { drawer.classList.add('on'); markHere(); }
+    function openDrawer() { drawerMarks(); drawer.classList.add('on'); markHere(); }
     function closeDrawer() { drawer.classList.remove('on'); }
 
     function markHere() {
@@ -537,20 +560,115 @@
         } catch (e) { return []; }
     }
 
-    function remember() {
+    // いまの場所を、入口の一覧に出せる形で（本・ページの題・節・%）
+    function place() {
         var t = (document.title || '').split('/');
         var book = t.length > 1 ? t[t.length - 1].trim() : '';
         var name = (t.length > 1 ? t.slice(0, -1).join('/') : t[0]).trim();
         var path = pathTo(currentHead()).filter(function (h) { return !h.isTitle; });
         var sec = path.length ? path[path.length - 1].text : '';
         if (sec.replace(/[\s　]/g, '') === name.replace(/[\s　]/g, '')) sec = '';
-        var it = {
+        return {
             p: location.pathname, d: dirOf(location.pathname), b: book, n: name, s: sec,
             pct: Math.min(100, Math.round((cur / total) * 100)), t: Date.now()
         };
+    }
+
+    function remember() {
+        var it = place();
         var list = readRecent().filter(function (x) { return x && x.d !== it.d; });
         list.unshift(it);
         localStorage.setItem(RECENT, JSON.stringify(list.slice(0, 10)));
+    }
+
+    // ---- 手で挟むしおり ----------------------------------------------------
+    function readMarks() {
+        try {
+            var list = JSON.parse(localStorage.getItem(MARKS) || '[]');
+            return Array.isArray(list) ? list.filter(function (m) { return m && m.id && m.p; }) : [];
+        } catch (e) { return []; }
+    }
+
+    function writeMarks(list) {
+        try { localStorage.setItem(MARKS, JSON.stringify(list.slice(0, 100))); } catch (e) { }
+    }
+
+    // 挟んだ所の本文の頭。一覧で「どこだったか」を見分ける手がかり
+    function snippet(pos) {
+        if (!nodes.length) return '';
+        var out = '', i = nodeIndex(pos), off = pos - starts[i];
+        // 画面の上の字は行の途中のことが多いので、近くの文の頭（。の次）まで戻る
+        var before = nodes[i].nodeValue.slice(Math.max(0, off - 80), off);
+        var cut = before.lastIndexOf('。');
+        off = cut >= 0 ? off - before.length + cut + 1 : (off <= 80 ? 0 : off);
+        while (i < nodes.length && out.length < 40) {
+            out += nodes[i].nodeValue.slice(Math.max(0, off));
+            off = 0; i++;
+        }
+        out = out.replace(/\s+/g, ' ').trim();
+        return out.length > 24 ? out.slice(0, 24) + '…' : out;
+    }
+
+    function toast(msg) {
+        var el = document.getElementById('reader-toast');
+        if (!el) {
+            el = document.createElement('div');
+            el.id = 'reader-toast';
+            el.setAttribute('role', 'status');
+            document.body.appendChild(el);
+        }
+        el.textContent = msg;
+        el.classList.add('on');
+        clearTimeout(el._t);
+        el._t = setTimeout(function () { el.classList.remove('on'); }, 2200);
+    }
+
+    function addMark() {
+        var it = place();
+        it.id = Date.now().toString(36);
+        it.pos = cur;
+        it.x = snippet(cur);
+        // 同じページのすぐ近く（300字以内）にあるしおりは、挟み直しとみなして置き換える
+        var list = readMarks().filter(function (m) {
+            return !(m.p === it.p && Math.abs(m.pos - it.pos) < 300);
+        });
+        list.unshift(it);
+        writeMarks(list);
+        var r = document.getElementById('reader-resume');
+        if (r) r.classList.remove('on');
+        toast('🔖 しおりを挟みました（' + it.pct + '%）');
+    }
+
+    function removeMark(id) {
+        writeMarks(readMarks().filter(function (m) { return m.id !== id; }));
+    }
+
+    // 目次の引き出しの中の「このページのしおり」
+    function drawerMarks() {
+        var box = drawer.querySelector('.marks');
+        box.innerHTML = '';
+        var list = readMarks().filter(function (m) { return m.p === location.pathname; })
+            .sort(function (a, b) { return a.pos - b.pos; });
+        if (!list.length) return;
+        var h = document.createElement('h4');
+        h.textContent = 'このページのしおり';
+        box.appendChild(h);
+        list.forEach(function (m) {
+            var row = document.createElement('div');
+            row.className = 'mark';
+            row.innerHTML = '<a href="#"><span>' + m.pct + '%' + (m.s ? '・' + esc(m.s) : '') + '</span>'
+                + esc(m.x || '') + '</a><button type="button" aria-label="しおりを外す">×</button>';
+            row.querySelector('a').addEventListener('click', function (e) {
+                e.preventDefault();
+                closeDrawer();
+                scrollToPos(m.pos, TOP);
+            });
+            row.querySelector('button').addEventListener('click', function () {
+                removeMark(m.id);
+                drawerMarks();
+            });
+            box.appendChild(row);
+        });
     }
 
     function ago(t) {
@@ -602,9 +720,60 @@
             // 本の目次では、読みかけの行に印を付ける
             'li.reader-here>a::after{content:"読みかけ";display:inline-block;margin-left:.6em;padding:.05em .6em;',
             'border-radius:999px;font-size:.72em;font-weight:700;vertical-align:.1em;background:#6366f1;color:#fff}',
+            '.reader-marks{padding:.7em .5em .5em;border-radius:14px;text-align:left;line-height:1.5;',
+            'background:rgba(255,255,255,.94);box-shadow:0 4px 18px rgba(0,0,0,.18)}',
+            '.reader-marks .row{display:flex;align-items:flex-start;border-radius:9px}',
+            '.reader-marks .row:hover{background:rgba(127,127,127,.12)}',
+            '.reader-marks .row a{flex:1 1 auto;display:block;padding:.45em .6em;text-decoration:none !important;font-size:.9rem}',
+            '.reader-marks .row b{display:block;font-size:.95rem}',
+            '.reader-marks .row em{display:block;font-style:normal;font-size:.84rem;opacity:.8}',
+            '.reader-marks .row .x{display:block;font-size:.8rem;opacity:.7}',
+            '.reader-marks .meta{display:block;font-size:.72rem;opacity:.55}',
+            '.reader-marks .more{padding:.2em .6em .3em}',
+            '.reader-marks .row button{flex:0 0 auto;font:inherit;font-size:1rem;background:none;border:0;',
+            'opacity:.45;padding:.45em .7em;cursor:pointer}',
+            '.reader-marks .row button:hover{opacity:.9}',
+            // サイト側のリンク色に負けないよう、字の色はここで決める
+            '.reader-marks,.reader-marks .row a,.reader-marks .row a *,.reader-marks .row button{color:#222 !important}',
+            '.reader-marks .k{display:block;padding:0 .6em .2em;font-size:.75rem;font-weight:700;color:#6366f1 !important}',
+            'body.dark-mode .reader-marks{background:rgba(26,26,46,.92);border:1px solid rgba(255,255,255,.14)}',
+            'body.dark-mode .reader-marks,body.dark-mode .reader-marks .row a,',
+            'body.dark-mode .reader-marks .row a *,body.dark-mode .reader-marks .row button{color:#e6e6f0 !important}',
+            'body.dark-mode .reader-marks .k{color:#a5b4fc !important}',
             '@media print{.reader-recent{display:none !important}}'
         ].join('');
         document.head.appendChild(s);
+    }
+
+    // 入口に出す「しおり」の一覧。トップでは本の名前も出す
+    function markList(marks, withBook) {
+        var wrap = document.createElement('div');
+        wrap.className = 'reader-marks';
+        wrap.innerHTML = '<span class="k">🔖 しおり</span>';
+        var shown = marks.slice(0, 8);
+        shown.forEach(function (m) {
+            var row = document.createElement('div');
+            row.className = 'row';
+            row.innerHTML = '<a href="' + esc(m.p) + '#mark-' + esc(m.id) + '">'
+                + (withBook && m.b ? '<b>' + esc(m.b) + '</b>' : '')
+                + '<em>' + esc(m.n) + (m.s ? ' ／ ' + esc(m.s) : '') + '</em>'
+                + (m.x ? '<span class="x">' + esc(m.x) + '</span>' : '')
+                + '<span class="meta">' + m.pct + '%・' + ago(m.t) + '</span></a>'
+                + '<button type="button" aria-label="しおりを外す">×</button>';
+            row.querySelector('button').addEventListener('click', function () {
+                removeMark(m.id);
+                row.remove();
+                if (!wrap.querySelector('.row')) wrap.remove();
+            });
+            wrap.appendChild(row);
+        });
+        if (marks.length > shown.length) {
+            var more = document.createElement('span');
+            more.className = 'meta more';
+            more.textContent = 'ほか ' + (marks.length - shown.length) + ' 件（本の目次ごとに見られます）';
+            wrap.appendChild(more);
+        }
+        return wrap;
     }
 
     function entrance() {
@@ -613,10 +782,12 @@
         var isToc = /(?:^|\/)(index|mokuji)\.html$/i.test(here) || /\/$/.test(here);
         if (!isTop && !isToc) return;
         var list = readRecent().filter(function (x) { return x && x.p && x.d; });
+        var marks = readMarks();
         if (!isTop) {
             list = list.filter(function (x) { return x.d === dirOf(here); });
+            marks = marks.filter(function (m) { return m.d === dirOf(here); });
         }
-        if (!list.length) return;
+        if (!list.length && !marks.length) return;
         entranceCss();
 
         var box = document.createElement('div');
@@ -624,6 +795,7 @@
         list.slice(0, isTop ? 3 : 1).forEach(function (it, i) {
             box.appendChild(card(it, i === 0 ? '続きから読む' : ''));
         });
+        if (marks.length) box.appendChild(markList(marks, isTop));
 
         if (isTop) {
             var head = document.querySelector('.container > header') || document.querySelector('header');
@@ -639,6 +811,7 @@
         if (after) after.parentNode.insertBefore(box, after.nextSibling);
         else document.body.insertBefore(box, document.body.firstChild);
 
+        if (!list.length) return;
         // 目次の中の、読みかけの行に印。同じページへのリンクが節の数だけあるので、
         // 覚えた節の名前と同じ行を選び、無ければそのページの最初の行
         var it = list[0];
@@ -657,12 +830,10 @@
 
     // 「続きから読む」から来たときは、確かめずにそのまま読んでいた所へ移る。
     // 字の表示（Web フォント）が後から入って行がずれるので、触られるまでは入れ直す
-    function resumeNow() {
+    // 手で挟んだしおり（#mark-<id>）から来たときも同じ
+    function resumeNow(pos) {
         try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { }
-        var saved = null;
-        try { saved = localStorage.getItem(STORE + location.pathname); } catch (e) { }
-        var pos = +saved;
-        if (!saved || !(pos > total * 0.02)) return;
+        if (!(pos > 0)) return;
         var touched = false;
         var mark = function () { touched = true; };
         ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
@@ -680,7 +851,18 @@
     }
 
     function offerResume() {
-        if (location.hash === '#resume') { resumeNow(); return; }
+        if (location.hash === '#resume') {
+            var last = null;
+            try { last = localStorage.getItem(STORE + location.pathname); } catch (e) { }
+            resumeNow(last && +last > total * 0.02 ? +last : 0);
+            return;
+        }
+        var mk = location.hash.match(/^#mark-([0-9a-z]+)$/);
+        if (mk) {
+            var hit = readMarks().filter(function (m) { return m.id === mk[1] && m.p === location.pathname; })[0];
+            resumeNow(hit ? hit.pos : 0);
+            return;
+        }
         if (location.hash) return;
         var saved = null;
         try { saved = localStorage.getItem(STORE + location.pathname); } catch (e) { }
@@ -731,6 +913,7 @@
         if (e.key === 'ArrowRight') { navTo('次へ'); return; }
         if (e.key === 'j') { jumpHead(1); e.preventDefault(); return; }
         if (e.key === 'k') { jumpHead(-1); e.preventDefault(); return; }
+        if (e.key === 'b') { addMark(); e.preventDefault(); return; }
         if (e.key === 't') { drawer.classList.contains('on') ? closeDrawer() : openDrawer(); e.preventDefault(); }
     }
 
