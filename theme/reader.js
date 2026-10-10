@@ -6,7 +6,7 @@
  *   ・上端の進捗バー
  *   ・現在位置バー（見出しの道筋。押すと目次が開く）
  *   ・目次の引き出し（見出し一覧＋いま読んでいる所を光らせる）
- *   ・しおり（前回の続きへ）
+ *   ・しおり（前回の続きへ。トップと本の目次に「続きから読む」）
  *   ・拡大縮小しても読んでいた場所を保つ
  *   ・キーボード（← → で前後のページ、j k で見出し送り、t で目次）
  *
@@ -26,6 +26,15 @@
     var TOP = 96;              // 「画面の上」とみなす高さ
     var MIN_CHARS = 2500;      // これより短いページには出さない
     var STORE = 'reader.pos.';
+    var RECENT = 'reader.recent';  // ページをまたいだ「最後に読んだ所」。本ごとに1件、新しい順
+    // サイトの根（/mimune-no-uraniwa/）。自分が theme/ の下にいることから割り出す
+    var ROOT = (function () {
+        try {
+            var me = document.currentScript;
+            if (me && me.src) return new URL('../', me.src).pathname;
+        } catch (e) { }
+        return '/';
+    })();
 
     if (window.__readerReady) return;
     window.__readerReady = true;
@@ -506,13 +515,172 @@
         clearTimeout(saveT);
         saveT = setTimeout(function () {
             try {
-                if (cur > total * 0.02) localStorage.setItem(STORE + location.pathname, String(cur));
-                else localStorage.removeItem(STORE + location.pathname);
+                if (cur > total * 0.02) {
+                    localStorage.setItem(STORE + location.pathname, String(cur));
+                    remember();
+                } else {
+                    localStorage.removeItem(STORE + location.pathname);
+                }
             } catch (e) { }
         }, 700);
     }
 
+    // サイトを開き直すとトップか本の目次に戻るので、ページの中のしおりだけでは
+    // 「どの章まで読んだか」が分からない。本ごとに最後のページを覚えておき、
+    // 入口（トップ・本の目次）に「続きから読む」を出す
+    function dirOf(p) { return p.replace(/[^\/]*$/, ''); }
+
+    function readRecent() {
+        try {
+            var list = JSON.parse(localStorage.getItem(RECENT) || '[]');
+            return Array.isArray(list) ? list : [];
+        } catch (e) { return []; }
+    }
+
+    function remember() {
+        var t = (document.title || '').split('/');
+        var book = t.length > 1 ? t[t.length - 1].trim() : '';
+        var name = (t.length > 1 ? t.slice(0, -1).join('/') : t[0]).trim();
+        var path = pathTo(currentHead()).filter(function (h) { return !h.isTitle; });
+        var sec = path.length ? path[path.length - 1].text : '';
+        if (sec.replace(/[\s　]/g, '') === name.replace(/[\s　]/g, '')) sec = '';
+        var it = {
+            p: location.pathname, d: dirOf(location.pathname), b: book, n: name, s: sec,
+            pct: Math.min(100, Math.round((cur / total) * 100)), t: Date.now()
+        };
+        var list = readRecent().filter(function (x) { return x && x.d !== it.d; });
+        list.unshift(it);
+        localStorage.setItem(RECENT, JSON.stringify(list.slice(0, 10)));
+    }
+
+    function ago(t) {
+        var m = Math.round((Date.now() - t) / 60000);
+        if (!(m >= 0)) return '';
+        if (m < 60) return m < 2 ? 'さっき' : m + '分前';
+        var h = Math.round(m / 60);
+        if (h < 24) return h + '時間前';
+        var d = Math.round(h / 24);
+        return d < 31 ? d + '日前' : new Date(t).toLocaleDateString('ja-JP');
+    }
+
+    function card(it, label) {
+        var a = document.createElement('a');
+        a.className = 'reader-continue';
+        a.href = it.p + '#resume';
+        a.innerHTML = (label ? '<span class="k">' + label + '</span>' : '')
+            + (it.b ? '<b>' + esc(it.b) + '</b>' : '')
+            + '<em>' + esc(it.n) + (it.s ? ' ／ ' + esc(it.s) : '') + '</em>'
+            + '<span class="meta">' + it.pct + '%まで・' + ago(it.t) + '</span>'
+            + '<i class="bar" style="width:' + it.pct + '%"></i>';
+        return a;
+    }
+
+    function entranceCss() {
+        var s = document.createElement('style');
+        s.id = 'reader-entrance-style';
+        s.textContent = [
+            '.reader-recent{max-width:640px;margin:1.2rem auto 1.8rem;display:flex;flex-direction:column;gap:.6rem}',
+            '.reader-continue{display:block;position:relative;overflow:hidden;padding:.8em 1.1em 1em;border-radius:14px;',
+            'text-decoration:none !important;text-align:left;font-size:1rem;line-height:1.5;',
+            'background:rgba(255,255,255,.94);color:#222 !important;box-shadow:0 4px 18px rgba(0,0,0,.18)}',
+            '.reader-continue:hover{transform:translateY(-1px)}',
+            '.reader-continue .k{display:block;font-size:.75rem;font-weight:700;color:#6366f1 !important;letter-spacing:.05em}',
+            // サイト側のリンク色（明るい表示では青）に負けないよう、中の字はカードの色にそろえる
+            '.reader-recent a.reader-continue,.reader-recent a.reader-continue b,.reader-recent a.reader-continue em,'
+            + '.reader-recent a.reader-continue .meta{color:#222 !important}',
+            'body.dark-mode .reader-recent a.reader-continue,body.dark-mode .reader-recent a.reader-continue b,'
+            + 'body.dark-mode .reader-recent a.reader-continue em,body.dark-mode .reader-recent a.reader-continue .meta{color:#e6e6f0 !important}',
+            '.reader-continue b{display:block;font-size:1.02rem}',
+            '.reader-continue em{display:block;font-style:normal;font-size:.88rem;opacity:.8}',
+            '.reader-continue .meta{display:block;font-size:.74rem;opacity:.55;margin-top:.15em}',
+            '.reader-continue .bar{position:absolute;left:0;bottom:0;height:3px;background:linear-gradient(90deg,#6366f1,#ec4899)}',
+            '.reader-recent.in-book{margin-left:0}',
+            '.reader-recent .reader-continue+.reader-continue{font-size:.9rem;padding:.6em 1.1em .8em}',
+            'body.dark-mode .reader-continue{background:rgba(26,26,46,.92);color:#e6e6f0 !important;',
+            'border:1px solid rgba(255,255,255,.14)}',
+            'body.dark-mode .reader-continue .k{color:#a5b4fc !important}',
+            // 本の目次では、読みかけの行に印を付ける
+            'li.reader-here>a::after{content:"読みかけ";display:inline-block;margin-left:.6em;padding:.05em .6em;',
+            'border-radius:999px;font-size:.72em;font-weight:700;vertical-align:.1em;background:#6366f1;color:#fff}',
+            '@media print{.reader-recent{display:none !important}}'
+        ].join('');
+        document.head.appendChild(s);
+    }
+
+    function entrance() {
+        var here = location.pathname;
+        var isTop = here === ROOT || here === ROOT + 'index.html';
+        var isToc = /(?:^|\/)(index|mokuji)\.html$/i.test(here) || /\/$/.test(here);
+        if (!isTop && !isToc) return;
+        var list = readRecent().filter(function (x) { return x && x.p && x.d; });
+        if (!isTop) {
+            list = list.filter(function (x) { return x.d === dirOf(here); });
+        }
+        if (!list.length) return;
+        entranceCss();
+
+        var box = document.createElement('div');
+        box.className = 'reader-recent';
+        list.slice(0, isTop ? 3 : 1).forEach(function (it, i) {
+            box.appendChild(card(it, i === 0 ? '続きから読む' : ''));
+        });
+
+        if (isTop) {
+            var head = document.querySelector('.container > header') || document.querySelector('header');
+            if (head) head.parentNode.insertBefore(box, head.nextSibling);
+            else document.body.insertBefore(box, document.body.firstChild);
+            return;
+        }
+
+        box.classList.add('in-book');
+        var h1 = document.querySelector('h1');
+        var after = (h1 && h1.nextElementSibling && h1.nextElementSibling.classList.contains('book-search'))
+            ? h1.nextElementSibling : h1;
+        if (after) after.parentNode.insertBefore(box, after.nextSibling);
+        else document.body.insertBefore(box, document.body.firstChild);
+
+        // 目次の中の、読みかけの行に印。同じページへのリンクが節の数だけあるので、
+        // 覚えた節の名前と同じ行を選び、無ければそのページの最初の行
+        var it = list[0];
+        var file = it.p.split('/').pop();
+        var rows = Array.prototype.filter.call(document.querySelectorAll('li > a[href]'), function (a) {
+            return (a.getAttribute('href') || '').split('#')[0].split('/').pop() === file;
+        });
+        if (!rows.length) return;
+        var flat = function (s) { return (s || '').replace(/[\s　◆▸▶･・]/g, ''); };  // clean() と同じ字を落として比べる
+        var hit = null;
+        if (it.s) {
+            rows.forEach(function (a) { if (!hit && flat(a.textContent) === flat(it.s)) hit = a; });
+        }
+        (hit || rows[0]).parentNode.classList.add('reader-here');
+    }
+
+    // 「続きから読む」から来たときは、確かめずにそのまま読んでいた所へ移る。
+    // 字の表示（Web フォント）が後から入って行がずれるので、触られるまでは入れ直す
+    function resumeNow() {
+        try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { }
+        var saved = null;
+        try { saved = localStorage.getItem(STORE + location.pathname); } catch (e) { }
+        var pos = +saved;
+        if (!saved || !(pos > total * 0.02)) return;
+        var touched = false;
+        var mark = function () { touched = true; };
+        ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
+            window.addEventListener(ev, mark, { once: true, passive: true });
+        });
+        var go = function () {
+            if (touched) return;
+            collect();
+            scrollToPos(pos, TOP);
+            cur = pos;
+        };
+        go();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(go);
+        window.addEventListener('load', go);
+    }
+
     function offerResume() {
+        if (location.hash === '#resume') { resumeNow(); return; }
         if (location.hash) return;
         var saved = null;
         try { saved = localStorage.getItem(STORE + location.pathname); } catch (e) { }
@@ -568,7 +736,7 @@
 
     // ---- 始める ------------------------------------------------------------
     function start() {
-        if (SKIP.test(location.pathname)) return;
+        if (SKIP.test(location.pathname) || /\/$/.test(location.pathname)) { entrance(); return; }
         collect();
         if (total < MIN_CHARS) return;
         collectHeads();

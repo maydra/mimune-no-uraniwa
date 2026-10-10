@@ -203,7 +203,10 @@
     try {
         var me = document.currentScript;
         if (!me || !me.src) return;
-        var url = new URL('reader.js' + (me.src.indexOf('?') >= 0 ? me.src.slice(me.src.indexOf('?')) : ''), me.src);
+        // reader.js だけ直したときは R を上げる（全ページの ?v= を書き換えずに新しい版を届ける）
+        var R = '2';
+        var q = me.src.indexOf('?') >= 0 ? me.src.slice(me.src.indexOf('?')) + '&r=' + R : '?r=' + R;
+        var url = new URL('reader.js' + q, me.src);
         var s = document.createElement('script');
         s.src = url.href;
         s.defer = true;
