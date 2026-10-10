@@ -199,6 +199,40 @@ body.dark-mode [style*="background-color"] rt {
     -webkit-text-fill-color: #5d5a52 !important;
 }
 
+/* ただし三色の蛍光ペンだけは、暗い配色では紙の色のままだと濃すぎる（2026-10-11、
+   「マーカーが濃厚すぎる」）。色味を残した半透明を薄く敷き、字は暗い配色の明るい字に戻す。
+   紙の色のままより少し鮮やかな色を下地にして、薄めても三色の見分けが付くようにする */
+body.dark-mode [style*="FCD2E7" i] { background-color: rgba(255, 120, 190, 0.24) !important; }
+body.dark-mode [style*="CCFFFF" i] { background-color: rgba(70, 215, 255, 0.20) !important; }
+body.dark-mode [style*="FFFF99" i] { background-color: rgba(255, 235, 80, 0.25) !important; }
+body.dark-mode [style*="FCD2E7" i],
+body.dark-mode [style*="FCD2E7" i] *,
+body.dark-mode [style*="CCFFFF" i],
+body.dark-mode [style*="CCFFFF" i] *,
+body.dark-mode [style*="FFFF99" i],
+body.dark-mode [style*="FFFF99" i] * {
+    color: #ececf4 !important;
+    -webkit-text-fill-color: #ececf4 !important;
+}
+body.dark-mode [style*="FCD2E7" i] a,
+body.dark-mode [style*="CCFFFF" i] a,
+body.dark-mode [style*="FFFF99" i] a {
+    color: #c7d2fe !important;
+    -webkit-text-fill-color: #c7d2fe !important;
+}
+body.dark-mode [style*="FCD2E7" i] a.verse-link,
+body.dark-mode [style*="CCFFFF" i] a.verse-link,
+body.dark-mode [style*="FFFF99" i] a.verse-link {
+    color: #fca5a5 !important;
+    -webkit-text-fill-color: #fca5a5 !important;
+}
+body.dark-mode [style*="FCD2E7" i] rt,
+body.dark-mode [style*="CCFFFF" i] rt,
+body.dark-mode [style*="FFFF99" i] rt {
+    color: #b9b7c9 !important;
+    -webkit-text-fill-color: #b9b7c9 !important;
+}
+
 /* Navigation buttons */
 body.light-mode .nav-btn,
 body.light-mode .back-link,
