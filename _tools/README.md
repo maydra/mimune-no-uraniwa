@@ -6,6 +6,7 @@
 
 - `root/` … 以前リポジトリ直下にあった一括処理スクリプト（cache_bust.py など）
 - `dp/` … 原理講論ページの生成・修理に使ったもの
+- `CHANGELOG.md` … サイトの仕組み・見た目を変えたときの編集履歴
 - 直下 … 以前の `tools/`（build_fulltext.py＝検索インデックスの作成、ほか）
 
 実行は**リポジトリの根から**（例: `python _tools/root/cache_bust.py`）。
