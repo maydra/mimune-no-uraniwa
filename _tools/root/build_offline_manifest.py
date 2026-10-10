@@ -30,8 +30,14 @@ for d in sorted(ROOT.iterdir()):
     if files:
         books[d.name] = files
 
+# どの本のページからも読む共有ファイル（ページの <link> は本ごとに違うので、全部まとめて渡す）。
+# ?v= は付けない。オフラインのときの SW は ?v= を無視して探す
+shared = sorted(str(f.relative_to(ROOT)).replace('\\', '/')
+                for f in (ROOT / 'theme' / 'pages').glob('*.css'))
+shared += ['theme/reader.js']
+
 OUT.parent.mkdir(exist_ok=True)
-OUT.write_text(json.dumps({'books': books}, ensure_ascii=False,
+OUT.write_text(json.dumps({'books': books, 'shared': shared}, ensure_ascii=False,
                           separators=(',', ':')), encoding='utf-8')
 total = sum(len(v) for v in books.values())
 print(f'{OUT.name}: {len(books)} books, {total} pages, '

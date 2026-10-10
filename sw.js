@@ -1,4 +1,4 @@
-/* み旨の裏庭 service worker v5
+/* み旨の裏庭 service worker v5（2026-10-11: theme/ はネットワーク優先）
  *
  * 方針: ふだんの閲覧は今までどおりネットワークから（SW が壊れても
  * サイトは壊れない）。開いたページは通りすがりに保存しておき、
@@ -62,7 +62,25 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    // CSS/JS/画像: キャッシュ優先（?v= が変われば URL ごと変わる）、裏で更新
+    // theme/ の CSS/JS: ネットワーク優先。キャッシュ優先だと、直しても届くのが
+    // 2回目に開いたときになる（reader.js は ?v= を変えずに直すことがある）
+    if (url.pathname.includes('/theme/')) {
+        event.respondWith((async () => {
+            try {
+                const res = await fetch(req);
+                if (res.ok) {
+                    const copy = res.clone();
+                    caches.open(ASSETS).then((c) => c.put(req, copy)).catch(() => { });
+                }
+                return res;
+            } catch (err) {
+                return (await caches.match(req)) || (await caches.match(req, { ignoreSearch: true })) || Response.error();
+            }
+        })());
+        return;
+    }
+
+    // ほかの CSS/JS/画像: キャッシュ優先（?v= が変われば URL ごと変わる）、裏で更新
     event.respondWith((async () => {
         const hit = await caches.match(req);
         const refresh = fetch(req).then((res) => {
@@ -106,7 +124,10 @@ self.addEventListener('message', (event) => {
     } else if (msg.type === 'REMOVE_BOOK') {
         event.waitUntil((async () => {
             const cache = await caches.open(PAGES);
-            for (const u of msg.urls || []) await cache.delete(u);
+            // theme/ の共有ファイルはほかの保存した本も使うので残す
+            for (const u of msg.urls || []) {
+                if (!new URL(u).pathname.includes('/theme/')) await cache.delete(u);
+            }
             reply({ type: 'BOOK_REMOVED', book: msg.book });
         })());
     }

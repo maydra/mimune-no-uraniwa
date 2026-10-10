@@ -47,6 +47,8 @@
         ).forEach(function (el) {
             list.push(new URL(el.href || el.src, location.href).href);
         });
+        // 本文ページが読む共有の CSS（theme/pages/）と reader.js
+        (man.shared || []).forEach(function (p) { list.push(new URL(p, root).href); });
         list.push(new URL('offline.html', root).href);
         urls = Array.from(new Set(list));
         return urls;
