@@ -77,7 +77,10 @@ body.dark-mode .toc {
     color: #e0e0e0 !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
-    backdrop-filter: blur(20px) !important;
+    /* ぼかしはやめた（背景は5%しか透けず見た目はほぼ同じで、本文を包む箱に掛かると
+       iPhone SE のスクロールが重くなる。2026-10-11） */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
 }
 
 /* Typography */
@@ -386,7 +389,6 @@ body.dark-mode [data-bible-nav] a {
     background-color: rgba(255, 255, 255, 0.05);
     color: #a5b4fc !important; /* Indigo accent */
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
 }
 body.dark-mode [data-bible-nav] a:hover {
     background-color: rgba(165, 180, 252, 0.15);
