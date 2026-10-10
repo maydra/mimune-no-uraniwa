@@ -1908,6 +1908,7 @@
             };
 
             const updateHeader = () => {
+            if (container.style.display === 'none') return; // reader.js が出している間は、こちらは測らない
                 const threshold = 100;
                 let current = null;
 

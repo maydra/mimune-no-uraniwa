@@ -204,7 +204,7 @@
         var me = document.currentScript;
         if (!me || !me.src) return;
         // reader.js だけ直したときは R を上げる（全ページの ?v= を書き換えずに新しい版を届ける）
-        var R = '3';
+        var R = '5';
         var q = me.src.indexOf('?') >= 0 ? me.src.slice(me.src.indexOf('?')) + '&r=' + R : '?r=' + R;
         var url = new URL('reader.js' + q, me.src);
         var s = document.createElement('script');

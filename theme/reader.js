@@ -212,7 +212,7 @@
             '#reader-crumb{pointer-events:auto;display:none;align-items:center;gap:.4em;max-width:min(96vw,1000px);',
             'margin:.35rem auto 0;padding:.35em .9em;border-radius:999px;font-size:.78rem;line-height:1.4;',
             'background:rgba(255,255,255,.92);color:#333;border:1px solid rgba(0,0,0,.08);',
-            'box-shadow:0 2px 10px rgba(0,0,0,.10);cursor:pointer;backdrop-filter:blur(8px);',
+            'box-shadow:0 2px 10px rgba(0,0,0,.10);cursor:pointer;',
             'white-space:nowrap;overflow:hidden;text-overflow:ellipsis}',
             '#reader-crumb.on{display:flex}',
             '#reader-crumb .sep{opacity:.45;margin:0 .15em;flex:0 0 auto}',
@@ -479,9 +479,13 @@
     function openDrawer() { drawerMarks(); drawer.classList.add('on'); markHere(); }
     function closeDrawer() { drawer.classList.remove('on'); }
 
+    var hereAt = -2;
     function markHere() {
         var i = currentHead();
-        items.forEach(function (a, k) { if (a) a.classList.toggle('here', k === i); });
+        if (i !== hereAt) {
+            hereAt = i;
+            items.forEach(function (a, k) { if (a) a.classList.toggle('here', k === i); });
+        }
         if (i >= 0 && drawer.classList.contains('on') && items[i]) {
             items[i].scrollIntoView({ block: 'nearest' });
         }
@@ -489,13 +493,14 @@
 
     // ---- 更新 --------------------------------------------------------------
     var ticking = false;
+    var settleT = null;
     function onScroll() {
         if (ticking) return;
         ticking = true;
         requestAnimationFrame(function () {
             ticking = false;
-            if (!restoring) cur = topPos();
-            if (total) bar.style.width = Math.min(100, (cur / total) * 100) + '%';
+            var h = document.documentElement.scrollHeight - window.innerHeight;
+            bar.style.width = (h > 0 ? Math.min(100, (window.scrollY / h) * 100) : 0) + '%';
             var i = currentHead();
             if (window.scrollY < 180 || i < 0) {
                 crumb.classList.remove('on');
@@ -511,8 +516,13 @@
                 if (crumb.innerHTML !== html) crumb.innerHTML = html;
             }
             markHere();
-            save();
         });
+        // 字を当てて探すのは重いので、スクロールの途中ではやらない（iPhone SE で引っかかる）
+        clearTimeout(settleT);
+        settleT = setTimeout(function () {
+            if (!restoring) cur = topPos();
+            save();
+        }, 160);
     }
 
     function esc(s) {
@@ -522,8 +532,14 @@
     }
 
     // ---- 拡大縮小・画面の作り直しでも同じ所に戻す --------------------------
+    // iPhone の Safari は、スクロールの向きを変えるたびにツールバーが出入りして
+    // 高さだけが変わり resize が来る。そこで scrollBy すると慣性スクロールが止まる
+    // （dp で「いきなり止まる」と言われた）。字の折り返しが変わるのは幅が変わったときだけ
     var resizeT = null;
+    var lastW = window.innerWidth;
     function onResize() {
+        if (window.innerWidth === lastW) return;
+        lastW = window.innerWidth;
         var keep = cur;
         clearTimeout(resizeT);
         resizeT = setTimeout(function () {
@@ -718,8 +734,13 @@
             'border:1px solid rgba(255,255,255,.14)}',
             'body.dark-mode .reader-continue .k{color:#a5b4fc !important}',
             // 本の目次では、読みかけの行に印を付ける
-            'li.reader-here>a::after{content:"読みかけ";display:inline-block;margin-left:.6em;padding:.05em .6em;',
-            'border-radius:999px;font-size:.72em;font-weight:700;vertical-align:.1em;background:#6366f1;color:#fff}',
+            // 行末に札を付けると、狭い画面では札だけ次の行に落ちる（iPhone SE で崩れた）。
+            // 行全体を薄い箱で囲み、札は箱の中の上に置く。箱は影で広げるので字の位置は動かない
+            'li.reader-here{background:rgba(99,102,241,.14);border-radius:6px;',
+            'box-shadow:0 0 0 .45em rgba(99,102,241,.14);margin-top:1em !important;margin-bottom:.9em !important}',
+            'li.reader-here::before{content:"読みかけ" !important;display:block;width:max-content;margin:0 0 .2em;',
+            'padding:.05em .6em;border-radius:999px;font-size:.68rem;font-weight:700;line-height:1.6;',
+            'background:#6366f1;color:#fff}',
             '.reader-marks{padding:.7em .5em .5em;border-radius:14px;text-align:left;line-height:1.5;',
             'background:rgba(255,255,255,.94);box-shadow:0 4px 18px rgba(0,0,0,.18)}',
             '.reader-marks .row{display:flex;align-items:flex-start;border-radius:9px}',
