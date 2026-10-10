@@ -21,3 +21,16 @@ HTML を書き換えるスクリプトを回したあとは `python _tools/root/
 各本の目次に「📄 1ファイルで保存」ボタンを置く（聖書は書ごと）。
 「この本をオフライン保存」はブラウザの保存領域に頼るので、機内で開けないことがある。こちらは端末にファイルとして残る。
 本文を直したら、その本だけ作り直す: `python _tools/root/build_downloads.py dp kitou`
+
+## ページの CSS は theme/pages/ に（2026-10-11）
+
+各ページに同じ <style>（1ページ約10KB）が埋め込まれていたので、`theme/pages/<ハッシュ>.css` に出して
+`<link>` で読むようにした。ページを移っても CSS はキャッシュから出る。
+
+- 見た目を直すときは、`theme/pages/` の CSS を直せば、それを使う全ページに効く
+- `<style>` をページに書き込むスクリプト（`_tools/upgrade_*.py` など）を回したら、最後に
+  `python _tools/root/extract_inline_css.py` を回す。2ページ以上で同じ `<style>` は共有ファイルに出る
+- 同じとき、`backdrop-filter`（ぼかし）と、開いたときの `fadeInDown` / `fadeInUp` も落とす。
+  iPhone SE でスクロールが重くなる原因だった。フォントは Noto Serif JP の 400 と 700 だけ
+- 共有ファイルを足したら `python _tools/root/build_offline_manifest.py` も回す（オフライン保存が一緒に持っていく）
+- `theme/` の CSS・JS は、Service Worker がネットワーク優先で取る。直せば次に開いたときに届く

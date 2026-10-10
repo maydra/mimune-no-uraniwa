@@ -30,7 +30,7 @@
 
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Crimson+Pro:wght@400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap"
         rel="stylesheet" />
     <style>
         * {
@@ -61,7 +61,6 @@
         header {
             text-align: center;
             margin-bottom: 3rem;
-            animation: fadeInDown 0.8s ease-out;
         }
 
         .page-title {
@@ -210,7 +209,6 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
         .content-card::before {
@@ -490,8 +488,6 @@
             height: 28px;
             pointer-events: auto;
             background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(10px) saturate(180%);
-            -webkit-backdrop-filter: blur(10px) saturate(180%);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             padding: 0 1.2rem;
             display: flex;
@@ -533,8 +529,6 @@
             opacity: 0;
             overflow: hidden;
             background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(25px) saturate(200%);
-            -webkit-backdrop-filter: blur(25px) saturate(200%);
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
@@ -809,301 +803,7 @@
     <iframe name="typoSink" id="typoSink" style="display:none;"></iframe>
 </details>
 
-<style>
-    .typo-box {
-        margin: 2.5rem 0;
-        padding: 1rem 1.1rem;
-        border: 1px solid #ddd;
-        border-radius: 14px;
-        background: #fff;
-    }
-
-    .typo-title {
-        margin: 0 0 .35rem 0;
-        font-size: 1.05rem;
-    }
-
-    .typo-desc {
-        margin: 0 0 1rem 0;
-        opacity: .8;
-    }
-
-    .typo-label {
-        display: block;
-        font-weight: 600;
-        margin: .7rem 0 .35rem 0;
-    }
-
-    .typo-textarea {
-        width: 100%;
-        box-sizing: border-box;
-        padding: .7rem .75rem;
-        border: 1px solid #ccc;
-        border-radius: 12px;
-        font: inherit;
-        line-height: 1.5;
-        resize: vertical;
-    }
-
-    .typo-row {
-        margin-top: .9rem;
-        display: flex;
-        gap: .75rem;
-        align-items: center;
-    }
-
-    .typo-btn {
-      padding: .7rem 1.5rem;
-      border: 0;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
-      cursor: pointer;
-      font: inherit;
-    }
-
-    .typo-btn[disabled] {
-        opacity: .6;
-        cursor: not-allowed;
-    }
-
-    .typo-status {
-        font-size: .95rem;
-        opacity: .9;
-    }
-
-    .typo-box summary {
-        cursor: pointer;
-        list-style: none;
-        outline: none;
-    }
-
-    .typo-box summary::-webkit-details-marker {
-        display: none;
-    }
-
-    .typo-box summary::before {
-        content: '▶';
-        display: inline-block;
-        margin-right: 0.5rem;
-        transition: transform 0.2s;
-        font-size: 0.8em;
-    }
-
-    .typo-box[open] summary::before {
-        transform: rotate(90deg);
-    }
-
-    .typo-box[open] {
-        padding-bottom: 1.5rem;
-    }
-
-    /* モダンなナビゲーションボタン用スタイル (Light Theme) */
-    .page-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        margin: 2rem 0;
-        padding: 1rem 0;
-        width: 100%;
-    }
-
-    .nav-btn {
-        flex: 1;
-        text-align: center;
-        padding: 0.8rem 1rem;
-        background: #ffffff;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 50px;
-        color: #333;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-
-    .nav-btn:hover {
-        background: #f0f0f0;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        border-color: rgba(102, 126, 234, 0.3);
-        color: #000;
-    }
-
-    .nav-btn span {
-        font-size: 1.2rem;
-        line-height: 1;
-    }
-
-    @media (max-width: 37.5rem) {
-        .page-nav {
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .nav-btn {
-            width: 100%;
-            padding: 0.7rem 1rem;
-        }
-    }
-
-        *[id] {
-            scroll-margin-top: 6rem;
-        }
-        .no1 {
-            margin-bottom: 1.5rem;
-        }
-        h2 .no1, h3 .no1 {
-            margin-bottom: 0;
-        }
-
-        /* --- Refined Expandable Sticky Header Styles --- */
-        .stacked-header-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 3000;
-            pointer-events: none;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .breadcrumb-view {
-            height: 28px;
-            pointer-events: auto;
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(10px) saturate(180%);
-            -webkit-backdrop-filter: blur(10px) saturate(180%);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            padding: 0 1.2rem;
-            display: flex;
-            align-items: center;
-            font-size: 0.75rem;
-            color: #777;
-            font-family: 'Noto Serif JP', serif;
-            font-weight: 500;
-            cursor: pointer;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(-100%);
-            visibility: hidden;
-        }
-
-        .breadcrumb-view.visible {
-            opacity: 1;
-            transform: translateY(0);
-            visibility: visible;
-        }
-
-        .breadcrumb-view:hover {
-            background: rgba(255, 255, 255, 0.7);
-            color: #333;
-        }
-
-        .breadcrumb-view .separator {
-            margin: 0 0.5rem;
-            color: #aaa;
-            font-weight: 300;
-        }
-
-        .stacked-view {
-            pointer-events: auto;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(25px) saturate(200%);
-            -webkit-backdrop-filter: blur(25px) saturate(200%);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        .stacked-header-container.is-expanded .stacked-view {
-            max-height: 100vh;
-            opacity: 1;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .stack-bar {
-            height: 32px;
-            line-height: 32px;
-            padding: 0 1.5rem;
-            cursor: pointer;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            color: #444;
-            font-size: 0.85rem;
-            font-weight: 600;
-            font-family: 'Noto Serif JP', serif;
-            display: flex;
-            align-items: center;
-            transition: background 0.2s ease, padding-left 0.3s ease;
-        }
-
-        .stack-bar:hover {
-            background: rgba(102, 126, 234, 0.08);
-            color: #667eea;
-        }
-
-        /* Hierarchy-based Indentation for Expanded State */
-        .stack-bar[data-level="1"] { padding-left: 1.5rem; }
-        .stack-bar[data-level="2"] { padding-left: 3.0rem; }
-        .stack-bar[data-level="3"] { padding-left: 4.5rem; }
-        .stack-bar[data-level="4"] { padding-left: 6.0rem; }
-        .stack-bar[data-level="5"] { padding-left: 7.5rem; }
-        .stack-bar[data-level="6"] { padding-left: 9.0rem; }
-
-        .stack-bar::before {
-            content: '▸';
-            margin-right: 0.5rem;
-            color: #667eea;
-            font-size: 0.7rem;
-        }
-        .stack-bar[data-level='1']::before { content: '◆'; font-size: 0.9rem; }
-
-        @media (max-width: 48rem) {
-            .breadcrumb-view { height: 24px; font-size: 0.7rem; padding: 0 0.8rem; }
-            .stack-bar { height: 30px; font-size: 0.8rem; }
-            .stack-bar[data-level="1"] { padding-left: 1rem; }
-        .stack-bar[data-level="2"] { padding-left: 1.8rem; }
-        .stack-bar[data-level="3"] { padding-left: 2.6rem; }
-        .stack-bar[data-level="4"] { padding-left: 3.4rem; }
-        .stack-bar[data-level="5"] { padding-left: 4.2rem; }
-        .stack-bar[data-level="6"] { padding-left: 5.0rem; }
-        }
-
-  .typo-input{
-    display:block;
-    width:100%;
-    box-sizing:border-box;
-    padding:.7rem .75rem;
-    border:1px solid #ccc;
-    border-radius:12px;
-    font:inherit;
-    line-height:1.5;
-    background:#fff;
-    color:#111;
-  }
-  .typo-box.dark-theme .typo-input{
-    border-color:rgba(255,255,255,0.15);
-    background:rgba(0,0,0,0.2);
-    color:#fff;
-  }
-
-</style>
+<link rel="stylesheet" href="../theme/pages/1816e31d52.css?v=202610110220">
 
 <script>
     (() => {
