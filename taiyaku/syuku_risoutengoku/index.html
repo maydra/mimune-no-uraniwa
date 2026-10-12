@@ -463,6 +463,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let theme   = store.get("theme", "light");
   let showAI  = store.get("ai", true);      // 訳の無い所へ入れた参考訳を出すか
   let showBrk = store.get("brk", false);    // キリの良いところに太線を引くか
+  // 区切りも ?brk=1 / ?brk=0 でリンクに乗せられる。画面の言葉と同じく、自分で押した
+  // （かリンクで渡された）ときだけ配るリンクに乗せる
+  const qBrk = new URLSearchParams(location.search).get("brk");
+  if (qBrk === "1" || qBrk === "0") { showBrk = qBrk === "1"; store.set("brk", showBrk); store.set("brkPicked", true); }
+  let brkPicked = store.get("brkPicked", false);
   // 画面の言葉は ?ui=en のようにリンクでも渡せる。強い順に「リンク → 憶え → 端末の言語」
   const qUi = new URLSearchParams(location.search).get("ui");
   if (UI[qUi]) store.set("ui", qUi);
@@ -534,9 +539,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const pageURL = () => location.href.split("#")[0].split("?")[0];
-  const uiQuery = () => (uiPicked ? "?ui=" + ui : "");
+  const query = () => {
+    const q = [];
+    if (uiPicked) q.push("ui=" + ui);
+    if (brkPicked) q.push("brk=" + (showBrk ? 1 : 0));
+    return q.length ? "?" + q.join("&") : "";
+  };
   function shareURL(key, langs, row) {
-    return pageURL() + uiQuery() + "#" + key + (row ? "-" + row : "")
+    return pageURL() + query() + "#" + key + (row ? "-" + row : "")
       + (langs && langs.length ? "/" + langs.join("+") : "");
   }
   function syncHash() {   // いま出しているものをアドレス欄に映す（そのままコピーして配れるように）
@@ -1122,9 +1132,10 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#small").onclick = () => { fs = Math.max(fs - 2, 13); store.set("fs", fs); paint(); };
   $("#theme").onclick = () => { theme = theme === "dark" ? "light" : "dark"; store.set("theme", theme); paint(); };
   $("#ai").onclick    = () => { showAI = !showAI; store.set("ai", showAI); paint(); };
-  $("#brk").onclick   = () => { showBrk = !showBrk; store.set("brk", showBrk); paint(); if (cur >= 0) showCur(); };
+  $("#brk").onclick   = () => { showBrk = !showBrk; store.set("brk", showBrk);
+    brkPicked = true; store.set("brkPicked", true); paint(); syncHash(); if (cur >= 0) showCur(); };
   $("#ui").onchange   = () => {
-    ui = $("#ui").value; uiPicked = true; store.set("ui", ui); search(); paint();
+    ui = $("#ui").value; uiPicked = true; store.set("ui", ui); search(); paint(); syncHash();
   };
 
   // ---- 語句を全節から探す ----
