@@ -580,11 +580,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---- 描き直しても、読んでいた段落を画面の同じ高さに残す ----
   // 言語を足す・文字を大きくするなどで列の幅が変わると、段落の高さが変わる。
   // スクロール位置（px）のままだと、まったく別の所が映ってしまう。
-  // そこで描き直す前に「バーのすぐ下に見えている段落と、その中のどこまで来ていたか」を
-  // 覚え、描き直したあとで同じ段落の同じ割合の所がバーの下へ来るように動かす。
+  // そこで描き直す前に「バーのすぐ下に見えている**文字**（どの段落の、どの言語の、
+  // 何文字目か）」を覚え、描き直したあとでその文字の行が同じ高さに来るように動かす。
+  // 段落のかたまりの割合で覚えると、横3列で日本語を外したとき、かたまりが縮んだぶん
+  // 韓国語の中で1〜2行ずれる。文字で覚えれば、横3列ではずれはゼロ、縦3列でも
+  // （列の幅が変わって改行の位置は変わるが）読んでいた行が同じ高さに来る。
+  // 文字が拾えない所（段落の間の線の上など）は、段落のかたまりの割合で覚える。
   // 覚えた所は、読者が自分でスクロールするまで**測り直さずに使い続ける**。押すたびに
   // 測り直すと、小さな誤差や、動いている途中の位置を拾って、何度も押すうちにずれていく
-  let place = null;         // { r, frac, off }
+  let place = null;         // { marks: [{ r, lang, i, dy }], r, frac, off }
   let placedY = -1;         // 最後にこちらで合わせたスクロール位置
   let followUntil = 0;      // この時刻までは、段落の背が変わったら合わせ直す
   // 段落 i の帯は「その番号の上端から、次の番号の上端まで」。縦3列では番号の箱が
@@ -603,11 +607,85 @@ document.addEventListener("DOMContentLoaded", () => {
   spacer.setAttribute("aria-hidden", "true");
   document.body.appendChild(spacer);
   const setSpacer = (px) => { spacer.style.height = px > 0 ? Math.ceil(px) + "px" : ""; };
+  // 欄の中の i 文字目（欄の頭の札も含めて数える）。描き直しても中身は同じなので、
+  // 同じ数え方で同じ文字に戻れる
+  function textAt(cell, i) {
+    const w = document.createTreeWalker(cell, NodeFilter.SHOW_TEXT);
+    for (let n; (n = w.nextNode()); i -= n.length) if (i < n.length) return { n, o: i };
+    return null;
+  }
+  function indexOf(cell, node, o) {
+    const w = document.createTreeWalker(cell, NodeFilter.SHOW_TEXT);
+    let i = 0;
+    for (let n; (n = w.nextNode()); i += n.length) if (n === node) return i + o;
+    return -1;
+  }
+  function charTop(cell, i) {
+    const p = textAt(cell, i);
+    if (!p) return null;
+    const rg = document.createRange();
+    rg.setStart(p.n, p.o); rg.setEnd(p.n, Math.min(p.o + 1, p.n.length));
+    const rs = rg.getClientRects();
+    return rs.length ? rs[0].top : null;
+  }
+  function caretAt(x, y) {
+    if (document.caretRangeFromPoint) {
+      const r = document.caretRangeFromPoint(x, y);
+      return r && { n: r.startContainer, o: r.startOffset };
+    }
+    if (document.caretPositionFromPoint) {          // Firefox
+      const p = document.caretPositionFromPoint(x, y);
+      return p && { n: p.offsetNode, o: p.offset };
+    }
+    return null;
+  }
+  const cellOf = (m) => document.querySelector(`#body .cell[lang="${m.lang}"][data-r="${m.r}"]`);
+  function capture() {
+    const t = headH(), y = t + 4;
+    // バーのすぐ下の線にかかっている欄（縦3列なら言語の数だけ並ぶ）。どの言語を
+    // 外しても残る欄がどれかで戻れるように、全部覚えておく
+    const marks = [];
+    for (const el of document.querySelectorAll("#body .cell")) {
+      const b = el.getBoundingClientRect();
+      if (b.top > y || b.bottom <= y) continue;
+      const m = { r: el.dataset.r, lang: el.lang, i: -1, dy: b.top - t };
+      const c = caretAt(Math.min(b.left + 16, b.right - 2), y);
+      if (c && el.contains(c.n) && c.n.nodeType === 3) {
+        const i = indexOf(el, c.n, Math.min(c.o, Math.max(c.n.length - 1, 0)));
+        const ct = i >= 0 ? charTop(el, i) : null;
+        if (ct !== null) { m.i = i; m.dy = ct - t; }
+      }
+      marks.push(m);
+    }
+    // 上端の欄が外される言語のものだったときのために、すぐ下に見えている欄の頭も
+    // 覚えておく（言語ごとに1つ。横3列なら同じ段落の次の言語の欄になる）
+    const below = {};
+    for (const el of document.querySelectorAll("#body .cell")) {
+      const top = el.getBoundingClientRect().top;
+      if (top > y && (!below[el.lang] || top < below[el.lang].top)) below[el.lang] = { el, top };
+    }
+    Object.values(below).sort((a, b) => a.top - b.top).forEach(({ el, top }) =>
+      marks.push({ r: el.dataset.r, lang: el.lang, i: -1, dy: top - t }));
+    const b = bands().find((x) => x.bottom > t);
+    if (!b && !marks.length) return null;
+    return { marks, r: b && b.r,
+      frac: b && b.top < t ? (t - b.top) / ((b.bottom - b.top) || 1) : 0,
+      off:  b && b.top >= t ? b.top - t : 0 };
+  }
+  function targetY() {
+    for (const m of place.marks) {
+      const el = cellOf(m);
+      if (!el) continue;                            // その言語は外された
+      const top = m.i >= 0 ? charTop(el, m.i) : el.getBoundingClientRect().top;
+      if (top !== null) return scrollY + top - m.dy - headH();
+    }
+    const b = bands().find((x) => x.r === place.r);
+    return b ? scrollY + b.top + place.frac * (b.bottom - b.top) - place.off - headH() : null;
+  }
   function restorePlace() {
     if (!place) return;
-    const b = bands().find((x) => x.r === place.r);
-    if (!b) return;
-    const y = scrollY + b.top + place.frac * (b.bottom - b.top) - place.off - headH();
+    const y = targetY();
+    if (y === null) return;
     const room = document.documentElement.scrollHeight - spacer.offsetHeight - innerHeight;
     setSpacer(y - room);
     // ページに scroll-behavior:smooth が掛かっている。滑らかに動いている途中で次に
@@ -619,12 +697,7 @@ document.addEventListener("DOMContentLoaded", () => {
     placedY = scrollY;
   }
   function keepPlace(fn) {
-    if (!place || Math.abs(scrollY - placedY) > 2) {
-      const t = headH(), b = bands().find((x) => x.bottom > t);
-      place = b ? { r: b.r,
-        frac: b.top < t ? (t - b.top) / ((b.bottom - b.top) || 1) : 0,
-        off:  b.top < t ? 0 : b.top - t } : null;
-    }
+    if (!place || Math.abs(scrollY - placedY) > 2) place = capture();
     setSpacer(0);
     fn();
     restorePlace();
