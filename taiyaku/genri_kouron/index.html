@@ -581,29 +581,65 @@ document.addEventListener("DOMContentLoaded", () => {
   // 言語を足す・文字を大きくするなどで列の幅が変わると、段落の高さが変わる。
   // スクロール位置（px）のままだと、まったく別の所が映ってしまう。
   // そこで描き直す前に「バーのすぐ下に見えている段落と、その中のどこまで来ていたか」を
-  // 覚え、描き直したあとで同じ段落の同じ割合の所がバーの下へ来るように動かす
-  function keepPlace(fn) {
-    // 段落 i の帯は「その番号の上端から、次の番号の上端まで」。縦3列では番号の箱が
-    // 段落の高さまで伸びていないので、箱の大きさでは測れない
-    const bands = () => {
-      const els = [...document.querySelectorAll("#body .rowno")];
-      const end = document.querySelector("#body").getBoundingClientRect().bottom;
-      const top = (el) => (el.closest(".rowbox") || el).getBoundingClientRect().top;
-      return els.map((el, i) => ({ r: el.dataset.r, top: top(el),
-        bottom: i + 1 < els.length ? top(els[i + 1]) : end }));
-    };
-    const headH = () => document.querySelector("header").offsetHeight;
-    const top0 = headH();
-    const b0 = bands().find((b) => b.bottom > top0);
-    fn();
-    if (!b0) return;
-    const frac = b0.top < top0 ? (top0 - b0.top) / ((b0.bottom - b0.top) || 1) : 0;
-    const off = b0.top < top0 ? 0 : b0.top - top0;
-    const b1 = bands().find((b) => b.r === b0.r);
-    if (!b1) return;
-    // ページに scroll-behavior:smooth が掛かっているので、ここは瞬時に動かす
-    scrollBy({ top: b1.top + frac * (b1.bottom - b1.top) - off - headH(), behavior: "instant" });
+  // 覚え、描き直したあとで同じ段落の同じ割合の所がバーの下へ来るように動かす。
+  // 覚えた所は、読者が自分でスクロールするまで**測り直さずに使い続ける**。押すたびに
+  // 測り直すと、小さな誤差や、動いている途中の位置を拾って、何度も押すうちにずれていく
+  let place = null;         // { r, frac, off }
+  let placedY = -1;         // 最後にこちらで合わせたスクロール位置
+  let followUntil = 0;      // この時刻までは、段落の背が変わったら合わせ直す
+  // 段落 i の帯は「その番号の上端から、次の番号の上端まで」。縦3列では番号の箱が
+  // 段落の高さまで伸びていないので、箱の大きさでは測れない
+  function bands() {
+    const els = [...document.querySelectorAll("#body .rowno")];
+    const end = document.querySelector("#body").getBoundingClientRect().bottom;
+    const top = (el) => (el.closest(".rowbox") || el).getBoundingClientRect().top;
+    return els.map((el, i) => ({ r: el.dataset.r, top: top(el),
+      bottom: i + 1 < els.length ? top(els[i + 1]) : end }));
   }
+  const headH = () => document.querySelector("header").offsetHeight;
+  // 節の終わり近くで言語を減らすとページが短くなり、戻したい所までスクロールできない
+  // （いちばん下でつかえて、出典の欄が映る）。そのときだけ足りない分の余白を下に足す
+  const spacer = document.createElement("div");
+  spacer.setAttribute("aria-hidden", "true");
+  document.body.appendChild(spacer);
+  const setSpacer = (px) => { spacer.style.height = px > 0 ? Math.ceil(px) + "px" : ""; };
+  function restorePlace() {
+    if (!place) return;
+    const b = bands().find((x) => x.r === place.r);
+    if (!b) return;
+    const y = scrollY + b.top + place.frac * (b.bottom - b.top) - place.off - headH();
+    const room = document.documentElement.scrollHeight - spacer.offsetHeight - innerHeight;
+    setSpacer(y - room);
+    // ページに scroll-behavior:smooth が掛かっている。滑らかに動いている途中で次に
+    // 押されると途中の位置を拾うので、ここだけ切って一気に動かす
+    const html = document.documentElement, was = html.style.scrollBehavior;
+    html.style.scrollBehavior = "auto";
+    scrollTo(scrollX, Math.round(y));
+    html.style.scrollBehavior = was;
+    placedY = scrollY;
+  }
+  function keepPlace(fn) {
+    if (!place || Math.abs(scrollY - placedY) > 2) {
+      const t = headH(), b = bands().find((x) => x.bottom > t);
+      place = b ? { r: b.r,
+        frac: b.top < t ? (t - b.top) / ((b.bottom - b.top) || 1) : 0,
+        off:  b.top < t ? 0 : b.top - t } : null;
+    }
+    setSpacer(0);
+    fn();
+    restorePlace();
+    followUntil = performance.now() + 1500;
+  }
+  // 字の形（フォント）が後から届くと段落の背が変わる。描き直した直後だけ追いかける
+  if (window.ResizeObserver) new ResizeObserver(() => {
+    if (performance.now() < followUntil && Math.abs(scrollY - placedY) <= 2) restorePlace();
+  }).observe(document.querySelector("#body"));
+  // 読者が自分でスクロールしたら、覚えた所は捨てる（次に押したときに測り直す）
+  addEventListener("scroll", () => {
+    if (place && Math.abs(scrollY - placedY) > 2) { place = null; followUntil = 0; }
+    // 足した余白が画面の外（下）へ出たら外す。映っている間に外すと画面が跳ねる
+    if (spacer.offsetHeight && spacer.getBoundingClientRect().top > innerHeight) setSpacer(0);
+  }, { passive: true });
 
   // ---- 本文の言語の出し入れ ----
   const langBox = $("#langs");
