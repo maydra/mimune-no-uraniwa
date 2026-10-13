@@ -499,7 +499,7 @@ document.addEventListener("DOMContentLoaded", () => {
     applyHash(h);
     if (h.i !== idx) { want = h.row; go(h.i); return; }
     if (h.row) cur = h.row - 1;
-    if (on.join("+") !== was) paint(); else mark();
+    if (on.join("+") !== was) keepPlace(paint); else mark();
     if (h.row) showCur();
   });
   function showCur() {
@@ -577,6 +577,34 @@ document.addEventListener("DOMContentLoaded", () => {
     sel.value = idx;
   }
 
+  // ---- 描き直しても、読んでいた段落を画面の同じ高さに残す ----
+  // 言語を足す・文字を大きくするなどで列の幅が変わると、段落の高さが変わる。
+  // スクロール位置（px）のままだと、まったく別の所が映ってしまう。
+  // そこで描き直す前に「バーのすぐ下に見えている段落と、その中のどこまで来ていたか」を
+  // 覚え、描き直したあとで同じ段落の同じ割合の所がバーの下へ来るように動かす
+  function keepPlace(fn) {
+    // 段落 i の帯は「その番号の上端から、次の番号の上端まで」。縦3列では番号の箱が
+    // 段落の高さまで伸びていないので、箱の大きさでは測れない
+    const bands = () => {
+      const els = [...document.querySelectorAll("#body .rowno")];
+      const end = document.querySelector("#body").getBoundingClientRect().bottom;
+      const top = (el) => (el.closest(".rowbox") || el).getBoundingClientRect().top;
+      return els.map((el, i) => ({ r: el.dataset.r, top: top(el),
+        bottom: i + 1 < els.length ? top(els[i + 1]) : end }));
+    };
+    const headH = () => document.querySelector("header").offsetHeight;
+    const top0 = headH();
+    const b0 = bands().find((b) => b.bottom > top0);
+    fn();
+    if (!b0) return;
+    const frac = b0.top < top0 ? (top0 - b0.top) / ((b0.bottom - b0.top) || 1) : 0;
+    const off = b0.top < top0 ? 0 : b0.top - top0;
+    const b1 = bands().find((b) => b.r === b0.r);
+    if (!b1) return;
+    // ページに scroll-behavior:smooth が掛かっているので、ここは瞬時に動かす
+    scrollBy({ top: b1.top + frac * (b1.bottom - b1.top) - off - headH(), behavior: "instant" });
+  }
+
   // ---- 本文の言語の出し入れ ----
   const langBox = $("#langs");
   LANGS.forEach((L) => {
@@ -589,7 +617,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!on.length) on = [L.id];
       store.set("langs", on);
       langsPicked = true; store.set("langsPicked", true);
-      paint(); syncHash();
+      keepPlace(paint); syncHash();
     };
     langBox.appendChild(b);
   });
@@ -950,13 +978,13 @@ document.addEventListener("DOMContentLoaded", () => {
   sel.onchange        = () => go(+sel.value);
   $("#prev").onclick  = () => go(idx - 1);
   $("#next").onclick  = () => go(idx + 1);
-  $("#toggle").onclick= () => { tools = !tools; store.set("tools", tools); paint(); };
-  $("#layout").onclick= () => { stacked = !stacked; store.set(layoutKey(), stacked); paint(); };
-  $("#big").onclick   = () => { fs = Math.min(fs + 2, 40); store.set("fs", fs); paint(); };
-  $("#small").onclick = () => { fs = Math.max(fs - 2, 13); store.set("fs", fs); paint(); };
-  $("#theme").onclick = () => { theme = theme === "dark" ? "light" : "dark"; store.set("theme", theme); paint(); };
+  $("#toggle").onclick= () => { tools = !tools; store.set("tools", tools); keepPlace(paint); };
+  $("#layout").onclick= () => { stacked = !stacked; store.set(layoutKey(), stacked); keepPlace(paint); };
+  $("#big").onclick   = () => { fs = Math.min(fs + 2, 40); store.set("fs", fs); keepPlace(paint); };
+  $("#small").onclick = () => { fs = Math.max(fs - 2, 13); store.set("fs", fs); keepPlace(paint); };
+  $("#theme").onclick = () => { theme = theme === "dark" ? "light" : "dark"; store.set("theme", theme); keepPlace(paint); };
   $("#ui").onchange   = () => {
-    ui = $("#ui").value; uiPicked = true; store.set("ui", ui); search(); paint();
+    ui = $("#ui").value; uiPicked = true; store.set("ui", ui); search(); keepPlace(paint);
   };
 
   // ---- 語句を全節から探す ----
@@ -1016,7 +1044,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === q) { if (e.key === "Escape") { q.blur(); hits.hidden = true; } return; }
     if (e.key === "/") {           // バーをたたんでいても探せるように、まず開く
       e.preventDefault();
-      if (!tools) { tools = true; store.set("tools", tools); paint(); }
+      if (!tools) { tools = true; store.set("tools", tools); keepPlace(paint); }
       q.focus(); q.select(); return;
     }
     if (e.target.tagName === "SELECT") return;
@@ -1030,7 +1058,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   matchMedia("(max-width:760px)").addEventListener("change", () => {
     stacked = readLayout();
-    paint();
+    keepPlace(paint);
   });
 
   paint();
