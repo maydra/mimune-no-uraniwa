@@ -46,6 +46,7 @@
     var total = 0;             // 本文の総字数
     var heads = [];            // 見出し
     var cur = 0;               // いま画面の上にある文字の位置
+    var curDy = 0;             // その文字の行の上端が TOP からどれだけ上にあるか（0〜1行分）
     var ui = null, bar = null, crumb = null, drawer = null, items = [];
     var restoring = false;
 
@@ -110,18 +111,27 @@
         return h > 0 ? Math.round(total * (window.scrollY / h)) : 0;
     }
 
-    function scrollToPos(pos, keep) {
-        if (!nodes.length) return;
+    // pos 文字目の行の上端（画面の座標）。1文字ぶんの範囲で測る。幅0の範囲だと
+    // 折り返しの境目で箱が取れず、段落ごと（<br> 区切りの本では本文全体の箱）の
+    // 上端に飛んで、何行もずれていた
+    function posTop(pos) {
+        if (!nodes.length) return null;
         var i = nodeIndex(pos);
+        var n = nodes[i], o = Math.min(pos - starts[i], n.nodeValue.length - 1);
         var r = document.createRange();
-        r.setStart(nodes[i], Math.min(pos - starts[i], nodes[i].nodeValue.length));
-        r.collapse(true);
-        var rect = r.getBoundingClientRect();
-        if (!rect || (!rect.top && !rect.height)) {            // 折り返しの境目は箱が取れない
-            rect = nodes[i].parentElement.getBoundingClientRect();
+        for (var k = o; k < n.nodeValue.length; k++) {
+            r.setStart(n, k); r.setEnd(n, k + 1);
+            var rs = r.getClientRects();
+            if (rs.length && rs[0].height) return rs[0].top;
         }
+        return n.parentElement.getBoundingClientRect().top;
+    }
+
+    function scrollToPos(pos, keep) {
+        var top = posTop(pos);
+        if (top === null) return;
         restoring = true;
-        window.scrollBy(0, rect.top - (keep == null ? TOP : keep));
+        window.scrollBy(0, top - (keep == null ? TOP : keep));
         setTimeout(function () { restoring = false; }, 60);
     }
 
@@ -520,7 +530,11 @@
         // 字を当てて探すのは重いので、スクロールの途中ではやらない（iPhone SE で引っかかる）
         clearTimeout(settleT);
         settleT = setTimeout(function () {
-            if (!restoring) cur = topPos();
+            if (!restoring && performance.now() > resizing) {
+                cur = topPos();
+                var t = posTop(cur);
+                curDy = t === null ? 0 : Math.max(-80, Math.min(0, t - TOP));
+            }
             save();
         }, 160);
     }
@@ -535,16 +549,22 @@
     // iPhone の Safari は、スクロールの向きを変えるたびにツールバーが出入りして
     // 高さだけが変わり resize が来る。そこで scrollBy すると慣性スクロールが止まる
     // （dp で「いきなり止まる」と言われた）。字の折り返しが変わるのは幅が変わったときだけ
+    // 覚えた文字（cur）と、その行の高さ（curDy）へ戻す。行の頭を TOP に揃えると、
+    // 変えるたびに最大1行ぶん跳ねる。ウィンドウを動かしている間（最後の resize から
+    // 0.5秒）は、ブラウザが起こすスクロールで測り直さない。測り直すとずれが重なり、
+    // パソコンでウィンドウをゆっくり広げると3〜4行ずれていた
     var resizeT = null;
+    var resizing = 0;
     var lastW = window.innerWidth;
     function onResize() {
         if (window.innerWidth === lastW) return;
         lastW = window.innerWidth;
-        var keep = cur;
+        resizing = performance.now() + 500;
+        scrollToPos(cur, TOP + curDy);       // 引きずっている間も、そのつど合わせる
         clearTimeout(resizeT);
         resizeT = setTimeout(function () {
             collect();                       // 文字数は変わらないが、ノードは取り直す
-            scrollToPos(keep, TOP);
+            scrollToPos(cur, TOP + curDy);
         }, 60);
     }
 
@@ -864,7 +884,7 @@
             if (touched) return;
             collect();
             scrollToPos(pos, TOP);
-            cur = pos;
+            cur = pos; curDy = 0;
         };
         go();
         if (document.fonts && document.fonts.ready) document.fonts.ready.then(go);
