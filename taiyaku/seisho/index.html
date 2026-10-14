@@ -575,10 +575,31 @@
   }).observe(document.querySelector("#body"));
   // 読者が自分でスクロールしたら、覚えた所は捨てる（次に押したときに測り直す）
   addEventListener("scroll", () => {
+    if (performance.now() < resizing) return;       // ウィンドウを動かしている最中
     if (place && Math.abs(scrollY - placedY) > 2) { place = null; followUntil = 0; }
     // 足した余白が画面の外（下）へ出たら外す。映っている間に外すと画面が跳ねる
     if (spacer.offsetHeight && spacer.getBoundingClientRect().top > innerHeight) setSpacer(0);
   }, { passive: true });
+
+  // ---- ウィンドウの大きさを変えても、読んでいた所に残る ----
+  // 幅が変わると折り返しが変わり、段落の背が伸び縮みして、同じスクロール位置に
+  // 別の所が映る。resize が届くのは並べ直した**あと**なので、そこで測っても遅い。
+  // そこでスクロールが止まるたびに上端の文字を覚えておき（held）、大きさが変わったら
+  // そこへ戻す。動かしている間はずっと同じ覚えを使うので、何度変えてもずれない
+  let held = null, holdT = 0, resizing = 0;
+  addEventListener("scroll", () => {
+    clearTimeout(holdT);
+    holdT = setTimeout(() => {
+      if (performance.now() >= resizing) held = place || capture();
+    }, 150);
+  }, { passive: true });
+  addEventListener("resize", () => {
+    resizing = performance.now() + 500;
+    if (!place) place = held;
+    if (!place) return;
+    restorePlace();
+    followUntil = performance.now() + 1500;
+  });
 
   // ---- 本文の言語の出し入れ ----
   const langBox = $("#langs");
