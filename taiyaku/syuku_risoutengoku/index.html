@@ -681,7 +681,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (const el of document.querySelectorAll("#body .cell")) {
       const b = el.getBoundingClientRect();
       if (b.top > y || b.bottom <= y) continue;
-      const m = { r: el.dataset.r, lang: el.lang, i: -1, dy: b.top - t };
+      const m = { r: el.dataset.r, lang: el.lang, i: -1, dy: b.top - t, top: true };
       const c = caretAt(Math.min(b.left + 16, b.right - 2), y);
       if (c && el.contains(c.n) && c.n.nodeType === 3) {
         const i = indexOf(el, c.n, Math.min(c.o, Math.max(c.n.length - 1, 0)));
@@ -705,8 +705,18 @@ document.addEventListener("DOMContentLoaded", () => {
       frac: b && b.top < t ? (t - b.top) / ((b.bottom - b.top) || 1) : 0,
       off:  b && b.top >= t ? b.top - t : 0 };
   }
+  // 縦3列 ⇔ 横3列では、上端に並んでいた韓日英の欄が縦に積み直されるので、全部を同じ
+  // 高さには残せない。読者が読んでいたはずの言語（画面の言葉と同じ言語）を残す。
+  // 上端にかかっていた欄の中からだけ選ぶ（すぐ下の欄の頭で合わせると、読んでいた
+  // 段落が上へ逃げる）
+  function ordered() {
+    const p = place.prefer;
+    if (!p) return place.marks;
+    const first = place.marks.filter((m) => m.top && m.lang === p);
+    return first.concat(place.marks.filter((m) => !first.includes(m)));
+  }
   function targetY() {
-    for (const m of place.marks) {
+    for (const m of ordered()) {
       const el = cellOf(m);
       if (!el) continue;                            // その言語は外された
       const top = m.i >= 0 ? charTop(el, m.i) : el.getBoundingClientRect().top;
@@ -729,8 +739,11 @@ document.addEventListener("DOMContentLoaded", () => {
     html.style.scrollBehavior = was;
     placedY = scrollY;
   }
-  function keepPlace(fn) {
+  // prefer: 残したい言語（縦3列 ⇔ 横3列のとき）。一度決めたら、その覚えが続く間は
+  // 同じ言語で合わせる。押すボタンによって残す言語が変わると、そこでずれる
+  function keepPlace(fn, prefer) {
     if (!place || Math.abs(scrollY - placedY) > 2) place = capture();
+    if (place && prefer && !place.prefer) place.prefer = prefer;
     setSpacer(0);
     fn();
     restorePlace();
@@ -1264,7 +1277,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#prev").onclick  = () => go(idx - 1);
   $("#next").onclick  = () => go(idx + 1);
   $("#toggle").onclick= () => { tools = !tools; store.set("tools", tools); keepPlace(paint); };
-  $("#layout").onclick= () => { stacked = !stacked; store.set(layoutKey(), stacked); keepPlace(paint); };
+  $("#layout").onclick= () => { stacked = !stacked; store.set(layoutKey(), stacked); keepPlace(paint, ui); };
   $("#big").onclick   = () => { fs = Math.min(fs + 2, 40); store.set("fs", fs); keepPlace(paint); };
   $("#small").onclick = () => { fs = Math.max(fs - 2, 13); store.set("fs", fs); keepPlace(paint); };
   $("#theme").onclick = () => { theme = theme === "dark" ? "light" : "dark"; store.set("theme", theme); keepPlace(paint); };
