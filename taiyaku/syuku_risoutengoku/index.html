@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script>/* 本文のパースを待たずに、保存済みのダーク設定だけ先に当てて白フラッシュを消す */
-try{if(JSON.parse(localStorage.getItem("hoondok.theme"))==="dark")document.documentElement.dataset.theme="dark";}catch(e){}</script>
+<script>/* 本文のパースを待たずに配色を決めて、白フラッシュを消す。自分で選んだ憶えが無ければ端末の設定に従う */
+try{var c=JSON.parse(localStorage.getItem("hoondok.theme"));if(c!=="light"&&c!=="dark")c=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=c;}catch(e){}</script>
 <title>祝福家庭と理想天国 三か国語対訳</title>
 <meta name="description" content="韓国語・日本語・英語を段落ごとに並べて読める対訳です。">
 <meta property="og:type" content="website">
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
       langsT: "表示する言語", q: "全体から語句を探す",
       rows: "横3列", cols: "縦3列", layoutT: "縦3列（横並び） / 横3列（縦積み）",
       brk: "区切り", brkT: "キリの良いところ（小見出しと、み言の出典の切れ目）に太線を引く",
-      smallT: "文字を小さく", bigT: "文字を大きく", themeT: "配色",
+      smallT: "文字を小さく", bigT: "文字を大きく", themeT: "配色", theme: { system: "端末の設定に合わせる", light: "明るい", dark: "暗い" },
       ai: "AI訳", aiT: "訳の無い所へ入れた参考訳を出し入れする",
       uiT: "画面の言語",
       hint: "段落をクリックで印 ／ ↑↓ で読み進める ／ ←→ で節を移動",
@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
       langsT: "표시할 언어", q: "전체에서 낱말 찾기",
       rows: "가로 3줄", cols: "세로 3단", layoutT: "세로 3단(나란히) / 가로 3줄(쌓기)",
       brk: "구분선", brkT: "끊기 좋은 곳(소제목과 말씀 출처가 바뀌는 곳)에 굵은 선을 긋습니다",
-      smallT: "글자 작게", bigT: "글자 크게", themeT: "배색",
+      smallT: "글자 작게", bigT: "글자 크게", themeT: "배색", theme: { system: "기기 설정에 따름", light: "밝게", dark: "어둡게" },
       ai: "AI 번역", aiT: "번역이 없는 곳에 넣은 참고 번역을 보이거나 숨깁니다",
       uiT: "화면 언어",
       hint: "문단을 클릭하면 표시 ／ ↑↓ 로 읽어 나가기 ／ ←→ 로 절 이동",
@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
       langsT: "Languages to show", q: "Search every section",
       rows: "3 rows", cols: "3 columns", layoutT: "3 columns (side by side) / 3 rows (stacked)",
       brk: "Breaks", brkT: "Draw a heavy line at natural breaks (subheadings and changes of source)",
-      smallT: "Smaller text", bigT: "Larger text", themeT: "Color scheme",
+      smallT: "Smaller text", bigT: "Larger text", themeT: "Color scheme", theme: { system: "Follow the device setting", light: "Light", dark: "Dark" },
       ai: "AI", aiT: "Show or hide the AI reference translations filled into missing paragraphs",
       uiT: "Interface language",
       hint: "Click a paragraph to mark it / ↑↓ to read on / ←→ to change section",
@@ -469,7 +469,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let stacked = readLayout();
   let tools   = store.get("tools", null);
   if (tools === null) tools = !narrow();    // スマホでは初めからたたんでおく
-  let theme   = store.get("theme", "light");
+  // 配色は3つ: system（端末の設定に従う。既定）／ light ／ dark。サイト本体の theme/script.js と同じ
+  const DARKQ = matchMedia("(prefers-color-scheme: dark)");
+  let theme = store.get("theme", "system");
+  if (theme !== "light" && theme !== "dark") theme = "system";
+  const themeNow = () => theme === "system" ? (DARKQ.matches ? "dark" : "light") : theme;
   let showAI  = store.get("ai", true);      // 訳の無い所へ入れた参考訳を出すか
   let showBrk = store.get("brk", false);    // キリの良いところに太線を引くか
   // 区切りも ?brk=1 / ?brk=0 でリンクに乗せられる。画面の言葉と同じく、自分で押した
@@ -835,7 +839,9 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#brk").title = t.brkT;
     $("#small").title = t.smallT;
     $("#big").title = t.bigT;
-    $("#theme").title = t.themeT;
+    $("#theme").title = t.themeT + ": " + t.theme[theme];
+    $("#theme").setAttribute("aria-label", t.themeT + ": " + t.theme[theme]);
+    $("#theme").textContent = { system: "◐", light: "☀\uFE0E", dark: "☾\uFE0E" }[theme];
     $("#ai").textContent = t.ai;
     $("#ai").title = t.aiT;
     $("#ui").title = t.uiT;
@@ -847,7 +853,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function paint() {
     const t = T();
     applyUI();
-    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.theme = themeNow();
     document.body.classList.toggle("hideai", !showAI);
     $("#tools").classList.toggle("closed", !tools);
     $("#ai").setAttribute("aria-pressed", String(showAI));
@@ -1319,7 +1325,11 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#layout").onclick= () => { stacked = !stacked; store.set(layoutKey(), stacked); keepPlace(paint, ui); };
   $("#big").onclick   = () => { fs = Math.min(fs + 2, 40); store.set("fs", fs); keepPlace(paint); };
   $("#small").onclick = () => { fs = Math.max(fs - 2, 13); store.set("fs", fs); keepPlace(paint); };
-  $("#theme").onclick = () => { theme = theme === "dark" ? "light" : "dark"; store.set("theme", theme); keepPlace(paint); };
+  $("#theme").onclick = () => {                 // 端末の設定 → 明るい → 暗い → 端末の設定 …
+    const order = ["system", "light", "dark"];
+    theme = order[(order.indexOf(theme) + 1) % order.length];
+    store.set("theme", theme); keepPlace(paint);
+  };
   $("#ai").onclick    = () => { showAI = !showAI; store.set("ai", showAI); keepPlace(paint); };
   $("#brk").onclick   = () => { showBrk = !showBrk; store.set("brk", showBrk);
     brkPicked = true; store.set("brkPicked", true); keepPlace(paint); syncHash(); };
@@ -1399,6 +1409,9 @@ document.addEventListener("DOMContentLoaded", () => {
     stacked = readLayout();
     keepPlace(paint);
   });
+
+  // 端末の設定が変わったら（日没で暗くなる設定など）その場で追いかける。自分で選んだ人は動かさない
+  DARKQ.addEventListener("change", () => { if (theme === "system") keepPlace(paint); });
 
   paint();
   if (want) { cur = want - 1; want = 0; mark(); showCur(); }

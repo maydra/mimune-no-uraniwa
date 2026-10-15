@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>/* 本文のパースを待たずに配色を決めて、白フラッシュを消す。自分で選んだ憶えが無ければ端末の設定に従う */
+try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="dark")c=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=c;}catch(e){}</script>
 <title>聖書 三か国語対訳</title>
 <meta name="description" content="韓国語・日本語・英語を節ごとに並べて読める対訳です。">
 <meta property="og:type" content="website">
@@ -206,7 +209,7 @@
       openT: "上のバーを出す", closeT: "上のバーをたたむ",
       langsT: "表示する言語", q: "この書から語句を探す",
       rows: "横3列", cols: "縦3列", layoutT: "縦3列（横並び） / 横3列（縦積み）",
-      smallT: "文字を小さく", bigT: "文字を大きく", themeT: "配色", uiT: "画面の言語",
+      smallT: "文字を小さく", bigT: "文字を大きく", themeT: "配色", theme: { system: "端末の設定に合わせる", light: "明るい", dark: "暗い" }, uiT: "画面の言語",
       hint: "節をクリックで印 ／ ↑↓ で読み進める ／ ←→ で章を移動",
       hintTouch: "節をタップで印 ／ ◀ ▶ で章を移動",
       pos: (i, n, v) => `${i} / ${n}　${v} 節`,
@@ -236,7 +239,7 @@
       openT: "위 막대 펴기", closeT: "위 막대 접기",
       langsT: "표시할 언어", q: "이 책에서 낱말 찾기",
       rows: "가로 3줄", cols: "세로 3단", layoutT: "세로 3단(나란히) / 가로 3줄(쌓기)",
-      smallT: "글자 작게", bigT: "글자 크게", themeT: "배색", uiT: "화면 언어",
+      smallT: "글자 작게", bigT: "글자 크게", themeT: "배색", theme: { system: "기기 설정에 따름", light: "밝게", dark: "어둡게" }, uiT: "화면 언어",
       hint: "절을 클릭하면 표시 ／ ↑↓ 로 읽어 나가기 ／ ←→ 로 장 이동",
       hintTouch: "절을 누르면 표시 ／ ◀ ▶ 로 장 이동",
       pos: (i, n, v) => `${i} / ${n}　${v} 절`,
@@ -267,7 +270,7 @@
       openT: "Show the toolbar", closeT: "Hide the toolbar",
       langsT: "Languages to show", q: "Search this book",
       rows: "3 rows", cols: "3 columns", layoutT: "3 columns (side by side) / 3 rows (stacked)",
-      smallT: "Smaller text", bigT: "Larger text", themeT: "Color scheme",
+      smallT: "Smaller text", bigT: "Larger text", themeT: "Color scheme", theme: { system: "Follow the device setting", light: "Light", dark: "Dark" },
       uiT: "Interface language",
       hint: "Click a verse to mark it / ↑↓ to read on / ←→ to change chapter",
       hintTouch: "Tap a verse to mark it / ◀ ▶ to change chapter",
@@ -342,7 +345,11 @@
   let langsPicked = store.get("langsPicked", false);
   let idx = Math.min(Math.max(store.get("sec", 0), 0), Math.max(data.length - 1, 0));
   let fs = store.get("fs", 20);
-  let theme = store.get("theme", "light");
+  // 配色は3つ: system（端末の設定に従う。既定）／ light ／ dark。サイト本体の theme/script.js と同じ
+  const DARKQ = matchMedia("(prefers-color-scheme: dark)");
+  let theme = store.get("theme", "system");
+  if (theme !== "light" && theme !== "dark") theme = "system";
+  const themeNow = () => theme === "system" ? (DARKQ.matches ? "dark" : "light") : theme;
   let tools = store.get("tools", !narrow());
   let cur = -1;
 
@@ -649,7 +656,9 @@
     $("#q").placeholder = t.q;
     $("#layout").title = t.layoutT;
     $("#small").title = t.smallT; $("#big").title = t.bigT;
-    $("#theme").title = t.themeT;
+    $("#theme").title = t.themeT + ": " + t.theme[theme];
+    $("#theme").setAttribute("aria-label", t.themeT + ": " + t.theme[theme]);
+    $("#theme").textContent = { system: "◐", light: "☀\uFE0E", dark: "☾\uFE0E" }[theme];
     $("#ui").title = t.uiT; $("#ui").setAttribute("aria-label", t.uiT);
     $("#ui").value = ui;
     $("#hint").textContent = touch() ? t.hintTouch : t.hint;
@@ -658,7 +667,7 @@
   function paint() {
     const t = T();
     applyUI();
-    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.theme = themeNow();
     $("#tools").classList.toggle("closed", !tools);
     document.documentElement.style.setProperty("--fs", fs + "px");
     $("#layout").textContent = stacked ? t.cols : t.rows;
@@ -867,7 +876,11 @@
   $("#layout").onclick = () => { stacked = !stacked; store.set(layoutKey(), stacked); keepPlace(paint, ui); };
   $("#small").onclick = () => { fs = Math.max(13, fs - 1); store.set("fs", fs); keepPlace(paint); };
   $("#big").onclick = () => { fs = Math.min(34, fs + 1); store.set("fs", fs); keepPlace(paint); };
-  $("#theme").onclick = () => { theme = theme === "dark" ? "light" : "dark"; store.set("theme", theme); keepPlace(paint); };
+  $("#theme").onclick = () => {                 // 端末の設定 → 明るい → 暗い → 端末の設定 …
+    const order = ["system", "light", "dark"];
+    theme = order[(order.indexOf(theme) + 1) % order.length];
+    store.set("theme", theme); keepPlace(paint);
+  };
   $("#toggle").onclick = () => { tools = !tools; store.set("tools", tools); keepPlace(paint); };
   $("#ui").onchange = () => { ui = $("#ui").value; uiPicked = true; store.set("ui", ui); store.set("uiPicked", true); keepPlace(paint); syncHash(); };
 
@@ -887,6 +900,9 @@
   addEventListener("resize", () => { const v = readLayout(); if (v !== stacked) { stacked = v; keepPlace(paint, ui); } });
 
   parseHash();
+  // 端末の設定が変わったら（日没で暗くなる設定など）その場で追いかける。自分で選んだ人は動かさない
+  DARKQ.addEventListener("change", () => { if (theme === "system") keepPlace(paint); });
+
   paint();
 })();
 </script>
