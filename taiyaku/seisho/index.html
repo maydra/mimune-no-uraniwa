@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>聖書 三か国語対訳</title>
+<meta name="description" content="韓国語・日本語・英語を節ごとに並べて読める対訳です。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="聖書 三か国語対訳">
+<meta property="og:description" content="韓国語・日本語・英語を節ごとに並べて読める対訳です。">
+<meta property="og:url" content="https://maydra.github.io/mimune-no-uraniwa/taiyaku/seisho/index.html">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="み旨の裏庭">
+<meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+<meta name="twitter:card" content="summary">
 <style>
   :root{
     --bg:#faf8f4; --panel:#fff; --ink:#1d1b17; --muted:#7a736c;
@@ -365,8 +374,17 @@
     if (i >= 0) { idx = i; cur = m[3] ? +m[3] : -1; }
   }
   const wantLangs = () => (langsPicked ? on : null);
+  // 配るリンクは、画面の言葉が韓国語・英語なら ko.html / en.html を指す。LINE などの
+  // プレビューは JavaScript を動かさず <title> と og: だけを読むので、言語ごとに入口を分けて
+  // 本の名前をその言語で出す。入口は ?ui= と # を持ったまま index.html へ移る
+  const entryURL = (href) => {
+    const u = href.split("#")[0].split("?")[0];
+    const dir = u.slice(0, u.lastIndexOf("/") + 1);
+    if (ui === "ko" || ui === "en") return dir + ui + ".html";
+    return u.endsWith("/ko.html") || u.endsWith("/en.html") ? dir + "index.html" : u;
+  };
   function shareURL(key, langs, verse) {
-    const u = new URL(location.href);
+    const u = new URL(entryURL(location.href));
     u.search = uiPicked ? `?ui=${ui}` : "";
     u.hash = key + (verse ? "-" + verse : "") + (langs ? "/" + langs.join("+") : "");
     return u.toString();
@@ -375,7 +393,7 @@
     const s = data[idx];
     if (!s) return;
     const h = s.key + (cur > 0 ? "-" + cur : "") + (langsPicked ? "/" + on.join("+") : "");
-    history.replaceState(null, "", "#" + h);
+    try { history.replaceState(null, "", entryURL(location.href) + location.search + "#" + h); } catch {}
   }
   function toast(msg) {
     let el = $(".toast");

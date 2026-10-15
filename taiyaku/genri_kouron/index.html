@@ -7,6 +7,15 @@
 <script>/* 本文のパースを待たずに、保存済みのダーク設定だけ先に当てて白フラッシュを消す */
 try{if(JSON.parse(localStorage.getItem("dp.theme"))==="dark")document.documentElement.dataset.theme="dark";}catch(e){}</script>
 <title>原理講論 三か国語対訳</title>
+<meta name="description" content="韓国語・日本語・英語を段落ごとに並べて読める対訳です。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="原理講論 三か国語対訳">
+<meta property="og:description" content="韓国語・日本語・英語を段落ごとに並べて読める対訳です。">
+<meta property="og:url" content="https://maydra.github.io/mimune-no-uraniwa/taiyaku/genri_kouron/index.html">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="み旨の裏庭">
+<meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+<meta name="twitter:card" content="summary">
 <style>
   :root{
     --bg:#faf8f4; --panel:#fff; --ink:#1d1b17; --muted:#7a736c;
@@ -510,7 +519,16 @@ document.addEventListener("DOMContentLoaded", () => {
     (box || cell).scrollIntoView({ block: box ? "start" : "center" });
   }
 
-  const pageURL = () => location.href.split("#")[0].split("?")[0];
+  // 配るリンクは、画面の言葉が韓国語・英語なら ko.html / en.html を指す。LINE などの
+  // プレビューは JavaScript を動かさず <title> と og: だけを読むので、言語ごとに入口を分けて
+  // 本の名前をその言語で出す。入口は ?ui= と # を持ったまま index.html へ移る
+  const entryURL = (href) => {
+    const u = href.split("#")[0].split("?")[0];
+    const dir = u.slice(0, u.lastIndexOf("/") + 1);
+    if (ui === "ko" || ui === "en") return dir + ui + ".html";
+    return u.endsWith("/ko.html") || u.endsWith("/en.html") ? dir + "index.html" : u;
+  };
+  const pageURL = () => entryURL(location.href);
   const uiQuery = () => (uiPicked ? "?ui=" + ui : "");
   function shareURL(key, langs, row) {
     return pageURL() + uiQuery() + "#" + key + (row ? "-" + row : "")

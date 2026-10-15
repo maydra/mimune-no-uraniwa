@@ -6,7 +6,16 @@
 <meta name="color-scheme" content="light dark">
 <script>/* 本文のパースを待たずに、保存済みのダーク設定だけ先に当てて白フラッシュを消す */
 try{if(JSON.parse(localStorage.getItem("hoondok.theme"))==="dark")document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<title>訓読 対訳ビューア</title>
+<title>祝福家庭と理想天国 三か国語対訳</title>
+<meta name="description" content="韓国語・日本語・英語を段落ごとに並べて読める対訳です。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="祝福家庭と理想天国 三か国語対訳">
+<meta property="og:description" content="韓国語・日本語・英語を段落ごとに並べて読める対訳です。">
+<meta property="og:url" content="https://maydra.github.io/mimune-no-uraniwa/taiyaku/syuku_risoutengoku/index.html">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="み旨の裏庭">
+<meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png">
+<meta name="twitter:card" content="summary">
 <style>
   :root{
     --bg:#faf8f4; --panel:#fff; --ink:#1d1b17; --muted:#7a736c;
@@ -281,7 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---- 画面の言葉。本文の言語（LANGS）とは別で、右上のプルダウンで選ぶ ----
   const UI = {
     ja: {
-      title: "訓読 対訳ビューア", brand: "訓読 対訳",
+      title: "祝福家庭と理想天国 三か国語対訳", brand: "訓読 対訳",
       secSel: "節を選ぶ", prev: "前の節", next: "次の節",
       openT: "上のバーを出す", closeT: "上のバーをたたむ",
       langsT: "表示する言語", q: "全体から語句を探す",
@@ -318,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
         + `段落の対応づけは文字数から機械的に推定したものです。ずれていたら元記事で確かめてください。`,
     },
     ko: {
-      title: "훈독 대역 뷰어", brand: "훈독 대역",
+      title: "축복가정과 이상천국 3개국어 대역", brand: "훈독 대역",
       secSel: "절 고르기", prev: "이전 절", next: "다음 절",
       openT: "위 막대 펴기", closeT: "위 막대 접기",
       langsT: "표시할 언어", q: "전체에서 낱말 찾기",
@@ -355,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
         + `문단 짝짓기는 글자 수를 바탕으로 기계가 추정한 것입니다. 어긋나 보이면 원글에서 확인해 주십시오.`,
     },
     en: {
-      title: "Hoondok Parallel Reader", brand: "Hoondok Parallel",
+      title: "Blessing and Ideal Family — Three-Language Parallel", brand: "Hoondok Parallel",
       secSel: "Choose a section", prev: "Previous section", next: "Next section",
       openT: "Show the toolbar", closeT: "Hide the toolbar",
       langsT: "Languages to show", q: "Search every section",
@@ -538,7 +547,16 @@ document.addEventListener("DOMContentLoaded", () => {
     (box || cell).scrollIntoView({ block: box ? "start" : "center" });
   }
 
-  const pageURL = () => location.href.split("#")[0].split("?")[0];
+  // 配るリンクは、画面の言葉が韓国語・英語なら ko.html / en.html を指す。LINE などの
+  // プレビューは JavaScript を動かさず <title> と og: だけを読むので、言語ごとに入口を分けて
+  // 本の名前をその言語で出す。入口は ?ui= と # を持ったまま index.html へ移る
+  const entryURL = (href) => {
+    const u = href.split("#")[0].split("?")[0];
+    const dir = u.slice(0, u.lastIndexOf("/") + 1);
+    if (ui === "ko" || ui === "en") return dir + ui + ".html";
+    return u.endsWith("/ko.html") || u.endsWith("/en.html") ? dir + "index.html" : u;
+  };
+  const pageURL = () => entryURL(location.href);
   const query = () => {
     const q = [];
     if (uiPicked) q.push("ui=" + ui);
