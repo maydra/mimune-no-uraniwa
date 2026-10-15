@@ -142,13 +142,13 @@ try{var c=JSON.parse(localStorage.getItem("dp.theme"));if(c!=="light"&&c!=="dark
   .cell .dp-red,.cell .dp-blue,.cell .dp-yellow,.cell .dp-green,
   .cell [style*="background-color"]{border-radius:3px;padding:0 1px;
     box-decoration-break:clone;-webkit-box-decoration-break:clone}
-  /* 暗い配色でも蛍光ペンは紙と同じ色にする（薄めると三色の見分けが付かない）。
-     地が明るいので字だけ黒に戻す */
-  html[data-theme="dark"] .cell .dp-red,
-  html[data-theme="dark"] .cell .dp-blue,
-  html[data-theme="dark"] .cell .dp-yellow,
-  html[data-theme="dark"] .cell .dp-green,
-  html[data-theme="dark"] .cell [style*="background-color"]{color:#1d1b17}
+  /* 暗い配色では紙の色のままだと濃すぎる（2026-10-15、「日本語 dp のやつみたいに薄く」）。
+     日本語の原理講論（theme/style.css の body.dark-mode）と同じ半透明を敷き、字は暗い配色の明るい字のまま。
+     紙の色より少し鮮やかな色を下地にして、薄めても三色の見分けが付くようにする */
+  html[data-theme="dark"] .cell .dp-red,   html[data-theme="dark"] .cell [style*="FCD2E7" i]{background:rgba(255,120,190,.24)!important;color:var(--ink)}
+  html[data-theme="dark"] .cell .dp-blue,  html[data-theme="dark"] .cell [style*="CCFFFF" i]{background:rgba(70,215,255,.20)!important;color:var(--ink)}
+  html[data-theme="dark"] .cell .dp-yellow,html[data-theme="dark"] .cell [style*="FFFF99" i]{background:rgba(255,235,80,.25)!important;color:var(--ink)}
+  html[data-theme="dark"] .cell .dp-green {background:rgba(120,230,120,.22);color:var(--ink)}
   .cell .small{font-size:.86em;color:var(--muted)}
   /* ルビ。**選んでも拾われないようにする**（本文をコピーしたときに読みが混ざらない） */
   .cell ruby rt{font-size:.5em;color:var(--muted);font-weight:400;
