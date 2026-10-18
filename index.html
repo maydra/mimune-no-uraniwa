@@ -101,6 +101,18 @@
             background-clip: text;
         }
 
+        .online-now {
+            margin-top: -0.5rem;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .online-now::before {
+            content: '●';
+            color: #22c55e;
+            margin-right: 0.4em;
+        }
+
         .search-links {
             display: flex;
             gap: 1rem;
@@ -363,6 +375,7 @@
     <div class="container">
         <header>
             <h1 id="み旨の裏庭---サイト目次"><a href="#み旨の裏庭---サイト目次">み旨の裏庭</a></h1>
+            <p class="online-now" id="online-now" title="直近5分にこのサイトを開いていた人の数（Google アナリティクス）" hidden>いま、このサイトを <b></b> 人が利用しています</p>
             <div class="search-links">
                 <a href="search-all.html" class="search-btn">🔍 サイト内一括検索</a>
                 <a href="gacha.html" class="search-btn">🎲 み言をランダムに見る</a>
@@ -602,6 +615,23 @@
     </script>
 
     <script src="theme/script.js?v=202609192031"></script>
+    <script>
+        // 「いま○人が利用しています」。Cloudflare の Worker（_tools/online-count）が
+        // Google アナリティクスの直近5分の人数を返す。取れないとき（通信なし・Worker の不調）は出さない。
+        (function () {
+            var el = document.getElementById('online-now');
+            if (!el || !window.fetch) return;
+            fetch('https://mimune-online.dreamerhigh2015.workers.dev/')
+                .then(function (r) { return r.ok ? r.json() : null; })
+                .then(function (d) {
+                    if (!d || typeof d.active !== 'number') return;
+                    // 開いている本人は必ずいるので、数え漏れても1人は出す
+                    el.querySelector('b').textContent = Math.max(d.active, 1);
+                    el.hidden = false;
+                })
+                .catch(function () {});
+        })();
+    </script>
     <script>
         // 「ホーム画面に追加」。対応ブラウザ(Android/PC の Chrome・Edge)では
         // ワンタップのボタンを出し、iPhone/iPad には手順を文章で見せる。

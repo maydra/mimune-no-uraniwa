@@ -35,3 +35,13 @@ HTML を書き換えるスクリプトを回したあとは `python _tools/root/
   iPhone SE でスクロールが重くなる原因だった。フォントは Noto Serif JP の 400 と 700 だけ
 - 共有ファイルを足したら `python _tools/root/build_offline_manifest.py` も回す（オフライン保存が一緒に持っていく）
 - `theme/` の CSS・JS は、Service Worker がネットワーク優先で取る。直せば次に開いたときに届く
+
+## ホームの「いま○人が利用しています」（2026-10-18）
+
+`_tools/online-count/` の Cloudflare Worker（https://mimune-online.dreamerhigh2015.workers.dev ）が、
+Google アナリティクス（プロパティ 520812725）の直近5分の人数を `{"active":N,"minutes":5}` で返す。ホームの `#online-now` がそれを読む。
+
+- アナリティクスを読むのは Google Cloud のプロジェクト mimune-online のサービスアカウント `online-count@mimune-online.iam.gserviceaccount.com`。プロパティには「閲覧者」で入っている
+- その鍵は Cloudflare の secret `GA_KEY` にだけある。リポジトリには置かない。作り直したら `npx wrangler secret put GA_KEY < 鍵.json`
+- Worker を直したら `_tools/online-count` で `npx wrangler deploy`（Cloudflare のアカウント dreamerhigh2015 にログインが要る: `npx wrangler login`）
+- アナリティクスに聞くのは Worker 1つあたり1分に1回まで。取れないときは 503 を返し、ホームは行ごと出さない
