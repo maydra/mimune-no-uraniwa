@@ -1,0 +1,879 @@
+/* seika/seika.css — 聖歌のページ（_tools/seika/build_seika.py が作る）
+   明暗は theme/script.js が body に付ける light-mode / dark-mode で切り替える。
+   theme/style.css は明るい配色で p・div などの字を !important で黒にするので、
+   こちらの色も !important で上書きする。 */
+
+.song {
+    --ink: #e8e6f2;
+    --kana: #a5b4fc;
+    --mean: #cfc8ea;
+    --rule: rgba(255, 255, 255, 0.16);
+    --accent: #f0a6fb;
+    --ko: #5eead4;
+    --panel: rgba(255, 255, 255, 0.04);
+}
+
+/* 番号の色: 日本の聖歌は紫（--accent）、성가（ハングルの聖歌集）は青緑（--ko） */
+body.light-mode .song {
+    --ink: #161616;
+    --kana: #34479e;
+    --mean: #4d4d4d;
+    --rule: rgba(0, 0, 0, 0.14);
+    --accent: #8a3ea8;
+    --ko: #0f766e;
+    --panel: #f7f6fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif JP', serif;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) fixed;
+    min-height: 100vh;
+    color: #e0e0e0;
+    padding: 3rem 1rem;
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3.5rem 4rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+[lang="ko"] {
+    font-family: 'Noto Serif KR', 'Noto Serif JP', serif;
+}
+
+/* 見出し */
+.song-head {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* 番号。礼拝で言われるのは日本の聖歌の番号なので、そちらを大きく */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.song .badge {
+    border-radius: 999px;
+    padding: 0.15rem 0.9rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--rule);
+    color: var(--mean) !important;
+}
+
+.song .badge-ja {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent) !important;
+    border-color: var(--accent);
+}
+
+.song .badge-ko {
+    color: var(--ko) !important;
+    border-color: var(--ko);
+}
+
+.song .c-ja,
+.song .other-ja {
+    color: var(--accent) !important;
+}
+
+.song .c-ko,
+.song .other-ko {
+    color: var(--ko) !important;
+}
+
+.song .share-btn {
+    margin-top: 0.9rem;
+    font: inherit;
+    font-size: 0.88rem;
+    padding: 0.3rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    color: var(--ink) !important;
+    cursor: pointer;
+}
+
+.song h1 {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-weight: 700;
+    color: var(--ink) !important;
+    line-height: 2.2;
+}
+
+.song .title-ja {
+    color: var(--mean) !important;
+    font-size: 1.1rem;
+}
+
+/* ルビ */
+.song rt {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.6em;
+    color: var(--kana) !important;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+/* 読みが字より長い語でも、隣の語の読みとくっつかないように語の間を空け、
+   読みは字の上に寄せて置く（既定の均等割りだと1字ずつ散らばる） */
+.song ruby {
+    ruby-align: center;
+}
+
+.song .w {
+    display: inline-block;
+}
+
+/* 読みはカナ（.rk）とローマ字（.rr）の両方が入っていて、片方だけ見せる */
+.song.read-kana .rr,
+.song.read-roman .rk {
+    display: none;
+}
+
+.song .rr {
+    font-family: 'Noto Serif JP', Georgia, serif;
+    letter-spacing: 0.02em;
+}
+
+.song.read-none .ko rt,
+.song.read-none h1 rt {
+    visibility: hidden;
+}
+
+/* 表示の切り替え */
+.song-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 2.2rem;
+}
+
+.song-tools button {
+    font: inherit;
+    font-size: 0.9rem;
+    padding: 0.35rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    color: var(--ink) !important;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.song-tools > button[aria-pressed="false"] {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+/* 読みの切り替え（カナ／ABC／なし）。押されているものだけ色を付ける */
+.seg {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--panel);
+}
+
+.song .seg-label {
+    font-size: 0.82rem;
+    padding: 0 0.4rem 0 0.9rem;
+    color: var(--mean) !important;
+}
+
+.song-tools .seg button,
+.finder .seg button {
+    font: inherit;
+    font-size: 0.9rem;
+    border: 0;
+    border-radius: 0;
+    padding: 0.35rem 0.85rem;
+    background: transparent;
+    color: var(--ink) !important;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* 暗い配色では地の色が淡いので字を濃く、明るい配色では地が濃いので字を白く */
+.song .seg button[aria-pressed="true"] {
+    background: var(--accent);
+    color: #1b1030 !important;
+}
+
+body.light-mode .song .seg button[aria-pressed="true"] {
+    color: #fff !important;
+}
+
+.song .other-none {
+    color: var(--mean) !important;
+}
+
+/* 節 */
+.verse {
+    display: grid;
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--rule);
+}
+
+.song .vno {
+    color: var(--accent) !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-top: 0.9rem;
+}
+
+/* 1行 = 左にハングル、右の欄外に意味 */
+.line {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    column-gap: 1.6rem;
+    align-items: end;
+}
+
+.song .ko {
+    font-size: 1.45rem;
+    line-height: 2.6;
+    word-spacing: 0.45em;
+    color: var(--ink) !important;
+}
+
+/* 欄外: 日本の聖歌の歌詞（公式の訳詞）。それが無い曲は意味 */
+.side {
+    border-left: 2px solid var(--rule);
+    padding: 0.15rem 0 0.55rem 0.9rem;
+    line-height: 1.6;
+}
+
+.song .ja-off {
+    font-size: 0.98rem;
+    color: var(--ink) !important;
+}
+
+.song .ja-off rt {
+    font-size: 0.5em;
+    color: var(--mean) !important;
+}
+
+.song .ja {
+    font-size: 0.95rem;
+    color: var(--mean) !important;
+}
+
+.song.hide-side .side > p {
+    visibility: hidden;
+}
+
+/* 行に当てられなかった訳詞は、まとめて出す */
+.official {
+    margin-top: 2.2rem;
+}
+
+.song .official h2 {
+    font-size: 1.1rem;
+    color: var(--ink) !important;
+    margin-bottom: 0.6rem;
+}
+
+.song .off-verse {
+    color: var(--ink) !important;
+    margin: 0.6rem 0;
+    line-height: 1.9;
+}
+
+.song .off-verse span {
+    color: var(--accent) !important;
+}
+
+.song .again {
+    color: var(--accent) !important;
+    font-size: 0.95rem;
+    padding: 0.4rem 0 0.2rem;
+}
+
+.song .ja-seika {
+    color: var(--accent) !important;
+    font-size: 0.92rem;
+    margin-top: 0.2rem;
+}
+
+/* 動画で聴く。押すまではサムネだけ */
+.videos {
+    margin-top: 2.2rem;
+}
+
+.song .videos h2 {
+    font-size: 1.1rem;
+    color: var(--ink) !important;
+    margin-bottom: 0.8rem;
+}
+
+.vgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.yt-play,
+.yt iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+}
+
+.yt-play {
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+}
+
+.yt-play img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.song .yt-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.2rem;
+    height: 2.3rem;
+    border-radius: 0.7rem;
+    background: rgba(220, 0, 0, 0.88);
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.song .yt figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--mean) !important;
+}
+
+/* 語句・読みのきまり・出典 */
+.gloss,
+.howto {
+    margin-top: 2.2rem;
+    padding: 1.4rem 1.6rem;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+}
+
+.song .gloss h2 {
+    font-size: 1.1rem;
+    color: var(--ink) !important;
+    margin-bottom: 0.8rem;
+}
+
+.gloss dl > div {
+    display: grid;
+    grid-template-columns: 8.5rem minmax(0, 1fr);
+    column-gap: 1rem;
+    padding: 0.35rem 0;
+    border-top: 1px dashed var(--rule);
+}
+
+.gloss dl > div:first-child {
+    border-top: none;
+}
+
+.song .gloss dt {
+    color: var(--ink) !important;
+    font-weight: 700;
+}
+
+.song .gloss dd {
+    color: var(--mean) !important;
+    font-size: 0.92rem;
+}
+
+.song .howto summary {
+    cursor: pointer;
+    color: var(--ink) !important;
+    font-weight: 700;
+}
+
+.howto ul {
+    margin: 0.8rem 0 0 1.2rem;
+}
+
+.song .howto li {
+    color: var(--mean) !important;
+    font-size: 0.92rem;
+    margin: 0.3rem 0;
+}
+
+body.light-mode .song .howto,
+body.light-mode .song details.howto {
+    background: var(--panel) !important;
+    border-color: var(--rule) !important;
+}
+
+.song .source {
+    margin-top: 1.6rem;
+    font-size: 0.82rem;
+    color: var(--mean) !important;
+}
+
+/* 一覧（seika/index.html） */
+.finder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+
+.finder input {
+    font: inherit;
+    font-size: 1.05rem;
+    flex: 1 1 16rem;
+    max-width: 26rem;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    color: var(--ink) !important;
+}
+
+.songs {
+    list-style: none;
+}
+
+.songs li {
+    display: flex;
+    align-items: stretch;
+    border-top: 1px solid var(--rule);
+}
+
+.songs li.here {
+    background: var(--panel);
+    outline: 2px solid var(--accent);
+    border-radius: 8px;
+}
+
+.songs .go {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem 0.4rem;
+    text-decoration: none !important;
+    min-width: 0;
+}
+
+.song .songs .num {
+    flex: 0 0 3.2rem;
+    text-align: right;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--accent) !important;
+    font-variant-numeric: tabular-nums;
+}
+
+.song .songs .num-ko {
+    color: var(--ko) !important;
+}
+
+/* 並びの切り替え: 押されたボタンも番号と同じ色 */
+.song .seg-order button[data-order="ko"][aria-pressed="true"] {
+    background: var(--ko);
+}
+
+.song .list-cap {
+    font-size: 0.88rem;
+    color: var(--mean) !important;
+    margin-bottom: 0.4rem;
+    text-align: center;
+}
+
+/* 切り替えたら、番号が裏返って入れ替わる。上から少しずつ遅らせる */
+.songs.flip .num {
+    animation: num-flip 0.42s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+    animation-delay: calc(var(--i, 0) * 22ms);
+}
+
+.songs.flip li {
+    animation: row-in 0.32s ease-out both;
+    animation-delay: calc(var(--i, 0) * 22ms);
+}
+
+.list-cap.flip {
+    animation: row-in 0.3s ease-out both;
+}
+
+@keyframes num-flip {
+    from { transform: perspective(300px) rotateX(-90deg); opacity: 0; }
+    to { transform: none; opacity: 1; }
+}
+
+@keyframes row-in {
+    from { opacity: 0.35; }
+    to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .songs.flip .num,
+    .songs.flip li,
+    .list-cap.flip {
+        animation: none;
+    }
+}
+
+/* ハングル版の無い日本の聖歌のページ: 歌詞を読みやすく大きめに */
+.ja-only .off-verse {
+    font-size: 1.15rem;
+    line-height: 2.1;
+    margin: 1.1rem 0;
+}
+
+.song .credit {
+    color: var(--mean) !important;
+    font-size: 0.9rem;
+}
+
+.songs .t {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    line-height: 1.5;
+}
+
+.songs .tt {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 0.5rem;
+}
+
+.song .songs .t b {
+    font-size: 1.05rem;
+    color: var(--ink) !important;
+}
+
+.song .songs .t small {
+    font-size: 0.85rem;
+    color: var(--mean) !important;
+}
+
+.song .songs .off b {
+    color: var(--mean) !important;
+    font-weight: 400;
+}
+
+.song .songs .tag {
+    font-size: 0.72rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--mean) !important;
+}
+
+.song .songs .share {
+    flex: 0 0 auto;
+    font-size: 1.1rem;
+    padding: 0 0.9rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.song h2.ko-only {
+    font-size: 1rem;
+    color: var(--mean) !important;
+    margin: 2rem 0 0.4rem;
+}
+
+.song .none {
+    text-align: center;
+    color: var(--mean) !important;
+    padding: 1.5rem 0;
+}
+
+/* 下のリンク（family_pledge.html と同じ形） */
+.nav-links {
+    margin-top: 3.5rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 2.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+}
+
+/* スマホ: 欄外は各行のすぐ下に */
+@media (max-width: 720px) {
+    body {
+        padding: 1.2rem 0.6rem;
+    }
+
+    .container {
+        padding: 1.8rem 1rem;
+        border-radius: 16px;
+    }
+
+    .verse {
+        grid-template-columns: 1.6rem minmax(0, 1fr);
+    }
+
+    .line {
+        grid-template-columns: minmax(0, 1fr);
+        margin-bottom: 0.5rem;
+    }
+
+    .song .ko {
+        font-size: 1.12rem;
+        line-height: 2.3;
+        word-spacing: 0.1em;
+    }
+
+    .side {
+        border-left: none;
+        padding: 0 0 0.2rem;
+    }
+
+    .song-tools {
+        gap: 0.4rem;
+    }
+
+    .song-tools > button,
+    .song-tools .seg button {
+        font-size: 0.82rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .song .ja-off,
+    .song .ja {
+        font-size: 0.88rem;
+    }
+
+    .song .vno {
+        padding-top: 0.6rem;
+    }
+
+    .gloss,
+    .howto {
+        padding: 1.1rem 1rem;
+    }
+
+    .gloss dl > div {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .songs .go {
+        gap: 0.7rem;
+    }
+
+    .song .songs .num {
+        flex-basis: 2.6rem;
+        font-size: 1.15rem;
+    }
+
+    .nav-links a {
+        padding: 0.7rem 1.6rem;
+    }
+}
+
+/* 流行歌の紹介のページ */
+.intro p {
+    margin: 0.6rem 0;
+}
+
+.song .intro p {
+    color: var(--ink) !important;
+}
+
+.quote {
+    margin-top: 2rem;
+}
+
+.song .quote h2,
+.song .refs h2 {
+    font-size: 1.1rem;
+    color: var(--ink) !important;
+    margin-bottom: 0.6rem;
+}
+
+.quote blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.song .quote .note {
+    font-size: 0.85rem;
+    color: var(--mean) !important;
+    margin-top: 0.6rem;
+}
+
+.refs {
+    margin-top: 2rem;
+}
+
+.refs ul {
+    margin-left: 1.2rem;
+}
+
+.refs li {
+    margin: 0.3rem 0;
+}
+
+.song .off-ab {
+    font-size: 1rem;
+    color: var(--accent) !important;
+    margin: 1rem 0 0.3rem;
+}
+
+/* 読みを付ける道具（yomi.html） */
+.song .title-en {
+    color: var(--mean) !important;
+    font-size: 0.9rem;
+}
+
+.song .tool-link {
+    margin-top: 0.6rem;
+    font-size: 0.92rem;
+}
+
+.yomi textarea {
+    display: block;
+    width: 100%;
+    font-family: 'Noto Serif KR', 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    color: var(--ink) !important;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+.go-row {
+    text-align: center;
+    margin: -1rem 0 0.6rem;
+}
+
+.song .go-btn {
+    font: inherit;
+    font-weight: 700;
+    padding: 0.55rem 1.8rem;
+    border-radius: 999px;
+    border: 0;
+    background: var(--accent);
+    color: #1b1030 !important;
+    cursor: pointer;
+}
+
+body.light-mode .song .go-btn {
+    color: #fff !important;
+}
+
+.song #status {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--mean) !important;
+    min-height: 1.4em;
+    margin-bottom: 1rem;
+}
+
+.yomi #out .line {
+    border-top: 1px solid var(--rule);
+}
+
+.yomi #out .gap {
+    height: 1.2rem;
+}
+
+.song .mt {
+    font-size: 0.92rem;
+    color: var(--mean) !important;
+}
+
+.song .mt + .mt {
+    margin-top: 0.2rem;
+}
+
+.mt-links a {
+    font-size: 0.78rem;
+    margin-right: 0.6rem;
+}
+
+.mt.done .mt-links {
+    display: none;
+}
+
+.song .whole {
+    margin-top: 1.2rem;
+    font-size: 0.88rem;
+    color: var(--mean) !important;
+}
+
+.song .mt-lang {
+    font-size: 0.78rem;
+    margin-right: 0.6rem;
+    color: var(--mean) !important;
+}
+
+/* 試験中 */
+.song .beta-tag {
+    font-size: 0.4em;
+    vertical-align: middle;
+    padding: 0.1rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--accent);
+    color: var(--accent) !important;
+    -webkit-text-fill-color: var(--accent) !important;
+    font-weight: 400;
+}
+
+.song .beta {
+    margin-top: 1.4rem;
+    font-size: 0.82rem;
+    color: var(--mean) !important;
+}

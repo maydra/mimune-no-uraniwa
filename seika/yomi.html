@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXQ0QTBYTR');
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>読みを付ける | 聖歌 | み旨の裏庭</title>
+  <meta name="description" content="ハングルの歌詞を貼ると、カタカナ・ローマ字の読みと、日本語・英語の意味が出ます。" />
+  <meta property="og:title" content="読みを付ける | 聖歌 | み旨の裏庭" />
+  <meta property="og:description" content="ハングルの歌詞を貼ると、カタカナ・ローマ字の読みと、日本語・英語の意味が出ます。" />
+  <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" />
+  <link rel="icon" href="/mimune-no-uraniwa/favicon.png?v=202609192031" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../theme/style.css?v=202609192031">
+  <link rel="stylesheet" href="../theme/pages/e631ced897.css?v=202610110220">
+  <link rel="stylesheet" href="seika.css?v=202610232300">
+</head>
+<body>
+  <div class="container">
+    <article class="song read-kana yomi" id="song">
+      <header class="song-head">
+        <h1>読みを付ける</h1>
+        <p class="title-ja">ハングルの歌詞を貼ると、読みと意味が出ます</p>
+        <p class="title-en" lang="en">Paste Korean lyrics to see how to read them and what they mean</p>
+      </header>
+
+      <textarea id="src" rows="8" lang="ko" placeholder="ここにハングルの歌詞を貼り付け / Paste Korean lyrics here"></textarea>
+
+      <div class="song-tools">
+        <div class="seg" role="group" aria-label="読み Reading">
+          <span class="seg-label">読み</span>
+          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button><button type="button" data-read="none">なし</button>
+        </div>
+        <div class="seg" role="group" aria-label="意味 Meaning">
+          <span class="seg-label">意味</span>
+          <button type="button" data-mean="ja">日本語</button><button type="button" data-mean="en">English</button><button type="button" data-mean="both">両方</button><button type="button" data-mean="none">なし</button>
+        </div>
+      </div>
+      <p class="go-row"><button type="button" class="go-btn" id="go">読みと意味を出す / Show</button></p>
+      <p class="note" id="status" aria-live="polite"></p>
+
+      <section id="out"></section>
+      <p class="whole" id="whole" hidden></p>
+
+      <details class="howto">
+        <summary>使い方と注意 / Notes</summary>
+        <ul>
+          <li>読みは、綴りではなく実際に聞こえる音を自動で付けています。漢字語や合成語では、実際の発音と違うことがあります（聖歌のページの読みは、そうした所を手で直してあります）</li>
+          <li>意味は機械翻訳です。パソコンの Chrome では、端末の中で訳すので歌詞はどこにも送りません。そのほかのブラウザでは、行ごとの「Papago」「Google」を押すと翻訳サイトが開きます（押した行だけがそのサイトに送られます）</li>
+          <li>貼った歌詞はこのページの中だけで使い、保存もしません</li>
+          <li lang="en">Readings are generated automatically from the actual pronunciation (ABC = Revised Romanization). Meanings are machine translations: Chrome on a computer translates on your device; elsewhere, tap Papago or Google to open a translator for that line. Nothing you paste is stored.</li>
+        </ul>
+      </details>
+    </article>
+
+    <nav class="nav-links"><a href="index.html">聖歌の一覧</a> <a href="../index.html">トップページ</a></nav>
+  </div>
+
+  <script src="hangul-yomi.js?v=202610232300"></script>
+  <script>
+    (function () {
+      var song = document.getElementById('song');
+      var src = document.getElementById('src');
+      var out = document.getElementById('out');
+      var statusEl = document.getElementById('status');
+      var HANGUL = /[\uac00-\ud7a3]+/g;
+
+      function esc(s) {
+        return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
+      }
+      // 語ごとに箱へ入れ、語の中のハングルの塊にルビ（カナと ABC の両方）を付ける
+      function rubyLine(line) {
+        return line.split(/(\s+)/).map(function (tok) {
+          if (!tok.trim()) return tok;
+          var html = '', pos = 0, m;
+          HANGUL.lastIndex = 0;
+          while ((m = HANGUL.exec(tok))) {
+            html += esc(tok.slice(pos, m.index));
+            html += '<ruby>' + m[0] + '<rt><span class="rk">' + HangulYomi.toKana(m[0]) + '</span><span class="rr" lang="ko-Latn">'
+              + HangulYomi.toRoman(m[0]) + '</span></rt></ruby>';
+            pos = m.index + m[0].length;
+          }
+          return '<span class="w">' + html + esc(tok.slice(pos)) + '</span>';
+        }).join('');
+      }
+      function papago(text, lang) { return 'https://papago.naver.com/?sk=ko&tk=' + lang + '&st=' + encodeURIComponent(text); }
+      function google(text, lang) { return 'https://translate.google.com/?sl=ko&tl=' + lang + '&text=' + encodeURIComponent(text) + '&op=translate'; }
+      var LANG_LABEL = { ja: '日本語', en: 'English' };
+
+      // 端末の中の翻訳（Chrome の Translator API）。使えなければ null
+      var translators = {};
+      async function getTranslator(lang) {
+        if (translators[lang] !== undefined) return translators[lang];
+        translators[lang] = null;
+        if (!('Translator' in self)) return null;
+        try {
+          var opts = { sourceLanguage: 'ko', targetLanguage: lang };
+          if ((await Translator.availability(opts)) === 'unavailable') return null;
+          opts.monitor = function (m) {
+            m.addEventListener('downloadprogress', function (e) {
+              statusEl.textContent = '翻訳の準備をしています（初回だけ） ' + Math.round(e.loaded * 100) + '%';
+            });
+          };
+          translators[lang] = await Translator.create(opts);
+        } catch (e) {
+          translators[lang] = null;
+        }
+        return translators[lang];
+      }
+
+      function meanLangs() {
+        var m = song.dataset.mean || 'ja';
+        return m === 'both' ? ['ja', 'en'] : m === 'none' ? [] : [m];
+      }
+
+      async function show() {
+        var lines = src.value.split(/\r?\n/);
+        var langs = meanLangs();
+        out.innerHTML = '';
+        var jobs = [];
+        lines.forEach(function (line) {
+          var text = line.trim();
+          if (!text) {
+            if (out.lastChild && !out.lastChild.classList.contains('gap')) {
+              var gap = document.createElement('div');
+              gap.className = 'gap';
+              out.appendChild(gap);
+            }
+            return;
+          }
+          var row = document.createElement('div');
+          row.className = 'line';
+          var side = langs.map(function (lang) {
+            return '<p class="mt" data-lang="' + lang + '"><span class="mt-text"></span>'
+              + '<span class="mt-links"><span class="mt-lang">' + LANG_LABEL[lang] + '</span>'
+              + '<a href="' + papago(text, lang) + '" target="_blank" rel="noopener">Papago</a>'
+              + '<a href="' + google(text, lang) + '" target="_blank" rel="noopener">Google</a></span></p>';
+          }).join('');
+          row.innerHTML = '<p class="ko" lang="ko">' + rubyLine(text) + '</p><div class="side">' + side + '</div>';
+          out.appendChild(row);
+          if (/[\uac00-\ud7a3]/.test(text)) jobs.push([row, text]);
+        });
+
+        var whole = document.getElementById('whole');
+        var all = lines.join('\n').trim();
+        whole.hidden = !all || !langs.length;
+        whole.innerHTML = '全体を翻訳サイトで開く: ' + langs.map(function (lang) {
+          return LANG_LABEL[lang] + '（<a href="' + papago(all, lang) + '" target="_blank" rel="noopener">Papago</a>・'
+            + '<a href="' + google(all, lang) + '" target="_blank" rel="noopener">Google</a>）';
+        }).join(' ');
+
+        // 端末の中で訳せる言葉は自動で訳し、訳せたら翻訳サイトのボタンは隠す
+        for (var k = 0; k < langs.length; k++) {
+          var t = await getTranslator(langs[k]);
+          if (!t) continue;
+          statusEl.textContent = LANG_LABEL[langs[k]] + 'の意味を、端末の中で訳しています…';
+          for (var n = 0; n < jobs.length; n++) {
+            var p = jobs[n][0].querySelector('.mt[data-lang="' + langs[k] + '"]');
+            try {
+              p.querySelector('.mt-text').textContent = await t.translate(jobs[n][1]);
+              p.classList.add('done');
+            } catch (e) { /* その行はボタンのまま */ }
+          }
+        }
+        var auto = langs.some(function (l) { return translators[l]; });
+        statusEl.textContent = !langs.length ? ''
+          : auto ? '意味は端末の中の機械翻訳です（Chrome）。違和感のある行は Papago・Google でも確かめてください。'
+          : '意味は、行ごとの「Papago」「Google」を押すと翻訳サイトで見られます。';
+      }
+      document.getElementById('go').addEventListener('click', show);
+
+      // 読みと意味の選び方は覚えておく（歌詞は覚えない）
+      function setChoice(kind, value) {
+        song.querySelectorAll('[data-' + kind + ']').forEach(function (b) {
+          b.setAttribute('aria-pressed', b.dataset[kind] === value ? 'true' : 'false');
+        });
+        if (kind === 'read') {
+          song.classList.remove('read-kana', 'read-roman', 'read-none');
+          song.classList.add('read-' + value);
+        } else {
+          song.dataset.mean = value;
+        }
+        try { localStorage.setItem('seika-' + kind, value); } catch (e) {}
+      }
+      var ja = (navigator.language || 'ja').slice(0, 2) === 'ja';
+      var saved = {};
+      try { saved.read = localStorage.getItem('seika-read'); saved.mean = localStorage.getItem('seika-mean'); } catch (e) {}
+      setChoice('read', saved.read || (ja ? 'kana' : 'roman'));
+      setChoice('mean', saved.mean || (ja ? 'ja' : 'en'));
+      ['read', 'mean'].forEach(function (kind) {
+        song.querySelectorAll('[data-' + kind + ']').forEach(function (b) {
+          b.addEventListener('click', function () {
+            setChoice(kind, b.dataset[kind]);
+            if (kind === 'mean' && out.children.length) show();
+          });
+        });
+      });
+    })();
+  </script>
+  <script src="../theme/script.js?v=202609192031"></script>
+</body>
+</html>
