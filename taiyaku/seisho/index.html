@@ -620,14 +620,20 @@ try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="d
   // 別の所が映る。resize が届くのは並べ直した**あと**なので、そこで測っても遅い。
   // そこでスクロールが止まるたびに上端の文字を覚えておき（held）、大きさが変わったら
   // そこへ戻す。動かしている間はずっと同じ覚えを使うので、何度変えてもずれない
-  let held = null, holdT = 0, resizing = 0;
+  let held = null, holdT = 0, resizing = 0, lastW = innerWidth;
   addEventListener("scroll", () => {
     clearTimeout(holdT);
     holdT = setTimeout(() => {
       if (performance.now() >= resizing) held = place || capture();
     }, 150);
   }, { passive: true });
+  // iPhone の Safari は、スクロールするとツールバーが縮んで高さだけが変わり、そこでも
+  // resize が来る。折り返しは変わらないのに、スクロールを始める前の覚え（held）へ
+  // 引き戻していた（ページが上下に跳ねて読みにくい、と録画で言われた）。幅が変わった
+  // ときだけ戻す
   addEventListener("resize", () => {
+    if (innerWidth === lastW) return;
+    lastW = innerWidth;
     resizing = performance.now() + 500;
     if (!place) place = held;
     if (!place) return;
