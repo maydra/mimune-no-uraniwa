@@ -30,7 +30,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 SONGS = HERE / "songs"
 OUT = ROOT / "seika"
-VERSION = "202610240200"
+VERSION = "202610240230"
 SITE = "https://maydra.github.io/mimune-no-uraniwa/seika/"
 
 WORD = re.compile(r"([^\s{]+)(?:\{([^}]*)\})?")

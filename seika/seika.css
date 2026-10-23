@@ -329,6 +329,15 @@ body.light-mode .song .seg button[aria-pressed="true"] {
     display: none;
 }
 
+/* 日本語: 読みの切り替えが隠れるので、題の読みは ABC を選んでいてもカナにする */
+.lyrics.view-ja.read-roman h1 .rk {
+    display: inline;
+}
+
+.lyrics.view-ja.read-roman h1 .rr {
+    display: none;
+}
+
 /* 日本語: 訳詞は聖歌集のように大きめに */
 .lyrics.view-ja .official {
     margin-top: 0;
