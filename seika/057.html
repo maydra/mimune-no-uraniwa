@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../theme/style.css?v=202609192031">
   <link rel="stylesheet" href="../theme/pages/e631ced897.css?v=202610110220">
-  <link rel="stylesheet" href="seika.css?v=202610240100">
+  <link rel="stylesheet" href="seika.css?v=202610240130">
 </head>
 <body>
   <div class="container">
@@ -36,7 +36,7 @@
       <div class="song-tools">
         <div class="seg" role="group" aria-label="読み">
           <span class="seg-label">読み</span>
-          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button><button type="button" data-read="none">なし</button>
+          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button>
         </div>
       </div>
 
@@ -171,12 +171,12 @@
       });
       var readBtns = song.querySelectorAll('[data-read]');
       function setRead(mode) {
-        song.classList.remove('read-kana', 'read-roman', 'read-none');
+        song.classList.remove('read-kana', 'read-roman');
         song.classList.add('read-' + mode);
         readBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.read === mode ? 'true' : 'false'); });
       }
       var mode = (navigator.language || 'ja').slice(0, 2) === 'ja' ? 'kana' : 'roman';
-      try { mode = localStorage.getItem('seika-read') || mode; } catch (e) {}
+      try { var saved = localStorage.getItem('seika-read'); if (saved === 'kana' || saved === 'roman') mode = saved; } catch (e) {}
       setRead(mode);
       readBtns.forEach(function (b) {
         b.addEventListener('click', function () {

@@ -21,11 +21,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../theme/style.css?v=202609192031">
   <link rel="stylesheet" href="../theme/pages/e631ced897.css?v=202610110220">
-  <link rel="stylesheet" href="seika.css?v=202610240100">
+  <link rel="stylesheet" href="seika.css?v=202610240130">
 </head>
 <body>
   <div class="container">
-    <article class="song lyrics read-kana view-both" id="song">
+    <article class="song lyrics read-kana view-ko" id="song">
       <header class="song-head">
         <p class="badges"><span class="badge badge-ja">日本の聖歌 6番</span><span class="badge badge-ko">성가 5</span></p>
         <h1 lang="ko"><span class="w"><ruby>어둠에<rt><span class="rk">オドゥメ</span><span class="rr" lang="ko-Latn">eodume</span></rt></ruby></span> <span class="w"><ruby>싸인<rt><span class="rk">ッサイン</span><span class="rr" lang="ko-Latn">ssain</span></rt></ruby></span> <span class="w"><ruby>세력<rt><span class="rk">セリョㇰ</span><span class="rr" lang="ko-Latn">seryeok</span></rt></ruby></span></h1>
@@ -33,14 +33,14 @@
         <button type="button" class="share-btn" id="share">🔗 この歌を共有</button>
       </header>
 
+      <div class="view-tabs" role="group" aria-label="表示">
+        <button type="button" data-view="ko">ハングル</button><button type="button" data-view="ja">日本語</button>
+      </div>
+
       <div class="song-tools">
-        <div class="seg seg-read" role="group" aria-label="読み">
+        <div class="seg" role="group" aria-label="読み">
           <span class="seg-label">読み</span>
-          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button><button type="button" data-read="none">なし</button>
-        </div>
-        <div class="seg" role="group" aria-label="表示">
-          <span class="seg-label">表示</span>
-          <button type="button" data-view="ko">ハングル</button><button type="button" data-view="both">両方</button><button type="button" data-view="ja">日本語</button>
+          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button>
         </div>
       </div>
 
@@ -458,12 +458,12 @@
       // 読み: カナ／ABC／なし。日本語でない端末では最初から ABC
       var readBtns = song.querySelectorAll('[data-read]');
       function setRead(mode) {
-        song.classList.remove('read-kana', 'read-roman', 'read-none');
+        song.classList.remove('read-kana', 'read-roman');
         song.classList.add('read-' + mode);
         readBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.read === mode ? 'true' : 'false'); });
       }
       var mode = (navigator.language || 'ja').slice(0, 2) === 'ja' ? 'kana' : 'roman';
-      try { mode = localStorage.getItem('seika-read') || mode; } catch (e) {}
+      try { var saved = localStorage.getItem('seika-read'); if (saved === 'kana' || saved === 'roman') mode = saved; } catch (e) {}
       setRead(mode);
       readBtns.forEach(function (b) {
         b.addEventListener('click', function () {
@@ -472,16 +472,16 @@
         });
       });
 
-      // 表示: ハングル／両方／日本語。スマホは並べると読みにくいので、最初はハングルだけ
+      // 表示: ハングル／日本語。選んだほうを覚える
       var viewBtns = song.querySelectorAll('button[data-view]');
       function setView(v) {
-        song.classList.remove('view-ko', 'view-both', 'view-ja');
+        song.classList.remove('view-ko', 'view-ja');
         song.classList.add('view-' + v);
         viewBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.view === v ? 'true' : 'false'); });
       }
       if (viewBtns.length) {
-        var view = matchMedia('(max-width: 720px)').matches ? 'ko' : 'both';
-        try { view = localStorage.getItem('seika-view') || view; } catch (e) {}
+        var view = 'ko';
+        try { if (localStorage.getItem('seika-view') === 'ja') view = 'ja'; } catch (e) {}
         setView(view);
         viewBtns.forEach(function (b) {
           b.addEventListener('click', function () {
@@ -490,13 +490,6 @@
           });
         });
       }
-
-      // ハングルだけの表示で行を押すと、その行の日本語を出す（もう一度押すと消す）
-      song.addEventListener('click', function (e) {
-        if (!song.classList.contains('view-ko') || (getSelection && String(getSelection()))) return;
-        var line = e.target.closest('.line.has-side');
-        if (line) line.classList.toggle('peek');
-      });
 
       document.querySelectorAll('.yt-play').forEach(function (btn) {
         btn.addEventListener('click', function () {

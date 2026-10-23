@@ -21,11 +21,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../theme/style.css?v=202609192031">
   <link rel="stylesheet" href="../theme/pages/e631ced897.css?v=202610110220">
-  <link rel="stylesheet" href="seika.css?v=202610240100">
+  <link rel="stylesheet" href="seika.css?v=202610240130">
 </head>
 <body>
   <div class="container">
-    <article class="song lyrics read-kana view-both" id="song">
+    <article class="song lyrics read-kana view-ko" id="song">
       <header class="song-head">
         <p class="badges"><span class="badge badge-ja">日本の聖歌 31番</span><span class="badge badge-ko">성가 29</span></p>
         <h1 lang="ko"><span class="w"><ruby>부름받은<rt><span class="rk">プルㇺバドゥン</span><span class="rr" lang="ko-Latn">bureumbadeun</span></rt></ruby></span> <span class="w"><ruby>몸<rt><span class="rk">モㇺ</span><span class="rr" lang="ko-Latn">mom</span></rt></ruby></span></h1>
@@ -33,40 +33,39 @@
         <button type="button" class="share-btn" id="share">🔗 この歌を共有</button>
       </header>
 
+      <div class="view-tabs" role="group" aria-label="表示">
+        <button type="button" data-view="ko">ハングル</button><button type="button" data-view="ja">日本語</button>
+      </div>
+
       <div class="song-tools">
-        <div class="seg seg-read" role="group" aria-label="読み">
+        <div class="seg" role="group" aria-label="読み">
           <span class="seg-label">読み</span>
-          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button><button type="button" data-read="none">なし</button>
-        </div>
-        <div class="seg" role="group" aria-label="表示">
-          <span class="seg-label">表示</span>
-          <button type="button" data-view="ko">ハングル</button><button type="button" data-view="both">両方</button><button type="button" data-view="ja">日本語</button>
+          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button>
         </div>
       </div>
-      <p class="peek-hint">行を押すと、その行の日本語が出ます</p>
 
       <section class="verse">
         <p class="vno" aria-label="1番">1</p>
         <div class="lines">
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>부름<rt><span class="rk">プルㇺ</span><span class="rr" lang="ko-Latn">bureum</span></rt></ruby></span> <span class="w"><ruby>받아<rt><span class="rk">パダ</span><span class="rr" lang="ko-Latn">bada</span></rt></ruby></span> <span class="w"><ruby>나선<rt><span class="rk">ナソン</span><span class="rr" lang="ko-Latn">naseon</span></rt></ruby></span> <span class="w"><ruby>이<rt><span class="rk">イ</span><span class="rr" lang="ko-Latn">i</span></rt></ruby></span> <span class="w"><ruby>몸<rt><span class="rk">モㇺ</span><span class="rr" lang="ko-Latn">mom</span></rt></ruby></span> <span class="w"><ruby>어디든지<rt><span class="rk">オディドゥンジ</span><span class="rr" lang="ko-Latn">eodideunji</span></rt></ruby></span> <span class="w"><ruby>가오리다<rt><span class="rk">カオリダ</span><span class="rr" lang="ko-Latn">gaorida</span></rt></ruby></span></p>
             </div>
             <div class="side"><p class="ja-off">召されて出で立つ この身はゆくぞ</p></div>
           </div>
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>괴로우나<rt><span class="rk">クェロウナ</span><span class="rr" lang="ko-Latn">goerouna</span></rt></ruby></span> <span class="w"><ruby>즐거우나<rt><span class="rk">チュㇽゴウナ</span><span class="rr" lang="ko-Latn">jeulgeouna</span></rt></ruby></span> <span class="w"><ruby>주만<rt><span class="rk">チュマン</span><span class="rr" lang="ko-Latn">juman</span></rt></ruby></span> <span class="w"><ruby>따라<rt><span class="rk">ッタラ</span><span class="rr" lang="ko-Latn">ttara</span></rt></ruby></span> <span class="w"><ruby>가오리니<rt><span class="rk">カオリニ</span><span class="rr" lang="ko-Latn">gaorini</span></rt></ruby></span></p>
             </div>
             <div class="side"><p class="ja-off"><ruby>辛<rt>つら</rt></ruby>くも<ruby>楽<rt>たの</rt></ruby>しも <ruby>君<rt>きみ</rt></ruby>のみ<ruby>慕<rt>した</rt></ruby>いて</p></div>
           </div>
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>어느<rt><span class="rk">オヌ</span><span class="rr" lang="ko-Latn">eoneu</span></rt></ruby></span> <span class="w"><ruby>누가<rt><span class="rk">ヌガ</span><span class="rr" lang="ko-Latn">nuga</span></rt></ruby></span> <span class="w"><ruby>막으리까<rt><span class="rk">マグリッカ</span><span class="rr" lang="ko-Latn">mageurikka</span></rt></ruby></span> <span class="w"><ruby>죽음인들<rt><span class="rk">チュグミンドゥㇽ</span><span class="rr" lang="ko-Latn">jugeumindeul</span></rt></ruby></span> <span class="w"><ruby>막으리까<rt><span class="rk">マグリッカ</span><span class="rr" lang="ko-Latn">mageurikka</span></rt></ruby></span></p>
             </div>
             <div class="side"><p class="ja-off"><ruby>誰<rt>たれ</rt></ruby>がさまたぐ 死もさまたぐや</p></div>
           </div>
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>어느<rt><span class="rk">オヌ</span><span class="rr" lang="ko-Latn">eoneu</span></rt></ruby></span> <span class="w"><ruby>누가<rt><span class="rk">ヌガ</span><span class="rr" lang="ko-Latn">nuga</span></rt></ruby></span> <span class="w"><ruby>막으리까<rt><span class="rk">マグリッカ</span><span class="rr" lang="ko-Latn">mageurikka</span></rt></ruby></span> <span class="w"><ruby>죽음인들<rt><span class="rk">チュグミンドゥㇽ</span><span class="rr" lang="ko-Latn">jugeumindeul</span></rt></ruby></span> <span class="w"><ruby>막으리까<rt><span class="rk">マグリッカ</span><span class="rr" lang="ko-Latn">mageurikka</span></rt></ruby></span></p>
             </div>
@@ -77,25 +76,25 @@
       <section class="verse">
         <p class="vno" aria-label="2番">2</p>
         <div class="lines">
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>아골<rt><span class="rk">アゴㇽ</span><span class="rr" lang="ko-Latn">agol</span></rt></ruby></span> <span class="w"><ruby>골짝<rt><span class="rk">コㇽチャㇰ</span><span class="rr" lang="ko-Latn">goljjak</span></rt></ruby></span> <span class="w"><ruby>빈들에도<rt><span class="rk">ピンドゥレド</span><span class="rr" lang="ko-Latn">bindeuredo</span></rt></ruby></span> <span class="w"><ruby>복음<rt><span class="rk">ポグㇺ</span><span class="rr" lang="ko-Latn">bogeum</span></rt></ruby></span> <span class="w"><ruby>들고<rt><span class="rk">トゥㇽゴ</span><span class="rr" lang="ko-Latn">deulgo</span></rt></ruby></span> <span class="w"><ruby>가오리다<rt><span class="rk">カオリダ</span><span class="rr" lang="ko-Latn">gaorida</span></rt></ruby></span></p>
             </div>
             <div class="side"><p class="ja-off">地の<ruby>隅<rt>すみ</rt></ruby><ruby>荒<rt>あ</rt></ruby>れ野も 恵みとともに</p></div>
           </div>
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>소돔<rt><span class="rk">ソドㇺ</span><span class="rr" lang="ko-Latn">sodom</span></rt></ruby></span> <span class="w"><ruby>같은<rt><span class="rk">カトゥン</span><span class="rr" lang="ko-Latn">gateun</span></rt></ruby></span> <span class="w"><ruby>거리에도<rt><span class="rk">コリエド</span><span class="rr" lang="ko-Latn">georiedo</span></rt></ruby></span> <span class="w"><ruby>사랑<rt><span class="rk">サラン</span><span class="rr" lang="ko-Latn">sarang</span></rt></ruby></span> <span class="w"><ruby>안고<rt><span class="rk">アンゴ</span><span class="rr" lang="ko-Latn">ango</span></rt></ruby></span> <span class="w"><ruby>찾아가서<rt><span class="rk">チャジャガソ</span><span class="rr" lang="ko-Latn">chajagaseo</span></rt></ruby></span></p>
             </div>
             <div class="side"><p class="ja-off">ソドムの町も 愛もてたずねて</p></div>
           </div>
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>종의<rt><span class="rk">チョンエ</span><span class="rr" lang="ko-Latn">jong-e</span></rt></ruby></span> <span class="w"><ruby>몸에<rt><span class="rk">モメ</span><span class="rr" lang="ko-Latn">mome</span></rt></ruby></span> <span class="w"><ruby>지닌<rt><span class="rk">チニン</span><span class="rr" lang="ko-Latn">jinin</span></rt></ruby></span> <span class="w"><ruby>것도<rt><span class="rk">コット</span><span class="rr" lang="ko-Latn">geotto</span></rt></ruby></span> <span class="w"><ruby>아낌<rt><span class="rk">アッキㇺ</span><span class="rr" lang="ko-Latn">akkim</span></rt></ruby></span> <span class="w"><ruby>없이<rt><span class="rk">オㇷ゚シ</span><span class="rr" lang="ko-Latn">eopsi</span></rt></ruby></span> <span class="w"><ruby>드리리다<rt><span class="rk">トゥリリダ</span><span class="rr" lang="ko-Latn">deuririda</span></rt></ruby></span></p>
             </div>
             <div class="side"><p class="ja-off">この身のすべてを <ruby>惜<rt>お</rt></ruby>しまず<ruby>捧<rt>ささ</rt></ruby>ぐる</p></div>
           </div>
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>종의<rt><span class="rk">チョンエ</span><span class="rr" lang="ko-Latn">jong-e</span></rt></ruby></span> <span class="w"><ruby>몸에<rt><span class="rk">モメ</span><span class="rr" lang="ko-Latn">mome</span></rt></ruby></span> <span class="w"><ruby>지닌<rt><span class="rk">チニン</span><span class="rr" lang="ko-Latn">jinin</span></rt></ruby></span> <span class="w"><ruby>것도<rt><span class="rk">コット</span><span class="rr" lang="ko-Latn">geotto</span></rt></ruby></span> <span class="w"><ruby>아낌<rt><span class="rk">アッキㇺ</span><span class="rr" lang="ko-Latn">akkim</span></rt></ruby></span> <span class="w"><ruby>없이<rt><span class="rk">オㇷ゚シ</span><span class="rr" lang="ko-Latn">eopsi</span></rt></ruby></span> <span class="w"><ruby>드리리다<rt><span class="rk">トゥリリダ</span><span class="rr" lang="ko-Latn">deuririda</span></rt></ruby></span></p>
             </div>
@@ -106,25 +105,25 @@
       <section class="verse">
         <p class="vno" aria-label="3番">3</p>
         <div class="lines">
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>존귀<rt><span class="rk">チョングィ</span><span class="rr" lang="ko-Latn">jongwi</span></rt></ruby></span> <span class="w"><ruby>영광<rt><span class="rk">ヨングァン</span><span class="rr" lang="ko-Latn">yeonggwang</span></rt></ruby></span> <span class="w"><ruby>모든<rt><span class="rk">モドゥン</span><span class="rr" lang="ko-Latn">modeun</span></rt></ruby></span> <span class="w"><ruby>권세<rt><span class="rk">クォンセ</span><span class="rr" lang="ko-Latn">gwonse</span></rt></ruby></span> <span class="w"><ruby>주님<rt><span class="rk">チュニㇺ</span><span class="rr" lang="ko-Latn">junim</span></rt></ruby></span> <span class="w"><ruby>홀로<rt><span class="rk">ホㇽロ</span><span class="rr" lang="ko-Latn">hollo</span></rt></ruby></span> <span class="w"><ruby>받으시고<rt><span class="rk">パドゥシゴ</span><span class="rr" lang="ko-Latn">badeusigo</span></rt></ruby></span></p>
             </div>
             <div class="side"><p class="ja-off"><ruby>御栄<rt>みさかえ</rt></ruby><ruby>誉<rt>ほまれ</rt></ruby>は 君のみ受けて</p></div>
           </div>
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>멸시<rt><span class="rk">ミョㇽシ</span><span class="rr" lang="ko-Latn">myeolsi</span></rt></ruby></span> <span class="w"><ruby>천대<rt><span class="rk">チョンデ</span><span class="rr" lang="ko-Latn">cheondae</span></rt></ruby></span> <span class="w"><ruby>십자가는<rt><span class="rk">シㇷ゚チャガヌン</span><span class="rr" lang="ko-Latn">sipjaganeun</span></rt></ruby></span> <span class="w"><ruby>제가<rt><span class="rk">チェガ</span><span class="rr" lang="ko-Latn">jega</span></rt></ruby></span> <span class="w"><ruby>지고<rt><span class="rk">チゴ</span><span class="rr" lang="ko-Latn">jigo</span></rt></ruby></span> <span class="w"><ruby>가오리다<rt><span class="rk">カオリダ</span><span class="rr" lang="ko-Latn">gaorida</span></rt></ruby></span></p>
             </div>
             <div class="side"><p class="ja-off">いやしみ十字架は わが身が負い行く</p></div>
           </div>
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>이름<rt><span class="rk">イルㇺ</span><span class="rr" lang="ko-Latn">ireum</span></rt></ruby></span> <span class="w"><ruby>없이<rt><span class="rk">オㇷ゚シ</span><span class="rr" lang="ko-Latn">eopsi</span></rt></ruby></span> <span class="w"><ruby>빛도<rt><span class="rk">ピット</span><span class="rr" lang="ko-Latn">bitto</span></rt></ruby></span> <span class="w"><ruby>없이<rt><span class="rk">オㇷ゚シ</span><span class="rr" lang="ko-Latn">eopsi</span></rt></ruby></span> <span class="w"><ruby>감사하며<rt><span class="rk">カㇺサハミョ</span><span class="rr" lang="ko-Latn">gamsahamyeo</span></rt></ruby></span> <span class="w"><ruby>따르리다<rt><span class="rk">ッタルリダ</span><span class="rr" lang="ko-Latn">ttareurida</span></rt></ruby></span></p>
             </div>
             <div class="side"><p class="ja-off">名もなく<ruby>捨<rt>す</rt></ruby>てられ よろこび<ruby>従<rt>したが</rt></ruby>う</p></div>
           </div>
-          <div class="line has-side">
+          <div class="line">
             <div class="kos">
               <p class="ko" lang="ko"><span class="w"><ruby>이름<rt><span class="rk">イルㇺ</span><span class="rr" lang="ko-Latn">ireum</span></rt></ruby></span> <span class="w"><ruby>없이<rt><span class="rk">オㇷ゚シ</span><span class="rr" lang="ko-Latn">eopsi</span></rt></ruby></span> <span class="w"><ruby>빛도<rt><span class="rk">ピット</span><span class="rr" lang="ko-Latn">bitto</span></rt></ruby></span> <span class="w"><ruby>없이<rt><span class="rk">オㇷ゚シ</span><span class="rr" lang="ko-Latn">eopsi</span></rt></ruby></span> <span class="w"><ruby>감사하며<rt><span class="rk">カㇺサハミョ</span><span class="rr" lang="ko-Latn">gamsahamyeo</span></rt></ruby></span> <span class="w"><ruby>따르리다<rt><span class="rk">ッタルリダ</span><span class="rr" lang="ko-Latn">ttareurida</span></rt></ruby></span></p>
             </div>
@@ -133,7 +132,7 @@
         </div>
       </section>
 
-      <section class="official ja-view">
+      <section class="official">
         <h2>日本の聖歌の歌詞</h2>
           <p class="off-verse"><span>1.</span> 召されて出で立つ この身はゆくぞ<br><ruby>辛<rt>つら</rt></ruby>くも<ruby>楽<rt>たの</rt></ruby>しも <ruby>君<rt>きみ</rt></ruby>のみ<ruby>慕<rt>した</rt></ruby>いて<br><ruby>誰<rt>たれ</rt></ruby>がさまたぐ 死もさまたぐや<br><ruby>誰<rt>たれ</rt></ruby>がさまたぐ 死もさまたげられぬ</p>
           <p class="off-verse"><span>2.</span> 地の<ruby>隅<rt>すみ</rt></ruby><ruby>荒<rt>あ</rt></ruby>れ野も 恵みとともに<br>ソドムの町も 愛もてたずねて<br>この身のすべてを <ruby>惜<rt>お</rt></ruby>しまず<ruby>捧<rt>ささ</rt></ruby>ぐる<br>この身のすべてを 惜しまず捧ぐる</p>
@@ -255,12 +254,12 @@
       // 読み: カナ／ABC／なし。日本語でない端末では最初から ABC
       var readBtns = song.querySelectorAll('[data-read]');
       function setRead(mode) {
-        song.classList.remove('read-kana', 'read-roman', 'read-none');
+        song.classList.remove('read-kana', 'read-roman');
         song.classList.add('read-' + mode);
         readBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.read === mode ? 'true' : 'false'); });
       }
       var mode = (navigator.language || 'ja').slice(0, 2) === 'ja' ? 'kana' : 'roman';
-      try { mode = localStorage.getItem('seika-read') || mode; } catch (e) {}
+      try { var saved = localStorage.getItem('seika-read'); if (saved === 'kana' || saved === 'roman') mode = saved; } catch (e) {}
       setRead(mode);
       readBtns.forEach(function (b) {
         b.addEventListener('click', function () {
@@ -269,16 +268,16 @@
         });
       });
 
-      // 表示: ハングル／両方／日本語。スマホは並べると読みにくいので、最初はハングルだけ
+      // 表示: ハングル／日本語。選んだほうを覚える
       var viewBtns = song.querySelectorAll('button[data-view]');
       function setView(v) {
-        song.classList.remove('view-ko', 'view-both', 'view-ja');
+        song.classList.remove('view-ko', 'view-ja');
         song.classList.add('view-' + v);
         viewBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.view === v ? 'true' : 'false'); });
       }
       if (viewBtns.length) {
-        var view = matchMedia('(max-width: 720px)').matches ? 'ko' : 'both';
-        try { view = localStorage.getItem('seika-view') || view; } catch (e) {}
+        var view = 'ko';
+        try { if (localStorage.getItem('seika-view') === 'ja') view = 'ja'; } catch (e) {}
         setView(view);
         viewBtns.forEach(function (b) {
           b.addEventListener('click', function () {
@@ -287,13 +286,6 @@
           });
         });
       }
-
-      // ハングルだけの表示で行を押すと、その行の日本語を出す（もう一度押すと消す）
-      song.addEventListener('click', function (e) {
-        if (!song.classList.contains('view-ko') || (getSelection && String(getSelection()))) return;
-        var line = e.target.closest('.line.has-side');
-        if (line) line.classList.toggle('peek');
-      });
 
       document.querySelectorAll('.yt-play').forEach(function (btn) {
         btn.addEventListener('click', function () {

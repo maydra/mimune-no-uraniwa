@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../theme/style.css?v=202609192031">
   <link rel="stylesheet" href="../theme/pages/e631ced897.css?v=202610110220">
-  <link rel="stylesheet" href="seika.css?v=202610240100">
+  <link rel="stylesheet" href="seika.css?v=202610240130">
 </head>
 <body>
   <div class="container">
@@ -37,7 +37,7 @@
       <div class="song-tools">
         <div class="seg" role="group" aria-label="読み Reading">
           <span class="seg-label">読み</span>
-          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button><button type="button" data-read="none">なし</button>
+          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button>
         </div>
         <div class="seg" role="group" aria-label="意味 Meaning">
           <span class="seg-label">意味</span>
@@ -64,7 +64,7 @@
     <nav class="nav-links"><a href="index.html">聖歌の一覧</a> <a href="../index.html">トップページ</a></nav>
   </div>
 
-  <script src="hangul-yomi.js?v=202610240100"></script>
+  <script src="hangul-yomi.js?v=202610240130"></script>
   <script>
     (function () {
       var song = document.getElementById('song');
@@ -183,7 +183,7 @@
           b.setAttribute('aria-pressed', b.dataset[kind] === value ? 'true' : 'false');
         });
         if (kind === 'read') {
-          song.classList.remove('read-kana', 'read-roman', 'read-none');
+          song.classList.remove('read-kana', 'read-roman');
           song.classList.add('read-' + value);
         } else {
           song.dataset.mean = value;
@@ -193,7 +193,7 @@
       var ja = (navigator.language || 'ja').slice(0, 2) === 'ja';
       var saved = {};
       try { saved.read = localStorage.getItem('seika-read'); saved.mean = localStorage.getItem('seika-mean'); } catch (e) {}
-      setChoice('read', saved.read || (ja ? 'kana' : 'roman'));
+      setChoice('read', saved.read === 'kana' || saved.read === 'roman' ? saved.read : (ja ? 'kana' : 'roman'));
       setChoice('mean', saved.mean || (ja ? 'ja' : 'en'));
       ['read', 'mean'].forEach(function (kind) {
         song.querySelectorAll('[data-' + kind + ']').forEach(function (b) {

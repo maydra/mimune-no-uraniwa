@@ -11,8 +11,6 @@
     --accent: #f0a6fb;
     --ko: #5eead4;
     --panel: rgba(255, 255, 255, 0.04);
-    --ja-bg: rgba(240, 166, 251, 0.07);
-    --ja-bar: rgba(240, 166, 251, 0.5);
 }
 
 /* 番号の色: 日本の聖歌は紫（--accent）、성가（ハングルの聖歌集）は青緑（--ko） */
@@ -24,8 +22,6 @@ body.light-mode .song {
     --accent: #8a3ea8;
     --ko: #0f766e;
     --panel: #f7f6fa;
-    --ja-bg: rgba(138, 62, 168, 0.06);
-    --ja-bar: rgba(138, 62, 168, 0.45);
 }
 
 * {
@@ -158,11 +154,6 @@ body {
     letter-spacing: 0.02em;
 }
 
-.song.read-none .ko rt,
-.song.read-none h1 rt {
-    visibility: hidden;
-}
-
 /* 表示の切り替え */
 .song-tools {
     display: flex;
@@ -284,8 +275,34 @@ body.light-mode .song .seg button[aria-pressed="true"] {
     color: var(--mean) !important;
 }
 
-/* 表示の切り替え（歌のページ）: ハングル／両方／日本語。
-   日本語の欄は、日本の聖歌の番号と同じ紫の帯でハングルと見分ける */
+/* 表示の切り替え（歌のページ）: ハングル／日本語のタブ。並べるとスマホで読みにくいので
+   どちらかだけを出す。パソコンは幅があるので、ハングルの表示でも欄外に日本語 */
+.view-tabs {
+    display: flex;
+    max-width: 20rem;
+    margin: 0 auto 1.3rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.song .view-tabs button {
+    flex: 1;
+    font: inherit;
+    font-size: 1rem;
+    padding: 0.45rem 0;
+    margin-bottom: -1px;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    color: var(--mean) !important;
+    cursor: pointer;
+}
+
+.song .view-tabs button[aria-pressed="true"] {
+    color: var(--accent) !important;
+    border-bottom-color: var(--accent);
+    font-weight: 700;
+}
+
 .lyrics .line {
     align-items: center;
 }
@@ -294,62 +311,16 @@ body.light-mode .song .seg button[aria-pressed="true"] {
     margin-top: 0.15rem;
 }
 
-.lyrics.view-ko .line {
-    grid-template-columns: minmax(0, 1fr);
-}
-
-.lyrics.view-ko .side,
 .lyrics.view-ko .official,
-.lyrics.view-both .official.ja-view,
-.lyrics.view-ja .verse {
+.lyrics.view-ja .verse,
+.lyrics.view-ja .song-tools {
     display: none;
 }
 
-.lyrics.view-ko .line.has-side {
-    cursor: pointer;
-}
-
-.lyrics.view-ko .line.peek .side {
-    display: block;
-    border-left: none;
-    padding: 0 0 0.5rem;
-    animation: peek 0.18s ease-out;
-}
-
-.lyrics.view-ko .line.peek .side > p {
-    background: var(--ja-bg);
-    border-left: 3px solid var(--ja-bar);
-    border-radius: 0 8px 8px 0;
-    padding: 0.3rem 0.8rem;
-}
-
-@keyframes peek {
-    from { opacity: 0; transform: translateY(-4px); }
-    to { opacity: 1; transform: none; }
-}
-
-.lyrics .peek-hint {
-    display: none;
-    text-align: center;
-    font-size: 0.82rem;
-    color: var(--mean) !important;
-    margin: -1.4rem 0 1.4rem;
-}
-
-.lyrics.view-ko .peek-hint {
-    display: block;
-}
-
-/* 日本語だけ: 読みは効かないので薄く。訳詞は聖歌集のように大きめに */
-.lyrics.view-ja .seg-read {
-    opacity: 0.4;
-    pointer-events: none;
-}
-
+/* 日本語: 訳詞は聖歌集のように大きめに */
 .lyrics.view-ja .official {
     margin-top: 0;
-    padding-top: 1.1rem;
-    border-top: 1px solid var(--rule);
+    padding-top: 0.6rem;
 }
 
 .lyrics.view-ja .off-verse {
@@ -775,23 +746,12 @@ body.light-mode .song details.howto {
         font-size: 0.88rem;
     }
 
-    /* 両方: 行のまとまりごとに、ハングルの下に紫の帯の欄で日本語 */
+    /* スマホはハングルの表示で欄外の日本語を出さない（日本語はタブで） */
+    .lyrics .side {
+        display: none;
+    }
+
     .lyrics .line {
-        margin-bottom: 0.7rem;
-    }
-
-    .lyrics .line + .line {
-        margin-top: 0;
-    }
-
-    .lyrics.view-both .side > p {
-        background: var(--ja-bg);
-        border-left: 3px solid var(--ja-bar);
-        border-radius: 0 8px 8px 0;
-        padding: 0.3rem 0.8rem;
-    }
-
-    .lyrics.view-ko .line {
         margin-bottom: 0.2rem;
     }
 

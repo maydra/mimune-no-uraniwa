@@ -30,7 +30,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 SONGS = HERE / "songs"
 OUT = ROOT / "seika"
-VERSION = "202610240100"
+VERSION = "202610240130"
 SITE = "https://maydra.github.io/mimune-no-uraniwa/seika/"
 
 WORD = re.compile(r"([^\s{]+)(?:\{([^}]*)\})?")
@@ -403,16 +403,15 @@ def render(song):
                 continue
             kos, side = g
             kos = "\n".join(f'              <p class="ko" lang="ko">{ruby(k)}</p>' for k in kos)
-            out.append(f'          <div class="line{" has-side" if side else ""}">\n'
+            out.append('          <div class="line">\n'
                        f'            <div class="kos">\n{kos}\n            </div>\n'
                        f'            <div class="side">{side}</div>\n'
                        '          </div>')
         out.append("        </div>\n      </section>")
     verses = "\n".join(out)
 
-    # 公式の訳詞を節ごとにまとめたもの。「日本語」の表示ではこれだけを出す。行に当てられ
-    # なかった曲と、訳詞のほうに節が多い曲（all: yes）は「両方」の表示でも下に出す。
-    # 13番のように（Ａ）（Ｂ）があれば両方
+    # 「日本語」の表示: 公式の訳詞を節ごとに全部（行に当てられなかった曲も、訳詞のほうに
+    # 節が多い曲も、ここで全節読める）。13番のように（Ａ）（Ｂ）があれば両方
     off_block = ""
     has_meaning = any(ln and ln[1] for vs in song["verses"] for ln in vs["lines"])
     if off:
@@ -424,9 +423,7 @@ def render(song):
                 body.append(f'          <h3 class="off-ab">（{ab.group(1)}）</h3>')
             body += [f'          <p class="off-verse"><span>{k}.</span> ' + "<br>".join(kana_ruby(x) for x in vs) + "</p>"
                      for k, vs in enumerate(ver["verses"], 1)]
-        in_both = not pairs or song.get("all") == "yes"
-        heading = "日本の聖歌の歌詞（全節）" if pairs and in_both else "日本の聖歌の歌詞"
-        off_block = (f'\n      <section class="official{"" if in_both else " ja-view"}">\n        <h2>{heading}</h2>\n'
+        off_block = ('\n      <section class="official">\n        <h2>日本の聖歌の歌詞</h2>\n'
                      + "\n".join(body) + "\n      </section>\n")
     elif has_meaning:
         # 日本の聖歌に無い曲は、このサイトで付けた意味を節ごとに
@@ -438,7 +435,7 @@ def render(song):
                 lines.append("（＊ くり返し）")
             if lines:
                 body.append(f'          <p class="off-verse"><span>{mark}</span> ' + "<br>".join(lines) + "</p>")
-        off_block = ('\n      <section class="official ja-view">\n        <h2>意味（このサイトの訳）</h2>\n'
+        off_block = ('\n      <section class="official">\n        <h2>意味（このサイトの訳）</h2>\n'
                      + "\n".join(body) + "\n      </section>\n")
 
     gloss = "\n".join(
@@ -449,16 +446,13 @@ def render(song):
 
     badges = f'<span class="badge badge-ja">日本の聖歌 {ja_label(ja_no)}</span>' if ja_no else ""
     badges += f'<span class="badge badge-ko">성가 {no}</span>'
-    # 表示: ハングル／両方／日本語。日本語が1行ずつ当たる曲は、ハングルだけの表示で行を押すと
-    # その行の日本語が出る
-    view_seg = peek_hint = ""
+    # 表示はハングルと日本語のどちらか（並べるとスマホで読みにくい）。パソコンは幅があるので、
+    # ハングルの表示でも欄外に日本語を出す
+    view_tabs = ""
     if off_block:
-        view_seg = ('\n        <div class="seg" role="group" aria-label="表示">\n'
-                    '          <span class="seg-label">表示</span>\n'
-                    '          <button type="button" data-view="ko">ハングル</button><button type="button" data-view="both">両方</button>'
-                    '<button type="button" data-view="ja">日本語</button>\n        </div>')
-    if pairs or (not off and has_meaning):
-        peek_hint = '\n      <p class="peek-hint">行を押すと、その行の日本語が出ます</p>'
+        view_tabs = ('\n      <div class="view-tabs" role="group" aria-label="表示">\n'
+                     '        <button type="button" data-view="ko">ハングル</button><button type="button" data-view="ja">日本語</button>\n'
+                     '      </div>\n')
     off_source = ""
     if off:
         part = "第二部" if ja_no.startswith("2部") else "第一部"
@@ -470,20 +464,20 @@ def render(song):
 
     return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION) + f"""<body>
   <div class="container">
-    <article class="song lyrics read-kana view-both" id="song">
+    <article class="song lyrics read-kana view-ko" id="song">
       <header class="song-head">
         <p class="badges">{badges}</p>
         <h1 lang="ko">{ruby(title_ko)}</h1>
         <p class="title-ja">{html.escape(title_ja)}</p>
         <button type="button" class="share-btn" id="share">🔗 この歌を共有</button>
       </header>
-
+{view_tabs}
       <div class="song-tools">
-        <div class="seg seg-read" role="group" aria-label="読み">
+        <div class="seg" role="group" aria-label="読み">
           <span class="seg-label">読み</span>
-          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button><button type="button" data-read="none">なし</button>
-        </div>{view_seg}
-      </div>{peek_hint}
+          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button>
+        </div>
+      </div>
 
 {verses}
 {off_block}{videos_block(v)}{gloss_block}
@@ -514,12 +508,12 @@ def render(song):
       // 読み: カナ／ABC／なし。日本語でない端末では最初から ABC
       var readBtns = song.querySelectorAll('[data-read]');
       function setRead(mode) {{
-        song.classList.remove('read-kana', 'read-roman', 'read-none');
+        song.classList.remove('read-kana', 'read-roman');
         song.classList.add('read-' + mode);
         readBtns.forEach(function (b) {{ b.setAttribute('aria-pressed', b.dataset.read === mode ? 'true' : 'false'); }});
       }}
       var mode = (navigator.language || 'ja').slice(0, 2) === 'ja' ? 'kana' : 'roman';
-      try {{ mode = localStorage.getItem('seika-read') || mode; }} catch (e) {{}}
+      try {{ var saved = localStorage.getItem('seika-read'); if (saved === 'kana' || saved === 'roman') mode = saved; }} catch (e) {{}}
       setRead(mode);
       readBtns.forEach(function (b) {{
         b.addEventListener('click', function () {{
@@ -528,16 +522,16 @@ def render(song):
         }});
       }});
 
-      // 表示: ハングル／両方／日本語。スマホは並べると読みにくいので、最初はハングルだけ
+      // 表示: ハングル／日本語。選んだほうを覚える
       var viewBtns = song.querySelectorAll('button[data-view]');
       function setView(v) {{
-        song.classList.remove('view-ko', 'view-both', 'view-ja');
+        song.classList.remove('view-ko', 'view-ja');
         song.classList.add('view-' + v);
         viewBtns.forEach(function (b) {{ b.setAttribute('aria-pressed', b.dataset.view === v ? 'true' : 'false'); }});
       }}
       if (viewBtns.length) {{
-        var view = matchMedia('(max-width: 720px)').matches ? 'ko' : 'both';
-        try {{ view = localStorage.getItem('seika-view') || view; }} catch (e) {{}}
+        var view = 'ko';
+        try {{ if (localStorage.getItem('seika-view') === 'ja') view = 'ja'; }} catch (e) {{}}
         setView(view);
         viewBtns.forEach(function (b) {{
           b.addEventListener('click', function () {{
@@ -546,13 +540,6 @@ def render(song):
           }});
         }});
       }}
-
-      // ハングルだけの表示で行を押すと、その行の日本語を出す（もう一度押すと消す）
-      song.addEventListener('click', function (e) {{
-        if (!song.classList.contains('view-ko') || (getSelection && String(getSelection()))) return;
-        var line = e.target.closest('.line.has-side');
-        if (line) line.classList.toggle('peek');
-      }});
 
       document.querySelectorAll('.yt-play').forEach(function (btn) {{
         btn.addEventListener('click', function () {{
@@ -640,7 +627,7 @@ def render_intro(song):
       <div class="song-tools">
         <div class="seg" role="group" aria-label="読み">
           <span class="seg-label">読み</span>
-          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button><button type="button" data-read="none">なし</button>
+          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button>
         </div>
       </div>
 
@@ -688,12 +675,12 @@ def render_intro(song):
       }});
       var readBtns = song.querySelectorAll('[data-read]');
       function setRead(mode) {{
-        song.classList.remove('read-kana', 'read-roman', 'read-none');
+        song.classList.remove('read-kana', 'read-roman');
         song.classList.add('read-' + mode);
         readBtns.forEach(function (b) {{ b.setAttribute('aria-pressed', b.dataset.read === mode ? 'true' : 'false'); }});
       }}
       var mode = (navigator.language || 'ja').slice(0, 2) === 'ja' ? 'kana' : 'roman';
-      try {{ mode = localStorage.getItem('seika-read') || mode; }} catch (e) {{}}
+      try {{ var saved = localStorage.getItem('seika-read'); if (saved === 'kana' || saved === 'roman') mode = saved; }} catch (e) {{}}
       setRead(mode);
       readBtns.forEach(function (b) {{
         b.addEventListener('click', function () {{
@@ -808,7 +795,7 @@ def build_yomi():
       <div class="song-tools">
         <div class="seg" role="group" aria-label="読み Reading">
           <span class="seg-label">読み</span>
-          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button><button type="button" data-read="none">なし</button>
+          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button>
         </div>
         <div class="seg" role="group" aria-label="意味 Meaning">
           <span class="seg-label">意味</span>
@@ -954,7 +941,7 @@ def build_yomi():
           b.setAttribute('aria-pressed', b.dataset[kind] === value ? 'true' : 'false');
         });
         if (kind === 'read') {
-          song.classList.remove('read-kana', 'read-roman', 'read-none');
+          song.classList.remove('read-kana', 'read-roman');
           song.classList.add('read-' + value);
         } else {
           song.dataset.mean = value;
@@ -964,7 +951,7 @@ def build_yomi():
       var ja = (navigator.language || 'ja').slice(0, 2) === 'ja';
       var saved = {};
       try { saved.read = localStorage.getItem('seika-read'); saved.mean = localStorage.getItem('seika-mean'); } catch (e) {}
-      setChoice('read', saved.read || (ja ? 'kana' : 'roman'));
+      setChoice('read', saved.read === 'kana' || saved.read === 'roman' ? saved.read : (ja ? 'kana' : 'roman'));
       setChoice('mean', saved.mean || (ja ? 'ja' : 'en'));
       ['read', 'mean'].forEach(function (kind) {
         song.querySelectorAll('[data-' + kind + ']').forEach(function (b) {
