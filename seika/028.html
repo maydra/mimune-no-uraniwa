@@ -21,11 +21,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../theme/style.css?v=202609192031">
   <link rel="stylesheet" href="../theme/pages/e631ced897.css?v=202610110220">
-  <link rel="stylesheet" href="seika.css?v=202610232300">
+  <link rel="stylesheet" href="seika.css?v=202610240100">
 </head>
 <body>
   <div class="container">
-    <article class="song read-kana" id="song">
+    <article class="song lyrics read-kana view-both" id="song">
       <header class="song-head">
         <p class="badges"><span class="badge badge-ja">日本の聖歌 22番</span><span class="badge badge-ko">성가 28</span></p>
         <h1 lang="ko"><span class="w"><ruby>새<rt><span class="rk">セ</span><span class="rr" lang="ko-Latn">sae</span></rt></ruby></span> <span class="w"><ruby>에덴의<rt><span class="rk">エデネ</span><span class="rr" lang="ko-Latn">edene</span></rt></ruby></span> <span class="w"><ruby>노래<rt><span class="rk">ノレ</span><span class="rr" lang="ko-Latn">norae</span></rt></ruby></span></h1>
@@ -34,38 +34,49 @@
       </header>
 
       <div class="song-tools">
-        <div class="seg" role="group" aria-label="読み">
+        <div class="seg seg-read" role="group" aria-label="読み">
           <span class="seg-label">読み</span>
           <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button><button type="button" data-read="none">なし</button>
         </div>
-        <button type="button" data-toggle="side" aria-pressed="true">日本の聖歌の歌詞</button>
+        <div class="seg" role="group" aria-label="表示">
+          <span class="seg-label">表示</span>
+          <button type="button" data-view="ko">ハングル</button><button type="button" data-view="both">両方</button><button type="button" data-view="ja">日本語</button>
+        </div>
       </div>
+      <p class="peek-hint">行を押すと、その行の日本語が出ます</p>
 
       <section class="verse">
         <p class="vno" aria-label="1番">1</p>
         <div class="lines">
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>아버님이<rt><span class="rk">アボニミ</span><span class="rr" lang="ko-Latn">abeonimi</span></rt></ruby></span> <span class="w"><ruby>계신<rt><span class="rk">ケシン</span><span class="rr" lang="ko-Latn">gesin</span></rt></ruby></span> <span class="w"><ruby>곳은<rt><span class="rk">コスン</span><span class="rr" lang="ko-Latn">goseun</span></rt></ruby></span> <span class="w"><ruby>우리들의<rt><span class="rk">ウリドゥレ</span><span class="rr" lang="ko-Latn">urideure</span></rt></ruby></span> <span class="w"><ruby>생명의<rt><span class="rk">センミョンエ</span><span class="rr" lang="ko-Latn">saengmyeong-e</span></rt></ruby></span> <span class="w"><ruby>원천<rt><span class="rk">ウォンチョン</span><span class="rr" lang="ko-Latn">woncheon</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>아버님이<rt><span class="rk">アボニミ</span><span class="rr" lang="ko-Latn">abeonimi</span></rt></ruby></span> <span class="w"><ruby>계신<rt><span class="rk">ケシン</span><span class="rr" lang="ko-Latn">gesin</span></rt></ruby></span> <span class="w"><ruby>곳은<rt><span class="rk">コスン</span><span class="rr" lang="ko-Latn">goseun</span></rt></ruby></span> <span class="w"><ruby>우리들의<rt><span class="rk">ウリドゥレ</span><span class="rr" lang="ko-Latn">urideure</span></rt></ruby></span> <span class="w"><ruby>생명의<rt><span class="rk">センミョンエ</span><span class="rr" lang="ko-Latn">saengmyeong-e</span></rt></ruby></span> <span class="w"><ruby>원천<rt><span class="rk">ウォンチョン</span><span class="rr" lang="ko-Latn">woncheon</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">父の<ruby>居<rt>い</rt></ruby>ますは、<ruby>生命<rt>いのち</rt></ruby><ruby>溢<rt>あふ</rt></ruby>るる園</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>어둠에<rt><span class="rk">オドゥメ</span><span class="rr" lang="ko-Latn">eodume</span></rt></ruby></span> <span class="w"><ruby>묻혔던<rt><span class="rk">ムティョットン</span><span class="rr" lang="ko-Latn">mutyeotteon</span></rt></ruby></span> <span class="w"><ruby>참생명을<rt><span class="rk">チャㇺセンミョンウㇽ</span><span class="rr" lang="ko-Latn">chamsaengmyeong-eul</span></rt></ruby></span> <span class="w"><ruby>우리는<rt><span class="rk">ウリヌン</span><span class="rr" lang="ko-Latn">urineun</span></rt></ruby></span> <span class="w"><ruby>찾아<rt><span class="rk">チャジャ</span><span class="rr" lang="ko-Latn">chaja</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>어둠에<rt><span class="rk">オドゥメ</span><span class="rr" lang="ko-Latn">eodume</span></rt></ruby></span> <span class="w"><ruby>묻혔던<rt><span class="rk">ムティョットン</span><span class="rr" lang="ko-Latn">mutyeotteon</span></rt></ruby></span> <span class="w"><ruby>참생명을<rt><span class="rk">チャㇺセンミョンウㇽ</span><span class="rr" lang="ko-Latn">chamsaengmyeong-eul</span></rt></ruby></span> <span class="w"><ruby>우리는<rt><span class="rk">ウリヌン</span><span class="rr" lang="ko-Latn">urineun</span></rt></ruby></span> <span class="w"><ruby>찾아<rt><span class="rk">チャジャ</span><span class="rr" lang="ko-Latn">chaja</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">暗き<ruby>世<rt>よ</rt></ruby>にも我等は<ruby>真<rt>まこと</rt></ruby>を求め</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>참아버님의<rt><span class="rk">チャマボニメ</span><span class="rr" lang="ko-Latn">chamabeonime</span></rt></ruby></span> <span class="w"><ruby>본성을<rt><span class="rk">ポンソンウㇽ</span><span class="rr" lang="ko-Latn">bonseong-eul</span></rt></ruby></span> <span class="w"><ruby>따른<rt><span class="rk">ッタルン</span><span class="rr" lang="ko-Latn">ttareun</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>참아버님의<rt><span class="rk">チャマボニメ</span><span class="rr" lang="ko-Latn">chamabeonime</span></rt></ruby></span> <span class="w"><ruby>본성을<rt><span class="rk">ポンソンウㇽ</span><span class="rr" lang="ko-Latn">bonseong-eul</span></rt></ruby></span> <span class="w"><ruby>따른<rt><span class="rk">ッタルン</span><span class="rr" lang="ko-Latn">ttareun</span></rt></ruby></span></p>
+              <p class="ko" lang="ko"><span class="w"><ruby>참아들딸이<rt><span class="rk">チャマドゥㇽタリ</span><span class="rr" lang="ko-Latn">chamadeulttari</span></rt></ruby></span> <span class="w"><ruby>모두<rt><span class="rk">モドゥ</span><span class="rr" lang="ko-Latn">modu</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off"><ruby>御父<rt>みちち</rt></ruby>の<ruby>人格<rt>かたち</rt></ruby>に似た真の子女となりて</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>참아들딸이<rt><span class="rk">チャマドゥㇽタリ</span><span class="rr" lang="ko-Latn">chamadeulttari</span></rt></ruby></span> <span class="w"><ruby>모두<rt><span class="rk">モドゥ</span><span class="rr" lang="ko-Latn">modu</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
-            <div class="side"></div>
-          </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>아버님의<rt><span class="rk">アボニメ</span><span class="rr" lang="ko-Latn">abeonime</span></rt></ruby></span> <span class="w"><ruby>사랑받는<rt><span class="rk">サランバンヌン</span><span class="rr" lang="ko-Latn">sarangbanneun</span></rt></ruby></span> <span class="w"><ruby>아들딸이<rt><span class="rk">アドゥㇽタリ</span><span class="rr" lang="ko-Latn">adeulttari</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>아버님의<rt><span class="rk">アボニメ</span><span class="rr" lang="ko-Latn">abeonime</span></rt></ruby></span> <span class="w"><ruby>사랑받는<rt><span class="rk">サランバンヌン</span><span class="rr" lang="ko-Latn">sarangbanneun</span></rt></ruby></span> <span class="w"><ruby>아들딸이<rt><span class="rk">アドゥㇽタリ</span><span class="rr" lang="ko-Latn">adeulttari</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">父の<ruby>愛受<rt>う</rt></ruby>く神の子となりて</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>그립던<rt><span class="rk">クリㇷ゚トン</span><span class="rr" lang="ko-Latn">geuripteon</span></rt></ruby></span> <span class="w"><ruby>에덴동산에서<rt><span class="rk">エデンドンサネソ</span><span class="rr" lang="ko-Latn">edendongsaneseo</span></rt></ruby></span> <span class="w"><ruby>노래하며<rt><span class="rk">ノレハミョ</span><span class="rr" lang="ko-Latn">noraehamyeo</span></rt></ruby></span> <span class="w"><ruby>사세<rt><span class="rk">サセ</span><span class="rr" lang="ko-Latn">sase</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>그립던<rt><span class="rk">クリㇷ゚トン</span><span class="rr" lang="ko-Latn">geuripteon</span></rt></ruby></span> <span class="w"><ruby>에덴동산에서<rt><span class="rk">エデンドンサネソ</span><span class="rr" lang="ko-Latn">edendongsaneseo</span></rt></ruby></span> <span class="w"><ruby>노래하며<rt><span class="rk">ノレハミョ</span><span class="rr" lang="ko-Latn">noraehamyeo</span></rt></ruby></span> <span class="w"><ruby>사세<rt><span class="rk">サセ</span><span class="rr" lang="ko-Latn">sase</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">歌いつつ歩まん なつかしエデン</p></div>
           </div>
         </div>
@@ -73,28 +84,35 @@
       <section class="verse">
         <p class="vno" aria-label="2番">2</p>
         <div class="lines">
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>아버님이<rt><span class="rk">アボニミ</span><span class="rr" lang="ko-Latn">abeonimi</span></rt></ruby></span> <span class="w"><ruby>계신<rt><span class="rk">ケシン</span><span class="rr" lang="ko-Latn">gesin</span></rt></ruby></span> <span class="w"><ruby>곳은<rt><span class="rk">コスン</span><span class="rr" lang="ko-Latn">goseun</span></rt></ruby></span> <span class="w"><ruby>우리들의<rt><span class="rk">ウリドゥレ</span><span class="rr" lang="ko-Latn">urideure</span></rt></ruby></span> <span class="w"><ruby>부활의<rt><span class="rk">プファレ</span><span class="rr" lang="ko-Latn">buhware</span></rt></ruby></span> <span class="w"><ruby>보좌<rt><span class="rk">ポジュァ</span><span class="rr" lang="ko-Latn">bojwa</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>아버님이<rt><span class="rk">アボニミ</span><span class="rr" lang="ko-Latn">abeonimi</span></rt></ruby></span> <span class="w"><ruby>계신<rt><span class="rk">ケシン</span><span class="rr" lang="ko-Latn">gesin</span></rt></ruby></span> <span class="w"><ruby>곳은<rt><span class="rk">コスン</span><span class="rr" lang="ko-Latn">goseun</span></rt></ruby></span> <span class="w"><ruby>우리들의<rt><span class="rk">ウリドゥレ</span><span class="rr" lang="ko-Latn">urideure</span></rt></ruby></span> <span class="w"><ruby>부활의<rt><span class="rk">プファレ</span><span class="rr" lang="ko-Latn">buhware</span></rt></ruby></span> <span class="w"><ruby>보좌<rt><span class="rk">ポジュァ</span><span class="rr" lang="ko-Latn">bojwa</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">父の居ますは、<ruby>蘇<rt>よみがえ</rt></ruby>りの園</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>그리고<rt><span class="rk">クリゴ</span><span class="rr" lang="ko-Latn">geurigo</span></rt></ruby></span> <span class="w"><ruby>그렸던<rt><span class="rk">クリョットン</span><span class="rr" lang="ko-Latn">geuryeotteon</span></rt></ruby></span> <span class="w"><ruby>다시<rt><span class="rk">タシ</span><span class="rr" lang="ko-Latn">dasi</span></rt></ruby></span> <span class="w"><ruby>삶을<rt><span class="rk">サㇽムㇽ</span><span class="rr" lang="ko-Latn">salmeul</span></rt></ruby></span> <span class="w"><ruby>우리는<rt><span class="rk">ウリヌン</span><span class="rr" lang="ko-Latn">urineun</span></rt></ruby></span> <span class="w"><ruby>맞아<rt><span class="rk">マジャ</span><span class="rr" lang="ko-Latn">maja</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>그리고<rt><span class="rk">クリゴ</span><span class="rr" lang="ko-Latn">geurigo</span></rt></ruby></span> <span class="w"><ruby>그렸던<rt><span class="rk">クリョットン</span><span class="rr" lang="ko-Latn">geuryeotteon</span></rt></ruby></span> <span class="w"><ruby>다시<rt><span class="rk">タシ</span><span class="rr" lang="ko-Latn">dasi</span></rt></ruby></span> <span class="w"><ruby>삶을<rt><span class="rk">サㇽムㇽ</span><span class="rr" lang="ko-Latn">salmeul</span></rt></ruby></span> <span class="w"><ruby>우리는<rt><span class="rk">ウリヌン</span><span class="rr" lang="ko-Latn">urineun</span></rt></ruby></span> <span class="w"><ruby>맞아<rt><span class="rk">マジャ</span><span class="rr" lang="ko-Latn">maja</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">あこがれし新生、我等は成して</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>참아버님의<rt><span class="rk">チャマボニメ</span><span class="rr" lang="ko-Latn">chamabeonime</span></rt></ruby></span> <span class="w"><ruby>본심을<rt><span class="rk">ポンシムㇽ</span><span class="rr" lang="ko-Latn">bonsimeul</span></rt></ruby></span> <span class="w"><ruby>받은<rt><span class="rk">パドゥン</span><span class="rr" lang="ko-Latn">badeun</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>참아버님의<rt><span class="rk">チャマボニメ</span><span class="rr" lang="ko-Latn">chamabeonime</span></rt></ruby></span> <span class="w"><ruby>본심을<rt><span class="rk">ポンシムㇽ</span><span class="rr" lang="ko-Latn">bonsimeul</span></rt></ruby></span> <span class="w"><ruby>받은<rt><span class="rk">パドゥン</span><span class="rr" lang="ko-Latn">badeun</span></rt></ruby></span></p>
+              <p class="ko" lang="ko"><span class="w"><ruby>참아들딸이<rt><span class="rk">チャマドゥㇽタリ</span><span class="rr" lang="ko-Latn">chamadeulttari</span></rt></ruby></span> <span class="w"><ruby>모두<rt><span class="rk">モドゥ</span><span class="rr" lang="ko-Latn">modu</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">御父の人格に似た真の子女となりて</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>참아들딸이<rt><span class="rk">チャマドゥㇽタリ</span><span class="rr" lang="ko-Latn">chamadeulttari</span></rt></ruby></span> <span class="w"><ruby>모두<rt><span class="rk">モドゥ</span><span class="rr" lang="ko-Latn">modu</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
-            <div class="side"></div>
-          </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>아버님의<rt><span class="rk">アボニメ</span><span class="rr" lang="ko-Latn">abeonime</span></rt></ruby></span> <span class="w"><ruby>귀염받는<rt><span class="rk">クィヨㇺバンヌン</span><span class="rr" lang="ko-Latn">gwiyeombanneun</span></rt></ruby></span> <span class="w"><ruby>아들딸이<rt><span class="rk">アドゥㇽタリ</span><span class="rr" lang="ko-Latn">adeulttari</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>아버님의<rt><span class="rk">アボニメ</span><span class="rr" lang="ko-Latn">abeonime</span></rt></ruby></span> <span class="w"><ruby>귀염받는<rt><span class="rk">クィヨㇺバンヌン</span><span class="rr" lang="ko-Latn">gwiyeombanneun</span></rt></ruby></span> <span class="w"><ruby>아들딸이<rt><span class="rk">アドゥㇽタリ</span><span class="rr" lang="ko-Latn">adeulttari</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">父の喜ぶ神の子となりて</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>바라던<rt><span class="rk">パラドン</span><span class="rr" lang="ko-Latn">baradeon</span></rt></ruby></span> <span class="w"><ruby>에덴동산에서<rt><span class="rk">エデンドンサネソ</span><span class="rr" lang="ko-Latn">edendongsaneseo</span></rt></ruby></span> <span class="w"><ruby>춤추며<rt><span class="rk">チュㇺチュミョ</span><span class="rr" lang="ko-Latn">chumchumyeo</span></rt></ruby></span> <span class="w"><ruby>사세<rt><span class="rk">サセ</span><span class="rr" lang="ko-Latn">sase</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>바라던<rt><span class="rk">パラドン</span><span class="rr" lang="ko-Latn">baradeon</span></rt></ruby></span> <span class="w"><ruby>에덴동산에서<rt><span class="rk">エデンドンサネソ</span><span class="rr" lang="ko-Latn">edendongsaneseo</span></rt></ruby></span> <span class="w"><ruby>춤추며<rt><span class="rk">チュㇺチュミョ</span><span class="rr" lang="ko-Latn">chumchumyeo</span></rt></ruby></span> <span class="w"><ruby>사세<rt><span class="rk">サセ</span><span class="rr" lang="ko-Latn">sase</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">踊りつつ歩まん のぞみのエデン</p></div>
           </div>
         </div>
@@ -102,31 +120,45 @@
       <section class="verse">
         <p class="vno" aria-label="3番">3</p>
         <div class="lines">
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>아버님이<rt><span class="rk">アボニミ</span><span class="rr" lang="ko-Latn">abeonimi</span></rt></ruby></span> <span class="w"><ruby>계신<rt><span class="rk">ケシン</span><span class="rr" lang="ko-Latn">gesin</span></rt></ruby></span> <span class="w"><ruby>곳은<rt><span class="rk">コスン</span><span class="rr" lang="ko-Latn">goseun</span></rt></ruby></span> <span class="w"><ruby>우리들의<rt><span class="rk">ウリドゥレ</span><span class="rr" lang="ko-Latn">urideure</span></rt></ruby></span> <span class="w"><ruby>영생의<rt><span class="rk">ヨンセンエ</span><span class="rr" lang="ko-Latn">yeongsaeng-e</span></rt></ruby></span> <span class="w"><ruby>낙원<rt><span class="rk">ナグォン</span><span class="rr" lang="ko-Latn">nagwon</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>아버님이<rt><span class="rk">アボニミ</span><span class="rr" lang="ko-Latn">abeonimi</span></rt></ruby></span> <span class="w"><ruby>계신<rt><span class="rk">ケシン</span><span class="rr" lang="ko-Latn">gesin</span></rt></ruby></span> <span class="w"><ruby>곳은<rt><span class="rk">コスン</span><span class="rr" lang="ko-Latn">goseun</span></rt></ruby></span> <span class="w"><ruby>우리들의<rt><span class="rk">ウリドゥレ</span><span class="rr" lang="ko-Latn">urideure</span></rt></ruby></span> <span class="w"><ruby>영생의<rt><span class="rk">ヨンセンエ</span><span class="rr" lang="ko-Latn">yeongsaeng-e</span></rt></ruby></span> <span class="w"><ruby>낙원<rt><span class="rk">ナグォン</span><span class="rr" lang="ko-Latn">nagwon</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">父の居ますは、<ruby>永久<rt>とわ</rt></ruby>に続く園</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>마련해<rt><span class="rk">マリョンヘ</span><span class="rr" lang="ko-Latn">maryeonhae</span></rt></ruby></span> <span class="w"><ruby>두었던<rt><span class="rk">トゥオットン</span><span class="rr" lang="ko-Latn">dueotteon</span></rt></ruby></span> <span class="w"><ruby>영생복락<rt><span class="rk">ヨンセンボンナㇰ</span><span class="rr" lang="ko-Latn">yeongsaengbongnak</span></rt></ruby></span> <span class="w"><ruby>우리는<rt><span class="rk">ウリヌン</span><span class="rr" lang="ko-Latn">urineun</span></rt></ruby></span> <span class="w"><ruby>받아<rt><span class="rk">パダ</span><span class="rr" lang="ko-Latn">bada</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>마련해<rt><span class="rk">マリョンヘ</span><span class="rr" lang="ko-Latn">maryeonhae</span></rt></ruby></span> <span class="w"><ruby>두었던<rt><span class="rk">トゥオットン</span><span class="rr" lang="ko-Latn">dueotteon</span></rt></ruby></span> <span class="w"><ruby>영생복락<rt><span class="rk">ヨンセンボンナㇰ</span><span class="rr" lang="ko-Latn">yeongsaengbongnak</span></rt></ruby></span> <span class="w"><ruby>우리는<rt><span class="rk">ウリヌン</span><span class="rr" lang="ko-Latn">urineun</span></rt></ruby></span> <span class="w"><ruby>받아<rt><span class="rk">パダ</span><span class="rr" lang="ko-Latn">bada</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off"><ruby>備<rt>そな</rt></ruby>えられた玉座に、我等は<ruby>着<rt>つ</rt></ruby>きて</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>참아버님의<rt><span class="rk">チャマボニメ</span><span class="rr" lang="ko-Latn">chamabeonime</span></rt></ruby></span> <span class="w"><ruby>본형을<rt><span class="rk">ポンヒョンウㇽ</span><span class="rr" lang="ko-Latn">bonhyeong-eul</span></rt></ruby></span> <span class="w"><ruby>닮은<rt><span class="rk">タㇽムン</span><span class="rr" lang="ko-Latn">dalmeun</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>참아버님의<rt><span class="rk">チャマボニメ</span><span class="rr" lang="ko-Latn">chamabeonime</span></rt></ruby></span> <span class="w"><ruby>본형을<rt><span class="rk">ポンヒョンウㇽ</span><span class="rr" lang="ko-Latn">bonhyeong-eul</span></rt></ruby></span> <span class="w"><ruby>닮은<rt><span class="rk">タㇽムン</span><span class="rr" lang="ko-Latn">dalmeun</span></rt></ruby></span></p>
+              <p class="ko" lang="ko"><span class="w"><ruby>참아들딸이<rt><span class="rk">チャマドゥㇽタリ</span><span class="rr" lang="ko-Latn">chamadeulttari</span></rt></ruby></span> <span class="w"><ruby>모두<rt><span class="rk">モドゥ</span><span class="rr" lang="ko-Latn">modu</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">御父の人格に似た真の子女となりて</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>참아들딸이<rt><span class="rk">チャマドゥㇽタリ</span><span class="rr" lang="ko-Latn">chamadeulttari</span></rt></ruby></span> <span class="w"><ruby>모두<rt><span class="rk">モドゥ</span><span class="rr" lang="ko-Latn">modu</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
-            <div class="side"></div>
-          </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>아버님의<rt><span class="rk">アボニメ</span><span class="rr" lang="ko-Latn">abeonime</span></rt></ruby></span> <span class="w"><ruby>칭찬받는<rt><span class="rk">チンチャンバンヌン</span><span class="rr" lang="ko-Latn">chingchanbanneun</span></rt></ruby></span> <span class="w"><ruby>아들딸이<rt><span class="rk">アドゥㇽタリ</span><span class="rr" lang="ko-Latn">adeulttari</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>아버님의<rt><span class="rk">アボニメ</span><span class="rr" lang="ko-Latn">abeonime</span></rt></ruby></span> <span class="w"><ruby>칭찬받는<rt><span class="rk">チンチャンバンヌン</span><span class="rr" lang="ko-Latn">chingchanbanneun</span></rt></ruby></span> <span class="w"><ruby>아들딸이<rt><span class="rk">アドゥㇽタリ</span><span class="rr" lang="ko-Latn">adeulttari</span></rt></ruby></span> <span class="w"><ruby>되어지고<rt><span class="rk">トェオジゴ</span><span class="rr" lang="ko-Latn">doeeojigo</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">父の<ruby>誉<rt>ほ</rt></ruby>めうく神の子となりて</p></div>
           </div>
-          <div class="line">
-            <p class="ko" lang="ko"><span class="w"><ruby>새로운<rt><span class="rk">セロウン</span><span class="rr" lang="ko-Latn">saeroun</span></rt></ruby></span> <span class="w"><ruby>에덴동산에서<rt><span class="rk">エデンドンサネソ</span><span class="rr" lang="ko-Latn">edendongsaneseo</span></rt></ruby></span> <span class="w"><ruby>손<rt><span class="rk">ソン</span><span class="rr" lang="ko-Latn">son</span></rt></ruby></span> <span class="w"><ruby>잡고<rt><span class="rk">チャㇷ゚コ</span><span class="rr" lang="ko-Latn">japko</span></rt></ruby></span> <span class="w"><ruby>사세<rt><span class="rk">サセ</span><span class="rr" lang="ko-Latn">sase</span></rt></ruby></span></p>
+          <div class="line has-side">
+            <div class="kos">
+              <p class="ko" lang="ko"><span class="w"><ruby>새로운<rt><span class="rk">セロウン</span><span class="rr" lang="ko-Latn">saeroun</span></rt></ruby></span> <span class="w"><ruby>에덴동산에서<rt><span class="rk">エデンドンサネソ</span><span class="rr" lang="ko-Latn">edendongsaneseo</span></rt></ruby></span> <span class="w"><ruby>손<rt><span class="rk">ソン</span><span class="rr" lang="ko-Latn">son</span></rt></ruby></span> <span class="w"><ruby>잡고<rt><span class="rk">チャㇷ゚コ</span><span class="rr" lang="ko-Latn">japko</span></rt></ruby></span> <span class="w"><ruby>사세<rt><span class="rk">サセ</span><span class="rr" lang="ko-Latn">sase</span></rt></ruby></span></p>
+            </div>
             <div class="side"><p class="ja-off">手をつなぎ生きよう 新しエデン</p></div>
           </div>
         </div>
+      </section>
+
+      <section class="official ja-view">
+        <h2>日本の聖歌の歌詞</h2>
+          <p class="off-verse"><span>1.</span> 父の<ruby>居<rt>い</rt></ruby>ますは、<ruby>生命<rt>いのち</rt></ruby><ruby>溢<rt>あふ</rt></ruby>るる園<br>暗き<ruby>世<rt>よ</rt></ruby>にも我等は<ruby>真<rt>まこと</rt></ruby>を求め<br><ruby>御父<rt>みちち</rt></ruby>の<ruby>人格<rt>かたち</rt></ruby>に似た真の子女となりて<br>父の<ruby>愛受<rt>う</rt></ruby>く神の子となりて<br>歌いつつ歩まん なつかしエデン</p>
+          <p class="off-verse"><span>2.</span> 父の居ますは、<ruby>蘇<rt>よみがえ</rt></ruby>りの園<br>あこがれし新生、我等は成して<br>御父の人格に似た真の子女となりて<br>父の喜ぶ神の子となりて<br>踊りつつ歩まん のぞみのエデン</p>
+          <p class="off-verse"><span>3.</span> 父の居ますは、<ruby>永久<rt>とわ</rt></ruby>に続く園<br><ruby>備<rt>そな</rt></ruby>えられた玉座に、我等は<ruby>着<rt>つ</rt></ruby>きて<br>御父の人格に似た真の子女となりて<br>父の<ruby>誉<rt>ほ</rt></ruby>めうく神の子となりて<br>手をつなぎ生きよう 新しエデン</p>
       </section>
 
       <section class="videos">
@@ -258,19 +290,30 @@
         });
       });
 
-      // 欄外（日本の聖歌の歌詞／意味）を隠す
-      song.querySelectorAll('[data-toggle]').forEach(function (btn) {
-        var key = 'seika-hide-' + btn.dataset.toggle;
-        function set(hidden) {
-          song.classList.toggle('hide-' + btn.dataset.toggle, hidden);
-          btn.setAttribute('aria-pressed', hidden ? 'false' : 'true');
-        }
-        try { set(localStorage.getItem(key) === '1'); } catch (e) {}
-        btn.addEventListener('click', function () {
-          var hidden = !song.classList.contains('hide-' + btn.dataset.toggle);
-          set(hidden);
-          try { localStorage.setItem(key, hidden ? '1' : '0'); } catch (e) {}
+      // 表示: ハングル／両方／日本語。スマホは並べると読みにくいので、最初はハングルだけ
+      var viewBtns = song.querySelectorAll('button[data-view]');
+      function setView(v) {
+        song.classList.remove('view-ko', 'view-both', 'view-ja');
+        song.classList.add('view-' + v);
+        viewBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.view === v ? 'true' : 'false'); });
+      }
+      if (viewBtns.length) {
+        var view = matchMedia('(max-width: 720px)').matches ? 'ko' : 'both';
+        try { view = localStorage.getItem('seika-view') || view; } catch (e) {}
+        setView(view);
+        viewBtns.forEach(function (b) {
+          b.addEventListener('click', function () {
+            setView(b.dataset.view);
+            try { localStorage.setItem('seika-view', b.dataset.view); } catch (e) {}
+          });
         });
+      }
+
+      // ハングルだけの表示で行を押すと、その行の日本語を出す（もう一度押すと消す）
+      song.addEventListener('click', function (e) {
+        if (!song.classList.contains('view-ko') || (getSelection && String(getSelection()))) return;
+        var line = e.target.closest('.line.has-side');
+        if (line) line.classList.toggle('peek');
       });
 
       document.querySelectorAll('.yt-play').forEach(function (btn) {

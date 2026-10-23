@@ -30,7 +30,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 SONGS = HERE / "songs"
 OUT = ROOT / "seika"
-VERSION = "202610232300"
+VERSION = "202610240100"
 SITE = "https://maydra.github.io/mimune-no-uraniwa/seika/"
 
 WORD = re.compile(r"([^\s{]+)(?:\{([^}]*)\})?")
@@ -381,26 +381,41 @@ def render(song):
         cls = "verse refrain" if refrain else "verse"
         label = "折り返し" if refrain else verse["no"] + "番"
         out.append(f'      <section class="{cls}">\n        <p class="vno" aria-label="{label}">{mark}</p>\n        <div class="lines">')
+        # ハングルの行を、日本語の1行が当たるまとまりにする（訳詞の1行がハングルの2行に
+        # 当たる曲もある）。日本語はまとまりの最初の行に当ててあるので、日本語の無い行は前に足す
+        groups = []
         for j, ln in enumerate(verse["lines"]):
             if ln is None:
-                out.append('          <p class="again">＊ くり返し</p>')
+                groups.append(None)
                 continue
             ko, ja = ln
             if pairs:
                 side = f'<p class="ja-off">{kana_ruby(pairs[(vi, j)])}</p>' if (vi, j) in pairs else ""
             else:
                 side = f'<p class="ja">{html.escape(ja)}</p>' if ja else ""
-            out.append('          <div class="line">\n'
-                       f'            <p class="ko" lang="ko">{ruby(ko)}</p>\n'
+            if side or not groups or groups[-1] is None or not groups[-1][1]:
+                groups.append([[ko], side])
+            else:
+                groups[-1][0].append(ko)
+        for g in groups:
+            if g is None:
+                out.append('          <p class="again">＊ くり返し</p>')
+                continue
+            kos, side = g
+            kos = "\n".join(f'              <p class="ko" lang="ko">{ruby(k)}</p>' for k in kos)
+            out.append(f'          <div class="line{" has-side" if side else ""}">\n'
+                       f'            <div class="kos">\n{kos}\n            </div>\n'
                        f'            <div class="side">{side}</div>\n'
                        '          </div>')
         out.append("        </div>\n      </section>")
     verses = "\n".join(out)
 
-    # 行に当てられなかった公式の訳詞は、まとめて下に出す。手で当てた曲でも、
-    # 訳詞のほうに節が多いとき（all: yes）は全節を出す。13番のように（Ａ）（Ｂ）があれば両方
+    # 公式の訳詞を節ごとにまとめたもの。「日本語」の表示ではこれだけを出す。行に当てられ
+    # なかった曲と、訳詞のほうに節が多い曲（all: yes）は「両方」の表示でも下に出す。
+    # 13番のように（Ａ）（Ｂ）があれば両方
     off_block = ""
-    if off and (not pairs or song.get("all") == "yes"):
+    has_meaning = any(ln and ln[1] for vs in song["verses"] for ln in vs["lines"])
+    if off:
         versions = [JA_OFFICIAL[k] for k in (ja_no, ja_no + "(A)", ja_no + "(B)") if k in JA_OFFICIAL]
         body = []
         for ver in versions:
@@ -409,8 +424,22 @@ def render(song):
                 body.append(f'          <h3 class="off-ab">（{ab.group(1)}）</h3>')
             body += [f'          <p class="off-verse"><span>{k}.</span> ' + "<br>".join(kana_ruby(x) for x in vs) + "</p>"
                      for k, vs in enumerate(ver["verses"], 1)]
-        heading = "日本の聖歌の歌詞（全節）" if pairs else "日本の聖歌の歌詞"
-        off_block = (f'\n      <section class="official">\n        <h2>{heading}</h2>\n' + "\n".join(body) + "\n      </section>\n")
+        in_both = not pairs or song.get("all") == "yes"
+        heading = "日本の聖歌の歌詞（全節）" if pairs and in_both else "日本の聖歌の歌詞"
+        off_block = (f'\n      <section class="official{"" if in_both else " ja-view"}">\n        <h2>{heading}</h2>\n'
+                     + "\n".join(body) + "\n      </section>\n")
+    elif has_meaning:
+        # 日本の聖歌に無い曲は、このサイトで付けた意味を節ごとに
+        body = []
+        for verse in song["verses"]:
+            mark = "＊" if verse["no"] == "*" else verse["no"] + "."
+            lines = [html.escape(ln[1]) for ln in verse["lines"] if ln and ln[1]]
+            if None in verse["lines"]:
+                lines.append("（＊ くり返し）")
+            if lines:
+                body.append(f'          <p class="off-verse"><span>{mark}</span> ' + "<br>".join(lines) + "</p>")
+        off_block = ('\n      <section class="official ja-view">\n        <h2>意味（このサイトの訳）</h2>\n'
+                     + "\n".join(body) + "\n      </section>\n")
 
     gloss = "\n".join(
         f'          <div><dt lang="ko">{html.escape(t)}</dt><dd>{html.escape(d)}</dd></div>'
@@ -420,11 +449,16 @@ def render(song):
 
     badges = f'<span class="badge badge-ja">日本の聖歌 {ja_label(ja_no)}</span>' if ja_no else ""
     badges += f'<span class="badge badge-ko">성가 {no}</span>'
-    side_button = ""
-    if pairs:
-        side_button = '<button type="button" data-toggle="side" aria-pressed="true">日本の聖歌の歌詞</button>'
-    elif any(ln and ln[1] for vs in song["verses"] for ln in vs["lines"]):
-        side_button = '<button type="button" data-toggle="side" aria-pressed="true">意味</button>'
+    # 表示: ハングル／両方／日本語。日本語が1行ずつ当たる曲は、ハングルだけの表示で行を押すと
+    # その行の日本語が出る
+    view_seg = peek_hint = ""
+    if off_block:
+        view_seg = ('\n        <div class="seg" role="group" aria-label="表示">\n'
+                    '          <span class="seg-label">表示</span>\n'
+                    '          <button type="button" data-view="ko">ハングル</button><button type="button" data-view="both">両方</button>'
+                    '<button type="button" data-view="ja">日本語</button>\n        </div>')
+    if pairs or (not off and has_meaning):
+        peek_hint = '\n      <p class="peek-hint">行を押すと、その行の日本語が出ます</p>'
     off_source = ""
     if off:
         part = "第二部" if ja_no.startswith("2部") else "第一部"
@@ -436,7 +470,7 @@ def render(song):
 
     return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION) + f"""<body>
   <div class="container">
-    <article class="song read-kana" id="song">
+    <article class="song lyrics read-kana view-both" id="song">
       <header class="song-head">
         <p class="badges">{badges}</p>
         <h1 lang="ko">{ruby(title_ko)}</h1>
@@ -445,12 +479,11 @@ def render(song):
       </header>
 
       <div class="song-tools">
-        <div class="seg" role="group" aria-label="読み">
+        <div class="seg seg-read" role="group" aria-label="読み">
           <span class="seg-label">読み</span>
           <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button><button type="button" data-read="none">なし</button>
-        </div>
-        {side_button}
-      </div>
+        </div>{view_seg}
+      </div>{peek_hint}
 
 {verses}
 {off_block}{videos_block(v)}{gloss_block}
@@ -495,19 +528,30 @@ def render(song):
         }});
       }});
 
-      // 欄外（日本の聖歌の歌詞／意味）を隠す
-      song.querySelectorAll('[data-toggle]').forEach(function (btn) {{
-        var key = 'seika-hide-' + btn.dataset.toggle;
-        function set(hidden) {{
-          song.classList.toggle('hide-' + btn.dataset.toggle, hidden);
-          btn.setAttribute('aria-pressed', hidden ? 'false' : 'true');
-        }}
-        try {{ set(localStorage.getItem(key) === '1'); }} catch (e) {{}}
-        btn.addEventListener('click', function () {{
-          var hidden = !song.classList.contains('hide-' + btn.dataset.toggle);
-          set(hidden);
-          try {{ localStorage.setItem(key, hidden ? '1' : '0'); }} catch (e) {{}}
+      // 表示: ハングル／両方／日本語。スマホは並べると読みにくいので、最初はハングルだけ
+      var viewBtns = song.querySelectorAll('button[data-view]');
+      function setView(v) {{
+        song.classList.remove('view-ko', 'view-both', 'view-ja');
+        song.classList.add('view-' + v);
+        viewBtns.forEach(function (b) {{ b.setAttribute('aria-pressed', b.dataset.view === v ? 'true' : 'false'); }});
+      }}
+      if (viewBtns.length) {{
+        var view = matchMedia('(max-width: 720px)').matches ? 'ko' : 'both';
+        try {{ view = localStorage.getItem('seika-view') || view; }} catch (e) {{}}
+        setView(view);
+        viewBtns.forEach(function (b) {{
+          b.addEventListener('click', function () {{
+            setView(b.dataset.view);
+            try {{ localStorage.setItem('seika-view', b.dataset.view); }} catch (e) {{}}
+          }});
         }});
+      }}
+
+      // ハングルだけの表示で行を押すと、その行の日本語を出す（もう一度押すと消す）
+      song.addEventListener('click', function (e) {{
+        if (!song.classList.contains('view-ko') || (getSelection && String(getSelection()))) return;
+        var line = e.target.closest('.line.has-side');
+        if (line) line.classList.toggle('peek');
       }});
 
       document.querySelectorAll('.yt-play').forEach(function (btn) {{
