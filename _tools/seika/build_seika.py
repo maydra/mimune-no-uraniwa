@@ -30,7 +30,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 SONGS = HERE / "songs"
 OUT = ROOT / "seika"
-VERSION = "202610240230"
+VERSION = "202610240300"
 SITE = "https://maydra.github.io/mimune-no-uraniwa/seika/"
 
 WORD = re.compile(r"([^\s{]+)(?:\{([^}]*)\})?")
@@ -446,8 +446,8 @@ def render(song):
 
     badges = f'<span class="badge badge-ja">日本の聖歌 {ja_label(ja_no)}</span>' if ja_no else ""
     badges += f'<span class="badge badge-ko">성가 {no}</span>'
-    # 表示はハングルと日本語のどちらか（並べるとスマホで読みにくい）。パソコンは幅があるので、
-    # ハングルの表示でも欄外に日本語を出す
+    # 表示はハングルと日本語のどちらか（並べると読みにくい）。行ごとの日本語（.side）は
+    # ページに入れてあるが、いまは出さない（seika.css）
     view_tabs = ""
     if off_block:
         view_tabs = ('\n      <div class="view-tabs" role="group" aria-label="表示">\n'

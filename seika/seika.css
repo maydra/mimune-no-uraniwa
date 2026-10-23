@@ -287,8 +287,8 @@ body.light-mode .song .seg button[aria-pressed="true"] {
     color: var(--mean) !important;
 }
 
-/* 表示の切り替え（歌のページ）: ハングル／日本語のタブ。並べるとスマホで読みにくいので
-   どちらかだけを出す。パソコンは幅があるので、ハングルの表示でも欄外に日本語 */
+/* 表示の切り替え（歌のページ）: ハングル／日本語のタブ。並べると読みにくいので、
+   パソコンでもどちらかだけを出す（欄外の日本語 .side は出さない） */
 .view-tabs {
     display: flex;
     max-width: 20rem;
@@ -316,7 +316,11 @@ body.light-mode .song .seg button[aria-pressed="true"] {
 }
 
 .lyrics .line {
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.lyrics .side {
+    display: none;
 }
 
 .lyrics .line + .line {
@@ -765,11 +769,6 @@ body.light-mode .song details.howto {
     .song .ja-off,
     .song .ja {
         font-size: 0.88rem;
-    }
-
-    /* スマホはハングルの表示で欄外の日本語を出さない（日本語はタブで） */
-    .lyrics .side {
-        display: none;
     }
 
     .lyrics .line {
