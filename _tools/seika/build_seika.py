@@ -30,7 +30,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 SONGS = HERE / "songs"
 OUT = ROOT / "seika"
-VERSION = "202610240130"
+VERSION = "202610240200"
 SITE = "https://maydra.github.io/mimune-no-uraniwa/seika/"
 
 WORD = re.compile(r"([^\s{]+)(?:\{([^}]*)\})?")
@@ -473,9 +473,9 @@ def render(song):
       </header>
 {view_tabs}
       <div class="song-tools">
-        <div class="seg" role="group" aria-label="読み">
-          <span class="seg-label">読み</span>
-          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button>
+        <div class="opt" role="group" aria-label="読み">
+          <span class="opt-label">読み</span>
+          <div class="seg"><button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button></div>
         </div>
       </div>
 
@@ -625,9 +625,9 @@ def render_intro(song):
       </header>
 
       <div class="song-tools">
-        <div class="seg" role="group" aria-label="読み">
-          <span class="seg-label">読み</span>
-          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button>
+        <div class="opt" role="group" aria-label="読み">
+          <span class="opt-label">読み</span>
+          <div class="seg"><button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button></div>
         </div>
       </div>
 
@@ -793,13 +793,13 @@ def build_yomi():
       <textarea id="src" rows="8" lang="ko" placeholder="ここにハングルの歌詞を貼り付け / Paste Korean lyrics here"></textarea>
 
       <div class="song-tools">
-        <div class="seg" role="group" aria-label="読み Reading">
-          <span class="seg-label">読み</span>
-          <button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button>
+        <div class="opt" role="group" aria-label="読み Reading">
+          <span class="opt-label">読み</span>
+          <div class="seg"><button type="button" data-read="kana">カナ</button><button type="button" data-read="roman">ABC</button></div>
         </div>
-        <div class="seg" role="group" aria-label="意味 Meaning">
-          <span class="seg-label">意味</span>
-          <button type="button" data-mean="ja">日本語</button><button type="button" data-mean="en">English</button><button type="button" data-mean="both">両方</button><button type="button" data-mean="none">なし</button>
+        <div class="opt" role="group" aria-label="意味 Meaning">
+          <span class="opt-label">意味</span>
+          <div class="seg"><button type="button" data-mean="ja">日本語</button><button type="button" data-mean="en">English</button><button type="button" data-mean="both">両方</button><button type="button" data-mean="none">なし</button></div>
         </div>
       </div>
       <p class="go-row"><button type="button" class="go-btn" id="go">読みと意味を出す / Show</button></p>

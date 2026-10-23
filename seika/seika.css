@@ -180,7 +180,21 @@ body {
     text-decoration: line-through;
 }
 
-/* 読みの切り替え（カナ／ABC／なし）。押されているものだけ色を付ける */
+/* 切り替え（読み: カナ／ABC など）。名前は上に小さく出す（横に並べると選ぶものの1つに
+   見える）。押されているものだけ色を付ける */
+.opt {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.song .opt-label {
+    font-size: 0.76rem;
+    letter-spacing: 0.1em;
+    color: var(--mean) !important;
+}
+
 .seg {
     display: inline-flex;
     align-items: center;
@@ -190,10 +204,8 @@ body {
     background: var(--panel);
 }
 
-.song .seg-label {
-    font-size: 0.82rem;
-    padding: 0 0.4rem 0 0.9rem;
-    color: var(--mean) !important;
+.song .opt .seg button {
+    min-width: 4.6rem;
 }
 
 .song-tools .seg button,
