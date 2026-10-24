@@ -29,23 +29,16 @@ body.light-mode::before {
     display: none !important;
 }
 
+/* 暗い配色の地。`fixed` と、その上に重ねていた放射グラデーション（body::before）は
+   2026-10-24 にやめた。fixed の背景はスクロールのたびに描き直しになり、古い Android で
+   カクつく定番。グラデーション自体はページ全体に1回だけ描くので残す */
 body.dark-mode {
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) fixed !important;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
     color: #e0e0e0 !important;
 }
 
 body.dark-mode::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 0;
-    display: block !important;
+    display: none !important;
 }
 
 /* Card Overrides */
