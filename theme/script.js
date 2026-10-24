@@ -166,6 +166,26 @@
 
     document.addEventListener('copy', handleCopy);
 
+    // --- 明朝 ---------------------------------------------------------------
+    // 2026-10-24 に Google Fonts（Noto Serif JP）の <link> を全ページから外した。
+    // CSS だけで 61KB、本文の漢字に応じてフォント片が十数個降りてきて、どのページでも
+    // いちばん大きい通信だった。iPhone/Mac はヒラギノ、Windows は BIZ UDP明朝・游明朝が
+    // 入っているので、CSS の font-family でそれらを使う（_tools/root/lighten_pages.py）。
+    // Android だけは明朝が入っていないので、ここで今までどおり Web フォントを読む。
+    try {
+        if (/Android/i.test(navigator.userAgent) && !document.querySelector('link[href*="fonts.googleapis.com/css2"]')) {
+            var pre = document.createElement('link');
+            pre.rel = 'preconnect';
+            pre.href = 'https://fonts.gstatic.com';
+            pre.crossOrigin = '';
+            document.head.appendChild(pre);
+            var font = document.createElement('link');
+            font.rel = 'stylesheet';
+            font.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap';
+            document.head.appendChild(font);
+        }
+    } catch (e) { }
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
@@ -204,7 +224,7 @@
         var me = document.currentScript;
         if (!me || !me.src) return;
         // reader.js だけ直したときは R を上げる（全ページの ?v= を書き換えずに新しい版を届ける）
-        var R = '6';
+        var R = '7';
         var q = me.src.indexOf('?') >= 0 ? me.src.slice(me.src.indexOf('?')) + '&r=' + R : '?r=' + R;
         var url = new URL('reader.js' + q, me.src);
         var s = document.createElement('script');

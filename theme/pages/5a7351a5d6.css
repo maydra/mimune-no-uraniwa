@@ -6,7 +6,7 @@
         }
 
         body {
-            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
+            font-family: "Hiragino Mincho ProN", "BIZ UDPMincho", "Yu Mincho", YuMincho, "Noto Serif CJK JP", "Noto Serif JP", serif;
             background: #ffffff;
             min-height: 100vh;
             color: #111111;
@@ -30,7 +30,7 @@
         }
 
         .page-title {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
             font-weight: 900;
             color: #111;
             margin-bottom: 1.5rem;
@@ -39,7 +39,7 @@
         }
 
         .chapter-title {
-            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
             font-weight: 900;
             color: #111;
             margin-bottom: 1.5rem;
@@ -356,11 +356,11 @@
             }
 
             .page-title {
-                font-size: clamp(2rem, 6vw, 3.5rem);
+                font-size: clamp(1.4rem, 5vw, 1.9rem);
             }
 
             .chapter-title {
-                font-size: clamp(1.8rem, 5vw, 3rem);
+                font-size: clamp(1.4rem, 4vw, 2.2rem);
             }
 
             h1 {
@@ -506,7 +506,7 @@
             align-items: center;
             font-size: 0.75rem;
             color: #777;
-            font-family: 'Noto Serif JP', serif;
+            font-family: "Hiragino Mincho ProN", "BIZ UDPMincho", "Yu Mincho", YuMincho, "Noto Serif CJK JP", "Noto Serif JP", serif;
             font-weight: 500;
             cursor: pointer;
             white-space: nowrap;
@@ -563,7 +563,7 @@
             color: #444;
             font-size: 0.85rem;
             font-weight: 600;
-            font-family: 'Noto Serif JP', serif;
+            font-family: "Hiragino Mincho ProN", "BIZ UDPMincho", "Yu Mincho", YuMincho, "Noto Serif CJK JP", "Noto Serif JP", serif;
             display: flex;
             align-items: center;
             transition: background 0.2s ease, padding-left 0.3s ease;
