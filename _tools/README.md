@@ -32,7 +32,10 @@ HTML を書き換えるスクリプトを回したあとは `python _tools/root/
 - `<style>` をページに書き込むスクリプト（`_tools/upgrade_*.py` など）を回したら、最後に
   `python _tools/root/extract_inline_css.py` を回す。2ページ以上で同じ `<style>` は共有ファイルに出る
 - 同じとき、`backdrop-filter`（ぼかし）と、開いたときの `fadeInDown` / `fadeInUp` も落とす。
-  iPhone SE でスクロールが重くなる原因だった。フォントは Noto Serif JP の 400 と 700 だけ
+  iPhone SE でスクロールが重くなる原因だった
+- フォントは端末の明朝（2026-10-24 から。`_tools/root/lighten_pages.py` の FONT_STACK）。Google Fonts の `<link>` は
+  ページに書かない（Android だけ theme/script.js が読む）。古い `_tools/upgrade_*.py` などの雛形にはまだ Noto Serif JP の
+  `<link>` が残っているので、回したら `python _tools/root/lighten_pages.py webfont theme-boot` も回す
 - 共有ファイルを足したら `python _tools/root/build_offline_manifest.py` も回す（オフライン保存が一緒に持っていく）
 - `theme/` の CSS・JS は、Service Worker がネットワーク優先で取る。直せば次に開いたときに届く
 

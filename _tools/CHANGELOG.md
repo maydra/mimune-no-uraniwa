@@ -3,6 +3,22 @@
 サイトの仕組み・見た目を変えたときの記録。本文の誤植直しなどは書かない。
 新しいものを上に足す。細かい経緯は各 commit のメッセージにある。
 
+## 2026-10-24 軽くする: Web フォントをやめる・配色のちらつき・marquee・ホームの作り直し
+
+きっかけ: ユーザーから「UI や軽さをもっと改善したい」。実測で、ページ自体は軽く（本文1ページ 30KB）、重いのは Google Fonts（CSS だけで 61KB＋フォント片）・トップの固定グラデーション・旧サイトの `<marquee>` だった。提案を全部やることになった。
+
+- **Web フォントをやめた。** 全ページの Google Fonts（Noto Serif JP）の `<link>` を外し、`font-family` を端末の明朝（ヒラギノ → BIZ UDP明朝 → 游明朝 → Noto Serif CJK）にした。Android には明朝が無いので、theme/script.js が Android のときだけ今までどおり Web フォントを読む。韓国語の聖歌（seika/）は Noto Serif KR が要るので触っていない。一括処理は `_tools/root/lighten_pages.py webfont`
+- **配色のちらつきを消した。** HTML は暗い配色で書かれ、script.js が DOMContentLoaded 後に明るい配色へ変えていたので、明るい設定の人は毎ページ「暗 → 白」とちらついた。`<body>` の直後に `<script id="theme-boot">` を置き、描く前に localStorage の theme（無ければ端末の設定）で body のクラスを付ける（`lighten_pages.py theme-boot`。theme/style.css か theme/script.js を読む 3,689 ページ）。reader.js の文字の大きさも同じ所で当てる
+- **`<marquee>` と「INDEXへ」を消した**（224 ページ）。旧サイトの赤い帯で、ずっと動き続けて電池と描画を食っていた。「INDEXへ」は上のナビと重複。検索の本文にも入っていたので data/fulltext を作り直した（`lighten_pages.py marquee`）
+- **暗い配色の背景から `fixed` をやめ、放射グラデーションの重ね（body::before）を消した**（theme/style.css）。fixed の背景はスクロールのたびに描き直しになる。グラデーション自体は残した
+- **ホームを作り直した**（index.html、CSS は theme/home.css へ）。題の下に検索欄（search-all.html?q=… へ飛ぶ。search-all.js が q を読んでそのまま探す）。本の一覧は `<details>` にして、スマホでは主要文献だけ開き、ほかは題を押して開く。パソコンでは全部開いたまま（index.html の JS が open を付ける）。題の h1 は半分の大きさ。カードの影と hover の動きはやめた
+- **本文ページの題を小さく**（theme/pages/*.css の h1: 最大 4.5rem → 2.4rem、スマホ 3.5rem → 1.9rem）
+- **文字の大きさの切り替え**を reader.js の引き出しに足した（小・標準・大・特大。html の font-size を % で変え、localStorage の reader.font に覚える。変えたあとは resize と同じやり方で同じ所へ戻す）。reader.js を直したので script.js の R を 7 に
+- **og:image を og-image.jpg（1200×630、51KB）に**。前の og-image.png（1024×1024、1.4MB）は LINE などに貼ったときの表示が遅かった。png はまだ消していない（LINE が古い URL を数日キャッシュする）
+- 検索の本文（data/fulltext）から聖歌（seika/）を外した（み言ではないので。build_fulltext.py の SKIP_DIRS）
+
+残り（別の日）: 本文の段落を `<br/><br/>` から `<p>` にする（変換スクリプトと 3,400 ページの再生成が要る）。出典の「（一三五−三四三、…）」を `<cite>` で包んで薄く出すのも、そのときに。
+
 ## 2026-10-23 聖歌: ハングルと日本語の表示を切り替える
 
 きっかけ: ユーザーから「韓国語と日本語が同じ場所に表記されているとちょっと読みづらいかもしれない（特にスマホだとね）。うまく切り替えたりすみわけをしたい」。いったん「ハングル／両方／日本語」と行を押すと日本語が出る形を作ったが、「ハングルだけ、日本語だけ、のどちらかでいい。オプションが多すぎて UI がぐちゃっとなってそう」で2つにした。
