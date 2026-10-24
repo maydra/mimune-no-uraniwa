@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-XXQ0QTBYTR');
+        // 表示し終えてから（load のあと、最初の描画 FCP が画面に出てから）fn を動かす。下の「いま○人」も使う。
+        // requestAnimationFrame では足りない（描いた絵が画面に出る前に回ることがある）。
+        // 描画の時刻が取れないブラウザ・裏のタブでは load の1秒あと
+        function afterPaint(fn) {
+            var done = false;
+            var run = function () { if (!done) { done = true; setTimeout(fn, 0); } };
+            var onLoad = function () {
+                try {
+                    if (performance.getEntriesByName('first-contentful-paint').length) return run();
+                    new PerformanceObserver(function (list) {
+                        if (list.getEntriesByName('first-contentful-paint').length) run();
+                    }).observe({ type: 'paint', buffered: true });
+                } catch (e) { }
+                setTimeout(run, 1000);
+            };
+            if (document.readyState === 'complete') onLoad();
+            else window.addEventListener('load', onLoad);
+        }
+        // タグの本体（gtag/js、約180KB）は表示し終えてから読む。先に読むと、スマホの
+        // 細い回線で題（LCP）が出るのを待たせる（2026-10-24、PageSpeed のモバイルで LCP 3.9秒）
+        afterPaint(function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR';
+            document.head.appendChild(s);
+        });
     </script>
 
     <link href="/mimune-no-uraniwa/favicon.png?v=202610241207" rel="icon" type="image/png" />
@@ -34,7 +59,7 @@
   "logo": "https://maydra.github.io/mimune-no-uraniwa/favicon.png"
 }
 </script>
-    <link rel="stylesheet" href="theme/home.css?v=202610241207">
+    <link rel="stylesheet" href="theme/home.css?v=202610241314">
     <link rel="stylesheet" href="theme/style.css?v=202610241207">
 </head>
 
@@ -43,7 +68,7 @@
     <div class="container">
         <header>
             <h1 id="み旨の裏庭---サイト目次"><a href="#み旨の裏庭---サイト目次">み旨の裏庭</a></h1>
-            <p class="online-now" id="online-now" title="直近5分にこのサイトを開いていた人の数（Google アナリティクス）" hidden>いま、このサイトを <b></b> 人が利用しています</p>
+            <p class="online-now" id="online-now" title="直近5分にこのサイトを開いていた人の数（Google アナリティクス）">いま、このサイトを <b>–</b> 人が利用しています</p>
             <form class="home-search" action="search-all.html" method="get" role="search">
                 <input type="search" name="q" placeholder="み言を探す（例：真の愛　家庭）" aria-label="サイト内を検索" autocomplete="off" enterkeyhint="search" required>
                 <button type="submit">検索</button>
@@ -54,6 +79,7 @@
             </div>
         </header>
 
+        <main>
         <div class="content-grid">
 <details class="section-card featured-section" open>
 <summary><h2>主要文献</h2></summary>
@@ -214,6 +240,7 @@
 </ul>
 </details>
         </div>
+        </main>
     </div>
 
     <script>
@@ -226,7 +253,7 @@
         }
     </script>
 
-    <script src="theme/script.js?v=202610241207"></script>
+    <script src="theme/script.js?v=202610241207" defer></script>
     <script>
         // パソコンでは本の一覧を全部開いたまま。スマホでは主要文献だけ開き、ほかは題を押して開く
         if (matchMedia('(min-width: 769px)').matches) {
@@ -236,18 +263,22 @@
     <script>
         // 「いま○人が利用しています」。Cloudflare の Worker（_tools/online-count）が
         // Google アナリティクスの直近5分の人数を返す。取れないとき（通信なし・Worker の不調）は出さない。
+        // 行の高さは最初から取ってあり（home.css の .online-now:not(.on)）、出すときに下の一覧を押し下げない。
+        // 聞きに行くのはページを表示し終えてから（Worker の返事は1秒以上かかることがある）
         (function () {
             var el = document.getElementById('online-now');
             if (!el || !window.fetch) return;
-            fetch('https://mimune-online.dreamerhigh2015.workers.dev/')
-                .then(function (r) { return r.ok ? r.json() : null; })
-                .then(function (d) {
-                    if (!d || typeof d.active !== 'number') return;
-                    // 開いている本人は必ずいるので、数え漏れても1人は出す
-                    el.querySelector('b').textContent = Math.max(d.active, 1);
-                    el.hidden = false;
-                })
-                .catch(function () {});
+            afterPaint(function () {
+                fetch('https://mimune-online.dreamerhigh2015.workers.dev/')
+                    .then(function (r) { return r.ok ? r.json() : null; })
+                    .then(function (d) {
+                        if (!d || typeof d.active !== 'number') return;
+                        // 開いている本人は必ずいるので、数え漏れても1人は出す
+                        el.querySelector('b').textContent = Math.max(d.active, 1);
+                        el.classList.add('on');
+                    })
+                    .catch(function () {});
+            });
         })();
     </script>
     <script>

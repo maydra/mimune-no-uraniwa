@@ -50,6 +50,12 @@ h1 a {
     margin-bottom: 1rem;
 }
 
+/* 人数が届くまでは見せないが、場所は取っておく（届いたときに下の一覧が押し下げられない。
+   PageSpeed の CLS 0.048 はこれだった）。取れなかったときは空いた1行のまま */
+.online-now:not(.on) {
+    visibility: hidden;
+}
+
 .online-now::before {
     content: '●';
     color: #22c55e;
