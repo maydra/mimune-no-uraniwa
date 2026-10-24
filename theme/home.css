@@ -1,0 +1,298 @@
+/* theme/home.css — ホーム（index.html）の見た目。
+   2026-10-24 に index.html の <style> から出した。配色（明るい・暗い）の上書きは
+   theme/style.css がやるので、ここは暗い配色を基準に形だけ決める。
+   背景の fixed グラデーションと放射の重ね、カードの大きな影と hover の動きは
+   やめた（古い端末でスクロールが重い割に、見た目はほとんど変わらない）。 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hiragino Mincho ProN", "BIZ UDPMincho", "Yu Mincho", YuMincho, "Noto Serif CJK JP", "Noto Serif JP", serif;
+    background: #24243e;
+    min-height: 100vh;
+    color: #e0e0e0;
+    padding: 1.5rem 1rem 3rem;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ---- 頭 ---- */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+}
+
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.online-now {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.online-now::before {
+    content: '●';
+    color: #22c55e;
+    margin-right: 0.4em;
+}
+
+/* 検索欄。押すと search-all.html?q=… へ */
+.home-search {
+    display: flex;
+    max-width: 640px;
+    margin: 0 auto 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.home-search input {
+    flex: 1 1 auto;
+    min-width: 0;
+    font: inherit;
+    font-size: 1.1rem;
+    padding: 0.7em 1.2em;
+    border: 0;
+    background: none;
+    color: inherit;
+    outline: none;
+}
+
+.home-search input::placeholder {
+    color: inherit;
+    opacity: 0.55;
+}
+
+.home-search input::-webkit-search-decoration,
+.home-search input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+.home-search button {
+    flex: 0 0 auto;
+    font: inherit;
+    font-weight: 700;
+    padding: 0 1.4em;
+    border: 0;
+    background: #667eea;
+    color: #fff;
+    cursor: pointer;
+}
+
+.home-search:focus-within {
+    border-color: rgba(102, 126, 234, 0.9);
+}
+
+.search-links {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55em 1.3em;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.search-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* ---- 本の一覧 ---- */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.25rem;
+}
+
+.section-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.6rem 1.8rem;
+}
+
+.section-card summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.section-card summary::-webkit-details-marker {
+    display: none;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+}
+
+h2::before {
+    content: '◆';
+    color: #667eea;
+    font-size: 0.75em;
+    flex: 0 0 auto;
+}
+
+/* 開閉の印（スマホだけ） */
+h2::after {
+    content: '▾';
+    margin-left: auto;
+    opacity: 0.55;
+    font-size: 0.9em;
+    transition: transform 0.2s ease;
+}
+
+.section-card[open] h2::after {
+    transform: rotate(180deg);
+}
+
+.section-card[open] summary {
+    margin-bottom: 1.1rem;
+}
+
+.links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.links-list li {
+    position: relative;
+    padding-left: 1.4rem;
+}
+
+.links-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+}
+
+.links-list a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    display: inline-block;
+}
+
+.links-list a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.long-title {
+    font-size: 1.4rem !important;
+    word-break: keep-all;
+    overflow-wrap: normal;
+}
+
+.featured-section {
+    grid-column: 1 / -1;
+    background: rgba(102, 126, 234, 0.12);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.featured-section .links-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.6rem 1rem;
+}
+
+.section-card p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+/* パソコン: 全部開いたまま。開閉の印も出さない（index.html の JS が open を付ける） */
+@media (min-width: 769px) {
+    .section-card summary {
+        pointer-events: none;
+    }
+
+    h2::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem 0.75rem 3rem;
+        font-size: 1.05rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .section-card {
+        padding: 1.1rem 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .long-title {
+        font-size: 1.2rem !important;
+    }
+
+    .links-list a {
+        font-size: 1.05rem;
+    }
+
+    .featured-section .links-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-btn {
+        justify-content: center;
+    }
+}

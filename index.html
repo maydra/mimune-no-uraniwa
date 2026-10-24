@@ -10,9 +10,9 @@
         gtag('config', 'G-XXQ0QTBYTR');
     </script>
 
-    <link href="/mimune-no-uraniwa/favicon.png?v=202609192031" rel="icon" type="image/png" />
-    <link rel="manifest" href="manifest.json?v=202609192031" />
-    <link rel="apple-touch-icon" href="icons/icon-192.png?v=202609192031" />
+    <link href="/mimune-no-uraniwa/favicon.png?v=202610241207" rel="icon" type="image/png" />
+    <link rel="manifest" href="manifest.json?v=202610241207" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png?v=202610241207" />
     <meta name="theme-color" content="#302b63" />
     <meta charset="utf-8" />
     <title>み旨の裏庭 | サイト目次</title>
@@ -24,7 +24,7 @@
     <meta content="『み旨の裏庭』は「み旨の裏道」を継承した、み言を記録するアーカイブサイトです。原理講論・家庭盟誓などの資料を掲載。" property="og:description" />
     <meta content="website" property="og:type" />
     <meta content="https://maydra.github.io/mimune-no-uraniwa/" property="og:url" />
-    <meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" property="og:image" />
+    <meta content="https://maydra.github.io/mimune-no-uraniwa/og-image.jpg" property="og:image" />
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,577 +34,188 @@
   "logo": "https://maydra.github.io/mimune-no-uraniwa/favicon.png"
 }
 </script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap"
-        rel="stylesheet" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Serif JP', 'Crimson Pro', serif;
-            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-            min-height: 100vh;
-            color: #e0e0e0;
-            padding: 2rem 1rem;
-            position: relative;
-            overflow-x: hidden;
-            font-size: 1.25rem;
-            line-height: 1.9;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        h1 {
-            font-size: clamp(3rem, 7vw, 5.5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
-            text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-        }
-
-        h1 a {
-            text-decoration: none;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .online-now {
-            margin-top: -0.5rem;
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-
-        .online-now::before {
-            content: '●';
-            color: #22c55e;
-            margin-right: 0.4em;
-        }
-
-        .search-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-
-        .search-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            padding: 1rem 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.15rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .search-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-            border-color: rgba(102, 126, 234, 0.5);
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .section-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .section-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(102, 126, 234, 0.3);
-            box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
-        }
-
-        .section-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            letter-spacing: 0.05em;
-        }
-
-        h2::before {
-            content: '◆';
-            color: #667eea;
-            font-size: 0.8em;
-        }
-
-        .links-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .links-list li {
-            position: relative;
-            padding-left: 1.6rem;
-        }
-
-        .links-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            transition: transform 0.3s ease;
-        }
-
-        .links-list li:hover::before {
-            transform: translateX(3px);
-        }
-
-        .links-list a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.25rem;
-            line-height: 1.9;
-            transition: all 0.3s ease;
-            display: inline-block;
-            position: relative;
-        }
-
-        .links-list a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
-        }
-
-        .links-list a:hover {
-            color: #fff;
-            transform: translateX(3px);
-        }
-
-        .links-list a:hover::after {
-            width: 100%;
-        }
-
-        /* Specific adjustment for long titles to prevent awkward wrapping */
-        .long-title {
-            font-size: 1.8rem !important;
-            /* Slightly smaller than the default 2.2rem */
-            word-break: keep-all;
-            /* Prevents breaking in the middle of words */
-            overflow-wrap: normal;
-        }
-
-        /* 特別なセクション用のスタイル */
-        .featured-section {
-            grid-column: 1 / -1;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
-            border: 1px solid rgba(102, 126, 234, 0.3);
-        }
-
-        .featured-section h2 {
-            font-size: 2.5rem;
-            background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .featured-section .links-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-            gap: 1rem;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.75rem;
-                font-size: 1.1rem;
-            }
-
-            .content-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .section-card {
-                padding: 2rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .links-list a {
-                font-size: 1.15rem;
-            }
-
-            .featured-section h2 {
-                font-size: 2rem;
-            }
-
-            .featured-section .links-list {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 1rem;
-            }
-
-            .search-links {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .search-btn {
-                justify-content: center;
-                font-size: 1.05rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            .links-list a {
-                font-size: 1.05rem;
-            }
-        }
-    </style>
-    
-
-    <link rel="stylesheet" href="theme/style.css?v=202609192031">
+    <link rel="stylesheet" href="theme/home.css?v=202610241207">
+    <link rel="stylesheet" href="theme/style.css?v=202610241207">
 </head>
 
-<body data-pagefind-ignore style="color: #e0e0e0;">
+<body data-pagefind-ignore>
+<script id="theme-boot">(function(){try{var c=document.body.classList,t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';c.remove('light-mode','dark-mode');c.add(t+'-mode');var f=localStorage.getItem('reader.font');if(f)document.documentElement.style.fontSize=f}catch(e){}})()</script>
     <div class="container">
         <header>
             <h1 id="み旨の裏庭---サイト目次"><a href="#み旨の裏庭---サイト目次">み旨の裏庭</a></h1>
             <p class="online-now" id="online-now" title="直近5分にこのサイトを開いていた人の数（Google アナリティクス）" hidden>いま、このサイトを <b></b> 人が利用しています</p>
+            <form class="home-search" action="search-all.html" method="get" role="search">
+                <input type="search" name="q" placeholder="み言を探す（例：真の愛　家庭）" aria-label="サイト内を検索" autocomplete="off" enterkeyhint="search" required>
+                <button type="submit">検索</button>
+            </form>
             <div class="search-links">
-                <a href="search-all.html" class="search-btn">🔍 サイト内一括検索</a>
+                <a href="search-all.html" class="search-btn">🔍 くわしく検索</a>
                 <a href="gacha.html" class="search-btn">🎲 み言をランダムに見る</a>
             </div>
         </header>
 
         <div class="content-grid">
-            <div class="section-card featured-section">
-                <h2>主要文献</h2>
-                <ul class="links-list">
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/dp/index.html">原理講論</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/family_pledge.html">家庭盟誓</a></li>
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/seikonmondou/20120324_seikon_mondou.html">聖婚問答</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/Bible_out/index.html">聖書</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/peacemessage/index.html">平和神経／平和メッセージ</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/heiwa_sekaijin/index.html">平和を愛する世界人として</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/seika/index.html">聖歌（試験中）</a></li>
-                </ul>
-            </div>
-
-            <div class="section-card">
-                <h2>天聖経収録16冊</h2>
-                <ul class="links-list">
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/makotono_kami/index.html">真の神様</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/makotonofubo/index.html">真の父母</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/makotono_ai/index.html">真の愛</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/makotonokatei/index.html">真の家庭</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/tijyouseikatu_reikai/index.html">地上生活と霊界</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/reikon/index.html">人間の生と霊魂の世界</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/reisetutogisiki/index.html">礼節と儀式</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/tumito_tougennfukki/index.html">罪と蕩減復帰</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syukufuku_katei/index.html">祝福家庭</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/seiyakujinno_miti/index.html">成約人への道</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/utyuuno_konnpon/index.html">宇宙の根本</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/kann_taiheiyou/index.html">環太平洋摂理</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/sokoku_koufuku/index.html">真の神様の祖国光復</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/kounoseikatu/index.html">真の孝の生活</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/tenitikoku/index.html">天一国主人の生活</a></li>
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/makotonokatei-kateimeisei/index.html">真の家庭と家庭盟誓</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="section-card">
-<h2>天聖經（増補版）</h2>
+<details class="section-card featured-section" open>
+<summary><h2>主要文献</h2></summary>
 <ul class="links-list">
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou01/index.html">神様</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou02/index.html">真の父母</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou03/index.html">真の愛</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou04/index.html">真の人間</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou05/index.html">真の家庭</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou06/index.html">真の万物</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou07/index.html">地上生活と霊界</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou08/index.html">信仰生活と修練</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou09/index.html">家庭教会と氏族的メシヤ</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou10/index.html">平和思想</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou11/index.html">礼式と名節</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou12/index.html">天一国</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou13/index.html">平和メッセージ</a></li>
-<li><a href="https://maydra.github.io/mimune-no-uraniwa/tenseikyou14/index.html">真の父母様の祈祷</a></li>
+<li><a href="dp/index.html">原理講論</a></li>
+<li><a href="family_pledge.html">家庭盟誓</a></li>
+<li><a href="seikonmondou/20120324_seikon_mondou.html">聖婚問答</a></li>
+<li><a href="Bible_out/index.html">聖書</a></li>
+<li><a href="peacemessage/index.html">平和神経／平和メッセージ</a></li>
+<li><a href="heiwa_sekaijin/index.html">平和を愛する世界人として</a></li>
+<li><a href="seika/index.html">聖歌（試験中）</a></li>
 </ul>
-</div>
-<div class="section-card">
-                <h2 class="long-title">御父母様の生涯路程</h2>
-                <ul class="links-list">
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_1/index.html">真の御父母様の生涯路程　１</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_2/index.html">真の御父母様の生涯路程　２</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_3/index.html">真の御父母様の生涯路程　３</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_4/index.html">真の御父母様の生涯路程　４</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_5/index.html">真の御父母様の生涯路程　５</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_6/index.html">真の御父母様の生涯路程　６</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_7/index.html">真の御父母様の生涯路程　７</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_8/index.html">真の御父母様の生涯路程　８</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_9/index.html">真の御父母様の生涯路程　９</a>
-                    </li>
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_10/index.html">真の御父母様の生涯路程　１０</a>
-                    </li>
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/syougairotei_11/index.html">真の御父母様の生涯路程　１１</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="section-card">
-                <h2>信仰と生活</h2>
-                <ul class="links-list">
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/tf_inori/index.html">父の祈り</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/kitou/index.html">天一国時代の祈祷</a></li>
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/makotonarusijyonomiti/index.html">真なる子女の道</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/niseinomiti/index.html">二世の道</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/sijyosidou/index.html">み旨にかなった子女指導</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/seinenno_kibou/index.html">青年の希望</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/hitonosyougai/index.html">人の生涯</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/kansha_suru_faith/index.html">感謝する信仰</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="section-card">
-                <h2>伝道と牧会</h2>
-                <ul class="links-list">
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/bokkaisyanomiti/index.html">牧会者の道</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/dendou_hand/index.html">伝道ハンドブック</a></li>
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/syuku_&amp;_risoutengoku/index.html">み旨の道／祝福家庭と理想天国Ⅰ</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/syukufukuto_nyuuseki/index.html">祝福と入籍</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/souzokutekimesiya/index.html">宗族的メシヤ</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="section-card">
-                <h2>摂理と世界</h2>
-                <ul class="links-list">
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/mimunetosekai/index.html">御旨と世界</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/mimuneto_umi/index.html">御旨と海</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/nippon/index.html">神様の摂理と日本</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/nanbokutouitu/index.html">神様の摂理から見た南北統一</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/nanboku_heiwa/index.html">南北統一と世界平和</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/heiwa_miti/index.html">南北統一と世界平和への道</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/sekaiheiwa/index.html">真の家庭と世界平和</a></li>
-                </ul>
-            </div>
-
-            <div class="section-card">
-                <h2>教育と思想</h2>
-                <ul class="links-list">
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/kyouiku_tetugaku/index.html">文鮮明先生の教育哲学</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/heiwasisou/index.html">文鮮明先生の平和思想</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/touitusisou/index.html">統一思想要綱（頭翼思想）</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/utyu/index.html">宇宙主管を願う前に自己主管を完成せよ</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/sikkutati/index.html">統一教会と食口たち</a></li>
-                </ul>
-            </div>
-
-            <div class="section-card">
-                <h2>御言集</h2>
-                <ul class="links-list">
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/kunkyou/index.html">訓教経 上</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/kunkyou2/index.html">訓教経 下</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/sensyuu55/index.html">文鮮明先生御言選集 55</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/msge/index.html">文鮮明師講演文集</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/malsum/index.html">マルスム</a></li>
-                </ul>
-            </div>
-
-            <div class="section-card">
-                <h2>修練会</h2>
-                <ul class="links-list">
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/houkansyuu_jyosei/index.html">十六万女性修練会</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/houkansyuu_dansei/index.html">男性訪韓修練会御言集</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="section-card">
-                <h2>天一国と入籍</h2>
-                <ul class="links-list">
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/sokokukoufuku_nyuuseki/index.html">祖国光復と入籍</a>
-                    </li>
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/kamisamaoukensokuisiki/index.html">神様王権即位式</a>
-                    </li>
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/syukuga_sennpu/index.html">真の御父母様天宙勝利祝賀宣布</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/ouza/index.html">天宙の王座</a></li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/honkyou/index.html">本郷：真の愛による交差祝福と国境撤廃</a>
-                    </li>
-                    <li><a href="https://maydra.github.io/mimune-no-uraniwa/tensoukan/index.html">天総官　文興進様</a></li>
-                </ul>
-            </div>
-
-            <div class="section-card featured-section" id="pwa-card">
-                <h2>📱 アプリのように使う・オフラインで読む</h2>
-                <p style="margin-bottom: 1.2rem; font-size: 1.15rem;">
+</details>
+<details class="section-card">
+<summary><h2>天聖経収録16冊</h2></summary>
+<ul class="links-list">
+<li><a href="makotono_kami/index.html">真の神様</a></li>
+<li><a href="makotonofubo/index.html">真の父母</a></li>
+<li><a href="makotono_ai/index.html">真の愛</a></li>
+<li><a href="makotonokatei/index.html">真の家庭</a></li>
+<li><a href="tijyouseikatu_reikai/index.html">地上生活と霊界</a></li>
+<li><a href="reikon/index.html">人間の生と霊魂の世界</a></li>
+<li><a href="reisetutogisiki/index.html">礼節と儀式</a></li>
+<li><a href="tumito_tougennfukki/index.html">罪と蕩減復帰</a></li>
+<li><a href="syukufuku_katei/index.html">祝福家庭</a></li>
+<li><a href="seiyakujinno_miti/index.html">成約人への道</a></li>
+<li><a href="utyuuno_konnpon/index.html">宇宙の根本</a></li>
+<li><a href="kann_taiheiyou/index.html">環太平洋摂理</a></li>
+<li><a href="sokoku_koufuku/index.html">真の神様の祖国光復</a></li>
+<li><a href="kounoseikatu/index.html">真の孝の生活</a></li>
+<li><a href="tenitikoku/index.html">天一国主人の生活</a></li>
+<li><a href="makotonokatei-kateimeisei/index.html">真の家庭と家庭盟誓</a></li>
+</ul>
+</details>
+<details class="section-card">
+<summary><h2>天聖經（増補版）</h2></summary>
+<ul class="links-list">
+<li><a href="tenseikyou01/index.html">神様</a></li>
+<li><a href="tenseikyou02/index.html">真の父母</a></li>
+<li><a href="tenseikyou03/index.html">真の愛</a></li>
+<li><a href="tenseikyou04/index.html">真の人間</a></li>
+<li><a href="tenseikyou05/index.html">真の家庭</a></li>
+<li><a href="tenseikyou06/index.html">真の万物</a></li>
+<li><a href="tenseikyou07/index.html">地上生活と霊界</a></li>
+<li><a href="tenseikyou08/index.html">信仰生活と修練</a></li>
+<li><a href="tenseikyou09/index.html">家庭教会と氏族的メシヤ</a></li>
+<li><a href="tenseikyou10/index.html">平和思想</a></li>
+<li><a href="tenseikyou11/index.html">礼式と名節</a></li>
+<li><a href="tenseikyou12/index.html">天一国</a></li>
+<li><a href="tenseikyou13/index.html">平和メッセージ</a></li>
+<li><a href="tenseikyou14/index.html">真の父母様の祈祷</a></li>
+</ul>
+</details>
+<details class="section-card">
+<summary><h2 class="long-title">御父母様の生涯路程</h2></summary>
+<ul class="links-list">
+<li><a href="syougairotei_1/index.html">真の御父母様の生涯路程　１</a></li>
+<li><a href="syougairotei_2/index.html">真の御父母様の生涯路程　２</a></li>
+<li><a href="syougairotei_3/index.html">真の御父母様の生涯路程　３</a></li>
+<li><a href="syougairotei_4/index.html">真の御父母様の生涯路程　４</a></li>
+<li><a href="syougairotei_5/index.html">真の御父母様の生涯路程　５</a></li>
+<li><a href="syougairotei_6/index.html">真の御父母様の生涯路程　６</a></li>
+<li><a href="syougairotei_7/index.html">真の御父母様の生涯路程　７</a></li>
+<li><a href="syougairotei_8/index.html">真の御父母様の生涯路程　８</a></li>
+<li><a href="syougairotei_9/index.html">真の御父母様の生涯路程　９</a></li>
+<li><a href="syougairotei_10/index.html">真の御父母様の生涯路程　１０</a></li>
+<li><a href="syougairotei_11/index.html">真の御父母様の生涯路程　１１</a></li>
+</ul>
+</details>
+<details class="section-card">
+<summary><h2>信仰と生活</h2></summary>
+<ul class="links-list">
+<li><a href="tf_inori/index.html">父の祈り</a></li>
+<li><a href="kitou/index.html">天一国時代の祈祷</a></li>
+<li><a href="makotonarusijyonomiti/index.html">真なる子女の道</a></li>
+<li><a href="niseinomiti/index.html">二世の道</a></li>
+<li><a href="sijyosidou/index.html">み旨にかなった子女指導</a></li>
+<li><a href="seinenno_kibou/index.html">青年の希望</a></li>
+<li><a href="hitonosyougai/index.html">人の生涯</a></li>
+<li><a href="kansha_suru_faith/index.html">感謝する信仰</a></li>
+</ul>
+</details>
+<details class="section-card">
+<summary><h2>伝道と牧会</h2></summary>
+<ul class="links-list">
+<li><a href="bokkaisyanomiti/index.html">牧会者の道</a></li>
+<li><a href="dendou_hand/index.html">伝道ハンドブック</a></li>
+<li><a href="syuku_&_risoutengoku/index.html">み旨の道／祝福家庭と理想天国Ⅰ</a></li>
+<li><a href="syukufukuto_nyuuseki/index.html">祝福と入籍</a></li>
+<li><a href="souzokutekimesiya/index.html">宗族的メシヤ</a></li>
+</ul>
+</details>
+<details class="section-card">
+<summary><h2>摂理と世界</h2></summary>
+<ul class="links-list">
+<li><a href="mimunetosekai/index.html">御旨と世界</a></li>
+<li><a href="mimuneto_umi/index.html">御旨と海</a></li>
+<li><a href="nippon/index.html">神様の摂理と日本</a></li>
+<li><a href="nanbokutouitu/index.html">神様の摂理から見た南北統一</a></li>
+<li><a href="nanboku_heiwa/index.html">南北統一と世界平和</a></li>
+<li><a href="heiwa_miti/index.html">南北統一と世界平和への道</a></li>
+<li><a href="sekaiheiwa/index.html">真の家庭と世界平和</a></li>
+</ul>
+</details>
+<details class="section-card">
+<summary><h2>教育と思想</h2></summary>
+<ul class="links-list">
+<li><a href="kyouiku_tetugaku/index.html">文鮮明先生の教育哲学</a></li>
+<li><a href="heiwasisou/index.html">文鮮明先生の平和思想</a></li>
+<li><a href="touitusisou/index.html">統一思想要綱（頭翼思想）</a></li>
+<li><a href="utyu/index.html">宇宙主管を願う前に自己主管を完成せよ</a></li>
+<li><a href="sikkutati/index.html">統一教会と食口たち</a></li>
+</ul>
+</details>
+<details class="section-card">
+<summary><h2>御言集</h2></summary>
+<ul class="links-list">
+<li><a href="kunkyou/index.html">訓教経 上</a></li>
+<li><a href="kunkyou2/index.html">訓教経 下</a></li>
+<li><a href="sensyuu55/index.html">文鮮明先生御言選集 55</a></li>
+<li><a href="msge/index.html">文鮮明師講演文集</a></li>
+<li><a href="malsum/index.html">マルスム</a></li>
+</ul>
+</details>
+<details class="section-card">
+<summary><h2>修練会</h2></summary>
+<ul class="links-list">
+<li><a href="houkansyuu_jyosei/index.html">十六万女性修練会</a></li>
+<li><a href="houkansyuu_dansei/index.html">男性訪韓修練会御言集</a></li>
+</ul>
+</details>
+<details class="section-card">
+<summary><h2>天一国と入籍</h2></summary>
+<ul class="links-list">
+<li><a href="sokokukoufuku_nyuuseki/index.html">祖国光復と入籍</a></li>
+<li><a href="kamisamaoukensokuisiki/index.html">神様王権即位式</a></li>
+<li><a href="syukuga_sennpu/index.html">真の御父母様天宙勝利祝賀宣布</a></li>
+<li><a href="ouza/index.html">天宙の王座</a></li>
+<li><a href="honkyou/index.html">本郷：真の愛による交差祝福と国境撤廃</a></li>
+<li><a href="tensoukan/index.html">天総官　文興進様</a></li>
+</ul>
+</details>
+<details class="section-card featured-section" id="pwa-card" open>
+<summary><h2>📱 アプリのように使う・オフラインで読む</h2></summary>
+<p style="margin-bottom: 1.2rem; font-size: 1.15rem;">
                     このサイトはホーム画面に追加して、アプリのように開けます。
                     さらに、スマホ・タブレットでは各書籍の目次に「<b>📥 この本をオフライン保存</b>」ボタンが出ます。
-                    押しておくと、飛行機の中など電波のない場所でもその本を読めます。</p>
-                <div class="search-links" style="justify-content: flex-start; margin-top: 0;">
-                    <button id="install-btn" class="search-btn" hidden
-                        style="cursor: pointer; border-width: 1px; font-family: inherit;">📲 ホーム画面に追加する</button>
-                </div>
-                <p id="install-hint" style="font-size: 1.05rem; opacity: 0.85; margin-top: 0.6rem;"></p>
-            </div>
-
-            <div class="section-card">
-                <h2 class="long-title">韓日英三か国語対訳（試験中）</h2>
-                <ul class="links-list">
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/taiyaku/syuku_risoutengoku/index.html">祝福家庭と理想天国</a>
-                    </li>
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/taiyaku/genri_kouron/index.html">原理講論</a>
-                    </li>
-                    <li><a
-                            href="https://maydra.github.io/mimune-no-uraniwa/taiyaku/seisho/index.html">聖書</a>
-                    </li>
-                </ul>
-            </div>
+                    押しておくと、飛行機の中など電波のない場所でもその本を読めます。</p><div class="search-links" style="justify-content: flex-start; margin-top: 0;">
+<button class="search-btn" hidden="" id="install-btn" style="cursor: pointer; border-width: 1px; font-family: inherit;">📲 ホーム画面に追加する</button>
+</div><p id="install-hint" style="font-size: 1.05rem; opacity: 0.85; margin-top: 0.6rem;"></p>
+</details>
+<details class="section-card">
+<summary><h2 class="long-title">韓日英三か国語対訳（試験中）</h2></summary>
+<ul class="links-list">
+<li><a href="taiyaku/syuku_risoutengoku/index.html">祝福家庭と理想天国</a></li>
+<li><a href="taiyaku/genri_kouron/index.html">原理講論</a></li>
+<li><a href="taiyaku/seisho/index.html">聖書</a></li>
+</ul>
+</details>
         </div>
     </div>
+
     <script>
         const params = new URLSearchParams(window.location.search);
         if (params.get("randomScroll") === "true") {
@@ -615,7 +226,13 @@
         }
     </script>
 
-    <script src="theme/script.js?v=202609192031"></script>
+    <script src="theme/script.js?v=202610241207"></script>
+    <script>
+        // パソコンでは本の一覧を全部開いたまま。スマホでは主要文献だけ開き、ほかは題を押して開く
+        if (matchMedia('(min-width: 769px)').matches) {
+            document.querySelectorAll('details.section-card').forEach(function (d) { d.open = true; });
+        }
+    </script>
     <script>
         // 「いま○人が利用しています」。Cloudflare の Worker（_tools/online-count）が
         // Google アナリティクスの直近5分の人数を返す。取れないとき（通信なし・Worker の不調）は出さない。
