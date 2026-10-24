@@ -171,9 +171,47 @@
     // CSS だけで 61KB、本文の漢字に応じてフォント片が十数個降りてきて、どのページでも
     // いちばん大きい通信だった。iPhone/Mac はヒラギノ、Windows は BIZ UDP明朝・游明朝が
     // 入っているので、CSS の font-family でそれらを使う（_tools/root/lighten_pages.py）。
-    // Android だけは明朝が入っていないので、ここで今までどおり Web フォントを読む。
+    // Android は機種によって明朝が無いので、無いときだけここで今までどおり Web フォントを読む。
+    // 多くの Android（9 以降の Pixel など）は Noto Serif CJK を持っていて、font-family の
+    // 最後の serif でそれが出る。あるかどうかは、serif と sans-serif で「永」を描き比べて決める
+    // （同じ絵ならゴシックで代用されている＝明朝が無い）。読み出しに雑音を混ぜるブラウザ
+    // （指紋対策）では同じ字を2回描いても絵が揃わないので、そのときは分からないとみなして読む。
+    // 結果は端末に覚えて（font.mincho）、ページを移るたびには描き比べない。
+    function hasMincho() {
+        var KEY = 'font.mincho';
+        try {
+            var known = localStorage.getItem(KEY);
+            if (known === '1' || known === '0') return known === '1';
+        } catch (e) { }
+        var yes = drawMincho();
+        try { localStorage.setItem(KEY, yes ? '1' : '0'); } catch (e) { }
+        return yes;
+    }
+
+    function drawMincho() {
+        try {
+            var c = document.createElement('canvas');
+            c.width = c.height = 48;
+            var g = c.getContext('2d', { willReadFrequently: true });
+            if (!g) return false;
+            // 基準線は alphabetic（top だと字の縦位置が最初の欧文フォントの寸法で変わり、
+            // 同じ和文フォントで代用されていても絵がずれて「違う」と出てしまう）
+            var shot = function (family) {
+                g.clearRect(0, 0, 48, 48);
+                g.font = '40px ' + family;
+                g.textBaseline = 'alphabetic';
+                g.fillText('永', 4, 40);
+                return Array.prototype.join.call(g.getImageData(0, 0, 48, 48).data, '');
+            };
+            var serif = shot('serif');
+            return serif === shot('serif') && serif !== shot('sans-serif');
+        } catch (e) {
+            return false;
+        }
+    }
+
     try {
-        if (/Android/i.test(navigator.userAgent) && !document.querySelector('link[href*="fonts.googleapis.com/css2"]')) {
+        if (/Android/i.test(navigator.userAgent) && !document.querySelector('link[href*="fonts.googleapis.com/css2"]') && !hasMincho()) {
             var pre = document.createElement('link');
             pre.rel = 'preconnect';
             pre.href = 'https://fonts.gstatic.com';
