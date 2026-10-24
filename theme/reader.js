@@ -270,6 +270,11 @@
             'border-radius:999px;padding:.35em .9em;cursor:pointer}',
             '#reader-resume .x{background:none;padding:.2em .5em;opacity:.7}',
             '#reader-drawer .tools a.pin{flex:1 1 100%;font-weight:700;background:rgba(99,102,241,.18)}',
+            '#reader-drawer .font{flex:1 1 100%;display:flex;align-items:center;gap:.3rem;font-size:.8rem;opacity:.9}',
+            '#reader-drawer .font span{flex:0 0 auto;opacity:.7;margin-right:.2rem}',
+            '#reader-drawer .font button{flex:1 1 auto;font:inherit;padding:.4em .2em;border:1px solid rgba(127,127,127,.3);',
+            'border-radius:8px;background:none;color:inherit;cursor:pointer}',
+            '#reader-drawer .font button[aria-pressed="true"]{background:rgba(99,102,241,.18);border-color:rgba(99,102,241,.5);font-weight:700}',
             '#reader-drawer .marks{margin:0 0 1rem}',
             '#reader-drawer .marks:empty{display:none}',
             '#reader-drawer .mark{display:flex;align-items:flex-start;gap:.3em;border-radius:7px}',
@@ -391,6 +396,7 @@
         pin.textContent = '🔖 ここにしおり';
         pin.addEventListener('click', function (e) { e.preventDefault(); closeDrawer(); addMark(); });
         tools.appendChild(pin);
+        tools.appendChild(fontControl());
         var src = tocHref();
         var toc = document.createElement('a');
         toc.href = src;
@@ -543,6 +549,46 @@
         return s.replace(/[&<>"]/g, function (c) {
             return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c];
         });
+    }
+
+    // ---- 文字の大きさ（2026-10-24） ----------------------------------------
+    // html の font-size を % で変える（ページの字は rem で決めてあるので全部が追いかける）。
+    // 覚えは localStorage の reader.font。各ページの <body> 直後の theme-boot が、
+    // 描く前に同じ値を当てるので、開いたときに大きさが変わって跳ねることはない。
+    var FONT = 'reader.font';
+    var FONT_SIZES = [['小', '87.5%'], ['標準', ''], ['大', '112.5%'], ['特大', '130%']];
+    function fontControl() {
+        var box = document.createElement('div');
+        box.className = 'font';
+        box.setAttribute('role', 'group');
+        box.setAttribute('aria-label', '文字の大きさ');
+        var label = document.createElement('span');
+        label.textContent = '文字';
+        box.appendChild(label);
+        var saved = '';
+        try { saved = localStorage.getItem(FONT) || ''; } catch (e) { }
+        FONT_SIZES.forEach(function (it) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.textContent = it[0];
+            b.dataset.size = it[1];
+            b.setAttribute('aria-pressed', saved === it[1] ? 'true' : 'false');
+            b.addEventListener('click', function () {
+                try {
+                    if (it[1]) localStorage.setItem(FONT, it[1]);
+                    else localStorage.removeItem(FONT);
+                } catch (e) { }
+                document.documentElement.style.fontSize = it[1];
+                Array.prototype.forEach.call(box.querySelectorAll('button'), function (o) {
+                    o.setAttribute('aria-pressed', o === b ? 'true' : 'false');
+                });
+                // 字が変わると折り返しが変わるので、resize と同じやり方で同じ所へ戻す
+                collect();
+                scrollToPos(cur, TOP + curDy);
+            });
+            box.appendChild(b);
+        });
+        return box;
     }
 
     // ---- 拡大縮小・画面の作り直しでも同じ所に戻す --------------------------
