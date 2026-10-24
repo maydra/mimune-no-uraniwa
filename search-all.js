@@ -539,4 +539,12 @@
         input.addEventListener('focus', kick, { once: true });
         input.addEventListener('input', kick, { once: true });
     }
+
+    // ホームの検索欄から ?q=… で来たときは、入れて、そのまま探す（2026-10-24）。
+    // 打ってから来たのだから、全文を読み始めてよい
+    const initialQuery = (params.get('q') || '').trim();
+    if (initialQuery) {
+        input.value = initialQuery;
+        runSearch();
+    }
 })();
