@@ -20,8 +20,10 @@
 (function () {
     'use strict';
 
-    // 読み物ではないページ。目次・検索・ランダムには要らない
-    var SKIP = /(?:^|\/)(index|mokuji|random|gacha|search-all|404|offline|test_output|google[0-9a-f]+)\.html$/i;
+    // 読み物ではないページ。目次・検索・ランダムには要らない。
+    // GitHub Pages は …/index のように .html を省いても同じページを返すので、省いた形も同じに扱う
+    // （省いた形だとホームが読み物とみなされ、「続きから読む」が出ていなかった。2026-10-24）
+    var SKIP = /(?:^|\/)(index|mokuji|random|gacha|search-all|404|offline|test_output|google[0-9a-f]+)(?:\.html)?$/i;
     // 本文ではない所（ここの文字は数に入れない）
     var NOT_BODY = 'script,style,nav,rt,rp,.page-nav,.typo-box,#reader-ui,#stacked-header-container,.toc,.hits';
     var TOP = 96;              // 「画面の上」とみなす高さ
@@ -865,8 +867,8 @@
 
     function entrance() {
         var here = location.pathname;
-        var isTop = here === ROOT || here === ROOT + 'index.html';
-        var isToc = /(?:^|\/)(index|mokuji)\.html$/i.test(here) || /\/$/.test(here);
+        var isTop = here === ROOT || here === ROOT + 'index.html' || here === ROOT + 'index';
+        var isToc = /(?:^|\/)(index|mokuji)(?:\.html)?$/i.test(here) || /\/$/.test(here);
         if (!isTop && !isToc) return;
         var list = readRecent().filter(function (x) { return x && x.p && x.d; });
         var marks = readMarks();
