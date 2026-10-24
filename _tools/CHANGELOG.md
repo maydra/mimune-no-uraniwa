@@ -3,6 +3,24 @@
 サイトの仕組み・見た目を変えたときの記録。本文の誤植直しなどは書かない。
 新しいものを上に足す。細かい経緯は各 commit のメッセージにある。
 
+## 2026-10-24 ホームの PageSpeed（モバイル）: LCP 3.9秒・CLS 0.048 を直す
+
+きっかけ: ユーザーから PageSpeed Insights のモバイルの結果（https://maydra.github.io/mimune-no-uraniwa/index 、パフォーマンス 87・LCP 3.9秒・CLS 0.048・ユーザー補助 98）と「このデータをもとに修正して」。
+
+- **LCP が遅いわけ。** 題（h1）は実際には 0.3秒で描けていたが、PageSpeed は「描いた時刻までに読み終わった通信」を全部待った扱いで細い回線を計算する。その時刻までに gtag（178KB）と、Android の UA で読む Google Fonts の CSS（60KB）が読み終わっていたので 3.9秒になっていた
+- **gtag の本体は、最初の描画（FCP）が画面に出てから読む**（ホームだけ）。`afterPaint()`（index.html の頭）が load のあと PerformanceObserver で FCP を待つ。requestAnimationFrame では足りなかった（ヘッドレスの Chrome では、描いた絵が画面に出る前に回って、gtag がまた先に読み終わった）。dataLayer への積み込みは今までどおり頭でするので、数え方は変わらない
+- **Android でも、端末に明朝があれば Web フォントを読まない**（theme/script.js、全ページ）。多くの Android（9 以降）は Noto Serif CJK を持っていて、font-family の最後の `serif` で出る。canvas に serif と sans-serif で「永」を描き比べ、違えば明朝あり。基準線は alphabetic にする（top だと最初の欧文フォントの寸法で縦位置が変わり、同じ和文で代用されていても「違う」と出た。Arial と Verdana で確かめた）。読み出しに雑音を混ぜるブラウザ（同じ字を2回描いて揃わない）は分からないとみなして今までどおり読む。結果は localStorage の `font.mincho` に覚える
+- **「いま○人」の行は場所を最初から取っておく**（`.online-now:not(.on)` を visibility:hidden）。前は `hidden` で消しておき、人数が届いたときに出していたので、下の一覧が1行ぶん押し下げられていた（CLS 0.048 はこれ）。人数を聞きに行くのも afterPaint のあと。取れなかったときは空いた1行のまま
+- ホームの script.js に `defer`（ページの末尾でも、defer が無いと「描画を止める」に数えられる）。本の一覧を `<main>` で包んだ（ユーザー補助の「メインのランドマークが無い」）
+- **reader.js: `…/index` のように .html を省いた URL を、index.html と同じに扱う。** GitHub Pages は省いても同じページを返すが、reader.js は `.html` で終わるかで目次・トップを見分けていたので、`/mimune-no-uraniwa/index` では「続きから読む」が出ず、ホームを読み物として字を数えていた。script.js の R を 8 に
+- ローカルに GitHub Pages と同じ配り方（拡張子なし → .html、gzip）のサーバを立て、Lighthouse 12（モバイル）で前後を3〜4回ずつ測った。前: パフォーマンス 84〜86・LCP 3.8〜3.9秒・CLS 0.048。後: 93〜98・LCP 1.7秒・CLS 0。TBT はこの PC だと Windows の和文フォントの読み込みで 150〜290ms に揺れる（PageSpeed の実機では前から 90ms）。ヘッドレス Chrome（幅 390px の Android UA・1280px、明るい／暗い、`/`・`/index`・`/index.html`）で、ずれ 0・横はみ出し 0・配色ボタン・カードの開閉・「いま○人」・Worker を止めたとき・「続きから読む」を確かめた
+
+残したもの:
+- 「描画を止めるリクエスト」に home.css と style.css（合わせて 9KB）が残る。HTML に埋め込めば消えるが、style.css を二重に持つことになる。LCP はもう 2.5秒を十分下回るので見送った
+- 「キャッシュの有効期間」（10分）は GitHub Pages が決めていて変えられない。「CSS・JS の最小化」は合わせて 8KB で、手で直すファイルを読めなくする割に得が小さい
+- gtag の「使っていない JavaScript」73KB はタグ自体の中身。読む時刻を遅らせたので表示には響かない。本文のページは今までどおり頭で async に読んでいる
+- しおりの履歴がある人がホームを開くと、「続きから読む」が後から差し込まれて一覧が下がる（ローカルで CLS 0.11）。前からある動き。PageSpeed は履歴の無い状態で測るので数字には出ない
+
 ## 2026-10-24 軽くする: Web フォントをやめる・配色のちらつき・marquee・ホームの作り直し
 
 きっかけ: ユーザーから「UI や軽さをもっと改善したい」。実測で、ページ自体は軽く（本文1ページ 30KB）、重いのは Google Fonts（CSS だけで 61KB＋フォント片）・トップの固定グラデーション・旧サイトの `<marquee>` だった。提案を全部やることになった。

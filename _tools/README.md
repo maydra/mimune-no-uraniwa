@@ -34,7 +34,8 @@ HTML を書き換えるスクリプトを回したあとは `python _tools/root/
 - 同じとき、`backdrop-filter`（ぼかし）と、開いたときの `fadeInDown` / `fadeInUp` も落とす。
   iPhone SE でスクロールが重くなる原因だった
 - フォントは端末の明朝（2026-10-24 から。`_tools/root/lighten_pages.py` の FONT_STACK）。Google Fonts の `<link>` は
-  ページに書かない（Android だけ theme/script.js が読む）。古い `_tools/upgrade_*.py` などの雛形にはまだ Noto Serif JP の
+  ページに書かない（Android で端末に明朝が無いときだけ theme/script.js が読む。あるかどうかは canvas で描き比べて
+  localStorage の `font.mincho` に覚える）。古い `_tools/upgrade_*.py` などの雛形にはまだ Noto Serif JP の
   `<link>` が残っているので、回したら `python _tools/root/lighten_pages.py webfont theme-boot` も回す
 - 共有ファイルを足したら `python _tools/root/build_offline_manifest.py` も回す（オフライン保存が一緒に持っていく）
 - `theme/` の CSS・JS は、Service Worker がネットワーク優先で取る。直せば次に開いたときに届く
@@ -47,4 +48,5 @@ Google アナリティクス（プロパティ 520812725）の直近5分の人�
 - アナリティクスを読むのは Google Cloud のプロジェクト mimune-online のサービスアカウント `online-count@mimune-online.iam.gserviceaccount.com`。プロパティには「閲覧者」で入っている
 - その鍵は Cloudflare の secret `GA_KEY` にだけある。リポジトリには置かない。作り直したら `npx wrangler secret put GA_KEY < 鍵.json`
 - Worker を直したら `_tools/online-count` で `npx wrangler deploy`（Cloudflare のアカウント dreamerhigh2015 にログインが要る: `npx wrangler login`）
-- アナリティクスに聞くのは Worker 1つあたり1分に1回まで。取れないときは 503 を返し、ホームは行ごと出さない
+- アナリティクスに聞くのは Worker 1つあたり1分に1回まで。取れないときは 503 を返し、ホームは行を見せない（場所は空けたまま。2026-10-24 から、後から出して一覧を押し下げないように）
+- ホームが Worker に聞きに行くのは、最初の描画が画面に出てから（index.html の `afterPaint()`。gtag の本体も同じ）
