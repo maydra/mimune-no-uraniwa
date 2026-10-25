@@ -31,9 +31,11 @@ body.light-mode::before {
 
 /* 暗い配色の地。`fixed` と、その上に重ねていた放射グラデーション（body::before）は
    2026-10-24 にやめた。fixed の背景はスクロールのたびに描き直しになり、古い Android で
-   カクつく定番。グラデーション自体はページ全体に1回だけ描くので残す */
+   カクつく定番。グラデーション自体はページ全体に1回だけ描くので残す。
+   末尾の #211c4a は地の「色」。グラデーションは絵なので、色が無いと iOS 26 の Safari は
+   上下のバーのぼかしを白で塗る（2026-10-25、ユーザーのスクショで上下が白くかすんでいた） */
 body.dark-mode {
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) #211c4a !important;
     color: #e0e0e0 !important;
 }
 

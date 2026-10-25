@@ -3,6 +3,15 @@
 サイトの仕組み・見た目を変えたときの記録。本文の誤植直しなどは書かない。
 新しいものを上に足す。細かい経緯は各 commit のメッセージにある。
 
+## 2026-10-25 iPhone の Safari で、夜の配色の上下が白くかすむ
+
+きっかけ: ユーザーから原理講論を夜の配色で読んでいる iPhone のスクショと「スマホだとこういう白フェードが上下に来るのはどうしようもないの？」。
+
+- iOS 26 の Safari は、上のステータスバーと下のツールバーの下にぼかしを敷き、その色をページの地の色（html か body の background-color）から取る。`theme-color` の meta は見ないと報告されている
+- 暗い配色の body は `background: linear-gradient(…)` だけで、色が空（transparent）だった。Safari はそれを白とみなして、上下を白で塗っていた
+- theme/style.css の `body.dark-mode` の背景に、地の色 `#211c4a`（グラデーションの真ん中あたり）を足した。見た目のグラデーションは変わらない。ヘッドレス Chrome で、暗い配色の body の background-color が rgb(33, 28, 74) になることを確かめた。実機の Safari ではまだ確かめていない
+- まだ下だけ白いときは、右下に浮いている配色ボタン（半透明の白）を Safari が拾っている疑いがある
+
 ## 2026-10-24 ホームの PageSpeed（モバイル）: LCP 3.9秒・CLS 0.048 を直す
 
 きっかけ: ユーザーから PageSpeed Insights のモバイルの結果（https://maydra.github.io/mimune-no-uraniwa/index 、パフォーマンス 87・LCP 3.9秒・CLS 0.048・ユーザー補助 98）と「このデータをもとに修正して」。
