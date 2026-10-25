@@ -24,13 +24,17 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "root"))
 from hangul_kana import to_kana, to_roman  # noqa: E402
+from lighten_pages import BOOT as THEME_BOOT  # noqa: E402  <body> の直後で配色を決める（ほかのページと同じ）
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 SONGS = HERE / "songs"
 OUT = ROOT / "seika"
-VERSION = "202610240300"
+# ページが読む CSS・JS の ?v=。_tools/root/cache_bust.py が全ページで揃えた値に合わせる
+# （ずれていると、作り直すたびに古い版番号へ戻る。2026-10-25）
+VERSION = "202610241207"
 SITE = "https://maydra.github.io/mimune-no-uraniwa/seika/"
 
 WORD = re.compile(r"([^\s{]+)(?:\{([^}]*)\})?")
@@ -50,6 +54,9 @@ def read_tsv(path):
 SONG_INDEX = read_tsv(HERE / "songs_index.tsv")                     # ハングルの聖歌集の目次
 VIDEOS = {r["no"]: r for r in read_tsv(HERE / "videos.tsv")}         # match_videos.py が作る
 JA_OFFICIAL = json.loads((HERE / "ja_official.json").read_text(encoding="utf-8"))  # parse_ja_official.py が作る
+# 静岡家庭教会のページに無い曲（第二部1・10〜17）は、動画の画面の歌詞を手で書き起こした
+JA_FROM_VIDEOS = {k: v for k, v in json.loads((HERE / "ja_from_videos.json").read_text(encoding="utf-8")).items()
+                  if not k.startswith("_")}
 
 
 def ja_label(ja_no):
@@ -77,8 +84,9 @@ def ja_order(ja_no):
 
 def load_ja_rows():
     """日本の聖歌の番号 → 題、→ 動画。公式の歌詞（第一部1〜70・第二部2〜9）と、
-    再生リスト（第二部1・10〜17 もある）の両方から集める"""
-    rows, vids = {}, {}
+    再生リスト（第二部1・10〜17 もある）の両方から集める。
+    再生リストの題が公式の題と違う曲（山に育む／山に育くむ など）は、一覧の検索で引けるよう別名に持つ"""
+    rows, vids, aliases = {}, {}, {}
     for key in JA_OFFICIAL:
         k = re.sub(r"\([AB]\)$", "", key)
         rows.setdefault(k, official_title(k))
@@ -86,12 +94,15 @@ def load_ja_rows():
         for r in csv.reader(f, delimiter="\t"):
             m = re.match(r"聖歌((?:2部)?\d+)番：(.+?)(?:（([AB])）)?(?:\s*※広告なし)?$", r[2])
             if m:
-                rows.setdefault(m.group(1), m.group(2).strip())
+                t = m.group(2).strip()
+                rows.setdefault(m.group(1), t)
+                if t != rows[m.group(1)]:
+                    aliases.setdefault(m.group(1), []).append(t)
                 vids.setdefault(m.group(1), []).append(r[1] + (f"({m.group(3)})" if m.group(3) else ""))
-    return rows, vids
+    return rows, vids, aliases
 
 
-JA_ROWS, JA_VIDS = load_ja_rows()
+JA_ROWS, JA_VIDS, JA_ALIASES = load_ja_rows()
 # ハングル版の無い日本の聖歌（41〜70番の讃美歌など）。日本語の歌詞と動画だけのページを作る
 JA_OFFICIAL_ONLY = [k for k in sorted(JA_ROWS, key=ja_order)
                     if k not in {v["ja_no"] for v in VIDEOS.values() if v.get("ja_no")}]
@@ -282,11 +293,11 @@ HEAD = """<!DOCTYPE html>
   <meta name="description" content="{desc}" />
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{desc}" />
-  <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.png" />
-  <link rel="icon" href="/mimune-no-uraniwa/favicon.png?v=202609192031" type="image/png" />
+  <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.jpg" />
+  <link rel="icon" href="/mimune-no-uraniwa/favicon.png?v={version}" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../theme/style.css?v=202609192031">
-  <link rel="stylesheet" href="../theme/pages/e631ced897.css?v=202610110220">
+  <link rel="stylesheet" href="../theme/style.css?v={version}">
+  <link rel="stylesheet" href="../theme/pages/e631ced897.css?v={version}">
   <link rel="stylesheet" href="seika.css?v={version}">
 </head>
 """
@@ -463,6 +474,7 @@ def render(song):
     desc = f"{plain(title_ko)}（{title_ja}）のハングルの歌詞。カタカナ・ローマ字の読みと日本語の歌詞つき。"
 
     return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION) + f"""<body>
+{THEME_BOOT}
   <div class="container">
     <article class="song lyrics read-kana view-ko" id="song">
       <header class="song-head">
@@ -553,7 +565,7 @@ def render(song):
       }});
     }})();
   </script>
-  <script src="../theme/script.js?v=202609192031"></script>
+  <script src="../theme/script.js?v={VERSION}"></script>
 </body>
 </html>
 """
@@ -615,6 +627,7 @@ def render_intro(song):
     page_title = f"성가{no}「{plain(title_ko)}」（{title_ja}） | み旨の裏庭"
     desc = f"韓国の歌「{plain(title_ko)}」の紹介と主な語句。"
     return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION) + f"""<body>
+{THEME_BOOT}
   <div class="container">
     <article class="song read-kana" id="song">
       <header class="song-head">
@@ -700,7 +713,7 @@ def render_intro(song):
       }});
     }})();
   </script>
-  <script src="../theme/script.js?v=202609192031"></script>
+  <script src="../theme/script.js?v={VERSION}"></script>
 </body>
 </html>
 """
@@ -710,7 +723,7 @@ def render_intro(song):
 
 def render_ja_only(ja_no):
     title = JA_ROWS[ja_no]
-    off = official_for(ja_no)
+    off = official_for(ja_no) or JA_FROM_VIDEOS.get(ja_no)
     if ja_no in JA_HOLD:
         lyrics = '\n      <p class="none">歌詞は、権利を確かめるまで載せていません。下の動画に日本語の歌詞が出ます。</p>\n'
         source = ""
@@ -721,8 +734,12 @@ def render_ja_only(ja_no):
             for k, vs in enumerate(off["verses"], 1))
         part = "第二部" if ja_no.startswith("2部") else "第一部"
         lyrics = f'\n      <section class="official ja-only">\n        {credit}\n{body}\n      </section>\n'
-        source = (f'歌詞: 静岡家庭教会「<a href="{off["source"]}" target="_blank" rel="noopener">'
-                  f'日本統一教会　聖歌　{part}</a>」（閉鎖、Internet Archive の保存から）。')
+        if ja_no in JA_FROM_VIDEOS:
+            source = (f'歌詞: <a href="{off["source"]}" target="_blank" rel="noopener">YouTube の動画</a>（{JA_OWNER[0]}）の'
+                      '画面に出る歌詞を、このサイトで書き起こしました。')
+        else:
+            source = (f'歌詞: 静岡家庭教会「<a href="{off["source"]}" target="_blank" rel="noopener">'
+                      f'日本統一教会　聖歌　{part}</a>」（閉鎖、Internet Archive の保存から）。')
     else:
         lyrics = '\n      <p class="none">歌詞はまだありません。下の動画に日本語の歌詞が出ます。</p>\n'
         source = ""
@@ -732,6 +749,7 @@ def render_ja_only(ja_no):
     page_title = f"日本の聖歌{ja_label(ja_no)}「{title}」 | み旨の裏庭"
     desc = f"日本の聖歌{ja_label(ja_no)}「{title}」の歌詞と動画。"
     return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION) + f"""<body>
+{THEME_BOOT}
   <div class="container">
     <article class="song" id="song">
       <header class="song-head">
@@ -765,7 +783,7 @@ def render_ja_only(ja_no):
       }});
     }})();
   </script>
-  <script src="../theme/script.js?v=202609192031"></script>
+  <script src="../theme/script.js?v={VERSION}"></script>
 </body>
 </html>
 """
@@ -782,6 +800,7 @@ def build_yomi():
     page = HEAD.format(title="読みを付ける | 聖歌 | み旨の裏庭",
                        desc="ハングルの歌詞を貼ると、カタカナ・ローマ字の読みと、日本語・英語の意味が出ます。",
                        version=VERSION) + """<body>
+""" + THEME_BOOT + """
   <div class="container">
     <article class="song read-kana yomi" id="song">
       <header class="song-head">
@@ -963,7 +982,7 @@ def build_yomi():
       });
     })();
   </script>
-  <script src="../theme/script.js?v=202609192031"></script>
+  <script src="../theme/script.js?v=""" + VERSION + """"></script>
 </body>
 </html>
 """
@@ -1008,7 +1027,8 @@ def build_index():
                 f'<span class="t"><span class="tt"><b>{html.escape(title_ja)}</b>{tag}</span><small>{" · ".join(sub)}</small></span>')
         link = f'<a class="go" href="{page}">{body}</a>' if page else f'<div class="go off">{body}</div>'
         share_url = SITE + (page or f"#{anchor}")
-        search = " ".join(filter(None, [ja_no, str(ko_no or ""), title_ja, ko_title.get(str(ko_no), "") if ko_no else ""]))
+        search = " ".join(filter(None, [ja_no, str(ko_no or ""), title_ja, ko_title.get(str(ko_no), "") if ko_no else ""]
+                                 + JA_ALIASES.get(ja_no, [])))
         id_attr = f' id="{anchor}"' if with_id else ""  # 同じ曲が2つの並びに出るので、id は片方だけ
         return (f'        <li{id_attr} data-ja="{html.escape(ja_no)}" data-ko="{ko_no or ""}" data-search="{html.escape(search)}">'
                 f'{link}<button type="button" class="share" data-url="{share_url}" data-title="{html.escape(title_ja)}" aria-label="{html.escape(title_ja)}を共有">🔗</button></li>')
@@ -1025,6 +1045,7 @@ def build_index():
     page = HEAD.format(title="聖歌の一覧 | み旨の裏庭",
                        desc="日本の聖歌とハングルの聖歌（성가）の一覧。番号で探して、そのまま共有できます。",
                        version=VERSION) + f"""<body>
+{THEME_BOOT}
   <div class="container">
     <article class="song seika-index" id="idx" data-view="ja">
       <header class="song-head">
@@ -1131,7 +1152,7 @@ def build_index():
       }}
     }})();
   </script>
-  <script src="../theme/script.js?v=202609192031"></script>
+  <script src="../theme/script.js?v={VERSION}"></script>
 </body>
 </html>
 """
