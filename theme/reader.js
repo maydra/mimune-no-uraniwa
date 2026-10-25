@@ -765,7 +765,10 @@
         return d < 31 ? d + '日前' : new Date(t).toLocaleDateString('ja-JP');
     }
 
-    function card(it, label) {
+    // 札は <a> で、左上の × はその外に置く（<a> の中のボタンは押すとリンクも開くため）
+    function card(it, label, onDismiss) {
+        var wrap = document.createElement('div');
+        wrap.className = 'reader-card';
         var a = document.createElement('a');
         a.className = 'reader-continue';
         a.href = it.p + '#resume';
@@ -774,7 +777,24 @@
             + '<em>' + esc(it.n) + (it.s ? ' ／ ' + esc(it.s) : '') + '</em>'
             + '<span class="meta">' + it.pct + '%まで・' + ago(it.t) + '</span>'
             + '<i class="bar" style="width:' + it.pct + '%"></i>';
-        return a;
+        wrap.appendChild(a);
+        var x = document.createElement('button');
+        x.type = 'button';
+        x.className = 'reader-dismiss';
+        x.title = '一覧から消す';
+        x.setAttribute('aria-label', '「' + (it.b || it.n) + '」を一覧から消す');
+        x.innerHTML = '<svg viewBox="0 0 10 10" width="10" height="10" aria-hidden="true">'
+            + '<path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+        x.addEventListener('click', function () { onDismiss(it); });
+        wrap.appendChild(x);
+        return wrap;
+    }
+
+    // 「続きから読む」から本を外す。しおりは消さない
+    function forgetRecent(d) {
+        try {
+            localStorage.setItem(RECENT, JSON.stringify(readRecent().filter(function (x) { return x && x.d !== d; })));
+        } catch (e) { }
     }
 
     function entranceCss() {
@@ -797,7 +817,16 @@
             '.reader-continue .meta{display:block;font-size:.74rem;opacity:.55;margin-top:.15em}',
             '.reader-continue .bar{position:absolute;left:0;bottom:0;height:3px;background:linear-gradient(90deg,#6366f1,#ec4899)}',
             '.reader-recent.in-book{margin-left:0}',
-            '.reader-recent .reader-continue+.reader-continue{font-size:.9rem;padding:.6em 1.1em .8em}',
+            '.reader-recent .reader-card+.reader-card .reader-continue{font-size:.9rem;padding:.6em 1.1em .8em}',
+            // 左上の ×。札の角に半分かぶせて、札の字は動かさない。押せる範囲は ::after で広げる
+            '.reader-card{position:relative}',
+            '.reader-dismiss{position:absolute;top:-.5rem;left:-.5rem;z-index:1;width:1.5rem;height:1.5rem;padding:0;',
+            'display:flex;align-items:center;justify-content:center;border-radius:50%;cursor:pointer;',
+            'background:#fff;color:#666 !important;border:1px solid rgba(0,0,0,.14);box-shadow:0 2px 6px rgba(0,0,0,.22)}',
+            '.reader-dismiss::after{content:"";position:absolute;inset:-.5rem}',
+            '.reader-dismiss:hover{color:#111 !important;background:#f2f2f7}',
+            'body.dark-mode .reader-dismiss{background:#2b2a45;color:#c9c9d9 !important;border-color:rgba(255,255,255,.22)}',
+            'body.dark-mode .reader-dismiss:hover{color:#fff !important;background:#3a3960}',
             'body.dark-mode .reader-continue{background:rgba(26,26,46,.92);color:#e6e6f0 !important;',
             'border:1px solid rgba(255,255,255,.14)}',
             'body.dark-mode .reader-continue .k{color:#a5b4fc !important}',
@@ -881,10 +910,27 @@
 
         var box = document.createElement('div');
         box.className = 'reader-recent';
-        list.slice(0, isTop ? 3 : 1).forEach(function (it, i) {
-            box.appendChild(card(it, i === 0 ? '続きから読む' : ''));
-        });
         if (marks.length) box.appendChild(markList(marks, isTop));
+        // × で消したら並べ直す。トップでは4冊目以降が繰り上がる（次に開いたときと同じ並び）
+        var drawCards = function (focusAt) {
+            Array.prototype.forEach.call(box.querySelectorAll('.reader-card'), function (c) { c.remove(); });
+            var first = box.firstChild;
+            list.slice(0, isTop ? 3 : 1).forEach(function (it, i) {
+                box.insertBefore(card(it, i === 0 ? '続きから読む' : '', function (gone) {
+                    forgetRecent(gone.d);
+                    list = list.filter(function (x) { return x.d !== gone.d; });
+                    drawCards(i);
+                    if (!list.length) {
+                        var mark = document.querySelector('li.reader-here');
+                        if (mark) mark.classList.remove('reader-here');
+                    }
+                    if (!box.firstChild) box.remove();
+                }), first);
+            });
+            var xs = box.querySelectorAll('.reader-dismiss');
+            if (focusAt >= 0 && xs.length) xs[Math.min(focusAt, xs.length - 1)].focus();
+        };
+        drawCards(-1);
 
         if (isTop) {
             var head = document.querySelector('.container > header') || document.querySelector('header');
