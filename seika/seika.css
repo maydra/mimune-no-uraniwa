@@ -30,9 +30,11 @@ body.light-mode .song {
     box-sizing: border-box;
 }
 
+/* 字は端末の明朝（ほかのページと同じ。_tools/root/lighten_pages.py の FONT_STACK）。
+   Android で明朝が無い機種だけ、theme/script.js が Noto Serif JP を読む */
 body {
-    font-family: 'Noto Serif JP', serif;
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) fixed;
+    font-family: "Hiragino Mincho ProN", "BIZ UDPMincho", "Yu Mincho", YuMincho, "Noto Serif CJK JP", "Noto Serif JP", serif;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
     min-height: 100vh;
     color: #e0e0e0;
     padding: 3rem 1rem;
@@ -51,8 +53,12 @@ body {
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
 }
 
+/* ハングルは端末の明朝（Mac の AppleMyungjo、Windows の Batang）を先に使い、無ければ
+   Noto Serif KR。Noto Serif KR は、ページに出てくるハングルの字だけを切り出したものを
+   描画を止めずに読む（build_seika.py の ko_font_link）。2026-10-25 までは日本語・韓国語の
+   Web フォントを丸ごと読んでいて、1ページで 1〜2MB・数十回の通信だった */
 [lang="ko"] {
-    font-family: 'Noto Serif KR', 'Noto Serif JP', serif;
+    font-family: AppleMyungjo, Batang, "Noto Serif KR", "Hiragino Mincho ProN", "BIZ UDPMincho", "Yu Mincho", YuMincho, "Noto Serif CJK KR", serif;
 }
 
 /* 見出し */
@@ -126,7 +132,7 @@ body {
 
 /* ルビ */
 .song rt {
-    font-family: 'Noto Serif JP', serif;
+    font-family: "Hiragino Mincho ProN", "BIZ UDPMincho", "Yu Mincho", YuMincho, "Noto Serif CJK JP", "Noto Serif JP", serif;
     font-size: 0.6em;
     color: var(--kana) !important;
     font-weight: 400;
@@ -150,7 +156,7 @@ body {
 }
 
 .song .rr {
-    font-family: 'Noto Serif JP', Georgia, serif;
+    font-family: "Hiragino Mincho ProN", "BIZ UDPMincho", "Yu Mincho", YuMincho, Georgia, "Noto Serif CJK JP", "Noto Serif JP", serif;
     letter-spacing: 0.02em;
 }
 
@@ -869,7 +875,7 @@ body.light-mode .song details.howto {
 .yomi textarea {
     display: block;
     width: 100%;
-    font-family: 'Noto Serif KR', 'Noto Serif JP', serif;
+    font-family: AppleMyungjo, Batang, "Noto Serif KR", "Hiragino Mincho ProN", "BIZ UDPMincho", "Yu Mincho", YuMincho, "Noto Serif CJK KR", serif;
     font-size: 1.05rem;
     line-height: 1.7;
     padding: 0.8rem 1rem;

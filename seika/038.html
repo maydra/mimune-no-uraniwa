@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+  <!-- Google tag (gtag.js)。本体（約180KB）は表示し終えてから読む（ホームの index.html と同じ。2026-10-25） -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-XXQ0QTBYTR');
+    // 表示し終えてから（load のあと、最初の描画 FCP が画面に出てから）fn を動かす。
+    // 下の韓国語の Web フォントも使う。描画の時刻が取れないブラウザ・裏のタブでは load の1秒あと
+    function afterPaint(fn) {
+      var done = false;
+      var run = function () { if (!done) { done = true; setTimeout(fn, 0); } };
+      var onLoad = function () {
+        try {
+          if (performance.getEntriesByName('first-contentful-paint').length) return run();
+          new PerformanceObserver(function (list) {
+            if (list.getEntriesByName('first-contentful-paint').length) run();
+          }).observe({ type: 'paint', buffered: true });
+        } catch (e) { }
+        setTimeout(run, 1000);
+      };
+      if (document.readyState === 'complete') onLoad();
+      else window.addEventListener('load', onLoad);
+    }
+    afterPaint(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR';
+      document.head.appendChild(s);
+    });
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,10 +40,11 @@
   <meta property="og:description" content="찾아진 양떼（捜し出された羊）のハングルの歌詞。カタカナ・ローマ字の読みと日本語の歌詞つき。" />
   <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.jpg" />
   <link rel="icon" href="/mimune-no-uraniwa/favicon.png?v=202610241207" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <script>afterPaint(function () { var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap&text=%EA%B0%80%EA%B0%99%EA%B2%8C%EA%B2%A0%EA%B5%AC%EA%B5%AD%EA%B7%B8%EA%B8%B0%EA%B8%B8%EB%82%98%EB%82%B4%EB%83%90%EB%84%A4%EB%86%93%EB%89%98%EB%8A%94%EB%8B%88%EB%8B%98%EB%8B%A4%EB%8B%A8%EB%8D%98%EB%8F%84%EB%93%9C%EB%93%A4%EB%96%BC%EB%9D%BC%EB%9D%BD%EB%A0%A4%EB%A0%B8%EB%A1%9C%EB%A5%B4%EB%A5%B8%EB%A5%BC%EB%A6%AC%EB%A6%B0%EB%A6%BD%EB%A7%8C%EB%A9%B0%EB%A9%B4%EB%AA%A8%EB%AC%B8%EB%B0%94%EB%B0%9B%EB%B3%B4%EB%B3%B5%EB%B4%85%EB%B6%80%EB%B9%84%EB%B9%9B%EC%82%AC%EC%82%B0%EC%83%81%EC%84%9C%EC%84%A0%EC%84%B1%EC%8B%9C%EC%8B%A0%EC%95%84%EC%95%BC%EC%96%91%EC%96%B4%EC%97%AC%EC%97%B4%EC%98%88%EC%98%A4%EC%99%80%EC%9A%B0%EC%9A%B4%EC%9C%84%EC%9C%BC%EC%9D%84%EC%9D%98%EC%9D%B4%EC%9D%B8%EC%9E%A5%EC%A0%80%EC%A3%BC%EC%A4%84%EC%A7%80%EC%A7%84%EC%A7%91%EC%B0%BE%EC%B2%9C%EC%B9%9C%EC%B9%A0%ED%81%AC%ED%83%88%ED%91%9C%ED%91%B8%ED%95%98%ED%95%9C%ED%95%A0%ED%95%A8%ED%97%88%ED%97%98%ED%98%B8'; document.head.appendChild(l); });</script>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&amp;display=swap&amp;text=%EA%B0%80%EA%B0%99%EA%B2%8C%EA%B2%A0%EA%B5%AC%EA%B5%AD%EA%B7%B8%EA%B8%B0%EA%B8%B8%EB%82%98%EB%82%B4%EB%83%90%EB%84%A4%EB%86%93%EB%89%98%EB%8A%94%EB%8B%88%EB%8B%98%EB%8B%A4%EB%8B%A8%EB%8D%98%EB%8F%84%EB%93%9C%EB%93%A4%EB%96%BC%EB%9D%BC%EB%9D%BD%EB%A0%A4%EB%A0%B8%EB%A1%9C%EB%A5%B4%EB%A5%B8%EB%A5%BC%EB%A6%AC%EB%A6%B0%EB%A6%BD%EB%A7%8C%EB%A9%B0%EB%A9%B4%EB%AA%A8%EB%AC%B8%EB%B0%94%EB%B0%9B%EB%B3%B4%EB%B3%B5%EB%B4%85%EB%B6%80%EB%B9%84%EB%B9%9B%EC%82%AC%EC%82%B0%EC%83%81%EC%84%9C%EC%84%A0%EC%84%B1%EC%8B%9C%EC%8B%A0%EC%95%84%EC%95%BC%EC%96%91%EC%96%B4%EC%97%AC%EC%97%B4%EC%98%88%EC%98%A4%EC%99%80%EC%9A%B0%EC%9A%B4%EC%9C%84%EC%9C%BC%EC%9D%84%EC%9D%98%EC%9D%B4%EC%9D%B8%EC%9E%A5%EC%A0%80%EC%A3%BC%EC%A4%84%EC%A7%80%EC%A7%84%EC%A7%91%EC%B0%BE%EC%B2%9C%EC%B9%9C%EC%B9%A0%ED%81%AC%ED%83%88%ED%91%9C%ED%91%B8%ED%95%98%ED%95%9C%ED%95%A0%ED%95%A8%ED%97%88%ED%97%98%ED%98%B8" /></noscript>
   <link rel="stylesheet" href="../theme/style.css?v=202610241207">
   <link rel="stylesheet" href="../theme/pages/e631ced897.css?v=202610241207">
-  <link rel="stylesheet" href="seika.css?v=202610241207">
+  <link rel="stylesheet" href="seika.css?v=202610251500">
 </head>
 <body>
 <script id="theme-boot">(function(){try{var c=document.body.classList,t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';c.remove('light-mode','dark-mode');c.add(t+'-mode');var f=localStorage.getItem('reader.font');if(f)document.documentElement.style.fontSize=f}catch(e){}})()</script>
@@ -354,6 +377,6 @@
       });
     })();
   </script>
-  <script src="../theme/script.js?v=202610241207"></script>
+  <script src="../theme/script.js?v=202610241207" defer></script>
 </body>
 </html>

@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+  <!-- Google tag (gtag.js)。本体（約180KB）は表示し終えてから読む（ホームの index.html と同じ。2026-10-25） -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-XXQ0QTBYTR');
+    // 表示し終えてから（load のあと、最初の描画 FCP が画面に出てから）fn を動かす。
+    // 下の韓国語の Web フォントも使う。描画の時刻が取れないブラウザ・裏のタブでは load の1秒あと
+    function afterPaint(fn) {
+      var done = false;
+      var run = function () { if (!done) { done = true; setTimeout(fn, 0); } };
+      var onLoad = function () {
+        try {
+          if (performance.getEntriesByName('first-contentful-paint').length) return run();
+          new PerformanceObserver(function (list) {
+            if (list.getEntriesByName('first-contentful-paint').length) run();
+          }).observe({ type: 'paint', buffered: true });
+        } catch (e) { }
+        setTimeout(run, 1000);
+      };
+      if (document.readyState === 'complete') onLoad();
+      else window.addEventListener('load', onLoad);
+    }
+    afterPaint(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR';
+      document.head.appendChild(s);
+    });
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,10 +40,11 @@
   <meta property="og:description" content="성화청년회가（東の勇士）のハングルの歌詞。カタカナ・ローマ字の読みと日本語の歌詞つき。" />
   <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.jpg" />
   <link rel="icon" href="/mimune-no-uraniwa/favicon.png?v=202610241207" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <script>afterPaint(function () { var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap&text=%EA%B0%80%EA%B0%90%EA%B0%99%EA%B1%B7%EA%B2%83%EA%B2%8C%EA%B2%A8%EA%B3%84%EA%B3%A0%EA%B4%91%EA%BF%88%EB%82%98%EB%82%A0%EB%82%B4%EB%84%A4%EB%85%84%EB%88%84%EB%8A%94%EB%8B%8C%EB%8B%98%EB%8B%A4%EB%8F%99%EB%91%90%EB%93%A0%EB%93%A4%EB%94%B8%EB%9C%BB%EB%9D%BC%EB%A0%A4%EB%A0%A5%EB%A0%B9%EB%A4%84%EB%A5%98%EB%A6%AC%EB%A7%8C%EB%A9%B4%EB%AA%85%EB%AA%A8%EB%B0%94%EB%B0%9B%EB%B0%9C%EB%B0%9D%EB%B0%A9%EB%B2%84%EB%B6%80%EB%B9%9B%EC%82%AC%EC%82%B0%EC%82%B4%EC%83%81%EC%83%88%EC%84%B1%EC%84%B8%EC%86%8C%EC%88%98%EC%8B%A0%EC%95%84%EC%95%9E%EC%96%B4%EC%97%90%EC%98%A4%EC%98%A8%EC%9A%A9%EC%9A%B8%EC%9B%80%EC%9C%A1%EC%9D%80%EC%9D%84%EC%9D%98%EC%9D%B4%EC%9D%B8%EC%9D%BC%EC%9E%90%EC%A0%8A%EC%A2%85%EC%A7%80%EC%A7%9D%EC%B0%B8%EC%B2%9C%EC%B2%AD%EC%B3%90%EC%B9%98%EC%B9%A8%ED%83%84%ED%8D%BC%ED%8E%B4%ED%95%98%ED%95%9C%ED%95%B4%ED%98%B8%ED%99%94%ED%99%9C%ED%9A%8C%ED%9E%88'; document.head.appendChild(l); });</script>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&amp;display=swap&amp;text=%EA%B0%80%EA%B0%90%EA%B0%99%EA%B1%B7%EA%B2%83%EA%B2%8C%EA%B2%A8%EA%B3%84%EA%B3%A0%EA%B4%91%EA%BF%88%EB%82%98%EB%82%A0%EB%82%B4%EB%84%A4%EB%85%84%EB%88%84%EB%8A%94%EB%8B%8C%EB%8B%98%EB%8B%A4%EB%8F%99%EB%91%90%EB%93%A0%EB%93%A4%EB%94%B8%EB%9C%BB%EB%9D%BC%EB%A0%A4%EB%A0%A5%EB%A0%B9%EB%A4%84%EB%A5%98%EB%A6%AC%EB%A7%8C%EB%A9%B4%EB%AA%85%EB%AA%A8%EB%B0%94%EB%B0%9B%EB%B0%9C%EB%B0%9D%EB%B0%A9%EB%B2%84%EB%B6%80%EB%B9%9B%EC%82%AC%EC%82%B0%EC%82%B4%EC%83%81%EC%83%88%EC%84%B1%EC%84%B8%EC%86%8C%EC%88%98%EC%8B%A0%EC%95%84%EC%95%9E%EC%96%B4%EC%97%90%EC%98%A4%EC%98%A8%EC%9A%A9%EC%9A%B8%EC%9B%80%EC%9C%A1%EC%9D%80%EC%9D%84%EC%9D%98%EC%9D%B4%EC%9D%B8%EC%9D%BC%EC%9E%90%EC%A0%8A%EC%A2%85%EC%A7%80%EC%A7%9D%EC%B0%B8%EC%B2%9C%EC%B2%AD%EC%B3%90%EC%B9%98%EC%B9%A8%ED%83%84%ED%8D%BC%ED%8E%B4%ED%95%98%ED%95%9C%ED%95%B4%ED%98%B8%ED%99%94%ED%99%9C%ED%9A%8C%ED%9E%88" /></noscript>
   <link rel="stylesheet" href="../theme/style.css?v=202610241207">
   <link rel="stylesheet" href="../theme/pages/e631ced897.css?v=202610241207">
-  <link rel="stylesheet" href="seika.css?v=202610241207">
+  <link rel="stylesheet" href="seika.css?v=202610251500">
 </head>
 <body>
 <script id="theme-boot">(function(){try{var c=document.body.classList,t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';c.remove('light-mode','dark-mode');c.add(t+'-mode');var f=localStorage.getItem('reader.font');if(f)document.documentElement.style.fontSize=f}catch(e){}})()</script>
@@ -293,6 +316,6 @@
       });
     })();
   </script>
-  <script src="../theme/script.js?v=202610241207"></script>
+  <script src="../theme/script.js?v=202610241207" defer></script>
 </body>
 </html>

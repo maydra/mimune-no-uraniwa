@@ -3,6 +3,21 @@
 サイトの仕組み・見た目を変えたときの記録。本文の誤植直しなどは書かない。
 新しいものを上に足す。細かい経緯は各 commit のメッセージにある。
 
+## 2026-10-25 聖歌のページを軽くする（Web フォント・gtag）
+
+きっかけ: 聖歌のページを作るプログラムの雛形が 10-24 の軽量化より古かったと伝えたら、ユーザーから「最適化して作り直してね」。
+
+- 10-24 の軽量化で、聖歌（seika/）だけ Google Fonts を残していた（韓国語に Noto Serif KR が要るため）。測ると、**フォントだけで1ページ 1〜2MB・35〜63回の通信**で、描画を止める読み込みだった。Lighthouse（モバイル）は 56〜61、FCP 6〜11秒
+- **日本語は端末の明朝**（ほかのページと同じ字の並び。Android で明朝が無い機種は theme/script.js が Noto Serif JP を読む）
+- **韓国語は端末の明朝（Mac の AppleMyungjo、Windows の Batang）を先に使い、無ければ Noto Serif KR**。Noto Serif KR は、そのページの `lang="ko"` の所に出てくるハングルの字だけを切り出したもの（Google Fonts の `text=`）を、最初の描画のあとに読む（`build_seika.py` の `ko_font_link`）。1ページ 30〜50KB・2回。韓国語の部分の無いページ（日本の聖歌だけの曲）は読まない
+- media="print" で描画を止めないだけの読み方だと、速い回線では描画より先に読み終わり、PageSpeed がそれも待った扱いにして FCP が 1.1 → 2.3秒になった。それで描画のあとに回した
+- 読みを付ける道具（yomi.html）は Web フォントを読まない。貼られる歌詞の字は前もって分からず、丸ごと読むと 500KB、切り出すと一部の字だけ書体が変わる
+- gtag の本体は、ホームと同じく最初の描画のあとに読む（HEAD の `afterPaint`）。theme/script.js に `defer`
+- theme/script.js: Android の明朝の読み込みは、ページに `fonts.googleapis.com/css2` の `<link>` があれば読まない作りだった。聖歌は韓国語の `<link>` を持つので、日本語（`family=Noto+Serif+JP`）の `<link>` だけを見るようにした
+- 版番号を2つに分けた。`THEME_V` は theme/ の CSS・JS（cache_bust.py の値）、`VERSION` は seika.css・hangul-yomi.js。sw.js は theme/ の外の CSS・JS を手元のキャッシュ優先で出すので、seika.css を直したら `VERSION` を上げる
+- seika.css の body の背景から `fixed` を外した（style.css の暗い配色が上書きしていたので、見た目は変わらない）
+- 手元の Lighthouse 12（モバイル、GitHub Pages と同じ配り方のサーバ）で、前 → 後: 001.html 56 → 96〜100（FCP 11.2 → 0.9秒、LCP 12.0 → 1.6秒、通信 66回 1.9MB → 18回 0.3MB）、一覧 61 → 90〜100、第2部12番 57 → 100、yomi 80 → 88〜98。TBT はこの PC の和文フォントで揺れる。Puppeteer（幅 390px、暗い・明るい）で、ハングルが Noto Serif KR で出ること・配色ボタン・gtag・横はみ出し 0 を確かめた
+
 ## 2026-10-25 聖歌: 第2部の9曲に歌詞・一覧の検索で YouTube の題でも引ける
 
 きっかけ: ユーザーから再生リスト（太陽と月）のリンクと「『山に育む』とかが聖歌に無かったけど追加できないかな。ネットで歌詞を探すか、動画内スクショで歌詞を探すしかないか。ほかにサイトにない聖歌も同じように」。

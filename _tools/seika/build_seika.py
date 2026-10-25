@@ -21,6 +21,7 @@ import html
 import json
 import re
 import sys
+import urllib.parse
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -32,9 +33,12 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 SONGS = HERE / "songs"
 OUT = ROOT / "seika"
-# ページが読む CSS・JS の ?v=。_tools/root/cache_bust.py が全ページで揃えた値に合わせる
+# theme/ の CSS・JS と favicon の ?v=。_tools/root/cache_bust.py が全ページで揃えた値に合わせる
 # （ずれていると、作り直すたびに古い版番号へ戻る。2026-10-25）
-VERSION = "202610241207"
+THEME_V = "202610241207"
+# seika.css・hangul-yomi.js の ?v=。sw.js は theme/ の外の CSS・JS を手元のキャッシュ優先で出すので、
+# これらを直したら上げる（上げないと、前に開いた人には古いものが出続ける）
+VERSION = "202610251500"
 SITE = "https://maydra.github.io/mimune-no-uraniwa/seika/"
 
 WORD = re.compile(r"([^\s{]+)(?:\{([^}]*)\})?")
@@ -278,14 +282,36 @@ def videos_block(v):
 HEAD = """<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+  <!-- Google tag (gtag.js)。本体（約180KB）は表示し終えてから読む（ホームの index.html と同じ。2026-10-25） -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){{dataLayer.push(arguments);}}
     gtag('js', new Date());
 
     gtag('config', 'G-XXQ0QTBYTR');
+    // 表示し終えてから（load のあと、最初の描画 FCP が画面に出てから）fn を動かす。
+    // 下の韓国語の Web フォントも使う。描画の時刻が取れないブラウザ・裏のタブでは load の1秒あと
+    function afterPaint(fn) {{
+      var done = false;
+      var run = function () {{ if (!done) {{ done = true; setTimeout(fn, 0); }} }};
+      var onLoad = function () {{
+        try {{
+          if (performance.getEntriesByName('first-contentful-paint').length) return run();
+          new PerformanceObserver(function (list) {{
+            if (list.getEntriesByName('first-contentful-paint').length) run();
+          }}).observe({{ type: 'paint', buffered: true }});
+        }} catch (e) {{ }}
+        setTimeout(run, 1000);
+      }};
+      if (document.readyState === 'complete') onLoad();
+      else window.addEventListener('load', onLoad);
+    }}
+    afterPaint(function () {{
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR';
+      document.head.appendChild(s);
+    }});
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -294,13 +320,39 @@ HEAD = """<!DOCTYPE html>
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{desc}" />
   <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.jpg" />
-  <link rel="icon" href="/mimune-no-uraniwa/favicon.png?v={version}" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../theme/style.css?v={version}">
-  <link rel="stylesheet" href="../theme/pages/e631ced897.css?v={version}">
+  <link rel="icon" href="/mimune-no-uraniwa/favicon.png?v={theme_v}" type="image/png" />
+  <!--ko-font-->
+  <link rel="stylesheet" href="../theme/style.css?v={theme_v}">
+  <link rel="stylesheet" href="../theme/pages/e631ced897.css?v={theme_v}">
   <link rel="stylesheet" href="seika.css?v={version}">
 </head>
 """
+
+KO_FONT_MARK = "<!--ko-font-->"
+HANGUL_CHAR = re.compile(r"[가-힣ㄱ-ㅎㅏ-ㅣ]")
+
+
+def ko_font_link(page, web_font=True):
+    """HEAD の <!--ko-font--> を、韓国語の Web フォント（Noto Serif KR）を読む <link> にする。
+    日本語は端末の明朝なので読まない（seika.css）。韓国語も端末に明朝があればそちらが先。
+    - ページに出てくるハングルの字だけを切り出して読む（Google Fonts の text=）。丸ごと読むと
+      字の範囲ごとの片が数十個降りてきて、1ページで 1〜2MB あった（2026-10-25）
+    - 最初の描画のあとに読む（HEAD の afterPaint）。それまでは端末のハングルで出て、読めたら替わる。
+      media="print" の <link> で描画を止めないだけだと、速い回線では描画より先に読み終わり、
+      PageSpeed がそれも待った扱いで計算して FCP が 1.1 → 2.3秒になった
+    - 読みを付ける道具は読まない（web_font=False）。貼られる歌詞の字は前もって分からず、丸ごと
+      読むと 500KB、切り出すと貼った字の一部だけ書体が変わる。端末のハングルで出す"""
+    chars = sorted(set(HANGUL_CHAR.findall(page)))
+    # 書体が Noto Serif KR になるのは lang="ko" の所だけ。日本語の文の中の「성가」などは端末の字
+    if not chars or not web_font or 'lang="ko"' not in page:
+        return page.replace("  " + KO_FONT_MARK + "\n", "")
+    # <script> の中では &amp; が戻らないので、JS には生の URL（英数と % と & だけ）、<noscript> には escape したもの
+    url = ("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap"
+           "&text=" + urllib.parse.quote("".join(chars)))
+    link = ("<script>afterPaint(function () { var l = document.createElement('link'); l.rel = 'stylesheet'; "
+            f"l.href = '{url}'; document.head.appendChild(l); }});</script>\n"
+            f'  <noscript><link rel="stylesheet" href="{html.escape(url)}" /></noscript>')
+    return page.replace(KO_FONT_MARK, link)
 
 # 試験中（2026-10-23 にホームの主要文献へ「聖歌（試験中）」として出した）。誤りの知らせは、
 # 本のページと同じ「誤植・修正提案」のフォーム（Google Apps Script。ページの URL が自動で付く）
@@ -473,7 +525,7 @@ def render(song):
     page_title = (f"日本の聖歌{ja_label(ja_no)}" if ja_no else f"성가{no}") + f"「{title_ja}」{plain(title_ko)} | み旨の裏庭"
     desc = f"{plain(title_ko)}（{title_ja}）のハングルの歌詞。カタカナ・ローマ字の読みと日本語の歌詞つき。"
 
-    return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION) + f"""<body>
+    return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION, theme_v=THEME_V) + f"""<body>
 {THEME_BOOT}
   <div class="container">
     <article class="song lyrics read-kana view-ko" id="song">
@@ -565,7 +617,7 @@ def render(song):
       }});
     }})();
   </script>
-  <script src="../theme/script.js?v={VERSION}"></script>
+  <script src="../theme/script.js?v={THEME_V}" defer></script>
 </body>
 </html>
 """
@@ -626,7 +678,7 @@ def render_intro(song):
               + "\n".join(cards) + "\n        </div>\n      </section>\n") if cards else ""
     page_title = f"성가{no}「{plain(title_ko)}」（{title_ja}） | み旨の裏庭"
     desc = f"韓国の歌「{plain(title_ko)}」の紹介と主な語句。"
-    return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION) + f"""<body>
+    return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION, theme_v=THEME_V) + f"""<body>
 {THEME_BOOT}
   <div class="container">
     <article class="song read-kana" id="song">
@@ -713,7 +765,7 @@ def render_intro(song):
       }});
     }})();
   </script>
-  <script src="../theme/script.js?v={VERSION}"></script>
+  <script src="../theme/script.js?v={THEME_V}" defer></script>
 </body>
 </html>
 """
@@ -748,7 +800,7 @@ def render_ja_only(ja_no):
               + "\n".join(cards) + "\n        </div>\n      </section>\n") if cards else ""
     page_title = f"日本の聖歌{ja_label(ja_no)}「{title}」 | み旨の裏庭"
     desc = f"日本の聖歌{ja_label(ja_no)}「{title}」の歌詞と動画。"
-    return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION) + f"""<body>
+    return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION, theme_v=THEME_V) + f"""<body>
 {THEME_BOOT}
   <div class="container">
     <article class="song" id="song">
@@ -783,7 +835,7 @@ def render_ja_only(ja_no):
       }});
     }})();
   </script>
-  <script src="../theme/script.js?v={VERSION}"></script>
+  <script src="../theme/script.js?v={THEME_V}" defer></script>
 </body>
 </html>
 """
@@ -799,7 +851,7 @@ def build_yomi():
     翻訳（Translator API）が使えればそれで訳し、使えなければ行ごとに Papago・Google 翻訳を開くボタン"""
     page = HEAD.format(title="読みを付ける | 聖歌 | み旨の裏庭",
                        desc="ハングルの歌詞を貼ると、カタカナ・ローマ字の読みと、日本語・英語の意味が出ます。",
-                       version=VERSION) + """<body>
+                       version=VERSION, theme_v=THEME_V) + """<body>
 """ + THEME_BOOT + """
   <div class="container">
     <article class="song read-kana yomi" id="song">
@@ -982,11 +1034,11 @@ def build_yomi():
       });
     })();
   </script>
-  <script src="../theme/script.js?v=""" + VERSION + """"></script>
+  <script src="../theme/script.js?v=""" + THEME_V + """" defer></script>
 </body>
 </html>
 """
-    (OUT / "yomi.html").write_text(page, encoding="utf-8", newline="\n")
+    (OUT / "yomi.html").write_text(ko_font_link(page, web_font=False), encoding="utf-8", newline="\n")
     print("wrote", (OUT / "yomi.html").relative_to(ROOT))
 
 
@@ -1044,7 +1096,7 @@ def build_index():
 
     page = HEAD.format(title="聖歌の一覧 | み旨の裏庭",
                        desc="日本の聖歌とハングルの聖歌（성가）の一覧。番号で探して、そのまま共有できます。",
-                       version=VERSION) + f"""<body>
+                       version=VERSION, theme_v=THEME_V) + f"""<body>
 {THEME_BOOT}
   <div class="container">
     <article class="song seika-index" id="idx" data-view="ja">
@@ -1152,11 +1204,11 @@ def build_index():
       }}
     }})();
   </script>
-  <script src="../theme/script.js?v={VERSION}"></script>
+  <script src="../theme/script.js?v={THEME_V}" defer></script>
 </body>
 </html>
 """
-    (OUT / "index.html").write_text(page, encoding="utf-8", newline="\n")
+    (OUT / "index.html").write_text(ko_font_link(page), encoding="utf-8", newline="\n")
     print("wrote", (OUT / "index.html").relative_to(ROOT), f"({len(by_ja)} + {len(ko_only)} songs)")
 
 
@@ -1171,11 +1223,11 @@ def main(args):
             song = parse(f)
             page = render(song)
         dest = OUT / f"{int(song['no']):03d}.html"
-        dest.write_text(page, encoding="utf-8", newline="\n")
+        dest.write_text(ko_font_link(page), encoding="utf-8", newline="\n")
         print("wrote", dest.relative_to(ROOT))
     if not args:
         for k in JA_OFFICIAL_ONLY:
-            (OUT / ja_page_name(k)).write_text(render_ja_only(k), encoding="utf-8", newline="\n")
+            (OUT / ja_page_name(k)).write_text(ko_font_link(render_ja_only(k)), encoding="utf-8", newline="\n")
         print("wrote", len(JA_OFFICIAL_ONLY), "pages of Japanese-only songs (seika/ja-*.html)")
     build_yomi()
     build_index()

@@ -210,8 +210,10 @@
         }
     }
 
+    // 見るのは日本語の Web フォントの <link> だけ。聖歌のページは韓国語（Noto Serif KR）の
+    // <link> を持つが、日本語は端末の明朝なので、明朝の無い Android ではここで読む（2026-10-25）
     try {
-        if (/Android/i.test(navigator.userAgent) && !document.querySelector('link[href*="fonts.googleapis.com/css2"]') && !hasMincho()) {
+        if (/Android/i.test(navigator.userAgent) && !document.querySelector('link[href*="family=Noto+Serif+JP"]') && !hasMincho()) {
             var pre = document.createElement('link');
             pre.rel = 'preconnect';
             pre.href = 'https://fonts.gstatic.com';
