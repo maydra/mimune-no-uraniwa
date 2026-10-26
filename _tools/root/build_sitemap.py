@@ -37,6 +37,11 @@ def listable(path):
     return not (REDIRECT.search(head) or NOINDEX.search(head))
 
 
+def ordered(paths):
+    # Windows の pathlib は大文字小文字を無視して並べるので、GitHub（Linux）とそろえて文字列で並べる
+    return sorted(paths, key=lambda p: p.as_posix())
+
+
 def url(path):
     return BASE + quote(path.relative_to(ROOT).as_posix(), safe='/')
 
@@ -54,13 +59,13 @@ maps = []
 total = 0
 
 # 根にあるページ（トップ・ガチャなど）は根の sitemap.xml へ
-top = [url(p) for p in sorted(ROOT.glob('*.html')) if listable(p)]
+top = [url(p) for p in ordered(ROOT.glob('*.html')) if listable(p)]
 write(ROOT / 'sitemap.xml', 'urlset', 'url', top)
 maps.append(BASE + 'sitemap.xml')
 total += len(top)
 
-for d in sorted(p for p in ROOT.iterdir() if p.is_dir() and p.name not in SKIP_DIRS):
-    pages = [url(p) for p in sorted(d.rglob('*.html')) if listable(p)]
+for d in ordered(p for p in ROOT.iterdir() if p.is_dir() and p.name not in SKIP_DIRS):
+    pages = [url(p) for p in ordered(d.rglob('*.html')) if listable(p)]
     if not pages:
         continue
     write(d / 'sitemap.xml', 'urlset', 'url', pages)
