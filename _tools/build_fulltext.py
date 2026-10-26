@@ -239,7 +239,9 @@ def main():
             continue
 
         url = path.relative_to(ROOT).as_posix()
-        docs.append((url, clean(p.title) or url, text))
+        # 検索結果の見出しにサイト名は要らない（「見出し | 書名 | み旨の裏庭」の末尾）
+        title = re.sub(r"\s*[|｜]\s*み旨の裏庭\s*$", "", clean(p.title))
+        docs.append((url, title or url, text))
 
     docs.sort(key=lambda d: d[0])
 
