@@ -1,0 +1,39 @@
+# push のたびにサイトマップを作り直し、変わっていたら commit する。
+# ページを足した人は何もしなくていい（_tools/root/build_sitemap.py を参照）。
+# この commit は GITHUB_TOKEN で push するので、ここから次のワークフローは起きない。
+name: sitemap
+
+on:
+  push:
+    branches: [main]
+    paths: ['**.html', '_tools/root/build_sitemap.py', '.github/workflows/sitemap.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sitemap
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python _tools/root/build_sitemap.py
+      - name: commit if changed
+        run: |
+          git add -A -- sitemap-index.xml sitemap-index.txt sitemap.xml '*/sitemap.xml'
+          if git diff --cached --quiet; then
+            echo 'sitemap unchanged'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'sitemap: regenerate after page changes'
+          git pull --rebase origin main
+          git push origin HEAD:main
