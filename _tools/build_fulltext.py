@@ -41,7 +41,8 @@ OUT_DIR = ROOT / "data" / "fulltext"
 
 SKIP_DIRS = {".git", "pagefind", "node_modules", "__pycache__", "theme",
              "data", "tools", "Bible_out_backup", "out", "download",
-             "seika"}  # 聖歌は み言ではないので検索に入れない（2026-10-24）
+             "seika",  # 聖歌は み言ではないので検索に入れない（2026-10-24）
+             "jisho"}  # 原理用語辞典も同じ。よく出る語ばかりで、み言の結果に毎回混ざる。辞典は自分の検索欄で引く（2026-10-26）
 
 # 読み物ではないページ。検索ページ自身が結果に出ると邪魔になる。
 SKIP_NAMES = {"search-all.html", "gacha.html", "random.html",
