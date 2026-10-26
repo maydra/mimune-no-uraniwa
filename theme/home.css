@@ -62,6 +62,139 @@ h1 a {
     margin-right: 0.4em;
 }
 
+/* 右上の「更新情報」。パソコンでは配色ボタン（#theme-toggle、右上に固定の 44px）の左に並べる。
+   absolute なので、出ても下の一覧は動かない。スマホでは配色ボタンが右下に移るので右上の角へ。
+   幅が狭いと題の「み旨の裏庭」にかぶるので、440px 以下はベルだけにする */
+.updates {
+    position: absolute;
+    top: 20px;
+    right: 76px;
+    z-index: 50;
+    text-align: left;
+}
+
+.updates-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    height: 44px;
+    padding: 0 1em;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.updates-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* 新着の印。いちばん新しい更新が14日以内で、まだ開いていないとき（index.html の JS が .new を付ける） */
+.updates-btn.new::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #f43f5e;
+    box-shadow: 0 0 0 2px #24243e;
+}
+
+.updates-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: min(380px, calc(100vw - 24px));
+    max-height: min(70vh, 520px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0.9rem 1.1rem;
+    background: #2b2754;
+    color: #e6e6f0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color-scheme: dark;  /* スクロールバーも暗く */
+}
+
+.updates-panel[hidden] {
+    display: none;
+}
+
+.updates-title {
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.updates-list {
+    list-style: none;
+}
+
+.updates-list li {
+    padding: 0.55em 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.updates-list li:first-child {
+    border-top: 0;
+}
+
+.updates-list time {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.65;
+}
+
+body.light-mode .updates-btn {
+    background: #f0f0f0;
+    border-color: #ddd;
+}
+
+body.light-mode .updates-btn.new::after {
+    box-shadow: 0 0 0 2px #fff;
+}
+
+body.light-mode .updates-panel {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    color-scheme: light;
+}
+
+body.light-mode .updates-list li {
+    border-top-color: rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    .updates {
+        top: 12px;
+        right: 12px;
+    }
+}
+
+@media (max-width: 440px) {
+    .updates-btn {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        justify-content: center;
+        font-size: 1.05rem;
+    }
+
+    .updates-label {
+        display: none;
+    }
+}
+
 /* 検索欄。押すと search-all.html?q=… へ */
 .home-search {
     display: flex;

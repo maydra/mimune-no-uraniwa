@@ -59,7 +59,7 @@
   "logo": "https://maydra.github.io/mimune-no-uraniwa/favicon.png"
 }
 </script>
-    <link rel="stylesheet" href="theme/home.css?v=202610241314">
+    <link rel="stylesheet" href="theme/home.css?v=202610261900">
     <link rel="stylesheet" href="theme/style.css?v=202610241207">
 </head>
 
@@ -67,6 +67,27 @@
 <script id="theme-boot">(function(){try{var c=document.body.classList,t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';c.remove('light-mode','dark-mode');c.add(t+'-mode');var f=localStorage.getItem('reader.font');if(f)document.documentElement.style.fontSize=f}catch(e){}})()</script>
     <div class="container">
         <header>
+            <!-- 更新情報。新しいものを上に足す（いちばん上の datetime が「新着」の赤い点の基準）。
+                 見に来る人に関わる変更だけ。仕組みの細かい話は _tools/CHANGELOG.md -->
+            <div class="updates" id="updates">
+                <button type="button" class="updates-btn" aria-label="更新情報" aria-expanded="false" aria-controls="updates-panel"><span aria-hidden="true">🔔</span><span class="updates-label">更新情報</span></button>
+                <div class="updates-panel" id="updates-panel" hidden>
+                    <div class="updates-title">更新情報</div>
+                    <ul class="updates-list">
+                        <li><time datetime="2026-10-26">2026.10.26</time><a href="kyouiku_tetugaku/index.html">『文鮮明先生の教育哲学』</a>の誤植を直しました。段落の終わりが欠けていた4か所です。ご報告ありがとうございました</li>
+                        <li><time datetime="2026-10-26">2026.10.26</time><a href="taiyaku/genri_genbon/index.html">「原理原本」の日韓対訳</a>を公開しました。日本語訳は AI による機械翻訳です</li>
+                        <li><time datetime="2026-10-26">2026.10.26</time><a href="jisho/index.html">「原理用語辞典（日・韓・英）」</a>を公開しました</li>
+                        <li><time datetime="2026-10-26">2026.10.26</time>「続きから読む」の札を × で消せるようにしました</li>
+                        <li><time datetime="2026-10-25">2026.10.25</time><a href="seika/index.html">聖歌</a>の第2部に9曲の歌詞を足しました。YouTube の題でも探せます</li>
+                        <li><time datetime="2026-10-24">2026.10.24</time>本文の文字の大きさを4段階で変えられるようにしました</li>
+                        <li><time datetime="2026-10-24">2026.10.24</time>ホームを軽くし、検索欄をいちばん上に置きました</li>
+                        <li><time datetime="2026-10-23">2026.10.23</time><a href="seika/index.html">「聖歌（試験中）」</a>を公開しました。ハングルの読みと日本語の歌詞つきです</li>
+                        <li><time datetime="2026-10-17">2026.10.17</time>『真の御父母様の生涯路程』2・3・8・10巻の誤植を直しました</li>
+                        <li><time datetime="2026-10-11">2026.10.11</time>「続きから読む」と、自分で置ける「しおり」を付けました</li>
+                        <li><time datetime="2026-09-29">2026.09.29</time>どの本も1つのファイルでダウンロードして、通信なしで読めるようにしました</li>
+                    </ul>
+                </div>
+            </div>
             <h1 id="み旨の裏庭---サイト目次"><a href="#み旨の裏庭---サイト目次">み旨の裏庭</a></h1>
             <p class="online-now" id="online-now" title="直近5分にこのサイトを開いていた人の数（Google アナリティクス）">いま、このサイトを <b>–</b> 人が利用しています</p>
             <form class="home-search" action="search-all.html" method="get" role="search">
@@ -263,6 +284,36 @@
         if (matchMedia('(min-width: 769px)').matches) {
             document.querySelectorAll('details.section-card').forEach(function (d) { d.open = true; });
         }
+    </script>
+    <script>
+        // 右上の「更新情報」。押すと一覧が開き、外を押すか Esc で閉じる。
+        // いちばん新しい更新が14日以内で、まだ開いていなければ赤い点を出す。
+        // 開いたらその日付を覚える（localStorage の updates.seen）。覚えられない端末では毎回点が出る
+        (function () {
+            var box = document.getElementById('updates');
+            if (!box) return;
+            var btn = box.querySelector('.updates-btn');
+            var panel = document.getElementById('updates-panel');
+            var first = panel.querySelector('time');
+            var latest = first ? first.getAttribute('datetime') : '';
+            var seen = '';
+            try { seen = localStorage.getItem('updates.seen') || ''; } catch (e) { }
+            if (latest && latest > seen && Date.now() - Date.parse(latest) < 14 * 864e5) btn.classList.add('new');
+            function show(on) {
+                panel.hidden = !on;
+                btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+                if (!on) return;
+                btn.classList.remove('new');
+                try { localStorage.setItem('updates.seen', latest); } catch (e) { }
+            }
+            btn.addEventListener('click', function () { show(panel.hidden); });
+            document.addEventListener('click', function (e) {
+                if (!panel.hidden && !box.contains(e.target)) show(false);
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !panel.hidden) { show(false); btn.focus(); }
+            });
+        })();
     </script>
     <script>
         // 「いま○人が利用しています」。Cloudflare の Worker（_tools/online-count）が
