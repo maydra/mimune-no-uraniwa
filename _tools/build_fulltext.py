@@ -169,6 +169,8 @@ def book_titles():
         top = (ROOT / "index.html").read_text(encoding="utf-8")
     except OSError:
         top = ""
+    # 右上の「更新情報」の一覧は本の名前を『』で囲んで書くので、本の一覧より先に読まない
+    top = re.sub(r'<ul class="updates-list">.*?</ul>', '', top, flags=re.S)
     for slug, title in BOOK_LINK_RE.findall(top):
         slug = html_mod.unescape(slug)
         titles.setdefault(slug, clean(html_mod.unescape(title)))

@@ -251,6 +251,9 @@ def link_names(index):
     """目次のページで、フォルダ → リンクの文字（＝本の名前）"""
     names = {}
     for a in read(index).find_all('a', href=True):
+        # ホーム右上の「更新情報」は本の名前を『』で囲んで書くので、本の一覧より先に読まない
+        if a.find_parent(class_='updates-list'):
+            continue
         t = unquote(urlparse(urljoin(SITE + quote(rel(index)), a['href'])).path)
         name = a.get_text(' ', strip=True)
         if name and t.startswith(urlparse(SITE).path):
