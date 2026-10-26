@@ -27,14 +27,24 @@ SKIP_NAMES = {'random.html', 'offline.html', 'search-all.html', '404.html'}
 
 REDIRECT = re.compile(r'http-equiv=["\']?refresh|location\.replace', re.I)
 NOINDEX = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]*noindex', re.I)
+CANONICAL = re.compile(r'<link[^>]+rel=["\']canonical["\'][^>]*href=["\']([^"\']+)', re.I)
 
 
 def listable(path):
     if path.name in SKIP_NAMES or path.name.startswith('google'):
         return False
-    # 聖書（Bible_out）は Shift_JIS。見たいのは ASCII のタグだけなので読み方は問わない
-    head = path.read_bytes()[:4000].decode('ascii', 'ignore')
-    return not (REDIRECT.search(head) or NOINDEX.search(head))
+    # 見たいのは ASCII のタグだけなので読み方は問わない
+    head = path.read_bytes()[:6000].decode('ascii', 'ignore')
+    if REDIRECT.search(head) or NOINDEX.search(head):
+        return False
+    # 「正はあっち」と canonical で指しているページ（父の祈りの framepage など、古い目次の写し）は載せない
+    # 「jisho/」と「jisho/index.html」は同じページ
+    canon = CANONICAL.search(head)
+    return not canon or same(canon.group(1), url(path))
+
+
+def same(a, b):
+    return re.sub(r'index\.html$', '', a) == re.sub(r'index\.html$', '', b)
 
 
 def ordered(paths):

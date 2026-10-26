@@ -43,7 +43,9 @@ JUNK = [re.compile(r'(?is)<nav\b.*?</nav>'),
         re.compile(r'(?is)<div class="toc"[^>]*>.*?</ul></div>'),       # ページの頭の目次
         re.compile(r'(?is)<div class="book-search">.*?</div>'),          # 書籍内検索・オフライン保存
         re.compile(r'(?is)<section id="typo-report".*?</section>'),      # 誤植の投稿フォーム
-        re.compile(r'(?is)<a\b[^>]*>\s*(?:目次に戻る|前のページに戻る|次のページに進む|（全面表示）|戻る)\s*</a>')]
+        re.compile(r'(?is)<a\b[^>]*>\s*(?:目次に戻る|前のページに戻る|次のページに進む|（全面表示）|戻る|み旨の裏庭トップに戻る)\s*</a>'),
+        re.compile(r'(?is)<button\b.*?</button>'),                       # 目次の「すべて開く」など
+        re.compile(r'(?is)<a\b[^>]*>[^<]*(?:この章の本文を読む|ランダムに探す)[^<]*</a>')]
 NON_ASCII_GAP = re.compile(r'(?<=[^\x00-\x7f]) (?=[^\x00-\x7f])')
 
 
@@ -128,6 +130,7 @@ def description(src, start, names=()):
     t = text(body[start:] if start else body)
     # 「2-13」のようなページ番号だけの頭は落とす
     t = re.sub(r'^\d+-\d+\s*', '', t)
+    t = TOC_NAV.sub('', t)
     # 本文の頭に本の名前がもう一度入っている本が多い（南北統一・真の父母など）。説明文では落とす
     for name in names:
         t = drop_prefix(t, name)
@@ -137,6 +140,21 @@ def description(src, start, names=()):
     # 行の切れ目（<br>）で入った空白は、日本語どうしのあいだでは詰める
     t = NON_ASCII_GAP.sub('', t)
     return t if len(t) <= DESC_LEN else t[:DESC_LEN].rstrip() + '…'
+
+
+# 父の祈りの目次の頭にある巻の切り替え「HOME 1巻 2巻 … 12巻」
+TOC_NAV = re.compile(r'^\s*HOME(?:\s*\d+巻)+\s*')
+
+
+def book_name(title):
+    """目次ページの title から本の名前だけを取り出す（「目次/本郷/…」「…｜目次」「◆…目次◆」など）。"""
+    parts = re.split(r'\s*[|｜/／]\s*', title.strip('◆ '))
+    keep = []
+    for part in parts:
+        part = re.sub(r'(?:総合|全章詳細リンク)?目次|\s*-\s*$', '', part).strip(' -◆・　')
+        if part and part != SITE:
+            keep.append(part)
+    return '　'.join(keep)
 
 
 def main(args):
@@ -155,9 +173,8 @@ def main(args):
         if '--all' not in args and rel.split('/')[0] not in folders:
             continue
         title = titles[p]
-        if '目次' in title:
-            # 目次ページは別の手当てが要る（同じ巻の目次が2枚ある本もある）。今回は触らない
-            continue
+        # 目次ページは title をそのままにして、description だけ「『本の名前』の目次。章立て…」にする
+        toc = '目次' in title or p.name == 'index.html'
         src = old = srcs[p]
         head, end = heading(src, title, common.get(p.relative_to(ROOT).parts[0], frozenset()))
         # 元の title は全角空白などをそのまま残す
@@ -167,7 +184,7 @@ def main(args):
         if weak:
             raw = re.sub(re.escape(p.stem) + r'$', '', raw).rstrip(' _/　')
         # 本の入口（index.html）は本の名前のままでいい。重複の相手のほうに見出しを足す
-        if title and (count[title] > 1 or weak) and p.name != 'index.html':
+        if title and (count[title] > 1 or weak) and not toc:
             if head:
                 new = f'{head} | {raw}' + ('' if SITE in raw else f' | {SITE}')
                 src = TITLE.sub(lambda m: f'<title>{html.escape(new, quote=False)}</title>', src, count=1)
@@ -178,10 +195,13 @@ def main(args):
         if not HAS_DESC.search(src):
             h1 = re.search(r'(?is)<h1[^>]*>(.*?)</h1>', src)
             names = [title, raw] + ([text(h1.group(1))] if h1 else [])
-            d = description(src, end, names)
-            if d and p.name == 'index.html':
-                d = description(src, None, names)
-                d = f'『{title}』の目次。{d}'[:DESC_LEN + 1]
+            if toc:
+                # title が「総合目次」だけの本は h1（「御父母様の生涯路程⑪ 総合目次」）から取る
+                book = book_name(title) or (book_name(names[-1]) if h1 else '')
+                d = description(src, None, names + [book])
+                d = f'『{book}』の目次。{d}'[:DESC_LEN + 1] if book else d
+            else:
+                d = description(src, end, names)
             if d:
                 tag = f'\n<meta name="description" content="{html.escape(d)}"/>'
                 src = re.sub(r'(?is)</title>', lambda m: m.group(0) + tag, src, count=1)
