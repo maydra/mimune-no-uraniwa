@@ -137,6 +137,18 @@
         setTimeout(function () { restoring = false; }, 60);
     }
 
+    // ページの題を [ページの名前, 書名] に分ける。題の書き方は2通りある:
+    //   「節の名前/書名」（古くからの書き方）
+    //   「見出し | 書名 | み旨の裏庭」（2026-10 に検索向けに付け直したページ。書名の中に / を含むことがある）
+    function titleParts() {
+        var t = (document.title || '').replace(/\s*[|｜]\s*み旨の裏庭\s*$/, '');
+        var bar = t.split(/\s*[|｜]\s*/);
+        if (bar.length > 1) return [bar[0].trim(), bar.slice(1).join(' | ').replace(/^\/+/, '').trim()];
+        var parts = t.split('/');
+        if (parts.length > 1) return [parts.slice(0, -1).join('/').trim(), parts[parts.length - 1].trim()];
+        return [t.trim(), ''];
+    }
+
     // ---- 見出し ------------------------------------------------------------
     function clean(el) {
         var c = el.cloneNode(true);
@@ -152,8 +164,7 @@
         // 「節の名前／書名」で書かれている。書名の方は、どのページでも同じなので
         // 場所の手がかりにならない。書名だけの見出しは並べず、節の名前に
         // くっついている書名は切り落とす
-        var parts = (document.title || '').split('/');
-        var book = parts.length > 1 ? parts[parts.length - 1].trim() : '';
+        var book = titleParts()[1];
         var flatBook = book.replace(/[\s　]/g, '');
         var all = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
         Array.prototype.forEach.call(all, function (h) {
@@ -646,9 +657,9 @@
 
     // いまの場所を、入口の一覧に出せる形で（本・ページの題・節・%）
     function place() {
-        var t = (document.title || '').split('/');
-        var book = t.length > 1 ? t[t.length - 1].trim() : '';
-        var name = (t.length > 1 ? t.slice(0, -1).join('/') : t[0]).trim();
+        var tp = titleParts();
+        var book = tp[1];
+        var name = tp[0];
         var path = pathTo(currentHead()).filter(function (h) { return !h.isTitle; });
         var sec = path.length ? path[path.length - 1].text : '';
         if (sec.replace(/[\s　]/g, '') === name.replace(/[\s　]/g, '')) sec = '';
