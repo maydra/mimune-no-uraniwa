@@ -23,6 +23,15 @@ HTML を書き換えるスクリプトを回したあとは `python _tools/root/
 「この本をオフライン保存」はブラウザの保存領域に頼るので、機内で開けないことがある。こちらは端末にファイルとして残る。
 本文を直したら、その本だけ作り直す: `python _tools/root/build_downloads.py dp kitou`
 
+## 検索エンジン向け（2026-10-27）
+
+- サイトマップは GitHub Actions（`.github/workflows/sitemap.yml`）が push のたびに `_tools/root/build_sitemap.py` で作り直す。手で回さなくていい
+- **本やページを足したら `python _tools/root/seo_titles.py --all` を回す。** 見分けのつかない title に見出しを足し、
+  description・canonical・og:〜（LINE や X で共有したときのカード）の無いページに足す。付いているものは触らないので、何度回してもいい
+- サイトは maydra.github.io の下のフォルダにあるので、robots.txt は Google に読まれない。サイトマップは Search Console
+  から `sitemap-index.xml` を送って知らせる
+- 存在しない URL には `404.html` が出る（検索欄と目次へのリンク）。どの階層の URL にも同じものが出るので、リンクは `/mimune-no-uraniwa/` から書く
+
 ## ページの CSS は theme/pages/ に（2026-10-11）
 
 各ページに同じ <style>（1ページ約10KB）が埋め込まれていたので、`theme/pages/<ハッシュ>.css` に出して

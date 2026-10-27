@@ -3,6 +3,23 @@
 サイトの仕組み・見た目を変えたときの記録。本文の誤植直しなどは書かない。
 新しいものを上に足す。細かい経緯は各 commit のメッセージにある。
 
+## 2026-10-27 検索エンジン向けの手入れ（canonical・共有カード・404 ページ）
+
+きっかけ: ユーザーから「み旨の裏庭のSEO対策で出来る事をやりたい」。前の日の夜に、サイトマップの自動化と title・description の手入れ（下の「2026-10-26 サイトマップ・title・description」）は済んでいた。
+
+- サイトマップに載る全 3,604 ページに canonical（そのページの正式な URL）を足した。GitHub Pages は `001.html` を `001` でも返すので、どちらで見つかっても1枚に数えられる。URL はサイトマップと同じで、ホームだけ末尾の index.html なし（`https://maydra.github.io/mimune-no-uraniwa/`）。サイトマップのホームの行もそれに合わせた（`build_sitemap.py` の `url`）
+- 同じページに、LINE・X などで共有したときのカード（og:title・og:description・og:url・og:site_name・og:type・twitter:card、無いページには og:image も）を足した。中身は title と description から取る
+- 足すのは `_tools/root/seo_titles.py`（`head_tags`）。付いているタグは触らないので、本を足したら `--all` で回せばいい
+- `404.html` を足した。いままで存在しない URL には GitHub の英語の画面が出ていた。検索欄（くわしく検索へ）・トップと検索へのリンク・開こうとした URL を出す。noindex。アナリティクスのタグを入れたので、どの URL で 404 が出ているかを GA4 で見られる
+- Puppeteer（幅 390・320px、明暗）で 404 ページの横はみ出し 0 を確かめた
+
+## 2026-10-26 サイトマップ・title・description
+
+- 手書きだったサイトマップを `_tools/root/build_sitemap.py` で全ページから作るようにし、GitHub Actions（`.github/workflows/sitemap.yml`）が push のたびに作り直す。本文 約1,250ページが漏れていた（02d61e357）
+- 本の名前だけ・ファイル名だけで見分けのつかなかった title に、ページの最初の見出しを足した（「見出し | 本の名前 | み旨の裏庭」）。description の無い 3,017 ページに本文の頭を入れた（`_tools/root/seo_titles.py`、0e572ec5e）
+- 父の祈りの framepage など、目次の古い写しは canonical で本物の目次を指し、サイトマップから外した。目次ページに「『本の名前』の目次。…」の description（1213a372b）
+- 「続きから読む」の札が新しい title の形（「|」区切り）を読めるようにした（`theme/reader.js` の `titleParts`、5bde3e63a）。検索本文も新しい題で作り直した（1537262b0）
+
 ## 2026-10-26 原理用語辞典を「くわしく検索」に入れない
 
 きっかけ: 検索本文を作り直すたびに jisho/ が入ってくるので聞いたら、ユーザーから「いれなくていいや」。
