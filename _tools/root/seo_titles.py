@@ -8,7 +8,11 @@ title が他のページと同じなら、そのページの最初の見出し�
 
 見出しが取れないページは触らない（--dry-run の一覧に「見出しなし」で出る）。
 目次ページ（title に「目次」）と、すでに description があるページの description は触らない。
-何度回しても結果は同じ。
+
+あわせて、canonical（このページの正式な URL）と、LINE・X などで共有したときのカード（og:〜・twitter:card）を
+足す。GitHub Pages は 001.html を 001 でも返すので、どちらで見つかっても1枚に数えられるようにする。
+canonical はサイトマップと同じ URL（ホームだけ末尾の index.html なし）。もう付いているタグは触らない。
+何度回しても結果は同じ。本やページを足したら --all で回す。
 
     python _tools/root/seo_titles.py --dry-run tf_inori   # 変更前後を表示するだけ
     python _tools/root/seo_titles.py tf_inori             # 書き換える（フォルダは複数可、--all で全部）
@@ -19,7 +23,7 @@ import pathlib
 import re
 import sys
 import unicodedata
-from urllib.parse import unquote
+from urllib.parse import quote, unquote
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 BASE = 'https://maydra.github.io/mimune-no-uraniwa/'
@@ -29,6 +33,9 @@ MAX_HEAD = 60  # これより長いのは見出しではなく目次の一覧を
 
 TITLE = re.compile(r'(?is)<title[^>]*>(.*?)</title>')
 HAS_DESC = re.compile(r'(?is)<meta[^>]+name=["\']description["\']')
+DESC_TAG = re.compile(r'(?is)<meta[^>]+name=["\']description["\'][^>]*>')
+CONTENT = re.compile(r'(?is)\bcontent=(["\'])(.*?)\1')
+CANONICAL = re.compile(r'(?is)<link[^>]+rel=["\']canonical["\']')
 # 見出しの候補を上から順に試す。h2/h3 が無い本（父の祈りの一部）は、太字の1行＋<hr> が題になっている
 HEADS = [re.compile(r'(?is)<h[234][^>]*>(.*?)</h[234]>'),
          re.compile(r'(?is)<b id=["\']?\d+["\']?[^>]*>(.*?)(?:<hr|</b>)'),
@@ -157,6 +164,35 @@ def book_name(title):
     return '　'.join(keep)
 
 
+def page_url(p):
+    if p == ROOT / 'index.html':
+        return BASE
+    return BASE + quote(p.relative_to(ROOT).as_posix(), safe='/')
+
+
+def head_tags(src, p):
+    """canonical・og:〜・twitter:card のうち、まだ無いものを description のすぐ後ろに足す。"""
+    url = page_url(p)
+    m = TITLE.search(src)
+    # og:site_name で出るので、題の末尾の「| み旨の裏庭」は落とす
+    title = re.sub(r'\s*\|\s*' + SITE + r'$', '', text(m.group(1))) if m else ''
+    d = DESC_TAG.search(src)
+    desc = html.unescape(c.group(2)) if d and (c := CONTENT.search(d.group(0))) else ''
+    tags = [] if CANONICAL.search(src) else [f'<link rel="canonical" href="{url}"/>']
+    og = {'og:type': 'website' if p.name == 'index.html' else 'article',
+          'og:site_name': SITE, 'og:title': title, 'og:description': desc,
+          'og:url': url, 'og:image': BASE + 'og-image.jpg'}
+    for prop, value in og.items():
+        if value and not re.search(rf'(?i)property=["\']{prop}["\']', src):
+            tags.append(f'<meta property="{prop}" content="{html.escape(value)}"/>')
+    if not re.search(r'(?i)name=["\']twitter:card["\']', src):
+        tags.append('<meta name="twitter:card" content="summary"/>')
+    if not tags:
+        return src
+    at = d or re.search(r'(?is)</title>', src)
+    return src[:at.end()] + ''.join('\n' + t for t in tags) + src[at.end():]
+
+
 def main(args):
     dry = '--dry-run' in args
     folders = [a.strip('/') for a in args if not a.startswith('--')]
@@ -206,6 +242,10 @@ def main(args):
                 tag = f'\n<meta name="description" content="{html.escape(d)}"/>'
                 src = re.sub(r'(?is)</title>', lambda m: m.group(0) + tag, src, count=1)
                 print(f'D {rel}  {d[:50]}…')
+        before = src
+        src = head_tags(src, p)
+        if src != before:
+            print(f'M {rel}')
         if src != old:
             changed += 1
             if not dry:

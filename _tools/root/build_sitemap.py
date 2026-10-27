@@ -53,6 +53,9 @@ def ordered(paths):
 
 
 def url(path):
+    # ホームは canonical（_tools/root/seo_titles.py）と同じく末尾の index.html なし
+    if path == ROOT / 'index.html':
+        return BASE
     return BASE + quote(path.relative_to(ROOT).as_posix(), safe='/')
 
 
