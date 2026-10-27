@@ -1,0 +1,48 @@
+# 週2回、全ページが Google に載っているかを Search Console の URL 検査で調べ、
+# _tools/seo/index-status.md（本ごとの一覧）と index-status.json を書き直して commit する。
+# URL 検査は1日 2,000 件までなので、月曜と火曜に分けて一回りする（_tools/root/search_console.py）。
+# 鍵は secret の GSC_KEY（サービスアカウントの JSON の中身）。無ければ何もしない。
+name: index-status
+
+on:
+  schedule:
+    - cron: '0 20 * * 0,1'  # 日本時間 月・火の朝5時
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: index-status
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: inspect
+        env:
+          GSC_KEY: ${{ secrets.GSC_KEY }}
+        run: |
+          if [ -z "$GSC_KEY" ]; then
+            echo 'secret GSC_KEY がないので調べない'
+            exit 0
+          fi
+          pip install -q google-auth requests
+          python _tools/root/search_console.py inspect --limit 1900
+      - name: commit if changed
+        run: |
+          git add -A -- _tools/seo
+          if git diff --cached --quiet; then
+            echo 'nothing new'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'index status: inspect pages in Search Console'
+          git pull --rebase origin main
+          git push origin HEAD:main

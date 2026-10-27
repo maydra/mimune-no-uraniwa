@@ -30,7 +30,13 @@ HTML を書き換えるスクリプトを回したあとは `python _tools/root/
 - **本やページを足したら `python _tools/root/seo_titles.py --all` を回す。** 見分けのつかない title に見出しを足し、
   description・canonical・og:〜（LINE や X で共有したときのカード）の無いページに足す。付いているものは触らないので、何度回してもいい
 - サイトは maydra.github.io の下のフォルダにあるので、robots.txt は Google に読まれない。サイトマップは Search Console
-  から `sitemap-index.xml` を送って知らせる
+  から `sitemap-index.xml` を送って知らせる。ページが変わった push のあとは、同じ Actions が Search Console の API で送り直す
+- **Google に載っているかの一覧は `_tools/seo/index-status.md`**（本ごとに、載っているページ数と載っていない理由）。
+  Actions の index-status が週2回（日本時間の月・火の朝）URL 検査をかけて書き直す。中身は `_tools/root/search_console.py`
+- Search Console の API に使う鍵は、サービスアカウント `online-count@mimune-online.iam.gserviceaccount.com`（「いま○人」と同じ）のもの。
+  Search Console の「ユーザーと権限」に「フル」で足してあり、GCP のプロジェクト mimune-online で Search Console API を有効にしてある。
+  Actions では secret の `GSC_KEY` に鍵の JSON の中身を入れる。手元で回すときは `GSC_KEY_FILE` に鍵のファイルの場所を入れる
+- URL の `&` は `%26` にしない（Google は `syuku_&_risoutengoku/` を `&` のまま登録している）。HTML とサイトマップの中では `&amp;` と書く
 - 存在しない URL には `404.html` が出る（検索欄と目次へのリンク）。どの階層の URL にも同じものが出るので、リンクは `/mimune-no-uraniwa/` から書く
 
 ## ページの CSS は theme/pages/ に（2026-10-11）

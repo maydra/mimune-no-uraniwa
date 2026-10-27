@@ -1,7 +1,8 @@
 # push のたびにサイトマップを作り直し、変わっていたら commit する。
 # ページを足した人は何もしなくていい（_tools/root/build_sitemap.py を参照）。
 # この commit は GITHUB_TOKEN で push するので、ここから次のワークフローは起きない。
-# 中身が変わったページは、最終更新日（lastmod）を新しくし、IndexNow で Bing などに知らせる。
+# 中身が変わったページは、最終更新日（lastmod）を新しくし、IndexNow で Bing などに知らせ、
+# Search Console にサイトマップを送り直す。
 name: sitemap
 
 on:
@@ -42,3 +43,17 @@ jobs:
       - name: tell Bing and others (IndexNow)
         continue-on-error: true
         run: python _tools/root/indexnow.py "$RUNNER_TEMP/changed.txt"
+      # Google には、変わったページがあったときだけサイトマップを送り直す（secret の GSC_KEY が要る）。
+      # 上で push したサイトマップが GitHub Pages に出るのを待ってから送る
+      - name: tell Google (Search Console)
+        continue-on-error: true
+        env:
+          GSC_KEY: ${{ secrets.GSC_KEY }}
+        run: |
+          if [ -z "$GSC_KEY" ] || [ ! -s "$RUNNER_TEMP/changed.txt" ]; then
+            echo 'skip'
+            exit 0
+          fi
+          sleep 120
+          pip install -q google-auth requests
+          python _tools/root/search_console.py submit
