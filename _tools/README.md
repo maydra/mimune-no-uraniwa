@@ -26,6 +26,7 @@ HTML を書き換えるスクリプトを回したあとは `python _tools/root/
 ## 検索エンジン向け（2026-10-27）
 
 - サイトマップは GitHub Actions（`.github/workflows/sitemap.yml`）が push のたびに `_tools/root/build_sitemap.py` で作り直す。手で回さなくていい
+- 同じ Actions が、title・description・本文の文字が変わったページだけ最終更新日（lastmod）を新しくし（記録は `_tools/root/sitemap-lastmod.json`、手で直さない）、その URL を IndexNow で Bing などに知らせる（`_tools/root/indexnow.py`。鍵は根の `e54f07b2…txt`、消さない）。`?v=` の打ち直しだけでは日付は変わらない。Google は IndexNow を使わないので、Google にはサイトマップの日付で知らせる
 - **本やページを足したら `python _tools/root/seo_titles.py --all` を回す。** 見分けのつかない title に見出しを足し、
   description・canonical・og:〜（LINE や X で共有したときのカード）の無いページに足す。付いているものは触らないので、何度回してもいい
 - サイトは maydra.github.io の下のフォルダにあるので、robots.txt は Google に読まれない。サイトマップは Search Console

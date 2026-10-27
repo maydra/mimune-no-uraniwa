@@ -1,12 +1,13 @@
 # push のたびにサイトマップを作り直し、変わっていたら commit する。
 # ページを足した人は何もしなくていい（_tools/root/build_sitemap.py を参照）。
 # この commit は GITHUB_TOKEN で push するので、ここから次のワークフローは起きない。
+# 中身が変わったページは、最終更新日（lastmod）を新しくし、IndexNow で Bing などに知らせる。
 name: sitemap
 
 on:
   push:
     branches: [main]
-    paths: ['**.html', '_tools/root/build_sitemap.py', '.github/workflows/sitemap.yml']
+    paths: ['**.html', '_tools/root/build_sitemap.py', '_tools/root/indexnow.py', '.github/workflows/sitemap.yml']
   workflow_dispatch:
 
 permissions:
@@ -24,10 +25,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python _tools/root/build_sitemap.py
+      - run: python _tools/root/build_sitemap.py --stamp --changed "$RUNNER_TEMP/changed.txt"
       - name: commit if changed
         run: |
-          git add -A -- sitemap-index.xml sitemap-index.txt sitemap.xml '*/sitemap.xml'
+          git add -A -- sitemap-index.xml sitemap-index.txt sitemap.xml '*/sitemap.xml' _tools/root/sitemap-lastmod.json
           if git diff --cached --quiet; then
             echo 'sitemap unchanged'
             exit 0
@@ -37,3 +38,7 @@ jobs:
           git commit -m 'sitemap: regenerate after page changes'
           git pull --rebase origin main
           git push origin HEAD:main
+      # 送れなくてもサイトマップの commit は済んでいるので、ここで失敗しても全体は止めない
+      - name: tell Bing and others (IndexNow)
+        continue-on-error: true
+        run: python _tools/root/indexnow.py "$RUNNER_TEMP/changed.txt"
