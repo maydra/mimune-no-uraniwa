@@ -2,17 +2,19 @@
 """Search Console の API で、サイトマップを送り、各ページが Google に載っているかを調べる。
 
     python _tools/root/search_console.py submit             # sitemap-index.xml を送る（送り直す）
-    python _tools/root/search_console.py inspect --limit 1900
-        # 調べたのが古い順に URL 検査をかけ、_tools/seo/index-status.json と index-status.md を書き直す
+    python _tools/root/search_console.py inspect --limit 1800 --max-age 6
+        # 調べてから6日以上たったページに、古い順に URL 検査をかけ、
+        # _tools/seo/index-status.json と index-status.md を書き直す
 
 GitHub Actions が回す（submit は .github/workflows/sitemap.yml でページが変わったとき、
-inspect は .github/workflows/index-status.yml で週2回）。手元で回すときは、鍵の JSON の場所を
+inspect は .github/workflows/index-status.yml で毎日）。手元で回すときは、鍵の JSON の場所を
 環境変数 GSC_KEY_FILE に入れる。Actions では secret の GSC_KEY に鍵の JSON の中身を入れてある。
 
 鍵はサービスアカウント online-count@mimune-online.iam.gserviceaccount.com のもの（ホームの「いま○人」と同じ）。
 Search Console の「ユーザーと権限」に「フル」で足してある（submit に要る）。
 
-URL 検査は1日 2,000 件・1分 600 件まで。ページは 3,600 余りなので、2日に分けて1週間で一回りする。
+URL 検査は1日 2,000 件・1分 600 件まで（上限は太平洋時間の0時に戻る）。ページは 3,600 余りなので、
+毎日、調べてから6日以上たったページを調べると、1日 500 件ほどで1週間に一回りする。
 Google の「インデックス登録をリクエスト」は API では送れない（Indexing API は求人とライブ配信専用）。
 """
 import collections
@@ -50,7 +52,12 @@ def session():
         creds = service_account.Credentials.from_service_account_info(json.loads(info), scopes=scopes)
     else:
         creds = service_account.Credentials.from_service_account_file(os.environ['GSC_KEY_FILE'], scopes=scopes)
-    return AuthorizedSession(creds)
+    s = AuthorizedSession(creds)
+    # 鍵が違う・Search Console から外されたときは、ここで止める（あとの URL 検査は失敗を数えるだけなので気づけない）
+    r = s.get(f'{API}/webmasters/v3/sites', timeout=60)
+    if not r.ok or BASE not in r.text:
+        sys.exit(f'Search Console に入れない: {r.status_code} {r.text[:300]}')
+    return s
 
 
 def url(rel):
@@ -103,15 +110,18 @@ def save(status):
     STATUS.write_text('{\n' + lines + '\n}\n', encoding='utf-8', newline='\n')
 
 
-def inspect(s, limit):
+def inspect(s, limit, max_age):
     pages = sorted(json.loads(PAGES.read_text(encoding='utf-8')))
     listed = set(pages)
     status = json.loads(STATUS.read_text(encoding='utf-8')) if STATUS.exists() else {}
     # サイトマップから消えたページは忘れる
     status = {k: v for k, v in status.items() if k in listed}
+    # 調べてから max_age 日たっていないページは飛ばす
+    since = (datetime.datetime.now(JST).date() - datetime.timedelta(days=max_age)).isoformat()
+    due = [rel for rel in pages if status.get(rel, {}).get('checked', '') <= since]
     # まだ調べていないページ → 調べたのが古いページ、の順。同じなら聖書（ほかのサイトにも同じ本文がある）は後
-    todo = sorted(pages, key=lambda rel: (rel in status, status.get(rel, {}).get('checked', ''),
-                                          rel.startswith('Bible_out/'), rel))[:limit]
+    todo = sorted(due, key=lambda rel: (rel in status, status.get(rel, {}).get('checked', ''),
+                                        rel.startswith('Bible_out/'), rel))[:limit]
     errors = 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         for i, (rel, result, err) in enumerate(pool.map(lambda rel: inspect_one(s, rel), todo), 1):
@@ -155,7 +165,7 @@ def report(s, pages, status):
         else:
             books[folder][v['state'] if v else 'まだ調べていない'] += 1
     out = [f'# Google のインデックス状況（{today.isoformat()} 更新）', '',
-           '`_tools/root/search_console.py inspect` が週2回（Actions の index-status）書き直す。手で直さない。', '',
+           '`_tools/root/search_console.py inspect` が毎日（Actions の index-status）書き直す。手で直さない。', '',
            f'サイトマップのページ {len(pages)}、調べたページ {len(status)}。', '', '## 状態ごと', '']
     out += [f'- {state}: {n}' for state, n in states.most_common()]
     out += ['', '## 本ごと（載っている / ページ数）', '', '| 本 | 載っている | ページ | 載っていない理由 |', '|---|---:|---:|---|']
@@ -188,6 +198,7 @@ if __name__ == '__main__':
     if args[:1] == ['submit']:
         submit(s)
     elif args[:1] == ['inspect']:
-        inspect(s, int(args[args.index('--limit') + 1]) if '--limit' in args else 1900)
+        inspect(s, int(args[args.index('--limit') + 1]) if '--limit' in args else 1800,
+                int(args[args.index('--max-age') + 1]) if '--max-age' in args else 6)
     else:
         sys.exit(__doc__)

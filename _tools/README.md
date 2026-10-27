@@ -32,7 +32,7 @@ HTML を書き換えるスクリプトを回したあとは `python _tools/root/
 - サイトは maydra.github.io の下のフォルダにあるので、robots.txt は Google に読まれない。サイトマップは Search Console
   から `sitemap-index.xml` を送って知らせる。ページが変わった push のあとは、同じ Actions が Search Console の API で送り直す
 - **Google に載っているかの一覧は `_tools/seo/index-status.md`**（本ごとに、載っているページ数と載っていない理由）。
-  Actions の index-status が週2回（日本時間の月・火の朝）URL 検査をかけて書き直す。中身は `_tools/root/search_console.py`
+  Actions の index-status が毎日（日本時間の18時）、調べてから6日以上たったページに URL 検査をかけて書き直す（1週間で全ページ）。中身は `_tools/root/search_console.py`
 - Search Console の API に使う鍵は、サービスアカウント `online-count@mimune-online.iam.gserviceaccount.com`（「いま○人」と同じ）のもの。
   Search Console の「ユーザーと権限」に「フル」で足してあり、GCP のプロジェクト mimune-online で Search Console API を有効にしてある。
   Actions では secret の `GSC_KEY` に鍵の JSON の中身を入れる。手元で回すときは `GSC_KEY_FILE` に鍵のファイルの場所を入れる

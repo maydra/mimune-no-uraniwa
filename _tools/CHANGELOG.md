@@ -10,7 +10,7 @@
 - API で調べると、Google に載っていたのはホームと一部の目次・本文（過去16か月で検索に出たのは130ページ）。ほとんどのページは除外ではなく「URL が Google に認識されていません」（存在を知られていない）だった。昨夜まで正しいサイトマップが無かったため。今夜 `sitemap-index.xml` が送信され、読み込み待ち
 - **`&` の扱いを直した。** Google は『み旨の道／祝福家庭と理想天国』を `syuku_&_risoutengoku/` のまま登録していて（目次はクリック60回）、この日に入れた canonical とサイトマップの `syuku_%26_risoutengoku/` は Google から見ると別の URL だった。URL の `&` はそのままにし、HTML とサイトマップの中では `&amp;` と書くようにした（`build_sitemap.py`・`seo_titles.py` の `SAFE`）。38ページの canonical と og:url を書き直し、IndexNow にも `&` の URL で送り直した
 - `_tools/root/search_console.py` を足した。`submit` はサイトマップを送り直し、`inspect` は URL 検査で各ページの状態を調べて `_tools/seo/index-status.json` と本ごとの一覧 `_tools/seo/index-status.md` を書く。まだ調べていないページ → 調べたのが古いページの順で、聖書は後回し。1日の上限（2,000件）に当たったらそこでやめる
-- Actions: `index-status.yml` が日本時間の月・火の朝に 1,900 件ずつ調べて commit する（1週間で全ページ）。`sitemap.yml` は、ページが変わったときにサイトマップが Pages に出るのを2分待ってから Search Console に送り直す。どちらも secret の `GSC_KEY` が無ければ何もしない
+- Actions: `index-status.yml` が毎日 日本時間の18時（URL 検査の上限が戻ったあと）に、調べてから6日以上たったページを 1,800 件まで調べて commit する（最初の2日で一回り、あとは1日500件ほどで1週間に全ページ）。鍵で Search Console に入れないときは失敗で止まる（成功に見えて何も調べていない、を防ぐ）。`sitemap.yml` は、ページが変わったときにサイトマップが Pages に出るのを2分待ってから Search Console に送り直す。どちらも secret の `GSC_KEY` が無ければ何もしない
 
 ## 2026-10-27 サイトマップに最終更新日・IndexNow で自動で知らせる
 

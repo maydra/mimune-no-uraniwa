@@ -1,12 +1,13 @@
-# 週2回、全ページが Google に載っているかを Search Console の URL 検査で調べ、
+# 毎日、調べてから6日以上たったページが Google に載っているかを Search Console の URL 検査で調べ、
 # _tools/seo/index-status.md（本ごとの一覧）と index-status.json を書き直して commit する。
-# URL 検査は1日 2,000 件までなので、月曜と火曜に分けて一回りする（_tools/root/search_console.py）。
+# URL 検査は1日 2,000 件までで、上限は太平洋時間の0時（日本時間の16〜17時）に戻るので、その後に回す。
+# 1日 500 件ほどで、1週間に全ページを一回りする（_tools/root/search_console.py）。
 # 鍵は secret の GSC_KEY（サービスアカウントの JSON の中身）。無ければ何もしない。
 name: index-status
 
 on:
   schedule:
-    - cron: '0 20 * * 0,1'  # 日本時間 月・火の朝5時
+    - cron: '0 9 * * *'  # 日本時間 毎日18時
   workflow_dispatch:
 
 permissions:
@@ -33,7 +34,7 @@ jobs:
             exit 0
           fi
           pip install -q google-auth requests
-          python _tools/root/search_console.py inspect --limit 1900
+          python _tools/root/search_console.py inspect --limit 1800 --max-age 6
       - name: commit if changed
         run: |
           git add -A -- _tools/seo
