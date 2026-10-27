@@ -33,6 +33,9 @@ from urllib.parse import quote
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 BASE = 'https://maydra.github.io/mimune-no-uraniwa/'
 LASTMOD = ROOT / '_tools' / 'root' / 'sitemap-lastmod.json'
+# URL のパスにそのまま書いてよい記号は % にしない。Google は syuku_&_risoutengoku を & のまま登録していて、
+# %26 にすると別の URL に数える（2026-10-27 に Search Console の API で確かめた）。空白は %20 にする
+SAFE = "/!$&'()*+,;=:@~"
 TODAY = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).date().isoformat()
 
 SKIP_DIRS = {'_tools', 'data', 'theme', 'icons', 'music', '.git', '.github',
@@ -54,7 +57,7 @@ def listable(path):
     # 「正はあっち」と canonical で指しているページ（父の祈りの framepage など、古い目次の写し）は載せない
     # 「jisho/」と「jisho/index.html」は同じページ
     canon = CANONICAL.search(head)
-    return not canon or same(canon.group(1), url(path))
+    return not canon or same(html.unescape(canon.group(1)), url(path))
 
 
 def same(a, b):
@@ -70,7 +73,7 @@ def url(path):
     # ホームは canonical（_tools/root/seo_titles.py）と同じく末尾の index.html なし
     if path == ROOT / 'index.html':
         return BASE
-    return BASE + quote(path.relative_to(ROOT).as_posix(), safe='/')
+    return BASE + quote(path.relative_to(ROOT).as_posix(), safe=SAFE)
 
 
 def fingerprint(path):
@@ -85,7 +88,9 @@ def fingerprint(path):
 
 
 def write(path, tag, child, entries):
-    body = ''.join(f'<{child}><loc>{loc}</loc>' + (f'<lastmod>{day}</lastmod>' if day else '') + f'</{child}>\n'
+    # XML の中なので & は &amp; と書く（URL は & のまま）
+    body = ''.join(f'<{child}><loc>{html.escape(loc, quote=False)}</loc>'
+                   + (f'<lastmod>{day}</lastmod>' if day else '') + f'</{child}>\n'
                    for loc, day in entries)
     text = (f"<?xml version='1.0' encoding='utf-8'?>\n"
             f'<{tag} xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}</{tag}>\n')

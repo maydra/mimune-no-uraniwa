@@ -66,9 +66,9 @@ def text(fragment):
 def sitemap_pages():
     idx = (ROOT / 'sitemap-index.xml').read_text(encoding='utf-8')
     for s in re.findall(r'<loc>(.*?)</loc>', idx):
-        sub = (ROOT / unquote(s)[len(BASE):]).read_text(encoding='utf-8')
+        sub = (ROOT / unquote(html.unescape(s))[len(BASE):]).read_text(encoding='utf-8')
         for u in re.findall(r'<loc>(.*?)</loc>', sub):
-            yield ROOT / unquote(u)[len(BASE):]
+            yield ROOT / (unquote(html.unescape(u))[len(BASE):] or 'index.html')
 
 
 def body_after_h1(src):
@@ -165,9 +165,10 @@ def book_name(title):
 
 
 def page_url(p):
+    """build_sitemap.py の url と同じ形（& は %26 にしない。Google が & のまま登録している）。"""
     if p == ROOT / 'index.html':
         return BASE
-    return BASE + quote(p.relative_to(ROOT).as_posix(), safe='/')
+    return BASE + quote(p.relative_to(ROOT).as_posix(), safe="/!$&'()*+,;=:@~")
 
 
 def head_tags(src, p):
@@ -178,7 +179,7 @@ def head_tags(src, p):
     title = re.sub(r'\s*\|\s*' + SITE + r'$', '', text(m.group(1))) if m else ''
     d = DESC_TAG.search(src)
     desc = html.unescape(c.group(2)) if d and (c := CONTENT.search(d.group(0))) else ''
-    tags = [] if CANONICAL.search(src) else [f'<link rel="canonical" href="{url}"/>']
+    tags = [] if CANONICAL.search(src) else [f'<link rel="canonical" href="{html.escape(url)}"/>']
     og = {'og:type': 'website' if p.name == 'index.html' else 'article',
           'og:site_name': SITE, 'og:title': title, 'og:description': desc,
           'og:url': url, 'og:image': BASE + 'og-image.jpg'}
