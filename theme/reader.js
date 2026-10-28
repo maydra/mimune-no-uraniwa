@@ -288,6 +288,8 @@
             '#reader-drawer .font button{flex:1 1 auto;font:inherit;padding:.4em .2em;border:1px solid rgba(127,127,127,.3);',
             'border-radius:8px;background:none;color:inherit;cursor:pointer}',
             '#reader-drawer .font button[aria-pressed="true"]{background:rgba(99,102,241,.18);border-color:rgba(99,102,241,.5);font-weight:700}',
+            '#reader-drawer .font i{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.3em;vertical-align:-.05em;border:1px solid rgba(127,127,127,.45)}',
+            '#reader-drawer .font button[aria-pressed="false"]{opacity:.55;text-decoration:line-through}',
             '#reader-drawer .marks{margin:0 0 1rem}',
             '#reader-drawer .marks:empty{display:none}',
             '#reader-drawer .mark{display:flex;align-items:flex-start;gap:.3em;border-radius:7px}',
@@ -410,6 +412,8 @@
         pin.addEventListener('click', function (e) { e.preventDefault(); closeDrawer(); addMark(); });
         tools.appendChild(pin);
         tools.appendChild(fontControl());
+        var mk = markerControl();
+        if (mk) tools.appendChild(mk);
         var src = tocHref();
         var toc = document.createElement('a');
         toc.href = src;
@@ -600,6 +604,45 @@
                 scrollToPos(cur, TOP + curDy);
             });
             box.appendChild(b);
+        });
+        return box;
+    }
+
+    // ---- 蛍光ペンの色ごとの ON/OFF（2026-10-28） ---------------------------
+    // 原理講論（dp/）の color_filter.js がある所だけ。ページ上の「表示：」ボタンと同じ物で、
+    // どちらで押しても両方がそろう。隠れた字は数に残るので、押したあとは数え直して、
+    // いま読んでいた所（隠れたならその先の見えている字）へ戻す
+    function markerControl() {
+        var cf = window.dpColorFilter;
+        if (!cf) return null;
+        var box = document.createElement('div');
+        box.className = 'font';
+        box.setAttribute('role', 'group');
+        box.setAttribute('aria-label', '蛍光ペン');
+        var label = document.createElement('span');
+        label.textContent = '色';
+        box.appendChild(label);
+        Object.keys(cf.colors).forEach(function (key) {
+            var c = cf.colors[key];
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.dataset.color = key;
+            b.innerHTML = '<i style="background:' + c.bg + '"></i>' + c.label;
+            b.setAttribute('aria-pressed', cf.isOn(key) ? 'true' : 'false');
+            b.addEventListener('click', function () {
+                var keep = cur, dy = curDy;
+                cf.set(key, !cf.isOn(key));
+                collect();
+                var i = nodeIndex(keep);
+                while (i < nodes.length && !nodes[i].parentElement.getClientRects().length) i++;
+                if (i < nodes.length) scrollToPos(i === nodeIndex(keep) ? keep : starts[i], TOP + dy);
+            });
+            box.appendChild(b);
+        });
+        document.addEventListener('dpcolorfilter', function (e) {
+            Array.prototype.forEach.call(box.querySelectorAll('button'), function (o) {
+                if (o.dataset.color === e.detail.key) o.setAttribute('aria-pressed', e.detail.on ? 'true' : 'false');
+            });
         });
         return box;
     }

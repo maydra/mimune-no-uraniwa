@@ -243,6 +243,18 @@
     }
 
     /**
+     * 出す・隠すはクラスで切り替える。el.style.display を触ると、ブラウザが style 属性を
+     * 書き直して background-color:#FCD2E7 が rgb(252, 210, 231) に変わり、暗い配色の
+     * 蛍光ペンの指定（theme/style.css の [style*="FCD2E7" i]）が外れて、昔の濃い色に戻っていた
+     */
+    function setShown(el, on) {
+        el.classList.toggle('cf-off', !on);
+    }
+    function isShown(el) {
+        return !el.classList.contains('cf-off');
+    }
+
+    /**
      * フィルタリングを適用
      */
     function applyFilter() {
@@ -252,7 +264,7 @@
         textUnits.forEach(el => {
             const bgColor = getBackgroundColor(el);
             const key = getColorKey(bgColor);
-            el.style.display = filterState[key] ? '' : 'none';
+            setShown(el, filterState[key]);
 
             // デバッグ: 最初の10要素のみログ出力
             if (debugCount < 10 && bgColor && bgColor !== 'none') {
@@ -261,7 +273,7 @@
                     text: el.textContent.substring(0, 30) + '...',
                     bgColor: bgColor,
                     key: key,
-                    display: el.style.display
+                    shown: !el.classList.contains('cf-off')
                 });
                 debugCount++;
             }
@@ -271,12 +283,12 @@
         const blocks = document.querySelectorAll('p, li, blockquote, div.no1');
         blocks.forEach(block => {
             if (isProtected(block) || isHeading(block)) {
-                block.style.display = '';
+                setShown(block, true);
                 return;
             }
 
             if (block.querySelector('h1, h2, h3, h4, h5, h6')) {
-                block.style.display = '';
+                setShown(block, true);
                 return;
             }
 
@@ -284,30 +296,30 @@
             if (units.length === 0) {
                 if (block.classList.contains('color-filter-text-unit')) {
                     const key = getColorKey(getBackgroundColor(block));
-                    block.style.display = filterState[key] ? '' : 'none';
+                    setShown(block, filterState[key]);
                     return;
                 }
-                block.style.display = '';
+                setShown(block, true);
                 return;
             }
 
-            const hasVisible = Array.from(units).some(u => u.style.display !== 'none');
-            block.style.display = hasVisible ? '' : 'none';
+            const hasVisible = Array.from(units).some(isShown);
+            setShown(block, hasVisible);
         });
 
         // 3. コンテナやセクションカードなどの大きな要素の制御
         const containers = document.querySelectorAll('.content-card, .section-card, .content-section, article, main');
         containers.forEach(container => {
             if (container.querySelector('h1, h2, h3, h4, h5, h6, [id]:not(.color-filter-text-unit)')) {
-                container.style.display = '';
+                setShown(container, true);
                 return;
             }
 
-            const hasVisibleContent = Array.from(container.querySelectorAll('p, li, blockquote, div.no1')).some(b => b.style.display !== 'none');
-            const hasDirectVisibleUnits = Array.from(container.children).some(c => c.classList.contains('color-filter-text-unit') && c.style.display !== 'none');
+            const hasVisibleContent = Array.from(container.querySelectorAll('p, li, blockquote, div.no1')).some(isShown);
+            const hasDirectVisibleUnits = Array.from(container.children).some(c => c.classList.contains('color-filter-text-unit') && isShown(c));
 
             if (container.querySelectorAll('p, li, div.no1').length > 0) {
-                container.style.display = (hasVisibleContent || hasDirectVisibleUnits) ? '' : 'none';
+                setShown(container, hasVisibleContent || hasDirectVisibleUnits);
             }
         });
     }
@@ -327,6 +339,27 @@
             if (span) span.textContent = 'OFF';
         }
     }
+
+    /**
+     * 1色の ON/OFF。ページ上のボタンと、目次の引き出し（theme/reader.js）の両方から呼ぶ
+     */
+    function setColor(key, on) {
+        filterState[key] = !!on;
+        saveFilterState();
+        applyFilter();
+        document.querySelectorAll('.color-filter-container .filter-btn').forEach(b => {
+            if (b.dataset.color === key) updateButtonUI(b, key);
+        });
+        document.dispatchEvent(new CustomEvent('dpcolorfilter', { detail: { key: key, on: !!on } }));
+    }
+
+    window.dpColorFilter = {
+        colors: COLORS,
+        isOn: key => !!filterState[key],
+        set: setColor
+    };
+    // 引き出し（reader.js）が DOMContentLoaded より先にボタンを作っても、覚えた状態で出るように
+    loadFilterState();
 
     /**
      * フィルターボタンを作成
@@ -354,12 +387,8 @@
                 <span class="toggle-status"></span>
             `;
 
-            button.addEventListener('click', () => {
-                filterState[key] = !filterState[key];
-                updateButtonUI(button, key);
-                saveFilterState();
-                applyFilter();
-            });
+            button.dataset.color = key;
+            button.addEventListener('click', () => setColor(key, !filterState[key]));
 
             updateButtonUI(button, key);
             buttonsWrapper.appendChild(button);
@@ -407,8 +436,8 @@
             }
             .filter-btn.active .toggle-status { background: #4a90e2; }
 
+            .cf-off { display: none !important; }
             .color-filter-text-unit {
-                display: initial;
                 background-color: inherit;
             }
 
