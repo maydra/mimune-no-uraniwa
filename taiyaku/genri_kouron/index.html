@@ -63,6 +63,7 @@ try{var c=JSON.parse(localStorage.getItem("dp.theme"));if(c!=="light"&&c!=="dark
     color:var(--muted);flex:0 0 auto;white-space:nowrap}
   .linkbtn:hover{color:var(--accent)}
   h1 .linkbtn{font-size:13px;margin-left:10px;vertical-align:middle}
+  h1 .linkbtn + .linkbtn{margin-left:6px}
 
   /* 対訳の本体は 1 枚のグリッド。英語は複数行にまたがる */
   /* 節の中の目次。小見出しだけを並べて、押すとその段落へ跳ぶ */
@@ -309,6 +310,11 @@ document.addEventListener("DOMContentLoaded", () => {
       linkSecT: "この節を開くリンクをコピー",
       linkRowT: (n) => `${n} 段落目を開くリンクをコピー`,
       linkLangT: (l) => `${l}だけを出してこの節を開くリンクをコピー`,
+      copy: "コピー", copiedText: "本文をコピーしました", copyTextFail: "コピーできませんでした",
+      noText: "コピーする本文がありません",
+      copySecT: "この節の本文をコピー（出している言語を、言語ごとにまとめて）",
+      copyRowT: (n) => `${n} 段落目の本文をコピー`,
+      copyLangT: (l) => `この節の${l}の本文をコピー`,
       wPdf: (l) => `${l} はPDF添付のみで本文がありません`,
       wMismatch: (l, f) => `${l}の記事は別の内容が載っているようです（語の一致 ${f}）。対訳として当てにしないでください`,
       wShort: (l) => `${l}は投稿されていない部分があります。抜けている所は「—」と出ます`,
@@ -344,6 +350,11 @@ document.addEventListener("DOMContentLoaded", () => {
       linkSecT: "이 절을 여는 링크를 복사",
       linkRowT: (n) => `${n}번째 문단을 여는 링크를 복사`,
       linkLangT: (l) => `${l}만 켜고 이 절을 여는 링크를 복사`,
+      copy: "복사", copiedText: "본문을 복사했습니다", copyTextFail: "복사하지 못했습니다",
+      noText: "복사할 본문이 없습니다",
+      copySecT: "이 절의 본문을 복사 (보이는 언어를 언어별로 모아서)",
+      copyRowT: (n) => `${n}번째 문단의 본문을 복사`,
+      copyLangT: (l) => `이 절의 ${l} 본문을 복사`,
       wPdf: (l) => `${l}는 PDF 첨부만 있고 본문이 없습니다`,
       wMismatch: (l, f) => `${l} 글에는 다른 내용이 실려 있는 것 같습니다 (낱말 일치 ${f}). 대역으로 믿지 마십시오`,
       wShort: (l) => `${l}는 올라오지 않은 부분이 있습니다. 빠진 곳은 「—」로 나옵니다`,
@@ -379,6 +390,11 @@ document.addEventListener("DOMContentLoaded", () => {
       linkSecT: "Copy a link that opens this section",
       linkRowT: (n) => `Copy a link that opens paragraph ${n}`,
       linkLangT: (l) => `Copy a link that opens this section with only ${l} showing`,
+      copy: "Copy", copiedText: "Text copied", copyTextFail: "Could not copy",
+      noText: "No text to copy",
+      copySecT: "Copy the text of this section (the languages showing, one language after another)",
+      copyRowT: (n) => `Copy the text of paragraph ${n}`,
+      copyLangT: (l) => `Copy the ${l} text of this section`,
       wPdf: (l) => `The ${l} post has only a PDF attachment, with no body text`,
       wMismatch: (l, f) => `The ${l} post seems to carry different content (word match ${f}). Do not rely on it as a parallel text`,
       wShort: (l) => `Part of the ${l} text was never posted. Missing paragraphs show as "—"`,
@@ -566,28 +582,54 @@ document.addEventListener("DOMContentLoaded", () => {
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => toastEl.classList.remove("on"), 1500);
   }
-  function copyLink(url) {
-    const failed = () => {
-      // コピーできないときは、せめてアドレス欄にその URL を出しておく（取り逃がさないため）
-      try { history.replaceState(null, "", url); } catch {}
-      toast(T().copyFail);
-    };
+  function copyText(text, done, failed) {
     const byExec = () => {                // file:// では clipboard API が塞がれることがある
       const ta = document.createElement("textarea");
-      ta.value = url;
+      ta.value = text;
       ta.style.cssText = "position:fixed;top:-500px;opacity:0";
       document.body.appendChild(ta);
       ta.select();
       let ok = false;
       try { ok = document.execCommand("copy"); } catch {}
       ta.remove();
-      if (ok) { toast(T().copied); } else { failed(); }
+      if (ok) { done(); } else { failed(); }
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(() => toast(T().copied), byExec);
+      navigator.clipboard.writeText(text).then(done, byExec);
     } else {
       byExec();
     }
+  }
+  function copyLink(url) {
+    copyText(url, () => toast(T().copied), () => {
+      // コピーできないときは、せめてアドレス欄にその URL を出しておく（取り逃がさないため）
+      try { history.replaceState(null, "", url); } catch {}
+      toast(T().copyFail);
+    });
+  }
+  function copyBody(text) {
+    if (!text) return toast(T().noText);
+    copyText(text, () => toast(T().copiedText), () => toast(T().copyTextFail));
+  }
+  // 本文の HTML を、コピーする文字にする。ルビの読みは入れない。原理原本の断り書き（※）と
+  // 原稿のページの印（〔2〕）も入れない（範囲を選んでコピーするときと同じ）
+  function cellText(html) {
+    const d = document.createElement("div");
+    d.innerHTML = html || "";
+    d.querySelectorAll("rt, rp, .note, .pg").forEach((x) => x.remove());
+    d.querySelectorAll("br").forEach((x) => x.replaceWith("\n"));
+    return d.textContent.replace(/\n{3,}/g, "\n\n").trim();
+  }
+  // 段落 a〜b-1 の本文。出している言語ごとにまとめる（韓国語を全部 → 日本語を全部 → 英語を全部）
+  function textOf(s, langs, a, b, withTitle) {
+    return langs.map((L) => {
+      const out = withTitle && s.titles[L.id] ? [s.titles[L.id]] : [];
+      (s.cells[L.id] || []).filter((c) => a <= c.r && c.r < b).forEach((c) => {
+        const t = cellText(c.h);
+        if (t) out.push(t);
+      });
+      return out.join("\n\n");
+    }).filter(Boolean).join("\n\n");
   }
 
   // ---- 節の名前と一覧 ----
@@ -858,15 +900,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const shown = LANGS.filter((L) => on.includes(L.id));
-    // 節の題と、節ぜんぶを開くリンク
+    // 節の題と、節ぜんぶを開くリンク・節ぜんぶの本文のコピー
     $("#secTitle").innerHTML = esc(secTitle(s))
-      + `<button class="linkbtn" data-share="" title="${esc(t.linkSecT)}">🔗 ${esc(t.link)}</button>`;
-    // 言語ごとの行。それぞれ「その言語だけを出して開く」リンクを配れる
+      + `<button class="linkbtn" data-share="" title="${esc(t.linkSecT)}">🔗 ${esc(t.link)}</button>`
+      + `<button class="linkbtn" data-copy="" title="${esc(t.copySecT)}">📋 ${esc(t.copy)}</button>`;
+    // 言語ごとの行。それぞれ「その言語だけを出して開く」リンクと、その言語だけの本文を配れる
     $("#secSub").innerHTML = LANGS.map((L) =>
       `<div><b>${L.tag}</b><span>${esc(s.titles[L.id] || t.none)}</span>`
-      + `<button class="linkbtn" data-share="${L.id}" title="${esc(t.linkLangT(t.name[L.id]))}">🔗</button></div>`).join("");
+      + `<button class="linkbtn" data-share="${L.id}" title="${esc(t.linkLangT(t.name[L.id]))}">🔗</button>`
+      + `<button class="linkbtn" data-copy="${L.id}" title="${esc(t.copyLangT(t.name[L.id]))}">📋</button></div>`).join("");
     $(".sechead").querySelectorAll("[data-share]").forEach((b) => {
       b.onclick = () => copyLink(shareURL(s.key, b.dataset.share ? [b.dataset.share] : wantLangs()));
+    });
+    $(".sechead").querySelectorAll("[data-copy]").forEach((b) => {
+      const langs = b.dataset.copy ? LANGS.filter((L) => L.id === b.dataset.copy) : shown;
+      b.onclick = () => copyBody(textOf(s, langs, 0, s.n, true));
     });
 
     const NAME = t.name;
@@ -1079,7 +1127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     draw();
   }
 
-  // 行番号の欄。番号のとなりに、その段落を開くリンクを配るボタンを置く
+  // 行番号の欄。番号のとなりに、その段落を開くリンクを配るボタンと、本文をコピーするボタンを置く
   function rownoEl(s, r) {
     const el = document.createElement("div");
     el.className = "rowno";
@@ -1087,14 +1135,20 @@ document.addEventListener("DOMContentLoaded", () => {
     el.dataset.span = 1;
     const n = document.createElement("span");
     n.textContent = r + 1;
-    const lk = document.createElement("span");
-    lk.className = "lk";
-    lk.textContent = "\u{1F517}";
-    lk.tabIndex = 0;
-    lk.title = T().linkRowT(r + 1);
-    lk.onclick = (e) => { e.stopPropagation(); copyLink(shareURL(s.key, wantLangs(), r + 1)); };
-    lk.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); lk.onclick(e); } };
-    el.append(n, lk);
+    const btn = (icon, title, fn) => {
+      const b = document.createElement("span");
+      b.className = "lk";
+      b.textContent = icon;
+      b.tabIndex = 0;
+      b.title = title;
+      b.onclick = (e) => { e.stopPropagation(); fn(); };
+      b.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); b.onclick(e); } };
+      return b;
+    };
+    el.append(n,
+      btn("\u{1F517}", T().linkRowT(r + 1), () => copyLink(shareURL(s.key, wantLangs(), r + 1))),
+      btn("\u{1F4CB}", T().copyRowT(r + 1),
+        () => copyBody(textOf(s, LANGS.filter((L) => on.includes(L.id)), r, r + 1))));
     el.onclick = () => { cur = (cur === r ? -1 : r); mark(); };
     return el;
   }

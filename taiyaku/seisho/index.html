@@ -66,6 +66,7 @@ try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="d
     color:var(--muted);flex:0 0 auto;white-space:nowrap}
   .linkbtn:hover{color:var(--accent)}
   h1 .linkbtn{font-size:13px;margin-left:10px;vertical-align:middle}
+  h1 .linkbtn + .linkbtn{margin-left:6px}
 
   /* 対訳の本体は 1 枚のグリッド。英語は複数行にまたがる */
   main{padding:8px var(--pad) 50vh;max-width:1600px;margin:0 auto;
@@ -233,6 +234,11 @@ try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="d
       linkSecT: "この章を開くリンクをコピー",
       linkRowT: (n) => `${n}節を開くリンクをコピー`,
       linkLangT: (l) => `${l}だけを出してこの章を開くリンクをコピー`,
+      copy: "コピー", copiedText: "本文をコピーしました", copyTextFail: "コピーできませんでした",
+      noText: "コピーする本文がありません",
+      copySecT: "この章の本文をコピー（出している言語を、言語ごとにまとめて）",
+      copyRowT: (n) => `${n}節の本文をコピー`,
+      copyLangT: (l) => `この章の${l}の本文をコピー`,
       wEmpty: (l) => `この章は${l}の本文がありません`,
       wGap: (l, n) => `節の切り方が版で違う所が ${n} あります（${l}はその本文を前後の節に入れています）`,
       merged: "この版では前後の節にまとめられています",
@@ -263,6 +269,11 @@ try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="d
       linkSecT: "이 장을 여는 링크를 복사",
       linkRowT: (n) => `${n}절을 여는 링크를 복사`,
       linkLangT: (l) => `${l}만 켜고 이 장을 여는 링크를 복사`,
+      copy: "복사", copiedText: "본문을 복사했습니다", copyTextFail: "복사하지 못했습니다",
+      noText: "복사할 본문이 없습니다",
+      copySecT: "이 장의 본문을 복사 (보이는 언어를 언어별로 모아서)",
+      copyRowT: (n) => `${n}절의 본문을 복사`,
+      copyLangT: (l) => `이 장의 ${l} 본문을 복사`,
       wEmpty: (l) => `이 장은 ${l} 본문이 없습니다`,
       wGap: (l, n) => `절을 나눈 방식이 판마다 다른 곳이 ${n}군데 있습니다 (${l}는 그 본문을 앞뒤 절에 넣었습니다)`,
       merged: "이 판에서는 앞뒤 절에 합쳐져 있습니다",
@@ -295,6 +306,11 @@ try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="d
       linkSecT: "Copy a link that opens this chapter",
       linkRowT: (n) => `Copy a link that opens verse ${n}`,
       linkLangT: (l) => `Copy a link that opens this chapter with only ${l} showing`,
+      copy: "Copy", copiedText: "Text copied", copyTextFail: "Could not copy",
+      noText: "No text to copy",
+      copySecT: "Copy the text of this chapter (the languages showing, one language after another)",
+      copyRowT: (n) => `Copy the text of verse ${n}`,
+      copyLangT: (l) => `Copy the ${l} text of this chapter`,
       wEmpty: (l) => `This chapter has no ${l} text`,
       wGap: (l, n) => `${n} places where the editions divide the verses differently (${l} carries that text in a neighbouring verse)`,
       merged: "joined to a neighbouring verse in this edition",
@@ -419,17 +435,37 @@ try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="d
     el.textContent = msg; el.classList.add("on");
     clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 1600);
   }
-  function copyLink(url) {
+  function copyText(text, okMsg, failMsg) {
     const byExec = () => {
       const ta = document.createElement("textarea");
-      ta.value = url; document.body.appendChild(ta); ta.select();
+      ta.value = text; document.body.appendChild(ta); ta.select();
       let ok = false; try { ok = document.execCommand("copy"); } catch {}
       document.body.removeChild(ta);
-      toast(ok ? T().copied : T().copyFail);
+      toast(ok ? okMsg : failMsg);
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(() => toast(T().copied), byExec);
+      navigator.clipboard.writeText(text).then(() => toast(okMsg), byExec);
     } else { byExec(); }
+  }
+  const copyLink = (url) => copyText(url, T().copied, T().copyFail);
+  function copyBody(text) {
+    if (!text) return toast(T().noText);
+    copyText(text, T().copiedText, T().copyTextFail);
+  }
+  // 章（v を渡せばその節だけ）の本文。出している言語ごとにまとめる。
+  // 節1つなら「創世記 1:1 本文」、章ぜんぶなら頭に「創世記 第1章」、各行に節の番号を付ける。
+  // 版で前後の節にまとめられて空になっている節は飛ばす
+  function textOf(s, langs, v) {
+    const book = LOADED[s.code];
+    const rows = (book && book.ch && book.ch[s.ch]) || [];
+    const col = { ja: 1, ko: 2, en: 3 };
+    return langs.map((L) => {
+      const nm = (s.names && s.names[L.id]) || s.code;
+      const got = rows.filter((r) => r[col[L.id]] && (!v || r[0] === v));
+      if (!got.length) return "";
+      if (v) return `${nm} ${s.ch}:${v} ${got[0][col[L.id]]}`;
+      return `${nm} ${UI[L.id].chapter(s.ch)}\n` + got.map((r) => `${r[0]} ${r[col[L.id]]}`).join("\n");
+    }).filter(Boolean).join("\n\n");
   }
 
   const bookName = (s) => (s.names && (s.names[ui] || s.names.ja)) || s.code;
@@ -713,15 +749,21 @@ try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="d
     LANGS.forEach((L) => { hasText[L.id] = rows.some((r) => r[col[L.id]]); });
 
     $("#secTitle").innerHTML = esc(secTitle(s))
-      + `<button class="linkbtn" data-share="" title="${esc(t.linkSecT)}">🔗 ${esc(t.link)}</button>`;
+      + `<button class="linkbtn" data-share="" title="${esc(t.linkSecT)}">🔗 ${esc(t.link)}</button>`
+      + `<button class="linkbtn" data-copy="" title="${esc(t.copySecT)}">📋 ${esc(t.copy)}</button>`;
     $("#secSub").innerHTML = LANGS.map((L) => {
       const nm = (s.names && s.names[L.id]) || s.code;
       // 章の呼び方はその欄の言語で出す（KO なら「1장」、EN なら「Chapter 1」）
       return `<div><b>${L.tag}</b><span>${esc(nm)} ${esc(UI[L.id].chapter(s.ch))}</span>`
-        + `<button class="linkbtn" data-share="${L.id}" title="${esc(t.linkLangT(t.name[L.id]))}">🔗</button></div>`;
+        + `<button class="linkbtn" data-share="${L.id}" title="${esc(t.linkLangT(t.name[L.id]))}">🔗</button>`
+        + `<button class="linkbtn" data-copy="${L.id}" title="${esc(t.copyLangT(t.name[L.id]))}">📋</button></div>`;
     }).join("");
     $(".sechead").querySelectorAll("[data-share]").forEach((b) => {
       b.onclick = () => copyLink(shareURL(s.key, b.dataset.share ? [b.dataset.share] : wantLangs()));
+    });
+    $(".sechead").querySelectorAll("[data-copy]").forEach((b) => {
+      const langs = b.dataset.copy ? LANGS.filter((L) => L.id === b.dataset.copy) : shown;
+      b.onclick = () => copyBody(textOf(s, langs));
     });
 
     const warn = [];
@@ -785,12 +827,17 @@ try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="d
     el.dataset.r = v; el.dataset.span = 1;
     const n = document.createElement("span");
     n.textContent = v;
-    const lk = document.createElement("span");
-    lk.className = "lk"; lk.textContent = "\u{1F517}"; lk.tabIndex = 0;
-    lk.title = T().linkRowT(v);
-    lk.onclick = (e) => { e.stopPropagation(); copyLink(shareURL(s.key, wantLangs(), v)); };
-    lk.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); lk.onclick(e); } };
-    el.append(n, lk);
+    const btn = (icon, title, fn) => {
+      const b = document.createElement("span");
+      b.className = "lk"; b.textContent = icon; b.tabIndex = 0;
+      b.title = title;
+      b.onclick = (e) => { e.stopPropagation(); fn(); };
+      b.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); b.onclick(e); } };
+      return b;
+    };
+    el.append(n,
+      btn("\u{1F517}", T().linkRowT(v), () => copyLink(shareURL(s.key, wantLangs(), v))),
+      btn("\u{1F4CB}", T().copyRowT(v), () => copyBody(textOf(s, LANGS.filter((L) => on.includes(L.id)), v))));
     el.onclick = () => { cur = (cur === v ? -1 : v); mark(); syncHash(); };
     return el;
   }
