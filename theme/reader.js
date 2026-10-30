@@ -289,12 +289,10 @@
             '#reader-gacha{max-width:calc(100vw - 1.5rem);box-sizing:border-box}',
             '#reader-gacha span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}',
             '@media (max-width:768px){#reader-gacha{left:.75rem;transform:none;max-width:calc(100vw - 5.4rem)}}',
-            // ガチャで当たった一節。蛍光ペンの色
-            '::highlight(reader-gacha){background-color:rgba(250,204,21,.38)}',
+            // ガチャで当たった一節。蛍光ペンの色（<mark> の黄色い地と黒い字は使わない）
+            'mark.reader-gacha-hit{background-color:rgba(250,204,21,.38);color:inherit;padding:0}',
             // 暗い色は body.dark-mode（『平和を愛する世界人として』だけは body.dark）
-            'body.dark-mode ::highlight(reader-gacha),body.dark ::highlight(reader-gacha){background-color:rgba(250,204,21,.24)}',
-            '#reader-gacha-paint i{position:absolute;z-index:5;pointer-events:none;background:rgba(250,204,21,.32)}',
-            'body.dark-mode #reader-gacha-paint i,body.dark #reader-gacha-paint i{background:rgba(250,204,21,.2)}',
+            'body.dark-mode mark.reader-gacha-hit,body.dark mark.reader-gacha-hit{background-color:rgba(250,204,21,.24)}',
             '#reader-drawer .tools a.pin{flex:1 1 100%;font-weight:700;background:rgba(99,102,241,.18)}',
             '#reader-drawer .font{flex:1 1 100%;display:flex;align-items:center;gap:.3rem;font-size:.8rem;opacity:.9}',
             '#reader-drawer .font span{flex:0 0 auto;opacity:.7;margin-right:.2rem}',
@@ -1198,27 +1196,17 @@
         return null;
     }
 
-    function paintPassage(range) {
-        if (window.CSS && CSS.highlights && window.Highlight) {
-            CSS.highlights.set('reader-gacha', new Highlight(range));
-            return;
+    // 一節の字を <mark> で包んで色を付ける。テキストノードはそのまま中へ移すので、nodes と starts は変わらない。
+    // 初めは CSS の ::highlight で塗っていたが、Safari（WebKit）は見出しなどのブロックと並ぶ
+    // 素の字（<p> で包まれず <br> で区切った本文。多くの本がこの書き方）を塗らない。
+    // iPhone では本によって色が付いたり付かなかったりした（2026-10-30）
+    function markPassage(q) {
+        for (var i = q.a; i <= q.b; i++) {
+            var n = nodes[i], m = document.createElement('mark');
+            m.className = 'reader-gacha-hit';
+            n.parentNode.insertBefore(m, n);
+            m.appendChild(n);
         }
-        // ::highlight の無いブラウザ（iOS 17.1 まで）は、行の箱を上に重ねる。字の位置が動いたら敷き直す
-        var layer = document.createElement('div');
-        layer.id = 'reader-gacha-paint';
-        document.body.appendChild(layer);
-        var lay = function () {
-            layer.innerHTML = '';
-            Array.prototype.forEach.call(range.getClientRects(), function (r) {
-                if (!r.width) return;
-                var b = document.createElement('i');
-                b.style.cssText = 'left:' + (r.left + window.scrollX) + 'px;top:' + (r.top + window.scrollY) + 'px;width:' + r.width + 'px;height:' + r.height + 'px';
-                layer.appendChild(b);
-            });
-        };
-        lay();
-        window.addEventListener('resize', lay);
-        window.addEventListener('load', lay);
     }
 
     function gacha() {
@@ -1234,8 +1222,11 @@
         } catch (e) { }
         collect();
         var hit = pickPassage();
-        var range = hit ? hit.range : null;
-        if (range) paintPassage(range);
+        var range = null;
+        if (hit) {
+            markPassage(hit.q);
+            range = rangeOf(hit.q);   // 字を動かすと前の範囲は縮むので、包んだあとに取り直す
+        }
         // 本の名前は theme/gacha.js が置いていく（ページの題は本によって書き方がまちまち）
         var book = '';
         try {
