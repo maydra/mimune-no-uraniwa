@@ -1253,16 +1253,26 @@
         box.classList.add('on');
         box.querySelector('.x').addEventListener('click', function () { box.classList.remove('on'); });
         if (!range) return;
-        // 一節を画面の上下のまん中に。画面に収まらない長さなら頭を上のバーのすぐ下に
+        // 一節を画面の上下のまん中に。画面に収まらない長さなら頭を上のバーのすぐ下に。
+        // 行き先は「今いる所からいくつ」ではなく「ページの頭からいくつ」で指す。iPhone の Safari は
+        // 読み込みの途中に動かすと、初めて描くときに画面の側でスクロールを1番上へ戻すことがあり、
+        // 今いる所から動かすと、戻されたのを知らないまま足して1番下まで行っていた
+        // （2026-10-30、iPhone SE の画面録画。1番上・1番下・一節が画面の外、が混じっていた）
         held = true;
         var go = function () {
             if (!held) return;
+            var top = posTop(starts[hit.q.a]);
+            if (top === null) return;
             var h = range.getBoundingClientRect().height;
             var room = window.innerHeight - TOP - 70;
+            var keep = TOP + Math.max(24, (room - h) / 2);
+            if (Math.abs(top - keep) < 2) return;
             // 『平和を愛する世界人として』は scroll-behavior:smooth。動いている途中で測り直すとずれるので、一気に飛ぶ
             var st = document.documentElement.style, was = st.scrollBehavior;
             st.scrollBehavior = 'auto';
-            scrollToPos(starts[hit.q.a], TOP + Math.max(24, (room - h) / 2));
+            restoring = true;
+            window.scrollTo(0, Math.max(0, window.scrollY + top - keep));
+            setTimeout(function () { restoring = false; }, 60);
             st.scrollBehavior = was;
         };
         var EV = ['wheel', 'touchstart', 'keydown', 'mousedown'];
@@ -1273,9 +1283,14 @@
         };
         EV.forEach(function (ev) { window.addEventListener(ev, touch, { capture: true, passive: true }); });
         go();
-        // 画像などが後から入って行がずれるので、触られるまでは入れ直す
+        // 画像などが後から入って行がずれるのと、iPhone が位置を戻すのに備えて、触られるまで何度か入れ直す。
+        // 一節がもう目当ての所にあれば何もしない
+        [100, 300, 600, 1000, 1600, 2500, 4000].forEach(function (ms) { setTimeout(go, ms); });
         if (document.fonts && document.fonts.ready) document.fonts.ready.then(go);
-        window.addEventListener('load', go);
+        window.addEventListener('load', function () {
+            go();
+            requestAnimationFrame(function () { requestAnimationFrame(go); });   // 描き終えたあとにもう一度
+        });
     }
 
     // ---- キーボード --------------------------------------------------------
