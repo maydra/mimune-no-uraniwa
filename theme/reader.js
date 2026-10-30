@@ -25,7 +25,7 @@
     // （省いた形だとホームが読み物とみなされ、「続きから読む」が出ていなかった。2026-10-24）
     var SKIP = /(?:^|\/)(index|mokuji|random|gacha|search-all|404|offline|test_output|google[0-9a-f]+)(?:\.html)?$/i;
     // 本文ではない所（ここの文字は数に入れない）
-    var NOT_BODY = 'script,style,nav,rt,rp,.page-nav,.typo-box,#reader-ui,#stacked-header-container,.toc,.hits';
+    var NOT_BODY = 'script,style,nav,rt,rp,.page-nav,.typo-box,#reader-ui,#reader-drawer,#reader-gacha,#stacked-header-container,.toc,.hits';
     var TOP = 96;              // 「画面の上」とみなす高さ
     var MIN_CHARS = 2500;      // これより短いページには出さない
     var STORE = 'reader.pos.';
@@ -39,6 +39,9 @@
         } catch (e) { }
         return '/';
     })();
+    // data-only="gacha" で読まれたら、ガチャの一節に色を付けるだけにする（読書支援は出さない）。
+    // 独自の作りの『平和を愛する世界人として』が、ガチャで来たときだけこうして読む
+    var GACHA_ONLY = !!(document.currentScript && document.currentScript.getAttribute('data-only') === 'gacha');
 
     if (window.__readerReady) return;
     window.__readerReady = true;
@@ -275,13 +278,23 @@
             '#reader-drawer .side{margin-top:1.2rem;border-top:1px solid rgba(127,127,127,.25);padding-top:.7rem}',
             '#reader-drawer .side a{display:block;padding:.5em .5em;font-size:.82rem;line-height:1.5;','text-decoration:none;color:inherit !important;border-radius:7px}','#reader-drawer .side a:hover{background:rgba(127,127,127,.14)}','#reader-drawer .side a>span{display:block;opacity:.55;font-size:.74rem}','#reader-drawer .side a>em{display:block;opacity:.6;font-size:.74rem;font-style:normal}','#reader-drawer .side a>b{display:block;font-weight:600}',
             '#reader-drawer .side span{opacity:.6;font-size:.74rem}',
-            '#reader-resume{pointer-events:auto;position:fixed;left:50%;transform:translateX(-50%);bottom:1.1rem;',
+            '#reader-resume,#reader-gacha{pointer-events:auto;position:fixed;left:50%;transform:translateX(-50%);bottom:1.1rem;',
             'z-index:10001;display:none;align-items:center;gap:.6em;padding:.55em .8em .55em 1em;border-radius:999px;',
             'font-size:.83rem;background:rgba(30,30,40,.92);color:#fff;box-shadow:0 4px 18px rgba(0,0,0,.28)}',
-            '#reader-resume.on{display:flex}',
-            '#reader-resume button{font:inherit;color:#fff;background:rgba(255,255,255,.18);border:0;',
-            'border-radius:999px;padding:.35em .9em;cursor:pointer}',
-            '#reader-resume .x{background:none;padding:.2em .5em;opacity:.7}',
+            '#reader-resume.on,#reader-gacha.on{display:flex}',
+            '#reader-resume button,#reader-gacha button,#reader-gacha a{font:inherit;color:#fff !important;background:rgba(255,255,255,.18);border:0;',
+            'border-radius:999px;padding:.35em .9em;cursor:pointer;text-decoration:none;white-space:nowrap}',
+            '#reader-resume .x,#reader-gacha .x{background:none;padding:.2em .5em;opacity:.7}',
+            // ガチャの札。本の名前が長ければ切る。スマホでは右下の色の切り替えボタンをよけて左に寄せる
+            '#reader-gacha{max-width:calc(100vw - 1.5rem);box-sizing:border-box}',
+            '#reader-gacha span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}',
+            '@media (max-width:768px){#reader-gacha{left:.75rem;transform:none;max-width:calc(100vw - 5.4rem)}}',
+            // ガチャで当たった一節。蛍光ペンの色
+            '::highlight(reader-gacha){background-color:rgba(250,204,21,.38)}',
+            // 暗い色は body.dark-mode（『平和を愛する世界人として』だけは body.dark）
+            'body.dark-mode ::highlight(reader-gacha),body.dark ::highlight(reader-gacha){background-color:rgba(250,204,21,.24)}',
+            '#reader-gacha-paint i{position:absolute;z-index:5;pointer-events:none;background:rgba(250,204,21,.32)}',
+            'body.dark-mode #reader-gacha-paint i,body.dark #reader-gacha-paint i{background:rgba(250,204,21,.2)}',
             '#reader-drawer .tools a.pin{flex:1 1 100%;font-weight:700;background:rgba(99,102,241,.18)}',
             '#reader-drawer .font{flex:1 1 100%;display:flex;align-items:center;gap:.3rem;font-size:.8rem;opacity:.9}',
             '#reader-drawer .font span{flex:0 0 auto;opacity:.7;margin-right:.2rem}',
@@ -311,7 +324,7 @@
             // 題の後ろに付いている書名は、小さく下の行へ回す
             'body.reader-on h1 .reader-book{display:block;font-size:.58em;font-weight:600;opacity:.72;margin-top:.3em}',
             'body.reader-on h1 .reader-book .sep{display:none}',
-            '@media print{#reader-ui,#reader-drawer,#reader-resume,#reader-toast{display:none !important}}'
+            '@media print{#reader-ui,#reader-drawer,#reader-resume,#reader-gacha,#reader-toast{display:none !important}}'
         ].join('');
         document.head.appendChild(s);
     }
@@ -674,6 +687,7 @@
     var saveT = null;
     function save() {
         clearTimeout(saveT);
+        if (held) return;   // ガチャで着いただけの所を「続きから読む」にしない
         saveT = setTimeout(function () {
             try {
                 if (cur > total * 0.02) {
@@ -1072,6 +1086,198 @@
         setTimeout(hide, 12000);
     }
 
+    // ---- ガチャ（2026-10-30） ----------------------------------------------
+    // ホームの「🎲 み言をランダムに見る」(gacha.html) は、本文の字数に比例してページを選び、
+    // ?gacha=1 を付けて飛んでくる。ここで本文の字を1つ選び、その字を含む一節へ移って色を付ける。
+    // どの字も同じ確率なので、長い本・長い一節ほどよく当たる。
+    // 前は各ページに直書きのスクリプトが「ページの高さ × 乱数」へ動かしていて、
+    // 最後の1画面ぶんが全部ページの下端に寄り、どこが当たりかも分からなかった
+    var held = false;   // ガチャで来て、まだ触られていない。このあいだはしおりを残さない
+    var BLOCK = /^(P|DIV|H[1-6]|LI|UL|OL|DL|DT|DD|BLOCKQUOTE|HR|TABLE|TR|TD|TH|SECTION|ARTICLE|HEADER|FOOTER|MAIN|CENTER|PRE|FIGURE|DETAILS|SUMMARY|ASIDE|FORM)$/;
+    var SEP = /^[＊*◆◇●○■□☆★※・･…‥―─－\-—=＝〜~]+$/;   // 「＊」だけの行など、み言の区切りの印
+    var LONG = 800;     // <br> の行をまとめた一節がこれより長ければ、行ごとに分け直す
+
+    // 本文を行に分ける。行の切れ目は <br> とブロックの切れ目。
+    // 行ごとに、前に <br> がいくつあったか（2つ以上なら空行）と、ブロックが切れたかと、
+    // リンクの字数（『父の祈り』の巻の並び「1巻 2巻 …」を外すため）を持つ
+    function lineList() {
+        var at = new Map();
+        nodes.forEach(function (n, i) { at.set(n, i); });
+        var out = [], line = null, br = 0, block = true;
+        var end = function () { if (line) { out.push(line); line = null; } };
+        (function walk(el, head, link) {
+            for (var c = el.firstChild; c; c = c.nextSibling) {
+                if (c.nodeType === 3) {
+                    if (!at.has(c)) continue;
+                    var i = at.get(c);
+                    if (!line) {
+                        line = { a: i, b: i, br: br, block: block, head: head, link: 0 };
+                        br = 0; block = false;
+                    }
+                    line.b = i;
+                    if (link) line.link += c.nodeValue.replace(/\s/g, '').length;
+                } else if (c.nodeType === 1) {
+                    if (c.matches(NOT_BODY)) continue;
+                    if (c.tagName === 'BR') { end(); br++; continue; }
+                    var isBlock = BLOCK.test(c.tagName);
+                    if (isBlock) { end(); block = true; }
+                    walk(c, head || /^H[1-6]$/.test(c.tagName), link || (c.tagName === 'A' && c.hasAttribute('href')));
+                    if (isBlock) { end(); block = true; }
+                }
+            }
+        })(document.body, false, false);
+        end();
+        return out;
+    }
+
+    function lineText(ln) {
+        var s = '';
+        for (var i = ln.a; i <= ln.b; i++) s += nodes[i].nodeValue;
+        return s;
+    }
+
+    // 行を一節にまとめる。区切りは、ブロックの切れ目・空行・見出し・「＊」だけの行・
+    // 全角空白で始まる行（段落の字下げ）。字下げのない行が <br> で続く所（祈りの連）はまとめる
+    function passages() {
+        var out = [], p = null;
+        lineList().forEach(function (ln) {
+            var t = lineText(ln);
+            var flat = t.replace(/\s/g, '');
+            var sep = SEP.test(flat);
+            var indent = /^[ \t\r\n]*　/.test(t);
+            if (!p || p.sep || sep || ln.head !== p.head || ln.block || ln.br >= 2 || indent) {
+                if (p) out.push(p);
+                p = { lines: [], t: '', link: 0, head: ln.head, sep: sep };
+            }
+            p.lines.push({ a: ln.a, b: ln.b, t: flat, link: ln.link });
+            p.t += flat;
+            p.link += ln.link;
+        });
+        if (p) out.push(p);
+        // 段落の区切りが字下げも空行もない本では、ページ全体が一節になってしまう。長すぎたら行で分ける
+        var res = [];
+        out.forEach(function (q) {
+            if (q.t.length > LONG && q.lines.length > 1) {
+                q.lines.forEach(function (l) { res.push({ a: l.a, b: l.b, t: l.t, link: l.link, head: q.head, sep: q.sep }); });
+            } else {
+                res.push({ a: q.lines[0].a, b: q.lines[q.lines.length - 1].b, t: q.t, link: q.link, head: q.head, sep: q.sep });
+            }
+        });
+        return res.filter(function (q) {
+            if (q.sep || q.t.length < 12) return false;
+            // 見出しは選ばない。ただし長いものは閉じ忘れた <h2> に入った本文（『父の祈り』に祈り全体が <h2> の所がある）
+            if (q.head && q.t.length < 100) return false;
+            if (q.link * 2 >= q.t.length) return false;   // 半分以上がリンクの行は案内
+            // 短くて句点で終わらない行は小見出しか出典（生涯路程 11 は小見出しも <br> の行で、
+            // 訓教経は「一九七二年六月二十五日 韓国前本部教会 『…選集第五十八巻』」の行がある）
+            if (q.t.length < 40 && !/[。．！？!?」）)]$/.test(q.t)) return false;
+            return !/^[（(][^（(]*[）)]$/.test(q.t);   // 括弧だけの行は出典
+        });
+    }
+
+    function rangeOf(q) {
+        var r = document.createRange();
+        r.setStart(nodes[q.a], 0);
+        r.setEnd(nodes[q.b], nodes[q.b].nodeValue.length);
+        return r;
+    }
+
+    // 本文の字を1つ選び、その字を含む一節の範囲を返す。見出しや区切りの印に当たったら次の一節。
+    // 画面に出ていない一節（閉じた折りたたみの中など）は飛ばし、後ろに無ければ前から探す
+    function pickPassage() {
+        var ps = passages();
+        if (!ps.length) return null;
+        var r = Math.floor(Math.random() * total);
+        var i = 0;
+        while (i < ps.length - 1 && starts[ps[i].b] + nodes[ps[i].b].nodeValue.length <= r) i++;
+        var order = ps.slice(i).concat(ps.slice(0, i).reverse());
+        for (var k = 0; k < order.length; k++) {
+            var range = rangeOf(order[k]);
+            if (range.getClientRects().length) return { q: order[k], range: range };
+        }
+        return null;
+    }
+
+    function paintPassage(range) {
+        if (window.CSS && CSS.highlights && window.Highlight) {
+            CSS.highlights.set('reader-gacha', new Highlight(range));
+            return;
+        }
+        // ::highlight の無いブラウザ（iOS 17.1 まで）は、行の箱を上に重ねる。字の位置が動いたら敷き直す
+        var layer = document.createElement('div');
+        layer.id = 'reader-gacha-paint';
+        document.body.appendChild(layer);
+        var lay = function () {
+            layer.innerHTML = '';
+            Array.prototype.forEach.call(range.getClientRects(), function (r) {
+                if (!r.width) return;
+                var b = document.createElement('i');
+                b.style.cssText = 'left:' + (r.left + window.scrollX) + 'px;top:' + (r.top + window.scrollY) + 'px;width:' + r.width + 'px;height:' + r.height + 'px';
+                layer.appendChild(b);
+            });
+        };
+        lay();
+        window.addEventListener('resize', lay);
+        window.addEventListener('load', lay);
+    }
+
+    function gacha() {
+        // ?gacha=book は本ごとのランダム（<本>/random.html）から。「もう一回」もその本の中で引く
+        var retry = ROOT + 'gacha.html';
+        try {
+            var q = new URLSearchParams(location.search);
+            if (q.get('gacha') === 'book') retry = 'random.html';
+            q.delete('gacha');
+            var s = q.toString();
+            // 開き直しても同じ所に色が付き直さないように、印は消しておく
+            history.replaceState(null, '', location.pathname + (s ? '?' + s : '') + location.hash);
+        } catch (e) { }
+        collect();
+        var hit = pickPassage();
+        var range = hit ? hit.range : null;
+        if (range) paintPassage(range);
+        // 本の名前は theme/gacha.js が置いていく（ページの題は本によって書き方がまちまち）
+        var book = '';
+        try {
+            var g = JSON.parse(sessionStorage.getItem('reader.gacha') || 'null');
+            sessionStorage.removeItem('reader.gacha');
+            var here = decodeURIComponent(location.pathname);
+            if (g && g.p && here.slice(-g.p.length) === g.p) book = g.b || '';
+        } catch (e) { }
+        var box = document.createElement('div');
+        box.id = 'reader-gacha';
+        box.innerHTML = '<span>🎲 ' + esc(book ? '『' + book + '』から' : 'ガチャで出た一節') + '</span>'
+            + '<a class="go" href="' + retry + '">もう一回</a>'
+            + '<button type="button" class="x" aria-label="閉じる">×</button>';
+        document.body.appendChild(box);
+        box.classList.add('on');
+        box.querySelector('.x').addEventListener('click', function () { box.classList.remove('on'); });
+        if (!range) return;
+        // 一節を画面の上下のまん中に。画面に収まらない長さなら頭を上のバーのすぐ下に
+        held = true;
+        var go = function () {
+            if (!held) return;
+            var h = range.getBoundingClientRect().height;
+            var room = window.innerHeight - TOP - 70;
+            // 『平和を愛する世界人として』は scroll-behavior:smooth。動いている途中で測り直すとずれるので、一気に飛ぶ
+            var st = document.documentElement.style, was = st.scrollBehavior;
+            st.scrollBehavior = 'auto';
+            scrollToPos(starts[hit.q.a], TOP + Math.max(24, (room - h) / 2));
+            st.scrollBehavior = was;
+        };
+        var EV = ['wheel', 'touchstart', 'keydown', 'mousedown'];
+        var touch = function (e) {
+            if (box.contains(e.target)) return;   // 「もう一回」「×」を押しただけでは読み始めたとみなさない
+            held = false;
+            EV.forEach(function (ev) { window.removeEventListener(ev, touch, true); });
+        };
+        EV.forEach(function (ev) { window.addEventListener(ev, touch, { capture: true, passive: true }); });
+        go();
+        // 画像などが後から入って行がずれるので、触られるまでは入れ直す
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(go);
+        window.addEventListener('load', go);
+    }
+
     // ---- キーボード --------------------------------------------------------
     function navTo(which) {
         var nav = document.querySelector('.page-nav');
@@ -1110,7 +1316,9 @@
     function start() {
         if (SKIP.test(location.pathname) || /\/$/.test(location.pathname)) { entrance(); return; }
         collect();
-        if (total < MIN_CHARS) return;
+        var lucky = /[?&]gacha=/.test(location.search);
+        // 短いページでも、ガチャで来たときは一節に色を付ける
+        if (total < MIN_CHARS || GACHA_ONLY) { if (lucky) { css(); gacha(); } return; }
         collectHeads();
         // dp の古い現在位置バーは、こちらと二重になるので引っ込める
         var old = document.getElementById('stacked-header-container');
@@ -1120,7 +1328,7 @@
         splitTitle();
         build();
         onScroll();
-        offerResume();
+        if (lucky) gacha(); else offerResume();
         window.addEventListener('scroll', onScroll, { passive: true });
         window.addEventListener('resize', onResize);
         window.addEventListener('keydown', onKey);

@@ -22,53 +22,8 @@
 <script id="theme-boot">(function(){try{var c=document.body.classList,t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';c.remove('light-mode','dark-mode');c.add(t+'-mode');var f=localStorage.getItem('reader.font');if(f)document.documentElement.style.fontSize=f}catch(e){}})()</script>
 <h1>🔮 ランダムなページを選んでいます...</h1>
 <noscript><p>この機能は JavaScript が必要です。<a href="index.html">トップページに戻る</a></p></noscript>
-<script>
-  // 常に randomScroll=true を付けたいなら true 固定でもOK
-  const wantRandomScroll = true;
-
-  // JSONを取得してランダムページへ遷移
-  fetch("pages.json")
-    .then(res => res.json())
-    .then(pages => {
-      // 除外フィルター: indexを含む、はじめに/序文/目次、gacha/search などを除外
-      const excludedPatterns = [
-        /index/i,
-        /hajimeni/i,
-        /jyobunn/i,
-        /mokuji/i,
-        /search/i,
-        /gacha/i,
-        /^preview\//,
-        /library\//
-      ];
-
-      const filteredPages = pages.filter(page => {
-        return !excludedPatterns.some(pattern => pattern.test(page));
-      });
-
-      if (filteredPages.length === 0) {
-        throw new Error("利用可能な本文ページが見つかりませんでした。");
-      }
-
-      const randomPage = filteredPages[Math.floor(Math.random() * filteredPages.length)];
-      // gacha.html はサイトの根に置いてあるので、相対パスのままで
-      // GitHub Pages でもローカル確認でも同じように飛べる
-      const fullURL = randomPage + (wantRandomScroll ? "?randomScroll=true" : "");
-      // replace: 履歴にこのページを残さない。href だと着地先で「戻る」を押した
-      // 瞬間ここへ戻って再抽選され、元のページに帰れなくなる
-      location.replace(fullURL);
-    })
-    .catch(err => {
-      console.error("ページ取得失敗:", err);
-      const p = document.createElement("p");
-      p.textContent = "ページ取得に失敗しました。";
-      p.style.fontWeight = "bold";
-      const back = document.createElement("a");
-      back.href = "index.html";
-      back.textContent = "トップページに戻る";
-      document.body.append(p, back);
-    });
-</script>
+<!-- 振り分けは各本の random.html と同じ theme/gacha.js -->
+<script src="theme/gacha.js?v=202610282236"></script>
 
 <script src="theme/script.js?v=202610282236"></script>
 </body>

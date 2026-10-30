@@ -2,8 +2,8 @@
 """data/offline-manifest.json を作り直す。
 
 「この本をオフライン保存」(offline.js) が読む、書籍ごとの全ページ一覧。
-pages.json はガチャ用に本文ページだけを選んだものなので使わない
-(聖書・平和メッセージなどが丸ごと抜けている)。
+data/gacha.json はガチャ用に本文ページだけを選んだものなので使わない
+(聖書・聖歌などが丸ごと抜けている)。
 
 ページを足したり消したりしたら、リポジトリの根からこれを回して commit:
     python _tools/root/build_offline_manifest.py
@@ -34,7 +34,7 @@ for d in sorted(ROOT.iterdir()):
 # ?v= は付けない。オフラインのときの SW は ?v= を無視して探す
 shared = sorted(str(f.relative_to(ROOT)).replace('\\', '/')
                 for f in (ROOT / 'theme' / 'pages').glob('*.css'))
-shared += ['theme/reader.js']
+shared += ['theme/reader.js', 'theme/gacha.js', 'data/gacha.json']  # 本ごとのランダム（random.html）が読む
 
 OUT.parent.mkdir(exist_ok=True)
 OUT.write_text(json.dumps({'books': books, 'shared': shared}, ensure_ascii=False,
