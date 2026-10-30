@@ -780,15 +780,6 @@
       });
     })();
   </script>
-<script>
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("randomScroll") === "true") {
-      window.onload = () => {
-        const y = Math.floor(Math.random() * document.body.scrollHeight);
-        window.scrollTo({ top: y, behavior: "smooth" });
-      };
-    }
-  </script>
 <nav class="page-nav">
 <a class="nav-btn" href="11sozo.html"><span>←</span> 前へ</a>
 <a class="nav-btn" href="index.html">目次</a>

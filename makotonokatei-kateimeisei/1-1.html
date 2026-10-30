@@ -207,15 +207,6 @@
 
 
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script>
 <nav class="page-nav">
   <div style="flex:1"></div>
   <a href="index.html" class="nav-btn">目次</a>

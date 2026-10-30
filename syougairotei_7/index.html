@@ -287,15 +287,6 @@
 
 <p><a href="random.html">📖 今日のみ言をこの本からランダムに探す</a></p>
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("randomScroll") === "true") {
-    window.onload = () => {
-      const y = Math.floor(Math.random() * document.body.scrollHeight);
-      window.scrollTo({ top: y, behavior: "smooth" });
-    };
-  }
-</script>
 
 
 <script src="../theme/script.js?v=202610282236"></script>
