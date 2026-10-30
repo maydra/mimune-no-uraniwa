@@ -116,13 +116,14 @@ def ko_spans(flat, runs):
 
 
 def lang_runs(groups, L):
-    """訳の言語 L の組を、公式の訳（off）と AI 訳（ai）の続きに分ける。組をまたいではつながない"""
+    """訳の言語 L の組を、公式の訳（off）と AI 訳（ai）の続きに分ける。組をまたいではつながない。
+    AI 訳は1つずつ別の続きにする（序文のように、ほかの言語の切れ目に合わせて AI 訳を分けたとき、行ごとに並ぶように）"""
     runs = []
     for g in groups:
         cur = []
         for x in g[L]:
             kind = 'off' if isinstance(x, int) else 'ai'
-            if cur and cur[-1]['kind'] == kind:
+            if cur and cur[-1]['kind'] == kind == 'off':
                 cur[-1]['items'].append(x)
             else:
                 cur.append({'kind': kind, 'items': [x], 'g': g})
@@ -195,7 +196,8 @@ def rows_of(sec, als, trans):
                 prev = merged[-1] if merged else None
                 if (prev and prev['g'] is run['g'] and 0 < run['a'] < F
                         and not SENT_END.match(flat_blk[run['a'] - 1])):
-                    prev['kind'] = 'mix'
+                    if not prev['kind'] == run['kind'] == 'ai':
+                        prev['kind'] = 'mix'
                     prev['items'] = prev['items'] + run['items']
                     prev['b'] = run['b']
                 else:
