@@ -1,0 +1,1536 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>/* 本文のパースを待たずに配色を決めて、白フラッシュを消す。自分で選んだ憶えが無ければ端末の設定に従う */
+try{var c=JSON.parse(localStorage.getItem("heiwa.theme"));if(c!=="light"&&c!=="dark")c=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=c;}catch(e){}</script>
+<title>平和を愛する世界人として 韓日英 三か国語対訳</title>
+<meta name="description" content="文鮮明先生の自叙伝『平和を愛する世界人として』の韓国語原文と日本語訳を、段落ごとに並べて読める対訳です。">
+<link rel="canonical" href="https://maydra.github.io/mimune-no-uraniwa/taiyaku/heiwa_sekaijin/index.html"/>
+<meta property="og:type" content="website">
+<meta property="og:title" content="平和を愛する世界人として 韓日英 三か国語対訳">
+<meta property="og:description" content="文鮮明先生の自叙伝『平和を愛する世界人として』の韓国語原文と日本語訳を、段落ごとに並べて読める対訳です。">
+<meta property="og:url" content="https://maydra.github.io/mimune-no-uraniwa/taiyaku/heiwa_sekaijin/index.html">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="み旨の裏庭">
+<meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.jpg">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#faf8f4; --panel:#fff; --ink:#1d1b17; --muted:#7a736c;
+    --line:#e6e0d6; --accent:#8a5a2b; --mark:#fff4d6; --markline:#dfae55; --add:#b3261e;
+    --pad:20px; --fs:20px; --lh:1.9; --gap:26px;
+  }
+  html[data-theme="dark"]{
+    --bg:#15140f; --panel:#1f1e17; --ink:#ece7dc; --muted:#9a9287;
+    --line:#34312a; --accent:#dba867; --mark:#3b3118; --markline:#8b6c2b; --add:#ff9b91;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,"Malgun Gothic","Noto Sans KR",sans-serif}
+
+  header{position:sticky;top:0;z-index:30;background:var(--panel);
+    border-bottom:1px solid var(--line);box-shadow:0 1px 10px rgba(0,0,0,.07)}
+  .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:9px var(--pad)}
+  .bar + .bar{padding-top:0}
+  #tools.closed{display:none}
+  .brand{font-weight:700;color:var(--accent);white-space:nowrap;letter-spacing:.05em}
+  select,button,input{font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);
+    border-radius:8px;padding:6px 10px;cursor:pointer}
+  #sec{max-width:min(48vw,440px)}
+  button:hover{border-color:var(--accent)}
+  button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .grp{display:flex;gap:6px;align-items:center}
+  /* 画面の言語。本文の言語ボタンと取り違えないよう、地球の印と区切り線を付ける */
+  .uigrp{padding-left:10px;border-left:1px solid var(--line)}
+  .spacer{flex:1}
+  .hint{color:var(--muted);font-size:13px}
+  .pos{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px;white-space:nowrap}
+
+  .sechead{padding:22px var(--pad) 10px;max-width:1600px;margin:0 auto}
+  .sechead h1{font-size:clamp(19px,2.2vw,27px);margin:0 0 10px;line-height:1.4}
+  .sechead .sub{color:var(--muted);font-size:14px;line-height:1.8}
+  .sechead .sub > div{display:flex;gap:6px;align-items:baseline}
+  .sechead .sub b{color:var(--accent);flex:0 0 auto}
+  .sechead .sub span{flex:1 1 auto;min-width:0}
+  .warn{display:inline-block;margin:10px 8px 0 0;padding:5px 12px;border-radius:999px;
+    background:var(--mark);border:1px solid var(--markline);font-size:13px}
+  /* 節ごと・言語ごとのリンクを配るボタン */
+  .linkbtn{font-size:12px;line-height:1.5;padding:2px 9px;border-radius:999px;
+    color:var(--muted);flex:0 0 auto;white-space:nowrap}
+  .linkbtn:hover{color:var(--accent)}
+  h1 .linkbtn{font-size:13px;margin-left:10px;vertical-align:middle}
+  h1 .linkbtn + .linkbtn{margin-left:6px}
+
+  /* 対訳の本体は 1 枚のグリッド。英語は複数行にまたがる */
+  /* 節の中の目次。小見出しだけを並べて、押すとその段落へ跳ぶ */
+  .sectoc{margin:12px 0 0;border:1px solid var(--line);border-radius:10px;
+    background:color-mix(in srgb,var(--panel) 60%,transparent)}
+  .sectoc[hidden]{display:none}
+  .sectoc > summary{cursor:pointer;list-style:none;padding:9px 14px;font-size:14px;
+    font-weight:700;color:var(--accent);display:flex;align-items:center;gap:8px}
+  .sectoc > summary::-webkit-details-marker{display:none}
+  .sectoc > summary::before{content:"▸";transition:transform .15s;font-size:12px}
+  .sectoc[open] > summary::before{transform:rotate(90deg)}
+  .sectoc > summary .cnt{color:var(--muted);font-weight:400}
+  /* 出す段の深さを選ぶ。深い節（モーセ路程は5段・28行）を大づかみにするため */
+  .sectoc .lv{display:flex;gap:4px;margin-left:auto;align-items:center}
+  .sectoc .lv .lvT{color:var(--muted);font-weight:400;font-size:12px}
+  .sectoc .lv button{font:inherit;font-size:12px;font-weight:700;line-height:1.5;
+    padding:1px 8px;border-radius:6px;border:1px solid var(--line);
+    background:var(--bg);color:var(--muted);cursor:pointer}
+  .sectoc .lv button[aria-pressed="true"]{background:var(--accent);color:#fff;
+    border-color:var(--accent)}
+  .toclist{padding:0 8px 10px}
+  .tocrow{display:grid;gap:10px;padding:6px 6px;border-top:1px solid var(--line);
+    border-radius:6px;cursor:pointer;font-size:14px;line-height:1.6}
+  .tocrow:first-child{border-top:none}
+  .tocrow:hover{background:var(--mark)}
+  /* 段の深さを字の大きさでも見せる。いちばん上の段は少し離して、太い線で区切る */
+  .tocrow[data-d="0"]{border-top:2px solid var(--markline);margin-top:9px}
+  .tocrow[data-d="0"]:first-child{margin-top:0}
+  .tocrow[data-d="0"] .t{font-size:15px;font-weight:700}
+  .tocrow[data-d="1"] .t{font-weight:600}
+  .tocrow[data-d="2"] .t{font-size:13.5px}
+  .tocrow[data-d="3"] .t,.tocrow[data-d="4"] .t,.tocrow[data-d="5"] .t{font-size:13px;opacity:.92}
+  /* 段の数だけ縦線を引く（木の枝）。どこにぶら下がっているかが、字を読まなくても分かる */
+  .tocrow .t{position:relative}
+  .tocrow .t::before{content:"";position:absolute;left:0;top:1px;bottom:1px;
+    width:calc(var(--d,0) * 1.4em);pointer-events:none;
+    background-image:repeating-linear-gradient(to right,
+      var(--line) 0 1px, transparent 1px 1.4em)}
+  .tocrow .no{display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+    color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;
+    user-select:none;-webkit-user-select:none}
+  .tocrow .no .p{color:var(--accent);font-weight:700;white-space:nowrap}
+  .tocrow .no .r{font-size:11px;opacity:.75}
+  .tocrow .t{min-width:0;overflow-wrap:anywhere;white-space:normal}
+  .tocrow .t b{display:block;font-size:10px;letter-spacing:.14em;color:var(--muted);
+    font-weight:700;user-select:none;-webkit-user-select:none}
+  @media (max-width:760px){ .tocrow{grid-template-columns:1fr !important;gap:2px} }
+
+  main{padding:8px var(--pad) 50vh;max-width:1600px;margin:0 auto;
+    display:grid;column-gap:var(--gap);align-items:start}
+  .cell{font-size:var(--fs);line-height:var(--lh);white-space:pre-wrap;overflow-wrap:anywhere;
+    padding:12px 12px 14px;border-top:1px solid var(--line);border-radius:8px}
+  .cell .tag{display:block;font-size:10px;letter-spacing:.14em;color:var(--muted);
+    font-weight:700;margin-bottom:5px;user-select:none;-webkit-user-select:none}
+  .cell.span{background:color-mix(in srgb,var(--panel) 55%,transparent)}
+  .cell.on{background:var(--mark);box-shadow:inset 4px 0 0 var(--markline)}
+  .rowno{user-select:none;-webkit-user-select:none;font-size:11px;color:var(--muted);padding-top:14px;border-top:1px solid var(--line);
+    font-variant-numeric:tabular-nums;display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+  /* 段落ごとのリンク。ふだんは薄く、指で触る端末では触らなくても見えるようにする */
+  .rowno .lk{cursor:pointer;font-size:11px;line-height:1;opacity:0;transition:opacity .15s;
+    padding:2px 3px;border-radius:6px}
+  .rowno:hover .lk,.rowno .lk:focus-visible{opacity:.85}
+  .rowno.here .lk{opacity:.85}
+  @media (pointer:coarse){ .rowno .lk{opacity:.45;padding:5px 7px;font-size:13px} }
+  .empty{color:var(--muted)}
+  /* 訳の無い所へ入れた参考訳。公式訳と取り違えないよう、薄い文字＋左の縦線＋札 */
+  .cell.ai{color:var(--muted);border-left:3px solid var(--markline);
+    border-radius:0 8px 8px 0;background:color-mix(in srgb,var(--mark) 40%,transparent)}
+  .cell.ai .tag{color:var(--markline)}
+  body.hideai .cell.ai{display:none}
+  .cell.gap{background:repeating-linear-gradient(135deg,transparent,transparent 7px,
+    color-mix(in srgb,var(--markline) 16%,transparent) 7px,
+    color-mix(in srgb,var(--markline) 16%,transparent) 14px)}
+  /* 翻訳版の掲載順から動かして並べた所。目障りにならない程度の小さな断り */
+  .mvtag{color:var(--markline);letter-spacing:0;cursor:help;margin-left:6px}
+  /* 英訳が原文をはしょっている所。⚠ を押すと、英語に出ていない原文の文が開く */
+  .wtag{color:var(--markline);letter-spacing:.02em;margin-left:8px;cursor:pointer;
+    font:inherit;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;
+    border:1px solid color-mix(in srgb,var(--markline) 60%,transparent);
+    background:color-mix(in srgb,var(--mark) 70%,transparent);vertical-align:2px}
+  .wtag:hover,.wtag[aria-expanded="true"]{background:var(--markline);color:#fff;
+    border-color:var(--markline)}
+  @media (pointer:coarse){ .wtag{font-size:13px;padding:6px 13px} }
+  .cell.brief{box-shadow:inset 3px 0 0 color-mix(in srgb,var(--markline) 55%,transparent)}
+  .wbox{display:none;margin-top:10px;padding:9px 11px;border-radius:8px;white-space:normal;
+    background:color-mix(in srgb,var(--mark) 55%,transparent);
+    border:1px solid color-mix(in srgb,var(--markline) 45%,transparent)}
+  .wbox.open{display:block}
+  /* 英語に無い文を、その場へ赤で挿し込んだもの。公式訳ではないので括弧と札で断る */
+  .cell ins{text-decoration:none;color:var(--add);font-style:normal;
+    background:color-mix(in srgb,var(--add) 9%,transparent);border-radius:4px;padding:0 3px}
+  .wmore{background:none;border:0;padding:0;margin-top:8px;cursor:pointer;font:inherit;
+    font-size:calc(var(--fs) * .8);color:var(--accent);text-decoration:underline}
+  .wbox h4{margin:0 0 7px;font-size:10px;letter-spacing:.14em;color:var(--markline);font-weight:700}
+  /* 原文（英語に出ていない文だけ蛍光ペン）。紙の蛍光ペンなので配色が暗くても色は同じ */
+  .worig-wrap{display:none;margin-top:8px;padding-top:8px;
+    border-top:1px dashed color-mix(in srgb,var(--markline) 45%,transparent)}
+  .worig-wrap.open{display:block}
+  .wbox .worig{font-size:calc(var(--fs) * .86);line-height:1.7;white-space:pre-wrap;
+    color:var(--muted)}
+  .wbox mark{background:#ffe680;color:#2b2417;border-radius:3px;padding:1px 2px}
+  .wbox mark sup{font-size:9px;font-weight:700;margin-left:2px;vertical-align:5px}
+  .wbox .wg{margin:9px 0 0;padding:0 0 0 22px;font-size:calc(var(--fs) * .86);line-height:1.55}
+  .wbox .wg li{margin:0 0 6px}
+  .wbox .wg li::marker{color:var(--markline);font-weight:700}
+  .wbox u{display:block;text-decoration:none;color:var(--markline);
+    font-size:10px;letter-spacing:.06em;margin-top:7px}
+  .wbox .n{margin-top:9px;padding-top:8px;font-size:calc(var(--fs) * .86);line-height:1.6;
+    border-top:1px dashed color-mix(in srgb,var(--markline) 45%,transparent)}
+  .wbox .n b{color:var(--markline);font-size:10px;letter-spacing:.14em;margin-right:6px}
+
+  /* 横3列（縦積み）: 1 行ぶんをひとかたまりにして、行の切れ目を太い線で見せる */
+  .rowbox{border-top:2px solid var(--line);padding-top:2px;margin-top:14px;
+    scroll-margin-top:calc(var(--headh,60px) + 12px)}
+  .rowbox .rowno{padding:8px 12px 0;border-top:none;flex-direction:row;align-items:baseline;gap:10px}
+  .rowbox .cell{border-top:none;padding-top:4px}
+
+  /* 「区切り」: キリの良いところに引く太線。縦3列では全列をまたぐ1行ぶんを取って引く。
+     線の右端に、次の線までをまとめてコピーするボタンを載せる。節の頭は線を引かずボタンだけ */
+  .brk{grid-column:1 / -1;display:flex;align-items:center;gap:10px;margin:10px 0 0}
+  .brk::before{content:"";flex:1;border-top:4px solid color-mix(in srgb,var(--ink) 45%,transparent);
+    border-radius:2px}
+  .brk.top{margin-top:0}
+  .brk.top::before{border-top-color:transparent}
+  .rowbox + .brk{margin-top:14px}
+
+  #q{min-width:170px;cursor:text}
+  .hits{position:absolute;top:100%;left:0;right:0;max-height:52vh;overflow:auto;
+    background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+  .hit{padding:9px var(--pad);border-top:1px solid var(--line);cursor:pointer;font-size:14px;line-height:1.6}
+  .hit:hover{background:var(--mark)}
+  .hit b{color:var(--accent);margin-right:8px;font-variant-numeric:tabular-nums}
+  .hit mark{background:var(--mark);color:inherit;font-weight:700;padding:0 2px}
+  footer{padding:18px var(--pad);color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+  /* コピーしたことの知らせ。段落ごとのボタンは小さいので、その場で字を変えずここに出す */
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:60;
+    background:var(--accent);color:#fff;padding:9px 18px;border-radius:999px;font-size:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .18s;
+    max-width:min(92vw,560px);text-align:center}
+  .toast.on{opacity:1}
+  a{color:var(--accent)}
+
+  /* スマホ: 縦3列は1行2〜3字になって読めないので、初めて開いたときは横3列にして
+     上のバーもたたんでおく（下の JS）。ここでは詰めて、指で押せる大きさにする */
+  @media (max-width:760px){
+    :root{--gap:0px;--pad:12px}
+    .bar{gap:6px;padding:7px var(--pad)}
+    select,button{padding:8px 11px}
+    #sec{max-width:100%;flex:1 1 150px;min-width:0}
+    #q{flex:1 1 140px;min-width:0}
+    .uigrp{padding-left:8px}
+    .sechead{padding:14px var(--pad) 6px}
+    .warn{font-size:12px;padding:5px 10px}
+    .cell{padding:10px 10px 12px}
+    .rowbox .rowno{padding:8px 10px 0}
+    .linkbtn{padding:4px 10px}
+  }
+  @media (max-width:480px){ .brand{display:none} }
+  @media print{
+    header,footer,.hint,.linkbtn{display:none}
+    body{background:#fff;color:#000}
+    .cell{break-inside:avoid}
+    .cell.on{background:none;box-shadow:none}
+  }
+  #brk{display:none}
+  .cell .cnote{display:block;margin-top:.6em;font-size:.82em;line-height:1.65;color:var(--muted)}
+  .cell .jaonly{text-decoration:underline dotted var(--markline);text-decoration-thickness:2px;text-underline-offset:.3em}
+  .cell .jobadge{display:inline-block;font-size:.66em;line-height:1.55;padding:0 .55em;margin-right:.4em;
+    border:1px solid var(--markline);border-radius:999px;color:var(--markline);vertical-align:.15em;white-space:nowrap}
+  .cell .aiseg{color:var(--muted);background:color-mix(in srgb,var(--mark) 45%,transparent);
+    border-radius:3px;padding:0 .15em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .cell .aisegtag{color:var(--markline)}
+  body.hideai .cell .aiseg,body.hideai .cell .aisegtag{display:none}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXQ0QTBYTR');
+</script>
+</head>
+<body data-pagefind-ignore>
+<script id="theme-boot">(function(){try{var c=document.body.classList,t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';c.remove('light-mode','dark-mode');c.add(t+'-mode');var f=localStorage.getItem('reader.font');if(f)document.documentElement.style.fontSize=f}catch(e){}})()</script>
+
+<header>
+  <div class="bar">
+    <span class="brand" id="brand">訓読 対訳</span>
+    <select id="sec"></select>
+    <button id="prev">◀</button>
+    <button id="next">▶</button>
+    <div class="spacer"></div>
+    <span class="pos" id="pos"></span>
+    <button id="toggle" aria-expanded="true">▴</button>
+  </div>
+  <div id="tools">
+    <div class="bar">
+      <div class="grp" id="langs"></div>
+      <input id="q" autocomplete="off">
+      <div class="spacer"></div>
+      <div class="grp">
+        <button id="layout">横3列</button>
+        <button id="brk">区切り</button>
+        <button id="small">A−</button>
+        <button id="big">A＋</button>
+        <button id="theme">◐</button>
+        <button id="ai">AI訳</button>
+      </div>
+      <div class="grp uigrp">
+        <select id="ui">
+          <option value="ja">🌐 日本語</option>
+          <option value="ko">🌐 한국어</option>
+          <option value="en">🌐 English</option>
+        </select>
+      </div>
+    </div>
+    <div class="bar">
+      <span class="hint" id="hint"></span>
+    </div>
+  </div>
+  <div class="hits" id="hits" hidden></div>
+</header>
+
+<div class="sechead">
+  <h1 id="secTitle">読み込み中… / Loading…</h1>
+  <div class="sub" id="secSub"></div>
+  <div id="secWarn"></div>
+  <details class="sectoc" id="sectoc" hidden>
+    <summary id="sectocSum"></summary>
+    <div class="toclist" id="sectocBody"></div>
+  </details>
+</div>
+
+<main id="body"></main>
+
+<footer id="foot"></footer>
+
+<script src="book.js?v=202610282236" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const LANGS = [
+    { id: "ko", label: "한국어",  tag: "KO" },
+    { id: "ja", label: "日本語",  tag: "JA" },
+    { id: "en", label: "English", tag: "EN" },
+  ];
+
+  // ---- 画面の言葉。本文の言語（LANGS）とは別で、右上のプルダウンで選ぶ ----
+  const UI = {
+    ja: {
+      title: "平和を愛する世界人として 韓日英 三か国語対訳", brand: "自叙伝 対訳",
+      secSel: "節を選ぶ", prev: "前の節", next: "次の節",
+      openT: "上のバーを出す", closeT: "上のバーをたたむ",
+      langsT: "表示する言語", q: "全体から語句を探す",
+      rows: "横3列", cols: "縦3列", layoutT: "縦3列（横並び） / 横3列（縦積み）",
+      brk: "区切り", brkT: "キリの良いところ（小見出しと、み言の出典の切れ目）に太線を引く",
+      smallT: "文字を小さく", bigT: "文字を大きく", themeT: "配色", theme: { system: "端末の設定に合わせる", light: "明るい", dark: "暗い" },
+      ai: "AI訳", aiT: "訳の無い所へ入れた参考訳を出し入れする",
+      uiT: "画面の言語",
+      hint: "段落をクリックで印 ／ ↑↓ で読み進める ／ ←→ で節を移動",
+      hintTouch: "段落をタップで印 ／ ◀ ▶ で節を移動",
+      pos: (i, n, p) => `${i} / ${n}　${p} 段落`,
+      secToc: "この節の目次", secTocT: "小見出しへ跳ぶ", secTocLv: "段",
+      loading: "読み込み中…",
+      nodata: "データがありません（python scripts/align.py を実行してください）",
+      none: "（この節は未収録）",
+      name: { ko: "韓国語", ja: "日本語", en: "英語" },
+      chapter: (n) => `第${n}章`,
+      link: "リンク", copied: "コピーしました", copyFail: "コピーできませんでした。アドレス欄のURLを使ってください",
+      linkSecT: "この節を開くリンクをコピー",
+      linkRowT: (n) => `${n} 段落目を開くリンクをコピー`,
+      linkLangT: (l) => `${l}だけを出してこの節を開くリンクをコピー`,
+      copy: "コピー", copiedText: "本文をコピーしました", copyTextFail: "コピーできませんでした",
+      noText: "コピーする本文がありません",
+      copySecT: "この節の本文をコピー（出している言語を、言語ごとにまとめて）",
+      copyRowT: (n) => `${n} 段落目の本文をコピー`,
+      copyLangT: (l) => `この節の${l}の本文をコピー`,
+      copyBrk: (n) => `ここから ${n} 段落をコピー`,
+      copyBrkT: "次の太線までの本文を、言語ごとにまとめてコピー",
+      wPdf: (l) => `${l} はPDF添付のみで本文がありません`,
+      wMismatch: (l, f) => `${l}の記事は別の内容が載っているようです（語の一致 ${f}）。対訳として当てにしないでください`,
+      wShort: (l) => `${l}は投稿されていない部分があります。抜けている所は「—」と出ます`,
+      wAisec: (l) => `${l}版のこの節は元データにありません。${l}の欄は全文が韓国語からの AI 参考訳です（公式訳ではありません。「AI訳」ボタンで消せます）`,
+      wMoved: "⇄印の訳文は、韓国語の順に合わせるため、訳書（日本語版・英語版）の順番から移動してあります",
+      spanTag: () => "",
+      // ⚠ の一式は英語で出す（briefBox）。ここに w* の文字列は置かない
+      mvTag: "⇄ 順番移動",
+      mvTitle: "韓国語の順に合わせるため、訳書の順番から移動してあります",
+      joTag: "日本語版のみの文（点線）", joT: "点線の文は、その欄の訳書（日本語版・英語版）にだけあり、韓国語の原文にはありません",
+      aiSegTag: "色付きの所は AI訳", aiSegT: "色付きの所は訳書で省かれていた語句を、韓国語から AI が訳したものです（公式訳ではありません。「AI訳」ボタンで消せます）",
+      noHit: "見つかりませんでした",
+      searching: (n) => `${n} 節を読み込んでいます…`,
+      foot: (links) => `韓国語・英語: み言選集の資料「평화를 사랑하는 세계인으로 (한.日.Eng.)」。日本語: 日本語版（み旨の裏庭の${links}）。`
+        + `日本語版・英語版で省かれている所は、韓国語から訳した AI 参考訳で補っています（公式訳ではありません。「AI訳」ボタンで消せます）。`
+        + `訳書が中身を書き換えている所と、訳書にしか無い文には「※」の注を付けました。`,
+    },
+    ko: {
+      title: "평화를 사랑하는 세계인으로 한일영 3개국어 대역", brand: "자서전 대역",
+      secSel: "절 고르기", prev: "이전 절", next: "다음 절",
+      openT: "위 막대 펴기", closeT: "위 막대 접기",
+      langsT: "표시할 언어", q: "전체에서 낱말 찾기",
+      rows: "가로 3줄", cols: "세로 3단", layoutT: "세로 3단(나란히) / 가로 3줄(쌓기)",
+      brk: "구분선", brkT: "끊기 좋은 곳(소제목과 말씀 출처가 바뀌는 곳)에 굵은 선을 긋습니다",
+      smallT: "글자 작게", bigT: "글자 크게", themeT: "배색", theme: { system: "기기 설정에 따름", light: "밝게", dark: "어둡게" },
+      ai: "AI 번역", aiT: "번역이 없는 곳에 넣은 참고 번역을 보이거나 숨깁니다",
+      uiT: "화면 언어",
+      hint: "문단을 클릭하면 표시 ／ ↑↓ 로 읽어 나가기 ／ ←→ 로 절 이동",
+      hintTouch: "문단을 누르면 표시 ／ ◀ ▶ 로 절 이동",
+      pos: (i, n, p) => `${i} / ${n}　${p} 문단`,
+      secToc: "이 절의 차례", secTocT: "소제목으로 이동", secTocLv: "단계",
+      loading: "읽는 중…",
+      nodata: "자료가 없습니다 (python scripts/align.py 을 실행하십시오)",
+      none: "(이 절은 실려 있지 않습니다)",
+      name: { ko: "한국어", ja: "일본어", en: "영어" },
+      chapter: (n) => `제${n}장`,
+      link: "링크", copied: "복사했습니다", copyFail: "복사하지 못했습니다. 주소창의 URL을 사용해 주십시오",
+      linkSecT: "이 절을 여는 링크를 복사",
+      linkRowT: (n) => `${n}번째 문단을 여는 링크를 복사`,
+      linkLangT: (l) => `${l}만 켜고 이 절을 여는 링크를 복사`,
+      copy: "복사", copiedText: "본문을 복사했습니다", copyTextFail: "복사하지 못했습니다",
+      noText: "복사할 본문이 없습니다",
+      copySecT: "이 절의 본문을 복사 (보이는 언어를 언어별로 모아서)",
+      copyRowT: (n) => `${n}번째 문단의 본문을 복사`,
+      copyLangT: (l) => `이 절의 ${l} 본문을 복사`,
+      copyBrk: (n) => `여기서부터 ${n}문단 복사`,
+      copyBrkT: "다음 굵은 선까지의 본문을 언어별로 모아서 복사",
+      wPdf: (l) => `${l}는 PDF 첨부만 있고 본문이 없습니다`,
+      wMismatch: (l, f) => `${l} 글에는 다른 내용이 실려 있는 것 같습니다 (낱말 일치 ${f}). 대역으로 믿지 마십시오`,
+      wShort: (l) => `${l}는 올라오지 않은 부분이 있습니다. 빠진 곳은 「—」로 나옵니다`,
+      wAisec: (l) => `${l}판의 이 절은 원본 데이터에 없습니다. ${l} 칸은 전문이 한국어에서 옮긴 AI 참고 번역입니다 (공식 번역이 아닙니다. 「AI 번역」 단추로 숨길 수 있습니다)`,
+      wMoved: "⇄ 표시가 붙은 번역문은 한국어 순서에 맞추기 위해 번역판(일본어판·영어판)의 순서에서 옮긴 것입니다",
+      spanTag: () => "",
+      // ⚠ の一式は英語で出す（briefBox）。ここに w* の文字列は置かない
+      mvTag: "⇄ 순서 이동",
+      mvTitle: "한국어 순서에 맞추기 위해 번역판의 순서에서 옮겼습니다",
+      joTag: "일본어판에만 있는 문장 (점선)", joT: "점선 문장은 그 칸의 번역판(일본어판·영어판)에만 있고 한국어 원문에는 없습니다",
+      aiSegTag: "색 바탕은 AI 번역", aiSegT: "색 바탕 부분은 번역판에서 생략된 어구를 한국어에서 AI가 옮긴 것입니다 (공식 번역이 아닙니다. 「AI 번역」 버튼으로 숨길 수 있습니다)",
+      noHit: "찾지 못했습니다",
+      searching: (n) => `${n}개 절을 읽고 있습니다…`,
+      foot: (links) => `한국어·영어: 말씀선집 자료 「평화를 사랑하는 세계인으로 (한.日.Eng.)」. 일본어: 일본어판 (${links}). `
+        + `일본어판·영어판에서 생략된 부분은 한국어에서 옮긴 AI 참고 번역으로 채웠습니다 (공식 번역이 아닙니다. 「AI 번역」 버튼으로 숨길 수 있습니다). `
+        + `번역판이 내용을 바꾼 곳과 번역판에만 있는 문장에는 「※」 주를 달았습니다.`,
+    },
+    en: {
+      title: "As a Peace-Loving Global Citizen — Korean–Japanese–English Parallel", brand: "Autobiography Parallel",
+      secSel: "Choose a section", prev: "Previous section", next: "Next section",
+      openT: "Show the toolbar", closeT: "Hide the toolbar",
+      langsT: "Languages to show", q: "Search every section",
+      rows: "3 rows", cols: "3 columns", layoutT: "3 columns (side by side) / 3 rows (stacked)",
+      brk: "Breaks", brkT: "Draw a heavy line at natural breaks (subheadings and changes of source)",
+      smallT: "Smaller text", bigT: "Larger text", themeT: "Color scheme", theme: { system: "Follow the device setting", light: "Light", dark: "Dark" },
+      ai: "AI", aiT: "Show or hide the AI reference translations filled into missing paragraphs",
+      uiT: "Interface language",
+      hint: "Click a paragraph to mark it / ↑↓ to read on / ←→ to change section",
+      hintTouch: "Tap a paragraph to mark it / ◀ ▶ to change section",
+      pos: (i, n, p) => `${i} / ${n}　${p} paragraphs`,
+      secToc: "Contents of this section", secTocT: "Jump to a subheading", secTocLv: "Levels",
+      loading: "Loading…",
+      nodata: "No data (run python scripts/align.py)",
+      none: "(not posted for this section)",
+      name: { ko: "Korean", ja: "Japanese", en: "English" },
+      chapter: (n) => `Ch. ${n}`,
+      link: "Link", copied: "Copied", copyFail: "Could not copy - use the URL in the address bar",
+      linkSecT: "Copy a link that opens this section",
+      linkRowT: (n) => `Copy a link that opens paragraph ${n}`,
+      linkLangT: (l) => `Copy a link that opens this section with only ${l} showing`,
+      copy: "Copy", copiedText: "Text copied", copyTextFail: "Could not copy",
+      noText: "No text to copy",
+      copySecT: "Copy the text of this section (the languages showing, one language after another)",
+      copyRowT: (n) => `Copy the text of paragraph ${n}`,
+      copyLangT: (l) => `Copy the ${l} text of this section`,
+      copyBrk: (n) => `Copy the next ${n} paragraph${n === 1 ? "" : "s"}`,
+      copyBrkT: "Copy the text down to the next heavy line, one language after another",
+      wPdf: (l) => `The ${l} post has only a PDF attachment, with no body text`,
+      wMismatch: (l, f) => `The ${l} post seems to carry different content (word match ${f}). Do not rely on it as a parallel text`,
+      wShort: (l) => `Part of the ${l} text was never posted. Missing paragraphs show as "—"`,
+      wAisec: (l) => `This section of the ${l} edition is missing from the source data. The whole ${l} column is an AI reference translation from the Korean (not the official text; hide it with the "AI" button)`,
+      wMoved: "Translation cells marked ⇄ were moved out of the order of the Japanese or English edition to follow the Korean",
+      spanTag: () => "",
+      wTag: "⚠ shorter than the original",
+      wTagT: "Show the Korean sentences that the English leaves out",
+      wHead: "In the Korean, not in the English",
+      wNote: "Note",
+      wRed: "* The red text is missing from the English post — translated here from the Korean, not the official text",
+      wMore: "Show the Korean",
+      wLess: "Hide the Korean",
+      mvTag: "⇄ moved",
+      mvTitle: "Moved out of the order of the translated edition to follow the Korean",
+      joTag: "Japanese edition only (dotted)", joT: "Dotted sentences appear only in the translated edition of that column (Japanese or English), not in the Korean original",
+      aiSegTag: "Shaded: AI translation", aiSegT: "Shaded words were left out of the translated edition and are an AI translation from the Korean (not the official text; hide them with the AI button)",
+      noHit: "Nothing found",
+      searching: (n) => `Loading ${n} sections…`,
+      foot: (links) => `Korean and English: the source text "평화를 사랑하는 세계인으로 (한.日.Eng.)". Japanese: the Japanese edition (${links}). `
+        + `Passages left out of the Japanese or English edition are filled with AI reference translations from the Korean (not the official text; hide them with the AI button). `
+        + `Notes marked ※ point out where a translation changes the content, and sentences found only in a translation.`,
+    },
+  };
+  // 参考訳の札だけは**その欄の言語**で出す。英語の欄を読んでいる人が読めなければ意味がない
+  const AITAG = {
+    ko: "AI 참고 번역 (한국어에서) · 공식 번역이 아닙니다",
+    ja: "AI訳（韓国語から）・公式訳ではありません",
+    en: "AI translation from Korean — not the official text",
+  };
+
+  const BOOK = window.HOONDOK || { sections: [] };
+  const data = BOOK.sections;
+  const $ = (s) => document.querySelector(s);
+
+  // ---- 節の本文は、開いたときだけ読み込む ----
+  // 一枚の data.js だと素で 5.6MB あり、スマホでは数秒の白画面になる。
+  // <script> の差し込みなので file:// でも動く（聖書版と同じ作り）
+  const waiting = {};
+  window.HD = {
+    put(key, payload) {
+      const s = data.find((x) => x.key === key);
+      if (s) s.cells = payload.cells || {};
+      (waiting[key] || []).forEach((fn) => fn());
+      delete waiting[key];
+    },
+  };
+  function load(s, then) {
+    if (s.cells) return then();
+    if (waiting[s.key]) return waiting[s.key].push(then);
+    waiting[s.key] = [then];
+    const el = document.createElement("script");
+    el.src = `data/${s.key}.js` + (BOOK.v ? `?v=${BOOK.v}` : "");
+    el.onerror = () => window.HD.put(s.key, { cells: {} });
+    document.head.appendChild(el);
+  }
+  const esc = (t) => String(t).replace(/[&<>"]/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem("heiwa." + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+    set(k, v) { try { localStorage.setItem("heiwa." + k, JSON.stringify(v)); } catch {} },
+  };
+  const narrow = () => matchMedia("(max-width:760px)").matches;
+  const touch  = () => matchMedia("(pointer:coarse)").matches;
+
+  let on      = store.get("langs", ["ko", "ja", "en"]);
+  let idx     = Math.min(Math.max(store.get("sec", 0), 0), Math.max(data.length - 1, 0));
+  let fs      = store.get("fs", 20);
+  // 縦3列か横3列かは**画面の広さごとに**覚える。既定はスマホが横3列、パソコンが縦3列。
+  // 一つの憶えにすると、パソコンでの選択がスマホの既定まで動かしてしまう
+  const layoutKey = () => (narrow() ? "stacked.narrow" : "stacked.wide");
+  const readLayout = () => {
+    const v = store.get(layoutKey(), null);
+    return v === null ? narrow() : v;
+  };
+  {                                          // 昔の一つきりの憶えは、広い画面のぶんとして引き継ぐ
+    const oldv = store.get("stacked", null);
+    if (oldv !== null) {
+      if (store.get("stacked.wide", null) === null) store.set("stacked.wide", oldv);
+      try { localStorage.removeItem("heiwa.stacked"); } catch {}
+    }
+  }
+  let stacked = readLayout();
+  let tools   = store.get("tools", null);
+  if (tools === null) tools = !narrow();    // スマホでは初めからたたんでおく
+  // 配色は3つ: system（端末の設定に従う。既定）／ light ／ dark。サイト本体の theme/script.js と同じ
+  const DARKQ = matchMedia("(prefers-color-scheme: dark)");
+  let theme = store.get("theme", "system");
+  if (theme !== "light" && theme !== "dark") theme = "system";
+  const themeNow = () => theme === "system" ? (DARKQ.matches ? "dark" : "light") : theme;
+  let showAI  = store.get("ai", true);      // 訳の無い所へ入れた参考訳を出すか
+  let showBrk = store.get("brk", false);    // キリの良いところに太線を引くか
+  // 区切りも ?brk=1 / ?brk=0 でリンクに乗せられる。画面の言葉と同じく、自分で押した
+  // （かリンクで渡された）ときだけ配るリンクに乗せる
+  const qBrk = new URLSearchParams(location.search).get("brk");
+  if (qBrk === "1" || qBrk === "0") { showBrk = qBrk === "1"; store.set("brk", showBrk); store.set("brkPicked", true); }
+  let brkPicked = store.get("brkPicked", false);
+  // 画面の言葉は ?ui=en のようにリンクでも渡せる。強い順に「リンク → 憶え → 端末の言語」
+  const qUi = new URLSearchParams(location.search).get("ui");
+  if (UI[qUi]) store.set("ui", qUi);
+  let ui = store.get("ui", null);
+  // 自分で選んだ（か、リンクで渡された）ときだけ、配るリンクにも乗せる。
+  // 既定のまま配ったリンクは、相手の端末の言語で開いてほしい
+  let uiPicked = !!UI[ui];
+  if (!uiPicked) ui = (navigator.language || "").slice(0, 2);
+  if (!UI[ui]) ui = "ja";
+  let cur     = -1;                         // いま読んでいる行
+  const T = () => UI[ui];
+
+  if (!on.length) on = ["ko"];
+  // 本文の言語も、画面の言葉と同じ扱いにする。自分で選んだ（かリンクで渡された）ときだけ
+  // 配るリンクに乗せる。既定の3つのまま配ったリンクは、相手の憶えのまま開いてほしい
+  let langsPicked = store.get("langsPicked", false);
+  const wantLangs = () => (langsPicked ? on : null);
+
+  // ---- URL の #。`#6-4` で節、`#6-4-12` で段落、`#6-4-12/en` で言語まで指せる ----
+  // 節の鍵は必ず「章-節」の2つ組なので、3つ目の数があれば、それが段落の番号（1始まり）
+  function parseHash() {
+    const h = decodeURIComponent(location.hash.slice(1));
+    if (!h) return null;
+    const [k, l] = h.split("/");
+    const langs = (l || "").split("+").filter((x) => LANGS.some((L) => L.id === x));
+    let i = data.findIndex((s) => s.key === k), row = 0;
+    if (i < 0) {
+      const cut = k.lastIndexOf("-");
+      const n = cut > 0 ? parseInt(k.slice(cut + 1), 10) : NaN;
+      if (Number.isFinite(n)) {
+        i = data.findIndex((s) => s.key === k.slice(0, cut));
+        if (i >= 0) row = n;
+      }
+    }
+    if (i < 0) {                                  // `#28` のような通し番号も受ける
+      const n = parseInt(k, 10);
+      if (Number.isFinite(n)) i = n - 1;
+    }
+    if (i < 0 || i >= data.length) return null;
+    return { i, langs, row };
+  }
+  function applyHash(h) {
+    if (!h) return false;
+    if (h.langs.length) {
+      on = LANGS.map((L) => L.id).filter((x) => h.langs.includes(x));
+      store.set("langs", on);
+      langsPicked = true; store.set("langsPicked", true);
+    }
+    return true;
+  }
+  let want = 0;                                   // 開いた直後に出したい段落（1始まり・0は無し）
+  { const h = parseHash(); if (applyHash(h)) { idx = h.i; want = h.row; } }
+  addEventListener("hashchange", () => {
+    const h = parseHash();
+    if (!h) return;
+    const was = on.join("+");                     // 言語だけ違うリンクを開いたときは描き直す
+    applyHash(h);
+    if (h.i !== idx) { want = h.row; go(h.i); return; }
+    if (h.row) cur = h.row - 1;
+    if (on.join("+") !== was) keepPlace(paint); else mark();
+    if (h.row) showCur();
+  });
+  function showCur() {
+    const cell = document.querySelector(".cell.on");
+    if (!cell) return;
+    // 横3列では行の頭（番号とリンク）から見せる。縦3列は段落が短いので真ん中でよい
+    const box = cell.closest(".rowbox");
+    (box || cell).scrollIntoView({ block: box ? "start" : "center" });
+  }
+
+  // 配るリンクは、画面の言葉が韓国語・英語なら ko.html / en.html を指す。LINE などの
+  // プレビューは JavaScript を動かさず <title> と og: だけを読むので、言語ごとに入口を分けて
+  // 本の名前をその言語で出す。入口は ?ui= と # を持ったまま index.html へ移る
+  const entryURL = (href) => {
+    const u = href.split("#")[0].split("?")[0];
+    const dir = u.slice(0, u.lastIndexOf("/") + 1);
+    if (ui === "ko" || ui === "en") return dir + ui + ".html";
+    return u.endsWith("/ko.html") || u.endsWith("/en.html") ? dir + "index.html" : u;
+  };
+  const pageURL = () => entryURL(location.href);
+  const query = () => {
+    const q = [];
+    if (uiPicked) q.push("ui=" + ui);
+    if (brkPicked) q.push("brk=" + (showBrk ? 1 : 0));
+    return q.length ? "?" + q.join("&") : "";
+  };
+  function shareURL(key, langs, row) {
+    return pageURL() + query() + "#" + key + (row ? "-" + row : "")
+      + (langs && langs.length ? "/" + langs.join("+") : "");
+  }
+  function syncHash() {   // いま出しているものをアドレス欄に映す（そのままコピーして配れるように）
+    const k = data[idx] && data[idx].key;
+    if (!k) return;
+    const url = shareURL(k, wantLangs(), cur >= 0 ? cur + 1 : 0);
+    if (url === location.href) return;
+    try { history.replaceState(null, "", url); } catch {}   // file:// で断られることがある
+  }
+  const toastEl = document.createElement("div");
+  toastEl.className = "toast";
+  let toastTimer = 0;
+  function toast(msg) {
+    document.body.appendChild(toastEl);
+    toastEl.textContent = msg;
+    toastEl.classList.add("on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove("on"), 1500);
+  }
+  function copyText(text, done, failed) {
+    const byExec = () => {                // file:// では clipboard API が塞がれることがある
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.cssText = "position:fixed;top:-500px;opacity:0";
+      document.body.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch {}
+      ta.remove();
+      if (ok) { done(); } else { failed(); }
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, byExec);
+    } else {
+      byExec();
+    }
+  }
+  function copyLink(url) {
+    copyText(url, () => toast(T().copied), () => {
+      // コピーできないときは、せめてアドレス欄にその URL を出しておく（取り逃がさないため）
+      try { history.replaceState(null, "", url); } catch {}
+      toast(T().copyFail);
+    });
+  }
+  function copyBody(text) {
+    if (!text) return toast(T().noText);
+    copyText(text, () => toast(T().copiedText), () => toast(T().copyTextFail));
+  }
+  // 段落 a〜b-1 の本文。出している言語ごとにまとめる（韓国語を全部 → 日本語を全部 → 英語を全部）。
+  // 区切りの手本の WF1u（Daum の手並べ連載）が、1回ぶんをこの順で載せている。
+  // 隠している参考訳（AI訳）は入れない。出しているときは、続く参考訳の頭に一度だけ札を付ける
+  function textOf(s, langs, a, b, withTitle) {
+    return langs.map((L) => {
+      const out = withTitle && s.titles[L.id] ? [s.titles[L.id]] : [];
+      let ai = false;
+      (s.cells[L.id] || []).filter((c) => c.r < b && c.r + (c.span || 1) > a).forEach((c) => {
+        if (!c.t || (c.ai && !showAI)) return;
+        const body = c.seg ? c.seg.filter((g) => showAI || !g.ai)
+          .map((g) => g.ai ? g.t.replace(/^(\s*)([\s\S]*)$/, "$1〔AI: $2〕") : g.t).join("") : c.t;
+        out.push((c.ai && !ai ? `〔${AITAG[L.id]}〕\n` : "") + body.trim());
+        ai = !!c.ai;
+      });
+      return out.join("\n\n");
+    }).filter(Boolean).join("\n\n");
+  }
+
+  // ---- 節の名前と一覧 ----
+  function secLabel(s) {
+    const m = /^(\d+)-(\d+)$/.exec(s.key || "");
+    return m ? `${T().chapter(+m[1])} ${s.key}` : s.label;
+  }
+  function secTitle(s) {
+    return s.titles[ui] || s.titles.ja || s.titles.ko || s.titles.en || s.label;
+  }
+  const sel = $("#sec");
+  function fillSections() {
+    sel.innerHTML = "";
+    data.forEach((s, i) => {
+      const o = document.createElement("option");
+      o.value = i;
+      o.textContent = `${secLabel(s)}　${secTitle(s)}`;
+      sel.appendChild(o);
+    });
+    sel.value = idx;
+  }
+
+  // ---- 描き直しても、読んでいた段落を画面の同じ高さに残す ----
+  // 言語を足す・文字を大きくするなどで列の幅が変わると、段落の高さが変わる。
+  // スクロール位置（px）のままだと、まったく別の所が映ってしまう。
+  // そこで描き直す前に「バーのすぐ下に見えている**文字**（どの段落の、どの言語の、
+  // 何文字目か）」を覚え、描き直したあとでその文字の行が同じ高さに来るように動かす。
+  // 段落のかたまりの割合で覚えると、横3列で日本語を外したとき、かたまりが縮んだぶん
+  // 韓国語の中で1〜2行ずれる。文字で覚えれば、横3列ではずれはゼロ、縦3列でも
+  // （列の幅が変わって改行の位置は変わるが）読んでいた行が同じ高さに来る。
+  // 文字が拾えない所（段落の間の線の上など）は、段落のかたまりの割合で覚える。
+  // 覚えた所は、読者が自分でスクロールするまで**測り直さずに使い続ける**。押すたびに
+  // 測り直すと、小さな誤差や、動いている途中の位置を拾って、何度も押すうちにずれていく
+  let place = null;         // { marks: [{ r, lang, i, dy }], r, frac, off }
+  let placedY = -1;         // 最後にこちらで合わせたスクロール位置
+  let followUntil = 0;      // この時刻までは、段落の背が変わったら合わせ直す
+  // 段落 i の帯は「その番号の上端から、次の番号の上端まで」。縦3列では番号の箱が
+  // 段落の高さまで伸びていないので、箱の大きさでは測れない
+  function bands() {
+    const els = [...document.querySelectorAll("#body .rowno")];
+    const end = document.querySelector("#body").getBoundingClientRect().bottom;
+    const top = (el) => (el.closest(".rowbox") || el).getBoundingClientRect().top;
+    return els.map((el, i) => ({ r: el.dataset.r, top: top(el),
+      bottom: i + 1 < els.length ? top(els[i + 1]) : end }));
+  }
+  const headH = () => document.querySelector("header").offsetHeight;
+  // 節の終わり近くで言語を減らすとページが短くなり、戻したい所までスクロールできない
+  // （いちばん下でつかえて、出典の欄が映る）。そのときだけ足りない分の余白を下に足す
+  const spacer = document.createElement("div");
+  spacer.setAttribute("aria-hidden", "true");
+  document.body.appendChild(spacer);
+  const setSpacer = (px) => { spacer.style.height = px > 0 ? Math.ceil(px) + "px" : ""; };
+  // 欄の中の i 文字目（欄の頭の札も含めて数える）。描き直しても中身は同じなので、
+  // 同じ数え方で同じ文字に戻れる
+  function textAt(cell, i) {
+    const w = document.createTreeWalker(cell, NodeFilter.SHOW_TEXT);
+    for (let n; (n = w.nextNode()); i -= n.length) if (i < n.length) return { n, o: i };
+    return null;
+  }
+  function indexOf(cell, node, o) {
+    const w = document.createTreeWalker(cell, NodeFilter.SHOW_TEXT);
+    let i = 0;
+    for (let n; (n = w.nextNode()); i += n.length) if (n === node) return i + o;
+    return -1;
+  }
+  function charTop(cell, i) {
+    const p = textAt(cell, i);
+    if (!p) return null;
+    const rg = document.createRange();
+    rg.setStart(p.n, p.o); rg.setEnd(p.n, Math.min(p.o + 1, p.n.length));
+    const rs = rg.getClientRects();
+    return rs.length ? rs[0].top : null;
+  }
+  function caretAt(x, y) {
+    if (document.caretRangeFromPoint) {
+      const r = document.caretRangeFromPoint(x, y);
+      return r && { n: r.startContainer, o: r.startOffset };
+    }
+    if (document.caretPositionFromPoint) {          // Firefox
+      const p = document.caretPositionFromPoint(x, y);
+      return p && { n: p.offsetNode, o: p.offset };
+    }
+    return null;
+  }
+  const cellOf = (m) => document.querySelector(`#body .cell[lang="${m.lang}"][data-r="${m.r}"]`);
+  function capture() {
+    const t = headH(), y = t + 4;
+    // バーのすぐ下の線にかかっている欄（縦3列なら言語の数だけ並ぶ）。どの言語を
+    // 外しても残る欄がどれかで戻れるように、全部覚えておく
+    const marks = [];
+    for (const el of document.querySelectorAll("#body .cell")) {
+      const b = el.getBoundingClientRect();
+      if (b.top > y || b.bottom <= y) continue;
+      const m = { r: el.dataset.r, lang: el.lang, i: -1, dy: b.top - t, top: true };
+      const c = caretAt(Math.min(b.left + 16, b.right - 2), y);
+      if (c && el.contains(c.n) && c.n.nodeType === 3) {
+        const i = indexOf(el, c.n, Math.min(c.o, Math.max(c.n.length - 1, 0)));
+        const ct = i >= 0 ? charTop(el, i) : null;
+        if (ct !== null) { m.i = i; m.dy = ct - t; }
+      }
+      marks.push(m);
+    }
+    // 上端の欄が外される言語のものだったときのために、すぐ下に見えている欄の頭も
+    // 覚えておく（言語ごとに1つ。横3列なら同じ段落の次の言語の欄になる）
+    const below = {};
+    for (const el of document.querySelectorAll("#body .cell")) {
+      const top = el.getBoundingClientRect().top;
+      if (top > y && (!below[el.lang] || top < below[el.lang].top)) below[el.lang] = { el, top };
+    }
+    Object.values(below).sort((a, b) => a.top - b.top).forEach(({ el, top }) =>
+      marks.push({ r: el.dataset.r, lang: el.lang, i: -1, dy: top - t }));
+    const b = bands().find((x) => x.bottom > t);
+    if (!b && !marks.length) return null;
+    return { marks, r: b && b.r,
+      frac: b && b.top < t ? (t - b.top) / ((b.bottom - b.top) || 1) : 0,
+      off:  b && b.top >= t ? b.top - t : 0 };
+  }
+  // 縦3列 ⇔ 横3列では、上端に並んでいた韓日英の欄が縦に積み直されるので、全部を同じ
+  // 高さには残せない。読者が読んでいたはずの言語（画面の言葉と同じ言語）を残す。
+  // 上端にかかっていた欄の中からだけ選ぶ（すぐ下の欄の頭で合わせると、読んでいた
+  // 段落が上へ逃げる）
+  function ordered() {
+    const p = place.prefer;
+    if (!p) return place.marks;
+    const first = place.marks.filter((m) => m.top && m.lang === p);
+    return first.concat(place.marks.filter((m) => !first.includes(m)));
+  }
+  function targetY() {
+    for (const m of ordered()) {
+      const el = cellOf(m);
+      if (!el) continue;                            // その言語は外された
+      const top = m.i >= 0 ? charTop(el, m.i) : el.getBoundingClientRect().top;
+      if (top !== null) return scrollY + top - m.dy - headH();
+    }
+    const b = bands().find((x) => x.r === place.r);
+    return b ? scrollY + b.top + place.frac * (b.bottom - b.top) - place.off - headH() : null;
+  }
+  function restorePlace() {
+    if (!place) return;
+    const y = targetY();
+    if (y === null) return;
+    const room = document.documentElement.scrollHeight - spacer.offsetHeight - innerHeight;
+    setSpacer(y - room);
+    // ページに scroll-behavior:smooth が掛かっている。滑らかに動いている途中で次に
+    // 押されると途中の位置を拾うので、ここだけ切って一気に動かす
+    const html = document.documentElement, was = html.style.scrollBehavior;
+    html.style.scrollBehavior = "auto";
+    scrollTo(scrollX, Math.round(y));
+    html.style.scrollBehavior = was;
+    placedY = scrollY;
+  }
+  // prefer: 残したい言語（縦3列 ⇔ 横3列のとき）。一度決めたら、その覚えが続く間は
+  // 同じ言語で合わせる。押すボタンによって残す言語が変わると、そこでずれる
+  function keepPlace(fn, prefer) {
+    if (!place || Math.abs(scrollY - placedY) > 2) place = capture();
+    if (place && prefer && !place.prefer) place.prefer = prefer;
+    setSpacer(0);
+    fn();
+    restorePlace();
+    followUntil = performance.now() + 1500;
+  }
+  // 字の形（フォント）が後から届くと段落の背が変わる。描き直した直後だけ追いかける
+  if (window.ResizeObserver) new ResizeObserver(() => {
+    if (performance.now() < followUntil && Math.abs(scrollY - placedY) <= 2) restorePlace();
+  }).observe(document.querySelector("#body"));
+  // 読者が自分でスクロールしたら、覚えた所は捨てる（次に押したときに測り直す）
+  addEventListener("scroll", () => {
+    if (performance.now() < resizing) return;       // ウィンドウを動かしている最中
+    if (place && Math.abs(scrollY - placedY) > 2) { place = null; followUntil = 0; }
+    // 足した余白が画面の外（下）へ出たら外す。映っている間に外すと画面が跳ねる
+    if (spacer.offsetHeight && spacer.getBoundingClientRect().top > innerHeight) setSpacer(0);
+  }, { passive: true });
+
+  // ---- ウィンドウの大きさを変えても、読んでいた所に残る ----
+  // 幅が変わると折り返しが変わり、段落の背が伸び縮みして、同じスクロール位置に
+  // 別の所が映る。resize が届くのは並べ直した**あと**なので、そこで測っても遅い。
+  // そこでスクロールが止まるたびに上端の文字を覚えておき（held）、大きさが変わったら
+  // そこへ戻す。動かしている間はずっと同じ覚えを使うので、何度変えてもずれない
+  let held = null, holdT = 0, resizing = 0, lastW = innerWidth;
+  addEventListener("scroll", () => {
+    clearTimeout(holdT);
+    holdT = setTimeout(() => {
+      if (performance.now() >= resizing) held = place || capture();
+    }, 150);
+  }, { passive: true });
+  // iPhone の Safari は、スクロールするとツールバーが縮んで高さだけが変わり、そこでも
+  // resize が来る。折り返しは変わらないのに、スクロールを始める前の覚え（held）へ
+  // 引き戻していた（ページが上下に跳ねて読みにくい、と録画で言われた）。幅が変わった
+  // ときだけ戻す
+  addEventListener("resize", () => {
+    if (innerWidth === lastW) return;
+    lastW = innerWidth;
+    resizing = performance.now() + 500;
+    if (!place) place = held;
+    if (!place) return;
+    restorePlace();
+    followUntil = performance.now() + 1500;
+  });
+
+  // ---- 本文の言語の出し入れ ----
+  const langBox = $("#langs");
+  LANGS.forEach((L) => {
+    const b = document.createElement("button");
+    b.textContent = L.label;
+    b.dataset.lang = L.id;
+    b.onclick = () => {
+      on = on.includes(L.id) ? on.filter((x) => x !== L.id)
+                             : LANGS.map((x) => x.id).filter((x) => on.includes(x) || x === L.id);
+      if (!on.length) on = [L.id];
+      store.set("langs", on);
+      langsPicked = true; store.set("langsPicked", true);
+      keepPlace(paint); syncHash();
+    };
+    langBox.appendChild(b);
+  });
+
+  // ---- 画面の言葉を貼り替える ----
+  function applyUI() {
+    const t = T();
+    document.documentElement.lang = ui;
+    document.title = t.title;
+    $("#brand").textContent = t.brand;
+    $("#sec").title = t.secSel;
+    $("#prev").title = t.prev;
+    $("#next").title = t.next;
+    $("#toggle").title = tools ? t.closeT : t.openT;
+    $("#toggle").textContent = tools ? "▴" : "▾";
+    $("#toggle").setAttribute("aria-expanded", String(tools));
+    langBox.title = t.langsT;
+    $("#q").placeholder = t.q;
+    $("#layout").title = t.layoutT;
+    $("#brk").textContent = t.brk;
+    $("#brk").title = t.brkT;
+    $("#small").title = t.smallT;
+    $("#big").title = t.bigT;
+    $("#theme").title = t.themeT + ": " + t.theme[theme];
+    $("#theme").setAttribute("aria-label", t.themeT + ": " + t.theme[theme]);
+    $("#theme").textContent = { system: "◐", light: "☀\uFE0E", dark: "☾\uFE0E" }[theme];
+    $("#ai").textContent = t.ai;
+    $("#ai").title = t.aiT;
+    $("#ui").title = t.uiT;
+    $("#ui").setAttribute("aria-label", t.uiT);
+    $("#ui").value = ui;
+    $("#hint").textContent = touch() ? t.hintTouch : t.hint;
+  }
+
+  function paint() {
+    const t = T();
+    applyUI();
+    document.documentElement.dataset.theme = themeNow();
+    document.body.classList.toggle("hideai", !showAI);
+    $("#tools").classList.toggle("closed", !tools);
+    $("#ai").setAttribute("aria-pressed", String(showAI));
+    $("#brk").setAttribute("aria-pressed", String(showBrk));
+    document.documentElement.style.setProperty("--fs", fs + "px");
+    $("#layout").textContent = stacked ? t.cols : t.rows;
+    $("#layout").setAttribute("aria-pressed", String(stacked));
+    langBox.querySelectorAll("button").forEach((b) =>
+      b.setAttribute("aria-pressed", String(on.includes(b.dataset.lang))));
+    fillSections();
+
+    const s = data[idx];
+    const main = $("#body");
+    main.innerHTML = "";
+    if (!s) { $("#secTitle").textContent = t.nodata; return; }
+
+    if (!s.cells) {                  // 本文がまだ来ていない節。届いたら描き直す
+      $("#secTitle").textContent = t.loading;
+      $("#secSub").innerHTML = "";
+      $("#secWarn").innerHTML = "";
+      $("#pos").textContent = "";
+      $("#sectoc").hidden = true;
+      load(s, () => { paint(); if (cur >= 0) showCur(); });
+      return;
+    }
+
+    const shown = LANGS.filter((L) => on.includes(L.id));
+    // 節の題と、節ぜんぶを開くリンク・節ぜんぶの本文のコピー
+    $("#secTitle").innerHTML = esc(secTitle(s))
+      + `<button class="linkbtn" data-share="" title="${esc(t.linkSecT)}">🔗 ${esc(t.link)}</button>`
+      + `<button class="linkbtn" data-copy="" title="${esc(t.copySecT)}">📋 ${esc(t.copy)}</button>`;
+    // 言語ごとの行。それぞれ「その言語だけを出して開く」リンクと、その言語だけの本文を配れる
+    $("#secSub").innerHTML = LANGS.map((L) =>
+      `<div><b>${L.tag}</b><span>${esc(s.titles[L.id] || t.none)}</span>`
+      + `<button class="linkbtn" data-share="${L.id}" title="${esc(t.linkLangT(t.name[L.id]))}">🔗</button>`
+      + `<button class="linkbtn" data-copy="${L.id}" title="${esc(t.copyLangT(t.name[L.id]))}">📋</button></div>`).join("");
+    $(".sechead").querySelectorAll("[data-share]").forEach((b) => {
+      b.onclick = () => copyLink(shareURL(s.key, b.dataset.share ? [b.dataset.share] : wantLangs()));
+    });
+    $(".sechead").querySelectorAll("[data-copy]").forEach((b) => {
+      const langs = b.dataset.copy ? LANGS.filter((L) => L.id === b.dataset.copy) : shown;
+      b.onclick = () => copyBody(textOf(s, langs, 0, s.n, true));
+    });
+
+    const NAME = t.name;
+    const warn = [];
+    if ((s.pdf || []).length)
+      warn.push(t.wPdf(s.pdf.map((l) => NAME[l]).join(" / ")));
+    (s.mismatch || []).forEach((l) => warn.push(t.wMismatch(NAME[l], s.fit?.[l] ?? "?")));
+    (s.short || []).forEach((l) => {
+      if (!(s.mismatch || []).includes(l)) warn.push(t.wShort(NAME[l]));
+    });
+    (s.aisec || []).forEach((l) => warn.push(t.wAisec(NAME[l])));
+    if ([...(s.cells.ja || []), ...(s.cells.en || [])].some((c) => c.mv)) warn.push(t.wMoved);
+    if (s.warn) warn.push(s.warn[ui] || s.warn.ja);
+    $("#secWarn").innerHTML = warn.map((w) => `<span class="warn">${esc(w)}</span>`).join(" ");
+
+    const links = shown
+      .map((L) => s.urls[L.id] ? `<a href="${s.urls[L.id]}" target="_blank" rel="noopener">${L.tag}</a>` : "")
+      .filter(Boolean).join(" ・ ");
+    $("#foot").innerHTML = t.foot(links);
+    $("#pos").textContent = t.pos(idx + 1, data.length, s.n);
+
+    buildSecToc(s, shown);
+
+    // 区切りの頭（節の頭の 0 も入れる）。どの頭にも、次の頭までをまとめてコピーするボタンを置く
+    const cuts = showBrk ? [0, ...[...breaksOf(s)].sort((a, b) => a - b)] : [];
+    const brk = new Set(cuts);
+    const brkEl = (r) => {
+      const d = document.createElement("div");
+      d.className = "brk" + (r ? "" : " top");
+      const end = cuts.find((x) => x > r) ?? s.n;
+      const b = document.createElement("button");
+      b.className = "linkbtn";
+      b.textContent = "📋 " + t.copyBrk(end - r);
+      b.title = t.copyBrkT;
+      b.onclick = () => copyBody(textOf(s, shown, r, end));
+      d.appendChild(b);
+      return d;
+    };
+    if (stacked) {
+      // 横3列: 1 行ぶんの各言語をひとかたまりにして上から並べる（スマホ・プロジェクタ用）
+      main.style.gridTemplateColumns = "1fr";
+      main.style.gridTemplateRows = "";
+      for (let r = 0; r < s.n; r++) {
+        if (brk.has(r)) main.appendChild(brkEl(r));
+        const box = document.createElement("div");
+        box.className = "rowbox";
+        box.appendChild(rownoEl(s, r));
+        shown.forEach((L) => {
+          const c = (s.cells[L.id] || []).find((x) => x.r === r);
+          if (c) box.appendChild(cellEl(L, c, r));
+        });
+        main.appendChild(box);
+      }
+    } else {
+      // 太線は1行ぶんのグリッドの行を取って引く。段落 r のグリッドの行は、
+      // その前に入った線の数だけ下へずれる
+      const at = [];
+      for (let r = 0, k = 0; r <= s.n; r++) { if (brk.has(r)) k++; at.push(r + 1 + k); }
+      main.style.gridTemplateColumns = `34px ${shown.map(() => "1fr").join(" ")}`;
+      main.style.gridTemplateRows = `repeat(${s.n + brk.size}, auto)`;
+      brk.forEach((r) => {
+        const d = brkEl(r);
+        d.style.gridRow = String(at[r] - 1);
+        main.appendChild(d);
+      });
+      for (let r = 0; r < s.n; r++) {
+        const nm = rownoEl(s, r);
+        nm.style.gridColumn = "1";
+        nm.style.gridRow = String(at[r]);
+        main.appendChild(nm);
+      }
+      shown.forEach((L, ci) => {
+        (s.cells[L.id] || []).forEach((c) => {
+          const el = cellEl(L, c, c.r);
+          const end = Math.min(c.r + c.span, s.n);
+          el.style.gridColumn = String(ci + 2);
+          el.style.gridRow = `${at[c.r]} / ${at[end] - (brk.has(end) ? 1 : 0)}`;
+          main.appendChild(el);
+        });
+      });
+    }
+    // 上のバーの高さ。寄せたとき行の頭がバーの下に隠れないように使う。
+    // 段落数などを書き終えたあとで測る（バーの折り返しが変わって高さが動くため）
+    document.documentElement.style.setProperty(
+      "--headh", document.querySelector("header").offsetHeight + "px");
+    mark();
+    // 次の節を先に取り寄せておく（▶ を押したとき待たせない）
+    if (data[idx + 1]) load(data[idx + 1], () => {});
+  }
+
+  // ---- 節の中の目次 ----
+  // この本は節（1-1〜7-5）の中がさらに番号つきの小見出しで分かれているが、原文が
+  // 見出しとして組まれていないので、align.py が字の形で見分けて `k` を付けている。
+  // その行だけを節の頭に並べ、押すとその段落に印が付いて、そこまで動く。
+  // **1番だけは節の題そのもの**で本文には現れないので、節の題から補って先頭に置く。
+  function tocLead(s, L) {
+    const h = s.header && s.header[L.id];
+    if (!h || !h.length) return "";
+    // 題の並びの後ろから探す。まず**番号で始まる行**（英語は題が長いので、
+    // 字数で切ると章の題まで戻ってしまう）。無ければ短くて句点で終わらない行
+    // （4-3 の「事例１：…」など）。2-2 のように本文の一文が紛れている節もあるので、
+    // 長い行は採らない
+    for (let i = h.length - 1; i >= 0; i--) {
+      const t = (h[i] || "").trim();
+      if (t && /^[0-9０-９]{1,2}\s*[.)．、）]/.test(t)) return t;
+    }
+    for (let i = h.length - 1; i >= 0; i--) {
+      const t = (h[i] || "").trim();
+      if (t && t.length <= 45 && !/[.。?!？！]$/.test(t)) return t;
+    }
+    return "";
+  }
+
+  function cellAt(s, L, r) {
+    // その行を抱えているセル。言語によっては1つのセルが何行にもまたがる
+    return (s.cells[L.id] || []).find((x) => x.r <= r && r < x.r + (x.span || 1));
+  }
+
+  // ---- 「区切り」の太線をどこに引くか ----
+  // 手本は Daum の WF1u（投稿者が人手で韓日英を並べた連載）の1回ぶんの切れ目。あれは
+  //   1. 小見出しの前では必ず切る
+  //   2. その間は、み言の出典（「…입니다. 177)」「미래의 주인공 243」「(9) 83-11-12」）で
+  //      終わる段落の後ろでしか切らない。同じ説教からの引用を途中で割らない
+  //   3. 1回ぶんは韓国語で 500 字ほど（4段落前後）
+  // で出来ているので、同じ決まりで 1 と 2 の切れ目から 3 に近くなる組を選ぶ。
+  // 1-1・1-2 で WF1u の切れ目 75 か所と比べて 65 か所が一致する（2026-10-05）。
+  // どこかの言語の欄が何段落ぶんもまたいでいる所は、線が欄を横切るので切らない
+  const BRK_LEN = 500, BRK_MIN = 150;
+  const citeEnd = (t) => {
+    const m = /[.?!。」”"'’]\s*([^.?!。」”]{0,40})$/.exec((t || "").trim());
+    return /\d/.test(m ? m[1] : (t || "").trim().slice(-20));
+  };
+  function breaksOf(s) {
+    if (s.brk) return s.brk;
+    const ko = [];
+    (s.cells.ko || []).forEach((c) => { ko[c.r] = c; });
+    const len = [];
+    for (let r = 0; r < s.n; r++) len.push(((ko[r] && ko[r].t) || "").replace(/\s/g, "").length);
+    const inside = new Set();                    // 欄がまたいでいて、線を引けない所
+    LANGS.forEach((L) => (s.cells[L.id] || []).forEach((c) => {
+      for (let r = c.r + 1; r < c.r + (c.span || 1); r++) inside.add(r);
+    }));
+    const out = new Set();
+    const fixed = [0];
+    for (let r = 1; r < s.n; r++) if (ko[r] && ko[r].k && !inside.has(r)) { fixed.push(r); out.add(r); }
+    fixed.push(s.n);
+    for (let f = 0; f + 1 < fixed.length; f++) {
+      const a = fixed[f], b = fixed[f + 1];
+      const pts = [a];
+      for (let r = a + 1; r < b; r++)
+        if (!inside.has(r) && ko[r - 1] && !ko[r - 1].k && citeEnd(ko[r - 1].t)) pts.push(r);
+      pts.push(b);
+      // 切れ目の組を、1回ぶんの字数が BRK_LEN に近くなるように選ぶ（ひとつ前の切れ目からの DP）
+      const cost = [0], from = [-1];
+      for (let j = 1; j < pts.length; j++) {
+        cost[j] = Infinity;
+        for (let i = 0; i < j; i++) {
+          let n = 0;
+          for (let r = pts[i]; r < pts[j]; r++) n += len[r];
+          const c = cost[i] + ((n - BRK_LEN) / BRK_LEN) ** 2 + (n < BRK_MIN ? 5 : 0);
+          if (c < cost[j]) { cost[j] = c; from[j] = i; }
+        }
+      }
+      for (let j = from[pts.length - 1]; j > 0; j = from[j]) out.add(pts[j]);
+    }
+    return (s.brk = out);
+  }
+
+  // ---- 小見出しの深さと通し番号 ----
+  // 本は「Ⅰ → 1 → (1) → ㉠ → ⓐ」の順に細かくなる。見出しの頭の番号の**形**で
+  // 深さが決まるので、それを読んで目次に段差を付ける。日本語（（三）／(1)）や
+  // 英語（2.3.1）は書き方が違うが、韓国語（原典）の形で決めれば三言語で同じ段に並ぶ。
+  // 章によっては「1.」から始まる（Ⅰ. が無い）ので、その節でいちばん浅い形を 0 に寄せる。
+  const NUM_FORMS = [
+    [/^\s*([Ⅰ-Ⅹ]+)\s*[.．、)）]/, 0],          // Ⅰ Ⅱ Ⅲ
+    [/^\s*([IVX]{1,4})\s*[.．]/, 0],                      // I II III（英字）
+    [/^\s*([0-9０-９]{1,2})\s*[.．、]/, 1],                 // 1. 2.
+    [/^\s*[(（]\s*([0-9０-９]{1,2})\s*[)）]/, 2],           // (1) (2)
+    [/^\s*([㉠-㉿])\s*[.．、)）]?/, 3],            // ㉠ ㉡
+    [/^\s*([ⓐ-ⓩ])\s*[.．、)）]?/, 4],            // ⓐ ⓑ
+  ];
+
+  function numToken(text) {
+    for (const [re, lv] of NUM_FORMS) {
+      const m = re.exec(text || "");
+      if (m) return { tok: m[1], lv };
+    }
+    return null;
+  }
+
+  // 見出しの並び（韓国語の字）から、段差と「Ⅲ-1」のような通し番号を出す
+  function tocLevels(texts) {
+    const got = texts.map(numToken);
+    const lvs = got.filter(Boolean).map((g) => g.lv);
+    const base = lvs.length ? Math.min(...lvs) : 0;
+    // 番号の無い見出しの段は、**その下にぶら下がる番号**から決める。
+    // 「제2차 민족적 가나안 복귀노정」は直前が (3) なので「一つ下」にすると深くなりすぎる
+    // が、次に来るのは (1) なのでその親、つまり (1) の一つ上が正しい
+    const nextLv = new Array(got.length).fill(null);
+    for (let i = got.length - 1, n = null; i >= 0; i--) {
+      nextLv[i] = n;
+      if (got[i]) n = Math.max(0, got[i].lv - base);
+    }
+    const depth = [], path = [], stack = [], auto = [];
+    let lastNum = -1;                 // 直前の「番号のある見出し」の段
+    got.forEach((g, i) => {
+      let d, tok;
+      if (g) {
+        d = Math.max(0, g.lv - base);
+        tok = g.tok;
+        lastNum = d;
+      } else {
+        d = (nextLv[i] !== null && nextLv[i] >= 1) ? nextLv[i] - 1
+                                                   : Math.max(0, lastNum + 1);
+        auto[d] = (auto[d] || 0) + 1;   // 番号が無いので、こちらで数えて振る
+        tok = String(auto[d]);
+      }
+      stack.length = d;
+      stack[d] = tok;
+      for (let k = d + 1; k < auto.length; k++) auto[k] = 0;   // 親が変われば数え直す
+      depth.push(d);
+      path.push(stack.filter(Boolean).join("-"));
+    });
+    return { depth, path, deep: Math.max(0, ...depth) > 0,
+             wide: Math.max(0, ...path.map((p) => p.length)) };
+  }
+
+  function buildSecToc(s, shown) {
+    const box = $("#sectoc"), body = $("#sectocBody"), t = T();
+    const heads = [];
+    for (const c of s.cells.ko || []) if (c.k) heads.push(c.r);
+    heads.sort((a, b) => a - b);
+    if (heads[0] !== 0) heads.unshift(0);          // 1番（節の題）を先頭に
+    box.hidden = heads.length < 2;
+    if (box.hidden) return;
+    // 既定は「パソコンでは開く・スマホでは閉じる」。**自分で開け閉めしたときだけ**憶える。
+    // toggle は後から飛んでくるので、こちらで入れた値と同じなら書かない。そうしないと
+    // 初めて開いた端末の幅が、その人の憶えとして焼き付いてしまう
+    const wantOpen = store.get("sectoc", !narrow());
+    box.open = wantOpen;
+    box.ontoggle = () => { if (box.open !== wantOpen) store.set("sectoc", box.open); };
+    const lv = tocLevels(heads.map((r, i) =>
+      (i === 0 ? tocLead(s, { id: "ko" }) : "") || (cellAt(s, { id: "ko" }, r) || {}).t || ""));
+    const maxD = Math.max(0, ...lv.depth);
+    const gut = lv.deep ? Math.min(104, 34 + lv.wide * 8) + "px" : "34px";
+    // 出す段の深さ。深い節は大づかみにできたほうが読みやすい（モーセ路程は5段・28行）
+    let show = Math.min(store.get("sectoclv", 99), maxD + 1);
+
+    function drawLv() {
+      if (maxD < 1) { $("#sectocSum").innerHTML = esc(t.secToc)
+        + `<span class="cnt">${heads.length}</span>`; return; }
+      const btn = [];
+      for (let n = 1; n <= maxD + 1; n++)
+        btn.push(`<button type="button" data-lv="${n}" aria-pressed="${n === show}">${n}</button>`);
+      const seen = lv.depth.filter((d) => d < show).length;
+      $("#sectocSum").innerHTML = esc(t.secToc)
+        + `<span class="cnt">${seen < heads.length ? seen + " / " : ""}${heads.length}</span>`
+        + `<span class="lv"><span class="lvT">${esc(t.secTocLv)}</span>${btn.join("")}</span>`;
+      $("#sectocSum").querySelectorAll("[data-lv]").forEach((b) => {
+        b.onclick = (e) => {
+          e.preventDefault(); e.stopPropagation();     // 目次をたたまずに切り替える
+          show = +b.dataset.lv;
+          store.set("sectoclv", show > maxD ? 99 : show);
+          draw();
+        };
+      });
+    }
+
+    function draw() {
+      drawLv();
+      body.innerHTML = "";
+      heads.forEach((r, i) => {
+        if (lv.depth[i] >= show) return;
+        const row = document.createElement("div");
+        row.className = "tocrow";
+        row.style.gridTemplateColumns = `${gut} ${shown.map(() => "1fr").join(" ")}`;
+        row.title = t.secTocT;
+        row.dataset.d = lv.depth[i];
+        row.style.setProperty("--d", lv.depth[i]);
+        const no = document.createElement("span");
+        no.className = "no";
+        no.innerHTML = (lv.deep && lv.path[i] ? `<span class="p">${esc(lv.path[i])}</span>` : "")
+          + `<span class="r">${r + 1}</span>`;
+        row.appendChild(no);
+        shown.forEach((L) => {
+          const c = cellAt(s, L, r);
+          const txt = (i === 0 ? tocLead(s, L) : "") || (c && c.t) || "";
+          const cell = document.createElement("span");
+          cell.className = "t";
+          cell.lang = L.id;
+          if (lv.depth[i]) cell.style.paddingLeft = (lv.depth[i] * 1.4 + 0.5) + "em";
+          cell.innerHTML = `<b>${L.tag}</b>` + esc(txt.replace(/\s+/g, " ").trim() || "—");
+          row.appendChild(cell);
+        });
+        row.onclick = () => { cur = r; mark(); showCur(); };
+        body.appendChild(row);
+      });
+    }
+    draw();
+  }
+
+  // 行番号の欄。番号のとなりに、その段落を開くリンクを配るボタンと、本文をコピーするボタンを置く
+  function rownoEl(s, r) {
+    const el = document.createElement("div");
+    el.className = "rowno";
+    el.dataset.r = r;
+    el.dataset.span = 1;
+    const n = document.createElement("span");
+    n.textContent = r + 1;
+    const btn = (icon, title, fn) => {
+      const b = document.createElement("span");
+      b.className = "lk";
+      b.textContent = icon;
+      b.tabIndex = 0;
+      b.title = title;
+      b.onclick = (e) => { e.stopPropagation(); fn(); };
+      b.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); b.onclick(e); } };
+      return b;
+    };
+    el.append(n,
+      btn("\u{1F517}", T().linkRowT(r + 1), () => copyLink(shareURL(s.key, wantLangs(), r + 1))),
+      btn("\u{1F4CB}", T().copyRowT(r + 1),
+        () => copyBody(textOf(s, LANGS.filter((L) => on.includes(L.id)), r, r + 1))));
+    el.onclick = () => { cur = (cur === r ? -1 : r); mark(); };
+    return el;
+  }
+
+  function cellEl(L, c, r) {
+    const t = T();
+    const el = document.createElement("div");
+    el.className = "cell" + (c.span > 1 ? " span" : "") + (c.t ? "" : " gap")
+      + (c.ai ? " ai" : "");
+    el.lang = L.id;
+    el.dataset.r = c.r;
+    el.dataset.span = c.span;
+    el.innerHTML = `<span class="tag">${c.ai
+        ? AITAG[L.id]
+        : L.tag + (c.span > 1 ? ` ${t.spanTag(c.span)}` : "")
+        + (c.mv ? `<span class="mvtag" title="${esc(t.mvTitle)}">${t.mvTag}</span>` : "")
+        + ((c.seg || []).some((g) => g.jo) ? `<span class="mvtag" title="${esc(t.joT)}">${esc(c.jot || t.joTag)}</span>` : "")
+        + ((c.seg || []).some((g) => g.ai) ? `<span class="mvtag aisegtag" title="${esc(t.aiSegT)}">${esc(c.ait || t.aiSegTag)}</span>` : "")
+        + (c.w ? `<button class="wtag" aria-expanded="false"
+             title="${esc(UI.en.wTagT)}">${UI.en.wTag}</button>` : "")}</span>`
+      + (c.t ? `<span class="body">${c.seg ? c.seg.map((g) => g.jo ? g.t.replace(/^(\s*)([\s\S]*)$/, (m, sp, x) =>
+              `${esc(sp)}<span class="jaonly"><span class="jobadge" title="${esc(t.joT)}">${esc(c.jol || t.joTag)}</span>${esc(x)}</span>`)
+          : g.ai ? `<span class="aiseg" title="${esc(t.aiSegT)}">${esc(g.t)}</span>` : esc(g.t)).join("") : esc(c.t)}</span>`
+             : '<span class="empty">—</span>')
+      + (c.w ? briefBox(c.w) : "")
+      + (c.notes || []).map((n) => `<span class="cnote">${esc(n)}</span>`).join("");
+    if (c.w) {
+      el.classList.add("brief");
+      const btn = el.querySelector(".wtag"), box = el.querySelector(".wbox");
+      const body = el.querySelector(".body"), more = el.querySelector(".wmore");
+      const orig = el.querySelector(".worig-wrap");
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        const open = box.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        if (body) body.innerHTML = open ? filled(c.w, c.t) : esc(c.t);
+        if (orig) orig.classList.remove("open");    // 原文はいったん畳む
+      };
+      if (more && orig) {
+        more.onclick = (e) => {
+          e.stopPropagation();
+          const open = orig.classList.toggle("open");
+          more.textContent = open ? UI.en.wLess : UI.en.wMore;
+        };
+      }
+    }
+    el.onclick = () => { cur = (cur === r ? -1 : r); mark(); };
+    return el;
+  }
+
+  /* ⚠ を押したときに出る所。赤で挿し込んだ文の断り、一言、それと畳んである原文。
+
+     ⚠ の一式（ボタン・断り・一言・落ちた文の訳）は、画面の言葉によらず**必ず英語**。
+     ⚠ が付くのは英語の欄で、読むのは英語で読む人。映して使うとき、操作する人の画面の
+     言葉が日本語でも、英語の欄を頼りにしている人が読めなければ意味がない（AITAG と
+     同じ理屈）。日本語で読みたい人には日本語の列があり、そちらは何も欠けていない。 */
+  function briefBox(w) {
+    const t = UI.en;
+    const note = w.ne || w.n;
+    return `<div class="wbox"><u>${esc(t.wRed)}</u>`
+      + (note ? `<div class="n" lang="${w.ne ? "en" : "ja"}"><b>${esc(t.wNote)}</b>${esc(note)}</div>` : "")
+      + (w.ko ? `<button class="wmore">${esc(t.wMore)}</button>`
+              + `<div class="worig-wrap"><h4>${esc(t.wHead)}</h4>`
+              + `<div class="worig" lang="ko">${marked(w)}</div>`
+              + `<ol class="wg">` + w.d.map((d) => {
+                  const g = d.en || d.ja;
+                  return `<li lang="en">${g ? esc(g) : ""}</li>`;
+                }).join("") + `</ol></div>` : "")
+      + `</div>`;
+  }
+
+  /* 英文に、英語へ出ていない文を元の並びの所へ挿し込む。後ろから挿して位置をずらさない。
+
+     **挿すのは画面の言葉によらず必ず英語**。ここは英訳の欄で、赤字は「英訳が全部訳して
+     いたらこう書いてあったはず」を補うもの。日本語を混ぜると英文として読めなくなる。
+     日本語で読みたい人には日本語の列があり、畳んである原文の所に番号つきの訳も出る。 */
+  function filled(w, text) {
+    const put = w.d.map((d, i) => ({ at: d.at || 0, i, s: d.en || d.ja || d.ko }))
+      .filter((x) => x.s).sort((a, b) => b.at - a.at || b.i - a.i);
+    let out = text;
+    for (const x of put) {
+      out = out.slice(0, x.at) + "\u0000" + x.s + "\u0001" + out.slice(x.at);
+    }
+    return esc(out)
+      .replace(/\u0000/g, ' <ins lang="en">〈 ')
+      .replace(/\u0001/g, " 〉</ins>");
+  }
+
+  /* 原文まるごとに、英語へ出ていない文だけ蛍光ペンを引く。番号は下の訳と対で読む。 */
+  function marked(w) {
+    const at = [];
+    w.d.forEach((d, i) => {
+      const p = (d.p >= 0) ? d.p : w.ko.indexOf(d.ko);       // 位置は組み立てのときに出す
+      if (p >= 0) at.push({ p, end: d.e || (p + d.ko.length), n: i + 1 });
+    });
+    at.sort((a, b) => a.p - b.p);
+    let out = "", was = 0;
+    for (const x of at) {
+      if (x.p < was) continue;                       // 重なった所は先に見つけた方を残す
+      out += esc(w.ko.slice(was, x.p))
+        + `<mark>${esc(w.ko.slice(x.p, x.end))}<sup>${x.n}</sup></mark>`;
+      was = x.end;
+    }
+    return out + esc(w.ko.slice(was));
+  }
+
+  function mark() {
+    document.querySelectorAll(".cell, .rowno").forEach((el) => {
+      const r = +el.dataset.r, sp = +el.dataset.span || 1;
+      const here = el.classList.contains("rowno");
+      el.classList.toggle(here ? "here" : "on", cur >= r && cur < r + sp);
+      if (here) el.style.color = (r === cur) ? "var(--accent)" : "";
+    });
+    syncHash();
+  }
+
+  function go(n) {
+    idx = Math.min(Math.max(n, 0), data.length - 1);
+    cur = want ? want - 1 : -1;
+    store.set("sec", idx);
+    paint();
+    if (want) { want = 0; showCur(); } else { scrollTo({ top: 0 }); }
+  }
+  function move(step) {
+    const s = data[idx]; if (!s || !s.n) return;
+    cur = Math.min(Math.max(cur + step, 0), s.n - 1);
+    mark();
+    showCur();
+  }
+
+  sel.onchange        = () => go(+sel.value);
+  $("#prev").onclick  = () => go(idx - 1);
+  $("#next").onclick  = () => go(idx + 1);
+  $("#toggle").onclick= () => { tools = !tools; store.set("tools", tools); keepPlace(paint); };
+  $("#layout").onclick= () => { stacked = !stacked; store.set(layoutKey(), stacked); keepPlace(paint, ui); };
+  $("#big").onclick   = () => { fs = Math.min(fs + 2, 40); store.set("fs", fs); keepPlace(paint); };
+  $("#small").onclick = () => { fs = Math.max(fs - 2, 13); store.set("fs", fs); keepPlace(paint); };
+  $("#theme").onclick = () => {                 // 端末の設定 → 明るい → 暗い → 端末の設定 …
+    const order = ["system", "light", "dark"];
+    theme = order[(order.indexOf(theme) + 1) % order.length];
+    store.set("theme", theme); keepPlace(paint);
+  };
+  $("#ai").onclick    = () => { showAI = !showAI; store.set("ai", showAI); keepPlace(paint); };
+  $("#brk").onclick   = () => { showBrk = !showBrk; store.set("brk", showBrk);
+    brkPicked = true; store.set("brkPicked", true); keepPlace(paint); syncHash(); };
+  $("#ui").onchange   = () => {
+    ui = $("#ui").value; uiPicked = true; store.set("ui", ui); search(); keepPlace(paint); syncHash();
+  };
+
+  // ---- 語句を全節から探す ----
+  const hits = $("#hits"), q = $("#q");
+  let hitList = [];
+  function search() {
+    const t = q.value.trim();
+    hitList = [];
+    if (t.length < 2) { hits.hidden = true; return; }
+    const todo = data.filter((s) => !s.cells);
+    if (todo.length) {               // 本文がまだそろっていない。そろったら探し直す
+      hits.innerHTML = `<div class="hit">${esc(T().searching(todo.length))}</div>`;
+      hits.hidden = false;
+      todo.forEach((s) => load(s, () => { if (!data.some((x) => !x.cells)) search(); }));
+      return;
+    }
+    const low = t.toLowerCase();
+    outer:
+    for (let si = 0; si < data.length; si++) {
+      const s = data[si];
+      for (const L of LANGS) {
+        for (const c of s.cells[L.id] || []) {
+          const at = c.t.toLowerCase().indexOf(low);
+          if (at >= 0) {
+            hitList.push({ si, r: c.r, lang: L.tag, label: secLabel(s),
+              snip: c.t.slice(Math.max(0, at - 30), at + t.length + 60), at: Math.min(at, 30), len: t.length });
+            if (hitList.length >= 60) break outer;
+          }
+        }
+      }
+    }
+    hits.innerHTML = hitList.length
+      ? hitList.map((h, i) => {
+          const a = esc(h.snip.slice(0, h.at)), b = esc(h.snip.slice(h.at, h.at + h.len)),
+                c = esc(h.snip.slice(h.at + h.len));
+          return `<div class="hit" data-i="${i}"><b>${esc(h.label)} ${h.lang} ${h.r + 1}</b>…${a}<mark>${b}</mark>${c}…</div>`;
+        }).join("")
+      : `<div class="hit">${esc(T().noHit)}</div>`;
+    hits.hidden = false;
+  }
+  q.oninput = search;
+  q.onfocus = () => { if (hitList.length) hits.hidden = false; };
+  hits.onclick = (e) => {
+    const el = e.target.closest(".hit"); if (!el || !el.dataset.i) return;
+    const h = hitList[+el.dataset.i];
+    hits.hidden = true;
+    if (h.si !== idx) { want = h.r + 1; go(h.si); }
+    cur = h.r; mark();
+    showCur();
+  };
+  addEventListener("click", (e) => {
+    if (!e.target.closest("#hits") && e.target !== q) hits.hidden = true;
+  });
+
+  addEventListener("keydown", (e) => {
+    if (e.target === q) { if (e.key === "Escape") { q.blur(); hits.hidden = true; } return; }
+    if (e.key === "/") {           // バーをたたんでいても探せるように、まず開く
+      e.preventDefault();
+      if (!tools) { tools = true; store.set("tools", tools); keepPlace(paint); }
+      q.focus(); q.select(); return;
+    }
+    if (e.target.tagName === "SELECT") return;
+    const k = e.key;
+    if (k === "ArrowDown") { e.preventDefault(); move(1); }
+    else if (k === "ArrowUp") { e.preventDefault(); move(-1); }
+    else if (k === "ArrowRight") go(idx + 1);
+    else if (k === "ArrowLeft") go(idx - 1);
+    else if (k === "Home") { cur = -1; mark(); scrollTo({ top: 0 }); }
+  });
+
+  matchMedia("(max-width:760px)").addEventListener("change", () => {
+    stacked = readLayout();
+    keepPlace(paint);
+  });
+
+  // 端末の設定が変わったら（日没で暗くなる設定など）その場で追いかける。自分で選んだ人は動かさない
+  DARKQ.addEventListener("change", () => { if (theme === "system") keepPlace(paint); });
+
+  paint();
+  if (want) { cur = want - 1; want = 0; mark(); showCur(); }
+});
+</script>
+</body>
+</html>
