@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <!-- 縦書きの括弧︵︶はフォント（図の字だけに絞った BIZ UDPゴシック）に無いので、（）を90度回して描く -->
   <title>Ⅳ. 洗礼ヨハネがエリヤになった理由</title>
 
   <text x="57" y="56" font-size="46" dominant-baseline="central">Ⅳ.</text>
@@ -38,10 +39,10 @@
     </g>
   </g>
   <g font-size="49" text-anchor="middle" dominant-baseline="central">
-    <text x="1007" y="367">︵</text>
+    <text x="1007" y="379" transform="rotate(90 1007 379)">（</text>
     <text x="1007" y="416.5">再</text>
     <text x="1007" y="465.5">臨</text>
     <text x="1007" y="515.5">者</text>
-    <text x="1007" y="565">︶</text>
+    <text x="1007" y="553" transform="rotate(90 1007 553)">）</text>
   </g>
 </svg>

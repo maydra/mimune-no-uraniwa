@@ -23,13 +23,15 @@
 4. **描く図を選ぶ**: `chartsheet.py` で図の一覧を作って目で見る。章・節の扉と、題の下線の有無だけ違う重複は外す（創造原理は136枚 → 105枚）。`charts.json` に足す
 5. **置く文を決める**: `python -I -X utf8 _tools/dpcharts/anchors.py <map_zen.json> --page <page>`。図を映していた最後のスライド（題の下線だけ違う重複の図のスライドも含める）の説明文の、最後の一文を本文の文と突き合わせ、いちばん重なる文の終わりに置く。講義が本文の2文を1文にまとめている所は、後ろの文の終わり（次の文の言い終わりがほぼそのまま重なるときだけ。本文の「のである」は除いて比べる）。目印は、その文の終わりで終わり、ページに1回しか出ない最も短い字の並び（8字以上、空白は数えない）。引用（「」『』）の中の「。」では文を切らない（堕落論で、図が引用の途中に入った）。計算で決まった所は全部、スライドの最後の一文と本文の文を並べて目で確かめる。合わない所は charts.json の "after" を手で書き、"fixed": true と "how"（理由）を付ける（anchors.py は fixed の図を計算し直さない）。説明文の無い字だけの図や、OCR が崩れた図もこれで置く。ユーザー「スライドは連続配置するのではなく、刻んで配置して欲しい」（2026-10-30）
 6. **描く**: STYLE.md のとおり。見本は z095・z180。`render.py` で元の画像と重ねて見比べる（赤=元だけ、水色=SVG だけ）。後編は約50組（1組 9〜10枚）に分け、9人のサブエージェントに同時に描かせた。描き手への手順は dpcharts-work の `BRIEF_kou.md`、割り振りの表は `assign.md`（`nextgroups.py done=<組> start=<数>` で消し込み、次の組を出す）。描き手は頼まれた文の色に引っぱられて元の色を変えることがある（白い楕円を黄に、など）。**元の図の色を優先する**と手順に書き、終わった組の報告で「元と変えた所」を読んで直す
-7. **まとめる**: `python -I -X utf8 _tools/dpcharts/build_charts.py`。SVG の決まり（id の頭・使わない要素・目印がページに1回だけか）を確かめ、Chrome で描いてある物の範囲を測って viewBox の余白を詰め、`dp/charts/<page>.json` を書き、ページの `<script src="charts.js" data-charts="…">` を足す・直す
-8. `python _tools/root/build_offline_manifest.py`（図の JSON もオフライン保存に入る）
-9. **確かめる**（`extract/` の道具。作業のフォルダは dpcharts-work）
+7. **フォント**: `python -X utf8 _tools/dpcharts/build_font.py`。図に出てくる字だけの BIZ UDPゴシック（OFL 版）を `dp/fonts/` に書く。元の ttf は dpcharts-work/fontsrc（リポジトリに入れない）。図の字を足したり直したりしたら回す。フォントに無い字があれば名前を出すので、図形で描くか別の字に替える（縦書きの括弧︵︶は（）を回した）
+8. **まとめる**: `python -I -X utf8 _tools/dpcharts/build_charts.py`。SVG の決まり（id の頭・使わない要素・目印がページに1回だけか）を確かめ、Chrome で描いてある物の範囲を測って viewBox の余白を詰め、`dp/charts/<page>.json` を書き、ページの `<script src="charts.js" data-charts="…">` を足す・直す
+9. `python _tools/root/build_offline_manifest.py`（図の JSON とフォントもオフライン保存に入る）
+10. **確かめる**（`extract/` の道具。作業のフォルダは dpcharts-work）
    - 字: `python -I -X utf8 ocr_check.py prep <page>` → `ocr_batch.ps1` で `ocrcheck/<page>/orig` と `svg` を OCR → `ocr_check.py diff <page>`。元の画像と描き直しの両方を OCR にかけ、元にだけある字を出す（OCR の読み癖は両方に出るので打ち消し合う）。出た字は SVG の中身を直接見て確かめる（縦書きや丸の中の字は OCR が読み落とすだけのことが多い）。本当の誤りは「蕩減」を「蕩滅」と写したものばかり（前後編で10枚）。描き終えたら SVG を「蕩滅」で検索する
    - 置き場所: `node shot.mjs http://127.0.0.1:8766/dp/<page>.html out.png --eval "$(cat verify_after.js)"`。図が全部、決めた文の直後にあるか、蛍光ペンの中に入っていないか
    - 読んでいた所: `keep_test3.js`（「図」を出し入れしても、画面の上の字が同じ高さに残るか）
-10. **十字架**: 型を変えたときは `python -I -X utf8 _tools/dpcharts/fix_crosses.py` で、描いた図の十字架を元の画像の寸法に合わせ直せる
+   - 字の形: `render.py --font web` で絞ったフォント、`--font other` で BIZ UDPゴシックの無い端末の代わり（游ゴシック）で描ける。web はこの PC の BIZ UDPゴシックと画素まで同じになるはず
+11. **十字架**: 型を変えたときは `python -I -X utf8 _tools/dpcharts/fix_crosses.py` で、描いた図の十字架を元の画像の寸法に合わせ直せる
 
 ## ページでの動き（dp/charts.js）
 - 既定は出さない。「図」を押すと JSON を読み、目印の字の並びで終わる文の直後に `<figure class="dpc-fig">` を差し込む。文のあとに字が続けば、字のノードを割って間に入れる（段落の途中）。段落の終わりなら次の `<br>` のあと。差し込んだら `dpchartsplaced` を出し、reader.js が字のノードを取り直す。状態は localStorage の `dp_charts`
@@ -39,4 +41,5 @@
 - 図の字は本文の字数に入れない（theme/reader.js の NOT_BODY、color_filter.js の保護）。出し入れの前後で、画面の上にあった字が同じ高さに来るようにスクロールを戻す
 - 「図」は3か所にある: ページの頭の「表示：」の並び、上の帯（reader.js の `#reader-crumb`）の ☰ の手前、目次の引き出し。帯の「図」は押しても引き出しを開かない。どれも `window.dpCharts` を呼ぶ。帯に置いたのは、ユーザー「スライド表示ボタンがなかなか出ないぬ」（読んでいる途中からは、ページの頭まで戻らないと押せなかった）
 - 図はまず縦横比（viewBox と同じ）の枠だけを置き、画面の上下 1500px に入った枠から SVG を入れる（IntersectionObserver）。枠の高さは SVG を入れても変わらないので、スクロールの位置は動かない
+- 図の字のフォントは `'BIZ UDPGothic','DPC Gothic',…`（charts.js の CSS が SVG の font-family 属性に勝つ）。DPC Gothic は dp/fonts の絞ったフォントで、@font-face は JSON の fonts を読んだとき（「図」を出したとき）に足す。BIZ UDPゴシックの入っている Windows はダウンロードしない。ユーザーの iPhone で字が箱からはみ出していた（2026-10-31）
 - JSON の URL には中身のハッシュを付ける。dp/ の JS・JSON は SW がキャッシュ優先で出すので、付けないと直した図が1回遅れて届く

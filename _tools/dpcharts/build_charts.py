@@ -5,6 +5,7 @@ python -I -X utf8 _tools/dpcharts/build_charts.py
 
 - 図の一覧と、出す所の目印（その字の並びで終わる文のあと）は _tools/dpcharts/charts.json（目印は anchors.py が書く）
 - SVG は _tools/dpcharts/svg/<id>.svg。決まりは STYLE.md。まだ無い図は飛ばす
+- 図の字のフォントは先に build_font.py で作る（JSON の fonts にハッシュ付きの URL が入る）
 """
 import hashlib, json, os, re, sys
 import xml.etree.ElementTree as ET
@@ -131,6 +132,12 @@ def main():
     pages = {}
     for c in reg["charts"]:
         pages.setdefault(c["page"], []).append(c)
+    # 図の字のフォント（build_font.py が書く）。URL に中身のハッシュを付ける（SW がキャッシュ優先で出すため）
+    fonts = {}
+    for w in ("700", "400"):
+        fp = os.path.join(ROOT, "dp", "fonts", f"dpc-gothic-{w}.woff2")
+        if os.path.exists(fp):
+            fonts[w] = f"fonts/dpc-gothic-{w}.woff2?v={short_hash(open(fp, 'rb').read())}"
     bad = 0
     for page, charts in pages.items():
         text = page_text(page)
@@ -164,7 +171,7 @@ def main():
         for o in out:
             o["svg"] = fit_viewbox(o["svg"], boxes[o["id"]])
         os.makedirs(os.path.join(ROOT, "dp", "charts"), exist_ok=True)
-        data = json.dumps({"v": 1, "charts": out}, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+        data = json.dumps({"v": 1, **({"fonts": fonts} if fonts else {}), "charts": out}, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
         name = page + ".json"
         open(os.path.join(ROOT, "dp", "charts", name), "wb").write(data)
         changed = set_script_tag(page, js_hash, name, short_hash(data))

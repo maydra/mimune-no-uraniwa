@@ -1,6 +1,9 @@
 """図の SVG をヘッドレス Chrome で PNG に描き、元の画像と並べた見比べ図を作る。
 
-python -I -X utf8 _tools/dpcharts/render.py <svg> <out.png> [--ref <元の画像.png>] [--dark] [--scale 2]
+python -I -X utf8 _tools/dpcharts/render.py <svg> <out.png> [--ref <元の画像.png>] [--dark] [--scale 2] [--font local|web|other]
+
+--font web はページと同じ、dp/fonts の絞ったフォント（DPC Gothic）で描く。--font other は BIZ UDPゴシックの無い端末
+（iPhone ならヒラギノ）の代わりに游ゴシックで描き、フォントが無いとどうずれるかを見る。既定はこの PC の BIZ UDPゴシック
 
 --ref を付けると「描いた SVG・重ねた図」を縦に並べ、幅 1000 に縮める（--full で元の画像も上に足す）。
 重ねた図は、元の画像にだけある線が赤、SVG にだけある線が水色、両方にある線が黒になる。
@@ -32,7 +35,20 @@ def view_box(svg):
     return float(m.group(3)), float(m.group(4))
 
 
-def render(svg_path, out, dark=False, scale=1):
+FONTS = os.path.join(os.path.dirname(os.path.dirname(HERE)), "dp", "fonts")
+
+
+def font_css(font):
+    if font == "web":
+        url = lambda w: "file:///" + os.path.join(FONTS, f"dpc-gothic-{w}.woff2").replace("\\", "/")
+        return ("".join(f"@font-face{{font-family:'DPC Gothic';src:url('{url(w)}') format('woff2');font-weight:{w};font-display:block}}"
+                        for w in (400, 700)) + "svg{font-family:'DPC Gothic'}")
+    if font == "other":
+        return "svg{font-family:'Yu Gothic'}"
+    return ""
+
+
+def render(svg_path, out, dark=False, scale=1, font="local"):
     svg = open(svg_path, encoding="utf-8").read()
     w, h = view_box(svg)
     W, H = int(round(w)), int(round(h))
@@ -41,12 +57,12 @@ def render(svg_path, out, dark=False, scale=1):
         html = os.path.join(tmp, "page.html")
         body = re.sub(r"<svg\b", f'<svg width="{W}" height="{H}"', svg, count=1)
         open(html, "w", encoding="utf-8").write(
-            f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head>'
+            f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}{font_css(font)}</style></head>'
             f'<body class="{"dark" if dark else ""}">{body}</body></html>')
         cmd = [CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--no-first-run",
                f"--user-data-dir={os.path.join(tmp, 'profile')}",
                f"--force-device-scale-factor={scale}", f"--window-size={W},{H}",
-               f"--screenshot={out}", "file:///" + html.replace("\\", "/")]
+               f"--screenshot={out}", "--virtual-time-budget=3000", "--allow-file-access-from-files", "file:///" + html.replace("\\", "/")]
         subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=60)
         for _ in range(20):
             if os.path.exists(out):
@@ -95,14 +111,15 @@ def main():
     ap.add_argument("--dark", action="store_true")
     ap.add_argument("--scale", type=float, default=1)
     ap.add_argument("--full", action="store_true", help="見比べ図に元の画像も入れる")
+    ap.add_argument("--font", default="local", choices=["local", "web", "other"])
     a = ap.parse_args()
     if a.ref:
         raw = a.out + ".raw.png"
-        render(a.svg, raw, a.dark, 1)
+        render(a.svg, raw, a.dark, 1, a.font)
         compare(a.ref, raw, a.out, a.full)
         os.remove(raw)
     else:
-        render(a.svg, a.out, a.dark, a.scale)
+        render(a.svg, a.out, a.dark, a.scale, a.font)
     print(a.out)
 
 

@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <!-- 縦書きの括弧︵︶はフォント（図の字だけに絞った BIZ UDPゴシック）に無いので、（）を90度回して描く -->
   <title>未完成期の堕落と警告のみ言</title>
 
   <!-- 神と完成した人間の授受 -->
@@ -42,7 +43,7 @@
 
   <g text-anchor="middle" dominant-baseline="central" font-size="39">
     <text x="293" y="374.2">成<tspan x="293" dy="42">長</tspan><tspan x="293" dy="42">期</tspan><tspan x="293" dy="42">間</tspan></text>
-    <text x="347" y="332">︵<tspan x="347" dy="42">未</tspan><tspan x="347" dy="42">完</tspan><tspan x="347" dy="42">成</tspan><tspan x="347" dy="42">期</tspan><tspan x="347" dy="42">︶</tspan></text>
+    <text x="347" y="342" transform="rotate(90 347 342)">（</text><text x="347" y="374">未<tspan x="347" dy="42">完</tspan><tspan x="347" dy="42">成</tspan><tspan x="347" dy="42">期</tspan></text><text x="347" y="532" transform="rotate(90 347 532)">）</text>
   </g>
   <g font-size="41" dominant-baseline="central">
     <text x="579" y="395.5" textLength="289" lengthAdjust="spacing">長成期の完成級</text>

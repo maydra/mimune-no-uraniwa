@@ -3,7 +3,7 @@
  * SVG に描き直したもの（作り方は _tools/dpcharts/README.md）。
  *
  * - ページの <script src="charts.js" data-charts="charts/11sozo.json?v=…"> で読む。JSON の中身は
- *   { charts: [{ id, after, svg }] }。after は「この字の並びで終わる文のあとに出す」目印（空白を除いた本文の字）。
+ *   { fonts: {重さ: URL}, charts: [{ id, after, svg }] }。after は「この字の並びで終わる文のあとに出す」目印（空白を除いた本文の字）。
  *   図は、その図を映していたスライドの説明文が終わる文のあとに1枚ずつ入る（段落の途中にも入る）
  * - 「表示：」の並びの「図」で出す・隠すを切り替える（既定は隠す）。状態は localStorage の dp_charts
  * - 目次の引き出し（theme/reader.js）からも window.dpCharts で切り替える
@@ -237,6 +237,22 @@
         return loading;
     }
 
+    // 図の字のフォント。JSON の fonts（{"700": "fonts/dpc-gothic-700.woff2?v=…"}）を @font-face にする。
+    // 「図」を出すまでは足さないので、図を出さない人はダウンロードしない。届くまでは端末のフォントで描く（swap）
+    var fontsAdded = false;
+    function useFonts(f) {
+        if (fontsAdded || !f) return;
+        fontsAdded = true;
+        var css = Object.keys(f).map(function (w) {
+            return "@font-face{font-family:'DPC Gothic';src:url('" + new URL(f[w], me.src).href +
+                "') format('woff2');font-weight:" + w + ';font-display:swap}';
+        }).join('\n');
+        var s = document.createElement('style');
+        s.id = 'dpc-fonts';
+        s.textContent = css;
+        document.head.appendChild(s);
+    }
+
     function paint() {
         document.body.classList.toggle('dpc-on', on);
         buttons.forEach(function (b) {
@@ -257,6 +273,7 @@
         }
         return load().then(function (d) {
             if (!on) return;
+            useFonts(d.fonts);
             keepPlace(function () {
                 if (!placed) place(d.charts || []);
                 paint();
@@ -283,6 +300,9 @@
             // 端末のフォントが少し広くても字が切れないように（viewBox は描いてある物の範囲に詰めてある）
             '.dpc-box{width:100%}',
             '.dpc-box svg{display:block;width:100%;height:100%;overflow:visible}',
+            // 図は BIZ UDPゴシックで寸法を合わせて描いた。入っていない端末（iPhone・Android・Mac）では、図の字だけに絞った
+            // 同じフォント（DPC Gothic、dp/fonts）を使う。入っている Windows はダウンロードしない（useFonts）
+            ".dpc-box svg{font-family:'BIZ UDPGothic','DPC Gothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif}",
             'body.dark-mode .dpc-fig{background:#1f1d36;border-color:rgba(255,255,255,.16);color:#e6e6ef}',
             'body.dark-mode .dpc-fig .paper{fill:#2c2a48}',
             '.dpc-note{display:none;max-width:34em;margin:-.6rem auto 1.2rem;padding:0 .4rem;font-size:.8rem;opacity:.75;text-align:center}',

@@ -30,6 +30,8 @@ for d in sorted(ROOT.iterdir()):
     # 原理講論の図（dp/charts.js と dp/charts/*.json）。図は「図」を ON にしたときだけ読むので、
     # 開いただけでは保存されない（2026-10-30）
     extra = [d / 'charts.js'] + sorted((d / 'charts').glob('*.json'))
+    # 図の字のフォント（dp/fonts、2026-10-31）。BIZ UDPゴシックの無い端末で、オフラインでも図の字がずれないように
+    extra += sorted((d / 'fonts').glob('*.woff2'))
     files += [str(f.relative_to(ROOT)).replace('\\', '/') for f in extra if f.exists()]
     if files:
         books[d.name] = files
