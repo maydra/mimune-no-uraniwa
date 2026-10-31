@@ -64,6 +64,28 @@ for fld in sys.argv[1:]:
         m = re.search(r'<h3 class="tit_subject">(.*?)</h3>', h, re.S) or re.search(r'property="og:title" content="(.*?)"', h)
         title = H.unescape(re.sub(r'<[^>]+>|\s+', ' ', m.group(1))).strip() if m else ''
         p = Article(); p.feed(h)
-        out.write(json.dumps({'n': n, 'title': title, 'paras': p.paras}, ensure_ascii=False) + '\n')
+        paras = p.paras
+        # 平和経の第五篇 22〜28 は PDF を HTML にしたものを貼ってあり、<p> が無い。<div class="t …"> 1つが1段落
+        if sum(len(x['text']) for x in paras) < 200 and '<div class="t ' in h:
+            body = re.search(r'tx-content-container">(.*?)<script', h, re.S).group(1)
+            paras = []
+            # div の外にも題・日付の行がある（28）。外の部分は <br>・<p>・<div> で行に分ける
+            for i, d in enumerate(re.split(r'<div class="t [^"]*">(.*?)</div>', body, flags=re.S)):
+                if i % 2 == 0:
+                    d = re.sub(r'<br\s*/?>|</?p[^>]*>|</?div[^>]*>', '\n', d)
+                for t in (d.split('\n') if i % 2 == 0 else [re.sub(r'<br\s*/?>', '', d)]):
+                    t = H.unescape(re.sub(r'<[^>]+>', '', t)).replace(' ', ' ').strip()
+                    if t:
+                        paras.append({'text': t, 'bold': False, 'colors': [], 'pdf': True})
+        # 平和経の第五篇 21 は1つの <p> に、行の幅で折り返した行が空行1つ置きに並ぶ（段落の切れ目は空行3つ）
+        fixed = []
+        for x in paras:
+            if x['text'].count('\n\n') > 20:
+                for t in re.split(r'\n{4,}', x['text']):
+                    fixed.append(dict(x, text=re.sub(r'\n+', '', t).strip(), pdf=True))
+            else:
+                fixed.append(x)
+        paras = [x for x in fixed if x['text']]
+        out.write(json.dumps({'n': n, 'title': title, 'paras': paras}, ensure_ascii=False) + '\n')
     out.close()
     print(fld, len(nums), 'articles')

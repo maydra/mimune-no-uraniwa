@@ -125,8 +125,11 @@ def absolute(href, page, book_dir):
 
 def moved(page):
     """引っ越したあとの転送だけが残っているページ"""
-    head = page.read_text(encoding='utf-8', errors='ignore')[:4000]
-    return 'location.replace(' in head or '移動しました' in head
+    text = page.read_text(encoding='utf-8', errors='ignore')
+    head = text[:4000]
+    # 「移動しました」は本文にも出る（平和経 第九篇9「…地中海文明に移動しました」、南北統一 2-1-3 が落ちていた）。
+    # 転送だけのページは短いので、長いページでは見ない
+    return 'location.replace(' in head or ('移動しました' in head and len(text) < 5000)
 
 
 def natural(name):
