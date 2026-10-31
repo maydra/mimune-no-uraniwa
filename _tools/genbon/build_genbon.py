@@ -8,14 +8,19 @@
 
 units.json の1件（段落）:
     id      通し番号
-    vol     巻（1〜3）
-    parts   [[原稿のページ, 原文]]。段落の途中で原稿のページが替わると2つ以上になる
+    vol     巻（1〜5）
+    parts   [[原稿のページ, 原文]]。段落の途中で原稿のページが替わると2つ以上になる。
+            ページはふつう数（448）。4・5巻には文字の印もある（"497-2"・"661-1"・"X-010"）
     ja      日本語訳（原文からの AI 訳）。段落の途中のページの替わり目に〔ページ〕の印
     heading 見出し（節の題）なら true。ここから新しい節
     sub     節の中の小見出しなら true（節は分けず、節の目次にだけ出す）
     note    訳の断り（任意。訳文の後ろに ※ で出す）
+    sec_title  見出しの行ではないが、ここから節を分けるときの節の名前 {"ja": …, "ko": …}（任意）
 
-節は見出しごと（巻が替わる所でも切る）。原稿の 398ページは掲示板に投稿されていないので、その旨の行を入れる。
+節は見出しごと（巻が替わる所でも切る）。原稿の欠けているページ（398・458 は掲示板に無い、562 は白紙、
+4巻の「拔去分」）は、その次のページの前に断りの行を入れる（GAPS）。
+原文は 1〜447ページが WD3Y（김현주 さんの訳つきの掲示板）、448ページから先が巻ごとの掲示板（3巻 W8k2・4巻 W4A3・5巻 W4A4）。
+448ページから先の足し方は work/extend_345.py と work/merge_345.py。
 """
 
 import html
@@ -30,8 +35,21 @@ SRC = ROOT / "taiyaku" / "genri_kouron" / "index.html"
 OUT = ROOT / "taiyaku" / "genri_genbon"
 SITE = "https://maydra.github.io/mimune-no-uraniwa/taiyaku/genri_genbon/"
 BOARD = "https://cafe.daum.net/ckatkfkdrhdqn/WD3Y"
-MISSING_PAGES = {398}
-MARK = re.compile(r"〔(\d+)〕")
+VOL_BOARDS = "https://cafe.daum.net/ckatkfkdrhdqn/W8MH/29"     # 巻ごとの掲示板の案内（統一教会の根の経典）
+# 欠けているページ: 次のページ → (印, 韓国語の断り, 日本語の断り)
+_NOPOST = ("이 쪽은 게시판에 올라와 있지 않습니다", "このページは掲示板に投稿されていません")
+_PULLED = ("원고에서 빠진 부분. 게시판에는 「拔去分」이라고만 있습니다", "原稿から抜き取られた分。掲示板には「拔去分」とだけある")
+GAPS = {
+    399: ("398",) + _NOPOST,
+    459: ("458",) + _NOPOST,
+    469: ("465〜468",) + _PULLED,
+    476: ("473〜475",) + _PULLED,
+    515: ("511〜514",) + _PULLED,
+    548: ("545〜547",) + _PULLED,
+    557: ("553〜556",) + _PULLED,
+    563: ("562", "백지", "白紙のページ"),
+}
+MARK = re.compile(r"〔([^〕]+)〕")
 SPLIT = 1500          # これより長い段落（原文の字数）は原稿のページの切れ目で行を分ける
 
 
@@ -75,12 +93,15 @@ def sections(units):
     out, cur, title = [], None, None
     for u in units:
         new_vol = cur is not None and u["vol"] != cur["vol"]
-        if u.get("heading") or cur is None or new_vol:
+        if u.get("heading") or u.get("sec_title") or cur is None or new_vol:
             if u.get("heading"):
                 title = (u["ja"], u["parts"][0][1])
+            elif u.get("sec_title"):
+                # 見出しの行は無いが節を分けたい所（5巻の頭の 561ページは5巻の目次）。節の名前だけを決める
+                title = (u["sec_title"]["ja"], u["sec_title"]["ko"])
             elif title is None:
                 title = ("原理原本", "원리원본")
-            cur = {"vol": u["vol"], "title": title, "cont": not u.get("heading") and cur is not None, "units": []}
+            cur = {"vol": u["vol"], "title": title, "cont": not (u.get("heading") or u.get("sec_title")) and cur is not None, "units": []}
             out.append(cur)
         cur["units"].append(u)
     return out
@@ -91,12 +112,12 @@ def build_rows(sec, last_page):
     r = 0
     for u in sec["units"]:
         first = u["parts"][0][0]
-        # 原稿の欠けているページ（掲示板に無い）は、その前に断りの行を入れる
-        for miss in sorted(MISSING_PAGES):
-            if last_page < miss < first:
-                ko_cells.append({"r": r, "h": pg(miss) + "（이 쪽은 게시판에 올라와 있지 않습니다）"})
-                ja_cells.append({"r": r, "h": pg(miss) + "（このページは掲示板に投稿されていません）"})
-                r += 1
+        # 原稿の欠けているページは、その次のページの前に断りの行を入れる
+        if first in GAPS and first != last_page:
+            mark, ko_msg, ja_msg = GAPS[first]
+            ko_cells.append({"r": r, "h": pg(mark) + f"（{ko_msg}）"})
+            ja_cells.append({"r": r, "h": pg(mark) + f"（{ja_msg}）"})
+            r += 1
         lead = pg(first) if first != last_page else ""
         # 長すぎる段落（掲示板が原稿の1ページを1かたまりで載せ、どのページも文の途中で終わっている所。
         # 371〜392ページは1万2千字の1段落になる）は、原稿のページの切れ目で行を分ける
@@ -196,15 +217,18 @@ def patch_viewer(src):
         s = s.replace(a, b)
     # 出典の説明（言語ごと）
     foot = {
-        "ja": ("`原文: <a href=\"" + BOARD + "\" target=\"_blank\" rel=\"noopener\">Daum カフェ「천일국 경전방」の原理原本の掲示板</a>"
-               "（原稿の写し。〔数字〕は原稿のページ）。日本語訳: AI による訳です。韓国語の原文から訳し、掲示板にある 김현주 さんの訳を参考にしました。"
+        "ja": ("`原文: Daum カフェ「천일국 경전방」の<a href=\"" + BOARD + "\" target=\"_blank\" rel=\"noopener\">原理原本の掲示板</a>（1〜447ページ）と"
+               "<a href=\"" + VOL_BOARDS + "\" target=\"_blank\" rel=\"noopener\">巻ごとの掲示板</a>（448ページから）"
+               "（原稿の写し。〔数字〕は原稿のページ）。日本語訳: AI による訳です。韓国語の原文から訳し、447ページまでは掲示板にある 김현주 さんの訳を参考にしました。"
                "公式の訳ではありません。原稿のページの切れ目で途中になった文は、つないで1つの段落にしています。`"),
-        "ko": ("`원문: <a href=\"" + BOARD + "\" target=\"_blank\" rel=\"noopener\">Daum 카페 「천일국 경전방」 원리원본 게시판</a>"
-               "(원고 필사. 〔숫자〕는 원고의 쪽). 일본어 번역: AI 번역입니다. 한국어 원문에서 옮기고, 게시판의 김현주 님 번역을 참고했습니다. "
+        "ko": ("`원문: Daum 카페 「천일국 경전방」의 <a href=\"" + BOARD + "\" target=\"_blank\" rel=\"noopener\">원리원본 게시판</a>(1〜447쪽)과 "
+               "<a href=\"" + VOL_BOARDS + "\" target=\"_blank\" rel=\"noopener\">권별 게시판</a>(448쪽부터) "
+               "(원고 필사. 〔숫자〕는 원고의 쪽). 일본어 번역: AI 번역입니다. 한국어 원문에서 옮기고, 447쪽까지는 게시판의 김현주 님 번역을 참고했습니다. "
                "공식 번역이 아닙니다.`"),
-        "en": ("`Korean text: <a href=\"" + BOARD + "\" target=\"_blank\" rel=\"noopener\">the Wolli Wonbon board of the Daum cafe 천일국 경전방</a>"
+        "en": ("`Korean text: the Daum cafe 천일국 경전방 — <a href=\"" + BOARD + "\" target=\"_blank\" rel=\"noopener\">the Wolli Wonbon board</a> (pp. 1–447) and "
+               "<a href=\"" + VOL_BOARDS + "\" target=\"_blank\" rel=\"noopener\">the per-volume boards</a> (from p. 448)"
                " (a transcription of the manuscript; 〔n〕 marks a manuscript page). Japanese: an AI translation from the Korean, "
-               "made with reference to the Japanese translation by 김현주 on the same board. Not an official translation.`"),
+               "made up to p. 447 with reference to the Japanese translation by 김현주 on the first board. Not an official translation.`"),
     }
     for lang, text in foot.items():
         m = re.search(r"(\n    " + lang + r": \{.*?\n      foot: \(links\) => )`.*?`(?:\n        \+ `.*?`)?,", s, re.S)
@@ -245,10 +269,11 @@ def main():
         cont = "（続き）" if sec["cont"] else ""
         kcont = " (계속)" if sec["cont"] else ""
         # 節を選ぶ欄は「label　names」と並べて出す。label は巻と原稿のページ、names が題
-        label_ja = f"{sec['vol']}巻〔{p1}〜{p2}〕"
+        rng = f"{p1}" if p1 == p2 else f"{p1}〜{p2}"      # 1ページだけの節（5巻の目次）は〔561〕
+        label_ja = f"{sec['vol']}巻〔{rng}〕"
         book["sections"].append({
             "key": key, "label": label_ja,
-            "labels": {"ja": label_ja, "ko": f"{sec['vol']}권〔{p1}〜{p2}〕", "en": f"Vol. {sec['vol']}〔{p1}–{p2}〕"},
+            "labels": {"ja": label_ja, "ko": f"{sec['vol']}권〔{rng}〕", "en": f"Vol. {sec['vol']}〔{rng.replace('〜', '–')}〕"},
             "titles": {"ja": f"原理原本 {sec['vol']}巻 {ja_t}{cont}", "ko": f"원리원본 {sec['vol']}권 {ko_t}{kcont}"},
             "names": {"ja": ja_t + cont, "ko": ko_t + kcont}, "header": {}, "urls": {}, "n": n, "src": "wonbon",
         })
