@@ -359,6 +359,46 @@ h2::after {
     text-underline-offset: 0.2em;
 }
 
+/* 八大教材・教本（2026-10-31）。サイトに無い本はリンクなしで薄く、天聖経は押すと16冊が開く */
+.links-list .missing {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.55;
+}
+
+.links-list details.sub > summary {
+    /* パソコンでは .section-card summary を押せなくしてある（枠を開いたままにするため）。中の天聖経は押せるように戻す */
+    pointer-events: auto;
+    cursor: pointer;
+    list-style: none;
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.links-list details.sub > summary::-webkit-details-marker {
+    display: none;
+}
+
+.links-list details.sub > summary::after {
+    content: ' ▾';
+    color: #667eea;
+}
+
+.links-list details.sub[open] > summary::after {
+    content: ' ▴';
+}
+
+.links-list details.sub > .links-list {
+    margin: 0.4rem 0 0.3rem;
+}
+
+.section-card .card-note {
+    margin: 1rem 0 0;
+    font-size: 0.95rem;
+    opacity: 0.7;
+}
+
 .long-title {
     font-size: 1.4rem !important;
     word-break: keep-all;
