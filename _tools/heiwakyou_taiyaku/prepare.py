@@ -13,6 +13,8 @@
                 serials は記事の題の [001] の番号、posts は掲示板の記事の番号（m.cafe.daum.net/ckatkfkdrhdqn/UYjn/<番号>）
                 kind は "meta"（日付・場所・行事の行）・"head"（小見出し）・"p"（本文）
     HHNN.txt  … 対応付けのための一覧（K1: …／J1 [p1]: …）
+work/sections-en/HHNN.txt … 韓英の対応付けのための一覧（K1: …／E1 [p1]: …）。英語のある73講演だけ。
+    英語は src/VfHJ-en.jsonl（extract_en.py）。HHNN.json の "en"・"en_posts"（連載の記事の番号）に入る
 
     python -I -X utf8 _tools/heiwakyou_taiyaku/prepare.py
 """
@@ -26,6 +28,8 @@ HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 KO_SRC = HERE / 'src' / 'UYjn.jsonl'     # _tools/cafe_books/raw/UYjn.jsonl の写し（掲示板の記事が変わっても対応表がずれないように固定）
 SITE = ROOT / 'heiwakyou'
+EN_SRC = HERE / 'src' / 'VfHJ-en.jsonl'  # 英語（73講演だけ）。extract_en.py が韓日英の連載から抜き出したもの
+OUT_EN = HERE / 'work' / 'sections-en'
 OUT = HERE / 'work' / 'sections'
 MERGE = {62: [62, 63, 64, 65, 66]}      # 天国を開く門 真の家庭 1〜5 → 0414
 # 第六篇 6〜10 は、日本語版は日付の順、韓国語の掲示板は題の順に並んでいる。日付の行で対応を決めた（日本語のページ → 記事の通し番号）
@@ -97,6 +101,39 @@ def ja_sentences(text):
     return [s for s in out if s]
 
 
+EN_HEAD = re.compile(r'^\d{1,2}\.\s+\S')
+ABBR = {'Mr', 'Mrs', 'Ms', 'Dr', 'St', 'Jr', 'Sr', 'Rev', 'Prof', 'Gen', 'Col', 'Lt', 'Mt', 'No', 'vs', 'etc', 'Inc', 'Co'}
+
+
+def en_sentences(text):
+    """英語の段落を文に分ける（heiwa_sekaijin と同じ）。. ! ? のあと、空白と大文字・引用符・数字が続く所で切る。
+    Mr. などの略語と、イニシャル（1字の大文字）では切らない"""
+    out, start = [], 0
+    for m in re.finditer(r'[.!?][”"’\')]*\s+(?=[“"‘(\[]?[A-Z0-9])', text):
+        before = text[start:m.start()]
+        word = re.search(r'([A-Za-z]+)$', before)
+        if text[m.start()] == '.' and word and (word.group(1) in ABBR or len(word.group(1)) == 1):
+            continue
+        out.append(text[start:m.end()].strip())
+        start = m.end()
+    if text[start:].strip():
+        out.append(text[start:].strip())
+    return out
+
+
+def en_items(arts):
+    """英語の記事（講演の中の小見出しごと）→ [{s, p, t, kind}]。小見出しの行（「1. Where does …」）は head"""
+    out, s, pi = [], 0, 0
+    for art in arts:
+        for line in art['lines']:
+            pi += 1
+            head = bool(EN_HEAD.match(line)) and len(line) < 160
+            for t in ([line] if head else en_sentences(line)):
+                s += 1
+                out.append({'s': s, 'p': pi, 't': t, 'kind': 'head' if head else 'p'})
+    return out
+
+
 def ja_page(path):
     soup = BeautifulSoup(path.read_text(encoding='utf-8'), 'html.parser')
     title = soup.select_one('.chapter-head h2').get_text(strip=True)
@@ -143,7 +180,13 @@ def main():
     for i, page in enumerate(pages):
         if page.stem in ORDER_FIX:
             speeches[i] = [by_serial[ORDER_FIX[page.stem]]]
+    en_src = {}
+    for line in EN_SRC.read_text(encoding='utf-8').splitlines():
+        if line.strip():
+            r = json.loads(line)
+            en_src.setdefault(r['key'], []).append(r)
     OUT.mkdir(parents=True, exist_ok=True)
+    OUT_EN.mkdir(parents=True, exist_ok=True)
     report, total = [], {'ko': 0, 'ja': 0, 'ko_chars': 0, 'ja_chars': 0}
     for posts, page in zip(speeches, pages):
         key = page.stem
@@ -166,6 +209,9 @@ def main():
                # つないだ講演（0414）は、1本目の記事の題の後ろの「1」を外す
                'title': {'ko': re.sub(r'\s*\d+$', '', ko_title(posts[0])) if len(posts) > 1 else ko_title(posts[0]), 'ja': title_ja},
                'serials': [serial(r) for r in posts], 'posts': [r['n'] for r in posts], 'ko': ko, 'ja': ja}
+        if key in en_src:
+            sec['en'] = en_items(en_src[key])
+            sec['en_posts'] = [r['id'] for r in en_src[key]]
         (OUT / f'{key}.json').write_text(json.dumps(sec, ensure_ascii=False, indent=1), encoding='utf-8')
         mark = {'meta': ' 頭', 'head': ' 見出し', 'p': ''}
         txt = [f'# {key}  第{sec["hen"]}篇 {sec["num"]}  {sec["title"]["ko"]} / {title_ja}', '',
@@ -174,12 +220,23 @@ def main():
         txt += ['', '## 日本語（サイトの訳。[pN] は段落）']
         txt += [f'J{x["s"]} [p{x["p"]}{mark[x["kind"]]}]: {x["t"]}' for x in ja]
         (OUT / f'{key}.txt').write_text('\n'.join(txt) + '\n', encoding='utf-8')
+        if 'en' in sec:
+            txt = [f'# {key}  第{sec["hen"]}篇 {sec["num"]}  {sec["title"]["ko"]} / {title_ja}', '',
+                   '## 韓国語（原文。[頭] は日付・場所・行事の行、[見出し] は小見出し）']
+            txt += [f'K{x["n"]}{" [" + mark[x["kind"]].strip() + "]" if x["kind"] != "p" else ""}: {x["t"]}' for x in ko]
+            txt += ['', '## 英語（韓日英の連載の英語。[pN] は段落）']
+            txt += [f'E{x["s"]} [p{x["p"]}{mark[x["kind"]]}]: {x["t"]}' for x in sec['en']]
+            (OUT_EN / f'{key}.txt').write_text('\n'.join(txt) + '\n', encoding='utf-8')
+            total['en'] = total.get('en', 0) + len(sec['en'])
+            total['en_chars'] = total.get('en_chars', 0) + sum(len(x['t']) for x in sec['en'])
+            total['en_secs'] = total.get('en_secs', 0) + 1
         total['ko'] += len(ko)
         total['ja'] += len(ja)
         total['ko_chars'] += sum(len(x['t']) for x in ko)
         total['ja_chars'] += sum(len(x['t']) for x in ja)
     report.append(f'節 {len(pages)}、韓国語 {total["ko"]} かたまり（{total["ko_chars"]:,} 字）、'
-                  f'日本語 {total["ja"]} 文（{total["ja_chars"]:,} 字）')
+                  f'日本語 {total["ja"]} 文（{total["ja_chars"]:,} 字）、'
+                  f'英語 {total["en_secs"]} 講演・{total["en"]} 文（{total["en_chars"]:,} 字）')
     (HERE / 'work' / 'prepare-report.txt').write_text('\n'.join(report) + '\n', encoding='utf-8')
     print('\n'.join(report))
 

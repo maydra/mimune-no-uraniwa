@@ -11,6 +11,9 @@
   - 掲示板の記事があとで直されても、対応表がずれないようにするため
   - 3冊の韓国語の掲示板は、案内の記事 W8MH/24「천일국 3대 경전」に並んでいる（SxxP 천성경（증보판）・UYjn 평화경・W2OB 참부모경）
 - 日本語: このサイトの `heiwakyou/HHNN.html`（掲示板 V1yi「2. 平和経」から組んだもの）
+- 英語: 前の試みの韓日英の連載（掲示板 VfHJ、記事 1492〜2010）の英語。全178講演のうち73講演しか無い
+  - `extract_en.py`（前の試みの道具で記事を言語に分ける）で一度だけ抜き出し、`src/VfHJ-en.jsonl` に置いた
+  - 残り101講演の英語は見つからなかった。ユーザーの判断で、いまは英語の欄に断りを出すだけ（2026-10-31。AI 訳で埋めるのは、Usage に余裕があるときの Todo）
   - 突き合わせで見つけた組み方の誤りは、`_tools/cafe_books/build_books.py` で直した（英語の略称の所で切れた段落、第四篇14 の章の見出し）
 
 ### 講演の対応
@@ -27,6 +30,7 @@
 | 1 | `prepare.py` | `work/sections/HHNN.json`・`.txt`（HHNN は篇2桁＋講演の番号2桁）。韓国語は段落（`K`）、日本語は文（`J`）。日付・場所・行事の行は `[頭]`、小見出しは `[見出し]` |
 | 2 | 対応表と注。`TASK-align.md` をサブエージェントに渡して作った（1人あたり韓＋日で約5万字、68組。0414 は長いので章で2人に分け、`work/align-parts/` からつないだ） | `work/align/HHNN.json` |
 | 3 | 日本語版で省かれた所の AI 訳。`frags.py list` が `work/trans/todo/` に書き出し、`TASK-translate.md` で訳す | `work/trans/ja/*.json` |
+| 2' | 韓英の対応表と注。`TASK-align-en.md`（英語のある73講演。`work/batches-en.json` の32組） | `work/align-en/HHNN.json`（材料は `work/sections-en/HHNN.txt`） |
 | 4 | `build.py` | `taiyaku/heiwakyou/`（index.html・book.js・data/*.js） |
 
 ```

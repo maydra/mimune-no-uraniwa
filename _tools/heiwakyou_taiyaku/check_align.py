@@ -158,6 +158,8 @@ def main():
     arg = args[0] if args else 'all'
     N = NAME[lang]
     nos = sorted(p.stem for p in SEC.glob('*.json')) if arg == 'all' else [arg]
+    if arg == 'all' and lang != 'ja':   # 英語は元データのある講演だけ（73講演）
+        nos = [no for no in nos if lang in json.loads((SEC / f'{no}.json').read_text(encoding='utf-8'))]
     bad = 0
     rows = []
     for no in nos:
