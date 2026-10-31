@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神の愛と四位基台</title>
+  <defs>
+    <marker id="z153-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="2.2" markerHeight="2.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="8.5">
+    <line x1="428.8" y1="102.5" x2="312" y2="280"/>
+    <line x1="456.2" y1="102.5" x2="574.5" y2="280"/>
+    <line x1="325.5" y1="280" x2="442.9" y2="456"/>
+    <line x1="560.5" y1="280" x2="443.1" y2="456"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="9" fill="none" marker-end="url(#z153-g)">
+    <path d="M427,394 Q400.7,278.6 425.6,168.8"/>
+    <path d="M456,165 Q479.2,283.1 455.6,388.8"/>
+    <path d="M364,257 Q444.8,226.3 518.5,256.4"/>
+    <path d="M525,289.5 Q440,318.6 367.1,291.4"/>
+  </g>
+
+  <!-- 神から神の愛へ -->
+  <line x1="504" y1="107" x2="718" y2="107" stroke="currentColor" stroke-width="7" stroke-dasharray="14 6.67"/>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <circle cx="442.5" cy="102.5" r="50" fill="#fff" class="paper"/>
+    <ellipse cx="294.5" cy="280" rx="50.5" ry="48" fill="#F98AEE"/>
+    <ellipse cx="593.5" cy="280" rx="50.5" ry="48" fill="#A0F08A"/>
+    <ellipse cx="443.5" cy="456" rx="50.5" ry="48" fill="#DCC4C4"/>
+    <rect x="718" y="72" width="242" height="70" fill="#CDF8F7"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="441.5" y="101.5" font-size="53">神</text>
+    <g fill="#111">
+      <text x="295" y="280.5" font-size="58">ア</text>
+      <text x="593.5" y="279.5" font-size="58">エ</text>
+      <text x="444" y="456" font-size="40">子女</text>
+      <text x="841" y="106" font-size="50" textLength="160" lengthAdjust="spacing">神の愛</text>
+    </g>
+  </g>
+
+  <!-- 箇条（元の画像のとおり細字） -->
+  <circle cx="724.5" cy="196" r="10.5"/>
+  <circle cx="723.5" cy="311" r="10.5"/>
+  <g font-size="40" font-weight="400" dominant-baseline="central">
+    <text x="745" y="194" textLength="257" lengthAdjust="spacing">三対象の愛の</text>
+    <text x="745" y="244.5" textLength="171" lengthAdjust="spacing">主体的愛</text>
+    <text x="745" y="311" textLength="300" lengthAdjust="spacing">四位基台造成の</text>
+    <text x="743" y="361" textLength="213" lengthAdjust="spacing">根本的な力</text>
+  </g>
+
+  <!-- 四 位 基 台：創造目的を完成した善の根本的な基台 -->
+  <g font-size="47" dominant-baseline="central">
+    <text x="321" y="559" textLength="241" lengthAdjust="spacing">四位基台</text>
+    <text x="588.5" y="559" text-anchor="middle">：</text>
+    <text x="614" y="559" textLength="446" lengthAdjust="spacing">創造目的を完成した</text>
+    <text x="615" y="621.5" textLength="397" lengthAdjust="spacing">善の根本的な基台</text>
+  </g>
+</svg>

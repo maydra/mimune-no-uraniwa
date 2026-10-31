@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>2. 天の側とサタンの側は何によって決定されるか</title>
+
+  <!-- 題 -->
+  <text x="33" y="37" font-size="28" dominant-baseline="central">2.</text>
+  <text x="68" y="37" font-size="26" dominant-baseline="central" textLength="547" lengthAdjust="spacing">天の側とサタンの側は何によって決定されるか</text>
+  <line x1="68" y1="54.6" x2="614" y2="54.6" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 天の側・サタン側の札 -->
+  <rect x="184.5" y="89.5" width="139.5" height="43.5" rx="5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <rect x="509.5" y="85.5" width="138.5" height="44.5" rx="5" fill="#50403D" stroke="currentColor" stroke-width="2.5"/>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="253" y="111" textLength="86" lengthAdjust="spacing">天の側</text>
+    <text x="578.5" y="108" fill="#fff" font-weight="400" textLength="110" lengthAdjust="spacing">サタン側</text>
+  </g>
+
+  <!-- 灰色の両向きの矢印 -->
+  <g fill="#8C949A">
+    <polygon points="338,110 355,100 355,105.5 472,105.5 472,100 489,110 472,120 472,114.5 355,114.5 355,120"/>
+    <polygon points="340,243 357,232.5 357,238.5 475,238.5 475,232.5 492,243 475,253.5 475,247.5 357,247.5 357,253.5"/>
+    <polygon points="341,332.5 358,322.5 358,328.5 475,328.5 475,322.5 492,332.5 475,342.5 475,336.5 358,336.5 358,342.5"/>
+  </g>
+
+  <!-- 札の下の字 -->
+  <g font-size="24" text-anchor="middle" dominant-baseline="central">
+    <text x="252.5" y="156.5" textLength="116" lengthAdjust="spacing">神の摂理と</text>
+    <text x="254.5" y="185" textLength="116" lengthAdjust="spacing">同じ、同調</text>
+    <text x="573.5" y="153.5" textLength="118" lengthAdjust="spacing">神の摂理に</text>
+    <text x="574" y="181.5" textLength="47" lengthAdjust="spacing">反対</text>
+  </g>
+
+  <!-- 楕円をつなぐ線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="4">
+    <line x1="253" y1="270" x2="253" y2="312"/>
+    <line x1="579" y1="270" x2="579" y2="310"/>
+  </g>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="252.5" cy="243.5" rx="65" ry="35.2" fill="#F8F28F"/>
+    <ellipse cx="253" cy="331.5" rx="64.7" ry="27" fill="#F8F28F"/>
+    <ellipse cx="580.5" cy="242" rx="65" ry="35.7" fill="#F86D42"/>
+    <ellipse cx="579" cy="329.5" rx="64.7" ry="27" fill="#F86D42"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <g font-size="23">
+      <text x="252" y="232" textLength="93" lengthAdjust="spacing">アベル型</text>
+      <text x="252" y="258" textLength="71" lengthAdjust="spacing">人生観</text>
+      <text x="579" y="230" textLength="93" lengthAdjust="spacing">カイン型</text>
+      <text x="579" y="255.5" textLength="71" lengthAdjust="spacing">人生観</text>
+    </g>
+    <g font-size="25">
+      <text x="254" y="332" textLength="99" lengthAdjust="spacing">民主世界</text>
+      <text x="579.5" y="329.5" textLength="100" lengthAdjust="spacing">共産世界</text>
+    </g>
+  </g>
+
+  <!-- 下の字 -->
+  <g font-size="26" text-anchor="middle" dominant-baseline="central">
+    <text x="249" y="383" textLength="131" lengthAdjust="spacing">信仰の自由</text>
+    <text x="578" y="380" textLength="79" lengthAdjust="spacing">唯物論</text>
+  </g>
+</svg>

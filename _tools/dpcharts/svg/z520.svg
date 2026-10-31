@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>霊人に対する復活摂理　1. 霊人が再臨復活する理由とその方法</title>
+  <defs>
+    <marker id="z520-a" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="51" font-size="48" dominant-baseline="central">Ⅲ.</text>
+  <text x="135" y="51" font-size="50" dominant-baseline="central" textLength="500" lengthAdjust="spacing">霊人に対する復活摂理</text>
+  <line x1="135" y1="81.5" x2="635" y2="81.5" stroke="currentColor" stroke-width="3.5"/>
+  <text x="79" y="125" font-size="46" dominant-baseline="central">1.</text>
+  <text x="135" y="125" font-size="46" dominant-baseline="central" textLength="733" lengthAdjust="spacing">霊人が再臨復活する理由とその方法</text>
+  <line x1="135" y1="153.5" x2="868" y2="153.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 地上と霊界の境の線（霊人体と肉身の下に描く） -->
+  <line x1="376" y1="471" x2="912" y2="471" stroke="currentColor" stroke-width="6"/>
+
+  <!-- 霊人（上の白い部分が未完成） -->
+  <ellipse cx="507" cy="333" rx="52" ry="90" fill="#fff"/>
+  <path d="M458.2,302 A48.8,10 0 0 0 555.8,302 A52,90 0 1 1 458.2,302 Z" fill="#F98AEE"/>
+  <ellipse cx="507" cy="302" rx="48.8" ry="10" fill="#FBCEFA"/>
+  <g fill="none" stroke="#111" stroke-width="4.5">
+    <path d="M458.2,302 A48.8,10 0 0 1 555.8,302" stroke-dasharray="5.5 6.5"/>
+    <path d="M458.2,302 A48.8,10 0 0 0 555.8,302"/>
+  </g>
+  <ellipse cx="507" cy="333" rx="52" ry="90" fill="none" stroke="currentColor" stroke-width="4.5"/>
+
+  <!-- 地上人の霊人体 -->
+  <ellipse cx="825" cy="378.5" rx="52" ry="89.5" fill="#fff"/>
+  <path d="M776.4,346.5 A48.6,9.5 0 0 0 873.6,346.5 A52,89.5 0 1 1 776.4,346.5 Z" fill="#F98AEE"/>
+  <ellipse cx="825" cy="346.5" rx="48.6" ry="9.5" fill="#FBCEFA"/>
+  <g fill="none" stroke="#111" stroke-width="4.5">
+    <path d="M776.4,346.5 A48.6,9.5 0 0 1 873.6,346.5" stroke-dasharray="5.5 6.5"/>
+    <path d="M776.4,346.5 A48.6,9.5 0 0 0 873.6,346.5"/>
+  </g>
+  <ellipse cx="825" cy="378.5" rx="52" ry="89.5" fill="none" stroke="currentColor" stroke-width="4.5"/>
+
+  <!-- 肉身 -->
+  <ellipse cx="823.5" cy="561.5" rx="50.5" ry="86" fill="#A0F08A" stroke="currentColor" stroke-width="4"/>
+  <g font-size="54" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="823.5" y="532.5">肉</text>
+    <text x="824.5" y="589.5">身</text>
+  </g>
+
+  <!-- 霊人体と肉身の授受 -->
+  <g fill="none" stroke="currentColor" stroke-width="6" marker-end="url(#z520-a)">
+    <path d="M768,512 Q751,483 764,451"/>
+    <path d="M880,439 Q897,466 887,497"/>
+  </g>
+
+  <!-- 未完成使命部分 -->
+  <g font-size="44" dominant-baseline="central">
+    <text x="269" y="223">未完成</text>
+    <text x="269" y="277">使命部分</text>
+  </g>
+  <line x1="425" y1="236.5" x2="478" y2="258.2" stroke="currentColor" stroke-width="5.5"/>
+  <path d="M478,258.2 L508,270.5 M494,253 L508,270.5 L486,274" fill="none" stroke="#111" stroke-width="5.5"/>
+
+  <!-- 再臨協助 -->
+  <g stroke="currentColor" stroke-width="8">
+    <line x1="583" y1="356" x2="706.9" y2="404.1"/>
+    <line x1="721" y1="434" x2="590.3" y2="385"/>
+  </g>
+  <polygon points="732,414 711.4,392.5 702.3,415.8"/>
+  <polygon points="565,375.5 594.7,373.3 585.9,396.7"/>
+  <text x="665.5" y="343.5" font-size="38" font-weight="400" text-anchor="middle" dominant-baseline="central" transform="rotate(22 665.5 343.5)">再臨協助</text>
+
+  <!-- 札 -->
+  <g stroke="currentColor" stroke-width="4">
+    <rect x="292.5" y="349.5" width="143" height="68" fill="#fff" class="paper"/>
+    <rect x="924" y="373.5" width="76" height="188" fill="#fff" class="paper"/>
+  </g>
+  <text x="365.5" y="383" font-size="46" text-anchor="middle" dominant-baseline="central">霊人</text>
+  <g font-size="48" text-anchor="middle" dominant-baseline="central">
+    <text x="962" y="417">地</text>
+    <text x="962.5" y="466.5">上</text>
+    <text x="962.5" y="517.5">人</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>イエスの信仰基台（中心人物・条件物・蕩減期間）</title>
+
+  <!-- 灰色の矢印と枝 -->
+  <g fill="#8C949A">
+    <polygon points="202,138 211,155 205,155 205,264 199,264 199,155 193,155"/>
+  </g>
+  <path d="M359,161 H338 V249.5 H359 M316,205.5 H359" fill="none" stroke="#8C949A" stroke-width="5"/>
+
+  <!-- 神 -->
+  <circle cx="203" cy="97" r="35.8" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.4"/>
+  <text x="202.5" y="96.5" font-size="40" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 信仰基台 -->
+  <rect x="229.5" y="161.5" width="84" height="89" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <g font-size="30" text-anchor="middle" dominant-baseline="central">
+    <text x="271.5" y="186.5" textLength="62" lengthAdjust="spacing">信仰</text>
+    <text x="271.5" y="226" textLength="62" lengthAdjust="spacing">基台</text>
+  </g>
+
+  <!-- 3行 -->
+  <g font-size="27" dominant-baseline="central">
+    <text x="369" y="159" textLength="114" lengthAdjust="spacing">中心人物</text>
+    <text x="497" y="159" text-anchor="middle">：</text>
+    <text x="512" y="159" textLength="85" lengthAdjust="spacing">イエス</text>
+    <text x="368" y="204" textLength="85" lengthAdjust="spacing">条件物</text>
+    <text x="468" y="204" text-anchor="middle">：</text>
+    <text x="483" y="204" textLength="115" lengthAdjust="spacing">三大試練</text>
+    <text x="368" y="249" textLength="114" lengthAdjust="spacing">蕩減期間</text>
+    <text x="497" y="249" text-anchor="middle">：</text>
+    <text x="511" y="249" textLength="30" lengthAdjust="spacing">40</text>
+    <text x="544" y="249" textLength="142" lengthAdjust="spacing">日断食期間</text>
+  </g>
+
+  <!-- イエス -->
+  <ellipse cx="202" cy="295" rx="61.8" ry="31.8" fill="#F8F28F" stroke="currentColor" stroke-width="2.4"/>
+  <text x="201.5" y="294.5" font-size="29" text-anchor="middle" dominant-baseline="central" textLength="92" lengthAdjust="spacing" fill="#111">イエス</text>
+  <text x="234" y="351.5" font-size="25" text-anchor="middle" dominant-baseline="central" textLength="210" lengthAdjust="spacing">洗礼ヨハネの代理</text>
+</svg>

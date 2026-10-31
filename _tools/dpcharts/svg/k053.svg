@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>(6) 摂理的同時性から見た時代区分</title>
+
+  <text x="44.5" y="37.5" font-size="30" dominant-baseline="central" textLength="46" lengthAdjust="spacingAndGlyphs">(6)</text>
+  <text x="99" y="37.5" font-size="30" dominant-baseline="central" textLength="441" lengthAdjust="spacing">摂理的同時性から見た時代区分</text>
+  <line x1="99" y1="56.5" x2="539" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 段の横線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <line x1="136" y1="106" x2="685" y2="106"/>
+    <line x1="136" y1="173" x2="685" y2="173"/>
+    <line x1="136" y1="238" x2="685" y2="238"/>
+    <line x1="136" y1="305" x2="685" y2="305"/>
+  </g>
+
+  <!-- 2000年の弧（字の所で切れる） -->
+  <g fill="none" stroke="currentColor" stroke-width="2.2">
+    <path d="M236.5,366 A63.5,62 0 0 0 269.5,357 M292.6,333 A63.5,62 0 0 0 300,304"/>
+    <path d="M300,304 A64,67 0 0 0 335.1,293 M356.7,268 A64,67 0 0 0 364,237"/>
+    <path d="M364,237 A60.5,62.5 0 0 0 398.4,225.9 M418.3,202.1 A60.5,62.5 0 0 0 424.5,174.5"/>
+  </g>
+
+  <!-- 2000年ずつ上る矢印 -->
+  <g stroke="currentColor" stroke-width="6">
+    <line x1="236.5" y1="366" x2="280" y2="323.6"/>
+    <line x1="300" y1="304" x2="344.7" y2="257.2"/>
+    <line x1="364" y1="237" x2="405" y2="194.6"/>
+    <line x1="424.5" y1="174.5" x2="424.5" y2="120"/>
+  </g>
+  <g>
+    <polygon points="289.3,314.5 284.5,331 272.6,318.9"/>
+    <polygon points="353.6,247.8 349.4,264.6 337.1,252.8"/>
+    <polygon points="414.1,185.3 409.7,202 397.5,190.1"/>
+    <polygon points="424.5,107 416,122 433,122"/>
+  </g>
+
+  <!-- アダム・アブラハム・イエス・再臨主 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="174.5" cy="366" rx="45.5" ry="18.5" fill="#CF921C"/>
+    <ellipse cx="218" cy="304.5" rx="62" ry="19" fill="#FCE5E3"/>
+    <ellipse cx="292.5" cy="237.5" rx="50.5" ry="19" fill="#F8F28F"/>
+    <ellipse cx="352" cy="173.5" rx="50.5" ry="19" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="24" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="174.5" y="365.5" fill="#111">アダム</text>
+    <text x="218" y="303.5" fill="#111">アブラハム</text>
+    <text x="292.5" y="237.5" fill="#111">イエス</text>
+    <text x="350.5" y="173.5">再臨主</text>
+  </g>
+
+  <g>
+    <circle cx="236.5" cy="366" r="8.5"/>
+    <circle cx="300" cy="304" r="8.5"/>
+    <circle cx="364" cy="237" r="8.5"/>
+    <circle cx="424.5" cy="174.5" r="8.5"/>
+  </g>
+  <g font-size="21" font-weight="400" dominant-baseline="central">
+    <text x="274.5" y="345" textLength="70" lengthAdjust="spacingAndGlyphs">2000年</text>
+    <text x="335.5" y="280.5" textLength="70" lengthAdjust="spacingAndGlyphs">2000年</text>
+    <text x="399.5" y="214" textLength="70" lengthAdjust="spacingAndGlyphs">2000年</text>
+  </g>
+
+  <!-- 時代の名前 -->
+  <g font-size="23.5" dominant-baseline="central">
+    <text x="475" y="205.5">実体的同時性の時代</text>
+    <text x="475" y="271">形象的同時性の時代</text>
+    <text x="475" y="337.5">象徴的同時性の時代</text>
+  </g>
+</svg>

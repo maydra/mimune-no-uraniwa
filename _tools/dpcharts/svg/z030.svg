@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>真理と、心霊・知能の発達に応じた新しい真理</title>
+  <defs>
+    <linearGradient id="z030-up" gradientUnits="userSpaceOnUse" x1="241" y1="0" x2="808" y2="0">
+      <stop offset="0" stop-color="#E8A33D"/>
+      <stop offset="0.1" stop-color="#E7B76C"/>
+      <stop offset="0.28" stop-color="#EBCB99"/>
+      <stop offset="0.46" stop-color="#EFD8B4"/>
+      <stop offset="0.63" stop-color="#F5E5CC"/>
+      <stop offset="0.81" stop-color="#FAF0E7"/>
+      <stop offset="0.97" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 真理 -->
+  <rect x="205" y="61" width="132" height="80.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="272" y="101" font-size="52" text-anchor="middle" dominant-baseline="central">真理</text>
+  <g font-size="48" dominant-baseline="central">
+    <text x="368.5" y="102.5" text-anchor="middle">：</text>
+    <text y="102.5" letter-spacing="1.8"><tspan x="394.6">唯一、</tspan><tspan x="544">永遠不変、</tspan><tspan x="793.4">絶対</tspan></text>
+  </g>
+
+  <!-- 心霊・知能の発達（白から橙への面） -->
+  <polygon points="245,567 808,181 808,567" fill="url(#z030-up)"/>
+  <g stroke="#111" stroke-width="6.5">
+    <line x1="471" y1="413.5" x2="471" y2="563" stroke-dasharray="8.3 8"/>
+    <line x1="638" y1="304" x2="638" y2="563" stroke-dasharray="9 8"/>
+  </g>
+  <line x1="810.5" y1="198" x2="810.5" y2="563" stroke="currentColor" stroke-width="6" stroke-dasharray="17 8"/>
+
+  <g stroke="currentColor" stroke-width="10">
+    <line x1="239.5" y1="182" x2="800" y2="182"/>
+    <line x1="239.5" y1="182" x2="239.5" y2="518"/>
+    <line x1="241.5" y1="568" x2="894" y2="568"/>
+  </g>
+  <line x1="250" y1="567" x2="768" y2="208.5" stroke="currentColor" stroke-width="9"/>
+  <g>
+    <polygon points="226,516 253,516 239.5,547"/>
+    <polygon points="893,553.5 893,582.5 923,568"/>
+    <polygon points="759.2,197.5 775.2,220.5 791,192.5"/>
+  </g>
+
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="9">
+    <circle cx="239.5" cy="182.5" r="17"/>
+    <circle cx="808" cy="176.5" r="17"/>
+    <circle cx="241.5" cy="567.5" r="17"/>
+  </g>
+
+  <text x="536.5" y="417" font-size="46" textLength="371" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central" transform="rotate(-34.7 536.5 417)" fill="#111" stroke="#fff" stroke-width="9" stroke-linejoin="round" paint-order="stroke">心霊・知能の発達</text>
+
+  <!-- 新しい真理 -->
+  <rect x="839" y="147" width="268" height="80" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <text x="972.5" y="187" font-size="47" textLength="237" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central" fill="#111">新しい真理</text>
+  <text x="970.5" y="258" font-size="30" textLength="216" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central">(ヨハネ 16:25)</text>
+  <g font-size="45" dominant-baseline="central">
+    <text x="829.5" y="319.5" textLength="92" lengthAdjust="spacing">聖書</text>
+    <text x="943" y="319.5" text-anchor="middle">：</text>
+    <text x="966.5" y="319.5" textLength="138" lengthAdjust="spacing">教科書</text>
+  </g>
+  <g font-size="40" font-weight="400" dominant-baseline="central">
+    <text x="834" y="395" textLength="81" lengthAdjust="spacing">範囲</text>
+    <text x="834" y="450" textLength="81" lengthAdjust="spacing">程度</text>
+    <text x="834" y="504" textLength="81" lengthAdjust="spacing">方法</text>
+  </g>
+
+  <!-- 下の字 -->
+  <g font-size="48" dominant-baseline="central">
+    <text x="186" y="622" textLength="98" lengthAdjust="spacing">無知</text>
+    <text x="463" y="622.5" textLength="98" lengthAdjust="spacing">時代</text>
+    <text x="566" y="622.5" font-weight="400">(歴史)</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神の責任分担（95％）と人間責任分担（5％）</title>
+
+  <!-- 円グラフ（細い扇形が人間責任分担） -->
+  <ellipse cx="644" cy="237" rx="204" ry="203" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <path d="M648.2,241 L632.3,440 A204,203 0 0 0 666.1,439.2 Z" fill="#FCE5E3" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="649" y="385" font-size="33">5</text>
+    <text x="651" y="421" font-size="30" textLength="20" lengthAdjust="spacingAndGlyphs">%</text>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="641.5" y="200" font-size="57" textLength="350" lengthAdjust="spacing">神の責任分担</text>
+    <text x="737.3" y="264.5" font-size="45" textLength="65.4" lengthAdjust="spacingAndGlyphs">（95</text>
+    <text x="804.3" y="264.5" font-size="45" textLength="64.2" lengthAdjust="spacingAndGlyphs">％）</text>
+    <text x="656" y="469" font-size="45" textLength="275" lengthAdjust="spacing">人間責任分担</text>
+  </g>
+
+  <!-- ● は円で描く -->
+  <circle cx="248" cy="548.5" r="12"/>
+  <circle cx="246.5" cy="620.5" r="12"/>
+  <g font-size="49" dominant-baseline="central">
+    <text x="270" y="549" textLength="227" lengthAdjust="spacing">神の苦労、</text>
+    <text x="768" y="549" text-anchor="middle" textLength="499" lengthAdjust="spacing">恩賜に比べ微小なもの</text>
+    <text x="418.5" y="620" text-anchor="middle" textLength="298" lengthAdjust="spacing">人間自身には</text>
+    <text x="766" y="620" text-anchor="middle" textLength="395" lengthAdjust="spacing">大きく難しいこと</text>
+  </g>
+</svg>

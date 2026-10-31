@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>善悪を知る木</title>
+
+  <g font-size="48" dominant-baseline="central">
+    <text x="50" y="58">2.</text>
+    <text x="113" y="58" textLength="300" lengthAdjust="spacing">善悪を知る木</text>
+  </g>
+  <line x1="113" y1="88" x2="413" y2="88" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神からアダムとエバへ（尾は円で隠す） -->
+  <g>
+    <polygon points="552.5,187.6 454.7,238 451.3,231.4 432.1,255.3 462.7,253.6 459.3,246.9 557.1,196.4"/>
+    <polygon points="616.5,195.3 715.8,246.6 712.4,253.3 743,255 723.9,231.1 720.4,237.7 621.1,186.5"/>
+  </g>
+  <circle cx="586.5" cy="166" r="52" fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5"/>
+  <text x="585.5" y="165.5" font-size="60" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <line x1="464" y1="291.5" x2="713" y2="291.5" stroke="currentColor" stroke-width="10"/>
+
+  <!-- 下への灰色の矢印（尾は楕円で隠す） -->
+  <g fill="#8C949A">
+    <polygon points="354,338 354,376 345.2,376 359.5,403 373.8,376 365,376 365,338"/>
+    <polygon points="815.5,338 815.5,376 806.8,376 821,403 835.2,376 826.5,376 826.5,338"/>
+  </g>
+  <g stroke="currentColor" stroke-width="5">
+    <ellipse cx="359.5" cy="291.5" rx="92.5" ry="50.5" fill="#F98AEE"/>
+    <ellipse cx="820.5" cy="291.5" rx="92.5" ry="50.5" fill="#A0F08A"/>
+  </g>
+  <g font-size="49" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="361" y="290" textLength="148" lengthAdjust="spacing">アダム</text>
+    <text x="822" y="290.5" textLength="120" lengthAdjust="spacing">エバ</text>
+  </g>
+
+  <g font-size="44" text-anchor="middle" dominant-baseline="central">
+    <text x="360" y="433" textLength="274" lengthAdjust="spacing">完成した男性</text>
+    <text x="360" y="483.5" textLength="228" lengthAdjust="spacing">比喩する木</text>
+    <text x="358.5" y="602" textLength="183" lengthAdjust="spacing">生命の木</text>
+    <text x="820" y="433" textLength="274" lengthAdjust="spacing">完成した女性</text>
+    <text x="820.5" y="483.5" textLength="229" lengthAdjust="spacing">比喩する木</text>
+  </g>
+
+  <!-- ॥（縦の＝） -->
+  <g>
+    <rect x="348" y="524" width="8.5" height="34"/>
+    <rect x="363.5" y="524" width="8.5" height="34"/>
+    <rect x="809" y="523" width="8.5" height="34"/>
+    <rect x="824.5" y="523" width="8.5" height="34"/>
+  </g>
+
+  <rect x="663.5" y="572.5" width="318" height="71" rx="7" fill="#CDF8F7" stroke="currentColor" stroke-width="5"/>
+  <text x="822" y="608" font-size="44" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="274" lengthAdjust="spacing">善悪を知る木</text>
+</svg>

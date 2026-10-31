@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神と善の対象（天国）</title>
+  <defs>
+    <marker id="z126-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.25" markerHeight="2.25" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="640.5" y="63.5" font-size="58" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 本性相と本形状 -->
+  <g transform="translate(647.2,196.6) rotate(0.7)">
+    <ellipse rx="170" ry="86.5" fill="#A0F08A"/>
+    <path d="M-169,-9.3 C-167.2,-7.5 -159.3,-1.9 -153.2,1.8 C-147.0,5.5 -141.5,9.6 -133.1,13 C-124.7,16.4 -113.8,20.2 -102.9,22.2 C-92.0,24.2 -79.6,25.3 -67.9,24.9 C-56.3,24.5 -42.1,22.0 -33,19.8 C-23.9,17.6 -19.7,14.5 -13.1,11.6 C-6.5,8.7 0.2,5.3 6.8,2.3 C13.4,-0.7 18.4,-3.5 26.7,-6.4 C35.0,-9.3 44.1,-13.0 56.6,-15.3 C69.1,-17.7 88.3,-20.5 101.6,-20.5 C114.9,-20.5 127.4,-17.9 136.6,-15.3 C145.8,-12.7 151.1,-8.2 156.8,-5 C162.5,-1.8 168.2,2.7 169.8,4.2 A170,86.5 0 0 0 -169,-9.3 Z" fill="#F98AEE"/>
+    <path d="M-169,-9.3 C-167.2,-7.5 -159.3,-1.9 -153.2,1.8 C-147.0,5.5 -141.5,9.6 -133.1,13 C-124.7,16.4 -113.8,20.2 -102.9,22.2 C-92.0,24.2 -79.6,25.3 -67.9,24.9 C-56.3,24.5 -42.1,22.0 -33,19.8 C-23.9,17.6 -19.7,14.5 -13.1,11.6 C-6.5,8.7 0.2,5.3 6.8,2.3 C13.4,-0.7 18.4,-3.5 26.7,-6.4 C35.0,-9.3 44.1,-13.0 56.6,-15.3 C69.1,-17.7 88.3,-20.5 101.6,-20.5 C114.9,-20.5 127.4,-17.9 136.6,-15.3 C145.8,-12.7 151.1,-8.2 156.8,-5 C162.5,-1.8 168.2,2.7 169.8,4.2" fill="none" stroke="#111" stroke-width="4.5"/>
+    <ellipse rx="170" ry="86.5" fill="none" stroke="currentColor" stroke-width="4.5"/>
+  </g>
+  <g fill="#111" font-size="42" text-anchor="middle" dominant-baseline="central">
+    <text x="586.5" y="167">本性相</text>
+    <text x="709" y="226.5">本形状</text>
+  </g>
+
+  <!-- 刺激と喜び -->
+  <g stroke="currentColor" stroke-width="8" fill="none" marker-end="url(#z126-k)">
+    <path d="M623,381 C613,362 612,335 625.1,309.8"/>
+    <path d="M667,297 C676,315 680,345 663.9,369.6"/>
+  </g>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="537.5" y="340.5">刺激</text>
+    <text x="750" y="341">喜び</text>
+  </g>
+
+  <!-- 天国 -->
+  <ellipse cx="650" cy="486.75" rx="221" ry="85" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="612.5" y="447.5" font-size="52">天</text>
+    <text x="688" y="447.5" font-size="52">国</text>
+    <text x="650" y="511.5" font-size="44">（三大祝福完成）</text>
+  </g>
+
+  <text x="647" y="615" font-size="50" text-anchor="middle" dominant-baseline="central">善の対象</text>
+</svg>

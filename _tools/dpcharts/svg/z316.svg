@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>家庭完成　神・完成アダム・完成エバ・子女の四位基台から家庭・社会・天国へ</title>
+  <defs>
+    <marker id="z316-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="2.4" markerHeight="2.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="59.5" font-size="50" dominant-baseline="central">家庭完成</text>
+  <line x1="50" y1="90" x2="249.5" y2="90" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 四位の線と、子女から下へ広がる線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="7.5">
+    <line x1="652.8" y1="118" x2="491.2" y2="218.4"/>
+    <line x1="652.8" y1="118" x2="818.5" y2="222.2"/>
+    <line x1="491.2" y1="218.4" x2="654" y2="327.7"/>
+    <line x1="818.5" y1="222.2" x2="654" y2="327.7"/>
+    <line x1="652.1" y1="327.7" x2="435" y2="527.7"/>
+    <line x1="652.1" y1="327.7" x2="884.7" y2="527.7"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="currentColor" stroke-width="5.5" fill="none" marker-end="url(#z316-a)">
+    <path d="M645.5,294 Q628.8,223.5 647,156"/>
+    <path d="M663,156.5 Q680.5,223 662,293.5"/>
+    <path d="M604,215.5 Q657.3,203.5 701.5,215.5"/>
+    <path d="M706,234.5 Q653.5,244 607,233.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="652.75" cy="102.5" rx="45.25" ry="39.25" fill="#fff" class="paper"/>
+    <ellipse cx="518" cy="224.5" rx="70.25" ry="39.25" fill="#F98AEE"/>
+    <ellipse cx="794.5" cy="221.5" rx="69.75" ry="39.25" fill="#A0F08A"/>
+    <ellipse cx="654" cy="341" rx="53.25" ry="39.5" fill="#DCC4C4"/>
+  </g>
+  <text x="651" y="101" font-size="50" text-anchor="middle" dominant-baseline="central">神</text>
+  <!-- 完・ア、完・エ（中黒は円で描く） -->
+  <g font-size="45" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="486 550.5" y="224.5">完ア</text>
+    <text x="762.5 826.5" y="221.5">完エ</text>
+    <text x="653.5" y="341.5">子女</text>
+  </g>
+  <g fill="#111">
+    <circle cx="518" cy="224.5" r="5.5"/>
+    <circle cx="794.5" cy="221" r="5.5"/>
+  </g>
+
+  <g font-size="41" text-anchor="middle" dominant-baseline="central">
+    <text x="654" y="426.5">家庭</text>
+    <text x="653.75" y="478.5">社会</text>
+  </g>
+  <rect x="465" y="517.5" width="386" height="63.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <text x="652" y="550" font-size="41" text-anchor="middle" dominant-baseline="central" fill="#111">天国</text>
+
+  <!-- 括弧は字の幅がフォントで違うので、内側の端で合わせる -->
+  <g font-size="42" dominant-baseline="central">
+    <text x="355.2" y="628" text-anchor="end">（</text>
+    <text x="355.2" y="628" textLength="583.8" lengthAdjust="spacing">一つの父母を中心とした大家族</text>
+    <text x="939" y="628">）</text>
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>(2) 復活摂理から見た時代区分</title>
+
+  <text x="46.5" y="35.5" font-size="30" dominant-baseline="central" textLength="46" lengthAdjust="spacingAndGlyphs">(2)</text>
+  <text x="102" y="35.5" font-size="30" dominant-baseline="central" textLength="379" lengthAdjust="spacing">復活摂理から見た時代区分</text>
+  <line x1="102" y1="55" x2="479" y2="55" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 段の横線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <line x1="136" y1="105" x2="684.5" y2="105"/>
+    <line x1="136" y1="172" x2="684.5" y2="172"/>
+    <line x1="136" y1="236" x2="684.5" y2="236"/>
+    <line x1="136" y1="303" x2="684.5" y2="303"/>
+  </g>
+
+  <!-- 2000年の弧（字の所で切れる） -->
+  <g fill="none" stroke="currentColor" stroke-width="2.2">
+    <path d="M234,364 A72,62 0 0 0 274.1,353.5 M295.7,334 A72,62 0 0 0 306,302"/>
+    <path d="M306,302 A73,65 0 0 0 348.1,290.1 M371.3,266 A73,65 0 0 0 379,237"/>
+    <path d="M379,237 A71.5,64 0 0 0 417.1,227.2 M442.1,203 A71.5,64 0 0 0 450.5,173"/>
+  </g>
+
+  <!-- 2000年ずつ上る矢印 -->
+  <g stroke="currentColor" stroke-width="6">
+    <line x1="234" y1="364" x2="284.8" y2="320.3"/>
+    <line x1="306" y1="302" x2="358.1" y2="255.6"/>
+    <line x1="379" y1="237" x2="429.6" y2="191.7"/>
+    <line x1="450.5" y1="173" x2="450.5" y2="119"/>
+  </g>
+  <g>
+    <polygon points="294.6,311.8 288.8,328 277.7,315.1"/>
+    <polygon points="367.8,247 362.2,263.3 350.9,250.6"/>
+    <polygon points="439.3,183 433.8,199.3 422.5,186.7"/>
+    <polygon points="450.5,106 442,121 459,121"/>
+  </g>
+
+  <!-- アダム・アブラハム・イエス・再臨主 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="172.5" cy="365" rx="45.5" ry="18.5" fill="#CF921C"/>
+    <ellipse cx="225" cy="300.5" rx="62" ry="19" fill="#FCE5E3"/>
+    <ellipse cx="305.5" cy="235.5" rx="50.5" ry="19" fill="#F8F28F"/>
+    <ellipse cx="381" cy="171.5" rx="50.5" ry="19" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="24" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="172.5" y="364.5" fill="#111">アダム</text>
+    <text x="225" y="299.5" fill="#111">アブラハム</text>
+    <text x="304" y="235.5" fill="#111">イエス</text>
+    <text x="381" y="171">再臨主</text>
+  </g>
+
+  <g>
+    <circle cx="234" cy="364" r="8.5"/>
+    <circle cx="306" cy="302" r="8.5"/>
+    <circle cx="379" cy="237" r="8.5"/>
+    <circle cx="450.5" cy="173" r="8.5"/>
+  </g>
+  <g font-size="21" font-weight="400" dominant-baseline="central">
+    <text x="279.5" y="346.5" textLength="70" lengthAdjust="spacingAndGlyphs">2000年</text>
+    <text x="353.5" y="278.5" textLength="70" lengthAdjust="spacingAndGlyphs">2000年</text>
+    <text x="422.5" y="215.5" textLength="70" lengthAdjust="spacingAndGlyphs">2000年</text>
+  </g>
+
+  <!-- 時代の名前 -->
+  <g font-size="23.5" dominant-baseline="central">
+    <text x="500" y="123.5">完成復活摂理時代</text>
+    <text x="500" y="152.5">（生霊体級まで）</text>
+    <text x="500" y="189.5">長成復活摂理時代</text>
+    <text x="500" y="218.5">（生命体級まで）</text>
+    <text x="500" y="255.5">蘇生復活摂理時代</text>
+    <text x="500" y="284">（霊形体級まで）</text>
+    <text x="500" y="328.5">復活基台摂理時代</text>
+  </g>
+</svg>

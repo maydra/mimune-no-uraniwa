@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>聖書の主要な部分は象徴・比喩　善悪の果も比喩（創 2:9）</title>
+
+  <!-- 聖書から箱への点線（聖書の下に描く） -->
+  <g stroke="currentColor" stroke-width="12.5" stroke-dasharray="12.5 12.1" fill="none">
+    <line x1="474" y1="145.3" x2="396" y2="202.3"/>
+    <line x1="474" y1="299.7" x2="385" y2="234.8"/>
+  </g>
+
+  <!-- 聖書（z207 と同じ形） -->
+  <g>
+    <path d="M285,123 L398,126 Q418,129 420,152 L404,206 L389,241 L378,266 L369,295 L364,310 Q362,314 352,314 L285,311 L240,306 Q230,304 230,293 L232,278 L224,266 Z" fill="#3A3A3A" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M236,275 L350,279 L346,303 L240,299 Q234,298 234,290 Z" fill="#EDEDED"/>
+    <g stroke="#111" stroke-width="1.5">
+      <line x1="238" y1="282" x2="348" y2="286"/>
+      <line x1="238" y1="288" x2="347" y2="292"/>
+      <line x1="238" y1="294" x2="347" y2="298"/>
+    </g>
+    <polyline points="389,135 295,133 237,262 344,262" fill="none" stroke="#BDBDBD" stroke-width="2"/>
+    <line x1="393" y1="133" x2="347" y2="267" stroke="#DADADA" stroke-width="4"/>
+    <path d="M312,281 L329,283 L321,329 L304,329 Z" fill="#3A3A3A" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <text transform="translate(325,166.5) skewX(-10)" font-size="50" text-anchor="middle" dominant-baseline="central" fill="#fff" textLength="98" lengthAdjust="spacingAndGlyphs">聖書</text>
+
+  <!-- 箱 -->
+  <g stroke="currentColor" stroke-width="4">
+    <rect x="477.5" y="102.5" width="279" height="78" rx="4" fill="#fff" class="paper"/>
+    <rect x="848.5" y="102.5" width="234" height="78" rx="4" fill="#fff" class="paper"/>
+    <rect x="477.5" y="258.5" width="279" height="78" rx="4" fill="#E8202A"/>
+    <rect x="851.5" y="258.5" width="228" height="78" rx="4" fill="#fff" class="paper"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="617.5" y="141" font-size="47" textLength="237" lengthAdjust="spacing">主要な部分</text>
+    <text x="616.5" y="296" font-size="47" fill="#fff" textLength="189" lengthAdjust="spacing">善悪の果</text>
+    <text x="965.5" y="298" font-size="45" textLength="115" lengthAdjust="spacing">比喩</text>
+  </g>
+  <text y="141.5" font-size="45" dominant-baseline="central"><tspan x="862" textLength="88" lengthAdjust="spacingAndGlyphs">象徴</tspan><tspan x="947.8">、</tspan><tspan x="982" textLength="87" lengthAdjust="spacingAndGlyphs">比喩</tspan></text>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="777,135.5 809,135.5 809,129 833.5,141.5 809,154 809,147.5 777,147.5"/>
+    <polygon points="777,291.5 809,291.5 809,285 833.5,298 809,311 809,304.5 777,304.5"/>
+    <polygon points="616.5,362 632.5,362 632.5,447.5 642,447.5 624.5,482 607,447.5 616.5,447.5"/>
+  </g>
+
+  <text y="530" font-size="49" dominant-baseline="central"><tspan x="384">創</tspan> <tspan x="445" textLength="76" lengthAdjust="spacingAndGlyphs">2:9</tspan> <tspan x="547" textLength="300" lengthAdjust="spacing">善悪を知る木</tspan></text>
+  <text x="547" y="598" font-size="49" dominant-baseline="central" textLength="199" lengthAdjust="spacing">生命の木</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>霊的堕落</title>
+  <defs>
+    <marker id="z245-a" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="2.45" markerHeight="2.7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="51" y="60" font-size="46" dominant-baseline="central">1.</text>
+  <text x="109" y="59" font-size="48" dominant-baseline="central" textLength="200" lengthAdjust="spacing">霊的堕落</text>
+  <line x1="109" y1="89.5" x2="308" y2="89.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神 → ルーシェル（線を先に描き、円で隠す） -->
+  <line x1="660" y1="206" x2="499.5" y2="309" stroke="currentColor" stroke-width="9" marker-end="url(#z245-a)"/>
+  <ellipse cx="684" cy="190" rx="58" ry="54" fill="#fff" class="paper" stroke="currentColor" stroke-width="5"/>
+  <text x="681" y="191" font-size="60" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <ellipse cx="399.5" cy="347" rx="94.5" ry="51" fill="#B9C2C6" stroke="currentColor" stroke-width="5"/>
+  <text x="319" y="347.5" font-size="40" dominant-baseline="central" fill="#111" textLength="161" lengthAdjust="spacingAndGlyphs">ルーシェル</text>
+  <g font-size="40" dominant-baseline="central">
+    <text x="513" y="352" textLength="133" lengthAdjust="spacing">(イザヤ</text>
+    <text x="657" y="352" textLength="112" lengthAdjust="spacingAndGlyphs">14:12)</text>
+  </g>
+
+  <!-- ルーシェルについて -->
+  <g>
+    <circle cx="277.5" cy="448.5" r="11"/>
+    <circle cx="277.5" cy="521.5" r="11"/>
+    <circle cx="276.5" cy="595.5" r="11"/>
+  </g>
+  <g font-size="46" dominant-baseline="central">
+    <text x="300" y="448.5" textLength="144" lengthAdjust="spacing">天使長</text>
+    <text x="300" y="521" textLength="144" lengthAdjust="spacing">愛の基</text>
+    <text x="299" y="594" textLength="287" lengthAdjust="spacing">神の愛を独占</text>
+  </g>
+</svg>

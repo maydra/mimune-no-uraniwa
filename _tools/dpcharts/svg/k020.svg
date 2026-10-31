@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>③より大きなものをもって蕩減条件</title>
+
+  <text x="51.5" y="37" font-size="31" text-anchor="middle" dominant-baseline="central">③</text>
+  <text x="73" y="37" font-size="31" dominant-baseline="central" textLength="472" lengthAdjust="spacing">より大きなものをもって蕩減条件</text>
+
+  <!-- 本然の位置・状態 -->
+  <ellipse cx="241" cy="130" rx="98" ry="44" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="240" y="111.5">本然の</text>
+    <text x="197" y="142.5">位置<tspan x="240.5">・</tspan><tspan x="283.5">状態</tspan></text>
+  </g>
+
+  <!-- 復帰の矢印 -->
+  <polygon points="240.5,177.5 250.5,194.5 244.5,194.5 244.5,277 236.5,277 236.5,194.5 230.5,194.5" fill="#8C949A"/>
+  <text x="255" y="228.5" font-size="28" dominant-baseline="central" textLength="57" lengthAdjust="spacing">復帰</text>
+
+  <!-- より大きな価値 -->
+  <ellipse cx="241.5" cy="335" rx="113.5" ry="58" fill="#CDF8F7" stroke="currentColor" stroke-width="2.2"/>
+  <ellipse cx="242" cy="335" rx="98.5" ry="44.5" fill="none" stroke="#111" stroke-width="2.6" stroke-dasharray="5.3 2.4"/>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="240.5" y="320" textLength="141" lengthAdjust="spacing">より大きな</text>
+    <text x="240" y="355">価値</text>
+  </g>
+
+  <!-- 例 -->
+  <circle cx="381" cy="151" r="5"/>
+  <circle cx="381" cy="284.5" r="5"/>
+  <g fill="#8C949A">
+    <polygon points="401,195 421,195 421,191.5 431.5,198 421,204.5 421,201 401,201"/>
+    <polygon points="401,374.5 421,374.5 421,371 431.5,377.5 421,384 421,380.5 401,380.5"/>
+  </g>
+  <g font-size="28" dominant-baseline="central">
+    <text x="399" y="150" textLength="287" lengthAdjust="spacing">アブラハムの献祭失敗</text>
+    <text x="455" y="197" textLength="229" lengthAdjust="spacing">一人息子イサクを</text>
+    <text x="454" y="236.5" textLength="86" lengthAdjust="spacing">供え物</text>
+    <text x="398" y="283.5" textLength="201" lengthAdjust="spacing">イスラエル民族</text>
+    <text y="330.5"><tspan x="454.5" textLength="29" lengthAdjust="spacingAndGlyphs">40</tspan> <tspan x="494" textLength="141" lengthAdjust="spacing">日偵察失敗</tspan></text>
+    <text y="377.5"><tspan x="454.5" textLength="29" lengthAdjust="spacingAndGlyphs">40</tspan> <tspan x="491" textLength="173" lengthAdjust="spacing">年間荒野流浪</tspan></text>
+  </g>
+</svg>

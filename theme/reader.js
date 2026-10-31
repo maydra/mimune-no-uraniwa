@@ -25,7 +25,8 @@
     // （省いた形だとホームが読み物とみなされ、「続きから読む」が出ていなかった。2026-10-24）
     var SKIP = /(?:^|\/)(index|mokuji|random|gacha|search-all|404|offline|test_output|google[0-9a-f]+)(?:\.html)?$/i;
     // 本文ではない所（ここの文字は数に入れない）
-    var NOT_BODY = 'script,style,nav,rt,rp,.page-nav,.typo-box,#reader-ui,#reader-drawer,#reader-gacha,#stacked-header-container,.toc,.hits';
+    // .dpc-fig・.dpc-note は原理講論の図（dp/charts.js）。出し入れで字数が変わると、しおりの位置がずれる
+    var NOT_BODY = 'script,style,nav,rt,rp,.page-nav,.typo-box,#reader-ui,#reader-drawer,#reader-gacha,#stacked-header-container,.toc,.hits,.dpc-fig,.dpc-note';
     var TOP = 96;              // 「画面の上」とみなす高さ
     var MIN_CHARS = 2500;      // これより短いページには出さない
     var STORE = 'reader.pos.';
@@ -247,6 +248,10 @@
             '#reader-crumb>span:not(.sep):not(.menu):not(.tail){flex:0 1 auto;opacity:.72;max-width:12em}',
             '#reader-crumb .tail{flex:1 1 auto;min-width:4em}',
             '#reader-crumb .menu{flex:0 0 auto;margin-left:.5em;opacity:.55;font-size:.9em}',
+            // 原理講論の「図」（dp/charts.js）。読んでいる途中でもすぐ押せるように帯に置く
+            '#reader-crumb .dpc-chip{flex:0 0 auto;margin-left:.6em;padding:0 .6em;border-radius:999px;font-weight:700;',
+            'border:1px solid rgba(127,127,127,.45);opacity:.6}',
+            '#reader-crumb .dpc-chip[aria-pressed="true"]{opacity:1;background:rgba(99,102,241,.18);border-color:rgba(99,102,241,.6)}',
             'body.dark-mode #reader-crumb{background:rgba(26,26,46,.92);color:#e6e6f0;border-color:rgba(255,255,255,.14)}',
             '#reader-drawer{position:fixed;inset:0;z-index:10000;display:none;pointer-events:auto}',
             '#reader-drawer.on{display:block}',
@@ -342,10 +347,17 @@
             + '<h4>このページの見出し</h4><div class="list"></div><div class="side"></div></div>';
         document.body.appendChild(drawer);
 
-        crumb.addEventListener('click', openDrawer);
-        crumb.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDrawer(); }
+        // 帯の「図」だけは引き出しを開かずに図を出し入れする
+        crumb.addEventListener('click', function (e) {
+            if (e.target.closest && e.target.closest('.dpc-chip')) { e.stopPropagation(); toggleCharts(); return; }
+            openDrawer();
         });
+        crumb.addEventListener('keydown', function (e) {
+            if (e.key !== 'Enter' && e.key !== ' ') return;
+            e.preventDefault();
+            if (e.target.closest && e.target.closest('.dpc-chip')) toggleCharts(); else openDrawer();
+        });
+        document.addEventListener('dpcharts', function () { onScroll(); });
         drawer.querySelector('.veil').addEventListener('click', closeDrawer);
 
         fillDrawer();
@@ -425,6 +437,8 @@
         tools.appendChild(fontControl());
         var mk = markerControl();
         if (mk) tools.appendChild(mk);
+        var ch = chartControl();
+        if (ch) tools.appendChild(ch);
         var src = tocHref();
         var toc = document.createElement('a');
         toc.href = src;
@@ -556,7 +570,7 @@
                 if (cut) path = path.slice(-3);
                 var html = (cut ? '<span class="sep">…</span>' : '') + path.map(function (h, k) {
                     return (k === path.length - 1 ? '<span class="tail">' : '<span>') + esc(h.text) + '</span>';
-                }).join('<span class="sep">/</span>') + '<span class="menu" aria-hidden="true">☰</span>';
+                }).join('<span class="sep">/</span>') + chartChip() + '<span class="menu" aria-hidden="true">☰</span>';
                 if (crumb.innerHTML !== html) crumb.innerHTML = html;
             }
             markHere();
@@ -655,6 +669,48 @@
                 if (o.dataset.color === e.detail.key) o.setAttribute('aria-pressed', e.detail.on ? 'true' : 'false');
             });
         });
+        return box;
+    }
+
+    // ---- 図の ON/OFF（2026-10-30） ---------------------------------------
+    // 原理講論（dp/）で charts.js を読むページだけ。ページ上の「表示：」の「図」と同じ物。
+    // 図の字は数えない（NOT_BODY）ので、出し入れのあとは読んでいた字へ戻すだけでよい。
+    // 「表示：」の並びはページの頭にしかないので、上の帯（#reader-crumb）にも「図」を置く
+    // （ユーザー「スライド表示ボタンがなかなか出ないぬ」）
+    function toggleCharts() {
+        var dc = window.dpCharts;
+        if (!dc) return;
+        var keep = cur, dy = curDy;
+        dc.set(!dc.isOn()).then(function () { scrollToPos(keep, TOP + dy); });
+    }
+
+    function chartChip() {
+        var dc = window.dpCharts;
+        if (!dc) return '';
+        return '<span class="dpc-chip" role="button" tabindex="0" aria-pressed="' + (dc.isOn() ? 'true' : 'false')
+            + '" title="講義チャートの図を出す・隠す">図</span>';
+    }
+
+    function chartControl() {
+        var dc = window.dpCharts;
+        if (!dc) return null;
+        var box = document.createElement('div');
+        box.className = 'font';
+        box.setAttribute('role', 'group');
+        box.setAttribute('aria-label', '図');
+        var label = document.createElement('span');
+        label.textContent = '図';
+        box.appendChild(label);
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = '講義チャート';
+        b.title = dc.credit;
+        b.setAttribute('aria-pressed', dc.isOn() ? 'true' : 'false');
+        b.addEventListener('click', toggleCharts);
+        document.addEventListener('dpcharts', function (e) {
+            b.setAttribute('aria-pressed', e.detail.on ? 'true' : 'false');
+        });
+        box.appendChild(b);
         return box;
     }
 
@@ -1338,6 +1394,9 @@
         window.addEventListener('scroll', onScroll, { passive: true });
         window.addEventListener('resize', onResize);
         window.addEventListener('keydown', onKey);
+        // 原理講論の図（dp/charts.js）は文の終わりで字のノードを二つに割って差し込むので、ノードを取り直す。
+        // 字数は変わらない（図の字は NOT_BODY）
+        document.addEventListener('dpchartsplaced', function () { collect(); });
         window.addEventListener('pagehide', function () { clearTimeout(saveT); save(); });
         document.addEventListener('visibilitychange', function () { if (document.hidden) save(); });
     }

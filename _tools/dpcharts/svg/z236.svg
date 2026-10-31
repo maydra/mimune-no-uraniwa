@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>罪の根</title>
+
+  <text x="54" y="57" font-size="46" dominant-baseline="central">Ⅴ.</text>
+  <text x="132" y="57" font-size="48" dominant-baseline="central" textLength="150" lengthAdjust="spacing">罪の根</text>
+  <line x1="132" y1="87.5" x2="281" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <g font-size="44" dominant-baseline="central">
+    <text x="287" y="136.5" textLength="184" lengthAdjust="spacing">人間始祖</text>
+    <text x="915" y="140" textLength="103" lengthAdjust="spacing">天使</text>
+  </g>
+
+  <!-- 人間始祖（男と女）と天使。元の絵に縁の線は無い -->
+  <g transform="translate(237,170) scale(1.25)" fill="#F98AEE">
+    <path d="M43,40 L43,48 C30,49 14,50 10,58 L4,130 Q3,140 9,141 Q15,141 15,132 L21,78 L23,124 L26,232 Q26,238 33,238 L41,238 Q47,238 47,232 L49,134 L51,134 L53,232 Q53,238 59,238 L67,238 Q74,238 74,232 L77,124 L79,78 L85,132 Q85,141 91,141 Q97,140 96,130 L90,58 C86,50 70,49 57,48 L57,40 Z"/>
+    <circle cx="50" cy="22" r="19"/>
+  </g>
+  <g transform="translate(395,170) scale(1.25)" fill="#A0F08A">
+    <path d="M45,40 L45,49 C38,49 31,50 27,53 C23,55 20,59 18,64 L-6,120 Q-9,129 -3,131 Q2,133 5,126 L26,90 C30,94 33,99 33,105 C33,115 17,125 17,139 L27,232 Q28,238 34,238 L41,238 Q47,238 47,232 L48,150 L52,150 L53,232 Q53,238 59,238 L66,238 Q72,238 73,232 L83,139 C83,125 67,115 67,105 C67,99 70,94 74,90 L95,126 Q98,133 103,131 Q109,129 106,120 L82,64 C80,59 77,55 73,53 C69,50 62,49 55,49 L55,40 Z"/>
+    <path d="M50,2 C64,2 71,12 71,25 C71,33 70,38 67,41 Q65,44 60,44 L40,44 Q35,44 33,41 C30,38 29,33 29,25 C29,12 36,2 50,2 Z"/>
+  </g>
+  <g transform="translate(904,176.3) scale(1.22)">
+    <path d="M24,52 C14,38 2,26 -8,26 C-15,26 -18,32 -18,42 L-18,120 C-19,140 -24,158 -32,174 C-16,170 2,162 14,150 L22,120 ZM76,52 C86,38 98,26 108,26 C115,26 118,32 118,42 L118,120 C119,140 124,158 132,174 C116,170 98,162 86,150 L78,120 Z" fill="#6E7D84"/>
+    <path d="M-26,166 L-12,148 M-19,168 L-3,153 M126,166 L112,148 M119,168 L103,153" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="#B9C2C6">
+      <path d="M43,40 L43,48 C30,49 14,50 10,58 L4,130 Q3,140 9,141 Q15,141 15,132 L21,78 L23,124 L26,232 Q26,238 33,238 L41,238 Q47,238 47,232 L49,134 L51,134 L53,232 Q53,238 59,238 L67,238 Q74,238 74,232 L77,124 L79,78 L85,132 Q85,141 91,141 Q97,140 96,130 L90,58 C86,50 70,49 57,48 L57,40 Z"/>
+      <circle cx="50" cy="22" r="19"/>
+    </g>
+  </g>
+
+  <!-- 行き来の矢印と点線 -->
+  <g>
+    <polygon points="582,261.5 777,261.5 777,251 806,268 777,285 777,274.5 582,274.5"/>
+    <polygon points="806,325.5 609,325.5 609,313.5 580,332 609,350.5 609,338.5 806,338.5"/>
+  </g>
+  <line x1="693" y1="348" x2="693" y2="478" stroke="currentColor" stroke-width="7" stroke-dasharray="8.5 7.5"/>
+
+  <!-- 不倫なる血縁関係 → 悪の血統繁殖 -->
+  <g fill="#CDF8F7" stroke="currentColor" stroke-width="4">
+    <rect x="490" y="478" width="407" height="64"/>
+    <rect x="490" y="583" width="407" height="64"/>
+  </g>
+  <polygon points="685,543 696,543 696,561.5 704.5,561.5 690.5,579 676.5,561.5 685,561.5" fill="#8C949A"/>
+  <g font-size="45" dominant-baseline="central" fill="#111">
+    <text x="511" y="509.5" textLength="367" lengthAdjust="spacing">不倫なる血縁関係</text>
+    <text x="556" y="614.5" textLength="275" lengthAdjust="spacing">悪の血統繁殖</text>
+  </g>
+</svg>

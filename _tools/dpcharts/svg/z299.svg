@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 697" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅲ. 自由と堕落と復帰</title>
+
+  <text x="54" y="79" font-size="50">Ⅲ.</text>
+  <text x="128" y="76" font-size="49" textLength="400" lengthAdjust="spacing">自由と堕落と復帰</text>
+  <line x1="127" y1="87.5" x2="527" y2="87.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 真ん中の縦の線（楕円の下に描く） -->
+  <line x1="641.5" y1="127" x2="641.5" y2="635" stroke="currentColor" stroke-width="12"/>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="754,197.5 896,197.5 896,191 922,203.5 896,216 896,209.5 754,209.5"/>
+    <polygon points="530,460.5 413,460.5 413,454 387,466.5 413,479 413,472.5 530,472.5"/>
+  </g>
+
+  <!-- 神とエバの授受 -->
+  <g fill="none" stroke="currentColor" stroke-width="8.5">
+    <path d="M412,191 Q452.5,170.5 491,184"/>
+    <path d="M501,216 Q457.5,239 424,223"/>
+  </g>
+  <polygon points="496,174 511,192 486,194"/>
+  <polygon points="402,215 428,213 420,233.5"/>
+
+  <!-- 円と楕円 -->
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="340.5" cy="203.5" r="45.5" fill="#fff" class="paper"/>
+    <circle cx="338.5" cy="466.5" r="45.5" fill="#fff" class="paper"/>
+  </g>
+  <circle cx="972" cy="203.5" r="45.5" fill="#50403D" stroke="currentColor" stroke-width="5"/>
+  <ellipse cx="642.5" cy="203.5" rx="111" ry="46.5" fill="#A0F08A" stroke="currentColor" stroke-width="5"/>
+  <ellipse cx="641" cy="466.5" rx="109.75" ry="45.5" fill="#CF921C" stroke="currentColor" stroke-width="4.5"/>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <g font-size="49">
+      <text x="340" y="203.5">神</text>
+      <text x="338" y="466.5">神</text>
+    </g>
+    <text x="972" y="204" font-size="46" fill="#fff">天</text>
+    <text x="638" y="203" font-size="44" fill="#111" textLength="110" lengthAdjust="spacing">エバ</text>
+    <text x="641" y="466.5" font-size="45" fill="#111" textLength="176" lengthAdjust="spacingAndGlyphs">堕落人間</text>
+
+    <g font-size="41">
+      <text x="474" y="275">本心の自由</text>
+      <text x="474.5" y="330">不安</text>
+      <text x="807" y="166">堕落</text>
+      <text x="823.5" y="252">愛の力</text>
+      <text x="475.5" y="430">復帰</text>
+    </g>
+    <g font-size="40">
+      <text x="473" y="503.5">自由</text>
+      <text x="469.5" y="557">み言（真理）</text>
+      <text x="470.5" y="609.5">原理的愛の力</text>
+    </g>
+  </g>
+</svg>

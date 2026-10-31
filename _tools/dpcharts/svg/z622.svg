@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>重生：堕落人間からイエスによって完成人間（善の子女）へ</title>
+
+  <!-- 神と完成人間の授受 -->
+  <g fill="none" stroke="currentColor" stroke-width="6.5">
+    <path d="M579,212 A25.4,25.4 0 0 1 570.5,169"/>
+    <path d="M579,212 A25.4,25.4 0 0 1 570.5,169" transform="rotate(180 613.25 184.75)"/>
+  </g>
+  <polygon points="585.1,155.4 563.5,161.5 577.5,176.5"/>
+  <polygon points="585.1,155.4 563.5,161.5 577.5,176.5" transform="rotate(180 613.25 184.75)"/>
+
+  <!-- 堕落人間から完成人間へ（楕円より先に描く） -->
+  <polygon points="612.5,386.5 632.5,422.5 620.5,422.5 620.5,545 604.5,545 604.5,422.5 592.5,422.5" fill="#8C949A"/>
+
+  <circle cx="615" cy="87" r="56.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5"/>
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="613" cy="302.5" rx="117" ry="77.5" fill="#FCE5E3"/>
+    <ellipse cx="613" cy="593.5" rx="117" ry="50.5" fill="#CF921C"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="612" y="85.5" font-size="57">神</text>
+    <g fill="#111">
+      <text x="612.5" y="280.5" font-size="46" textLength="181" lengthAdjust="spacing">完成人間</text>
+      <text y="331" font-size="38" font-weight="400"><tspan x="539" text-anchor="end">（</tspan><tspan x="538" text-anchor="start" textLength="149" lengthAdjust="spacing">善の子女</tspan><tspan x="686" text-anchor="start">）</tspan></text>
+      <text x="612.5" y="594" font-size="46" textLength="181" lengthAdjust="spacing">堕落人間</text>
+    </g>
+  </g>
+
+  <!-- イエスの札 -->
+  <polygon points="405,433 557.5,433 585,475 557.5,517 405,517" fill="#F8F28F" stroke="currentColor" stroke-width="4.5" stroke-linejoin="miter"/>
+  <text x="484" y="475" font-size="46" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="132" lengthAdjust="spacing">イエス</text>
+
+  <!-- 重生・原罪脱ぐ -->
+  <circle cx="716.5" cy="443.5" r="12"/>
+  <circle cx="716.5" cy="507.5" r="12"/>
+  <g font-size="45" dominant-baseline="central">
+    <text x="740" y="443.5" textLength="90" lengthAdjust="spacing">重生</text>
+    <text x="739" y="506.5" textLength="178" lengthAdjust="spacing">原罪脱ぐ</text>
+  </g>
+</svg>

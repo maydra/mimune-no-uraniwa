@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>『キリスト教：愛と犠牲』</title>
+
+  <text x="84 120.5 170 220.5 273 320.5 370 420.5 470 520.5 570 606.5" y="60" font-size="50" text-anchor="middle" dominant-baseline="central">『キリスト教：愛と犠牲』</text>
+
+  <!-- 神とイエス（縦的） -->
+  <circle cx="649" cy="166.5" r="58.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="647" y="166.5" font-size="60" text-anchor="middle" dominant-baseline="central">神</text>
+  <g>
+    <path d="M633.5,283 Q625,262 631,245 M665.5,233 Q674,252 667,268" fill="none" stroke="currentColor" stroke-width="5.5"/>
+    <polygon points="638,230.5 623.5,241.5 638,247"/>
+    <polygon points="661,267.5 675,275 661.5,285"/>
+  </g>
+  <text x="753" y="254" font-size="45" text-anchor="middle" dominant-baseline="central">縦的</text>
+
+  <ellipse cx="649.5" cy="332" rx="113.5" ry="39" fill="#F8F28F" stroke="currentColor" stroke-width="4"/>
+  <text x="650" y="331.5" font-size="54" textLength="163" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central" fill="#111">イエス</text>
+
+  <!-- イエスと人間 -->
+  <g transform="translate(2,148)">
+    <path d="M633.5,283 Q625,262 631,245 M665.5,233 Q674,252 667,268" fill="none" stroke="currentColor" stroke-width="5.5"/>
+    <polygon points="638,230.5 623.5,241.5 638,247"/>
+    <polygon points="661,267.5 675,275 661.5,285"/>
+  </g>
+  <path d="M440,432 Q454,379 520,358 M539,364 Q523.75,419.75 457.5,440.5 M777,350 Q832.25,357 862.5,420 M857,438.5 Q789.75,421.75 771.5,368" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <polygon points="535.5,353 518,350.5 523,365"/>
+  <polygon points="443,445.5 455,433 460,448"/>
+  <polygon points="868,434 855,423.75 870,416.25"/>
+  <polygon points="765,354.5 778.75,365.5 764.5,370.5"/>
+
+  <!-- 人間どうし（横的） -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="374.5" cy="479" rx="88.5" ry="39" fill="#FCE5E3"/>
+    <ellipse cx="651.5" cy="479" rx="88.5" ry="39" fill="#FCE5E3"/>
+    <ellipse cx="928.5" cy="479" rx="88.5" ry="39" fill="#FCE5E3"/>
+  </g>
+  <g font-size="48" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="369.5" y="479">人間</text>
+    <text x="645.5" y="479">人間</text>
+    <text x="925.5" y="479">人間</text>
+  </g>
+  <g>
+    <path d="M475.5,471.5 Q517,454.75 538.5,469 M550.5,486.5 Q504.75,503.1 488,490.5" fill="none" stroke="currentColor" stroke-width="6"/>
+    <polygon points="542,461.5 551.5,476 534.5,476"/>
+    <polygon points="473.5,482.5 490.5,482.5 484,497"/>
+  </g>
+  <g transform="translate(277,0)">
+    <path d="M475.5,471.5 Q517,454.75 538.5,469 M550.5,486.5 Q504.75,503.1 488,490.5" fill="none" stroke="currentColor" stroke-width="6"/>
+    <polygon points="542,461.5 551.5,476 534.5,476"/>
+    <polygon points="473.5,482.5 490.5,482.5 484,497"/>
+  </g>
+  <g font-size="44" text-anchor="middle" dominant-baseline="central">
+    <text x="510.5" y="533.5">横的</text>
+    <text x="788.5" y="532">横的</text>
+  </g>
+
+  <!-- マタイ 7:12 -->
+  <text x="222 263 304 326 347.5 368 387.5 409.5" y="601" font-size="40" text-anchor="middle" dominant-baseline="central">マタイ 7:12</text>
+  <g font-size="41" font-weight="400" dominant-baseline="central">
+    <text x="454.5 482.5 524 568 610 654 693.5 736.5 781 820.5 862.5 904.5 947 989.5 1031 1074.5" y="601" text-anchor="middle">『人々からしてほしいと望むことは</text>
+    <text x="1097" y="601">、</text>
+    <text x="482.5 523 566.5 607.5 649.5 690.5 732.5 775 815.5 858.5 899 940 968.5" y="656" text-anchor="middle">人々にもそのとおりにせよ』</text>
+  </g>
+</svg>

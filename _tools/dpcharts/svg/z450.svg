@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>洗礼ヨハネ＝再臨したエリヤ</title>
+
+  <!-- エリヤから再臨したエリヤへ（楕円の下に描く） -->
+  <polygon points="893.5,225 893.5,412.5 879.5,412.5 899.5,448.5 919.5,412.5 905.5,412.5 905.5,230" fill="#8C949A"/>
+
+  <g stroke="currentColor" stroke-width="4.5" fill="#F86D42">
+    <ellipse cx="897" cy="170" rx="189" ry="61"/>
+    <ellipse cx="377" cy="517.5" rx="173" ry="63.5"/>
+    <ellipse cx="900" cy="517" rx="190" ry="61"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="897" y="170" font-size="56" textLength="168" lengthAdjust="spacing">エリヤ</text>
+    <text x="377" y="517.5" font-size="54" textLength="270" lengthAdjust="spacing">洗礼ヨハネ</text>
+    <text x="900" y="517" font-size="48">再臨したエリヤ</text>
+  </g>
+
+  <!-- ＝ -->
+  <rect x="589" y="498" width="74" height="9"/>
+  <rect x="589" y="525" width="74" height="9"/>
+
+  <!-- 再臨（縦書き） -->
+  <g font-size="42" text-anchor="middle" dominant-baseline="central">
+    <text x="847" y="305">再</text>
+    <text x="847.5" y="349.5">臨</text>
+  </g>
+
+  <g dominant-baseline="central">
+    <text x="996.5" y="305.5" font-size="44" text-anchor="middle" textLength="132" lengthAdjust="spacing">マラキ</text>
+    <text x="917" y="355" font-size="37" font-weight="400" textLength="159" lengthAdjust="spacingAndGlyphs">(マラキ 4:5)</text>
+    <text x="640" y="334.5" font-size="45" text-anchor="middle" textLength="135" lengthAdjust="spacing">イエス</text>
+    <text x="563" y="390" font-size="37" font-weight="400" textLength="169" lengthAdjust="spacingAndGlyphs">マタイ 11:14</text>
+    <text x="563" y="425.5" font-size="37" font-weight="400" textLength="169" lengthAdjust="spacingAndGlyphs">マタイ 17:13</text>
+  </g>
+  <!-- 2行にまたがる括弧 -->
+  <path d="M551,375 Q539,409.5 551,444 M743,373 Q753,407.5 743,442" fill="none" stroke="currentColor" stroke-width="5"/>
+</svg>

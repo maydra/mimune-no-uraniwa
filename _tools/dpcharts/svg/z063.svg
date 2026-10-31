@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>性相と形状の関係</title>
+
+  <text x="51" y="57" font-size="50" dominant-baseline="central" textLength="400" lengthAdjust="spacing">性相と形状の関係</text>
+  <line x1="51" y1="87.5" x2="451" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <rect x="219" y="201.5" width="183.5" height="95" rx="19" fill="#F98AEE"/>
+    <rect x="219.5" y="450" width="183.5" height="94.5" rx="19" fill="#A0F08A"/>
+  </g>
+  <g font-size="68" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="309.5" y="247.5">性相</text>
+    <text x="311" y="496">形状</text>
+  </g>
+
+  <!-- 上下の矢印と縦の棒 -->
+  <g fill="#8C949A">
+    <polygon points="292,317.5 306.5,346.5 298.5,346.5 298.5,429.5 285.5,429.5 285.5,346.5 277.5,346.5"/>
+    <polygon points="324.5,319 337.5,319 337.5,402 345.5,402 331,432 316.5,402 324.5,402"/>
+    <rect x="475.5" y="326.5" width="10" height="89"/>
+    <rect x="648.5" y="326.5" width="9" height="89"/>
+    <rect x="852.5" y="326.5" width="10" height="89"/>
+    <rect x="1020.5" y="326.5" width="10" height="89"/>
+  </g>
+
+  <!-- 語は縦の棒と揃うように1語ずつ置く -->
+  <g font-size="48" dominant-baseline="central">
+    <text x="432" y="250.5">内的、</text>
+    <text x="581" y="250.5">原因的、</text>
+    <text x="781" y="250.5">主体的、</text>
+    <text x="981" y="250.5">縦的</text>
+    <text x="426" y="495.5">外的、</text>
+    <text x="576" y="495.5">結果的、</text>
+    <text x="776" y="495.5">対象的、</text>
+    <text x="976" y="495.5">横的</text>
+  </g>
+</svg>

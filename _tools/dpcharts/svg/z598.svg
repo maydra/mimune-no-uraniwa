@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>②人間創造の目的から見て</title>
+
+  <text x="72" y="53.5" font-size="44" text-anchor="middle" dominant-baseline="central">②</text>
+  <text x="99" y="53.5" font-size="41.5" dominant-baseline="central" textLength="459" lengthAdjust="spacing">人間創造の目的から見て</text>
+
+  <!-- 神（上）と人（下）の楕円。上が淡い桃、下が淡い緑で、境目は波の形 -->
+  <ellipse cx="477.75" cy="193.25" rx="224" ry="95.75" fill="#CCF8CC"/>
+  <path d="M253.8,192 C433.5,255.7 526.8,125.4 701.7,192 A224,95.75 0 0 0 253.8,192 Z" fill="#FCCCF8"/>
+  <ellipse cx="483.25" cy="439.75" rx="224" ry="95.5" fill="#CCF8CC"/>
+  <path d="M259.3,438 C432.5,505.1 535.7,371.6 707.2,438 A224,95.5 0 0 0 259.3,438 Z" fill="#FCCCF8"/>
+
+  <!-- 授受の矢印（面の中は #111、地の上は currentColor） -->
+  <g stroke-width="6" fill="none">
+    <path d="M382,376 V354.6 M382,279.8 V274 M398,263 V282.7 M398,351.4 V365 M458.5,376 V344.8 M458.5,288.6 V274 M474.5,263 V289 M474.5,344.3 V365 M535,376 V346.8 M535,285.8 V274 M550.5,263 V283.8 M550.5,348.7 V365" stroke="#111"/>
+    <path d="M382,354.6 V279.8 M398,282.7 V351.4 M458.5,344.8 V288.6 M474.5,289 V344.3 M535,346.8 V285.8 M550.5,283.8 V348.7" stroke="currentColor"/>
+  </g>
+  <g fill="#111">
+    <polygon points="382,259 391,274 373,274"/>
+    <polygon points="389,365 407,365 398,380"/>
+    <polygon points="458.5,259 467.5,274 449.5,274"/>
+    <polygon points="465.5,365 483.5,365 474.5,380"/>
+    <polygon points="535,259 544,274 526,274"/>
+    <polygon points="541.5,365 559.5,365 550.5,380"/>
+  </g>
+
+  <!-- 点線（楕円の縁で色を分ける） -->
+  <g stroke-width="7">
+    <path d="M597,230 H614 M623,230 H640 M649,230 H666 M675,230 H684.6 M678,421 H695 M701,421 H702.9" stroke="#111"/>
+    <path d="M684.6,230 H692 M701,230 H718 M727,230 H744 M702.9,421 H720 M727,421 H744" stroke="currentColor"/>
+  </g>
+
+  <g fill="none" stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="477.75" cy="193.25" rx="224" ry="95.75"/>
+    <ellipse cx="483.25" cy="439.75" rx="224" ry="95.5"/>
+  </g>
+
+  <!-- 丸で囲んだ神と人 -->
+  <g fill="none" stroke="#111" stroke-width="4.5">
+    <circle cx="473" cy="146.25" r="35.25"/>
+    <circle cx="487" cy="488" r="32.5"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="471.5" y="146" font-size="45">神</text>
+    <text x="487" y="488" font-size="48">人</text>
+  </g>
+
+  <!-- ○□△ -->
+  <g stroke="#111" stroke-width="4.5">
+    <circle cx="389" cy="225" r="19.75" fill="#A0F08A"/>
+    <rect x="447.25" y="205.25" width="38.5" height="37.5" fill="#F8F28F"/>
+    <polygon points="542.75,206 524.6,242.25 560.9,242.25" fill="#F98AEE"/>
+    <circle cx="390" cy="415.5" r="18.75" fill="#A0F08A"/>
+    <rect x="447.25" y="396.25" width="38.5" height="38.5" fill="#F8F28F"/>
+    <polygon points="541.35,397.8 521.9,436.75 561.8,436.75" fill="#F98AEE"/>
+  </g>
+
+  <g dominant-baseline="central">
+    <text x="231" y="325" font-size="41" textLength="82" lengthAdjust="spacing">喜び</text>
+    <text x="589" y="421" font-size="42" fill="#111" textLength="84" lengthAdjust="spacing">特性</text>
+    <g font-size="37">
+      <text x="752" y="205" textLength="152" lengthAdjust="spacing">個性体の</text>
+      <text x="753" y="259" textLength="261" lengthAdjust="spacing">主体的二性性相</text>
+      <text x="753" y="396" textLength="372" lengthAdjust="spacing">二性性相の実体として</text>
+      <text x="750" y="450" textLength="299" lengthAdjust="spacing">展開された個性体</text>
+    </g>
+  </g>
+
+  <rect x="288" y="559" width="661.5" height="80.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g font-size="49" dominant-baseline="central" fill="#111">
+    <text x="320" y="599" textLength="201" lengthAdjust="spacing">完成人間</text>
+    <text x="544" y="599" text-anchor="middle">：</text>
+    <text x="571" y="599" textLength="349" lengthAdjust="spacing">唯一無二の存在</text>
+  </g>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>『どの国の言葉で統一されるのであろうか』　言語統一：韓国語（祖国語）</title>
+
+  <text x="131" y="38.5" font-size="30" dominant-baseline="central">『どの国の言葉で統一されるのであろうか』</text>
+
+  <!-- 神と再臨主の間の矢印 -->
+  <g fill="none" stroke="currentColor" stroke-width="4.5">
+    <path d="M380.5,156 Q366,142 379,128.5"/>
+    <path d="M432.5,122.5 Q446,136 437.5,149"/>
+  </g>
+  <g>
+    <polygon points="376.5,124 386.5,123 382,132.5"/>
+    <polygon points="429.5,156 434.5,145 440.5,153.5"/>
+  </g>
+
+  <!-- 再臨主から子女への矢印（楕円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="6.5">
+    <line x1="376.6" y1="205" x2="315.6" y2="252"/>
+    <line x1="406" y1="205" x2="406" y2="247"/>
+    <line x1="432.7" y1="205" x2="496.7" y2="251.7"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="306.5,259 311.5,245 321.3,257.7"/>
+    <polygon points="406,258.5 398.5,246 413.5,246"/>
+    <polygon points="506,258.5 491.2,257.6 500.6,244.7"/>
+  </g>
+
+  <!-- 神 -->
+  <circle cx="406.5" cy="97" r="30" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <text x="406" y="97" font-size="32" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 再臨主（父母） -->
+  <ellipse cx="407" cy="193" rx="52.3" ry="37.3" fill="#F8F28F" stroke="currentColor" stroke-width="2.5"/>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="407.5" y="180" font-size="25" textLength="76" lengthAdjust="spacing">再臨主</text>
+    <text x="407" y="209" font-size="23">（父母）</text>
+  </g>
+  <text x="532" y="192" font-size="28" text-anchor="middle" dominant-baseline="central" textLength="113" lengthAdjust="spacing">韓国再臨</text>
+
+  <!-- 子女 -->
+  <g fill="#FCE5E3" stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="289.5" cy="286" rx="28.8" ry="25.3"/>
+    <ellipse cx="406.5" cy="286" rx="28.8" ry="25.3"/>
+    <ellipse cx="520.5" cy="286" rx="28.8" ry="25.3"/>
+  </g>
+  <g font-size="23" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="289.5" y="287">子女</text>
+    <text x="406.5" y="287">子女</text>
+    <text x="521" y="287">子女</text>
+  </g>
+
+  <!-- 子女どうしの授受 -->
+  <g fill="none" stroke="currentColor" stroke-width="4">
+    <path d="M331.5,280 Q339.5,268 353.5,273.5"/>
+    <path d="M363.5,294 Q355.5,306 341.5,300.5"/>
+    <path d="M445,278 Q453,266 467,271.5"/>
+    <path d="M477,292 Q469,304 455,298.5"/>
+  </g>
+  <g>
+    <polygon points="357.5,268.5 366,279 352,279"/>
+    <polygon points="337.5,305.5 329,295 343,295"/>
+    <polygon points="471,266.5 479.5,277 465.5,277"/>
+    <polygon points="451,303.5 442.5,293 456.5,293"/>
+  </g>
+
+  <text y="340" font-size="28" dominant-baseline="central"><tspan x="237" textLength="113" lengthAdjust="spacing">言語統一</tspan><tspan x="359">：</tspan><tspan x="382" textLength="84" lengthAdjust="spacing">韓国語</tspan><tspan x="473">（祖国語）</tspan></text>
+
+  <!-- 下の箱 -->
+  <rect x="133.5" y="373.5" width="535" height="46" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <text x="154" y="397" font-size="25" dominant-baseline="central" textLength="499" lengthAdjust="spacing" fill="#111">一つの言語を用いる一つの民族、一つの世界</text>
+</svg>

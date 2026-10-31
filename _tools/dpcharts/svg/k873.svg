@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>① 陸地で発達した文明の結実</title>
+  <defs>
+    <marker id="k873-g" viewBox="0 0 12 14" refX="6" refY="7" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="14" orient="auto">
+      <path d="M0,0 L12,7 L0,14 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="33" y="36.5" font-size="28" dominant-baseline="central">①</text>
+  <text x="73" y="36.5" font-size="28" dominant-baseline="central" textLength="343" lengthAdjust="spacing">陸地で発達した文明の結実</text>
+  <line x1="71" y1="54.5" x2="417" y2="54.5" stroke="currentColor" stroke-width="2"/>
+
+  <!-- 灰色の矢印（大陸→半島→島嶼→大陸→島嶼→半島） -->
+  <g stroke="#8C949A" stroke-width="6" fill="none" marker-end="url(#k873-g)">
+    <line x1="233" y1="229" x2="276.2" y2="206.8"/>
+    <line x1="393" y1="192" x2="436.5" y2="192"/>
+    <line x1="550" y1="206" x2="592" y2="233.7"/>
+    <line x1="595" y1="299.5" x2="555.4" y2="327.5"/>
+    <line x1="443" y1="337" x2="399" y2="337"/>
+  </g>
+
+  <!-- 文明の丸 -->
+  <g stroke="currentColor" stroke-width="3">
+    <circle cx="188.5" cy="265" r="42.5" fill="#fff" class="paper"/>
+    <circle cx="337" cy="193.5" r="42.5" fill="#fff" class="paper"/>
+    <circle cx="498.5" cy="192.5" r="42.5" fill="#fff" class="paper"/>
+    <circle cx="641.5" cy="265.5" r="42.5" fill="#fff" class="paper"/>
+    <circle cx="498.5" cy="336" r="42.5" fill="#fff" class="paper"/>
+    <circle cx="337" cy="336.5" r="42.5" fill="#F8F28F"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="188" y="249" textLength="55" lengthAdjust="spacing">大陸</text>
+    <text x="188" y="281" textLength="55" lengthAdjust="spacing">文明</text>
+    <text x="338" y="178" textLength="55" lengthAdjust="spacing">半島</text>
+    <text x="338" y="209.5" textLength="55" lengthAdjust="spacing">文明</text>
+    <text x="498.5" y="176.5" textLength="55" lengthAdjust="spacing">島嶼</text>
+    <text x="498.5" y="208.5" textLength="55" lengthAdjust="spacing">文明</text>
+    <text x="641" y="250" textLength="55" lengthAdjust="spacing">大陸</text>
+    <text x="641" y="281.5" textLength="55" lengthAdjust="spacing">文明</text>
+    <text x="498.5" y="320" textLength="55" lengthAdjust="spacing">島嶼</text>
+    <text x="498.5" y="351.5" textLength="55" lengthAdjust="spacing">文明</text>
+    <g fill="#111">
+      <text x="337" y="320" textLength="55" lengthAdjust="spacing">半島</text>
+      <text x="337" y="352" textLength="55" lengthAdjust="spacing">文明</text>
+    </g>
+  </g>
+
+  <!-- 国の名（細字） -->
+  <g font-size="27" font-weight="400" dominant-baseline="central">
+    <text x="188" y="166" text-anchor="middle" textLength="55" lengthAdjust="spacing">古代</text>
+    <text x="131" y="200" textLength="110" lengthAdjust="spacing">エジプト</text>
+    <text x="248" y="98.5" font-size="25" textLength="178" lengthAdjust="spacing">ギリシャ、ローマ</text>
+    <text x="337" y="130.5" font-size="25" text-anchor="middle" textLength="101" lengthAdjust="spacing">イベリア</text>
+    <text x="498" y="126" text-anchor="middle" textLength="55" lengthAdjust="spacing">英国</text>
+    <text x="641" y="199" text-anchor="middle" textLength="55" lengthAdjust="spacing">米国</text>
+    <text x="500" y="404.5" text-anchor="middle" textLength="51" lengthAdjust="spacing">日本</text>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="240" y="336" textLength="55" lengthAdjust="spacing">結実</text>
+    <text x="337" y="405" textLength="55" lengthAdjust="spacing">韓国</text>
+  </g>
+</svg>

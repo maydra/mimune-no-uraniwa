@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>堕落人間の分立</title>
+
+  <!-- 題 -->
+  <text x="35" y="35.5" font-size="30" dominant-baseline="central" textLength="217" lengthAdjust="spacing">堕落人間の分立</text>
+  <line x1="33" y1="55" x2="254" y2="55" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 善なる条件・悪なる条件の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="325,166 342,178.5 335.6,181.1 379.7,288.5 372.3,291.5 328.2,184.2 321.7,186.8"/>
+    <polygon points="507,165 510.5,185.8 504,183.2 460.7,291.5 453.3,288.5 496.6,180.2 490.1,177.6"/>
+  </g>
+
+  <!-- 神・サ -->
+  <circle cx="306.5" cy="123.5" r="39.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <circle cx="517.5" cy="123.5" r="39.5" fill="#50403D" stroke="currentColor" stroke-width="2.2"/>
+  <g font-size="38" text-anchor="middle" dominant-baseline="central">
+    <text x="306.5" y="124.5">神</text>
+    <text x="517.5" y="124.5" fill="#fff">サ</text>
+  </g>
+
+  <!-- 堕落人間 -->
+  <ellipse cx="411" cy="322.5" rx="100" ry="38" fill="#CF921C" stroke="currentColor" stroke-width="2.2"/>
+  <text x="406.5" y="323" font-size="33" text-anchor="middle" dominant-baseline="central" textLength="135" lengthAdjust="spacing" fill="#111">堕落人間</text>
+
+  <!-- 字 -->
+  <g font-size="30" dominant-baseline="central">
+    <text x="229" y="220" textLength="89" lengthAdjust="spacing">善なる</text>
+    <text x="230" y="260" textLength="59" lengthAdjust="spacing">条件</text>
+    <text x="517" y="220" textLength="89" lengthAdjust="spacing">悪なる</text>
+    <text x="517" y="260" textLength="60" lengthAdjust="spacing">条件</text>
+  </g>
+  <text x="407.5" y="387" font-size="30" text-anchor="middle" dominant-baseline="central" textLength="121" lengthAdjust="spacing">中間位置</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>『宗教』</title>
+
+  <!-- 題 -->
+  <g font-size="30" dominant-baseline="central">
+    <text x="168" y="38" text-anchor="end">『</text>
+    <text x="170" y="38" textLength="60" lengthAdjust="spacing">宗教</text>
+    <text x="231" y="38">』</text>
+  </g>
+
+  <!-- 文芸復興の札 -->
+  <g fill="#F86D42" stroke="currentColor" stroke-width="2.5">
+    <rect x="151" y="86" width="169" height="38"/>
+    <rect x="327" y="86" width="168" height="38"/>
+    <rect x="502" y="86" width="167" height="38"/>
+  </g>
+  <g font-size="25" font-weight="400" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="236" y="105.5" textLength="148" lengthAdjust="spacing">一次文芸復興</text>
+    <text x="411" y="105.5" textLength="148" lengthAdjust="spacing">二次文芸復興</text>
+    <text x="586" y="105.5" textLength="148" lengthAdjust="spacing">三次文芸復興</text>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="233,126 238,126 238,137.5 242,137.5 235.5,147.5 229,137.5 233,137.5"/>
+    <polygon points="408.5,126 413.5,126 413.5,137.5 417.5,137.5 411,147.5 404.5,137.5 408.5,137.5"/>
+    <polygon points="583,126 588,126 588,137.5 592,137.5 585.5,147.5 579,137.5 583,137.5"/>
+  </g>
+
+  <!-- 宗教改革の表 -->
+  <rect x="150" y="149" width="523" height="201" fill="#F8F28F" stroke="currentColor" stroke-width="3"/>
+  <g stroke="#111" stroke-width="3">
+    <line x1="323.5" y1="150.5" x2="323.5" y2="348.5"/>
+    <line x1="498.5" y1="150.5" x2="498.5" y2="348.5"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="237.5" y="175.5" textLength="55" lengthAdjust="spacing">一次</text>
+    <text x="237.5" y="210" textLength="113" lengthAdjust="spacing">宗教改革</text>
+    <text x="412.5" y="175.5" textLength="55" lengthAdjust="spacing">二次</text>
+    <text x="412.5" y="210" textLength="113" lengthAdjust="spacing">宗教改革</text>
+    <text x="586.5" y="176" textLength="55" lengthAdjust="spacing">三次</text>
+    <text x="586.5" y="210.5" textLength="113" lengthAdjust="spacing">宗教改革</text>
+  </g>
+  <g font-size="26" dominant-baseline="central" fill="#111">
+    <text x="237" y="251" text-anchor="middle" textLength="76" lengthAdjust="spacing">ルター</text>
+    <text x="343" y="250.5" textLength="125" lengthAdjust="spacing">ウェスレイ</text>
+    <text x="343" y="285" textLength="126" lengthAdjust="spacing">フォックス</text>
+    <text x="333" y="318.5" font-size="25" textLength="155" lengthAdjust="spacingAndGlyphs">スウェーデンボルグ</text>
+  </g>
+</svg>

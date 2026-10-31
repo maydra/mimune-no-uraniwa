@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>霊的堕落の結果</title>
+
+  <text x="53" y="81" font-size="48" textLength="349" lengthAdjust="spacing">霊的堕落の結果</text>
+  <line x1="52" y1="92" x2="401" y2="92" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神とのつながり（円と楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="8.5">
+    <line x1="822" y1="163.9" x2="340" y2="276.3"/>
+    <line x1="830.5" y1="150" x2="645.7" y2="304"/>
+    <line x1="808.9" y1="150" x2="998.7" y2="304"/>
+  </g>
+  <!-- 切れた所の × -->
+  <g stroke="currentColor" stroke-width="7">
+    <line x1="570" y1="201" x2="616" y2="234"/>
+    <line x1="573" y1="237" x2="612" y2="196"/>
+    <line x1="718" y1="214.5" x2="774" y2="228.5"/>
+    <line x1="736.5" y1="248" x2="758.5" y2="196"/>
+  </g>
+
+  <circle cx="822" cy="150" r="57" fill="#fff" class="paper" stroke="currentColor" stroke-width="3.5"/>
+  <text x="820" y="149.5" font-size="62" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="288" cy="304" rx="101" ry="51" fill="#50403D"/>
+    <ellipse cx="669" cy="304" rx="87" ry="51" fill="#CF921C"/>
+    <ellipse cx="983" cy="304" rx="87" ry="51" fill="#F98AEE"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="286" y="301.5" font-size="48" textLength="170" lengthAdjust="spacingAndGlyphs" fill="#fff">ルーシェル</text>
+    <text x="668" y="303.5" font-size="48" textLength="122" lengthAdjust="spacing" fill="#111">エ バ</text>
+    <text x="984" y="304" font-size="50" textLength="134" lengthAdjust="spacingAndGlyphs" fill="#111">アダム</text>
+  </g>
+
+  <!-- ルーシェルとエバの授受 -->
+  <polygon points="415,280.5 528,280.5 528,272 553.5,286 528,300 528,291.5 415,291.5"/>
+  <polygon points="550,315.5 436,315.5 436,307 410.5,321 436,335 436,326.5 550,326.5"/>
+
+  <circle cx="441.5" cy="409" r="9"/>
+  <g font-size="41">
+    <text x="460" y="425" textLength="292" lengthAdjust="spacing">愛によって一体</text>
+    <text x="460" y="479" textLength="537" lengthAdjust="spacing">ルーシェルの要素を受け継ぐ</text>
+  </g>
+
+  <g font-size="44">
+    <text x="383" y="564.5" textLength="267" lengthAdjust="spacing">①良心の呵責</text>
+    <text x="733" y="564.5" textLength="132" lengthAdjust="spacing">恐怖心</text>
+    <text x="383" y="643.5" textLength="269" lengthAdjust="spacing">②新しい知恵</text>
+    <text y="643.5"><tspan x="733" textLength="201" lengthAdjust="spacingAndGlyphs">本然の相対</tspan><tspan x="954.5" text-anchor="middle">：</tspan><tspan x="977" textLength="117" lengthAdjust="spacingAndGlyphs">アダム</tspan></text>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="673,543 700,543 700,535.5 714,548 700,560.5 700,553 673,553"/>
+    <polygon points="673,619.5 700,619.5 700,612 714,624.5 700,637 700,629.5 673,629.5"/>
+  </g>
+</svg>

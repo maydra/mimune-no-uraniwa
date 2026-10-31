@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>軌道を走る汽車と、外力による脱線</title>
+
+  <!-- 線路 -->
+  <polygon points="210,293 805,375 897,385 893,397 780,413 210,297" fill="#111"/>
+
+  <!-- 客車（奥から3両） -->
+  <polygon points="229,278 402,281 402,334 229,298" fill="#111"/>
+  <g fill="#111">
+    <circle cx="238" cy="291" r="6"/>
+    <circle cx="249" cy="293" r="6"/>
+    <circle cx="279" cy="298" r="7"/>
+    <circle cx="291" cy="300" r="7"/>
+    <circle cx="327" cy="308" r="8"/>
+    <circle cx="341" cy="310" r="8"/>
+    <circle cx="380" cy="317" r="9"/>
+    <circle cx="395" cy="320" r="9"/>
+  </g>
+  <g stroke="#111" stroke-width="1.5" stroke-linejoin="round">
+    <polygon points="231,243 235,238 259,230 259,237" fill="#5A6366"/>
+    <polygon points="261,232 266,226 310,215 310,224" fill="#5A6366"/>
+    <polygon points="313,222 320,213 400,195 400,210" fill="#5A6366"/>
+    <polygon points="231,243 259,237 259,279 231,279" fill="#A0F08A"/>
+    <polygon points="261,232 310,224 310,280 261,279" fill="#A0F08A"/>
+    <polygon points="313,222 400,210 400,282 313,280" fill="#A0F08A"/>
+  </g>
+  <g fill="#4CAF50">
+    <rect x="232" y="275" width="26" height="3.5"/>
+    <rect x="262" y="276" width="47" height="3.5"/>
+    <polygon points="314,276 399,277 399,281 314,279"/>
+  </g>
+  <g fill="#111">
+    <rect x="234" y="247" width="3.5" height="19"/>
+    <rect x="239.5" y="246" width="3.5" height="20"/>
+    <rect x="245" y="245" width="3.5" height="21"/>
+    <rect x="250.5" y="244" width="3.5" height="22"/>
+    <rect x="265" y="238" width="5" height="27"/>
+    <rect x="273" y="237" width="5" height="28"/>
+    <rect x="281" y="236" width="5" height="29"/>
+    <rect x="289" y="235" width="5" height="30"/>
+    <rect x="297" y="234" width="5" height="31"/>
+    <rect x="318" y="230" width="6" height="28"/>
+    <rect x="328" y="229" width="6" height="29"/>
+    <rect x="338" y="228" width="6" height="30"/>
+    <rect x="348" y="227" width="6" height="32"/>
+    <rect x="358" y="226" width="6" height="33"/>
+    <rect x="368" y="225" width="6" height="34"/>
+    <rect x="378" y="224" width="6" height="36"/>
+    <rect x="388" y="223" width="6" height="37"/>
+  </g>
+
+  <!-- 炭水車と運転室 -->
+  <g stroke="#111" stroke-width="1.5" stroke-linejoin="round">
+    <polygon points="402,201 458,187 458,332 402,334" fill="#8C949A"/>
+    <polygon points="458,181 502,170 502,282 458,288" fill="#B9C2C6"/>
+  </g>
+  <g fill="#111">
+    <polygon points="400,203 418,191 458,182 458,190 402,208"/>
+    <polygon points="452,183 470,160 505,148 507,170 458,183"/>
+    <rect x="468" y="188" width="14" height="28"/>
+  </g>
+
+  <!-- 機関車の下まわり -->
+  <polygon points="440,268 502,262 604,262 604,300 640,290 735,300 738,368 726,386 640,373 440,346" fill="#111"/>
+  <polygon points="748,306 757,306 757,328 778,328 778,336 748,336" fill="#111"/>
+  <g fill="#111" stroke="#B9C2C6">
+    <circle cx="432" cy="320" r="17" stroke-width="2.5"/>
+    <circle cx="457" cy="325" r="18" stroke-width="2.5"/>
+    <circle cx="503" cy="315" r="37" stroke-width="3"/>
+    <circle cx="552" cy="323" r="37" stroke-width="3"/>
+    <circle cx="598" cy="331" r="33" stroke-width="3"/>
+    <circle cx="634" cy="338" r="24" stroke-width="2.5"/>
+  </g>
+  <g stroke="#B9C2C6" stroke-width="2">
+    <line x1="469" y1="315" x2="537" y2="315"/>
+    <line x1="503" y1="281" x2="503" y2="349"/>
+    <line x1="479" y1="291" x2="527" y2="339"/>
+    <line x1="479" y1="339" x2="527" y2="291"/>
+    <line x1="518" y1="323" x2="586" y2="323"/>
+    <line x1="552" y1="289" x2="552" y2="357"/>
+    <line x1="528" y1="299" x2="576" y2="347"/>
+    <line x1="528" y1="347" x2="576" y2="299"/>
+    <line x1="568" y1="331" x2="628" y2="331"/>
+    <line x1="598" y1="301" x2="598" y2="361"/>
+    <line x1="577" y1="310" x2="619" y2="352"/>
+    <line x1="577" y1="352" x2="619" y2="310"/>
+  </g>
+
+  <!-- ボイラー -->
+  <g stroke="#111" stroke-width="2" stroke-linejoin="round">
+    <path d="M502,178 Q510,160 540,156 L612,146 L624,148 L624,252 L540,258 L505,262 Q497,222 502,178 Z" fill="#C4CCD3"/>
+    <path d="M584,152 Q586,142 606,141 Q628,141 630,150 L630,158 L584,160 Z" fill="#B9C2C6"/>
+    <polygon points="641,146 678,146 674,140 645,140" fill="#8C949A"/>
+    <rect x="645" y="126" width="29" height="15" fill="#8C949A"/>
+    <ellipse cx="659.5" cy="126" rx="14.5" ry="5" fill="#B9C2C6"/>
+  </g>
+  <g fill="none" stroke="#CF921C" stroke-width="3">
+    <path d="M538,158 Q528,205 543,257"/>
+    <path d="M556,155 Q546,205 560,256"/>
+    <path d="M572,152 Q562,203 576,255"/>
+    <path d="M588,150 Q578,202 592,254"/>
+  </g>
+
+  <!-- 正面 -->
+  <polygon points="604,262 640,240 640,290 604,300" fill="#8C949A" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="640" y="240" width="126" height="50" fill="#B9C2C6" stroke="#111" stroke-width="2"/>
+  <circle cx="674" cy="193" r="54" fill="#8C949A" stroke="#111" stroke-width="3"/>
+  <circle cx="677" cy="196" r="44" fill="#C4CCD3" stroke="#111" stroke-width="1.5"/>
+  <g fill="none" stroke="#111" stroke-width="3">
+    <path d="M500,214 L624,188"/>
+    <path d="M622,180 C630,145 690,126 728,152 L733,192"/>
+    <line x1="680" y1="142" x2="680" y2="165"/>
+    <line x1="687" y1="207" x2="707" y2="207"/>
+    <line x1="681" y1="213" x2="681" y2="240"/>
+  </g>
+  <rect x="660" y="177" width="40" height="10" fill="#fff" stroke="#111" stroke-width="2"/>
+  <circle cx="681" cy="207" r="6" fill="#fff" stroke="#111" stroke-width="2.5"/>
+  <rect x="679.5" y="248" width="5" height="97" fill="#CF921C" stroke="#111" stroke-width="1"/>
+  <g fill="#E8ECDF" stroke="#111" stroke-width="2">
+    <circle cx="654" cy="298.5" r="14"/>
+    <circle cx="762" cy="298.5" r="14"/>
+  </g>
+
+  <!-- 走る力・脱線 -->
+  <g stroke="#8C949A">
+    <line x1="383" y1="352.5" x2="700" y2="422.2" stroke-width="16.5"/>
+    <line x1="697" y1="424.8" x2="849" y2="527" stroke-width="10.5"/>
+    <line x1="720.5" y1="429.8" x2="961.5" y2="480.8" stroke-width="8.5" stroke-dasharray="10 10.5"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="869.5,541 854.3,515.3 840.1,536.3"/>
+    <polygon points="989,487 966.4,468.4 960.8,494.8"/>
+  </g>
+
+  <!-- 外力 -->
+  <line x1="989.5" y1="254" x2="728" y2="409.8" stroke="#EA0000" stroke-width="14"/>
+  <polygon points="700.1,426.5 740.1,424.3 721.1,392.3" fill="#EA0000"/>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="302" y="356" font-size="50" textLength="104" lengthAdjust="spacing" transform="rotate(10 302 356)">軌道</text>
+    <text x="528" y="425.5" font-size="50" textLength="162" lengthAdjust="spacing" transform="rotate(10 528 425.5)">走る力</text>
+    <text x="1058.5" y="240.5" font-size="52">外力</text>
+    <text x="913.5" y="583" font-size="53">脱線</text>
+  </g>
+</svg>

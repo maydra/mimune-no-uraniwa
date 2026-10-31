@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>被造物の成長期間</title>
+
+  <g font-size="49" text-anchor="middle">
+    <text x="78" y="76">Ⅱ</text>
+    <text x="109" y="76">.</text>
+  </g>
+  <text x="128" y="76" font-size="49" textLength="400" lengthAdjust="spacing">被造物の成長期間</text>
+  <line x1="128" y1="87.5" x2="528" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 成長期間の矢印と線 -->
+  <polygon points="465,244.5 513,302.5 487.5,302.5 487.5,535 441.5,535 441.5,302.5 416.5,302.5" fill="#C4CCD3" stroke="currentColor" stroke-width="3.5"/>
+  <g stroke="currentColor" stroke-width="5.5">
+    <line x1="282" y1="237.5" x2="710" y2="237.5"/>
+    <line x1="282" y1="535" x2="711" y2="535"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="466.5" cy="187" rx="94.5" ry="48.5" fill="#CDF8F7"/>
+    <ellipse cx="464" cy="592.5" rx="99" ry="54.5" fill="#DCC4C4"/>
+  </g>
+  <g font-size="52" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="465.5" y="187.5">完成</text>
+    <text x="463.5" y="594.5">被造物</text>
+  </g>
+
+  <!-- 夕・夜・朝 -->
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="621.5" y="190.5" font-size="52">朝</text>
+    <text x="826" y="191.5" font-size="50">第一日</text>
+    <text y="191" font-size="40"><tspan x="917">（</tspan><tspan x="944.5">創</tspan><tspan x="1009">1:5</tspan><tspan x="1047">）</tspan></text>
+    <text x="872.5" y="274.5" font-size="45">創造理想実現出発</text>
+    <text x="321" y="388" font-size="49">成長期間</text>
+    <text x="620.5" y="389" font-size="53">夜</text>
+    <text x="615" y="579.5" font-size="53">夕</text>
+  </g>
+  <line x1="665" y1="190.5" x2="740" y2="190.5" stroke="currentColor" stroke-width="5.5" stroke-dasharray="17 12"/>
+</svg>

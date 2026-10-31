@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>善悪の母体　善性品的存在・悪性品的存在　二人の子</title>
+  <defs>
+    <marker id="k066-a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="2.5" markerHeight="2.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="k066-b" viewBox="0 0 13 18" refX="7" refY="9" markerWidth="2" markerHeight="2.77" orient="auto">
+      <path d="M0,0 L13,9 L0,18 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 縦の点線（楕円より先に描く） -->
+  <g stroke="currentColor" stroke-width="4" stroke-dasharray="11 6.5">
+    <line x1="227.5" y1="116.5" x2="227.5" y2="314"/>
+    <line x1="593.5" y1="116.5" x2="593.5" y2="314"/>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g stroke="currentColor" stroke-width="5.5" fill="none" marker-end="url(#k066-a)">
+    <line x1="260" y1="108" x2="338.4" y2="159"/>
+    <line x1="340" y1="182" x2="248.1" y2="121.5"/>
+    <line x1="446" y1="163.5" x2="542.3" y2="103.8"/>
+    <line x1="570" y1="107.3" x2="479.6" y2="165"/>
+  </g>
+
+  <!-- アダムから下の箱へ -->
+  <g stroke="currentColor" stroke-width="6.5" fill="none" marker-end="url(#k066-b)">
+    <line x1="356" y1="208.4" x2="246.5" y2="302.6"/>
+    <line x1="456" y1="209.9" x2="576.3" y2="304.3"/>
+  </g>
+
+  <!-- 神・サ・アダム -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="226.5" cy="88.25" rx="47" ry="30" fill="#fff" class="paper"/>
+    <ellipse cx="595.5" cy="89" rx="47" ry="30" fill="#50403D"/>
+    <ellipse cx="406.5" cy="186" rx="73.5" ry="35.5" fill="#CF921C"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="223.5" y="87.5" font-size="35">神</text>
+    <text x="594.5" y="88" font-size="34" fill="#fff">サ</text>
+    <text x="407.5" y="185.5" font-size="33" textLength="96" lengthAdjust="spacing" fill="#111">アダム</text>
+    <text x="407" y="258" font-size="29" textLength="143" lengthAdjust="spacing">善悪の母体</text>
+  </g>
+
+  <!-- 灰色の矢印（下へ） -->
+  <polygon points="403.5,285 410.5,285 410.5,303 418.5,303 407.5,322.5 396.5,303 403.5,303" fill="#8C949A"/>
+
+  <!-- 下の箱 -->
+  <rect x="155.5" y="314.5" width="143" height="81" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <rect x="524.5" y="314.5" width="143" height="81" fill="#50403D" stroke="currentColor" stroke-width="2.6"/>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="227" y="338" textLength="113" lengthAdjust="spacing">善性品的</text>
+    <text x="227.5" y="373" textLength="56" lengthAdjust="spacing">存在</text>
+    <text x="595.5" y="337.5" textLength="113" lengthAdjust="spacing" fill="#fff">悪性品的</text>
+    <text x="596" y="374.5" textLength="56" lengthAdjust="spacing" fill="#fff">存在</text>
+  </g>
+
+  <!-- 二人の子の左右の短い線 -->
+  <g stroke="currentColor" stroke-width="4">
+    <line x1="312" y1="356.5" x2="322" y2="356.5"/>
+    <line x1="325" y1="356.5" x2="335" y2="356.5"/>
+    <line x1="339" y1="356.5" x2="349" y2="356.5"/>
+    <line x1="474" y1="356.5" x2="485" y2="356.5"/>
+    <line x1="488" y1="356.5" x2="499" y2="356.5"/>
+    <line x1="503" y1="356.5" x2="513" y2="356.5"/>
+  </g>
+  <text x="412.5" y="356.5" font-size="26" textLength="102" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central">二人の子</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>ヘレニズムとヘブライズム</title>
+
+  <!-- 題 -->
+  <text x="32" y="37.5" font-size="31" dominant-baseline="central" textLength="379" lengthAdjust="spacingAndGlyphs">ヘレニズムとヘブライズム</text>
+  <line x1="32" y1="57" x2="412" y2="57" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- 灰色の矢印（箱・楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="254.5,143 263.5,143 263.5,292 269.5,292 259,311.5 248.5,292 254.5,292"/>
+    <polygon points="506.5,142 515.5,142 515.5,185 522,185 511,204.5 500,185 506.5,185"/>
+    <polygon points="505,264 514,264 514,293 520,293 509.5,314.5 499,293 505,293"/>
+  </g>
+
+  <!-- ヘブライズムとヘレニズム -->
+  <g stroke="currentColor" stroke-width="3">
+    <rect x="176" y="90" width="167" height="52" fill="#F8F28F"/>
+    <rect x="424" y="89" width="167" height="52.5" fill="#F86D42"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="259.5" y="115.5" textLength="155" lengthAdjust="spacingAndGlyphs">ヘブライズム</text>
+    <text x="507.5" y="114" textLength="143" lengthAdjust="spacingAndGlyphs">ヘレニズム</text>
+  </g>
+
+  <!-- 文明 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="507" cy="235" rx="88" ry="28.5" fill="#fff" class="paper"/>
+    <ellipse cx="257" cy="340" rx="104" ry="28" fill="#F8F28F"/>
+    <ellipse cx="507.5" cy="344" rx="100.5" ry="28" fill="#F86D42"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="508.5" y="235" textLength="141" lengthAdjust="spacingAndGlyphs">ミノア文明</text>
+    <text y="340" fill="#111" text-anchor="start"><tspan x="172" textLength="96" lengthAdjust="spacingAndGlyphs">ヘブライ</tspan><tspan x="270" font-size="26" textLength="79" lengthAdjust="spacing">文明圏</tspan></text>
+    <text y="344" fill="#111" text-anchor="start"><tspan x="423" textLength="94" lengthAdjust="spacingAndGlyphs">ギリシャ</tspan><tspan x="520" font-size="26" textLength="78" lengthAdjust="spacing">文明圏</tspan></text>
+  </g>
+
+  <!-- 添え書き -->
+  <g dominant-baseline="central" font-size="26">
+    <text x="272" y="229" textLength="104" lengthAdjust="spacingAndGlyphs">西アジア</text>
+    <text x="179.5" y="390" textLength="157" lengthAdjust="spacing">統一王国時代</text>
+    <text x="608" y="386.5" textLength="91" lengthAdjust="spacingAndGlyphs">ギリシャ</text>
+  </g>
+  <g font-size="30">
+    <text x="561" y="287" textLength="77" lengthAdjust="spacingAndGlyphs">BC2000</text>
+    <text x="543" y="397" textLength="58" lengthAdjust="spacingAndGlyphs">BC11C</text>
+  </g>
+</svg>

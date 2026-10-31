@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>ユダヤ民族捕虜および帰還時代</title>
+
+  <!-- 年数の柱 -->
+  <g>
+    <rect x="242" y="114" width="5.5" height="203"/>
+    <rect x="247.5" y="115" width="10.5" height="201" fill="#A0F08A"/>
+    <path d="M228,115 H264 M228,316 H264" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    <rect x="403" y="114" width="5.5" height="203"/>
+    <rect x="408.5" y="115" width="10.5" height="201" fill="#A0F08A"/>
+    <path d="M391,115 H426 M391,316 H426" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  </g>
+
+  <!-- 札 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <rect x="123.5" y="84" width="105.5" height="60" fill="#fff" class="paper"/>
+    <rect x="124" y="281" width="105" height="72" fill="#fff" class="paper"/>
+    <rect x="290" y="79" width="102" height="72" fill="#fff" class="paper"/>
+    <rect x="290" y="287" width="102" height="60" fill="#fff" class="paper"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="176.5" textLength="95.4" lengthAdjust="spacing" y="115" font-size="24">ハランへ</text>
+    <text x="176.5" textLength="77.5" lengthAdjust="spacing" y="300.5" font-size="25">カナン</text>
+    <text x="176.5" textLength="53.5" lengthAdjust="spacing" y="332.5" font-size="25">復帰</text>
+    <text x="340" textLength="84.2" lengthAdjust="spacing" y="101.5" font-size="22">バビロン</text>
+    <text x="340.5" textLength="47.3" lengthAdjust="spacing" y="131" font-size="23">捕虜</text>
+    <text x="341.5" textLength="77.6" lengthAdjust="spacing" y="317.5" font-size="26">マラキ</text>
+    <text x="221" textLength="26.7" lengthAdjust="spacingAndGlyphs" y="210.5" font-size="27">21</text>
+    <text x="374.5" textLength="45.7" lengthAdjust="spacingAndGlyphs" y="211" font-size="27">210</text>
+  </g>
+
+  <!-- 説明の箱 -->
+  <rect x="438" y="66" width="255" height="301" rx="7" fill="#fff" class="paper"/>
+  <path d="M438,144 V73 Q438,66 445,66 H686 Q693,66 693,73 V144 Z" fill="#CDF8F7"/>
+  <line x1="438" y1="144" x2="693" y2="144" stroke="currentColor" stroke-width="2.6"/>
+  <rect x="438" y="66" width="255" height="301" rx="7" fill="none" stroke="currentColor" stroke-width="2.6"/>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="566" textLength="184.6" lengthAdjust="spacing" y="89.5" font-size="26" fill="#111">ユダヤ民族捕虜</text>
+    <text x="566.5" textLength="183.6" lengthAdjust="spacing" y="121.5" font-size="26" fill="#111">および帰還時代</text>
+    <text x="524.5" textLength="105.6" lengthAdjust="spacing" y="186.5" font-size="26">神殿理想</text>
+  </g>
+  <g>
+    <circle cx="458" cy="186.5" r="7"/>
+    <circle cx="458" cy="301" r="7"/>
+  </g>
+  <path d="M458,204 Q436,233 458,262 M674,204 Q696,233 674,262" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  <g text-anchor="middle" dominant-baseline="central" font-weight="400">
+    <text x="570" textLength="208.1" lengthAdjust="spacing" y="219" font-size="21">モーセ一次カナン復帰</text>
+    <text y="247.5" font-size="22"><tspan x="476" textLength="20.2" lengthAdjust="spacingAndGlyphs">21</tspan><tspan x="572" textLength="172.2" lengthAdjust="spacing">日期間横的復帰</tspan></text>
+    <text x="563.5" textLength="183.6" lengthAdjust="spacing" y="301" font-size="26">サウル王の不信</text>
+    <text x="551" textLength="156.6" lengthAdjust="spacing" y="332" font-size="26">によって失敗</text>
+  </g>
+</svg>

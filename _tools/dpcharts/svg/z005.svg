@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>欲望は善にも悪にも向かう</title>
+
+  <!-- 欲望から善と悪への矢印（端は楕円で隠す） -->
+  <g fill="#8C949A">
+    <polygon points="420,320 462,300 462,313.5 560,313.5 560,327 462,327 462,340"/>
+    <polygon points="740,312.5 838,312.5 838,300 879,319 838,338.5 838,325.5 740,325.5"/>
+  </g>
+
+  <ellipse cx="646.5" cy="317" rx="114.5" ry="52" fill="#FCE5E3" stroke="currentColor" stroke-width="4"/>
+  <text x="575" y="315.5" font-size="58" fill="#111" dominant-baseline="central" textLength="140" lengthAdjust="spacing">欲望</text>
+
+  <!-- 善・悪 -->
+  <ellipse cx="348" cy="322.5" rx="56.5" ry="60" fill="#fff" class="paper" stroke="currentColor" stroke-width="3.5"/>
+  <ellipse cx="954" cy="322.5" rx="56.5" ry="60" fill="#50403D" stroke="currentColor" stroke-width="3.5"/>
+  <g font-size="58" text-anchor="middle" dominant-baseline="central">
+    <text x="348.5" y="322.5">善</text>
+    <text x="954.5" y="322" fill="#fff">悪</text>
+  </g>
+
+  <!-- 幸福・不幸（縦書き） -->
+  <g font-size="56" text-anchor="middle" dominant-baseline="central">
+    <text x="237.5" y="292.5">幸</text>
+    <text x="237.5" y="351">福</text>
+    <text x="1065.5" y="293">不</text>
+    <text x="1065.5" y="351.5">幸</text>
+  </g>
+
+  <g font-size="47" dominant-baseline="central">
+    <text x="249.5" y="444.5" textLength="250" lengthAdjust="spacing">本心が喜ぶ</text>
+    <text x="867.5" y="446" textLength="198" lengthAdjust="spacing">生活環境</text>
+  </g>
+</svg>

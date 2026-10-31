@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>「象徴献祭」の意義と目的</title>
+  <defs>
+    <marker id="k087-g" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="2.8" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="43" y="37" font-size="30" textLength="349" lengthAdjust="spacing" dominant-baseline="central">「象徴献祭」の意義と目的</text>
+  <line x1="43" y1="56.5" x2="392" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 左右の仕切り -->
+  <line x1="409.5" y1="72" x2="409.5" y2="416" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="222.5,180 222.5,144 226.5,144 219.5,131 212.5,144 216.5,144 216.5,180"/>
+    <polygon points="222.5,282 222.5,244 226.5,244 219.5,231 212.5,244 216.5,244 216.5,282"/>
+    <polygon points="317,164.3 270,193 267.7,189.2 260,201.5 274.5,200.3 272.1,196.4 319,167.7"/>
+    <polygon points="331,168.7 258.7,274.1 255,271.6 253,286 265.7,278.9 262,276.4 334.2,170.9"/>
+    <polygon points="560.5,141 560.5,123 564,123 558,112 552,123 555.5,123 555.5,141"/>
+    <polygon points="560.5,217 560.5,201 564,201 558,190 552,201 555.5,201 555.5,217"/>
+    <polygon points="560.5,294 560.5,277 564,277 558,266 552,277 555.5,277 555.5,294"/>
+  </g>
+  <path d="M522,302 C495,272 492,228 519.5,196.5" fill="none" stroke="#8C949A" stroke-width="4" marker-end="url(#k087-g)"/>
+
+  <!-- 神 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2">
+    <circle cx="219.5" cy="104" r="25"/>
+    <circle cx="558" cy="85" r="25"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="219" y="104">神</text>
+    <text x="557.5" y="85">神</text>
+  </g>
+
+  <!-- 左：万物復帰 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="347" cy="154.5" rx="38.5" ry="24" fill="#50403D"/>
+    <ellipse cx="219" cy="203" rx="38.5" ry="24.5" fill="#DCC4C4"/>
+    <ellipse cx="219.5" cy="305" rx="38.5" ry="24.5" fill="#CF921C"/>
+  </g>
+  <!-- 右：実体人間復帰 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="558" cy="163.5" rx="38.5" ry="24" fill="#FCE5E3"/>
+    <ellipse cx="558" cy="240" rx="38.5" ry="24.5" fill="#DCC4C4"/>
+    <ellipse cx="558" cy="316.5" rx="38.5" ry="24" fill="#CF921C"/>
+  </g>
+  <text x="347" y="155" font-size="22" textLength="62" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central" fill="#fff">サタン</text>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="219" y="203.5" textLength="50" lengthAdjust="spacing">万物</text>
+    <text x="558" y="164" textLength="50" lengthAdjust="spacing">人間</text>
+    <text x="558" y="240.5" textLength="50" lengthAdjust="spacing">万物</text>
+    <text y="305.5"><tspan x="202">堕</tspan><tspan x="219.5">・</tspan><tspan x="237.5">人</tspan></text>
+    <text y="317"><tspan x="540">堕</tspan><tspan x="558">・</tspan><tspan x="576">人</tspan></text>
+  </g>
+
+  <!-- 下の説明 -->
+  <g font-size="24" dominant-baseline="central">
+    <text x="150" y="369" text-anchor="middle">①</text>
+    <text x="166" y="369" textLength="189" lengthAdjust="spacing">万物復帰のための</text>
+    <text x="166" y="400.5" textLength="95" lengthAdjust="spacing">蕩減条件</text>
+    <text x="440" y="369" text-anchor="middle">②</text>
+    <text x="457" y="369" textLength="229" lengthAdjust="spacing">実体人間復帰のための</text>
+    <text x="457" y="400.5" textLength="192" lengthAdjust="spacing">象徴的な蕩減条件</text>
+  </g>
+</svg>

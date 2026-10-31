@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間の例</title>
+  <defs>
+    <marker id="z104-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+    <marker id="z104-d" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.8" markerHeight="2.8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <g font-size="48">
+    <text x="96" y="80" text-anchor="end">『</text>
+    <text x="97" y="80" textLength="196" lengthAdjust="spacing">人間の例</text>
+    <text x="297" y="80">』</text>
+  </g>
+
+  <!-- 四位の線（円の下に描く。神と心の間は矢印だけ） -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="721" y1="165.4" x2="884.5" y2="289"/>
+    <line x1="544.5" y1="288.7" x2="716" y2="428.5"/>
+    <line x1="884.5" y1="308.5" x2="727" y2="428.5"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z104-g)">
+    <path d="M600,254 C606,225 629,206 657,198"/>
+    <path d="M675,208 C670,236 645,255 619,262"/>
+    <path d="M639,279 C682,274 738,264 788,276"/>
+    <path d="M799,304 C754,318 701,319 655,310"/>
+  </g>
+
+  <!-- 円形運動（青緑の点線。円の下を通る） -->
+  <g fill="none" stroke="#3FA9C1" stroke-width="5" stroke-dasharray="14 9">
+    <ellipse cx="635.6" cy="297" rx="221" ry="75"/>
+    <ellipse cx="696.5" cy="177" rx="66" ry="212" transform="rotate(56.9 696.5 177)"/>
+  </g>
+
+  <!-- 心と体（左が性相、右が形状。中で円形運動） -->
+  <circle cx="544.5" cy="297" r="52.5" fill="#A0F08A"/>
+  <path d="M538.5,244.8 Q519.3,278.7 543,298 Q560.8,318.3 543.5,349.5 A52.5,52.5 0 0 1 538.5,244.8 Z" fill="#F98AEE"/>
+  <circle cx="884.5" cy="298" r="52.5" fill="#A0F08A"/>
+  <path d="M878.5,245.8 Q857.8,274.1 884,302 Q901,317.8 884,350.5 A52.5,52.5 0 0 1 878.5,245.8 Z" fill="#F98AEE"/>
+  <g stroke="currentColor" stroke-width="3.5">
+    <circle cx="544.5" cy="297" r="52.5" fill="none"/>
+    <circle cx="884.5" cy="298" r="52.5" fill="none"/>
+    <circle cx="721" cy="160" r="49" fill="#fff" class="paper"/>
+    <ellipse cx="720.5" cy="428.5" rx="58.5" ry="49.5" fill="#FCE5E3"/>
+  </g>
+  <g stroke="#111" stroke-width="3.5" fill="none" marker-end="url(#z104-d)">
+    <path d="M522,309 C533,304 547,300 559,306"/>
+    <path d="M566,322 C555,327 541,331 529,326"/>
+    <path d="M862,311 C874,305 889,300 900,309"/>
+    <path d="M906,321 C896,329 881,331 869,327"/>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="718" y="158.5" font-size="53">神</text>
+    <g font-size="37" fill="#111">
+      <text x="543" y="275.5">心</text>
+      <text x="883" y="275">体</text>
+    </g>
+    <g font-size="38" fill="#111">
+      <text x="695" y="428.5">完</text>
+      <text x="721" y="428.5">・</text>
+      <text x="749" y="428.5">人</text>
+    </g>
+  </g>
+
+  <g font-size="37" dominant-baseline="central">
+    <text x="856" y="149">合性一体化</text>
+    <text x="227" y="326">合性一体化</text>
+  </g>
+
+  <g>
+    <circle cx="517" cy="513" r="6.8"/>
+    <circle cx="516.5" cy="570.5" r="6.8"/>
+    <circle cx="516.5" cy="624.5" r="6.8"/>
+  </g>
+  <g font-size="43" dominant-baseline="central">
+    <text x="529" y="514.5" textLength="439" lengthAdjust="spacing">創造目的完成した人間</text>
+    <text x="529" y="571" textLength="221" lengthAdjust="spacing">立体的存在</text>
+    <text x="529" y="626.5" textLength="265" lengthAdjust="spacing">無形世界主管</text>
+  </g>
+</svg>

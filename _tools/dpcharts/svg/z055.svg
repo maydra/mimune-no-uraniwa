@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>被造世界の共通事実　陽性と陰性の二性性相</title>
+
+  <text x="52" y="60" font-size="50" dominant-baseline="central" textLength="450" lengthAdjust="spacing">被造世界の共通事実</text>
+  <line x1="52" y1="90.5" x2="502" y2="90.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <g font-size="54" dominant-baseline="central">
+    <text x="208" y="198">存在（自体内）</text>
+    <text x="963" y="198" text-anchor="middle">他の存在</text>
+  </g>
+
+  <!-- 陽性と陰性の円（左） -->
+  <g>
+    <path d="M244,353.5 C284.3,377.5 298.7,377.5 339,353.5 S393.7,329.5 434,353.5 A95,95 0 0 0 244,353.5 Z" fill="#F98AEE"/>
+    <path d="M244,353.5 C284.3,377.5 298.7,377.5 339,353.5 S393.7,329.5 434,353.5 A95,95 0 0 1 244,353.5 Z" fill="#A0F08A"/>
+    <path d="M244,353.5 C284.3,377.5 298.7,377.5 339,353.5 S393.7,329.5 434,353.5" fill="none" stroke="#111" stroke-width="3.5"/>
+    <circle cx="339" cy="353.5" r="95" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <g fill="#111">
+      <rect x="314" y="298.5" width="51" height="8"/>
+      <rect x="333.5" y="283" width="11" height="40"/>
+      <rect x="314" y="406" width="51" height="10"/>
+    </g>
+  </g>
+  <!-- 同じ円（右） -->
+  <g transform="translate(634.5,0)">
+    <path d="M244,353.5 C284.3,377.5 298.7,377.5 339,353.5 S393.7,329.5 434,353.5 A95,95 0 0 0 244,353.5 Z" fill="#F98AEE"/>
+    <path d="M244,353.5 C284.3,377.5 298.7,377.5 339,353.5 S393.7,329.5 434,353.5 A95,95 0 0 1 244,353.5 Z" fill="#A0F08A"/>
+    <path d="M244,353.5 C284.3,377.5 298.7,377.5 339,353.5 S393.7,329.5 434,353.5" fill="none" stroke="#111" stroke-width="3.5"/>
+    <circle cx="339" cy="353.5" r="95" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <g fill="#111">
+      <rect x="314" y="298.5" width="51" height="8"/>
+      <rect x="333.5" y="283" width="11" height="40"/>
+      <rect x="314" y="406" width="51" height="10"/>
+    </g>
+  </g>
+
+  <!-- 陽性（+）・陰性（-） -->
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="505" y="313" font-size="40">陽性</text>
+    <text x="813" y="313" font-size="40">陰性</text>
+    <text x="504.5" y="372" font-size="46">（+）</text>
+    <text x="812.5" y="370" font-size="46">（-）</text>
+  </g>
+  <g stroke="currentColor" stroke-width="3.5">
+    <line x1="459" y1="338" x2="551" y2="338"/>
+    <line x1="764" y1="338" x2="855" y2="338"/>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="563,349.5 725,349.5 725,343.5 754,357.5 725,372 725,366.5 563,366.5"/>
+    <polygon points="752.5,377.5 589,377.5 589,371.5 562,386 589,400.5 589,394.5 752.5,394.5"/>
+  </g>
+  <text x="658" y="443" font-size="50" text-anchor="middle" dominant-baseline="central">二性性相</text>
+
+  <rect x="348" y="520.5" width="591" height="75.5" fill="#CDF8F7" stroke="currentColor" stroke-width="3.5"/>
+  <text x="643.5" y="558" font-size="54" text-anchor="middle" dominant-baseline="central" fill="#111">陽性と陰性の二性性相</text>
+</svg>

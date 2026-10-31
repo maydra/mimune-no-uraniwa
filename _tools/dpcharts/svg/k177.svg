@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>(3) み旨から見たイサクの位置と彼の象徴献祭</title>
+
+  <text x="49" y="39.5" font-size="30" dominant-baseline="central" textLength="40" lengthAdjust="spacingAndGlyphs">(3)</text>
+  <text x="98" y="39.5" font-size="30" dominant-baseline="central" textLength="508" lengthAdjust="spacingAndGlyphs">み旨から見たイサクの位置と彼の象徴献祭</text>
+  <line x1="97" y1="58" x2="606" y2="58" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 上向きの矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="257,260 264,260 264,182.5 271,182.5 260.5,169.5 250,182.5 257,182.5"/>
+    <polygon points="535,260 543,260 543,182.5 547,182.5 539,169 531,182.5 535,182.5"/>
+    <polygon points="370,213 421,213 421,205 451,219.5 421,234 421,226 370,226"/>
+  </g>
+
+  <!-- 象徴献祭の失敗の × -->
+  <path d="M243,195.5 L277,230 M277,195 L242,230" stroke="currentColor" stroke-width="4.5"/>
+
+  <!-- 神 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2">
+    <circle cx="261" cy="125.5" r="38.5"/>
+    <circle cx="539" cy="126" r="36.5"/>
+  </g>
+  <g font-size="37" text-anchor="middle" dominant-baseline="central">
+    <text x="260" y="125.5">神</text>
+    <text x="537.5" y="125">神</text>
+  </g>
+
+  <!-- アブラハム -->
+  <g stroke="currentColor" stroke-width="2.2" fill="#F8F28F">
+    <ellipse cx="259.5" cy="285" rx="70.5" ry="28"/>
+    <ellipse cx="538.5" cy="285" rx="70.5" ry="28"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="260.5" y="285" textLength="115" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+    <text x="539.5" y="285" textLength="115" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+  </g>
+
+  <g dominant-baseline="central">
+    <text x="176" y="188.5" font-size="29" textLength="57" lengthAdjust="spacingAndGlyphs">象徴</text>
+    <text x="176" y="223" font-size="29" textLength="57" lengthAdjust="spacingAndGlyphs">献祭</text>
+    <text x="295" y="220.5" font-size="26" textLength="51" lengthAdjust="spacingAndGlyphs">失敗</text>
+    <text x="555" y="219" font-size="26" textLength="130" lengthAdjust="spacingAndGlyphs">イサク燔祭</text>
+  </g>
+
+  <!-- 箇条書き（点は円で描く） -->
+  <g>
+    <circle cx="136.5" cy="352" r="6.5"/>
+    <circle cx="388" cy="352" r="6.5"/>
+    <circle cx="388" cy="392.5" r="6.5"/>
+  </g>
+  <g font-size="26" dominant-baseline="central">
+    <text x="147" y="352" textLength="157" lengthAdjust="spacing">再び同じ摂理</text>
+    <text x="148" y="391.5" textLength="103" lengthAdjust="spacingAndGlyphs">できない</text>
+    <text x="401" y="352.5" textLength="236" lengthAdjust="spacing">失敗しなかった立場</text>
+    <text x="401" y="391.5" textLength="262" lengthAdjust="spacing">延長されなかった立場</text>
+  </g>
+</svg>

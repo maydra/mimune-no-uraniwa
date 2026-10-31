@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 民主主義　中世封建時代から専制君主時代へ</title>
+
+  <!-- 題 -->
+  <g dominant-baseline="central">
+    <text x="47" y="32.5" font-size="30" text-anchor="middle">Ⅰ</text>
+    <circle cx="63" cy="42" r="2.5"/>
+    <text x="79" y="32" font-size="30" textLength="125" lengthAdjust="spacing">民主主義</text>
+  </g>
+  <line x1="78" y1="51" x2="204" y2="51" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- 黒い矢印と灰色の括弧（楕円の下に描く） -->
+  <polygon points="301,141 301,320 296,320 304.5,335 313,320 308,320 308,141"/>
+  <path d="M455,337.5 H432.5 V400.5 H455 M413,369.5 H455" fill="none" stroke="#8C949A" stroke-width="6"/>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="427,174.5 351.5,174.5 351.5,164.5 327.5,181 351.5,197.5 351.5,187.5 427,187.5"/>
+    <polygon points="427,259.5 351,259.5 351,250 326,266 351,282 351,272.5 427,272.5"/>
+  </g>
+
+  <!-- 時代の楕円 -->
+  <g fill="#CF921C" stroke="currentColor" stroke-width="3">
+    <ellipse cx="305.75" cy="109.5" rx="107.75" ry="32"/>
+    <ellipse cx="304.5" cy="371.5" rx="108" ry="32"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="306.5" y="109" textLength="171" lengthAdjust="spacing">中世封建時代</text>
+    <text x="304.5" y="372" textLength="173" lengthAdjust="spacing">専制君主時代</text>
+  </g>
+
+  <!-- 十字軍戦争・文芸復興・宗教改革 -->
+  <rect x="427" y="154" width="163" height="49" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <g stroke="currentColor" stroke-width="3">
+    <rect x="427" y="228.5" width="163" height="37" fill="#F86D42"/>
+    <rect x="427" y="265.5" width="163" height="34.5" fill="#F8F28F"/>
+  </g>
+  <g font-size="26" dominant-baseline="central">
+    <text x="444" y="178" textLength="130" lengthAdjust="spacing">十字軍戦争</text>
+    <text x="457" y="245.5" textLength="104" lengthAdjust="spacing" fill="#111">文芸復興</text>
+    <text x="457" y="283" textLength="104" lengthAdjust="spacing" fill="#111">宗教改革</text>
+  </g>
+
+  <!-- 専制君主時代の説明（元は細字） -->
+  <g font-size="23" font-weight="400" dominant-baseline="central">
+    <text y="337.5"><tspan x="467" textLength="21" lengthAdjust="spacingAndGlyphs">17</tspan><tspan x="495" textLength="93" lengthAdjust="spacing">世紀中葉</tspan></text>
+    <text x="465" y="368.5" textLength="141" lengthAdjust="spacing">絶対主義国家</text>
+    <text x="466" y="400.5" textLength="164" lengthAdjust="spacing">国王の絶対権限</text>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>2. 人間の犯罪　堕落前と堕落後（創 2:25、創 3:7）　下部：科（とが）→ 罪を犯す</title>
+
+  <text x="50" y="56.5" font-size="48" dominant-baseline="central">2.</text>
+  <text x="114" y="56.5" font-size="48" dominant-baseline="central" textLength="250" lengthAdjust="spacing">人間の犯罪</text>
+  <line x1="114" y1="87" x2="364" y2="87" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- アダムとエバから2本の線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="9.5">
+    <line x1="390" y1="188" x2="330" y2="268"/>
+    <line x1="390" y1="372" x2="330" y2="292"/>
+  </g>
+
+  <!-- ア・エの楕円（S字で左右に分ける） -->
+  <path d="M279,235 C262,246 255,262 270,275 C285,288 293,303 270,323.7 A76.5,44.5 0 0 1 279,235 Z" fill="#F98AEE"/>
+  <path d="M279,235 C262,246 255,262 270,275 C285,288 293,303 270,323.7 A76.5,44.5 0 1 0 279,235 Z" fill="#A0F08A"/>
+  <path d="M279,235 C262,246 255,262 270,275 C285,288 293,303 270,323.7" fill="none" stroke="#111" stroke-width="5"/>
+  <ellipse cx="279.5" cy="279.5" rx="76.5" ry="44.5" fill="none" stroke="currentColor" stroke-width="4"/>
+  <g font-size="42" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="236" y="283">ア</text>
+    <text x="313.5" y="279.5">エ</text>
+  </g>
+
+  <g font-size="46" dominant-baseline="central">
+    <text y="175.5"><tspan x="399" textLength="138" lengthAdjust="spacing">堕落前</tspan><tspan x="546.7">：</tspan><tspan x="581" font-size="45.5" textLength="455" lengthAdjust="spacing">裸でいても恥ずかしく</tspan></text>
+    <text x="582" y="230" textLength="185" lengthAdjust="spacing">思わない</text>
+    <text y="284.5"><tspan x="577.5">（</tspan><tspan x="598">創</tspan> <tspan x="654.5" textLength="92.5" lengthAdjust="spacingAndGlyphs">2:25</tspan><tspan x="745.3">）</tspan></text>
+    <text y="380.5"><tspan x="400" textLength="138" lengthAdjust="spacing">堕落後</tspan><tspan x="548.7">：</tspan><tspan x="584" textLength="228" lengthAdjust="spacing">下部を覆う</tspan><tspan x="819.5">（</tspan><tspan x="840">創</tspan> <tspan x="895.8" textLength="71" lengthAdjust="spacingAndGlyphs">3:7</tspan><tspan x="964.3">）</tspan></text>
+  </g>
+
+  <polygon points="631.5,434 663.5,434 663.5,467 685.5,467 647.5,497.5 609.5,467 631.5,467" fill="#8C949A"/>
+
+  <!-- 下部：科 → 罪を犯す -->
+  <rect x="376" y="526" width="538.5" height="93.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g fill="#111" dominant-baseline="central">
+    <text y="581" font-size="49"><tspan x="399" textLength="98" lengthAdjust="spacing">下部</tspan><tspan x="511.2">：</tspan><tspan x="549">科</tspan><tspan x="696" textLength="196" lengthAdjust="spacing">罪を犯す</tspan></text>
+    <text x="575" y="543.5" font-size="23" text-anchor="middle" textLength="46" lengthAdjust="spacing">とが</text>
+  </g>
+  <polygon points="626,573 648.5,573 648.5,565 671,580.5 648.5,596 648.5,588 626,588" fill="#8C949A" stroke="#111" stroke-width="2"/>
+</svg>

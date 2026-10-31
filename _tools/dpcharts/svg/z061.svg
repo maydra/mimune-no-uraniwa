@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間の心と体　性相と形状の二性性相</title>
+
+  <!-- 太い線（円・箱の下に描く） -->
+  <g stroke="currentColor" stroke-width="9" fill="none">
+    <line x1="330" y1="288" x2="420" y2="228"/>
+    <line x1="330" y1="386.25" x2="420" y2="444.75"/>
+    <polyline points="795,248.25 844.45,338.5 795,428.75"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="293.5" cy="341" rx="78.75" ry="77" fill="#FCE5E3"/>
+    <circle cx="472" cy="223" r="63" fill="#F98AEE"/>
+    <circle cx="472.5" cy="453" r="63" fill="#A0F08A"/>
+    <rect x="606.5" y="166.5" width="207" height="97.5" rx="21" fill="#F98AEE"/>
+    <rect x="613.5" y="404.5" width="199" height="94.5" rx="18" fill="#A0F08A"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="292.5" y="340.5" font-size="58">人間</text>
+    <text x="472.5" y="220.5" font-size="68">心</text>
+    <text x="472.5" y="451.5" font-size="68">体</text>
+    <text x="709" y="214.5" font-size="68">性相</text>
+    <text x="712" y="452" font-size="68">形状</text>
+  </g>
+
+  <!-- ＝ -->
+  <g>
+    <rect x="550" y="207" width="49" height="8"/>
+    <rect x="550" y="221" width="49" height="7"/>
+    <rect x="550" y="442" width="49" height="7"/>
+    <rect x="550" y="455" width="49" height="8"/>
+  </g>
+
+  <g fill="#8C949A">
+    <polygon points="465.5,289 480.5,289 480.5,348.5 491.5,348.5 473,385 454.5,348.5 465.5,348.5"/>
+    <polygon points="706.5,278 720.5,278 720.5,358.5 731.5,358.5 713.5,396 695.5,358.5 706.5,358.5"/>
+  </g>
+
+  <text x="860" y="348.5" font-size="60" dominant-baseline="central" textLength="240" lengthAdjust="spacing">二性性相</text>
+  <text x="473.5" y="565" font-size="44" text-anchor="middle" dominant-baseline="central">第二の心</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神・イエス・聖霊・善の子女の四位基台</title>
+
+  <!-- 四位の線（円・楕円より先に描く） -->
+  <g stroke="currentColor" stroke-width="10">
+    <line x1="639.5" y1="126" x2="493.6" y2="320.5"/>
+    <line x1="661.9" y1="126" x2="805.4" y2="320.5"/>
+    <line x1="485.4" y1="320.5" x2="646.4" y2="550.5"/>
+    <line x1="819.7" y1="320.5" x2="658.6" y2="550.5"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="651" cy="126" rx="72" ry="67" fill="#fff" class="paper"/>
+    <ellipse cx="483.5" cy="320.5" rx="109.5" ry="58.5" fill="#F98AEE"/>
+    <ellipse cx="823" cy="320.5" rx="112" ry="58.5" fill="#A0F08A"/>
+    <ellipse cx="652.5" cy="550.5" rx="103.5" ry="78.5" fill="#FCE5E3"/>
+  </g>
+
+  <!-- イエスと聖霊の授受 -->
+  <g>
+    <path d="M602,297 Q642.2,276.8 675.5,289.5" fill="none" stroke="currentColor" stroke-width="10"/>
+    <polygon points="680.6,276.2 703,300 670.4,302.8"/>
+    <path d="M700,345.5 C678.6,358.3 650.9,364.3 623.5,352" fill="none" stroke="currentColor" stroke-width="10"/>
+    <polygon points="629.5,338.6 599,341 617.5,365.4"/>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="647.5" y="123.5" font-size="70">神</text>
+    <g fill="#111">
+      <text x="483" y="319.5" font-size="54" textLength="170" lengthAdjust="spacing">イエス</text>
+      <text x="822.5" y="319.5" font-size="58" textLength="123" lengthAdjust="spacing">聖霊</text>
+      <text x="651.5" y="518" font-size="57">善の</text>
+      <text x="652.5" y="581" font-size="57">子女</text>
+    </g>
+  </g>
+
+  <text x="302" y="215" font-size="55" font-weight="400" dominant-baseline="central" textLength="171" lengthAdjust="spacing">真の父</text>
+</svg>

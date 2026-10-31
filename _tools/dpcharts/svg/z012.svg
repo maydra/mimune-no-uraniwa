@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間の堕落と無知</title>
+
+  <text x="50" y="78" font-size="48" textLength="400" lengthAdjust="spacing">人間の堕落と無知</text>
+  <line x1="50" y1="89.5" x2="450" y2="89.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 人から心と体へ（端は人と円で隠す） -->
+  <g stroke="currentColor" stroke-width="17">
+    <line x1="450" y1="335.5" x2="560" y2="247.5"/>
+    <line x1="420" y1="410.7" x2="570" y2="505.3"/>
+  </g>
+
+  <!-- 人（100×240 の型を置く） -->
+  <g transform="translate(286,186.9) scale(1.9,1.665)" fill="#FCE6E5" stroke="#111" stroke-width="2.3" stroke-linejoin="round">
+    <path d="M43,40 L43,48 C30,49 14,50 10,58 L4,130 Q3,140 9,141 Q15,141 15,132 L21,78 L23,124 L26,232 Q26,238 33,238 L41,238 Q47,238 47,232 L49,134 L51,134 L53,232 Q53,238 59,238 L67,238 Q74,238 74,232 L77,124 L79,78 L85,132 Q85,141 91,141 Q97,140 96,130 L90,58 C86,50 70,49 57,48 L57,40 Z"/>
+    <circle cx="50" cy="22" r="19"/>
+  </g>
+
+  <!-- 心・体 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="618.7" cy="262.2" rx="82.5" ry="80.2" fill="#F98AEE"/>
+    <ellipse cx="621" cy="485.8" rx="83" ry="80.2" fill="#A0F08A"/>
+  </g>
+  <g font-size="66" fill="#111" text-anchor="middle" dominant-baseline="central">
+    <text x="619.5" y="263">心</text>
+    <text x="621.5" y="484.5">体</text>
+  </g>
+
+  <g fill="#8C949A">
+    <polygon points="753,249.5 841,249.5 841,243.5 871.5,259 841,274.5 841,267.5 753,267.5"/>
+    <polygon points="753,476.5 841,476.5 841,470.5 871.5,486 841,501.5 841,494.5 753,494.5"/>
+  </g>
+
+  <g font-size="56" text-anchor="middle" dominant-baseline="central">
+    <text x="968" y="226.5">内的</text>
+    <text x="968" y="288.5">無知</text>
+    <text x="966" y="458.5">外的</text>
+    <text x="966" y="520.5">無知</text>
+  </g>
+</svg>

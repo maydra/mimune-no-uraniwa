@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>アダムからヨセフまでの代数と数理的な蕩減期間（12・4・21・40）</title>
+
+  <!-- 年数の柱（緑の帯と黒い線） -->
+  <rect x="336" y="71" width="11" height="302" fill="#A0F08A"/>
+  <line x1="333" y1="69.5" x2="333" y2="376.5" stroke="currentColor" stroke-width="5.5"/>
+
+  <!-- 人物どうしをつなぐ弧 -->
+  <g fill="none" stroke="currentColor" stroke-width="4">
+    <path d="M331,70 C318,76 318,115 331,121"/>
+    <path d="M331,121 C319,127 319,164 331,170"/>
+    <path d="M331,172 C322,196 321.5,220 321.5,250 V300 C321.5,328 324,352 331,374"/>
+  </g>
+
+  <!-- 柱の目盛りと、人物から数字の丸への線 -->
+  <g stroke="currentColor" stroke-width="3">
+    <line x1="321" y1="222.5" x2="354" y2="222.5"/>
+    <line x1="321" y1="273" x2="354" y2="273"/>
+    <line x1="321" y1="323.5" x2="354" y2="323.5"/>
+    <line x1="312" y1="375" x2="354" y2="375"/>
+  </g>
+  <g stroke="currentColor" stroke-width="6">
+    <line x1="314" y1="69.5" x2="420" y2="69.5"/>
+    <line x1="314" y1="121" x2="420" y2="121"/>
+    <line x1="314" y1="170" x2="420" y2="170"/>
+  </g>
+
+  <!-- 人物 -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="3">
+    <ellipse cx="262.5" cy="67" rx="53.5" ry="18"/>
+    <ellipse cx="262.5" cy="119" rx="53.5" ry="18"/>
+    <ellipse cx="263.5" cy="169.5" rx="53.5" ry="18"/>
+    <ellipse cx="263.5" cy="208.5" rx="53.5" ry="18" stroke-width="5"/><!-- イサクだけ縁が太いのは元どおり -->
+    <ellipse cx="263.5" cy="274" rx="53.5" ry="18"/>
+    <ellipse cx="261" cy="375" rx="53.5" ry="18"/>
+  </g>
+  <g font-size="24" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="263.5" y="67" textLength="69" lengthAdjust="spacing">アダム</text>
+    <text x="263.5" y="119.5" textLength="47" lengthAdjust="spacing">ノア</text>
+    <text x="264.5" y="169" font-size="22" textLength="73" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+    <text x="262" y="209" textLength="72" lengthAdjust="spacing">イサク</text>
+    <text x="263" y="274.5" textLength="68" lengthAdjust="spacing">ヤコブ</text>
+    <text x="259.5" y="375.5" textLength="69" lengthAdjust="spacing">ヨセフ</text>
+  </g>
+
+  <!-- 年数 -->
+  <g font-size="23" text-anchor="end" dominant-baseline="central">
+    <text x="401" y="93" textLength="47" lengthAdjust="spacingAndGlyphs">1600</text>
+    <text x="401" y="143" textLength="39" lengthAdjust="spacingAndGlyphs">400</text>
+    <text x="401" y="197" textLength="41" lengthAdjust="spacingAndGlyphs">120</text>
+    <text x="400" y="242.5" textLength="27" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="398" y="296" textLength="22" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="400" y="352" textLength="27" lengthAdjust="spacingAndGlyphs">40</text>
+  </g>
+
+  <!-- 灰色の矢印（12・4・21・40 から 120・40・21・40 へ） -->
+  <g fill="none" stroke="#8C949A" stroke-width="5.5">
+    <path d="M440.5,180 V196.5 H417"/>
+    <path d="M496.5,180 V242 H417"/>
+    <path d="M547.5,180 V296.5 H417"/>
+    <path d="M600.5,180 V350.5 H417"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="418,190.5 406.5,196.5 418,202.5"/>
+    <polygon points="418,236 406.5,242 418,248"/>
+    <polygon points="418,290.5 406.5,296.5 418,302.5"/>
+    <polygon points="418,344.5 406.5,350.5 418,356.5"/>
+  </g>
+
+  <!-- 数字の丸 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="4">
+    <ellipse cx="442.5" cy="69.5" rx="24" ry="13.5"/>
+    <ellipse cx="494" cy="69.5" rx="24" ry="13.5"/>
+    <ellipse cx="546" cy="69.5" rx="24" ry="13.5"/>
+    <ellipse cx="599.5" cy="69.5" rx="24" ry="13.5"/>
+    <ellipse cx="442.5" cy="120" rx="24" ry="13.5"/>
+    <ellipse cx="494" cy="120" rx="24" ry="13.5"/>
+    <ellipse cx="546" cy="120" rx="24" ry="13.5"/>
+    <ellipse cx="599.5" cy="120" rx="24" ry="13.5"/>
+  </g>
+  <g fill="#687C83" stroke="currentColor" stroke-width="1.5">
+    <ellipse cx="441.5" cy="169.5" rx="24.5" ry="14.5"/>
+    <ellipse cx="494" cy="169.5" rx="24.5" ry="14.5"/>
+    <ellipse cx="547" cy="169.5" rx="24.5" ry="14.5"/>
+    <ellipse cx="599.5" cy="169.5" rx="24.5" ry="14.5"/>
+  </g>
+  <g font-size="24" text-anchor="middle" dominant-baseline="central">
+    <text x="441" y="70" textLength="30" lengthAdjust="spacingAndGlyphs">12</text>
+    <text x="494" y="70">4</text>
+    <text x="546" y="70" textLength="29" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="599" y="70" textLength="32" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="443" y="120.5" font-size="22" textLength="33" lengthAdjust="spacingAndGlyphs">120</text>
+    <text x="494" y="120.5" textLength="31" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="546.5" y="120.5" textLength="29" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="600" y="120.5" textLength="32" lengthAdjust="spacingAndGlyphs">40</text>
+  </g>
+  <g font-size="24" text-anchor="middle" dominant-baseline="central" fill="#fff">
+    <text x="442" y="170" textLength="27" lengthAdjust="spacingAndGlyphs">12</text>
+    <text x="494" y="170">4</text>
+    <text x="547" y="170" textLength="27" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="600" y="170" textLength="28" lengthAdjust="spacingAndGlyphs">40</text>
+  </g>
+</svg>

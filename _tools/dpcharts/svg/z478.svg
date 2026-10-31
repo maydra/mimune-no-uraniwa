@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 死と生に対する聖書的概念　死人を葬ることは、死人に任せておくがよい（ルカ 9:60）</title>
+
+  <text x="55" y="78" font-size="48">Ⅰ.</text>
+  <text x="139" y="58" font-size="50" dominant-baseline="central" textLength="600" lengthAdjust="spacing">死と生に対する聖書的概念</text>
+  <line x1="139" y1="88" x2="739" y2="88" stroke="currentColor" stroke-width="3"/>
+
+  <text y="140" font-size="42" dominant-baseline="central"><tspan x="242" textLength="334" lengthAdjust="spacing">死人を葬ることは</tspan><tspan x="576">、</tspan><tspan x="617" textLength="460" lengthAdjust="spacing">死人に任せておくがよい</tspan></text>
+  <text y="188.5" font-size="32" font-weight="400" dominant-baseline="central"><tspan x="898" textLength="76" lengthAdjust="spacingAndGlyphs">(ルカ</tspan> <tspan x="993" textLength="79" lengthAdjust="spacingAndGlyphs">9:60)</tspan></text>
+
+  <!-- 死人 -->
+  <g stroke="currentColor" stroke-width="4" fill="#CF921C">
+    <rect x="245.5" y="190.5" width="154" height="71" rx="5"/>
+    <rect x="627.5" y="189.5" width="149.5" height="73" rx="5"/>
+  </g>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="322" y="226" textLength="92" lengthAdjust="spacing">死人</text>
+    <text x="702" y="225" textLength="92" lengthAdjust="spacing">死人</text>
+  </g>
+
+  <!-- 死人から死への点線 -->
+  <g stroke="currentColor" stroke-width="8.5" stroke-dasharray="13 11.5">
+    <line x1="322.5" y1="276" x2="322.5" y2="338"/>
+    <line x1="701" y1="276" x2="701" y2="338"/>
+  </g>
+  <g font-size="42" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="412.5" y="295.5">①</text>
+    <text x="789.5" y="295.5">②</text>
+  </g>
+
+  <!-- 灰色の矢印（円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="315.5,430 328.5,430 328.5,499 336.5,499 322,525 307.5,499 315.5,499"/>
+    <polygon points="694.5,430 707.5,430 707.5,502 715.5,502 701,527 686.5,502 694.5,502"/>
+  </g>
+
+  <!-- 死と生の円 -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="322" cy="390" r="50" fill="#CF921C"/>
+    <circle cx="322" cy="580" r="50" fill="#CF921C"/>
+    <circle cx="701" cy="391" r="50" fill="#50403D"/>
+    <circle cx="701" cy="581" r="50" fill="#FCE5E3"/>
+  </g>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="322.5" y="390.5" fill="#111">死</text>
+    <text x="322" y="581" fill="#111">生</text>
+    <text x="701" y="392.5" fill="#fff">死</text>
+    <text x="701" y="582" fill="#111">生</text>
+  </g>
+
+  <!-- 説明 -->
+  <g font-size="42" font-weight="400" dominant-baseline="central">
+    <text x="393" y="354" textLength="125" lengthAdjust="spacing">肉身の</text>
+    <text x="393" y="404" textLength="84" lengthAdjust="spacing">寿命</text>
+    <text x="393" y="454.5" textLength="125" lengthAdjust="spacing">切れる</text>
+    <text x="393" y="536" textLength="125" lengthAdjust="spacing">肉身の</text>
+    <text x="393" y="586" textLength="125" lengthAdjust="spacing">生理的</text>
+    <text x="391" y="636" textLength="168" lengthAdjust="spacing">機能維持</text>
+    <text x="770" y="366.5" textLength="335" lengthAdjust="spacing">サタンの主管圏内</text>
+    <text x="770" y="416.5" textLength="125" lengthAdjust="spacing">落ちる</text>
+    <text x="770" y="533" textLength="167" lengthAdjust="spacing">神の愛の</text>
+    <text x="770" y="582" textLength="167" lengthAdjust="spacing">主管圏内</text>
+    <text x="770" y="632.5" textLength="291" lengthAdjust="spacing">み言どおり活動</text>
+  </g>
+</svg>

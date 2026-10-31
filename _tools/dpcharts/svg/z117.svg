@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 被造世界を創造された目的</title>
+  <defs>
+    <marker id="z117-a" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="77" y="76" font-size="48" text-anchor="middle">Ⅰ</text>
+  <text x="107.5" y="76" font-size="48" text-anchor="middle">.</text>
+  <text x="128" y="76" font-size="48" textLength="597" lengthAdjust="spacing">被造世界を創造された目的</text>
+  <line x1="127" y1="86" x2="727" y2="86" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神と被造世界の授受 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="394" cy="238" rx="87" ry="57" fill="#fff" class="paper"/>
+    <ellipse cx="394" cy="482.5" rx="87" ry="57.5" fill="#DCC4C4"/>
+  </g>
+  <g font-size="61" text-anchor="middle" dominant-baseline="central">
+    <text x="390.5" y="237">神</text>
+    <text x="392" y="481.5" fill="#111">被</text>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="8" marker-end="url(#z117-a)">
+    <path d="M369,413 C355,390 352,353 367,327"/>
+    <path d="M409,306 C421,330 426,362 411,391"/>
+  </g>
+  <g font-size="37" dominant-baseline="central">
+    <text x="284" y="574">(創</text>
+    <text x="353" y="574" textLength="142" lengthAdjust="spacing">1:4-31)</text>
+  </g>
+
+  <g fill="#8C949A">
+    <polygon points="480,341 541,341 541,323 580,360 541,397 541,378 480,378"/>
+    <polygon points="752,341 813,341 813,323 852,360 813,397 813,378 752,378"/>
+  </g>
+
+  <!-- 善の対象 -->
+  <rect x="618.5" y="188" width="93.5" height="344" rx="12" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <g font-size="60" text-anchor="middle" dominant-baseline="central">
+    <text x="666.5" y="247.5">善</text>
+    <text x="666.5" y="324">の</text>
+    <text x="666.5" y="398">対</text>
+    <text x="666.5" y="472">象</text>
+  </g>
+
+  <!-- 喜び -->
+  <ellipse cx="945" cy="359" rx="64" ry="149" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g font-size="70" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="945" y="313">喜</text>
+    <text x="947.5" y="404">び</text>
+  </g>
+</svg>

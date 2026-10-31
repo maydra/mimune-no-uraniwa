@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>実体対象内部の円形運動</title>
+  <defs>
+    <marker id="z101-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+    <marker id="z101-d" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.8" markerHeight="2.8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <text x="52" y="76" font-size="48" textLength="548" lengthAdjust="spacing">実体対象内部の円形運動</text>
+  <line x1="51" y1="87.5" x2="601" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（円の下に描く。神と主体の間は矢印だけ） -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="687" y1="215" x2="873" y2="366.5"/>
+    <line x1="469" y1="366.5" x2="664" y2="524"/>
+    <line x1="906" y1="366.5" x2="701" y2="524"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z101-g)">
+    <path d="M530,317 C539,286 565,262 597,251"/>
+    <path d="M618,258 C610,289 587,313 554,323"/>
+    <path d="M580,360 C635,344 709,339 773,353"/>
+    <path d="M787,384 C730,399 660,402 599,391"/>
+  </g>
+
+  <!-- 円形運動（青緑の点線。円の下を通る） -->
+  <g fill="none" stroke="#3FA9C1" stroke-width="5" stroke-dasharray="14 9">
+    <ellipse cx="594" cy="370" rx="260" ry="84"/>
+    <ellipse cx="648" cy="243" rx="72" ry="228.5" transform="rotate(56.3 648 243)"/>
+  </g>
+
+  <!-- 主体と対象（左が性相、右が形状。中で円形運動） -->
+  <circle cx="468" cy="366.5" r="59" fill="#A0F08A"/>
+  <path d="M465,307.6 Q442,338 467,366.5 Q489,395 469,425.5 A59,59 0 0 1 465,307.6 Z" fill="#F98AEE"/>
+  <circle cx="897" cy="366.5" r="59" fill="#A0F08A"/>
+  <path d="M893,307.6 Q864,338 896.5,370 Q912,398 896,425.5 A59,59 0 0 1 893,307.6 Z" fill="#F98AEE"/>
+  <g fill="none" stroke="currentColor" stroke-width="3.5">
+    <circle cx="468" cy="366.5" r="59"/>
+    <circle cx="897" cy="366.5" r="59"/>
+  </g>
+  <g stroke="currentColor" stroke-width="3.5">
+    <circle cx="687" cy="218" r="59" fill="#fff" class="paper"/>
+    <circle cx="687" cy="524" r="59" fill="#DCC4C4"/>
+  </g>
+  <g stroke="#111" stroke-width="3.5" fill="none" marker-end="url(#z101-d)">
+    <path d="M446,379 C456,373 472,371 483,376"/>
+    <path d="M489,389 C478,397 463,400 451,394"/>
+    <path d="M873,379 C884,374 900,369 911,377"/>
+    <path d="M917,391 C905,395 891,401 879,394"/>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="684" y="217.5" font-size="57">神</text>
+    <text x="687" y="524.5" font-size="57" fill="#111">合</text>
+    <g font-size="37" fill="#111">
+      <text x="469.5" y="343.5">主体</text>
+      <text x="897" y="342.5">対象</text>
+    </g>
+    <g font-size="40">
+      <text x="463" y="474">円形運動</text>
+      <text x="896" y="471.5">円形運動</text>
+    </g>
+    <text x="691.5" y="617" font-size="45">実体対象</text>
+  </g>
+</svg>

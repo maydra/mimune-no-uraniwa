@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>実体基台</title>
+  <defs>
+    <marker id="k035-a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="4.4" markerHeight="4.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="k035-b" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="49" y="39" font-size="30" dominant-baseline="central" textLength="37" lengthAdjust="spacingAndGlyphs">(2)</text>
+  <text x="102" y="39" font-size="30" dominant-baseline="central" textLength="122" lengthAdjust="spacing">実体基台</text>
+  <line x1="101" y1="58" x2="225" y2="58" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 段の横線 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <line x1="128" y1="142" x2="683" y2="142"/>
+    <line x1="126" y1="195" x2="308" y2="195"/>
+    <line x1="128" y1="251" x2="347" y2="251"/>
+    <line x1="128" y1="306.5" x2="347" y2="306.5"/>
+  </g>
+
+  <!-- 矢印 -->
+  <g stroke="currentColor" stroke-width="3" fill="none" marker-end="url(#k035-a)">
+    <line x1="172" y1="311" x2="172" y2="199"/>
+    <line x1="172" y1="195" x2="172" y2="144" stroke-dasharray="12 3"/>
+    <line x1="176" y1="195" x2="280" y2="336"/>
+    <line x1="284" y1="337" x2="306.5" y2="201"/>
+  </g>
+  <line x1="308.5" y1="195" x2="308.5" y2="144" stroke="currentColor" stroke-width="3.6" marker-end="url(#k035-b)"/>
+  <polygon points="308,192 373,192 373,187.5 387,194.5 373,201.5 373,197 308,197" fill="currentColor"/>
+  <circle cx="308" cy="195" r="4.8" fill="currentColor"/>
+
+  <!-- 括弧 -->
+  <g fill="none" stroke="currentColor" stroke-width="2.4">
+    <path d="M366,142 Q371,142 371,149 L371,158 Q371,165 379,165 Q371,165 371,172 L371,183 Q371,189 366,190"/>
+    <path d="M366,203 Q371,204 371,212 L371,256 Q371,266 381,266 Q371,267 371,277 L371,333 Q371,341 365,343"/>
+  </g>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="310" cy="118.5" rx="50" ry="20.5" fill="#FCE5E3"/>
+    <ellipse cx="171" cy="330" rx="50" ry="20" fill="#FCE5E3"/>
+    <ellipse cx="282.5" cy="355" rx="48.5" ry="18.5" fill="#CF921C"/>
+  </g>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="310" y="118.5" textLength="76" lengthAdjust="spacing">完・人</text>
+    <text x="171" y="330" textLength="76" lengthAdjust="spacing">ア・エ</text>
+    <text x="282.5" y="355" textLength="76" lengthAdjust="spacing">堕・人</text>
+  </g>
+
+  <!-- 右の字 -->
+  <g fill="currentColor">
+    <circle cx="369.5" cy="116.5" r="1.7"/>
+    <circle cx="377" cy="116.5" r="1.7"/>
+    <circle cx="384.5" cy="116.5" r="1.7"/>
+    <circle cx="392" cy="116.5" r="1.7"/>
+    <circle cx="399.5" cy="116.5" r="1.7"/>
+  </g>
+  <text x="413" y="117" font-size="25" dominant-baseline="central" textLength="102" lengthAdjust="spacing">完成実体</text>
+  <text x="400" y="159.5" font-size="24" dominant-baseline="central" textLength="138" lengthAdjust="spacing">メシヤと一体</text>
+  <text x="400" y="194" font-size="24" dominant-baseline="central" textLength="141" lengthAdjust="spacing">メシヤ迎える</text>
+  <text x="543" y="194" font-size="19" dominant-baseline="central" textLength="125" lengthAdjust="spacing">（原罪取り除く）</text>
+
+  <rect x="394" y="240.5" width="241" height="38" fill="#CDF8F7" stroke="currentColor" stroke-width="2.2"/>
+  <text x="515" y="259.5" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="220" lengthAdjust="spacing">メシヤのための基台</text>
+
+  <g stroke="currentColor" stroke-width="2.6">
+    <line x1="510.5" y1="286" x2="510.5" y2="299"/>
+    <line x1="519" y1="286" x2="519" y2="299"/>
+    <line x1="506" y1="340" x2="522" y2="340"/>
+    <line x1="514" y1="332" x2="514" y2="348"/>
+  </g>
+  <g font-size="22" text-anchor="middle" dominant-baseline="central">
+    <text x="515.5" y="316.5" textLength="113" lengthAdjust="spacing">実体基台</text>
+    <text x="515.5" y="366" textLength="113" lengthAdjust="spacing">信仰基台</text>
+  </g>
+</svg>

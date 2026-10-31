@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>内的無知（霊的無知）と外的無知</title>
+
+  <!-- 人から箱へ（端は人と箱で隠す） -->
+  <g stroke="currentColor" stroke-width="17.5">
+    <line x1="345" y1="270.2" x2="410" y2="198.7"/>
+    <line x1="320" y1="412" x2="415" y2="486.1"/>
+  </g>
+
+  <!-- 人（100×240 の型を置く） -->
+  <g transform="translate(196,164.9) scale(1.9,1.665)" fill="#FCE6E5" stroke="#111" stroke-width="2.3" stroke-linejoin="round">
+    <path d="M43,40 L43,48 C30,49 14,50 10,58 L4,130 Q3,140 9,141 Q15,141 15,132 L21,78 L23,124 L26,232 Q26,238 33,238 L41,238 Q47,238 47,232 L49,134 L51,134 L53,232 Q53,238 59,238 L67,238 Q74,238 74,232 L77,124 L79,78 L85,132 Q85,141 91,141 Q97,140 96,130 L90,58 C86,50 70,49 57,48 L57,40 Z"/>
+    <circle cx="50" cy="22" r="19"/>
+  </g>
+
+  <!-- 内的無知・外的無知 -->
+  <g fill="#CF921C" stroke="currentColor" stroke-width="3.5">
+    <rect x="397" y="159.5" width="237.5" height="124.5"/>
+    <rect x="401.5" y="454.5" width="237" height="77"/>
+  </g>
+  <g fill="#111" text-anchor="middle" dominant-baseline="central">
+    <text x="516" y="194.5" font-size="49">内的無知</text>
+    <text x="516" y="251" font-size="43">（霊的無知）</text>
+    <text x="519.5" y="492" font-size="49">外的無知</text>
+  </g>
+
+  <g fill="#8C949A">
+    <polygon points="654,213.5 682,213.5 682,205 712.5,220 682,235.5 682,226.5 654,226.5"/>
+    <polygon points="654,486.5 682,486.5 682,478 712.5,493 682,508.5 682,499.5 654,499.5"/>
+  </g>
+
+  <!-- 箇条書き -->
+  <g>
+    <circle cx="740.5" cy="146.5" r="10"/>
+    <circle cx="740.5" cy="220" r="10"/>
+    <circle cx="740.5" cy="290" r="10"/>
+    <circle cx="740.5" cy="465" r="10"/>
+    <circle cx="740.5" cy="536" r="10"/>
+  </g>
+  <g font-size="44" dominant-baseline="central">
+    <text x="769" y="150.5">人間、生の目的</text>
+    <text x="769" y="221">来世、神</text>
+    <text x="769" y="291.5">善と悪</text>
+    <text x="769" y="467">肉身、自然界</text>
+    <text x="769" y="542">物質世界の</text>
+    <text x="769" y="596">根本、現象</text>
+  </g>
+</svg>

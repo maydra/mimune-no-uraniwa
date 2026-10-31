@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>ユダヤ人が信じればメシヤ、信じられなければ十字架（洗礼ヨハネとイエス）</title>
+
+  <!-- 灰色の矢印（楕円より先に描き、楕円で隠す） -->
+  <g stroke="#8C949A" stroke-width="8" fill="none">
+    <line x1="560" y1="204.5" x2="391" y2="204.5"/>
+    <line x1="766" y1="204.5" x2="949" y2="204.5"/>
+    <line x1="603" y1="514" x2="365.5" y2="302.5"/>
+    <line x1="729.6" y1="510" x2="943.8" y2="302.3"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="371,204.5 391.5,192.5 391.5,216.5"/>
+    <polygon points="969.5,204.5 949,192.5 949,216.5"/>
+    <polygon points="0,0 -20.5,-12 -20.5,12" transform="translate(350,289) rotate(-139)"/>
+    <polygon points="0,0 -20.5,-12 -20.5,12" transform="translate(958.5,288) rotate(-44.1)"/>
+    <polygon points="653,299 653,286 634,286 665,266.5 696,286 678,286 678,299"/>
+    <polygon points="653,457 653,444 634,444 665,424.5 696,444 678,444 678,457"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="663" cy="204" rx="111.5" ry="46.5" fill="#F8F28F"/>
+    <ellipse cx="663.5" cy="364" rx="111.5" ry="46.5" fill="#F86D42"/>
+    <ellipse cx="665" cy="542" rx="115" ry="68.5" fill="#F86D42"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="662" y="204" font-size="52">イエス</text>
+    <text x="662.5" y="364.5" font-size="40">洗礼ヨハネ</text>
+    <text x="666.5" y="516.5" font-size="45">ユダヤ人</text>
+    <text x="666" y="564.5" font-size="32" textLength="188" lengthAdjust="spacingAndGlyphs">(イスラエル)</text>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="284" y="204" font-size="50">メシヤ</text>
+    <text x="426.5" y="436.5" font-size="41">信じる</text>
+    <text x="971.5" y="430.5" font-size="41">信じられない</text>
+  </g>
+
+  <!-- 十字架（型を 1.4 倍） -->
+  <g transform="translate(986.0,142.0) scale(1.0600,1.2389)" stroke-width="2.610" fill="#7A5230" stroke="#111" stroke-linejoin="round">
+    <path d="M40,0 H60 V42 H100 V60 H60 V180 H40 V60 H0 V42 H40 Z"/>
+  </g>
+</svg>

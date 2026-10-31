@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>6. 民主主義と社会主義</title>
+
+  <!-- 題 -->
+  <g dominant-baseline="central">
+    <text x="34" y="35.5" font-size="30" textLength="25" lengthAdjust="spacingAndGlyphs">6.</text>
+    <text x="70.5" y="35" font-size="29" textLength="261" lengthAdjust="spacing">民主主義と社会主義</text>
+  </g>
+  <line x1="70" y1="53" x2="330" y2="53" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 灰色の矢印と分かれの線（楕円・箱の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="217.5,86 224.5,86 224.5,170 229.5,170 221,185.5 212.5,170 217.5,170"/>
+    <polygon points="217.5,290 224.5,290 224.5,390 229.5,390 221,405.5 212.5,390 217.5,390"/>
+  </g>
+  <path d="M295,243.5 H324.5 M343,149.5 H324.5 V338.5 H343" fill="none" stroke="#8C949A" stroke-width="6"/>
+
+  <!-- 民主主義、社会主義の楕円 -->
+  <ellipse cx="221.5" cy="242.5" rx="84.5" ry="55.5" fill="#F8F28F" stroke="currentColor" stroke-width="2.8"/>
+  <g font-size="28" dominant-baseline="central" fill="#111">
+    <text y="225"><tspan x="155.5" textLength="117" lengthAdjust="spacing">民主主義</tspan><tspan x="271.5">、</tspan></text>
+    <text x="220.5" y="259.5" text-anchor="middle" textLength="116.5" lengthAdjust="spacing">社会主義</text>
+  </g>
+
+  <!-- 宗教・政治・経済の札 -->
+  <g stroke="currentColor" stroke-width="2.8">
+    <rect x="340.5" y="113.5" width="42.5" height="67.5" rx="6" fill="#F98AEE"/>
+    <rect x="340.5" y="210.5" width="42.5" height="66.5" rx="6" fill="#FCE5E3"/>
+    <rect x="340.5" y="309.5" width="42.5" height="66.5" rx="6" fill="#A0F08A"/>
+  </g>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="362.5" y="133.5">宗</text>
+    <text x="362.5" y="160">教</text>
+    <text x="362.5" y="230.5">政</text>
+    <text x="362.5" y="257">治</text>
+    <text x="362.5" y="330">経</text>
+    <text x="362.5" y="356">済</text>
+  </g>
+
+  <!-- 右の字 -->
+  <g dominant-baseline="central">
+    <text x="397.7" y="132" font-size="26" textLength="288" lengthAdjust="spacing">キリスト教民主主義社会</text>
+    <text x="397.7" y="224.5" font-size="26" textLength="157.6" lengthAdjust="spacing">民主主義社会</text>
+    <text x="396.7" y="322.5" font-size="26" textLength="158.6" lengthAdjust="spacing">社会主義社会</text>
+
+    <g font-size="25" text-anchor="middle">
+      <text x="408" y="166">－</text>
+      <text x="408" y="262">－</text>
+      <text x="408" y="361">－</text>
+    </g>
+    <g font-size="25">
+      <text x="422.7" y="166" textLength="104.5" lengthAdjust="spacing">宗教改革</text>
+      <text y="259"><tspan x="422" textLength="25.5" lengthAdjust="spacing">英</tspan><tspan x="449">、</tspan><tspan x="475" textLength="25.5" lengthAdjust="spacing">米</tspan><tspan x="502">、</tspan><tspan x="527.5" textLength="78" lengthAdjust="spacing">仏革命</tspan></text>
+      <text x="422.7" y="357" textLength="236.5" lengthAdjust="spacing">民主主義的経済社会</text>
+    </g>
+
+    <!-- 年代 -->
+    <g font-size="25">
+      <text y="166"><tspan x="574" text-anchor="middle">(</tspan><tspan x="580.5" textLength="45" lengthAdjust="spacingAndGlyphs">1517</tspan></text>
+      <text y="224.5"><tspan x="572.5" text-anchor="middle">(</tspan><tspan x="579.5" textLength="33" lengthAdjust="spacingAndGlyphs">18C</tspan></text>
+      <text y="322.5"><tspan x="572.5" text-anchor="middle">(</tspan><tspan x="577.5" textLength="35" lengthAdjust="spacingAndGlyphs">20C</tspan></text>
+      <text y="166"><tspan x="667" text-anchor="middle">～</tspan><tspan x="683" text-anchor="middle">)</tspan></text>
+      <text y="224.5"><tspan x="654" text-anchor="middle">～</tspan><tspan x="670" text-anchor="middle">)</tspan></text>
+      <text y="322.5"><tspan x="654" text-anchor="middle">～</tspan><tspan x="670" text-anchor="middle">)</tspan></text>
+    </g>
+    <g font-size="22">
+      <text x="632" y="166" textLength="22.5" lengthAdjust="spacing">年</text>
+      <text x="619" y="224.5" textLength="22.5" lengthAdjust="spacing">末</text>
+      <text x="619" y="322.5" textLength="22.5" lengthAdjust="spacing">末</text>
+    </g>
+  </g>
+</svg>

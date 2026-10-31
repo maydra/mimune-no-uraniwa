@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>円形運動と合性体</title>
+  <defs>
+    <marker id="z099-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="76" font-size="48" textLength="397" lengthAdjust="spacing">円形運動と合性体</text>
+  <line x1="47" y1="87.5" x2="447" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（円の下に描く。神と主の間は矢印だけ） -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="665" y1="222.5" x2="796" y2="373"/>
+    <line x1="500" y1="373" x2="651" y2="524"/>
+    <line x1="798" y1="373" x2="660" y2="524"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z099-g)">
+    <path d="M538,313 C541,288 565,269 588,260"/>
+    <path d="M615,277 C608,300 588,318 565,326"/>
+    <path d="M598,370 C622,348 664,346 694,358"/>
+    <path d="M709,386 C681,396 642,407 610,393"/>
+  </g>
+
+  <!-- 円形運動（青緑の点線。円の下を通る） -->
+  <g fill="none" stroke="#3FA9C1" stroke-width="5" stroke-dasharray="14 9">
+    <ellipse cx="579" cy="370" rx="229" ry="79"/>
+    <ellipse cx="648" cy="229.5" rx="70" ry="215" transform="rotate(51.7 648 229.5)"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <circle cx="653.5" cy="222.5" r="55" fill="#fff" class="paper"/>
+    <circle cx="507" cy="373" r="55" fill="#F98AEE"/>
+    <circle cx="799" cy="373" r="55" fill="#A0F08A"/>
+    <circle cx="653" cy="524" r="55" fill="#DCC4C4"/>
+  </g>
+  <g font-size="57" text-anchor="middle" dominant-baseline="central">
+    <text x="653.5" y="222.5">神</text>
+    <text x="507" y="373" fill="#111">主</text>
+    <text x="799" y="373" fill="#111">対</text>
+    <text x="653" y="524" fill="#111">合</text>
+  </g>
+
+  <g font-size="43" dominant-baseline="central">
+    <text x="228" y="325">神と</text>
+    <text x="228" y="383">合性一体化</text>
+    <text x="875" y="341">主体と</text>
+    <text x="875" y="399">合性一体化</text>
+  </g>
+  <text x="649" y="616" font-size="45" text-anchor="middle" dominant-baseline="central">神の実体対象</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神の愛</title>
+  <defs>
+    <marker id="z152-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="2" markerHeight="2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+    <marker id="z152-d" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="2.9" markerHeight="2.9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#66727A"/>
+    </marker>
+  </defs>
+
+  <text x="53.5" y="56" font-size="46" dominant-baseline="central" textLength="149" lengthAdjust="spacing">神の愛</text>
+  <line x1="53" y1="86" x2="203" y2="86" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 隣りあう二者の授受（濃い灰色）: 神とア・エと子女は同じ形、神とエ・アと子女は同じ形 -->
+  <g stroke="#66727A" stroke-width="7" fill="none" marker-end="url(#z152-d)">
+    <g>
+      <path d="M322,312 Q331,244 390.7,213"/>
+      <path d="M401,217 Q388.9,288.6 333.2,315.8"/>
+    </g>
+    <g transform="translate(184,232)">
+      <path d="M322,312 Q331,244 390.7,213"/>
+      <path d="M401,217 Q388.9,288.6 333.2,315.8"/>
+    </g>
+    <g>
+      <path d="M520,208 Q581,249 582,309.9"/>
+      <path d="M571,322 Q511.9,280.1 511.2,218.6"/>
+    </g>
+    <g transform="translate(-179,232)">
+      <path d="M520,208 Q581,249 582,309.9"/>
+      <path d="M571,322 Q511.9,280.1 511.2,218.6"/>
+    </g>
+  </g>
+
+  <!-- 中央の授受作用 -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z152-g)">
+    <path d="M443,516 Q416.4,377.5 438.3,249.1"/>
+    <path d="M463.5,245 Q489.7,380 467.2,514.9"/>
+    <path d="M376,366 Q456.6,335.6 530.9,360.9"/>
+    <path d="M535,389 Q452.2,417.5 380.6,394.1"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="454.5" cy="161" rx="49.5" ry="47" fill="#fff" class="paper"/>
+    <ellipse cx="300.5" cy="380" rx="49.5" ry="47" fill="#F98AEE"/>
+    <ellipse cx="609" cy="380" rx="49.5" ry="47" fill="#A0F08A"/>
+    <ellipse cx="454.5" cy="598" rx="49.5" ry="47" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="454" y="160.5" font-size="50">神</text>
+    <g fill="#111">
+      <text x="301" y="380.5" font-size="54">ア</text>
+      <text x="609" y="379" font-size="54">エ</text>
+      <text x="455" y="597" font-size="40">子女</text>
+    </g>
+  </g>
+
+  <!-- 三対象の愛 -->
+  <rect x="741.5" y="113" width="260" height="63.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="3.5"/>
+  <text x="872" y="143" font-size="44" text-anchor="middle" dominant-baseline="central" textLength="225" lengthAdjust="spacing">三対象の愛</text>
+  <path d="M738,199 C727,203 724.5,212 724.5,228 L724.5,330 C724.5,362 718,374 706,378 C718,382 724.5,394 724.5,426 L724.5,524 C724.5,540 727,549 738,553" fill="none" stroke="currentColor" stroke-width="5.5"/>
+  <g font-size="41" dominant-baseline="central">
+    <text x="761" y="227" textLength="173" lengthAdjust="spacing">父母の愛</text>
+    <text x="762" y="353" textLength="172" lengthAdjust="spacing">夫婦の愛</text>
+    <text x="762" y="480" textLength="172" lengthAdjust="spacing">子女の愛</text>
+  </g>
+  <!-- （第一対象の愛）などは元の画像のとおり細字 -->
+  <g font-size="36" font-weight="400" dominant-baseline="central">
+    <g text-anchor="end">
+      <text x="780" y="273.5">（</text>
+      <text x="780" y="400">（</text>
+      <text x="780" y="527">（</text>
+    </g>
+    <text x="780" y="273.5" textLength="222" lengthAdjust="spacing">第一対象の愛</text>
+    <text x="780" y="400" textLength="222" lengthAdjust="spacing">第二対象の愛</text>
+    <text x="780" y="527" textLength="222" lengthAdjust="spacing">第三対象の愛</text>
+    <text x="1002" y="273.5">）</text>
+    <text x="1002" y="400">）</text>
+    <text x="1002" y="527">）</text>
+  </g>
+
+  <rect x="730" y="580" width="308" height="68" fill="#CDF8F7" stroke="currentColor" stroke-width="3.5"/>
+  <text x="883.5" y="614" font-size="40" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="247" lengthAdjust="spacing">創造目的完成</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>東西王朝分立時代　巡礼者とエルサレム、法王と十字軍戦争</title>
+
+  <!-- 見出しの箱 -->
+  <rect x="221" y="21" width="392" height="54" rx="5" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <text x="417" y="48" font-size="31" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="251" lengthAdjust="spacing">東西王朝分立時代</text>
+
+  <!-- 枠 -->
+  <rect x="221" y="89" width="392" height="325" rx="6" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <circle cx="241" cy="108.5" r="10.3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <text x="241" y="109" font-size="17" text-anchor="middle" dominant-baseline="central">2</text>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="356,146 422,146 422,143 434,149 422,155 422,152 356,152"/>
+    <polygon points="358,249 422,249 422,246 434,252 422,258 422,255 358,255"/>
+    <polygon points="378.5,301.5 400,301.5 400,312 409,312 389.5,324 370,312 378.5,312"/>
+    <polygon points="358,358 406,358 406,354 418,362.5 406,371 406,366.5 358,366.5"/>
+  </g>
+  <path d="M378.5,240.5 L402.5,263.5 M402.5,240.5 L378.5,263.5" stroke="currentColor" stroke-width="3.2"/>
+
+  <!-- 巡礼者と法王 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="290" cy="150.5" rx="54.5" ry="30.5" fill="#FCE5E3"/>
+    <ellipse cx="292" cy="252.5" rx="54.5" ry="30.5" fill="#FCE5E3"/>
+    <ellipse cx="292" cy="366.5" rx="54.5" ry="30.5" fill="#F8F28F"/>
+  </g>
+  <g font-size="30" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="289.5" y="151.5" textLength="86" lengthAdjust="spacing">巡礼者</text>
+    <text x="291.5" y="253.5" textLength="86" lengthAdjust="spacing">巡礼者</text>
+    <text x="291.5" y="366.5" textLength="61" lengthAdjust="spacing">法王</text>
+  </g>
+
+  <!-- エルサレムとカリフ帝国・セルジュク トルコ -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="521" cy="147" rx="77" ry="46" fill="#CF921C"/>
+    <ellipse cx="522" cy="250.5" rx="77.5" ry="46" fill="#CF921C"/>
+  </g>
+  <g stroke="#111" stroke-width="2.5" fill="#F8F28F">
+    <ellipse cx="490.5" cy="148.5" rx="46" ry="23"/>
+    <ellipse cx="490.5" cy="251" rx="46" ry="23.5"/>
+  </g>
+  <g font-size="19" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="491" y="149" textLength="78" lengthAdjust="spacingAndGlyphs">エルサレム</text>
+    <text x="491" y="251.5" textLength="78" lengthAdjust="spacingAndGlyphs">エルサレム</text>
+  </g>
+  <g font-size="20" dominant-baseline="central" fill="#111">
+    <text x="537" y="137.5" textLength="49" lengthAdjust="spacingAndGlyphs">カリフ</text>
+    <text x="541" y="160" textLength="41" lengthAdjust="spacing">帝国</text>
+    <text x="538.5" y="226.5" textLength="30" lengthAdjust="spacingAndGlyphs">セル</text>
+    <text x="538.5" y="249" textLength="45" lengthAdjust="spacingAndGlyphs">ジュク</text>
+    <text x="541" y="271.5" textLength="42" lengthAdjust="spacingAndGlyphs">トルコ</text>
+  </g>
+  <circle cx="589" cy="249.5" r="2.4" fill="#111"/>
+
+  <!-- 十字軍戦争：敗戦 -->
+  <g font-size="23" dominant-baseline="central">
+    <text x="425" y="360.5" textLength="107" lengthAdjust="spacing">十字軍戦争</text>
+    <text x="541.5" y="360.5" text-anchor="middle">：</text>
+    <text x="553" y="360.5" textLength="43" lengthAdjust="spacing">敗戦</text>
+  </g>
+  <text y="388.5" font-size="20" text-anchor="middle" dominant-baseline="central"><tspan x="430.5">（</tspan><tspan x="451" textLength="30" lengthAdjust="spacingAndGlyphs">200</tspan><tspan x="488.5">年間</tspan><tspan x="520">７</tspan><tspan x="541.5">回</tspan><tspan x="555.5">）</tspan></text>
+</svg>

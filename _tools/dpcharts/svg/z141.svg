@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>創造本然の四位基台</title>
+  <defs>
+    <marker id="z141-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="653" y1="106" x2="484" y2="288.5"/>
+    <line x1="639" y1="106" x2="810.5" y2="288.5"/>
+    <line x1="484" y1="288.5" x2="654" y2="471.5"/>
+    <line x1="810.5" y1="288.5" x2="638" y2="471.5"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z141-g)">
+    <path d="M636.5,383 Q605.5,290.5 632.4,204.1"/>
+    <path d="M657,199 Q684.2,293.5 658.6,377.9"/>
+    <path d="M576,281 Q650.5,247.3 707.2,276.5"/>
+    <path d="M716,302 Q642.7,334.2 582.7,305.6"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="646.5" cy="106" rx="65.5" ry="62.5" fill="#fff" class="paper"/>
+    <ellipse cx="483.5" cy="288.5" rx="65.5" ry="62.5" fill="#F98AEE"/>
+    <ellipse cx="809.5" cy="288.5" rx="65.5" ry="62.5" fill="#A0F08A"/>
+    <ellipse cx="646.5" cy="471.5" rx="65.5" ry="62.5" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="645" y="105.5" font-size="57">神</text>
+    <g fill="#111">
+      <text x="484.5" y="263.5" font-size="42">人間</text>
+      <text x="484.5" y="313.5" font-size="42">主体</text>
+      <text x="809.5" y="288" font-size="47">対象</text>
+      <text x="646.5" y="470.5" font-size="56">合</text>
+    </g>
+  </g>
+
+  <line x1="726" y1="474.5" x2="853" y2="474.5" stroke="currentColor" stroke-width="6" stroke-dasharray="17 10.5"/>
+  <text x="868" y="475" font-size="45" dominant-baseline="central">第三対象</text>
+
+  <rect x="389.5" y="558" width="508" height="87" fill="#CDF8F7" stroke="currentColor" stroke-width="3.5"/>
+  <text x="642.5" y="600" font-size="48" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="445" lengthAdjust="spacing">創造本然の四位基台</text>
+</svg>

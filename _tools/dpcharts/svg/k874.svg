@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>② 河川と海岸を中心とした文明の結実</title>
+
+  <!-- 題 -->
+  <text x="34" y="37" font-size="28" dominant-baseline="central">②</text>
+  <text x="72" y="37" font-size="28" dominant-baseline="central" textLength="460" lengthAdjust="spacing">河川と海岸を中心とした文明の結実</text>
+  <line x1="71" y1="55" x2="533" y2="55" stroke="currentColor" stroke-width="2"/>
+
+  <!-- 上の地名 -->
+  <g font-size="24" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="204.5" y="100" textLength="91" lengthAdjust="spacing">ナイル河</text>
+    <text x="204.5" y="131.5" textLength="115" lengthAdjust="spacing">チグリス河</text>
+    <text x="204" y="163" textLength="162" lengthAdjust="spacing">ユーフラテス河</text>
+    <text x="410.5" y="124.5" textLength="163" lengthAdjust="spacing">ギリシャ、ローマ</text>
+    <text x="411" y="159" textLength="206" lengthAdjust="spacing">スペイン、ポルトガル</text>
+    <text x="615.5" y="128.5" font-size="26">英国</text>
+    <text x="615.5" y="163" font-size="26">米国</text>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="292,213 310,213 310,209 323,216 310,223 310,219 292,219"/>
+    <polygon points="499,213 516,213 516,209 529,216 516,223 516,219 499,219"/>
+    <polygon points="505,341 517,331.5 519,348"/>
+  </g>
+  <path d="M618,247 Q598,333 517,340" fill="none" stroke="#8C949A" stroke-width="5.5"/>
+
+  <!-- 文明の楕円 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="204" cy="216" rx="85.5" ry="30.3" fill="#fff" class="paper"/>
+    <ellipse cx="410" cy="216" rx="85.5" ry="30.3" fill="#fff" class="paper"/>
+    <ellipse cx="616" cy="216.5" rx="85.5" ry="30.8" fill="#fff" class="paper"/>
+    <ellipse cx="410" cy="341" rx="85.5" ry="30.3" fill="#F8F28F"/>
+  </g>
+  <g font-size="29" text-anchor="middle" dominant-baseline="central">
+    <text x="203" y="216" textLength="122" lengthAdjust="spacing">河川文明</text>
+    <text x="411.5" y="216" textLength="137" lengthAdjust="spacing">地中海文明</text>
+    <text x="618" y="216" textLength="137" lengthAdjust="spacing">大西洋文明</text>
+    <text x="411" y="341.5" textLength="137" lengthAdjust="spacing" fill="#111">太平洋文明</text>
+  </g>
+
+  <g font-size="26" text-anchor="middle" dominant-baseline="central">
+    <text x="410" y="285" textLength="54" lengthAdjust="spacing">結実</text>
+    <text x="409" y="399" textLength="206" lengthAdjust="spacing">米国、日本、韓国</text>
+  </g>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>復活による霊的救いと、再臨による霊肉ともの救い</title>
+
+  <text x="553.5" y="90" font-size="52" text-anchor="middle" dominant-baseline="central">復活</text>
+
+  <!-- 箱から十字架の左へ寄る線（箱の下に描く） -->
+  <g fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="miter">
+    <polyline points="425,206 489,247 425,289"/>
+    <line x1="800" y1="228.25" x2="852" y2="195.75"/>
+    <line x1="800" y1="257" x2="852" y2="292.15"/>
+  </g>
+
+  <!-- 左の箱 -->
+  <g stroke="currentColor" stroke-width="4">
+    <rect x="216.5" y="96" width="228.5" height="118.5" rx="23" fill="#fff" class="paper"/>
+    <rect x="216.5" y="264.5" width="229.5" height="120.5" rx="23" fill="#CF921C"/>
+  </g>
+  <g font-size="41" dominant-baseline="central">
+    <text y="131.5"><tspan x="250.5" text-anchor="middle">霊</tspan><tspan x="287.5" text-anchor="middle">：</tspan><tspan x="304" textLength="124" lengthAdjust="spacing">救いの</tspan></text>
+    <text x="354" y="181.5" text-anchor="middle">基台</text>
+    <g fill="#111">
+      <text y="300.5"><tspan x="251" text-anchor="middle">肉</tspan><tspan x="288.5" text-anchor="middle">：</tspan><tspan x="306" textLength="122" lengthAdjust="spacingAndGlyphs">サタン</tspan></text>
+      <text x="355" y="350.5" text-anchor="middle">侵入</text>
+    </g>
+  </g>
+
+  <!-- 十字架（型を置く） -->
+  <g transform="translate(489.0,135.0) scale(1.2700,1.2833)" stroke-width="2.350" fill="#7A5230" stroke="#111" stroke-linejoin="round">
+    <path d="M40,0 H60 V42 H100 V60 H60 V180 H40 V60 H0 V42 H40 Z"/>
+  </g>
+
+  <!-- 十字架と信徒のあいだの回る矢印 -->
+  <g fill="none" stroke="currentColor" stroke-width="6.5">
+    <path d="M629,214.5 Q656.5,204 684,211.5"/>
+    <path d="M694.5,268.5 Q667,279 639.5,271.5"/>
+  </g>
+  <polygon points="688.5,203 697,219 680,220"/>
+  <polygon points="635,280 626.5,264 643.5,263"/>
+
+  <!-- 信徒 -->
+  <ellipse cx="760.25" cy="235.75" rx="51.25" ry="79.25" fill="#FCE5E3" stroke="currentColor" stroke-width="4"/>
+  <g font-size="48" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="760" y="211">信</text>
+    <text x="760" y="261">徒</text>
+  </g>
+
+  <!-- 右の箱 -->
+  <g stroke="currentColor" stroke-width="4">
+    <rect x="839" y="66" width="263.5" height="142.5" rx="31" fill="#fff" class="paper"/>
+    <rect x="838" y="272" width="264" height="152" rx="31" fill="#CF921C"/>
+  </g>
+  <g font-size="43" dominant-baseline="central">
+    <text x="864" y="106" textLength="215" lengthAdjust="spacing">霊的救いの</text>
+    <text x="903.5" y="169" textLength="135" lengthAdjust="spacing">恵　沢</text>
+    <g font-size="44" fill="#111">
+      <text x="880.5" y="318.5" textLength="180" lengthAdjust="spacing">肉的救い</text>
+      <text x="970" y="381" text-anchor="middle">未完成</text>
+    </g>
+  </g>
+
+  <!-- 再臨 -->
+  <polygon points="547.5,385 559.5,385 559.5,446.5 570.5,446.5 553.5,472 536.5,446.5 547.5,446.5" fill="#8C949A"/>
+  <ellipse cx="550.5" cy="531" rx="103" ry="44.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="549" y="530" font-size="56" text-anchor="middle" dominant-baseline="central">再臨</text>
+  <g font-size="48" dominant-baseline="central">
+    <text y="530.5"><tspan x="680.5" text-anchor="middle">：</tspan><tspan x="709" textLength="387" lengthAdjust="spacing">霊肉ともの救いの</tspan></text>
+    <text x="709" y="593" textLength="195" lengthAdjust="spacing">摂理完遂</text>
+  </g>
+</svg>

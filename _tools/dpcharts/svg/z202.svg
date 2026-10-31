@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>邪心</title>
+  <defs>
+    <marker id="z202-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.86" markerHeight="2.57" preserveAspectRatio="none" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="53" y="77" font-size="48" textLength="98" lengthAdjust="spacing">邪心</text>
+  <line x1="53" y1="87.5" x2="151" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（円の下に描く） -->
+  <path d="M579,186.3 L422.5,365.1 L579.3,544.3 L735.7,365.4 Z" fill="none" stroke="currentColor" stroke-width="12"/>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z202-g)">
+    <path d="M567.5,479 Q543.8,377.95 562.9,277.1"/>
+    <path d="M593,257 Q614.95,381.05 597.1,460.9"/>
+    <path d="M519,347.5 C556.4,328.6 590,322.1 627.8,340.2"/>
+    <path d="M638.5,377.5 C601.1,396.4 571.6,402.8 532.7,386.9"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="578" cy="169.25" r="70.5" fill="#50403D"/>
+    <ellipse cx="409" cy="363" rx="91.5" ry="64.5" fill="#F98AEE"/>
+    <ellipse cx="749" cy="363" rx="91.5" ry="67" fill="#A0F08A"/>
+    <ellipse cx="576.75" cy="556.75" rx="112.75" ry="58.25" fill="#50403D"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="577" y="170" font-size="84" fill="#fff">サ</text>
+    <text x="409.5" y="361" font-size="66" fill="#111">生心</text>
+    <text x="751" y="362" font-size="66" fill="#111">肉心</text>
+    <text x="577.5" y="555.5" font-size="68" fill="#fff">邪心</text>
+  </g>
+
+  <!-- 邪心 …… 悪を指向 -->
+  <line x1="715" y1="555.5" x2="787" y2="555.5" stroke="currentColor" stroke-width="7.5" stroke-dasharray="7 9.25"/>
+  <text x="922.5" y="555.5" font-size="57" text-anchor="middle" dominant-baseline="central">悪を指向</text>
+</svg>

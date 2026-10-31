@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>『実例：マタイ 17:3』エリヤ・イエス・洗礼ヨハネ</title>
+  <defs>
+    <marker id="z523-g" viewBox="0 0 20 22" refX="1" refY="11" markerWidth="20" markerHeight="22" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L20,11 L0,22 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <g font-size="48" dominant-baseline="central">
+    <text x="68.6" y="56.7">『実例</text>
+    <text x="215" y="56.7" text-anchor="middle">：</text>
+    <text x="314" y="56.7" text-anchor="middle" font-size="52">マタイ</text>
+    <text x="404.2" y="56.7" font-size="50" textLength="98.6" lengthAdjust="spacingAndGlyphs">17:3</text>
+    <text x="501.6" y="56.7">』</text>
+  </g>
+
+  <!-- 灰色の矢印（円より先に描く） -->
+  <g stroke="#8C949A" stroke-width="8" fill="none" marker-end="url(#z523-g)">
+    <line x1="443.5" y1="210.5" x2="443.5" y2="334" stroke-dasharray="22.5 11"/>
+    <line x1="515" y1="191.6" x2="835" y2="340.4"/>
+    <line x1="536" y1="401" x2="777" y2="401"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="443" cy="166.75" rx="92" ry="43.8" fill="#F86D42"/>
+    <ellipse cx="443.25" cy="401" rx="92.25" ry="43.6" fill="#F8F28F"/>
+    <ellipse cx="914.25" cy="401" rx="109.25" ry="43.8" fill="#F86D42"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="440.5" y="166.5" font-size="48">エリヤ</text>
+    <text x="443" y="401" font-size="48">イエス</text>
+    <text x="915.5" y="401.5" font-size="38">洗礼ヨハネ</text>
+  </g>
+
+  <g font-size="40" dominant-baseline="central">
+    <text x="686" y="235">再臨、</text>
+    <text x="811" y="235">協助</text>
+  </g>
+  <g font-size="32" dominant-baseline="central">
+    <text x="222" y="256" textLength="201" lengthAdjust="spacing">霊人体として</text>
+    <text x="222" y="302.5" textLength="100.5" lengthAdjust="spacing">現れる</text>
+  </g>
+  <text y="455.5" font-size="33" dominant-baseline="central"><tspan x="516">（</tspan><tspan x="533">マタイ</tspan><tspan x="639" textLength="157" lengthAdjust="spacingAndGlyphs">17:12～13</tspan><tspan x="795.7">）</tspan></text>
+
+  <!-- マタイ 17:12〜13 の引用（細字） -->
+  <g font-weight="400">
+    <text y="524.5" font-size="29.5" dominant-baseline="central"><tspan x="211.6">『</tspan><tspan x="226.7" textLength="332.2" lengthAdjust="spacing">あなたがたに言っておく</tspan><tspan x="558.9">。</tspan><tspan x="589.1" textLength="332.2" lengthAdjust="spacing">エリヤはすでにきたのだ</tspan><tspan x="921.3">。</tspan><tspan x="951.5" textLength="151" lengthAdjust="spacing">しかし人々</tspan></text>
+    <text y="574.5" font-size="29.5" dominant-baseline="central"><tspan x="211.5" textLength="177.3" lengthAdjust="spacing">は彼を認めず</tspan><tspan x="388.8">、</tspan><tspan x="418.4" textLength="384.2" lengthAdjust="spacing">自分かってに彼をあしらった</tspan><tspan x="802.5">。</tspan><tspan x="832.1" textLength="118.2" lengthAdjust="spacing">そのとき</tspan><tspan x="950.2">、</tspan><tspan x="979.8" textLength="118.2" lengthAdjust="spacing">弟子たち</tspan></text>
+    <text y="625" font-size="29.5" dominant-baseline="central"><tspan x="211.5" textLength="827.4" lengthAdjust="spacing">はイエスがバプテスマのヨハネのことを言われたのだと悟った</tspan><tspan x="1038.9">』</tspan></text>
+  </g>
+</svg>

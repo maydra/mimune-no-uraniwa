@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>専制君主社会（サタン側）からアベル型民主主義の民主社会とカイン型民主主義の共産社会へ</title>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="378.6,145.9 299.9,254.3 295.4,251.1 293.3,269.3 310,261.6 305.5,258.4 384.2,150.1"/>
+    <polygon points="443.3,150.1 522.7,258.5 518.3,261.7 535,269.3 532.8,251.1 528.4,254.3 448.9,145.9"/>
+    <polygon points="275,216 301,216 301,220 313,212 301,204 301,208 275,208"/>
+    <polygon points="546,206.5 519,206.5 519,202 507,210 519,218 519,213.5 546,213.5"/>
+  </g>
+
+  <!-- 専制君主社会 -->
+  <ellipse cx="415" cy="113.75" rx="108" ry="36.75" fill="#CF921C" stroke="currentColor" stroke-width="3"/>
+  <text x="415" y="114" font-size="28" text-anchor="middle" dominant-baseline="central" textLength="171" lengthAdjust="spacing" fill="#111">専制君主社会</text>
+  <text x="543" y="114.5" font-size="26" dominant-baseline="central" textLength="103" lengthAdjust="spacing">サタン側</text>
+
+  <!-- 人生観の楕円 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="217.5" cy="208.5" rx="58" ry="41" fill="#F8F28F"/>
+    <ellipse cx="602.5" cy="206.5" rx="58" ry="41" fill="#F86D42"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="216" y="194.5" font-size="23" textLength="82" lengthAdjust="spacing">アベル型</text>
+    <text x="215" y="226.5" font-size="26" textLength="79" lengthAdjust="spacing">人生観</text>
+    <text x="596.5" y="190" font-size="23" textLength="91" lengthAdjust="spacing">カイン型</text>
+    <text x="600" y="224" font-size="26" textLength="79" lengthAdjust="spacing">人生観</text>
+  </g>
+
+  <!-- 社会の箱 -->
+  <g stroke="currentColor" stroke-width="3">
+    <rect x="197" y="275" width="135" height="45" fill="#F8F28F"/>
+    <rect x="464" y="276" width="135" height="45" fill="#F86D42"/>
+  </g>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="265" y="297" textLength="114" lengthAdjust="spacing">民主社会</text>
+    <text x="531.5" y="298" textLength="115" lengthAdjust="spacing">共産社会</text>
+  </g>
+
+  <!-- 下の字 -->
+  <g font-size="28" dominant-baseline="central">
+    <text x="136" y="354.5" textLength="229" lengthAdjust="spacing">アベル型民主主義</text>
+    <text x="445" y="354.5" textLength="229" lengthAdjust="spacing">カイン型民主主義</text>
+  </g>
+</svg>

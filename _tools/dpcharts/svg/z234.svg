@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>善の実と悪の実　善の血統と悪の血統</title>
+  <defs>
+    <marker id="z234-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3.3" markerHeight="2.9" preserveAspectRatio="none" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 神・エバ・サタンの授受 -->
+  <g stroke="currentColor" stroke-width="7.5" fill="none" marker-end="url(#z234-k)">
+    <path d="M369.6,138.2 A180,180 0 0 1 519.8,134.7"/>
+    <path d="M524.9,165 A180,180 0 0 1 374,165.8"/>
+    <path d="M775.6,138.2 A180,180 0 0 1 925.8,134.7"/>
+    <path d="M930.9,165 A180,180 0 0 1 780,165.8"/>
+  </g>
+
+  <!-- 下への灰色の矢印（途中は善の実・悪の実で隠す） -->
+  <g fill="#8C949A">
+    <polygon points="436,218 436,475.5 423.5,475.5 443.5,507.5 463.5,475.5 451,475.5 451,218"/>
+    <polygon points="844,218 844,475.5 831.5,475.5 851.5,507.5 871.5,475.5 859,475.5 859,218"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="288.5" cy="155" r="53.75" fill="#fff" class="paper"/>
+    <circle cx="1011" cy="155" r="53.75" fill="#50403D"/>
+  </g>
+  <ellipse cx="650" cy="155" rx="96" ry="71" fill="#F98AEE" stroke="currentColor" stroke-width="5"/>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="286" y="155.5" font-size="60">神</text>
+    <text x="1010" y="155.5" font-size="58" fill="#fff">サ</text>
+    <text x="650.5" y="128" font-size="46" fill="#111" textLength="97" lengthAdjust="spacing">エバ</text>
+    <text x="649.5" y="176.5" font-size="34" fill="#111" textLength="159" lengthAdjust="spacing">(善悪の果)</text>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <rect x="356" y="306" width="173" height="85" rx="42.5" fill="#fff" class="paper"/>
+    <rect x="766" y="305" width="173" height="87" rx="43.5" fill="#CF921C"/>
+  </g>
+  <g font-size="42" text-anchor="middle" dominant-baseline="central">
+    <text x="443" y="348" textLength="128" lengthAdjust="spacing">善の実</text>
+    <text x="851" y="348" fill="#111" textLength="128" lengthAdjust="spacing">悪の実</text>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <rect x="315.25" y="518.25" width="254.5" height="82.5" fill="#fff" class="paper"/>
+    <rect x="723.25" y="518.25" width="255.5" height="82.5" fill="#CF921C"/>
+  </g>
+  <g font-size="52" text-anchor="middle" dominant-baseline="central">
+    <text x="443" y="559" textLength="216" lengthAdjust="spacing">善の血統</text>
+    <text x="851" y="559" fill="#111" textLength="216" lengthAdjust="spacing">悪の血統</text>
+  </g>
+</svg>

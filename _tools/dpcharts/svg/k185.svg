@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅱ. 実体基台</title>
+
+  <text x="41" y="37" font-size="30" dominant-baseline="central" textLength="32" lengthAdjust="spacingAndGlyphs">Ⅱ.</text>
+  <text x="83" y="37" font-size="31" dominant-baseline="central" textLength="124" lengthAdjust="spacing">実体基台</text>
+  <line x1="82" y1="56" x2="208" y2="56" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 信仰基台の札 -->
+  <rect x="152.5" y="115.5" width="65" height="62" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <g font-size="24" font-weight="400" dominant-baseline="central">
+    <text x="162" y="134.5" textLength="46" lengthAdjust="spacingAndGlyphs">信仰</text>
+    <text x="162" y="160.5" textLength="46" lengthAdjust="spacingAndGlyphs">基台</text>
+  </g>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="260,180 267,180 267,149 271,149 263.5,135 255.5,149 260,149"/>
+    <rect x="260" y="270" width="7" height="36"/>
+    <polygon points="325,253 342,244 342,262"/>
+    <polygon points="325,323 342,314.5 342,319.5 556,319.5 556,326.5 342,326.5 342,332"/>
+  </g>
+  <line x1="342" y1="253" x2="553" y2="253" stroke="#8C949A" stroke-width="7" stroke-dasharray="8.5 9.9"/>
+
+  <circle cx="264" cy="99.5" r="31.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <text x="262.5" y="100.5" font-size="36" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- アブラハム・イサク・ヤコブ／イシマエル・エサウ -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="264.5" cy="200" rx="55.5" ry="22.5" fill="#F8F28F"/>
+    <ellipse cx="264.5" cy="253" rx="55.5" ry="23.5" fill="#F8F28F"/>
+    <ellipse cx="263" cy="323" rx="53" ry="22.5" fill="#F8F28F"/>
+    <ellipse cx="606.5" cy="252" rx="54" ry="23.5" fill="#F86D42"/>
+    <ellipse cx="608.5" cy="323" rx="52" ry="22.5" fill="#F86D42"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="264.5" y="199.5" font-size="24" textLength="94" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+    <text x="263.5" y="252.5" font-size="27" textLength="74" lengthAdjust="spacingAndGlyphs">イサク</text>
+    <text x="264" y="322.5" font-size="26" textLength="77" lengthAdjust="spacingAndGlyphs">ヤコブ</text>
+    <text x="607" y="252.5" font-size="22" textLength="95" lengthAdjust="spacingAndGlyphs">イシマエル</text>
+    <text x="608.5" y="323" font-size="25" textLength="74" lengthAdjust="spacingAndGlyphs">エサウ</text>
+  </g>
+  <g font-size="22" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="263" y="359" textLength="84" lengthAdjust="spacingAndGlyphs">（アベル）</text>
+    <text x="608.5" y="359" textLength="84" lengthAdjust="spacingAndGlyphs">（カイン）</text>
+  </g>
+
+  <!-- 実体基台：堕落性を脱ぐための蕩減条件 -->
+  <rect x="390.5" y="333.5" width="123" height="30.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <text x="399" y="347.5" font-size="23" font-weight="400" dominant-baseline="central" textLength="106" lengthAdjust="spacing">実体基台</text>
+  <line x1="451.5" y1="370.3" x2="451.5" y2="388" stroke="currentColor" stroke-width="4" stroke-dasharray="3.5 3.5"/>
+  <text x="281" y="408" font-size="27" dominant-baseline="central" textLength="341" lengthAdjust="spacingAndGlyphs">堕落性を脱ぐための蕩減条件</text>
+</svg>

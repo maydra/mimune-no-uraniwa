@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 694" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>第一祝福復帰の現象</title>
+  <defs>
+    <marker id="z363-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.4" markerHeight="2.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="54" y="83" font-size="48">Ⅰ.</text>
+  <text x="138" y="63.5" font-size="48" dominant-baseline="central" textLength="450" lengthAdjust="spacing">第一祝福復帰の現象</text>
+  <line x1="138" y1="93.5" x2="587" y2="93.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 個体的な四位基台（線は楕円の下に描く） -->
+  <polygon points="369,202 498.3,350.3 365,490.6 243.7,348" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="currentColor" stroke-width="7" fill="none" marker-end="url(#z363-k)">
+    <path d="M357,435 Q336.4,346.5 358.3,272"/>
+    <path d="M381,260 Q400.1,339.2 380.8,421.5"/>
+    <path d="M309,336.5 Q364.6,318.4 413.8,332.6"/>
+    <path d="M429.5,359.5 Q363.6,377.6 323.3,361.2"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="369" cy="188" rx="46" ry="59" fill="#fff" class="paper"/>
+    <ellipse cx="254" cy="348" rx="46" ry="59" fill="#F98AEE"/>
+    <ellipse cx="487.5" cy="345.5" rx="46" ry="58.5" fill="#A0F08A"/>
+    <ellipse cx="365" cy="506.5" rx="46" ry="58.5" fill="#DCC4C4"/>
+  </g>
+  <g font-size="56" text-anchor="middle" dominant-baseline="central">
+    <text x="368" y="187.5">神</text>
+    <text x="254.5" y="347" fill="#111">心</text>
+    <text x="487.5" y="345" fill="#111">体</text>
+    <text x="364" y="506" fill="#111">個</text>
+  </g>
+
+  <text x="366" y="613" font-size="50" text-anchor="middle" dominant-baseline="central">個性完成</text>
+
+  <!-- 右の箇条 -->
+  <circle cx="573.5" cy="316.5" r="12"/>
+  <polygon points="605,381.5 634,381.5 634,373.5 655.5,388 634,402.5 634,394.5 605,394.5" fill="#8C949A"/>
+  <g font-size="48" dominant-baseline="central">
+    <text x="596" y="315" textLength="450" lengthAdjust="spacing">創造本然の人間復帰</text>
+    <text x="672" y="388.5" textLength="346" lengthAdjust="spacing">最終段階に入る</text>
+  </g>
+</svg>

@@ -69,7 +69,8 @@
             return false;
         }
 
-        if (element.closest('.page-nav, .toc-collapsible, .color-filter-container, #typo-report, #toc, .nav-btn, .footer')) {
+        // .dpc-fig・.dpc-note は charts.js の図（SVG の字を span で包むと消える）
+        if (element.closest('.page-nav, .toc-collapsible, .color-filter-container, #typo-report, #toc, .nav-btn, .footer, .dpc-fig, .dpc-note')) {
             return true;
         }
 

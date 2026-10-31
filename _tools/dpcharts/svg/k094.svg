@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>堕落性を脱ぐための蕩減条件</title>
+  <defs>
+    <marker id="k094-g" viewBox="0 0 15 18" refX="7" refY="9" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="18" orient="auto">
+      <path d="M0,0 L15,9 L0,18 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <!-- 黒い線（円と楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="2.2" fill="none">
+    <line x1="601.5" y1="70.9" x2="415" y2="146.6"/>
+    <line x1="415" y1="145.4" x2="227.5" y2="222.2"/>
+    <line x1="415" y1="144.1" x2="601.2" y2="226.7"/>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g stroke="#8C949A" stroke-width="6.5" fill="none" marker-end="url(#k094-g)">
+    <line x1="382" y1="130.2" x2="267.4" y2="80.6"/>
+    <line x1="228.5" y1="203" x2="228.5" y2="118"/>
+    <line x1="561" y1="228" x2="284" y2="228"/>
+  </g>
+  <line x1="600.5" y1="89" x2="600.5" y2="203" stroke="#8C949A" stroke-width="6" stroke-dasharray="18 9"/>
+
+  <!-- 神とサタン -->
+  <circle cx="227.5" cy="70.2" r="28" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <text x="227.5" y="70.2" font-size="32" text-anchor="middle" dominant-baseline="central">神</text>
+  <circle cx="601.5" cy="70.5" r="28.5" fill="#50403D" stroke="currentColor" stroke-width="2.2"/>
+  <text x="601.5" y="70.5" font-size="29" text-anchor="middle" dominant-baseline="central" fill="#fff">サ</text>
+
+  <!-- 人物 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="415" cy="143.5" rx="40" ry="23.5" fill="#CF921C"/>
+    <ellipse cx="227.5" cy="226.5" rx="40.5" ry="23.5" fill="#F8F28F"/>
+    <ellipse cx="601.2" cy="226.8" rx="40.2" ry="23.8" fill="#F86D42"/>
+  </g>
+  <g font-size="22" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="415" y="143">アダム</text>
+    <text x="227.5" y="227.5">アベル</text>
+    <text x="601.2" y="227.5">カイン</text>
+  </g>
+
+  <!-- 分立 -->
+  <g stroke="currentColor" stroke-width="5.5" stroke-linecap="butt">
+    <line x1="493" y1="100" x2="525" y2="118"/>
+    <line x1="516" y1="95" x2="502" y2="123"/>
+    <line x1="586" y1="130" x2="617" y2="160"/>
+    <line x1="617" y1="130" x2="586" y2="160"/>
+  </g>
+  <text transform="translate(493,81.5) rotate(-22)" font-size="25" text-anchor="middle" dominant-baseline="central">分立</text>
+  <text x="627" y="146" font-size="27" dominant-baseline="central">分立</text>
+
+  <!-- 象徴献祭 -->
+  <rect x="128" y="108.5" width="82" height="82" fill="#DCC4C4" stroke="currentColor" stroke-width="2.2"/>
+  <g font-size="29" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="169" y="133.5">象徴</text>
+    <text x="169" y="167.5">献祭</text>
+  </g>
+
+  <text x="218" y="273.5" font-size="26" textLength="362" lengthAdjust="spacingAndGlyphs" dominant-baseline="central">「堕落性を脱ぐための蕩減条件」</text>
+
+  <circle cx="178" cy="333.5" r="6.5"/>
+  <circle cx="178" cy="375.5" r="6.5"/>
+  <g font-size="26" dominant-baseline="central">
+    <text x="194" y="334.5" textLength="390" lengthAdjust="spacing">カインとアベルが子女として立つ</text>
+    <text x="194" y="373.5" textLength="469" lengthAdjust="spacing">父母であるアダムがサタン分立した立場</text>
+  </g>
+</svg>

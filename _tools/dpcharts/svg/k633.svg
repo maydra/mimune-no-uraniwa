@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>原始共産社会から共産主義社会へ　神は先立つ共産主義社会を許す</title>
+
+  <!-- 灰色の矢印（円・楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="224.5,111 235.5,111 235.5,135 245.5,135 229.5,162.5 213.5,135 224.5,135"/>
+    <polygon points="593,111 604,111 604,135 614.5,135 598.5,164 582.5,135 593,135"/>
+    <polygon points="225.5,330 233.5,330 233.5,275.5 238.5,275.5 229.5,260.5 220.5,275.5 225.5,275.5"/>
+    <polygon points="578.5,89.8 339.5,204.7 336.9,199.3 323.0,216.5 345.1,216.4 342.5,211.0 581.5,96.2"/>
+  </g>
+
+  <!-- サと神 -->
+  <g stroke="currentColor" stroke-width="2.8">
+    <circle cx="229" cy="66.5" r="35.5" fill="#50403D"/>
+    <circle cx="599" cy="66.5" r="35.5" fill="#fff" class="paper"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="229.5" y="67" font-size="33" fill="#fff">サ</text>
+    <text x="598" y="66" font-size="34">神</text>
+  </g>
+
+  <!-- 共産主義社会・原始共産社会・地上天国 -->
+  <g stroke="currentColor" stroke-width="2.8">
+    <ellipse cx="229" cy="217.5" rx="88.5" ry="41.5" fill="#CF921C"/>
+    <ellipse cx="229.5" cy="360.5" rx="75.5" ry="41" fill="#CF921C"/>
+    <ellipse cx="599" cy="217.5" rx="74.5" ry="41.5" fill="#fff" class="paper"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" font-size="27">
+    <g fill="#111">
+      <text x="230" y="217.5" textLength="157" lengthAdjust="spacing">共産主義社会</text>
+      <text x="229.5" y="342.5" textLength="54" lengthAdjust="spacing">原始</text>
+      <text x="229.5" y="373.5" textLength="106" lengthAdjust="spacing">共産社会</text>
+    </g>
+    <text x="599" y="217" font-size="28" textLength="116" lengthAdjust="spacing">地上天国</text>
+  </g>
+
+  <!-- 原理型の非原理世界 -->
+  <g font-size="26" dominant-baseline="central">
+    <text x="251.7" y="122.5" textLength="105.6" lengthAdjust="spacing">原理型の</text>
+    <text x="252.7" y="154" textLength="131.6" lengthAdjust="spacing">非原理世界</text>
+  </g>
+
+  <!-- 先立つ、許す（矢印に沿って傾ける） -->
+  <text x="372 400.2 427.9 456.3 484.7 512.7" y="182.5" font-size="27" dominant-baseline="central" transform="rotate(-27 457.5 182.5)">先立つ、許す</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神の第一祝福：個性完成</title>
+  <defs>
+    <marker id="z128-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.3" markerHeight="2.3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <g font-size="48" dominant-baseline="central">
+    <text x="97" y="56.5" text-anchor="end">『</text>
+    <text x="97" y="56.5" textLength="298" lengthAdjust="spacing">神の第一祝福</text>
+    <text x="421.5" y="56.5" text-anchor="middle">：</text>
+    <text x="448" y="56.5" textLength="200" lengthAdjust="spacing">個性完成</text>
+    <text x="648" y="56.5">』</text>
+  </g>
+
+  <!-- 個体的な四位基台（線は円の下に描く） -->
+  <polygon points="422.7,158.2 590.4,285.4 422.4,411.5 256,285" fill="none" stroke="currentColor" stroke-width="7.5" stroke-linejoin="round"/>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="currentColor" stroke-width="7" fill="none" marker-end="url(#z128-k)">
+    <path d="M341,278 Q430,252.2 498.8,275.7"/>
+    <path d="M506,298.5 Q421,321.6 351.9,300.3"/>
+    <path d="M409.5,354.5 Q390.3,287.6 407.9,230.4"/>
+    <path d="M433.5,220 Q452.6,298.2 435.4,343.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="423" cy="158.7" r="50" fill="#fff" class="paper"/>
+    <circle cx="243.4" cy="290" r="48" fill="#F98AEE"/>
+    <circle cx="602.8" cy="290.1" r="48" fill="#A0F08A"/>
+    <circle cx="428" cy="415.6" r="50" fill="#DCC4C4"/>
+  </g>
+  <g font-size="50" text-anchor="middle" dominant-baseline="central">
+    <text x="422" y="157">神</text>
+    <text x="241.5" y="288.5" fill="#111">心</text>
+    <text x="604.5" y="290.5" fill="#111">体</text>
+    <text x="426.5" y="417.5" fill="#111">個</text>
+  </g>
+
+  <text x="231" y="514" font-size="48" textLength="398" lengthAdjust="spacing" dominant-baseline="central">個体的な四位基台</text>
+
+  <!-- 右の箇条 -->
+  <circle cx="675.5" cy="226.5" r="9"/>
+  <circle cx="676" cy="288.5" r="9"/>
+  <circle cx="676" cy="354" r="9"/>
+  <g font-size="42" dominant-baseline="central">
+    <text x="694" y="226">神の宮</text>
+    <text x="820" y="226" textLength="264" lengthAdjust="spacingAndGlyphs">(コリントⅠ 3:16)</text>
+    <text x="694" y="289">一体</text>
+    <text x="778" y="289" textLength="223" lengthAdjust="spacingAndGlyphs">(ヨハネ 14:20)</text>
+    <text x="999" y="289">、</text>
+    <text x="1038" y="289">神性</text>
+    <text x="694" y="351">心情体恤</text>
+  </g>
+
+  <!-- 神のみ旨に従って生活 -->
+  <rect x="377.5" y="562" width="553" height="84.5" rx="9" fill="#CDF8F7" stroke="currentColor" stroke-width="3.5"/>
+  <text x="404" y="604" font-size="48" textLength="499" lengthAdjust="spacing" dominant-baseline="central" fill="#111">神のみ旨に従って生活</text>
+</svg>

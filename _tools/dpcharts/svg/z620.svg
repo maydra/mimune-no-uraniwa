@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>イエス（①天使・被造世界：主管　②原罪：ない　③神のみ旨と心情：完全に知って、体恤生活）</title>
+
+  <text x="51.4" y="55.5" font-size="49" dominant-baseline="central" textLength="147.9" lengthAdjust="spacing">イエス</text>
+  <line x1="49" y1="86" x2="200" y2="86" stroke="currentColor" stroke-width="4"/>
+
+  <!-- イエスから神へ・被造世界へ（灰色の矢印。楕円の下に描く） -->
+  <g fill="none" stroke="#8C949A" stroke-width="11.5">
+    <path d="M426,368 C475.8,319.8 502.9,238.1 415.5,189"/>
+    <path d="M426,368 C485.7,403.8 466.5,485.3 439.75,511.5"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="389.5,175.5 422,175.5 408,201.5"/>
+    <polygon points="419.5,532.5 429,501.5 450.5,521.5"/>
+  </g>
+
+  <!-- 授受の矢印（神とイエス、イエスと被造世界） -->
+  <g>
+    <path d="M281.5,306 Q255.25,278 274,258 M349,243.5 Q375,272.25 355,292" fill="none" stroke="currentColor" stroke-width="6.5"/>
+    <polygon points="288.5,240 284,263 268,253"/>
+    <polygon points="343.5,308 347.5,286.5 362,301"/>
+  </g>
+  <g transform="translate(0,186)">
+    <path d="M281.5,306 Q255.25,278 274,258 M349,243.5 Q375,272.25 355,292" fill="none" stroke="currentColor" stroke-width="6.5"/>
+    <polygon points="288.5,240 284,263 268,253"/>
+    <polygon points="343.5,308 347.5,286.5 362,301"/>
+  </g>
+
+  <!-- 神・イエス・被造世界（天使） -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="317.5" cy="181.5" r="51" fill="#fff" class="paper"/>
+    <ellipse cx="314.5" cy="368" rx="110" ry="52" fill="#F8F28F"/>
+    <ellipse cx="315" cy="566" rx="111.5" ry="64.5" fill="#DCC4C4"/>
+  </g>
+  <text x="316.9" y="181.5" font-size="54" text-anchor="middle" dominant-baseline="central">神</text>
+  <g dominant-baseline="central" fill="#111">
+    <text x="248.4" y="368" font-size="45" textLength="136.1" lengthAdjust="spacing">イエス</text>
+    <text x="232.8" y="547" font-size="41" textLength="164.6" lengthAdjust="spacing">被造世界</text>
+    <text y="591" font-size="41"><tspan x="254.3">（</tspan><tspan x="273.2" textLength="83.5" lengthAdjust="spacing">天使</tspan><tspan x="355.7">）</tspan></text>
+  </g>
+
+  <!-- ③②① -->
+  <g font-size="45" dominant-baseline="central">
+    <text y="191.5"><tspan x="492.5">③</tspan> <tspan x="547.4" textLength="347.5" lengthAdjust="spacing">神のみ旨と心情</tspan><tspan x="907.2">：</tspan></text>
+    <text y="246.5"><tspan x="546.9" textLength="273.6" lengthAdjust="spacing">完全に知って</tspan><tspan x="821.4">、</tspan><tspan x="868.4" textLength="181.5" lengthAdjust="spacing">体恤生活</tspan></text>
+    <text y="349.5"><tspan x="492.5">②</tspan> <tspan x="547.1" textLength="90" lengthAdjust="spacing">原罪</tspan><tspan x="650.2">：</tspan><tspan x="684.8" textLength="91.5" lengthAdjust="spacing">ない</tspan></text>
+    <text y="415.5"><tspan x="538.2">（</tspan><tspan x="558.1" textLength="124.1" lengthAdjust="spacingAndGlyphs">サタン</tspan><tspan x="683.7" textLength="250.3" lengthAdjust="spacingAndGlyphs">侵入できない</tspan><tspan x="930.3">）</tspan></text>
+    <text y="517.5"><tspan x="492.5">①</tspan> <tspan x="547.0" textLength="90.7" lengthAdjust="spacing">天使</tspan><tspan x="650.2">・</tspan><tspan x="684.8" textLength="181.7" lengthAdjust="spacing">被造世界</tspan><tspan x="879.2">：</tspan><tspan x="913.9" textLength="91.5" lengthAdjust="spacing">主管</tspan></text>
+  </g>
+</svg>

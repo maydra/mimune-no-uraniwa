@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神の永遠の相対基台と永遠なる存在基台</title>
+  <defs>
+    <marker id="z081-d" viewBox="0 0 10 7" refX="0" refY="3.5" markerWidth="5" markerHeight="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <text x="301.5" y="114" font-size="54" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 神（左が性相、右が形状） -->
+  <path d="M565.5,87.75 c-35.86,44.15 -70,86.38 -70,135.375 c0,49 34.14,91.225 70,135.375 c31.76,44.15 62,86.38 62,135.375 c0,49 -30.24,91.225 -62,135.375 A330.75,270.75 0 0 1 565.5,87.75 Z" fill="#F98AEE"/>
+  <path d="M565.5,87.75 c-35.86,44.15 -70,86.38 -70,135.375 c0,49 34.14,91.225 70,135.375 c31.76,44.15 62,86.38 62,135.375 c0,49 -30.24,91.225 -62,135.375 A330.75,270.75 0 0 0 565.5,87.75 Z" fill="#A0F08A"/>
+  <ellipse cx="565.5" cy="358.5" rx="330.75" ry="270.75" fill="none" stroke="currentColor" stroke-width="4.5"/>
+
+  <g stroke="#111" stroke-width="6.5">
+    <line x1="487.5" y1="183.5" x2="411.5" y2="236.5"/>
+    <line x1="643" y1="182" x2="721" y2="237"/>
+  </g>
+  <g stroke="#111" stroke-width="4" fill="none" marker-end="url(#z081-d)">
+    <path d="M486,269.5 Q571.7,248.7 629.6,267.1"/>
+    <path d="M645,300.5 Q556.9,326.25 501.25,305"/>
+  </g>
+
+  <!-- 下向きの矢印 -->
+  <g fill="#8C949A" stroke="#111" stroke-width="2" stroke-linejoin="miter">
+    <polygon points="554,342.5 588,342.5 588,361.5 602.5,361.5 570,386 538.5,361.5 554,361.5"/>
+    <polygon points="554,463.5 588,463.5 588,484.5 602.5,484.5 570,510 538.5,484.5 554,484.5"/>
+  </g>
+
+  <g dominant-baseline="central" fill="#111">
+    <text x="559.5" y="151" font-size="50" text-anchor="middle">万有原力</text>
+    <text x="388.5" y="287" font-size="48" text-anchor="middle">本性相</text>
+    <text x="742" y="286" font-size="48" text-anchor="middle">本形状</text>
+    <text x="390" y="425" font-size="50" textLength="361" lengthAdjust="spacing">永遠の相対基台</text>
+    <text x="386.5" y="544.5" font-size="46" textLength="368" lengthAdjust="spacing">永遠なる存在基台</text>
+  </g>
+
+  <!-- 点線と右の説明 -->
+  <line x1="764" y1="543" x2="809" y2="543" stroke="#111" stroke-width="7" stroke-dasharray="9 9"/>
+  <line x1="817.5" y1="543" x2="899" y2="543" stroke="currentColor" stroke-width="7" stroke-dasharray="9 9"/>
+  <path d="M931,480.5 Q919,481 919,493 L919,530 Q919,540 907,543.5 Q919,547 919,557 L919,594 Q919,606 931,606.5" fill="none" stroke="currentColor" stroke-width="5.5"/>
+  <circle cx="948.5" cy="509.5" r="10"/>
+  <circle cx="948.5" cy="574" r="10"/>
+  <g font-size="48" dominant-baseline="central">
+    <text x="969" y="505">永存</text>
+    <text x="968" y="572">創造</text>
+  </g>
+</svg>

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>(2) 完成再臨復活</title>
+  <defs>
+    <!-- 霊界の層の帯（下から上へ淡くなる。z522・z525 と同じ） -->
+    <linearGradient id="z527-sk" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ECB970"/>
+      <stop offset="0.5" stop-color="#F4D0A0"/>
+      <stop offset="1" stop-color="#FEF1E0"/>
+    </linearGradient>
+    <clipPath id="z527-in"><rect x="169" y="292" width="963" height="175.5"/></clipPath>
+    <!-- 帯の中から、再臨主の白い楕円（黄の楕円の外）を除いた所 -->
+    <clipPath id="z527-inw"><path clip-rule="evenodd" d="M169,292 H1132 V467.5 H169 Z M704.5,315.5 A61.5,149.5 0 1,0 827.5,315.5 A61.5,149.5 0 1,0 704.5,315.5 Z M726,365 A40,100 0 1,0 806,365 A40,100 0 1,0 726,365 Z"/></clipPath>
+    <marker id="z527-ak" viewBox="0 0 20 20" refX="17" refY="10" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0.5 L20,10 L0,19.5 z" fill="#111"/>
+    </marker>
+    <marker id="z527-ac" viewBox="0 0 20 20" refX="17" refY="10" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0.5 L20,10 L0,19.5 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text y="55.3" font-size="48" text-anchor="middle" dominant-baseline="central"><tspan x="82">（</tspan><tspan x="108">2</tspan><tspan x="133">）</tspan></text>
+  <text x="162" y="55.3" font-size="48" dominant-baseline="central" textLength="299" lengthAdjust="spacing">完成再臨復活</text>
+  <line x1="162" y1="85" x2="461" y2="85" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 霊界の層 -->
+  <rect x="169" y="292" width="963" height="175.5" fill="url(#z527-sk)"/>
+  <g stroke-width="6">
+    <line x1="203" y1="164.5" x2="1096" y2="164.5" stroke="currentColor"/>
+    <line x1="203" y1="264" x2="1096" y2="264" stroke="currentColor"/>
+    <line x1="203" y1="363.5" x2="1096" y2="363.5" stroke="#111"/>
+    <line x1="203" y1="465" x2="1096" y2="465" stroke="#111"/>
+  </g>
+
+  <!-- アブラハム -->
+  <ellipse cx="242.25" cy="415.5" rx="37.75" ry="49.5" fill="#FCE5E3" stroke="#111" stroke-width="4"/>
+  <line x1="242.5" y1="465" x2="242.5" y2="372" stroke="#111" stroke-width="6" marker-end="url(#z527-ak)"/>
+
+  <!-- イエス（上の端は帯の外なので線を分ける） -->
+  <ellipse cx="418.75" cy="365" rx="46.5" ry="100" fill="#F8F28F" stroke="currentColor" stroke-width="4.5"/>
+  <ellipse cx="418.75" cy="365" rx="46.5" ry="100" fill="none" stroke="#111" stroke-width="4.5" clip-path="url(#z527-in)"/>
+  <ellipse cx="419.25" cy="415" rx="20" ry="48" fill="#FCE5E3" stroke="#111" stroke-width="5"/>
+  <line x1="419.5" y1="367" x2="419.5" y2="272" stroke="#111" stroke-width="6" marker-end="url(#z527-ak)"/>
+
+  <!-- 再臨主（白い楕円は暗い配色で紙の色になる） -->
+  <ellipse cx="766" cy="315.5" rx="61.5" ry="149.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <ellipse cx="766" cy="315.5" rx="61.5" ry="149.5" fill="none" stroke="#111" stroke-width="4" clip-path="url(#z527-in)"/>
+  <ellipse cx="766" cy="365" rx="40" ry="100" fill="#F8F28F" stroke="currentColor" stroke-width="4"/>
+  <ellipse cx="766.25" cy="415" rx="20.5" ry="48" fill="#FCE5E3" stroke="#111" stroke-width="5"/>
+  <line x1="766" y1="266" x2="766" y2="173" stroke="currentColor" stroke-width="6" marker-end="url(#z527-ac)"/>
+
+  <!-- 霊人（△）・地上の聖徒（○・□） -->
+  <g fill="#FCE5E3" stroke-width="2.5" stroke-linejoin="round">
+    <polygon points="297.5,371 286,383.5 309,383.5" stroke="#111"/>
+    <polygon points="338.5,371 327,383.5 350,383.5" stroke="#111"/>
+    <polygon points="628.5,271.5 617,284 640,284" stroke="currentColor"/>
+    <polygon points="669,271.5 657.5,284 680.5,284" stroke="currentColor"/>
+    <polygon points="990.5,169.5 979,182 1002,182" stroke="currentColor"/>
+    <polygon points="1022.5,169.5 1011,182 1034,182" stroke="currentColor"/>
+  </g>
+  <g fill="#F8F28F" stroke-width="2.5">
+    <circle cx="628" cy="300" r="7" stroke="#111"/>
+    <circle cx="668.5" cy="300" r="7" stroke="#111"/>
+    <circle cx="990.5" cy="198.5" r="7" stroke="currentColor"/>
+    <circle cx="1023" cy="198.5" r="7" stroke="currentColor"/>
+    <circle cx="598.25" cy="488" r="7" stroke="currentColor"/>
+    <circle cx="598" cy="512" r="7" stroke="currentColor"/>
+  </g>
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5">
+    <rect x="983.25" y="213.5" width="14" height="14"/>
+    <rect x="1016" y="213.5" width="14" height="14"/>
+    <rect x="916" y="482" width="14" height="14"/>
+    <rect x="916" y="505" width="14" height="14"/>
+  </g>
+
+  <!-- 再臨の矢印（帯の中は #111、外は currentColor。白い楕円の上は currentColor） -->
+  <g stroke-width="6" fill="none">
+    <line x1="301" y1="386.5" x2="584.7" y2="505.8" stroke="currentColor" marker-end="url(#z527-ac)"/>
+    <line x1="342" y1="386.5" x2="585.7" y2="481.9" stroke="currentColor" marker-end="url(#z527-ac)"/>
+    <line x1="601.5" y1="480" x2="627.5" y2="313" stroke="currentColor"/>
+    <line x1="614" y1="512" x2="667.2" y2="312.9" stroke="currentColor"/>
+    <line x1="634.5" y1="311" x2="903.6" y2="508.8" stroke="currentColor" marker-end="url(#z527-ac)"/>
+    <line x1="675" y1="304.5" x2="904.6" y2="484.2" stroke="currentColor" marker-end="url(#z527-ac)"/>
+    <line x1="923.5" y1="474.5" x2="988.2" y2="235.9" stroke="currentColor" marker-end="url(#z527-ac)"/>
+    <line x1="940" y1="513" x2="1020.2" y2="235.9" stroke="currentColor" marker-end="url(#z527-ac)"/>
+    <g stroke="#111" clip-path="url(#z527-in)">
+      <line x1="301" y1="386.5" x2="584.7" y2="505.8"/>
+      <line x1="342" y1="386.5" x2="585.7" y2="481.9"/>
+      <line x1="601.5" y1="480" x2="627.5" y2="313" marker-end="url(#z527-ak)"/>
+      <line x1="614" y1="512" x2="667.2" y2="312.9" marker-end="url(#z527-ak)"/>
+      <line x1="923.5" y1="474.5" x2="988.2" y2="235.9"/>
+      <line x1="940" y1="513" x2="1020.2" y2="235.9"/>
+    </g>
+    <g stroke="#111" clip-path="url(#z527-inw)">
+      <line x1="634.5" y1="311" x2="903.6" y2="508.8"/>
+      <line x1="675" y1="304.5" x2="904.6" y2="484.2"/>
+    </g>
+  </g>
+
+  <!-- 楽園・天国 -->
+  <g font-size="32" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text y="297.3"><tspan x="502">（</tspan><tspan x="541">楽園</tspan><tspan x="581">）</tspan></text>
+    <text y="297.3" fill="#111" clip-path="url(#z527-in)"><tspan x="502">（</tspan><tspan x="541">楽園</tspan><tspan x="581">）</tspan></text>
+    <text y="196.3"><tspan x="852">（</tspan><tspan x="891.5">天国</tspan><tspan x="931">）</tspan></text>
+  </g>
+  <g font-size="32" dominant-baseline="central">
+    <text x="476" y="334.3" fill="#111" textLength="133" lengthAdjust="spacing">生命体級</text>
+    <text x="826" y="233.3" textLength="133" lengthAdjust="spacing">生霊体級</text>
+  </g>
+  <g font-size="32" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="597.5" y="547.8">長成</text>
+    <text x="597.5" y="589.3">再臨復活</text>
+    <text x="944" y="547.3">完成</text>
+    <text x="943.5" y="589.3">再臨復活</text>
+  </g>
+
+  <!-- 縦の札 -->
+  <rect x="216" y="471.5" width="53" height="169.5" fill="#FCE5E3" stroke="currentColor" stroke-width="3.5"/>
+  <g font-size="32" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="243" y="501.5">ア</text>
+    <text x="243" y="528.5">ブ</text>
+    <text x="243" y="558">ラ</text>
+    <text x="243" y="586.5">ハ</text>
+    <text x="243" y="614">ム</text>
+  </g>
+  <rect x="394.5" y="470.5" width="49.5" height="114" fill="#F8F28F" stroke="currentColor" stroke-width="3.5"/>
+  <g font-size="32" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="419" y="496">イ</text>
+    <text x="419" y="527">エ</text>
+    <text x="419" y="561">ス</text>
+  </g>
+  <rect x="741" y="470.5" width="50" height="114" fill="#fff" class="paper" stroke="currentColor" stroke-width="3.5"/>
+  <g font-size="32" text-anchor="middle" dominant-baseline="central">
+    <text x="766" y="497">再</text>
+    <text x="766" y="528">臨</text>
+    <text x="766" y="561">主</text>
+  </g>
+</svg>

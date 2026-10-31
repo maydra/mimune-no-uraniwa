@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>原罪は、子々孫々に遺伝</title>
+
+  <g font-size="48" dominant-baseline="central">
+    <text x="90" y="79.5" text-anchor="end">『</text>
+    <text x="90" y="79.5" textLength="150" lengthAdjust="spacing">原罪は</text>
+    <text x="240" y="79.5">、</text>
+    <text x="290" y="79.5" textLength="350" lengthAdjust="spacing">子々孫々に遺伝</text>
+    <text x="640" y="79.5">』</text>
+  </g>
+
+  <!-- 下向きの矢印と、右の字へつなぐ線（楕円より先に描き、楕円で隠す） -->
+  <g fill="#8C949A">
+    <polygon points="440,220 454,220 454,317 464.5,317 447,348 429.5,317 440,317"/>
+    <polygon points="440,430 454,430 454,515 464,515 447,546 430,515 440,515"/>
+  </g>
+  <g stroke="currentColor" stroke-width="11" fill="none">
+    <line x1="560" y1="190" x2="637" y2="190"/>
+    <path d="M530,400 L632,362 M530,400 L632,438"/>
+    <line x1="540" y1="592.5" x2="635" y2="592.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="450" cy="192" rx="138.5" ry="41" fill="#F8F28F"/>
+    <ellipse cx="447" cy="400.5" rx="97.5" ry="42" fill="#fff" class="paper"/>
+    <ellipse cx="450" cy="596.5" rx="120.5" ry="41.5" fill="#50403D" stroke-width="4.5"/>
+  </g>
+  <text x="346" y="192" font-size="41" dominant-baseline="central" fill="#111" textLength="208" lengthAdjust="spacing">再臨メシヤ</text>
+  <text x="394" y="400" font-size="44" dominant-baseline="central" textLength="105" lengthAdjust="spacing">宗教</text>
+  <text x="381" y="596" font-size="45" dominant-baseline="central" fill="#fff" textLength="136" lengthAdjust="spacing">罪の根</text>
+
+  <g font-size="42" dominant-baseline="central">
+    <text x="644" y="175" textLength="173" lengthAdjust="spacing">罪の根を</text>
+    <text x="644" y="225" textLength="263" lengthAdjust="spacing">根本的に解決</text>
+    <text x="644" y="363" textLength="306" lengthAdjust="spacing">姦淫を最大の罪</text>
+    <text x="644" y="438" textLength="305" lengthAdjust="spacing">禁欲生活を強調</text>
+    <text x="645" y="591.5" textLength="87" lengthAdjust="spacing">淫乱</text>
+  </g>
+</svg>

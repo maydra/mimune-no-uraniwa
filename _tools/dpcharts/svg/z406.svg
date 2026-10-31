@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>創造目的＝地上天国、復帰摂理＝人類歴史</title>
+
+  <!-- 堕落（右へ） -->
+  <polygon points="525,284.5 748.5,284.5 748.5,272.5 777,289.5 748.5,306.5 748.5,295.5 525,295.5" fill="#8C949A"/>
+
+  <!-- 復帰摂理（地上地獄から地上天国へ戻る曲がった矢印。箱の下に描く） -->
+  <path d="M827.3,350.1 A180,71.3 0 0 1 505,380" fill="none" stroke="#8C949A" stroke-width="11.5"/>
+  <polygon points="477,363 512,367 503,380 490.5,394" fill="#8C949A"/>
+
+  <!-- 箱 -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <rect x="230" y="54.5" width="271" height="90" fill="#CDF8F7"/>
+    <rect x="230.5" y="263.5" width="271.5" height="90.5" fill="#fff" class="paper"/>
+    <rect x="801.5" y="263.5" width="269.5" height="89.5" fill="#50403D"/>
+  </g>
+
+  <!-- 縦の「＝」 -->
+  <g>
+    <rect x="348" y="179" width="10" height="55"/>
+    <rect x="374" y="179" width="10" height="55"/>
+    <rect x="620" y="510" width="10" height="55"/>
+    <rect x="646" y="510" width="10" height="55"/>
+  </g>
+
+  <g font-size="52" text-anchor="middle" dominant-baseline="central">
+    <text x="365" y="99" fill="#111">創造目的</text>
+    <text x="364" y="307">地上天国</text>
+    <text x="936" y="308" fill="#fff">地上地獄</text>
+    <text x="639" y="236.5">堕落</text>
+    <text x="639" y="456">復帰摂理</text>
+    <text x="639" y="614">人類歴史</text>
+  </g>
+</svg>

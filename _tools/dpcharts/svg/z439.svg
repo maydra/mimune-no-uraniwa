@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間の責任分担と完成・堕落（善悪の果）</title>
+
+  <!-- 点線（楕円の下から描く） -->
+  <g stroke="currentColor" stroke-width="6">
+    <line x1="301.5" y1="364.75" x2="301.5" y2="547" stroke-dasharray="21 11.25"/>
+    <line x1="659.5" y1="467" x2="659.5" y2="548" stroke-dasharray="20.5 10"/>
+    <line x1="1012" y1="369.25" x2="1012" y2="543" stroke-dasharray="20.5 10.25"/>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="651.5,150 661.5,150 661.5,229.5 670.5,229.5 656.5,253 642.5,229.5 651.5,229.5"/>
+    <polygon points="600,313.5 431,313.5 431,303.5 403.5,319.5 431,335.5 431,325.5 600,325.5"/>
+    <polygon points="713,313.5 884.5,313.5 884.5,303.5 912.5,319.5 884.5,335.5 884.5,325.5 713,325.5"/>
+    <polygon points="563.5,586.5 521.5,586.5 521.5,579.5 502,590 521.5,600.5 521.5,593.5 563.5,593.5"/>
+    <polygon points="785,586.5 828,586.5 828,580 847.5,590 828,600 828,593.5 785,593.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="656.75" cy="102.25" r="55.25" fill="#fff" class="paper"/>
+    <ellipse cx="656.75" cy="319.5" rx="62.25" ry="56" fill="#FCE5E3"/>
+    <ellipse cx="299.75" cy="319.5" rx="92.75" ry="53.5" fill="#fff" class="paper"/>
+    <ellipse cx="1013.75" cy="319.5" rx="92.25" ry="53.5" fill="#CF921C"/>
+    <rect x="530.5" y="386.5" width="259.5" height="67.5" fill="#CDF8F7"/>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="655.5" y="101.5" font-size="56">神</text>
+    <text x="300" y="319" font-size="52">完成</text>
+    <g fill="#111">
+      <text x="656" y="319.5" font-size="46">人間</text>
+      <text x="1014.5" y="319" font-size="52">堕落</text>
+      <text x="659.5" y="419.5" font-size="48" textLength="198" lengthAdjust="spacing">責任分担</text>
+    </g>
+    <text x="515.5" y="353.5" font-size="44">完遂</text>
+    <text x="806" y="353.5" font-size="42" textLength="170" lengthAdjust="spacingAndGlyphs">果たさない</text>
+  </g>
+
+  <g font-size="44" dominant-baseline="central">
+    <text x="203" y="590" textLength="277" lengthAdjust="spacingAndGlyphs">取って食べない</text>
+    <text x="587" y="590" textLength="175" lengthAdjust="spacingAndGlyphs">善悪の果</text>
+    <text x="873" y="590" textLength="236" lengthAdjust="spacingAndGlyphs">取って食べる</text>
+  </g>
+</svg>

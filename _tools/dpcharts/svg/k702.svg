@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>『再臨理想の目的』</title>
+
+  <!-- 題 -->
+  <text y="39" font-size="29" dominant-baseline="central"><tspan x="130">『</tspan><tspan x="145" textLength="221" lengthAdjust="spacing">再臨理想の目的</tspan><tspan x="366">』</tspan></text>
+
+  <!-- 灰色の線（楕円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="7" fill="none">
+    <line x1="309" y1="305" x2="207" y2="368"/>
+    <line x1="342" y1="305" x2="342" y2="368"/>
+    <line x1="375" y1="305" x2="479.6" y2="368"/>
+  </g>
+
+  <!-- 神 -->
+  <circle cx="344.5" cy="107.5" r="32.2" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <text x="343.5" y="108" font-size="34" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 上下の間の回る矢印（左は上へ、右は下へ） -->
+  <g>
+    <g transform="translate(315,157)"><path d="M2,-6 C-4.5,-1 -5,8 2.5,14" fill="none" stroke="currentColor" stroke-width="3.6"/><polygon points="4.8,-14.8 -5.2,-10.5 3.8,-4.5"/></g>
+    <g transform="translate(371,156.5) rotate(180)"><path d="M2,-6 C-4.5,-1 -5,8 2.5,14" fill="none" stroke="currentColor" stroke-width="3.6"/><polygon points="4.8,-14.8 -5.2,-10.5 3.8,-4.5"/></g>
+    <g transform="translate(315,250)"><path d="M2,-6 C-4.5,-1 -5,8 2.5,14" fill="none" stroke="currentColor" stroke-width="3.6"/><polygon points="4.8,-14.8 -5.2,-10.5 3.8,-4.5"/></g>
+    <g transform="translate(371,248.5) rotate(180)"><path d="M2,-6 C-4.5,-1 -5,8 2.5,14" fill="none" stroke="currentColor" stroke-width="3.6"/><polygon points="4.8,-14.8 -5.2,-10.5 3.8,-4.5"/></g>
+  </g>
+
+  <!-- イエス・政党 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="343.5" cy="202.5" rx="57.2" ry="27.2" fill="#F8F28F"/>
+    <ellipse cx="344" cy="296" rx="57.7" ry="26.7" fill="#F86D42"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="343.5" y="202.5" font-size="28.5" textLength="91" lengthAdjust="spacing">イエス</text>
+    <text x="320.5" y="295" font-size="29">政</text>
+    <text x="368" y="295" font-size="29">党</text>
+  </g>
+
+  <!-- 箇条 -->
+  <circle cx="421.5" cy="174.5" r="7.5"/>
+  <circle cx="421" cy="221.5" r="7.5"/>
+  <g font-size="24.5" dominant-baseline="central">
+    <text x="435" y="175" textLength="247" lengthAdjust="spacing">中枢神経を結んでやる</text>
+    <text x="434" y="222.5" textLength="249" lengthAdjust="spacing">神のみ旨を中心とした</text>
+    <text x="435" y="256.5" textLength="124" lengthAdjust="spacing">本然の機能</text>
+  </g>
+
+  <!-- 立法・司法・行政 -->
+  <g fill="#F86D42" stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="177.5" cy="385" rx="51.2" ry="26.7"/>
+    <ellipse cx="344.5" cy="384.5" rx="51.2" ry="26.7"/>
+    <ellipse cx="511.5" cy="385" rx="51.2" ry="26.7"/>
+  </g>
+  <g font-size="30" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="178" y="384" textLength="62" lengthAdjust="spacing">立法</text>
+    <text x="344.5" y="384.5" textLength="61" lengthAdjust="spacing">司法</text>
+    <text x="512" y="384.5" textLength="62" lengthAdjust="spacing">行政</text>
+  </g>
+
+  <!-- 間の回る矢印（右回りの弧2本） -->
+  <g transform="translate(259.5,384.5)">
+    <path d="M-21.5,-9 C-15,-17.5 3,-20 12,-12.5 M21.5,9 C15,17.5 -3,20 -12,12.5" fill="none" stroke="currentColor" stroke-width="3.8"/>
+    <polygon points="17.5,-17 10.5,-7 22,-5.5"/><polygon points="-17.5,17 -10.5,7 -22,5.5"/>
+  </g>
+  <g transform="translate(427,384.5)">
+    <path d="M-21.5,-9 C-15,-17.5 3,-20 12,-12.5 M21.5,9 C15,17.5 -3,20 -12,12.5" fill="none" stroke="currentColor" stroke-width="3.8"/>
+    <polygon points="17.5,-17 10.5,-7 22,-5.5"/><polygon points="-17.5,17 -10.5,7 -22,5.5"/>
+  </g>
+</svg>

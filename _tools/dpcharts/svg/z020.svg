@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>それでは科学が行くべきところはどこであろうか？</title>
+  <defs>
+    <marker id="z020-g" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="2.7" markerHeight="2.7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="78" font-size="48" textLength="1142" lengthAdjust="spacing">それでは科学が行くべきところはどこであろうか？</text>
+  <line x1="50" y1="90" x2="1192" y2="90" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 世界から真理へ（箱の下に描く） -->
+  <g fill="#8C949A">
+    <rect x="655" y="252.5" width="80" height="12"/>
+    <rect x="655" y="529.5" width="80" height="11"/>
+  </g>
+  <!-- 真理から目的達成へ（箱の下から出る） -->
+  <g>
+    <polygon points="931.1,277.5 961.8,320.7 957.7,323.6 980,336 975.7,310.9 971.6,313.8 940.9,270.5"/>
+    <polygon points="940.6,517.4 969.8,482.5 973.7,485.7 980,461 956.8,471.6 960.6,474.8 931.4,509.6"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <rect x="389.5" y="172" width="270.5" height="173" fill="#F98AEE"/>
+    <rect x="390.5" y="448" width="270.5" height="173.5" fill="#A0F08A"/>
+    <rect x="729.5" y="214.5" width="211.5" height="87.5" fill="#F98AEE"/>
+    <rect x="730.5" y="491.5" width="210.5" height="87" fill="#A0F08A"/>
+    <rect x="982" y="338" width="117" height="119" fill="#CDF8F7"/>
+  </g>
+  <g font-size="45" dominant-baseline="central" fill="#111">
+    <text x="410" y="208" textLength="92" lengthAdjust="spacing">内的</text>
+    <text x="524" y="208" text-anchor="middle">：</text>
+    <text x="410" y="258.5" textLength="230" lengthAdjust="spacing">原因の世界</text>
+    <text x="410" y="308" textLength="230" lengthAdjust="spacing">本質の世界</text>
+    <text x="411" y="486.5" textLength="92" lengthAdjust="spacing">外的</text>
+    <text x="525" y="486.5" text-anchor="middle">：</text>
+    <text x="411" y="536.5" textLength="230" lengthAdjust="spacing">結果の世界</text>
+    <text x="411" y="586.5" textLength="230" lengthAdjust="spacing">現象の世界</text>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="836" y="257.5" font-size="45">内的真理</text>
+    <text x="834" y="535.5" font-size="45">外的真理</text>
+    <text x="1043.5" y="372.5" font-size="43">目的</text>
+    <text x="1043.5" y="422" font-size="43">達成</text>
+  </g>
+
+  <!-- 内と外の間を回る矢印 -->
+  <g fill="none" stroke="#8C949A" stroke-width="11" marker-end="url(#z020-g)">
+    <path d="M502,431 Q489.5,394 496.5,380.8"/>
+    <path d="M541,360 Q553.5,397 546.5,410.2"/>
+    <path d="M811,434 Q796.3,393.3 804.4,377.2"/>
+    <path d="M851,354.8 Q865.7,395.5 857.6,411.6"/>
+  </g>
+
+  <!-- 科学から外的へ -->
+  <polygon points="330,531 355.5,531 355.5,524.5 381.5,537.8 355.5,551 355.5,544.5 330,544.5" fill="#8C949A"/>
+  <ellipse cx="270" cy="538" rx="63" ry="53" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="269" y="538" font-size="48" text-anchor="middle" dominant-baseline="central">科学</text>
+</svg>

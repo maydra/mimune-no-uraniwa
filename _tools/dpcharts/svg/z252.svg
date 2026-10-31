@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>肉的堕落の経路</title>
+
+  <text x="55" y="76" font-size="48" textLength="348" lengthAdjust="spacing">肉的堕落の経路</text>
+  <line x1="52" y1="87.5" x2="401" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神とのつながり（円と楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="8.5">
+    <line x1="807" y1="168.6" x2="330" y2="278.2"/>
+    <line x1="819.3" y1="158" x2="611.4" y2="306.5"/>
+    <line x1="801.6" y1="158" x2="979.8" y2="306.5"/>
+  </g>
+  <!-- 切れた所の × -->
+  <g stroke="currentColor" stroke-width="7">
+    <line x1="557" y1="205" x2="602" y2="239"/>
+    <line x1="561" y1="241" x2="601" y2="201"/>
+    <line x1="701" y1="216.5" x2="755" y2="234.5"/>
+    <line x1="716.5" y1="249" x2="740.5" y2="197"/>
+    <line x1="884" y1="196" x2="885" y2="253"/>
+    <line x1="854" y1="227.5" x2="911" y2="221.5"/>
+  </g>
+
+  <circle cx="807" cy="158" r="57" fill="#fff" class="paper" stroke="currentColor" stroke-width="3.5"/>
+  <text x="805" y="157.5" font-size="62" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="283" cy="306.5" rx="101" ry="51" fill="#50403D"/>
+    <ellipse cx="635" cy="306.5" rx="87" ry="51" fill="#CF921C"/>
+    <ellipse cx="966" cy="306.5" rx="87" ry="51" fill="#CF921C"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="283" y="304" font-size="48" textLength="170" lengthAdjust="spacingAndGlyphs" fill="#fff">ルーシェル</text>
+    <text x="634.5" y="306" font-size="48" textLength="122" lengthAdjust="spacing" fill="#111">エ バ</text>
+    <text x="966.5" y="306" font-size="50" textLength="134" lengthAdjust="spacingAndGlyphs" fill="#111">アダム</text>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <polygon points="406,283.5 502,283.5 502,276.5 527.5,289 502,301.5 502,294.5 406,294.5"/>
+  <polygon points="524,317.5 428,317.5 428,310.5 402.5,323 428,335.5 428,328.5 524,328.5"/>
+  <polygon points="737,283.5 844,283.5 844,276.5 869.5,289 844,301.5 844,294.5 737,294.5"/>
+  <polygon points="865,317.5 758,317.5 758,310.5 733.5,323 758,335.5 758,328.5 865,328.5"/>
+  <polygon points="794.5,343 806.5,343 806.5,457 818.5,457 800.5,489.5 782.5,457 794.5,457" fill="#8C949A"/>
+
+  <g font-size="46">
+    <text x="510" y="417" textLength="258" lengthAdjust="spacingAndGlyphs">アダムを誘惑</text>
+    <text x="819" y="417" textLength="305" lengthAdjust="spacingAndGlyphs">本然の位置離脱</text>
+  </g>
+
+  <rect x="526" y="505" width="544.5" height="128.5" fill="#CDF8F7" stroke="currentColor" stroke-width="3.5"/>
+  <g font-size="43" fill="#111">
+    <text x="553" y="556.5" textLength="347" lengthAdjust="spacing">非原理的な愛の力</text>
+    <text x="654" y="614.5" textLength="393" lengthAdjust="spacing">不倫なる肉的性関係</text>
+  </g>
+  <polygon points="593,589.5 622,589.5 622,578.5 637.5,596 622,613.5 622,602.5 593,602.5" fill="#8C949A" stroke="#111" stroke-width="1.5"/>
+</svg>

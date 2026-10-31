@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>終末：恐怖の時代ではなく喜びの日</title>
+
+  <!-- 灰色の線（楕円の下から出る） -->
+  <g stroke="#8C949A" stroke-width="11">
+    <line x1="330" y1="338.1" x2="472.1" y2="244.7"/>
+    <line x1="330" y1="329.6" x2="515" y2="453.5"/>
+  </g>
+  <polygon points="493,231 478.7,260.2 460.5,232.6" fill="#8C949A"/>
+
+  <!-- ✕ -->
+  <g stroke="currentColor" stroke-width="8.5">
+    <line x1="418.3" y1="236" x2="420.7" y2="323"/>
+    <line x1="380" y1="264" x2="458.5" y2="295"/>
+  </g>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="276.75" cy="334" rx="77.75" ry="127" fill="#fff" class="paper"/>
+    <ellipse cx="645.5" cy="225" rx="140.5" ry="59" fill="#CF921C"/>
+    <ellipse cx="645.5" cy="451.5" rx="140.5" ry="59" fill="#fff" class="paper"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <g font-size="66">
+      <text x="278.5" y="291">終</text>
+      <text x="278.5" y="378">末</text>
+    </g>
+    <text x="646.5" y="225" font-size="48" fill="#111">恐怖の時代</text>
+    <text x="642.5" y="452" font-size="51">喜びの日</text>
+    <text x="940" y="523" font-size="49">（人類の希望）</text>
+  </g>
+  <g font-size="53" dominant-baseline="central">
+    <text x="816.5" y="229.5">天変地異</text>
+    <text x="817.5" y="454.5">実現</text>
+  </g>
+</svg>

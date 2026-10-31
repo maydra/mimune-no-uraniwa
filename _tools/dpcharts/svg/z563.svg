@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>み旨を絶対的に予定</title>
+
+  <text x="51" y="59" font-size="49" dominant-baseline="central" textLength="449" lengthAdjust="spacing">み旨を絶対的に予定</text>
+  <line x1="51" y1="89" x2="500" y2="89" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 神からみ旨へ（楕円の下に描く） -->
+  <polygon points="515,198.5 713,198.5 713,186 747.5,205 713,224 713,211.5 515,211.5" fill="#8C949A"/>
+
+  <!-- 楕円から下へ下りる点線（楕円の下に描く） -->
+  <g stroke="currentColor" fill="none">
+    <line x1="447" y1="263.8" x2="447" y2="386" stroke-width="7" stroke-dasharray="9 7.17"/>
+    <line x1="857.5" y1="262.6" x2="857.5" y2="376" stroke-width="6" stroke-dasharray="9.5 7.9"/>
+  </g>
+
+  <ellipse cx="447" cy="206" rx="69.75" ry="59.75" fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5"/>
+  <ellipse cx="858.5" cy="206" rx="96.25" ry="55.75" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="445.5" y="204.5" font-size="66">神</text>
+    <text x="857.5" y="205" font-size="57" textLength="115" lengthAdjust="spacing" fill="#111">み旨</text>
+  </g>
+
+  <!-- 神とみ旨の性質（・は円で描く） -->
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="374.5" y="415">唯一</text>
+    <text x="512" y="415">永遠</text>
+    <text x="374" y="469">不変</text>
+    <text x="534" y="469" textLength="138" lengthAdjust="spacing">絶対者</text>
+    <text x="790" y="415">唯一</text>
+    <text x="927.5" y="415">永遠</text>
+    <text x="789.5" y="469">不変</text>
+    <text x="927.5" y="469">絶対</text>
+  </g>
+  <g>
+    <circle cx="443" cy="415" r="5.5"/>
+    <circle cx="443" cy="469" r="5.5"/>
+    <circle cx="858" cy="415" r="5.5"/>
+    <circle cx="858" cy="469" r="5.5"/>
+  </g>
+
+  <rect x="288.25" y="540.25" width="709.5" height="89.5" rx="14" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <g font-size="53" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="535.5" y="586" textLength="432" lengthAdjust="spacing">み旨に対する予定</text>
+    <text x="779.5" y="586">：</text>
+    <text x="887.5" y="586" textLength="163" lengthAdjust="spacing">絶対的</text>
+  </g>
+</svg>

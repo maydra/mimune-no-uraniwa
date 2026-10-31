@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>アロンとミリアムとを与えられた理由</title>
+
+  <!-- 題 -->
+  <text x="36" y="38" font-size="30" dominant-baseline="central" textLength="529" lengthAdjust="spacing">アロンとミリアムとを与えられた理由</text>
+  <line x1="32" y1="56.5" x2="568" y2="56.5" stroke="currentColor" stroke-width="2"/>
+
+  <!-- 神 → モーセ -->
+  <circle cx="249" cy="109.5" r="28.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <text x="249" y="110.5" font-size="32" text-anchor="middle" dominant-baseline="central">神</text>
+  <polygon points="246,141 251,141 251,165 255.5,165 248.5,178 241.5,165 246,165" fill="#8C949A"/>
+
+  <!-- モーセ・アロン・ミリアム（線は楕円より先に描く） -->
+  <g stroke="currentColor" stroke-width="5.7">
+    <line x1="248.5" y1="207.5" x2="175" y2="277.5"/>
+    <line x1="248.5" y1="207.5" x2="324" y2="277.5"/>
+    <line x1="175" y1="277" x2="324" y2="277"/>
+  </g>
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="248.5" cy="207.5" rx="49" ry="25.5"/>
+    <ellipse cx="175" cy="277.5" rx="49" ry="25.5"/>
+    <ellipse cx="324" cy="277.5" rx="49" ry="25.5"/>
+  </g>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central">
+    <text x="247.5" y="207" textLength="74" lengthAdjust="spacing">モーセ</text>
+    <text x="175.5" y="279" textLength="75" lengthAdjust="spacing">アロン</text>
+    <text x="323.5" y="279" textLength="83" lengthAdjust="spacing">ミリアム</text>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="175.5" y="229">兄</text>
+    <text x="329" y="229">姉</text>
+  </g>
+  <g font-size="24" font-weight="400" dominant-baseline="central">
+    <text x="122" y="329.5" textLength="102" lengthAdjust="spacing">(出 4:14)</text>
+    <text x="267" y="329.5" textLength="114" lengthAdjust="spacing">(出 15:20)</text>
+  </g>
+
+  <!-- ⇒ -->
+  <polygon points="386,271 411.5,271 411.5,254.5 436,279.5 411.5,304.5 411.5,288 386,288" fill="#8C949A" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>
+
+  <!-- 神・イエス・聖霊・人間 -->
+  <g stroke="currentColor" stroke-width="5.7">
+    <line x1="569.5" y1="209.5" x2="496.5" y2="278.5"/>
+    <line x1="569.5" y1="209.5" x2="646.5" y2="278.5"/>
+    <line x1="571" y1="343.5" x2="496.5" y2="278.5"/>
+    <line x1="571" y1="343.5" x2="646.5" y2="278.5"/>
+    <line x1="496.5" y1="279" x2="646.5" y2="279"/>
+  </g>
+  <g stroke="currentColor" stroke-width="2.6">
+    <circle cx="569.5" cy="209.5" r="28" fill="#fff" class="paper"/>
+    <ellipse cx="496.5" cy="278.5" rx="48.5" ry="25.5" fill="#F98AEE"/>
+    <ellipse cx="646.5" cy="278.5" rx="48" ry="25.5" fill="#A0F08A"/>
+    <ellipse cx="571" cy="343.5" rx="49" ry="25.5" fill="#FCE5E3"/>
+  </g>
+  <text x="569.5" y="210" font-size="32" text-anchor="middle" dominant-baseline="central">神</text>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="498" y="279" font-size="26" textLength="74" lengthAdjust="spacing">イエス</text>
+    <text x="647" y="280" font-size="28" textLength="64" lengthAdjust="spacing">聖霊</text>
+    <text x="568.5" y="344" font-size="31" textLength="57" lengthAdjust="spacing">人間</text>
+  </g>
+
+  <text x="448" y="396.5" font-size="26" font-weight="400" dominant-baseline="central" textLength="259" lengthAdjust="spacing">み言の実体として復帰</text>
+</svg>

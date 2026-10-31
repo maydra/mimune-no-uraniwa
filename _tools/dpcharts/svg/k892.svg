@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>大家族理想世界　言語統一</title>
+
+  <rect x="291.5" y="33.5" width="232" height="43" rx="6" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <text x="407.5" y="55" font-size="28" text-anchor="middle" dominant-baseline="central" textLength="200" lengthAdjust="spacing">大家族理想世界</text>
+
+  <!-- 神と再臨主の間の矢印 -->
+  <g fill="none" stroke="currentColor" stroke-width="4.5">
+    <path d="M365,189.5 Q352,176 363,162"/>
+    <path d="M446,153.5 Q459,167 449.5,180"/>
+  </g>
+  <g>
+    <polygon points="361,157.5 371.5,155 367,166"/>
+    <polygon points="442.5,188 447,177 453.5,186"/>
+  </g>
+
+  <!-- 再臨主から子女への矢印（楕円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="6.5">
+    <line x1="405.5" y1="223" x2="314.7" y2="291.1"/>
+    <line x1="405" y1="223" x2="405" y2="286"/>
+    <line x1="405.5" y1="223" x2="495.3" y2="290.6"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="305.5,298 310.7,284.1 320.3,296.9"/>
+    <polygon points="405,297.5 397,285 413,285"/>
+    <polygon points="504.5,297.5 489.7,296.4 499.3,283.6"/>
+  </g>
+
+  <!-- 神 -->
+  <circle cx="405" cy="135" r="32.3" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <text x="404" y="135" font-size="32" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 再臨主（父母） -->
+  <ellipse cx="405.5" cy="223" rx="52.8" ry="39.3" fill="#F8F28F" stroke="currentColor" stroke-width="2.5"/>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="406" y="209">再臨主</text>
+    <text x="405.5" y="238.5">（父母）</text>
+  </g>
+
+  <!-- 子女 -->
+  <g fill="#FCE5E3" stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="288" cy="326" rx="28.8" ry="25.3"/>
+    <ellipse cx="404.5" cy="326" rx="28.8" ry="25.3"/>
+    <ellipse cx="519.5" cy="326" rx="28.8" ry="25.3"/>
+  </g>
+  <g font-size="23" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="288" y="327">子女</text>
+    <text x="405" y="327">子女</text>
+    <text x="520" y="327">子女</text>
+  </g>
+
+  <!-- 子女どうしの授受 -->
+  <g fill="none" stroke="currentColor" stroke-width="4">
+    <path d="M329.5,318 Q337.5,306 351.5,311.5"/>
+    <path d="M361.5,332 Q353.5,344 339.5,338.5"/>
+    <path d="M446.5,317.5 Q454.5,305.5 468.5,311"/>
+    <path d="M478.5,331.5 Q470.5,343.5 456.5,338"/>
+  </g>
+  <g>
+    <polygon points="355.5,306.5 364,317 350,317"/>
+    <polygon points="335.5,343.5 327,333 341,333"/>
+    <polygon points="472.5,306 481,316.5 467,316.5"/>
+    <polygon points="452.5,343 444,332.5 458,332.5"/>
+  </g>
+
+  <text x="411" y="386" font-size="28" text-anchor="middle" dominant-baseline="central" textLength="113" lengthAdjust="spacing">言語統一</text>
+</svg>

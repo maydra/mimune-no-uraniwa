@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間は被造世界の形状的中心</title>
+  <defs>
+    <marker id="z110-a" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.7" markerHeight="2.7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="76" font-size="48" textLength="648" lengthAdjust="spacing">人間は被造世界の形状的中心</text>
+  <line x1="53" y1="87" x2="703" y2="87" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神から人間・被造物へ（灰色の線。形の下に描く） -->
+  <g stroke="#8C949A" stroke-width="9">
+    <line x1="647" y1="162.5" x2="381.5" y2="323.6"/>
+    <line x1="647" y1="155.9" x2="913.5" y2="316.3"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="647" cy="167" r="53" fill="#fff" class="paper"/>
+    <ellipse cx="381.5" cy="328" rx="79.5" ry="44" fill="#FCE5E3"/>
+    <ellipse cx="913.5" cy="328" rx="79.5" ry="44" fill="#DCC4C4"/>
+  </g>
+  <text x="646" y="166.5" font-size="53" text-anchor="middle" dominant-baseline="central">神</text>
+  <g font-size="44" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="353" y="327.5">人</text>
+    <text x="410" y="327.5">間</text>
+    <text x="913" y="328">被造物</text>
+  </g>
+
+  <!-- 合目的的関係（行き来する矢印） -->
+  <g stroke="currentColor" stroke-width="10" marker-end="url(#z110-a)">
+    <line x1="484" y1="318.5" x2="787.7" y2="318.5"/>
+    <line x1="807" y1="343" x2="503.3" y2="343"/>
+  </g>
+  <text x="505.5" y="390" font-size="47" dominant-baseline="central" textLength="286" lengthAdjust="spacing">合目的的関係</text>
+  <g font-size="37" dominant-baseline="central">
+    <text x="442" y="444" text-anchor="end">（</text>
+    <text x="443" y="444" textLength="223" lengthAdjust="spacing">被造物相互間</text>
+    <text x="668" y="444">、</text>
+    <text x="706" y="444" textLength="149" lengthAdjust="spacing">人間中心</text>
+    <text x="855" y="444">）</text>
+  </g>
+  <polygon points="623,480 659,480 659,498 677,498 640,510 605,498 623,498" fill="#8C949A"/>
+
+  <!-- 箇条 -->
+  <circle cx="365" cy="547" r="8.5"/>
+  <circle cx="364" cy="619" r="8.5"/>
+  <g font-size="45" dominant-baseline="central">
+    <text x="388" y="547">物</text>
+    <text x="480" y="547">質</text>
+    <text x="593" y="547" text-anchor="middle">：</text>
+    <text x="619" y="547" textLength="227" lengthAdjust="spacing">肉体に吸収</text>
+    <text x="846" y="547">、</text>
+    <text x="892" y="547" textLength="90" lengthAdjust="spacing">要素</text>
+    <text x="388" y="620" textLength="182" lengthAdjust="spacing">森羅万象</text>
+    <text x="593" y="620" text-anchor="middle">：</text>
+    <text x="618" y="620" textLength="318" lengthAdjust="spacing">生活環境の材料</text>
+  </g>
+</svg>

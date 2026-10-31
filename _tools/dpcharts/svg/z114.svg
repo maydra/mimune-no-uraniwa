@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>すべての存在が二性性相になっている理由</title>
+  <defs>
+    <marker id="z114-a" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.9" markerHeight="2.9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="z114-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.9" markerHeight="2.9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="54" y="80" font-size="46.5" textLength="890" lengthAdjust="spacing">すべての存在が二性性相になっている理由</text>
+  <line x1="52" y1="91.5" x2="945" y2="91.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神から主体・対象へ（灰色の線。形の下に描く） -->
+  <g stroke="#8C949A" stroke-width="9">
+    <line x1="649.5" y1="179.2" x2="426" y2="281.1"/>
+    <line x1="649.5" y1="178" x2="870" y2="273.1"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="649.5" cy="166.5" r="54.5" fill="#fff" class="paper"/>
+    <ellipse cx="426" cy="284.5" rx="82" ry="45.5" fill="#F98AEE"/>
+    <ellipse cx="870" cy="285.5" rx="82" ry="45.5" fill="#A0F08A"/>
+  </g>
+  <text x="648.5" y="165.5" font-size="60" text-anchor="middle" dominant-baseline="central">神</text>
+  <g font-size="48" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="395" y="284.5">主</text>
+    <text x="457.5" y="284.5">体</text>
+    <text x="838.5" y="285">対</text>
+    <text x="901.5" y="285">象</text>
+  </g>
+
+  <!-- 授受作用から力が生じる -->
+  <line x1="650.5" y1="282" x2="650.5" y2="336.6" stroke="#8C949A" stroke-width="9" marker-end="url(#z114-g)"/>
+  <g stroke="currentColor" stroke-width="9" fill="none" marker-end="url(#z114-a)">
+    <path d="M532,271 C599,245 682,249 751,265"/>
+    <path d="M768,299 C723,321 620,322 551,303"/>
+  </g>
+  <circle cx="650" cy="406" r="36" fill="#DCC4C4" stroke="currentColor" stroke-width="4"/>
+  <text x="648.5" y="406.5" font-size="46" text-anchor="middle" dominant-baseline="central" fill="#111">力</text>
+  <polygon points="630,460 666,460 666,479 693,479 650,506 602,479 630,479" fill="#8C949A"/>
+
+  <rect x="352.5" y="526.5" width="593" height="127" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g font-size="41" dominant-baseline="central" fill="#111">
+    <text x="394" y="564.5" textLength="334" lengthAdjust="spacing">①存在するために</text>
+    <text x="393" y="618" textLength="419" lengthAdjust="spacing">②永遠性をもつために</text>
+  </g>
+</svg>

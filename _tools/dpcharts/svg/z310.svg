@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>『人類歴史』　始まりから終末へ　聖書の記録</title>
+
+  <!-- 題（括弧は字の幅がフォントで違うので、内側の端で合わせる） -->
+  <g font-size="50" dominant-baseline="central">
+    <text x="93.5" y="57.5" text-anchor="end">『</text>
+    <text x="93.5" y="57.5" textLength="200" lengthAdjust="spacing">人類歴史</text>
+    <text x="293.5" y="57.5">』</text>
+  </g>
+
+  <!-- 始まり → 終末 -->
+  <g font-size="50" text-anchor="middle" dominant-baseline="central">
+    <text x="638.5" y="134.5">方向</text>
+    <text x="328.5" y="177" textLength="150" lengthAdjust="spacing">始まり</text>
+    <text x="968" y="177">終末</text>
+    <text x="659" y="264" textLength="250" lengthAdjust="spacing">聖書の記録</text>
+  </g>
+  <polygon points="412.5,171.5 864,171.5 864,158.5 898,178.5 864,198.5 864,185.5 412.5,185.5" fill="#8C949A"/>
+
+  <!-- 聖書の記録 -->
+  <rect x="231.5" y="304.5" width="832" height="346.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g font-size="44" dominant-baseline="central" fill="#111">
+    <text x="277" y="348" textLength="263" lengthAdjust="spacing">天と地が消滅</text>
+    <text x="277 320.8 364.6 408.4 452.2 496 539.8 583.6 627.4" y="413.5">日、月、光を失い、</text>
+    <text x="315.6" y="478" textLength="219" lengthAdjust="spacing">星が落ちる</text>
+    <text x="277" y="542.5" textLength="350" lengthAdjust="spacing">死人がよみがえる</text>
+    <text x="277" y="607" textLength="438" lengthAdjust="spacing">空中でイエスを迎える</text>
+  </g>
+  <!-- 聖句の出典（元は横に詰めた字） -->
+  <g font-size="38" dominant-baseline="central" fill="#111">
+    <text x="546" y="349" textLength="270" lengthAdjust="spacingAndGlyphs">(ペテロⅡ 3:12)</text>
+    <text x="541" y="478" textLength="260" lengthAdjust="spacingAndGlyphs">(マタイ 24:29)</text>
+    <text x="633" y="542.5" textLength="337" lengthAdjust="spacingAndGlyphs">(テサロニケⅠ 4:16)</text>
+    <text x="718" y="607" textLength="305" lengthAdjust="spacingAndGlyphs">(テサロニケⅠ 4:17)</text>
+  </g>
+</svg>

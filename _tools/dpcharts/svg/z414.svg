@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>十字架の贖罪と再臨の約束</title>
+
+  <!-- 十字架と贖罪 -->
+  <g transform="translate(208.0,121.0) scale(1.3900,1.2556)" stroke-width="2.268" fill="#7A5230" stroke="#111" stroke-linejoin="round">
+    <path d="M40,0 H60 V42 H100 V60 H60 V180 H40 V60 H0 V42 H40 Z"/>
+  </g>
+  <text x="274" y="403" font-size="52" text-anchor="middle" dominant-baseline="central">贖罪</text>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="392,213.5 419,213.5 419,193.5 442.5,236.5 419,279.5 419,259.5 392,259.5"/>
+    <polygon points="738.5,418.5 785.5,418.5 785.5,444.5 806.5,444.5 762.5,469 718.5,444.5 738.5,444.5"/>
+  </g>
+
+  <!-- 三つの × -->
+  <rect x="485.5" y="95.5" width="578.5" height="282.5" rx="22" fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5"/>
+  <g>
+    <circle cx="520" cy="157" r="9.5"/>
+    <circle cx="520" cy="238" r="9.5"/>
+    <circle cx="520" cy="316.5" r="9.5"/>
+  </g>
+  <g font-size="44" dominant-baseline="central">
+    <text x="541" y="158" textLength="319" lengthAdjust="spacing">原罪完全に清算</text>
+    <text x="540" y="237" textLength="412" lengthAdjust="spacing">創造本性完全に復帰</text>
+    <text x="542" y="316" textLength="316" lengthAdjust="spacing">メシヤ降臨目的</text>
+    <g text-anchor="middle">
+      <text x="883" y="158">：</text>
+      <text x="975" y="237">：</text>
+      <text x="883" y="316">：</text>
+    </g>
+  </g>
+  <g stroke="currentColor" stroke-width="7">
+    <path d="M904.5,142.5 L936.5,172.5 M936.5,142.5 L904.5,172.5"/>
+    <path d="M996.5,222 L1028.5,252 M1028.5,222 L996.5,252"/>
+    <path d="M905.5,301.5 L937.5,331.5 M937.5,301.5 L905.5,331.5"/>
+  </g>
+
+  <!-- 再臨の約束 -->
+  <rect x="353.5" y="506.5" width="706.5" height="80" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <text y="547" font-size="46" dominant-baseline="central" fill="#111"><tspan x="381" textLength="138" lengthAdjust="spacing">イエス</tspan><tspan x="541" text-anchor="middle">：</tspan><tspan x="566" textLength="464" lengthAdjust="spacing">再臨なさることを約束</tspan></text>
+</svg>

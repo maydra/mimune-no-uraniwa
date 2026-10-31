@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>幕屋　至聖所と聖所</title>
+
+  <!-- 題 -->
+  <text x="34" y="37.5" font-size="30" dominant-baseline="central" textLength="61" lengthAdjust="spacing">幕屋</text>
+  <line x1="33" y1="56.5" x2="96" y2="56.5" stroke="currentColor" stroke-width="2.4"/>
+
+  <g font-size="26" dominant-baseline="central">
+    <text x="354" y="76" textLength="52" lengthAdjust="spacing">神殿</text>
+    <text x="418.5" y="76" text-anchor="middle">：</text>
+    <text x="433" y="76" textLength="259" lengthAdjust="spacing">イエスの形象的表示体</text>
+    <text x="354" y="121" textLength="51" lengthAdjust="spacing">幕屋</text>
+    <text x="418" y="121" text-anchor="middle">：</text>
+    <text x="432.5" y="121" textLength="259" lengthAdjust="spacing">イエスの象徴的表示体</text>
+  </g>
+
+  <!-- 幕屋の挿絵（平たい図形） -->
+  <g stroke="#111" stroke-width="2.6" stroke-linejoin="round">
+    <!-- 床と奥の囲い -->
+    <polygon points="128,171 298,122.7 371,170 202.5,219" fill="#E6E6E6"/>
+    <polygon points="128,153 298,104.7 298,122.7 128,171" fill="#DCC4C4"/>
+    <polygon points="298,104.7 371,152 371,170 298,122.7" fill="#DCC4C4"/>
+    <!-- 天幕（黄色の箱） -->
+    <polygon points="233.75,106.25 285,89.5 313.75,110 262,127.5" fill="#F8F28F"/>
+    <polygon points="233.75,106.25 262,127.5 262.5,171.25 233.75,151.25" fill="#F8F28F"/>
+    <polygon points="262,127.5 313.75,110 313,155 262.5,171.25" fill="#F8F28F"/>
+    <!-- 洗盤（黄色の円筒） -->
+    <path d="M199,164 L199,177 A15,4 0 0 0 229,177 L229,164 Z" fill="#F8F28F"/>
+    <ellipse cx="214" cy="164" rx="15" ry="4" fill="#F8F28F"/>
+  </g>
+  <g stroke="#111" fill="none" stroke-linecap="round">
+    <path d="M238.5,109.8 V154.6 M242.5,112.8 V157.4 M246.5,115.9 V160.1 M251.5,119.6 V163.6 M256,123 V166.8" stroke-width="2"/>
+    <line x1="262" y1="127.5" x2="262.5" y2="171.25" stroke-width="4.5"/>
+    <!-- 綱 -->
+    <g stroke-width="2.6">
+      <line x1="233.75" y1="107.5" x2="212" y2="152.5"/>
+      <line x1="255" y1="128.75" x2="247.5" y2="178.75"/>
+      <line x1="262.5" y1="127.5" x2="286.25" y2="170"/>
+      <line x1="313.75" y1="111.25" x2="324.5" y2="155"/>
+    </g>
+  </g>
+  <!-- 手前の囲い -->
+  <g stroke="#111" stroke-width="2.6" stroke-linejoin="round" fill="#DCC4C4">
+    <polygon points="128,153 202.5,201 202.5,219 128,171"/>
+    <polygon points="202.5,201 371,152 371,170 202.5,219"/>
+  </g>
+  <!-- 柱と綱 -->
+  <g stroke="#111" stroke-width="2.6" stroke-linecap="round" fill="none">
+    <line x1="371" y1="152" x2="360.4" y2="173.2"/>
+    <line x1="202.5" y1="201" x2="191.5" y2="212"/>
+    <line x1="202.5" y1="201" x2="208.1" y2="217.4"/>
+    <line x1="203" y1="199.5" x2="203" y2="219" stroke-width="3.6"/>
+  </g>
+  <!-- 地の上の区間 -->
+  <g stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none">
+    <line x1="128" y1="153" x2="118.5" y2="172"/>
+    <line x1="371" y1="152" x2="380" y2="167.5"/>
+    <line x1="360.4" y1="173.2" x2="356.5" y2="181"/>
+    <line x1="191.5" y1="212" x2="183.5" y2="220"/>
+    <line x1="208.1" y1="217.4" x2="211.5" y2="227.5"/>
+  </g>
+
+  <!-- 黒い矢印 -->
+  <line x1="326" y1="197.5" x2="378" y2="226.5" stroke="currentColor" stroke-width="7"/>
+  <polygon points="382.5,216.5 391,234 373.5,234.5" fill="currentColor"/>
+
+  <!-- 至聖所・聖所 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <rect x="258" y="242.5" width="167.5" height="80" fill="#F98AEE"/>
+    <rect x="425.5" y="242.5" width="167.5" height="80" fill="#A0F08A"/>
+  </g>
+  <rect x="290" y="283" width="106" height="31" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="342.5" y="263.5" font-size="25" textLength="77" lengthAdjust="spacing">至聖所</text>
+    <text y="282" font-size="25"><tspan x="489.5">聖</tspan><tspan x="529">所</tspan></text>
+  </g>
+  <text x="342.5" y="299" font-size="21" text-anchor="middle" dominant-baseline="central" textLength="83" lengthAdjust="spacing">契約の箱</text>
+
+  <g font-size="25" dominant-baseline="central">
+    <text x="258.5" y="348" textLength="158" lengthAdjust="spacingAndGlyphs">イエスの霊人体</text>
+    <text x="441" y="348" textLength="135" lengthAdjust="spacingAndGlyphs">イエスの肉身</text>
+    <text x="258" y="387" textLength="136" lengthAdjust="spacingAndGlyphs">無形実体世界</text>
+    <text x="441" y="387" textLength="136" lengthAdjust="spacingAndGlyphs">有形実体世界</text>
+  </g>
+</svg>

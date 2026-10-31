@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>真理と知能（内的真理・外的真理、宗教・科学）</title>
+
+  <!-- 楕円どうしをつなぐ線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="8.5">
+    <line x1="420" y1="207.4" x2="600" y2="137.6"/>
+    <line x1="700" y1="136.2" x2="870" y2="207"/>
+    <line x1="420" y1="497.7" x2="600" y2="570.8"/>
+    <line x1="720" y1="549.7" x2="880" y2="483"/>
+  </g>
+
+  <!-- 下向きの矢印 -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="376" y1="270" x2="376" y2="382"/>
+    <line x1="657" y1="164" x2="657" y2="483"/>
+    <line x1="920.5" y1="270" x2="920.5" y2="378"/>
+  </g>
+  <g>
+    <polygon points="363,380.5 389,380.5 376,403"/>
+    <polygon points="644,481.5 670,481.5 657,504"/>
+    <polygon points="907.5,376.5 933.5,376.5 920.5,399.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="647.5" cy="114" rx="122.5" ry="51.5" fill="#fff" class="paper"/>
+    <ellipse cx="375.5" cy="232" rx="122.5" ry="51" fill="#fff" class="paper"/>
+    <ellipse cx="920.5" cy="232" rx="122.5" ry="51" fill="#fff" class="paper"/>
+    <ellipse cx="375" cy="467" rx="122" ry="51" fill="#CF921C"/>
+    <ellipse cx="922" cy="466" rx="122" ry="51" fill="#CF921C"/>
+    <ellipse cx="661" cy="573" rx="123" ry="47" fill="#CF921C"/>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="648" y="114" font-size="52" textLength="124" lengthAdjust="spacing">真理</text>
+    <text x="376.5" y="231.5" font-size="49">内的真理</text>
+    <text x="920.5" y="231.5" font-size="49">外的真理</text>
+    <g fill="#111">
+      <text x="376" y="466.5" font-size="49">内的知能</text>
+      <text x="922.5" y="465" font-size="49">外的知能</text>
+      <text x="661" y="573" font-size="52" textLength="124" lengthAdjust="spacing">知能</text>
+    </g>
+    <text x="301" y="372" font-size="48">宗教</text>
+    <text x="998" y="372" font-size="48">科学</text>
+  </g>
+</svg>

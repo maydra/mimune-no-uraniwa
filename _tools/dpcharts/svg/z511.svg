@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>終末に起こる霊的現象</title>
+  <defs>
+    <marker id="z511-a" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="54" y="60" font-size="50" dominant-baseline="central">6.</text>
+  <text x="117" y="60" font-size="50" dominant-baseline="central" textLength="500" lengthAdjust="spacing">終末に起こる霊的現象</text>
+  <line x1="117" y1="90" x2="616" y2="90" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 横の線 -->
+  <g stroke="currentColor" stroke-width="4">
+    <line x1="203" y1="296" x2="444" y2="296"/>
+    <line x1="203" y1="372" x2="444" y2="372"/>
+    <line x1="203" y1="444.5" x2="444" y2="444.5"/>
+    <line x1="203" y1="520" x2="444" y2="520"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4.5">
+    <line x1="267.5" y1="298" x2="267.5" y2="372" stroke-dasharray="10 5.5"/>
+    <line x1="267.5" y1="372" x2="267.5" y2="522"/>
+  </g>
+  <!-- 終末へ続く点線 -->
+  <line x1="456" y1="372" x2="576" y2="372" stroke="currentColor" stroke-width="4" stroke-dasharray="12 6"/>
+  <circle cx="450" cy="371.5" r="7"/>
+
+  <!-- 堕落して下り、終末に上る -->
+  <g stroke="currentColor" stroke-width="5.5">
+    <line x1="267.5" y1="372" x2="334.1" y2="534"/>
+    <line x1="348" y1="560" x2="434.2" y2="398.9"/>
+  </g>
+  <polygon points="344,558 347.1,528.6 321.2,539.3"/>
+  <polygon points="446.5,376 446.5,405.5 421.9,392.3"/>
+
+  <!-- 神とアダムの授受 -->
+  <g fill="none" stroke="currentColor" stroke-width="6" marker-end="url(#z511-a)">
+    <path d="M229,249 Q210,232 219,214"/>
+    <path d="M310,195 Q327,214 316,230"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <circle cx="267" cy="178" r="33.5" fill="#fff" class="paper"/>
+    <circle cx="266.5" cy="259.5" r="32.5" fill="#F98AEE"/>
+    <circle cx="269" cy="554.5" r="32.5" fill="#F98AEE"/>
+    <ellipse cx="368.5" cy="594" rx="60" ry="32.5" fill="#CF921C" stroke-width="4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="265.5" y="178" font-size="40">神</text>
+    <g fill="#111">
+      <text x="267.5" y="261" font-size="40">ア</text>
+      <text x="270" y="556" font-size="40">ア</text>
+      <text x="368.5" y="594" font-size="36">堕・人</text>
+    </g>
+  </g>
+
+  <g dominant-baseline="central">
+    <text x="636.5" y="372.5" font-size="50" text-anchor="middle">終末</text>
+    <g font-size="42" text-anchor="middle">
+      <text x="520" y="414">新約</text>
+      <text x="521" y="485">旧約</text>
+    </g>
+  </g>
+
+  <!-- 霊的現象の箱 -->
+  <rect x="701" y="236.5" width="403" height="271" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <circle cx="732.5" cy="297" r="12"/>
+  <circle cx="732.5" cy="371.5" r="12"/>
+  <circle cx="732.5" cy="447.5" r="12"/>
+  <g font-size="48" dominant-baseline="central">
+    <text x="755" y="297" textLength="248" lengthAdjust="spacing">霊通する人</text>
+    <text x="756" y="372" textLength="315" lengthAdjust="spacingAndGlyphs">あなたは主である</text>
+    <text x="755" y="447" textLength="243" lengthAdjust="spacing">偽キリスト</text>
+  </g>
+</svg>

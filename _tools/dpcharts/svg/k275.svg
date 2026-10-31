@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>割礼の目的</title>
+
+  <!-- 題 -->
+  <text x="35" y="38" font-size="30" dominant-baseline="central" textLength="155" lengthAdjust="spacing">割礼の目的</text>
+  <line x1="33" y1="57" x2="190" y2="57" stroke="currentColor" stroke-width="2.4"/>
+
+  <!-- 神 -->
+  <circle cx="211" cy="115" r="28" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <text x="210" y="115" font-size="32" text-anchor="middle" dominant-baseline="central">神</text>
+  <text x="254" y="117" font-size="25" dominant-baseline="central" textLength="160" lengthAdjust="spacing">(出 4:24～26)</text>
+
+  <!-- 灰色の矢印（楕円より先に描く） -->
+  <g fill="#8C949A">
+    <polygon points="208.2,144 208.2,222 204,222 211,234 218,222 213.8,222 213.8,144"/>
+    <polygon points="340,263.5 273,263.5 273,259.5 263.5,265.75 273,272 273,268 340,268"/>
+    <polygon points="289.4,320 261.8,293.9 265.1,290.5 250.5,287 254.8,301.4 258.1,297.9 285.6,324"/>
+    <polygon points="359.9,286.2 338.9,310.8 335.2,307.7 332.5,322.5 346.6,317.5 343,314.4 364.1,289.8"/>
+    <polygon points="606.7,324.4 586.3,296 590.2,293.2 576.5,287 578,301.9 581.8,299.2 602.3,327.6"/>
+  </g>
+  <g font-size="21" dominant-baseline="central">
+    <text x="120" y="171" textLength="79" lengthAdjust="spacing">殺そうと</text>
+    <text x="122" y="197" textLength="58" lengthAdjust="spacing">される</text>
+  </g>
+
+  <!-- モーセ・チッポラ・男の子 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="211" cy="265.5" rx="48.7" ry="25.2" fill="#fff" class="paper"/>
+    <ellipse cx="389" cy="265.5" rx="48.7" ry="25.2" fill="#fff" class="paper"/>
+    <ellipse cx="303.5" cy="347" rx="48.5" ry="25" fill="#FCE5E3"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="209" y="267.5" font-size="26" textLength="74" lengthAdjust="spacing">モーセ</text>
+    <text x="390" y="266" font-size="24" textLength="80" lengthAdjust="spacing">チッポラ</text>
+    <text x="350.5" y="226" font-size="28">妻</text>
+    <text x="306.5" y="286.5" font-size="25" textLength="49" lengthAdjust="spacing">割礼</text>
+    <text x="304.5" y="348" font-size="28" textLength="83" lengthAdjust="spacing" fill="#111">男の子</text>
+  </g>
+
+  <!-- ⇒ -->
+  <polygon points="454,250.5 468.5,250.5 468.5,234.5 482.5,264 468.5,293.5 468.5,278.5 454,278.5" fill="#8C949A" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>
+
+  <!-- イエス・イスラエル民族 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="548" cy="262" rx="48.7" ry="25.2" fill="#F8F28F"/>
+    <ellipse cx="629.5" cy="362.5" rx="65.2" ry="37.2" fill="#F86D42"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="628" y="297.5" font-size="25" textLength="50" lengthAdjust="spacing">割礼</text>
+    <g fill="#111">
+      <text x="548" y="262" font-size="28" textLength="86" lengthAdjust="spacing">イエス</text>
+      <text x="629.5" y="354" font-size="24" textLength="109" lengthAdjust="spacing">イスラエル</text>
+      <text x="630" y="381.5" font-size="24" textLength="44" lengthAdjust="spacing">民族</text>
+    </g>
+  </g>
+</svg>

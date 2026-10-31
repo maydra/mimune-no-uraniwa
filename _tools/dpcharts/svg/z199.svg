@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>生心と肉心との関係から見た人間の心</title>
+  <defs>
+    <marker id="z199-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.2" markerHeight="2" preserveAspectRatio="none" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="51" y="77" font-size="46">3.</text>
+  <text x="112" y="78" font-size="48" textLength="832" lengthAdjust="spacing">生心と肉心との関係から見た人間の心</text>
+  <line x1="112" y1="88" x2="944" y2="88" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 四位の線（円の下に描く） -->
+  <path d="M614,211.7 L473.5,372.3 L613,531.8 L754.6,372.4 Z" fill="none" stroke="currentColor" stroke-width="12.5"/>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="9.5" fill="none" marker-end="url(#z199-g)">
+    <path d="M603,464 Q583,371.25 599,293.5"/>
+    <path d="M626,275 Q644.5,378.75 629,447.5"/>
+    <path d="M563,357.5 Q611,330.25 655,352"/>
+    <path d="M665,383.5 Q601.5,408.75 572,389"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="612.75" cy="196.25" r="63" fill="#fff" class="paper"/>
+    <ellipse cx="461" cy="370" rx="82" ry="58" fill="#F98AEE"/>
+    <ellipse cx="766.5" cy="370" rx="82" ry="60" fill="#A0F08A"/>
+    <circle cx="612.75" cy="541.25" r="63" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="611.5" y="194.5" font-size="66">神</text>
+    <text x="613" y="540.5" font-size="66" fill="#111">心</text>
+    <g font-size="56">
+      <text x="461.5" y="370" fill="#111">生心</text>
+      <text x="768" y="370.5" fill="#111">肉心</text>
+      <text x="306.5" y="373.5">性相</text>
+      <text x="922" y="371">形状</text>
+    </g>
+  </g>
+
+  <!-- 心 …… 創造目的指向 -->
+  <line x1="693" y1="545" x2="803.5" y2="545" stroke="#8C949A" stroke-width="11" stroke-dasharray="12 12.5"/>
+  <g font-size="56" dominant-baseline="central">
+    <text x="816" y="539.5">創造目的</text>
+    <text x="816" y="608.5">指向</text>
+  </g>
+</svg>

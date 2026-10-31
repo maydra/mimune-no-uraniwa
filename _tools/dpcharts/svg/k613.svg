@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>宗教と経済が政治と結びつく　宗教史（キリスト教史）・政治史・経済史</title>
+
+  <!-- 灰色の矢印（楕円より先に描く） -->
+  <g fill="none" stroke="#8C949A">
+    <line x1="254.6" y1="118.5" x2="528" y2="118.5" stroke-width="6" stroke-dasharray="15 8.4"/>
+    <line x1="450" y1="225.5" x2="527" y2="225.5" stroke-width="7" stroke-dasharray="14 7"/>
+    <line x1="250.2" y1="326.5" x2="525" y2="326.5" stroke-width="7" stroke-dasharray="14.5 7.3"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="528,111 541.5,118.5 528,126"/>
+    <polygon points="527,218 540,225.5 527,233"/>
+    <polygon points="525,319 538.5,326.5 525,334"/>
+    <polygon points="243.6,130.0 337.7,180.3 335.4,184.7 351.5,184.2 342.9,170.6 340.6,175.0 246.4,124.8"/>
+    <polygon points="246.4,322.4 340.6,271.8 343.0,276.2 351.5,262.5 335.4,262.1 337.7,266.5 243.6,317.2"/>
+  </g>
+
+  <!-- 宗教・経済・政治 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="200.5" cy="117" rx="56.2" ry="45.7" fill="#F98AEE"/>
+    <ellipse cx="200.5" cy="327" rx="56.2" ry="45.7" fill="#A0F08A"/>
+    <ellipse cx="390.5" cy="226" rx="56.2" ry="45.7" fill="#FCE5E3"/>
+  </g>
+  <g font-size="32" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="200.5" y="116" textLength="74" lengthAdjust="spacing">宗教</text>
+    <text x="200" y="326" textLength="75" lengthAdjust="spacing">経済</text>
+    <text x="390.5" y="225.5" textLength="76" lengthAdjust="spacing">政治</text>
+  </g>
+
+  <!-- × -->
+  <g stroke="currentColor" stroke-width="6">
+    <line x1="179.5" y1="201.5" x2="218.5" y2="241.5"/>
+    <line x1="218.5" y1="201.5" x2="179.5" y2="241.5"/>
+  </g>
+
+  <!-- 結びつく（縦書き） -->
+  <g font-size="23" text-anchor="middle" dominant-baseline="central">
+    <text x="310" y="188.5">結</text>
+    <text x="310" y="212">び</text>
+    <text x="310" y="236.5">つ</text>
+    <text x="310" y="259.5">く</text>
+  </g>
+
+  <!-- 歴史 -->
+  <g font-size="32" dominant-baseline="central">
+    <text x="551" y="119.5" textLength="101" lengthAdjust="spacing">宗教史</text>
+    <text x="551" y="224.5" textLength="101" lengthAdjust="spacing">政治史</text>
+    <text x="551" y="326.5" textLength="101" lengthAdjust="spacing">経済史</text>
+  </g>
+  <text x="539.5" y="157.5" font-size="25" dominant-baseline="central" textLength="132" lengthAdjust="spacingAndGlyphs">(キリスト教史)</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅱ. 実体基台</title>
+  <defs>
+    <marker id="k121-a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="40" y="39" font-size="30" dominant-baseline="central">Ⅱ.</text>
+  <text x="85" y="39" font-size="30" textLength="124" lengthAdjust="spacing" dominant-baseline="central">実体基台</text>
+  <line x1="84" y1="58" x2="209" y2="58" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- ノアとハムの心情一体 -->
+  <g stroke="currentColor" stroke-width="4.5" fill="none" marker-end="url(#k121-a)">
+    <path d="M193,260 Q182,219 194,182"/>
+    <path d="M229,175 Q244,216 233,252"/>
+  </g>
+  <text x="323.5" y="211" font-size="28" text-anchor="middle" dominant-baseline="central">心情一体</text>
+
+  <!-- 実体基台（セムからハムへ） -->
+  <polygon points="519,305.5 314,305.5 314,300 294,309 314,318 314,312.5 519,312.5" fill="#8C949A"/>
+  <rect x="347.5" y="253.5" width="141" height="39.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <text x="417" y="273.5" font-size="28" text-anchor="middle" dominant-baseline="central">実体基台</text>
+
+  <!-- ノア・ハム・セム -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="214.5" cy="126.5" rx="75" ry="29.5" fill="#F8F28F"/>
+    <ellipse cx="214.5" cy="309" rx="75" ry="29.5" fill="#F8F28F"/>
+    <ellipse cx="599" cy="309" rx="75" ry="29.5" fill="#F86D42"/>
+  </g>
+  <g font-size="32" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="213.5" y="127">ノア</text>
+    <text x="213" y="309">ハム</text>
+    <text x="599" y="309">セム</text>
+  </g>
+
+  <g font-size="24" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="216.5" y="359.5">（アベル）</text>
+    <text x="601.5" y="358.5">（カイン）</text>
+  </g>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central">
+    <text x="414.5" y="345">堕落性を脱ぐ</text>
+    <text x="419" y="379.5">ための蕩減条件</text>
+  </g>
+</svg>

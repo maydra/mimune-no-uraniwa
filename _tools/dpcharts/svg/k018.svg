@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>②より小さいものをもって蕩減条件</title>
+
+  <text x="48" y="45" font-size="28" text-anchor="middle" dominant-baseline="central">②</text>
+  <text x="71" y="45" font-size="28" dominant-baseline="central" textLength="431" lengthAdjust="spacing">より小さいものをもって蕩減条件</text>
+
+  <!-- 本然の位置・状態 -->
+  <ellipse cx="251" cy="140.5" rx="98" ry="44.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="250.5" y="119.5">本然の</text>
+    <text x="210.5" y="155.5">位置<tspan x="251.5">・</tspan><tspan x="291.5">状態</tspan></text>
+  </g>
+
+  <!-- 復帰の矢印 -->
+  <polygon points="251,188.5 260.5,205.5 255,205.5 255,289 247,289 247,205.5 241.5,205.5" fill="#8C949A"/>
+  <text x="271" y="237.5" font-size="28" dominant-baseline="central" textLength="57" lengthAdjust="spacing">復帰</text>
+
+  <!-- より小さい価値 -->
+  <ellipse cx="251" cy="334" rx="98.5" ry="44.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-dasharray="4 2.2"/>
+  <ellipse cx="251.5" cy="333" rx="82.5" ry="32" fill="#CDF8F7" stroke="currentColor" stroke-width="2.2"/>
+  <g font-size="22.5" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="248" y="317.5">より</text>
+    <text x="249" y="343.5" textLength="113" lengthAdjust="spacing">小さい価値</text>
+  </g>
+
+  <!-- 例 -->
+  <circle cx="384" cy="171" r="5"/>
+  <circle cx="384" cy="248" r="5"/>
+  <circle cx="384.5" cy="324.5" r="5"/>
+  <g fill="#8C949A">
+    <polygon points="588,168.5 608,168.5 608,165 618.5,171.5 608,178 608,174.5 588,174.5"/>
+    <polygon points="472,243.5 492,243.5 492,240 502.5,246.5 492,253 492,249.5 472,249.5"/>
+    <polygon points="500,321.5 521,321.5 521,318 531.5,324.5 521,331 521,327.5 500,327.5"/>
+  </g>
+  <g font-size="28" dominant-baseline="central">
+    <text x="401" y="171" textLength="172" lengthAdjust="spacing">十字架の代贖</text>
+    <text x="632" y="170.5" textLength="57" lengthAdjust="spacing">救い</text>
+    <text x="400" y="247.5" textLength="57" lengthAdjust="spacing">洗礼</text>
+    <text x="516" y="247.5" textLength="57" lengthAdjust="spacing">重生</text>
+    <text x="401" y="324.5" textLength="85" lengthAdjust="spacing">聖餐式</text>
+    <text x="545" y="324.5" textLength="144" lengthAdjust="spacing">聖体の価値</text>
+  </g>
+</svg>

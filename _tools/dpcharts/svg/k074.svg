@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>信仰基台：○　アベルの供え物、カインの供え物受けられない</title>
+  <defs>
+    <marker id="k074-a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="457.5" y="63" font-size="26" textLength="234" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central">供え物受けられない</text>
+
+  <!-- 神→カイン・サ→アベルの線（楕円より先に描く） -->
+  <g stroke="currentColor" stroke-width="5" fill="none" marker-end="url(#k074-a)">
+    <line x1="282" y1="110" x2="572.5" y2="273.5"/>
+    <line x1="600" y1="111" x2="308.1" y2="266.3"/>
+  </g>
+
+  <!-- 灰色の上向きの矢印（供え物） -->
+  <g fill="#8C949A">
+    <polygon points="255.5,137.5 263.5,151 258.5,151 258.5,255 251.5,255 251.5,151 247.5,151"/>
+    <polygon points="627.5,137.5 635.5,151 630.5,151 630.5,257 623.5,257 623.5,151 619.5,151"/>
+  </g>
+
+  <!-- カインから神への点線の矢印（受けられない） -->
+  <path d="M331,96 C476.8,97.9 539.1,147.2 612,254" fill="none" stroke="#8C949A" stroke-width="6" stroke-dasharray="8.5 6.65" stroke-dashoffset="3.6"/>
+  <polygon points="316,95.5 331,87.5 331,103.5" fill="#8C949A"/>
+
+  <!-- × -->
+  <g stroke="currentColor" stroke-width="8">
+    <line x1="440.5" y1="89.5" x2="460.5" y2="134.5"/>
+    <line x1="471" y1="98" x2="429.5" y2="124.5"/>
+  </g>
+
+  <!-- 人物 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="256.5" cy="95.5" rx="46.5" ry="29.5" fill="#fff" class="paper"/>
+    <ellipse cx="627.5" cy="95.5" rx="46.5" ry="29.5" fill="#50403D"/>
+    <ellipse cx="443.5" cy="197.5" rx="55" ry="29.5" fill="#CF921C"/>
+    <ellipse cx="257" cy="295" rx="61" ry="26" fill="#F8F28F"/>
+    <ellipse cx="627" cy="294.5" rx="61" ry="26.5" fill="#F86D42"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="255" y="94.5" font-size="35">神</text>
+    <text x="625.5" y="96" font-size="33" fill="#fff">サ</text>
+    <text x="443.5" y="197" font-size="28" textLength="82" lengthAdjust="spacing" fill="#111">アダム</text>
+    <text x="258" y="295" font-size="27" textLength="83" lengthAdjust="spacing" fill="#111">アベル</text>
+    <text x="627.5" y="294" font-size="27" textLength="80" lengthAdjust="spacing" fill="#111">カイン</text>
+  </g>
+
+  <!-- 信仰基台の箱 -->
+  <rect x="139" y="156.5" width="91" height="80.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central">
+    <text x="184" y="180" textLength="55" lengthAdjust="spacing">信仰</text>
+    <text x="184" y="214.5" textLength="55" lengthAdjust="spacing">基台</text>
+  </g>
+
+  <!-- 供え物（縦書き） -->
+  <g font-size="23" text-anchor="middle" dominant-baseline="central">
+    <text x="281" y="172.5">供</text>
+    <text x="281.5" y="197.5">え</text>
+    <text x="281" y="220">物</text>
+  </g>
+
+  <!-- 信仰基台：○ -->
+  <rect x="324.5" y="344.5" width="238" height="51" fill="#CDF8F7" stroke="currentColor" stroke-width="2.6"/>
+  <g font-size="33" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="409.5" y="370.5" textLength="134" lengthAdjust="spacing">信仰基台</text>
+    <text x="496" y="370.5">：</text>
+  </g>
+  <circle cx="527.5" cy="369.5" r="14.9" fill="none" stroke="#111" stroke-width="4.2"/>
+</svg>

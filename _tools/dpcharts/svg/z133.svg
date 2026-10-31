@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>実体対象と善の対象（家庭的な四位基台）</title>
+  <defs>
+    <marker id="z133-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.5" markerHeight="2.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 左右をつなぐ点線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="4.5" fill="none">
+    <line x1="441" y1="140" x2="780" y2="140" stroke-dasharray="14 9.15"/>
+    <line x1="436" y1="304" x2="650" y2="304" stroke-dasharray="15 9.4"/>
+    <line x1="427.3" y1="489" x2="768" y2="489" stroke-dasharray="14 9.33"/>
+  </g>
+
+  <!-- 実体対象：人間と家庭・社会が喜びを返す -->
+  <g fill="#8C949A">
+    <polygon points="367,254 367,213 361.5,213 371,193 380.5,213 375,213 375,254"/>
+    <polygon points="367,424 367,378 361.5,378 371,358 380.5,378 375,378 375,424"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="370.8" cy="139.3" rx="56.6" ry="51.6" fill="#fff" class="paper"/>
+    <ellipse cx="370.8" cy="303.8" rx="56.6" ry="51.6" fill="#FCE5E3"/>
+    <ellipse cx="370.4" cy="491.1" rx="77.8" ry="69.2" fill="#FCE5E3"/>
+  </g>
+  <text x="370" y="139.5" font-size="58" text-anchor="middle" dominant-baseline="central">神</text>
+  <g fill="#111" text-anchor="middle" dominant-baseline="central">
+    <text x="370" y="303.5" font-size="46">人間</text>
+    <g font-size="42">
+      <text x="370.5" y="464.5">家庭</text>
+      <text x="370" y="519">社会</text>
+    </g>
+  </g>
+  <g font-size="48" dominant-baseline="central">
+    <text x="437" y="219" textLength="98" lengthAdjust="spacing">喜び</text>
+    <text x="437" y="386" textLength="98" lengthAdjust="spacing">喜び</text>
+  </g>
+
+  <!-- 善の対象：家庭的な四位基台 -->
+  <polygon points="837.2,150.75 965.6,313.5 833.1,461.3 710.1,309.6" fill="none" stroke="currentColor" stroke-width="4"/>
+  <g stroke="currentColor" stroke-width="5.5" fill="none" marker-end="url(#z133-k)">
+    <path d="M778,291.5 Q840.8,271.6 880.4,287.2"/>
+    <path d="M890,317.5 Q828.2,336.1 785.6,320.3"/>
+    <path d="M820,390 C810,360 806,270 816.5,231.3"/>
+    <path d="M845.5,221 C856,250 860,330 849.2,380.1"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="833.5" cy="139.7" rx="56.7" ry="51.8" fill="#fff" class="paper"/>
+    <ellipse cx="705.8" cy="304.2" rx="60.7" ry="51.6" fill="#F98AEE"/>
+    <ellipse cx="963.9" cy="304.1" rx="60.7" ry="51.6" fill="#A0F08A"/>
+    <ellipse cx="833.5" cy="481.4" rx="56.6" ry="51.9" fill="#DCC4C4"/>
+  </g>
+  <text x="830" y="139.5" font-size="58" text-anchor="middle" dominant-baseline="central">神</text>
+  <g fill="#111" font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="706" y="303.5">完ア</text>
+    <text x="964" y="303.5">完エ</text>
+    <text x="834" y="481.5">子女</text>
+  </g>
+
+  <g font-size="52" dominant-baseline="central">
+    <text x="263" y="614" textLength="213" lengthAdjust="spacing">実体対象</text>
+    <text x="728" y="614" textLength="214" lengthAdjust="spacing">善の対象</text>
+  </g>
+</svg>

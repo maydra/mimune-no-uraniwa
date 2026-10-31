@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>③実績のない自由はない</title>
+  <defs>
+    <marker id="z296-a" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.4" markerHeight="2.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text y="75" font-size="45"><tspan x="52">③</tspan><tspan x="105" textLength="454" lengthAdjust="spacing">実績のない自由はない</tspan></text>
+
+  <!-- 神と完成した人の間を回る矢印 -->
+  <circle cx="472.5" cy="165" r="51.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="470" y="164.5" font-size="52" text-anchor="middle" dominant-baseline="central">神</text>
+  <g stroke="currentColor" stroke-width="6.5" fill="none" marker-end="url(#z296-a)">
+    <path d="M415,270 Q395.5,242 416.5,214"/>
+    <path d="M526.5,205 Q548,233.5 526,260"/>
+  </g>
+
+  <ellipse cx="471.5" cy="318" rx="72.5" ry="51.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g font-size="45" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="436.5" y="318">完</text>
+    <text x="506.5" y="318">人</text>
+  </g>
+  <circle cx="471.5" cy="317.5" r="5.5" fill="#111"/>
+  <text x="576" y="335.5" font-size="52">喜びの実績</text>
+
+  <!-- 成長期間の矢印と線 -->
+  <polygon points="471.5,379 510,421.5 489.5,421.5 489.5,544 454,544 454,421.5 433,421.5" fill="#C4CCD3" stroke="currentColor" stroke-width="4"/>
+  <g stroke="currentColor" stroke-width="7">
+    <line x1="356" y1="375" x2="587.5" y2="375"/>
+    <line x1="356" y1="547.5" x2="587.5" y2="547.5"/>
+    <line x1="394" y1="438" x2="456" y2="438"/>
+    <line x1="488" y1="438" x2="546.5" y2="438"/>
+    <line x1="394" y1="496" x2="456" y2="496"/>
+    <line x1="488" y1="496" x2="546.5" y2="496"/>
+  </g>
+  <g stroke="#111" stroke-width="7">
+    <line x1="456" y1="438" x2="488" y2="438"/>
+    <line x1="456" y1="496" x2="488" y2="496"/>
+  </g>
+  <text y="480" font-size="48"><tspan x="574" textLength="197" lengthAdjust="spacing">責任分担</tspan><tspan x="780.5">（</tspan><tspan x="804.5">自由</tspan><tspan x="902">）</tspan></text>
+
+  <ellipse cx="472" cy="602.5" rx="67" ry="51.5" fill="#FCE5E3" stroke="currentColor" stroke-width="4"/>
+  <text x="471" y="603.5" font-size="49" text-anchor="middle" dominant-baseline="central" fill="#111">人間</text>
+  <text x="573.5" y="627" font-size="48" textLength="196" lengthAdjust="spacing">自由意志</text>
+</svg>

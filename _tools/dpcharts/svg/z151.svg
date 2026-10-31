@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>愛と美の目的</title>
+  <defs>
+    <marker id="z151-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="2.2" markerHeight="2.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="52.5" y="59" font-size="46" dominant-baseline="central" textLength="298" lengthAdjust="spacing">愛と美の目的</text>
+  <line x1="51" y1="89.5" x2="351" y2="89.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="10">
+    <line x1="647" y1="139.5" x2="468.6" y2="322.5"/>
+    <line x1="673" y1="139.5" x2="851.4" y2="322.5"/>
+    <line x1="457.5" y1="322.5" x2="639.3" y2="507.5"/>
+    <line x1="862.5" y1="322.5" x2="680.7" y2="507.5"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="9.5" fill="none" marker-end="url(#z151-g)">
+    <path d="M627,440 Q585.4,321.6 622.3,216.9"/>
+    <path d="M695,214 Q734.3,325 698.4,436"/>
+    <path d="M546,305.5 Q661.1,262.8 771.8,306.9"/>
+    <path d="M773,332 Q659.1,371.7 548.9,330.6"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="660" cy="139.5" rx="56" ry="53.5" fill="#fff" class="paper"/>
+    <ellipse cx="451" cy="322.5" rx="56" ry="53.5" fill="#F98AEE"/>
+    <ellipse cx="862" cy="322.5" rx="56" ry="53.5" fill="#A0F08A"/>
+    <ellipse cx="659.5" cy="507.5" rx="56" ry="53.5" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="659" y="139.5" font-size="57">神</text>
+    <text x="661" y="248.5" font-size="45">愛</text>
+    <text x="662" y="392.5" font-size="45">美</text>
+    <g fill="#111">
+      <text x="451" y="320.5" font-size="56">主</text>
+      <text x="862" y="321" font-size="57">対</text>
+      <text x="660" y="506.5" font-size="58">合</text>
+    </g>
+    <text x="659.5" y="619.5" font-size="46" textLength="296" lengthAdjust="spacing">創造目的完成</text>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>アベル・セツからノアの家庭へ</title>
+  <defs>
+    <marker id="k101-g" viewBox="0 0 16 19" refX="8" refY="9.5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="19" orient="auto">
+      <path d="M0,0 L16,9.5 L0,19 z" fill="#8C949A"/>
+    </marker>
+    <marker id="k101-d" viewBox="0 0 13 17" refX="5" refY="8.5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="17" orient="auto">
+      <path d="M0,0 L13,8.5 L0,17 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 灰色の矢印 -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#k101-g)">
+    <line x1="254" y1="162" x2="254" y2="111"/>
+    <line x1="535" y1="185.5" x2="332" y2="185.5"/>
+  </g>
+  <!-- 黒い矢印 -->
+  <g stroke="currentColor" stroke-width="6.5" fill="none" marker-end="url(#k101-d)">
+    <line x1="254" y1="208" x2="254" y2="237"/>
+    <line x1="254" y1="288" x2="254" y2="315"/>
+  </g>
+
+  <!-- 殺害 -->
+  <path d="M422,169.5 L453,200.5 M453,169.5 L422,200.5" stroke="currentColor" stroke-width="7"/>
+  <text x="437.5" y="144" font-size="33" text-anchor="middle" dominant-baseline="central">殺害</text>
+
+  <!-- 神 -->
+  <circle cx="254" cy="66" r="34" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <text x="254" y="66.5" font-size="37" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 人物 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="253.5" cy="185" rx="62.5" ry="23" fill="#F8F28F"/>
+    <ellipse cx="253.8" cy="268" rx="58.2" ry="20" fill="#F8F28F"/>
+    <ellipse cx="597.5" cy="185.5" rx="62.5" ry="23.5" fill="#F86D42"/>
+    <rect x="163" y="328" width="189" height="54" rx="8" fill="#F8F28F"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="254.5" y="185" font-size="33">アベル</text>
+    <text x="253" y="268.5" font-size="30">セツ</text>
+    <text x="599.5" y="185" font-size="33">カイン</text>
+    <text x="257.5" y="355" font-size="35">ノアの家庭</text>
+  </g>
+
+  <!-- 洪水審判 -->
+  <g font-size="30" dominant-baseline="central">
+    <text x="369" y="357" text-anchor="middle">：</text>
+    <text x="389" y="357" textLength="123" lengthAdjust="spacing">洪水審判</text>
+    <text x="525" y="357" font-size="29" textLength="114" lengthAdjust="spacingAndGlyphs">(創 6:13)</text>
+    <text x="390" y="399.5" textLength="61" lengthAdjust="spacing">終末</text>
+  </g>
+</svg>

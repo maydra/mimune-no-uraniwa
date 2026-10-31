@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>サタンは現実へ　宗教は現実を見捨て、科学は現実を追求する</title>
+
+  <!-- 灰色の矢印（楕円より先に描く） -->
+  <g fill="#8C949A">
+    <polygon points="228,226 271,226 271,221.5 287.5,230 271,238.5 271,234 228,234"/>
+    <polygon points="558.9,162.9 449.6,195.7 447.8,189.7 432.5,204.8 453.6,208.9 451.8,202.9 561.1,170.1"/>
+    <polygon points="556.2,292.2 447.7,254.2 449.7,248.3 428.5,251.5 443.1,267.2 445.2,261.3 553.8,299.3"/>
+  </g>
+
+  <!-- サ -->
+  <circle cx="192" cy="230.5" r="36.2" fill="#50403D" stroke="currentColor" stroke-width="2.6"/>
+  <text x="192" y="231" font-size="34" text-anchor="middle" dominant-baseline="central" fill="#fff">サ</text>
+
+  <!-- 現実・宗教・科学 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="362" cy="230" rx="66.7" ry="40.7" fill="#CF921C"/>
+    <ellipse cx="601" cy="146.5" rx="61.7" ry="34.2" fill="#F98AEE"/>
+    <ellipse cx="600.5" cy="310.5" rx="61.7" ry="34.2" fill="#A0F08A"/>
+  </g>
+  <g font-size="34" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="366" y="229.5" textLength="66" lengthAdjust="spacing">現実</text>
+    <text x="600.5" y="145">宗教</text>
+    <text x="599.5" y="309.5">科学</text>
+  </g>
+
+  <!-- 見捨てる・追求 -->
+  <g font-size="26" text-anchor="middle" dominant-baseline="central">
+    <text transform="translate(481.5,153) rotate(-20.4)" textLength="104" lengthAdjust="spacing">見捨てる</text>
+    <text transform="translate(478.5,298.5) rotate(18)" font-size="28" textLength="58" lengthAdjust="spacing">追求</text>
+  </g>
+
+  <!-- × -->
+  <g stroke="currentColor" stroke-width="5.5">
+    <line x1="479" y1="173" x2="511" y2="201"/>
+    <line x1="504" y1="169.5" x2="488" y2="205.5"/>
+    <line x1="580" y1="211" x2="615" y2="246"/>
+    <line x1="615" y1="211" x2="580" y2="246"/>
+  </g>
+</svg>

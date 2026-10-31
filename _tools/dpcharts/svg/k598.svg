@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人類罪悪史の発展過程</title>
+
+  <text x="32" y="38.5" font-size="30" dominant-baseline="central" textLength="314" lengthAdjust="spacing">人類罪悪史の発展過程</text>
+  <line x1="32" y1="57.5" x2="347" y2="57.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 神・サタン -->
+  <text x="249" y="95" font-size="31" text-anchor="middle" dominant-baseline="central">神</text>
+  <text x="564.5" y="88.5" font-size="27" text-anchor="middle" dominant-baseline="central" textLength="83" lengthAdjust="spacing">サタン</text>
+  <g font-size="23" dominant-baseline="central">
+    <text x="478" y="118" text-anchor="middle">（</text>
+    <text x="483" y="118" textLength="164" lengthAdjust="spacing">先に歩んできた</text>
+    <text x="652.5" y="118" text-anchor="middle">）</text>
+  </g>
+
+  <!-- 下向きの灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="249.75,188 258.25,188 258.25,200.5 263.5,200.5 254,216.5 244.5,200.5 249.75,200.5"/>
+    <polygon points="248.5,267 257,267 257,277.5 262.25,277.5 252.75,293 243.25,277.5 248.5,277.5"/>
+    <polygon points="247.75,344 256.25,344 256.25,354.5 261.5,354.5 252,370.5 242.5,354.5 247.75,354.5"/>
+    <polygon points="560.75,192 569.25,192 569.25,201.5 574.5,201.5 565,217 555.5,201.5 560.75,201.5"/>
+    <polygon points="560.75,267 569.25,267 569.25,274.5 574.5,274.5 565,290.5 555.5,274.5 560.75,274.5"/>
+    <polygon points="562.25,342 570.75,342 570.75,356.5 576,356.5 566.5,372 557,356.5 562.25,356.5"/>
+  </g>
+
+  <!-- 神の側の楕円 -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="3">
+    <ellipse cx="256" cy="164.5" rx="87" ry="23.5"/>
+    <ellipse cx="253" cy="243.5" rx="87" ry="22.5"/>
+    <ellipse cx="252" cy="320.5" rx="87" ry="22.5"/>
+    <ellipse cx="251" cy="398.5" rx="87.5" ry="22.5"/>
+  </g>
+  <!-- サタンの側の楕円 -->
+  <g fill="#CF921C" stroke="currentColor" stroke-width="3">
+    <ellipse cx="566" cy="165" rx="87" ry="26.5"/>
+    <ellipse cx="565" cy="243.5" rx="87" ry="22.5"/>
+    <ellipse cx="566" cy="318.5" rx="86.5" ry="22.5"/>
+    <ellipse cx="565.5" cy="398" rx="87" ry="22.5"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="256.5" y="165" font-size="26" textLength="131" lengthAdjust="spacing">善なる個体</text>
+    <text x="253" y="243.5" font-size="22" textLength="146" lengthAdjust="spacing">善なる氏族社会</text>
+    <text x="251.5" y="320.5" font-size="22" textLength="147" lengthAdjust="spacing">善なる封建社会</text>
+    <text x="250.5" y="398" font-size="26" textLength="129" lengthAdjust="spacing">善なる王国</text>
+    <text x="566" y="165" font-size="24" textLength="142" lengthAdjust="spacing">原始共同社会</text>
+    <text x="565.5" y="243.5" font-size="26" textLength="105" lengthAdjust="spacing">氏族社会</text>
+    <text x="566" y="318" font-size="28" textLength="116" lengthAdjust="spacing">封建社会</text>
+    <text x="565.5" y="398" font-size="26" textLength="105" lengthAdjust="spacing">君主社会</text>
+  </g>
+
+  <!-- 括弧 -->
+  <g fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M353,146.5 L362.5,153.5 V404.5 L352.5,414"/>
+    <path d="M467,145.5 L458.5,154 V406 L468.5,414.5"/>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <polygon points="396,254 416.5,254 416.5,243.5 433.5,266.5 416.5,290.5 416.5,279 396,279" fill="#8C949A"/>
+</svg>

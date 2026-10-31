@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神と人間との血縁関係復帰</title>
+  <defs>
+    <marker id="k431-a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="34" y="36.5" font-size="30" dominant-baseline="central" textLength="377" lengthAdjust="spacing">神と人間との血縁関係復帰</text>
+  <line x1="34" y1="55" x2="411" y2="55" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 神・サ -->
+  <circle cx="363.5" cy="130" r="32" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <circle cx="600" cy="130" r="32" fill="#50403D" stroke="currentColor" stroke-width="3"/>
+  <g font-size="30" text-anchor="middle" dominant-baseline="central">
+    <text x="363" y="130">神</text>
+    <text x="599.5" y="130" fill="#fff">サ</text>
+  </g>
+  <g font-size="24" dominant-baseline="central">
+    <text x="270" y="113.5" textLength="50" lengthAdjust="spacing">霊的</text>
+    <text x="270" y="143" textLength="50" lengthAdjust="spacing">父母</text>
+  </g>
+
+  <!-- 授受の矢印「( )」 -->
+  <g fill="none" stroke="currentColor" stroke-width="4" marker-end="url(#k431-a)">
+    <path d="M347,237 Q330,208 349,181"/>
+    <path d="M377,177 Q395,208 376,235"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="4" marker-end="url(#k431-a)">
+    <path d="M584,239 Q567,210 586,183"/>
+    <path d="M614,179 Q632,210 613,237"/>
+  </g>
+
+  <!-- 創造目的（心情の因縁） -->
+  <rect x="136.5" y="173.5" width="140" height="71.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <text x="153" y="195.5" font-size="26.5" dominant-baseline="central" textLength="108" lengthAdjust="spacing">創造目的</text>
+  <text y="226.5" font-size="20" dominant-baseline="central"><tspan x="144.5">（</tspan><tspan x="155" textLength="105" lengthAdjust="spacing">心情の因縁</tspan><tspan x="258">）</tspan></text>
+  <path d="M286,208 H298 M302.5,208 H314.5 M319,208 H331" stroke="currentColor" stroke-width="4.5"/>
+
+  <!-- 堕落 -->
+  <polygon points="435,281 515,281 515,274 533,284.5 515,295 515,288 435,288" fill="#8C949A"/>
+  <text x="455" y="255.5" font-size="24" dominant-baseline="central" textLength="50" lengthAdjust="spacing">堕落</text>
+
+  <!-- 人間・人類 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="362" cy="285.5" rx="53.5" ry="26" fill="#FCE5E3"/>
+    <ellipse cx="604" cy="284" rx="52.5" ry="25.5" fill="#CF921C"/>
+  </g>
+  <g font-size="29" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="360" y="285.5" textLength="58" lengthAdjust="spacing">人間</text>
+    <text x="601" y="283.5" textLength="60" lengthAdjust="spacing">人類</text>
+  </g>
+
+  <g font-size="25.5" dominant-baseline="central">
+    <text x="310" y="333.5" textLength="101" lengthAdjust="spacing">天の血統</text>
+    <text x="310" y="363.5" textLength="102" lengthAdjust="spacing">直系子女</text>
+    <text x="540" y="333.5" textLength="155" lengthAdjust="spacing">サタンの血統</text>
+    <text x="540" y="365" textLength="129" lengthAdjust="spacing">悪魔の子女</text>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>第一の試練（石がパンになるように命じてみよ）</title>
+
+  <text x="33" y="36" font-size="28" dominant-baseline="central" textLength="144" lengthAdjust="spacing">第一の試練</text>
+  <line x1="34" y1="55" x2="175" y2="55" stroke="currentColor" stroke-width="2.4"/>
+
+  <!-- 聖句 -->
+  <text x="138" y="116.5" font-size="24" font-weight="400" dominant-baseline="central" textLength="393" lengthAdjust="spacing">『石がパンになるように命じてみよ』</text>
+  <text x="540" y="116.5" font-size="23" dominant-baseline="central" textLength="130" lengthAdjust="spacing">(マタイ 4:3)</text>
+
+  <!-- 石 -->
+  <!-- 石: 元の絵どおり黄の面に波打つ縁 -->
+  <path d="M318.1,207.0 L316.7,210.0 L313.7,212.5 L311.9,214.9 L312.3,217.8 L313.6,221.5 L313.3,224.8 L310.6,226.7 L306.8,227.4 L304.0,228.5 L302.9,231.3 L302.2,235.1 L300.3,237.8 L297.0,238.1 L293.3,236.8 L290.4,236.4 L288.0,238.2 L285.5,241.2 L282.5,242.6 L279.5,241.2 L277.0,238.2 L274.6,236.4 L271.7,236.8 L268.0,238.1 L264.7,237.8 L262.8,235.1 L262.1,231.3 L261.0,228.5 L258.2,227.4 L254.4,226.7 L251.7,224.8 L251.4,221.5 L252.7,217.8 L253.1,214.9 L251.3,212.5 L248.3,210.0 L246.9,207.0 L248.3,204.0 L251.3,201.5 L253.1,199.1 L252.7,196.2 L251.4,192.5 L251.7,189.2 L254.4,187.3 L258.2,186.6 L261.0,185.5 L262.1,182.7 L262.8,178.9 L264.7,176.2 L268.0,175.9 L271.7,177.2 L274.6,177.6 L277.0,175.8 L279.5,172.8 L282.5,171.4 L285.5,172.8 L288.0,175.8 L290.4,177.6 L293.3,177.2 L297.0,175.9 L300.3,176.2 L302.2,178.9 L302.9,182.7 L304.0,185.5 L306.8,186.6 L310.6,187.3 L313.3,189.2 L313.6,192.5 L312.3,196.2 L311.9,199.1 L313.7,201.5 L316.7,204.0 Z" fill="#F8F28F" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <text x="281.5" y="207.5" font-size="34" text-anchor="middle" dominant-baseline="central" fill="#111">石</text>
+
+  <!-- 灰色の矢印 -->
+  <polygon points="347,203 363,203 363,196.5 379.5,207 363,217.5 363,211 347,211" fill="#8C949A"/>
+
+  <!-- 皿とパン -->
+  <g stroke="#111" stroke-linejoin="round">
+    <ellipse cx="491" cy="223" rx="78" ry="15.5" fill="#fff" stroke-width="3"/>
+    <path d="M482,234 Q534,232 545,219" fill="none" stroke-width="2.4"/>
+    <g stroke-width="1.6">
+      <polygon points="439,186 456,175 537,175 523,186" fill="#CF921C"/>
+      <rect x="439" y="186" width="84" height="13" fill="#F8F28F"/>
+      <rect x="439" y="199" width="84" height="13" fill="#CF921C"/>
+      <rect x="439" y="212" width="84" height="13" fill="#F8F28F"/>
+      <polygon points="523,186 537,175 537,188 523,199" fill="#F8F28F"/>
+      <polygon points="523,199 537,188 537,201 523,212" fill="#CF921C"/>
+      <polygon points="523,212 537,201 537,214 523,225" fill="#F8F28F"/>
+    </g>
+  </g>
+  <text x="481" y="207" font-size="26" text-anchor="middle" dominant-baseline="central" textLength="54" lengthAdjust="spacing" fill="#111">パン</text>
+
+  <!-- 下の箱 -->
+  <rect x="123.5" y="307.5" width="572" height="45" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <text x="141" y="330.5" font-size="23" dominant-baseline="central" textLength="536" lengthAdjust="spacing" fill="#111">パンで飢えをしのぐようになれば、サタンが石を所有</text>
+</svg>

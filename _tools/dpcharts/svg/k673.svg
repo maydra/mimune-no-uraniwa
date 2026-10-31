@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>マルクス、エンゲルス「弁証法的唯物論」提唱　共産主義世界形成</title>
+
+  <!-- 灰色の矢印（箱の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="213.1,177.7 302.1,302.2 297.7,305.4 313.3,312.7 311.5,295.6 307,298.8 217.9,174.3"/>
+    <polygon points="408.2,274 408.2,304.5 403,304.5 411.5,318.5 420,304.5 414.8,304.5 414.8,274"/>
+    <polygon points="602.7,174.4 522.3,296.6 517.7,293.6 516.6,310.8 531.9,302.9 527.3,299.9 607.7,177.6"/>
+  </g>
+
+  <!-- 国の名 -->
+  <g font-size="28" dominant-baseline="central">
+    <text x="155" y="32.5" textLength="113" lengthAdjust="spacing">イギリス</text>
+    <text x="375" y="32.5" textLength="78" lengthAdjust="spacing">ドイツ</text>
+    <text x="557" y="32.5" textLength="111" lengthAdjust="spacing">フランス</text>
+  </g>
+
+  <!-- 箱 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="3">
+    <rect x="126" y="56" width="170.5" height="119.5"/>
+    <rect x="309.5" y="56" width="204.5" height="71"/>
+    <rect x="309.5" y="134.5" width="204.5" height="139.5"/>
+    <rect x="527" y="56" width="170" height="119.5"/>
+  </g>
+  <rect x="122" y="320" width="579" height="95" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 箱の中の字（元は細字） -->
+  <g font-weight="400" dominant-baseline="central">
+    <text x="143" y="81" font-size="26" textLength="37" lengthAdjust="spacingAndGlyphs">17C</text>
+    <text x="142" y="115.5" font-size="25" textLength="126" lengthAdjust="spacing">ハーバート</text>
+    <text x="144" y="150" font-size="25" textLength="127" lengthAdjust="spacing">「超越神教」</text>
+
+    <text y="75.5" font-size="25"><tspan x="319" textLength="37" lengthAdjust="spacingAndGlyphs">19C</tspan><tspan x="363" textLength="25" lengthAdjust="spacing">初</tspan></text>
+    <text x="318" y="107.5" font-size="24" textLength="191" lengthAdjust="spacing">ヘーゲル「観念論」</text>
+
+    <text y="157" font-size="24"><tspan x="321" textLength="26" lengthAdjust="spacingAndGlyphs">19C</tspan><tspan x="353" textLength="16" lengthAdjust="spacingAndGlyphs">中</tspan><tspan x="378" textLength="123" lengthAdjust="spacingAndGlyphs">(ヘーゲル左派)</tspan></text>
+    <g text-anchor="middle" font-size="23">
+      <text x="412" y="188" textLength="122" lengthAdjust="spacing">シュトラウス</text>
+      <text x="412.5" y="220.5" textLength="165" lengthAdjust="spacing">フォイエルバッハ</text>
+      <text x="412" y="251.5" textLength="183" lengthAdjust="spacing">「弁証法的唯物論」</text>
+    </g>
+
+    <text x="544" y="80" font-size="26" textLength="37" lengthAdjust="spacingAndGlyphs">18C</text>
+    <text x="544" y="115.5" font-size="26" textLength="112" lengthAdjust="spacing">「無神論」</text>
+    <text x="545" y="150" font-size="26" textLength="139" lengthAdjust="spacing">「社会主義」</text>
+  </g>
+
+  <!-- 下の箱の字 -->
+  <g font-size="27" dominant-baseline="central" fill="#111">
+    <text x="140" y="347.5" textLength="545" lengthAdjust="spacingAndGlyphs">マルクス、エンゲルス「弁証法的唯物論」提唱</text>
+    <text x="297" y="387" textLength="230" lengthAdjust="spacing">共産主義世界形成</text>
+  </g>
+</svg>

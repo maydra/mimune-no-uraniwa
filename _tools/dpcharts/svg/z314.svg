@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 神の創造目的の完成　個性完成</title>
+  <defs>
+    <marker id="z314-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="2.2" markerHeight="2.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <g font-size="50" dominant-baseline="central">
+    <text x="77 108" y="58" text-anchor="middle">Ⅰ.</text>
+    <text x="126" y="57" textLength="450" lengthAdjust="spacing">神の創造目的の完成</text>
+    <text x="126.5" y="132">個性完成</text>
+  </g>
+  <g stroke="currentColor" stroke-width="4">
+    <line x1="127" y1="87.5" x2="577.5" y2="87.5"/>
+    <line x1="128" y1="162.5" x2="327.5" y2="162.5"/>
+  </g>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="348" y1="245.5" x2="241" y2="375"/>
+    <line x1="348" y1="245.5" x2="455" y2="375"/>
+    <line x1="241" y1="375" x2="348" y2="507"/>
+    <line x1="455" y1="375" x2="348" y2="507"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="currentColor" stroke-width="6.5" fill="none" marker-end="url(#z314-a)">
+    <path d="M337.5,450 Q320.3,383.4 340,303.3"/>
+    <path d="M356.5,303 Q374.5,379.2 356.5,447.7"/>
+    <path d="M293,367 Q346,353.5 395.7,368"/>
+    <path d="M402,387 Q346.4,397.5 297.3,386"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="348" cy="245.5" rx="48" ry="42" fill="#fff" class="paper"/>
+    <ellipse cx="241" cy="375" rx="48" ry="42" fill="#F98AEE"/>
+    <ellipse cx="455" cy="375" rx="48" ry="42" fill="#A0F08A"/>
+    <ellipse cx="348" cy="507" rx="48" ry="42" fill="#DCC4C4"/>
+  </g>
+  <g font-size="54" text-anchor="middle" dominant-baseline="central">
+    <text x="347" y="244.5">神</text>
+    <text x="241.5" y="374" fill="#111">心</text>
+    <text x="455.5" y="374.5" fill="#111">体</text>
+    <text x="346.5" y="506" fill="#111">個</text>
+  </g>
+
+  <!-- 個 …… 個性完成 -->
+  <line x1="412.75" y1="508" x2="670" y2="508" stroke="currentColor" stroke-width="8.5" stroke-dasharray="8.5 8.07"/>
+
+  <!-- 心情体恤 → 生活 → 個性完成 -->
+  <text x="729.2" y="201.5" font-size="46" dominant-baseline="central" textLength="183" lengthAdjust="spacing">心情体恤</text>
+  <g fill="#8C949A">
+    <polygon points="799.5,252.5 837.5,252.5 837.5,282.5 852,282.5 818.5,300.5 784.5,282.5 799.5,282.5"/>
+    <polygon points="797.5,402.5 834.5,402.5 834.5,432.5 849,432.5 816,450 782.5,432.5 797.5,432.5"/>
+  </g>
+  <!-- 元は横に詰めた字。読点の幅がフォントで違うので、読点の後ろで分ける -->
+  <g font-size="44" dominant-baseline="central">
+    <text x="519" y="350" textLength="256.7" lengthAdjust="spacingAndGlyphs">その目的を知り、</text>
+    <text x="775.7" y="350" textLength="320.9" lengthAdjust="spacingAndGlyphs">その意志に従って生活</text>
+  </g>
+  <rect x="692" y="474.5" width="244.5" height="68.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <text x="812.5" y="510" font-size="50" text-anchor="middle" dominant-baseline="central" fill="#111">個性完成</text>
+
+  <!-- 聖句 -->
+  <g dominant-baseline="central">
+    <text x="293" y="607" font-size="42" textLength="127" lengthAdjust="spacing">神の宮</text>
+    <text x="420" y="607" font-size="38" textLength="295" lengthAdjust="spacingAndGlyphs">(コリントⅠ 3:16)</text>
+    <text x="716 758 799.5" y="607" font-size="42">、一体</text>
+    <text x="845" y="607" font-size="38" textLength="247" lengthAdjust="spacingAndGlyphs">(ヨハネ 14:20)</text>
+  </g>
+</svg>

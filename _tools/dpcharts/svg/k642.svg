@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>中世社会　封建制度、ローマ・カトリックの堕落 → 人間の本性抑圧</title>
+
+  <!-- 中世社会 -->
+  <ellipse cx="408.5" cy="66.5" rx="88" ry="37" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <text x="409.5" y="66.5" font-size="35" text-anchor="middle" dominant-baseline="central" textLength="140" lengthAdjust="spacing">中世社会</text>
+
+  <!-- 封建制度、ローマ・カトリックの堕落（中黒は円で描く） -->
+  <g dominant-baseline="central" font-size="28">
+    <text y="146.5"><tspan x="215" textLength="104" lengthAdjust="spacing">封建制度</tspan><tspan x="319">、</tspan><tspan x="347" textLength="76" lengthAdjust="spacingAndGlyphs">ローマ</tspan></text>
+    <text x="449" y="146.5" textLength="208" lengthAdjust="spacingAndGlyphs">カトリックの堕落</text>
+  </g>
+  <circle cx="436" cy="146.5" r="3.5"/>
+
+  <!-- ➡ 人間の本性抑圧 -->
+  <polygon points="214,186 226,186 226,180 240.5,191.5 226,203 226,197 214,197" fill="#8C949A"/>
+  <text x="246" y="191.5" font-size="26.5" dominant-baseline="central" textLength="186" lengthAdjust="spacing">人間の本性抑圧</text>
+
+  <!-- 箇条 -->
+  <g dominant-baseline="central" font-size="29">
+    <g text-anchor="middle">
+      <text x="259.5" y="247">①</text>
+      <text x="259.5" y="287.5">②</text>
+      <text x="259.5" y="328.5">③</text>
+      <text x="259.5" y="369.5">④</text>
+    </g>
+    <text x="278" y="247" textLength="174" lengthAdjust="spacing">信仰活動束縛</text>
+    <text x="278" y="287.5" textLength="203" lengthAdjust="spacing">信仰の自由拘束</text>
+    <text y="328.5"><tspan x="278" textLength="145" lengthAdjust="spacing">僧侶の奢侈</tspan><tspan x="423">、</tspan><tspan x="451" textLength="58" lengthAdjust="spacing">享楽</tspan></text>
+    <text x="278" y="369.5" textLength="290" lengthAdjust="spacing">法王権の非信仰的立場</text>
+  </g>
+</svg>

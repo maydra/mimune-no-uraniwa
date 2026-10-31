@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>蕩減条件を立てる方法</title>
+
+  <text x="34" y="40" font-size="31" dominant-baseline="central" textLength="315" lengthAdjust="spacing">蕩減条件を立てる方法</text>
+  <line x1="33" y1="59" x2="349" y2="59" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 本来の位置・状態と堕落 -->
+  <ellipse cx="324" cy="128" rx="92" ry="50" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <ellipse cx="324" cy="350.5" rx="92" ry="49.5" fill="#CF921C" stroke="currentColor" stroke-width="2.2"/>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="323.5" y="104.5">本来の</text>
+    <text x="280" y="141.5">位置<tspan x="324">・</tspan><tspan x="367">状態</tspan></text>
+  </g>
+  <text x="281" y="351.5" font-size="33" dominant-baseline="central" fill="#111" textLength="84" lengthAdjust="spacing">堕落</text>
+
+  <!-- 上下の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="306.5,177 313.5,177 313.5,286.5 318.5,286.5 310,300 301.5,286.5 306.5,286.5"/>
+    <polygon points="337,181.5 345.5,195 340.5,195 340.5,301 333.5,301 333.5,195 328.5,195"/>
+  </g>
+
+  <text y="240" font-size="31" text-anchor="middle" dominant-baseline="central"><tspan x="393.5">復帰</tspan><tspan x="440.5">：</tspan><tspan x="536" textLength="158" lengthAdjust="spacing">反対の経路</tspan></text>
+</svg>

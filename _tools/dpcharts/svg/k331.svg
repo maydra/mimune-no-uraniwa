@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>(1) 信仰基台</title>
+
+  <!-- 題 -->
+  <g font-size="31" dominant-baseline="central">
+    <text x="47" y="36" textLength="43" lengthAdjust="spacingAndGlyphs">(1)</text>
+    <text x="101.5" y="36" textLength="124" lengthAdjust="spacing">信仰基台</text>
+  </g>
+  <line x1="101" y1="55" x2="226" y2="55" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 神 -->
+  <circle cx="195" cy="131" r="31.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <text x="194" y="131.5" font-size="36" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 灰色の矢印 -->
+  <polygon points="194.5,166 203.5,182.5 197.7,182.5 197.7,285 191.3,285 191.3,182.5 185.5,182.5" fill="#8C949A"/>
+
+  <!-- 信仰基台 -->
+  <rect x="217.5" y="192.5" width="77" height="69" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.4"/>
+  <g font-size="25" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="254" y="212.5" textLength="55" lengthAdjust="spacing">信仰</text>
+    <text x="254.5" y="241.5" textLength="51" lengthAdjust="spacing">基台</text>
+  </g>
+  <path d="M335.5,182.5 H317.5 V270.5 H335.5 M296,226.5 H335.5" fill="none" stroke="#8C949A" stroke-width="6"/>
+  <g font-size="28" dominant-baseline="central">
+    <text x="348" y="181" textLength="113" lengthAdjust="spacing">中心人物</text>
+    <text x="493" y="181" textLength="84" lengthAdjust="spacing">モーセ</text>
+    <text x="347" y="225.5" textLength="114" lengthAdjust="spacing">条件物</text>
+    <text x="491" y="225.5" textLength="144" lengthAdjust="spacing">幕屋を信奉</text>
+    <text x="347" y="270.5" textLength="113" lengthAdjust="spacing">蕩減期間</text>
+    <text x="492" y="270.5" textLength="114" lengthAdjust="spacing">荒野流浪</text>
+    <text x="609" y="270.5" textLength="29" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="638.5" y="270.5">年</text>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="476.5" y="181">：</text>
+    <text x="476.5" y="225.5">：</text>
+    <text x="476.5" y="270.5">：</text>
+  </g>
+
+  <!-- モーセ -->
+  <ellipse cx="194.5" cy="315" rx="59" ry="30.5" fill="#F8F28F" stroke="currentColor" stroke-width="2.6"/>
+  <text x="194" y="315.5" font-size="31" text-anchor="middle" dominant-baseline="central" textLength="93" lengthAdjust="spacing" fill="#111">モーセ</text>
+
+  <!-- 信仰基台：○ -->
+  <rect x="349.5" y="310.5" width="221" height="49" fill="#CDF8F7" stroke="currentColor" stroke-width="2.6"/>
+  <g font-size="31" dominant-baseline="central" fill="#111">
+    <text x="366" y="334" textLength="124" lengthAdjust="spacing">信仰基台</text>
+    <text x="507" y="334" text-anchor="middle">：</text>
+  </g>
+  <circle cx="538.5" cy="334" r="12" fill="none" stroke="#111" stroke-width="3.2"/>
+</svg>

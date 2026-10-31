@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>縦的な蕩減条件と横的な蕩減条件　完全な相似形をつくることができない</title>
+
+  <!-- 前時代人物から中心人物へ（灰色の矢印） -->
+  <g fill="#8C949A">
+    <polygon points="230.5,93 237.5,93 237.5,102.5 242.5,102.5 234,116 225.5,102.5 230.5,102.5"/>
+    <polygon points="230.5,183 237.5,183 237.5,192 242.5,192 234,205.5 225.5,192 230.5,192"/>
+  </g>
+
+  <!-- 前時代人物・中心人物 -->
+  <!-- 前時代人物は元どおり白、中心人物は黄 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="233" cy="63" rx="47" ry="30" fill="#fff" class="paper"/>
+    <ellipse cx="234.5" cy="150.5" rx="55.5" ry="32.5" fill="#fff" class="paper"/>
+    <ellipse cx="235" cy="236.5" rx="69" ry="29.5" fill="#F8F28F"/>
+  </g>
+  <g dominant-baseline="central" fill="currentColor">
+    <text x="202" y="52.5" font-size="21" textLength="64" lengthAdjust="spacing">前時代</text>
+    <text x="213" y="76.5" font-size="21" textLength="42" lengthAdjust="spacing">人物</text>
+    <text x="199" y="138.5" font-size="24" textLength="71" lengthAdjust="spacing">前時代</text>
+    <text x="211" y="165" font-size="24" textLength="47" lengthAdjust="spacing">人物</text>
+  </g>
+  <g dominant-baseline="central" fill="#111">
+    <text x="184" y="236.5" font-size="25" textLength="102" lengthAdjust="spacing">中心人物</text>
+  </g>
+
+  <!-- 縦的な蕩減条件（縦書き） -->
+  <rect x="312" y="36" width="83" height="138" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="335.5" y="61">縦</text>
+    <text x="335.5" y="90">的</text>
+    <text x="335.5" y="118.5">な</text>
+    <text x="371.5" y="61">蕩</text>
+    <text x="371.5" y="90">減</text>
+    <text x="371.5" y="119">条</text>
+    <text x="371.5" y="148">件</text>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central">
+    <text x="425.5" y="87">付</text>
+    <text x="425.5" y="112.5">加</text>
+  </g>
+  <polygon points="346.5,185 359.5,185 359.5,196 366.5,196 353,206.5 339.5,196 346.5,196" fill="#8C949A"/>
+
+  <!-- 横的な蕩減条件 -->
+  <rect x="314" y="214" width="235" height="48" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <text x="330" y="238" font-size="27" dominant-baseline="central" fill="#111" textLength="203" lengthAdjust="spacing">横的な蕩減条件</text>
+  <text x="567" y="237.5" font-size="25" dominant-baseline="central" textLength="53" lengthAdjust="spacing">加重</text>
+
+  <text y="290.5" font-size="25" dominant-baseline="central"><tspan x="278" textLength="153" lengthAdjust="spacing">同時性の内容</tspan><tspan x="431">、</tspan><tspan x="461" textLength="128" lengthAdjust="spacing">範囲異なる</tspan></text>
+
+  <polygon points="421,318.5 441,318.5 441,330 453,330 431.5,344.5 410,330 421,330" fill="#8C949A"/>
+
+  <!-- 完全な相似形をつくることができない -->
+  <rect x="195" y="357" width="473" height="51" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <text x="209" y="381" font-size="26" dominant-baseline="central" fill="#111" textLength="446" lengthAdjust="spacing">完全な相似形をつくることができない</text>
+</svg>

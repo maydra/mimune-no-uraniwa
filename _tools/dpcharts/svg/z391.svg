@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 終末と新しい真理</title>
+
+  <text x="55" y="57.5" font-size="48" dominant-baseline="central">Ⅰ.</text>
+  <text x="133" y="57.5" font-size="48" dominant-baseline="central" textLength="400" lengthAdjust="spacing">終末と新しい真理</text>
+  <line x1="133" y1="87.5" x2="533" y2="87.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 楕円どうしをつなぐ線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="8.5">
+    <line x1="440" y1="251" x2="590" y2="198.5"/>
+    <line x1="700" y1="196.7" x2="860" y2="250"/>
+    <line x1="440" y1="482" x2="580" y2="545"/>
+    <line x1="720" y1="541" x2="860" y2="478"/>
+  </g>
+
+  <!-- 下向きの矢印 -->
+  <g stroke="currentColor" stroke-width="9.5">
+    <line x1="366" y1="290" x2="366" y2="394"/>
+    <line x1="645.5" y1="244" x2="645.5" y2="481"/>
+    <line x1="932.5" y1="290" x2="932.5" y2="394"/>
+  </g>
+  <g>
+    <polygon points="353,393 379,393 366,415"/>
+    <polygon points="632.5,480 658.5,480 645.5,502"/>
+    <polygon points="919.5,393 945.5,393 932.5,415"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="645.5" cy="181" rx="120.5" ry="46" fill="#fff" class="paper"/>
+    <ellipse cx="366.5" cy="258" rx="120.5" ry="46" fill="#fff" class="paper"/>
+    <ellipse cx="932.5" cy="258" rx="120.5" ry="46" fill="#fff" class="paper"/>
+    <ellipse cx="366" cy="473.5" rx="120.5" ry="46" fill="#CF921C"/>
+    <ellipse cx="932.5" cy="473.5" rx="120.5" ry="46" fill="#CF921C"/>
+    <ellipse cx="649" cy="561.5" rx="120.5" ry="46" fill="#CF921C"/>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="645.5" y="181" font-size="56">神</text>
+    <text x="366.5" y="258" font-size="54">神霊</text>
+    <text x="934" y="258" font-size="54">真理</text>
+    <g fill="#111">
+      <text x="366.5" y="474" font-size="54">心霊</text>
+      <text x="933" y="474" font-size="54">知能</text>
+      <text x="649" y="562" font-size="47">堕落人間</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 1161" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神は</title>
+
+  <!-- うしろの薄い円（上が性相、下が形状。暗い配色でも字が読めるよう、表の色を薄めて重ねる） -->
+  <path d="M243.5,648.1 c66.5,41 130.1,80 203.9,80 c73.8,0 137.4,-39 203.9,-80 c66.5,-41 130.1,-80 203.9,-80 c73.8,0 137.4,39 203.9,80 A407.8,392.5 0 0 0 243.5,648.1 Z" fill="#F98AEE" fill-opacity="0.22"/>
+  <path d="M243.5,648.1 c66.5,41 130.1,80 203.9,80 c73.8,0 137.4,-39 203.9,-80 c66.5,-41 130.1,-80 203.9,-80 c73.8,0 137.4,39 203.9,80 A407.8,392.5 0 0 1 243.5,648.1 Z" fill="#A0F08A" fill-opacity="0.32"/>
+  <ellipse cx="651.3" cy="648.1" rx="407.8" ry="392.5" fill="none" stroke="currentColor" stroke-opacity="0.25" stroke-width="3"/>
+
+  <text x="54" y="73" font-size="68" textLength="140" lengthAdjust="spacing" dominant-baseline="central">神は</text>
+  <line x1="54" y1="117" x2="195" y2="117" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 黒丸 -->
+  <g fill="#8C949A">
+    <circle cx="209" cy="193" r="19"/>
+    <circle cx="209" cy="493" r="19"/>
+    <circle cx="205.5" cy="900.5" r="19"/>
+  </g>
+
+  <!-- 太い字 -->
+  <g font-size="66" dominant-baseline="central">
+    <text x="259" y="188" textLength="546" lengthAdjust="spacing">本性相と本形状の</text>
+    <text x="260" y="292" textLength="666" lengthAdjust="spacing">二性性相の中和的主体</text>
+    <text x="259" y="487" textLength="478" lengthAdjust="spacing">本性相的男性と</text>
+    <text x="259" y="592" textLength="546" lengthAdjust="spacing">本形状的女性との</text>
+    <text x="260" y="697" textLength="666" lengthAdjust="spacing">二性性相の中和的主体</text>
+    <text x="259" y="893" textLength="616" lengthAdjust="spacing">被造世界に対しては</text>
+    <text x="874" y="893">、</text>
+    <text x="259" y="997" textLength="617" lengthAdjust="spacing">性相的な男性格主体</text>
+  </g>
+
+  <!-- 細い字 -->
+  <g font-size="50" font-weight="400" dominant-baseline="central">
+    <text x="927" y="298" textLength="150" lengthAdjust="spacing">である</text>
+    <text x="264" y="385" textLength="208" lengthAdjust="spacing">と同時に</text>
+    <text x="929" y="702" textLength="150" lengthAdjust="spacing">として</text>
+    <text x="260" y="789" textLength="156" lengthAdjust="spacing">おられ</text>
+    <text x="416" y="789">、</text>
+    <text x="881" y="1006" textLength="152" lengthAdjust="spacing">として</text>
+    <text x="262" y="1090" textLength="266" lengthAdjust="spacing">いまし給う</text>
+    <text x="528" y="1090">。</text>
+  </g>
+
+  <!-- 下線 -->
+  <g stroke="currentColor" stroke-width="3.5">
+    <line x1="258" y1="231.5" x2="464" y2="231.5"/>
+    <line x1="534" y1="231.5" x2="739" y2="231.5"/>
+    <line x1="258" y1="531" x2="670" y2="531"/>
+    <line x1="258" y1="635" x2="670" y2="635"/>
+    <line x1="534" y1="1040.5" x2="876" y2="1040.5"/>
+  </g>
+</svg>

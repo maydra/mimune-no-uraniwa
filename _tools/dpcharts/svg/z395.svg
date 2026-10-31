@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>時代に従う心霊・知能の発達</title>
+  <defs>
+    <linearGradient id="z395-o" gradientUnits="userSpaceOnUse" x1="340" y1="0" x2="923" y2="0">
+      <stop offset="0" stop-color="#E8A33D"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 心霊・知能の発達の三角形（白から橙へ） -->
+  <polygon points="340,528.5 923,528.5 923,157" fill="url(#z395-o)"/>
+
+  <!-- 三角形の中の点線と破線 -->
+  <g stroke="#111" fill="none">
+    <line x1="570.5" y1="398" x2="570.5" y2="512" stroke-width="8" stroke-dasharray="8.5 9"/>
+    <line x1="744" y1="275.3" x2="744" y2="512" stroke-width="8" stroke-dasharray="8 8.33"/>
+    <line x1="923" y1="173" x2="923" y2="525" stroke-width="9" stroke-dasharray="17 8.83"/>
+  </g>
+
+  <!-- 神から右へ、下へ -->
+  <g stroke="currentColor" stroke-width="10" fill="none">
+    <polyline points="904,157 331.5,157 331.5,434"/>
+  </g>
+  <polygon points="320,432 342,432 331,454"/>
+
+  <!-- 時代に従い（横の矢印） -->
+  <line x1="337" y1="528.5" x2="1004" y2="528.5" stroke="currentColor" stroke-width="12"/>
+  <polygon points="1003,511.5 1003,546.5 1039.5,529"/>
+
+  <!-- 心霊・知能の発達（斜めの矢印） -->
+  <line x1="337.5" y1="528.7" x2="874" y2="188" stroke="currentColor" stroke-width="12.5"/>
+  <polygon points="864,174.5 903,169.5 881,201.5"/>
+
+  <circle cx="921" cy="152" r="17" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <circle cx="334.5" cy="100.5" r="53.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <ellipse cx="337.5" cy="585.5" rx="76.5" ry="63.5" fill="#CF921C" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 神＜神霊・真理 -->
+  <polygon points="387.5,88.1 415.2,72.9 420,81.25 391.4,97 420,112.75 415.2,121.1 387.5,105.9"/>
+  <g>
+    <rect x="542" y="96" width="8" height="8"/>
+    <rect x="558" y="96" width="8" height="8"/>
+    <rect x="574" y="96" width="8" height="8"/>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="331" y="99.5" font-size="60">神</text>
+    <text x="475" y="67" font-size="45">神霊</text>
+    <text x="475" y="119" font-size="45">真理</text>
+    <text y="96" font-size="41" text-anchor="start"><tspan x="602" textLength="82" lengthAdjust="spacing">唯一</tspan><tspan x="683">、</tspan><tspan x="716" textLength="82" lengthAdjust="spacing">永遠</tspan><tspan x="797">、</tspan><tspan x="831" textLength="82" lengthAdjust="spacing">不変</tspan></text>
+    <text x="318" y="480.5" font-size="43" textLength="126" lengthAdjust="spacing">(無知)</text>
+    <text x="666" y="580" font-size="49" textLength="246" lengthAdjust="spacing">時代に従い</text>
+    <g fill="#111" font-size="44">
+      <text x="336.5" y="560">堕落</text>
+      <text x="336" y="610.5">人間</text>
+    </g>
+    <text transform="translate(662,375.2) rotate(-32.42)" font-size="50" fill="#111" stroke="#fff" stroke-width="8" stroke-linejoin="round" paint-order="stroke"><tspan x="-200" text-anchor="start" textLength="100" lengthAdjust="spacing">心霊</tspan><tspan x="-75">・</tspan><tspan x="-50" text-anchor="start" textLength="250" lengthAdjust="spacing">知能の発達</tspan></text>
+  </g>
+  <g font-size="44" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="993.5" y="288">範囲</text>
+    <text x="993.5" y="350.5">程度</text>
+    <text x="993.5" y="413">方法</text>
+  </g>
+</svg>

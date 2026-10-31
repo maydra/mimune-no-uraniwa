@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神の喜び</title>
+
+  <text x="53" y="76" font-size="48" textLength="199" lengthAdjust="spacing">神の喜び</text>
+  <line x1="52" y1="87.5" x2="252" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神・人間・万物世界 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="450.5" cy="188.5" rx="73.5" ry="69.5" fill="#fff" class="paper"/>
+    <ellipse cx="452" cy="401" rx="101" ry="47" fill="#FCE5E3"/>
+    <ellipse cx="452" cy="589" rx="129" ry="42" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="449.5" y="187.5" font-size="65">神</text>
+    <text x="450.5" y="400.5" font-size="54" fill="#111">人間</text>
+    <text x="452" y="585" font-size="49" fill="#111">万物世界</text>
+  </g>
+
+  <!-- 喜びの授受（行き来する矢印） -->
+  <g fill="none" stroke="currentColor" stroke-width="7">
+    <path d="M432,344 C426,325 425,305 431,290"/>
+    <path d="M470,271 C476,290 477,305 473,322"/>
+    <path d="M432,537 C426,518 425,498 431,483"/>
+    <path d="M470,464 C476,483 477,498 473,515"/>
+  </g>
+  <g>
+    <polygon points="440.5,268.5 420.5,283 440.5,293"/>
+    <polygon points="462,318.5 482,328 463,343"/>
+    <polygon points="440.5,461 420.5,475.5 440.5,485.5"/>
+    <polygon points="462,511.5 482,521 463,536"/>
+  </g>
+  <g font-size="46" dominant-baseline="central">
+    <text x="309" y="314" textLength="94" lengthAdjust="spacing">喜び</text>
+    <text x="309" y="502" textLength="94" lengthAdjust="spacing">喜び</text>
+  </g>
+
+  <!-- 三大祝福 -->
+  <text x="581" y="237.5" font-size="48" dominant-baseline="central" textLength="196" lengthAdjust="spacing">三大祝福</text>
+  <g font-size="40" dominant-baseline="central">
+    <text x="785" y="237.5">(創</text>
+    <text x="858" y="237.5" textLength="100" lengthAdjust="spacing">1:28)</text>
+  </g>
+  <path d="M657,303.4 H618.4 V433.1 H657 M618.4,369.8 H657" fill="none" stroke="#8C949A" stroke-width="9.3"/>
+  <g font-size="45" dominant-baseline="central">
+    <text x="669.5" y="301" textLength="90" lengthAdjust="spacing">生育</text>
+    <text x="669" y="368" textLength="91" lengthAdjust="spacing">繁殖</text>
+    <text x="669.5" y="435" textLength="181" lengthAdjust="spacing">万物主管</text>
+  </g>
+
+  <rect x="610" y="488" width="251" height="67.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <text x="637.5" y="521.5" font-size="49" dominant-baseline="central" textLength="197" lengthAdjust="spacing" fill="#111">天国完成</text>
+</svg>

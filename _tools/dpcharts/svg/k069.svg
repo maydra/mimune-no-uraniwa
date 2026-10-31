@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>善悪の表示体</title>
+
+  <!-- 題 -->
+  <text x="35" y="38" font-size="31" textLength="187" lengthAdjust="spacing" dominant-baseline="central">善悪の表示体</text>
+  <line x1="33" y1="57" x2="222" y2="57" stroke="currentColor" stroke-width="2.6"/>
+
+  <!-- アダム・エバ・天使長 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="186.5" cy="135.5" rx="56" ry="30" fill="#CF921C"/>
+    <ellipse cx="408.5" cy="135.5" rx="56" ry="30" fill="#CF921C"/>
+    <ellipse cx="633" cy="135.5" rx="56" ry="30" fill="#50403D"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="187" y="135.5" font-size="25" textLength="73" lengthAdjust="spacing" fill="#111">アダム</text>
+    <text x="385.5" y="135.5" font-size="25" fill="#111">エ</text>
+    <text x="429" y="135.5" font-size="25" fill="#111">バ</text>
+    <text x="633" y="135.5" font-size="27" textLength="83" lengthAdjust="spacing" fill="#fff">天使長</text>
+  </g>
+
+  <!-- 行き来の矢印 -->
+  <g fill="currentColor">
+    <polygon points="253,125.5 331.5,125.5 331.5,121 341.5,128 331.5,135 331.5,130.5 253,130.5"/>
+    <polygon points="339,140.5 261.5,140.5 261.5,136 251,143 261.5,150 261.5,145.5 339,145.5"/>
+    <polygon points="477,125.5 554.5,125.5 554.5,121 564.5,128 554.5,135 554.5,130.5 477,130.5"/>
+    <polygon points="562,140.5 485.5,140.5 485.5,136 475,143 485.5,150 485.5,145.5 562,145.5"/>
+  </g>
+
+  <!-- 点線 -->
+  <g stroke="currentColor" stroke-width="3" stroke-dasharray="6 5">
+    <line x1="295" y1="156" x2="295" y2="239"/>
+    <line x1="521" y1="153" x2="521" y2="236"/>
+  </g>
+
+  <!-- アベル・カイン -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="293.5" cy="313.5" rx="56" ry="30" fill="#F8F28F"/>
+    <ellipse cx="520.5" cy="313.5" rx="56" ry="30" fill="#F86D42"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="294.5" y="313.5" textLength="74" lengthAdjust="spacing">アベル</text>
+    <text x="521" y="313.5" textLength="73" lengthAdjust="spacing">カイン</text>
+  </g>
+
+  <!-- 灰色の下向きの矢印 -->
+  <g fill="#8C949A" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+    <polygon points="288,351 300,351 300,364 305,364 293.5,371.5 282,364 288,364"/>
+    <polygon points="516,351 528,351 528,364 533,364 521.5,371.5 510,364 516,364"/>
+  </g>
+
+  <!-- 地の上の字 -->
+  <g font-size="25.5" text-anchor="middle" dominant-baseline="central">
+    <text x="296.5" y="98" font-size="24" textLength="73" lengthAdjust="spacing">二番目</text>
+    <text x="520.5" y="99" font-size="25" textLength="50" lengthAdjust="spacing">最初</text>
+    <text x="295" y="261" textLength="181" lengthAdjust="spacing">愛の二番目の実</text>
+    <text x="522" y="260.5" textLength="155" lengthAdjust="spacing">愛の初めの実</text>
+    <text x="294" y="390" textLength="129" lengthAdjust="spacing">善の表示体</text>
+    <text x="520.5" y="390.5" textLength="129" lengthAdjust="spacing">悪の表示体</text>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>堕落した人間</title>
+
+  <text x="53" y="55" font-size="49" dominant-baseline="central" textLength="298" lengthAdjust="spacing">堕落した人間</text>
+  <line x1="53" y1="85.5" x2="352" y2="85.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 授受が切れている（二つの矢印に × ） -->
+  <g>
+    <g fill="none" stroke="currentColor" stroke-width="6">
+      <path d="M292,313 A34.7,34.7 0 0 1 286,262"/>
+      <path d="M292,313 A34.7,34.7 0 0 1 286,262" transform="rotate(180 326 281.25)"/>
+    </g>
+    <polygon points="299.1,246.9 278.5,255.4 293.6,268.6"/>
+    <polygon points="299.1,246.9 278.5,255.4 293.6,268.6" transform="rotate(180 326 281.25)"/>
+    <g stroke="currentColor" stroke-width="6">
+      <line x1="244" y1="257.5" x2="411" y2="306.5"/>
+      <line x1="243" y1="305.5" x2="410" y2="254.5"/>
+    </g>
+  </g>
+  <g transform="translate(-2,189)">
+    <g fill="none" stroke="currentColor" stroke-width="6">
+      <path d="M292,313 A34.7,34.7 0 0 1 286,262"/>
+      <path d="M292,313 A34.7,34.7 0 0 1 286,262" transform="rotate(180 326 281.25)"/>
+    </g>
+    <polygon points="299.1,246.9 278.5,255.4 293.6,268.6"/>
+    <polygon points="299.1,246.9 278.5,255.4 293.6,268.6" transform="rotate(180 326 281.25)"/>
+    <g stroke="currentColor" stroke-width="6">
+      <line x1="244" y1="257.5" x2="411" y2="306.5"/>
+      <line x1="243" y1="305.5" x2="410" y2="254.5"/>
+    </g>
+  </g>
+
+  <!-- 堕落人間から神へ・被造世界へ（灰色の矢印。楕円より先に描く） -->
+  <g fill="none" stroke="#8C949A" stroke-width="10">
+    <path d="M439,378 C485.3,310.5 503.9,241.5 417.5,192.2"/>
+    <path d="M439,378 C480.5,412.3 480.7,486.9 451,527.5"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="393.8,179.3 424.2,180 410.8,204.5"/>
+    <polygon points="434.9,549.2 439.7,519.2 462.3,535.8"/>
+  </g>
+
+  <circle cx="326.5" cy="184.5" r="50.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="323" cy="376.5" rx="111" ry="51.5" fill="#CF921C"/>
+    <ellipse cx="323" cy="575" rx="111" ry="64" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="325.5" y="184" font-size="53">神</text>
+    <g fill="#111">
+      <text x="322.5" y="376" font-size="46" textLength="180" lengthAdjust="spacing">堕落人間</text>
+      <text x="323" y="555" font-size="42" textLength="166" lengthAdjust="spacing">被造世界</text>
+      <text x="323" y="601" font-size="42">（天使）</text>
+    </g>
+  </g>
+
+  <!-- 右の説明 -->
+  <g font-size="45" dominant-baseline="central">
+    <text y="206"><tspan x="513" text-anchor="middle" font-size="47">③</tspan><tspan x="545" textLength="320" lengthAdjust="spacing">神のみ旨と心情</tspan><tspan x="889" text-anchor="middle">：</tspan></text>
+    <text y="261"><tspan x="545" textLength="236" lengthAdjust="spacing">知らないか、</tspan><tspan x="806" textLength="302" lengthAdjust="spacing">部分的にわかる</tspan></text>
+    <text y="363.5"><tspan x="513" text-anchor="middle" font-size="47">②</tspan><tspan x="545" textLength="91" lengthAdjust="spacing">原罪</tspan><tspan x="657" text-anchor="middle">：</tspan><tspan x="679" textLength="86" lengthAdjust="spacing">ある</tspan><tspan x="781" textLength="330" lengthAdjust="spacing">（サタン侵入条件）</tspan></text>
+    <text y="454"><tspan x="513" text-anchor="middle" font-size="47">①</tspan><tspan x="545" textLength="91" lengthAdjust="spacing">天使</tspan><tspan x="658" text-anchor="middle">・</tspan><tspan x="681" textLength="182" lengthAdjust="spacing">被造世界</tspan><tspan x="885" text-anchor="middle">：</tspan><tspan x="908" textLength="178" lengthAdjust="spacing">仰ぎ見る</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>統一王国時代 120 年</title>
+
+  <!-- 年数の柱（黒い線と緑の帯） -->
+  <rect x="244.5" y="91" width="11" height="270" fill="#A0F08A"/>
+  <rect x="414.5" y="84" width="11" height="272" fill="#A0F08A"/>
+  <g stroke="currentColor">
+    <line x1="241.5" y1="88" x2="241.5" y2="362.5" stroke-width="5.5"/>
+    <line x1="411.5" y1="81" x2="411.5" y2="357.5" stroke-width="5.5"/>
+    <path d="M227,88 H260 M226,179.5 H242 M226,271 H242 M227,362.5 H260 M399,81 H431 M398,175 H411 M398,268 H411 M391,357.5 H431" stroke-width="4"/>
+  </g>
+  <g font-size="22" dominant-baseline="central">
+    <text x="261" y="229" textLength="34" lengthAdjust="spacingAndGlyphs">120</text>
+    <g text-anchor="end">
+      <text x="401" y="131.5" textLength="22" lengthAdjust="spacingAndGlyphs">40</text>
+      <text x="401" y="221.5" textLength="22" lengthAdjust="spacingAndGlyphs">40</text>
+      <text x="401" y="314" textLength="22" lengthAdjust="spacingAndGlyphs">40</text>
+    </g>
+  </g>
+
+  <!-- 人物 -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="3">
+    <ellipse cx="176" cy="87.5" rx="53.5" ry="20"/>
+    <ellipse cx="176" cy="180" rx="53.5" ry="20"/>
+    <ellipse cx="176" cy="272" rx="53.5" ry="20"/>
+    <ellipse cx="348" cy="82" rx="53.5" ry="20"/>
+    <ellipse cx="348" cy="173.5" rx="53.5" ry="20"/>
+    <ellipse cx="348" cy="266.5" rx="53.5" ry="20"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="175.5" y="87" font-size="23" textLength="83" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+    <text x="174.5" y="180" textLength="73" lengthAdjust="spacing">イサク</text>
+    <text x="176" y="273.5" textLength="76" lengthAdjust="spacing">ヤコブ</text>
+    <text x="347.5" y="82" textLength="80" lengthAdjust="spacing">サウル</text>
+    <text x="346" y="174" textLength="77" lengthAdjust="spacing">ダビデ</text>
+    <text x="350" y="267.5" textLength="88" lengthAdjust="spacing">ソロモン</text>
+  </g>
+
+  <text x="117" y="126" font-size="20" dominant-baseline="central" textLength="109" lengthAdjust="spacing">ハランを出る</text>
+
+  <!-- 長子の嗣業復帰 -->
+  <rect x="119" y="330" width="108" height="64" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <g font-size="21" text-anchor="middle" dominant-baseline="central">
+    <text x="172.5" y="348.5" textLength="93" lengthAdjust="spacing">長子の嗣業</text>
+    <text x="172.5" y="377" font-size="22" textLength="45" lengthAdjust="spacing">復帰</text>
+  </g>
+
+  <!-- 統一王国時代 120 年の箱 -->
+  <path d="M445,121 V83 Q445,75 453,75 H691 Q699,75 699,83 V121 Z" fill="#CDF8F7"/>
+  <rect x="445" y="121" width="254" height="237" fill="#fff" class="paper"/>
+  <line x1="445" y1="121" x2="699" y2="121" stroke="currentColor" stroke-width="3"/>
+  <rect x="445" y="75" width="254" height="283" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
+  <text y="97" font-size="26" dominant-baseline="central" fill="#111"><tspan x="457" textLength="153" lengthAdjust="spacing">統一王国時代</tspan><tspan x="620" textLength="36" lengthAdjust="spacingAndGlyphs">120</tspan><tspan x="664">年</tspan></text>
+
+  <circle cx="460.5" cy="165" r="6.5"/>
+  <circle cx="462" cy="275" r="6.5"/>
+  <circle cx="462" cy="318.5" r="6.5"/>
+  <path d="M464,185 Q446,213 464,241" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <g font-weight="400" dominant-baseline="central">
+    <text x="474" y="165" font-size="25" textLength="129" lengthAdjust="spacing">神殿を建設</text>
+    <text y="198.5" font-size="21"><tspan x="465" textLength="62" lengthAdjust="spacing">モーセ</tspan><tspan x="533" textLength="29" lengthAdjust="spacingAndGlyphs">120</tspan><tspan x="569" textLength="108" lengthAdjust="spacing">年蕩減復帰</tspan></text>
+    <text y="227.5" font-size="21"><tspan x="503">：</tspan><tspan x="535" textLength="22" lengthAdjust="spacingAndGlyphs">40</tspan><tspan x="565">年</tspan><tspan x="591">×</tspan><tspan x="617" textLength="10" lengthAdjust="spacingAndGlyphs">3</tspan><tspan x="639">次</tspan></text>
+    <text x="476" y="275" font-size="25" textLength="152" lengthAdjust="spacing">サウル王不信</text>
+    <text x="476" y="318.5" font-size="22" textLength="218" lengthAdjust="spacingAndGlyphs">ダビデ、ソロモンまで延長</text>
+  </g>
+</svg>

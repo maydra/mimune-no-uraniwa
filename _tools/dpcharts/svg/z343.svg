@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>聖書：終末は幾度もあった</title>
+
+  <text y="56" font-size="49.5" dominant-baseline="central"><tspan x="51" textLength="100" lengthAdjust="spacing">聖書</tspan><tspan x="163">：</tspan><tspan x="201" textLength="448" lengthAdjust="spacing">終末は幾度もあった</tspan></text>
+
+  <!-- 聖句 -->
+  <g font-size="37" dominant-baseline="central">
+    <text x="420.5" y="147.5" textLength="156" lengthAdjust="spacingAndGlyphs">(創 6:13)</text>
+    <text x="636.5" y="146" textLength="209" lengthAdjust="spacingAndGlyphs">(ヨハネ 5:22)</text>
+    <text x="872.5" y="147.5" textLength="224" lengthAdjust="spacingAndGlyphs">(マタイ 24:29)</text>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <rect x="340" y="267.75" width="88.5" height="13.5"/>
+    <polygon points="565,267.75 644,267.75 644,257.5 671.5,274.5 644,291.5 644,281.25 565,281.25"/>
+    <polygon points="810,267.75 888.5,267.75 888.5,257.5 916,274.5 888.5,291.5 888.5,281.25 810,281.25"/>
+  </g>
+
+  <!-- 点線（楕円から箱へ） -->
+  <g stroke="currentColor" stroke-width="8" stroke-dasharray="9 8.5">
+    <line x1="497.5" y1="366" x2="497.5" y2="431"/>
+    <line x1="742.5" y1="366" x2="742.5" y2="431"/>
+    <line x1="985.5" y1="366" x2="985.5" y2="431"/>
+  </g>
+
+  <!-- アダム・ノア・イエス・再臨主 -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="271" cy="274.25" rx="53" ry="90.75" fill="#FCE5E3"/>
+    <ellipse cx="496.5" cy="274.25" rx="53" ry="90.75" fill="#FCE5E3"/>
+    <ellipse cx="741" cy="274.25" rx="53" ry="90.75" fill="#F8F28F"/>
+    <ellipse cx="985.5" cy="274.25" rx="53" ry="90.75" fill="#F8F28F"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <g font-size="47">
+      <text x="271.5" y="229.5">ア</text>
+      <text x="272" y="273.5">ダ</text>
+      <text x="271.5" y="320">ム</text>
+    </g>
+    <g font-size="54">
+      <text x="497" y="239.5">ノ</text>
+      <text x="498" y="311.5">ア</text>
+    </g>
+    <g font-size="47">
+      <text x="740" y="228.5">イ</text>
+      <text x="741" y="274.5">エ</text>
+      <text x="741" y="320.5">ス</text>
+    </g>
+    <g font-size="44">
+      <text x="985" y="229">再</text>
+      <text x="985.5" y="273.5">臨</text>
+      <text x="985" y="319">主</text>
+    </g>
+  </g>
+
+  <!-- 箱 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5">
+    <rect x="452" y="433" width="335" height="216"/>
+    <rect x="860" y="433" width="237.5" height="216.5"/>
+  </g>
+  <g font-size="42" text-anchor="middle" dominant-baseline="central">
+    <text x="619" y="496">堕落世界滅ぼす</text>
+    <text x="619" y="586">理想世界復帰</text>
+    <text x="978" y="478.5">霊肉の救い</text>
+    <text x="978" y="553.5">地上天国</text>
+    <text x="978" y="603.5">復帰</text>
+  </g>
+</svg>

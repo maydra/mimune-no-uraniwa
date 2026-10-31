@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>復帰摂理路程の時代区分　(1) み言による摂理から見た時代区分</title>
+
+  <text x="33" y="36.5" font-size="30" dominant-baseline="central" textLength="28" lengthAdjust="spacingAndGlyphs">2.</text>
+  <text x="69" y="36.5" font-size="30" dominant-baseline="central" textLength="348" lengthAdjust="spacing">復帰摂理路程の時代区分</text>
+  <line x1="69" y1="55.5" x2="416" y2="55.5" stroke="currentColor" stroke-width="2.2"/>
+  <text x="49.5" y="83.5" font-size="28" dominant-baseline="central" textLength="43" lengthAdjust="spacingAndGlyphs">(1)</text>
+  <text x="101" y="83.5" font-size="28" dominant-baseline="central" textLength="434" lengthAdjust="spacing">み言による摂理から見た時代区分</text>
+  <line x1="101" y1="101.5" x2="534" y2="101.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 段の横線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <line x1="132.5" y1="144" x2="715" y2="144"/>
+    <line x1="132.5" y1="204" x2="715" y2="204"/>
+    <line x1="132.5" y1="262" x2="715" y2="262"/>
+    <line x1="132.5" y1="320" x2="715" y2="320"/>
+  </g>
+
+  <!-- 2000年の弧（字の所で切れる） -->
+  <g fill="none" stroke="currentColor" stroke-width="2.2">
+    <path d="M239,380 A70,59 0 0 0 282.1,367.5 M301.8,347 A70,59 0 0 0 309,321"/>
+    <path d="M309,321 A70,59 0 0 0 351,309.2 M371.2,289.1 A70,59 0 0 0 379,262"/>
+    <path d="M379,262 A64.5,59 0 0 0 416.1,251.3 M436.3,230.1 A64.5,59 0 0 0 443.5,203"/>
+  </g>
+
+  <!-- 2000年ずつ上る矢印 -->
+  <g stroke="currentColor" stroke-width="6">
+    <line x1="239" y1="380" x2="287.6" y2="339"/>
+    <line x1="309" y1="321" x2="357.6" y2="280"/>
+    <line x1="379" y1="262" x2="422.8" y2="221.9"/>
+    <line x1="443.5" y1="203" x2="443.5" y2="158"/>
+  </g>
+  <g>
+    <polygon points="297.5,330.7 291.5,346.8 280.6,333.8"/>
+    <polygon points="367.5,271.7 361.5,287.8 350.6,274.8"/>
+    <polygon points="432.4,213.1 427.1,229.5 415.6,217"/>
+    <polygon points="443.5,145 435,160 452,160"/>
+  </g>
+
+  <!-- アダム・アブラハム・イエス・再臨主 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="180" cy="383" rx="45.5" ry="18.5" fill="#CF921C"/>
+    <ellipse cx="232.5" cy="318.5" rx="62" ry="19" fill="#FCE5E3"/>
+    <ellipse cx="310" cy="260.5" rx="50.5" ry="19" fill="#F8F28F"/>
+    <ellipse cx="373.5" cy="201.5" rx="50.5" ry="19" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="24" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="180" y="382.5" fill="#111">アダム</text>
+    <text x="233" y="317.5" fill="#111">アブラハム</text>
+    <text x="309.5" y="260.5" fill="#111">イエス</text>
+    <text x="373" y="201.5">再臨主</text>
+  </g>
+
+  <g>
+    <circle cx="239" cy="380" r="8.5"/>
+    <circle cx="309" cy="321" r="8.5"/>
+    <circle cx="379" cy="262" r="8.5"/>
+    <circle cx="443.5" cy="203" r="8.5"/>
+  </g>
+  <g font-size="21" font-weight="400" dominant-baseline="central">
+    <text x="287.5" y="359.5" textLength="70" lengthAdjust="spacingAndGlyphs">2000年</text>
+    <text x="356.5" y="301.5" textLength="70" lengthAdjust="spacingAndGlyphs">2000年</text>
+    <text x="421.5" y="242" textLength="70" lengthAdjust="spacingAndGlyphs">2000年</text>
+  </g>
+
+  <!-- 時代の名前 -->
+  <g font-size="26" dominant-baseline="central">
+    <text x="501" y="174.5">完成成約時代</text>
+    <text x="501" y="233">長成新約時代</text>
+    <text x="501" y="292">蘇生旧約時代</text>
+    <text x="447" y="354">み言の基台摂理時代</text>
+  </g>
+</svg>

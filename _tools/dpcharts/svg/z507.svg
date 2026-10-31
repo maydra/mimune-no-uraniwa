@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>天国と楽園</title>
+
+  <text x="50" y="64" font-size="48" dominant-baseline="central">5.</text>
+  <text x="113" y="64" font-size="48" dominant-baseline="central" textLength="250" lengthAdjust="spacing">天国と楽園</text>
+  <line x1="113" y1="93.5" x2="363" y2="93.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 左: イエスが目指した天国 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="366" cy="229" rx="152" ry="88" fill="#fff" class="paper"/>
+    <ellipse cx="366" cy="276" rx="86" ry="41" fill="#fff" class="paper"/>
+    <ellipse cx="369" cy="522.5" rx="152" ry="83.5" fill="#fff" class="paper"/>
+    <ellipse cx="364" cy="565.5" rx="85" ry="40.5" fill="#F8F28F"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="366" y="200" font-size="44">天上天国</text>
+    <text x="367" y="275" font-size="40">生霊体</text>
+    <text x="362" y="492.5" font-size="44">地上天国</text>
+    <text x="362" y="565" font-size="44" fill="#111">イエス</text>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="365,337 381,367 371.5,367 371.5,421 358.5,421 358.5,367 349,367"/>
+    <polygon points="939,334 955,364 945.5,364 945.5,418 932.5,418 932.5,364 923,364"/>
+    <polygon points="536,518 569,518 569,505 605,526.5 569,548 569,535 536,535"/>
+    <polygon points="695,518 720,518 720,505 761,526.5 720,548 720,535 695,535"/>
+  </g>
+
+  <!-- 十字架（型を 1.425 倍） -->
+  <g transform="translate(601.0,400.0) scale(0.9200,1.2556)" stroke-width="2.758" fill="#7A5230" stroke="#111" stroke-linejoin="round">
+    <path d="M40,0 H60 V42 H100 V60 H60 V180 H40 V60 H0 V42 H40 Z"/>
+  </g>
+
+  <!-- 右: 十字架のあと（点線） -->
+  <g stroke="currentColor" stroke-width="4.5" stroke-dasharray="13 6.2" stroke-dashoffset="6.5">
+    <ellipse cx="941" cy="230" rx="153" ry="87" fill="#fff" class="paper"/>
+    <ellipse cx="942" cy="527.5" rx="152" ry="87.5" fill="#F8F28F"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="940" y="200.5" font-size="44">天上天国</text>
+    <text x="940" y="257" font-size="40">(空いている)</text>
+    <g fill="#111">
+      <text x="941" y="484" font-size="44">地上天国</text>
+      <text x="942" y="534" font-size="36">実現できて</text>
+      <text x="943" y="575" font-size="36">いない</text>
+    </g>
+  </g>
+  <!-- 2行にまたがる丸括弧 -->
+  <g fill="none" stroke="#111" stroke-width="4.5" stroke-linecap="round">
+    <path d="M842,517 Q828,548 842,579"/>
+    <path d="M1042,517 Q1056,548 1042,579"/>
+  </g>
+</svg>

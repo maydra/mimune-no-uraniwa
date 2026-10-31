@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>悪霊の業</title>
+  <defs>
+    <marker id="z531-ac" viewBox="0 0 28 34" refX="25" refY="17" markerWidth="28" markerHeight="34" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L28,17 L0,34 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="52.7" y="57.7" font-size="44" dominant-baseline="central" textLength="181" lengthAdjust="spacing">悪霊の業</text>
+  <line x1="52" y1="86" x2="234" y2="86" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 地上の線と、箱へつなぐ点線（楕円より先に描く） -->
+  <line x1="209" y1="460" x2="619" y2="460" stroke="currentColor" stroke-width="6.5"/>
+  <line x1="578" y1="433" x2="760" y2="433" stroke="currentColor" stroke-width="6.5" stroke-dasharray="16 8"/>
+
+  <!-- 悪霊人が地上人に業をする -->
+  <line x1="327" y1="286.5" x2="415.3" y2="370.5" stroke="currentColor" stroke-width="10" marker-end="url(#z531-ac)"/>
+  <g stroke="currentColor" stroke-width="4" fill="#CF921C">
+    <ellipse cx="268.75" cy="211.5" rx="59.25" ry="91.5"/>
+    <ellipse cx="480.5" cy="461" rx="69" ry="118"/>
+  </g>
+  <g font-size="47" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="268.75" y="162">悪</text>
+    <text x="268.75" y="211.5">霊</text>
+    <text x="268.75" y="261.5">人</text>
+    <text x="480.5" y="410">地</text>
+    <text x="480.5" y="461">上</text>
+    <text x="480.5" y="511.5">人</text>
+  </g>
+
+  <text y="271.3" font-size="42" dominant-baseline="central"><tspan x="380.7" textLength="88.6" lengthAdjust="spacing">苦痛</tspan><tspan x="499.4" text-anchor="end">（</tspan><tspan x="499.7">罰</tspan><tspan x="542.9">）</tspan><tspan x="572.7" textLength="88.6" lengthAdjust="spacing">審判</tspan></text>
+
+  <!-- 地上人が苦痛を甘受すると -->
+  <rect x="767" y="235" width="312.5" height="400.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g fill="#8C949A">
+    <polygon points="923.5,320.5 935,340 927.5,340 927.5,365.5 919.5,365.5 919.5,340 912,340"/>
+    <polygon points="923.5,506.5 935,526 927.5,526 927.5,551.5 919.5,551.5 919.5,526 912,526"/>
+  </g>
+  <g font-size="44" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="923" y="278.8">恵沢</text>
+    <text x="921.5" y="404.8">罪に対する</text>
+    <text x="923.5" y="466.8">蕩減条件</text>
+    <text x="923" y="592.3">苦痛甘受</text>
+  </g>
+</svg>

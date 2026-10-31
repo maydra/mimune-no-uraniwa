@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>楽園（天国の門が開かれるまでとどまっている霊界）</title>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="423,187 439.5,219 429,219 429,268 417,268 417,219 406.5,219"/>
+    <polygon points="423,429 439.5,460 429,460 429,484 417,484 417,460 406.5,460"/>
+  </g>
+  <!-- 天国へは行けない -->
+  <g stroke="currentColor" stroke-width="6">
+    <line x1="396" y1="220" x2="451" y2="262"/>
+    <line x1="396" y1="262" x2="451" y2="220"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="423.5" cy="105" rx="136.5" ry="69" fill="#fff" class="paper"/>
+    <ellipse cx="423.5" cy="352" rx="137" ry="68.5" fill="#F8F28F"/>
+  </g>
+  <g font-size="52" text-anchor="middle" dominant-baseline="central">
+    <text x="423" y="105.5">天国</text>
+    <text x="423" y="351.5" fill="#111">楽園</text>
+  </g>
+
+  <g font-size="45" dominant-baseline="central">
+    <text x="577" y="313.5" textLength="502" lengthAdjust="spacing">天国の門が開かれるまで</text>
+    <text x="582" y="376" textLength="406" lengthAdjust="spacing">とどまっている霊界</text>
+  </g>
+
+  <!-- 十字架（型を 1.065 倍） -->
+  <g transform="translate(368.0,503.0) scale(1.1100,0.9444)" stroke-width="2.920" fill="#7A5230" stroke="#111" stroke-linejoin="round">
+    <path d="M40,0 H60 V42 H100 V60 H60 V180 H40 V60 H0 V42 H40 Z"/>
+  </g>
+
+  <g font-size="50" dominant-baseline="central">
+    <text x="509" y="550" textLength="148" lengthAdjust="spacing">イエス</text>
+    <text x="513" y="612.5">強盗</text>
+    <text x="625" y="612.5" textLength="107" lengthAdjust="spacingAndGlyphs">(ルカ</text>
+    <!-- 元の図は「24:43」。十字架上の強盗の話はルカ 23:43 なので直した（2026-10-31、ユーザー「誤表記は直そう」） -->
+    <text x="746" y="612.5" textLength="133" lengthAdjust="spacingAndGlyphs">23:43)</text>
+  </g>
+</svg>

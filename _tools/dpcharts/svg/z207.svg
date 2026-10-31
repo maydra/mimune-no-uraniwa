@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>罪の根　キリスト教信徒：善悪の果を取って食べたこと</title>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="845,108.5 926,108.5 926,93 960,115 926,137 926,121.5 845,121.5"/>
+    <polygon points="690.5,160 704.5,160 704.5,319 720.5,319 697.5,355 674.5,319 690.5,319"/>
+  </g>
+
+  <!-- 罪の根 -->
+  <ellipse cx="692.5" cy="113" rx="157.5" ry="52" fill="#CF921C" stroke="currentColor" stroke-width="4"/>
+  <text x="692" y="112" font-size="62" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="186" lengthAdjust="spacing">罪の根</text>
+  <text x="1003" y="115.5" font-size="110" text-anchor="middle" dominant-baseline="central" textLength="60" lengthAdjust="spacingAndGlyphs">?</text>
+
+  <!-- キリスト教信徒 -->
+  <rect x="245" y="257" width="346.5" height="85.5" rx="14" fill="#FCE5E3" stroke="currentColor" stroke-width="4"/>
+  <text x="415" y="298.5" font-size="50" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="290" lengthAdjust="spacingAndGlyphs">キリスト教信徒</text>
+
+  <!-- 聖書（z213 と同じ形を、元の画像の大きさに合わせて置く） -->
+  <g transform="matrix(1.1839,-0.0346,-0.0902,0.9744,20.39,266.47)">
+    <path d="M285,123 L398,126 Q418,129 420,152 L404,206 L389,241 L378,266 L369,295 L364,310 Q362,314 352,314 L285,311 L240,306 Q230,304 230,293 L232,278 L224,266 Z" fill="#3A3A3A" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M236,275 L350,279 L346,303 L240,299 Q234,298 234,290 Z" fill="#EDEDED"/>
+    <g stroke="#111" stroke-width="1.5">
+      <line x1="238" y1="282" x2="348" y2="286"/>
+      <line x1="238" y1="288" x2="347" y2="292"/>
+      <line x1="238" y1="294" x2="347" y2="298"/>
+    </g>
+    <polyline points="389,135 295,133 237,262 344,262" fill="none" stroke="#BDBDBD" stroke-width="2"/>
+    <line x1="393" y1="133" x2="347" y2="267" stroke="#DADADA" stroke-width="4"/>
+    <path d="M312,281 L329,283 L321,329 L304,329 Z" fill="#3A3A3A" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <text transform="translate(391,420) skewX(-10)" font-size="55" text-anchor="middle" dominant-baseline="central" fill="#fff" textLength="119" lengthAdjust="spacingAndGlyphs">聖書</text>
+
+  <!-- … -->
+  <g>
+    <rect x="510.5" y="469.5" width="11" height="11"/>
+    <rect x="532.5" y="469.5" width="11" height="11"/>
+    <rect x="554.5" y="469.5" width="11" height="11"/>
+  </g>
+
+  <!-- 善悪の果 -->
+  <g>
+    <path d="M 700.0,408.2 C 711.8,398.4 725.4,394.0 741.0,394.0 C 772.2,394.0 798.9,416.3 798.9,455.4 C 798.9,491.3 783.9,523.9 760.5,540.2 C 752.7,547.5 741.0,552.4 725.4,552.4 C 715.6,553.2 707.9,556.5 700.0,556.5 C 690.3,556.5 682.5,552.4 672.8,552.4 C 663.0,552.4 655.2,550.8 645.5,543.5 C 620.1,527.2 604.5,494.6 604.5,458.7 C 604.5,422.8 624.0,398.4 653.2,397.7 C 670.8,397.2 686.4,400.0 700.0,408.2 Z" fill="#E8202A" stroke="#111" stroke-width="5.2" stroke-linejoin="round"/>
+    <path d="M 698.1,408.2 C 697.1,391.9 692.2,377.2 680.5,365.8" fill="none" stroke="#111" stroke-width="8.2" stroke-linecap="round"/>
+    <path d="M 698.1,408.2 C 697.1,391.9 692.2,377.2 680.5,365.8" fill="none" stroke="#8B5A2B" stroke-width="4.7" stroke-linecap="round"/>
+    <path d="M 704.0,400.0 C 709.8,385.4 727.4,375.6 750.8,377.2 C 743.0,391.9 725.4,400.0 704.0,400.0 Z" fill="#4CAF50" stroke="#111" stroke-width="2.1" stroke-linejoin="round"/>
+  </g>
+  <text x="700" y="473.5" font-size="52" text-anchor="middle" dominant-baseline="central" fill="#fff" textLength="165" lengthAdjust="spacingAndGlyphs">善悪の果</text>
+
+  <text x="695.5" y="613" font-size="53" text-anchor="middle" dominant-baseline="central" textLength="424" lengthAdjust="spacing">取って食べたこと</text>
+</svg>

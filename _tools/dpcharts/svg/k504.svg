@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. エジプト苦役時代 400 年</title>
+
+  <text x="50" y="37.5" font-size="30" text-anchor="middle" dominant-baseline="central">Ⅰ</text>
+  <text x="65" y="37.5" font-size="30" dominant-baseline="central">.</text>
+  <text y="37.5" font-size="30" dominant-baseline="central"><tspan x="84" textLength="250" lengthAdjust="spacing">エジプト苦役時代</tspan><tspan x="343" textLength="45" lengthAdjust="spacingAndGlyphs">400</tspan><tspan x="397">年</tspan></text>
+  <line x1="81" y1="56.5" x2="428" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 象徴的同時性時代 → 形象的同時性時代 -->
+  <g font-size="25">
+    <text x="120" y="92" dominant-baseline="central" textLength="75" lengthAdjust="spacing">象徴的</text>
+    <text x="120" y="121" dominant-baseline="central" textLength="128" lengthAdjust="spacing">同時性時代</text>
+    <text x="287" y="90.5" dominant-baseline="central" textLength="72" lengthAdjust="spacing">形象的</text>
+    <text x="288" y="119" dominant-baseline="central" textLength="122" lengthAdjust="spacing">同時性時代</text>
+  </g>
+  <polygon points="250,97.5 266,97.5 266,95 279.5,102 266,109 266,106.5 250,106.5"/>
+
+  <!-- 年数の柱（黒い線と緑の帯） -->
+  <rect x="240.5" y="167" width="11" height="217" fill="#A0F08A"/>
+  <rect x="391.5" y="167" width="11" height="217" fill="#A0F08A"/>
+  <g stroke="currentColor">
+    <line x1="237.5" y1="165" x2="237.5" y2="385" stroke-width="5.5"/>
+    <line x1="388.5" y1="165" x2="388.5" y2="385" stroke-width="5.5"/>
+    <g stroke-width="3">
+      <line x1="222" y1="165" x2="256" y2="165"/>
+      <line x1="222" y1="385" x2="256" y2="385"/>
+      <line x1="374" y1="165" x2="409" y2="165"/>
+      <line x1="374" y1="385" x2="409" y2="385"/>
+    </g>
+  </g>
+  <g font-size="27" text-anchor="end" dominant-baseline="central">
+    <text x="226" y="275.5" textLength="56" lengthAdjust="spacingAndGlyphs">1600</text>
+    <text x="379" y="275.5" textLength="42" lengthAdjust="spacingAndGlyphs">400</text>
+  </g>
+
+  <!-- 人物 -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="3">
+    <ellipse cx="171.5" cy="165" rx="53.5" ry="20"/>
+    <ellipse cx="171.5" cy="386" rx="53.5" ry="20"/>
+    <ellipse cx="324.5" cy="165" rx="53.5" ry="20"/>
+    <ellipse cx="324.5" cy="386" rx="53.5" ry="20"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="172" y="164.5" textLength="74" lengthAdjust="spacing">アダム</text>
+    <text x="172" y="386.5" textLength="46" lengthAdjust="spacing">ノア</text>
+    <text x="324.5" y="164" font-size="23" textLength="79" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+    <text x="324" y="385.5" textLength="74" lengthAdjust="spacing">モーセ</text>
+  </g>
+
+  <!-- エジプト苦役時代の箱 -->
+  <path d="M420,149.5 V108.5 Q420,100.5 428,100.5 H689.5 Q697.5,100.5 697.5,108.5 V149.5 Z" fill="#CDF8F7"/>
+  <rect x="420" y="149.5" width="277.5" height="239" fill="#fff" class="paper"/>
+  <line x1="420" y1="149.5" x2="697.5" y2="149.5" stroke="currentColor" stroke-width="3.5"/>
+  <rect x="420" y="100.5" width="277.5" height="288" rx="8" fill="none" stroke="currentColor" stroke-width="3.5"/>
+  <text x="559" y="125" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="228" lengthAdjust="spacing">エジプト苦役時代</text>
+
+  <circle cx="435" cy="189" r="6.5"/>
+  <circle cx="435" cy="315" r="6.5"/>
+  <text x="452" y="188.5" font-size="26" dominant-baseline="central" textLength="155" lengthAdjust="spacing">象徴献祭失敗</text>
+  <g fill="none" stroke="currentColor" stroke-width="3">
+    <path d="M448,209 Q431,237 448,265"/>
+    <path d="M660,209 Q678,237 660,265"/>
+  </g>
+  <g font-size="20" font-weight="400" dominant-baseline="central">
+    <text x="452" y="221.5" textLength="203" lengthAdjust="spacing">ノアからアブラハムまで</text>
+    <text y="250.5"><tspan x="450" textLength="30" lengthAdjust="spacingAndGlyphs">400</tspan><tspan x="487" textLength="126" lengthAdjust="spacing">年サタン侵入</tspan></text>
+    <text x="451" y="314.5" textLength="231" lengthAdjust="spacing">イスラエル民族サタン再分立</text>
+    <text y="346.5"><tspan x="451" textLength="176" lengthAdjust="spacing">するエジプト苦役期間</tspan><tspan x="634" textLength="25" lengthAdjust="spacingAndGlyphs">400</tspan><tspan x="665">年</tspan></text>
+  </g>
+  <!-- 下向きの黒い矢印 -->
+  <polygon points="549,276 564.5,276 564.5,283 572.5,283 557,291.5 541.5,283 549,283"/>
+</svg>

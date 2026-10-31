@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>③ 気候を中心とした文明の結実</title>
+
+  <!-- 題 -->
+  <text x="34" y="37" font-size="28" dominant-baseline="central">③</text>
+  <text x="72" y="37" font-size="28" dominant-baseline="central" textLength="373" lengthAdjust="spacing">気候を中心とした文明の結実</text>
+  <line x1="71" y1="55" x2="446" y2="55" stroke="currentColor" stroke-width="2"/>
+
+  <!-- 見出しの ○ -->
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <circle cx="160.5" cy="88" r="9.8"/>
+    <circle cx="162.5" cy="270" r="9.8"/>
+  </g>
+  <g font-size="28" dominant-baseline="central">
+    <text x="182" y="87" textLength="228" lengthAdjust="spacing">生物の活動と繁殖</text>
+    <text x="183" y="268" textLength="368" lengthAdjust="spacing">元来の人類文明の移り変わり</text>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="265,157 304,157 304,153 316,160 304,167 304,163 265,163"/>
+    <polygon points="391,157 430,157 430,153 442,160 430,167 430,163 391,163"/>
+    <polygon points="517,157 556,157 556,153 568,160 556,167 556,163 517,163"/>
+    <polygon points="261,371.5 289,371.5 289,368 301,375 289,382 289,378 261,378"/>
+    <polygon points="400,371.5 428,371.5 428,368 440,375 428,382 428,378 400,378"/>
+    <polygon points="538,371.5 566,371.5 566,368 578,375 566,382 566,378 538,378"/>
+  </g>
+
+  <!-- 季節の円 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5">
+    <circle cx="226.5" cy="157.5" r="24.8"/>
+    <circle cx="353.5" cy="157.5" r="24.8"/>
+    <circle cx="479.5" cy="157.5" r="24.8"/>
+    <circle cx="605.5" cy="157.5" r="24.8"/>
+  </g>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central">
+    <text x="226.5" y="159">春</text>
+    <text x="353.5" y="159">夏</text>
+    <text x="479.5" y="159">秋</text>
+    <text x="605.5" y="159">冬</text>
+  </g>
+  <g font-size="27" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="224.5" y="206.5" textLength="79" lengthAdjust="spacing">始まり</text>
+    <text x="354.5" y="206.5" textLength="53" lengthAdjust="spacing">繁茂</text>
+    <text x="480" y="206.5" textLength="54" lengthAdjust="spacing">結実</text>
+    <text x="605.5" y="206.5" textLength="53" lengthAdjust="spacing">蓄え</text>
+    <text x="215" y="315" font-size="25" textLength="80" lengthAdjust="spacing">エデン</text>
+  </g>
+
+  <!-- 文明の円 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5">
+    <circle cx="211.5" cy="374.5" r="41.8"/>
+    <circle cx="350.5" cy="374.5" r="41.8"/>
+    <circle cx="489.5" cy="374.5" r="41.8"/>
+    <circle cx="628.5" cy="374.5" r="41.8"/>
+  </g>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central">
+    <text x="211.5" y="359">温帯</text>
+    <text x="211.5" y="391.5">文明</text>
+    <text x="350.5" y="359">熱帯</text>
+    <text x="350.5" y="391.5">文明</text>
+    <text x="489.5" y="359">涼帯</text>
+    <text x="489.5" y="391.5">文明</text>
+    <text x="628.5" y="359">寒帯</text>
+    <text x="628.5" y="391.5">文明</text>
+  </g>
+</svg>

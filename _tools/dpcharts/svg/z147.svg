@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>愛と美、善と悪、義と不義　1. 愛と美</title>
+  <defs>
+    <marker id="z147-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="2.7" markerHeight="2.7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <g font-size="48" dominant-baseline="central">
+    <text x="78" y="57" text-anchor="middle">Ⅲ</text>
+    <text x="108.5" y="57" text-anchor="middle">.</text>
+    <text x="129 184 229 278 329 384 429 478 528 584 628 678" y="56">愛と美、善と悪、義と不義</text>
+    <text x="89.5" y="137" text-anchor="middle">1</text>
+    <text x="110" y="137" text-anchor="middle">.</text>
+    <text x="130" y="136" textLength="148" lengthAdjust="spacing">愛と美</text>
+  </g>
+  <g stroke="currentColor" stroke-width="3.5">
+    <line x1="128" y1="86.5" x2="727.5" y2="86.5"/>
+    <line x1="129" y1="166.5" x2="279" y2="166.5"/>
+  </g>
+
+  <!-- 点線（矢印と線の下に描く） -->
+  <g stroke="currentColor" stroke-width="6" fill="none">
+    <line x1="718.4" y1="330.6" x2="892.1" y2="232" stroke-dasharray="8.3 9.1"/>
+    <line x1="721.3" y1="451" x2="891.2" y2="560" stroke-dasharray="7.5 8.7"/>
+    <line x1="338" y1="390.5" x2="421" y2="390.5" stroke-dasharray="9.5 8.8"/>
+    <line x1="440" y1="576.5" x2="632" y2="576.5" stroke-dasharray="9.5 8.7"/>
+  </g>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="8.5">
+    <line x1="680" y1="206.5" x2="499" y2="387.5"/>
+    <line x1="704.3" y1="206.5" x2="881.7" y2="387.5"/>
+    <line x1="488.7" y1="387.5" x2="669" y2="571.5"/>
+    <line x1="893.4" y1="387.5" x2="713" y2="571.5"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="8" fill="none" marker-end="url(#z147-g)">
+    <path d="M656,505 Q617.5,389.5 651.1,284"/>
+    <path d="M725,275 Q764.5,391.1 728.1,494.8"/>
+    <path d="M570,375 Q693.5,348.3 803,378.5"/>
+    <path d="M810,404.5 Q689.3,430 571.5,403.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="691" cy="206.5" rx="56.5" ry="54" fill="#fff" class="paper"/>
+    <ellipse cx="483" cy="387.5" rx="56.5" ry="54" fill="#F98AEE"/>
+    <ellipse cx="892.5" cy="387.5" rx="56.5" ry="54" fill="#A0F08A"/>
+    <ellipse cx="691" cy="571.5" rx="56.5" ry="54" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="689.5" y="205.5" font-size="57">神</text>
+    <text x="689.5" y="329" font-size="42">愛</text>
+    <text x="689" y="450" font-size="42">美</text>
+    <g fill="#111">
+      <text x="482" y="383.5" font-size="53">主</text>
+      <text x="892.5" y="386" font-size="53">対</text>
+      <text x="691" y="570" font-size="57">合</text>
+    </g>
+  </g>
+
+  <!-- 二性実体・第三対象 -->
+  <g font-size="47" dominant-baseline="central">
+    <text x="277" y="358.5" text-anchor="middle">二性</text>
+    <text x="277" y="417" text-anchor="middle">実体</text>
+    <text x="225" y="575" textLength="197" lengthAdjust="spacing">第三対象</text>
+  </g>
+
+  <!-- （動的）（静的） -->
+  <g font-size="54" dominant-baseline="central">
+    <text x="924" y="229" text-anchor="end">（</text>
+    <text x="975" y="229" text-anchor="middle" font-size="52">動的</text>
+    <text x="1028" y="229">）</text>
+    <text x="923" y="567" text-anchor="end">（</text>
+    <text x="974" y="567" text-anchor="middle" font-size="52">静的</text>
+    <text x="1027" y="567">）</text>
+  </g>
+</svg>

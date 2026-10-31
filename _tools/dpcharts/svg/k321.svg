@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>b 第二次幕屋のための基台</title>
+
+  <!-- 題 -->
+  <circle cx="48.5" cy="37.5" r="13.8" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <text x="48.5" y="36.5" font-size="22" text-anchor="middle" dominant-baseline="central">b</text>
+  <text x="73" y="37.5" font-size="31" dominant-baseline="central" textLength="345" lengthAdjust="spacing">第二次幕屋のための基台</text>
+  <line x1="72" y1="56.5" x2="419" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="245.5,158 252.5,169.5 248.5,169.5 248.5,334 242.5,334 242.5,169.5 238.5,169.5"/>
+    <polygon points="394.5,175 405,192.5 398.5,192.5 398.5,249 390.5,249 390.5,192.5 384,192.5"/>
+    <polygon points="394.5,299 405.5,316.5 397.5,316.5 397.5,329 390.5,329 390.5,316.5 383.5,316.5"/>
+    <polygon points="590,180 601,197.5 593.5,197.5 593.5,245.5 586.5,245.5 586.5,197.5 579,197.5"/>
+  </g>
+  <polygon points="481.5,196.5 494.5,196.5 494.5,184.5 509.5,209.5 494.5,234.5 494.5,222.5 481.5,222.5" fill="#8C949A" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>
+
+  <!-- 神 -->
+  <circle cx="247" cy="121" r="31.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <text x="246" y="121.5" font-size="34" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 信仰基台○ -->
+  <rect x="137.5" y="221.5" width="95" height="69" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.4"/>
+  <g font-size="25" font-weight="400" dominant-baseline="central">
+    <text x="146" y="241.5" textLength="55" lengthAdjust="spacing">信仰</text>
+    <text x="148" y="271" textLength="51" lengthAdjust="spacing">基台</text>
+  </g>
+  <circle cx="215" cy="271" r="10" fill="none" stroke="currentColor" stroke-width="2.6"/>
+
+  <!-- 字 -->
+  <g font-size="26" dominant-baseline="central">
+    <text x="278" y="195.5" textLength="52" lengthAdjust="spacing">再び</text>
+    <text x="278" y="229.5" textLength="26" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="304" y="229.5" textLength="78" lengthAdjust="spacing">日断食</text>
+    <text x="323" y="100" textLength="156" lengthAdjust="spacing">幕屋理想復帰</text>
+    <text x="523" y="100" textLength="131" lengthAdjust="spacing">救いの摂理</text>
+  </g>
+  <g font-size="24" dominant-baseline="central">
+    <text x="313" y="346.5" textLength="164" lengthAdjust="spacing">イスラエル民族</text>
+    <text x="312" y="381" textLength="235" lengthAdjust="spacing">磐石の水を飲んだ基台</text>
+  </g>
+
+  <!-- 石板 -->
+  <rect x="333.5" y="128.5" width="124" height="37" fill="#FCE5E3" stroke="currentColor" stroke-width="2.4"/>
+  <rect x="317.5" y="255.5" width="156" height="40" fill="#CF921C" stroke="currentColor" stroke-width="2.4"/>
+  <g font-size="26" dominant-baseline="central" fill="#111">
+    <text x="344" y="147" textLength="103" lengthAdjust="spacing">二次石板</text>
+    <text x="329" y="276" textLength="131" lengthAdjust="spacing">最初の石板</text>
+  </g>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="2.6" fill="#F8F28F">
+    <ellipse cx="245" cy="357" rx="50.5" ry="23.5"/>
+    <ellipse cx="590.5" cy="146" rx="50" ry="26.5"/>
+    <ellipse cx="590" cy="278" rx="51.5" ry="26.5"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="243" y="357" font-size="27" textLength="78" lengthAdjust="spacing">モーセ</text>
+    <text x="591" y="146" font-size="26" textLength="78" lengthAdjust="spacing">再臨主</text>
+    <text x="589" y="278" font-size="27" textLength="78" lengthAdjust="spacing">イエス</text>
+  </g>
+
+  <!-- 十字架 -->
+  <g transform="translate(639.5,239) scale(0.405,0.367)" fill="#7A5230" stroke="#111" stroke-width="5.2" stroke-linejoin="round">
+    <path d="M40,0 H60 V42 H100 V60 H60 V180 H40 V60 H0 V42 H40 Z"/>
+  </g>
+</svg>

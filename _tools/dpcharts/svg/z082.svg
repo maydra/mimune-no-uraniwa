@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>万有原力と授受作用を中心としてみた被造物</title>
+  <defs>
+    <marker id="z082-d" viewBox="0 0 10 8" refX="0" refY="4" markerWidth="3.3" markerHeight="2.64" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="73" font-size="44" textLength="897" lengthAdjust="spacing">万有原力と授受作用を中心としてみた被造物</text>
+  <line x1="49" y1="84.5" x2="949" y2="84.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 神：万有原力 -->
+  <text x="513" y="214" font-size="62" text-anchor="middle" dominant-baseline="central">神</text>
+  <ellipse cx="717.5" cy="216.5" rx="143" ry="63" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="715.5" y="216.5" font-size="56" text-anchor="middle" dominant-baseline="central">万有原力</text>
+
+  <!-- 被造物（左が性相、右が形状） -->
+  <text x="213" y="488" font-size="52" textLength="158" lengthAdjust="spacing" dominant-baseline="central">被造物</text>
+  <path d="M725.5,390.5 c-36.89,16.06 -72,31.42 -72,49.25 c0,17.83 35.11,33.19 72,49.25 c32.79,16.06 64,31.42 64,49.25 c0,17.83 -31.21,33.19 -64,49.25 A334,98.5 0 0 1 725.5,390.5 Z" fill="#F98AEE"/>
+  <path d="M725.5,390.5 c-36.89,16.06 -72,31.42 -72,49.25 c0,17.83 35.11,33.19 72,49.25 c32.79,16.06 64,31.42 64,49.25 c0,17.83 -31.21,33.19 -64,49.25 A334,98.5 0 0 0 725.5,390.5 Z" fill="#A0F08A"/>
+  <ellipse cx="725.5" cy="489" rx="334" ry="98.5" fill="none" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 万有原力から性相・形状へ（面の外は地の色、面の中は #111） -->
+  <g stroke-width="6.5">
+    <line x1="680.5" y1="254" x2="567.3" y2="402.3" stroke="currentColor"/>
+    <line x1="567.3" y1="402.3" x2="532.5" y2="447" stroke="#111"/>
+    <line x1="743" y1="254" x2="871" y2="401" stroke="currentColor"/>
+    <line x1="871" y1="401" x2="911" y2="447" stroke="#111"/>
+  </g>
+
+  <g stroke="#111" stroke-width="5.5" fill="none" marker-end="url(#z082-d)">
+    <path d="M643,474 Q739.75,450.8 797.5,470.4"/>
+    <path d="M810,502.5 Q717.95,527.55 658.1,508.4"/>
+  </g>
+  <g font-size="56" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="528.5" y="492">性相</text>
+    <text x="931" y="492.5">形状</text>
+  </g>
+</svg>

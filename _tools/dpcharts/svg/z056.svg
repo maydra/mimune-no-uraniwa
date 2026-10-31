@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>存在の陽性と陰性　人間・動物・植物・原子・素粒子</title>
+
+  <!-- 一行目の水色の箱 -->
+  <rect x="314" y="43.5" width="623.5" height="106" fill="#CDF8F7" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="3.5" fill="#DCC4C4">
+    <ellipse cx="409.5" cy="96" rx="69" ry="40" stroke="#111"/>
+    <ellipse cx="409.5" cy="208.5" rx="69" ry="40" fill="#FCE5E3"/>
+    <ellipse cx="409.5" cy="308.5" rx="69" ry="40"/>
+    <ellipse cx="409.5" cy="408.5" rx="69" ry="40"/>
+    <ellipse cx="409.5" cy="509.5" rx="69" ry="40"/>
+    <ellipse cx="409.5" cy="609.5" rx="69" ry="40"/>
+  </g>
+
+  <!-- 陽性の箱・陰性の箱 -->
+  <g stroke-width="3.5">
+    <g fill="#F98AEE">
+      <rect x="502.5" y="64" width="143.5" height="63.5" rx="13" stroke="#111"/>
+      <rect x="507" y="177" width="133.5" height="63.5" rx="13" stroke="currentColor"/>
+      <rect x="507" y="277.5" width="133.5" height="63.5" rx="13" stroke="currentColor"/>
+      <rect x="507" y="377" width="133.5" height="63.5" rx="13" stroke="currentColor"/>
+      <rect x="507" y="477.5" width="133.5" height="63.5" rx="13" stroke="currentColor"/>
+      <rect x="507" y="578" width="133.5" height="63.5" rx="13" stroke="currentColor"/>
+    </g>
+    <g fill="#A0F08A">
+      <rect x="766.5" y="65" width="144" height="63.5" rx="13" stroke="#111"/>
+      <rect x="772" y="176.5" width="133" height="63.5" rx="13" stroke="currentColor"/>
+      <rect x="772" y="277" width="133" height="63.5" rx="13" stroke="currentColor"/>
+      <rect x="772" y="376.5" width="133" height="63.5" rx="13" stroke="currentColor"/>
+      <rect x="772" y="477.5" width="133" height="63.5" rx="13" stroke="currentColor"/>
+      <rect x="772" y="578" width="133" height="63.5" rx="13" stroke="currentColor"/>
+    </g>
+  </g>
+
+  <!-- 授受の矢印（各行の中心からの位置） -->
+  <g fill="#8C949A">
+    <g transform="translate(0,96.5)">
+      <polygon points="676,-13 723.5,-13 723.5,-16 740,-8.5 723.5,-1 723.5,-4 676,-4"/>
+      <polygon points="739,5 691,5 691,2 675,9.25 691,16.5 691,13 739,13"/>
+    </g>
+    <g transform="translate(0,209)">
+      <polygon points="676,-13 723.5,-13 723.5,-16 740,-8.5 723.5,-1 723.5,-4 676,-4"/>
+      <polygon points="739,5 691,5 691,2 675,9.25 691,16.5 691,13 739,13"/>
+    </g>
+    <g transform="translate(0,309)">
+      <polygon points="676,-13 723.5,-13 723.5,-16 740,-8.5 723.5,-1 723.5,-4 676,-4"/>
+      <polygon points="739,5 691,5 691,2 675,9.25 691,16.5 691,13 739,13"/>
+    </g>
+    <g transform="translate(0,409)">
+      <polygon points="676,-13 723.5,-13 723.5,-16 740,-8.5 723.5,-1 723.5,-4 676,-4"/>
+      <polygon points="739,5 691,5 691,2 675,9.25 691,16.5 691,13 739,13"/>
+    </g>
+    <g transform="translate(0,509)">
+      <polygon points="676,-13 723.5,-13 723.5,-16 740,-8.5 723.5,-1 723.5,-4 676,-4"/>
+      <polygon points="739,5 691,5 691,2 675,9.25 691,16.5 691,13 739,13"/>
+    </g>
+    <g transform="translate(0,609)">
+      <polygon points="676,-13 723.5,-13 723.5,-16 740,-8.5 723.5,-1 723.5,-4 676,-4"/>
+      <polygon points="739,5 691,5 691,2 675,9.25 691,16.5 691,13 739,13"/>
+    </g>
+  </g>
+
+  <!-- 字（色の面の上なので #111） -->
+  <g font-size="48" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="409.5" y="96">存在</text>
+    <text x="409.5" y="208.5">人間</text>
+    <text x="409.5" y="308.5">動物</text>
+    <text x="409.5" y="408.5">植物</text>
+    <text x="409.5" y="509.5">原子</text>
+    <text x="409.5" y="609.5" font-size="36" textLength="110" lengthAdjust="spacing">素粒子</text>
+
+    <text x="574.25" y="95.75">陽性</text>
+    <text x="573.75" y="208.75">男性</text>
+    <text x="573.75" y="309.25">雄</text>
+    <text x="573.75" y="408.75" font-size="36" textLength="110" lengthAdjust="spacing">雄しべ</text>
+    <text x="573.75" y="509.25">陽性</text>
+    <text x="573.75" y="609.75">陽性</text>
+
+    <text x="838.5" y="96.75">陰性</text>
+    <text x="838.5" y="208.25">女性</text>
+    <text x="838.5" y="308.75">雌</text>
+    <text x="838.5" y="408.25" font-size="36" textLength="110" lengthAdjust="spacing">雌しべ</text>
+    <text x="838.5" y="509.25">陰性</text>
+    <text x="838.5" y="609.75">陰性</text>
+  </g>
+</svg>

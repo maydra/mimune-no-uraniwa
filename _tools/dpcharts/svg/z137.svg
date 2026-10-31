@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>創造目的完成</title>
+  <defs>
+    <marker id="z137-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.2" markerHeight="2.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="53" y="57.5" font-size="48" textLength="298" lengthAdjust="spacing" dominant-baseline="central">創造目的完成</text>
+  <line x1="52" y1="88" x2="351" y2="88" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="currentColor" stroke-width="6.5" fill="none" marker-end="url(#z137-k)">
+    <!-- 神と真の父母 -->
+    <path d="M486,283 C481,273 480,256 487,242.8"/>
+    <path d="M517.5,235 C522,245 523,262 517.5,274"/>
+    <!-- 真の父母と真ん中の子女 -->
+    <g transform="translate(-1,160)">
+      <path d="M486,283 C481,273 480,256 487,242.8"/>
+      <path d="M517.5,235 C522,245 523,262 517.5,274"/>
+    </g>
+    <!-- 真の父母と左右の子女 -->
+    <path d="M318,444 C325,410 357,388 395.5,374"/>
+    <path d="M410,381 C404,415 374,440 331.5,452.75"/>
+    <path d="M604.5,369 C640,374 674,400 686.25,434.85"/>
+    <path d="M680,451 C640,448 612,413 598.6,384.1"/>
+    <!-- 子女どうし -->
+    <g transform="translate(0,1.5)">
+      <path d="M346,486 C360,475 395,470 418.5,483.9"/>
+      <path d="M426,505 C412,517 380,520 355.6,504.4"/>
+    </g>
+    <g transform="translate(229,1.5)">
+      <path d="M346,486 C360,475 395,470 418.5,483.9"/>
+      <path d="M426,505 C412,517 380,520 355.6,504.4"/>
+    </g>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="500.6" cy="172.3" rx="58.4" ry="56.1" fill="#fff" class="paper"/>
+    <ellipse cx="499.3" cy="337.8" rx="102.3" ry="48.9" fill="#F8F28F"/>
+    <ellipse cx="266.8" cy="493.3" rx="56.2" ry="44.4" fill="#FCE5E3"/>
+    <ellipse cx="500.8" cy="493.2" rx="56.2" ry="44.4" fill="#FCE5E3"/>
+    <ellipse cx="732.6" cy="493.2" rx="56.2" ry="44.4" fill="#FCE5E3"/>
+  </g>
+  <text x="498.5" y="172.5" font-size="58" text-anchor="middle" dominant-baseline="central">神</text>
+  <g fill="#111" font-size="42" text-anchor="middle" dominant-baseline="central">
+    <text x="500" y="337">真の父母</text>
+    <text x="267" y="493.5">子女</text>
+    <text x="501" y="493.5">子女</text>
+    <text x="732.5" y="493">子女</text>
+  </g>
+
+  <!-- 地上天国から天上天国へ -->
+  <polygon points="925,453 925,242 915.5,242 930.5,209.5 945.5,242 936,242 936,453" fill="#8C949A"/>
+  <g font-size="46" dominant-baseline="central">
+    <text x="834" y="166" textLength="196" lengthAdjust="spacing">天上天国</text>
+    <text x="834" y="492" textLength="196" lengthAdjust="spacing">地上天国</text>
+  </g>
+  <g font-size="42" font-weight="400" dominant-baseline="central">
+    <text x="949" y="315.5" textLength="131" lengthAdjust="spacing">肉体を</text>
+    <text x="949" y="369" textLength="133" lengthAdjust="spacing">脱げば</text>
+  </g>
+
+  <!-- 一つの目的：動じ静ずる -->
+  <rect x="232" y="566" width="544.5" height="75.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <g fill="#111" font-size="44" dominant-baseline="central">
+    <text x="253" y="604" textLength="226" lengthAdjust="spacing">一つの目的</text>
+    <text x="504" y="604" text-anchor="middle">：</text>
+    <text x="528" y="604" textLength="225" lengthAdjust="spacing">動じ静ずる</text>
+  </g>
+</svg>

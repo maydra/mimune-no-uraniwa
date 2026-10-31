@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>心・神・無形世界を知らずには、人格・人生・有形世界は分からない</title>
+
+  <!-- 左の見出し -->
+  <g font-size="48" dominant-baseline="central">
+    <text x="238" y="134.5" textLength="150" lengthAdjust="spacing">知らず</text>
+    <text x="238" y="196.5" textLength="98" lengthAdjust="spacing">には</text>
+    <text x="238" y="500" textLength="152" lengthAdjust="spacing">分から</text>
+    <text x="238" y="562" textLength="98" lengthAdjust="spacing">ない</text>
+  </g>
+
+  <!-- 上から下への矢印 -->
+  <g fill="#8C949A">
+    <polygon points="467,269 482,269 482,408 491.5,408 474.5,436 457.5,408 467,408"/>
+    <polygon points="692,268 707,268 707,415 716.5,415 699.5,443 682.5,415 692,415"/>
+    <polygon points="920,266 935,266 935,413.5 944.5,413.5 927.5,441 910.5,413.5 920,413.5"/>
+  </g>
+
+  <!-- 横の太い矢印 -->
+  <g fill="#8C949A">
+    <polygon points="559,331 588,331 588,315 616,348 588,381 588,365 559,365"/>
+    <polygon points="783,331 811.5,331 811.5,314 840,348 811.5,382 811.5,365 783,365"/>
+  </g>
+
+  <!-- 円 -->
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="477" cy="169" r="62" fill="#F98AEE"/>
+    <circle cx="701.5" cy="169" r="62" fill="#fff" class="paper"/>
+    <circle cx="929" cy="152" r="81" fill="#F98AEE"/>
+    <circle cx="475.5" cy="532.5" r="62" fill="#A0F08A"/>
+    <circle cx="699.5" cy="532.5" r="62" fill="#FCE5E3"/>
+    <circle cx="929" cy="556" r="82" fill="#A0F08A"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="478" y="166" font-size="62" fill="#111">心</text>
+    <text x="698.5" y="166.5" font-size="62">神</text>
+    <g font-size="48" fill="#111">
+      <text x="929" y="119">無形</text>
+      <text x="929" y="182.5">世界</text>
+      <text x="476" y="532">人格</text>
+      <text x="699" y="532">人生</text>
+      <text x="929" y="524.5">有形</text>
+      <text x="929" y="587.5">世界</text>
+    </g>
+  </g>
+</svg>

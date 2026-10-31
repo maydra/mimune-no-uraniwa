@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅱ. 士師時代 400 年</title>
+
+  <text x="49" y="37.5" font-size="30" text-anchor="middle" dominant-baseline="central">Ⅱ</text>
+  <text x="65" y="37.5" font-size="30" dominant-baseline="central">.</text>
+  <text y="37.5" font-size="30" dominant-baseline="central"><tspan x="85" textLength="123" lengthAdjust="spacing">士師時代</tspan><tspan x="218" textLength="45" lengthAdjust="spacingAndGlyphs">400</tspan><tspan x="273">年</tspan></text>
+  <line x1="83" y1="56.5" x2="304" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 年数の柱（黒い線と緑の帯） -->
+  <rect x="252.5" y="142" width="11" height="197" fill="#A0F08A"/>
+  <rect x="425" y="142" width="11" height="197" fill="#A0F08A"/>
+  <g stroke="currentColor">
+    <line x1="249.5" y1="140" x2="249.5" y2="341" stroke-width="5.5"/>
+    <line x1="422" y1="140" x2="422" y2="341" stroke-width="5.5"/>
+    <g stroke-width="3">
+      <line x1="235" y1="140" x2="268" y2="140"/>
+      <line x1="235" y1="341" x2="269" y2="341"/>
+      <line x1="407" y1="140" x2="440" y2="140"/>
+      <line x1="407" y1="341" x2="441" y2="341"/>
+    </g>
+  </g>
+  <g font-size="27" text-anchor="end" dominant-baseline="central">
+    <text x="238" y="238.5" textLength="43" lengthAdjust="spacingAndGlyphs">400</text>
+    <text x="409" y="238.5" textLength="42" lengthAdjust="spacingAndGlyphs">400</text>
+  </g>
+
+  <!-- 人物 -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="3">
+    <ellipse cx="184.5" cy="138.5" rx="53.5" ry="20"/>
+    <ellipse cx="356.5" cy="139" rx="53.5" ry="20"/>
+    <ellipse cx="184.5" cy="341" rx="53.5" ry="20"/>
+    <ellipse cx="357" cy="341" rx="53.5" ry="20"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="185" y="138.5" textLength="48" lengthAdjust="spacing">ノア</text>
+    <text x="356" y="138.5" textLength="74" lengthAdjust="spacing">モーセ</text>
+    <text x="185" y="340" font-size="23" textLength="80" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+    <text x="357" y="341" textLength="76" lengthAdjust="spacing">サウル</text>
+  </g>
+
+  <!-- 士師時代の箱 -->
+  <path d="M457.5,173 V132 Q457.5,124 465.5,124 H686 Q694,124 694,132 V173 Z" fill="#CDF8F7"/>
+  <rect x="457.5" y="173" width="236.5" height="182" fill="#fff" class="paper"/>
+  <line x1="457.5" y1="173" x2="694" y2="173" stroke="currentColor" stroke-width="3"/>
+  <rect x="457.5" y="124" width="236.5" height="231" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
+  <text x="576" y="148.5" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="112" lengthAdjust="spacing">士師時代</text>
+
+  <circle cx="477.5" cy="215" r="6.5"/>
+  <circle cx="479" cy="292" r="6.5"/>
+  <g font-size="23" font-weight="400" dominant-baseline="central">
+    <text x="491" y="215.5" textLength="146" lengthAdjust="spacing">カナンに帰った</text>
+    <text x="490" y="251.5" textLength="177" lengthAdjust="spacing">イスラエルの不信</text>
+    <text y="294.5"><tspan x="490" textLength="122" lengthAdjust="spacing">エジプト苦役</tspan><tspan x="620" textLength="30" lengthAdjust="spacingAndGlyphs">400</tspan><tspan x="655">年</tspan></text>
+    <text x="489" y="325.5" textLength="112" lengthAdjust="spacing">再蕩減復帰</text>
+  </g>
+</svg>

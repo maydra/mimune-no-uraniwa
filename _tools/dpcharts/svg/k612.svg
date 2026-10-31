@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間創造（霊人体・肉身）と復帰摂理（内的・外的）、宗教と科学</title>
+
+  <g font-size="31" dominant-baseline="central">
+    <text x="140.5" y="59.5" textLength="125" lengthAdjust="spacing">人間創造</text>
+    <text x="334.5" y="59.5" textLength="125" lengthAdjust="spacing">復帰摂理</text>
+  </g>
+
+  <!-- 縦長の楕円 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="203" cy="148.5" rx="28.7" ry="62.2" fill="#F98AEE"/>
+    <ellipse cx="203" cy="326.5" rx="28.7" ry="62.2" fill="#A0F08A"/>
+    <ellipse cx="396" cy="148.5" rx="28.7" ry="62.2" fill="#F98AEE"/>
+    <ellipse cx="396" cy="326.5" rx="28.7" ry="62.2" fill="#A0F08A"/>
+  </g>
+  <g font-size="30" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="203" y="116.5">霊</text>
+    <text x="203" y="148">人</text>
+    <text x="203" y="180">体</text>
+    <text x="203" y="302">肉</text>
+    <text x="203" y="348.5">身</text>
+    <text x="396.5" y="123.5">内</text>
+    <text x="396.5" y="173">的</text>
+    <text x="396.5" y="302.5">外</text>
+    <text x="396.5" y="349.5">的</text>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="199.5,254.5 205.5,254.5 205.5,232 210,232 202.5,218.5 195,232 199.5,232"/>
+    <polygon points="393,254.5 399,254.5 399,232 403.5,232 396,218.5 388.5,232 393,232"/>
+    <polygon points="279,225 294,225 294,211.5 312.5,236 294,260.5 294,248 279,248"/>
+    <polygon points="471,227 486,227 486,213.5 504,238 486,262.5 486,250 471,250"/>
+  </g>
+
+  <!-- 宗教 × 科学 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="596.5" cy="148" rx="57.2" ry="25.7" fill="#F98AEE"/>
+    <ellipse cx="596.5" cy="327" rx="57.2" ry="25.7" fill="#A0F08A"/>
+  </g>
+  <g font-size="30" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="597" y="147.5">宗教</text>
+    <text x="596" y="326.5">科学</text>
+  </g>
+  <g stroke="currentColor" stroke-width="5.5">
+    <line x1="575" y1="213" x2="614.5" y2="259.5"/>
+    <line x1="614.5" y1="213" x2="575" y2="259.5"/>
+  </g>
+</svg>

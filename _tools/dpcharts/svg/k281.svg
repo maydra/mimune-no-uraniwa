@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>モーセとイエス（十災禍の対比）</title>
+
+  <!-- マスの色 -->
+  <g>
+    <rect x="108" y="3" width="298.5" height="86" fill="#fff" class="paper"/>
+    <rect x="108" y="89" width="147" height="233" fill="#CF921C"/>
+    <rect x="255" y="89" width="151.5" height="233" fill="#F8F28F"/>
+    <rect x="108" y="322" width="298.5" height="109.5" fill="#CDF8F7"/>
+    <rect x="415.5" y="3" width="299" height="87" fill="#fff" class="paper"/>
+    <rect x="415.5" y="90" width="144.5" height="231" fill="#CF921C"/>
+    <rect x="560" y="90" width="154.5" height="231" fill="#F8F28F"/>
+    <rect x="415.5" y="321" width="299" height="110.5" fill="#CDF8F7"/>
+  </g>
+
+  <!-- 罫線 -->
+  <g stroke="currentColor" stroke-width="3" fill="none">
+    <rect x="108" y="3" width="298.5" height="428.5"/>
+    <rect x="415.5" y="3" width="299" height="428.5"/>
+  </g>
+  <g stroke="#111" stroke-width="3">
+    <line x1="108" y1="89" x2="406.5" y2="89"/>
+    <line x1="108" y1="155" x2="406.5" y2="155"/>
+    <line x1="108" y1="238" x2="406.5" y2="238"/>
+    <line x1="108" y1="322" x2="406.5" y2="322"/>
+    <line x1="255" y1="89" x2="255" y2="322"/>
+    <line x1="415.5" y1="90" x2="714.5" y2="90"/>
+    <line x1="415.5" y1="154" x2="714.5" y2="154"/>
+    <line x1="415.5" y1="238.5" x2="714.5" y2="238.5"/>
+    <line x1="415.5" y1="321" x2="714.5" y2="321"/>
+    <line x1="560" y1="90" x2="560" y2="321"/>
+  </g>
+
+  <!-- 見出し -->
+  <g font-size="32" text-anchor="middle" dominant-baseline="central">
+    <text x="257" y="46" textLength="104" lengthAdjust="spacing">モーセ</text>
+    <text x="564.5" y="46" textLength="105" lengthAdjust="spacing">イエス</text>
+  </g>
+
+  <!-- 茶と黄のマス -->
+  <g fill="#111" dominant-baseline="central">
+    <g font-size="28" text-anchor="middle">
+      <text x="180" y="122" textLength="108" lengthAdjust="spacing">エジプト</text>
+      <text x="332" y="124" font-size="27" textLength="128" lengthAdjust="spacing">イスラエル</text>
+      <text x="486.5" y="124" textLength="111" lengthAdjust="spacing">サタン側</text>
+      <text x="637" y="124" textLength="68" lengthAdjust="spacing">神側</text>
+      <text x="488.5" y="196.5" textLength="67" lengthAdjust="spacing">暗闇</text>
+      <text x="637" y="196.5" textLength="68" lengthAdjust="spacing">光明</text>
+      <text x="488.5" y="279" textLength="55" lengthAdjust="spacing">滅ぶ</text>
+      <text x="636.5" y="279" textLength="111" lengthAdjust="spacing">救われる</text>
+    </g>
+    <g font-size="25">
+      <text x="131" y="180" textLength="92" lengthAdjust="spacing">3日間の</text>
+      <text x="132" y="211.5" textLength="49" lengthAdjust="spacing">暗黒</text>
+      <text x="285" y="180" textLength="92" lengthAdjust="spacing">3日間の</text>
+      <text x="286" y="211.5" textLength="48" lengthAdjust="spacing">光明</text>
+    </g>
+    <g font-size="24">
+      <text x="117" y="264" textLength="121" lengthAdjust="spacingAndGlyphs">長子、家畜の</text>
+      <text x="117" y="296" textLength="106" lengthAdjust="spacingAndGlyphs">初子を撃つ</text>
+      <text x="264" y="265" textLength="129" lengthAdjust="spacingAndGlyphs">羊の血をもっ</text>
+      <text x="265" y="296.5" textLength="84" lengthAdjust="spacingAndGlyphs">て免れる</text>
+    </g>
+  </g>
+
+  <!-- 水色のマス -->
+  <g fill="#111">
+    <circle cx="126" cy="354" r="4.8"/>
+    <circle cx="441.5" cy="354.5" r="4.8"/>
+    <g dominant-baseline="central">
+      <text x="143" y="355" font-size="26" textLength="232" lengthAdjust="spacing">エジプトから多くの</text>
+      <text x="143" y="386.5" font-size="26" textLength="206" lengthAdjust="spacing">財物を取って出発</text>
+      <text x="455" y="354.5" font-size="28" textLength="113" lengthAdjust="spacing">万物復帰</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>創造本然の世界と堕落世界　大家族の世界・一つの国の言葉／相異なる民族形成・言語が異なる</title>
+
+  <!-- 上の箱 -->
+  <rect x="143.5" y="41.5" width="232" height="43" rx="6" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <rect x="435.5" y="41.5" width="231" height="43" rx="6" fill="#DCC4C4" stroke="currentColor" stroke-width="3"/>
+  <text x="259" y="63" font-size="28" text-anchor="middle" dominant-baseline="central" textLength="201" lengthAdjust="spacing">創造本然の世界</text>
+  <text x="551.5" y="62.5" font-size="28" text-anchor="middle" dominant-baseline="central" textLength="122" lengthAdjust="spacing" fill="#111">堕落世界</text>
+  <polygon points="379,59.5 418,59.5 418,56 431,62.5 418,69 418,65.5 379,65.5" fill="#8C949A"/>
+
+  <!-- 神から人間への矢印（円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="6">
+    <line x1="257" y1="134.5" x2="179" y2="247.5"/>
+    <line x1="257" y1="134.5" x2="257.5" y2="246"/>
+    <line x1="257" y1="134.5" x2="332.6" y2="247"/>
+    <line x1="553" y1="134.5" x2="475" y2="247.5"/>
+    <line x1="553" y1="134.5" x2="553" y2="246"/>
+    <line x1="553" y1="134.5" x2="628.6" y2="247"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="172.5,257 173,242.2 186.2,251.3"/>
+    <polygon points="257.5,257.5 249.4,245 265.4,245"/>
+    <polygon points="339,256.5 325.4,250.6 338.7,241.7"/>
+    <polygon points="468.5,257 469,242.2 482.2,251.3"/>
+    <polygon points="553,257.5 545,245 561,245"/>
+    <polygon points="635,256.5 621.4,250.6 634.7,241.7"/>
+  </g>
+
+  <!-- 堕落世界の × -->
+  <g stroke="currentColor" stroke-width="5">
+    <line x1="488" y1="202.3" x2="526" y2="197.3"/>
+    <line x1="500.5" y1="182" x2="513" y2="217"/>
+    <line x1="541" y1="192" x2="566.5" y2="216"/>
+    <line x1="568" y1="194" x2="540" y2="215.5"/>
+    <line x1="580.5" y1="199" x2="621.5" y2="199"/>
+    <line x1="601.5" y1="181" x2="598.5" y2="217"/>
+  </g>
+
+  <!-- 神 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="257" cy="134.5" rx="33.2" ry="31.8"/>
+    <ellipse cx="553" cy="134.5" rx="33.2" ry="31.8"/>
+  </g>
+  <g font-size="32" text-anchor="middle" dominant-baseline="central">
+    <text x="256" y="135">神</text>
+    <text x="552" y="134">神</text>
+  </g>
+
+  <!-- 人間 -->
+  <g fill="#FCE5E3" stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="156.5" cy="288" rx="28.8" ry="25.3"/>
+    <ellipse cx="257.5" cy="288" rx="28.8" ry="25.3"/>
+    <ellipse cx="359.5" cy="288" rx="28.8" ry="25.3"/>
+    <ellipse cx="446.5" cy="289" rx="28.8" ry="25.3"/>
+    <ellipse cx="554.5" cy="289" rx="28.8" ry="25.3"/>
+    <ellipse cx="661.5" cy="289" rx="28.8" ry="25.3"/>
+  </g>
+  <g font-size="24" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="156" y="289" textLength="48" lengthAdjust="spacing">人間</text>
+    <text x="257" y="289" textLength="48" lengthAdjust="spacing">人間</text>
+    <text x="359" y="289" textLength="48" lengthAdjust="spacing">人間</text>
+    <text x="446" y="290" textLength="48" lengthAdjust="spacing">人間</text>
+    <text x="554" y="290" textLength="48" lengthAdjust="spacing">人間</text>
+    <text x="661" y="290" textLength="48" lengthAdjust="spacing">人間</text>
+  </g>
+
+  <!-- 入れ替わりの印（堕落世界は × で消す） -->
+  <g>
+    <path d="M193,282 Q198,273 211,275" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <polygon points="214.5,271 221.5,280 209,280"/>
+    <path d="M219,293 Q214,302 201,300" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <polygon points="197.5,304 190.5,295 203,295"/>
+    <path d="M295,281 Q300,272 313,274" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <polygon points="316.5,270 323.5,279 311,279"/>
+    <path d="M321,292 Q316,301 303,299" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <polygon points="299.5,303 292.5,294 305,294"/>
+    <path d="M487.5,282.5 Q492.5,273.5 505.5,275.5" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <polygon points="509,271.5 516,280.5 503.5,280.5"/>
+    <path d="M513.5,293.5 Q508.5,302.5 495.5,300.5" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <polygon points="492,304.5 485,295.5 497.5,295.5"/>
+    <path d="M594,282.5 Q599,273.5 612,275.5" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <polygon points="615.5,271.5 622.5,280.5 610,280.5"/>
+    <path d="M620,293.5 Q615,302.5 602,300.5" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <polygon points="598.5,304.5 591.5,295.5 604,295.5"/>
+  </g>
+  <g stroke="currentColor" stroke-width="3.5">
+    <line x1="493.5" y1="263" x2="507" y2="313"/>
+    <line x1="507.5" y1="263" x2="494.5" y2="313"/>
+    <line x1="600" y1="263" x2="613.5" y2="313"/>
+    <line x1="614" y1="263" x2="601" y2="313"/>
+  </g>
+
+  <!-- 下の字 -->
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="258.5" y="345" textLength="170" lengthAdjust="spacing">大家族の世界</text>
+    <text x="258.5" y="384.5" textLength="200" lengthAdjust="spacing">一つの国の言葉</text>
+    <text x="553.5" y="345" textLength="230" lengthAdjust="spacing">相異なる民族形成</text>
+    <text x="553" y="384.5" textLength="169" lengthAdjust="spacing">言語が異なる</text>
+  </g>
+</svg>

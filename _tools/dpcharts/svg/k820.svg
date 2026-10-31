@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>⑭ 人間の贖罪は肉身をつけている場合のみ可能である</title>
+  <defs>
+    <marker id="k820-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="34" y="35" font-size="27" dominant-baseline="central">⑭</text>
+  <text x="69" y="35" font-size="26" dominant-baseline="central" textLength="531" lengthAdjust="spacingAndGlyphs">人間の贖罪は肉身をつけている場合のみ可能である</text>
+  <line x1="68" y1="53" x2="600" y2="53" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- 救いの摂理 -->
+  <text x="338" y="108" font-size="28.5" dominant-baseline="central" textLength="145" lengthAdjust="spacing">救いの摂理</text>
+  <polygon points="342,136.5 466,136.5 466,132.5 482,140 466,147.5 466,143.5 342,143.5" fill="#8C949A"/>
+
+  <!-- 灰色の線（円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="5">
+    <line x1="246.4" y1="262" x2="190.7" y2="320"/>
+    <line x1="290.6" y1="262" x2="346.3" y2="320"/>
+    <line x1="536.8" y1="262" x2="483.4" y2="320"/>
+    <line x1="581.6" y1="262" x2="637.3" y2="320"/>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g stroke="currentColor" stroke-width="3.5" fill="none" marker-end="url(#k820-a)">
+    <path d="M254,209 Q242.5,193 254,178"/>
+    <path d="M276,176 Q289,192 277,206"/>
+    <path d="M547,209 Q535.5,193 547,179"/>
+    <path d="M569,176 Q580.5,192 569,206"/>
+  </g>
+
+  <!-- 楕円と円 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="265.5" cy="139.5" rx="54.5" ry="29.5" fill="#F8F28F"/>
+    <ellipse cx="557.5" cy="140.5" rx="54.5" ry="29.5" fill="#F8F28F"/>
+    <ellipse cx="267.5" cy="245" rx="54.5" ry="29" fill="#FCE5E3"/>
+    <ellipse cx="559.5" cy="246" rx="54.5" ry="29" fill="#FCE5E3"/>
+    <circle cx="184" cy="330" r="28" fill="#F98AEE"/>
+    <circle cx="351" cy="330" r="28" fill="#A0F08A"/>
+    <circle cx="475.5" cy="330.5" r="28" fill="#F98AEE"/>
+    <circle cx="642.5" cy="330.5" r="28" fill="#A0F08A"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="266" y="140" textLength="84" lengthAdjust="spacing">イエス</text>
+    <text x="557.5" y="140.5" textLength="85" lengthAdjust="spacing">再臨主</text>
+    <text x="267.5" y="245.5" textLength="60" lengthAdjust="spacing">人間</text>
+    <text x="559" y="246" textLength="60" lengthAdjust="spacing">人間</text>
+    <text x="184" y="329.5">霊</text>
+    <text x="351" y="329.5">肉</text>
+    <text x="476" y="330.5">霊</text>
+    <text x="642.5" y="330.5">肉</text>
+  </g>
+
+  <!-- 肉の上の ×（字の所は切る。円の外は currentColor、円の中は #111） -->
+  <g stroke-width="5">
+    <g stroke="currentColor">
+      <line x1="324" y1="308" x2="330.7" y2="313.4"/>
+      <line x1="374.3" y1="348.6" x2="381" y2="354"/>
+      <line x1="381" y1="307" x2="374.1" y2="312.7"/>
+      <line x1="330.9" y1="348.3" x2="324" y2="354"/>
+    </g>
+    <g stroke="#111">
+      <line x1="330.7" y1="313.4" x2="336.2" y2="317.8"/>
+      <line x1="368.8" y1="344.2" x2="374.3" y2="348.6"/>
+      <line x1="374.1" y1="312.7" x2="368.7" y2="317.1"/>
+      <line x1="336.3" y1="343.9" x2="330.9" y2="348.3"/>
+    </g>
+  </g>
+
+  <!-- 肉身再臨 -->
+  <rect x="621.5" y="101.5" width="75.5" height="78" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="659.5" y="122" textLength="55" lengthAdjust="spacing">肉身</text>
+    <text x="659" y="159" textLength="57" lengthAdjust="spacing">再臨</text>
+  </g>
+
+  <!-- 下の字 -->
+  <g font-size="28" dominant-baseline="central">
+    <text x="128" y="385" textLength="114" lengthAdjust="spacing">霊的救い</text>
+    <text x="295" y="385" textLength="115" lengthAdjust="spacing">原罪遺伝</text>
+    <text x="502" y="385" textLength="142" lengthAdjust="spacing">霊肉の救い</text>
+  </g>
+</svg>

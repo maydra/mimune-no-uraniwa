@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>エリヤ再臨の例（マラキ 4:5）</title>
+
+  <!-- 題 -->
+  <g font-size="30" dominant-baseline="central">
+    <text x="35" y="37.5" textLength="218" lengthAdjust="spacing">エリヤ再臨の例</text>
+    <text x="266" y="37.5" textLength="175" lengthAdjust="spacing">(マラキ 4:5)</text>
+  </g>
+  <line x1="34" y1="56.5" x2="446" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="366,165.2 282.6,237.6 279.2,233.6 275.5,247.8 290,246.2 286.6,242.2 370,169.8"/>
+    <polygon points="449,163.9 540.7,234.5 543.6,230.7 549,245 533.8,243.5 536.7,239.7 445,169.1"/>
+  </g>
+  <!-- × -->
+  <g stroke="currentColor" stroke-width="4">
+    <line x1="297" y1="206.3" x2="346" y2="210"/>
+    <line x1="313" y1="186.7" x2="330.5" y2="230"/>
+  </g>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="406.5" cy="135" rx="60.5" ry="49" fill="#fff" class="paper"/>
+    <ellipse cx="246.5" cy="289.5" rx="92" ry="39.5" fill="#fff" class="paper"/>
+    <ellipse cx="570.5" cy="294" rx="93.5" ry="39" fill="#FCE5E3"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="407" y="119.5" font-size="32" textLength="94" lengthAdjust="spacing">エリヤ</text>
+    <text x="406" y="152.5" font-size="27" textLength="80" lengthAdjust="spacing">(昇天)</text>
+    <text x="246.5" y="290" font-size="28" textLength="142" lengthAdjust="spacing">天より再臨</text>
+    <g font-size="26" fill="#111">
+      <text x="571" y="276.5" textLength="103" lengthAdjust="spacing">地上誕生</text>
+      <text x="571.5" y="308" textLength="130" lengthAdjust="spacing">洗礼ヨハネ</text>
+    </g>
+  </g>
+
+  <!-- 下の字 -->
+  <g font-size="26" dominant-baseline="central">
+    <text x="130" y="356" textLength="234" lengthAdjust="spacing">ユダヤ人たちの信仰</text>
+    <text x="493" y="356" textLength="156" lengthAdjust="spacing">イエスのみ言</text>
+    <text x="494" y="388" font-size="23" textLength="153" lengthAdjust="spacing">(マタイ 11:14)</text>
+  </g>
+</svg>

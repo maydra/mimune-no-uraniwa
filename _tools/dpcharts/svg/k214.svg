@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>サタン屈伏の表示路程</title>
+
+  <!-- 題 -->
+  <text x="33" y="36" font-size="31" dominant-baseline="central" textLength="314" lengthAdjust="spacing">サタン屈伏の表示路程</text>
+  <line x1="32" y1="55" x2="348" y2="55" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="4.4" fill="none">
+    <line x1="420" y1="137.5" x2="226" y2="205.3"/>
+    <line x1="422" y1="132" x2="343.7" y2="197.9"/>
+    <line x1="444.3" y1="160" x2="444.3" y2="190"/>
+    <line x1="228" y1="226.5" x2="248" y2="226.5"/>
+    <line x1="350" y1="226.5" x2="381" y2="226.5"/>
+    <line x1="492" y1="226.5" x2="538" y2="226.5"/>
+    <line x1="444" y1="250" x2="444" y2="279"/>
+    <line x1="603.7" y1="253.5" x2="485.7" y2="313.9"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="215,209 222.7,200.6 226.6,211.9"/>
+    <polygon points="334.5,205.5 339.9,193.3 347.6,202.5"/>
+    <polygon points="444.3,199.5 439.3,189.5 449.3,189.5"/>
+    <polygon points="257.5,226.5 247.5,221.5 247.5,231.5"/>
+    <polygon points="391,226.5 381,221.5 381,231.5"/>
+    <polygon points="548,226.5 538,221.5 538,231.5"/>
+    <polygon points="444,288.5 439,278.5 449,278.5"/>
+    <polygon points="477,318.3 483.4,309.4 488,318.3"/>
+  </g>
+
+  <!-- 黒い破線の矢印 -->
+  <g stroke="currentColor" fill="none">
+    <line x1="214.5" y1="241.2" x2="400.4" y2="316" stroke-width="4" stroke-dasharray="6 4.5"/>
+    <line x1="342.2" y1="244" x2="410" y2="298.9" stroke-width="3" stroke-dasharray="3.5 3"/>
+    <g stroke-width="2" stroke-dasharray="7 3">
+      <line x1="256.3" y1="264.5" x2="197.2" y2="303.3"/>
+      <line x1="369.2" y1="263.5" x2="318.7" y2="317.7"/>
+    </g>
+  </g>
+  <g>
+    <polygon points="411.5,320.5 398.5,320.6 402.3,311.4"/>
+    <polygon points="417,304.5 407.2,302.4 412.8,295.4"/>
+  </g>
+
+  <!-- 楕円と円 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <circle cx="444.5" cy="133" r="29.5" fill="#fff" class="paper"/>
+    <ellipse cx="180.3" cy="226.3" rx="45.3" ry="22.8" fill="#F8F28F"/>
+    <ellipse cx="307" cy="226.5" rx="45" ry="22.5" fill="#F8F28F"/>
+    <ellipse cx="444" cy="226.8" rx="50" ry="23.8" fill="#F8F28F"/>
+    <ellipse cx="624" cy="226.3" rx="70.5" ry="29.3" fill="#FCE5E3" stroke-width="3.2"/>
+    <ellipse cx="589.5" cy="226" rx="36.5" ry="16" fill="#F86D42" stroke="#111" stroke-width="3"/>
+    <ellipse cx="624" cy="226.3" rx="70.5" ry="29.3" fill="none" stroke-width="3.2"/>
+    <circle cx="444" cy="324" r="29.5" fill="#50403D"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="443" y="132.5" font-size="33">神</text>
+    <g fill="#111">
+      <text x="182.5" y="227" font-size="23" textLength="74" lengthAdjust="spacing">ヤコブ</text>
+      <text x="305" y="226" font-size="23" textLength="70" lengthAdjust="spacing">モーセ</text>
+      <text x="444" y="226.5" font-size="25" textLength="77" lengthAdjust="spacing">イエス</text>
+      <text x="587.5" y="227.5" font-size="26" textLength="48" lengthAdjust="spacingAndGlyphs">信徒</text>
+      <text x="653.5" y="226.5" font-size="24" textLength="48" lengthAdjust="spacing">人類</text>
+    </g>
+    <text x="444" y="323.5" font-size="32" fill="#fff">サ</text>
+  </g>
+
+  <g font-size="26" dominant-baseline="central">
+    <text x="453" y="264.5" font-size="24" textLength="96" lengthAdjust="spacing">実体路程</text>
+    <text x="138" y="320.5" textLength="104" lengthAdjust="spacing">象徴路程</text>
+    <text x="266.5" y="335" textLength="105" lengthAdjust="spacing">形象路程</text>
+  </g>
+</svg>

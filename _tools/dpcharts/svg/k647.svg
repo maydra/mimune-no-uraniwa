@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>中世的指導精神　ヘブライズム復古運動（宗教改革）とヘレニズム復古運動（文芸復興）</title>
+
+  <!-- 灰色の矢印（楕円・箱の下に描く） -->
+  <g stroke="#8C949A" stroke-width="8">
+    <line x1="333" y1="139.5" x2="275.5" y2="181.4"/>
+    <line x1="419" y1="139.5" x2="476.5" y2="181.4"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="261,192 269.6,173.3 281.4,189.5"/>
+    <polygon points="491,192 482.4,173.3 470.6,189.5"/>
+    <polygon points="260.5,288 267.5,288 267.5,320 271.5,320 264,334.5 256.5,320 260.5,320"/>
+    <polygon points="486.5,288 493.5,288 493.5,320 497.5,320 490,334.5 482.5,320 486.5,320"/>
+  </g>
+
+  <!-- 中世的指導精神 -->
+  <ellipse cx="375.5" cy="101.5" rx="72.5" ry="49.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <g font-size="28.5" text-anchor="middle" dominant-baseline="central">
+    <text x="377.5" y="81.5" textLength="87" lengthAdjust="spacing">中世的</text>
+    <text x="376.5" y="116.5" textLength="116" lengthAdjust="spacing">指導精神</text>
+  </g>
+
+  <!-- サタン分立・創造本性を復帰 -->
+  <circle cx="475.5" cy="58" r="7"/>
+  <circle cx="475.5" cy="94" r="7"/>
+  <g dominant-baseline="central">
+    <text x="490" y="57.5" font-size="28.5" textLength="144" lengthAdjust="spacing">サタン分立</text>
+    <text x="489.5" y="93" font-size="29" textLength="203" lengthAdjust="spacing">創造本性を復帰</text>
+  </g>
+
+  <!-- アベル（内的）・カイン（外的） -->
+  <g font-size="25.5" font-weight="400" dominant-baseline="central">
+    <text y="153.5"><tspan x="135" textLength="77" lengthAdjust="spacing">アベル</tspan><tspan x="222.5" text-anchor="middle">（</tspan><tspan x="229" textLength="51" lengthAdjust="spacing">内的</tspan><tspan x="284.5" text-anchor="middle">）</tspan></text>
+    <text y="153.5"><tspan x="484" textLength="77" lengthAdjust="spacing">カイン</tspan><tspan x="572.5" text-anchor="middle">（</tspan><tspan x="578" textLength="51" lengthAdjust="spacing">外的</tspan><tspan x="635" text-anchor="middle">）</tspan></text>
+  </g>
+
+  <!-- 復古運動の箱 -->
+  <g stroke="currentColor" stroke-width="3">
+    <rect x="178" y="201" width="172" height="78" fill="#F8F28F"/>
+    <rect x="404" y="201" width="171" height="78" fill="#F86D42"/>
+  </g>
+  <g font-size="26.5" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="264.5" y="224" textLength="149" lengthAdjust="spacingAndGlyphs">ヘブライズム</text>
+    <text x="264.5" y="256" textLength="106" lengthAdjust="spacing">復古運動</text>
+    <text x="490" y="224" textLength="130" lengthAdjust="spacingAndGlyphs">ヘレニズム</text>
+    <text x="489.5" y="256.5" textLength="106" lengthAdjust="spacing">復古運動</text>
+  </g>
+
+  <!-- 宗教改革と文芸復興 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="264" cy="373.5" rx="72.5" ry="33.5" fill="#F8F28F"/>
+    <ellipse cx="490" cy="373.5" rx="72.5" ry="33.5" fill="#F86D42"/>
+  </g>
+  <g font-size="29" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="264.5" y="374" textLength="116" lengthAdjust="spacing">宗教改革</text>
+    <text x="490.5" y="373.5" textLength="116" lengthAdjust="spacing">文芸復興</text>
+  </g>
+</svg>

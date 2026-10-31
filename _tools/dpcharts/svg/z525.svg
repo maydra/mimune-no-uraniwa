@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>マタイ 27:52『墓で眠っていた聖徒たちの死体が生き返った』</title>
+  <defs>
+    <!-- 霊界の層の帯（下から上へ淡くなる。z522・z527 と同じ） -->
+    <linearGradient id="z525-sk" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ECB970"/>
+      <stop offset="0.5" stop-color="#F4D0A0"/>
+      <stop offset="1" stop-color="#FEF1E0"/>
+    </linearGradient>
+    <clipPath id="z525-in"><rect x="169" y="250" width="963" height="176"/></clipPath>
+    <marker id="z525-ak" viewBox="0 0 20 20" refX="17" refY="10" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0.5 L20,10 L0,19.5 z" fill="#111"/>
+    </marker>
+    <marker id="z525-ac" viewBox="0 0 20 20" refX="17" refY="10" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0.5 L20,10 L0,19.5 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <g font-size="41" dominant-baseline="central">
+    <text x="206.5" y="55.5" textLength="95" lengthAdjust="spacingAndGlyphs">マタイ</text>
+    <text x="313" y="55.5" textLength="84" lengthAdjust="spacingAndGlyphs">27:52</text>
+    <text x="414" y="55.5">『</text>
+    <text x="430" y="55.5" textLength="666" lengthAdjust="spacingAndGlyphs">墓で眠っていた聖徒たちの死体が生き返った</text>
+    <text x="1096" y="55.5">』</text>
+  </g>
+
+  <!-- 霊界の層 -->
+  <rect x="169" y="250" width="963" height="176" fill="url(#z525-sk)"/>
+  <g stroke-width="4.5">
+    <line x1="200" y1="122.5" x2="1093" y2="122.5" stroke="currentColor"/>
+    <line x1="200" y1="222" x2="1093" y2="222" stroke="currentColor"/>
+    <line x1="200" y1="322" x2="1093" y2="322" stroke="#111"/>
+    <line x1="200" y1="423.5" x2="1093" y2="423.5" stroke="#111"/>
+  </g>
+
+  <!-- 札 -->
+  <rect x="571" y="246" width="144" height="50" rx="5" fill="#F8F28F"/>
+  <text x="643.5" y="272.8" font-size="37" text-anchor="middle" dominant-baseline="central" fill="#111">生命体</text>
+  <rect x="200" y="325.5" width="221.5" height="94" rx="5" fill="#FCE5E3"/>
+  <g font-size="32" dominant-baseline="central" fill="#111">
+    <text x="212" y="353.3" textLength="165" lengthAdjust="spacing">旧約時代の</text>
+    <text x="211.5" y="394.3" textLength="198" lengthAdjust="spacing">霊形体級霊人</text>
+  </g>
+
+  <!-- 旧約時代の霊形体級霊人 -->
+  <ellipse cx="463.75" cy="373" rx="37.75" ry="49.5" fill="#FCE5E3" stroke="#111" stroke-width="4"/>
+  <line x1="464" y1="423" x2="464" y2="330.5" stroke="#111" stroke-width="6.5" marker-end="url(#z525-ak)"/>
+
+  <!-- イエス（上の端は帯の外なので線を分ける） -->
+  <ellipse cx="776.25" cy="323" rx="52.25" ry="100" fill="#F8F28F" stroke="currentColor" stroke-width="4.5"/>
+  <ellipse cx="776.25" cy="323" rx="52.25" ry="100" fill="none" stroke="#111" stroke-width="4.5" clip-path="url(#z525-in)"/>
+  <ellipse cx="776.6" cy="372.5" rx="19.6" ry="48.5" fill="#FCE5E3" stroke="#111" stroke-width="4"/>
+  <line x1="776.5" y1="324" x2="776.5" y2="232" stroke="#111" stroke-width="6" marker-end="url(#z525-ak)"/>
+
+  <!-- 霊人（△）と地上の聖徒（○） -->
+  <g fill="#FCE5E3" stroke-width="2.5" stroke-linejoin="round">
+    <polygon points="519.5,331 508,343 531,343" stroke="#111"/>
+    <polygon points="560,331 548.5,343 571.5,343" stroke="#111"/>
+    <polygon points="911.5,231.5 900,244 923,244" stroke="currentColor"/>
+    <polygon points="952,231.5 940.5,244 963.5,244" stroke="currentColor"/>
+  </g>
+  <g fill="#F8F28F" stroke-width="2.5">
+    <circle cx="912" cy="259.5" r="7" stroke="#111"/>
+    <circle cx="952" cy="259.5" r="7" stroke="#111"/>
+    <circle cx="918.5" cy="442" r="7" stroke="currentColor"/>
+    <circle cx="918.5" cy="466" r="7" stroke="currentColor"/>
+  </g>
+
+  <!-- 霊的再臨の矢印（帯の中は #111、外は currentColor） -->
+  <g stroke-width="6.5" fill="none">
+    <line x1="521" y1="351.5" x2="898.1" y2="460" stroke="currentColor" marker-end="url(#z525-ac)"/>
+    <line x1="563" y1="351.2" x2="900.1" y2="437.7" stroke="currentColor" marker-end="url(#z525-ac)"/>
+    <line x1="912" y1="431" x2="912" y2="274" stroke="currentColor"/>
+    <line x1="929.5" y1="431" x2="947.7" y2="274" stroke="currentColor"/>
+    <g stroke="#111" clip-path="url(#z525-in)">
+      <line x1="521" y1="351.5" x2="898.1" y2="460"/>
+      <line x1="563" y1="351.2" x2="900.1" y2="437.7"/>
+      <line x1="912" y1="431" x2="912" y2="274" marker-end="url(#z525-ak)"/>
+      <line x1="929.5" y1="431" x2="947.7" y2="274" marker-end="url(#z525-ak)"/>
+    </g>
+  </g>
+
+  <text x="940.5" y="453.3" font-size="37" dominant-baseline="central" textLength="150.8" lengthAdjust="spacing">霊的再臨</text>
+  <text x="848" y="505.3" font-size="40" dominant-baseline="central" textLength="165" lengthAdjust="spacing">地上聖徒</text>
+
+  <!-- 十字架（型を横 0.7・縦 0.62 倍） -->
+  <g transform="translate(674.0,437.0) scale(0.7100,0.5167)" stroke-width="4.891" fill="#7A5230" stroke="#111" stroke-linejoin="round">
+    <path d="M40,0 H60 V42 H100 V60 H60 V180 H40 V60 H0 V42 H40 Z"/>
+  </g>
+  <rect x="747.5" y="429.5" width="59" height="120" fill="#F8F28F" stroke="currentColor" stroke-width="3.5"/>
+  <g font-size="33" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="777" y="456">イ</text>
+    <text x="777" y="489.5">エ</text>
+    <text x="777" y="523.5">ス</text>
+  </g>
+
+  <rect x="340" y="574.5" width="598.5" height="75.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g font-size="40" dominant-baseline="central" fill="#111">
+    <text x="368" y="612.3">墓</text>
+    <text x="430.5" y="612.3" text-anchor="middle">：</text>
+    <text x="451.4" y="612.3" textLength="458.7" lengthAdjust="spacing">楽園より暗くつらい世界</text>
+  </g>
+</svg>

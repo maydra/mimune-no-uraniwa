@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 終末の意義</title>
+
+  <text x="53" y="58" font-size="48" dominant-baseline="central">Ⅰ.</text>
+  <text x="132" y="57.5" font-size="50" dominant-baseline="central" textLength="250" lengthAdjust="spacing">終末の意義</text>
+  <line x1="132" y1="87.5" x2="382" y2="87.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 灰色の矢印（楕円の下から出る） -->
+  <g stroke="#8C949A" stroke-width="15">
+    <line x1="520" y1="340.8" x2="988.9" y2="513.8"/>
+    <line x1="520" y1="486" x2="978.1" y2="358.8"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="1018,524.5 979.6,529 991.7,496.1"/>
+    <polygon points="1008,350.5 979.4,376.6 970.1,342.9"/>
+    <polygon points="739.75,262 751.25,262 751.25,369 761.5,369 745.5,397.5 729.5,369 739.75,369"/>
+  </g>
+
+  <!-- 地上地獄・地上天国 -->
+  <rect x="200" y="207" width="77.5" height="243" fill="#50403D" stroke="currentColor" stroke-width="4.5"/>
+  <rect x="1019.5" y="214" width="78" height="242.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <g font-size="47" text-anchor="middle" dominant-baseline="central">
+    <g fill="#fff">
+      <text x="239" y="254">地</text>
+      <text x="239" y="303.5">上</text>
+      <text x="239" y="354">地</text>
+      <text x="239" y="404">獄</text>
+    </g>
+    <g fill="#111">
+      <text x="1059" y="260.5">地</text>
+      <text x="1059" y="310.5">上</text>
+      <text x="1059" y="362.5">天</text>
+      <text x="1059" y="411.5">国</text>
+    </g>
+  </g>
+
+  <!-- 主権・メシヤ -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="425" cy="317" rx="130" ry="68" fill="#50403D"/>
+    <ellipse cx="425" cy="516" rx="130" ry="68" fill="#fff" class="paper"/>
+    <ellipse cx="746.5" cy="217" rx="95" ry="49" fill="#F8F28F"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="425" y="317" font-size="46" fill="#fff">サタン主権</text>
+    <text x="424.5" y="516.5" font-size="53">神主権</text>
+    <text x="746.5" y="217.5" font-size="50" fill="#111">メシヤ</text>
+  </g>
+
+  <!-- 終末 -->
+  <circle cx="745.5" cy="423.5" r="24.5"/>
+  <rect x="674.5" y="477.5" width="145.5" height="67.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="747.5" y="511.5" font-size="53" text-anchor="middle" dominant-baseline="central">終末</text>
+</svg>

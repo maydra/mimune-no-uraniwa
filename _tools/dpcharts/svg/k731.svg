@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>天の側とサタン側（連合国と同盟国）</title>
+
+  <!-- 見出し -->
+  <g font-size="31" text-anchor="middle" dominant-baseline="central">
+    <text x="262" y="68.5" textLength="93" lengthAdjust="spacing">天の側</text>
+    <text x="583.5" y="68.5" textLength="124" lengthAdjust="spacing">サタン側</text>
+  </g>
+
+  <!-- 灰色の両向きの矢印 -->
+  <polygon points="353.5,158.5 370,148.8 370,154.5 475,154.5 475,148.8 491.5,158.5 475,168.2 475,162.5 370,162.5 370,168.2" fill="#8C949A"/>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="263" cy="160" rx="81" ry="39" fill="#F8F28F"/>
+    <ellipse cx="583.5" cy="158.5" rx="80.5" ry="36.5" fill="#50403D"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <g font-size="26" fill="#111">
+      <text x="263.5" y="150.5" textLength="130" lengthAdjust="spacing">キリスト教</text>
+      <text x="263" y="180" textLength="52" lengthAdjust="spacing">国家</text>
+    </g>
+    <g font-size="23" fill="#fff" font-weight="400">
+      <text x="582.5" y="145" textLength="116" lengthAdjust="spacing">キリスト教</text>
+      <text x="582" y="170" textLength="116" lengthAdjust="spacing">妨害、迫害</text>
+    </g>
+  </g>
+
+  <!-- 国をつなぐ線（丸の下に描く） -->
+  <g stroke="#8C949A" stroke-width="6">
+    <line x1="192" y1="254.5" x2="329.5" y2="254.5"/>
+    <line x1="190" y1="262" x2="259" y2="331"/>
+    <line x1="336.3" y1="262" x2="255.8" y2="331"/>
+    <line x1="509.5" y1="254.5" x2="655" y2="254.5"/>
+    <line x1="508.7" y1="262" x2="580" y2="331"/>
+    <line x1="656.3" y1="262" x2="575.8" y2="331"/>
+  </g>
+
+  <!-- 国の丸 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <g fill="#FCE5E3">
+      <ellipse cx="192" cy="252" rx="27" ry="25"/>
+      <ellipse cx="329.5" cy="252" rx="27" ry="25"/>
+      <ellipse cx="257" cy="331" rx="27" ry="25"/>
+      <ellipse cx="313.5" cy="331" rx="27" ry="25"/>
+    </g>
+    <g fill="#CF921C">
+      <ellipse cx="509.5" cy="252" rx="27" ry="25"/>
+      <ellipse cx="655" cy="252" rx="27" ry="25"/>
+      <ellipse cx="582.5" cy="331" rx="27" ry="25"/>
+    </g>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <g font-size="31">
+      <text x="192" y="251">米</text>
+      <text x="330" y="252">英</text>
+      <text x="255.5" y="331">仏</text>
+      <text x="314" y="331">露</text>
+      <text x="509.5" y="251.5">独</text>
+    </g>
+    <g font-size="18">
+      <text x="654.5" y="242" textLength="36" lengthAdjust="spacingAndGlyphs">オース</text>
+      <text x="656" y="260.5" textLength="33" lengthAdjust="spacingAndGlyphs">トリア</text>
+    </g>
+    <text x="583" y="331.5" font-size="21" textLength="43" lengthAdjust="spacingAndGlyphs">トルコ</text>
+  </g>
+
+  <!-- 下の字（細字） -->
+  <g font-size="25" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="261.5" y="379.5" textLength="77" lengthAdjust="spacing">連合国</text>
+    <text x="581.5" y="377.5" textLength="76" lengthAdjust="spacing">同盟国</text>
+  </g>
+</svg>

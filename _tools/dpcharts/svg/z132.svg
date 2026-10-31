@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神の第二祝福：家庭完成</title>
+  <defs>
+    <marker id="z132-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <g font-size="48" dominant-baseline="central">
+    <text x="97" y="59.5" text-anchor="end">『</text>
+    <text x="97" y="59.5" textLength="298" lengthAdjust="spacing">神の第二祝福</text>
+    <text x="421.5" y="59.5" text-anchor="middle">：</text>
+    <text x="448" y="59.5" textLength="200" lengthAdjust="spacing">家庭完成</text>
+    <text x="648" y="59.5">』</text>
+  </g>
+
+  <!-- 家庭的な四位基台（線は円の下に描く） -->
+  <g stroke="currentColor" stroke-width="6" fill="none">
+    <polygon points="649.1,189.3 867.5,311.1 649.1,436.7 430.7,311.2"/>
+    <line x1="305" y1="577.1" x2="600" y2="453.2"/>
+    <line x1="700" y1="454.4" x2="995" y2="577.1"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="currentColor" stroke-width="5.5" fill="none" marker-end="url(#z132-k)">
+    <path d="M541,308.5 Q656.4,292.4 746.2,304.8"/>
+    <path d="M758,327 Q644,342.2 553.9,330.5"/>
+    <path d="M636.5,375 C622,355 620,305 632.5,274.9"/>
+    <path d="M661.5,263 C676,285 680,335 665.4,364.6"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="649.3" cy="183" r="65.5" fill="#fff" class="paper"/>
+    <ellipse cx="407.6" cy="305.6" rx="81.8" ry="61.7" fill="#F98AEE"/>
+    <ellipse cx="889.8" cy="305.7" rx="81.7" ry="61.7" fill="#A0F08A"/>
+    <ellipse cx="649.6" cy="445" rx="82.6" ry="52.1" fill="#DCC4C4"/>
+  </g>
+  <text x="647" y="181.5" font-size="62" text-anchor="middle" dominant-baseline="central">神</text>
+  <g fill="#111" font-size="54" text-anchor="middle" dominant-baseline="central">
+    <text x="368" y="305">完</text>
+    <text x="408" y="305">・</text>
+    <text x="448.5" y="305">ア</text>
+    <text x="850" y="305">完</text>
+    <text x="890" y="305">・</text>
+    <text x="929.5" y="305">エ</text>
+    <text x="650" y="444.5">子女</text>
+  </g>
+
+  <text x="434" y="584" font-size="52" textLength="430" lengthAdjust="spacing" dominant-baseline="central">家庭的な四位基台</text>
+</svg>

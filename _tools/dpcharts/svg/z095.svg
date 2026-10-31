@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>四位基台</title>
+  <defs>
+    <marker id="z095-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="75" font-size="48">3.</text>
+  <text x="113" y="75" font-size="48">四位基台</text>
+  <line x1="113" y1="89" x2="307" y2="89" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 正・分・合 -->
+  <g font-size="50" text-anchor="middle" dominant-baseline="central">
+    <text x="405" y="150">正</text>
+    <text x="405" y="320">分</text>
+    <text x="405" y="489">合</text>
+  </g>
+  <g stroke="currentColor" stroke-width="3.5" fill="none">
+    <line x1="418" y1="186" x2="418" y2="282"/>
+    <line x1="418" y1="356" x2="418" y2="450"/>
+    <g stroke-dasharray="14 9">
+      <line x1="455" y1="150" x2="655" y2="150"/>
+      <line x1="455" y1="320" x2="522" y2="320"/>
+      <line x1="455" y1="489" x2="655" y2="489"/>
+    </g>
+  </g>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="725" y1="150" x2="590" y2="318"/>
+    <line x1="725" y1="150" x2="862" y2="318"/>
+    <line x1="590" y1="318" x2="725" y2="487"/>
+    <line x1="862" y1="318" x2="725" y2="487"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z095-g)">
+    <path d="M722,410 Q688,322 711,236"/>
+    <path d="M735,232 Q764,320 741,406"/>
+    <path d="M668,312 Q730,282 792,304"/>
+    <path d="M795,330 Q732,358 670,340"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <circle cx="725" cy="150" r="62" fill="#fff" class="paper"/>
+    <circle cx="590" cy="318" r="62" fill="#F98AEE"/>
+    <circle cx="862" cy="318" r="62" fill="#A0F08A"/>
+    <circle cx="725" cy="487" r="62" fill="#DCC4C4"/>
+  </g>
+  <g font-size="52" text-anchor="middle" dominant-baseline="central">
+    <text x="725" y="150">神</text>
+    <text x="590" y="318" fill="#111">主</text>
+    <text x="862" y="318" fill="#111">対</text>
+    <text x="725" y="487" fill="#111">合</text>
+  </g>
+
+  <rect x="230" y="578" width="835" height="67" fill="#fff" class="paper" stroke="currentColor" stroke-width="3.5"/>
+  <text x="647" y="612" font-size="40" text-anchor="middle" dominant-baseline="central">四位基台：四位が各々三対象目的完成</text>
+</svg>

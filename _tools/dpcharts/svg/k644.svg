@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>中世社会：創造本性復帰の道遮る　中世の人：創造本性復帰しようとする方向　創造原理</title>
+  <defs>
+    <marker id="k644-a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 字の行 -->
+  <g dominant-baseline="central">
+    <text x="151" y="70" font-size="28" textLength="114" lengthAdjust="spacing">中世社会</text>
+    <text x="294" y="70" font-size="28.5" textLength="287" lengthAdjust="spacing">創造本性復帰の道遮る</text>
+    <text x="151" y="124.5" font-size="28" textLength="114" lengthAdjust="spacing">中世の人</text>
+    <text x="293" y="124.5" font-size="27.2" textLength="382" lengthAdjust="spacing">創造本性復帰しようとする方向</text>
+    <text x="148" y="182.5" font-size="28" textLength="116" lengthAdjust="spacing">創造原理</text>
+    <g font-size="28" text-anchor="middle">
+      <text x="279.5" y="70">：</text>
+      <text x="279" y="124.5">：</text>
+      <text x="278.5" y="182.5">：</text>
+    </g>
+  </g>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="375" cy="196" rx="46.5" ry="30.5" fill="#F98AEE"/>
+    <ellipse cx="574" cy="193.5" rx="64.5" ry="32" fill="#F98AEE"/>
+    <ellipse cx="375.5" cy="348" rx="46" ry="30.5" fill="#A0F08A"/>
+    <ellipse cx="574" cy="347.5" rx="62.5" ry="31" fill="#A0F08A"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="374.5" y="196" font-size="29" textLength="58" lengthAdjust="spacing">性相</text>
+    <text x="574" y="193" font-size="26" textLength="104" lengthAdjust="spacing">内的欲望</text>
+    <text x="375" y="347.5" font-size="29" textLength="58" lengthAdjust="spacing">形状</text>
+    <text x="573.5" y="347.5" font-size="26" textLength="104" lengthAdjust="spacing">外的欲望</text>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g fill="none" stroke="currentColor" stroke-width="5" marker-end="url(#k644-a)">
+    <path d="M362,298 Q343,274 360,251"/>
+    <path d="M386,247 Q406,272 390,294"/>
+  </g>
+  <g transform="translate(199,-1)" fill="none" stroke="currentColor" stroke-width="5" marker-end="url(#k644-a)">
+    <path d="M362,298 Q343,274 360,251"/>
+    <path d="M386,247 Q406,272 390,294"/>
+  </g>
+
+  <!-- 灰色の太い矢印 -->
+  <polygon points="461,260 474,260 474,249 490,267.5 474,286 474,275 461,275" fill="#8C949A"/>
+</svg>

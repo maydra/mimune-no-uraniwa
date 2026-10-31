@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>内的真理と外的真理：無知解放、永遠の幸福</title>
+  <defs>
+    <marker id="z017-k" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="2.7" markerHeight="2.7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 人から内的真理・外的真理へ、そこから右の箱へ（人と箱の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="315.6,300.1 433.7,195.7 439.6,202.4 451,173 420.4,180.7 426.4,187.4 308.4,291.9"/>
+    <polygon points="296.5,394.2 426.9,501.5 421.2,508.4 452,515 439.6,486 433.9,493 303.5,385.8"/>
+    <polygon points="697.2,171.7 824.7,248.7 820,256.4 851.5,258.5 835,231.6 830.4,239.3 702.8,162.3"/>
+    <polygon points="703.1,516.1 830.6,428 835.7,435.4 850.5,407.5 819.2,411.5 824.3,418.9 696.9,507.1"/>
+  </g>
+
+  <!-- 人（z015・z029 と同じ大きさと位置） -->
+  <g transform="translate(212.5,219) scale(1.27)" fill="#FCE6E5" stroke="#111" stroke-width="3.1" stroke-linejoin="round">
+    <path d="M43,40 L43,48 C30,49 14,50 10,58 L4,130 Q3,140 9,141 Q15,141 15,132 L21,78 L23,124 L26,232 Q26,238 33,238 L41,238 Q47,238 47,232 L49,134 L51,134 L53,232 Q53,238 59,238 L67,238 Q74,238 74,232 L77,124 L79,78 L85,132 Q85,141 91,141 Q97,140 96,130 L90,58 C86,50 70,49 57,48 L57,40 Z"/>
+    <circle cx="50" cy="22" r="19"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <rect x="458" y="133" width="256" height="70" fill="#F98AEE"/>
+    <rect x="458" y="475" width="256" height="70" fill="#A0F08A"/>
+  </g>
+  <g font-size="49" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="586.5" y="167.5">内的真理</text>
+    <text x="586.5" y="510">外的真理</text>
+  </g>
+
+  <!-- 宗教・科学と、その間を回る矢印 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="587" cy="258.5" rx="90" ry="34" fill="#fff" class="paper"/>
+    <ellipse cx="587" cy="418.5" rx="90" ry="34" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="48" text-anchor="middle" dominant-baseline="central">
+    <text x="588.5" y="258">宗教</text>
+    <text x="588" y="419">科学</text>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="8" marker-end="url(#z017-k)">
+    <path d="M550,366 Q527.5,344.6 543,324"/>
+    <path d="M614,309 Q636.5,330.4 621,351"/>
+  </g>
+
+  <!-- 右の箱 -->
+  <rect x="880" y="187" width="206" height="308.5" rx="13" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g fill="#111">
+    <circle cx="914.5" cy="247.5" r="12.5"/>
+    <circle cx="914.5" cy="391.5" r="12.5"/>
+  </g>
+  <g font-size="45" dominant-baseline="central" fill="#111">
+    <text x="932" y="246">無知</text>
+    <text x="932" y="304.5">解放</text>
+    <text x="932" y="392">永遠の</text>
+    <text x="932" y="450.5">幸福</text>
+  </g>
+</svg>

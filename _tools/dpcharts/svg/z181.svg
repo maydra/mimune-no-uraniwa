@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>被造世界における人間の位置　②被造世界の媒介体、和動の中心体</title>
+  <defs>
+    <marker id="z181-d" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="2.4" markerHeight="2.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <text x="76.5" y="57.5" font-size="48" text-anchor="middle" dominant-baseline="central">②</text>
+  <text x="128" y="57.5" font-size="48" dominant-baseline="central">被造世界の媒介体、<tspan x="577">和動の中心体</tspan></text>
+
+  <!-- 無形世界と有形世界 -->
+  <path d="M435,385 A292,252.5 0 0 1 1019,385 Z" fill="#F98AEE"/>
+  <path d="M435,385 A292,252.5 0 0 0 1019,385 Z" fill="#A0F08A"/>
+  <line x1="435" y1="385" x2="1019" y2="385" stroke="#111" stroke-width="5"/>
+  <ellipse cx="727" cy="385" rx="292" ry="252.5" fill="none" stroke="currentColor" stroke-width="4"/>
+  <g font-size="45" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="734" y="174.5" textLength="180" lengthAdjust="spacing">無形世界</text>
+    <text x="734" y="587" textLength="180" lengthAdjust="spacing">有形世界</text>
+  </g>
+
+  <!-- 霊人体と肉身 -->
+  <g fill="none" stroke="#111" stroke-width="4.5">
+    <ellipse cx="727" cy="341" rx="83" ry="40"/>
+    <ellipse cx="727" cy="429" rx="78" ry="39"/>
+  </g>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="726" y="341">霊人体</text>
+    <text y="427"><tspan x="696.5">肉</tspan><tspan x="757">身</tspan></text>
+  </g>
+
+  <!-- 授受と円形運動の矢印 -->
+  <g stroke="#111" fill="none" marker-end="url(#z181-d)">
+    <g stroke-width="7">
+      <path d="M712,279 Q687,252.5 710,228"/>
+      <path d="M742,220 Q767,246.5 744,271"/>
+      <path d="M712,550 Q687,523.5 710,499"/>
+      <path d="M742,491 Q767,517.5 744,542"/>
+      <path d="M639,417 Q617,392.5 637,370"/>
+      <path d="M811,354 Q837,378.5 813,401"/>
+    </g>
+    <g stroke-width="8">
+      <path d="M537,429 Q519.5,379.5 534,332"/>
+      <path d="M928,333 Q945.5,382.5 931,430"/>
+    </g>
+  </g>
+
+  <!-- 神から -->
+  <circle cx="273.5" cy="385" r="59.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="272" y="384" font-size="60" text-anchor="middle" dominant-baseline="central">神</text>
+  <polygon points="334,378 382,378 382,366 423.5,385.5 382,405 382,400 334,400" fill="#8C949A"/>
+</svg>

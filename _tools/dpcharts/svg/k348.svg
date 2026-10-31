@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>モーセの死と死体</title>
+
+  <!-- 題 -->
+  <text x="35" y="37.5" font-size="31" dominant-baseline="central" textLength="249" lengthAdjust="spacing">モーセの死と死体</text>
+  <line x1="32" y1="56.5" x2="284" y2="56.5" stroke="currentColor" stroke-width="2"/>
+
+  <!-- モーセ・イエス -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="188.3" cy="157" rx="50.8" ry="24"/>
+    <ellipse cx="188.5" cy="325" rx="50.5" ry="24"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="188.5" y="158" textLength="74" lengthAdjust="spacing">モーセ</text>
+    <text x="187.5" y="325" textLength="74" lengthAdjust="spacing">イエス</text>
+  </g>
+
+  <!-- 下向きの矢印 -->
+  <polygon points="179,225.5 199,225.5 199,241 216.5,241 189,257 161,241 179,241" fill="#8C949A" stroke="currentColor" stroke-width="1.2"/>
+
+  <!-- 横の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="252.5,153.5 277.5,153.5 277.5,150.5 287.5,156.5 277.5,162.5 277.5,159.5 252.5,159.5"/>
+    <polygon points="404.5,154.5 429.5,154.5 429.5,151.5 439,157.5 429.5,163.5 429.5,160.5 404.5,160.5"/>
+    <polygon points="561.5,153.5 586.5,153.5 586.5,150.5 596,156.5 586.5,162.5 586.5,159.5 561.5,159.5"/>
+    <polygon points="252.5,322 277.5,322 277.5,319 287,325 277.5,331 277.5,328 252.5,328"/>
+    <polygon points="406.5,322.5 431.5,322.5 431.5,319.5 441,325.5 431.5,331.5 431.5,328.5 406.5,328.5"/>
+    <polygon points="561.5,322 586.5,322 586.5,319 596,325 586.5,331 586.5,328 561.5,328"/>
+  </g>
+
+  <g font-size="28" dominant-baseline="central">
+    <text x="295" y="139" textLength="84" lengthAdjust="spacing">哀願の</text>
+    <text x="295" y="173.5" textLength="51" lengthAdjust="spacing">祈り</text>
+    <text x="452" y="157" textLength="100" lengthAdjust="spacing">息絶える</text>
+    <text x="618" y="140" textLength="56" lengthAdjust="spacing">死体</text>
+    <text x="618" y="177.5" textLength="54" lengthAdjust="spacing">不明</text>
+    <text x="295" y="306" textLength="84" lengthAdjust="spacing">哀願の</text>
+    <text x="295" y="340" textLength="56" lengthAdjust="spacing">祈願</text>
+    <text x="461" y="310" textLength="84" lengthAdjust="spacing">十字架</text>
+    <text x="506.5" y="339" text-anchor="middle">死</text>
+    <text x="617" y="307" textLength="56" lengthAdjust="spacing">死体</text>
+    <text x="617" y="344.5" textLength="55" lengthAdjust="spacing">不明</text>
+  </g>
+
+  <!-- 聖句 -->
+  <g font-size="24" dominant-baseline="central">
+    <text x="300.5" y="206" text-anchor="middle">(</text>
+    <text x="306" y="206">申</text>
+    <text x="336" y="206" textLength="46" lengthAdjust="spacingAndGlyphs">3:25</text>
+    <text x="387" y="206" text-anchor="middle">)</text>
+    <text x="300.5" y="373" text-anchor="middle">(</text>
+    <text x="307" y="373" textLength="67" lengthAdjust="spacing">マタイ</text>
+    <text x="384" y="373" textLength="57" lengthAdjust="spacingAndGlyphs">26:39</text>
+    <text x="446" y="373" text-anchor="middle">)</text>
+  </g>
+</svg>

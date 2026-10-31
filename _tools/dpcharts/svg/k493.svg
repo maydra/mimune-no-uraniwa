@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>数理的な蕩減期間の総合</title>
+  <defs>
+    <marker id="k493-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="35" y="37.5" font-size="30" dominant-baseline="central" textLength="344" lengthAdjust="spacing">数理的な蕩減期間の総合</text>
+  <line x1="34" y1="56.5" x2="380" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 左の数字（12・4・21・40）と灰色のかぎ -->
+  <g font-size="26" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="136.5" y="79.5" textLength="20" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="136" y="109" textLength="17" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="137" y="138.5" textLength="9" lengthAdjust="spacingAndGlyphs">4</text>
+    <text x="137.5" y="168" textLength="18" lengthAdjust="spacingAndGlyphs">12</text>
+    <text x="136.5" y="214.5" textLength="20" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="136" y="244" textLength="17" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="137" y="274" textLength="9" lengthAdjust="spacingAndGlyphs">4</text>
+    <text x="137.5" y="303" textLength="18" lengthAdjust="spacingAndGlyphs">12</text>
+    <text x="686.5" y="321" textLength="20" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="686" y="350" textLength="16" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="687.5" y="380" textLength="9" lengthAdjust="spacingAndGlyphs">4</text>
+    <text x="687.5" y="409" textLength="18" lengthAdjust="spacingAndGlyphs">12</text>
+  </g>
+  <g fill="none" stroke="#8C949A" stroke-width="3">
+    <path d="M155,80.5 H168 V167 H155 M155,109 H168 M155,138.5 H168 M168,123.5 H183"/>
+    <path d="M155,214 H168 V301 H155 M155,243.5 H168 M155,275.5 H168 M168,258.5 H183"/>
+    <path d="M668,322.5 H655 V409 H668 M668,349.5 H655 M668,380.5 H655 M655,364.5 H641"/>
+  </g>
+
+  <!-- 左の箱 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="3">
+    <rect x="184" y="88" width="98" height="72" rx="7"/>
+    <rect x="184" y="169" width="98" height="177" rx="7"/>
+  </g>
+  <g font-size="25" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="233.5" y="107.5" textLength="49" lengthAdjust="spacing">完成</text>
+    <text x="233.5" y="139.5" textLength="49" lengthAdjust="spacing">実体</text>
+    <text x="233.5" y="240" textLength="49" lengthAdjust="spacing">信仰</text>
+    <text x="233.5" y="274.5" textLength="49" lengthAdjust="spacing">基台</text>
+  </g>
+
+  <!-- 横の線 -->
+  <g stroke="currentColor" stroke-width="3">
+    <line x1="294" y1="170" x2="514" y2="170"/>
+    <line x1="322" y1="224.5" x2="512" y2="224.5"/>
+    <line x1="321" y1="285" x2="476" y2="285"/>
+    <line x1="294" y1="346" x2="484" y2="346"/>
+  </g>
+
+  <!-- 数理的成長期間・数理的蕩減期間（縦書き） -->
+  <g font-size="22" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="307" y="191">数</text>
+    <text x="307" y="214">理</text>
+    <text x="307" y="236">的</text>
+    <text x="307" y="258.5">成</text>
+    <text x="307" y="281.5">長</text>
+    <text x="307" y="303.5">期</text>
+    <text x="307" y="326.5">間</text>
+    <text x="500" y="246.5">数</text>
+    <text x="500" y="270.5">理</text>
+    <text x="500" y="293.5">的</text>
+    <text x="500" y="317.5">蕩</text>
+    <text x="500" y="341.5">減</text>
+    <text x="500" y="365">期</text>
+    <text x="500" y="389">間</text>
+  </g>
+
+  <!-- 右の「}」 -->
+  <path d="M519,227 Q528,229 528,245 V313 Q528,321 536,321 Q528,321 528,329 V397 Q528,412 519,414" fill="none" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 灰色の点線の矢印（成長期間の残り） -->
+  <line x1="339" y1="222" x2="339" y2="186" stroke="#8C949A" stroke-width="4" stroke-dasharray="9 6"/>
+  <polygon points="333.5,187 339,175 344.5,187" fill="#8C949A"/>
+
+  <!-- 黒い矢印 -->
+  <g stroke="currentColor" stroke-width="6">
+    <line x1="339" y1="346" x2="339" y2="247"/>
+    <line x1="460" y1="224" x2="460" y2="185"/>
+    <line x1="340" y1="224" x2="397" y2="357.1"/>
+    <line x1="412.5" y1="377" x2="455.4" y2="239.5"/>
+  </g>
+  <g>
+    <polygon points="332,249 339,235.5 346,249"/>
+    <polygon points="453,186.5 460,175.5 467,186.5"/>
+    <polygon points="390.2,359 402.5,370 403,353.5"/>
+    <polygon points="461.8,242.5 459,228 448.4,238.3"/>
+  </g>
+
+  <!-- 神とア・エ、神と人間（めぐる矢印） -->
+  <g fill="none" stroke="currentColor" stroke-width="2.5" marker-end="url(#k493-a)">
+    <path d="M320,128 C310,123 310,112 318,107"/>
+    <path d="M359,106 C369,111 369,122 361,127"/>
+    <path d="M440,128 C430,123 430,112 438,107"/>
+    <path d="M479,106 C489,111 489,122 481,127"/>
+  </g>
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5">
+    <circle cx="340" cy="89.5" r="20.5"/>
+    <circle cx="460.5" cy="89.5" r="20.5"/>
+    <ellipse cx="339.5" cy="147.5" rx="29" ry="18.5"/>
+    <ellipse cx="460" cy="147.5" rx="25" ry="18.5"/>
+  </g>
+  <g font-size="22" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="339.5" y="88.5">神</text>
+    <text x="460" y="88.5">神</text>
+  </g>
+  <g font-size="17" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="326" y="148.5">ア</text>
+    <text x="353" y="148.5">エ</text>
+    <text x="460" y="147" font-size="18" textLength="35" lengthAdjust="spacing">人間</text>
+  </g>
+  <circle cx="339.5" cy="148" r="2"/>
+
+  <!-- 下のア・エと堕落人間 -->
+  <ellipse cx="339" cy="366" rx="29" ry="18.5" fill="#FCE5E3" stroke="currentColor" stroke-width="3"/>
+  <g font-size="17" font-weight="400" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="325.5" y="366.5">ア</text>
+    <text x="352" y="366.5">エ</text>
+  </g>
+  <circle cx="339" cy="366" r="2" fill="#111"/>
+  <ellipse cx="413.5" cy="398" rx="49.5" ry="23.5" fill="#50403D" stroke="currentColor" stroke-width="3"/>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central" fill="#fff">
+    <text x="393.5" y="398">堕</text>
+    <text x="435" y="398">人</text>
+  </g>
+  <circle cx="413" cy="398" r="3" fill="#fff"/>
+
+  <!-- メシヤ・実体基台・信仰基台 -->
+  <ellipse cx="590" cy="185" rx="45.5" ry="21.5" fill="#F8F28F" stroke="currentColor" stroke-width="3"/>
+  <text x="590.5" y="185" font-size="23" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="67" lengthAdjust="spacing">メシヤ</text>
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="3">
+    <rect x="541" y="213" width="98" height="71" rx="7"/>
+    <rect x="541" y="292" width="98" height="105" rx="7"/>
+  </g>
+  <g font-size="25" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="590.5" y="232" textLength="49" lengthAdjust="spacing">実体</text>
+    <text x="590.5" y="263.5" textLength="49" lengthAdjust="spacing">基台</text>
+    <text x="590.5" y="328" textLength="49" lengthAdjust="spacing">信仰</text>
+    <text x="590.5" y="359.5" textLength="49" lengthAdjust="spacing">基台</text>
+  </g>
+</svg>

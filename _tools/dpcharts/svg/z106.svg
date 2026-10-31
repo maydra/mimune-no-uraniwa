@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>存在の球形運動</title>
+  <defs>
+    <marker id="z106-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="77" font-size="48" textLength="347" lengthAdjust="spacing">存在の球形運動</text>
+  <line x1="54" y1="89" x2="403" y2="89" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="621" y1="212.2" x2="434.5" y2="364.7"/>
+    <line x1="621" y1="208.1" x2="807.5" y2="361.9"/>
+    <line x1="434.5" y1="363.1" x2="620.5" y2="517.6"/>
+    <line x1="807.5" y1="367" x2="620.5" y2="519.4"/>
+  </g>
+
+  <!-- 授受作用の矢印（縦と横に交わる） -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z106-g)">
+    <path d="M524,345 C584,330 648,326 708,339"/>
+    <path d="M718,369 C658,388 592,389 533,375"/>
+    <path d="M610,438 C595,393 596,350 600,305"/>
+    <path d="M631,288 C644,333 644,381 640,428"/>
+  </g>
+
+  <!-- 球形運動（青緑の点線。円の下を通る） -->
+  <g fill="none" stroke="#3FA9C1" stroke-width="5" stroke-dasharray="14 9">
+    <ellipse cx="542.5" cy="359.3" rx="238" ry="82"/>
+    <ellipse cx="591.3" cy="229.2" rx="70" ry="214.5" transform="rotate(51.9 591.3 229.2)"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <circle cx="621" cy="205.5" r="56.5" fill="#fff" class="paper"/>
+    <circle cx="434.5" cy="361.5" r="56.5" fill="#F98AEE"/>
+    <circle cx="807.5" cy="361.5" r="56.5" fill="#A0F08A"/>
+    <circle cx="620.5" cy="519.5" r="56.5" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="620" y="204.5" font-size="57">神</text>
+    <g font-size="45" fill="#111">
+      <text x="435" y="361.5">性相</text>
+      <text x="809" y="361.5">形状</text>
+      <text x="621" y="519">存在</text>
+    </g>
+  </g>
+
+  <!-- 右の箇条 -->
+  <circle cx="722" cy="482.5" r="7.8"/>
+  <circle cx="721" cy="563.5" r="7.8"/>
+  <g fill="none" stroke="currentColor" stroke-width="5">
+    <polyline points="940.5,464.5 913.5,488.5 940.5,512.5"/>
+    <polyline points="939.5,582.5 912.5,606 939.5,629.5"/>
+  </g>
+  <g font-size="41" dominant-baseline="central">
+    <text x="736" y="485" textLength="164" lengthAdjust="spacing">球形運動</text>
+    <text x="737" y="562.5" textLength="164" lengthAdjust="spacing">球形運動</text>
+    <text x="902" y="609" text-anchor="end">中心</text>
+    <text x="952" y="464" textLength="123" lengthAdjust="spacing">性相的</text>
+    <text x="952" y="514" textLength="123" lengthAdjust="spacing">形状的</text>
+    <text x="952" y="583" textLength="123" lengthAdjust="spacing">性相的</text>
+    <text x="952" y="633" textLength="123" lengthAdjust="spacing">形状的</text>
+  </g>
+</svg>

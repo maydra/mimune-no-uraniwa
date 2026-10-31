@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>モーセの立場</title>
+
+  <!-- 題 -->
+  <text x="36" y="37.5" font-size="31" dominant-baseline="central" textLength="188" lengthAdjust="spacing">モーセの立場</text>
+  <line x1="35" y1="56.5" x2="223" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 神とモーセ -->
+  <polygon points="177.5,240 177.5,182 173,182 181.5,166 190,182 185.5,182 185.5,240" fill="#8C949A"/>
+  <circle cx="181.5" cy="125" r="34.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <text x="181.5" y="126" font-size="40" text-anchor="middle" dominant-baseline="central">神</text>
+  <ellipse cx="181.5" cy="272" rx="55.5" ry="31" fill="#F8F28F" stroke="currentColor" stroke-width="2.6"/>
+  <text x="180" y="272.5" font-size="29" text-anchor="middle" dominant-baseline="central" textLength="84" lengthAdjust="spacing" fill="#111">モーセ</text>
+
+  <!-- かっこ -->
+  <path d="M263,217.5 H248.5 V328 H263" fill="none" stroke="#8C949A" stroke-width="5.5"/>
+
+  <!-- 父母立場・子女立場 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6">
+    <rect x="264" y="178" width="76" height="79"/>
+    <rect x="264" y="289.5" width="76" height="79"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="302.5" y="202" textLength="57" lengthAdjust="spacing">父母</text>
+    <text x="302.5" y="235.5" textLength="57" lengthAdjust="spacing">立場</text>
+    <text x="302.5" y="313" textLength="57" lengthAdjust="spacing">子女</text>
+    <text x="302.5" y="347.5" textLength="57" lengthAdjust="spacing">立場</text>
+  </g>
+
+  <!-- 箇条 -->
+  <g>
+    <circle cx="356.5" cy="195" r="7.5"/>
+    <circle cx="357" cy="238" r="7.5"/>
+    <circle cx="356.5" cy="309" r="7.5"/>
+    <circle cx="356.5" cy="350.5" r="7.5"/>
+  </g>
+  <g font-size="28" dominant-baseline="central">
+    <text x="374" y="195.5" textLength="147" lengthAdjust="spacing">神の身代わり</text>
+    <text x="521" y="195.5">、</text>
+    <text x="543" y="195.5" textLength="150" lengthAdjust="spacing">イエスの立場</text>
+    <text x="374" y="239" textLength="208" lengthAdjust="spacing">「信仰基台」復帰</text>
+    <text x="375" y="309.5" textLength="288" lengthAdjust="spacing">イエスに先立つ預言者</text>
+    <text x="374" y="351" textLength="315" lengthAdjust="spacing">「実体基台」のアベルの立場</text>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅱ. ヤコブ路程を見本として歩いたモーセ路程とイエス路程</title>
+
+  <!-- 題 -->
+  <text x="50" y="37.5" font-size="30" text-anchor="middle" dominant-baseline="central">Ⅱ</text>
+  <text x="65" y="37.5" font-size="30" dominant-baseline="central">.</text>
+  <text x="83" y="37" font-size="28.5" dominant-baseline="central" textLength="716" lengthAdjust="spacing">ヤコブ路程を見本として歩いたモーセ路程とイエス路程</text>
+  <line x1="81" y1="56" x2="798" y2="56" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- 下向きの矢印 -->
+  <g fill="#8C949A">
+    <polygon points="205,150 211,150 211,168 215,168 208,181.5 201,168 205,168"/>
+    <polygon points="205,227 211,227 211,245 215,245 208,258.5 201,245 205,245"/>
+    <polygon points="205,304 211,304 211,320 215,320 208,333.5 201,320 205,320"/>
+  </g>
+
+  <!-- アとエ -->
+  <g transform="translate(208,124)">
+    <ellipse rx="61.5" ry="28" fill="#CF921C"/>
+    <path d="M-8,-27.5 C-25,-21 -24,-7.3 -4,-0.5 C21,8 21,23 3,27.5" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+    <ellipse rx="61.5" ry="28" fill="none" stroke="currentColor" stroke-width="3"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="175" y="125">ア</text>
+    <text x="240.5" y="122.5">エ</text>
+  </g>
+
+  <!-- ヤコブ・モーセ・イエス -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="208" cy="206" rx="45" ry="22"/>
+    <ellipse cx="208" cy="282.5" rx="45" ry="22.5"/>
+    <ellipse cx="207.5" cy="359" rx="49.5" ry="23.5"/>
+  </g>
+  <g font-size="23.5" text-anchor="middle" dominant-baseline="central">
+    <text x="208" y="205.5" textLength="71" lengthAdjust="spacing">ヤコブ</text>
+    <text x="207.5" y="283" textLength="71" lengthAdjust="spacing">モーセ</text>
+    <text x="207.5" y="359" textLength="71" lengthAdjust="spacing">イエス</text>
+  </g>
+
+  <!-- 右の字 -->
+  <g dominant-baseline="central">
+    <text x="290" y="124" font-size="29" textLength="289" lengthAdjust="spacing">サタンが侵入した経路</text>
+    <text x="288" y="207.5" font-size="31" textLength="345" lengthAdjust="spacing">サタンを屈伏させる路程</text>
+    <g font-size="28">
+      <text x="295.5" y="249" text-anchor="middle">（</text>
+      <text x="302" y="249" textLength="115" lengthAdjust="spacing">見本路程</text>
+      <text x="422.5" y="249" text-anchor="middle">）</text>
+    </g>
+  </g>
+</svg>

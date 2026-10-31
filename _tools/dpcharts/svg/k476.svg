@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>縦からなる横的な蕩減復帰</title>
+  <defs>
+    <marker id="k476-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3.4" markerHeight="3.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <!-- アダム・ノアの白抜きの太い矢印 -->
+  <polygon points="302,35 388,35 388,101 421,101 345.5,144 270,101 302,101" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2" stroke-linejoin="miter"/>
+  <g font-size="29" text-anchor="middle" dominant-baseline="central">
+    <text x="345" y="62.5" textLength="72" lengthAdjust="spacing">アダム</text>
+    <text x="343" y="101.5" textLength="57" lengthAdjust="spacing">ノア</text>
+  </g>
+
+  <!-- 灰色の曲がった矢印（箱の下に描く） -->
+  <g stroke="#8C949A" stroke-width="6.5" fill="none" marker-end="url(#k476-g)">
+    <path d="M500,193 C499,222 485,236 448,241"/>
+    <path d="M569,193 C565,268 525,296 453,305"/>
+  </g>
+
+  <!-- 横の線と縦の線（楕円の下に描く） -->
+  <line x1="420" y1="175" x2="619" y2="175" stroke="currentColor" stroke-width="5.5"/>
+  <line x1="345.5" y1="190" x2="345.5" y2="300" stroke="currentColor" stroke-width="11"/>
+
+  <!-- アブラハム・イサク・ヤコブ -->
+  <g stroke="currentColor" stroke-width="2.2" fill="#F8F28F">
+    <ellipse cx="345" cy="175" rx="85.5" ry="22.5"/>
+    <ellipse cx="345" cy="242.5" rx="85.5" ry="22"/>
+    <ellipse cx="345" cy="311.5" rx="85.5" ry="22"/>
+  </g>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="346" y="174.5" textLength="126" lengthAdjust="spacing">アブラハム</text>
+    <text x="344" y="242.5" textLength="80" lengthAdjust="spacing">イサク</text>
+    <text x="344" y="311" textLength="80" lengthAdjust="spacing">ヤコブ</text>
+  </g>
+
+  <!-- 横的蕩減条件（茶の楕円に ×） -->
+  <g stroke="currentColor" stroke-width="2.2" fill="#CF921C">
+    <ellipse cx="504.5" cy="174" rx="23.5" ry="18"/>
+    <ellipse cx="571.5" cy="174.5" rx="23.5" ry="18"/>
+  </g>
+  <g stroke="currentColor" stroke-width="3">
+    <path d="M485,153 L491,159.5 M518,188.5 L524,195 M524,153 L518,159.5 M491,188.5 L485,195"/>
+    <path d="M552,153 L558,159.5 M585,188.5 L591,195 M591,153 L585,159.5 M558,188.5 L552,195"/>
+  </g>
+  <g stroke="#111" stroke-width="3">
+    <path d="M491,159.5 L518,188.5 M518,159.5 L491,188.5"/>
+    <path d="M558,159.5 L585,188.5 M585,159.5 L558,188.5"/>
+  </g>
+
+  <!-- 白い箱 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2">
+    <rect x="440.5" y="101" width="220" height="44.5" rx="6"/>
+    <rect x="481" y="212" width="180" height="76.5"/>
+  </g>
+  <g font-size="28" dominant-baseline="central">
+    <text x="465" y="123" textLength="172" lengthAdjust="spacing">横的蕩減条件</text>
+  </g>
+  <g font-size="26" dominant-baseline="central">
+    <text x="494" y="232" textLength="147" lengthAdjust="spacing">一代で横的に</text>
+    <text x="494" y="266" textLength="103" lengthAdjust="spacing">蕩減復帰</text>
+  </g>
+
+  <!-- 縦からなる -->
+  <path d="M251,140 Q241,141 241,158 L241,228 Q241,241 232,243 Q241,245 241,258 L241,330 Q241,346 251,346" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <rect x="174.2" y="165.2" width="40.8" height="176.6" rx="5" fill="#CDF8F7" stroke="currentColor" stroke-width="2.2"/>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="195" y="196">縦</text>
+    <text x="195" y="224.5">か</text>
+    <text x="195" y="253.5">ら</text>
+    <text x="195" y="282.5">な</text>
+    <text x="195" y="312">る</text>
+  </g>
+
+  <!-- 横的な蕩減復帰 -->
+  <rect x="251.2" y="360.2" width="240.6" height="40.6" rx="5" fill="#CDF8F7" stroke="currentColor" stroke-width="2.2"/>
+  <text x="272" y="380.5" font-size="28" dominant-baseline="central" fill="#111" textLength="200" lengthAdjust="spacing">横的な蕩減復帰</text>
+</svg>

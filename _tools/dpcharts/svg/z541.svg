@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 再臨復活によるキリスト教統一</title>
+
+  <text x="75.5" y="56" font-size="46" text-anchor="middle" dominant-baseline="central">Ⅰ</text>
+  <text x="99" y="56" font-size="46" dominant-baseline="central">.</text>
+  <text x="126" y="55.5" font-size="49" dominant-baseline="central" textLength="697" lengthAdjust="spacing">再臨復活によるキリスト教統一</text>
+  <line x1="125" y1="85.5" x2="826" y2="85.5" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 左の見出し（縦書き。右の列から読む：楽園の霊人／キリスト教地上信徒） -->
+  <g font-size="41" text-anchor="middle" dominant-baseline="central">
+    <text x="306.5" y="188.5">楽</text>
+    <text x="306.5" y="231">園</text>
+    <text x="306.5" y="272.5">の</text>
+    <text x="256.5" y="188.5">霊</text>
+    <text x="256.5" y="230">人</text>
+    <text x="301.5" y="379.5">キ</text>
+    <text x="301.5" y="417">リ</text>
+    <text x="301.5" y="455">ス</text>
+    <text x="301.5" y="492">ト</text>
+    <text x="301.5" y="529">教</text>
+    <text x="251" y="381">地</text>
+    <text x="251" y="422.5">上</text>
+    <text x="251" y="464.5">信</text>
+    <text x="251" y="506.5">徒</text>
+  </g>
+
+  <!-- 地上の線と、霊人から地上信徒への矢印 -->
+  <line x1="191" y1="336" x2="776.5" y2="336" stroke="currentColor" stroke-width="7"/>
+  <g stroke="currentColor" stroke-width="8">
+    <line x1="409" y1="320" x2="409" y2="349.5"/>
+    <line x1="553.5" y1="320" x2="553.5" y2="349.5"/>
+    <line x1="695.5" y1="320" x2="695.5" y2="349.5"/>
+  </g>
+  <g fill="currentColor">
+    <polygon points="397.5,348.5 420.5,348.5 409,369.5"/>
+    <polygon points="542,348.5 565,348.5 553.5,369.5"/>
+    <polygon points="684,348.5 707,348.5 695.5,369.5"/>
+  </g>
+
+  <!-- 地上信徒から再臨主への弧（楕円より先に描き、始まりを楕円で隠す） -->
+  <g stroke="currentColor" stroke-width="6" fill="none">
+    <path d="M424,532 C583.8,688.4 862,591.9 871.35,441.96"/>
+    <path d="M577,524 C708.7,572 826.2,523.2 842.88,439.64"/>
+    <path d="M745,479 C791.1,480.7 805.3,451.6 812.71,432.71"/>
+  </g>
+  <g fill="currentColor">
+    <polygon points="872.5,423.5 881.7,444.1 860.8,442.8"/>
+    <polygon points="846.5,421.5 852.9,443.2 832.3,439.1"/>
+    <polygon points="819.5,415.5 821.9,438 802.4,430.2"/>
+  </g>
+
+  <!-- 楽園の霊人（灰桃）とキリスト教地上信徒（薄い桃） -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="409.25" cy="242" rx="47.75" ry="80" fill="#DCC4C4"/>
+    <ellipse cx="553.5" cy="242" rx="49.5" ry="80" fill="#DCC4C4"/>
+    <ellipse cx="695.75" cy="242" rx="49.75" ry="80" fill="#DCC4C4"/>
+    <ellipse cx="409.25" cy="453.75" rx="49.75" ry="80.25" fill="#FCE5E3"/>
+    <ellipse cx="553.5" cy="453.75" rx="49.5" ry="80.25" fill="#FCE5E3"/>
+    <ellipse cx="695.75" cy="452.75" rx="49.75" ry="78.75" fill="#FCE5E3"/>
+  </g>
+  <g font-size="69" dominant-baseline="central" fill="#111">
+    <text x="409.5" y="242.5" text-anchor="middle">A</text>
+    <text x="553.5" y="242.5" text-anchor="middle">B</text>
+    <text x="695.5" y="242.5" text-anchor="middle">C</text>
+    <text><tspan x="409.5" y="455.5" text-anchor="middle">A</tspan><tspan x="417.4" y="438.3">′</tspan></text>
+    <text><tspan x="553.5" y="456" text-anchor="middle">B</tspan><tspan x="559.4" y="438.3">′</tspan></text>
+    <text><tspan x="695.5" y="452.5" text-anchor="middle">C</tspan><tspan x="707.4" y="434.3">′</tspan></text>
+  </g>
+
+  <!-- 再臨主 -->
+  <ellipse cx="851.5" cy="326.25" rx="59" ry="86.75" fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5"/>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="850.5" y="281">再</text>
+    <text x="851" y="326">臨</text>
+    <text x="850.5" y="371.5">主</text>
+  </g>
+
+  <polygon points="927,315.5 971,315.5 971,293.75 1010.5,326.5 971,359.25 971,337.5 927,337.5" fill="#8C949A"/>
+
+  <!-- キリスト教統一 -->
+  <rect x="1019" y="165.5" width="74" height="323" rx="6" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g font-size="43" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="1056" y="207">キ</text>
+    <text x="1056" y="248.5">リ</text>
+    <text x="1056" y="290">ス</text>
+    <text x="1056" y="330.5">ト</text>
+    <text x="1056" y="372">教</text>
+    <text x="1056" y="413.5">統</text>
+    <text x="1056" y="454">一</text>
+  </g>
+</svg>

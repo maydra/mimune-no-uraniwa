@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>エジプト苦役時代とローマ帝国迫害時代　① ヤコブ・12子息・70家族がエジプトで400年苦役　② イエス・12弟子・70門徒がローマ帝国で400年迫害</title>
+
+  <!-- 見出し -->
+  <g fill="#CDF8F7" stroke="currentColor" stroke-width="3">
+    <rect x="128.5" y="73.5" width="278" height="55" rx="8"/>
+    <rect x="413.5" y="73.5" width="278" height="55" rx="8"/>
+  </g>
+  <g font-size="28" dominant-baseline="central" fill="#111">
+    <text x="152" y="100.5" textLength="230" lengthAdjust="spacing">エジプト苦役時代</text>
+    <text x="425" y="100.5" textLength="257" lengthAdjust="spacing">ローマ帝国迫害時代</text>
+  </g>
+
+  <!-- 枠 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="3">
+    <rect x="130.5" y="136.5" width="276" height="222" rx="8"/>
+    <rect x="416.5" y="136.5" width="276" height="222" rx="8"/>
+  </g>
+  <g font-size="24" text-anchor="middle" dominant-baseline="central">
+    <text x="151.5" y="156">①</text>
+    <text x="436" y="156">②</text>
+  </g>
+
+  <!-- 70家族・12子息・ヤコブ／70門徒・12弟子・イエス -->
+  <!-- 外の楕円の縁は地の上（currentColor）、内の楕円の縁は色の面の上（#111） -->
+  <g stroke-width="3">
+    <ellipse cx="270.5" cy="218.5" rx="113.5" ry="57.5" fill="#FCE5E3" stroke="currentColor"/>
+    <ellipse cx="238" cy="218.5" rx="81" ry="38.5" fill="#F86D42" stroke="#111"/>
+    <ellipse cx="207.5" cy="218.5" rx="50.5" ry="27.5" fill="#F8F28F" stroke="#111"/>
+    <ellipse cx="556.5" cy="218.5" rx="113.5" ry="57.5" fill="#FCE5E3" stroke="currentColor"/>
+    <ellipse cx="524.5" cy="218.5" rx="81" ry="38.5" fill="#F86D42" stroke="#111"/>
+    <ellipse cx="493.5" cy="218.5" rx="50.5" ry="27.5" fill="#F8F28F" stroke="#111"/>
+  </g>
+  <g fill="#111" text-anchor="middle" dominant-baseline="central">
+    <text x="208" y="218" font-size="28" textLength="78" lengthAdjust="spacing">ヤコブ</text>
+    <text x="493" y="219" font-size="28" textLength="76" lengthAdjust="spacing">イエス</text>
+    <g font-size="22" font-weight="400">
+      <text x="279" y="208">12</text>
+      <text x="282" y="232">子息</text>
+      <text x="343.5" y="207.5">70</text>
+      <text x="349" y="233">家族</text>
+      <text x="566.5" y="208">12</text>
+      <text x="569.5" y="232">弟子</text>
+      <text x="633" y="208">70</text>
+      <text x="641.5" y="233">門徒</text>
+    </g>
+  </g>
+
+  <g font-size="28" font-weight="400" dominant-baseline="central">
+    <text x="252" y="298.5" textLength="141" lengthAdjust="spacing">エジプトで</text>
+    <text y="331"><tspan x="250" textLength="43" lengthAdjust="spacingAndGlyphs">400</tspan><tspan x="301" textLength="86" lengthAdjust="spacing">年苦役</tspan></text>
+    <text x="508" y="301" textLength="170" lengthAdjust="spacing">ローマ帝国で</text>
+    <text y="332"><tspan x="505" textLength="44" lengthAdjust="spacingAndGlyphs">400</tspan><tspan x="557" textLength="86" lengthAdjust="spacing">年迫害</tspan></text>
+  </g>
+</svg>

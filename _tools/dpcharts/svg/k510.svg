@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>メシヤのための家庭的な基台と民族的な基台（象徴献祭と神殿建築の年数）</title>
+
+  <!-- 上の見出し -->
+  <g dominant-baseline="central">
+    <text x="142" y="85" font-size="22" textLength="145" lengthAdjust="spacing">メシヤのための</text>
+    <text x="142" y="114" font-size="23" textLength="138" lengthAdjust="spacing">家庭的な基台</text>
+    <text x="156" y="147" font-size="23" textLength="92" lengthAdjust="spacing">象徴献祭</text>
+    <text x="525" y="84.5" font-size="22" textLength="138" lengthAdjust="spacing">メシヤのための</text>
+    <text x="525" y="113" font-size="23" textLength="138" lengthAdjust="spacing">民族的な基台</text>
+    <text x="573" y="148" font-size="23" textLength="92" lengthAdjust="spacing">神殿建築</text>
+  </g>
+
+  <!-- 灰色の下向きの矢印 -->
+  <g fill="#8C949A">
+    <rect x="347.5" y="69" width="6" height="18"/>
+    <polygon points="344.5,86 356.5,86 350.5,95.5"/>
+    <rect x="347.5" y="132" width="6" height="18"/>
+    <polygon points="344.5,148.5 356.5,148.5 350.5,158"/>
+    <rect x="463.5" y="69" width="6" height="18"/>
+    <polygon points="460.5,86 472.5,86 466.5,95.5"/>
+    <rect x="463.5" y="132" width="6" height="18"/>
+    <polygon points="460.5,148.5 472.5,148.5 466.5,158"/>
+  </g>
+
+  <!-- ＝ -->
+  <g stroke="currentColor" stroke-width="3.5">
+    <path d="M400,49.5 H417 M400,56.5 H417"/>
+    <path d="M399,112 H416 M399,119 H416"/>
+    <path d="M400,175.5 H416 M400,182.5 H416"/>
+  </g>
+
+  <!-- 年数の柱（緑の帯と黒い線） -->
+  <rect x="337.5" y="198" width="11" height="208" fill="#A0F08A"/>
+  <rect x="469" y="198" width="11" height="208" fill="#A0F08A"/>
+  <g stroke="currentColor">
+    <line x1="351" y1="195" x2="351" y2="408.5" stroke-width="5.5"/>
+    <line x1="466.5" y1="195" x2="466.5" y2="408.5" stroke-width="5.5"/>
+    <path d="M333,250 H368 M333,302.5 H368 M333,355.5 H368 M333,407 H368 M449,250 H484 M449,302.5 H484 M449,355.5 H484 M449,407 H484" stroke-width="3"/>
+    <!-- 人物から数字の丸へ -->
+    <path d="M272,181.5 H306 M509,181.5 H548" stroke-width="4"/>
+  </g>
+
+  <!-- 人物 -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="3">
+    <ellipse cx="349.5" cy="53" rx="43.5" ry="17"/>
+    <ellipse cx="466.5" cy="53" rx="43.5" ry="17"/>
+    <ellipse cx="349.5" cy="116" rx="43.5" ry="17"/>
+    <ellipse cx="465" cy="116" rx="43.5" ry="17"/>
+    <ellipse cx="349.5" cy="180" rx="43.5" ry="17"/>
+    <ellipse cx="465.5" cy="180" rx="43.5" ry="17"/>
+  </g>
+  <g font-size="22" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="352" y="52.5" textLength="62" lengthAdjust="spacing">アダム</text>
+    <text x="467" y="52" font-size="19" textLength="62" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+    <text x="350" y="116.5" textLength="42" lengthAdjust="spacing">ノア</text>
+    <text x="464.5" y="115.5" textLength="63" lengthAdjust="spacing">モーセ</text>
+    <text x="349.5" y="179" font-size="19" textLength="64" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+    <text x="466.5" y="180.5" textLength="65" lengthAdjust="spacing">サウル</text>
+  </g>
+
+  <!-- 年数 -->
+  <g font-size="21" dominant-baseline="central">
+    <text x="359" y="227.5" textLength="33" lengthAdjust="spacingAndGlyphs">120</text>
+    <text x="359" y="276.5" textLength="22" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="359" y="329.5" textLength="18" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="359" y="383.5" textLength="22" lengthAdjust="spacingAndGlyphs">40</text>
+  </g>
+  <g font-size="21" text-anchor="end" dominant-baseline="central">
+    <text x="458" y="226.5" textLength="33" lengthAdjust="spacingAndGlyphs">120</text>
+    <text x="458" y="276.5" textLength="33" lengthAdjust="spacingAndGlyphs">400</text>
+    <text x="458" y="329" textLength="34" lengthAdjust="spacingAndGlyphs">210</text>
+    <text x="458" y="382.5" textLength="34" lengthAdjust="spacingAndGlyphs">400</text>
+  </g>
+
+  <!-- 灰色の矢印（数字の丸から年数へ） -->
+  <g fill="none" stroke="#8C949A" stroke-width="5.5">
+    <path d="M257.5,185 V229.5 H312"/>
+    <path d="M221,185 V280.5 H312"/>
+    <path d="M183.5,185 V336.5 H312"/>
+    <path d="M144.5,185 V384.5 H312"/>
+    <path d="M566,185 V229.5 H499"/>
+    <path d="M603.5,185 V280.5 H499"/>
+    <path d="M640.5,185 V336.5 H499"/>
+    <path d="M675.5,185 V384.5 H499"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="311,223.5 321,229.5 311,235.5"/>
+    <polygon points="311,274.5 321,280.5 311,286.5"/>
+    <polygon points="311,330.5 321,336.5 311,342.5"/>
+    <polygon points="311,378.5 321,384.5 311,390.5"/>
+    <polygon points="500,223.5 490,229.5 500,235.5"/>
+    <polygon points="500,274.5 490,280.5 500,286.5"/>
+    <polygon points="500,330.5 490,336.5 500,342.5"/>
+    <polygon points="500,378.5 490,384.5 500,390.5"/>
+  </g>
+
+  <!-- 数字の丸 -->
+  <g fill="#687C83" stroke="currentColor" stroke-width="1.5">
+    <ellipse cx="145" cy="177" rx="18.5" ry="11.5"/>
+    <ellipse cx="182" cy="177" rx="18.5" ry="11.5"/>
+    <ellipse cx="219" cy="177" rx="18.5" ry="11.5"/>
+    <ellipse cx="256" cy="177" rx="18.5" ry="11.5"/>
+    <ellipse cx="566" cy="177" rx="18.5" ry="11.5"/>
+    <ellipse cx="603" cy="177" rx="18.5" ry="11.5"/>
+    <ellipse cx="640" cy="177" rx="18.5" ry="11.5"/>
+    <ellipse cx="677" cy="177" rx="18.5" ry="11.5"/>
+  </g>
+  <g font-size="20" font-weight="400" text-anchor="middle" dominant-baseline="central" fill="#fff">
+    <text x="145" y="177.5" textLength="24" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="182" y="177.5" textLength="24" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="219" y="177.5" textLength="24" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="256.5" y="177.5" textLength="32" lengthAdjust="spacingAndGlyphs">120</text>
+    <text x="566" y="177.5" textLength="32" lengthAdjust="spacingAndGlyphs">120</text>
+    <text x="603" y="177.5" textLength="24" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="640" y="177.5" textLength="24" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="677" y="177.5" textLength="24" lengthAdjust="spacingAndGlyphs">40</text>
+  </g>
+
+  <!-- 右の時代の名前 -->
+  <g font-size="17" dominant-baseline="central">
+    <text x="499" y="210" textLength="98" lengthAdjust="spacing">統一王国時代</text>
+    <text x="499" y="257" textLength="131" lengthAdjust="spacing">南北王朝分立時代</text>
+    <text x="501" y="299.5" textLength="105" lengthAdjust="spacing">イスラエル民族</text>
+    <text x="501" y="320.5" textLength="130" lengthAdjust="spacingAndGlyphs">捕虜および帰還時代</text>
+    <text x="504" y="366.5" textLength="159" lengthAdjust="spacing">メシヤ降臨準備時代</text>
+  </g>
+</svg>

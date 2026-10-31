@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>授受の関係からみた堕落と復帰</title>
+
+  <text x="50" y="78" font-size="50" textLength="700" lengthAdjust="spacing">授受の関係からみた堕落と復帰</text>
+  <line x1="50" y1="89.5" x2="750" y2="89.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 堕落 -->
+  <text x="410.5" y="181" font-size="45" text-anchor="middle" dominant-baseline="central">堕落</text>
+
+  <!-- 神と人間の授受（×で断たれる） -->
+  <g fill="none" stroke="currentColor" stroke-width="8.5">
+    <path d="M345,532 Q280,462.5 277,391"/>
+    <path d="M300.5,353 Q363.75,418.5 369,492"/>
+  </g>
+  <g stroke="currentColor" stroke-width="9.5">
+    <line x1="235.5" y1="428" x2="395" y2="447.5"/>
+    <line x1="347.5" y1="365" x2="281.5" y2="508"/>
+  </g>
+  <!-- サタンと人間の授受 -->
+  <g fill="none" stroke="currentColor" stroke-width="8.5">
+    <path d="M446,529 Q446.5,427 498,377"/>
+    <path d="M539,358 Q541,442.5 487,505"/>
+  </g>
+  <g>
+    <polygon points="276,356.5 289,392 263,392"/>
+    <polygon points="356.5,491.5 381.5,491.5 369,527"/>
+    <polygon points="522,353 489.5,366.5 508,385"/>
+    <polygon points="478,497 494.5,514.5 461.5,529"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="266" cy="295" r="54" fill="#fff" class="paper"/>
+    <circle cx="547.5" cy="295.5" r="54.5" fill="#50403D"/>
+  </g>
+  <text x="264.5" y="295.5" font-size="60" text-anchor="middle" dominant-baseline="central">神</text>
+  <text x="548.5" y="297.5" font-size="60" text-anchor="middle" dominant-baseline="central" fill="#fff">サ</text>
+
+  <ellipse cx="409.5" cy="579.5" rx="91.5" ry="50.5" fill="#CF921C" stroke="currentColor" stroke-width="4"/>
+  <text y="580" font-size="52" text-anchor="middle" dominant-baseline="central" fill="#111"><tspan x="374.5">人</tspan><tspan x="442.5">間</tspan></text>
+
+  <!-- 灰色の矢印 -->
+  <polygon points="626.25,439.75 659.5,439.75 659.5,420.5 681,459.75 659.5,499.5 659.5,479.75 626.25,479.75" fill="#8C949A" stroke="currentColor" stroke-width="1.5"/>
+
+  <!-- 復帰 -->
+  <text x="835.5" y="147" font-size="45" text-anchor="middle" dominant-baseline="central">復帰</text>
+  <circle cx="836.5" cy="237" r="54" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="835.5" y="237.5" font-size="60" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <g>
+    <path d="M826,350 Q810,331 821,316 M852.5,302 Q868,322 855,338" fill="none" stroke="currentColor" stroke-width="6"/>
+    <polygon points="829,300.5 814,310 828,317.5"/>
+    <polygon points="850,351.5 863.5,343 851,335"/>
+  </g>
+  <g transform="translate(0,171)">
+    <path d="M826,350 Q810,331 821,316 M852.5,302 Q868,322 855,338" fill="none" stroke="currentColor" stroke-width="6"/>
+    <polygon points="829,300.5 814,310 828,317.5"/>
+    <polygon points="850,351.5 863.5,343 851,335"/>
+  </g>
+
+  <ellipse cx="836" cy="411" rx="92" ry="51" fill="#F8F28F" stroke="currentColor" stroke-width="4"/>
+  <text x="835.5" y="410.5" font-size="50" textLength="150" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central" fill="#111">イエス</text>
+  <text x="941" y="405" font-size="48" dominant-baseline="central">仲保</text>
+  <text x="944" y="459" font-size="33" textLength="171" lengthAdjust="spacingAndGlyphs" dominant-baseline="central">(ヨハネ 3:16)</text>
+
+  <ellipse cx="835.5" cy="582" rx="91.5" ry="51" fill="#CF921C" stroke="currentColor" stroke-width="4"/>
+  <text y="581" font-size="52" text-anchor="middle" dominant-baseline="central" fill="#111"><tspan x="795">堕</tspan><tspan x="836">・</tspan><tspan x="876.5">人</tspan></text>
+</svg>

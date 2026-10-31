@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 聖書を見る観点</title>
+
+  <!-- 題 -->
+  <g font-size="30" text-anchor="middle" dominant-baseline="central">
+    <text x="47" y="37.5">Ⅰ</text>
+    <text x="63" y="37.5">.</text>
+  </g>
+  <text x="79" y="37.5" font-size="30" dominant-baseline="central" textLength="219" lengthAdjust="spacing">聖書を見る観点</text>
+  <line x1="79" y1="56.5" x2="300" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 灰色の矢印（箱と楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="298.5,160 306.5,160 306.5,207 315,207 302.5,223 290,207 298.5,207"/>
+    <polygon points="395,269.5 453.5,269.5 453.5,262.5 471,274 453.5,285.5 453.5,278.5 395,278.5"/>
+  </g>
+
+  <!-- 箱と楕円 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <rect x="154" y="116.5" width="301" height="49.5" rx="7" fill="#fff" class="paper"/>
+    <ellipse cx="302.5" cy="274" rx="100.5" ry="47" fill="#CDF8F7"/>
+    <rect x="477" y="226" width="201" height="96" rx="7" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="30" dominant-baseline="central">
+    <text x="180" y="140.5" textLength="251" lengthAdjust="spacing">天倫の重要な問題</text>
+    <text x="224" y="272.5" font-size="31" textLength="157" lengthAdjust="spacing" fill="#111">象徴と比喩</text>
+    <text x="491" y="254" font-size="27" textLength="171" lengthAdjust="spacing">摂理に対する</text>
+    <text x="507" y="294" font-size="27" textLength="142" lengthAdjust="spacing">時代的要求</text>
+    <text x="214" y="377.5" textLength="314" lengthAdjust="spacing">聖書解釈の観点が重要</text>
+  </g>
+</svg>

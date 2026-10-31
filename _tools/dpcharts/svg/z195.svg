@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>霊人体の素性</title>
+
+  <text x="52" y="77" font-size="48" textLength="299" lengthAdjust="spacing">霊人体の素性</text>
+  <line x1="52" y1="87.5" x2="351" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 霊人体 -->
+  <ellipse cx="336.75" cy="266" rx="83.25" ry="144" fill="#F98AEE" stroke="currentColor" stroke-width="4.5"/>
+  <text x="338" y="203" font-size="60" text-anchor="middle" dominant-baseline="central" fill="#111">霊<tspan x="338" dy="1.05em">人</tspan><tspan x="338" dy="1.05em">体</tspan></text>
+
+  <!-- 悪化・善化・救い -->
+  <g>
+    <circle cx="456.5" cy="145" r="11"/>
+    <circle cx="456" cy="263" r="11"/>
+    <circle cx="456" cy="382" r="11"/>
+  </g>
+  <g font-size="46" dominant-baseline="central">
+    <text x="481" y="146">悪化<tspan font-weight="400">（肉身生活の犯罪行為）</tspan></text>
+    <text x="481" y="265">善化<tspan font-weight="400">（肉身生活の贖罪）</tspan></text>
+    <text x="481" y="383.5">救い<tspan font-weight="400">（地上で善なる生活）</tspan></text>
+  </g>
+
+  <!-- 聖句 -->
+  <g font-size="42" dominant-baseline="central">
+    <g text-anchor="end">
+      <text x="421" y="478.5">マタイ 16:19</text>
+      <text x="421" y="544">マタイ 18:18</text>
+    </g>
+    <g font-weight="400">
+      <text x="462" y="478.5" text-anchor="end">『</text>
+      <text x="462" y="478.5">私が天国の鍵を授ける…』</text>
+      <text x="462" y="544" text-anchor="end">『</text>
+      <text x="462" y="544">地上でつなぐことは天でもつなが</text>
+      <text x="462" y="590.5">れ、地上で解くことは、天でもみ</text>
+      <text x="462" y="637">な解かれるであろう』</text>
+    </g>
+  </g>
+</svg>

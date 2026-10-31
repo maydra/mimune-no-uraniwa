@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>三つの権能の目的　創造本然の四位基台を復帰</title>
+  <defs>
+    <marker id="k273-a" viewBox="0 0 10 10" refX="3" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="34" y="37.5" font-size="30" dominant-baseline="central" textLength="254" lengthAdjust="spacing">三つの権能の目的</text>
+  <line x1="33" y1="56.5" x2="285" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 四位の線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="6">
+    <line x1="409" y1="292.5" x2="316" y2="199.5"/>
+    <line x1="409.5" y1="292.5" x2="502.5" y2="199.5"/>
+  </g>
+
+  <!-- 神からの灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="379.94,110.36 339.09,142.55 336.15,138.82 329,154 345.43,150.6 342.49,146.87 383.34,114.68"/>
+    <polygon points="432.67,110.6 476.65,146.62 473.64,150.29 490,154 483.14,138.69 480.13,142.36 436.15,106.34"/>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g stroke="currentColor" stroke-width="2.8" fill="none" marker-end="url(#k273-a)">
+    <path d="M374,181.5 Q407,165 432,176.5"/>
+    <path d="M437.5,199 Q407,212 382.5,204"/>
+  </g>
+
+  <circle cx="407" cy="96" r="31.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="312" cy="189" rx="53.5" ry="30.5" fill="#F98AEE"/>
+    <ellipse cx="502.5" cy="189" rx="53" ry="30.5" fill="#A0F08A"/>
+    <ellipse cx="409" cy="285.5" rx="63.5" ry="28" fill="#FCE5E3"/>
+  </g>
+  <text x="406" y="96.5" font-size="34" text-anchor="middle" dominant-baseline="central">神</text>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="310" y="188.5" font-size="27" textLength="81" lengthAdjust="spacing">イエス</text>
+    <text x="503.5" y="189.5" font-size="29" textLength="64" lengthAdjust="spacing">聖霊</text>
+    <text x="408" y="286.5" font-size="27" textLength="85" lengthAdjust="spacing">全人類</text>
+  </g>
+
+  <g font-size="29" dominant-baseline="central">
+    <text x="154" y="187" textLength="94" lengthAdjust="spacing">真の父</text>
+    <text x="568" y="187" textLength="94" lengthAdjust="spacing">真の母</text>
+    <text x="405" y="335" text-anchor="middle" textLength="61" lengthAdjust="spacing">子女</text>
+  </g>
+
+  <!-- 創造本然の四位基台を復帰 -->
+  <rect x="199.5" y="364.5" width="416" height="50" fill="#CDF8F7" stroke="currentColor" stroke-width="2.2"/>
+  <text x="218" y="389.5" font-size="30" dominant-baseline="central" textLength="378" lengthAdjust="spacing" fill="#111">創造本然の四位基台を復帰</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>堕落前と堕落後のアダムとエバ</title>
+
+  <!-- 三角形の線（元の線の位置。円の下に描く） -->
+  <g stroke="currentColor" stroke-width="5.5" fill="none" stroke-linejoin="round">
+    <path d="M183.3,185 L248.75,48.4 L314.2,185 Z"/>
+    <path d="M502.3,185 L567.75,48.4 L633.2,185 Z"/>
+  </g>
+
+  <!-- 堕落前 -->
+  <g stroke="currentColor" stroke-width="2.4">
+    <circle cx="248.5" cy="62.5" r="29.8" fill="#fff" class="paper"/>
+    <circle cx="177.5" cy="182" r="29.8" fill="#F98AEE"/>
+    <circle cx="319.5" cy="182" r="29.8" fill="#A0F08A"/>
+  </g>
+  <text x="248.5" y="62.5" font-size="34" text-anchor="middle" dominant-baseline="central">神</text>
+  <g font-size="32" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="177.5" y="183">ア</text>
+    <text x="319.5" y="183">エ</text>
+  </g>
+  <text x="248" y="160" font-size="28" text-anchor="middle" dominant-baseline="central">裸</text>
+
+  <!-- 堕落 -->
+  <text x="407.5" y="71.5" font-size="30" text-anchor="middle" dominant-baseline="central">堕落</text>
+  <polygon points="365,116 421,116 421,108 450.5,124 421,140 421,132 365,132" fill="#8C949A"/>
+
+  <!-- 堕落後 -->
+  <g stroke="currentColor" stroke-width="2.4">
+    <circle cx="567.5" cy="62.5" r="29.8" fill="#50403D"/>
+    <circle cx="496.5" cy="182" r="29.8" fill="#CF921C"/>
+    <circle cx="639" cy="182" r="29.8" fill="#CF921C"/>
+  </g>
+  <text x="567.5" y="62.5" font-size="34" text-anchor="middle" dominant-baseline="central" fill="#fff">サ</text>
+  <g font-size="32" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="496.5" y="183">ア</text>
+    <text x="639" y="183">エ</text>
+  </g>
+
+  <!-- 説明（左） -->
+  <g font-size="25" dominant-baseline="central">
+    <text x="130" y="241" textLength="209" lengthAdjust="spacingAndGlyphs">互いに裸であっても</text>
+    <text x="130" y="279.5" textLength="234" lengthAdjust="spacingAndGlyphs">恥ずかしいと思わない</text>
+    <text x="240.5" y="322.5" font-size="24" font-weight="400" text-anchor="middle">（創 2:25）</text>
+  </g>
+
+  <!-- 説明（右） -->
+  <circle cx="429" cy="242" r="7.3"/>
+  <circle cx="429" cy="324" r="7.3"/>
+  <g font-size="25" dominant-baseline="central">
+    <text x="446" y="241" textLength="129" lengthAdjust="spacingAndGlyphs">下部を覆う：</text>
+    <text x="447" y="280.5" textLength="207" lengthAdjust="spacingAndGlyphs" font-weight="400">サタンと血縁関係</text>
+    <text x="447" y="323" textLength="129" lengthAdjust="spacingAndGlyphs">身を隠した：</text>
+    <text x="447" y="363.5" textLength="181" lengthAdjust="spacingAndGlyphs" font-weight="400">犯罪意識の表現</text>
+    <text x="546" y="403" font-size="24" font-weight="400" text-anchor="middle">（創 3:7）</text>
+  </g>
+</svg>

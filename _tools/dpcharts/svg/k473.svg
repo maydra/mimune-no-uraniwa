@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>アブラハム・イサク・ヤコブ　摂理：延長されないで、横的に蕩減復帰</title>
+  <defs>
+    <marker id="k473-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3.4" markerHeight="3.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 白抜きの下向きの矢印（アダム・ノア） -->
+  <polygon points="237,33 318,33 318,94.5 350,94.5 278.5,136.5 206.5,94.5 237,94.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central">
+    <text x="278.5" y="60" textLength="65" lengthAdjust="spacing">アダム</text>
+    <text x="278.5" y="97.5" textLength="51" lengthAdjust="spacing">ノア</text>
+  </g>
+
+  <!-- アダム・ノアから二つの丸へ -->
+  <g stroke="currentColor" stroke-width="3.5" fill="none" marker-end="url(#k473-a)">
+    <path d="M314,48.4 L472.1,161.9"/>
+    <path d="M318,99.4 L402.1,161.2"/>
+  </g>
+
+  <!-- アブラハム・イサク・ヤコブをつなぐ太い線と、右の二つの丸へつなぐ線 -->
+  <g stroke="currentColor">
+    <line x1="278.5" y1="195" x2="278.5" y2="236" stroke-width="10"/>
+    <line x1="278.5" y1="267" x2="278.5" y2="306" stroke-width="10"/>
+    <line x1="350" y1="180.5" x2="497.5" y2="180.5" stroke-width="3.5"/>
+  </g>
+  <g fill="#DCC4C4" stroke="currentColor" stroke-width="3">
+    <ellipse cx="425.5" cy="181" rx="21" ry="16"/>
+    <ellipse cx="497.5" cy="181" rx="21" ry="16"/>
+  </g>
+
+  <!-- アブラハム・イサク・ヤコブ -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="2.8">
+    <ellipse cx="278" cy="180" rx="81" ry="21"/>
+    <ellipse cx="278" cy="251.5" rx="80.5" ry="21"/>
+    <ellipse cx="278.5" cy="321" rx="80.5" ry="20.5"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="279" y="180" textLength="118" lengthAdjust="spacing">アブラハム</text>
+    <text x="277" y="251" textLength="80" lengthAdjust="spacing">イサク</text>
+    <text x="277" y="320.5" textLength="80" lengthAdjust="spacing">ヤコブ</text>
+  </g>
+
+  <!-- 右の波括弧 -->
+  <path d="M375,191 Q384,193 384,204 L384,250 Q384,259 393.5,260.5 Q384,262 384,271 L384,317 Q384,328 375,330" fill="none" stroke="currentColor" stroke-width="3"/>
+
+  <g font-size="26" dominant-baseline="central">
+    <text x="406" y="223.5" textLength="155" lengthAdjust="spacing">個体は違うが</text>
+    <text x="406" y="257.5" textLength="260" lengthAdjust="spacing">み旨を中心として一体</text>
+  </g>
+  <g font-size="22" dominant-baseline="central">
+    <text y="309.5"><tspan x="419" textLength="44" lengthAdjust="spacing">出エ</tspan><tspan x="472" textLength="34" lengthAdjust="spacingAndGlyphs">3:6</tspan><tspan x="531">『</tspan><tspan x="544" textLength="101" lengthAdjust="spacing">アブラハム</tspan><tspan x="647">、</tspan></text>
+    <text y="338.5"><tspan x="462" textLength="59" lengthAdjust="spacing">イサク</tspan><tspan x="524">、</tspan><tspan x="547" textLength="103" lengthAdjust="spacing">ヤコブの神</tspan><tspan x="651">』</tspan></text>
+  </g>
+
+  <!-- 摂理：延長されないで、横的に蕩減復帰 -->
+  <rect x="164.5" y="367.5" width="494" height="43" fill="#CDF8F7" stroke="currentColor" stroke-width="2.8"/>
+  <g font-size="26" dominant-baseline="central" fill="#111">
+    <text x="179" y="389" textLength="49" lengthAdjust="spacing">摂理</text>
+    <text x="242.5" y="389" text-anchor="middle">：</text>
+    <text x="257" y="389" textLength="179" lengthAdjust="spacing">延長されないで</text>
+    <text x="438" y="389">、</text>
+    <text x="465" y="389" textLength="179" lengthAdjust="spacing">横的に蕩減復帰</text>
+  </g>
+</svg>

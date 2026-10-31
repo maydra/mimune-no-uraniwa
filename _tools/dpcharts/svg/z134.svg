@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神の第三祝福：主管性完成</title>
+  <defs>
+    <marker id="z134-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.45" markerHeight="2.45" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <g font-size="48" dominant-baseline="central">
+    <text x="95" y="60" text-anchor="end">『</text>
+    <text x="95" y="60" textLength="298" lengthAdjust="spacing">神の第三祝福</text>
+    <text x="419.5" y="60" text-anchor="middle">：</text>
+    <text x="446" y="60" textLength="249" lengthAdjust="spacing">主管性完成</text>
+    <text x="695" y="60">』</text>
+  </g>
+
+  <!-- 主管的な四位基台（線は円の下に描く） -->
+  <g stroke="currentColor" stroke-width="6" fill="none">
+    <polygon points="641.8,191.1 858.5,313.3 645.3,434.9 425.9,310.5"/>
+    <line x1="341" y1="587.6" x2="600" y2="450.4"/>
+    <line x1="680" y1="445.75" x2="956" y2="576.9"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="currentColor" stroke-width="6" fill="none" marker-end="url(#z134-k)">
+    <path d="M542,299 Q641.5,274.4 735,296.2"/>
+    <path d="M747,322 Q629.8,341.9 553.5,322.2"/>
+    <path d="M624,362 C612,340 609,295 621.1,266.4"/>
+    <path d="M656.5,256 C668,280 672,325 659.7,351"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="640.6" cy="184.4" r="59.2" fill="#fff" class="paper"/>
+    <ellipse cx="411.1" cy="301.9" rx="77.7" ry="58.7" fill="#F98AEE"/>
+    <ellipse cx="869.8" cy="302.1" rx="79.1" ry="59.5" fill="#A0F08A"/>
+    <circle cx="640.5" cy="435.5" r="59.3" fill="#DCC4C4"/>
+  </g>
+  <text x="639.5" y="183.5" font-size="58" text-anchor="middle" dominant-baseline="central">神</text>
+  <g fill="#111" text-anchor="middle" dominant-baseline="central">
+    <text x="408.5" y="302" font-size="54">人間</text>
+    <text x="870" y="301.5" font-size="54">万物</text>
+    <text x="640.5" y="434.5" font-size="58">被</text>
+  </g>
+
+  <text x="423" y="584" font-size="54" textLength="446" lengthAdjust="spacing" dominant-baseline="central">主管的な四位基台</text>
+</svg>

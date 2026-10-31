@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>イエスの再臨は東方の国に</title>
+  <defs>
+    <marker id="k846-g" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="2.8" markerHeight="2.8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="358,69 404,69 404,57 435,80 404,103 404,90 358,90" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>
+    <polygon points="224,126 232,126 232,186 237.5,186 228,201.5 218.5,186 224,186"/>
+    <polygon points="318,237.5 426,237.5 426,231 442,241.5 426,252 426,245.5 318,245.5"/>
+  </g>
+  <g stroke="#8C949A" stroke-width="5" fill="none" marker-end="url(#k846-g)">
+    <path d="M534.8,195.6 A22,26 0 0 1 530.4,150.2"/>
+    <path d="M551.2,147.4 A22,26 0 0 1 555.6,192.8"/>
+  </g>
+
+  <!-- 楕円と箱 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="227.5" cy="83" rx="90" ry="41.5" fill="#fff" class="paper"/>
+    <ellipse cx="227.5" cy="242.5" rx="90" ry="37.5" fill="#C4CCD3"/>
+    <ellipse cx="545" cy="242" rx="97.5" ry="33" fill="#F86D42"/>
+    <rect x="478.5" y="41.5" width="128" height="92" fill="#F8F28F"/>
+    <rect x="205" y="341" width="414" height="46" fill="#CDF8F7"/>
+  </g>
+
+  <!-- 楕円と箱の中の字 -->
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="227.5" y="70" font-size="27" textLength="143" lengthAdjust="spacing">日の出る方</text>
+    <text x="227.5" y="104" font-size="26" textLength="72" lengthAdjust="spacing">(東方)</text>
+    <g fill="#111">
+      <text x="542" y="68.5" font-size="30" textLength="62" lengthAdjust="spacing">小羊</text>
+      <text x="542" y="107.5" font-size="30" textLength="94" lengthAdjust="spacing">イエス</text>
+      <text x="227" y="241" font-size="33" textLength="76" lengthAdjust="spacing">天使</text>
+      <text x="412" y="363.5" font-size="30" textLength="376" lengthAdjust="spacing">イエスの再臨は東方の国に</text>
+    </g>
+  </g>
+  <g dominant-baseline="central" fill="#111" font-size="27">
+    <text x="463" y="242.5" textLength="101" lengthAdjust="spacingAndGlyphs">144, 000</text>
+    <text x="569" y="242.5" textLength="59" lengthAdjust="spacing">群れ</text>
+  </g>
+
+  <!-- 地の上の字 -->
+  <g dominant-baseline="central">
+    <text x="583" y="170" font-size="24" textLength="105" lengthAdjust="spacing">(黙 14:1)</text>
+    <text x="318" y="273" font-size="22" textLength="119" lengthAdjust="spacing">(黙 7:2～3)</text>
+    <text x="544" y="298" font-size="24" text-anchor="middle" textLength="157" lengthAdjust="spacing">小羊と父の印</text>
+  </g>
+</svg>

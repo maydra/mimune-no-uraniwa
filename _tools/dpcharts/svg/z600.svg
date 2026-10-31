@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>③人間と被造世界との関係</title>
+
+  <text x="72.5" y="54" font-size="44" text-anchor="middle" dominant-baseline="central">③</text>
+  <text x="99" y="54" font-size="41.5" dominant-baseline="central" textLength="458" lengthAdjust="spacing">人間と被造世界との関係</text>
+
+  <!-- 無形世界と有形世界 -->
+  <path d="M202,321.5 A248,223.5 0 0 1 698,321.5 Z" fill="#F98AEE"/>
+  <path d="M202,321.5 A248,223.5 0 0 0 698,321.5 Z" fill="#A0F08A"/>
+  <line x1="202" y1="321.5" x2="698" y2="321.5" stroke="#111" stroke-width="5.5"/>
+  <ellipse cx="450" cy="321.5" rx="248" ry="223.5" fill="none" stroke="currentColor" stroke-width="5"/>
+  <g font-size="41.5" dominant-baseline="central" fill="#111">
+    <text x="365" y="155.5" textLength="167" lengthAdjust="spacing">無形世界</text>
+    <text x="362" y="487.5" textLength="167" lengthAdjust="spacing">有形世界</text>
+  </g>
+
+  <!-- 霊人体と肉身 -->
+  <g stroke="#111" stroke-width="4.5">
+    <ellipse cx="445.75" cy="280" rx="85" ry="39" fill="#F0D8F8"/>
+    <ellipse cx="445.75" cy="363.25" rx="86.75" ry="39" fill="#E0F8C8"/>
+  </g>
+  <g font-size="41" dominant-baseline="central" fill="#111">
+    <text x="385" y="280.5" textLength="123" lengthAdjust="spacing">霊人体</text>
+    <text x="406" y="363" textLength="82" lengthAdjust="spacing">肉身</text>
+  </g>
+
+  <!-- 授受の矢印（下の組は上の組をずらして置く） -->
+  <g fill="#111">
+    <g>
+      <path d="M431,228.5 Q419.75,211.5 427.5,200.5 M457,188 Q470.6,202.1 461.75,215.75" fill="none" stroke="#111" stroke-width="7"/>
+      <polygon points="436.9,185.5 420.1,195.9 434.9,205.1"/>
+      <polygon points="452.6,229.6 469.3,220.7 454.2,210.8"/>
+    </g>
+    <g transform="translate(2.5,231)">
+      <path d="M431,228.5 Q419.75,211.5 427.5,200.5 M457,188 Q470.6,202.1 461.75,215.75" fill="none" stroke="#111" stroke-width="7"/>
+      <polygon points="436.9,185.5 420.1,195.9 434.9,205.1"/>
+      <polygon points="452.6,229.6 469.3,220.7 454.2,210.8"/>
+    </g>
+    <!-- 円形運動の大きい矢印 -->
+    <path d="M324.5,400.5 C299.2,349.4 295.8,296.5 320.75,243.5 M562,231 C584.5,287.8 588.6,328.8 562,388" fill="none" stroke="#111" stroke-width="10.5"/>
+    <polygon points="333.2,220.3 307.9,236.6 333.6,250.4"/>
+    <polygon points="550,412.5 574.9,394.3 549.1,381.7"/>
+  </g>
+
+  <!-- 天宙 -->
+  <rect x="613" y="256" width="59" height="122" rx="11" fill="#fff" class="paper" stroke="#111" stroke-width="4.5"/>
+  <g font-size="40" text-anchor="middle" dominant-baseline="central">
+    <text x="642.5" y="296.5">天</text>
+    <text x="642" y="338">宙</text>
+  </g>
+
+  <!-- 右の説明（●・は円で描く） -->
+  <g>
+    <circle cx="729" cy="202" r="8.25"/>
+    <circle cx="728.5" cy="295" r="8.25"/>
+    <circle cx="728.5" cy="435.5" r="8.25"/>
+    <circle cx="849" cy="294.5" r="5"/>
+  </g>
+  <g font-size="41.5" dominant-baseline="central">
+    <text x="745" y="202" textLength="334" lengthAdjust="spacing">被造世界の主管者</text>
+    <text x="745" y="294.5" textLength="84" lengthAdjust="spacing">有形</text>
+    <text x="870" y="294.5" textLength="208" lengthAdjust="spacing">無形世界の</text>
+    <text x="745" y="354" textLength="125" lengthAdjust="spacing">媒介体</text>
+    <text x="745" y="435" textLength="292" lengthAdjust="spacing">天宙を総合した</text>
+    <text x="745" y="493" textLength="125" lengthAdjust="spacing">実体相</text>
+  </g>
+
+  <rect x="340.5" y="575.5" width="607.5" height="75" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g font-size="49.5" dominant-baseline="central" fill="#111">
+    <text x="371" y="613" textLength="200" lengthAdjust="spacing">完成人間</text>
+    <text x="596" y="613" text-anchor="middle">：</text>
+    <text x="622" y="613" textLength="299" lengthAdjust="spacing">天宙的な価値</text>
+  </g>
+</svg>

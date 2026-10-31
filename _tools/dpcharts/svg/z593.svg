@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>キリスト論の諸問題</title>
+
+  <rect x="217" y="31.5" width="422.5" height="73" fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5"/>
+  <text x="427.5" y="68" font-size="41" text-anchor="middle" dominant-baseline="central" textLength="371" lengthAdjust="spacing">キリスト論の諸問題</text>
+
+  <!-- 神・イエス・聖霊・堕落人間を結ぶ線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="10">
+    <line x1="401.5" y1="200" x2="320" y2="330"/>
+    <line x1="470" y1="200" x2="553" y2="330"/>
+    <line x1="316" y1="337.5" x2="557" y2="337.5"/>
+    <line x1="330" y1="345" x2="409" y2="480"/>
+    <line x1="543.5" y1="345" x2="462.5" y2="480"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="436.25" cy="178.75" rx="61.25" ry="47.75" fill="#fff" class="paper"/>
+    <ellipse cx="316.25" cy="337.25" rx="73.75" ry="43.75" fill="#F98AEE"/>
+    <ellipse cx="557" cy="337.25" rx="73.5" ry="43.75" fill="#A0F08A"/>
+    <ellipse cx="436.25" cy="492.25" rx="108.25" ry="43.75" fill="#CF921C"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="433" y="178.5" font-size="52">神</text>
+    <g fill="#111">
+      <text x="316" y="337.5" font-size="42" textLength="126" lengthAdjust="spacing">イエス</text>
+      <text x="557" y="337.5" font-size="45" textLength="91" lengthAdjust="spacing">聖霊</text>
+      <text x="435.5" y="492" font-size="42" textLength="169" lengthAdjust="spacing">堕落人間</text>
+    </g>
+  </g>
+
+  <!-- 括弧 -->
+  <g fill="none" stroke="currentColor" stroke-width="6">
+    <path d="M668,130 C676,133 680,142 680,160 L680,200 C680,217 684,227 691,230 C684,233 680,243 680,260 L680,300 C680,318 676,327 668,331"/>
+    <path d="M667,346 C676,349 680,358 680,376 L680,410 C680,428 684,439 691,442 C684,445 680,456 680,474 L680,508 C680,526 676,535 667,538"/>
+  </g>
+
+  <g fill="#CDF8F7" stroke="currentColor" stroke-width="4.5">
+    <rect x="723" y="193" width="321" height="78" rx="12"/>
+    <rect x="722" y="405" width="323" height="80" rx="12"/>
+    <rect x="283" y="569" width="783.5" height="80" rx="12"/>
+  </g>
+  <g font-size="45" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="884.5" y="232" textLength="228" lengthAdjust="spacing">三位一体論</text>
+    <text x="794.5" y="445">重</text>
+    <text x="884.5" y="445">生</text>
+    <text x="975.5" y="445">論</text>
+    <text x="673.5" y="608" font-size="46" textLength="736" lengthAdjust="spacing">キリスト教の教理と信仰生活に混乱</text>
+  </g>
+
+  <!-- 小さい灰色の矢印 -->
+  <polygon points="221.5,598 245,598 245,588 267,609 245,630.5 245,620.5 221.5,620.5" fill="#8C949A" stroke="currentColor" stroke-width="2"/>
+</svg>

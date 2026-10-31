@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>完成人間（無形世界は永遠に生きる所）→ 堕落人間（無形世界が分からない、肉身に強い未練）</title>
+
+  <!-- 完成人間 -->
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="343" cy="181" r="122" fill="#F98AEE"/>
+    <circle cx="343" cy="442" r="122" fill="#A0F08A"/>
+    <circle cx="342.5" cy="233.5" r="69" fill="#F0D8FA"/>
+    <circle cx="343" cy="391" r="69.5" fill="#E3FBCB"/>
+  </g>
+  <line x1="202" y1="311.5" x2="485" y2="311.5" stroke="currentColor" stroke-width="5"/>
+  <g font-size="40" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="345" y="127.5" font-size="42" textLength="166" lengthAdjust="spacing">無形世界</text>
+    <text x="342.5" y="193">霊</text>
+    <text x="342.5" y="235">人</text>
+    <text x="342.5" y="277">体</text>
+    <text x="343" y="369">肉</text>
+    <text x="343" y="410.5">身</text>
+    <text x="345" y="511.5" textLength="82" lengthAdjust="spacing">地上</text>
+  </g>
+  <text x="344" y="607.5" font-size="40" text-anchor="middle" dominant-baseline="central" textLength="162" lengthAdjust="spacing">完成人間</text>
+  <g font-size="41" font-weight="400" dominant-baseline="central">
+    <text x="481" y="125.5" textLength="206" lengthAdjust="spacing">永遠に生き</text>
+    <text x="481" y="176" textLength="83" lengthAdjust="spacing">る所</text>
+  </g>
+
+  <!-- 灰色の太い矢印 -->
+  <polygon points="557,292 596,292 596,276 631,312.5 596,349 596,333 557,333" fill="#8C949A"/>
+
+  <!-- 堕落人間 -->
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="839.5" cy="181" r="122" fill="#F98AEE"/>
+    <circle cx="839.5" cy="442" r="122" fill="#A0F08A"/>
+    <circle cx="839.5" cy="233.5" r="69" fill="#F0D8FA"/>
+    <circle cx="840" cy="391" r="69.5" fill="#E3FBCB"/>
+  </g>
+  <line x1="699" y1="311.5" x2="981" y2="311.5" stroke="currentColor" stroke-width="5"/>
+  <g font-size="40" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="840" y="369">肉</text>
+    <text x="840" y="410">身</text>
+    <text x="841" y="511.5" textLength="82" lengthAdjust="spacing">地上</text>
+  </g>
+  <text x="840.5" y="607" font-size="40" text-anchor="middle" dominant-baseline="central" textLength="162" lengthAdjust="spacing">堕落人間</text>
+
+  <!-- 点線（面の中は #111、地の上は currentColor） -->
+  <g stroke="#111">
+    <line x1="934" y1="162" x2="962.7" y2="162" stroke-width="5" stroke-dasharray="10 8.7"/>
+    <line x1="868" y1="392.5" x2="944.6" y2="392.5" stroke-width="4" stroke-dasharray="9 7.9"/>
+  </g>
+  <g stroke="currentColor">
+    <line x1="971.4" y1="162" x2="1000" y2="162" stroke-width="5" stroke-dasharray="10 8.6"/>
+    <line x1="952.5" y1="392.5" x2="995.3" y2="392.5" stroke-width="4" stroke-dasharray="9 7.9"/>
+  </g>
+  <g font-size="40.5" font-weight="400" dominant-baseline="central">
+    <text x="1006" y="162" textLength="121" lengthAdjust="spacing">分から</text>
+    <text x="1006" y="211" textLength="81" lengthAdjust="spacing">ない</text>
+    <text x="1014" y="395.5" textLength="81" lengthAdjust="spacing">強い</text>
+    <text x="1014" y="446" textLength="81" lengthAdjust="spacing">未練</text>
+  </g>
+</svg>

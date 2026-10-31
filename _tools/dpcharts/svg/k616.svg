@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>3. 氏族社会</title>
+
+  <!-- 題 -->
+  <g dominant-baseline="central">
+    <text x="33" y="38.5" font-size="30" textLength="27" lengthAdjust="spacingAndGlyphs">3.</text>
+    <text x="69.5" y="38" font-size="29" textLength="116" lengthAdjust="spacing">氏族社会</text>
+  </g>
+  <line x1="69" y1="56" x2="185" y2="56" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="214.5,160 221.5,160 221.5,225 226.5,225 218,240.5 209.5,225 214.5,225"/>
+    <polygon points="214.5,318 221.5,318 221.5,387 226.5,387 218,403.5 209.5,387 214.5,387"/>
+  </g>
+
+  <!-- ユダヤと氏族社会 -->
+  <g stroke="currentColor" stroke-width="2.8">
+    <ellipse cx="218" cy="136" rx="67" ry="30.5" fill="#CF921C"/>
+    <ellipse cx="218" cy="285" rx="83.5" ry="38.5" fill="#F8F28F"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="218" y="134" font-size="34" textLength="102" lengthAdjust="spacing">ユダヤ</text>
+    <text x="218.5" y="285" font-size="28" textLength="116" lengthAdjust="spacing">氏族社会</text>
+  </g>
+
+  <!-- イエス殺害 → 分裂 -->
+  <g dominant-baseline="central">
+    <text x="310.5" y="136" font-size="30" textLength="155" lengthAdjust="spacing">イエス殺害</text>
+    <text x="529.5" y="136" font-size="30" textLength="62" lengthAdjust="spacing">分裂</text>
+  </g>
+  <line x1="486" y1="136.5" x2="508" y2="136.5" stroke="currentColor" stroke-width="3.5"/>
+  <polygon points="505,131.5 517,136.5 505,141.5"/>
+
+  <!-- 箇条 -->
+  <g>
+    <circle cx="319.5" cy="222" r="7.5"/>
+    <circle cx="319.5" cy="311" r="7.5"/>
+    <circle cx="319.5" cy="366" r="7.5"/>
+  </g>
+  <g dominant-baseline="central">
+    <text x="337.5" y="222" font-size="28" textLength="258" lengthAdjust="spacing">キリスト教氏族社会</text>
+    <text y="255" font-size="25"><tspan x="343" text-anchor="middle">（</tspan><tspan x="348.8" textLength="236.5" lengthAdjust="spacing">原始キリスト教社会</tspan><tspan x="590" text-anchor="middle">）</tspan></text>
+    <text x="337.5" y="311" font-size="28" textLength="316" lengthAdjust="spacing">キリスト教部族社会形成</text>
+    <text x="335.5" y="366" font-size="28" textLength="353" lengthAdjust="spacing">ゲルマン民族のキリスト教社会</text>
+  </g>
+</svg>

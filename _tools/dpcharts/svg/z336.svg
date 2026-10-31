@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>③闘争歴史の帰趨</title>
+  <defs>
+    <!-- 家庭の字は白と茶の境（y=312.5）をまたぐので、上を地の色・下を #111 に塗り分ける -->
+    <linearGradient id="z336-k" gradientUnits="userSpaceOnUse" x1="0" y1="290" x2="0" y2="335">
+      <stop offset="0.5" stop-color="currentColor"/>
+      <stop offset="0.5" stop-color="#111"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 題（帰趨に「きすう」の読み） -->
+  <g font-size="48" dominant-baseline="central">
+    <text x="53" y="69.5" font-size="50">③</text>
+    <text x="110.5" y="69.5" textLength="349" lengthAdjust="spacing">闘争歴史の帰趨</text>
+  </g>
+  <text y="31.5" font-size="23" font-weight="400" text-anchor="middle" dominant-baseline="central"><tspan x="384.5">き</tspan><tspan x="422">す</tspan><tspan x="446.5">う</tspan></text>
+
+  <!-- 人間・土地・財産 } -->
+  <g font-size="36" text-anchor="middle" dominant-baseline="central">
+    <text x="226.5" y="260" textLength="74" lengthAdjust="spacing">人間</text>
+    <text x="226.5" y="311.5" textLength="74" lengthAdjust="spacing">土地</text>
+    <text x="226.5" y="364" textLength="74" lengthAdjust="spacing">財産</text>
+  </g>
+  <path d="M266,227 C274,231 277,236 278,248 L279,300 C280,307 284,311 291,312.5 C284,314 280,318 279,326 L278.5,372 C277.5,388 273,393 266,398" fill="none" stroke="currentColor" stroke-width="5"/>
+
+  <!-- 家庭から氏族・民族・国家・世界へ（灰色の線。楕円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="9">
+    <line x1="400" y1="306.5" x2="500" y2="270.5"/>
+    <line x1="545" y1="257.8" x2="605" y2="232.6"/>
+    <line x1="665" y1="210.8" x2="725" y2="194.6"/>
+    <line x1="790" y1="171.3" x2="850" y2="151.5"/>
+    <line x1="400" y1="322.3" x2="500" y2="353.3"/>
+    <line x1="550" y1="369.3" x2="610" y2="389.1"/>
+    <line x1="665" y1="405.6" x2="725" y2="425.4"/>
+    <line x1="790" y1="445.9" x2="850" y2="463.3"/>
+    <!-- 真ん中の線（理念の闘いの「の」で切れる） -->
+    <line x1="400" y1="312.5" x2="900" y2="312.5"/>
+    <line x1="955" y1="312.5" x2="1000" y2="312.5"/>
+  </g>
+
+  <!-- 上下から真ん中の線への矢印（氏族の小さい矢じりは塗り、ほかは開いた矢じり） -->
+  <g fill="#8C949A">
+    <polygon points="509.75,295.5 524.75,295.5 524.75,301.5 517.25,308 509.75,301.5"/>
+    <polygon points="517.25,316.5 525.75,322.5 525.75,327.5 508.75,327.5 508.75,322.5"/>
+  </g>
+  <g stroke="#8C949A" fill="none" stroke-width="6.5">
+    <line x1="517.25" y1="249.5" x2="517.25" y2="300"/>
+    <line x1="517.25" y1="371" x2="517.25" y2="325"/>
+    <line x1="635.75" y1="220" x2="635.75" y2="298"/>
+    <line x1="635.75" y1="400.5" x2="635.75" y2="326.7"/>
+    <line x1="757.25" y1="180" x2="757.25" y2="296.8"/>
+    <line x1="756.75" y1="435" x2="756.75" y2="326.6"/>
+    <line x1="880.25" y1="144.5" x2="880.25" y2="294.2"/>
+    <line x1="879.5" y1="469.5" x2="879.5" y2="330.4"/>
+    <polyline points="623.8,281.5 635.8,298 647.8,281.5"/>
+    <polyline points="624.2,343.5 635.8,326.7 647.2,343.5"/>
+    <polyline points="741.2,273.5 757.2,296.8 773.2,273.5"/>
+    <polyline points="740.5,349.5 756.8,326.6 773,349.5"/>
+    <polyline points="863.8,273 880.2,294.2 896.8,273"/>
+    <polyline points="864,351 879.5,330.4 895,351"/>
+  </g>
+
+  <!-- 家庭（上は白、下は茶） -->
+  <path d="M314.25,312.5 A54.25,36.25 0 0 1 422.75,312.5 Z" fill="#fff" class="paper"/>
+  <path d="M314.25,312.5 A54.25,36.25 0 0 0 422.75,312.5 Z" fill="#CF921C"/>
+  <ellipse cx="368.5" cy="312.5" rx="54.25" ry="36.25" fill="none" stroke="currentColor" stroke-width="4.5"/>
+  <text x="368" y="313" font-size="40" text-anchor="middle" dominant-baseline="central" fill="url(#z336-k)">家庭</text>
+
+  <!-- 氏族・民族・国家・世界（上は民主＝白、下は共産＝茶） -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <g fill="#fff" class="paper">
+      <ellipse cx="516" cy="249.5" rx="53.5" ry="30.5"/>
+      <ellipse cx="635.5" cy="220" rx="53.5" ry="30.5"/>
+      <ellipse cx="756.5" cy="180" rx="53.5" ry="30.5"/>
+      <ellipse cx="877.5" cy="144.5" rx="53.5" ry="30.5"/>
+    </g>
+    <g fill="#CF921C">
+      <ellipse cx="518" cy="371" rx="53.5" ry="30.5"/>
+      <ellipse cx="638" cy="400.5" rx="53.5" ry="30.5"/>
+      <ellipse cx="761" cy="435" rx="53.5" ry="30.5"/>
+      <ellipse cx="881" cy="469.5" rx="56.75" ry="30.5"/>
+    </g>
+    <ellipse cx="1037" cy="318" rx="42.75" ry="118.75" fill="#CDF8F7"/>
+  </g>
+  <g font-size="40" text-anchor="middle" dominant-baseline="central">
+    <text x="515" y="247">氏族</text>
+    <text x="636.5" y="220">民族</text>
+    <text x="758" y="177">国家</text>
+    <text x="877" y="145">世界</text>
+    <g fill="#111">
+      <text x="518" y="372">氏族</text>
+      <text x="638.5" y="401">民族</text>
+      <text x="761" y="436">国家</text>
+      <text x="880.5" y="470">世界</text>
+    </g>
+    <text x="818.5" y="81" text-anchor="start">（民主）</text>
+    <text x="818.5" y="530.5" text-anchor="start">（共産）</text>
+  </g>
+
+  <!-- 世界から完全統一へ -->
+  <g fill="#8C949A">
+    <polygon points="917.2,148.1 982,220.4 975.1,226.6 1000.5,235.4 994.5,209.2 987.6,215.4 922.8,143.1"/>
+    <polygon points="917.6,465.3 979.9,407.5 986.2,414.3 996,387.4 968.5,395.2 974.8,402 912.4,459.9"/>
+  </g>
+
+  <!-- 理念の闘い・完全統一（縦書き） -->
+  <g font-size="40" text-anchor="middle" dominant-baseline="central">
+    <text x="928" y="231">理</text>
+    <text x="928" y="272.5">念</text>
+    <text x="928" y="315">の</text>
+    <text x="928" y="356.5">闘</text>
+    <text x="928" y="398">い</text>
+  </g>
+  <g font-size="45" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="1038.5" y="251.5">完</text>
+    <text x="1038.5" y="297">全</text>
+    <text x="1038.5" y="343">統</text>
+    <text x="1038.5" y="388">一</text>
+  </g>
+  <polygon points="1024.5,540.5 1024.5,495.5 1014.5,495.5 1035.5,467.5 1056.5,495.5 1046,495.5 1046,540.5" fill="#8C949A" stroke="currentColor" stroke-width="2"/>
+
+  <!-- 宗教と科学とを、統一することのできる真理 -->
+  <rect x="243.25" y="568.25" width="827.5" height="71.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <text y="603.5" font-size="40" dominant-baseline="central" fill="#111"><tspan x="262.5" textLength="300" lengthAdjust="spacing">宗教と科学とを、</tspan><tspan x="578.5" textLength="474" lengthAdjust="spacing">統一することのできる真理</tspan></text>
+</svg>

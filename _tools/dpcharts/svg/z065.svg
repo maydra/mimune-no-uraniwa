@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神の二性性相　本性相と本形状、（本）陽性と（本）陰性</title>
+
+  <text x="53" y="59.5" font-size="50" dominant-baseline="central" textLength="300" lengthAdjust="spacing">神の二性性相</text>
+  <line x1="53" y1="90" x2="353" y2="90" stroke="currentColor" stroke-width="3.5"/>
+
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="277.5" y="213.5">第一</text>
+    <text x="277.5" y="272">原因</text>
+    <text x="277.5" y="485">第一</text>
+    <text x="277.5" y="544">原因</text>
+  </g>
+
+  <!-- 太い線（円・箱の下に描く） -->
+  <g stroke="currentColor" stroke-width="9" fill="none">
+    <line x1="465" y1="220.9" x2="555" y2="198.8"/>
+    <line x1="465" y1="280.4" x2="555" y2="301.1"/>
+    <polyline points="800,197.5 832,197.5 832,297 800,297"/>
+    <line x1="465" y1="494.9" x2="555" y2="472.8"/>
+    <line x1="465" y1="555.7" x2="555" y2="574.9"/>
+    <polyline points="800,472 831.5,472 831.5,571.5 800,571.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <circle cx="411" cy="247" r="71" fill="#fff" class="paper"/>
+    <circle cx="411" cy="523" r="71" fill="#fff" class="paper"/>
+    <rect x="550" y="159" width="258" height="78" rx="28" ry="18" fill="#F98AEE"/>
+    <rect x="550" y="261.5" width="258" height="78.5" rx="28" ry="18" fill="#A0F08A"/>
+    <rect x="549" y="432" width="258" height="78" rx="28" ry="18" fill="#F98AEE"/>
+    <rect x="549" y="536" width="258" height="78" rx="28" ry="18" fill="#A0F08A"/>
+  </g>
+
+  <g font-size="70" text-anchor="middle" dominant-baseline="central">
+    <text x="406.5" y="246.5">神</text>
+    <text x="405.5" y="523.5">神</text>
+  </g>
+
+  <g font-size="56" dominant-baseline="central" fill="#111">
+    <text x="675" y="197" text-anchor="middle">本性相</text>
+    <text x="676.5" y="300" text-anchor="middle">本形状</text>
+    <!-- （本）は元の画像で細字。括弧の字幅がフォントで変わっても崩れないよう1字ずつ置く -->
+    <g font-weight="400">
+      <text x="589" y="470" text-anchor="end">（</text>
+      <text x="615.5" y="470" text-anchor="middle">本</text>
+      <text x="643" y="470">）</text>
+      <text x="588" y="574" text-anchor="end">（</text>
+      <text x="615.5" y="574" text-anchor="middle">本</text>
+      <text x="642" y="574">）</text>
+    </g>
+    <text x="671" y="470">陽性</text>
+    <text x="670" y="574">陰性</text>
+  </g>
+
+  <g font-size="52" dominant-baseline="central">
+    <text x="863" y="243" textLength="210" lengthAdjust="spacing">二性性相</text>
+    <text x="862" y="519" textLength="210" lengthAdjust="spacing">二性性相</text>
+  </g>
+</svg>

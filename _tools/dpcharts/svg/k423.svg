@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>(4) 霊的カナン復帰</title>
+
+  <text x="44" y="37.5" font-size="30" dominant-baseline="central" textLength="52" lengthAdjust="spacingAndGlyphs">(4)</text>
+  <text x="105" y="37.5" font-size="30" dominant-baseline="central" textLength="220" lengthAdjust="spacing">霊的カナン復帰</text>
+  <line x1="104" y1="56.5" x2="325" y2="56.5" stroke="currentColor" stroke-width="2.4"/>
+
+  <!-- 灰色の線（円・楕円・箱の下に描く） -->
+  <g stroke="#8C949A" stroke-width="6">
+    <line x1="288.5" y1="222" x2="322.7" y2="172"/>
+    <line x1="286.6" y1="255" x2="328.5" y2="310"/>
+    <line x1="345" y1="164" x2="388" y2="164"/>
+    <line x1="345" y1="320.5" x2="387" y2="320.5"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="524.5,162.8 510.5,153 510.5,159 499,159 499,166.5 510.5,166.5 510.5,172.6"/>
+    <polygon points="520.5,321.8 507,312 507,318 495,318 495,325.5 507,325.5 507,331.6"/>
+  </g>
+
+  <!-- 復活イエス・キリスト教信徒 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="157" cy="237" rx="30.7" ry="86.7" fill="#F8F28F"/>
+    <ellipse cx="262" cy="237" rx="30.7" ry="86.7" fill="#FCE5E3"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="157" y="179">復</text>
+    <text x="157" y="208.1">活</text>
+    <text x="157" y="237.2">イ</text>
+    <text x="157" y="266.3">エ</text>
+    <text x="157" y="295.4">ス</text>
+  </g>
+  <g font-size="22" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="262" y="173">キ</text>
+    <text x="262" y="194.3">リ</text>
+    <text x="262" y="215.6">ス</text>
+    <text x="262" y="236.9">ト</text>
+    <text x="262" y="258.2">教</text>
+    <text x="262" y="279.5">信</text>
+    <text x="262" y="300.8">徒</text>
+  </g>
+
+  <!-- 行き来の矢印 -->
+  <g>
+    <path d="M197,221.5 Q207.5,216 217.6,220.5" fill="none" stroke="currentColor" stroke-width="3.6"/>
+    <polygon points="219.5,215.3 225,222.9 215.6,225.7" fill="currentColor"/>
+  </g>
+  <g transform="rotate(180 210.4 235.9)">
+    <path d="M197,221.5 Q207.5,216 217.6,220.5" fill="none" stroke="currentColor" stroke-width="3.6"/>
+    <polygon points="219.5,215.3 225,222.9 215.6,225.7" fill="currentColor"/>
+  </g>
+
+  <!-- 霊・肉 -->
+  <circle cx="338" cy="162.5" r="27.7" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <circle cx="338" cy="322" r="27.7" fill="#CF921C" stroke="currentColor" stroke-width="2.6"/>
+  <g font-size="30" text-anchor="middle" dominant-baseline="central">
+    <text x="338" y="163">霊</text>
+    <text x="338" y="322" fill="#111">肉</text>
+  </g>
+
+  <!-- 霊的救い → 霊的カナン復帰 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="3">
+    <rect x="386.5" y="121.5" width="104.5" height="82.5"/>
+    <rect x="530.5" y="120.5" width="157" height="84"/>
+  </g>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central">
+    <text x="439" y="142.5">霊的</text>
+    <text x="439" y="182">救い</text>
+  </g>
+  <g font-size="26" dominant-baseline="central">
+    <text x="537" y="145.5">霊的</text>
+    <text x="537" y="179.5" textLength="131" lengthAdjust="spacing">カナン復帰</text>
+  </g>
+
+  <!-- 肉身にサタン侵入 → イエス再臨のためのサタン再分立路程 -->
+  <g fill="#CF921C" stroke="currentColor" stroke-width="3">
+    <rect x="385.5" y="264.5" width="104.5" height="115"/>
+    <rect x="527.5" y="264.5" width="163" height="115"/>
+  </g>
+  <g font-size="26" dominant-baseline="central" fill="#111">
+    <text x="397" y="287.5" textLength="78" lengthAdjust="spacing">肉身に</text>
+    <text x="397" y="321.5" textLength="78" lengthAdjust="spacing">サタン</text>
+    <text x="397" y="356">侵入</text>
+    <text x="543" y="287.5" textLength="133" lengthAdjust="spacingAndGlyphs">イエス再臨の</text>
+    <text x="543" y="321.5" textLength="133" lengthAdjust="spacingAndGlyphs">ためのサタン</text>
+    <text x="544" y="356" textLength="130" lengthAdjust="spacing">再分立路程</text>
+  </g>
+</svg>

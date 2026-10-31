@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間に責任分担を与えられた理由</title>
+
+  <text x="53" y="58" font-size="48" dominant-baseline="central" textLength="747" lengthAdjust="spacing">人間に責任分担を与えられた理由</text>
+  <line x1="52" y1="88" x2="801" y2="88" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 成長の矢印（灰色の面と縁） -->
+  <polygon points="366,245.5 420,301 389,301 389,538 345,538 345,301 312,301" fill="#C4CCD3" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 成長期間の三段を分ける点線（矢印の面の上だけ #111） -->
+  <g stroke-width="6" stroke-dasharray="8 7.44">
+    <line x1="296" y1="339.5" x2="346.75" y2="339.5" stroke="currentColor"/>
+    <line x1="346.75" y1="339.5" x2="387.25" y2="339.5" stroke="#111" stroke-dashoffset="50.75"/>
+    <line x1="387.25" y1="339.5" x2="443" y2="339.5" stroke="currentColor" stroke-dashoffset="91.25"/>
+    <line x1="296" y1="444.5" x2="346.75" y2="444.5" stroke="currentColor"/>
+    <line x1="346.75" y1="444.5" x2="387.25" y2="444.5" stroke="#111" stroke-dashoffset="50.75"/>
+    <line x1="387.25" y1="444.5" x2="443" y2="444.5" stroke="currentColor" stroke-dashoffset="91.25"/>
+  </g>
+
+  <!-- 上と下の横線 -->
+  <g stroke="currentColor" stroke-width="7">
+    <line x1="263" y1="237" x2="476" y2="237"/>
+    <line x1="263" y1="538" x2="476" y2="538"/>
+  </g>
+
+  <!-- 完成と人間 -->
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="365.5" cy="184.5" rx="104.5" ry="49.5" fill="#CDF8F7"/>
+    <ellipse cx="366" cy="593.5" rx="105" ry="49.5" fill="#FCE5E3"/>
+  </g>
+  <g font-size="54" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="366" y="183">完成</text>
+    <text x="366" y="593">人間</text>
+  </g>
+
+  <!-- 成長期間（縦書き） -->
+  <text x="259" y="321.5" font-size="42" text-anchor="middle" dominant-baseline="central">成<tspan x="259" dy="1.05em">長</tspan><tspan x="259" dy="1.05em">期</tspan><tspan x="259" dy="1.05em">間</tspan></text>
+
+  <!-- 責任分担の括弧 -->
+  <path d="M446,255 C462,257 471.5,268 471.5,290 L471.5,360 C471.5,378 478,388 490,390 C478,392 471.5,402 471.5,420 L471.5,492 C471.5,512 462,522 446,524" fill="none" stroke="currentColor" stroke-width="7"/>
+  <g font-size="53" text-anchor="middle" dominant-baseline="central">
+    <text x="556" y="363">責任</text>
+    <text x="556" y="425.5">分担</text>
+  </g>
+
+  <!-- 理由 -->
+  <g>
+    <circle cx="655" cy="196" r="8.5"/>
+    <circle cx="655" cy="304" r="8.5"/>
+    <circle cx="655" cy="412" r="8.5"/>
+    <circle cx="655" cy="520" r="8.5"/>
+  </g>
+  <g font-size="52" dominant-baseline="central">
+    <text x="685" y="192.5">神の創造性</text>
+    <text x="685" y="301.5">創造の偉業加担</text>
+    <text x="685" y="409.5">創造主の立場</text>
+    <text x="685" y="518.5">主人の権限</text>
+    <text x="820" y="580" text-anchor="middle">（万物主管）</text>
+  </g>
+</svg>

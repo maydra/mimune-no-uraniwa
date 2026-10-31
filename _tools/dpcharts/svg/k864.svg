@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>③ 先天的に宗教的天稟をもっている</title>
+  <defs>
+    <marker id="k864-a" viewBox="0 0 12 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" orient="auto">
+      <path d="M0,0 L12,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="34" y="37" font-size="28" dominant-baseline="central">③</text>
+  <text x="73" y="37" font-size="28" dominant-baseline="central" textLength="429" lengthAdjust="spacing">先天的に宗教的天稟をもっている</text>
+
+  <!-- 神 -->
+  <circle cx="314" cy="124.5" r="32" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <text x="314" y="124.5" font-size="33" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 上り下りの矢印 -->
+  <g stroke="currentColor" stroke-width="4" fill="none" marker-end="url(#k864-a)">
+    <path d="M296.5,237 Q277,205.5 296.5,174"/>
+    <path d="M325,168 Q343,199.5 325.5,231"/>
+  </g>
+
+  <!-- 韓国民族 -->
+  <ellipse cx="312.5" cy="282.5" rx="61" ry="31" fill="#F8F28F" stroke="currentColor" stroke-width="2.5"/>
+  <text x="312" y="282.5" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="104" lengthAdjust="spacing">韓国民族</text>
+  <g font-size="26" dominant-baseline="central">
+    <text x="190" y="257.5" textLength="52" lengthAdjust="spacing">古代</text>
+    <text x="190" y="297" textLength="50" lengthAdjust="spacing">今日</text>
+  </g>
+
+  <!-- 箇条 -->
+  <circle cx="390.5" cy="252.5" r="7.5"/>
+  <circle cx="390.5" cy="311" r="7.5"/>
+  <g font-size="28" dominant-baseline="central">
+    <text x="406" y="253" textLength="115" lengthAdjust="spacing">敬天思想</text>
+    <text x="407" y="311">忠</text>
+    <text x="449" y="311" text-anchor="middle">・</text>
+    <text x="464" y="311">孝</text>
+    <text x="507" y="311" text-anchor="middle">・</text>
+    <text x="522" y="311" textLength="115" lengthAdjust="spacing">烈を崇敬</text>
+  </g>
+  <g font-size="27" dominant-baseline="central">
+    <text x="392" y="349">（</text>
+    <text x="406" y="349" textLength="100" lengthAdjust="spacing">「沈清伝」</text>
+    <text x="524" y="349" textLength="101" lengthAdjust="spacing">「春香伝」</text>
+    <text x="638" y="349" text-anchor="end">）</text>
+  </g>
+</svg>

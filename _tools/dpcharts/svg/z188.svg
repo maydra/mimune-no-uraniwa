@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>霊人体の構成</title>
+  <defs>
+    <marker id="z188-a" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="2.8" markerHeight="3.5" preserveAspectRatio="none" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="z188-c" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="2.4" markerHeight="2.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="53" y="77" font-size="48" textLength="299" lengthAdjust="spacing">霊人体の構成</text>
+  <line x1="53" y1="87.5" x2="352" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 生心・霊体から人へ（人の下に描く） -->
+  <g stroke="currentColor" stroke-width="11">
+    <line x1="415" y1="218" x2="515" y2="304"/>
+    <line x1="420" y1="456.5" x2="540" y2="336.5"/>
+  </g>
+
+  <!-- 人（100×240 の型を置く） -->
+  <g transform="translate(484,160.9) scale(2,1.69)" fill="#FCE6E5" stroke="#111" stroke-width="2.2" stroke-linejoin="round">
+    <path d="M43,40 L43,48 C30,49 14,50 10,58 L4,130 Q3,140 9,141 Q15,141 15,132 L21,78 L23,124 L26,232 Q26,238 33,238 L41,238 Q47,238 47,232 L49,134 L51,134 L53,232 Q53,238 59,238 L67,238 Q74,238 74,232 L77,124 L79,78 L85,132 Q85,141 91,141 Q97,140 96,130 L90,58 C86,50 70,49 57,48 L57,40 Z"/>
+    <circle cx="50" cy="22" r="19"/>
+  </g>
+  <text x="582" y="612" font-size="48" text-anchor="middle" dominant-baseline="central">霊人体</text>
+
+  <!-- 生心と霊体 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="368" cy="210" rx="67" ry="59" fill="#F98AEE"/>
+    <ellipse cx="368" cy="483" rx="67" ry="59" fill="#A0F08A"/>
+  </g>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="368" y="209">生心</text>
+    <text x="368" y="482">霊体</text>
+  </g>
+  <circle cx="319" cy="306" r="29" fill="none" stroke="currentColor" stroke-width="3.5"/>
+  <g font-size="42" text-anchor="middle" dominant-baseline="central">
+    <text x="278" y="308">（</text>
+    <text x="319.5" y="308">神</text>
+    <text x="401.5" y="308">臨在</text>
+    <text x="453" y="308">）</text>
+  </g>
+
+  <!-- 生素・生力要素から人へ -->
+  <g stroke="currentColor" stroke-width="10" marker-end="url(#z188-a)">
+    <line x1="795" y1="239.2" x2="706.3" y2="293.2"/>
+    <line x1="795" y1="455.4" x2="707.9" y2="396.4"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4">
+    <rect x="787.5" y="138.5" width="239" height="142.5" rx="9" fill="#F98AEE"/>
+    <rect x="787.5" y="411.5" width="239" height="143" rx="9" fill="#A0F08A"/>
+  </g>
+  <g font-size="50" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="907" y="179.5">生素</text>
+    <text x="907" y="240.5">（陽性）</text>
+    <text x="906.5" y="451">生力要素</text>
+    <text x="907" y="513.5">（陰性）</text>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g stroke="currentColor" stroke-width="9.5" fill="none" marker-end="url(#z188-c)">
+    <path d="M888,383 C871.2,360.6 880.2,346.5 892,321"/>
+    <path d="M920,313 C940.4,340.2 940.7,352.8 922,381"/>
+  </g>
+</svg>

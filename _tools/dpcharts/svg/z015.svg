@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間の真理探究</title>
+
+  <text x="49" y="78" font-size="48" textLength="349" lengthAdjust="spacing">人間の真理探究</text>
+  <line x1="49" y1="89.5" x2="398" y2="89.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 人から内的無知・外的無知へ（人と箱の下に描く） -->
+  <g stroke="currentColor" stroke-width="16">
+    <line x1="325" y1="343.4" x2="395" y2="292.6"/>
+    <line x1="300" y1="398.5" x2="395" y2="479.3"/>
+  </g>
+
+  <!-- 人（z017・z029 と同じ大きさと位置） -->
+  <g transform="translate(212.5,219) scale(1.27)" fill="#FCE6E5" stroke="#111" stroke-width="3.1" stroke-linejoin="round">
+    <path d="M43,40 L43,48 C30,49 14,50 10,58 L4,130 Q3,140 9,141 Q15,141 15,132 L21,78 L23,124 L26,232 Q26,238 33,238 L41,238 Q47,238 47,232 L49,134 L51,134 L53,232 Q53,238 59,238 L67,238 Q74,238 74,232 L77,124 L79,78 L85,132 Q85,141 91,141 Q97,140 96,130 L90,58 C86,50 70,49 57,48 L57,40 Z"/>
+    <circle cx="50" cy="22" r="19"/>
+  </g>
+
+  <!-- 真理探求の矢印（箱の下から出る） -->
+  <g fill="#8C949A">
+    <polygon points="513,266.5 920,266.5 920,258.5 951,272.5 920,286.5 920,278.5 513,278.5"/>
+    <polygon points="513,494.5 920,494.5 920,486.5 951,500.5 920,514.5 920,506.5 513,506.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <rect x="381" y="205" width="132" height="139" rx="23" fill="#CF921C"/>
+    <rect x="381" y="430" width="132" height="139" rx="23" fill="#CF921C"/>
+    <rect x="961" y="205.5" width="132" height="139" rx="23" fill="#F98AEE"/>
+    <rect x="962" y="430" width="132" height="139" rx="23" fill="#A0F08A"/>
+  </g>
+  <g font-size="45" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="448" y="248">内的</text>
+    <text x="448" y="302">無知</text>
+    <text x="448" y="472.5">外的</text>
+    <text x="448" y="526">無知</text>
+    <text x="1027" y="249.5">内的</text>
+    <text x="1027" y="303">知</text>
+    <text x="1028" y="472.5">外的</text>
+    <text x="1028" y="526">知</text>
+  </g>
+
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="732" y="233.5">内的真理探求</text>
+    <text x="729.5" y="538.5">外的真理探求</text>
+  </g>
+
+  <!-- 宗教・科学 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="738" cy="319" rx="90" ry="33.5" fill="#fff" class="paper"/>
+    <ellipse cx="737.5" cy="451" rx="90" ry="33" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="48" text-anchor="middle" dominant-baseline="central">
+    <text x="739.5" y="319.5">宗教</text>
+    <text x="738" y="452.5">科学</text>
+  </g>
+</svg>

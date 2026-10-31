@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <!-- 元の図は「ヨルダン江」。本文の表記「ヨルダン河」に直した（2026-10-31、ユーザー「河になおそう」） -->
+  <title>第一次 21日路程と第二次 21ヶ月路程（ラメセスからカナンへの地図）</title>
+  <defs>
+    <clipPath id="k290-map">
+      <rect x="111" y="12" width="600" height="410"/>
+    </clipPath>
+  </defs>
+
+  <!-- 陸（薄い黄土色） -->
+  <rect x="111" y="12" width="600" height="410" fill="#F2C67D"/>
+
+  <!-- 海（地図の縁では海岸線を描かないように、外へ出した形を切り抜く） -->
+  <g clip-path="url(#k290-map)" fill="#CDF8F7" stroke="#111" stroke-width="4" stroke-linejoin="round">
+    <!-- 地中海 -->
+    <path d="M558,2 L101,2 L101,134 L171.5,134.5 L187.5,126.5 L216.5,122.5 L238.5,125.5 L257.5,133.5 L259.5,131.5 L284.5,126.5 L311.5,143.5 L306.5,148.5 L293.5,143.5 L289.5,143.5 L286.5,146.5 L316.5,180.5 L321.5,175.5 L314.5,167.5 L316.5,165.5 L315.5,156.5 L323.5,146.5 L352.5,162.5 L370.5,161.5 L385.5,155.5 L420.5,157.5 L436.5,151.5 L485.5,145.5 L512.5,116.5 L525.5,86.5 L537.5,64.5 L542.5,26.5 L546.5,22.5 L551.5,21.5 Z"/>
+    <!-- 紅海（スエズ湾・アカバ湾） -->
+    <path d="M330.5,216.5 L330.5,222.5 L340.5,230.5 L343.5,236.5 L338.5,255.5 L328.5,266.5 L327.5,274.5 L341.5,286.5 L353.5,302.5 L356.5,310.5 L353.5,314.5 L352.5,324.5 L359.5,332.5 L370.5,339.5 L370.5,345.5 L381.5,353.5 L408.5,383.5 L429.5,397.5 L435.5,409.5 L432.5,416.5 L437,432 L610,432 L592.5,405.5 L592.5,398.5 L587.5,393.5 L570.5,385.5 L562.5,383.5 L551.5,390.5 L546.5,385.5 L536.5,389.5 L528.5,384.5 L537.5,375.5 L545.5,360.5 L542.5,351.5 L551.5,331.5 L552.5,304.5 L560.5,286.5 L560.5,279.5 L557.5,276.5 L552.5,281.5 L539.5,304.5 L532.5,330.5 L522.5,352.5 L509.5,370.5 L514.5,381.5 L515.5,394.5 L493.5,413.5 L462.5,398.5 L442.5,379.5 L432.5,373.5 L407.5,345.5 L403.5,325.5 L385.5,311.5 L378.5,295.5 L360.5,278.5 L350.5,248.5 L352.5,232.5 L355.5,226.5 L349.5,221.5 L345.5,220.5 L343.5,222.5 L333.5,213.5 Z"/>
+    <!-- 湖（ガリラヤ湖・死海・苦い湖） -->
+    <path d="M588.5,43.5 L585.5,43.5 L580.5,47.5 L580.5,52.5 L585.5,56.5 L591.5,50.5 L591.5,46.5 Z"/>
+    <path transform="translate(583,142) scale(1.1) translate(-583,-142)" d="M585.5,117.5 L578.5,123.5 L576.5,127.5 L577.5,134.5 L575.5,139.5 L575.5,145.5 L577.5,150.5 L573.5,157.5 L576.5,162.5 L582.5,167.5 L589.5,161.5 L583.5,154.5 L583.5,149.5 L590.5,142.5 L590.5,138.5 L587.5,131.5 L592.5,123.5 Z"/>
+    <path d="M312,193 C312,189 318,189 321,191 L325,195 C328,197 330,199 328,201 C326,203 323,201 321,200 C318,203 312,202 312,197 Z"/>
+  </g>
+
+  <!-- 川（ナイル川の分かれ・ヨルダン川） -->
+  <g fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M205.5,135.5 L212.5,141 L204.5,150.5 L204.5,170.5 L209.5,188.5 L211.5,212.5 L214.5,223.5 L225.5,234.5 L231.5,237.5"/>
+    <path d="M196.5,209 L198.5,219.5 L213.5,224.5"/>
+    <path d="M231.5,237.5 L244.5,225.5 L255.5,208.5 L277.5,189.5 L282.5,187.5 L295.5,184.5 L300.5,180.5"/>
+    <path d="M231.5,237.5 L229.5,249.5 L233.5,258.5 L231.5,275.5 L224.5,288.5 L220.5,303.5 L211.5,310.5"/>
+    <path d="M186.5,349 L180.5,358.5 L180.5,361.5 L186.5,371.5 L195.5,401.5"/>
+    <path d="M177.5,162.5 L190.5,173.5"/>
+    <path d="M586,56 L585.5,63.5 L587.5,88.5 L584.5,99.5 L585.5,109.5 L586,118"/>
+  </g>
+
+  <!-- 名前から地点への点線 -->
+  <g fill="none" stroke="#111" stroke-width="3.5">
+    <path d="M244,92.5 L262.5,160" stroke-dasharray="6.5 4.3"/>
+    <path d="M426.5,124.3 L426,172" stroke-width="3" stroke-dasharray="4 4"/>
+    <path d="M201.5,190.5 L261,165.7" stroke-dasharray="8 4.5"/>
+    <path d="M188.5,251.3 L286,208.2" stroke-dasharray="7.8 3.5"/>
+    <path d="M239.8,327.7 L405.5,302.5" stroke-dasharray="8 3.3"/>
+    <path d="M339.3,374.4 L452.5,341.5" stroke-dasharray="8 3.5"/>
+    <path d="M482.8,354 L568,351" stroke-dasharray="8 3"/>
+    <path d="M534.5,186.4 L553,193.6" stroke-dasharray="8 3"/>
+  </g>
+
+  <!-- 第一次 21日路程（赤の点線） -->
+  <path d="M278,164 L310,164.5 L323.7,168.3 L336,172.2 L349,176 L362.7,176.8 L390,177 L418.7,174.5 L448.4,171.7 L463,169 L477.4,165 L491,158.7 L503.6,147.6 L516.3,136.1 L529.2,124.1" fill="none" stroke="#D11604" stroke-width="5" stroke-dasharray="9 5" stroke-linejoin="round"/>
+  <polygon points="536.5,118 532.5,130.4 523.6,119.6" fill="#D11604"/>
+
+  <!-- 第二次 21ヶ月路程（緑の実線と、カデシバルネアからの点線） -->
+  <g fill="none" stroke="#28CB15" stroke-linejoin="round">
+    <path d="M268,167 L282.3,191.5" stroke-width="4.5"/>
+    <path d="M289.5,206.5 L299.5,208.5 L311.5,209.5 L341.5,217.5 L354.5,224.5 L363.5,236.5 L366.5,253.5 L373.5,269.5 L393.1,290.5" stroke-width="5.5"/>
+    <path d="M405.5,302.5 L411.5,308.5 L413.5,313.5 L424.5,324.5 L438.6,334.2" stroke-width="5.5"/>
+    <path d="M466.5,347 L466.5,344.5 L477.5,343.5 L491.5,333.5 L499.5,331.5 L503.5,328.5 L519.5,309.5 L529.5,293.5 L537.5,254.5 L537.5,237.5 L531.7,200.3" stroke-width="5.5"/>
+    <path d="M530.5,175.5 L539,152 L547.5,136 L548.8,126.8" stroke-width="5" stroke-dasharray="12 6"/>
+  </g>
+  <g fill="#28CB15">
+    <polygon points="286.5,200 275.4,193.2 287.9,187"/>
+    <polygon points="399.5,297.5 386.9,294.1 397.2,284.7"/>
+    <polygon points="446.5,339.5 433.5,339.2 441.3,327.5"/>
+    <polygon points="530,191 538.9,200.5 525.1,203.1"/>
+    <polygon points="550.5,117.5 555.4,129.6 541.6,127.1"/>
+  </g>
+
+  <!-- 地点 -->
+  <g fill="#111">
+    <circle cx="265.5" cy="163.5" r="6.5"/>
+    <circle cx="289.5" cy="206.5" r="6.5"/>
+    <circle cx="405.5" cy="302.5" r="6.5"/>
+    <circle cx="452.5" cy="341.5" r="6.5"/>
+    <circle cx="527.5" cy="182" r="6.5"/>
+    <polygon points="468,347.5 457.5,364 478.5,364"/>
+  </g>
+
+  <!-- 枠付きの札 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="3">
+    <rect x="176" y="28" width="133.5" height="59.5"/>
+    <rect x="374" y="60" width="112" height="58"/>
+  </g>
+  <g font-size="21" text-anchor="middle" dominant-baseline="central">
+    <text x="242" y="46" textLength="60" lengthAdjust="spacing">第二次</text>
+    <text x="242.5" y="71.5" textLength="103" lengthAdjust="spacing">21ヶ月路程</text>
+    <text x="430" y="76" textLength="60" lengthAdjust="spacing">第一次</text>
+    <text x="429.5" y="101.5" textLength="81" lengthAdjust="spacing">21日路程</text>
+  </g>
+
+  <!-- 地名の札 -->
+  <g fill="#fff" class="paper">
+    <rect x="118" y="176" width="80" height="31"/>
+    <rect x="124" y="233" width="66" height="33"/>
+    <rect x="128" y="313" width="107" height="33"/>
+    <rect x="238" y="363" width="94" height="30"/>
+    <rect x="501" y="87" width="75" height="31"/>
+    <rect x="603" y="63" width="101" height="30"/>
+    <rect x="602" y="128" width="57" height="28"/>
+    <rect x="552" y="179" width="148" height="26"/>
+    <rect x="475" y="205" width="28" height="112"/>
+    <rect x="566" y="282" width="124" height="31"/>
+    <rect x="567" y="335" width="93" height="30"/>
+  </g>
+  <g font-size="23" dominant-baseline="central">
+    <text x="126" y="192" textLength="62" lengthAdjust="spacingAndGlyphs">ラメセス</text>
+    <text x="131" y="250" textLength="53" lengthAdjust="spacingAndGlyphs">スコテ</text>
+    <text x="136" y="330" textLength="90" lengthAdjust="spacingAndGlyphs">シンの荒野</text>
+    <text x="249" y="377.5" textLength="73" lengthAdjust="spacingAndGlyphs">レピデム</text>
+    <text x="506" y="101.5" textLength="65" lengthAdjust="spacingAndGlyphs">カナン</text>
+    <text x="608" y="78.5" textLength="91" lengthAdjust="spacingAndGlyphs">ヨルダン河</text>
+    <text x="608" y="143" textLength="45" lengthAdjust="spacingAndGlyphs">死海</text>
+    <text x="559" y="192.5" textLength="136" lengthAdjust="spacingAndGlyphs">カデシバルネア</text>
+    <text x="571" y="297" textLength="114" lengthAdjust="spacingAndGlyphs">ミデヤン荒野</text>
+    <text x="575" y="349.5" textLength="76" lengthAdjust="spacingAndGlyphs">ホレブ山</text>
+  </g>
+  <!-- 縦書き -->
+  <g font-size="21" text-anchor="middle" dominant-baseline="central">
+    <text x="488.5" y="220">シ</text>
+    <text x="488.5" y="240">ナ</text>
+    <text x="488.5" y="261">イ</text>
+    <text x="488.5" y="281.5">荒</text>
+    <text x="488.5" y="302.5">野</text>
+  </g>
+
+  <!-- 海の中の字 -->
+  <g font-size="20" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="359" y="293.5">紅</text>
+    <text x="378" y="326.5">海</text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>② 善なる民族</title>
+  <defs>
+    <marker id="k862-a" viewBox="0 0 12 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" orient="auto">
+      <path d="M0,0 L12,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="33" y="38" font-size="28" dominant-baseline="central">②</text>
+  <text x="72" y="38" font-size="28" dominant-baseline="central" textLength="143" lengthAdjust="spacing">善なる民族</text>
+
+  <!-- 神 -->
+  <circle cx="327.5" cy="119.5" r="32" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5"/>
+  <text x="327.5" y="119.5" font-size="33" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 上り下りの矢印 -->
+  <g stroke="currentColor" stroke-width="4" fill="none" marker-end="url(#k862-a)">
+    <path d="M309,231 Q289.5,200 309.5,169"/>
+    <path d="M338,163 Q358,194.5 338.5,226"/>
+  </g>
+
+  <!-- 韓国民族 -->
+  <ellipse cx="326" cy="277.5" rx="61" ry="31" fill="#F8F28F" stroke="currentColor" stroke-width="2.5"/>
+  <text x="326" y="277.5" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="108" lengthAdjust="spacing">韓国民族</text>
+  <g font-size="27" dominant-baseline="central">
+    <text x="142" y="277.5" textLength="51" lengthAdjust="spacingAndGlyphs">4000</text>
+    <text x="198" y="277.5" textLength="51" lengthAdjust="spacing">年史</text>
+  </g>
+
+  <!-- 箇条 -->
+  <g>
+    <circle cx="400" cy="231" r="7.5"/>
+    <circle cx="400" cy="317" r="7.5"/>
+    <circle cx="400" cy="363" r="7.5"/>
+  </g>
+  <g font-size="28" dominant-baseline="central">
+    <text x="419" y="230.5" textLength="273" lengthAdjust="spacing">一度も他の国を侵略</text>
+    <text x="421" y="270" textLength="85" lengthAdjust="spacing">しない</text>
+    <text x="419" y="317" textLength="170" lengthAdjust="spacing">天の側に立つ</text>
+    <text x="419" y="364" textLength="258" lengthAdjust="spacing">最終的な勝利を獲得</text>
+  </g>
+</svg>

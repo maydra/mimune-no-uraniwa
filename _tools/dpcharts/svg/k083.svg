@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>実体基台の結果</title>
+
+  <!-- 題 -->
+  <text x="34" y="34" font-size="31" textLength="218" lengthAdjust="spacing" dominant-baseline="central">実体基台の結果</text>
+  <line x1="33" y1="52.5" x2="253" y2="52.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="204.5,238 204.5,173 209,173 201.5,160 194,173 198.5,173 198.5,238"/>
+    <polygon points="526,262 289,262 289,258 277,265 289,272 289,268 526,268"/>
+    <polygon points="399.5,200.5 399.5,190 392.5,190 405,180.5 417.5,190 410,190 410,200.5"/>
+  </g>
+
+  <!-- 神 -->
+  <circle cx="201.5" cy="122" r="33" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <text x="201" y="122" font-size="34" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 箱 -->
+  <g stroke="currentColor" stroke-width="2.4">
+    <rect x="246" y="129" width="412" height="41" fill="#fff" class="paper"/>
+    <rect x="297" y="213" width="204" height="39" fill="#fff" class="paper"/>
+  </g>
+  <rect x="281.5" y="336" width="239.5" height="49.5" fill="#CDF8F7" stroke="currentColor" stroke-width="2.4"/>
+  <text x="257" y="149" font-size="28" textLength="339" lengthAdjust="spacing" dominant-baseline="central">メシヤのための家庭的基台</text>
+  <text x="313" y="232" font-size="29" textLength="115" lengthAdjust="spacing" dominant-baseline="central">実体基台</text>
+  <text x="304" y="360" font-size="31" textLength="126" lengthAdjust="spacing" dominant-baseline="central" fill="#111">復帰摂理</text>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="610.5" y="149" font-size="28">：</text>
+    <text x="442.5" y="232" font-size="29">：</text>
+    <text x="445.5" y="360" font-size="31" fill="#111">：</text>
+  </g>
+  <!-- × -->
+  <g stroke="currentColor" stroke-width="4.6">
+    <path d="M627,140 L644,157 M644,140 L627,157"/>
+    <path d="M461,223 L479,241 M479,223 L461,241"/>
+  </g>
+  <path d="M466.5,349.5 L486.5,369.5 M486.5,349.5 L466.5,369.5" stroke="#111" stroke-width="4.8"/>
+
+  <!-- アベルとカイン -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="202" cy="264.5" rx="68.5" ry="27" fill="#F8F28F"/>
+    <ellipse cx="596" cy="265" rx="71.5" ry="26.5" fill="#F86D42"/>
+  </g>
+  <g font-size="29" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="203" y="265" textLength="87" lengthAdjust="spacing">アベル</text>
+    <text x="596" y="265" textLength="87" lengthAdjust="spacing">カイン</text>
+  </g>
+  <text x="397.5" y="293" font-size="28" textLength="256" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central">カインがアベル殺害</text>
+</svg>

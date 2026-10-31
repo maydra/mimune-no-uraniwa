@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>義と不義</title>
+
+  <text x="50" y="76" font-size="48">3.</text>
+  <text x="105.5" y="76" font-size="48" textLength="199" lengthAdjust="spacing">義と不義</text>
+  <line x1="105" y1="88" x2="305" y2="88" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 人間から善へ、悪へ -->
+  <g fill="#8C949A">
+    <polygon points="374,221.5 406,207 406,213 600,213 600,230 406,230 406,236"/>
+    <polygon points="700,213 907,213 907,207 938,221.5 907,236 907,230 700,230"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="305.5" cy="221.5" r="55.5" fill="#fff" class="paper"/>
+    <circle cx="1003" cy="221" r="55" fill="#50403D"/>
+  </g>
+  <ellipse cx="650" cy="221" rx="107.5" ry="51.5" fill="#FCE5E3" stroke="currentColor" stroke-width="4.5"/>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="305" y="223" font-size="60">善</text>
+    <text x="1003" y="223" font-size="58" fill="#fff">悪</text>
+    <text x="641.5" y="222.5" font-size="63" fill="#111">人間</text>
+  </g>
+
+  <g font-size="57" text-anchor="middle" dominant-baseline="central">
+    <text x="479.5" y="300">義</text>
+    <text x="822" y="300.5">不義</text>
+  </g>
+
+  <!-- 生活的要素 -->
+  <rect x="310.5" y="351" width="322.5" height="229.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5"/>
+  <rect x="670" y="351" width="321.5" height="229.5" fill="#50403D" stroke="currentColor" stroke-width="4.5"/>
+  <g font-size="53" text-anchor="middle" dominant-baseline="central">
+    <text x="471" y="437.5">善のための</text>
+    <text x="471" y="500.5">生活的要素</text>
+    <g fill="#fff">
+      <text x="830.5" y="437.5">悪のための</text>
+      <text x="830.5" y="500.5">生活的要素</text>
+    </g>
+  </g>
+</svg>

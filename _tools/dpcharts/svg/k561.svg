@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>キリスト王国時代　神と国王（実体王国）・法王（霊的王国）　「再臨されるメシヤのための基台」</title>
+  <defs>
+    <marker id="k561-a" viewBox="0 0 9 11" refX="0" refY="5.5" markerWidth="9" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L9,5.5 L0,11 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 見出しの箱と白い枠 -->
+  <rect x="247.5" y="44" width="326" height="54" rx="6" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <g dominant-baseline="central" fill="#111">
+    <text x="289" y="70.5" font-size="34" textLength="119.1" lengthAdjust="spacingAndGlyphs">キリスト</text>
+    <text x="411" y="70.5" font-size="34" textLength="123.1" lengthAdjust="spacingAndGlyphs">王国時代</text>
+  </g>
+  <rect x="247.5" y="106" width="326" height="231" rx="8" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <g dominant-baseline="central">
+    <text x="272" y="128.5" font-size="24" text-anchor="middle">②</text>
+  </g>
+  <!-- 神から国王・法王への線（円と楕円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="6">
+    <line x1="413" y1="161" x2="329" y2="232"/>
+    <line x1="406.5" y1="159" x2="483.5" y2="230.5"/>
+  </g>
+  <!-- 実体王国・霊的王国 -->
+  <ellipse cx="320.8" cy="257" rx="64.5" ry="38.2" fill="#FCE5E3" stroke="currentColor" stroke-width="3"/>
+  <ellipse cx="498.2" cy="257.2" rx="66.5" ry="38.5" fill="#FCE5E3" stroke="currentColor" stroke-width="3"/>
+  <ellipse cx="317.5" cy="238.2" rx="36.5" ry="19.8" fill="#F8F28F" stroke="#111" stroke-width="3"/>
+  <ellipse cx="496" cy="237.8" rx="35" ry="19.2" fill="#F86D42" stroke="#111" stroke-width="3"/>
+  <circle cx="409" cy="158" r="29" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <g dominant-baseline="central" fill="#111">
+    <text x="294.6" y="239" font-size="23" textLength="46.8" lengthAdjust="spacing">国王</text>
+    <text x="472.6" y="239" font-size="23" textLength="46.8" lengthAdjust="spacing">法王</text>
+    <text x="279.6" y="272.5" font-size="23" textLength="84.8" lengthAdjust="spacingAndGlyphs">実体王国</text>
+    <text x="454.6" y="273" font-size="23" textLength="83.8" lengthAdjust="spacingAndGlyphs">霊的王国</text>
+  </g>
+  <g dominant-baseline="central">
+    <text x="409" y="158" font-size="31" text-anchor="middle">神</text>
+  </g>
+  <!-- 授受の矢印 -->
+  <g fill="none" stroke="currentColor" stroke-width="4" marker-end="url(#k561-a)">
+    <path d="M390,250 C395,240 412,236 423,245.25"/>
+    <path d="M428,263 C423,273 406,277 395,267.75"/>
+  </g>
+  <!-- 再臨されるメシヤのための基台 -->
+  <rect x="186" y="355" width="441" height="47" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <g dominant-baseline="central" fill="#111">
+    <text x="209" y="379" font-size="28" text-anchor="middle">「</text>
+    <text x="213.3" y="379" font-size="28" textLength="384.4" lengthAdjust="spacing">再臨されるメシヤのための基台</text>
+    <text x="602" y="379" font-size="28" text-anchor="middle">」</text>
+  </g>
+</svg>

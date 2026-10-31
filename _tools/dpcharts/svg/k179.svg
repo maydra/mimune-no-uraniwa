@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>アブラハムがイサクを殺そうとした立場</title>
+
+  <!-- 矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="243,174 250,174 250,130.5 253.5,130.5 246.5,119 239.5,130.5 243,130.5"/>
+    <polygon points="312,195 495,195 495,190.5 508.5,198.5 495,206.5 495,202 312,202"/>
+  </g>
+
+  <circle cx="247" cy="76" r="36" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <text x="246" y="74.5" font-size="37" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <g stroke="currentColor" stroke-width="2.2" fill="#F8F28F">
+    <ellipse cx="246" cy="198.5" rx="70" ry="28.5"/>
+    <ellipse cx="573" cy="198.5" rx="61" ry="27.5"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="246.5" y="199.5" font-size="28" textLength="123" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+    <text x="574" y="198" font-size="30" textLength="99" lengthAdjust="spacingAndGlyphs">イサク</text>
+  </g>
+
+  <text x="331" y="173.5" font-size="26" dominant-baseline="central" textLength="155" lengthAdjust="spacingAndGlyphs">殺そうとする</text>
+
+  <!-- 箇条書き（点は円で描く） -->
+  <g>
+    <circle cx="199" cy="264" r="7"/>
+    <circle cx="199" cy="307" r="7"/>
+    <circle cx="199" cy="350.5" r="7"/>
+    <circle cx="199" cy="394" r="7"/>
+  </g>
+  <g font-size="29" dominant-baseline="central">
+    <text x="218" y="264" textLength="372" lengthAdjust="spacingAndGlyphs">自分自身を殺そうとした立場</text>
+    <text y="307"><tspan x="216" textLength="170" lengthAdjust="spacingAndGlyphs">サタン分立し</tspan><tspan x="387">、</tspan><tspan x="418" textLength="199" lengthAdjust="spacingAndGlyphs">再びよみがえる</tspan></text>
+    <text x="216" y="350.5" textLength="345" lengthAdjust="spacingAndGlyphs">イサクと一体不可分の立場</text>
+    <text y="393"><tspan x="216" textLength="112" lengthAdjust="spacingAndGlyphs">失敗せず</tspan><tspan x="328">、</tspan><tspan x="360" textLength="258" lengthAdjust="spacingAndGlyphs">延長もされなかった</tspan></text>
+  </g>
+</svg>

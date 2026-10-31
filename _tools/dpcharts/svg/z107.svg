@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>球形運動の究極的中心</title>
+  <defs>
+    <marker id="z107-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="52" y="76" font-size="48" textLength="499" lengthAdjust="spacing">球形運動の究極的中心</text>
+  <line x1="51" y1="87.5" x2="551" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="706" y1="218.7" x2="485" y2="405"/>
+    <line x1="706" y1="211.3" x2="944" y2="426.5"/>
+    <line x1="485" y1="376.2" x2="706" y2="590.4"/>
+    <line x1="944" y1="379" x2="706" y2="584.3"/>
+  </g>
+
+  <!-- 授受作用の矢印（縦と横に交わる） -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z107-g)">
+    <path d="M611,388 C669,371 733,364 792,382"/>
+    <path d="M801,414 C743,431 680,435 621,419"/>
+    <path d="M690,474 C677,427 678,376 686,328"/>
+    <path d="M722,319 C734,365 734,413 725,460"/>
+  </g>
+
+  <!-- 球形運動（青緑の点線。円の下を通る） -->
+  <g fill="none" stroke="#3FA9C1" stroke-width="5" stroke-dasharray="14 9">
+    <ellipse cx="602" cy="389.5" rx="268.5" ry="88.5"/>
+    <ellipse cx="662.8" cy="243.3" rx="75.5" ry="211.5" transform="rotate(54.4 662.8 243.3)"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <circle cx="706" cy="221" r="53" fill="#fff" class="paper"/>
+    <ellipse cx="485" cy="396" rx="95" ry="43" fill="#FCE5E3"/>
+    <ellipse cx="944" cy="396" rx="95" ry="43" fill="#DCC4C4"/>
+    <ellipse cx="706" cy="573" rx="95" ry="43" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="704" y="220.5" font-size="53">神</text>
+    <g font-size="46" fill="#111">
+      <text x="479.5" y="397">人間</text>
+      <text x="943.5" y="396.5">被造物</text>
+    </g>
+    <text x="706" y="573.5" font-size="39" fill="#111">被造世界</text>
+  </g>
+
+  <!-- 箇条 -->
+  <g>
+    <circle cx="840.5" cy="190.5" r="9"/>
+    <circle cx="840" cy="242.5" r="9"/>
+    <circle cx="216" cy="397.5" r="9"/>
+    <circle cx="214.5" cy="512" r="9"/>
+    <circle cx="894.5" cy="472.5" r="9"/>
+  </g>
+  <g font-size="43" dominant-baseline="central">
+    <text x="860" y="189" textLength="216" lengthAdjust="spacing">究極的中心</text>
+    <text x="859" y="241" textLength="217" lengthAdjust="spacing">人間の中心</text>
+    <text x="234" y="399.5" textLength="130" lengthAdjust="spacing">形象的</text>
+    <text x="235" y="451" textLength="173" lengthAdjust="spacing">実体対象</text>
+    <text x="234" y="509.5" textLength="218" lengthAdjust="spacing">被造物中心</text>
+    <text x="911" y="475" textLength="129" lengthAdjust="spacing">象徴的</text>
+    <text x="911" y="525" textLength="173" lengthAdjust="spacing">実体対象</text>
+  </g>
+</svg>

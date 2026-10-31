@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>先だって原理型の非原理世界　共産主義世界</title>
+
+  <!-- 黒い矢印（サ→堕落人間→悪） -->
+  <g>
+    <polygon points="173.5,138.1 223.5,178.1 220.4,182.0 238.5,185.0 231.6,168.0 228.5,171.9 178.5,131.9"/>
+    <polygon points="294.7,237.4 352.5,283.6 349.4,287.5 367.5,290.5 360.6,273.5 357.5,277.4 299.7,231.2"/>
+  </g>
+  <!-- 白抜きの矢印（神→堕落人間→善） -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="3.2" stroke-linejoin="miter">
+    <polygon points="177.0,304.6 237.5,256.2 241.0,260.5 249.0,242.5 229.7,246.4 233.1,250.7 172.6,299.1"/>
+    <polygon points="307.2,199.5 357.5,159.2 361.0,163.5 369.0,145.5 349.7,149.4 353.1,153.7 302.8,194.0"/>
+  </g>
+
+  <!-- サ・神 -->
+  <g stroke="currentColor" stroke-width="3">
+    <circle cx="170" cy="134" r="31.5" fill="#50403D"/>
+    <circle cx="170" cy="298.5" r="32" fill="#fff" class="paper"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="170.5" y="134.5" font-size="30" fill="#fff">サ</text>
+    <text x="169.5" y="298.5" font-size="32">神</text>
+  </g>
+
+  <!-- 堕落人間 -->
+  <ellipse cx="279" cy="212" rx="45.5" ry="31.5" fill="#CF921C" stroke="currentColor" stroke-width="3"/>
+  <text x="280" y="212.5" font-size="23" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="80" lengthAdjust="spacingAndGlyphs">堕落人間</text>
+
+  <!-- 横の矢印 -->
+  <polygon points="438,130.5 466.5,130.5 466.5,127 480,134 466.5,141 466.5,137.5 438,137.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="3.6" stroke-linejoin="miter"/>
+  <polygon points="439,299 465,299 465,293.5 481.5,302.5 465,311.5 465,306.5 439,306.5"/>
+
+  <!-- 箱 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <rect x="376" y="108" width="52" height="52" rx="3" fill="#fff" class="paper"/>
+    <rect x="491" y="109" width="133" height="50" fill="#fff" class="paper"/>
+    <rect x="376" y="277" width="52" height="51" rx="3" fill="#50403D"/>
+    <rect x="490.5" y="277" width="190.5" height="50" fill="#CF921C"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="402" y="134" font-size="30">善</text>
+    <text x="557" y="134" font-size="28" textLength="114" lengthAdjust="spacing">地上天国</text>
+    <text x="401.5" y="302.5" font-size="30" fill="#fff">悪</text>
+    <text x="586" y="302.5" font-size="29" fill="#111" textLength="172" lengthAdjust="spacing">共産主義世界</text>
+  </g>
+
+  <!-- 先だって　原理型の非原理世界 -->
+  <text x="354" y="254" font-size="24" font-weight="400" dominant-baseline="central" textLength="93" lengthAdjust="spacing">先だって</text>
+  <text x="470" y="253.5" font-size="26" dominant-baseline="central" textLength="236" lengthAdjust="spacing">原理型の非原理世界</text>
+</svg>

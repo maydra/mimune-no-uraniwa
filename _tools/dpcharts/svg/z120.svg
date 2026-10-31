@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神の創造目的と被造世界の存在目的</title>
+  <defs>
+    <marker id="z120-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.8" markerHeight="2.8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="53" y="56" font-size="48" textLength="797" lengthAdjust="spacing" dominant-baseline="central">神の創造目的と被造世界の存在目的</text>
+  <line x1="52" y1="86" x2="852" y2="86" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神と被造世界 -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="286" cy="237" rx="87" ry="58" fill="#fff" class="paper"/>
+    <ellipse cx="286" cy="531" rx="87" ry="58" fill="#DCC4C4"/>
+  </g>
+  <g font-size="58" text-anchor="middle" dominant-baseline="central">
+    <text x="283" y="237">神</text>
+    <text x="283" y="531" fill="#111">被</text>
+  </g>
+
+  <!-- 創造目的と存在目的の矢印 -->
+  <g stroke="currentColor" stroke-width="7.5" fill="none" marker-end="url(#z120-k)">
+    <path d="M270,444 C252,410 252,362 262,334"/>
+    <path d="M300,322 C313,350 313,405 305,428"/>
+  </g>
+  <g font-size="44" dominant-baseline="central">
+    <text x="338" y="346">創造目的</text>
+    <text x="338" y="416">存在目的</text>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="542,368 582,368 582,353 609,382.5 582,412 582,397 542,397"/>
+    <polygon points="888,368 928,368 928,353 955,382.5 928,412 928,397 888,397"/>
+  </g>
+
+  <!-- 四位基台・三大祝福・善の目的 -->
+  <rect x="621" y="265.5" width="249" height="239" rx="7" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <g fill="#111">
+    <circle cx="646" cy="312" r="9.5"/>
+    <circle cx="646" cy="385.5" r="9.5"/>
+    <circle cx="646" cy="455.5" r="9.5"/>
+    <g font-size="44" dominant-baseline="central">
+      <text x="667" y="312">四位基台</text>
+      <text x="667" y="383">三大祝福</text>
+      <text x="667" y="453">善の目的</text>
+    </g>
+  </g>
+
+  <!-- 喜び -->
+  <rect x="970.5" y="326.5" width="134" height="112.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <text x="1038" y="383" font-size="46" text-anchor="middle" dominant-baseline="central" fill="#111">喜び</text>
+</svg>

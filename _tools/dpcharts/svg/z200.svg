@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>良心と本心</title>
+  <defs>
+    <marker id="z200-k" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3.1" markerHeight="2.9" preserveAspectRatio="none" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="z200-g" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="2.8" markerHeight="2.4" preserveAspectRatio="none" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+    <marker id="z200-d" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3.4" markerHeight="4.1" preserveAspectRatio="none" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <text x="54" y="78" font-size="48" textLength="249" lengthAdjust="spacing">良心と本心</text>
+  <line x1="54" y1="89.5" x2="303" y2="89.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神と善の授受 -->
+  <g stroke="currentColor" stroke-width="6.5" fill="none" marker-end="url(#z200-k)">
+    <path d="M350,273 Q340.15,256.45 347.7,242.1"/>
+    <path d="M384,230 Q392.15,247.85 387.7,262.3"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="367.5" cy="168" r="54" fill="#fff" class="paper"/>
+    <circle cx="367" cy="341.5" r="60" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="60" text-anchor="middle" dominant-baseline="central">
+    <text x="366" y="168.5">神</text>
+    <text x="367" y="341">善</text>
+  </g>
+
+  <!-- 本心・良心から善へ -->
+  <g fill="#8C949A">
+    <polygon points="330,500 330,428 321.5,428 335.5,400 349.5,428 341,428 341,500"/>
+    <polygon points="392,500 392,428 383.5,428 397.5,400 411.5,428 403,428 403,500"/>
+  </g>
+
+  <!-- 本心と良心（半分ずつ色の付いた円） -->
+  <path d="M367.5,483.75 A80.25,80.25 0 0 0 367.5,644.25 Z" fill="#F98AEE"/>
+  <path d="M367.5,483.75 A80.25,80.25 0 0 1 367.5,644.25 Z" fill="#A0F08A"/>
+  <circle cx="367.5" cy="564" r="80.25" fill="none" stroke="currentColor" stroke-width="4"/>
+  <line x1="367" y1="484" x2="367" y2="644" stroke="currentColor" stroke-width="4.5"/>
+  <g font-size="56" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="330" y="532">本<tspan x="330" dy="1.05em">心</tspan></text>
+    <text x="405" y="532">良<tspan x="405" dy="1.05em">心</tspan></text>
+  </g>
+  <g font-size="43" text-anchor="middle" dominant-baseline="central">
+    <text x="251" y="545">性<tspan x="251" dy="0.99em">相</tspan></text>
+    <text x="485" y="547.5">形<tspan x="485" dy="0.99em">状</tspan></text>
+  </g>
+
+  <!-- 本心指向と創造本然と異にする善 -->
+  <g stroke="#8C949A" stroke-width="14" fill="none" marker-end="url(#z200-g)">
+    <path d="M612,437 L467,408.3" stroke-dasharray="14.8 15.3"/>
+    <path d="M458,521 L580.3,481.5" stroke-dasharray="16.3 15.9"/>
+  </g>
+  <text x="537" y="388" font-size="38" text-anchor="middle" dominant-baseline="central" transform="rotate(8 537 388)">本心指向</text>
+
+  <circle cx="692" cy="454" r="56.5" fill="#CF921C" stroke="currentColor" stroke-width="4.5"/>
+  <line x1="741" y1="530" x2="719.6" y2="503.3" stroke="currentColor" stroke-width="7"/>
+  <line x1="719.6" y1="503.3" x2="709.5" y2="491.1" stroke="#111" stroke-width="7" marker-end="url(#z200-d)"/>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="914" y="411" font-size="44">人間の無知</text>
+    <text x="881" y="561" font-size="42">創造本然と異にする善</text>
+  </g>
+  <polygon points="905,455 922,455 922,478 938.5,478 913.5,502 888.5,478 905,478" fill="#8C949A"/>
+</svg>

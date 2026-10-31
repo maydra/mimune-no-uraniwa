@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. サタンと堕落人間</title>
+  <defs>
+    <marker id="z265-a" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="62" y="57" font-size="46" dominant-baseline="central">Ⅰ.</text>
+  <text x="127" y="57" font-size="48" dominant-baseline="central" textLength="401" lengthAdjust="spacing">サタンと堕落人間</text>
+  <line x1="127" y1="87.5" x2="526" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="8">
+    <line x1="429.2" y1="187.75" x2="271.1" y2="359.25"/>
+    <line x1="440.8" y1="187.75" x2="598.7" y2="359"/>
+    <line x1="270" y1="359.25" x2="419.5" y2="519.5"/>
+    <line x1="599" y1="359" x2="451" y2="519.5"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="currentColor" stroke-width="7.5" fill="none" marker-end="url(#z265-a)">
+    <path d="M422,457 Q386.75,363.5 418.5,276"/>
+    <path d="M446.5,258 Q476.5,379.5 448.5,439"/>
+    <path d="M359,350 Q449.5,318.75 502,344.5"/>
+    <path d="M518,369 Q432.5,399 377,377"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="435" cy="187.75" rx="56" ry="54.75" fill="#50403D" stroke-width="5"/>
+    <ellipse cx="281" cy="359.25" rx="67.5" ry="61.25" fill="#CF921C"/>
+    <ellipse cx="600.25" cy="359" rx="67.75" ry="61.5" fill="#CF921C"/>
+    <ellipse cx="435" cy="519.5" rx="56.5" ry="49" fill="#CF921C"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="435" y="188" font-size="58" fill="#fff">サ</text>
+    <g font-size="40" fill="#111">
+      <text x="279.5" y="333">堕落</text>
+      <text x="279.5" y="380.5" textLength="99" lengthAdjust="spacingAndGlyphs">アダム</text>
+      <text x="600" y="337">堕落</text>
+      <text x="601" y="383">エバ</text>
+    </g>
+    <text x="436" y="519.5" font-size="46" fill="#111">人間</text>
+  </g>
+
+  <g dominant-baseline="central">
+    <text x="504" y="150.5" font-size="40" textLength="207" lengthAdjust="spacing">ルーシェル</text>
+    <text x="294" y="609" font-size="44" textLength="275" lengthAdjust="spacing">サタンの子女</text>
+  </g>
+
+  <!-- 聖句（元は横に詰めた字。括弧は字の幅がフォントで違うので、内側の端で合わせる） -->
+  <g font-size="46" dominant-baseline="central">
+    <text x="704" y="276" text-anchor="end">「</text>
+    <text x="705" y="276" textLength="328" lengthAdjust="spacingAndGlyphs">悪魔から出てきた者</text>
+    <text x="1033" y="276">」</text>
+    <text x="816" y="338.5" textLength="200" lengthAdjust="spacingAndGlyphs">ヨハネ 8:44</text>
+    <text x="703" y="416" text-anchor="end">「</text>
+    <text x="703" y="416" textLength="377" lengthAdjust="spacingAndGlyphs">へびよ、まむしの子らよ</text>
+    <text x="1080" y="416">」</text>
+    <text x="815" y="476" textLength="222" lengthAdjust="spacingAndGlyphs">マタイ 12:34</text>
+    <text x="815" y="536" textLength="221" lengthAdjust="spacingAndGlyphs">マタイ 23:33</text>
+    <text x="704" y="617" text-anchor="end">「</text>
+    <text x="704" y="617" textLength="176" lengthAdjust="spacingAndGlyphs">子たる身分</text>
+    <text x="879" y="617">」</text>
+    <text x="918" y="617" textLength="158" lengthAdjust="spacingAndGlyphs">ロマ 8:23</text>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>絶対的なものとして予定なさることはできない</title>
+
+  <!-- 灰色の矢印（楕円と箱の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="360,160.5 398.5,160.5 398.5,149.5 427.5,166 398.5,183 398.5,171.5 360,171.5"/>
+    <polygon points="815,160.5 855.5,160.5 855.5,149.5 883.5,166 855.5,183 855.5,171.5 815,171.5"/>
+    <polygon points="365,516.5 411.5,516.5 411.5,505.5 434,522 411.5,538.5 411.5,527.5 365,527.5"/>
+    <polygon points="820,516.5 869.5,516.5 869.5,506 888.5,522 869.5,538 869.5,527.5 820,527.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="280" cy="166.5" rx="87.75" ry="65.25" fill="#FCE5E3"/>
+    <ellipse cx="998" cy="166.5" rx="107.75" ry="67.25" fill="#FCE5E3"/>
+    <ellipse cx="284.5" cy="522" rx="87.25" ry="65.75" fill="#CF921C"/>
+    <ellipse cx="1003" cy="522.5" rx="107.75" ry="68.25" fill="#FCE5E3"/>
+    <rect x="431.25" y="89.25" width="390.5" height="157.5" rx="11" fill="#fff" class="paper"/>
+    <rect x="436.25" y="437.25" width="390.5" height="162.5" rx="11" fill="#fff" class="paper"/>
+  </g>
+
+  <!-- 楕円の中の字 -->
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="280.5" y="146.5" font-size="43">アダム</text>
+    <text x="280.5" y="196" font-size="42.5">エバ</text>
+    <text x="996.5" y="135" font-size="41">善の</text>
+    <text x="997.5" y="185" font-size="41.5" textLength="167" lengthAdjust="spacing">人間始祖</text>
+    <text x="284" y="496.5" font-size="42">堕落</text>
+    <text x="283" y="547" font-size="41.5">人間</text>
+    <text x="1003.5" y="505.5" font-size="40" textLength="179" lengthAdjust="spacingAndGlyphs">予定された</text>
+    <text x="1003.5" y="555" font-size="41">人物</text>
+  </g>
+
+  <!-- 上の箱：神のみ言＋アダム・エバがみ言を守る（丸囲みの字は円と字に分ける） -->
+  <g fill="none" stroke="currentColor" stroke-width="3.5">
+    <circle cx="537.5" cy="125.5" r="28.25"/>
+    <circle cx="472" cy="211.5" r="28.25"/>
+    <circle cx="535" cy="211.5" r="28.25"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" font-weight="400">
+    <text x="537" y="126" font-size="37">神</text>
+    <text x="473.5" y="211.5" font-size="36">ア</text>
+    <text x="535" y="211" font-size="36">エ</text>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="649.5" y="126" font-size="44" textLength="136" lengthAdjust="spacing">のみ言</text>
+    <text x="690" y="213.5" font-size="44.5" textLength="225" lengthAdjust="spacing">み言を守る</text>
+  </g>
+  <!-- ＋ -->
+  <rect x="609" y="166" width="29" height="5"/>
+  <rect x="621" y="154" width="5" height="30"/>
+
+  <!-- 下の箱 -->
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="541.5" y="484.5" font-size="45">自身の</text>
+    <text x="609.5" y="552" font-size="45.5" textLength="276" lengthAdjust="spacing">責任分担完遂</text>
+  </g>
+
+  <!-- 真ん中の下線つきの字 -->
+  <text x="662.5" y="337" font-size="40.5" text-anchor="middle" dominant-baseline="central" textLength="832" lengthAdjust="spacing">絶対的なものとして予定なさることはできない</text>
+  <line x1="247" y1="365" x2="1079" y2="365" stroke="currentColor" stroke-width="3"/>
+</svg>

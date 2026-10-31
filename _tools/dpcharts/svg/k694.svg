@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>アベル型の民主主義　アメリカ</title>
+
+  <!-- 題 -->
+  <text x="164" y="37" font-size="27" dominant-baseline="central" textLength="111" lengthAdjust="spacing">アメリカ</text>
+  <line x1="162" y1="55" x2="278" y2="55" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- 灰色の矢印（楕円・箱の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="219,158 226,158 226,177 230,177 222.5,190.5 215,177 219,177"/>
+    <polygon points="219,256 226,256 226,275 230,275 222.5,288.5 215,275 219,275"/>
+    <polygon points="303,327.5 333,327.5 333,324 346,331 333,338.5 333,334.5 303,334.5"/>
+    <polygon points="500,327.5 527,327.5 527,324 540,331 527,338.5 527,334.5 500,334.5"/>
+  </g>
+
+  <!-- 楕円と箱 -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="222.75" cy="128" rx="99.5" ry="34"/>
+    <ellipse cx="222.5" cy="226.5" rx="85.5" ry="34"/>
+    <ellipse cx="222.5" cy="331" rx="85.5" ry="40.5"/>
+    <ellipse cx="427" cy="331" rx="75" ry="48"/>
+    <rect x="545.5" y="290.5" width="143.5" height="80.5" stroke-width="3"/>
+  </g>
+  <g font-size="24.5" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="224.5" y="128" textLength="172" lengthAdjust="spacing">アベル型人生観</text>
+    <text x="223" y="214.5" textLength="123" lengthAdjust="spacing">イギリスの</text>
+    <text x="223" y="242" textLength="74" lengthAdjust="spacing">清教徒</text>
+    <text x="224" y="322" textLength="144" lengthAdjust="spacing">アメリカ独立</text>
+    <text x="426.5" y="314.5" textLength="104" lengthAdjust="spacing">アベル型</text>
+    <text x="426" y="346.5" textLength="104" lengthAdjust="spacing">民主主義</text>
+  </g>
+  <text y="352" font-size="20" font-weight="400" dominant-baseline="central" fill="#111"><tspan x="179">(</tspan><tspan x="190" textLength="41" lengthAdjust="spacingAndGlyphs">1776</tspan><tspan x="236" textLength="20" lengthAdjust="spacing">年</tspan><tspan x="257">)</tspan></text>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="618.5" y="312.5" textLength="115" lengthAdjust="spacing">民主主義</text>
+    <text x="618" y="350" textLength="58" lengthAdjust="spacing">世界</text>
+  </g>
+
+  <!-- 右の箇条 -->
+  <circle cx="330.5" cy="227" r="6.5"/>
+  <text x="344" y="224.5" font-size="27" font-weight="400" dominant-baseline="central" textLength="143" lengthAdjust="spacing">信仰の自由</text>
+</svg>

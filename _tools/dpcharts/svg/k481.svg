@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>４数蕩減期間</title>
+  <defs>
+    <marker id="k481-a" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="k481-g" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="2.5" markerHeight="2.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+    <marker id="k481-m" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="37" font-size="30" text-anchor="middle" dominant-baseline="central">４</text>
+  <text x="69.5" y="37" font-size="30" dominant-baseline="central" textLength="154" lengthAdjust="spacing">数蕩減期間</text>
+  <line x1="34" y1="56" x2="226" y2="56" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 左の箱 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.4">
+    <rect x="149.2" y="83.2" width="85.6" height="108.6" rx="6"/>
+    <rect x="133.2" y="212.2" width="117.6" height="146.6" rx="7"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central">
+    <text x="177.5" y="106.5">４</text>
+    <text x="204" y="106.5">数</text>
+    <text x="191" y="137.5" textLength="51" lengthAdjust="spacing">完成</text>
+    <text x="191" y="169.5" textLength="51" lengthAdjust="spacing">実体</text>
+  </g>
+  <g font-size="27" dominant-baseline="central">
+    <text x="162" y="237" text-anchor="middle">４</text>
+    <text x="178" y="237" textLength="53" lengthAdjust="spacing">数に</text>
+    <text x="149" y="269.5" textLength="54" lengthAdjust="spacing">よる</text>
+    <text x="149" y="303" textLength="54" lengthAdjust="spacing">信仰</text>
+    <text x="149" y="335.5" textLength="54" lengthAdjust="spacing">基台</text>
+  </g>
+
+  <!-- 第四段階・成長三段階（縦書き） -->
+  <g font-size="24" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="287.5" y="96.5">第</text>
+    <text x="287.5" y="123">四</text>
+    <text x="287.5" y="149.5">段</text>
+    <text x="287.5" y="175">階</text>
+    <text x="287.5" y="232.5">成</text>
+    <text x="287.5" y="259">長</text>
+    <text x="287.5" y="285.5">三</text>
+    <text x="287.5" y="311.5">段</text>
+    <text x="287.5" y="338">階</text>
+  </g>
+
+  <!-- 段の横線 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <line x1="262" y1="202" x2="516" y2="202"/>
+    <line x1="308" y1="252.5" x2="516" y2="252.5"/>
+    <line x1="308" y1="310" x2="516" y2="310"/>
+    <line x1="262" y1="366.5" x2="516" y2="366.5"/>
+    <line x1="426" y1="409.5" x2="475" y2="409.5"/>
+  </g>
+
+  <!-- 矢印 -->
+  <line x1="381" y1="251.5" x2="381" y2="212.1" stroke="#8C949A" stroke-width="4.4" stroke-dasharray="10 4.5" stroke-dashoffset="3.5" marker-end="url(#k481-g)"/>
+  <g stroke="currentColor" stroke-width="5" fill="none" marker-end="url(#k481-a)">
+    <line x1="381" y1="380" x2="381" y2="269.8"/>
+    <line x1="384.5" y1="254" x2="444.5" y2="397.8"/>
+    <line x1="453" y1="408" x2="498.7" y2="260.4"/>
+  </g>
+
+  <!-- 四位基台の印 -->
+  <g transform="translate(381.5,140.5) scale(1.075)">
+    <path d="M0,-33 L-36,0 L0,33 L36,0 Z" fill="none" stroke="currentColor" stroke-width="2.4"/>
+    <g stroke="currentColor" stroke-width="2.2" fill="none" marker-end="url(#k481-m)">
+      <path d="M-19,-4.5 H15.8"/>
+      <path d="M19,3.5 H-16.8"/>
+      <path d="M-4,18 V-13.3"/>
+      <path d="M4,-18 V13.3"/>
+    </g>
+    <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.4">
+      <circle cx="0" cy="-35" r="15.8"/>
+      <circle cx="-38" cy="0" r="15.8"/>
+      <circle cx="38" cy="0" r="15.8"/>
+      <circle cx="0" cy="35" r="15.8"/>
+    </g>
+    <g font-size="17" text-anchor="middle" dominant-baseline="central">
+      <text x="0" y="-35">神</text>
+      <text x="-38" y="0">心</text>
+      <text x="38" y="0">体</text>
+      <text x="0" y="35">個</text>
+    </g>
+  </g>
+  <text x="461" y="143" font-size="28" dominant-baseline="central" textLength="170" lengthAdjust="spacing">四位基台完成</text>
+
+  <!-- ア・エ（元どおり白） -->
+  <ellipse cx="380" cy="388" rx="40.8" ry="17.8" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.4"/>
+  <text x="381" y="388" font-size="20" text-anchor="middle" dominant-baseline="central" fill="currentColor" textLength="50" lengthAdjust="spacing">ア・エ</text>
+
+  <!-- ４数復帰蕩減期間 -->
+  <rect x="533.2" y="266.2" width="138.6" height="86.6" rx="6" fill="#CDF8F7" stroke="currentColor" stroke-width="2.4"/>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="560" y="292">４</text>
+    <text x="617" y="292" textLength="82" lengthAdjust="spacing">数復帰</text>
+    <text x="602.5" y="327" textLength="112" lengthAdjust="spacing">蕩減期間</text>
+  </g>
+</svg>

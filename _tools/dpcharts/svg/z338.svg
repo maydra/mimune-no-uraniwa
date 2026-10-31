@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>④聖書</title>
+
+  <g font-size="48" dominant-baseline="central">
+    <text x="53" y="57.5" font-size="50">④</text>
+    <text x="109.5" y="58" textLength="100" lengthAdjust="spacing">聖書</text>
+  </g>
+
+  <!-- 創造 → 堕落 → 復帰 -->
+  <g font-size="48" text-anchor="middle" dominant-baseline="central">
+    <text x="312.5" y="153" textLength="100" lengthAdjust="spacing">創造</text>
+    <text x="637" y="153" textLength="100" lengthAdjust="spacing">堕落</text>
+    <text x="983" y="153" textLength="100" lengthAdjust="spacing">復帰</text>
+  </g>
+  <g stroke="currentColor" stroke-width="4.5">
+    <rect x="206.25" y="195.25" width="210.5" height="89.5" fill="#F98AEE"/>
+    <rect x="530.25" y="195.25" width="210.5" height="89.5" fill="#50403D"/>
+    <rect x="855.25" y="196.25" width="245.5" height="89.5" fill="#F98AEE"/>
+  </g>
+  <g font-size="50" dominant-baseline="central">
+    <text y="239" fill="#111"><tspan x="242" font-size="49">創</tspan> <tspan x="302" textLength="79" lengthAdjust="spacingAndGlyphs">2:9</tspan></text>
+    <text y="238.5" fill="#fff"><tspan x="553" font-size="49">創</tspan> <tspan x="616" textLength="101" lengthAdjust="spacingAndGlyphs">3:24</tspan></text>
+    <text y="241.5" fill="#111"><tspan x="882.5" font-size="49">黙</tspan> <tspan x="944" textLength="127" lengthAdjust="spacingAndGlyphs">22:13</tspan></text>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="448,220 483,220 483,208 501,239.5 483,271 483,259 448,259"/>
+    <polygon points="775,220 808,220 808,208 826.5,239.5 808,271 808,259 775,259"/>
+  </g>
+
+  <!-- ●生命の木 -->
+  <circle cx="218.5" cy="341" r="10"/>
+  <circle cx="878" cy="341" r="10"/>
+  <g font-size="44" dominant-baseline="central">
+    <text x="237.5" y="339.5" textLength="182" lengthAdjust="spacing">生命の木</text>
+    <text x="896.5" y="340.5" textLength="182" lengthAdjust="spacing">生命の木</text>
+  </g>
+
+  <!-- 歴史の目的 → 生命の木を中心としたエデンの園復帰 -->
+  <rect x="241.25" y="449.25" width="818.5" height="160.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <polygon points="529,498 569,498 569,491.5 587.5,502.5 569,513.5 569,507 529,507" fill="#8C949A"/>
+  <g dominant-baseline="central" fill="#111">
+    <text x="263" y="502.5" font-size="48" textLength="250.5" lengthAdjust="spacing">歴史の目的</text>
+    <text x="602.5" y="502" font-size="47" textLength="441" lengthAdjust="spacing">生命の木を中心とした</text>
+    <text x="604.5" y="564" font-size="47" textLength="306" lengthAdjust="spacing">エデンの園復帰</text>
+  </g>
+</svg>

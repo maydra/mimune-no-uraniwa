@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>授受作用の例</title>
+
+  <text x="48" y="76" font-size="50" textLength="300" lengthAdjust="spacing">授受作用の例</text>
+  <line x1="48" y1="87.5" x2="348" y2="87.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 左の見出し -->
+  <g font-size="48" text-anchor="middle" dominant-baseline="central">
+    <text x="264" y="168.5">原子</text>
+    <text x="264" y="308">分子</text>
+    <text x="264" y="446">植物</text>
+    <text x="264" y="585">動物</text>
+    <text x="339" y="168">：</text>
+    <text x="339" y="308">：</text>
+    <text x="335" y="446">：</text>
+    <text x="339" y="585">：</text>
+  </g>
+
+  <!-- 主体（桃）と対象（緑） -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <g fill="#F98AEE">
+      <ellipse cx="445" cy="170" rx="71.25" ry="39.75"/>
+      <ellipse cx="445" cy="309" rx="71.25" ry="39.75"/>
+      <ellipse cx="445" cy="448" rx="71.25" ry="39.75"/>
+      <ellipse cx="445" cy="587" rx="71.25" ry="39.75"/>
+    </g>
+    <g fill="#A0F08A">
+      <ellipse cx="698" cy="170" rx="71.25" ry="39.75"/>
+      <ellipse cx="698" cy="309" rx="71.25" ry="39.75"/>
+      <ellipse cx="698" cy="448" rx="71.25" ry="39.75"/>
+      <ellipse cx="698" cy="587" rx="71.25" ry="39.75"/>
+    </g>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="446" y="171" font-size="48">陽子</text>
+    <text x="698.5" y="170" font-size="48">電子</text>
+    <text x="445" y="309.5" font-size="38" textLength="114" lengthAdjust="spacingAndGlyphs">陽イオン</text>
+    <text x="700" y="309" font-size="38" textLength="114" lengthAdjust="spacingAndGlyphs">陰イオン</text>
+    <text x="444.5" y="448" font-size="44" textLength="110" lengthAdjust="spacingAndGlyphs">雄しべ</text>
+    <text x="698.5" y="447.5" font-size="44" textLength="110" lengthAdjust="spacingAndGlyphs">雌しべ</text>
+    <text x="443" y="587" font-size="50">雄</text>
+    <text x="698" y="587" font-size="50">雌</text>
+  </g>
+
+  <!-- 授受の矢印（4段） -->
+  <g fill="currentColor">
+    <g>
+      <path d="M530.5,153 Q565,137 595,152 M611,183.5 Q577,197 549,186" fill="none" stroke="currentColor" stroke-width="5.5"/>
+      <polygon points="597,141.5 616,157 592.5,164.5"/>
+      <polygon points="529,180 551,171.5 546.5,195"/>
+    </g>
+    <g transform="translate(-2,137)">
+      <path d="M530.5,153 Q565,137 595,152 M611,183.5 Q577,197 549,186" fill="none" stroke="currentColor" stroke-width="5.5"/>
+      <polygon points="597,141.5 616,157 592.5,164.5"/>
+      <polygon points="529,180 551,171.5 546.5,195"/>
+    </g>
+    <g transform="translate(0,282)">
+      <path d="M530.5,153 Q565,137 595,152 M611,183.5 Q577,197 549,186" fill="none" stroke="currentColor" stroke-width="5.5"/>
+      <polygon points="597,141.5 616,157 592.5,164.5"/>
+      <polygon points="529,180 551,171.5 546.5,195"/>
+    </g>
+    <g transform="translate(-0.5,419)">
+      <path d="M530.5,153 Q565,137 595,152 M611,183.5 Q577,197 549,186" fill="none" stroke="currentColor" stroke-width="5.5"/>
+      <polygon points="597,141.5 616,157 592.5,164.5"/>
+      <polygon points="529,180 551,171.5 546.5,195"/>
+    </g>
+  </g>
+
+  <!-- 右の説明 -->
+  <g font-size="45" dominant-baseline="central">
+    <text x="789" y="170">存在、</text>
+    <text x="916" y="170">融合作用</text>
+    <text x="789" y="310">存在、</text>
+    <text x="916" y="310">化学作用</text>
+  </g>
+  <g font-size="43" dominant-baseline="central">
+    <text x="790" y="447">生体を維持、</text>
+    <text x="1036" y="447">繁殖</text>
+    <text x="790" y="587">生体を維持、</text>
+    <text x="1036" y="587">繁殖</text>
+  </g>
+</svg>

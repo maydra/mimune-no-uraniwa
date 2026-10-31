@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>生霊体を完成した人間</title>
+  <defs>
+    <marker id="z193-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.5" markerHeight="2.6" preserveAspectRatio="none" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="51" y="76" font-size="48" textLength="500" lengthAdjust="spacing">生霊体を完成した人間</text>
+  <line x1="51" y1="86" x2="551" y2="86" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 霊人体と肉身 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="339.25" cy="254" rx="75.5" ry="126" fill="#F98AEE"/>
+    <ellipse cx="338.25" cy="509.75" rx="76.25" ry="125.75" fill="#A0F08A"/>
+  </g>
+  <line x1="265" y1="381.5" x2="423" y2="381.5" stroke="currentColor" stroke-width="7.5"/>
+  <g font-size="60" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="340" y="190">霊<tspan x="340" dy="1.05em">人</tspan><tspan x="340" dy="1.05em">体</tspan></text>
+    <text x="339.5" y="465.5">肉<tspan x="339.5" dy="1.48em">身</tspan></text>
+  </g>
+
+  <!-- 共鳴の矢印 -->
+  <path d="M428,297 C468,327 467.3,400.1 431.3,434.6" fill="none" stroke="#8C949A" stroke-width="12" marker-end="url(#z193-g)"/>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="547" y="238" font-size="54">霊的事実</text>
+    <text x="542.5" y="379.5" font-size="54">共鳴</text>
+    <text x="571" y="500" font-size="54">生理的現象</text>
+    <text x="569" y="560.5" font-size="45" font-weight="400">（肉身の五官）</text>
+  </g>
+
+  <!-- ⇒ -->
+  <polygon points="674,370 729,370 729,359 771,383 729,407 729,396 674,396" fill="#8C949A"/>
+
+  <!-- 地上天国から天上天国へ -->
+  <polygon points="920,420 920,368 907,368 928.5,333 950,368 937,368 937,420" fill="#8C949A"/>
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="928.5" cy="215.75" rx="112.5" ry="107.25" fill="#fff" class="paper"/>
+    <ellipse cx="929.25" cy="523.75" rx="112.75" ry="107.25" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="56" text-anchor="middle" dominant-baseline="central">
+    <text x="924" y="181.5">天上</text>
+    <text x="923" y="253.5">天国</text>
+    <text x="927.5" y="489.5">地上</text>
+    <text x="927.5" y="561.5">天国</text>
+  </g>
+</svg>

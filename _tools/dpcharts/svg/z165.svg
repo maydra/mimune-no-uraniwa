@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>成長期間の三段階と堕落・復帰</title>
+
+  <!-- 成長期間の矢印（人間は長成期の完成級まで） -->
+  <g fill="#C4CCD3" stroke="currentColor" stroke-width="2.5">
+    <polygon points="338.5,201 394,258 362,258 362,497 316.5,497 316.5,258 283,258"/>
+    <rect x="703" y="303" width="46" height="194"/>
+    <polygon points="973,202 1028.5,258.5 997,258.5 997,497 951,497 951,258.5 918.5,258.5"/>
+  </g>
+  <g stroke="currentColor" stroke-width="6.5">
+    <line x1="220" y1="199" x2="1095" y2="199"/>
+    <line x1="220" y1="497" x2="1095" y2="497"/>
+  </g>
+  <g stroke="currentColor" stroke-width="5" stroke-dasharray="10 15.07">
+    <line x1="276" y1="303" x2="1039" y2="303"/>
+    <line x1="276" y1="403" x2="1039" y2="403"/>
+  </g>
+  <g stroke="#111" stroke-width="5" stroke-dasharray="10 15.07">
+    <line x1="316.5" y1="303" x2="362" y2="303" stroke-dashoffset="15.43"/>
+    <line x1="316.5" y1="403" x2="362" y2="403" stroke-dashoffset="15.43"/>
+    <line x1="703" y1="403" x2="749" y2="403" stroke-dashoffset="0.81"/>
+    <line x1="951" y1="303" x2="997" y2="303" stroke-dashoffset="23.18"/>
+    <line x1="951" y1="403" x2="997" y2="403" stroke-dashoffset="23.18"/>
+  </g>
+  <polygon points="725,205 779.5,255.5 749,255.5 749,303 703,303 703,255.5 672,255.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 完成と出発点 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="338" cy="142" rx="104.5" ry="51.5" fill="#CDF8F7"/>
+    <ellipse cx="725.5" cy="142" rx="105" ry="51.5" fill="#CDF8F7"/>
+    <ellipse cx="973.5" cy="141.5" rx="105" ry="51" fill="#CDF8F7"/>
+    <ellipse cx="338.5" cy="550" rx="100" ry="49.5" fill="#DCC4C4"/>
+    <ellipse cx="725" cy="550" rx="99.5" ry="49.5" fill="#FCE5E3"/>
+    <ellipse cx="973" cy="550" rx="105.5" ry="49.5" fill="#CF921C"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="338.5" y="143" font-size="52">完成</text>
+    <text x="725" y="120.5" font-size="41">個性</text>
+    <text x="725.5" y="166" font-size="41">完成</text>
+    <text x="972" y="127.5" font-size="36.5">創造目的</text>
+    <text x="973" y="165" font-size="36.5">完成</text>
+    <text x="337.5" y="551.5" font-size="51">被造物</text>
+    <text x="723.5" y="554" font-size="47">人間</text>
+    <text x="972.5" y="551.5" font-size="43">堕落人間</text>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="240.5" y="278.7" font-size="40">成<tspan x="240.5" dy="42.2">長</tspan><tspan x="240.5" dy="42.2">期</tspan><tspan x="240.5" dy="42.2">間</tspan></text>
+    <text x="1071" y="244.2" font-size="41">復<tspan x="1071" dy="41.8">帰</tspan><tspan x="1071" dy="41.8">も</tspan><tspan x="1071" dy="41.8">三</tspan><tspan x="1071" dy="41.8">段</tspan><tspan x="1071" dy="41.8">階</tspan></text>
+    <g font-size="44">
+      <text x="485.5" y="254">完成期</text>
+      <text x="485.5" y="354.5">長成期</text>
+      <text x="485" y="454">蘇生期</text>
+    </g>
+    <text x="849" y="346" font-size="39">堕落</text>
+  </g>
+
+  <!-- 堕落 -->
+  <line x1="727" y1="311" x2="889" y2="474.5" stroke="#EA0000" stroke-width="9"/>
+  <polygon points="880,483.3 897.5,465.8 906,492.5" fill="#EA0000"/>
+</svg>

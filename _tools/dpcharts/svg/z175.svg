@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>万物世界に対する人間の直接主管とは？</title>
+  <defs>
+    <marker id="z175-g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="2.4" markerHeight="2.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="53" y="59.5" font-size="48" dominant-baseline="central" textLength="899" lengthAdjust="spacing">万物世界に対する人間の直接主管とは？</text>
+  <line x1="52" y1="90" x2="952" y2="90" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="430.5" y1="170" x2="264" y2="336"/>
+    <line x1="430.5" y1="170" x2="593" y2="332.5"/>
+    <line x1="264" y1="336" x2="427.5" y2="498"/>
+    <line x1="593" y1="332.5" x2="427.5" y2="498"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="9.5" fill="none" marker-end="url(#z175-g)">
+    <path d="M414,437 Q375,311 409,239.5"/>
+    <path d="M446,231 Q485,343 451,429.5"/>
+    <path d="M349,314 Q434,285 511,309.5"/>
+    <path d="M518,347 Q432,378 356,353"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="431" cy="168.5" r="52.5" fill="#fff" class="paper"/>
+    <ellipse cx="278.5" cy="326.5" rx="61.5" ry="50.5" fill="#F98AEE"/>
+    <ellipse cx="592.5" cy="328.5" rx="61.5" ry="50.5" fill="#A0F08A"/>
+    <ellipse cx="429" cy="499" rx="56" ry="50" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="429" y="167.5" font-size="54">神</text>
+    <text x="249.5" y="326.5" font-size="44" fill="#111">完<tspan x="278.5">・</tspan><tspan x="307.5">人</tspan></text>
+    <text x="592" y="328" font-size="44" fill="#111">万物</text>
+    <text x="430" y="498.5" font-size="54" fill="#111">合</text>
+  </g>
+
+  <!-- 直接主管の中身 -->
+  <g>
+    <circle cx="690" cy="260" r="8"/>
+    <circle cx="690" cy="371" r="8"/>
+    <circle cx="690" cy="486" r="8"/>
+  </g>
+  <g font-size="48" dominant-baseline="central">
+    <text x="710" y="259.5">神の心情、<tspan x="960">一体</tspan></text>
+    <text x="710" y="372">愛と美</text>
+    <text x="710" y="484">善の目的</text>
+  </g>
+
+  <rect x="245" y="575" width="369" height="76.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <text x="428.5" y="613" font-size="44" text-anchor="middle" dominant-baseline="central" textLength="319" lengthAdjust="spacing" fill="#111">主管的四位基台</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>アベル型の人生観からアベル型の世界へ、カイン型の人生観からカイン型の世界へ</title>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="261,192 261,260 255.3,260 264.8,276 274.3,260 269,260 269,192"/>
+    <polygon points="535,192 535,260 529.3,260 538.8,276 548.3,260 543,260 543,192"/>
+  </g>
+
+  <!-- 人生観の楕円 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="264.5" cy="133.5" rx="81" ry="60" fill="#F8F28F"/>
+    <ellipse cx="538.5" cy="133.5" rx="79" ry="60" fill="#F86D42"/>
+  </g>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="265" y="117.5" textLength="134" lengthAdjust="spacing">アベル型の</text>
+    <text x="265" y="158" textLength="82" lengthAdjust="spacing">人生観</text>
+    <text x="539" y="117.5" textLength="134" lengthAdjust="spacing">カイン型の</text>
+    <text x="539" y="157.5" textLength="82" lengthAdjust="spacing">人生観</text>
+  </g>
+
+  <!-- 世界の箱 -->
+  <g stroke="currentColor" stroke-width="3">
+    <rect x="192" y="279" width="145" height="89" fill="#F8F28F"/>
+    <rect x="466.5" y="280.5" width="143.5" height="87" fill="#F86D42"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="265" y="307" textLength="128" lengthAdjust="spacing">アベル型の</text>
+    <text x="264" y="341.5" textLength="52" lengthAdjust="spacing">世界</text>
+    <text x="538.5" y="306.5" textLength="129" lengthAdjust="spacing">カイン型の</text>
+    <text x="538" y="341" textLength="52" lengthAdjust="spacing">世界</text>
+  </g>
+</svg>

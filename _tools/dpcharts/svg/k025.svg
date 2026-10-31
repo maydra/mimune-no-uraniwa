@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>蕩減条件はだれが立てなければならないのであろうか</title>
+
+  <text x="35" y="46.5" font-size="30" dominant-baseline="central" textLength="567" lengthAdjust="spacingAndGlyphs">蕩減条件はだれが立てなければならないのであろうか</text>
+  <line x1="34" y1="64" x2="602" y2="64" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 主管の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="232,157 239,157 239,297 243.5,297 235.5,310 227.5,297 232,297"/>
+    <polygon points="567,159 574,159 574,297 578.5,297 570.5,310 562.5,297 567,297"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="264" y="202">主</text>
+    <text x="264" y="231">管</text>
+    <text x="599" y="204">主</text>
+    <text x="599" y="233">管</text>
+  </g>
+
+  <!-- 人間（完成） -->
+  <ellipse cx="238" cy="123" rx="66" ry="35" fill="#FCE5E3" stroke="currentColor" stroke-width="2.2"/>
+  <g fill="#111" dominant-baseline="central">
+    <text x="201" y="109.5" font-size="28" textLength="71" lengthAdjust="spacing">人間</text>
+    <text y="139" font-size="22" text-anchor="middle"><tspan x="208.5">(</tspan><tspan x="237">完成</tspan><tspan x="265">)</tspan></text>
+  </g>
+
+  <!-- サタン（堕落した天使） -->
+  <ellipse cx="570" cy="122.5" rx="78" ry="36.5" fill="#50403D" stroke="currentColor" stroke-width="2.2"/>
+  <g fill="#fff" dominant-baseline="central">
+    <text x="532.5" y="107" font-size="24" textLength="77" lengthAdjust="spacing">サタン</text>
+    <text y="134" font-size="18"><tspan x="509" text-anchor="middle">(</tspan><tspan x="514" textLength="113" lengthAdjust="spacing">堕落した天使</tspan><tspan x="632" text-anchor="middle">)</tspan></text>
+  </g>
+
+  <!-- 天使・堕落人間 -->
+  <ellipse cx="235.5" cy="340.5" rx="66.5" ry="27.5" fill="#C0CFD2" stroke="currentColor" stroke-width="2.2"/>
+  <text x="199.5" y="341" font-size="31" dominant-baseline="central" fill="#111" textLength="69" lengthAdjust="spacing">天使</text>
+  <ellipse cx="570.5" cy="340.5" rx="75.5" ry="28.5" fill="#CF921C" stroke="currentColor" stroke-width="2.2"/>
+  <text x="569.5" y="341" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="115" lengthAdjust="spacing">堕落人間</text>
+
+  <!-- 人間責任分担・復帰の黒い矢印 -->
+  <g transform="translate(303,154) rotate(35)">
+    <polygon points="0,0 26.5,-13 26.5,-3.75 272,-3.75 272,3.75 26.5,3.75 26.5,13"/>
+    <g font-size="28" text-anchor="middle" dominant-baseline="central">
+      <text x="153.5" y="-23.5" textLength="173" lengthAdjust="spacing">人間責任分担</text>
+      <text x="147.5" y="24">復帰</text>
+    </g>
+  </g>
+
+  <!-- 責任分担：✕ -->
+  <text y="393.5" font-size="26" dominant-baseline="central"><tspan x="489" textLength="105" lengthAdjust="spacing">責任分担</tspan><tspan x="607" text-anchor="middle">：</tspan></text>
+  <path d="M622,379 L647,404 M647,379 L622,404" stroke="currentColor" stroke-width="5.5" fill="none"/>
+</svg>

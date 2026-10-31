@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>堕落世界の文明の移り変わり</title>
+
+  <!-- 題 -->
+  <text x="35" y="37.5" font-size="30" dominant-baseline="central" textLength="402" lengthAdjust="spacing">堕落世界の文明の移り変わり</text>
+  <line x1="33" y1="57" x2="443" y2="57" stroke="currentColor" stroke-width="2"/>
+
+  <!-- 上の地名 -->
+  <g font-size="27" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="200.5" y="110" textLength="153" lengthAdjust="spacing">エジプト大陸</text>
+    <text x="412.5" y="108.5" textLength="147" lengthAdjust="spacing">半島、島嶼</text>
+    <text x="629" y="108" textLength="56" lengthAdjust="spacing">ソ連</text>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="259,186.5 342,186.5 342,182 354,189.5 342,197 342,193 259,193"/>
+    <polygon points="472,186.5 555,186.5 555,182 567,189.5 555,197 555,193 472,193"/>
+    <polygon points="465,305 477,297.5 478.5,312.5"/>
+  </g>
+  <path d="M605,231 Q560,300 476,304.5" fill="none" stroke="#8C949A" stroke-width="5.5"/>
+
+  <!-- 文明の円 -->
+  <g stroke="currentColor" stroke-width="3">
+    <circle cx="199.5" cy="189.5" r="45.3" fill="#fff" class="paper"/>
+    <circle cx="412" cy="189.5" r="45.3" fill="#fff" class="paper"/>
+    <circle cx="626.5" cy="189.5" r="45.3" fill="#fff" class="paper"/>
+    <circle cx="411.5" cy="313.5" r="45.3" fill="#F8F28F"/>
+  </g>
+  <g font-size="32" text-anchor="middle" dominant-baseline="central">
+    <text x="199" y="170.5">熱帯</text>
+    <text x="199" y="208">文明</text>
+    <text x="412" y="170.5">涼帯</text>
+    <text x="412" y="208">文明</text>
+    <text x="626" y="170.5">寒帯</text>
+    <text x="626" y="208">文明</text>
+    <g fill="#111">
+      <text x="411" y="294.5">温帯</text>
+      <text x="411" y="332">文明</text>
+    </g>
+  </g>
+
+  <g font-size="29" text-anchor="middle" dominant-baseline="central">
+    <text x="319.5" y="314.5">結実</text>
+    <text x="409" y="385.5">韓国</text>
+  </g>
+</svg>

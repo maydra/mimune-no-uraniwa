@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>霊人体と肉身の関係</title>
+  <defs>
+    <marker id="z189-a" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="3.2" markerHeight="3.5" preserveAspectRatio="none" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="77" font-size="48" textLength="449" lengthAdjust="spacing">霊人体と肉身の関係</text>
+  <line x1="50" y1="87" x2="499" y2="87" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 霊人体（霊体と生心） -->
+  <text x="445.5" y="131.5" font-size="44" text-anchor="middle" dominant-baseline="central">霊人体</text>
+  <ellipse cx="441.25" cy="272.75" rx="115.75" ry="109.75" fill="#F98AEE" stroke="currentColor" stroke-width="4.5"/>
+  <ellipse cx="441.25" cy="314" rx="64.5" ry="68.5" fill="none" stroke="#111" stroke-width="4.5"/>
+
+  <!-- 肉身（肉体と肉心） -->
+  <ellipse cx="441.25" cy="501.75" rx="115.75" ry="110.25" fill="#A0F08A" stroke="currentColor" stroke-width="4.5"/>
+  <ellipse cx="441.25" cy="460.25" rx="64.25" ry="68.75" fill="none" stroke="#111" stroke-width="4.5"/>
+  <text x="440" y="648" font-size="44" text-anchor="middle" dominant-baseline="central">肉身</text>
+
+  <line x1="308" y1="386.5" x2="574" y2="386.5" stroke="currentColor" stroke-width="6"/>
+
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="441.5" y="212.5" font-size="48">霊体</text>
+    <text x="442" y="563.5" font-size="48">肉体</text>
+    <text x="441.5" y="289" font-size="46">生<tspan x="441.5" dy="1.05em">心</tspan></text>
+    <text x="441.5" y="435" font-size="46">肉<tspan x="441.5" dy="1.05em">心</tspan></text>
+  </g>
+
+  <!-- 生力要素と生霊要素 -->
+  <g stroke="currentColor" stroke-width="6" fill="none" marker-end="url(#z189-a)">
+    <path d="M317.5,455 C290.7,425.3 280.8,367.1 303,347"/>
+    <path d="M553,330 C589.9,352.4 598.8,402.7 570.3,435.1"/>
+  </g>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="230.5" y="330">生<tspan x="230.5" dy="1.05em">力</tspan><tspan x="230.5" dy="1.05em">要</tspan><tspan x="230.5" dy="1.05em">素</tspan></text>
+    <text x="633.5" y="330.5">生<tspan x="633.5" dy="1.05em">霊</tspan><tspan x="633.5" dy="1.05em">要</tspan><tspan x="633.5" dy="1.05em">素</tspan></text>
+  </g>
+
+  <!-- 説明 -->
+  <g>
+    <circle cx="736" cy="192" r="11.5"/>
+    <circle cx="736" cy="340" r="11.5"/>
+    <circle cx="736" cy="434" r="11.5"/>
+  </g>
+  <g font-size="42" dominant-baseline="central">
+    <text x="761" y="192">霊人体は肉身を</text>
+    <text x="761" y="251">土台にして成長</text>
+    <text x="761" y="340">実と木</text>
+    <text x="761" y="436">生心・肉心による</text>
+    <text x="761" y="494">肉身の善化、</text>
+    <text x="761" y="552.5">霊人体の成長</text>
+  </g>
+</svg>

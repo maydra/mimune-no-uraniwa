@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>⑬ 地上天国復帰し、真の父母、王とならねばならない　再臨主は地上誕生</title>
+  <defs>
+    <marker id="k818-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="33" y="35" font-size="27" dominant-baseline="central">⑬</text>
+  <text y="35" font-size="26" dominant-baseline="central"><tspan x="68" textLength="161" lengthAdjust="spacingAndGlyphs">地上天国復帰し</tspan><tspan x="231">、</tspan><tspan x="254" textLength="93" lengthAdjust="spacingAndGlyphs">真の父母</tspan><tspan x="346">、</tspan><tspan x="369" textLength="231" lengthAdjust="spacingAndGlyphs">王とならねばならない</tspan></text>
+  <line x1="68" y1="53" x2="600" y2="53" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- 真の父母・王 -->
+  <circle cx="132.5" cy="111" r="7.5"/>
+  <circle cx="132" cy="148.5" r="7.5"/>
+  <g font-size="26" dominant-baseline="central">
+    <text x="147" y="112" textLength="104" lengthAdjust="spacing">真の父母</text>
+    <text x="147" y="147.5">王</text>
+  </g>
+
+  <!-- 十字架 -->
+  <g transform="translate(387.5,89.5) scale(0.45,0.406)" fill="#7A5230" stroke="#111" stroke-width="6" stroke-linejoin="round">
+    <path d="M40,0 H60 V42 H100 V60 H60 V180 H40 V60 H0 V42 H40 Z"/>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g stroke="currentColor" stroke-width="3.5" fill="none" marker-end="url(#k818-a)">
+    <path d="M300,238 Q285,211.5 300,188"/>
+    <path d="M330,186 Q343,211.5 329,235"/>
+    <path d="M557,238 Q542,210.5 558,186"/>
+    <path d="M588,183 Q601,210 586,234"/>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <polygon points="425,203.5 449,203.5 449,195.5 472.5,208 449,220.5 449,212.5 425,212.5" fill="#8C949A"/>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="317.5" cy="130" rx="60.5" ry="39" fill="#F8F28F"/>
+    <ellipse cx="574.5" cy="130" rx="60.5" ry="39" fill="#F8F28F"/>
+    <ellipse cx="317.5" cy="293.5" rx="84" ry="41" fill="#fff" class="paper"/>
+    <ellipse cx="574.5" cy="293.5" rx="84" ry="41" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="31" text-anchor="middle" dominant-baseline="central">
+    <text x="316.5" y="129.5" fill="#111" textLength="93" lengthAdjust="spacing">イエス</text>
+    <text x="574" y="129.5" fill="#111" textLength="61" lengthAdjust="spacing">再臨</text>
+    <text x="317" y="294" textLength="124" lengthAdjust="spacing">地上天国</text>
+    <text x="574" y="294" textLength="124" lengthAdjust="spacing">地上天国</text>
+  </g>
+
+  <!-- 再臨主は地上誕生 -->
+  <rect x="302" y="361" width="297" height="47" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <text x="450" y="385" font-size="31" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="252" lengthAdjust="spacing">再臨主は地上誕生</text>
+</svg>

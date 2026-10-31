@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>(2) アブラハムのイサク献祭</title>
+
+  <g font-size="30" dominant-baseline="central">
+    <text x="47" y="36" textLength="40" lengthAdjust="spacing">(2)</text>
+    <text x="101" y="36" textLength="346" lengthAdjust="spacing">アブラハムのイサク献祭</text>
+  </g>
+  <line x1="99" y1="55" x2="447" y2="55" stroke="currentColor" stroke-width="3"/>
+
+  <!-- アブラハムから神への矢印 -->
+  <g fill="#8C949A">
+    <polygon points="231.5,181 240,193.5 235,193.5 235,308 228,308 228,193.5 223,193.5"/>
+    <polygon points="540.5,183 549,195.5 544,195.5 544,308 537,308 537,195.5 532,195.5"/>
+    <polygon points="391,242 450.5,242 450.5,231.5 482,248 450.5,264.5 450.5,253.5 391,253.5"/>
+  </g>
+
+  <!-- 神 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.8">
+    <circle cx="232" cy="138.8" r="40"/>
+    <circle cx="541.5" cy="140.5" r="40"/>
+  </g>
+  <g font-size="37" text-anchor="middle" dominant-baseline="central">
+    <text x="231" y="138">神</text>
+    <text x="540" y="140">神</text>
+  </g>
+
+  <!-- 象徴献祭は失敗 -->
+  <path d="M214,227 L250,262 M250,226 L214,262" stroke="currentColor" stroke-width="5"/>
+  <g font-size="26" dominant-baseline="central">
+    <text x="265" y="231.5" textLength="106" lengthAdjust="spacing">象徴献祭</text>
+    <text x="265" y="264.5" textLength="53" lengthAdjust="spacing">失敗</text>
+    <text x="556" y="246.5" font-size="25" textLength="131" lengthAdjust="spacing">イサク燔祭</text>
+  </g>
+
+  <!-- 蕩減復帰 -->
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="423.5" y="122.5">蕩</text>
+    <text x="423.5" y="151.5">滅</text>
+    <text x="423.5" y="181">復</text>
+    <text x="423.5" y="209.5">帰</text>
+  </g>
+
+  <!-- アブラハム -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="2.8">
+    <ellipse cx="231" cy="337.5" rx="72" ry="29.5"/>
+    <ellipse cx="541" cy="337.5" rx="72" ry="29.5"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="231" y="337" textLength="116" lengthAdjust="spacing">アブラハム</text>
+    <text x="542" y="337" textLength="116" lengthAdjust="spacing">アブラハム</text>
+  </g>
+</svg>

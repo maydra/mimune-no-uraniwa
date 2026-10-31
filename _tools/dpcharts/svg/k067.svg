@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>エバの堕落の経路</title>
+
+  <!-- 題 -->
+  <text x="36" y="37.5" font-size="31" textLength="249" lengthAdjust="spacing" dominant-baseline="central">エバの堕落の経路</text>
+  <line x1="33" y1="57" x2="285" y2="57" stroke="currentColor" stroke-width="2.6"/>
+
+  <!-- アダム・エバ・天使長 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="187.5" cy="145.5" rx="56" ry="30" fill="#CF921C"/>
+    <ellipse cx="408" cy="145.5" rx="56" ry="30" fill="#CF921C"/>
+    <ellipse cx="630.5" cy="145.5" rx="56" ry="30" fill="#50403D"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="188" y="146" font-size="25" textLength="73" lengthAdjust="spacing" fill="#111">アダム</text>
+    <text x="386.5" y="145.5" font-size="25" fill="#111">エ</text>
+    <text x="429.5" y="145.5" font-size="25" fill="#111">バ</text>
+    <text x="631" y="145.5" font-size="27" textLength="83" lengthAdjust="spacing" fill="#fff">天使長</text>
+  </g>
+
+  <!-- 行き来の矢印 -->
+  <g fill="currentColor">
+    <polygon points="254,135.5 333.5,135.5 333.5,131 343.5,138 333.5,145 333.5,140.5 254,140.5"/>
+    <polygon points="341,150.5 262,150.5 262,146 251.5,153 262,160 262,155.5 341,155.5"/>
+    <polygon points="476,134.5 553,134.5 553,130 563.5,137 553,144 553,139.5 476,139.5"/>
+    <polygon points="562,149.5 484,149.5 484,145 473.5,152 484,159 484,154.5 562,154.5"/>
+  </g>
+
+  <!-- 地の上の字 -->
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="297" y="110.5" font-size="24" textLength="71" lengthAdjust="spacing">二番目</text>
+    <text x="515.5" y="110" font-size="25" textLength="50" lengthAdjust="spacing">最初</text>
+    <g font-size="25.5">
+      <text x="298.5" y="184" textLength="102" lengthAdjust="spacing">肉的堕落</text>
+      <text x="516" y="185" textLength="102" lengthAdjust="spacing">霊的堕落</text>
+      <text x="185" y="201.5" textLength="77" lengthAdjust="spacing">原理的</text>
+      <text x="185" y="233" textLength="51" lengthAdjust="spacing">相対</text>
+      <text x="630.5" y="204" textLength="102" lengthAdjust="spacing">非原理的</text>
+      <text x="630.5" y="235" textLength="50" lengthAdjust="spacing">相対</text>
+      <text x="516" y="342.5" textLength="129" lengthAdjust="spacing">過分な欲望</text>
+      <text x="315" y="374" textLength="127" lengthAdjust="spacing">と願う心情</text>
+    </g>
+    <text x="319" y="342.5" font-size="25.5" textLength="177" lengthAdjust="spacing">の側に戻りたい</text>
+  </g>
+
+  <!-- 点線 -->
+  <g stroke="currentColor" stroke-width="3" stroke-dasharray="6 4.6">
+    <line x1="297" y1="207" x2="297" y2="319"/>
+    <line x1="515.8" y1="208" x2="515.8" y2="321"/>
+  </g>
+
+  <!-- 丸で囲んだ神 -->
+  <circle cx="207.5" cy="341.5" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="207" y="342" font-size="22" text-anchor="middle" dominant-baseline="central">神</text>
+</svg>

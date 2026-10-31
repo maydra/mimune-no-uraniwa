@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>『地上天国復帰』</title>
+  <defs>
+    <marker id="z271-a" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.45" markerHeight="2.45" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 題（かぎ括弧は字の幅がフォントで違うので、内側の端で合わせる） -->
+  <g font-size="48" dominant-baseline="central">
+    <text x="95" y="57.5" text-anchor="end">『</text>
+    <text x="94" y="57.5" textLength="301" lengthAdjust="spacing">地上天国復帰</text>
+    <text x="395" y="57.5">』</text>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="391.75" cy="172" r="55.6" fill="#fff" class="paper"/>
+    <circle cx="921.5" cy="172" r="55.5" fill="#50403D"/>
+    <ellipse cx="653" cy="330" rx="94.5" ry="43.5" fill="#FCE5E3"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="389" y="171" font-size="58">神</text>
+    <text x="921.5" y="172.5" font-size="54" fill="#fff">サ</text>
+  </g>
+  <text x="580" y="330.5" font-size="46" dominant-baseline="central" textLength="146" lengthAdjust="spacing" fill="#111">全人類</text>
+
+  <!-- 神と全人類の授受、サタンとの授受は断つ -->
+  <g stroke="currentColor" stroke-width="9" fill="none" marker-end="url(#z271-a)">
+    <path d="M465,208.5 Q531,215.75 559.5,268 l0.7,0.72"/>
+    <path d="M553,299 Q500.75,295.5 457,240"/>
+    <path d="M741.5,279 Q772.5,226 834,213"/>
+    <path d="M864,227 Q837.75,274.25 773,293"/>
+  </g>
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="794" y1="198" x2="813.5" y2="310"/>
+    <line x1="742" y1="235" x2="867" y2="273.5"/>
+  </g>
+
+  <!-- 復帰の道 -->
+  <g font-size="40" dominant-baseline="central">
+    <text x="448" y="424.5">①</text>
+    <text x="500" y="424.5" textLength="371" lengthAdjust="spacing">自由意志＋責任分担</text>
+    <text x="448" y="484.5">②</text>
+    <text x="496" y="484.5" textLength="84" lengthAdjust="spacing">み言</text>
+    <text x="604" y="484.5" text-anchor="end">（</text>
+    <text x="604" y="484.5" textLength="84" lengthAdjust="spacing">原理</text>
+    <text x="688" y="484.5">）</text>
+    <text x="714" y="484.5" textLength="207" lengthAdjust="spacing">を探しだし</text>
+    <text x="921" y="484.5">、</text>
+    <text x="448" y="545.5">③</text>
+    <text x="497" y="545.5" textLength="333" lengthAdjust="spacing">サタンを自然屈伏</text>
+  </g>
+
+  <rect x="426" y="588.5" width="501" height="68.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <text x="469" y="622" font-size="40" dominant-baseline="central" textLength="417" lengthAdjust="spacing" fill="#111">創造本然の人間に復帰</text>
+</svg>

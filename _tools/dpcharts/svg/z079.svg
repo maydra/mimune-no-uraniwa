@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>万有原力（縦的な力）と授受作用の力（横的な力）</title>
+  <defs>
+    <marker id="z079-g" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="2.5" markerHeight="2.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <!-- 万有原力 -->
+  <ellipse cx="332.5" cy="149.5" rx="51" ry="117" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="334" y="81" font-size="46" text-anchor="middle" dominant-baseline="central">万<tspan x="334" dy="47">有</tspan><tspan x="334" dy="48">原</tspan><tspan x="333" dy="46">力</tspan></text>
+
+  <!-- 授受作用の力 -->
+  <ellipse cx="332.5" cy="526" rx="52" ry="128.5" fill="#DCC4C4" stroke="currentColor" stroke-width="4"/>
+  <text x="332" y="434" font-size="40" text-anchor="middle" dominant-baseline="central" fill="#111">授<tspan x="332" dy="38">受</tspan><tspan x="332" dy="37">作</tspan><tspan x="331.5" dy="38">用</tspan><tspan x="332" dy="37">の</tspan><tspan x="331.5" dy="36">力</tspan></text>
+
+  <!-- 上下の曲がった矢印 -->
+  <g stroke="#8C949A" stroke-width="8.5" fill="none" marker-end="url(#z079-g)">
+    <path d="M308.5,387 Q287.4,341.4 304.75,298.25"/>
+    <path d="M353.5,277 Q374.6,322.6 357.25,365.75"/>
+  </g>
+
+  <!-- 縦の線 -->
+  <g stroke="#8C949A" stroke-width="9">
+    <line x1="503" y1="281.5" x2="503" y2="392.5"/>
+    <line x1="660" y1="281" x2="660" y2="392"/>
+    <line x1="820.5" y1="281" x2="820.5" y2="392"/>
+    <line x1="981" y1="282" x2="981" y2="393"/>
+  </g>
+
+  <g font-size="52" text-anchor="middle" dominant-baseline="central">
+    <text x="504" y="86">原<tspan x="504" dy="54">因</tspan><tspan x="504" dy="53">的</tspan></text>
+    <text x="662.5" y="98">内<tspan x="662.5" dy="81">的</tspan></text>
+    <text x="822.5" y="84">主<tspan x="822.5" dy="55">体</tspan><tspan x="822.5" dy="54">的</tspan></text>
+    <text x="981.5" y="58">縦<tspan x="981.5" dy="54">的</tspan><tspan x="981.5" dy="53.5">な</tspan><tspan x="980.5" dy="54.5">力</tspan></text>
+    <text x="504" y="480">結<tspan x="504" dy="56">果</tspan><tspan x="504" dy="52">的</tspan></text>
+    <text x="660" y="502">外<tspan x="659.5" dy="54">的</tspan></text>
+    <text x="822.5" y="480">対<tspan x="822.5" dy="54">象</tspan><tspan x="822.5" dy="54">的</tspan></text>
+    <text x="979.5" y="455">横<tspan x="979.5" dy="53">的</tspan><tspan x="979.5" dy="54.5">な</tspan><tspan x="978.5" dy="54.5">力</tspan></text>
+  </g>
+</svg>

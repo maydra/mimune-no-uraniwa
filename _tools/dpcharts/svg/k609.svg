@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>2. 宗教史と経済史と政治史との相互関係</title>
+
+  <!-- 題 -->
+  <g font-size="29" dominant-baseline="central">
+    <text x="31" y="36">2.</text>
+    <text x="66" y="36" textLength="491" lengthAdjust="spacing">宗教史と経済史と政治史との相互関係</text>
+  </g>
+  <line x1="65" y1="55" x2="557" y2="55" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 人間堕落から二つの無知へ（太い線は楕円と箱より先に描く） -->
+  <g stroke="currentColor" stroke-width="6.5">
+    <line x1="240" y1="240.8" x2="292" y2="195.3"/>
+    <line x1="240" y1="262.7" x2="292" y2="306.9"/>
+  </g>
+  <ellipse cx="190" cy="249" rx="64.7" ry="36.7" fill="#CF921C" stroke="currentColor" stroke-width="2.6"/>
+  <text x="189.5" y="248.5" font-size="28" text-anchor="middle" dominant-baseline="central" textLength="115" lengthAdjust="spacing" fill="#111">人間堕落</text>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="366,164 528,164 528,159.5 541.5,167 528,174.5 528,170 366,170"/>
+    <polygon points="366,330 528,330 528,325.5 541.5,333 528,340.5 528,336 366,336"/>
+  </g>
+
+  <!-- 白い箱 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6">
+    <rect x="279.5" y="124.5" width="86" height="88" rx="13"/>
+    <rect x="280" y="290.5" width="85" height="87" rx="13"/>
+    <rect x="547.5" y="124.5" width="136" height="84.5" rx="14"/>
+    <rect x="547.5" y="290.5" width="136" height="84.5" rx="14"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="322" y="150.5">霊的</text>
+    <text x="322" y="184">無知</text>
+    <text x="322.5" y="316.5">肉的</text>
+    <text x="322.5" y="350.5">無知</text>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="615.5" y="150.5" font-size="27" textLength="108" lengthAdjust="spacing">原因世界</text>
+    <text x="615.5" y="183.5" font-size="25" textLength="116" lengthAdjust="spacing">(超現実的)</text>
+    <text x="615.5" y="316.5" font-size="27" textLength="108" lengthAdjust="spacing">結果世界</text>
+    <text x="615.5" y="349.5" font-size="25" textLength="98" lengthAdjust="spacing">(現実的)</text>
+  </g>
+
+  <!-- 宗教 × 科学 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="448.5" cy="203" rx="56.2" ry="21.5" fill="#F98AEE"/>
+    <ellipse cx="448.5" cy="299" rx="56.2" ry="21.5" fill="#A0F08A"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="449.5" y="202.5">宗教</text>
+    <text x="448.5" y="299.5">科学</text>
+  </g>
+  <g stroke="currentColor" stroke-width="5.5">
+    <line x1="432" y1="236" x2="462" y2="262"/>
+    <line x1="462" y1="236" x2="432" y2="262"/>
+  </g>
+</svg>

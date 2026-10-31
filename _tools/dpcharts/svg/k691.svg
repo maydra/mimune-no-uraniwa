@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>カイン型民主主義から共産主義世界へ　ドイツ：マルクス主義、ロシア：レーニン主義</title>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="237,68 237,131 231.5,131 241,148.5 250.5,131 245,131 245,68"/>
+    <polygon points="237,246 237,294 231.5,294 241,310.5 250.5,294 245,294 245,246"/>
+  </g>
+
+  <!-- カイン型民主主義 -->
+  <ellipse cx="241" cy="199" rx="74.5" ry="47.5" fill="#F86D42" stroke="currentColor" stroke-width="3"/>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="241.5" y="182" textLength="112" lengthAdjust="spacing">カイン型</text>
+    <text x="242" y="215" textLength="113" lengthAdjust="spacing">民主主義</text>
+  </g>
+
+  <!-- 共産主義世界 -->
+  <rect x="172.5" y="313.5" width="206.5" height="59.5" fill="#CF921C" stroke="currentColor" stroke-width="3"/>
+  <text x="276" y="343.5" font-size="31" text-anchor="middle" dominant-baseline="central" textLength="187" lengthAdjust="spacing" fill="#111">共産主義世界</text>
+
+  <!-- 右の字（元は細字） -->
+  <circle cx="347" cy="178" r="7.5"/>
+  <circle cx="347" cy="223" r="7.5"/>
+  <g font-size="27" font-weight="400" dominant-baseline="central">
+    <text y="179.5"><tspan x="369" textLength="77" lengthAdjust="spacing">ドイツ</tspan><tspan x="462.5" text-anchor="middle">：</tspan><tspan x="479" textLength="171" lengthAdjust="spacing">マルクス主義</tspan></text>
+    <text y="222"><tspan x="365" textLength="81" lengthAdjust="spacing">ロシア</tspan><tspan x="462.5" text-anchor="middle">：</tspan><tspan x="483" textLength="167" lengthAdjust="spacing">レーニン主義</tspan></text>
+  </g>
+</svg>

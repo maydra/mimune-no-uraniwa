@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅱ. 授受作用</title>
+  <defs>
+    <marker id="z078-k" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="1.8" markerHeight="1.8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="z078-a" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="1.9" markerHeight="1.9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="74" y="78" font-size="46" text-anchor="middle">Ⅱ</text>
+  <text x="99" y="78" font-size="46">.</text>
+  <text x="124" y="78" font-size="48" textLength="198" lengthAdjust="spacing">授受作用</text>
+  <line x1="124" y1="90" x2="323" y2="90" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神から主体・対象へ（太い黒の矢印） -->
+  <g stroke="currentColor" stroke-width="17.5" fill="none" marker-end="url(#z078-k)">
+    <path d="M589.2,220 L492.2,296.9"/>
+    <path d="M703.5,220 L801.6,297"/>
+  </g>
+  <ellipse cx="646" cy="181.5" rx="107.25" ry="65.75" fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5"/>
+  <text x="645.5" y="158" font-size="60" text-anchor="middle" dominant-baseline="central">神</text>
+  <text x="646.5" y="208" font-size="32" font-weight="400" text-anchor="middle" dominant-baseline="central">(万有原力)</text>
+
+  <!-- 主体と対象 -->
+  <ellipse cx="423" cy="372" rx="92.5" ry="51.5" fill="#F98AEE" stroke="currentColor" stroke-width="4"/>
+  <ellipse cx="872.5" cy="369.5" rx="93" ry="51" fill="#A0F08A" stroke="currentColor" stroke-width="4"/>
+  <g font-size="52" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="424" y="371.5">主体</text>
+    <text x="873" y="369">対象</text>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g stroke="currentColor" stroke-width="11" fill="none" marker-end="url(#z078-a)">
+    <path d="M521,350.5 Q659.8,318.4 758.5,346.7"/>
+    <path d="M776,396.5 Q641.1,427.6 534.8,402.2"/>
+  </g>
+
+  <!-- 力 -->
+  <polygon points="640,368 656,368 656,500 665.5,500 648,536.5 630.5,500 640,500" fill="#8C949A"/>
+  <circle cx="643" cy="587.5" r="41" fill="#DCC4C4" stroke="currentColor" stroke-width="4.5"/>
+  <text x="643" y="585" font-size="50" text-anchor="middle" dominant-baseline="central" fill="#111">力</text>
+  <line x1="699" y1="589.5" x2="752" y2="589.5" stroke="currentColor" stroke-width="6" stroke-dasharray="11 10"/>
+  <path d="M786,520 Q775.5,521.5 775.5,533 L775.5,574 Q775.5,586 765,589 Q775.5,592 775.5,604 L775.5,645 Q775.5,656.5 786,658" fill="none" stroke="currentColor" stroke-width="5.5"/>
+  <g font-size="44" dominant-baseline="central">
+    <text x="801" y="538">生存</text>
+    <text x="801" y="591">繁殖</text>
+    <text x="801" y="643">作用</text>
+  </g>
+</svg>

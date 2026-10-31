@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>創造本然の価値の基準</title>
+  <defs>
+    <marker id="z142-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="54" y="57" font-size="46" dominant-baseline="central" textLength="496" lengthAdjust="spacing">創造本然の価値の基準</text>
+  <line x1="53" y1="87.5" x2="552" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="8">
+    <line x1="449" y1="189" x2="333" y2="334"/>
+    <line x1="492" y1="189" x2="612" y2="334"/>
+    <line x1="325.5" y1="334" x2="452.6" y2="488"/>
+    <line x1="623.5" y1="334" x2="496.4" y2="488"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z142-g)">
+    <path d="M459,432 Q427.8,338.6 455.4,250.9"/>
+    <path d="M477.5,245 Q509,345 480.4,424.9"/>
+    <path d="M412,326.5 Q469.3,293.2 521.4,325.2"/>
+    <path d="M525,349.5 Q469.9,382.8 415.3,351"/>
+  </g>
+
+  <!-- 神から絶対者へ、絶対者から絶対的へ -->
+  <g stroke="currentColor" stroke-width="7" fill="none">
+    <line x1="535" y1="189" x2="875" y2="189" stroke-dasharray="22 14.3"/>
+    <line x1="964" y1="245" x2="964" y2="542.5" stroke-dasharray="21.5 13"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="471" cy="189" rx="62.5" ry="45" fill="#fff" class="paper"/>
+    <ellipse cx="330" cy="334" rx="69" ry="41" fill="#F98AEE"/>
+    <ellipse cx="604" cy="334" rx="69" ry="41" fill="#A0F08A"/>
+    <ellipse cx="470.5" cy="488" rx="62.5" ry="45" fill="#DCC4C4"/>
+    <rect x="875" y="151.5" width="174.5" height="74" fill="#fff" class="paper"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="469" y="188" font-size="50">神</text>
+    <text x="962.5" y="188" font-size="48">絶対者</text>
+    <g fill="#111">
+      <text x="297.5" y="334" font-size="45">人</text>
+      <text x="359" y="333" font-size="45">主</text>
+      <text x="603.5" y="333.5" font-size="50">対</text>
+      <text x="471" y="487.5" font-size="50">合</text>
+    </g>
+  </g>
+  <circle cx="328.5" cy="334" r="6" fill="#111"/>
+
+  <!-- 創造本然の価値 → 絶対的 -->
+  <polygon points="687,589.5 843,589.5 843,580 869,595.5 843,611 843,601.5 687,601.5" fill="#8C949A"/>
+  <g stroke="currentColor" stroke-width="3.5" fill="#CDF8F7">
+    <rect x="270.5" y="560" width="414" height="69"/>
+    <rect x="879" y="560" width="167.5" height="70.5"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="478" y="594" font-size="47" textLength="346" lengthAdjust="spacing">創造本然の価値</text>
+    <text x="962.5" y="595" font-size="48">絶対的</text>
+  </g>
+</svg>

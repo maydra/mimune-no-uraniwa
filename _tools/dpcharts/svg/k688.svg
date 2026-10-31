@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>(1) カイン型の民主主義</title>
+
+  <!-- 題 -->
+  <text y="37.5" font-size="30" dominant-baseline="central"><tspan x="53" text-anchor="middle">(</tspan><tspan x="67" text-anchor="middle">1</tspan><tspan x="86" text-anchor="middle">)</tspan></text>
+  <text x="108" y="37.5" font-size="30" dominant-baseline="central" textLength="281" lengthAdjust="spacing">カイン型の民主主義</text>
+  <line x1="105" y1="56.5" x2="389" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="239,153 239,166.5 236,166.5 242.5,182.5 249,166.5 246,166.5 246,153"/>
+    <polygon points="239,250 239,265.5 236,265.5 242.5,280.5 249,265.5 246,265.5 246,250"/>
+  </g>
+
+  <!-- 楕円 -->
+  <g fill="#F86D42" stroke="currentColor" stroke-width="3">
+    <ellipse cx="242" cy="111.75" rx="78.5" ry="41.25"/>
+    <ellipse cx="242" cy="217" rx="73.5" ry="33.5"/>
+    <ellipse cx="242" cy="329.5" rx="74.5" ry="48"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="243" y="96" font-size="25" textLength="101" lengthAdjust="spacing">カイン型</text>
+    <text x="242.5" y="127.5" font-size="26" textLength="76" lengthAdjust="spacing">人生観</text>
+    <text x="242" y="217" font-size="28" textLength="113" lengthAdjust="spacing">啓蒙思想</text>
+    <text x="245.5" y="330" font-size="26" textLength="132" lengthAdjust="spacing">フランス革命</text>
+  </g>
+
+  <!-- 右の字（元は細字） -->
+  <g font-size="26" font-weight="400" dominant-baseline="central">
+    <text x="327" y="211.5" textLength="286" lengthAdjust="spacing">ディドロ、ダランベール</text>
+    <text y="255"><tspan x="374" textLength="49" lengthAdjust="spacingAndGlyphs">1789</tspan><tspan x="431" textLength="25" lengthAdjust="spacing">年</tspan></text>
+    <text y="293"><tspan x="372" textLength="156" lengthAdjust="spacing">絶対主義社会</tspan><tspan x="528">、</tspan></text>
+    <text x="372" y="322" textLength="236" lengthAdjust="spacing">封建的支配階級打破</text>
+    <text x="372" y="360.5" textLength="277" lengthAdjust="spacing">市民の自由、平等、解放</text>
+    <text x="372" y="398.5" textLength="128" lengthAdjust="spacing">「人権宣言」</text>
+  </g>
+  <g>
+    <circle cx="356.5" cy="254.5" r="7"/>
+    <circle cx="356.5" cy="294.5" r="7"/>
+    <circle cx="356.5" cy="361.5" r="7"/>
+    <circle cx="356.5" cy="399.5" r="7"/>
+  </g>
+</svg>

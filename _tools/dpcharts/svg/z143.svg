@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>花の美はいかにして決定されるのだろうか</title>
+  <defs>
+    <marker id="z143-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="53" y="58" font-size="46" dominant-baseline="central" textLength="900" lengthAdjust="spacing">花の美はいかにして決定されるのだろうか</text>
+  <line x1="52" y1="88" x2="954" y2="88" stroke="currentColor" stroke-width="3.5"/>
+
+  <text x="648.5" y="131" font-size="50" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 四位の線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="8.5">
+    <line x1="626.7" y1="212.5" x2="439.4" y2="376"/>
+    <line x1="671.3" y1="212.5" x2="862.6" y2="376.5"/>
+    <line x1="440.7" y1="376" x2="629.1" y2="539"/>
+    <line x1="859.4" y1="376.5" x2="669.8" y2="539"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="7" fill="none" marker-end="url(#z143-g)">
+    <path d="M640,471 Q599.2,374 635.7,289.1"/>
+    <path d="M666,284 Q705.2,381 669.6,465.9"/>
+    <path d="M578,367 Q651.5,333.9 719.1,363.3"/>
+    <path d="M726,387 Q643.6,423.4 586.9,392.3"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="651.5" cy="212.5" rx="126.5" ry="42.5" fill="#fff" class="paper"/>
+    <ellipse cx="435.5" cy="376" rx="128.5" ry="60" fill="#F98AEE"/>
+    <ellipse cx="871" cy="376.5" rx="128" ry="60" fill="#A0F08A"/>
+    <ellipse cx="653" cy="539" rx="135" ry="42" fill="#DCC4C4"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="649.5" y="211" font-size="45">創造理想</text>
+    <g fill="#111" font-size="41">
+      <text x="434.5" y="351.5">人間の</text>
+      <text x="436" y="399">美追求欲</text>
+      <text x="871.5" y="348.5">花の</text>
+      <text x="872" y="396">創造目的</text>
+      <text x="654" y="540" font-size="43">完全な喜び</text>
+    </g>
+  </g>
+
+  <!-- 創造本然の美 …… 絶対的 -->
+  <g font-size="44" dominant-baseline="central">
+    <text x="517" y="629" textLength="271" lengthAdjust="spacing">創造本然の美</text>
+    <text x="929" y="630">絶対的</text>
+  </g>
+  <line x1="810" y1="629" x2="909.5" y2="629" stroke="currentColor" stroke-width="7" stroke-dasharray="8.5 9.7"/>
+</svg>

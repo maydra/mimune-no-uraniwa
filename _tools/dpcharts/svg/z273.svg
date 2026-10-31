@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>目的性から見た善と悪</title>
+  <defs>
+    <marker id="z273-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="54" y="76" font-size="48">Ⅲ.</text>
+  <text x="130" y="57" font-size="48" dominant-baseline="central" textLength="497" lengthAdjust="spacing">目的性から見た善と悪</text>
+  <line x1="129" y1="87.5" x2="629" y2="87.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 四位の線と、合から下へ開く線（円の下に描く） -->
+  <g fill="none" stroke="currentColor" stroke-width="9">
+    <polygon points="364.4,167 260.5,327.5 365,484 471,327.5"/>
+    <polyline points="198,624.5 363.5,479.5 529,624.5"/>
+    <polygon points="948,170.4 842,327.5 947,489 1054,327.5"/>
+    <polyline points="775.4,624.5 941.6,481 1107.8,624.5"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g fill="none" stroke="currentColor" stroke-width="6.5" marker-end="url(#z273-a)">
+    <path d="M357,424 Q327,329.5 357,235"/>
+    <path d="M369,229 Q395,322 373,416"/>
+    <path d="M315,317 Q361.5,290.5 409,317"/>
+    <path d="M411,336 Q375,362 317,338.5"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="6.5" marker-end="url(#z273-a)">
+    <path d="M940,425 Q910,330 940,235"/>
+    <path d="M957,229 Q979,324 957,419"/>
+    <path d="M898,318 Q944.5,291.5 992,318"/>
+    <path d="M995,336 Q959,362 901,338.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="5">
+    <ellipse cx="363.5" cy="175.5" rx="41.5" ry="45.5" fill="#fff" class="paper"/>
+    <ellipse cx="261.5" cy="327.5" rx="41.5" ry="45.5" fill="#F98AEE"/>
+    <ellipse cx="465" cy="327.5" rx="41.5" ry="45.5" fill="#A0F08A"/>
+    <ellipse cx="363.5" cy="479.5" rx="41.5" ry="45.5" fill="#DCC4C4"/>
+    <ellipse cx="946.5" cy="175.5" rx="41.5" ry="45.5" fill="#50403D"/>
+    <ellipse cx="844.5" cy="327.5" rx="41.5" ry="45.5" fill="#CF921C"/>
+    <ellipse cx="1048.5" cy="327.5" rx="41.5" ry="45.5" fill="#CF921C"/>
+    <ellipse cx="946.5" cy="479.5" rx="41.5" ry="45.5" fill="#CF921C"/>
+  </g>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="363" y="175" font-size="48">神</text>
+    <text x="262.5" y="328.5" fill="#111">ア</text>
+    <text x="465" y="327.5" fill="#111">エ</text>
+    <text x="363" y="479.5" fill="#111">合</text>
+    <text x="946.5" y="174.5" font-size="48" fill="#fff">サ</text>
+    <text x="845.5" y="328" fill="#111">ア</text>
+    <text x="1048" y="327.5" fill="#111">エ</text>
+    <text x="948" y="479.5" fill="#111">合</text>
+  </g>
+
+  <!-- 相反する目的 -->
+  <g fill="#8C949A">
+    <polygon points="522.5,169.5 445,169.5 445,162.5 422,174.5 445,186.5 445,179.5 522.5,179.5"/>
+    <polygon points="791.5,169.5 868,169.5 868,162.5 890.5,174.5 868,186.5 868,179.5 791.5,179.5"/>
+    <polygon points="655.5,222.5 679,239 664.5,239 664.5,264.5 646.5,264.5 646.5,239 632,239"/>
+  </g>
+  <rect x="539" y="295" width="233" height="69" fill="#fff" class="paper" stroke="currentColor" stroke-width="5"/>
+  <g font-size="41" text-anchor="middle" dominant-baseline="central">
+    <text x="656.5" y="176">相反する目的</text>
+    <text x="658.5" y="330" font-size="42">同一の意味</text>
+    <text x="363" y="602.5">善の世界</text>
+    <text x="947" y="603">悪の世界</text>
+  </g>
+</svg>

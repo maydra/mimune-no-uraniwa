@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>イエスの十字架と信徒（肉的救いは完成できず）</title>
+
+  <text x="548.5" y="66" font-size="47" text-anchor="middle" dominant-baseline="central" textLength="146" lengthAdjust="spacing">イエス</text>
+
+  <!-- 左の箱：肉：サタン侵入・殺害 -->
+  <rect x="185.5" y="110" width="233" height="242" rx="30" ry="40" fill="#CF921C" stroke="currentColor" stroke-width="5"/>
+  <g font-size="44" dominant-baseline="central" fill="#111">
+    <text y="177"><tspan x="226" text-anchor="middle">肉</tspan><tspan x="267" text-anchor="middle">：</tspan><tspan x="284" textLength="122" lengthAdjust="spacingAndGlyphs">サタン</tspan></text>
+    <text x="329" y="231.5" text-anchor="middle">侵入</text>
+    <text x="328.5" y="285.5" text-anchor="middle">殺害</text>
+  </g>
+
+  <!-- 十字架（型を置く） -->
+  <g transform="translate(481.0,117.0) scale(1.3400,1.2833)" stroke-width="2.287" fill="#7A5230" stroke="#111" stroke-linejoin="round">
+    <path d="M40,0 H60 V42 H100 V60 H60 V180 H40 V60 H0 V42 H40 Z"/>
+  </g>
+
+  <!-- 箱・十字架・信徒・箱をつなぐ線 -->
+  <g stroke="currentColor">
+    <line x1="429" y1="238" x2="491" y2="238" stroke-width="7"/>
+    <line x1="799" y1="234.5" x2="854" y2="234.5" stroke-width="6"/>
+  </g>
+
+  <!-- 十字架と信徒のあいだの回る矢印 -->
+  <g fill="none" stroke="currentColor" stroke-width="6">
+    <path d="M633.5,209.5 Q651,195 667.5,203"/>
+    <path d="M677.5,255.5 Q660,270 643.5,262"/>
+  </g>
+  <polygon points="671,195.5 679.5,211.5 663.5,210"/>
+  <polygon points="640,269.5 631.5,253.5 647.5,255"/>
+
+  <!-- 信徒 -->
+  <ellipse cx="738.5" cy="232.5" rx="48" ry="65" fill="#FCE5E3" stroke="currentColor" stroke-width="5"/>
+  <g font-size="48" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="739" y="207.5">信</text>
+    <text x="739" y="258">徒</text>
+  </g>
+
+  <!-- 右の箱：肉：サタン侵入・肉的救い完成できず -->
+  <rect x="863.5" y="112.5" width="252" height="242" rx="30" ry="40" fill="#CF921C" stroke="currentColor" stroke-width="5"/>
+  <g font-size="44" dominant-baseline="central" fill="#111">
+    <text y="152"><tspan x="910.5" text-anchor="middle">肉</tspan><tspan x="956.5" text-anchor="middle">：</tspan><tspan x="975" textLength="115" lengthAdjust="spacingAndGlyphs">サタン</tspan></text>
+    <text x="1022.75" y="207.5" text-anchor="middle">侵入</text>
+    <text x="888.5" y="265" textLength="182" lengthAdjust="spacing">肉的救い</text>
+    <text x="888.4" y="317" textLength="206" lengthAdjust="spacingAndGlyphs">完成できず</text>
+  </g>
+
+  <!-- 下への矢印と贖罪 -->
+  <polygon points="542.5,374 554.5,374 554.5,444.5 565.5,444.5 549,469.5 532.5,444.5 542.5,444.5" fill="#8C949A"/>
+  <g dominant-baseline="central">
+    <text y="510" font-size="41"><tspan x="442.5" textLength="82" lengthAdjust="spacing">贖罪</tspan><tspan x="546" text-anchor="middle">：</tspan><tspan x="567.5" textLength="331" lengthAdjust="spacing">原罪は清算できず</tspan></text>
+    <text x="441.75" y="572" font-size="40.5" textLength="607.5" lengthAdjust="spacing">肉身の苦行をしなければならない</text>
+    <text y="624.5" font-size="32"><tspan x="746">(</tspan><tspan x="759.5" textLength="164" lengthAdjust="spacing">テサロニケ</tspan><tspan x="942" text-anchor="middle">Ⅰ</tspan> <tspan x="967.5" textLength="66" lengthAdjust="spacing">5:17</tspan><tspan x="1046" text-anchor="end">)</tspan></text>
+  </g>
+</svg>

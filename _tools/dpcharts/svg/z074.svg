@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>神と被造世界（性相・内・原因・主体・縦／形状・外・結果・対象・横）</title>
+
+  <!-- 神 -->
+  <circle cx="306" cy="181" r="65.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5"/>
+  <text x="304" y="182" font-size="62" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 上下の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="288,256 302.5,285 293.5,285 293.5,389 282.5,389 282.5,285 273.5,285"/>
+    <polygon points="323.5,389 337.5,360.5 328.5,360.5 328.5,257 317.5,257 317.5,360.5 309.5,360.5"/>
+  </g>
+
+  <!-- 被造世界 -->
+  <ellipse cx="307" cy="482" rx="97.25" ry="83.25" fill="#DCC4C4" stroke="currentColor" stroke-width="4.5"/>
+  <g font-size="56" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="306" y="451">被造</text>
+    <text x="306" y="515">世界</text>
+  </g>
+
+  <!-- 縦の線 -->
+  <g stroke="#8C949A" stroke-width="8.5">
+    <line x1="492" y1="274" x2="492" y2="385"/>
+    <line x1="623.5" y1="274" x2="623.5" y2="385"/>
+    <line x1="754.5" y1="274" x2="754.5" y2="385"/>
+    <line x1="917" y1="275" x2="917" y2="385"/>
+    <line x1="1051" y1="274" x2="1051" y2="385"/>
+  </g>
+
+  <g font-size="56" dominant-baseline="central">
+    <text x="438" y="188" textLength="114" lengthAdjust="spacing">性相</text>
+    <text x="553" y="188">、</text>
+    <text x="601" y="188">内</text>
+    <text x="656" y="188">、</text>
+    <text x="700" y="188" textLength="114" lengthAdjust="spacing">原因</text>
+    <text x="816" y="188">、</text>
+    <text x="862" y="188" textLength="114" lengthAdjust="spacing">主体</text>
+    <text x="976" y="188">、</text>
+    <text x="1021" y="188">縦</text>
+    <text x="438" y="485" textLength="114" lengthAdjust="spacing">形状</text>
+    <text x="553" y="485">、</text>
+    <text x="599" y="485">外</text>
+    <text x="656" y="485">、</text>
+    <text x="701" y="485" textLength="114" lengthAdjust="spacing">結果</text>
+    <text x="816" y="485">、</text>
+    <text x="861" y="485" textLength="114" lengthAdjust="spacing">対象</text>
+    <text x="976" y="485">、</text>
+    <text x="1021" y="485">横</text>
+  </g>
+</svg>

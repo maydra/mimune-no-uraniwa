@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>肉身の善行と悪行</title>
+  <defs>
+    <marker id="z185-k" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="2.4" markerHeight="2.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="52" y="56" font-size="48" dominant-baseline="central" textLength="397" lengthAdjust="spacing">肉身の善行と悪行</text>
+  <line x1="51" y1="86" x2="450" y2="86" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 霊人体と肉身 -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="692" cy="267" r="113.5" fill="#F98AEE"/>
+    <circle cx="692" cy="506.5" r="114" fill="#A0F08A"/>
+  </g>
+  <g stroke="#111" stroke-width="4.5">
+    <circle cx="692" cy="313" r="67.5" fill="#F98AEE"/>
+    <circle cx="692" cy="460.5" r="67.5" fill="#A0F08A"/>
+  </g>
+  <line x1="562" y1="387" x2="822" y2="387" stroke="currentColor" stroke-width="5"/>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="689" y="117" font-size="45">霊人体</text>
+    <text x="691" y="655" font-size="41">肉身</text>
+    <g fill="#111">
+      <text x="691.5" y="436.5" font-size="42">肉</text>
+      <text x="692" y="486" font-size="42">心</text>
+      <text x="692" y="565" font-size="44">肉体</text>
+    </g>
+  </g>
+
+  <!-- 生力要素 -->
+  <rect x="275.5" y="357" width="254" height="69.5" rx="6" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <text x="400" y="391.5" font-size="44" text-anchor="middle" dominant-baseline="central" textLength="186" lengthAdjust="spacing" fill="#111">生力要素</text>
+  <path d="M567,453 Q524.15,385.75 574.7,335.5" fill="none" stroke="currentColor" stroke-width="10" marker-end="url(#z185-k)"/>
+
+  <!-- 善化・悪化、善行・悪行 -->
+  <g fill="none" stroke="currentColor" stroke-width="10">
+    <polyline points="875,211.5 818.7,252.5 875,293.5"/>
+    <polyline points="876,488.5 817.9,529.1 876,569.5"/>
+  </g>
+  <g font-size="44" text-anchor="middle" dominant-baseline="central">
+    <text x="935" y="210">善化</text>
+    <text x="935" y="295.5">悪化</text>
+    <text x="935.5" y="485">善行</text>
+    <text x="935.5" y="571.5">悪行</text>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>雄羊の燔祭と信仰基台</title>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="229,116 236,116 236,100 242,100 232.5,84 223,100 229,100"/>
+    <rect x="229" y="158" width="7" height="27"/>
+    <polygon points="311,144 327.5,139 326.4,143.9 530.8,190.1 529.2,196.9 324.8,150.7 323.7,155.6"/>
+  </g>
+
+  <!-- アブラハムとイサクの間の矢印 -->
+  <g>
+    <polygon points="312.5,197.2 481,197.2 481,193.5 492,201 481,208.5 481,204.8 312.5,204.8"/>
+    <polygon points="492,211.2 320,211.2 320,207.5 309.5,215 320,222.5 320,218.8 492,218.8"/>
+  </g>
+
+  <circle cx="231" cy="52" r="29.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <text x="230.5" y="51.5" font-size="34" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="232" cy="138" rx="63" ry="25" fill="#DCC4C4"/>
+    <ellipse cx="232" cy="207.5" rx="63" ry="24.5" fill="#fff" class="paper"/><!-- 元の図どおり白（使命がイサクへ移った） -->
+    <ellipse cx="579.5" cy="207.5" rx="61.5" ry="23.5" fill="#F8F28F"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="231.5" y="138" font-size="29" textLength="57" lengthAdjust="spacingAndGlyphs">雄羊</text>
+    <text x="232.5" y="207.5" font-size="24" textLength="108" lengthAdjust="spacingAndGlyphs" fill="currentColor">アブラハム</text>
+    <text x="578.5" y="208" font-size="25" textLength="75" lengthAdjust="spacingAndGlyphs">イサク</text>
+  </g>
+
+  <!-- 箇条書き（点は円で描く） -->
+  <g>
+    <circle cx="126.5" cy="258" r="5.5"/>
+    <circle cx="126.5" cy="293.5" r="5.5"/>
+    <circle cx="126.5" cy="329.5" r="5.5"/>
+    <circle cx="458" cy="257.5" r="5.5"/>
+    <circle cx="458" cy="293.5" r="5.5"/>
+    <circle cx="458" cy="329.5" r="5.5"/>
+  </g>
+  <g font-size="26" dominant-baseline="central">
+    <text x="139" y="258.5" textLength="130" lengthAdjust="spacingAndGlyphs">サタン分立</text>
+    <text x="139" y="293.5" textLength="261" lengthAdjust="spacing">失敗以前の立場に復帰</text>
+    <text x="138" y="329" textLength="287" lengthAdjust="spacing">使命をイサクに継がせる</text>
+    <text x="471" y="258" textLength="224" lengthAdjust="spacingAndGlyphs">み旨の前に従順屈伏</text>
+    <text x="471" y="294" textLength="180" lengthAdjust="spacingAndGlyphs">使命を受け継ぐ</text>
+    <text x="474" y="329" textLength="185" lengthAdjust="spacingAndGlyphs">「象徴献祭」成功</text>
+  </g>
+
+  <!-- 信仰基台：○ -->
+  <rect x="285.5" y="356.5" width="235" height="51.5" fill="#CDF8F7" stroke="currentColor" stroke-width="3.4"/>
+  <g font-size="34" dominant-baseline="central" fill="#111">
+    <text x="301" y="382.5" textLength="135" lengthAdjust="spacingAndGlyphs">信仰基台</text>
+    <text x="454" y="382.5" text-anchor="middle">：</text>
+  </g>
+  <circle cx="486.5" cy="381.5" r="13.5" fill="none" stroke="#111" stroke-width="4"/>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>木にたとえた罪の種類</title>
+
+  <!-- 地面 -->
+  <rect x="213" y="528" width="877" height="111" fill="#F2D794"/>
+
+  <!-- 葉の茂った木（挿絵）: 樹冠は緑の丸を重ね、幹・枝・根はその上 -->
+  <g fill="#4CAF50">
+    <circle cx="390" cy="215" r="150"/>
+    <circle cx="390" cy="92" r="58"/>
+    <circle cx="300" cy="108" r="60"/>
+    <circle cx="480" cy="108" r="56"/>
+    <circle cx="240" cy="195" r="58"/>
+    <circle cx="528" cy="200" r="62"/>
+    <circle cx="258" cy="308" r="70"/>
+    <circle cx="515" cy="318" r="70"/>
+  </g>
+  <g fill="#8B5A2B">
+    <polygon points="381.5,92 369.5,517 356,529 302,593 356,566 387,604 404,566 461,603 406,529 396.5,517 384.5,92"/>
+    <polygon points="383.1,166.6 329,91.3 327,92.7 378.9,169.4"/>
+    <polygon points="384.8,137.4 465.4,109.2 464.6,106.8 383.2,132.6"/>
+    <polygon points="387.1,200.8 495.6,154.4 494.4,151.6 384.9,195.2"/>
+    <polygon points="382.5,306 263.3,178.8 260.7,181.2 373.5,314"/>
+    <polygon points="320.8,229.8 244.4,274.9 245.6,277.1 323.2,234.2"/>
+    <polygon points="327.9,250.6 282,319.3 284,320.7 332.1,253.4"/>
+    <polygon points="397.5,361.2 541.4,200.4 538.6,197.6 384.5,348.8"/>
+    <polygon points="451.2,292.4 551.6,323.2 552.4,320.8 452.8,287.6"/>
+  </g>
+
+  <!-- 点線（樹冠と地面の上の区間は #111） -->
+  <g stroke-width="8">
+    <line x1="577.1" y1="161.6" x2="705" y2="125" stroke="currentColor" stroke-dasharray="11.3 12.35"/>
+    <g stroke-dasharray="11 12.55">
+      <line x1="481.6" y1="265.6" x2="566.4" y2="248.7" stroke="#111"/>
+      <line x1="566.4" y1="248.7" x2="605" y2="241" stroke="currentColor" stroke-dashoffset="15.8"/>
+    </g>
+    <line x1="395.6" y1="444.9" x2="612" y2="356.5" stroke="currentColor" stroke-dasharray="11 12.63" stroke-dashoffset="2.15"/>
+    <g stroke-dasharray="11 12.56">
+      <line x1="412.8" y1="533.3" x2="428.1" y2="528" stroke="#111"/>
+      <line x1="428.1" y1="528" x2="612" y2="463.9" stroke="currentColor" stroke-dashoffset="16.2"/>
+    </g>
+  </g>
+  <g stroke="currentColor" stroke-width="8.5">
+    <line x1="782" y1="120" x2="816.5" y2="120" stroke-dasharray="11.5 11.5"/>
+    <line x1="741" y1="239.5" x2="823.5" y2="239.5" stroke-dasharray="11.25 12.4"/>
+    <line x1="743" y1="347" x2="825" y2="347" stroke-dasharray="11 12.7"/>
+    <line x1="742" y1="458" x2="824" y2="458" stroke-dasharray="11 12.7"/>
+  </g>
+
+  <g fill="#CF921C" stroke="currentColor" stroke-width="4.5">
+    <circle cx="733" cy="120" r="34"/>
+    <ellipse cx="662" cy="239.5" rx="67" ry="34.5"/>
+    <ellipse cx="668" cy="351" rx="67" ry="35"/>
+    <ellipse cx="668" cy="458" rx="67" ry="35"/>
+  </g>
+  <g font-size="44" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="733" y="120">葉</text>
+    <text x="661" y="241">枝</text>
+    <text x="669" y="351">幹</text>
+    <text x="668" y="458">根</text>
+  </g>
+
+  <g font-size="44" dominant-baseline="central">
+    <text x="833" y="123.5" textLength="178" lengthAdjust="spacing">【自犯罪】</text>
+    <text x="833" y="241.5" textLength="178" lengthAdjust="spacing">【連体罪】</text>
+    <text x="833" y="347.5" textLength="224" lengthAdjust="spacing">【遺伝的罪】</text>
+    <text x="833" y="458.5" textLength="132" lengthAdjust="spacing">【原罪】</text>
+  </g>
+
+  <text y="582.5" font-size="44" dominant-baseline="central" fill="#111"><tspan x="501" textLength="91" lengthAdjust="spacing">原罪</tspan><tspan x="616" text-anchor="middle">：</tspan><tspan x="640" textLength="411" lengthAdjust="spacing">真の父母のみが清算</tspan></text>
+</svg>

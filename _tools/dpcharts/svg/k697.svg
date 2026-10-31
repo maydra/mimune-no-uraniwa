@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>『理想社会の構造』『人間一人の構造』</title>
+
+  <!-- 題 -->
+  <g font-size="30" dominant-baseline="central">
+    <text y="48.5"><tspan x="136">『</tspan><tspan x="151" textLength="221" lengthAdjust="spacing">理想社会の構造</tspan><tspan x="372">』</tspan></text>
+    <text y="48.5"><tspan x="422">『</tspan><tspan x="438" textLength="220" lengthAdjust="spacing">人間一人の構造</tspan><tspan x="658">』</tspan></text>
+  </g>
+
+  <!-- 下へ開く線（楕円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="6.5" fill="none">
+    <line x1="214" y1="322" x2="143" y2="388.5"/>
+    <line x1="320" y1="322" x2="395.5" y2="388.5"/>
+    <line x1="505" y1="322" x2="437.5" y2="385.5"/>
+    <line x1="615" y1="318" x2="689" y2="383.5"/>
+  </g>
+
+  <!-- 小さい矢印 -->
+  <g fill="#8C949A">
+    <polygon points="263.5,150 269.5,150 269.5,174 274.5,174 266.5,187 258.5,174 263.5,174"/>
+    <polygon points="263,236 269,236 269,262 274,262 266,275 258,262 263,262"/>
+    <polygon points="556.5,150 562.5,150 562.5,173 567.5,173 559.5,186 551.5,173 556.5,173"/>
+    <polygon points="556,236 562,236 562,264 567,264 559,276.5 551,264 556,264"/>
+  </g>
+
+  <!-- 左向きの太い矢印 -->
+  <polygon points="428.5,200.5 411.5,200.5 411.5,188 393,213.5 411.5,239 411.5,227 428.5,227" fill="#8C949A" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+
+  <!-- 神・頭脳 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.5">
+    <circle cx="267" cy="124" r="32.7"/>
+    <ellipse cx="560" cy="123" rx="39.7" ry="32.7"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="265.5" y="124" font-size="36">神</text>
+    <text x="559.5" y="124" font-size="29" textLength="62" lengthAdjust="spacing">頭脳</text>
+  </g>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="267.5" cy="215.5" rx="86.3" ry="27.3" fill="#F8F28F"/>
+    <ellipse cx="560" cy="215.5" rx="86.3" ry="27.3" fill="#F8F28F"/>
+    <ellipse cx="267" cy="303.5" rx="86" ry="26.3" fill="#F86D42"/>
+    <ellipse cx="560.5" cy="303" rx="86.3" ry="26.8" fill="#F86D42"/>
+  </g>
+  <g font-size="29" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="266" y="215" textLength="120" lengthAdjust="spacing">キリスト</text>
+    <text x="536.5" y="215">脊</text>
+    <text x="584" y="215">髄</text>
+    <text x="243" y="303.5">聖</text>
+    <text x="290.5" y="303.5">徒</text>
+    <text x="560.5" y="303.5" textLength="125" lengthAdjust="spacing">末梢神経</text>
+  </g>
+
+  <!-- 下の字 -->
+  <g font-size="30" text-anchor="middle" dominant-baseline="central">
+    <text x="269" y="368.5" textLength="126" lengthAdjust="spacing">社会全体</text>
+    <text x="564.5" y="368.5" textLength="125" lengthAdjust="spacing">四肢五体</text>
+  </g>
+</svg>

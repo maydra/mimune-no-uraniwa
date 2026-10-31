@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>実体対象と善の対象（主管的な四位基台）</title>
+  <defs>
+    <marker id="z135-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.45" markerHeight="2.45" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 左右をつなぐ点線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="4.5" fill="none">
+    <line x1="414.4" y1="140" x2="735" y2="140" stroke-dasharray="14.5 9.14"/>
+    <line x1="414.8" y1="308" x2="620" y2="308" stroke-dasharray="14 9.17"/>
+    <line x1="483" y1="472" x2="735" y2="472" stroke-dasharray="15 9.1"/>
+  </g>
+
+  <!-- 実体対象：人と万物世界が喜びを返す -->
+  <g fill="#8C949A">
+    <polygon points="352,250 352,213 345.5,213 355,199 364.5,213 359,213 359,250"/>
+    <polygon points="352,416 352,380 345,380 355,365 365,380 359,380 359,416"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="355.2" cy="138" r="57.1" fill="#fff" class="paper"/>
+    <circle cx="355.1" cy="304.8" r="57.1" fill="#F98AEE"/>
+    <ellipse cx="355.2" cy="471.8" rx="120.8" ry="57" fill="#DCC4C4"/>
+  </g>
+  <text x="354" y="137.5" font-size="60" text-anchor="middle" dominant-baseline="central">神</text>
+  <g fill="#111" dominant-baseline="central">
+    <text x="356" y="304.5" font-size="58" text-anchor="middle">人</text>
+    <text x="254" y="471" font-size="50" textLength="203" lengthAdjust="spacing">万物世界</text>
+  </g>
+  <g font-size="46" dominant-baseline="central">
+    <text x="428" y="217" textLength="96" lengthAdjust="spacing">喜び</text>
+    <text x="428" y="383.5" textLength="96" lengthAdjust="spacing">喜び</text>
+  </g>
+
+  <!-- 善の対象：主管的な四位基台 -->
+  <polygon points="788.7,158.1 922.3,305 787.9,452.8 658.7,304.3" fill="none" stroke="currentColor" stroke-width="4"/>
+  <g stroke="currentColor" stroke-width="6" fill="none" marker-end="url(#z135-k)">
+    <path d="M737,289.5 Q792.1,269 830.8,286.4"/>
+    <path d="M838,317 Q783.5,337.7 747,319.6"/>
+    <path d="M777,393 C766,365 762,270 772.8,227.7"/>
+    <path d="M799,215.5 C810,250 814,340 803.1,381.3"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="788.5" cy="138.6" r="57.2" fill="#fff" class="paper"/>
+    <circle cx="671.9" cy="305.2" r="57.2" fill="#F98AEE"/>
+    <circle cx="904.6" cy="305.1" r="57.5" fill="#A0F08A"/>
+    <circle cx="788.1" cy="470.7" r="57.8" fill="#DCC4C4"/>
+  </g>
+  <text x="787.5" y="136.5" font-size="60" text-anchor="middle" dominant-baseline="central">神</text>
+  <g fill="#111" font-size="58" text-anchor="middle" dominant-baseline="central">
+    <text x="672" y="305">人</text>
+    <text x="905" y="306">万</text>
+    <text x="788.5" y="469.5">被</text>
+  </g>
+  <g font-size="48" dominant-baseline="central">
+    <text x="874" y="468" text-anchor="end">（</text>
+    <text x="875" y="468" textLength="198" lengthAdjust="spacing">第三対象</text>
+    <text x="1074" y="468">）</text>
+  </g>
+
+  <g font-size="52" dominant-baseline="central">
+    <text x="249" y="582" textLength="213" lengthAdjust="spacing">実体対象</text>
+    <text x="682" y="583.5" textLength="214" lengthAdjust="spacing">善の対象</text>
+  </g>
+</svg>

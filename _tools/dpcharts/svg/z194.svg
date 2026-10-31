@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>霊人体の感性</title>
+  <defs>
+    <marker id="z194-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.5" markerHeight="2.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="51" y="77" font-size="48" textLength="299" lengthAdjust="spacing">霊人体の感性</text>
+  <line x1="51" y1="88" x2="350" y2="88" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 霊人体と肉身 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="369.25" cy="259" rx="92.25" ry="122" fill="#F98AEE"/>
+    <ellipse cx="368.25" cy="510" rx="92.25" ry="122" fill="#A0F08A"/>
+  </g>
+  <line x1="208" y1="384.5" x2="1051" y2="384.5" stroke="currentColor" stroke-width="6"/>
+  <g font-size="60" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="369.5" y="196">霊<tspan x="369.5" dy="1.05em">人</tspan><tspan x="369.5" dy="1.05em">体</tspan></text>
+    <text x="367.5" y="466.5">肉<tspan x="367.5" dy="1.48em">身</tspan></text>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g stroke="#8C949A" stroke-width="13" fill="none" marker-end="url(#z194-g)">
+    <path d="M265,453 C239.4,416.1 230.4,371.9 258,336.4"/>
+    <path d="M466,314 C493.7,349.5 509.8,402.3 479.8,435.9"/>
+  </g>
+
+  <g font-size="48" dominant-baseline="central">
+    <text x="507" y="222.5">肉身を脱いだのち</text>
+    <text x="504" y="285">神の愛を体恤</text>
+    <text x="504" y="472">地上で</text>
+    <text x="504" y="534.5">神の愛を体恤して初めて</text>
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>善と悪</title>
+  <defs>
+    <marker id="z154-a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="2.7" markerHeight="2.7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="75" font-size="48">2.</text>
+  <text x="111" y="75" font-size="48" textLength="148" lengthAdjust="spacing">善と悪</text>
+  <line x1="110" y1="87" x2="259" y2="87" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 左: 神を中心とする四位基台 -->
+  <polygon points="445,172 554,289 445,406 336,289" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <g stroke="currentColor" stroke-width="5.5" fill="none" marker-end="url(#z154-a)">
+    <path d="M434,356 Q418,290 431,225"/>
+    <path d="M456,222 Q470,288 457.5,352.5"/>
+    <path d="M400,273 Q446,254 486,269.6"/>
+    <path d="M490,301 Q445,319 404,303.7"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="444.5" cy="159" rx="47.5" ry="44" fill="#fff" class="paper"/>
+    <ellipse cx="346" cy="289" rx="47.5" ry="44" fill="#F98AEE"/>
+    <ellipse cx="543" cy="289" rx="47.5" ry="44" fill="#A0F08A"/>
+    <ellipse cx="444.5" cy="419" rx="47.5" ry="44" fill="#DCC4C4"/>
+  </g>
+  <g font-size="56" text-anchor="middle" dominant-baseline="central">
+    <text x="444" y="160">神</text>
+    <text x="346" y="289" fill="#111">主</text>
+    <text x="543" y="290" fill="#111">対</text>
+    <text x="444.5" y="420" fill="#111">合</text>
+  </g>
+
+  <!-- 右: サタンを中心とする四位基台 -->
+  <polygon points="906,172 1015,289 906,406 797,289" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <g transform="translate(461,0)" stroke="currentColor" stroke-width="5.5" fill="none" marker-end="url(#z154-a)">
+    <path d="M434,356 Q418,290 431,225"/>
+    <path d="M456,222 Q470,288 457.5,352.5"/>
+    <path d="M400,273 Q446,254 486,269.6"/>
+    <path d="M490,301 Q445,319 404,303.7"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="905.5" cy="159" rx="47.5" ry="44" fill="#50403D"/>
+    <ellipse cx="807" cy="289" rx="47.5" ry="44" fill="#F98AEE"/>
+    <ellipse cx="1004" cy="289" rx="47.5" ry="44" fill="#A0F08A"/>
+    <ellipse cx="905.5" cy="419" rx="47.5" ry="44" fill="#50403D"/>
+  </g>
+  <g font-size="56" text-anchor="middle" dominant-baseline="central">
+    <text x="905.5" y="160" fill="#fff">サ</text>
+    <text x="807" y="289" fill="#111">主</text>
+    <text x="1004" y="290" fill="#111">対</text>
+    <text x="906" y="420" fill="#fff">合</text>
+  </g>
+
+  <!-- 下の説明 -->
+  <g font-size="45" text-anchor="middle" dominant-baseline="central">
+    <text x="448.5" y="520">創造目的を成就</text>
+    <text x="908" y="520">創造目的に反する</text>
+  </g>
+  <g stroke="currentColor" stroke-width="4">
+    <rect x="401" y="568" width="77" height="77" fill="#CDF8F7"/>
+    <rect x="867" y="568" width="76" height="77" fill="#50403D"/>
+  </g>
+  <g font-size="56" text-anchor="middle" dominant-baseline="central">
+    <text x="440" y="607" fill="#111">善</text>
+    <text x="905" y="607" fill="#fff">悪</text>
+  </g>
+</svg>

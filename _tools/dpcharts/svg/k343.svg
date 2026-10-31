@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>モーセの磐石二打の結果</title>
+
+  <!-- 題 -->
+  <text x="37" y="37.5" font-size="31" dominant-baseline="central" textLength="343" lengthAdjust="spacing">モーセの磐石二打の結果</text>
+  <line x1="34" y1="56.5" x2="381" y2="56.5" stroke="currentColor" stroke-width="2"/>
+
+  <!-- 枝分かれの線（モーセの楕円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="7">
+    <line x1="176" y1="212.5" x2="223" y2="140"/>
+    <line x1="176" y1="243.5" x2="222" y2="310.5"/>
+  </g>
+
+  <!-- 小さい矢印 -->
+  <g fill="#8C949A">
+    <polygon points="306,138.5 314.5,138.5 314.5,135.5 327.5,141.5 314.5,147.5 314.5,144.5 306,144.5"/>
+    <polygon points="517,138.5 538.5,138.5 538.5,135.5 551.5,141.5 538.5,147.5 538.5,144.5 517,144.5"/>
+    <polygon points="306,306.5 316.5,306.5 316.5,303.5 329.5,309.5 316.5,315.5 316.5,312.5 306,312.5"/>
+    <polygon points="517,306.5 538.5,306.5 538.5,303.5 551.5,309.5 538.5,315.5 538.5,312.5 517,312.5"/>
+  </g>
+
+  <!-- モーセ -->
+  <ellipse cx="163.5" cy="229" rx="43.5" ry="24" fill="#F8F28F" stroke="currentColor" stroke-width="2.6"/>
+  <text x="163.5" y="229.5" font-size="23" text-anchor="middle" dominant-baseline="central" textLength="68" lengthAdjust="spacing" fill="#111">モーセ</text>
+  <text x="130" y="277.5" font-size="28" dominant-baseline="central" textLength="55" lengthAdjust="spacing">二打</text>
+
+  <!-- 外的な行動・内的な情状 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6">
+    <rect x="223" y="102" width="83" height="78"/>
+    <rect x="221.3" y="270" width="83.5" height="78.3"/>
+  </g>
+  <g font-size="24" text-anchor="middle" dominant-baseline="central">
+    <text x="264.5" y="125.5" textLength="68" lengthAdjust="spacing">外的な</text>
+    <text x="264.5" y="159.5" textLength="50" lengthAdjust="spacing">行動</text>
+    <text x="263" y="292.5" textLength="67" lengthAdjust="spacing">内的な</text>
+    <text x="263" y="326.5" textLength="51" lengthAdjust="spacing">情状</text>
+  </g>
+  <text x="224" y="201.5" font-size="25" font-weight="400" dominant-baseline="central" textLength="155" lengthAdjust="spacing">サタンの立場</text>
+
+  <!-- 外的イスラエル・内的イスラエル -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="424" cy="141.5" rx="92.5" ry="42.5" fill="#F86D42"/>
+    <ellipse cx="424.5" cy="309.5" rx="93" ry="42.5" fill="#F8F28F"/>
+  </g>
+  <g font-size="24" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="424.5" y="131.5" textLength="160" lengthAdjust="spacing">外的イスラエル</text>
+    <text x="384" y="161.5">（</text>
+    <text x="424" y="161.5" textLength="67" lengthAdjust="spacing">モーセ</text>
+    <text x="464" y="161.5">）</text>
+    <text x="424.5" y="301.5" textLength="160" lengthAdjust="spacing">内的イスラエル</text>
+    <text x="373.5" y="331">（</text>
+    <text x="424.5" y="331" textLength="89" lengthAdjust="spacing">ヨシュア</text>
+    <text x="475" y="331">）</text>
+  </g>
+
+  <!-- カナンの地に復帰できない・カナン入城 -->
+  <rect x="555.3" y="101.2" width="143.2" height="79.5" fill="#CF921C" stroke="currentColor" stroke-width="2.6"/>
+  <rect x="556" y="269.2" width="143" height="79.4" fill="#CDF8F7" stroke="currentColor" stroke-width="2.6"/>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="627.5" y="122.5" font-size="24" textLength="130" lengthAdjust="spacing">カナンの地に</text>
+    <text x="627" y="159" font-size="24" textLength="133" lengthAdjust="spacing">復帰できない</text>
+    <text x="628" y="292.5" font-size="27" textLength="81" lengthAdjust="spacing">カナン</text>
+    <text x="628.5" y="324.5" font-size="27" textLength="56" lengthAdjust="spacing">入城</text>
+  </g>
+</svg>

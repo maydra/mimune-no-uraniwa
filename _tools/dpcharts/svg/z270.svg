@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間世界に対するサタンの活動（聖句）</title>
+  <defs>
+    <marker id="z270-g" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.3" markerHeight="2.3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <!-- 地上と霊界の境 -->
+  <line x1="220" y1="396.5" x2="745" y2="396.5" stroke="currentColor" stroke-width="6"/>
+
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="262.75" cy="235.25" rx="53.75" ry="95.25" fill="#50403D"/>
+    <ellipse cx="463" cy="235" rx="54" ry="95.5" fill="#CF921C"/>
+    <ellipse cx="652.5" cy="299" rx="54" ry="94.5" fill="#F98AEE"/>
+    <ellipse cx="652.5" cy="493" rx="54" ry="94.5" fill="#A0F08A"/>
+  </g>
+
+  <!-- 縦書き（1字ずつ） -->
+  <g text-anchor="middle" dominant-baseline="central">
+    <g font-size="46" fill="#fff">
+      <text x="263" y="185.5">サ</text>
+      <text x="261.5" y="235.5">タ</text>
+      <text x="264" y="286">ン</text>
+    </g>
+    <g font-size="48" fill="#111">
+      <text x="463.5" y="186">悪</text>
+      <text x="463.5" y="235">霊</text>
+      <text x="463" y="285.5">人</text>
+      <text x="651" y="249.5">霊</text>
+      <text x="650.5" y="300">人</text>
+      <text x="651" y="349.5">体</text>
+    </g>
+    <g font-size="50" fill="#111">
+      <text x="653.5" y="465.5">肉</text>
+      <text x="653.5" y="519">身</text>
+    </g>
+  </g>
+
+  <!-- サタン ⇄ 悪霊人 ⇄ 霊人体 -->
+  <g>
+    <polygon points="327,214.5 372.5,214.5 372.5,209 393.5,219 372.5,229.5 372.5,223.5 327,223.5"/>
+    <polygon points="396,238.5 349,238.5 349,233 328.5,243 349,253 349,247.5 396,247.5"/>
+    <polygon points="533.6,206.9 571,229 574.3,223.4 586,243 563.2,242.3 566.5,236.7 529,214.7"/>
+    <polygon points="586,266.4 548.4,242.3 551.9,236.8 529.2,235.3 540.1,255.4 543.6,249.9 581.1,274"/>
+  </g>
+
+  <!-- 霊人体と肉身の授受 -->
+  <g stroke="#8C949A" stroke-width="8.5" fill="none" marker-end="url(#z270-g)">
+    <path d="M589,439 Q578,391.25 589,370.5"/>
+    <path d="M714,352 Q725.5,397.5 713,421"/>
+  </g>
+
+  <!-- 聖句（元は横に詰めた字） -->
+  <text x="650" y="146" font-size="41" dominant-baseline="central" textLength="205" lengthAdjust="spacing">悪魔の使者</text>
+  <!-- 出典はかなと数字で詰め方が違うので、分けて幅を合わせる -->
+  <g font-size="42" dominant-baseline="central">
+    <text x="857" y="146" textLength="115" lengthAdjust="spacingAndGlyphs">(マタイ</text>
+    <text x="982" y="146" textLength="98" lengthAdjust="spacingAndGlyphs">25:41)</text>
+    <text x="718" y="243" textLength="96" lengthAdjust="spacingAndGlyphs">サタン</text>
+    <text x="811" y="302" textLength="96" lengthAdjust="spacingAndGlyphs">(ルカ</text>
+    <text x="921" y="302" textLength="98" lengthAdjust="spacingAndGlyphs">22:3)</text>
+    <text x="786" y="393" textLength="289" lengthAdjust="spacingAndGlyphs">ペテロ＝サタン</text>
+    <text x="809" y="456" textLength="136" lengthAdjust="spacingAndGlyphs">(マタイ</text>
+    <text x="962" y="456" textLength="117" lengthAdjust="spacingAndGlyphs">16:23)</text>
+  </g>
+  <polygon points="821.5,240.5 843.5,240.5 843.5,234.5 857.5,244.5 843.5,254.5 843.5,248.5 821.5,248.5"/>
+  <text x="865" y="243" font-size="40" dominant-baseline="central" textLength="215" lengthAdjust="spacingAndGlyphs">イスカリオテのユダ</text>
+</svg>

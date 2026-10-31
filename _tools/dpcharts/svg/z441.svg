@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間の責任分担とみ旨の成就・失敗（王・王国と十字架）</title>
+
+  <!-- 点線（楕円の下から描く） -->
+  <g stroke="currentColor" stroke-width="7">
+    <line x1="367" y1="252.3" x2="367" y2="400.1" stroke-dasharray="21 10.7"/>
+    <line x1="931" y1="248" x2="931" y2="401" stroke-dasharray="21 12"/>
+  </g>
+
+  <!-- 黒い矢印（根元は円・楕円の下に隠す） -->
+  <g stroke="currentColor" stroke-width="12.3">
+    <line x1="612" y1="123.4" x2="520.25" y2="167.25"/>
+    <line x1="688" y1="123.8" x2="778.75" y2="164.5"/>
+    <line x1="607" y1="560" x2="524" y2="497.75"/>
+    <line x1="706.7" y1="560" x2="785.5" y2="505"/>
+  </g>
+  <polygon points="494,178.5 514.5,154 526,180.5"/>
+  <polygon points="803.5,176.5 785,151.5 772.5,177.5"/>
+  <polygon points="500,483 532,486 516,509.5"/>
+  <polygon points="808,488 777,494 794,516"/>
+
+  <!-- 責任分担から信仰・不信へ（灰色の矢印） -->
+  <g fill="#8C949A">
+    <polygon points="520,303.5 395.5,303.5 395.5,294.5 371.5,308.5 395.5,322.5 395.5,313.5 520,313.5"/>
+    <polygon points="775,303.5 902,303.5 902,294.5 925.5,308.5 902,322.5 902,313.5 775,313.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="649.5" cy="90" r="56" fill="#fff" class="paper"/>
+    <ellipse cx="365.25" cy="206.25" rx="129.75" ry="54.75" fill="#fff" class="paper"/>
+    <ellipse cx="932.5" cy="206.5" rx="130" ry="54.5" fill="#CF921C"/>
+    <rect x="507" y="244" width="279" height="128.5" fill="#CDF8F7"/>
+    <ellipse cx="362.75" cy="458.75" rx="142.25" ry="52.25" fill="#fff" class="paper"/>
+    <ellipse cx="933" cy="457" rx="141.5" ry="51.5" fill="#CF921C"/>
+    <ellipse cx="649.25" cy="591.5" rx="98.25" ry="53" fill="#F8F28F"/>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="648" y="88.5" font-size="60">神</text>
+    <text x="365.5" y="206" font-size="48" textLength="198" lengthAdjust="spacing">み旨成就</text>
+    <text x="293" y="459.5" font-size="48">王</text>
+    <text x="407.5" y="459.5" font-size="48">王国</text>
+    <text x="446" y="347" font-size="44">信仰</text>
+    <text x="845.5" y="346" font-size="44">不信</text>
+    <g fill="#111">
+      <text x="933.5" y="206" font-size="48" textLength="198" lengthAdjust="spacing">み旨失敗</text>
+      <text x="932.5" y="457" font-size="48" textLength="147" lengthAdjust="spacing">十字架</text>
+      <text x="649" y="591" font-size="48" textLength="145" lengthAdjust="spacing">イエス</text>
+    </g>
+  </g>
+  <circle cx="338" cy="458.5" r="6"/>
+
+  <!-- 人間の：責任分担 -->
+  <g font-size="48" dominant-baseline="central" fill="#111">
+    <text y="280.5"><tspan x="528.5" textLength="150" lengthAdjust="spacing">人間の</tspan><tspan x="703.5" text-anchor="middle">：</tspan></text>
+    <text x="568.5" y="334" textLength="198" lengthAdjust="spacing">責任分担</text>
+  </g>
+
+  <!-- 出典（細字） -->
+  <g font-size="34" font-weight="400" dominant-baseline="central">
+    <text y="546.5"><tspan x="199">(</tspan><tspan x="212" textLength="91" lengthAdjust="spacingAndGlyphs">イザヤ</tspan> <tspan x="310">9</tspan><tspan x="331">、</tspan><tspan x="360" textLength="25" lengthAdjust="spacingAndGlyphs">11</tspan><tspan x="390">、</tspan><tspan x="421" textLength="31" lengthAdjust="spacingAndGlyphs">60</tspan> <tspan x="460">章</tspan><tspan x="492">)</tspan></text>
+    <text y="540.5"><tspan x="818">(</tspan><tspan x="832" textLength="110" lengthAdjust="spacingAndGlyphs">イザヤ</tspan> <tspan x="952" textLength="37" lengthAdjust="spacingAndGlyphs">53</tspan> <tspan x="998">章</tspan><tspan x="1036">)</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>愛の主体と美の対象</title>
+  <defs>
+    <marker id="z148-a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 愛の主体・美の対象 -->
+  <g font-size="48" text-anchor="middle" dominant-baseline="central">
+    <text x="292.5" y="103">愛の</text>
+    <text x="293.5" y="161">主体</text>
+    <text x="542.5" y="103.5">美の</text>
+    <text x="543.5" y="161">対象</text>
+  </g>
+
+  <!-- 授受の矢印（上は右へ、下は左へ） -->
+  <g stroke="currentColor" stroke-width="6.5" fill="none" marker-end="url(#z148-a)">
+    <g>
+      <path d="M371,244.5 Q415.65,234.6 453.7,246.3"/>
+      <path d="M456,270 Q413.3,280.85 373.4,268.3"/>
+    </g>
+    <g transform="translate(-1,160)">
+      <path d="M371,244.5 Q415.65,234.6 453.7,246.3"/>
+      <path d="M456,270 Q413.3,280.85 373.4,268.3"/>
+    </g>
+    <g transform="translate(-2,321)">
+      <path d="M371,244.5 Q415.65,234.6 453.7,246.3"/>
+      <path d="M456,270 Q413.3,280.85 373.4,268.3"/>
+    </g>
+    <g transform="translate(479,55)">
+      <path d="M371,244.5 Q415.65,234.6 453.7,246.3"/>
+      <path d="M456,270 Q413.3,280.85 373.4,268.3"/>
+    </g>
+    <g transform="translate(480,225.5)">
+      <path d="M371,244.5 Q415.65,234.6 453.7,246.3"/>
+      <path d="M456,270 Q413.3,280.85 373.4,268.3"/>
+    </g>
+  </g>
+
+  <!-- 主と対象立場、対と主体立場をつなぐ点線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="6.5" stroke-dasharray="7 6.5">
+    <line x1="772" y1="367.5" x2="772" y2="428"/>
+    <line x1="1016.5" y1="365.5" x2="1016.5" y2="428"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="291" cy="260" rx="63.5" ry="55" fill="#fff" class="paper"/>
+    <ellipse cx="534.5" cy="260" rx="63.5" ry="55" fill="#FCE5E3"/>
+    <ellipse cx="291.5" cy="420" rx="63.5" ry="55" fill="#F98AEE"/>
+    <ellipse cx="537" cy="420" rx="63.5" ry="55" fill="#A0F08A"/>
+    <ellipse cx="291" cy="579" rx="63.5" ry="55" fill="#FCE5E3"/>
+    <ellipse cx="536.5" cy="579" rx="63.5" ry="55" fill="#DCC4C4"/>
+    <ellipse cx="770.5" cy="311.5" rx="63.5" ry="55" fill="#F98AEE"/>
+    <ellipse cx="1018" cy="311.5" rx="63.5" ry="55" fill="#A0F08A"/>
+    <ellipse cx="770" cy="484.5" rx="63.5" ry="55" fill="#A0F08A"/>
+    <ellipse cx="1018" cy="485" rx="63.5" ry="55" fill="#F98AEE"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="289" y="260" font-size="57">神</text>
+    <g fill="#111" font-size="53">
+      <text x="534.5" y="259">人</text>
+      <text x="290.5" y="420" font-size="52">男</text>
+      <text x="537" y="419.5">女</text>
+      <text x="291" y="578">人</text>
+      <text x="536" y="579" font-size="52">万</text>
+      <text x="770.5" y="309.5" font-size="52">主</text>
+      <text x="1018.5" y="310">対</text>
+      <g font-size="40">
+        <text x="770.5" y="463">対象</text>
+        <text x="772" y="507">立場</text>
+        <text x="1018.5" y="463">主体</text>
+        <text x="1019.5" y="507">立場</text>
+      </g>
+    </g>
+    <!-- 矢印に添える字は元の画像のとおり細字 -->
+    <g font-size="42" font-weight="400">
+      <text x="894.5" y="258.5">愛</text>
+      <text x="892.5" y="364">美</text>
+      <text x="890.5" y="431.5">美</text>
+      <text x="889" y="537.5">愛</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>直接主管圏</title>
+  <defs>
+    <marker id="z173-g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="2.4" markerHeight="2.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="47" y="59" font-size="50" dominant-baseline="central">3.</text>
+  <text x="111" y="59" font-size="48" dominant-baseline="central" textLength="249" lengthAdjust="spacing">直接主管圏</text>
+  <line x1="111" y1="89" x2="360" y2="89" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="9">
+    <line x1="434" y1="174.5" x2="265" y2="338"/>
+    <line x1="434" y1="174.5" x2="596" y2="336.5"/>
+    <line x1="265" y1="338" x2="429" y2="501"/>
+    <line x1="596" y1="336.5" x2="429" y2="501"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="#8C949A" stroke-width="9.5" fill="none" marker-end="url(#z173-g)">
+    <path d="M415,441 Q376,315 411,243"/>
+    <path d="M450,233 Q490,345 454,431"/>
+    <path d="M352,319 Q436,286 514,316"/>
+    <path d="M522,346 Q436,380 360,352"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="432.5" cy="168.5" r="52.5" fill="#fff" class="paper"/>
+    <circle cx="281" cy="329.5" r="51" fill="#F98AEE"/>
+    <circle cx="595" cy="330" r="52" fill="#A0F08A"/>
+    <ellipse cx="431.5" cy="503" rx="56.5" ry="50.5" fill="#DCC4C4"/>
+  </g>
+  <g font-size="54" text-anchor="middle" dominant-baseline="central">
+    <text x="430" y="167">神</text>
+    <text x="281" y="328" fill="#111">主</text>
+    <text x="595" y="329" fill="#111">対</text>
+    <text x="432" y="502" fill="#111">合</text>
+  </g>
+
+  <!-- 直接主管 -->
+  <rect x="678" y="172.5" width="233" height="64" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="794.5" y="204" font-size="48" text-anchor="middle" dominant-baseline="central">直接主管</text>
+  <g>
+    <circle cx="674" cy="291.5" r="8"/>
+    <circle cx="672.5" cy="368.5" r="8"/>
+    <circle cx="673.5" cy="454.5" r="8"/>
+  </g>
+  <g font-size="48" dominant-baseline="central">
+    <text x="710" y="289.5">神と心情一体</text>
+    <text x="710" y="377">愛と美</text>
+    <text x="710" y="464">善の目的</text>
+  </g>
+
+  <rect x="380" y="582.5" width="540" height="72" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <g font-size="52" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="542" y="618">直接主管圏</text>
+    <text x="704" y="618">：</text>
+    <text x="812.5" y="618">完成圏</text>
+  </g>
+</svg>

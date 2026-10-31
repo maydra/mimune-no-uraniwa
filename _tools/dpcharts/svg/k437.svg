@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>旧約前：僕の僕　旧約：僕　新約：養子　成約：直系子女</title>
+  <defs>
+    <marker id="k437-a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 段の横線 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <line x1="129.5" y1="113" x2="690.5" y2="113"/>
+    <line x1="129.5" y1="171.5" x2="690.5" y2="171.5"/>
+    <line x1="129.5" y1="231" x2="690.5" y2="231"/>
+    <line x1="129.5" y1="288" x2="690.5" y2="288"/>
+  </g>
+
+  <!-- 段の名 -->
+  <g font-size="23" dominant-baseline="central">
+    <text x="509" y="151" textLength="51" lengthAdjust="spacing">成約</text>
+    <text x="573.5" y="151" text-anchor="middle">：</text>
+    <text x="588" y="151" textLength="104" lengthAdjust="spacing">直系子女</text>
+    <text x="470" y="209" textLength="46" lengthAdjust="spacing">新約</text>
+    <text x="528.5" y="209" text-anchor="middle">：</text>
+    <text x="540" y="209" textLength="47" lengthAdjust="spacing">養子</text>
+    <text x="441" y="267.5" textLength="51" lengthAdjust="spacing">旧約</text>
+    <text x="506" y="267.5" text-anchor="middle">：</text>
+    <text x="519" y="267.5">僕</text>
+    <text x="386" y="329.5" textLength="78" lengthAdjust="spacing">旧約前</text>
+    <text x="477" y="329.5" text-anchor="middle">：</text>
+    <text x="491" y="329.5" textLength="78" lengthAdjust="spacing">僕の僕</text>
+  </g>
+  <text y="209" font-size="22" font-weight="400" dominant-baseline="central"><tspan x="592">（</tspan><tspan x="604" textLength="34" lengthAdjust="spacingAndGlyphs">ロマ</tspan><tspan x="644" textLength="42" lengthAdjust="spacingAndGlyphs">8:23</tspan><tspan x="686">）</tspan></text>
+
+  <!-- 上っていく線と矢印（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="4">
+    <line x1="207" y1="386" x2="232" y2="365"/>
+    <line x1="268.4" y1="332.9" x2="289.8" y2="314.7" marker-end="url(#k437-a)"/>
+    <line x1="334.4" y1="275.8" x2="356.3" y2="257.7" marker-end="url(#k437-a)"/>
+    <line x1="399.5" y1="216.9" x2="422.8" y2="196.7" marker-end="url(#k437-a)"/>
+    <line x1="463.4" y1="155.9" x2="507.3" y2="118.7" marker-end="url(#k437-a)"/>
+  </g>
+
+  <!-- サと堕落人間の間の矢印 -->
+  <g fill="currentColor">
+    <polygon points="164.5,325.5 169,337 166.5,337 166.5,359 162.5,359 162.5,337 160,337"/>
+    <polygon points="179,328 183,328 183,351.5 185.5,351.5 181,361.5 176.5,351.5 179,351.5"/>
+  </g>
+
+  <!-- 神と人間の授受 -->
+  <g fill="none" stroke="currentColor" stroke-width="3.5" marker-end="url(#k437-a)">
+    <path d="M492,76 Q474,66 492,56"/>
+    <path d="M553,53 Q573,63 553,74"/>
+  </g>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="521.5" cy="38" rx="30" ry="19.5" fill="#fff" class="paper"/>
+    <ellipse cx="522" cy="90" rx="30" ry="19.5" fill="#FCE5E3"/>
+    <ellipse cx="173" cy="308" rx="30" ry="16" fill="#50403D"/>
+    <ellipse cx="172.5" cy="388" rx="40" ry="23.5" fill="#CF921C"/>
+    <ellipse cx="250" cy="349" rx="40" ry="23.5" fill="#F8F28F"/>
+    <ellipse cx="316.5" cy="291.5" rx="40" ry="23.5" fill="#F8F28F"/>
+    <ellipse cx="377.5" cy="231" rx="40" ry="23.5" fill="#F8F28F"/>
+    <ellipse cx="445" cy="172" rx="40" ry="23.5" fill="#F8F28F"/>
+  </g>
+  <text x="522.5" y="38" font-size="27" text-anchor="middle" dominant-baseline="central">神</text>
+  <g font-size="22" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="509" y="90.5">人</text>
+    <text x="532.5" y="90.5">間</text>
+  </g>
+  <text x="172" y="307.5" font-size="21" text-anchor="middle" dominant-baseline="central" fill="#fff">サ</text>
+  <g font-size="22" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="153.5" y="388" font-size="23.5">堕</text>
+    <text x="191.5" y="388" font-size="23.5">人</text>
+    <text x="250.5" y="349.5" textLength="47" lengthAdjust="spacing">ノア</text>
+    <text x="316" y="291.5" textLength="68" lengthAdjust="spacingAndGlyphs">アブラハム</text>
+    <text x="377.5" y="231.5" textLength="67" lengthAdjust="spacing">イエス</text>
+    <text x="445" y="172" font-size="23" textLength="69" lengthAdjust="spacing">再臨主</text>
+  </g>
+  <circle cx="172.5" cy="388" r="2.8" fill="#111"/>
+</svg>

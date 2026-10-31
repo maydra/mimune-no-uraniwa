@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 無形実体世界と有形実体世界</title>
+
+  <text x="77.5" y="57.5" font-size="46" text-anchor="middle" dominant-baseline="central">Ⅰ</text>
+  <text x="107" y="57.5" font-size="46" text-anchor="middle" dominant-baseline="central">.</text>
+  <text x="129" y="57.5" font-size="48" dominant-baseline="central" textLength="647" lengthAdjust="spacing">無形実体世界と有形実体世界</text>
+  <line x1="128" y1="87" x2="777" y2="87" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神（二性性相） -->
+  <text x="274" y="275.5" font-size="46" text-anchor="middle" dominant-baseline="central">神</text>
+  <path d="M200,389 C220,410 255,410 276,389.5 C297,369 332,369 352,389 A76,76 0 0 0 200,389 Z" fill="#F98AEE"/>
+  <path d="M200,389 C220,410 255,410 276,389.5 C297,369 332,369 352,389 A76,76 0 0 1 200,389 Z" fill="#A0F08A"/>
+  <path d="M200,389 C220,410 255,410 276,389.5 C297,369 332,369 352,389" fill="none" stroke="#111" stroke-width="4.5"/>
+  <circle cx="276" cy="389" r="76" fill="none" stroke="currentColor" stroke-width="4"/>
+  <text x="282" y="506" font-size="43" text-anchor="middle" dominant-baseline="central" textLength="172" lengthAdjust="spacing">二性性相</text>
+
+  <!-- 灰色の太い矢印 -->
+  <g fill="#8C949A">
+    <polygon points="366,372 390,372 390,356 414,389 390,421 390,405 366,405"/>
+    <polygon points="659,372 687,372 687,356.5 714,389 687,421.5 687,405 659,405"/>
+  </g>
+
+  <!-- 人と心・体をつなぐ線（人と円より先に描く） -->
+  <g stroke="currentColor" stroke-width="14">
+    <line x1="540" y1="375" x2="585.8" y2="305"/>
+    <line x1="516" y1="428" x2="588" y2="485"/>
+  </g>
+
+  <!-- 人（100×240 の型を置く） -->
+  <g transform="translate(429.5,264) scale(1.25,1.17)" fill="#FCE6E5" stroke="#111" stroke-width="3" stroke-linejoin="round">
+    <path d="M43,40 L43,48 C30,49 14,50 10,58 L4,130 Q3,140 9,141 Q15,141 15,132 L21,78 L23,124 L26,232 Q26,238 33,238 L41,238 Q47,238 47,232 L49,134 L51,134 L53,232 Q53,238 59,238 L67,238 Q74,238 74,232 L77,124 L79,78 L85,132 Q85,141 91,141 Q97,140 96,130 L90,58 C86,50 70,49 57,48 L57,40 Z"/>
+    <circle cx="50" cy="22" r="19"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="608.5" cy="284.5" rx="42.5" ry="51.5" fill="#F98AEE"/>
+    <ellipse cx="608.5" cy="497.5" rx="42.5" ry="51.5" fill="#A0F08A"/>
+  </g>
+  <g font-size="47" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="608.5" y="285">心</text>
+    <text x="608.5" y="497">体</text>
+  </g>
+
+  <!-- 被造世界と無形・有形の実体世界 -->
+  <g stroke="currentColor" stroke-width="14">
+    <line x1="790" y1="333" x2="849.7" y2="275"/>
+    <line x1="790" y1="446" x2="850" y2="513.5"/>
+  </g>
+  <rect x="726" y="255" width="76" height="270" rx="18" fill="#DCC4C4" stroke="currentColor" stroke-width="4"/>
+  <g font-size="47" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="764" y="313">被</text>
+    <text x="764" y="363">造</text>
+    <text x="764" y="413.5">世</text>
+    <text x="764" y="463.5">界</text>
+  </g>
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="917.5" cy="233.5" rx="83.5" ry="108.5" fill="#F98AEE"/>
+    <ellipse cx="917" cy="532.5" rx="89" ry="102.5" fill="#A0F08A"/>
+  </g>
+  <g font-size="48" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="915.5" y="177">無形</text>
+    <text x="915.5" y="236">実体</text>
+    <text x="915.5" y="294.5">世界</text>
+    <text x="918" y="476.5">有形</text>
+    <text x="918" y="534.5">実体</text>
+    <text x="918" y="593.5">世界</text>
+  </g>
+
+  <!-- 天宙の括弧 -->
+  <path d="M1021,241 C1031,245 1038,256 1038,285 L1038,360 C1038,375 1042,382 1051,384 C1042,386 1038,393 1038,408 L1038,483 C1038,512 1031,523 1021,527" fill="none" stroke="currentColor" stroke-width="5.5"/>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="1084.5" y="358.5">天</text>
+    <text x="1084.5" y="407.5">宙</text>
+  </g>
+</svg>

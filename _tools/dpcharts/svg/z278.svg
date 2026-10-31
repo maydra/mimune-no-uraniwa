@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>善神の業と悪神の業</title>
+  <defs>
+    <marker id="z278-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="2.7" markerHeight="2.7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="52" y="81.5" font-size="48">Ⅳ.</text>
+  <text x="130" y="63.5" font-size="50" dominant-baseline="central" textLength="448" lengthAdjust="spacing">善神の業と悪神の業</text>
+  <line x1="129" y1="93.5" x2="578" y2="93.5" stroke="currentColor" stroke-width="4"/>
+
+  <g font-size="50" text-anchor="middle" dominant-baseline="central">
+    <text y="171.5"><tspan x="320">善</tspan><tspan x="387">神</tspan></text>
+    <text y="173.5"><tspan x="899">悪</tspan><tspan x="966.5">神</tspan></text>
+  </g>
+
+  <!-- 下への灰色の矢印（箱の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="341.5,375 357.5,375 357.5,486 367.5,486 349.5,515.5 331.5,486 341.5,486"/>
+    <polygon points="923.5,375 939.5,375 939.5,479.5 949.5,479.5 931.5,509.5 913.5,479.5 923.5,479.5"/>
+  </g>
+
+  <!-- 善神 -->
+  <rect x="250" y="212" width="199" height="162" rx="14" fill="#fff" class="paper" stroke="currentColor" stroke-width="5"/>
+  <g font-size="42" text-anchor="middle" dominant-baseline="central">
+    <text x="349.5" y="242">神</text>
+    <text x="349" y="290" textLength="167" lengthAdjust="spacingAndGlyphs">善霊人たち</text>
+    <text x="349" y="338" textLength="153" lengthAdjust="spacingAndGlyphs">天使たち</text>
+  </g>
+
+  <!-- 悪神 -->
+  <rect x="831.5" y="212.5" width="200.5" height="162" rx="14" fill="#50403D" stroke="currentColor" stroke-width="5"/>
+  <g text-anchor="middle" dominant-baseline="central" fill="#fff">
+    <text x="932.5" y="262.5" font-size="40" textLength="120" lengthAdjust="spacing">サタン</text>
+    <text x="931.5" y="320.5" font-size="38" textLength="174" lengthAdjust="spacingAndGlyphs">悪霊人たち</text>
+  </g>
+
+  <!-- 人間とのやりとり -->
+  <g stroke="currentColor" stroke-width="8" marker-end="url(#z278-a)">
+    <line x1="471.7" y1="369.4" x2="552.7" y2="415.1"/>
+    <line x1="541.9" y1="436.8" x2="459.4" y2="387.7"/>
+    <line x1="724.9" y1="414.5" x2="808.6" y2="365.7"/>
+    <line x1="819.5" y1="386.5" x2="739.3" y2="433.2"/>
+  </g>
+  <ellipse cx="640.75" cy="469.5" rx="90.25" ry="50.5" fill="#CF921C" stroke="currentColor" stroke-width="5"/>
+  <text y="469" font-size="52" text-anchor="middle" dominant-baseline="central" fill="#111"><tspan x="605">人</tspan><tspan x="675.5">間</tspan></text>
+
+  <g font-size="44" dominant-baseline="central">
+    <text y="556"><tspan x="198">平和感、</tspan><tspan x="374">正義感</tspan></text>
+    <text x="349.5" y="614" text-anchor="middle">健康</text>
+  </g>
+  <g font-size="43.5" dominant-baseline="central">
+    <text y="552"><tspan x="721.5">不安、</tspan><tspan x="852">恐怖、</tspan><tspan x="982.5">利己心</tspan></text>
+    <text x="915.5" y="610" text-anchor="middle">健康を害する</text>
+  </g>
+</svg>

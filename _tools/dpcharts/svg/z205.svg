@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間・サタン・堕落論</title>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="424,205 439.5,205 439.5,264 447.5,264 431.5,297 415.5,264 424,264"/>
+    <polygon points="424,410 439.5,410 439.5,464 447.5,464 431.5,497 415.5,464 424,464"/>
+  </g>
+
+  <!-- 人間から3つへ分かれる括弧（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="10.5" fill="none" stroke-linejoin="miter">
+    <path d="M587,82 H552 V233.5 H587"/>
+    <line x1="500" y1="158" x2="587" y2="158"/>
+  </g>
+
+  <ellipse cx="431" cy="157" rx="100" ry="55" fill="#FCE5E3" stroke="currentColor" stroke-width="4"/>
+  <ellipse cx="431.5" cy="362" rx="99.5" ry="55" fill="#50403D" stroke="currentColor" stroke-width="4"/>
+  <rect x="278.25" y="506.25" width="303.5" height="126.5" rx="11" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="426.5" y="156.5" font-size="56" fill="#111" textLength="112" lengthAdjust="spacing">人間</text>
+    <text x="431.5" y="362.5" font-size="56" fill="#fff" textLength="146" lengthAdjust="spacingAndGlyphs">サタン</text>
+    <text x="432" y="567.5" font-size="78" fill="#111" textLength="238" lengthAdjust="spacing">堕落論</text>
+  </g>
+
+  <g font-size="50" dominant-baseline="central">
+    <text x="603.5" y="88" textLength="400" lengthAdjust="spacing">悪を根こそぎ除去</text>
+    <text x="604.5" y="159.5" textLength="250" lengthAdjust="spacing">罪悪史清算</text>
+    <text x="604.5" y="230" textLength="200" lengthAdjust="spacing">善の歴史</text>
+  </g>
+  <text x="557.5" y="361" font-size="57" dominant-baseline="central" textLength="465" lengthAdjust="spacing">動機と経路と結果</text>
+</svg>

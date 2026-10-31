@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>出発のための摂理　磐石二打</title>
+
+  <!-- 題 -->
+  <text x="36" y="36" font-size="30" dominant-baseline="central" textLength="249" lengthAdjust="spacing">出発のための摂理</text>
+  <line x1="34" y1="55" x2="285" y2="55" stroke="currentColor" stroke-width="2.5"/>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="189.5,137.5 196.5,149.5 192.5,149.5 192.5,173 186.5,173 186.5,149.5 182.5,149.5"/>
+    <polygon points="246.5,194.5 258.5,186.5 258.5,191.5 542,191.5 542,197.5 258.5,197.5 258.5,202.5"/>
+  </g>
+
+  <!-- 神 -->
+  <circle cx="190.5" cy="106" r="28.3" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <text x="189.5" y="105.5" font-size="33" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- モーセ・イスラエル民族 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="189.5" cy="194.5" rx="50.5" ry="23.5" fill="#F8F28F"/>
+    <ellipse cx="609.5" cy="191" rx="69.5" ry="35" fill="#F86D42"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="190.5" y="192.5" font-size="27" textLength="82" lengthAdjust="spacing">モーセ</text>
+    <text x="610" y="179.5" font-size="26" textLength="116" lengthAdjust="spacing">イスラエル</text>
+    <text x="609" y="210" font-size="26" textLength="52" lengthAdjust="spacing">民族</text>
+  </g>
+
+  <!-- 実体基台：× -->
+  <rect x="293" y="141" width="191" height="42" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.6"/>
+  <g font-size="28" dominant-baseline="central">
+    <text x="310" y="162" textLength="112" lengthAdjust="spacing">実体基台</text>
+    <text x="431.5" y="162" text-anchor="middle">：</text>
+  </g>
+  <path d="M449.5,155.5 L463.5,170.5 M463.5,155.5 L449.5,170.5" stroke="currentColor" stroke-width="2.6" fill="none"/>
+
+  <!-- 出発のための摂理：× -->
+  <rect x="223" y="221.5" width="334.5" height="45.5" fill="#CDF8F7" stroke="currentColor" stroke-width="2.8"/>
+  <g font-size="28.5" dominant-baseline="central" fill="#111">
+    <text x="246" y="245" textLength="228" lengthAdjust="spacing">出発のための摂理</text>
+    <text x="488.5" y="245" text-anchor="middle">：</text>
+  </g>
+  <path d="M513,237 L529,253 M529,237 L513,253" stroke="#111" stroke-width="4.5" fill="none"/>
+
+  <g font-size="22" font-weight="400" dominant-baseline="central">
+    <text x="326" y="289" text-anchor="middle">（</text>
+    <text x="331" y="289" textLength="45" lengthAdjust="spacing">磐石</text>
+    <text x="392" y="289" textLength="44" lengthAdjust="spacing">中心</text>
+    <text x="441" y="289" text-anchor="middle">）</text>
+  </g>
+
+  <!-- 箇条 -->
+  <circle cx="232" cy="345" r="6"/>
+  <circle cx="232" cy="389.5" r="6"/>
+  <g font-size="28" dominant-baseline="central">
+    <text x="248" y="345" textLength="199" lengthAdjust="spacing">イスラエル民族</text>
+    <text x="462" y="345" text-anchor="middle">：</text>
+    <text x="478" y="345" textLength="54" lengthAdjust="spacing">不平</text>
+    <text x="533" y="345">、</text>
+    <text x="566" y="345" textLength="106" lengthAdjust="spacing">つぶやく</text>
+    <text x="248" y="389.5" textLength="82" lengthAdjust="spacing">モーセ</text>
+    <text x="346.5" y="389.5" text-anchor="middle">：</text>
+    <text x="362" y="389.5" textLength="114" lengthAdjust="spacing">磐石二打</text>
+  </g>
+</svg>

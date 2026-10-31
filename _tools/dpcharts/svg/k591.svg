@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>完成人間と地上天国、堕落人間と堕落世界　人類歴史（闘争、戦争）</title>
+
+  <!-- 灰色の線（楕円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="6.5">
+    <line x1="236.5" y1="195" x2="178.5" y2="255"/>
+    <line x1="275" y1="195" x2="335" y2="255"/>
+    <line x1="540.5" y1="195" x2="486.5" y2="255"/>
+    <line x1="582.5" y1="195" x2="640.5" y2="255"/>
+  </g>
+
+  <!-- 横の灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="316,62 473,62 473,57.5 486,65.5 473,73.5 473,69 316,69"/>
+    <polygon points="316,167 473,167 473,162.5 486,170.5 473,178.5 473,174 316,174"/>
+  </g>
+
+  <!-- 下向きの灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="183.5,292 189.5,292 189.5,319 193,319 186.5,330 180,319 183.5,319"/>
+    <polygon points="327.5,292 333.5,292 333.5,319 337,319 330.5,330 324,319 327.5,319"/>
+    <polygon points="561,297 567,297 567,319.5 570.5,319.5 564,331 557.5,319.5 561,319.5"/>
+  </g>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="255.5" cy="67" rx="64.5" ry="37" fill="#fff" class="paper"/>
+    <ellipse cx="560.5" cy="67" rx="64.5" ry="37" fill="#fff" class="paper"/>
+    <ellipse cx="255.5" cy="171.5" rx="64.5" ry="37.5" fill="#CF921C"/>
+    <ellipse cx="560.5" cy="171.5" rx="64.5" ry="37.5" fill="#CF921C"/>
+    <ellipse cx="186" cy="270.5" rx="43" ry="24.5" fill="#fff" class="paper"/>
+    <ellipse cx="330" cy="270.5" rx="43" ry="24.5" fill="#50403D"/>
+    <ellipse cx="495" cy="270" rx="43" ry="24.5" fill="#fff" class="paper"/>
+    <ellipse cx="633" cy="270" rx="43" ry="24.5" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central">
+    <text x="254.5" y="67" textLength="104" lengthAdjust="spacing">完成人間</text>
+    <text x="560" y="67.5" textLength="104" lengthAdjust="spacing">地上天国</text>
+    <text x="254.5" y="171" textLength="104" lengthAdjust="spacing" fill="#111">堕落人間</text>
+    <text x="560.5" y="171.5" textLength="105" lengthAdjust="spacing" fill="#111">堕落世界</text>
+  </g>
+  <g font-size="29" text-anchor="middle" dominant-baseline="central">
+    <text x="186.5" y="270" textLength="57" lengthAdjust="spacing">本心</text>
+    <text x="330" y="270.5" textLength="56" lengthAdjust="spacing" fill="#fff">邪心</text>
+    <text x="494.5" y="270" textLength="57" lengthAdjust="spacing">個体</text>
+    <text x="632.5" y="270" textLength="57" lengthAdjust="spacing">個体</text>
+  </g>
+
+  <!-- 箱 -->
+  <g stroke="currentColor" stroke-width="2.5">
+    <rect x="153" y="334" width="66" height="38" fill="#fff" class="paper"/>
+    <rect x="297.5" y="334.5" width="65" height="37" fill="#50403D"/>
+    <rect x="497" y="336" width="133" height="38" fill="#fff" class="paper"/>
+  </g>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central">
+    <text x="186.5" y="353" textLength="51" lengthAdjust="spacing">善行</text>
+    <text x="330.5" y="354" textLength="51" lengthAdjust="spacing" fill="#fff">悪行</text>
+    <text x="564" y="354.5" textLength="108" lengthAdjust="spacing">人類歴史</text>
+  </g>
+
+  <!-- × -->
+  <g stroke="currentColor" stroke-width="6.5">
+    <path d="M245.5,258.5 L270.5,283.5 M270.5,258.5 L245.5,283.5"/>
+    <path d="M245.5,340.5 L270.5,365.5 M270.5,340.5 L245.5,365.5"/>
+    <path d="M551.5,258.5 L576.5,283.5 M576.5,258.5 L551.5,283.5"/>
+  </g>
+
+  <!-- （衝突）（闘争、戦争） -->
+  <g font-size="26" dominant-baseline="central">
+    <text x="225" y="394" text-anchor="middle">（</text>
+    <text x="231" y="394" textLength="53" lengthAdjust="spacing">衝突</text>
+    <text x="290.5" y="394" text-anchor="middle">）</text>
+    <text x="496.5" y="395.5" text-anchor="middle">（</text>
+    <text x="503" y="395.5" textLength="50" lengthAdjust="spacing">闘争</text>
+    <text x="560" y="395.5" text-anchor="middle">、</text>
+    <text x="569" y="395.5" textLength="50" lengthAdjust="spacing">戦争</text>
+    <text x="625" y="395.5" text-anchor="middle">）</text>
+  </g>
+</svg>

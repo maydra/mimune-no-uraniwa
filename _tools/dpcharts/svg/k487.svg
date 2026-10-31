@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>21数の意義</title>
+  <defs>
+    <marker id="k487-a" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="2" markerHeight="2" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="33" y="37.5" font-size="30" dominant-baseline="central" textLength="161" lengthAdjust="spacing">21数の意義</text>
+  <line x1="33" y1="56.5" x2="194" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 段の横線と矢印 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <line x1="147" y1="116.5" x2="290" y2="116.5"/>
+    <line x1="147" y1="170" x2="291" y2="170"/>
+    <line x1="146" y1="220.5" x2="291" y2="220.5"/>
+    <line x1="147" y1="275.5" x2="290" y2="275.5"/>
+  </g>
+  <line x1="206" y1="276" x2="206" y2="128.4" stroke="currentColor" stroke-width="7" marker-end="url(#k487-a)"/>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central">
+    <text x="173" y="143">7</text>
+    <text x="173" y="195">7</text>
+    <text x="173" y="250.5">7</text>
+  </g>
+  <g font-size="24" text-anchor="middle" dominant-baseline="central">
+    <text x="249" y="143" textLength="49" lengthAdjust="spacing">完成</text>
+    <text x="249" y="195" textLength="50" lengthAdjust="spacing">長成</text>
+    <text x="249" y="250" textLength="49" lengthAdjust="spacing">蘇生</text>
+  </g>
+  <path d="M305,119 Q312,121 312,132 L312,184 Q312,194 321,196 Q312,198 312,208 L312,262 Q312,271 305,273" fill="none" stroke="currentColor" stroke-width="2.4"/>
+
+  <!-- 全成長期間＝21数完成期間 ← ７数完成期間×三段階 -->
+  <g font-size="25" dominant-baseline="central">
+    <text x="338" y="170" textLength="128" lengthAdjust="spacing">全成長期間</text>
+    <text x="482" y="170" text-anchor="middle">＝</text>
+    <text x="503" y="170" textLength="22" lengthAdjust="spacingAndGlyphs">21</text>
+    <text x="530" y="170" textLength="128" lengthAdjust="spacing">数完成期間</text>
+    <text x="349.5" y="220.5" text-anchor="middle">７</text>
+    <text x="364" y="220.5" textLength="129" lengthAdjust="spacing">数完成期間</text>
+    <text x="510" y="221" font-size="28" text-anchor="middle">×</text>
+    <text x="528" y="220.5" textLength="76" lengthAdjust="spacing">三段階</text>
+  </g>
+  <polygon points="477,199.5 477,193.5 469,193.5 482.5,183.5 496,193.5 489,193.5 489,199.5" fill="#8C949A"/>
+
+  <!-- 下の二行 -->
+  <g font-size="25" dominant-baseline="central">
+    <text x="136" y="321" textLength="180" lengthAdjust="spacing">天地創造全期間</text>
+    <text x="331.5" y="321" text-anchor="middle">７</text>
+    <text x="357.5" y="321" text-anchor="middle">日</text>
+    <text x="136" y="366.5" textLength="259" lengthAdjust="spacing">完成される一つの期間</text>
+    <text x="412.5" y="366.5" text-anchor="middle">＝</text>
+    <text x="440.5" y="366.5" text-anchor="middle">７</text>
+    <text x="455" y="366.5" textLength="128" lengthAdjust="spacing">数完成期間</text>
+  </g>
+</svg>

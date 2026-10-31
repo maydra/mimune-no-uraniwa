@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>3. 楽園以外の霊人たちの再臨復活</title>
+  <defs>
+    <marker id="z529-ac" viewBox="0 0 20 20" refX="17" refY="10" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0.5 L20,10 L0,19.5 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="48.3" y="57" font-size="46" dominant-baseline="central">3.</text>
+  <text x="113.5" y="56.7" font-size="48" dominant-baseline="central" textLength="698" lengthAdjust="spacing">楽園以外の霊人たちの再臨復活</text>
+  <line x1="113" y1="87" x2="813" y2="87" stroke="currentColor" stroke-width="3"/>
+
+  <g font-size="44" dominant-baseline="central">
+    <text x="191.7" y="173.2" textLength="182.6" lengthAdjust="spacing">他宗教人</text>
+    <text x="514.7" y="173.2" textLength="189.6" lengthAdjust="spacing">善霊人</text>
+    <text x="823.7" y="173.2" textLength="190.6" lengthAdjust="spacing">悪霊人</text>
+  </g>
+  <g stroke="currentColor" stroke-width="3">
+    <line x1="192" y1="202" x2="375" y2="202"/>
+    <line x1="513" y1="202" x2="705" y2="202"/>
+    <line x1="823" y1="202" x2="1015" y2="202"/>
+  </g>
+
+  <!-- 地上の線（下の楕円より先に描く） -->
+  <line x1="181" y1="531" x2="1103" y2="531" stroke="currentColor" stroke-width="5"/>
+
+  <!-- 霊人（上）と地上人（下） -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="239.75" cy="323" rx="51.25" ry="95.5" fill="#FCE5E3"/>
+    <ellipse cx="550.25" cy="323" rx="56.25" ry="95.5" fill="#fff" class="paper"/>
+    <ellipse cx="859" cy="323" rx="56" ry="95" fill="#CF921C"/>
+    <ellipse cx="389" cy="528.25" rx="70.5" ry="108.75" fill="#FCE5E3"/>
+    <ellipse cx="699.25" cy="529.5" rx="71.25" ry="110" fill="#fff" class="paper"/>
+    <ellipse cx="1004.5" cy="529.5" rx="70.5" ry="108.5" fill="#CF921C"/>
+  </g>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <g fill="#111">
+      <text x="239.75" y="285">霊</text>
+      <text x="239.75" y="360">人</text>
+      <text x="859" y="274">悪</text>
+      <text x="859" y="323">霊</text>
+      <text x="859" y="373">人</text>
+      <text x="389" y="478.5" font-size="44">同じ</text>
+      <text x="389" y="528" font-size="44">宗教</text>
+      <text x="389" y="578" font-size="44">信徒</text>
+      <text x="1004.5" y="480">地</text>
+      <text x="1004.5" y="529">上</text>
+      <text x="1004.5" y="580.5">人</text>
+    </g>
+    <text x="550.25" y="272">善</text>
+    <text x="550.25" y="322.5">霊</text>
+    <text x="550.25" y="373">人</text>
+    <text x="699.25" y="491">善</text>
+    <text x="699.25" y="566">人</text>
+  </g>
+
+  <!-- 協助の矢印（上下に向き合う2本を3組） -->
+  <g stroke="currentColor" stroke-width="6" marker-end="url(#z529-ac)">
+    <line x1="310.2" y1="374" x2="346" y2="414.3"/>
+    <line x1="329.5" y1="434" x2="292.5" y2="391.8"/>
+    <line x1="623.7" y1="374" x2="659.5" y2="414.3"/>
+    <line x1="643" y1="434" x2="606" y2="391.8"/>
+    <line x1="929.2" y1="374" x2="965" y2="414.3"/>
+    <line x1="948.5" y1="434" x2="911.5" y2="391.8"/>
+  </g>
+
+  <g font-size="39" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="391" y="362.8">協助</text>
+    <text x="701" y="362.8">協助</text>
+    <text x="1007" y="327.3" font-size="35">罪を</text>
+    <text x="1007" y="372.3" font-size="35">清算</text>
+  </g>
+</svg>

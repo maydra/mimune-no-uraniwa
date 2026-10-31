@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間の幸福</title>
+
+  <text x="48" y="81" font-size="48" textLength="250" lengthAdjust="spacing">人間の幸福</text>
+  <line x1="48" y1="92.5" x2="298" y2="92.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 幸福へ向かう矢印と、不幸へは向かわない矢印 -->
+  <g fill="#8C949A">
+    <polygon points="363,338.5 405,318 405,331.5 535,331.5 535,345.5 405,345.5 405,359"/>
+    <polygon points="767,331.5 896,331.5 896,318 938,338.5 896,359 896,345.5 767,345.5"/>
+  </g>
+  <g stroke="currentColor" stroke-width="7">
+    <line x1="803" y1="294" x2="853" y2="376"/>
+    <line x1="853" y1="294" x2="803" y2="376"/>
+  </g>
+
+  <!-- 幸福・不幸 -->
+  <ellipse cx="281" cy="340.5" rx="60" ry="87.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="3.5"/>
+  <ellipse cx="1020" cy="339.5" rx="60" ry="87.5" fill="#CF921C" stroke="currentColor" stroke-width="3.5"/>
+  <g font-size="60" text-anchor="middle" dominant-baseline="central">
+    <text x="280" y="309.5">幸</text>
+    <text x="280" y="372">福</text>
+    <text x="1020" y="309" fill="#111">不</text>
+    <text x="1020" y="370" fill="#111">幸</text>
+  </g>
+
+  <!-- 人（100×240 の型を置く） -->
+  <g transform="translate(559,137.9) scale(1.9,1.665)" fill="#FCE6E5" stroke="#111" stroke-width="2.3" stroke-linejoin="round">
+    <path d="M43,40 L43,48 C30,49 14,50 10,58 L4,130 Q3,140 9,141 Q15,141 15,132 L21,78 L23,124 L26,232 Q26,238 33,238 L41,238 Q47,238 47,232 L49,134 L51,134 L53,232 Q53,238 59,238 L67,238 Q74,238 74,232 L77,124 L79,78 L85,132 Q85,141 91,141 Q97,140 96,130 L90,58 C86,50 70,49 57,48 L57,40 Z"/>
+    <circle cx="50" cy="22" r="19"/>
+  </g>
+  <text x="580" y="572.5" font-size="52" dominant-baseline="central" textLength="133" lengthAdjust="spacing">欲望</text>
+</svg>

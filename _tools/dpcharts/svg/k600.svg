@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>イスラエル氏族社会からイスラエル封建社会へ</title>
+
+  <text x="235" y="46" font-size="33" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 灰色の矢印（楕円より先に描く） -->
+  <g fill="#8C949A">
+    <polygon points="234,168 241,168 241,214 247,214 237.5,230 228,214 234,214"/>
+    <polygon points="234,318 241,318 241,394 247,394 237.5,408 228,394 234,394"/>
+  </g>
+
+  <!-- イスラエルの楕円 -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="235.5" cy="127" rx="97.2" ry="44.7"/>
+    <ellipse cx="237.5" cy="278" rx="97.2" ry="44.7"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="236" y="110" textLength="143" lengthAdjust="spacing">イスラエル</text>
+    <text x="236" y="144.5">氏族社会</text>
+    <text x="238" y="261.5" textLength="143" lengthAdjust="spacing">イスラエル</text>
+    <text x="238" y="295.5">封建社会</text>
+  </g>
+
+  <!-- 箇条 -->
+  <g>
+    <circle cx="353" cy="123.5" r="6.8"/>
+    <circle cx="351" cy="228" r="6.8"/>
+    <circle cx="352" cy="280" r="6.8"/>
+    <circle cx="352" cy="333.5" r="6.8"/>
+  </g>
+  <g dominant-baseline="central">
+    <text x="365" y="122.5" font-size="26" textLength="235" lengthAdjust="spacing">善の中心アブラハム</text>
+    <text x="366" y="226.5" font-size="27" textLength="201" lengthAdjust="spacing">エジプトで氏族</text>
+    <text x="611" y="226.5" font-size="27" textLength="57" lengthAdjust="spacing">部族</text>
+    <text x="367" y="279" font-size="27" textLength="229" lengthAdjust="spacing">カナンで士師時代</text>
+    <text x="366" y="331.5" font-size="27" textLength="289" lengthAdjust="spacing">天の側主権の版図形成</text>
+  </g>
+  <g fill="none" stroke="currentColor">
+    <line x1="577" y1="228.5" x2="600" y2="228.5" stroke-width="3"/>
+    <path d="M594,224.5 L601.5,228.5 L594,232.5" stroke-width="2.4" stroke-linejoin="round"/>
+  </g>
+</svg>

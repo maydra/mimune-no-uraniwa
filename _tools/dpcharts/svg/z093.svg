@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>2. 三対象目的（三対象基準）</title>
+
+  <text x="62.5 85" y="78.5" font-size="48" text-anchor="middle">2.</text>
+  <text x="107" y="78.5" font-size="50" textLength="250" lengthAdjust="spacing">三対象目的</text>
+  <line x1="107" y1="90.5" x2="357" y2="90.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 矢印（4組とも同じ形。楕円の下に描く） -->
+  <g>
+    <g>
+      <path d="M273.5,214 L249.25,277.25 M312,214 L339,277.5 M294.75,225 L294.75,408" fill="none" stroke="currentColor" stroke-width="5.5"/>
+      <polygon points="240.5,273.5 258,281 243.5,292.5"/>
+      <polygon points="346.5,274 331.5,281 344.5,292.5"/>
+      <polygon points="285.5,407 304,407 294.75,427.5"/>
+    </g>
+    <g transform="translate(234,0)">
+      <path d="M273.5,214 L249.25,277.25 M312,214 L339,277.5 M294.75,225 L294.75,408" fill="none" stroke="currentColor" stroke-width="5.5"/>
+      <polygon points="240.5,273.5 258,281 243.5,292.5"/>
+      <polygon points="346.5,274 331.5,281 344.5,292.5"/>
+      <polygon points="285.5,407 304,407 294.75,427.5"/>
+    </g>
+    <g transform="translate(477,0)">
+      <path d="M273.5,214 L249.25,277.25 M312,214 L339,277.5 M294.75,225 L294.75,408" fill="none" stroke="currentColor" stroke-width="5.5"/>
+      <polygon points="240.5,273.5 258,281 243.5,292.5"/>
+      <polygon points="346.5,274 331.5,281 344.5,292.5"/>
+      <polygon points="285.5,407 304,407 294.75,427.5"/>
+    </g>
+    <g transform="translate(711,0)">
+      <path d="M273.5,214 L249.25,277.25 M312,214 L339,277.5 M294.75,225 L294.75,408" fill="none" stroke="currentColor" stroke-width="5.5"/>
+      <polygon points="240.5,273.5 258,281 243.5,292.5"/>
+      <polygon points="346.5,274 331.5,281 344.5,292.5"/>
+      <polygon points="285.5,407 304,407 294.75,427.5"/>
+    </g>
+  </g>
+
+  <!-- 神（白）・主（桃）・対（緑）・合（灰桃） -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <g fill="#fff" class="paper">
+      <ellipse cx="293.5" cy="190" rx="35.75" ry="51.75"/>
+      <ellipse cx="596.5" cy="341.5" rx="36.25" ry="53.25"/>
+      <ellipse cx="703" cy="342" rx="35.75" ry="53.75"/>
+      <ellipse cx="1006" cy="484" rx="34.75" ry="51.75"/>
+    </g>
+    <g fill="#F98AEE">
+      <ellipse cx="229" cy="346.5" rx="35.75" ry="53.25"/>
+      <ellipse cx="528" cy="190" rx="34.75" ry="51.75"/>
+      <ellipse cx="773" cy="481.5" rx="34.75" ry="51.25"/>
+      <ellipse cx="1071" cy="340.5" rx="34.75" ry="51.25"/>
+    </g>
+    <g fill="#A0F08A">
+      <ellipse cx="362.5" cy="342.5" rx="36.25" ry="53.25"/>
+      <ellipse cx="530" cy="483.5" rx="35.75" ry="53.25"/>
+      <ellipse cx="772.5" cy="191.75" rx="36.25" ry="53.5"/>
+      <ellipse cx="938.5" cy="344" rx="36.25" ry="53.75"/>
+    </g>
+    <g fill="#DCC4C4">
+      <ellipse cx="294" cy="482" rx="34.75" ry="51.75"/>
+      <ellipse cx="464" cy="343.5" rx="34.75" ry="51.25"/>
+      <ellipse cx="834" cy="343.5" rx="34.75" ry="51.25"/>
+      <ellipse cx="1006" cy="193.5" rx="34.75" ry="51.25"/>
+    </g>
+  </g>
+  <g font-size="48" text-anchor="middle" dominant-baseline="central">
+    <text x="293" y="189.5">神</text>
+    <text x="596" y="341.5">神</text>
+    <text x="702" y="342">神</text>
+    <text x="1005" y="484">神</text>
+    <g fill="#111">
+      <text x="229" y="345">主</text>
+      <text x="362.5" y="342.5">対</text>
+      <text x="294" y="481.5">合</text>
+      <text x="528" y="189">主</text>
+      <text x="464" y="343.5">合</text>
+      <text x="529.5" y="483.5">対</text>
+      <text x="772.5" y="191">対</text>
+      <text x="834.5" y="342.5">合</text>
+      <text x="773" y="480">主</text>
+      <text x="1006" y="192.5">合</text>
+      <text x="938.5" y="343.5">対</text>
+      <text x="1071" y="339">主</text>
+    </g>
+  </g>
+
+  <text x="659" y="604" font-size="50" text-anchor="middle" dominant-baseline="central">三対象基準</text>
+</svg>

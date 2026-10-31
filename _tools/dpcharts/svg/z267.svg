@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>サタン主権の世界</title>
+  <defs>
+    <marker id="z267-a" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="53" y="58" font-size="48" dominant-baseline="central" textLength="399" lengthAdjust="spacing">サタン主権の世界</text>
+  <line x1="52" y1="88.5" x2="451" y2="88.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="10">
+    <line x1="415.6" y1="190.25" x2="249.6" y2="370.25"/>
+    <line x1="419.3" y1="190.25" x2="587" y2="370"/>
+    <line x1="249.7" y1="370.25" x2="402.3" y2="535.75"/>
+    <line x1="586" y1="370" x2="433.2" y2="535.75"/>
+  </g>
+
+  <!-- 授受作用の矢印 -->
+  <g stroke="currentColor" stroke-width="7.5" fill="none" marker-end="url(#z267-a)">
+    <path d="M404,470 Q379.5,354 399,282"/>
+    <path d="M424,262 Q450.25,374.5 429.5,453"/>
+    <path d="M342,355 Q427.5,333.5 487,350"/>
+    <path d="M502,378 Q412.5,397.5 357,383"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="417.75" cy="190.25" rx="57.75" ry="56.25" fill="#50403D"/>
+    <ellipse cx="256" cy="370.25" rx="67.5" ry="57.75" fill="#CF921C"/>
+    <ellipse cx="587.5" cy="370" rx="62.5" ry="56.5" fill="#CF921C"/>
+    <ellipse cx="418.5" cy="535.75" rx="61.5" ry="51.25" fill="#CF921C"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="418" y="188.5" font-size="64" fill="#fff">サ</text>
+    <g fill="#111">
+      <text x="252.5" y="370.5" font-size="50">人間</text>
+      <text x="588.5" y="368.5" font-size="48">万物</text>
+      <text x="417.5" y="537" font-size="48">世界</text>
+    </g>
+  </g>
+
+  <!-- 聖句（括弧と「：」は字の幅がフォントで違うので、分けて置く） -->
+  <g font-size="41" dominant-baseline="central">
+    <text x="652" y="159" text-anchor="end">「</text>
+    <text x="654" y="159" textLength="205" lengthAdjust="spacing">この世の君</text>
+    <text x="858" y="159">」</text>
+    <text x="652" y="284" text-anchor="end">「</text>
+    <text x="654" y="284" textLength="205" lengthAdjust="spacing">この世の神</text>
+    <text x="858" y="284">」</text>
+    <text x="575" y="484" textLength="124" lengthAdjust="spacing">被造物</text>
+    <text x="720.5" y="484" text-anchor="middle">：</text>
+  </g>
+  <g font-size="39" dominant-baseline="central">
+    <text x="572" y="540" text-anchor="end">「</text>
+    <text x="570.5" y="540" textLength="507" lengthAdjust="spacing">神の子たちを待ち望んでいる</text>
+    <text x="1077" y="540">」</text>
+  </g>
+  <!-- 出典（元は縦長の数字なので、かなと数字を分けて幅を合わせる） -->
+  <g font-size="42" dominant-baseline="central">
+    <text x="731" y="221.5" textLength="120" lengthAdjust="spacingAndGlyphs">ヨハネ</text>
+    <text x="731" y="346.5" textLength="198" lengthAdjust="spacingAndGlyphs">コリントⅡ</text>
+    <text x="930" y="604.5" textLength="77" lengthAdjust="spacingAndGlyphs">ロマ</text>
+  </g>
+  <g font-size="50" dominant-baseline="central">
+    <text x="865" y="221.5" textLength="96" lengthAdjust="spacingAndGlyphs">12:31</text>
+    <text x="945" y="346.5" textLength="65" lengthAdjust="spacingAndGlyphs">4:4</text>
+    <text x="1019" y="604.5" textLength="84" lengthAdjust="spacingAndGlyphs">8:19</text>
+  </g>
+</svg>

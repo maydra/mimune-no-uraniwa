@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>イエスの初臨の例</title>
+
+  <!-- 題 -->
+  <text x="36" y="38" font-size="30" dominant-baseline="central" textLength="247" lengthAdjust="spacing">イエスの初臨の例</text>
+  <line x1="33" y1="56.5" x2="285" y2="56.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 灰色の矢印 -->
+  <g stroke="#8C949A" stroke-width="5" fill="#8C949A">
+    <line x1="428" y1="126" x2="495" y2="168.1"/>
+    <polygon points="506,175 489.9,174.3 498.4,160.8" stroke="none"/>
+    <line x1="350" y1="127" x2="289" y2="171.4"/>
+    <polygon points="278.5,179 285.1,164.3 294.5,177.2" stroke="none"/>
+  </g>
+
+  <!-- × -->
+  <g stroke="currentColor" stroke-width="2.8">
+    <line x1="294" y1="143.5" x2="342" y2="159.5"/>
+    <line x1="309.5" y1="130" x2="326.5" y2="173.5"/>
+  </g>
+
+  <!-- 楕円 -->
+  <g stroke="currentColor" stroke-width="2.6">
+    <ellipse cx="387" cy="102.5" rx="59" ry="29.5" fill="#F8F28F"/>
+    <ellipse cx="226.5" cy="234" rx="95.5" ry="55" fill="#fff" class="paper"/>
+    <ellipse cx="565" cy="232" rx="121" ry="55" fill="#fff" class="paper"/>
+  </g>
+  <text x="387" y="103" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="82" lengthAdjust="spacing">イエス</text>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="227" y="205" font-size="26" textLength="74" lengthAdjust="spacing">メシヤ</text>
+    <text x="227" y="234.5" font-size="25" textLength="172" lengthAdjust="spacing">雲に乗って降臨</text>
+    <text x="227" y="263.5" font-size="19" textLength="117" lengthAdjust="spacing">(ダニエル 7:13)</text>
+    <text x="565" y="203" font-size="26" textLength="74" lengthAdjust="spacing">メシヤ</text>
+    <text x="565" y="232.5" font-size="24" textLength="229" lengthAdjust="spacingAndGlyphs">ユダヤのベツレヘム誕生</text>
+    <text x="565" y="261.5" font-size="19" textLength="137" lengthAdjust="spacing">(マタイ 2:5～6)</text>
+  </g>
+
+  <text x="121" y="310.5" font-size="26" dominant-baseline="central" textLength="233" lengthAdjust="spacing">ユダヤ人たちの信仰</text>
+
+  <!-- ヨハネⅡ 7 -->
+  <g dominant-baseline="central" font-size="21">
+    <text x="121" y="352" textLength="68" lengthAdjust="spacingAndGlyphs">ヨハネⅡ</text>
+    <text x="199" y="352">7</text>
+  </g>
+  <g dominant-baseline="central" font-size="20" font-weight="400">
+    <text x="219" y="352" textLength="480" lengthAdjust="spacingAndGlyphs">『イエス・キリストが肉体をとってこられたことを告白し</text>
+    <text x="228" y="381" textLength="471" lengthAdjust="spacingAndGlyphs">ないで人を惑わす者が、多く世にはいってきたからであ</text>
+    <text x="229" y="410" textLength="477" lengthAdjust="spacingAndGlyphs">る。そういう者は、惑わす者であり、反キリストである』</text>
+  </g>
+  <line x1="541" y1="424.5" x2="690" y2="424.5" stroke="currentColor" stroke-width="1.4"/>
+</svg>

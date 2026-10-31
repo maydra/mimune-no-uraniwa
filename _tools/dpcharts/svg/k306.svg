@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>契約の箱</title>
+
+  <!-- 題 -->
+  <text x="34" y="38" font-size="30" dominant-baseline="central" textLength="124" lengthAdjust="spacing">契約の箱</text>
+  <line x1="33" y1="57" x2="159" y2="57" stroke="currentColor" stroke-width="2.4"/>
+
+  <g font-size="26" dominant-baseline="central">
+    <text x="242" y="97.5" textLength="104" lengthAdjust="spacing">契約の箱</text>
+    <text x="359.5" y="97.5" text-anchor="middle">：</text>
+    <text x="387" y="97.5" textLength="156" lengthAdjust="spacing">大きくは天宙</text>
+    <text x="230" y="133" textLength="124" lengthAdjust="spacing">（律法の櫃）</text>
+    <text x="385" y="133" textLength="262" lengthAdjust="spacing">小さくは幕屋の縮小体</text>
+  </g>
+
+  <!-- 契約の箱の挿絵（平たい図形） -->
+  <g stroke="currentColor" stroke-linecap="round" fill="none" stroke-width="3.6">
+    <line x1="180.5" y1="242.5" x2="268.75" y2="328"/>
+    <line x1="327.5" y1="289.5" x2="359.25" y2="318.75"/>
+  </g>
+  <g stroke="#111" stroke-width="2.6" stroke-linejoin="round" fill="#DCC4C4">
+    <polygon points="203.5,205.5 297.5,203.5 327.5,233.5 236,237"/>
+    <polygon points="202.5,205.5 236,237 236,295.5 202.5,262.5"/>
+    <polygon points="236,237 327.5,233.5 327,288.5 236,295.5"/>
+  </g>
+  <!-- ケルビム（左を描き、右は左右を返して置く） -->
+  <g stroke="#111" stroke-width="2.4" stroke-linejoin="round" fill="#F8F28F">
+    <path d="M233,205 C229,209 230,214 233,217 L229,220 C228,223 231,224 234,223 L242,221 C247,223 252,226 256,226 C259,225 259,221 255,218 C256,214 258,210 255,206 Z"/>
+    <path d="M232,201 C238,198 248,199 255,196 C260,193 264,190 266.9,186.2 C266,194 262,202 255,207 C248,211 238,211 232,208 Z"/>
+    <path d="M236,200 V209.5 M240,199.5 V210 M244,199.5 V210 M248,199 V209.5 M252,197.5 V208.5 M256,195.5 V205.5 M260,193 V201.5 M263.5,190 V197" fill="none" stroke-width="1.8"/>
+    <circle cx="241.25" cy="190" r="6.5"/>
+  </g>
+  <g transform="translate(535.5,-1.5) scale(-1,1)" stroke="#111" stroke-width="2.4" stroke-linejoin="round" fill="#F8F28F">
+    <path d="M233,205 C229,209 230,214 233,217 L229,220 C228,223 231,224 234,223 L242,221 C247,223 252,226 256,226 C259,225 259,221 255,218 C256,214 258,210 255,206 Z"/>
+    <path d="M232,201 C238,198 248,199 255,196 C260,193 264,190 266.9,186.2 C266,194 262,202 255,207 C248,211 238,211 232,208 Z"/>
+    <path d="M236,200 V209.5 M240,199.5 V210 M244,199.5 V210 M248,199 V209.5 M252,197.5 V208.5 M256,195.5 V205.5 M260,193 V201.5 M263.5,190 V197" fill="none" stroke-width="1.8"/>
+    <circle cx="241.25" cy="190" r="6.5"/>
+  </g>
+
+  <!-- 灰色の括弧 -->
+  <g fill="#8C949A">
+    <rect x="391.5" y="191.5" width="5.5" height="96"/>
+    <rect x="391.5" y="191.5" width="24" height="6"/>
+    <rect x="391.5" y="239.5" width="24" height="6"/>
+    <rect x="391.5" y="282" width="24" height="5.5"/>
+  </g>
+  <g font-size="26" dominant-baseline="central">
+    <text x="426" y="195" textLength="131" lengthAdjust="spacing">二つの石板</text>
+    <text x="427" y="240.5" textLength="156" lengthAdjust="spacing">マナ、金の壺</text>
+    <text x="427" y="285.5" textLength="130" lengthAdjust="spacing">アロンの杖</text>
+  </g>
+  <text x="429" y="319.5" font-size="22" font-weight="400" dominant-baseline="central" textLength="122" lengthAdjust="spacing">(ヘブル 9:4)</text>
+
+  <g font-size="26" dominant-baseline="central">
+    <text x="175" y="381" textLength="262" lengthAdjust="spacing">契約の箱の上に贖罪所</text>
+    <text x="450" y="381" text-anchor="middle">：</text>
+    <text x="464" y="381" textLength="182" lengthAdjust="spacing">神がみ言を語る</text>
+  </g>
+</svg>

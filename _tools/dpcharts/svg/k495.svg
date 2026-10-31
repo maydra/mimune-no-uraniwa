@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅴ. 代数を中心とする同時性の時代</title>
+
+  <text x="49" y="39" font-size="30" text-anchor="middle" dominant-baseline="central">Ⅴ</text>
+  <text x="65" y="39" font-size="30" dominant-baseline="central">.</text>
+  <text x="81" y="39" font-size="30" dominant-baseline="central" textLength="440" lengthAdjust="spacing">代数を中心とする同時性の時代</text>
+  <line x1="80" y1="58" x2="522" y2="58" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 10代のかっこ（黒い弧） -->
+  <g fill="none" stroke="currentColor" stroke-width="6">
+    <path d="M228,114 A43,80 0 0 0 228,271"/>
+    <path d="M223,272 A34,54 0 0 0 223,376"/>
+  </g>
+  <!-- 灰色の柱 -->
+  <path d="M246,114.5 H224.5 V375.5 H246 M224.5,271.5 H246" fill="none" stroke="#8C949A" stroke-width="6"/>
+
+  <!-- 人物 -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="3">
+    <ellipse cx="328.5" cy="114.5" rx="81.5" ry="23.5"/>
+    <ellipse cx="328.5" cy="272.5" rx="81.5" ry="23.5"/>
+    <ellipse cx="328.5" cy="376" rx="81.5" ry="23.5"/>
+  </g>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="328.5" y="114.5" textLength="81" lengthAdjust="spacing">アダム</text>
+    <text x="329.5" y="272.5" textLength="51" lengthAdjust="spacing">ノア</text>
+    <text x="327.5" y="376" textLength="125" lengthAdjust="spacing">アブラハム</text>
+  </g>
+
+  <g font-size="26" text-anchor="middle" dominant-baseline="central">
+    <text x="156" y="197" textLength="56" lengthAdjust="spacing">10代</text>
+    <text x="156.5" y="327" textLength="55" lengthAdjust="spacing">10代</text>
+    <text x="269.5" y="196.5" font-size="27" textLength="57" lengthAdjust="spacingAndGlyphs">1600</text>
+    <text x="264" y="325.5" font-size="27" textLength="42" lengthAdjust="spacingAndGlyphs">400</text>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="314,190.5 347,190.5 347,185.5 362,194 347,202.5 347,197.5 314,197.5"/>
+    <polygon points="315,321.5 347,321.5 347,316.5 362,325 347,333.5 347,328.5 315,328.5"/>
+  </g>
+
+  <!-- 箱 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="3">
+    <rect x="377" y="175.5" width="303" height="41.5"/>
+    <rect x="378" y="305" width="182" height="40"/>
+  </g>
+  <g font-size="26" dominant-baseline="central">
+    <text y="196"><tspan x="389" textLength="102" lengthAdjust="spacing">四位基台</tspan><tspan x="496">×</tspan><tspan x="522" textLength="26" lengthAdjust="spacingAndGlyphs">40</tspan><tspan x="555">数</tspan><tspan x="585">×</tspan><tspan x="612" textLength="25" lengthAdjust="spacingAndGlyphs">10</tspan><tspan x="644">代</tspan></text>
+    <text y="325.5" font-size="27"><tspan x="391" textLength="28" lengthAdjust="spacingAndGlyphs">40</tspan><tspan x="427">年</tspan><tspan x="457">×</tspan><tspan x="485" textLength="26" lengthAdjust="spacingAndGlyphs">10</tspan><tspan x="518">代</tspan></text>
+  </g>
+</svg>

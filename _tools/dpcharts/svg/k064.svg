@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>中心人物　供え物：アダム→カイン、アベル　二人の主人に対応（非原理的な立場）</title>
+  <defs>
+    <marker id="k064-a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="2.5" markerHeight="2.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="38" y="37" font-size="31" textLength="122" lengthAdjust="spacing" dominant-baseline="central">中心人物</text>
+  <line x1="35" y1="56" x2="161" y2="56" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 供え物：アダム ➡ カイン、アベル -->
+  <g font-size="28" dominant-baseline="central">
+    <text x="148" y="94" textLength="201" lengthAdjust="spacing">供え物：アダム</text>
+    <text x="407" y="94" textLength="203" lengthAdjust="spacing">カイン、アベル</text>
+  </g>
+  <polygon points="362,91.5 386,91.5 386,87.5 399.5,94 386,100.5 386,96.5 362,96.5" fill="currentColor"/>
+
+  <!-- 授受の矢印（楕円より先に描く） -->
+  <g stroke="currentColor" stroke-width="5.5" fill="none" marker-end="url(#k064-a)">
+    <line x1="266" y1="181.5" x2="352.5" y2="240.5"/>
+    <line x1="348" y1="262" x2="256.9" y2="197.6"/>
+    <line x1="455" y1="250" x2="547.5" y2="189.9"/>
+    <line x1="566" y1="199" x2="482.5" y2="256"/>
+  </g>
+
+  <!-- 神・サ・アダム -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="220.5" cy="164.5" rx="47" ry="30" fill="#fff" class="paper"/>
+    <ellipse cx="596.5" cy="164.5" rx="47" ry="30" fill="#50403D"/>
+    <ellipse cx="407" cy="273" rx="73.5" ry="35.5" fill="#CF921C"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="218.5" y="164" font-size="35">神</text>
+    <text x="596.5" y="165.5" font-size="34" fill="#fff">サ</text>
+    <text x="407.5" y="272.5" font-size="33" textLength="96" lengthAdjust="spacing" fill="#111">アダム</text>
+  </g>
+
+  <!-- 下の字 -->
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="408.5" y="336.5" font-size="31" textLength="250" lengthAdjust="spacing">二人の主人に対応</text>
+    <text x="408.5" y="383" font-size="27" textLength="233" lengthAdjust="spacing">（非原理的な立場）</text>
+  </g>
+</svg>

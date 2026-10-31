@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>原理を離れた自由はない</title>
+
+  <!-- 楕円をつなぐ線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="9.5">
+    <line x1="653.5" y1="115" x2="427" y2="286"/>
+    <line x1="654.5" y1="115" x2="866.5" y2="283"/>
+    <line x1="435" y1="286" x2="645.5" y2="456.5"/>
+    <line x1="879" y1="283" x2="653.5" y2="456.5"/>
+  </g>
+
+  <!-- 神のみ言から完全な自由への矢印 -->
+  <polygon points="646.5,150 656.5,150 656.5,384.5 664.5,384.5 652,410 639.5,384.5 646.5,384.5"/>
+
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="651" cy="115" rx="139" ry="63" fill="#fff" class="paper"/>
+    <ellipse cx="405" cy="286" rx="119" ry="49" fill="#F98AEE"/>
+    <ellipse cx="895" cy="283" rx="119" ry="49" fill="#A0F08A"/>
+    <ellipse cx="655.5" cy="456.5" rx="185.5" ry="39.5" fill="#FCE5E3"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="650.5" y="96.5" font-size="44">神のみ言</text>
+    <text x="650.5" y="144.5" font-size="34">（原理）</text>
+  </g>
+  <g font-size="44" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="406" y="285">自由意志</text>
+    <text x="897.5" y="282">自由行動</text>
+    <text x="655" y="456">完全な自由</text>
+  </g>
+
+  <!-- 自由意志と自由行動の間を回る矢印 -->
+  <g stroke="currentColor" stroke-width="9.5" fill="none">
+    <path d="M547,271.5 Q643.5,220.5 738.5,264"/>
+    <path d="M754,290 Q659,340 564,298.5"/>
+  </g>
+  <polygon points="762.5,273 744,250.5 733.5,273.5"/>
+  <polygon points="540.5,290.5 569,289.5 559,312.5"/>
+
+  <text x="389.5" y="370" font-size="42" text-anchor="middle" dominant-baseline="central">心の発露</text>
+
+  <polygon points="636.5,514.5 661.5,514.5 661.5,527.5 681,527.5 649.5,547 618,527.5 636.5,527.5" fill="#8C949A"/>
+
+  <rect x="368" y="567" width="565" height="68.5" fill="#CDF8F7" stroke="currentColor" stroke-width="3.5"/>
+  <text x="646.5" y="601" font-size="44" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="500" lengthAdjust="spacing">原理を離れた自由はない</text>
+</svg>

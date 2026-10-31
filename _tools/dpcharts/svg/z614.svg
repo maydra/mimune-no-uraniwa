@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>ヨハネ 1:10　イエス ≠ 創造主御自身</title>
+
+  <!-- 聖句（横に詰めた字） -->
+  <text y="55.5" font-size="42" dominant-baseline="central"><tspan x="206.2" textLength="93.4" lengthAdjust="spacingAndGlyphs">ヨハネ</tspan> <tspan x="309.0" textLength="64.9" lengthAdjust="spacingAndGlyphs">1:10</tspan><tspan x="391.0" font-weight="400">『</tspan><tspan x="407.2" font-weight="400" textLength="100.5" lengthAdjust="spacingAndGlyphs">世は彼</tspan><tspan x="509.5" font-weight="400">（</tspan><tspan x="530.3" font-weight="400" textLength="99.6" lengthAdjust="spacingAndGlyphs">イエス</tspan><tspan x="629.0" font-weight="400">）</tspan><tspan x="650.5" font-weight="400" textLength="406.4" lengthAdjust="spacingAndGlyphs">によってできたのであるが</tspan><tspan x="1054.0" font-weight="400">…</tspan><tspan x="1087.0" font-weight="400">』</tspan></text>
+
+  <!-- 授受の矢印（神とイエス、イエスと被造物） -->
+  <g>
+    <path d="M377,262 Q367,244 375,226 M416,206 Q426,224 418,242" fill="none" stroke="currentColor" stroke-width="8"/>
+    <polygon points="382.5,205.5 383.5,230 364.5,220.5"/>
+    <polygon points="410.5,262.5 409.5,238 428.5,247.5"/>
+  </g>
+  <g transform="translate(-1.5,180)">
+    <path d="M377,262 Q367,244 375,226 M416,206 Q426,224 418,242" fill="none" stroke="currentColor" stroke-width="8"/>
+    <polygon points="382.5,205.5 383.5,230 364.5,220.5"/>
+    <polygon points="410.5,262.5 409.5,238 428.5,247.5"/>
+  </g>
+
+  <!-- 神・イエス・被造物 -->
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="397" cy="153" r="48.25" fill="#fff" class="paper"/>
+    <ellipse cx="396.5" cy="323.5" rx="92.25" ry="47.5" fill="#F8F28F"/>
+    <ellipse cx="396.5" cy="503" rx="92.25" ry="48" fill="#DCC4C4"/>
+  </g>
+  <text x="397.9" y="152.5" font-size="54" text-anchor="middle" dominant-baseline="central">神</text>
+  <g dominant-baseline="central" fill="#111">
+    <text x="329.4" y="323.5" font-size="46" textLength="138" lengthAdjust="spacing">イエス</text>
+    <text x="328.8" y="502.5" font-size="45" textLength="136.2" lengthAdjust="spacing">被造物</text>
+  </g>
+
+  <!-- 右の説明 -->
+  <g font-size="44" dominant-baseline="central">
+    <text x="510" y="154" textLength="90.1" lengthAdjust="spacing">み言</text>
+    <text y="320"><tspan x="517.0" textLength="228.4" lengthAdjust="spacing">み言の実体</tspan><tspan x="754.0">（</tspan><tspan x="776.7" textLength="120.1" lengthAdjust="spacingAndGlyphs">ヨハネ</tspan> <tspan x="910.4" textLength="83.4" lengthAdjust="spacingAndGlyphs">1:14</tspan><tspan x="991.0">）</tspan></text>
+    <text x="550" y="374.5" font-size="41" textLength="164.6" lengthAdjust="spacing">完成人間</text>
+    <text x="548.5" y="429" font-size="41" textLength="249.3" lengthAdjust="spacing">創造主の立場</text>
+    <text y="503"><tspan x="517.1" textLength="328.5" lengthAdjust="spacingAndGlyphs">み言で創造される</tspan><tspan x="853.0">（</tspan><tspan x="874.9" textLength="107.7" lengthAdjust="spacingAndGlyphs">ヨハネ</tspan> <tspan x="994.6" textLength="57.7" lengthAdjust="spacingAndGlyphs">1:3</tspan><tspan x="1047.5">）</tspan></text>
+  </g>
+  <!-- 完成人間・創造主の立場をくくる括弧 -->
+  <polyline points="534,374 516,379.5 516,428 534,431.5" fill="none" stroke="currentColor" stroke-width="6"/>
+
+  <!-- イエス ≠ 創造主御自身（≠ は字ではなく線で描く） -->
+  <rect x="375" y="578" width="547" height="71.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <g fill="#111">
+    <text y="614" font-size="44" dominant-baseline="central"><tspan x="399.4" textLength="134.5" lengthAdjust="spacing">イエス</tspan> <tspan x="626.5" textLength="273.2" lengthAdjust="spacing">創造主御自身</tspan></text>
+    <rect x="552" y="606" width="55" height="6"/>
+    <rect x="552" y="619" width="55" height="6"/>
+  </g>
+  <line x1="569" y1="593.5" x2="588.6" y2="635.5" stroke="#111" stroke-width="7.5"/>
+</svg>

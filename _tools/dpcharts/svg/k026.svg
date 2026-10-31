@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>メシヤのための基台</title>
+  <defs>
+    <marker id="k026-a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="k026-s" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="3.4" markerHeight="3.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="34" y="33" font-size="30" dominant-baseline="central">2.</text>
+  <text x="72" y="33" font-size="30" dominant-baseline="central" textLength="280" lengthAdjust="spacing">メシヤのための基台</text>
+  <line x1="70" y1="53" x2="353" y2="53" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 段の横線（字の所は切る） -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <line x1="153" y1="188" x2="393" y2="188"/>
+    <line x1="153" y1="235" x2="324" y2="235"/>
+    <line x1="153" y1="283" x2="321" y2="283"/>
+    <line x1="351" y1="283" x2="373" y2="283"/>
+    <line x1="153" y1="332" x2="305" y2="332"/>
+    <line x1="334" y1="332" x2="371" y2="332"/>
+  </g>
+
+  <!-- 神とア・人間の授受（丸い矢印） -->
+  <g stroke="currentColor" stroke-width="2.2" fill="none" marker-end="url(#k026-s)">
+    <path d="M175,146 Q165,135 177,124"/>
+    <path d="M213,123 Q227,133 213,144"/>
+    <path d="M310,146 Q299,135 311,124"/>
+    <path d="M347,123 Q361,133 347,144"/>
+  </g>
+
+  <!-- 矢印 -->
+  <g stroke="currentColor" stroke-width="2.2" fill="none" marker-end="url(#k026-a)">
+    <line x1="194.5" y1="334" x2="194.5" y2="238"/>
+    <line x1="194.5" y1="235" x2="194.5" y2="191" stroke-dasharray="9 4"/>
+    <line x1="198" y1="235" x2="265" y2="356"/>
+    <line x1="285" y1="358" x2="326" y2="241"/>
+    <line x1="329.5" y1="229" x2="329.5" y2="191"/>
+  </g>
+  <polygon points="335,231.5 377,231.5 377,227 393,234.5 377,242 377,237.5 335,237.5" fill="currentColor"/>
+
+  <!-- 括弧 -->
+  <path d="M383,240 Q389,241 389,250 L389,297 Q389,305 397,306 Q389,307 389,315 L389,374 Q389,384 382,387" fill="none" stroke="currentColor" stroke-width="2.4"/>
+
+  <!-- 丸 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <circle cx="194" cy="103" r="21" fill="#fff" class="paper"/>
+    <circle cx="328" cy="103" r="21" fill="#fff" class="paper"/>
+    <circle cx="195" cy="165" r="21" fill="#F98AEE"/>
+    <ellipse cx="330.5" cy="166" rx="24.5" ry="21" fill="#FCE5E3"/>
+    <circle cx="195" cy="355" r="21" fill="#F98AEE"/>
+    <ellipse cx="277" cy="380.5" rx="49" ry="23" fill="#CF921C"/>
+    <circle cx="329" cy="234" r="5.5" fill="#CDF8F7" stroke-width="1.6"/>
+    <circle cx="425" cy="233.5" r="21" fill="#F8F28F"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="194" y="103" font-size="22">神</text>
+    <text x="328" y="103" font-size="22">神</text>
+    <g fill="#111">
+      <text x="195" y="165" font-size="22">ア</text>
+      <text x="330.5" y="166" font-size="17">人間</text>
+      <text x="195" y="355" font-size="22">ア</text>
+      <text x="277" y="380.5" font-size="24">堕・人</text>
+      <text x="425" y="233.5" font-size="24">メ</text>
+    </g>
+  </g>
+
+  <!-- 反対の経路（斜めの縦書き） -->
+  <g transform="translate(329.5,306) rotate(17)" font-size="18" text-anchor="middle" dominant-baseline="central">
+    <text x="0" y="-36.6">反</text>
+    <text x="0" y="-18.3">対</text>
+    <text x="0" y="0">の</text>
+    <text x="0" y="18.3">経</text>
+    <text x="0" y="36.6">路</text>
+  </g>
+
+  <!-- 右の字 -->
+  <rect x="401" y="145" width="293" height="43" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <text x="548.5" y="166" font-size="24" text-anchor="middle" dominant-baseline="central" textLength="261" lengthAdjust="spacing">メシヤ＝人類の真の父母</text>
+
+  <text x="448" y="233.5" font-size="24" dominant-baseline="central" textLength="95" lengthAdjust="spacing">を迎える</text>
+  <polygon points="560,229 571,229 571,222 583,233.5 571,245 571,238 560,238" fill="#8C949A"/>
+  <text x="596" y="215.5" font-size="24" dominant-baseline="central" textLength="69" lengthAdjust="spacing">原罪を</text>
+  <text x="596" y="247" font-size="24" dominant-baseline="central" textLength="91" lengthAdjust="spacing">取り除く</text>
+
+  <rect x="413" y="284" width="278" height="44" fill="#CDF8F7" stroke="currentColor" stroke-width="2.2"/>
+  <text x="551.5" y="306.5" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="249" lengthAdjust="spacing">メシヤのための基台</text>
+</svg>

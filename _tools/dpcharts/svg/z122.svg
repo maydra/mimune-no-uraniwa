@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>存在の二重目的</title>
+  <defs>
+    <marker id="z122-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.5" markerHeight="2.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="54" y="57" font-size="48" textLength="347" lengthAdjust="spacing" dominant-baseline="central">存在の二重目的</text>
+  <line x1="52" y1="87.5" x2="402" y2="87.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 存在から二つの目的へ（円と箱の下に描く） -->
+  <g stroke="currentColor" stroke-width="13">
+    <line x1="390" y1="330" x2="460" y2="269.3"/>
+    <line x1="390" y1="429" x2="460" y2="487.3"/>
+  </g>
+
+  <!-- 存在（二重目的もつ連体） -->
+  <ellipse cx="304.5" cy="386.5" rx="110.5" ry="115" fill="#DCC4C4" stroke="currentColor" stroke-width="4.5"/>
+  <g fill="#111" text-anchor="middle" dominant-baseline="central">
+    <g font-size="46">
+      <text x="275" y="335">存</text>
+      <text x="334.5" y="335">在</text>
+    </g>
+    <g font-size="36" font-weight="400">
+      <text x="305" y="387.5">二重目的</text>
+      <text x="307" y="430">もつ連体</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#111" stroke-width="4">
+    <path d="M226,374 Q214.5,408.5 226,443"/>
+    <path d="M384,374 Q395.5,408.5 384,443"/>
+  </g>
+
+  <!-- 性相的目的と形状的目的 -->
+  <g stroke="currentColor" stroke-width="5">
+    <rect x="456" y="197" width="254" height="125" fill="#F98AEE"/>
+    <rect x="456" y="437" width="253.5" height="124.5" fill="#A0F08A"/>
+  </g>
+  <g fill="#111" font-size="44" text-anchor="middle" dominant-baseline="central">
+    <text x="582" y="232">性相的目的</text>
+    <text x="583" y="286.5" font-weight="400">（全体）</text>
+    <text x="582" y="472">形状的目的</text>
+    <text x="583" y="526" font-weight="400">（個体）</text>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g stroke="currentColor" stroke-width="8.5" fill="none" marker-end="url(#z122-k)">
+    <path d="M570,418 C556,395 560,372 566.5,350.6"/>
+    <path d="M597,341 C609,358 611,388 602,411.7"/>
+  </g>
+
+  <g font-size="42" dominant-baseline="central">
+    <text x="731" y="259">原因的・内的・主体的</text>
+    <text x="730" y="497">結果的・外的・対象的</text>
+  </g>
+</svg>

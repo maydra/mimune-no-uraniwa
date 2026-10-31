@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>メシヤ＝救世主（王）</title>
+
+  <!-- メシヤから救世主への破線（楕円の下に描く） -->
+  <line x1="402.5" y1="155" x2="402.5" y2="290" stroke="currentColor" stroke-width="7" stroke-dasharray="29 16"/>
+
+  <!-- 救世主からイエス キリストへの矢印 -->
+  <polygon points="396,390 409,390 409,463 420,463 402.5,495 385,463 396,463" fill="#8C949A"/>
+
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="5">
+    <ellipse cx="402.5" cy="113.5" rx="163" ry="65"/>
+    <ellipse cx="402.5" cy="333.5" rx="163" ry="65"/>
+    <ellipse cx="402.5" cy="573" rx="190" ry="69.5"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="402.5" y="113" font-size="58">メシヤ</text>
+    <text x="398.5" y="333.5" font-size="53">救世主（王）</text>
+    <text x="402" y="542.5" font-size="54">イエス</text>
+    <text x="400.5" y="600.5" font-size="54">キリスト</text>
+  </g>
+
+  <!-- 点線 -->
+  <g stroke="currentColor" stroke-width="9" stroke-dasharray="9.5 8.75" fill="none">
+    <line x1="585" y1="114" x2="667" y2="114"/>
+    <line x1="585" y1="336" x2="667" y2="336"/>
+    <line x1="603" y1="568" x2="667" y2="568"/>
+  </g>
+
+  <g dominant-baseline="central">
+    <text x="691" y="114.5" font-size="54">王</text>
+    <text x="693" y="336" font-size="52" textLength="264" lengthAdjust="spacing">メシヤ思想</text>
+    <text x="693" y="570" font-size="52" textLength="387" lengthAdjust="spacing">メシヤ＝救世主</text>
+  </g>
+</svg>

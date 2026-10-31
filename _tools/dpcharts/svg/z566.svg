@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>中心人物が責任を果たせないと、身代わりが立てられる</title>
+
+  <!-- 神 -->
+  <circle cx="254.5" cy="163" r="57" fill="#fff" class="paper" stroke="currentColor" stroke-width="4.5"/>
+  <text x="251.5" y="162.5" font-size="66" text-anchor="middle" dominant-baseline="central">神</text>
+  <polygon points="327,146.5 350.5,146.5 350.5,126.5 381.7,162.75 350.5,199 350.5,178.5 327,178.5" fill="#8C949A" stroke="currentColor" stroke-width="1.5"/>
+
+  <!-- 身代わりの矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="596,160.5 673.5,160.5 673.5,152 696.5,164.5 673.5,177 673.5,168.5 596,168.5"/>
+    <polygon points="596,333.5 673.5,333.5 673.5,325 696.5,337.5 673.5,350 673.5,341.5 596,341.5"/>
+    <polygon points="596,504.5 673.5,504.5 673.5,496 696.5,508.5 673.5,521 673.5,512.5 596,512.5"/>
+  </g>
+  <g font-size="40" text-anchor="middle" dominant-baseline="central">
+    <text x="655" y="127" textLength="111" lengthAdjust="spacingAndGlyphs">身代わり</text>
+    <text x="653" y="298" textLength="111" lengthAdjust="spacingAndGlyphs">身代わり</text>
+    <text x="653.5" y="472" textLength="111" lengthAdjust="spacingAndGlyphs">身代わり</text>
+  </g>
+
+  <!-- 打ち消された人物（茶）と身代わり（黄） -->
+  <g stroke="currentColor" stroke-width="5">
+    <ellipse cx="501" cy="164.5" rx="96.5" ry="48" fill="#CF921C"/>
+    <ellipse cx="501" cy="338.5" rx="96.5" ry="48" fill="#CF921C"/>
+    <ellipse cx="501" cy="509" rx="96.5" ry="48.5" fill="#CF921C"/>
+    <ellipse cx="805.5" cy="164.5" rx="96.5" ry="48" fill="#F8F28F"/>
+    <ellipse cx="805.5" cy="338.5" rx="96.5" ry="48" fill="#F8F28F"/>
+    <ellipse cx="805.5" cy="509" rx="96.5" ry="48.5" fill="#F8F28F"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="501.5" y="164.5" font-size="47">アベル</text>
+    <text x="500" y="338" font-size="47">モーセ</text>
+    <text x="500" y="497" font-size="35" textLength="171" lengthAdjust="spacingAndGlyphs">イスカリオテ</text>
+    <text x="501.5" y="532" font-size="35" textLength="86" lengthAdjust="spacingAndGlyphs">のユダ</text>
+    <text x="805" y="164.5" font-size="47">セツ</text>
+    <text x="806.5" y="338.5" font-size="41">ヨシュア</text>
+    <text x="806" y="509" font-size="40" textLength="140" lengthAdjust="spacingAndGlyphs">マッテヤ</text>
+  </g>
+
+  <!-- 打ち消しの×（楕円の中は #111、外は地の色） -->
+  <g fill="none" stroke-width="5.5">
+    <path stroke="#111" d="M462.1,120.6 L540.1,208.4 M539.1,120.4 L461.1,208.2 M461,294.8 L539,382.6 M540.2,294.6 L462.2,382.5 M458.8,465.4 L537.4,553.9 M542.4,465.2 L463.7,553.7"/>
+    <path stroke="currentColor" d="M448.5,105.3 L462.1,120.6 M540.1,208.4 L552.6,222.5 M552.5,105.3 L539.1,120.4 M461.1,208.2 L448.4,222.5 M448.5,280.8 L461,294.8 M539,382.6 L552.6,398 M552.5,280.8 L540.2,294.6 M462.2,382.5 L448.4,398 M448.5,453.8 L458.8,465.4 M537.4,553.9 L552.6,571 M552.5,453.8 L542.4,465.2 M463.7,553.7 L448.4,571"/>
+  </g>
+
+  <!-- 聖句の出典 -->
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="957.4" y="164" font-size="40" textLength="59.5" lengthAdjust="spacingAndGlyphs">（創</text>
+    <text x="1048.9" y="164" font-size="40" textLength="103" lengthAdjust="spacingAndGlyphs">4:25）</text>
+    <text x="979.8" y="338" font-size="37" textLength="133.5" lengthAdjust="spacingAndGlyphs">（ヨシュア</text>
+    <text x="1085.2" y="338" font-size="37" textLength="59.5" lengthAdjust="spacingAndGlyphs">1:5）</text>
+    <text x="963.9" y="509" font-size="40" textLength="92.4" lengthAdjust="spacingAndGlyphs">（使徒</text>
+    <text x="1065.7" y="509" font-size="40" textLength="91" lengthAdjust="spacingAndGlyphs">1:26）</text>
+  </g>
+</svg>

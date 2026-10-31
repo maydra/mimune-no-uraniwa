@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>(2) アベル型の民主主義　イギリス</title>
+
+  <!-- 題 -->
+  <g dominant-baseline="central">
+    <text x="49" y="38" font-size="30" textLength="44" lengthAdjust="spacing">(2)</text>
+    <text x="106" y="38" font-size="30" textLength="286" lengthAdjust="spacing">アベル型の民主主義</text>
+    <text x="192" y="88" font-size="27" textLength="113" lengthAdjust="spacing">イギリス</text>
+  </g>
+  <g stroke="currentColor" stroke-width="2.5">
+    <line x1="107" y1="56" x2="391" y2="56"/>
+    <line x1="191" y1="105.5" x2="307" y2="105.5"/>
+  </g>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <g fill="#8C949A">
+    <polygon points="246,195 253,195 253,214 257.5,214 249.5,227 241.5,214 246,214"/>
+    <polygon points="246,292 253,292 253,311 257.5,311 249.5,324 241.5,311 246,311"/>
+    <polygon points="330,352.5 374,352.5 374,348.5 387,356 374,364 374,359.5 330,359.5"/>
+  </g>
+
+  <!-- 楕円 -->
+  <g fill="#F8F28F" stroke="currentColor" stroke-width="2.5">
+    <ellipse cx="249.5" cy="165" rx="99.5" ry="34"/>
+    <ellipse cx="249.5" cy="263" rx="81.5" ry="34"/>
+    <ellipse cx="249.5" cy="355" rx="85.5" ry="29"/>
+    <ellipse cx="468" cy="356" rx="75" ry="48"/>
+  </g>
+  <g font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="251" y="165" textLength="172" lengthAdjust="spacing">アベル型人生観</text>
+    <text x="250.5" y="252.5" textLength="121" lengthAdjust="spacing">キリスト教</text>
+    <text x="250" y="279" textLength="52" lengthAdjust="spacing">信徒</text>
+    <text x="250.5" y="355.5" textLength="149" lengthAdjust="spacing">イギリス革命</text>
+    <text x="468.5" y="340.5" textLength="103" lengthAdjust="spacing">アベル型</text>
+    <text x="468" y="372.5" textLength="104" lengthAdjust="spacing">民主主義</text>
+  </g>
+
+  <!-- 右の箇条 -->
+  <circle cx="352.5" cy="245" r="6.5"/>
+  <circle cx="352.5" cy="282.5" r="6.5"/>
+  <g font-size="25" font-weight="400" dominant-baseline="central">
+    <text x="367" y="244" textLength="129" lengthAdjust="spacing">信教の自由</text>
+    <text y="281"><tspan x="367" textLength="183" lengthAdjust="spacing">絶対主義と戦い</tspan><tspan x="550">、</tspan><tspan x="577" textLength="51" lengthAdjust="spacing">勝利</tspan></text>
+  </g>
+</svg>

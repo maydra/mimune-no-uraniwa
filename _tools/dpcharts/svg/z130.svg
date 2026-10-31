@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>実体対象と善の対象（絶対に堕落することがない）</title>
+  <defs>
+    <marker id="z130-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.5" markerHeight="2.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 左右をつなぐ点線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="5" fill="none">
+    <line x1="459" y1="104" x2="790" y2="104" stroke-dasharray="17 11.45"/>
+    <line x1="444" y1="264" x2="680" y2="264" stroke-dasharray="19 12"/>
+    <line x1="486" y1="419.5" x2="800" y2="419.5" stroke-dasharray="18.5 11.5"/>
+  </g>
+
+  <!-- 実体対象：完成した人間が喜びを返す -->
+  <g fill="#8C949A">
+    <polygon points="389,208 389,182 384.5,182 394.5,163 404.5,182 400,182 400,208"/>
+    <polygon points="389,377 389,347 385,347 395,326 405,347 400,347 400,377"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="394.7" cy="102.8" r="58.5" fill="#fff" class="paper"/>
+    <circle cx="394.7" cy="264.5" r="58.5" fill="#F98AEE"/>
+    <ellipse cx="394.6" cy="420.4" rx="102.5" ry="46.2" fill="#DCC4C4"/>
+  </g>
+  <text x="393.5" y="102" font-size="58" text-anchor="middle" dominant-baseline="central">神</text>
+  <g fill="#111" text-anchor="middle" dominant-baseline="central">
+    <text x="395" y="263" font-size="54">心</text>
+    <g font-size="50">
+      <text x="355" y="420">完</text>
+      <text x="395" y="420">・</text>
+      <text x="435.5" y="420">人</text>
+    </g>
+  </g>
+  <g font-size="46" text-anchor="middle" dominant-baseline="central">
+    <text x="506" y="184.5">喜び</text>
+    <text x="506" y="349.5">喜び</text>
+  </g>
+
+  <!-- 善の対象：四位基台 -->
+  <polygon points="847.2,109 982.8,260.6 846.3,415.2 710.7,263.7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+  <g stroke="currentColor" stroke-width="6" fill="none" marker-end="url(#z130-k)">
+    <path d="M796,241 Q849.4,221.8 889.2,239.5"/>
+    <path d="M896,269 Q835.9,290.4 804.2,273.3"/>
+    <path d="M836,345 Q815,260.9 831.9,181.2"/>
+    <path d="M859,172 Q876.6,270.7 861.7,334.6"/>
+  </g>
+  <g stroke="currentColor" stroke-width="4.5">
+    <circle cx="846.4" cy="103.1" r="58.5" fill="#fff" class="paper"/>
+    <circle cx="727.6" cy="260.8" r="58.5" fill="#F98AEE"/>
+    <circle cx="965.4" cy="260.2" r="58.5" fill="#A0F08A"/>
+    <circle cx="851.9" cy="412.8" r="58.5" fill="#DCC4C4"/>
+  </g>
+  <text x="845" y="101.5" font-size="58" text-anchor="middle" dominant-baseline="central">神</text>
+  <g fill="#111" font-size="54" text-anchor="middle" dominant-baseline="central">
+    <text x="728" y="259.5">心</text>
+    <text x="965.5" y="259.5">体</text>
+    <text x="849.5" y="413">個</text>
+  </g>
+
+  <g font-size="52" dominant-baseline="central">
+    <text x="288" y="517.5" textLength="214" lengthAdjust="spacing">実体対象</text>
+    <text x="746" y="517" textLength="214" lengthAdjust="spacing">善の対象</text>
+  </g>
+
+  <rect x="310.5" y="575.5" width="673" height="71.5" fill="#CDF8F7" stroke="currentColor" stroke-width="4"/>
+  <text x="349" y="611" font-size="48" textLength="597" lengthAdjust="spacing" dominant-baseline="central" fill="#111">絶対に堕落することがない</text>
+</svg>

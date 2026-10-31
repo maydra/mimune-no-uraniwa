@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅴ. 十字架に対する預言の両面</title>
+
+  <text x="60" y="57" font-size="48" dominant-baseline="central">Ⅴ.</text>
+  <text x="133" y="57" font-size="49" dominant-baseline="central" textLength="598" lengthAdjust="spacing">十字架に対する預言の両面</text>
+  <line x1="132" y1="87" x2="732" y2="87" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 神 → イエス（預言） -->
+  <polygon points="649.5,250 665.5,250 665.5,473.5 677.5,473.5 657.5,509.5 637.5,473.5 649.5,473.5" fill="#8C949A"/>
+  <circle cx="657.25" cy="195.25" r="68.75" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="653.5" y="194.5" font-size="68" text-anchor="middle" dominant-baseline="central">神</text>
+  <g font-size="50" text-anchor="middle" dominant-baseline="central">
+    <text x="610.5" y="334.5">預</text>
+    <text x="700" y="334">言</text>
+  </g>
+
+  <!-- イエスから王・王国と十字架へ（矢の根元はイエスの楕円の下に隠す） -->
+  <g stroke="currentColor" stroke-width="12.5">
+    <line x1="593.4" y1="550" x2="521.3" y2="460.6"/>
+    <line x1="747.7" y1="550" x2="804.5" y2="472.5"/>
+  </g>
+  <polygon points="503.5,438.5 531.9,452.1 510.7,469.1"/>
+  <polygon points="821.5,449 793.5,464.5 815.5,480.5"/>
+
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="367.5" cy="399" rx="148.5" ry="59.5" fill="#fff" class="paper"/>
+    <ellipse cx="943.5" cy="397.5" rx="148.5" ry="59.5" fill="#CF921C"/>
+    <ellipse cx="657.25" cy="576.75" rx="112.75" ry="56.25" fill="#F8F28F"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="285.5" y="398.5" font-size="54">王</text>
+    <text x="419.5" y="398.5" font-size="54">王国</text>
+    <text x="944" y="397" font-size="56" fill="#111">十字架</text>
+    <text x="657" y="576.5" font-size="54" fill="#111" textLength="170" lengthAdjust="spacing">イエス</text>
+  </g>
+  <circle cx="338.5" cy="398.5" r="6.5"/>
+
+  <!-- 出典（細字） -->
+  <g font-size="34" font-weight="400" dominant-baseline="central">
+    <text y="489.5"><tspan x="207">(</tspan><tspan x="220" textLength="91" lengthAdjust="spacingAndGlyphs">イザヤ</tspan> <tspan x="318">9</tspan><tspan x="339">、</tspan><tspan x="368" textLength="25" lengthAdjust="spacingAndGlyphs">11</tspan><tspan x="398">、</tspan><tspan x="429" textLength="31" lengthAdjust="spacingAndGlyphs">60</tspan> <tspan x="468">章</tspan><tspan x="500">)</tspan></text>
+    <text y="488.5"><tspan x="841">(</tspan><tspan x="855" textLength="98" lengthAdjust="spacingAndGlyphs">イザヤ</tspan> <tspan x="964" textLength="33" lengthAdjust="spacingAndGlyphs">53</tspan> <tspan x="1005">章</tspan><tspan x="1040">)</tspan></text>
+  </g>
+</svg>

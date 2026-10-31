@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>ヨハネ 14:9〜10　第二の心・第二の神（イエス ≠ 神）</title>
+
+  <!-- 聖句 -->
+  <g font-size="40" dominant-baseline="central">
+    <text y="57.5"><tspan x="206.8" textLength="120.9" lengthAdjust="spacing">ヨハネ</tspan> <tspan x="340.6" textLength="83.6" lengthAdjust="spacingAndGlyphs">14:9</tspan><tspan x="431.0">〜</tspan><tspan x="479.8" textLength="41.2" lengthAdjust="spacingAndGlyphs">10</tspan><tspan x="545.5" font-weight="400">『</tspan><tspan x="564.5" font-weight="400" textLength="535.6" lengthAdjust="spacing">わたしを見た者は父を見た</tspan></text>
+    <text y="111" font-weight="400"><tspan x="564.5" textLength="215.8" lengthAdjust="spacing">のである…</tspan><tspan x="779.5">』</tspan></text>
+  </g>
+
+  <!-- 授受の矢印（心と体、神とイエス） -->
+  <g>
+    <path d="M312,393 Q298,370 308,355 M354,340 Q368,363 358,378" fill="none" stroke="currentColor" stroke-width="9.5"/>
+    <polygon points="316.5,336.5 317,361 299,352.5"/>
+    <polygon points="349.5,396.5 349,372 367,380.5"/>
+  </g>
+  <g transform="translate(295.5,-10)">
+    <path d="M312,393 Q298,370 308,355 M354,340 Q368,363 358,378" fill="none" stroke="currentColor" stroke-width="9.5"/>
+    <polygon points="316.5,336.5 317,361 299,352.5"/>
+    <polygon points="349.5,396.5 349,372 367,380.5"/>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <polygon points="461.5,349 486.5,349 486.5,332.5 507,366.5 486.5,400.5 486.5,383.5 461.5,383.5" fill="#8C949A" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- 円 -->
+  <g stroke="currentColor" stroke-width="4">
+    <circle cx="335" cy="261" r="62" fill="#F98AEE"/>
+    <circle cx="336.5" cy="473" r="62" fill="#A0F08A"/>
+    <circle cx="627" cy="261" r="62" fill="#fff" class="paper"/>
+    <ellipse cx="631.5" cy="477" rx="87.5" ry="83" fill="#F8F28F"/>
+    <circle cx="992.75" cy="475" r="81" fill="#fff" class="paper"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="336" y="259.7" font-size="66" fill="#111">心</text>
+    <text x="336.75" y="472.25" font-size="65" fill="#111">体</text>
+    <text x="626.7" y="259.9" font-size="65">神</text>
+    <text x="994.2" y="470.9" font-size="65">神</text>
+  </g>
+  <text x="558.4" y="476.3" font-size="50" dominant-baseline="central" fill="#111" textLength="150" lengthAdjust="spacing">イエス</text>
+
+  <!-- イエス ≠ 神（字ではなく線で描く） -->
+  <rect x="766" y="453" width="95" height="11"/>
+  <rect x="766" y="479" width="95" height="10"/>
+  <line x1="798" y1="436.2" x2="825.8" y2="505.8" stroke="currentColor" stroke-width="12"/>
+
+  <g font-size="45" dominant-baseline="central">
+    <text x="246.1" y="599.5" textLength="181.8" lengthAdjust="spacing">第二の心</text>
+    <text x="541.1" y="599.5" textLength="181.8" lengthAdjust="spacing">第二の神</text>
+  </g>
+</svg>

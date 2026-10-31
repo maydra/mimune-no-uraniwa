@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>アベルの「象徴献祭」における二つの目的</title>
+  <defs>
+    <marker id="k093-g" viewBox="0 0 14 17" refX="6" refY="8.5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="17" orient="auto">
+      <path d="M0,0 L14,8.5 L0,17 z" fill="#8C949A"/>
+    </marker>
+  </defs>
+
+  <text x="37" y="39" font-size="29" textLength="551" lengthAdjust="spacing" dominant-baseline="central">アベルの「象徴献祭」における二つの目的</text>
+  <line x1="35" y1="57.5" x2="587" y2="57.5" stroke="currentColor" stroke-width="2"/>
+
+  <!-- 黒い線（円と楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="2.2" fill="none">
+    <line x1="263.8" y1="113.9" x2="589.2" y2="258.4"/>
+    <line x1="587.5" y1="111.2" x2="426" y2="189"/>
+    <line x1="426" y1="186.9" x2="263.2" y2="259.4"/>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g stroke="#8C949A" stroke-width="6" fill="none" marker-end="url(#k093-g)">
+    <line x1="264.5" y1="235" x2="264.5" y2="154"/>
+    <line x1="549" y1="260.5" x2="318" y2="260.5"/>
+  </g>
+  <line x1="587.5" y1="132" x2="587.5" y2="235" stroke="#8C949A" stroke-width="6" stroke-dasharray="20 11"/>
+
+  <!-- 神とサタン -->
+  <circle cx="263.8" cy="112" r="28.3" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <text x="263.8" y="112" font-size="32" text-anchor="middle" dominant-baseline="central">神</text>
+  <circle cx="587.5" cy="110" r="27.5" fill="#50403D" stroke="currentColor" stroke-width="2.2"/>
+  <text x="587.5" y="110.5" font-size="29" text-anchor="middle" dominant-baseline="central" fill="#fff">サ</text>
+
+  <!-- 人物 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="426.2" cy="187" rx="40.2" ry="24" fill="#CF921C"/>
+    <ellipse cx="263.2" cy="259" rx="40.2" ry="24" fill="#F8F28F"/>
+    <ellipse cx="589.2" cy="259" rx="40.2" ry="24" fill="#F86D42"/>
+  </g>
+  <g font-size="22" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="426.2" y="187">アダム</text>
+    <text x="263.2" y="259.5">アベル</text>
+    <text x="589.2" y="259.5">カイン</text>
+  </g>
+
+  <!-- 献祭の箱 -->
+  <g fill="#DCC4C4" stroke="currentColor" stroke-width="2.2">
+    <rect x="160.5" y="150" width="84.5" height="77.5"/>
+    <rect x="364.5" y="271" width="124.5" height="43"/>
+  </g>
+  <g font-size="29" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="202.8" y="172">象徴</text>
+    <text x="202.8" y="206.5">献祭</text>
+    <text x="427" y="293" font-size="26">実体献祭</text>
+  </g>
+
+  <!-- 二つの目的 -->
+  <circle cx="169" cy="343" r="7.5"/>
+  <circle cx="169" cy="390.5" r="7.5"/>
+  <g font-size="28" dominant-baseline="central">
+    <text x="185" y="344" textLength="473" lengthAdjust="spacingAndGlyphs">アダムの代わりに「信仰基台」を立てる</text>
+    <text x="185" y="391" textLength="401" lengthAdjust="spacing">実体献祭の中心人物として決定</text>
+  </g>
+</svg>

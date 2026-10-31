@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅲ. 肉身と霊人体との相対的関係　1. 肉身の構成とその機能</title>
+  <defs>
+    <marker id="z184-k" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="2.4" markerHeight="2.4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="75.5" y="60.5" font-size="46" text-anchor="middle" dominant-baseline="central">Ⅲ</text>
+  <text x="107" y="60.5" font-size="46" text-anchor="middle" dominant-baseline="central">.</text>
+  <text x="127" y="60" font-size="48" dominant-baseline="central" textLength="647" lengthAdjust="spacing">肉身と霊人体との相対的関係</text>
+  <line x1="126" y1="90" x2="775" y2="90" stroke="currentColor" stroke-width="3.5"/>
+  <text x="81.5" y="134.5" font-size="48" text-anchor="middle" dominant-baseline="central">1</text>
+  <text x="106" y="134.5" font-size="48" text-anchor="middle" dominant-baseline="central">.</text>
+  <text x="126" y="134" font-size="48" dominant-baseline="central" textLength="497" lengthAdjust="spacing">肉身の構成とその機能</text>
+  <line x1="125" y1="164" x2="624" y2="164" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 肉心・肉体と人をつなぐ線（人と円より先に描く） -->
+  <g stroke="currentColor" stroke-width="13">
+    <line x1="408" y1="290" x2="476" y2="380"/>
+    <line x1="409.2" y1="500" x2="491.9" y2="400"/>
+  </g>
+
+  <!-- 人（100×240 の型を置く） -->
+  <g transform="translate(452,246.7) scale(1.56,1.47)" fill="#FCE6E5" stroke="#111" stroke-width="3" stroke-linejoin="round">
+    <path d="M43,40 L43,48 C30,49 14,50 10,58 L4,130 Q3,140 9,141 Q15,141 15,132 L21,78 L23,124 L26,232 Q26,238 33,238 L41,238 Q47,238 47,232 L49,134 L51,134 L53,232 Q53,238 59,238 L67,238 Q74,238 74,232 L77,124 L79,78 L85,132 Q85,141 91,141 Q97,140 96,130 L90,58 C86,50 70,49 57,48 L57,40 Z"/>
+    <circle cx="50" cy="22" r="19"/>
+  </g>
+  <text x="527" y="636" font-size="44" text-anchor="middle" dominant-baseline="central">肉身</text>
+
+  <!-- 肉心と肉体 -->
+  <g stroke="currentColor" stroke-width="4">
+    <ellipse cx="357.5" cy="272" rx="70" ry="56" fill="#F98AEE"/>
+    <ellipse cx="358" cy="526" rx="70" ry="56" fill="#A0F08A"/>
+  </g>
+  <g font-size="50" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="357.5" y="271">肉心</text>
+    <text x="360" y="525.5">肉体</text>
+  </g>
+
+  <!-- （肉体の生理的機能維持） -->
+  <g fill="none" stroke="currentColor" stroke-width="5">
+    <path d="M198,339 Q186,376.5 198,414"/>
+    <path d="M406,339 Q418,376.5 406,414"/>
+  </g>
+  <g font-size="32" dominant-baseline="central">
+    <text x="204" y="356.5">肉体の生理的</text>
+    <text x="218" y="394">機能維持</text>
+  </g>
+
+  <!-- 空気・光と物質から肉身へ -->
+  <g stroke="currentColor" stroke-width="12.5">
+    <line x1="690" y1="316.9" x2="643.4" y2="357.1"/>
+    <line x1="690" y1="511" x2="643.1" y2="470.4"/>
+  </g>
+  <g>
+    <polygon points="620.5,376.25 633.75,346.25 653,368"/>
+    <polygon points="620.5,451.25 652.5,458.75 633.75,482"/>
+  </g>
+  <g stroke="currentColor" stroke-width="10" fill="none" marker-end="url(#z184-k)">
+    <path d="M866,461 Q839.7,418.45 868.6,370.1"/>
+    <path d="M909,362 Q929.85,413.75 907.3,450.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <rect x="685.5" y="214" width="401.5" height="136" fill="#F98AEE"/>
+    <rect x="685.5" y="474.5" width="401.5" height="136" fill="#A0F08A"/>
+  </g>
+  <g dominant-baseline="central" fill="#111">
+    <text x="713" y="254" font-size="48">無形の空気、<tspan x="1013">光</tspan></text>
+    <text x="888" y="313" font-size="42" text-anchor="middle">（陽性）</text>
+    <text x="886" y="513" font-size="48" text-anchor="middle">有形の物質</text>
+    <text x="887" y="573.5" font-size="45" text-anchor="middle">（陰性）</text>
+  </g>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>40日サタン分立基台</title>
+
+  <!-- 題 -->
+  <g font-size="27" dominant-baseline="central">
+    <text x="266" y="43.5" textLength="30" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="306" y="43.5" textLength="227" lengthAdjust="spacing">日サタン分立基台</text>
+  </g>
+
+  <!-- 灰色の線と矢印（楕円と箱の下に描く） -->
+  <g stroke="#8C949A" stroke-width="6">
+    <line x1="248" y1="125.5" x2="274" y2="125.5"/>
+    <line x1="248" y1="238.5" x2="274" y2="238.5"/>
+    <line x1="248" y1="355" x2="274" y2="355"/>
+  </g>
+  <g fill="#8C949A">
+    <polygon points="520,122.5 544,122.5 544,118.5 557,125.5 544,132.5 544,128.5 520,128.5"/>
+    <polygon points="520,235.5 544,235.5 544,231.5 557,238.5 544,245.5 544,241.5 520,241.5"/>
+    <polygon points="520,352 544,352 544,348 557,355 544,362 544,358 520,358"/>
+  </g>
+
+  <!-- 楕円と箱 -->
+  <g stroke="currentColor" stroke-width="3">
+    <ellipse cx="188" cy="125.5" rx="63.5" ry="42.5" fill="#fff" class="paper"/>
+    <ellipse cx="188" cy="238.5" rx="63.5" ry="41" fill="#fff" class="paper"/>
+    <ellipse cx="188" cy="355" rx="63.5" ry="43" fill="#fff" class="paper"/>
+    <rect x="271.5" y="91" width="250" height="69" rx="5" fill="#CDF8F7"/>
+    <rect x="271.5" y="204" width="250" height="68.5" rx="5" fill="#CDF8F7"/>
+    <rect x="271.5" y="315" width="250" height="80" rx="5" fill="#CDF8F7"/>
+    <ellipse cx="629.5" cy="125.5" rx="68" ry="48.5" fill="#fff" class="paper"/>
+    <ellipse cx="629.5" cy="240" rx="68" ry="48.5" fill="#fff" class="paper"/>
+    <ellipse cx="629.5" cy="355" rx="68" ry="48.5" fill="#fff" class="paper"/>
+  </g>
+
+  <!-- 左の楕円 -->
+  <g text-anchor="middle" dominant-baseline="central">
+    <g font-size="25">
+      <text x="187.5" y="108" textLength="50" lengthAdjust="spacing">第一</text>
+      <text x="187.5" y="221" textLength="50" lengthAdjust="spacing">第二</text>
+      <text x="187.5" y="338" textLength="50" lengthAdjust="spacing">第三</text>
+    </g>
+    <g font-size="23">
+      <text x="189.5" y="136" textLength="114" lengthAdjust="spacing">イスラエル</text>
+      <text x="189.5" y="248.5" textLength="114" lengthAdjust="spacing">イスラエル</text>
+      <text x="189.5" y="365.5" textLength="114" lengthAdjust="spacing">イスラエル</text>
+    </g>
+  </g>
+
+  <!-- 箱の中 -->
+  <g font-size="25" dominant-baseline="central" fill="#111">
+    <text x="285" y="125" textLength="101" lengthAdjust="spacing">エジプト</text>
+    <text x="392" y="125" textLength="40" lengthAdjust="spacingAndGlyphs">400</text>
+    <text x="432" y="125" textLength="78" lengthAdjust="spacing">年苦役</text>
+    <text x="285" y="238" textLength="116" lengthAdjust="spacing">ローマ帝国</text>
+    <text x="404" y="238" textLength="36" lengthAdjust="spacingAndGlyphs">400</text>
+    <text x="440" y="238" textLength="70" lengthAdjust="spacing">年迫害</text>
+    <text x="334" y="337" textLength="128" lengthAdjust="spacing">日本帝国の</text>
+    <text x="342" y="373" textLength="27" lengthAdjust="spacingAndGlyphs">40</text>
+    <text x="372" y="373" textLength="79" lengthAdjust="spacing">年迫害</text>
+  </g>
+
+  <!-- 右の楕円 -->
+  <g font-size="23" text-anchor="middle" dominant-baseline="central">
+    <text x="629.5" y="98.5" textLength="67" lengthAdjust="spacing">民族的</text>
+    <text x="628.5" y="125" textLength="67" lengthAdjust="spacing">カナン</text>
+    <text x="628.5" y="151.5" textLength="46" lengthAdjust="spacing">復帰</text>
+    <text x="629.5" y="214.5" textLength="67" lengthAdjust="spacing">世界的</text>
+    <text x="629.5" y="240.5" textLength="67" lengthAdjust="spacing">カナン</text>
+    <text x="629.5" y="266.5" textLength="46" lengthAdjust="spacing">復帰</text>
+    <text x="630" y="328.5" textLength="67" lengthAdjust="spacing">天宙的</text>
+    <text x="630" y="355" textLength="67" lengthAdjust="spacing">カナン</text>
+    <text x="629.5" y="381.5" textLength="46" lengthAdjust="spacing">復帰</text>
+  </g>
+</svg>

@@ -27,6 +27,10 @@ for d in sorted(ROOT.iterdir()):
         continue
     files = sorted(str(f.relative_to(ROOT)).replace('\\', '/')
                    for f in d.rglob('*.html'))
+    # 原理講論の図（dp/charts.js と dp/charts/*.json）。図は「図」を ON にしたときだけ読むので、
+    # 開いただけでは保存されない（2026-10-30）
+    extra = [d / 'charts.js'] + sorted((d / 'charts').glob('*.json'))
+    files += [str(f.relative_to(ROOT)).replace('\\', '/') for f in extra if f.exists()]
     if files:
         books[d.name] = files
 

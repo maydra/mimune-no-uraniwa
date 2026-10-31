@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅱ．実体基台</title>
+
+  <!-- 題 -->
+  <text x="50.5" y="36.5" font-size="30" text-anchor="middle" dominant-baseline="central">Ⅱ</text>
+  <text x="69.5" y="36.5" font-size="30" text-anchor="middle" dominant-baseline="central">.</text>
+  <text x="86" y="36" font-size="30" textLength="125" lengthAdjust="spacing" dominant-baseline="central">実体基台</text>
+  <line x1="85" y1="54.5" x2="211" y2="54.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- アダムとアベル・カインを結ぶ線（楕円の下に描く） -->
+  <g stroke="currentColor" stroke-width="3.4">
+    <line x1="384.7" y1="127.5" x2="257.6" y2="237.5"/>
+    <line x1="445.4" y1="127.5" x2="582.9" y2="237.5"/>
+  </g>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="232.5,209 232.5,159 237.5,159 229.5,146 221.5,159 226.5,159 226.5,209"/>
+    <polygon points="516,234.5 327,234.5 327,229.5 314,237.5 327,245.5 327,240.5 516,240.5"/>
+  </g>
+
+  <!-- 神 -->
+  <circle cx="229.5" cy="108" r="33" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <text x="229.5" y="109" font-size="34" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- 人物 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="416" cy="127.3" rx="76.5" ry="28.3" fill="#DCC4C4"/>
+    <ellipse cx="229" cy="237.5" rx="76.5" ry="28.3" fill="#F8F28F"/>
+    <ellipse cx="592" cy="237.5" rx="76.5" ry="28.3" fill="#F86D42"/>
+  </g>
+  <g font-size="30" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="416" y="128">アダム</text>
+    <text x="229" y="238">アベル</text>
+    <text x="592" y="238">カイン</text>
+  </g>
+
+  <!-- 実体基台の箱 -->
+  <rect x="343.5" y="182.5" width="145" height="41" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <text x="416" y="203" font-size="31" textLength="124" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central">実体基台</text>
+
+  <!-- 下の説明 -->
+  <g font-size="29" text-anchor="middle" dominant-baseline="central">
+    <text x="420.5" y="277">堕落性を脱ぐ</text>
+    <text x="424.5" y="312">ための蕩減条件</text>
+    <text x="425.5" y="388">反対の経路</text>
+  </g>
+  <line x1="425.5" y1="334" x2="425.5" y2="368" stroke="currentColor" stroke-width="2.6" stroke-dasharray="4.5 3"/>
+</svg>

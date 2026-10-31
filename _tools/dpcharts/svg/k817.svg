@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>⑫ 無形、有形二つの世界主管　イエスは霊肉で再臨</title>
+  <defs>
+    <marker id="k817-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="34" y="36.5" font-size="28" dominant-baseline="central">⑫</text>
+  <text y="36.5" font-size="28.5" dominant-baseline="central"><tspan x="76" textLength="56" lengthAdjust="spacing">無形</tspan><tspan x="133">、</tspan><tspan x="162" textLength="260" lengthAdjust="spacing">有形二つの世界主管</tspan></text>
+  <line x1="75" y1="54.5" x2="421" y2="54.5" stroke="currentColor" stroke-width="2"/>
+
+  <!-- 灰色の矢印 -->
+  <polygon points="344,98 449,98 449,94 461,100.5 449,107 449,103 344,103" fill="#8C949A"/>
+
+  <!-- つなぐ線（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="4">
+    <line x1="246.5" y1="95.5" x2="184.5" y2="168.5"/>
+    <line x1="252" y1="95.5" x2="313" y2="169"/>
+    <line x1="543" y1="100" x2="503" y2="140"/>
+    <line x1="572" y1="100" x2="619" y2="140"/>
+    <line x1="530" y1="186" x2="501" y2="224.5"/>
+    <line x1="589" y1="186" x2="622" y2="226"/>
+  </g>
+
+  <!-- 授受の矢印 -->
+  <g stroke="currentColor" stroke-width="3.5" fill="none" marker-end="url(#k817-a)">
+    <path d="M177,277 Q157,240.5 177,204"/>
+    <path d="M197,203 Q215,240 196,277"/>
+    <path d="M300,277 Q281,240 300,204"/>
+    <path d="M322,203 Q338,237 320,276"/>
+    <path d="M552,149 Q542,136 553,124"/>
+    <path d="M569,123 Q579,136 569,148"/>
+    <path d="M490,283 Q481,270 491,257"/>
+    <path d="M508,257 Q517,269 508,282"/>
+    <path d="M615,282 Q607,269 617,256"/>
+    <path d="M634,256 Q642,268 633,281"/>
+  </g>
+
+  <!-- 人・霊・肉 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <circle cx="248.5" cy="95.5" r="23.5" fill="#FCE5E3"/>
+    <circle cx="186.5" cy="168.5" r="23.5" fill="#F98AEE"/>
+    <circle cx="309.5" cy="169" r="23.5" fill="#A0F08A"/>
+    <ellipse cx="561.5" cy="93" rx="35.5" ry="24" fill="#F8F28F"/>
+    <circle cx="501" cy="136.5" r="23.5" fill="#F98AEE"/>
+    <circle cx="624.5" cy="136.5" r="23.5" fill="#A0F08A"/>
+    <ellipse cx="563.5" cy="178" rx="47" ry="21.5" fill="#FCE5E3"/>
+    <circle cx="501" cy="224.5" r="23.5" fill="#F98AEE"/>
+    <circle cx="624.5" cy="224.5" r="23.5" fill="#A0F08A"/>
+  </g>
+  <g font-size="30" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="249" y="94">人</text>
+    <text x="187" y="168.5">霊</text>
+    <text x="310" y="168.5">肉</text>
+    <text x="501" y="136.5">霊</text>
+    <text x="624.5" y="136.5">肉</text>
+    <text x="501.5" y="224">霊</text>
+    <text x="624" y="224.5">肉</text>
+  </g>
+  <text x="561.5" y="93" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="55" lengthAdjust="spacingAndGlyphs">再臨主</text>
+  <text x="563" y="178.5" font-size="23" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="70" lengthAdjust="spacing">全人類</text>
+
+  <!-- 無形世界・有形世界（左） -->
+  <path d="M240,286.7 A112.5,34.5 0 0 0 260,355.4 C270,342 266,328 252,321 C238,314 230,302 240,286.7 Z" fill="#F98AEE"/>
+  <path d="M240,286.7 A112.5,34.5 0 1 1 260,355.4 C270,342 266,328 252,321 C238,314 230,302 240,286.7 Z" fill="#A0F08A"/>
+  <path d="M240,286.7 C230,302 238,314 252,321 C266,328 270,342 260,355.4" fill="none" stroke="#111" stroke-width="3"/>
+  <ellipse cx="252" cy="321" rx="112.5" ry="34.5" fill="none" stroke="currentColor" stroke-width="3"/>
+
+  <!-- 無形世界・有形世界（右） -->
+  <path d="M549,287.8 A112.5,35 0 0 0 571,357.4 C581,344 577,330 563,322.5 C549,315 539,303 549,287.8 Z" fill="#F98AEE"/>
+  <path d="M549,287.8 A112.5,35 0 1 1 571,357.4 C581,344 577,330 563,322.5 C549,315 539,303 549,287.8 Z" fill="#A0F08A"/>
+  <path d="M549,287.8 C539,303 549,315 563,322.5 C577,330 581,344 571,357.4" fill="none" stroke="#111" stroke-width="3"/>
+  <ellipse cx="562.5" cy="322.5" rx="112.5" ry="35" fill="none" stroke="currentColor" stroke-width="3"/>
+
+  <g font-size="26" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="207" y="307.5" textLength="52" lengthAdjust="spacing">無形</text>
+    <text x="207" y="336" textLength="52" lengthAdjust="spacing">世界</text>
+    <text x="297" y="306.5" textLength="52" lengthAdjust="spacing">有形</text>
+    <text x="297" y="335.5" textLength="52" lengthAdjust="spacing">世界</text>
+    <text x="515.5" y="308" textLength="52" lengthAdjust="spacing">無形</text>
+    <text x="515.5" y="337.5" textLength="52" lengthAdjust="spacing">世界</text>
+    <text x="607.5" y="308.5" textLength="52" lengthAdjust="spacing">有形</text>
+    <text x="607.5" y="337.5" textLength="52" lengthAdjust="spacing">世界</text>
+  </g>
+
+  <!-- イエスは霊肉で再臨 -->
+  <rect x="246.5" y="377" width="321" height="46" fill="#CDF8F7" stroke="currentColor" stroke-width="3"/>
+  <text x="406" y="399" font-size="31" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="283" lengthAdjust="spacing">イエスは霊肉で再臨</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 蕩減復帰原理　1. 蕩減復帰</title>
+  <defs>
+    <marker id="k009-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 題 -->
+  <text x="51.3" y="35" font-size="28" text-anchor="middle" dominant-baseline="central">Ⅰ</text>
+  <text x="64" y="35" font-size="28" dominant-baseline="central">.</text>
+  <text x="87" y="35" font-size="28" dominant-baseline="central" textLength="188" lengthAdjust="spacing">蕩減復帰原理</text>
+  <line x1="86" y1="54.5" x2="276" y2="54.5" stroke="currentColor" stroke-width="2.2"/>
+  <text x="47" y="83.5" font-size="28" dominant-baseline="central" textLength="23" lengthAdjust="spacing">1.</text>
+  <text x="88" y="83.5" font-size="28" dominant-baseline="central" textLength="115" lengthAdjust="spacing">蕩減復帰</text>
+  <line x1="88" y1="101.5" x2="204" y2="101.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 堕落前・堕落後の札 -->
+  <g fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2">
+    <rect x="213" y="121" width="104.5" height="35" rx="5"/>
+    <rect x="472" y="121" width="104.5" height="35" rx="5"/>
+  </g>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central">
+    <text x="265.5" y="139" textLength="81" lengthAdjust="spacing">堕落前</text>
+    <text x="524.5" y="139" textLength="81" lengthAdjust="spacing">堕落後</text>
+  </g>
+
+  <!-- 矢印 -->
+  <g stroke="currentColor" stroke-width="4.4" fill="none" marker-end="url(#k009-a)">
+    <line x1="260.5" y1="303" x2="260.5" y2="226.5"/>
+    <line x1="276" y1="219" x2="276" y2="295.5"/>
+    <line x1="498.8" y1="302.5" x2="467.1" y2="229"/>
+    <line x1="483.8" y1="222" x2="513.7" y2="296"/>
+    <line x1="532" y1="300" x2="563.9" y2="225"/>
+    <line x1="582.5" y1="224" x2="552.1" y2="297.5"/>
+  </g>
+
+  <!-- 神・サ -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <circle cx="267.5" cy="191" r="26.5" fill="#fff" class="paper"/>
+    <circle cx="459" cy="193" r="26" fill="#fff" class="paper"/>
+    <circle cx="587.5" cy="195" r="27" fill="#50403D"/>
+  </g>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="268" y="192">神</text>
+    <text x="459" y="194">神</text>
+    <text x="587.5" y="196" fill="#fff">サ</text>
+  </g>
+
+  <!-- 人間 -->
+  <ellipse cx="268.5" cy="331" rx="50" ry="25" fill="#FCE5E3" stroke="currentColor" stroke-width="2.2"/>
+  <ellipse cx="526" cy="332" rx="51" ry="26" fill="#CF921C" stroke="currentColor" stroke-width="2.2"/>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="250" y="332">人</text>
+    <text x="286" y="332">間</text>
+    <text x="503.5" y="333">人</text>
+    <text x="541" y="333">間</text>
+  </g>
+
+  <!-- 字 -->
+  <g font-size="25" font-weight="400" text-anchor="middle" dominant-baseline="central">
+    <text x="191.5" y="253.5" textLength="103" lengthAdjust="spacing">心情一体</text>
+    <text x="430" y="274" textLength="76" lengthAdjust="spacing">創造主</text>
+    <text x="628.5" y="273.5" textLength="102" lengthAdjust="spacing">血縁関係</text>
+  </g>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central">
+    <text x="268.5" y="381.5" textLength="129" lengthAdjust="spacing">神のみ対応</text>
+    <text x="528.5" y="382.5" textLength="107" lengthAdjust="spacing">中間位置</text>
+  </g>
+</svg>

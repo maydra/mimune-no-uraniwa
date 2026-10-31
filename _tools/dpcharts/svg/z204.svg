@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>サタンの正体と悪の勢力</title>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="826.5,206 840.5,206 840.5,338 850.5,338 833.5,366 816.5,338 826.5,338"/>
+    <polygon points="530,527.5 398,527.5 398,517 369,534.5 398,552 398,541.5 530,541.5"/>
+    <polygon points="757,527.5 889,527.5 889,517 918,534.5 889,552 889,541.5 757,541.5"/>
+  </g>
+
+  <!-- サタン -->
+  <rect x="739" y="83" width="189.5" height="112.5" fill="#50403D" stroke="currentColor" stroke-width="4"/>
+  <text x="833.5" y="138.5" font-size="58" text-anchor="middle" dominant-baseline="central" fill="#fff" textLength="156" lengthAdjust="spacingAndGlyphs">サタン</text>
+  <text x="950" y="136.5" font-size="57" dominant-baseline="central">正体？</text>
+
+  <g font-size="51" text-anchor="middle" dominant-baseline="central">
+    <text x="832.5" y="410.5">悪の</text>
+    <text x="832.5" y="472.5">勢力</text>
+    <text x="447" y="476.5">本心</text>
+  </g>
+
+  <!-- 人間・善・悪 -->
+  <ellipse cx="643.5" cy="529.5" rx="119.5" ry="66.5" fill="#FCE5E3" stroke="currentColor" stroke-width="4"/>
+  <circle cx="286.5" cy="534" r="71.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="6"/>
+  <circle cx="1000.5" cy="534" r="71.5" fill="#50403D" stroke="currentColor" stroke-width="5"/>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="642.5" y="528.5" font-size="64" fill="#111" textLength="144" lengthAdjust="spacing">人間</text>
+    <text x="286.5" y="532.5" font-size="68">善</text>
+    <text x="999" y="534.5" font-size="66" fill="#fff">悪</text>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>第二祝福復帰の現象</title>
+  <defs>
+    <marker id="z372-k" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="2.3" markerHeight="2.3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="77" font-size="48">Ⅱ.</text>
+  <text x="133" y="57.5" font-size="48" dominant-baseline="central" textLength="450" lengthAdjust="spacing">第二祝福復帰の現象</text>
+  <line x1="133" y1="88" x2="583" y2="88" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 四位の線と、子女から下へ開く線（楕円の下に描く）。右は左を 613.5 ずらした形 -->
+  <g fill="none" stroke="currentColor" stroke-width="7">
+    <polygon points="348,215 446.5,328 348.5,441 248,329"/>
+    <polyline points="211.2,644 344.5,452.5 479.8,644"/>
+    <g stroke-width="6.5" marker-end="url(#z372-k)">
+      <path d="M339.5,396 Q319.6,321.5 339.4,269"/>
+      <path d="M356,260 Q373.8,326.6 356.3,386.8"/>
+      <path d="M300,317.5 Q347.8,304.1 384.3,318.3"/>
+      <path d="M393,338 Q338.2,352.3 310.7,337.4"/>
+    </g>
+  </g>
+  <g transform="translate(613.5,0)" fill="none" stroke="currentColor" stroke-width="7">
+    <polygon points="348,215 446.5,328 348.5,441 248,329"/>
+    <polyline points="211.2,644 344.5,452.5 479.8,644"/>
+    <g stroke-width="6.5" marker-end="url(#z372-k)">
+      <path d="M339.5,396 Q319.6,321.5 339.4,269"/>
+      <path d="M356,260 Q373.8,326.6 356.3,386.8"/>
+      <path d="M300,317.5 Q347.8,304.1 384.3,318.3"/>
+      <path d="M393,338 Q338.2,352.3 310.7,337.4"/>
+    </g>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4.5">
+    <ellipse cx="347.5" cy="202.5" rx="36.5" ry="45.5" fill="#fff" class="paper"/>
+    <ellipse cx="256.5" cy="328.5" rx="36.5" ry="45.5" fill="#F98AEE"/>
+    <ellipse cx="441.5" cy="326.5" rx="36.5" ry="45.5" fill="#A0F08A"/>
+    <ellipse cx="344.5" cy="452.5" rx="36.5" ry="45.5" fill="#DCC4C4"/>
+    <ellipse cx="961" cy="202.5" rx="36.5" ry="45.5" fill="#50403D"/>
+    <ellipse cx="870" cy="328.5" rx="36.5" ry="45.5" fill="#CF921C"/>
+    <ellipse cx="1055" cy="326.5" rx="36.5" ry="45.5" fill="#CF921C"/>
+    <ellipse cx="958" cy="452.5" rx="36.5" ry="45.5" fill="#CF921C"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central">
+    <text x="346.5" y="203" font-size="50">神</text>
+    <text x="961" y="202.5" font-size="48" fill="#fff">サ</text>
+    <g font-size="48" fill="#111">
+      <text x="257" y="329.5">ア</text>
+      <text x="441.5" y="326.5">エ</text>
+      <text x="870.5" y="329">ア</text>
+      <text x="1055" y="326">エ</text>
+    </g>
+    <g font-size="34" fill="#111">
+      <text x="345.5" y="437">子</text>
+      <text x="345.5" y="470">女</text>
+      <text x="959" y="437.5">子</text>
+      <text x="959" y="470.5">女</text>
+    </g>
+  </g>
+
+  <g font-size="42" text-anchor="middle" dominant-baseline="central">
+    <text x="346.5" y="127">善主権</text>
+    <text x="967" y="124">悪主権</text>
+    <text x="660.5" y="266">堕落</text>
+    <text x="660" y="389">主権復帰</text>
+  </g>
+  <g font-size="38" text-anchor="middle" dominant-baseline="central">
+    <text x="349.5" y="541">家庭</text>
+    <text x="349" y="589">社会</text>
+    <text x="348.5" y="637">世界</text>
+    <text x="960.5" y="540">家庭</text>
+    <text x="960" y="588">社会</text>
+    <text x="960" y="636">世界</text>
+  </g>
+
+  <!-- 堕落 → ／ ← 主権復帰 -->
+  <polygon points="524,306.5 774,306.5 774,299.5 796.5,311.5 774,323.5 774,316.5 524,316.5"/>
+  <polygon points="796,342.5 543,342.5 543,336 523.5,347 543,358 543,351.5 796,351.5"/>
+
+  <!-- サタン分立 -->
+  <g font-size="37" dominant-baseline="central">
+    <text y="465"><tspan x="466">宗教</tspan><tspan x="558.5" text-anchor="middle">：</tspan><tspan x="578">内的サタン分立</tspan></text>
+    <text y="548"><tspan x="558.5" text-anchor="middle">：</tspan><tspan x="578">外的サタン分立</tspan></text>
+    <g text-anchor="middle">
+      <text x="503" y="527.5">闘争</text>
+      <text x="502" y="569">戦争</text>
+    </g>
+  </g>
+</svg>

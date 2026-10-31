@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>蕩減条件を再び立てるとき</title>
+
+  <text y="45.5" font-size="31" dominant-baseline="central"><tspan x="131">『</tspan><tspan x="145" textLength="375" lengthAdjust="spacing">蕩減条件を再び立てるとき</tspan><tspan x="523">』</tspan></text>
+
+  <!-- 元々の蕩減条件（点線） -->
+  <ellipse cx="204" cy="224.5" rx="76.8" ry="53.2" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="10.8 14.94" stroke-dashoffset="5.4"/>
+  <g font-size="28" text-anchor="middle" dominant-baseline="central">
+    <text x="203.5" y="204">元々の</text>
+    <text x="204" y="238.5" textLength="116" lengthAdjust="spacing">蕩減条件</text>
+  </g>
+
+  <!-- ＋ -->
+  <rect x="303" y="206" width="6" height="32"/>
+  <rect x="291" y="220" width="31" height="6"/>
+
+  <!-- 以前の人物失敗蕩減条件 -->
+  <g font-size="26" text-anchor="middle" dominant-baseline="central">
+    <text x="389" y="190.5" textLength="130" lengthAdjust="spacing">以前の人物</text>
+    <text x="389.5" y="222.5">失敗</text>
+    <text x="389" y="253.5" textLength="105" lengthAdjust="spacing">蕩減条件</text>
+  </g>
+
+  <!-- ＝ -->
+  <rect x="458" y="212" width="26" height="5.5"/>
+  <rect x="458" y="227" width="26" height="5.5"/>
+
+  <!-- より大きい条件 -->
+  <ellipse cx="593.5" cy="220" rx="96" ry="72" fill="#CDF8F7" stroke="currentColor" stroke-width="2.2"/>
+  <ellipse cx="593.5" cy="220" rx="76.5" ry="53" fill="none" stroke="#111" stroke-width="3" stroke-dasharray="10.8 14.84" stroke-dashoffset="5.4"/>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="594.5" y="208" textLength="129" lengthAdjust="spacing">より大きい</text>
+    <text x="594.5" y="242">条件</text>
+  </g>
+</svg>

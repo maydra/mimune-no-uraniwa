@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>悪霊の業　①直接の業　②間接の業</title>
+  <defs>
+    <marker id="z533-ac" viewBox="0 0 28 33" refX="25" refY="16.5" markerWidth="28" markerHeight="33" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L28,16.5 L0,33 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <g font-size="44" dominant-baseline="central">
+    <text x="217.1" y="77.3">①</text>
+    <text x="270.6" y="77.3" textLength="180.6" lengthAdjust="spacing">直接の業</text>
+    <text x="590.1" y="77.3">②</text>
+    <text x="643.6" y="77.3" textLength="179.6" lengthAdjust="spacing">間接の業</text>
+  </g>
+
+  <!-- 地上の線（楕円より先に描く） -->
+  <g stroke="currentColor" stroke-width="4">
+    <line x1="220" y1="426.5" x2="522" y2="426.5"/>
+    <line x1="600" y1="426.5" x2="1103" y2="426.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="4" fill="#CF921C">
+    <ellipse cx="266.75" cy="216.5" rx="49.75" ry="77.5"/>
+    <ellipse cx="648.75" cy="217.25" rx="49.75" ry="77.25"/>
+    <ellipse cx="412.75" cy="428.5" rx="66.25" ry="113.5"/>
+    <ellipse cx="779" cy="429.5" rx="66" ry="113.5"/>
+    <ellipse cx="999" cy="429.5" rx="66" ry="113.5"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <g font-size="42">
+      <text x="270" y="175.5">悪</text>
+      <text x="270" y="216.5">霊</text>
+      <text x="270" y="258.5">人</text>
+      <text x="648.5" y="176">悪</text>
+      <text x="648.5" y="216.5">霊</text>
+      <text x="648.5" y="259.5">人</text>
+    </g>
+    <g font-size="46">
+      <text x="411.5" y="377">地</text>
+      <text x="411.5" y="426.5">上</text>
+      <text x="411.5" y="477.5">人</text>
+      <text x="999.5" y="378.5">地</text>
+      <text x="999.5" y="428.5">上</text>
+      <text x="999.5" y="479.5">人</text>
+    </g>
+    <text x="778" y="388.5" font-size="50">悪</text>
+    <text x="778" y="469.5" font-size="50">人</text>
+  </g>
+
+  <!-- 業の矢印 -->
+  <g stroke="currentColor" marker-end="url(#z533-ac)">
+    <line x1="313.5" y1="274" x2="367.2" y2="324.9" stroke-width="10.5"/>
+    <line x1="699" y1="264.5" x2="751.8" y2="313.9" stroke-width="10.5"/>
+    <line x1="848" y1="361.5" x2="932" y2="361.5" stroke-width="12"/>
+  </g>
+
+  <g font-size="40" dominant-baseline="central">
+    <text x="359" y="268.3" textLength="122.4" lengthAdjust="spacing">悪の業</text>
+    <text x="773" y="252.3" text-anchor="middle">再臨</text>
+    <text x="824" y="313.3" textLength="123.4" lengthAdjust="spacing">悪の業</text>
+  </g>
+  <g font-size="38" dominant-baseline="central">
+    <text x="695.9" y="577.8" textLength="163.3" lengthAdjust="spacing">同一犯罪</text>
+    <text x="694.9" y="627.3" textLength="122.3" lengthAdjust="spacing">行為者</text>
+  </g>
+</svg>

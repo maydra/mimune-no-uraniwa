@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>宗教史、政治史、経済史の融合</title>
+
+  <!-- 題 -->
+  <text x="33.5 64.9 96.3 127.7 159.1 190.5 221.9 253.3 284.7 316.1 347.5 378.9 410.3 441.7" y="37.5" font-size="31" dominant-baseline="central">宗教史、政治史、経済史の融合</text>
+  <line x1="33" y1="56" x2="474" y2="56" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 分かれの線（楕円の下に描く） -->
+  <path d="M240,191 H301 M301,124.5 H280.5 V257.5 H301" fill="none" stroke="#8C949A" stroke-width="6"/>
+
+  <!-- 新しい真理 -->
+  <ellipse cx="196.5" cy="191" rx="62" ry="41" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.8"/>
+  <g font-size="27" text-anchor="middle" dominant-baseline="central">
+    <text x="197" y="175" textLength="85.5" lengthAdjust="spacing">新しい</text>
+    <text x="196.5" y="207.5" textLength="58" lengthAdjust="spacing">真理</text>
+  </g>
+
+  <!-- 宗教・経済・政治 -->
+  <g font-size="31" dominant-baseline="central">
+    <text x="309.5" y="124" textLength="63.5" lengthAdjust="spacing">宗教</text>
+    <text x="403.5" y="124" textLength="222" lengthAdjust="spacing">神の心情に帰一</text>
+    <text x="309.5" y="193" textLength="63.5" lengthAdjust="spacing">経済</text>
+    <text x="404.5" y="193" textLength="221" lengthAdjust="spacing">一つの理念中心</text>
+    <text x="309.5" y="262.5" textLength="63.5" lengthAdjust="spacing">政治</text>
+    <text x="403.5" y="262.5" textLength="191" lengthAdjust="spacing">創造理想実現</text>
+  </g>
+  <g font-size="31" text-anchor="middle" dominant-baseline="central">
+    <text x="388" y="124">：</text>
+    <text x="388" y="193">：</text>
+    <text x="388" y="262.5">：</text>
+  </g>
+
+  <!-- メシヤ王国・共生共栄共義主義社会 -->
+  <g fill="#CDF8F7" stroke="currentColor" stroke-width="2.8">
+    <rect x="242.5" y="309" width="349" height="46"/>
+    <rect x="242.5" y="355" width="349" height="48"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="417" y="332" font-size="30" textLength="156" lengthAdjust="spacing">メシヤ王国</text>
+    <text x="417" y="378.5" font-size="31" textLength="316" lengthAdjust="spacing">共生共栄共義主義社会</text>
+  </g>
+</svg>

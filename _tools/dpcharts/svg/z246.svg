@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>霊的堕落の動機</title>
+
+  <text x="52" y="79" font-size="48" textLength="348" lengthAdjust="spacing">霊的堕落の動機</text>
+  <line x1="50" y1="90.5" x2="399" y2="90.5" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 神からルーシェルと人間へ（円の下に描く） -->
+  <g stroke="currentColor" stroke-width="10">
+    <line x1="614" y1="184" x2="441.3" y2="292.6"/>
+    <line x1="614" y1="184" x2="809.6" y2="291.2"/>
+  </g>
+  <polygon points="424,303.5 436.6,281.3 449.4,301.7"/>
+  <polygon points="827.5,301 813.6,279.7 802,300.7"/>
+
+  <circle cx="614" cy="184" r="57" fill="#fff" class="paper" stroke="currentColor" stroke-width="3.5"/>
+  <text x="613" y="183.5" font-size="62" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <g stroke="currentColor" stroke-width="3.5">
+    <ellipse cx="345" cy="338" rx="95" ry="50" fill="#C4CCD3"/>
+    <ellipse cx="890.5" cy="334.5" rx="83.5" ry="46.5" fill="#FCE5E3"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="345" y="339" font-size="44" textLength="160" lengthAdjust="spacingAndGlyphs">ルーシェル</text>
+    <text x="890" y="334.5" font-size="52">人 間</text>
+  </g>
+
+  <!-- ルーシェルの側 -->
+  <circle cx="242.5" cy="458.5" r="10.5"/>
+  <circle cx="241.5" cy="544.5" r="10.5"/>
+  <g font-size="45">
+    <text x="263" y="475" textLength="228" lengthAdjust="spacing">愛の減少感</text>
+    <text x="262" y="559" textLength="363" lengthAdjust="spacing">愛の位置が同一で</text>
+    <text x="264" y="614" textLength="315" lengthAdjust="spacing">あることを願う</text>
+  </g>
+
+  <!-- 人間の側 -->
+  <circle cx="710" cy="452.5" r="10.5"/>
+  <circle cx="710" cy="535.5" r="10.5"/>
+  <g font-size="45">
+    <text x="734" y="471" textLength="183" lengthAdjust="spacing">神の子女</text>
+    <text x="732" y="554.5" textLength="362" lengthAdjust="spacing">ルーシェルよりも</text>
+    <text x="732" y="616" textLength="225" lengthAdjust="spacing">一層愛する</text>
+  </g>
+</svg>

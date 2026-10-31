@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>人間・堕落人間・救いの霊と肉</title>
+
+  <!-- 円から霊・肉へ開く線（円の下に描く） -->
+  <g stroke="#8C949A" stroke-width="9">
+    <line x1="312.5" y1="305" x2="375.5" y2="215"/>
+    <line x1="315.5" y1="375" x2="376" y2="463"/>
+    <line x1="570.5" y1="305" x2="633.5" y2="215"/>
+    <line x1="573.5" y1="375" x2="634" y2="463"/>
+    <line x1="826.5" y1="305" x2="888.5" y2="215"/>
+    <line x1="830.5" y1="375" x2="889" y2="463"/>
+  </g>
+
+  <!-- 人間 → 堕・人 → 救い -->
+  <g fill="#8C949A">
+    <polygon points="320,334.5 439,334.5 439,325 462,339 439,353 439,343.5 320,343.5"/>
+    <polygon points="575,336.5 702,336.5 702,327 722,340.5 702,354 702,344.5 575,344.5"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="5">
+    <circle cx="275.5" cy="338.5" r="60.5" fill="#FCE5E3"/>
+    <circle cx="529.5" cy="338.5" r="60.5" fill="#CF921C"/>
+    <circle cx="790.5" cy="338.5" r="60.5" fill="#FCE5E3"/>
+  </g>
+  <g font-size="48" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="271.5" y="338">人間</text>
+    <text x="500" y="337" font-size="50" textLength="36" lengthAdjust="spacingAndGlyphs">堕</text>
+    <text x="561" y="338" font-size="50" textLength="36" lengthAdjust="spacingAndGlyphs">人</text>
+    <text x="791.5" y="337.5">救い</text>
+  </g>
+  <circle cx="530.5" cy="336.5" r="5.5" fill="#111"/>
+
+  <g font-size="48" text-anchor="middle" dominant-baseline="central">
+    <text x="402.5" y="180.5">霊</text>
+    <text x="734" y="180.5">霊的堕落</text>
+    <text x="989.5" y="180.5">霊的救い</text>
+    <text x="402.5" y="485.5">肉</text>
+    <text x="737.5" y="484">肉的堕落</text>
+    <text x="992.5" y="483">肉的救い</text>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅱ. 終末の徴候に関する聖句</title>
+
+  <text x="54.5" y="58" font-size="48" dominant-baseline="central">Ⅱ.</text>
+  <text x="130" y="57.5" font-size="50" dominant-baseline="central" textLength="550" lengthAdjust="spacing">終末の徴候に関する聖句</text>
+  <line x1="130" y1="87.5" x2="680" y2="87.5" stroke="currentColor" stroke-width="4"/>
+
+  <!-- 聖書（z207 と同じ形を、元の画像の大きさと傾きに合わせて置く） -->
+  <g transform="matrix(1.2322,0.0347,0.0571,1.2176,-35.2,78.34)">
+    <path d="M285,123 L398,126 Q418,129 420,152 L404,206 L389,241 L378,266 L369,295 L364,310 Q362,314 352,314 L285,311 L240,306 Q230,304 230,293 L232,278 L224,266 Z" fill="#3A3A3A" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M236,275 L350,279 L346,303 L240,299 Q234,298 234,290 Z" fill="#EDEDED"/>
+    <g stroke="#111" stroke-width="1.5">
+      <line x1="238" y1="282" x2="348" y2="286"/>
+      <line x1="238" y1="288" x2="347" y2="292"/>
+      <line x1="238" y1="294" x2="347" y2="298"/>
+    </g>
+    <polyline points="389,135 295,133 237,262 344,262" fill="none" stroke="#BDBDBD" stroke-width="2"/>
+    <line x1="393" y1="133" x2="347" y2="267" stroke="#DADADA" stroke-width="4"/>
+    <path d="M312,281 L329,283 L321,329 L304,329 Z" fill="#3A3A3A" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <text transform="translate(384,284) skewX(-10)" font-size="56" text-anchor="middle" dominant-baseline="central" fill="#fff" textLength="114" lengthAdjust="spacingAndGlyphs">聖書</text>
+
+  <!-- 灰色の矢印 -->
+  <polyline points="602.7,303.1 496.1,368.5 601.7,433.4" fill="none" stroke="#8C949A" stroke-width="11"/>
+  <g fill="#8C949A">
+    <polygon points="624,290 608.2,317.8 592,291.4"/>
+    <polygon points="623,446.5 591,445.1 607.2,418.7"/>
+  </g>
+
+  <!-- ✕ -->
+  <g stroke="currentColor">
+    <line x1="525" y1="312.5" x2="580" y2="350" stroke-width="14"/>
+    <line x1="555.2" y1="293.5" x2="547.8" y2="371.5" stroke-width="12"/>
+  </g>
+
+  <g font-size="58" dominant-baseline="central">
+    <text y="295.5"><tspan x="641.5" textLength="116" lengthAdjust="spacing">文字</tspan><tspan x="773.5">：</tspan><tspan x="818" textLength="232" lengthAdjust="spacing">天変地異</tspan></text>
+    <text y="449"><tspan x="642.5" textLength="116" lengthAdjust="spacing">象徴</tspan><tspan x="773.5">：</tspan><tspan x="817">？</tspan></text>
+  </g>
+</svg>

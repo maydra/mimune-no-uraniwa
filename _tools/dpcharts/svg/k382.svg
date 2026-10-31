@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>栄光の主から苦難の道へ（イエスが洗礼ヨハネの代理）</title>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="225,117 230.5,117 230.5,238 234.5,238 227.75,249.5 221,238 225,238"/>
+    <polygon points="462,83.8 521,83.8 521,79.5 533.5,86 521,92.5 521,88.2 462,88.2"/>
+  </g>
+
+  <!-- イエス（上・下） -->
+  <ellipse cx="227.5" cy="86.5" rx="79.3" ry="31.3" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.4"/>
+  <text x="227.5" y="86" font-size="30" text-anchor="middle" dominant-baseline="central" textLength="92" lengthAdjust="spacing">イエス</text>
+  <ellipse cx="227" cy="292" rx="77.8" ry="30.8" fill="#F8F28F" stroke="currentColor" stroke-width="2.4"/>
+  <text x="227.5" y="292" font-size="30" text-anchor="middle" dominant-baseline="central" textLength="92" lengthAdjust="spacing" fill="#111">イエス</text>
+
+  <!-- 栄光の主 ×→ 苦難の道 -->
+  <g font-size="27" dominant-baseline="central">
+    <text x="340" y="85" textLength="115" lengthAdjust="spacing">栄光の主</text>
+    <text x="542" y="85" textLength="116" lengthAdjust="spacing">苦難の道</text>
+  </g>
+  <path d="M480,74 L502,98 M502,74 L480,98" stroke="currentColor" stroke-width="5.5"/>
+  <text x="512" y="116" font-size="21" dominant-baseline="central" textLength="146" lengthAdjust="spacingAndGlyphs">(コリントⅠ 2:8)</text>
+
+  <g font-size="25" dominant-baseline="central">
+    <text x="245" y="180" textLength="130" lengthAdjust="spacing">洗礼ヨハネ</text>
+    <text x="402" y="180" textLength="289" lengthAdjust="spacing">使命を完遂できなかった</text>
+  </g>
+
+  <!-- 箇条 -->
+  <circle cx="329.5" cy="266.5" r="7.5"/>
+  <circle cx="329.5" cy="310.5" r="7.5"/>
+  <g font-size="25" dominant-baseline="central">
+    <text x="348" y="266.5" textLength="211" lengthAdjust="spacing">洗礼ヨハネの代理</text>
+    <text x="349" y="310" textLength="234" lengthAdjust="spacing">苦難を自身が受ける</text>
+  </g>
+
+  <!-- 聖句 -->
+  <g font-size="22" dominant-baseline="central">
+    <text x="153" y="368" textLength="68" lengthAdjust="spacing">マタイ</text>
+    <text x="228" y="368" textLength="58" lengthAdjust="spacingAndGlyphs">16:20</text>
+  </g>
+  <g font-size="22" font-weight="400" dominant-baseline="central">
+    <text x="299" y="368" textLength="385" lengthAdjust="spacing">『メシヤであるということを証してはな</text>
+    <text x="309" y="399.5" textLength="153" lengthAdjust="spacing">らぬと言われる』</text>
+  </g>
+</svg>

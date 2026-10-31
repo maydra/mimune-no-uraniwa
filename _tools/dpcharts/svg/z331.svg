@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>①文化圏発展史</title>
+
+  <g font-size="48" dominant-baseline="central">
+    <text x="50.5" y="61" font-size="50">①</text>
+    <text x="107.5" y="61" textLength="298" lengthAdjust="spacing">文化圏発展史</text>
+  </g>
+
+  <!-- 堕・人 → 宗教 → 神（灰色の矢印。尾は楕円で隠す） -->
+  <g fill="#8C949A">
+    <polygon points="395.5,320 395.5,240.5 383.5,240.5 401.5,215 419.5,240.5 407.5,240.5 407.5,320"/>
+    <polygon points="395.5,524 395.5,439.5 383.5,439.5 401.5,414 419.5,439.5 407.5,439.5 407.5,524"/>
+  </g>
+  <circle cx="401.5" cy="158.5" r="50.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="4"/>
+  <text x="400" y="158.5" font-size="61" text-anchor="middle" dominant-baseline="central">神</text>
+  <ellipse cx="401.5" cy="362" rx="82.5" ry="45" fill="#FCE5E3" stroke="currentColor" stroke-width="4.5"/>
+  <text x="402.5" y="362" font-size="54" text-anchor="middle" dominant-baseline="central" fill="#111" textLength="125" lengthAdjust="spacing">宗教</text>
+  <ellipse cx="401.5" cy="565.5" rx="82.5" ry="44.5" fill="#CF921C" stroke="currentColor" stroke-width="4.5"/>
+  <text y="565" font-size="54" text-anchor="middle" dominant-baseline="central" fill="#111"><tspan x="364">堕</tspan><tspan x="401.5">・</tspan><tspan x="439.5">人</tspan></text>
+
+  <!-- 善：［ 四つの宗教 -->
+  <text x="537" y="357" font-size="50" text-anchor="middle" dominant-baseline="central">善</text>
+  <text x="587" y="357" font-size="50" text-anchor="middle" dominant-baseline="central">：</text>
+  <polyline points="654,214 625.5,242.5 625.5,472.5 653.5,500.5" fill="none" stroke="currentColor" stroke-width="8.5"/>
+  <g font-size="40" dominant-baseline="central">
+    <text y="253.5"><tspan x="666.5" textLength="206" lengthAdjust="spacing">儒・仏・仙</tspan><tspan x="881.5" font-weight="400">（中国）</tspan></text>
+    <text y="322"><tspan x="669.5" textLength="205" lengthAdjust="spacing">ヒンズー教</tspan><tspan x="881.5" font-weight="400" textLength="162.5" lengthAdjust="spacing">（インド）</tspan></text>
+    <text y="391"><tspan x="667" textLength="207.5" lengthAdjust="spacing">イスラム教</tspan><tspan x="881.5" font-weight="400">（中東）</tspan></text>
+    <text y="460"><tspan x="669" textLength="205.5" lengthAdjust="spacing">キリスト教</tspan><tspan x="878" font-weight="400" textLength="209" lengthAdjust="spacingAndGlyphs">（ヨーロッパ）</tspan></text>
+  </g>
+
+  <rect x="586" y="521" width="507" height="114" fill="#CDF8F7" stroke="currentColor" stroke-width="4.5"/>
+  <g font-size="41" dominant-baseline="central" fill="#111">
+    <text y="552.5"><tspan x="607" textLength="359" lengthAdjust="spacing">国家は滅亡しても、</tspan><tspan x="987.5">宗教</tspan></text>
+    <text x="607.5" y="603" textLength="413" lengthAdjust="spacing">はそのまま残っている</text>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>Ⅰ. 文芸復興（Renaissance）</title>
+
+  <!-- 題 -->
+  <text x="44" y="38.5" font-size="30" dominant-baseline="central" textLength="26" lengthAdjust="spacingAndGlyphs">Ⅰ.</text>
+  <text x="82" y="38" font-size="31" dominant-baseline="central" textLength="125" lengthAdjust="spacing">文芸復興</text>
+  <line x1="81" y1="57" x2="208" y2="57" stroke="currentColor" stroke-width="2.5"/>
+  <text x="212" y="49" font-size="31" textLength="162" lengthAdjust="spacingAndGlyphs">(Renaissance)</text>
+
+  <!-- 灰色の矢印（楕円の下に描く） -->
+  <polygon points="207.5,250 215.5,250 215.5,382 220.5,382 211.5,398.5 202.5,382 207.5,382" fill="#8C949A"/>
+
+  <!-- 創造本性外的追求 -->
+  <ellipse cx="211" cy="206" rx="79" ry="49" fill="#F86D42" stroke="currentColor" stroke-width="3"/>
+  <g font-size="29" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="211.5" y="188.5" textLength="116" lengthAdjust="spacing">創造本性</text>
+    <text x="212" y="223" textLength="116" lengthAdjust="spacing">外的追求</text>
+  </g>
+
+  <!-- 追求するもの -->
+  <rect x="303" y="116" width="350" height="183" fill="#fff" class="paper" stroke="currentColor" stroke-width="3"/>
+  <g>
+    <circle cx="329" cy="142" r="8"/>
+    <circle cx="329" cy="187" r="8"/>
+    <circle cx="329" cy="232" r="8"/>
+    <circle cx="329" cy="275" r="8"/>
+  </g>
+  <g font-size="26" dominant-baseline="central">
+    <text x="345.5" y="141" textLength="131.5" lengthAdjust="spacing">自由を追求</text>
+    <text x="344.5" y="185.5" textLength="236.7" lengthAdjust="spacing">人格の自主性を追求</text>
+    <text y="230"><tspan x="344.5" textLength="52.6" lengthAdjust="spacing">理知</tspan><tspan x="397.6">、</tspan><tspan x="423.5" textLength="131.5" lengthAdjust="spacing">理性を追求</tspan></text>
+    <text y="275.5"><tspan x="344.5" textLength="52.6" lengthAdjust="spacing">自然</tspan><tspan x="397.6">、</tspan><tspan x="423.5" textLength="52.6" lengthAdjust="spacing">現実</tspan><tspan x="476.6">、</tspan><tspan x="502.5" textLength="131.5" lengthAdjust="spacing">科学を追求</tspan></text>
+  </g>
+</svg>

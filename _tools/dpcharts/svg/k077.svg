@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822 435" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>堕落性本性をもつようになった経路</title>
+
+  <!-- 題 -->
+  <text x="35" y="37" font-size="31" textLength="504" lengthAdjust="spacing" dominant-baseline="central">堕落性本性をもつようになった経路</text>
+  <line x1="34" y1="55.5" x2="538" y2="55.5" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- 灰色の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="234,153 234,136 238.5,136 231,123 223.5,136 228,136 228,153"/>
+    <polygon points="536,178.5 303,178.5 303,174.5 291,181.5 303,188.5 303,184.5 536,184.5"/>
+  </g>
+  <!-- × -->
+  <g stroke="currentColor" stroke-width="5">
+    <line x1="402" y1="166.5" x2="430" y2="194.5"/>
+    <line x1="430" y1="166.5" x2="402" y2="194.5"/>
+  </g>
+
+  <!-- 神 -->
+  <circle cx="232" cy="94.5" r="26.5" fill="#fff" class="paper" stroke="currentColor" stroke-width="2.2"/>
+  <text x="232" y="94" font-size="32" text-anchor="middle" dominant-baseline="central">神</text>
+
+  <!-- アダムと天使長 -->
+  <g stroke="currentColor" stroke-width="2.2">
+    <ellipse cx="231.5" cy="181" rx="56" ry="28.5" fill="#F98AEE"/>
+    <ellipse cx="592.5" cy="181" rx="56" ry="28.5" fill="#C0CFD0"/>
+  </g>
+  <g font-size="26" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="231.5" y="181.5" textLength="74" lengthAdjust="spacing">アダム</text>
+    <text x="592.5" y="181.5" textLength="76" lengthAdjust="spacing">天使長</text>
+  </g>
+
+  <!-- 堕落性本性 -->
+  <rect x="238" y="229.5" width="365" height="186.5" rx="9" fill="#CDF8F7" stroke="currentColor" stroke-width="2.2"/>
+  <rect x="337.5" y="208" width="157" height="36.5" fill="#CF921C" stroke="currentColor" stroke-width="2.2"/>
+  <text x="416" y="227" font-size="26" textLength="129" lengthAdjust="spacing" text-anchor="middle" dominant-baseline="central" fill="#111">堕落性本性</text>
+  <g font-size="26" dominant-baseline="central" fill="#111">
+    <text y="272"><tspan x="263">①</tspan><tspan x="292" textLength="287" lengthAdjust="spacing">神と同じ立場をとれない</tspan></text>
+    <text y="308.5"><tspan x="263">②</tspan><tspan x="292" textLength="233" lengthAdjust="spacing">自己の位置を離れる</tspan></text>
+    <text y="345"><tspan x="263">③</tspan><tspan x="292" textLength="207" lengthAdjust="spacing">主管性を転倒する</tspan></text>
+    <text y="382"><tspan x="263">④</tspan><tspan x="292" textLength="155" lengthAdjust="spacing">罪を繁殖する</tspan></text>
+  </g>
+</svg>

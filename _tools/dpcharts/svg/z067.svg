@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1303 689" class="dpc-svg" role="img" font-family="'BIZ UDPGothic','Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',Meiryo,sans-serif" font-weight="700" fill="currentColor">
+  <title>陽性と陰性の関係</title>
+
+  <text x="52" y="77" font-size="48" textLength="396" lengthAdjust="spacing">陽性と陰性の関係</text>
+  <line x1="50" y1="88" x2="450" y2="88" stroke="currentColor" stroke-width="3.5"/>
+
+  <!-- 箱 -->
+  <g stroke="currentColor" stroke-width="4">
+    <rect x="217" y="179" width="146" height="102" rx="18" fill="#F98AEE"/>
+    <rect x="434" y="179" width="146" height="102" rx="18" fill="#F98AEE"/>
+    <rect x="217" y="433" width="146" height="102" rx="18" fill="#A0F08A"/>
+    <rect x="434" y="433" width="146" height="102" rx="18" fill="#A0F08A"/>
+  </g>
+  <g font-size="56" text-anchor="middle" dominant-baseline="central" fill="#111">
+    <text x="290" y="230">性相</text>
+    <text x="507" y="230">陽性</text>
+    <text x="290" y="485">形状</text>
+    <text x="507" y="485">陰性</text>
+  </g>
+
+  <!-- 上下の矢印 -->
+  <g fill="#8C949A">
+    <polygon points="271,312 284,339 276,339 276,402 266,402 266,339 258,339"/>
+    <polygon points="309,403 322,375 314,375 314,314 304,314 304,375 296,375"/>
+    <polygon points="488,312 501,339 493,339 493,402 483,402 483,339 475,339"/>
+    <polygon points="526,403 539,375 531,375 531,314 521,314 521,375 513,375"/>
+  </g>
+
+  <!-- ＝ -->
+  <rect x="371" y="346" width="52" height="8" fill="currentColor"/>
+  <rect x="371" y="362" width="52" height="8" fill="currentColor"/>
+
+  <!-- 縦の線 -->
+  <g stroke="#8C949A" stroke-width="10">
+    <line x1="640" y1="314" x2="640" y2="401"/>
+    <line x1="772" y1="314" x2="772" y2="401"/>
+    <line x1="930" y1="314" x2="930" y2="401"/>
+    <line x1="1066" y1="314" x2="1066" y2="401"/>
+  </g>
+
+  <g font-size="54" dominant-baseline="central">
+    <text x="613" y="229">内、</text>
+    <text x="713" y="229">原因、</text>
+    <text x="874" y="229">主体、</text>
+    <text x="1034" y="229">縦</text>
+    <text x="613" y="484">外、</text>
+    <text x="713" y="484">結果、</text>
+    <text x="874" y="484">対象、</text>
+    <text x="1034" y="484">横</text>
+  </g>
+</svg>
