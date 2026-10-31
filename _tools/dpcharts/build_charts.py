@@ -65,6 +65,34 @@ def minify(src):
     return src.strip()
 
 
+TAG = re.compile(r'<(/?)([A-Za-z][\w:.-]*)((?:\s+[^\s=>/]+\s*=\s*(?:"[^"]*"|\'[^\']*\'))*)\s*(/?)>')
+
+
+def pin_baselines(src):
+    """<g> などに付けた dominant-baseline を、中の <text>・<tspan> 1つずつに書き写す。
+    Safari（WebKit）は dominant-baseline を親から引き継がない（WebKit のバグ 139258。<text> から <tspan> へも
+    引き継がない）。そのため、<g dominant-baseline="central"> の中の字が、iPhone では字の下の線にそろい、
+    箱の上へはみ出していた（2026-10-31、ユーザーのスクショ）。Chrome・Firefox は引き継ぐので、見た目は変わらない"""
+    stack, out, pos = [], [], 0
+    for m in TAG.finditer(src):
+        close, tag, attrs, selfclose = m.groups()
+        if close:
+            while stack and stack.pop()[0] != tag:
+                pass
+            continue
+        own = re.search(r'\sdominant-baseline\s*=\s*["\']([^"\']*)["\']', attrs)
+        inherited = stack[-1][1] if stack else None
+        value = own.group(1) if own else inherited
+        if not own and inherited and tag in ("text", "tspan"):
+            out.append(src[pos:m.start(3) + len(attrs)])
+            out.append(f' dominant-baseline="{inherited}"')
+            pos = m.start(3) + len(attrs)
+        if not selfclose:
+            stack.append((tag, value))
+    out.append(src[pos:])
+    return "".join(out)
+
+
 def short_hash(b):
     return hashlib.sha1(b).hexdigest()[:10]
 
@@ -158,7 +186,7 @@ def main():
                 bad += 1
                 print(f"  {c['id']}: " + " / ".join(errs))
                 continue
-            o = {"id": c["id"], "after": after, "svg": minify(src)}
+            o = {"id": c["id"], "after": after, "svg": pin_baselines(minify(src))}
             # ページでの大きさ（図の 1 単位が何 px か）。後編の元の画像は前編（幅 1303）より小さい（幅 822）ので、
             # 同じ割合のままだと後編の図だけ小さく出る。元の画像の幅で割り戻して、前編と同じ見た目の大きさにする
             if c.get("part") == "kou":

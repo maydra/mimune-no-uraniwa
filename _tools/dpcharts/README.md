@@ -42,4 +42,5 @@
 - 「図」は3か所にある: ページの頭の「表示：」の並び、上の帯（reader.js の `#reader-crumb`）の ☰ の手前、目次の引き出し。帯の「図」は押しても引き出しを開かない。どれも `window.dpCharts` を呼ぶ。帯に置いたのは、ユーザー「スライド表示ボタンがなかなか出ないぬ」（読んでいる途中からは、ページの頭まで戻らないと押せなかった）
 - 図はまず縦横比（viewBox と同じ）の枠だけを置き、画面の上下 1500px に入った枠から SVG を入れる（IntersectionObserver）。枠の高さは SVG を入れても変わらないので、スクロールの位置は動かない
 - 図の字のフォントは `'BIZ UDPGothic','DPC Gothic',…`（charts.js の CSS が SVG の font-family 属性に勝つ）。DPC Gothic は dp/fonts の絞ったフォントで、@font-face は JSON の fonts を読んだとき（「図」を出したとき）に足す。BIZ UDPゴシックの入っている Windows はダウンロードしない。ユーザーの iPhone で字が箱からはみ出していた（2026-10-31）
+- 字を縦の真ん中にそろえる `dominant-baseline` は、`build_charts.py` が JSON に書くときに、`<g>` から中の `<text>`・`<tspan>` 1つずつへ書き写す（`pin_baselines`）。Safari（iPhone も）はこの指定を親から引き継がず（WebKit のバグ 139258）、`<g>` にまとめて付けた字が字の下の線にそろって、箱の上へはみ出していた（2026-10-31、ユーザーのスクショ。フォントを配っても直らなかった）。Chrome は引き継ぐので、Windows では気づけない。確かめるときは、Chrome に `text:not([dominant-baseline]),tspan:not([dominant-baseline]){dominant-baseline:auto}` を足すと Safari と同じずれ方になる
 - JSON の URL には中身のハッシュを付ける。dp/ の JS・JSON は SW がキャッシュ優先で出すので、付けないと直した図が1回遅れて届く
