@@ -440,7 +440,11 @@ def fubokyou():
 # ---- 天一国経典『平和経』（V1yi。1記事＝1講演、182本。第四篇14「天国を開く門 真の家庭」だけ①〜⑤の5本に分かれている） ----
 # 記事の頭に「平和経」「第一篇 …」「1. 題」の行と、日付・場所・行事の行。そのあと本文と小見出し（太字。太字の無い記事もある）。
 # 第五篇 21〜28 は PDF を貼った記事で、parse.py が段落に分ける。PDF の頁の切れ目で段落が2つに割れている所は、句点で終わらなければつなぐ
-HEIWAKYOU_FIX = {'二十－世紀': '二十一世紀', 'イエス 様': 'イエス様', '\uf9d1': '六'}
+# 袖様（第四篇14）・一九九-年（第九篇8）は読み取りの誤り。∥（第六篇7 の題）は III が化けたもの（I・II と同じ書き方に）。
+# 2026-10-31 に韓国語版（UYjn）と突き合わせて見つけた
+HEIWAKYOU_FIX = {'二十－世紀': '二十一世紀', 'イエス 様': 'イエス様', '\uf9d1': '六',
+                 '袖様': '神様', '一九九-年': '一九九一年', '女性∥': '女性 III'}
+TENGOKU_POSTS = (62, 63, 64, 65, 66)    # 第四篇14 ①〜⑤。②〜⑤は2行目が「第2章 …」で、頭の行ではなく章の見出し
 CSS_HEIWAKYOU = '''<style>
 .content-card p.meta { text-indent: 0; margin: 0; font-size: 0.9rem; opacity: 0.8; }
 .content-card p.meta + p:not(.meta) { margin-top: 1.4rem; }
@@ -477,17 +481,23 @@ def heiwakyou():
                 l = fix_text(l).strip()
                 for a, b in HEIWAKYOU_FIX.items():
                     l = l.replace(a, b)
-                if l:
-                    lines.append([l, p['bold'], p.get('pdf', False)])
+                if not l:
+                    continue
+                # 英語の略称（「性感染症（STD）」「（IRF）」）の所で <p> が切れている記事がある（第一篇10・第二篇14・第三篇11・12）。
+                # 「（」で終わる行と、閉じ括弧・句読点で始まる行は、前の行につなぐ
+                if lines and (lines[-1][0].endswith('（') or l.startswith(('）', '：', '、', '。'))):
+                    lines[-1][0] += l
+                    continue
+                lines.append([l, p['bold'], p.get('pdf', False)])
         # 頭の行: 本の名前・篇・章・講演の題（番号つき・番号なし）と、日付・場所・行事
         k, pending_meta = 0, None
         while k < len(lines):
             l = lines[k][0]
             plain = re.sub(r'^[0-9０-９]+\s*[.．、]?\s*', '', l).strip()
             m = RE_META.match(l)
-            if ((l.startswith('平和経') and len(l) < 40) or RE_HEN.match(l) or RE_SHO.match(l)
+            if ((l.startswith('平和経') and len(l) < 40) or RE_HEN.match(l) or (RE_SHO.match(l) and n not in TENGOKU_POSTS)
                     or difflib.SequenceMatcher(None, clean(plain), clean(title)).ratio() > 0.75
-                    or (n in (62, 63, 64, 65, 66) and '天国を開く門' in l and len(l) < 30)):
+                    or (n in TENGOKU_POSTS and '天国を開く門' in l and len(l) < 30)):
                 pass
             elif m and len(l) < 80:
                 if m.group(2):
