@@ -1,4 +1,4 @@
-# Google のインデックス状況（2026-10-31 更新）
+# Google のインデックス状況（2026-11-02 更新）
 
 `_tools/root/search_console.py inspect` が毎日（Actions の index-status）書き直す。手で直さない。
 
@@ -108,19 +108,20 @@
 | 罪と蕩減復帰 | 0 | 10 | URL が Google に認識されていません 10 |
 | 宇宙主管を願う前に自己主管を完成せよ／み旨の道 | 0 | 5 | URL が Google に認識されていません 5 |
 
-## 検索での表示（2026-10-01〜2026-10-28）
+## 検索での表示（2026-10-03〜2026-10-30）
 
-表示されたページ 10、表示 533 回、クリック 171 回
+表示されたページ 11、表示 563 回、クリック 175 回
 
 | ページ | 表示 | クリック |
 |---|---:|---:|
-| / | 184 | 151 |
-| /syuku_&_risoutengoku/index.html | 161 | 9 |
-| /mimunetosekai/index.html | 132 | 8 |
-| /bokkaisyanomiti/0320040895.html | 19 | 0 |
-| /bokkaisyanomiti/0314030526.html | 18 | 0 |
-| /syougairotei_6/index.html | 14 | 3 |
+| / | 195 | 155 |
+| /syuku_&_risoutengoku/index.html | 172 | 9 |
+| /mimunetosekai/index.html | 140 | 8 |
+| /bokkaisyanomiti/0320040895.html | 20 | 0 |
+| /bokkaisyanomiti/0314030526.html | 17 | 0 |
+| /syougairotei_6/index.html | 13 | 3 |
 | /utyuuno_konnpon/1-1-2.html | 2 | 0 |
+| /bokkaisyanomiti/0321060964.html | 1 | 0 |
 | /makotono_ai/002_makotono_ai.html | 1 | 0 |
 | /syougairotei_1/005.html | 1 | 0 |
 | /syougairotei_5/006.html | 1 | 0 |
