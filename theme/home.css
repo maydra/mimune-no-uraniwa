@@ -44,15 +44,20 @@ h1 a {
     text-decoration: none;
 }
 
-.online-now {
+.online-now,
+.visitor-count {
     font-size: 0.95rem;
     opacity: 0.8;
+}
+
+.visitor-count {
     margin-bottom: 1rem;
 }
 
 /* 人数が届くまでは見せないが、場所は取っておく（届いたときに下の一覧が押し下げられない。
    PageSpeed の CLS 0.048 はこれだった）。取れなかったときは空いた1行のまま */
-.online-now:not(.on) {
+.online-now:not(.on),
+.visitor-count:not(.on) {
     visibility: hidden;
 }
 
@@ -60,6 +65,45 @@ h1 a {
     content: '●';
     color: #22c55e;
     margin-right: 0.4em;
+}
+
+/* 「あなたは 0005689 人目の訪問者です」の数字。昔のアクセスカウンターのように、黒い箱に1桁ずつ。
+   箱の高さは行の高さ（1.8）より低くして、数字が入っても行の高さを変えない */
+.visitor-count .counter {
+    display: inline-flex;
+    gap: 2px;
+    margin: 0 0.25em;
+    vertical-align: 0.1em;
+}
+
+.visitor-count .counter span {
+    display: inline-block;
+    min-width: 1.15em;
+    padding: 0 0.15em;
+    line-height: 1.45;
+    font-family: Consolas, Menlo, "Courier New", monospace;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+    color: #f5f5f5;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+/* 明るい配色では style.css が span の字を全部黒にするので、ここだけ白に戻す */
+body.light-mode .visitor-count .counter span {
+    color: #f5f5f5 !important;
+    border-color: #111;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
 }
 
 /* 右上の「更新情報」。パソコンでは配色ボタン（#theme-toggle、右上に固定の 44px）の左に並べる。

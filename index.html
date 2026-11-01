@@ -63,7 +63,7 @@
   "logo": "https://maydra.github.io/mimune-no-uraniwa/favicon.png"
 }
 </script>
-    <link rel="stylesheet" href="theme/home.css?v=202610311330">
+    <link rel="stylesheet" href="theme/home.css?v=202611011200">
     <link rel="stylesheet" href="theme/style.css?v=202610282236">
 </head>
 
@@ -78,6 +78,7 @@
                 <div class="updates-panel" id="updates-panel" hidden>
                     <div class="updates-title">更新情報</div>
                     <ul class="updates-list">
+                        <li><time datetime="2026-11-01">2026.11.01</time>ホームに昔ながらの訪問者カウンター（「あなたは○人目の訪問者です」）を付けました。2026年1月20日からホームを開いた人の数です</li>
                         <li><time datetime="2026-10-31">2026.10.31</time><a href="taiyaku/heiwakyou/index.html">天一国経典『平和経』の韓日対訳</a>を公開しました。全178講演の韓国語の原文と日本語版を段落ごとに並べています。日本語版で省かれている所（小見出しなど）は韓国語からの AI 参考訳で補い、日本語版が中身を書き換えている所には「※」の注を付けています。英語は追って加えます</li>
                         <li><time datetime="2026-10-31">2026.10.31</time><a href="taiyaku/genri_genbon/index.html">「原理原本」の日韓対訳</a>に、3巻の残り（448〜457ページ）と4巻・5巻（675ページと、後ろの X-010〜028）を加え、原稿の終わりまで読めるようになりました。448ページから先の日本語も、韓国語の原文からの AI 訳です</li>
                         <li><time datetime="2026-10-31">2026.10.31</time>天一国経典の<a href="heiwakyou/index.html">『平和経』</a>と<a href="makotonofubokyou/index.html">『真の父母経』</a>（日本語）を加えました。トップページの「天一国経典」の欄から開けます。天聖經（増補版）も、別の欄をやめてこの欄の中から開くようにしました</li>
@@ -106,6 +107,7 @@
             </div>
             <h1 id="み旨の裏庭---サイト目次"><a href="#み旨の裏庭---サイト目次">み旨の裏庭</a></h1>
             <p class="online-now" id="online-now" title="直近5分にこのサイトを開いていた人の数（Google アナリティクス）">いま、このサイトを <b>–</b> 人が利用しています</p>
+            <p class="visitor-count" id="visitor-count" title="2026年1月20日からこのページ（ホーム）を開いた人の数（Google アナリティクス。同じ端末・ブラウザは1人と数えます）">あなたは <span class="counter" aria-hidden="true"><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span></span><span class="sr-only">–</span> 人目の訪問者です</p>
             <form class="home-search" action="search-all.html" method="get" role="search">
                 <input type="search" name="q" placeholder="み言を探す（例：真の愛　家庭）" aria-label="サイト内を検索" autocomplete="off" enterkeyhint="search" required>
                 <button type="submit">検索</button>
@@ -343,21 +345,39 @@
         })();
     </script>
     <script>
-        // 「いま○人が利用しています」。Cloudflare の Worker（_tools/online-count）が
-        // Google アナリティクスの直近5分の人数を返す。取れないとき（通信なし・Worker の不調）は出さない。
-        // 行の高さは最初から取ってあり（home.css の .online-now:not(.on)）、出すときに下の一覧を押し下げない。
+        // 「いま○人が利用しています」と「あなたは○人目の訪問者です」。Cloudflare の Worker（_tools/online-count）が
+        // Google アナリティクスの直近5分の人数（active、サイト全体）と、2026-01-20 からホームを開いた人の累計（total）を1回で返す。
+        // 取れないとき（通信なし・Worker の不調）はその行を出さない。
+        // 行の高さは最初から取ってあり（home.css の :not(.on)）、出すときに下の一覧を押し下げない。
         // 聞きに行くのはページを表示し終えてから（Worker の返事は1秒以上かかることがある）
         (function () {
             var el = document.getElementById('online-now');
-            if (!el || !window.fetch) return;
+            var vc = document.getElementById('visitor-count');
+            if (!el || !vc || !window.fetch) return;
             afterPaint(function () {
                 fetch('https://mimune-online.dreamerhigh2015.workers.dev/')
                     .then(function (r) { return r.ok ? r.json() : null; })
                     .then(function (d) {
-                        if (!d || typeof d.active !== 'number') return;
-                        // 開いている本人は必ずいるので、数え漏れても1人は出す
-                        el.querySelector('b').textContent = Math.max(d.active, 1);
-                        el.classList.add('on');
+                        if (!d) return;
+                        if (typeof d.active === 'number') {
+                            // 開いている本人は必ずいるので、数え漏れても1人は出す
+                            el.querySelector('b').textContent = Math.max(d.active, 1);
+                            el.classList.add('on');
+                        }
+                        if (typeof d.total === 'number' && d.total > 0) {
+                            // 昔のカウンターのように 0 で7桁に埋め、1桁ずつ箱に入れる
+                            var s = String(d.total);
+                            while (s.length < 7) s = '0' + s;
+                            var box = vc.querySelector('.counter');
+                            box.textContent = '';
+                            for (var i = 0; i < s.length; i++) {
+                                var c = document.createElement('span');
+                                c.textContent = s.charAt(i);
+                                box.appendChild(c);
+                            }
+                            vc.querySelector('.sr-only').textContent = d.total.toLocaleString('ja-JP');
+                            vc.classList.add('on');
+                        }
                     })
                     .catch(function () {});
             });

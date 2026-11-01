@@ -56,13 +56,16 @@ HTML を書き換えるスクリプトを回したあとは `python _tools/root/
 - 共有ファイルを足したら `python _tools/root/build_offline_manifest.py` も回す（オフライン保存が一緒に持っていく）
 - `theme/` の CSS・JS は、Service Worker がネットワーク優先で取る。直せば次に開いたときに届く
 
-## ホームの「いま○人が利用しています」（2026-10-18）
+## ホームの「いま○人が利用しています」（2026-10-18）と「あなたは○人目の訪問者です」（2026-11-01）
 
 `_tools/online-count/` の Cloudflare Worker（https://mimune-online.dreamerhigh2015.workers.dev ）が、
-Google アナリティクス（プロパティ 520812725）の直近5分の人数を `{"active":N,"minutes":5}` で返す。ホームの `#online-now` がそれを読む。
+Google アナリティクス（プロパティ 520812725）の数を2つ、`{"active":N,"minutes":5,"total":M,"since":"2026-01-20"}` で返す。
+- `active` … 直近5分にサイトのどこかを開いていた人。ホームの `#online-now` が読む
+- `total` … 2026-01-20（アナリティクスのタグを入れた日）から今日までに**ホームを開いた**人（同じ端末・ブラウザは1人）。ホームの `#visitor-count` が0で7桁に埋めて、1桁ずつ黒い箱に出す。ホームの URL は `/`・`/index`・`/index.html` の3通りがあり、Worker の `HOME` の正規表現でまとめて数える。サイト全体の訪問者にしたいなら `dimensionFilter` を外す（2026-11-01 の時点でホーム 1,681人・全体 5,689人）
 
 - アナリティクスを読むのは Google Cloud のプロジェクト mimune-online のサービスアカウント `online-count@mimune-online.iam.gserviceaccount.com`。プロパティには「閲覧者」で入っている
 - その鍵は Cloudflare の secret `GA_KEY` にだけある。リポジトリには置かない。作り直したら `npx wrangler secret put GA_KEY < 鍵.json`
 - Worker を直したら `_tools/online-count` で `npx wrangler deploy`（Cloudflare のアカウント dreamerhigh2015 にログインが要る: `npx wrangler login`）
-- アナリティクスに聞くのは Worker 1つあたり1分に1回まで。取れないときは 503 を返し、ホームは行を見せない（場所は空けたまま。2026-10-24 から、後から出して一覧を押し下げないように）
+- アナリティクスに聞くのは Worker 1つあたり、`active` は1分に1回、`total` は10分に1回まで。聞き直しに失敗したら前に取れた数を返す（`active` は5分前のものまで、`total` はいくら古くても）。両方とも取れないときは 503 を返す。ホームは取れなかった行を見せない（場所は空けたまま。2026-10-24 から、後から出して一覧を押し下げないように）
+- `total` はアナリティクスの集計が遅れる分だけ遅れる。開き直しても +1 はすぐには出ない。広告ブロッカーなどでアナリティクスを止めている人も入らない
 - ホームが Worker に聞きに行くのは、最初の描画が画面に出てから（index.html の `afterPaint()`。gtag の本体も同じ）
