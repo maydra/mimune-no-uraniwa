@@ -1,4 +1,4 @@
-# Google のインデックス状況（2026-11-02 更新）
+# Google のインデックス状況（2026-11-03 更新）
 
 `_tools/root/search_console.py inspect` が毎日（Actions の index-status）書き直す。手で直さない。
 
@@ -7,14 +7,14 @@
 ## 状態ごと
 
 - URL が Google に認識されていません: 3862
-- クロール済み - インデックス未登録: 20
-- 送信して登録されました: 13
+- クロール済み - インデックス未登録: 19
+- 送信して登録されました: 14
 
 ## 本ごと（載っている / ページ数）
 
 | 本 | 載っている | ページ | 載っていない理由 |
 |---|---:|---:|---|
-| 牧会者の道 | 4 | 113 | URL が Google に認識されていません 99、クロール済み - インデックス未登録 10 |
+| 牧会者の道 | 5 | 113 | URL が Google に認識されていません 99、クロール済み - インデックス未登録 9 |
 | (トップ) | 1 | 3 | URL が Google に認識されていません 2 |
 | 真の愛 | 1 | 10 | URL が Google に認識されていません 9 |
 | 真の父母 | 1 | 104 | URL が Google に認識されていません 103 |
@@ -108,18 +108,18 @@
 | 罪と蕩減復帰 | 0 | 10 | URL が Google に認識されていません 10 |
 | 宇宙主管を願う前に自己主管を完成せよ／み旨の道 | 0 | 5 | URL が Google に認識されていません 5 |
 
-## 検索での表示（2026-10-03〜2026-10-30）
+## 検索での表示（2026-10-04〜2026-10-31）
 
-表示されたページ 11、表示 563 回、クリック 175 回
+表示されたページ 11、表示 556 回、クリック 168 回
 
 | ページ | 表示 | クリック |
 |---|---:|---:|
-| / | 195 | 155 |
-| /syuku_&_risoutengoku/index.html | 172 | 9 |
-| /mimunetosekai/index.html | 140 | 8 |
+| / | 190 | 150 |
+| /syuku_&_risoutengoku/index.html | 176 | 9 |
+| /mimunetosekai/index.html | 136 | 7 |
 | /bokkaisyanomiti/0320040895.html | 20 | 0 |
 | /bokkaisyanomiti/0314030526.html | 17 | 0 |
-| /syougairotei_6/index.html | 13 | 3 |
+| /syougairotei_6/index.html | 11 | 2 |
 | /utyuuno_konnpon/1-1-2.html | 2 | 0 |
 | /bokkaisyanomiti/0321060964.html | 1 | 0 |
 | /makotono_ai/002_makotono_ai.html | 1 | 0 |
