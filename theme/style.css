@@ -78,6 +78,15 @@ body.dark-mode .toc {
     -webkit-backdrop-filter: none !important;
 }
 
+/* 明るいときだけ本文の箱（.container）と聖書の前後の帯に 1px の枠が付くので、暗いときも
+   透明の枠で同じ太さを取っておく。太さが違うと本文の幅が 2px 変わって折り返しが変わり、
+   明暗を切り替えるたびに読んでいた所が何行もずれていた（2026-11-02、ユーザー
+   「このダークライトきりかえによるズレもなくしたい」） */
+body.dark-mode .container,
+body.dark-mode [data-bible-nav] {
+    border: 1px solid transparent !important;
+}
+
 /* Typography */
 body.light-mode h1,
 body.light-mode h1 a,

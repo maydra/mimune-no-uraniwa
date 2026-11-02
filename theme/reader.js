@@ -534,18 +534,28 @@
         }).catch(function () { });
     }
 
-    function openDrawer() { drawerMarks(); drawer.classList.add('on'); markHere(); }
+    // 引き出しはいつも一番上（しおり・文字・色・図）で開く。前は、いま読んでいる見出しが
+    // 見える所まで下げて開いていたので、長いページでは道具が上に隠れていた
+    // （2026-11-02、ユーザー「いつも道具が見える一番上で開く方がよさそう」）
+    function openDrawer() {
+        drawerMarks();
+        drawer.classList.add('on');
+        drawer.querySelector('.panel').scrollTop = 0;
+        markHere();
+    }
     function closeDrawer() { drawer.classList.remove('on'); }
 
+    // いま読んでいる見出しを光らせるだけで、引き出しの中は動かさない。前はスクロールのたびに
+    // その見出しまで動かしていたので、引き出しの「図」「文字」「色」を押すと（押したあとに
+    // 本文を同じ所へ戻すスクロールで）引き出しが見出しの一覧の下の方へ飛び、押すたびに上へ
+    // 戻さないといけなかった（2026-11-02、ユーザー「図の出し入れとかするとこの展開後ぱんくず
+    // ページが下の方に行っちゃうの直したい」）
     var hereAt = -2;
     function markHere() {
         var i = currentHead();
         if (i !== hereAt) {
             hereAt = i;
             items.forEach(function (a, k) { if (a) a.classList.toggle('here', k === i); });
-        }
-        if (i >= 0 && drawer.classList.contains('on') && items[i]) {
-            items[i].scrollIntoView({ block: 'nearest' });
         }
     }
 
@@ -577,8 +587,11 @@
         });
         // 字を当てて探すのは重いので、スクロールの途中ではやらない（iPhone SE で引っかかる）
         clearTimeout(settleT);
+        // 引き出しが開いているあいだは測り直さない。本文が引き出しに覆われていて、字を当てても
+        // 引き出しの字に当たり、画面の高さの割合からの見当になる。そのまま「図」「文字」「色」を
+        // 押すと、その見当の所へ戻すので、押すたびに読んでいた所が先へずれていた（2026-11-02）
         settleT = setTimeout(function () {
-            if (!restoring && performance.now() > resizing) {
+            if (!restoring && performance.now() > resizing && !(drawer && drawer.classList.contains('on'))) {
                 cur = topPos();
                 var t = posTop(cur);
                 curDy = t === null ? 0 : Math.max(-80, Math.min(0, t - TOP));
@@ -620,6 +633,12 @@
                     if (it[1]) localStorage.setItem(FONT, it[1]);
                     else localStorage.removeItem(FONT);
                 } catch (e) { }
+                // ページには transition（0.3秒）の付いた字（聖書の引用のリンク・見出し・前へ/次へ など）が
+                // あり、字の大きさも0.3秒かけて変わる。戻したあとも高さが変わり続けて、変えるたびに
+                // 何行もずれていた。変える一瞬だけ transition を止める（2026-11-02）
+                var still = document.createElement('style');
+                still.textContent = '*,*::before,*::after{transition:none !important}';
+                document.head.appendChild(still);
                 document.documentElement.style.fontSize = it[1];
                 Array.prototype.forEach.call(box.querySelectorAll('button'), function (o) {
                     o.setAttribute('aria-pressed', o === b ? 'true' : 'false');
@@ -627,6 +646,7 @@
                 // 字が変わると折り返しが変わるので、resize と同じやり方で同じ所へ戻す
                 collect();
                 scrollToPos(cur, TOP + curDy);
+                requestAnimationFrame(function () { requestAnimationFrame(function () { still.remove(); }); });
             });
             box.appendChild(b);
         });
