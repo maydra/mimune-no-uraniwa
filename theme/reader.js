@@ -53,6 +53,7 @@
     var heads = [];            // 見出し
     var cur = 0;               // いま画面の上にある文字の位置
     var curDy = 0;             // その文字の行の上端が TOP からどれだけ上にあるか（0〜1行分）
+    var curFig = null;         // 原理講論の図が画面の上にかかっているとき、その図と高さの割合（figAtTop）
     var ui = null, bar = null, crumb = null, drawer = null, items = [];
     var restoring = false;
 
@@ -139,6 +140,64 @@
         restoring = true;
         window.scrollBy(0, top - (keep == null ? TOP : keep));
         setTimeout(function () { restoring = false; }, 60);
+    }
+
+    // ---- 図が画面の上にかかっているとき（2026-11-03） ------------------------
+    // 原理講論の図（.dpc-fig）の字は数えないので、図が画面の上を覆うと topPos は本文の字を拾えず、
+    // 画面の高さの割合からの見当になっていた。図は幅に合わせて高さも変わるので、図を出したまま
+    // ウィンドウの幅を変えると、読んでいた所から何画面も飛んでいた（ユーザー「図表を出すとウィンドウ
+    // サイズ変化時の位置維持が難しくなるっぽい」）。そこで「どの図の、上から何割の所が画面の上にあるか」を
+    // 覚えて、その割合の所へ戻す。字の位置（cur）には図の直前の字（図を差し込んだ文の終わり）を入れる。
+    // しおりで戻ったときや図を隠したときは、その文が画面の上に来て、すぐ下に図（か続きの文）が出る
+    function figAtTop() {
+        var list = document.querySelectorAll('.dpc-fig');
+        for (var i = 0; i < list.length; i++) {
+            var r = list[i].getBoundingClientRect();
+            if (!r.height) continue;            // 隠している図
+            if (r.top > TOP + 40) break;        // 図は上から順に並んでいる
+            // 図の上の余白（1em ほど）にかかっているときも図で覚える。字を拾えず、図の下の字まで飛ぶため
+            if (r.top - 32 <= TOP && TOP < r.bottom) {
+                var into = TOP - r.top;
+                return into >= 0 ? { el: list[i], frac: into / r.height, off: 0 } : { el: list[i], frac: 0, off: into };
+            }
+        }
+        return null;
+    }
+
+    function posBefore(el) {         // el の直前にある本文の字（空白でない最後の字）
+        var lo = 0, hi = nodes.length - 1, best = -1;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (el.compareDocumentPosition(nodes[mid]) & Node.DOCUMENT_POSITION_PRECEDING) { best = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        if (best < 0) return 0;
+        var v = nodes[best].nodeValue, k = v.length - 1;
+        while (k > 0 && /\s/.test(v.charAt(k))) k--;
+        return starts[best] + k;
+    }
+
+    // 画面の上にある物を覚える（スクロールが止まったとき）
+    function measure() {
+        curFig = figAtTop();
+        if (curFig) { cur = posBefore(curFig.el); curDy = 0; return; }
+        cur = topPos();
+        var t = posTop(cur);
+        curDy = t === null ? 0 : Math.max(-80, Math.min(0, t - TOP));
+    }
+
+    // 覚えた所へ戻す。図が上にかかっていたなら、その図の同じ割合の所へ
+    function backToCur() {
+        var f = curFig;
+        if (f && f.el.isConnected) {
+            var r = f.el.getBoundingClientRect();
+            if (r.height) {
+                restoring = true;
+                window.scrollBy(0, r.top + f.frac * r.height + f.off - TOP);
+                setTimeout(function () { restoring = false; }, 60);
+                return;
+            }
+        }
+        scrollToPos(cur, TOP + curDy);
     }
 
     // ページの題を [ページの名前, 書名] に分ける。題の書き方は2通りある:
@@ -592,9 +651,7 @@
         // 押すと、その見当の所へ戻すので、押すたびに読んでいた所が先へずれていた（2026-11-02）
         settleT = setTimeout(function () {
             if (!restoring && performance.now() > resizing && !(drawer && drawer.classList.contains('on'))) {
-                cur = topPos();
-                var t = posTop(cur);
-                curDy = t === null ? 0 : Math.max(-80, Math.min(0, t - TOP));
+                measure();
             }
             save();
         }, 160);
@@ -604,6 +661,30 @@
         return s.replace(/[&<>"]/g, function (c) {
             return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c];
         });
+    }
+
+    // ---- 字の大きさが変わる間だけ transition を止める ------------------------
+    // ページには transition（0.2〜0.3秒）の付いた字（聖書の引用のリンク・見出し・前へ/次へ など）が
+    // あり、字の大きさも0.3秒かけて変わる。戻したあとも高さが変わり続けて、何行もずれていた。
+    // 文字の大きさを変えたとき（2026-11-02）と、幅が変わったとき（2026-11-03。iPhone を縦横に回すと
+    // 字の大きさの境目の幅をまたぎ、戻したあと 0.3秒で 60px ずれた）だけ止める。止めている間に変わった
+    // 字は、そのまま新しい大きさになる。ms のあいだ resize が来なければ戻す
+    var stillEl = null, stillT = null, stillN = 0;
+    function holdStill(ms) {
+        if (!stillEl) {
+            stillEl = document.createElement('style');
+            stillEl.textContent = '*,*::before,*::after{transition:none !important}';
+            document.head.appendChild(stillEl);
+        }
+        var n = ++stillN;                    // 戻す前にまた呼ばれたら、そちらに任せる
+        clearTimeout(stillT);
+        stillT = setTimeout(function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    if (n === stillN && stillEl) { stillEl.remove(); stillEl = null; }
+                });
+            });
+        }, ms);
     }
 
     // ---- 文字の大きさ（2026-10-24） ----------------------------------------
@@ -633,20 +714,14 @@
                     if (it[1]) localStorage.setItem(FONT, it[1]);
                     else localStorage.removeItem(FONT);
                 } catch (e) { }
-                // ページには transition（0.3秒）の付いた字（聖書の引用のリンク・見出し・前へ/次へ など）が
-                // あり、字の大きさも0.3秒かけて変わる。戻したあとも高さが変わり続けて、変えるたびに
-                // 何行もずれていた。変える一瞬だけ transition を止める（2026-11-02）
-                var still = document.createElement('style');
-                still.textContent = '*,*::before,*::after{transition:none !important}';
-                document.head.appendChild(still);
+                holdStill(0);
                 document.documentElement.style.fontSize = it[1];
                 Array.prototype.forEach.call(box.querySelectorAll('button'), function (o) {
                     o.setAttribute('aria-pressed', o === b ? 'true' : 'false');
                 });
                 // 字が変わると折り返しが変わるので、resize と同じやり方で同じ所へ戻す
                 collect();
-                scrollToPos(cur, TOP + curDy);
-                requestAnimationFrame(function () { requestAnimationFrame(function () { still.remove(); }); });
+                backToCur();
             });
             box.appendChild(b);
         });
@@ -678,6 +753,7 @@
                 var keep = cur, dy = curDy;
                 cf.set(key, !cf.isOn(key));
                 collect();
+                if (curFig) { backToCur(); return; }   // 図は色で隠れないので、図の同じ所へ
                 var i = nodeIndex(keep);
                 while (i < nodes.length && !nodes[i].parentElement.getClientRects().length) i++;
                 if (i < nodes.length) scrollToPos(i === nodeIndex(keep) ? keep : starts[i], TOP + dy);
@@ -701,6 +777,7 @@
         var dc = window.dpCharts;
         if (!dc) return;
         var keep = cur, dy = curDy;
+        curFig = null;      // 隠すと図は無くなる。図の直前の文（cur）へ戻す
         dc.set(!dc.isOn()).then(function () { scrollToPos(keep, TOP + dy); });
     }
 
@@ -749,11 +826,12 @@
         if (window.innerWidth === lastW) return;
         lastW = window.innerWidth;
         resizing = performance.now() + 500;
-        scrollToPos(cur, TOP + curDy);       // 引きずっている間も、そのつど合わせる
+        holdStill(200);
+        backToCur();                        // 引きずっている間も、そのつど合わせる
         clearTimeout(resizeT);
         resizeT = setTimeout(function () {
             collect();                       // 文字数は変わらないが、ノードは取り直す
-            scrollToPos(cur, TOP + curDy);
+            backToCur();
         }, 60);
     }
 
@@ -1120,7 +1198,7 @@
             if (touched) return;
             collect();
             scrollToPos(pos, TOP);
-            cur = pos; curDy = 0;
+            cur = pos; curDy = 0; curFig = null;
         };
         go();
         if (document.fonts && document.fonts.ready) document.fonts.ready.then(go);
