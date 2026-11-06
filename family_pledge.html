@@ -18,6 +18,11 @@
   <link rel="icon" href="/mimune-no-uraniwa/favicon.png?v=202610282236" type="image/png" />
   <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.jpg" />
   <style>
+    /* 文字を大きくしたら左右の余白を詰める。--g は標準より大きくなった分の基準の字（小・標準では 0） */
+    :root {
+      --g: max(0px, calc(1rem - 16px));
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -29,7 +34,7 @@
       background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
       min-height: 100vh;
       color: #e0e0e0;
-      padding: 3rem 1rem;
+      padding: 3rem max(4px, calc(16px - var(--g) * 2.5));
       line-height: 1.8;
     }
 
@@ -47,12 +52,12 @@
     }
 
     .container {
-      max-width: 1000px;
+      max-width: calc(1000px + var(--g) * 60);
       margin: 0 auto;
       position: relative;
       z-index: 1;
       background: rgba(255, 255, 255, 0.05);
-      padding: 4rem;
+      padding: 4rem max(16px, calc(64px - var(--g) * 10));
       border-radius: 30px;
       border: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
@@ -109,7 +114,7 @@
 
     .jpblock {
       background: rgba(255, 255, 255, 0.03);
-      padding: 3rem;
+      padding: 3rem max(8px, calc(48px - var(--g) * 8.5));
       border-radius: 20px;
       margin-top: 5rem;
       border: 1px solid rgba(255, 255, 255, 0.05);
@@ -157,7 +162,7 @@
 
     @media (max-width: 768px) {
       .container {
-        padding: 2rem;
+        padding: 2rem max(8px, calc(32px - var(--g) * 5));
       }
 
       h1 {
@@ -169,7 +174,7 @@
       }
 
       .jpblock {
-        padding: 1.5rem;
+        padding: 1.5rem max(8px, calc(24px - var(--g) * 3.5));
       }
 
       .jpitem {
@@ -182,7 +187,7 @@
 </head>
 
 <body>
-<script id="theme-boot">(function(){try{var c=document.body.classList,t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';c.remove('light-mode','dark-mode');c.add(t+'-mode');var f=localStorage.getItem('reader.font');if(f)document.documentElement.style.fontSize=f}catch(e){}})()</script>
+<script id="theme-boot">(function(){try{var c=document.body.classList,t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';c.remove('light-mode','dark-mode');c.add(t+'-mode');var f=localStorage.getItem('reader.font:family_pledge')||localStorage.getItem('reader.font');if(f)document.documentElement.style.fontSize=f}catch(e){}})()</script>
   <div class="container">
 
     <h1 id="家庭盟誓"><a href="#家庭盟誓">家庭盟誓</a></h1>

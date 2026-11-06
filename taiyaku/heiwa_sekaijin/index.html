@@ -272,7 +272,7 @@ try{var c=JSON.parse(localStorage.getItem("heiwa.theme"));if(c!=="light"&&c!=="d
         <button id="small">A−</button>
         <button id="big">A＋</button>
         <button id="theme">◐</button>
-        <button id="ai">AI訳</button>
+        <button id="ai">非公式訳</button>
       </div>
       <div class="grp uigrp">
         <select id="ui">
@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rows: "横3列", cols: "縦3列", layoutT: "縦3列（横並び） / 横3列（縦積み）",
       brk: "区切り", brkT: "キリの良いところ（小見出しと、み言の出典の切れ目）に太線を引く",
       smallT: "文字を小さく", bigT: "文字を大きく", themeT: "配色", theme: { system: "端末の設定に合わせる", light: "明るい", dark: "暗い" },
-      ai: "AI訳", aiT: "訳の無い所へ入れた参考訳を出し入れする",
+      ai: "非公式訳", aiT: "訳の無い所へ入れた非公式訳を出し入れする",
       uiT: "画面の言語",
       hint: "段落をクリックで印 ／ ↑↓ で読み進める ／ ←→ で節を移動",
       hintTouch: "段落をタップで印 ／ ◀ ▶ で節を移動",
@@ -347,18 +347,18 @@ document.addEventListener("DOMContentLoaded", () => {
       wPdf: (l) => `${l} はPDF添付のみで本文がありません`,
       wMismatch: (l, f) => `${l}の記事は別の内容が載っているようです（語の一致 ${f}）。対訳として当てにしないでください`,
       wShort: (l) => `${l}は投稿されていない部分があります。抜けている所は「—」と出ます`,
-      wAisec: (l) => `${l}版のこの節は元データにありません。${l}の欄は全文が韓国語からの AI 参考訳です（公式訳ではありません。「AI訳」ボタンで消せます）`,
+      wAisec: (l) => `${l}版のこの節は元データにありません。${l}の欄は全文が韓国語からの非公式訳です（「非公式訳」ボタンで消せます）`,
       wMoved: "⇄印の訳文は、韓国語の順に合わせるため、訳書（日本語版・英語版）の順番から移動してあります",
       spanTag: () => "",
       // ⚠ の一式は英語で出す（briefBox）。ここに w* の文字列は置かない
       mvTag: "⇄ 順番移動",
       mvTitle: "韓国語の順に合わせるため、訳書の順番から移動してあります",
       joTag: "日本語版のみの文（点線）", joT: "点線の文は、その欄の訳書（日本語版・英語版）にだけあり、韓国語の原文にはありません",
-      aiSegTag: "色付きの所は AI訳", aiSegT: "色付きの所は訳書で省かれていた語句を、韓国語から AI が訳したものです（公式訳ではありません。「AI訳」ボタンで消せます）",
+      aiSegTag: "色付きの所は非公式訳", aiSegT: "色付きの所は、訳書で省かれていた語句を韓国語から訳した非公式訳です（「非公式訳」ボタンで消せます）",
       noHit: "見つかりませんでした",
       searching: (n) => `${n} 節を読み込んでいます…`,
       foot: (links) => `韓国語・英語: み言選集の資料「평화를 사랑하는 세계인으로 (한.日.Eng.)」。日本語: 日本語版（み旨の裏庭の${links}）。`
-        + `日本語版・英語版で省かれている所は、韓国語から訳した AI 参考訳で補っています（公式訳ではありません。「AI訳」ボタンで消せます）。`
+        + `日本語版・英語版で省かれている所は、韓国語から訳した非公式訳で補っています（「非公式訳」ボタンで消せます）。`
         + `訳書が中身を書き換えている所と、訳書にしか無い文には「※」の注を付けました。`,
     },
     ko: {
@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rows: "가로 3줄", cols: "세로 3단", layoutT: "세로 3단(나란히) / 가로 3줄(쌓기)",
       brk: "구분선", brkT: "끊기 좋은 곳(소제목과 말씀 출처가 바뀌는 곳)에 굵은 선을 긋습니다",
       smallT: "글자 작게", bigT: "글자 크게", themeT: "배색", theme: { system: "기기 설정에 따름", light: "밝게", dark: "어둡게" },
-      ai: "AI 번역", aiT: "번역이 없는 곳에 넣은 참고 번역을 보이거나 숨깁니다",
+      ai: "비공식 번역", aiT: "번역이 없는 곳에 넣은 비공식 번역을 보이거나 숨깁니다",
       uiT: "화면 언어",
       hint: "문단을 클릭하면 표시 ／ ↑↓ 로 읽어 나가기 ／ ←→ 로 절 이동",
       hintTouch: "문단을 누르면 표시 ／ ◀ ▶ 로 절 이동",
@@ -394,18 +394,18 @@ document.addEventListener("DOMContentLoaded", () => {
       wPdf: (l) => `${l}는 PDF 첨부만 있고 본문이 없습니다`,
       wMismatch: (l, f) => `${l} 글에는 다른 내용이 실려 있는 것 같습니다 (낱말 일치 ${f}). 대역으로 믿지 마십시오`,
       wShort: (l) => `${l}는 올라오지 않은 부분이 있습니다. 빠진 곳은 「—」로 나옵니다`,
-      wAisec: (l) => `${l}판의 이 절은 원본 데이터에 없습니다. ${l} 칸은 전문이 한국어에서 옮긴 AI 참고 번역입니다 (공식 번역이 아닙니다. 「AI 번역」 단추로 숨길 수 있습니다)`,
+      wAisec: (l) => `${l}판의 이 절은 원본 데이터에 없습니다. ${l} 칸은 전문이 한국어에서 옮긴 비공식 번역입니다 (「비공식 번역」 단추로 숨길 수 있습니다)`,
       wMoved: "⇄ 표시가 붙은 번역문은 한국어 순서에 맞추기 위해 번역판(일본어판·영어판)의 순서에서 옮긴 것입니다",
       spanTag: () => "",
       // ⚠ の一式は英語で出す（briefBox）。ここに w* の文字列は置かない
       mvTag: "⇄ 순서 이동",
       mvTitle: "한국어 순서에 맞추기 위해 번역판의 순서에서 옮겼습니다",
       joTag: "일본어판에만 있는 문장 (점선)", joT: "점선 문장은 그 칸의 번역판(일본어판·영어판)에만 있고 한국어 원문에는 없습니다",
-      aiSegTag: "색 바탕은 AI 번역", aiSegT: "색 바탕 부분은 번역판에서 생략된 어구를 한국어에서 AI가 옮긴 것입니다 (공식 번역이 아닙니다. 「AI 번역」 버튼으로 숨길 수 있습니다)",
+      aiSegTag: "색 바탕은 비공식 번역", aiSegT: "색 바탕 부분은 번역판에서 생략된 어구를 한국어에서 옮긴 비공식 번역입니다 (「비공식 번역」 버튼으로 숨길 수 있습니다)",
       noHit: "찾지 못했습니다",
       searching: (n) => `${n}개 절을 읽고 있습니다…`,
       foot: (links) => `한국어·영어: 말씀선집 자료 「평화를 사랑하는 세계인으로 (한.日.Eng.)」. 일본어: 일본어판 (${links}). `
-        + `일본어판·영어판에서 생략된 부분은 한국어에서 옮긴 AI 참고 번역으로 채웠습니다 (공식 번역이 아닙니다. 「AI 번역」 버튼으로 숨길 수 있습니다). `
+        + `일본어판·영어판에서 생략된 부분은 한국어에서 옮긴 비공식 번역으로 채웠습니다 (「비공식 번역」 버튼으로 숨길 수 있습니다). `
         + `번역판이 내용을 바꾼 곳과 번역판에만 있는 문장에는 「※」 주를 달았습니다.`,
     },
     en: {
@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rows: "3 rows", cols: "3 columns", layoutT: "3 columns (side by side) / 3 rows (stacked)",
       brk: "Breaks", brkT: "Draw a heavy line at natural breaks (subheadings and changes of source)",
       smallT: "Smaller text", bigT: "Larger text", themeT: "Color scheme", theme: { system: "Follow the device setting", light: "Light", dark: "Dark" },
-      ai: "AI", aiT: "Show or hide the AI reference translations filled into missing paragraphs",
+      ai: "Unofficial", aiT: "Show or hide the unofficial translations filled into missing paragraphs",
       uiT: "Interface language",
       hint: "Click a paragraph to mark it / ↑↓ to read on / ←→ to change section",
       hintTouch: "Tap a paragraph to mark it / ◀ ▶ to change section",
@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
       wPdf: (l) => `The ${l} post has only a PDF attachment, with no body text`,
       wMismatch: (l, f) => `The ${l} post seems to carry different content (word match ${f}). Do not rely on it as a parallel text`,
       wShort: (l) => `Part of the ${l} text was never posted. Missing paragraphs show as "—"`,
-      wAisec: (l) => `This section of the ${l} edition is missing from the source data. The whole ${l} column is an AI reference translation from the Korean (not the official text; hide it with the "AI" button)`,
+      wAisec: (l) => `This section of the ${l} edition is missing from the source data. The whole ${l} column is an unofficial translation from the Korean (hide it with the "Unofficial" button)`,
       wMoved: "Translation cells marked ⇄ were moved out of the order of the Japanese or English edition to follow the Korean",
       spanTag: () => "",
       wTag: "⚠ shorter than the original",
@@ -454,19 +454,19 @@ document.addEventListener("DOMContentLoaded", () => {
       mvTag: "⇄ moved",
       mvTitle: "Moved out of the order of the translated edition to follow the Korean",
       joTag: "Japanese edition only (dotted)", joT: "Dotted sentences appear only in the translated edition of that column (Japanese or English), not in the Korean original",
-      aiSegTag: "Shaded: AI translation", aiSegT: "Shaded words were left out of the translated edition and are an AI translation from the Korean (not the official text; hide them with the AI button)",
+      aiSegTag: "Shaded: unofficial translation", aiSegT: "Shaded words were left out of the translated edition and are an unofficial translation from the Korean (hide them with the Unofficial button)",
       noHit: "Nothing found",
       searching: (n) => `Loading ${n} sections…`,
       foot: (links) => `Korean and English: the source text "평화를 사랑하는 세계인으로 (한.日.Eng.)". Japanese: the Japanese edition (${links}). `
-        + `Passages left out of the Japanese or English edition are filled with AI reference translations from the Korean (not the official text; hide them with the AI button). `
+        + `Passages left out of the Japanese or English edition are filled with unofficial translations from the Korean (hide them with the Unofficial button). `
         + `Notes marked ※ point out where a translation changes the content, and sentences found only in a translation.`,
     },
   };
   // 参考訳の札だけは**その欄の言語**で出す。英語の欄を読んでいる人が読めなければ意味がない
   const AITAG = {
-    ko: "AI 참고 번역 (한국어에서) · 공식 번역이 아닙니다",
-    ja: "AI訳（韓国語から）・公式訳ではありません",
-    en: "AI translation from Korean — not the official text",
+    ko: "비공식 번역 (한국어에서)",
+    ja: "非公式訳（韓国語から）",
+    en: "Unofficial translation from Korean",
   };
 
   const BOOK = window.HOONDOK || { sections: [] };
@@ -682,7 +682,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (s.cells[L.id] || []).filter((c) => c.r < b && c.r + (c.span || 1) > a).forEach((c) => {
         if (!c.t || (c.ai && !showAI)) return;
         const body = c.seg ? c.seg.filter((g) => showAI || !g.ai)
-          .map((g) => g.ai ? g.t.replace(/^(\s*)([\s\S]*)$/, "$1〔AI: $2〕") : g.t).join("") : c.t;
+          .map((g) => g.ai ? g.t.replace(/^(\s*)([\s\S]*)$/, "$1〔" + ({ ko: "비공식 번역", ja: "非公式訳", en: "Unofficial" })[L.id] + ": $2〕") : g.t).join("") : c.t;
         out.push((c.ai && !ai ? `〔${AITAG[L.id]}〕\n` : "") + body.trim());
         ai = !!c.ai;
       });

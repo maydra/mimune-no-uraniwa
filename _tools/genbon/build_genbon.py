@@ -166,7 +166,7 @@ def patch_viewer(src):
     reps = [
         ('<title>原理講論 三か国語対訳</title>', '<title>原理原本 日韓対訳</title>'),
         ('content="韓国語・日本語・英語を段落ごとに並べて読める対訳です。"',
-         'content="『原理原本』の韓国語の原文と日本語訳（AI 訳）を段落ごとに並べて読める対訳です。"'),
+         'content="『原理原本』の韓国語の原文と日本語訳（非公式訳）を段落ごとに並べて読める対訳です。"'),
         ('content="原理講論 三か国語対訳"', 'content="原理原本 日韓対訳"'),
         ('taiyaku/genri_kouron/index.html"', 'taiyaku/genri_genbon/index.html"'),
         ('localStorage.getItem("dp.theme")', 'localStorage.getItem("wb.theme")'),
@@ -175,22 +175,22 @@ def patch_viewer(src):
         ('    { id: "en", label: "English", tag: "EN" },\n', ''),
         ('store.get("langs", ["ko", "ja", "en"])', 'store.get("langs", ["ko", "ja"])'),
         ('title: "原理講論 三か国語対訳", brand: "原理講論 対訳"', 'title: "原理原本 日韓対訳", brand: "原理原本 対訳",\n'
-         '      noticeSum: "お断り　日本語訳は AI による機械翻訳です", noticeX: "このお断りを消す",\n'
+         '      noticeSum: "お断り　日本語訳は非公式訳です", noticeX: "このお断りを消す",\n'
          '      notice: "『原理原本』の原文は韓国語だけで、公式の日本語訳はないと管理者は認識しています。'
-         'このページの日本語訳は、あくまで AI による機械翻訳です。原文の意味を正しく受け取りたい方は、韓国語を学んで原文で読むことをおすすめします。"'),
+         'このページの日本語訳は、あくまで非公式訳です。原文の意味を正しく受け取りたい方は、韓国語を学んで原文で読むことをおすすめします。"'),
         ('rows: "横3列", cols: "縦3列", layoutT: "縦3列（横並び） / 横3列（縦積み）"',
          'rows: "横2列", cols: "縦2列", layoutT: "縦2列（横並び） / 横2列（縦積み）"'),
         ('title: "원리강론 3개국어 대역", brand: "원리강론 대역"', 'title: "원리원본 한일 대역", brand: "원리원본 대역",\n'
-         '      noticeSum: "안내　일본어 번역은 AI 기계 번역입니다", noticeX: "이 안내 닫기",\n'
+         '      noticeSum: "안내　일본어 번역은 비공식 번역입니다", noticeX: "이 안내 닫기",\n'
          '      notice: "『원리원본』은 원문이 한국어뿐이며, 공식 일본어 번역은 없는 것으로 관리자는 알고 있습니다. '
-         '이 페이지의 일본어 번역은 어디까지나 AI 기계 번역입니다. 원문의 뜻을 바르게 이해하시려면 한국어 원문으로 읽으시기를 권합니다."'),
+         '이 페이지의 일본어 번역은 어디까지나 비공식 번역입니다. 원문의 뜻을 바르게 이해하시려면 한국어 원문으로 읽으시기를 권합니다."'),
         ('rows: "가로 3줄", cols: "세로 3단", layoutT: "세로 3단(나란히) / 가로 3줄(쌓기)"',
          'rows: "가로 2줄", cols: "세로 2단", layoutT: "세로 2단(나란히) / 가로 2줄(쌓기)"'),
         ('title: "Divine Principle — Three-Language Parallel", brand: "Divine Principle"',
          'title: "Wolli Wonbon — Korean-Japanese Parallel", brand: "Wolli Wonbon",\n'
-         '      noticeSum: "Note: the Japanese is an AI machine translation", noticeX: "Dismiss this note",\n'
+         '      noticeSum: "Note: the Japanese is an unofficial translation", noticeX: "Dismiss this note",\n'
          '      notice: "The Wolli Wonbon exists only in the Korean original; as far as the site administrator knows, there is no official Japanese translation. '
-         'The Japanese on this page is only a machine translation by AI. To understand what the original means, we recommend learning Korean and reading it in Korean."'),
+         'The Japanese on this page is only an unofficial translation. To understand what the original means, we recommend learning Korean and reading it in Korean."'),
         # 機械翻訳のお断り。節の題の上に毎回出す（2026-10-26、ユーザー「ポップアップとまではいかないけど明確に読まれるように」）。
         # 右上の×で消せて、消したことはその端末で覚える（同、「お断りの左上か右上に×で消えるやつほしい」）
         ('<div class="sechead">\n  <h1 id="secTitle">',
@@ -219,16 +219,16 @@ def patch_viewer(src):
     foot = {
         "ja": ("`原文: Daum カフェ「천일국 경전방」の<a href=\"" + BOARD + "\" target=\"_blank\" rel=\"noopener\">原理原本の掲示板</a>（1〜447ページ）と"
                "<a href=\"" + VOL_BOARDS + "\" target=\"_blank\" rel=\"noopener\">巻ごとの掲示板</a>（448ページから）"
-               "（原稿の写し。〔数字〕は原稿のページ）。日本語訳: AI による訳です。韓国語の原文から訳し、447ページまでは掲示板にある 김현주 さんの訳を参考にしました。"
-               "公式の訳ではありません。原稿のページの切れ目で途中になった文は、つないで1つの段落にしています。`"),
+               "（原稿の写し。〔数字〕は原稿のページ）。日本語訳: 非公式訳です。韓国語の原文から訳し、447ページまでは掲示板にある 김현주 さんの訳を参考にしました。"
+               "原稿のページの切れ目で途中になった文は、つないで1つの段落にしています。`"),
         "ko": ("`원문: Daum 카페 「천일국 경전방」의 <a href=\"" + BOARD + "\" target=\"_blank\" rel=\"noopener\">원리원본 게시판</a>(1〜447쪽)과 "
                "<a href=\"" + VOL_BOARDS + "\" target=\"_blank\" rel=\"noopener\">권별 게시판</a>(448쪽부터) "
-               "(원고 필사. 〔숫자〕는 원고의 쪽). 일본어 번역: AI 번역입니다. 한국어 원문에서 옮기고, 447쪽까지는 게시판의 김현주 님 번역을 참고했습니다. "
-               "공식 번역이 아닙니다.`"),
+               "(원고 필사. 〔숫자〕는 원고의 쪽). 일본어 번역: 비공식 번역입니다. 한국어 원문에서 옮기고, 447쪽까지는 게시판의 김현주 님 번역을 참고했습니다. "
+               "`"),
         "en": ("`Korean text: the Daum cafe 천일국 경전방 — <a href=\"" + BOARD + "\" target=\"_blank\" rel=\"noopener\">the Wolli Wonbon board</a> (pp. 1–447) and "
                "<a href=\"" + VOL_BOARDS + "\" target=\"_blank\" rel=\"noopener\">the per-volume boards</a> (from p. 448)"
-               " (a transcription of the manuscript; 〔n〕 marks a manuscript page). Japanese: an AI translation from the Korean, "
-               "made up to p. 447 with reference to the Japanese translation by 김현주 on the first board. Not an official translation.`"),
+               " (a transcription of the manuscript; 〔n〕 marks a manuscript page). Japanese: an unofficial translation from the Korean, "
+               "made up to p. 447 with reference to the Japanese translation by 김현주 on the first board.`"),
     }
     for lang, text in foot.items():
         m = re.search(r"(\n    " + lang + r": \{.*?\n      foot: \(links\) => )`.*?`(?:\n        \+ `.*?`)?,", s, re.S)
@@ -285,9 +285,9 @@ def main():
     (OUT / "index.html").write_text(page, encoding="utf-8", newline="\n")
     # 画面の言葉が韓国語・英語のときに配るリンクの入口（LINE などのプレビューは JS を動かさず head だけ読む）
     for lang, title, desc, loc in (
-            ("ko", "원리원본 한일 대역", "『원리원본』의 한국어 원문과 일본어 번역(AI 번역)을 문단별로 나란히 읽는 대역입니다.", "ko_KR"),
+            ("ko", "원리원본 한일 대역", "『원리원본』의 한국어 원문과 일본어 번역(비공식 번역)을 문단별로 나란히 읽는 대역입니다.", "ko_KR"),
             ("en", "Wolli Wonbon — Korean-Japanese Parallel",
-             "The Korean text of the Wolli Wonbon side by side with a Japanese AI translation, paragraph by paragraph.", "en_US")):
+             "The Korean text of the Wolli Wonbon side by side with an unofficial Japanese translation, paragraph by paragraph.", "en_US")):
         (OUT / f"{lang}.html").write_text(ENTRY.format(lang=lang, title=title, desc=desc, loc=loc, site=SITE),
                                           encoding="utf-8", newline="\n")
     print("節", len(secs), "段落", len(units), "→", OUT.relative_to(ROOT))

@@ -263,7 +263,7 @@ try{var c=JSON.parse(localStorage.getItem("hoondok.theme"));if(c!=="light"&&c!==
         <button id="small">A−</button>
         <button id="big">A＋</button>
         <button id="theme">◐</button>
-        <button id="ai">AI訳</button>
+        <button id="ai">非公式訳</button>
       </div>
       <div class="grp uigrp">
         <select id="ui">
@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rows: "横3列", cols: "縦3列", layoutT: "縦3列（横並び） / 横3列（縦積み）",
       brk: "区切り", brkT: "キリの良いところ（小見出しと、み言の出典の切れ目）に太線を引く",
       smallT: "文字を小さく", bigT: "文字を大きく", themeT: "配色", theme: { system: "端末の設定に合わせる", light: "明るい", dark: "暗い" },
-      ai: "AI訳", aiT: "訳の無い所へ入れた参考訳を出し入れする",
+      ai: "非公式訳", aiT: "訳の無い所へ入れた非公式訳を出し入れする",
       uiT: "画面の言語",
       hint: "段落をクリックで印 ／ ↑↓ で読み進める ／ ←→ で節を移動",
       hintTouch: "段落をタップで印 ／ ◀ ▶ で節を移動",
@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
       wPdf: (l) => `${l} はPDF添付のみで本文がありません`,
       wMismatch: (l, f) => `${l}の記事は別の内容が載っているようです（語の一致 ${f}）。対訳として当てにしないでください`,
       wShort: (l) => `${l}は投稿されていない部分があります。抜けている所は「—」と出ます`,
-      wAisec: (l) => `${l}版はこの節が投稿されていません。${l}の欄は全文が韓国語からの AI 参考訳です（公式訳ではありません。「AI訳」ボタンで消せます）`,
+      wAisec: (l) => `${l}版はこの節が投稿されていません。${l}の欄は全文が韓国語からの非公式訳です（「非公式訳」ボタンで消せます）`,
       wMoved: "⇄印の英語は、対訳のため翻訳版の掲載順から移動してあります",
       spanTag: (n) => `・ ${n}段落ぶん`,
       // ⚠ の一式は英語で出す（briefBox）。ここに w* の文字列は置かない
@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rows: "가로 3줄", cols: "세로 3단", layoutT: "세로 3단(나란히) / 가로 3줄(쌓기)",
       brk: "구분선", brkT: "끊기 좋은 곳(소제목과 말씀 출처가 바뀌는 곳)에 굵은 선을 긋습니다",
       smallT: "글자 작게", bigT: "글자 크게", themeT: "배색", theme: { system: "기기 설정에 따름", light: "밝게", dark: "어둡게" },
-      ai: "AI 번역", aiT: "번역이 없는 곳에 넣은 참고 번역을 보이거나 숨깁니다",
+      ai: "비공식 번역", aiT: "번역이 없는 곳에 넣은 비공식 번역을 보이거나 숨깁니다",
       uiT: "화면 언어",
       hint: "문단을 클릭하면 표시 ／ ↑↓ 로 읽어 나가기 ／ ←→ 로 절 이동",
       hintTouch: "문단을 누르면 표시 ／ ◀ ▶ 로 절 이동",
@@ -382,7 +382,7 @@ document.addEventListener("DOMContentLoaded", () => {
       wPdf: (l) => `${l}는 PDF 첨부만 있고 본문이 없습니다`,
       wMismatch: (l, f) => `${l} 글에는 다른 내용이 실려 있는 것 같습니다 (낱말 일치 ${f}). 대역으로 믿지 마십시오`,
       wShort: (l) => `${l}는 올라오지 않은 부분이 있습니다. 빠진 곳은 「—」로 나옵니다`,
-      wAisec: (l) => `${l}판에는 이 절이 올라와 있지 않습니다. ${l} 칸은 전문이 한국어에서 옮긴 AI 참고 번역입니다 (공식 번역이 아닙니다. 「AI 번역」 단추로 숨길 수 있습니다)`,
+      wAisec: (l) => `${l}판에는 이 절이 올라와 있지 않습니다. ${l} 칸은 전문이 한국어에서 옮긴 비공식 번역입니다 (「비공식 번역」 단추로 숨길 수 있습니다)`,
       wMoved: "⇄ 표시가 붙은 영어는 대역을 맞추기 위해 번역판의 실린 순서에서 옮긴 것입니다",
       spanTag: (n) => `・ ${n}문단 분량`,
       // ⚠ の一式は英語で出す（briefBox）。ここに w* の文字列は置かない
@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rows: "3 rows", cols: "3 columns", layoutT: "3 columns (side by side) / 3 rows (stacked)",
       brk: "Breaks", brkT: "Draw a heavy line at natural breaks (subheadings and changes of source)",
       smallT: "Smaller text", bigT: "Larger text", themeT: "Color scheme", theme: { system: "Follow the device setting", light: "Light", dark: "Dark" },
-      ai: "AI", aiT: "Show or hide the AI reference translations filled into missing paragraphs",
+      ai: "Unofficial", aiT: "Show or hide the unofficial translations filled into missing paragraphs",
       uiT: "Interface language",
       hint: "Click a paragraph to mark it / ↑↓ to read on / ←→ to change section",
       hintTouch: "Tap a paragraph to mark it / ◀ ▶ to change section",
@@ -426,7 +426,7 @@ document.addEventListener("DOMContentLoaded", () => {
       wPdf: (l) => `The ${l} post has only a PDF attachment, with no body text`,
       wMismatch: (l, f) => `The ${l} post seems to carry different content (word match ${f}). Do not rely on it as a parallel text`,
       wShort: (l) => `Part of the ${l} text was never posted. Missing paragraphs show as "—"`,
-      wAisec: (l) => `This section was never posted in ${l}. The whole ${l} column is an AI reference translation from the Korean (not the official text; hide it with the "AI" button)`,
+      wAisec: (l) => `This section was never posted in ${l}. The whole ${l} column is an unofficial translation from the Korean (hide it with the "Unofficial" button)`,
       wMoved: "English cells marked ⇄ were moved out of the order of the translated post so that they line up",
       spanTag: (n) => `· ${n} paragraphs`,
       wTag: "⚠ shorter than the original",
@@ -446,9 +446,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   // 参考訳の札だけは**その欄の言語**で出す。英語の欄を読んでいる人が読めなければ意味がない
   const AITAG = {
-    ko: "AI 참고 번역 (한국어에서) · 공식 번역이 아닙니다",
-    ja: "AI訳（韓国語から）・公式訳ではありません",
-    en: "AI translation from Korean — not the official text",
+    ko: "비공식 번역 (한국어에서)",
+    ja: "非公式訳（韓国語から）",
+    en: "Unofficial translation from Korean",
   };
 
   const BOOK = window.HOONDOK || { sections: [] };

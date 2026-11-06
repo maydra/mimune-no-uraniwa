@@ -26,7 +26,7 @@
     var SKIP = /(?:^|\/)(index|mokuji|random|gacha|search-all|404|offline|test_output|google[0-9a-f]+)(?:\.html)?$/i;
     // 本文ではない所（ここの文字は数に入れない）
     // .dpc-fig・.dpc-note は原理講論の図（dp/charts.js）。出し入れで字数が変わると、しおりの位置がずれる
-    var NOT_BODY = 'script,style,nav,rt,rp,.page-nav,.typo-box,#reader-ui,#reader-drawer,#reader-gacha,#stacked-header-container,.toc,.hits,.dpc-fig,.dpc-note';
+    var NOT_BODY = 'script,style,nav,rt,rp,.page-nav,.typo-box,#reader-ui,#reader-drawer,#reader-gacha,#reader-font,#kundoku,.seikon-history,#stacked-header-container,.toc,.hits,.dpc-fig,.dpc-note';
     var TOP = 96;              // 「画面の上」とみなす高さ
     var MIN_CHARS = 2500;      // これより短いページには出さない
     var STORE = 'reader.pos.';
@@ -726,6 +726,214 @@
             box.appendChild(b);
         });
         return box;
+    }
+
+    // ---- 短いページの文字の大きさ（2026-11-06） ----------------------------
+    // 短いページには引き出しが出ないので、指定したページだけ左下に小さく置く。
+    // 大きさはそのページだけで覚える（reader.font:<名前>）。ホームや他の本には移らない。
+    // 「標準」も 100% と書いて覚える（消すとサイト全体の reader.font に戻ってしまう）。
+    // 描く前に当てるのは、そのページの theme-boot（同じ鍵を先に見るよう書き換えてある）
+    var OWN_FONT_PAGE = /\/(family_pledge|20120324_seikon_mondou)\.html$/;
+    function pageFontControl() {
+        var m = location.pathname.match(OWN_FONT_PAGE);
+        if (!m) return;
+        var key = FONT + ':' + m[1];
+        var saved = '';
+        try { saved = localStorage.getItem(key) || localStorage.getItem(FONT) || ''; } catch (e) { }
+        if (saved === '100%') saved = '';
+        var s = document.createElement('style');
+        // 字は px で固定（rem だとボタン自体も一緒に大きくなる）
+        s.textContent = '#reader-font{position:fixed;left:12px;bottom:12px;z-index:9998;display:flex;align-items:center;gap:3px;'
+            + 'padding:4px 6px;border-radius:10px;font-size:13px;line-height:1;background:rgba(127,127,127,.18);'
+            + 'backdrop-filter:blur(8px);border:1px solid rgba(127,127,127,.3)}'
+            + '#reader-font span{opacity:.7;margin:0 3px}'
+            + '#reader-font button{font:inherit;color:inherit;padding:6px 7px;border:1px solid transparent;border-radius:7px;background:none;cursor:pointer}'
+            + '#reader-font button[aria-pressed="true"]{background:rgba(99,102,241,.22);border-color:rgba(99,102,241,.55);font-weight:700}'
+            + '#reader-font button.kd{margin-left:3px;border-color:rgba(99,102,241,.6);font-weight:700}'
+            + '@media print{#reader-font{display:none}}';
+        document.head.appendChild(s);
+        var box = document.createElement('div');
+        box.id = 'reader-font';
+        box.setAttribute('role', 'group');
+        box.setAttribute('aria-label', '文字の大きさ');
+        var label = document.createElement('span');
+        label.textContent = '文字';
+        box.appendChild(label);
+        FONT_SIZES.forEach(function (it) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.textContent = it[0];
+            b.setAttribute('aria-pressed', saved === it[1] ? 'true' : 'false');
+            b.addEventListener('click', function () {
+                try { localStorage.setItem(key, it[1] || '100%'); } catch (e) { }
+                document.documentElement.style.fontSize = it[1];
+                Array.prototype.forEach.call(box.querySelectorAll('button'), function (o) {
+                    o.setAttribute('aria-pressed', o === b ? 'true' : 'false');
+                });
+            });
+            box.appendChild(b);
+        });
+        var kd = KUNDOKU[m[1]];
+        if (kd) {
+            var go = document.createElement('button');
+            go.type = 'button';
+            go.className = 'kd';
+            go.textContent = '訓読会モード';
+            go.addEventListener('click', function () { kundokuMode(kd); });
+            box.appendChild(go);
+        }
+        document.body.appendChild(box);
+    }
+
+    // ---- 訓読会モード（2026-11-06） ------------------------------------------
+    // 画面共有で読むための全画面表示。1項目を1画面に、入るかぎり大きな字で出す。
+    // 字はページの本文から写すので、本文を直せばここも変わる。
+    var KD_NUMS = [['일', 'イル'], ['이', 'イー'], ['삼', 'サム'], ['사', 'サー'], ['오', 'オー'], ['육', 'ユク'], ['칠', 'チル'], ['팔', 'パル']];
+    var KUNDOKU = {
+        family_pledge: { slides: '.container .section', part: '.line', alt: '.jpitem', mainLang: '韓国語', altLang: '日本語', ruby: true, nums: KD_NUMS },
+        '20120324_seikon_mondou': { slides: '.container > ol > li', part: '.kline', alt: '.container > ol > li > .jline', mainLang: '韓国語', altLang: '日本語', ruby: true, nums: KD_NUMS }
+    };
+    function kundokuMode(cfg) {
+        function pick(sel, partSel) {
+            return Array.prototype.map.call(document.querySelectorAll(sel), function (el) {
+                var c = el.cloneNode(true);
+                var nums = c.querySelectorAll('h2,strong');
+                Array.prototype.forEach.call(nums, function (n) { n.remove(); });
+                if (!partSel) return c.innerHTML.trim();
+                return Array.prototype.map.call(c.querySelectorAll(partSel), function (p) { return p.innerHTML.trim(); }).join(' ');
+            });
+        }
+        var main = pick(cfg.slides, cfg.part);
+        var alt = cfg.alt ? pick(cfg.alt) : null;
+        if (!main.length) return;
+        var i = 0, useAlt = false, idleT = 0, startX = null, swiped = false;
+        var dark = document.body.classList.contains('dark-mode');
+        var root = document.createElement('div');
+        root.id = 'kundoku';
+        root.className = dark ? 'dark' : '';
+        root.setAttribute('role', 'dialog');
+        root.setAttribute('aria-label', '訓読会モード');
+        root.tabIndex = -1;
+        root.innerHTML = '<div class="count"></div><div class="stage"><div class="text"></div></div>'
+            + '<div class="bar"><button type="button" data-a="prev">◀ 前へ</button><button type="button" data-a="next">次へ ▶</button>'
+            + (alt ? '<button type="button" data-a="lang"></button>' : '')
+            + '<button type="button" data-a="close">✕ 閉じる</button></div>';
+        var s = document.createElement('style');
+        s.textContent = '#kundoku{position:fixed;inset:0;z-index:10010;background:#fff;color:#111;overflow:hidden;font-family:inherit;outline:none}'
+            + '#kundoku.dark{background:#0f0f12;color:#f4f4f4}'
+            + '#kundoku.idle{cursor:none}'
+            + '#kundoku .stage{position:absolute;left:2.5vw;right:2.5vw;top:5.5vh;bottom:2.5vh;display:flex;align-items:center;justify-content:center;user-select:none}'
+            + '#kundoku .text{width:100%;line-height:1.55;font-weight:500;word-break:normal;overflow-wrap:anywhere;text-align:left}'
+            + '#kundoku .text.ruby{line-height:2.2;word-break:keep-all;overflow-wrap:normal}'
+            + '#kundoku rt{font-size:.46em;color:inherit;font-weight:400;opacity:1;padding-bottom:.35em}'
+            + '#kundoku .count{position:absolute;right:2.5vw;top:1.2vh;font-size:max(14px,2.6vh);line-height:1;opacity:.55}'
+            + '#kundoku .bar{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:6px;padding:6px;border-radius:12px;background:rgba(40,40,48,.88);transition:opacity .25s;white-space:nowrap}'
+            + '#kundoku.idle .bar{opacity:0;pointer-events:none}'
+            + '#kundoku .bar button{font:inherit;font-size:14px;line-height:1;color:#fff !important;background:none;border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:9px 11px;cursor:pointer}';
+        var text = root.querySelector('.text');
+        var stage = root.querySelector('.stage');
+        var count = root.querySelector('.count');
+        var langBtn = root.querySelector('[data-a=lang]');
+        // 枠に収まる一番大きな字を二分探索で探す
+        function fit() {
+            var W = stage.clientWidth, H = stage.clientHeight;
+            var lo = 10, hi = Math.max(W, H);
+            for (var n = 0; n < 16; n++) {
+                var mid = (lo + hi) / 2;
+                text.style.fontSize = mid + 'px';
+                if (text.offsetHeight <= H && text.scrollWidth <= W) lo = mid; else hi = mid;
+            }
+            text.style.fontSize = Math.floor(lo) + 'px';
+        }
+        function draw() {
+            var isRuby = !!cfg.ruby && !useAlt;
+            text.className = 'text' + (isRuby ? ' ruby' : '');
+            text.setAttribute('lang', isRuby ? 'ko' : 'ja');
+            var num = isRuby && cfg.nums ? '<ruby>' + cfg.nums[i][0] + '<rt>' + cfg.nums[i][1] + '</rt></ruby>' : (i + 1);
+            text.innerHTML = num + '. ' + (useAlt ? alt : main)[i];
+            count.textContent = (i + 1) + ' / ' + main.length;
+            if (langBtn) langBtn.textContent = useAlt ? cfg.mainLang + 'にする' : cfg.altLang + 'にする';
+            fit();
+        }
+        function move(d) {
+            var n = Math.max(0, Math.min(main.length - 1, i + d));
+            if (n !== i) { i = n; draw(); }
+        }
+        function wake() {
+            root.classList.remove('idle');
+            clearTimeout(idleT);
+            idleT = setTimeout(function () { root.classList.add('idle'); }, 2500);
+        }
+        function close() {
+            document.removeEventListener('keydown', onKey, true);
+            document.removeEventListener('fullscreenchange', onFs);
+            window.removeEventListener('resize', fit);
+            clearTimeout(idleT);
+            document.documentElement.style.overflow = prevOverflow;
+            if (document.fullscreenElement === root && document.exitFullscreen) {
+                try { document.exitFullscreen(); } catch (e) { }
+            }
+            root.remove();
+            s.remove();
+        }
+        function onFs() {
+            if (wasFull && !document.fullscreenElement) { close(); return; }
+            if (document.fullscreenElement === root) wasFull = true;
+            fit();
+        }
+        function onKey(e) {
+            if (e.ctrlKey || e.metaKey || e.altKey) return;
+            var k = e.key;
+            if (k === 'ArrowRight' || k === 'ArrowDown' || k === 'PageDown' || k === ' ' || k === 'Enter') move(1);
+            else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp' || k === 'Backspace') move(-1);
+            else if (k === 'Home') move(-main.length);
+            else if (k === 'End') move(main.length);
+            else if (k === 'Escape') close();
+            else if ((k === 'j' || k === 'J') && alt) { useAlt = !useAlt; draw(); }
+            else return;
+            e.preventDefault();
+            e.stopPropagation();
+            wake();
+        }
+        root.querySelector('.bar').addEventListener('click', function (e) {
+            e.stopPropagation();
+            var a = e.target.getAttribute && e.target.getAttribute('data-a');
+            if (a === 'prev') move(-1);
+            else if (a === 'next') move(1);
+            else if (a === 'lang') { useAlt = !useAlt; draw(); }
+            else if (a === 'close') close();
+            wake();
+        });
+        // 画面の左3割を押すと前へ、それ以外は次へ。スマホは横に払っても送れる
+        root.addEventListener('click', function (e) {
+            if (swiped) { swiped = false; return; }
+            move(e.clientX < innerWidth * 0.3 ? -1 : 1);
+            wake();
+        });
+        root.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+        root.addEventListener('touchend', function (e) {
+            if (startX === null) return;
+            var dx = e.changedTouches[0].clientX - startX;
+            startX = null;
+            if (Math.abs(dx) > 50) { swiped = true; move(dx < 0 ? 1 : -1); wake(); }
+        }, { passive: true });
+        root.addEventListener('mousemove', wake);
+        var prevOverflow = document.documentElement.style.overflow;
+        var wasFull = false;
+        document.documentElement.style.overflow = 'hidden';
+        document.head.appendChild(s);
+        document.body.appendChild(root);
+        document.addEventListener('keydown', onKey, true);
+        document.addEventListener('fullscreenchange', onFs);
+        window.addEventListener('resize', fit);
+        draw();
+        wake();
+        root.focus();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+        if (root.requestFullscreen) {
+            var pr = root.requestFullscreen();
+            if (pr && pr.catch) pr.catch(function () { });
+        }
     }
 
     // ---- 蛍光ペンの色ごとの ON/OFF（2026-10-28） ---------------------------
@@ -1478,7 +1686,11 @@
         collect();
         var lucky = /[?&]gacha=/.test(location.search);
         // 短いページでも、ガチャで来たときは一節に色を付ける
-        if (total < MIN_CHARS || GACHA_ONLY) { if (lucky) { css(); gacha(); } return; }
+        if (total < MIN_CHARS || GACHA_ONLY) {
+            if (lucky) { css(); gacha(); }
+            if (!GACHA_ONLY) pageFontControl();
+            return;
+        }
         collectHeads();
         // dp の古い現在位置バーは、こちらと二重になるので引っ込める
         var old = document.getElementById('stacked-header-container');

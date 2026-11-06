@@ -256,8 +256,8 @@ def rows_of(sec, als, trans):
 
 ONLY_TAG = {'ja': '点線の文は日本語版のみ（原文に無い）', 'en': 'Dotted: English edition only (not in the Korean)'}
 ONLY_BADGE = {'ja': '日本語版のみ', 'en': 'English edition only'}   # 点線の文の頭に付ける札
-ONLY_KO = {'ja': '※ 일본어판에만 있는 문장 (일본어에서 AI 번역): ', 'en': '※ 영어판에만 있는 문장 (영어에서 AI 번역): '}
-AISEG_TAG = {'ja': '色付きの所は韓国語からの AI訳', 'en': 'Shaded: AI translation from Korean'}
+ONLY_KO = {'ja': '※ 일본어판에만 있는 문장 (일본어에서 비공식 번역): ', 'en': '※ 영어판에만 있는 문장 (영어에서 비공식 번역): '}
+AISEG_TAG = {'ja': '色付きの所は韓国語からの非公式訳', 'en': 'Shaded: unofficial translation from Korean'}
 
 
 def cell_of(sec, L, run, r, span, trans, seen_max):
@@ -349,36 +349,36 @@ def patch_viewer(src, with_en=False):
         ('foot: (links) => `出典: Daum カフェ「천일국 경전방」の各記事（${links}）。`\n'
          '        + `段落の対応づけは文字数から機械的に推定したものです。ずれていたら元記事で確かめてください。`,',
          'foot: (links) => `韓国語・英語: み言選集の資料「평화를 사랑하는 세계인으로 (한.日.Eng.)」。日本語: 日本語版（み旨の裏庭の${links}）。`\n'
-         '        + `日本語版・英語版で省かれている所は、韓国語から訳した AI 参考訳で補っています（公式訳ではありません。「AI訳」ボタンで消せます）。`\n'
+         '        + `日本語版・英語版で省かれている所は、韓国語から訳した非公式訳で補っています（「非公式訳」ボタンで消せます）。`\n'
          '        + `訳書が中身を書き換えている所と、訳書にしか無い文には「※」の注を付けました。`,'),
         ('foot: (links) => `출처: 다음 카페 「천일국 경전방」의 각 글 (${links}). `\n'
          '        + `문단 짝짓기는 글자 수를 바탕으로 기계가 추정한 것입니다. 어긋나 보이면 원글에서 확인해 주십시오.`,',
          'foot: (links) => `한국어·영어: 말씀선집 자료 「평화를 사랑하는 세계인으로 (한.日.Eng.)」. 일본어: 일본어판 (${links}). `\n'
-         '        + `일본어판·영어판에서 생략된 부분은 한국어에서 옮긴 AI 참고 번역으로 채웠습니다 (공식 번역이 아닙니다. 「AI 번역」 버튼으로 숨길 수 있습니다). `\n'
+         '        + `일본어판·영어판에서 생략된 부분은 한국어에서 옮긴 비공식 번역으로 채웠습니다 (「비공식 번역」 버튼으로 숨길 수 있습니다). `\n'
          '        + `번역판이 내용을 바꾼 곳과 번역판에만 있는 문장에는 「※」 주를 달았습니다.`,'),
         ('foot: (links) => `Source: the posts in the Daum cafe "천일국 경전방" (${links}). `\n'
          '        + `The paragraph pairing is estimated mechanically from text length; if it looks off, check the original post.`,',
          'foot: (links) => `Korean and English: the source text "평화를 사랑하는 세계인으로 (한.日.Eng.)". Japanese: the Japanese edition (${links}). `\n'
-         '        + `Passages left out of the Japanese or English edition are filled with AI reference translations from the Korean (not the official text; hide them with the AI button). `\n'
+         '        + `Passages left out of the Japanese or English edition are filled with unofficial translations from the Korean (hide them with the Unofficial button). `\n'
          '        + `Notes marked ※ point out where a translation changes the content, and sentences found only in a translation.`,'),
         ('wMoved: "⇄印の英語は、対訳のため翻訳版の掲載順から移動してあります",',
          'wMoved: "⇄印の訳文は、韓国語の順に合わせるため、訳書（日本語版・英語版）の順番から移動してあります",'),
         ('mvTitle: "対訳のため、翻訳版に掲載されていた順番から移動してあります",',
          'mvTitle: "韓国語の順に合わせるため、訳書の順番から移動してあります",\n'
          '      joTag: "日本語版のみの文（点線）", joT: "点線の文は、その欄の訳書（日本語版・英語版）にだけあり、韓国語の原文にはありません",\n'
-         '      aiSegTag: "色付きの所は AI訳", aiSegT: "色付きの所は訳書で省かれていた語句を、韓国語から AI が訳したものです（公式訳ではありません。「AI訳」ボタンで消せます）",'),
+         '      aiSegTag: "色付きの所は非公式訳", aiSegT: "色付きの所は、訳書で省かれていた語句を韓国語から訳した非公式訳です（「非公式訳」ボタンで消せます）",'),
         ('wMoved: "⇄ 표시가 붙은 영어는 대역을 맞추기 위해 번역판의 실린 순서에서 옮긴 것입니다",',
          'wMoved: "⇄ 표시가 붙은 번역문은 한국어 순서에 맞추기 위해 번역판(일본어판·영어판)의 순서에서 옮긴 것입니다",'),
         ('mvTitle: "대역을 맞추기 위해, 번역판에 실려 있던 순서에서 옮겼습니다",',
          'mvTitle: "한국어 순서에 맞추기 위해 번역판의 순서에서 옮겼습니다",\n'
          '      joTag: "일본어판에만 있는 문장 (점선)", joT: "점선 문장은 그 칸의 번역판(일본어판·영어판)에만 있고 한국어 원문에는 없습니다",\n'
-         '      aiSegTag: "색 바탕은 AI 번역", aiSegT: "색 바탕 부분은 번역판에서 생략된 어구를 한국어에서 AI가 옮긴 것입니다 (공식 번역이 아닙니다. 「AI 번역」 버튼으로 숨길 수 있습니다)",'),
+         '      aiSegTag: "색 바탕은 비공식 번역", aiSegT: "색 바탕 부분은 번역판에서 생략된 어구를 한국어에서 옮긴 비공식 번역입니다 (「비공식 번역」 버튼으로 숨길 수 있습니다)",'),
         ('wMoved: "English cells marked ⇄ were moved out of the order of the translated post so that they line up",',
          'wMoved: "Translation cells marked ⇄ were moved out of the order of the Japanese or English edition to follow the Korean",'),
         ('mvTitle: "Moved out of the order in which it appeared in the translated post, so that it lines up",',
          'mvTitle: "Moved out of the order of the translated edition to follow the Korean",\n'
          '      joTag: "Japanese edition only (dotted)", joT: "Dotted sentences appear only in the translated edition of that column (Japanese or English), not in the Korean original",\n'
-         '      aiSegTag: "Shaded: AI translation", aiSegT: "Shaded words were left out of the translated edition and are an AI translation from the Korean (not the official text; hide them with the AI button)",'),
+         '      aiSegTag: "Shaded: unofficial translation", aiSegT: "Shaded words were left out of the translated edition and are an unofficial translation from the Korean (hide them with the Unofficial button)",'),
         ('if ((s.cells.en || []).some((c) => c.mv)) warn.push(t.wMoved);',
          'if ([...(s.cells.ja || []), ...(s.cells.en || [])].some((c) => c.mv)) warn.push(t.wMoved);\n'
          '    if (s.warn) warn.push(s.warn[ui] || s.warn.ja);'),
@@ -387,12 +387,12 @@ def patch_viewer(src, with_en=False):
         ('spanTag: (n) => `・ ${n}문단 분량`,', 'spanTag: () => "",'),
         ('spanTag: (n) => `· ${n} paragraphs`,', 'spanTag: () => "",'),
         # 序文の英語は元データに無い（「投稿されていない」は Daum の掲示板から作った祝福家庭と理想天国の言い方）
-        ('wAisec: (l) => `${l}版はこの節が投稿されていません。${l}の欄は全文が韓国語からの AI 参考訳です（公式訳ではありません。「AI訳」ボタンで消せます）`,',
-         'wAisec: (l) => `${l}版のこの節は元データにありません。${l}の欄は全文が韓国語からの AI 参考訳です（公式訳ではありません。「AI訳」ボタンで消せます）`,'),
-        ('wAisec: (l) => `${l}판에는 이 절이 올라와 있지 않습니다. ${l} 칸은 전문이 한국어에서 옮긴 AI 참고 번역입니다 (공식 번역이 아닙니다. 「AI 번역」 단추로 숨길 수 있습니다)`,',
-         'wAisec: (l) => `${l}판의 이 절은 원본 데이터에 없습니다. ${l} 칸은 전문이 한국어에서 옮긴 AI 참고 번역입니다 (공식 번역이 아닙니다. 「AI 번역」 단추로 숨길 수 있습니다)`,'),
-        ('wAisec: (l) => `This section was never posted in ${l}. The whole ${l} column is an AI reference translation from the Korean (not the official text; hide it with the "AI" button)`,',
-         'wAisec: (l) => `This section of the ${l} edition is missing from the source data. The whole ${l} column is an AI reference translation from the Korean (not the official text; hide it with the "AI" button)`,'),
+        ('wAisec: (l) => `${l}版はこの節が投稿されていません。${l}の欄は全文が韓国語からの非公式訳です（「非公式訳」ボタンで消せます）`,',
+         'wAisec: (l) => `${l}版のこの節は元データにありません。${l}の欄は全文が韓国語からの非公式訳です（「非公式訳」ボタンで消せます）`,'),
+        ('wAisec: (l) => `${l}판에는 이 절이 올라와 있지 않습니다. ${l} 칸은 전문이 한국어에서 옮긴 비공식 번역입니다 (「비공식 번역」 단추로 숨길 수 있습니다)`,',
+         'wAisec: (l) => `${l}판의 이 절은 원본 데이터에 없습니다. ${l} 칸은 전문이 한국어에서 옮긴 비공식 번역입니다 (「비공식 번역」 단추로 숨길 수 있습니다)`,'),
+        ('wAisec: (l) => `This section was never posted in ${l}. The whole ${l} column is an unofficial translation from the Korean (hide it with the "Unofficial" button)`,',
+         'wAisec: (l) => `This section of the ${l} edition is missing from the source data. The whole ${l} column is an unofficial translation from the Korean (hide it with the "Unofficial" button)`,'),
         # 日本語版にしか無い文（seg の jo）に点線と札、セルの下に ※ の注（notes）
         ('        + (c.mv ? `<span class="mvtag" title="${esc(t.mvTitle)}">${t.mvTag}</span>` : "")\n',
          '        + (c.mv ? `<span class="mvtag" title="${esc(t.mvTitle)}">${t.mvTag}</span>` : "")\n'
@@ -405,7 +405,7 @@ def patch_viewer(src, with_en=False):
         # コピーする本文: セルの中の AI 訳は、隠しているときは入れず、出しているときは〔AI: …〕で囲む
         ('        out.push((c.ai && !ai ? `〔${AITAG[L.id]}〕\\n` : "") + c.t.trim());',
          '        const body = c.seg ? c.seg.filter((g) => showAI || !g.ai)\n'
-         '          .map((g) => g.ai ? g.t.replace(/^(\\s*)([\\s\\S]*)$/, "$1〔AI: $2〕") : g.t).join("") : c.t;\n'
+         '          .map((g) => g.ai ? g.t.replace(/^(\\s*)([\\s\\S]*)$/, "$1〔" + ({ ko: "비공식 번역", ja: "非公式訳", en: "Unofficial" })[L.id] + ": $2〕") : g.t).join("") : c.t;\n'
          '        out.push((c.ai && !ai ? `〔${AITAG[L.id]}〕\\n` : "") + body.trim());'),
         ('      + (c.w ? briefBox(c.w) : "");',
          '      + (c.w ? briefBox(c.w) : "")\n'
