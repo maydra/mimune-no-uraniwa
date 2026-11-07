@@ -63,7 +63,7 @@
   "logo": "https://maydra.github.io/mimune-no-uraniwa/favicon.png"
 }
 </script>
-    <link rel="stylesheet" href="theme/home.css?v=202611071200">
+    <link rel="stylesheet" href="theme/home.css?v=202611071300">
     <link rel="stylesheet" href="theme/style.css?v=202610282236">
 </head>
 
@@ -78,7 +78,7 @@
                 <div class="updates-panel" id="updates-panel" hidden>
                     <div class="updates-title">更新情報</div>
                     <ul class="updates-list">
-                        <li><time datetime="2026-11-07">2026.11.07</time>ホームの検索の下に、今日の天暦の日付を出すようにしました</li>
+                        <li><time datetime="2026-11-07">2026.11.07</time>ホームの検索の下に、今日の日付と天暦を出すようにしました</li>
                         <li><time datetime="2026-11-06">2026.11.06</time><a href="family_pledge.html">家庭盟誓</a>と<a href="seikonmondou/20120324_seikon_mondou.html">成婚問答</a>のページに「訓読会モード」を付けました。全画面に1項目ずつ、できるだけ大きな文字で出します（家庭盟誓は韓国語をルビ付きで）。左下には、そのページだけに効く文字の大きさのボタンもあります。成婚問答のページの題を「成婚問答（聖婚問答）」とし、時代ごとの文言の違いをまとめた「成婚問答の歴史」を加えました。成婚問答には、韓国語（ルビ付き）も載せました</li>
                         <li><time datetime="2026-11-01">2026.11.01</time>ホームに昔ながらの訪問者カウンター（「あなたは○人目の訪問者です」）を付けました。2026年1月20日からホームを開いた人の数です</li>
                         <li><time datetime="2026-10-31">2026.10.31</time><a href="taiyaku/heiwakyou/index.html">天一国経典『平和経』の韓日対訳</a>を公開しました。全178講演の韓国語の原文と日本語版を段落ごとに並べています。日本語版で省かれている所（小見出しなど）は韓国語からの非公式訳で補い、日本語版が中身を書き換えている所には「※」の注を付けています。英語は追って加えます</li>
@@ -118,14 +118,17 @@
                 <a href="search-all.html" class="search-btn">🔍 くわしく検索</a>
                 <a href="gacha.html" class="search-btn">🎲 み言をランダムに見る</a>
             </div>
-            <p class="tenreki-today" id="tenreki-today" title="韓国の陰暦で計算した日付です"></p>
+            <p class="tenreki-today" id="tenreki-today" title="天暦は韓国の陰暦で計算した日付です"></p>
             <script>
-                // 今日の天暦。表は _tools/tenreki/build_tenreki.py が作る。
+                // 今日の日付（陽暦）と天暦。天暦の表は _tools/tenreki/build_tenreki.py が作る。
                 // 1年が1項目で、頭の1字が閏月（16進。0 は無し、2033年の閏11月は b）、続きが各月の大小（1 は30日、0 は29日）。
                 // 表の始まりの 2026-02-17 が天暦 2026年1月1日。ページを描く前に書くので、下の一覧は動かない
                 (function () {
                     var T = '0101001010111 0010100100111 50110100100110 0110110010011 0010110101010 31010101101010 0100101101101 b0100101011101 0010010101110 0101001001101 61101001001101 0110100100101 0110101010010 51101101010100 0101101101010 0100101101101 20100101011011 0010010011011 71010010010111 0101001001011 0101100100101 51011010100101 0011011010100 0101011011010'.split(' ');
                     var now = new Date();
+                    var el = document.getElementById('tenreki-today');
+                    var solar = '<span>今日は ' + now.getFullYear() + '年' + (now.getMonth() + 1) + '月' + now.getDate() + '日（' + '日月火水木金土'.charAt(now.getDay()) + '）</span>';
+                    el.innerHTML = solar; // 天暦の表の外でも陽暦は出す
                     var n = Math.round((Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) - Date.UTC(2026, 1, 17)) / 864e5);
                     if (n < 0) return;
                     for (var y = 0; y < T.length; y++) {
@@ -134,8 +137,7 @@
                             var len = T[y].charAt(i) === '1' ? 30 : 29;
                             if (n < len) {
                                 var m = leap && i > leap ? i - 1 : i;
-                                document.getElementById('tenreki-today').textContent =
-                                    '今日は 天一国' + (y + 14) + '年 天暦' + (leap && i === leap + 1 ? '閏' : '') + m + '月' + (n + 1) + '日';
+                                el.innerHTML = solar + ' <span>天一国' + (y + 14) + '年 天暦' + (leap && i === leap + 1 ? '閏' : '') + m + '月' + (n + 1) + '日</span>';
                                 return;
                             }
                             n -= len;

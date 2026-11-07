@@ -97,11 +97,16 @@ body.light-mode .visitor-count .counter span {
     border-color: #111;
 }
 
-/* 検索の下の「今日は 天一国14年 天暦9月28日」 */
+/* 検索の下の「今日は 2026年11月7日（土） 天一国14年 天暦9月28日」。狭い画面では陽暦と天暦の間で折り返す */
 .tenreki-today {
     margin-top: 0.9rem;
     font-size: 0.95rem;
     opacity: 0.8;
+}
+
+.tenreki-today span {
+    display: inline-block;
+    margin: 0 0.3em;
 }
 
 .tenreki-today:empty {
