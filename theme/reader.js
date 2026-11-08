@@ -804,6 +804,11 @@
             });
         }
         var main = pick(cfg.slides, cfg.part);
+        // 番号ではなく見出しで出す枚（家庭盟誓の後の年頭標語。data-kd-label="韓国語|ルビ|日本語"）
+        var labels = Array.prototype.map.call(document.querySelectorAll(cfg.slides), function (el) {
+            var l = el.getAttribute('data-kd-label');
+            return l ? l.split('|') : null;
+        });
         var alt = cfg.alt ? pick(cfg.alt) : null;
         if (!main.length) return;
         var i = 0, useAlt = false, idleT = 0, startX = null, swiped = false;
@@ -849,8 +854,10 @@
             var isRuby = !!cfg.ruby && !useAlt;
             text.className = 'text' + (isRuby ? ' ruby' : '');
             text.setAttribute('lang', isRuby ? 'ko' : 'ja');
-            var num = isRuby && cfg.nums ? '<ruby>' + cfg.nums[i][0] + '<rt>' + cfg.nums[i][1] + '</rt></ruby>' : (i + 1);
-            text.innerHTML = num + '. ' + (useAlt ? alt : main)[i];
+            var lb = labels[i];
+            var num = lb ? (isRuby ? '<ruby>' + lb[0] + '<rt>' + lb[1] + '</rt></ruby>' : lb[2]) + '<br>'
+                : (isRuby && cfg.nums ? '<ruby>' + cfg.nums[i][0] + '<rt>' + cfg.nums[i][1] + '</rt></ruby>' : (i + 1)) + '. ';
+            text.innerHTML = num + (useAlt ? alt : main)[i];
             count.textContent = (i + 1) + ' / ' + main.length;
             if (langBtn) langBtn.textContent = useAlt ? cfg.mainLang + 'にする' : cfg.altLang + 'にする';
             fit();
