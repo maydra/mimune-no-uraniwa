@@ -26,6 +26,19 @@
     var buttons = [];
     var note = null;
 
+    // 見出しへのリンク（11sozo.html#3-2）で開いたときは、図を入れたあとにその見出しへ合わせ直す。
+    // 図のデータは飛んだあとに届き、上に図が入ると本文が下へ押される。Chrome は読んでいた所を保つが、
+    // iPhone の Safari は保たないので、ずっと上の節（（３）四位基台）に置いていかれた（2026-11-14）。
+    // 読む人が自分で動かしたあとは合わせ直さない
+    var moved = false;
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (t) {
+        window.addEventListener(t, function () { moved = true; }, { passive: true, once: true });
+    });
+    function hashTarget() {
+        if (moved || !location.hash || location.hash === '#resume') return null;
+        try { return document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) { return null; }
+    }
+
     // ---- 本文の字 ------------------------------------------------------------
     // 図の目印は「空白を除いた本文の字」で探す。ルビの読み・目次・ボタンなどの字は数えない。
     // _tools/dpcharts/anchors.py の page_text() と同じ決まり
@@ -274,10 +287,13 @@
         return load().then(function (d) {
             if (!on) return;
             useFonts(d.fonts);
-            keepPlace(function () {
+            var show = function () {
                 if (!placed) place(d.charts || []);
                 paint();
-            });
+            };
+            var target = hashTarget();
+            if (target) { show(); target.scrollIntoView(); }
+            else keepPlace(show);
         }).catch(function (e) {
             console.warn('[dpCharts] 図を読めなかった:', e);
             on = false;
