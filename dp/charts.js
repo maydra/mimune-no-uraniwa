@@ -38,6 +38,26 @@
         if (moved || !location.hash || location.hash === '#resume') return null;
         try { return document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) { return null; }
     }
+    // 見出しは上の帯（節の名前）の下に、少し間をあけて出す。iPhone では見出しが帯の裏に隠れ、本文から
+    // 始まって、飛べたのか分からなかった（2026-11-14、ユーザー「もうすこしうえにジャンプしたらいいんじゃない？」）。
+    // Safari は自分の飛び先の位置をあとから付け直すことがあるので、読み込み中に何度か合わせる
+    var HEAD_GAP = 40;
+    function toHash() {
+        var t = hashTarget();
+        if (!t) return false;
+        var y = t.getBoundingClientRect().top + window.scrollY - (TOP + HEAD_GAP);
+        window.scrollTo(0, Math.max(0, Math.round(y)));
+        return true;
+    }
+    if (location.hash) {
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', toHash);
+        else toHash();
+        window.addEventListener('load', function () {
+            toHash();
+            setTimeout(toHash, 300);
+            setTimeout(toHash, 1000);
+        });
+    }
 
     // ---- 本文の字 ------------------------------------------------------------
     // 図の目印は「空白を除いた本文の字」で探す。ルビの読み・目次・ボタンなどの字は数えない。
@@ -291,8 +311,7 @@
                 if (!placed) place(d.charts || []);
                 paint();
             };
-            var target = hashTarget();
-            if (target) { show(); target.scrollIntoView(); }
+            if (hashTarget()) { show(); toHash(); }
             else keepPlace(show);
         }).catch(function (e) {
             console.warn('[dpCharts] 図を読めなかった:', e);
