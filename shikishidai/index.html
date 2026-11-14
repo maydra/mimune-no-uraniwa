@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js)。本体（約180KB）は表示し終えてから読む（ホームの index.html と同じ。2026-10-25） -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXQ0QTBYTR');
+    // 表示し終えてから（load のあと、最初の描画 FCP が画面に出てから）fn を動かす。
+    // 下の韓国語の Web フォントも使う。描画の時刻が取れないブラウザ・裏のタブでは load の1秒あと
+    function afterPaint(fn) {
+      var done = false;
+      var run = function () { if (!done) { done = true; setTimeout(fn, 0); } };
+      var onLoad = function () {
+        try {
+          if (performance.getEntriesByName('first-contentful-paint').length) return run();
+          new PerformanceObserver(function (list) {
+            if (list.getEntriesByName('first-contentful-paint').length) run();
+          }).observe({ type: 'paint', buffered: true });
+        } catch (e) { }
+        setTimeout(run, 1000);
+      };
+      if (document.readyState === 'complete') onLoad();
+      else window.addEventListener('load', onLoad);
+    }
+    afterPaint(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXQ0QTBYTR';
+      document.head.appendChild(s);
+    });
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>家庭礼拝の式次第 | み旨の裏庭</title>
+  <meta name="description" content="司会者・代表報告祈祷・感謝祈祷の名前と日付を入れると、家庭（地域）礼拝の式次第を大画面に映せます。天一国の年と天暦は自動で出ます。" />
+<link rel="canonical" href="https://maydra.github.io/mimune-no-uraniwa/shikishidai/index.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="み旨の裏庭"/>
+<meta property="og:url" content="https://maydra.github.io/mimune-no-uraniwa/shikishidai/index.html"/>
+<meta name="twitter:card" content="summary"/>
+  <meta property="og:title" content="家庭礼拝の式次第 | み旨の裏庭" />
+  <meta property="og:description" content="司会者・代表報告祈祷・感謝祈祷の名前と日付を入れると、家庭（地域）礼拝の式次第を大画面に映せます。天一国の年と天暦は自動で出ます。" />
+  <meta property="og:image" content="https://maydra.github.io/mimune-no-uraniwa/og-image.jpg" />
+  <link rel="icon" href="/mimune-no-uraniwa/favicon.png?v=202610282236" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* 礼拝堂の夜: 深い藍の幕に、象牙色の明朝。進行中の項目だけ金で灯す。編集は左の帳面、右は大画面と同じ 16:9 の舞台 */
+:root {
+  --night: #141a2e;
+  --night-2: #1c2440;
+  --stage: #10162a;
+  --ivory: #f3ecdc;
+  --ivory-dim: #a9a594;
+  --gold: #e3bd6a;
+  --line: #3a4466;
+  --paper: #f6f3ec;
+  --paper-2: #ebe6da;
+  --ink: #2a2c38;
+  --ink-soft: #6a6c78;
+  --focus: #c08a2a;
+  --mincho: "Shippori Mincho B1", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  --gothic: "Zen Kaku Gothic New", "Yu Gothic UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  color-scheme: dark;
+}
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--night);
+  color: var(--ivory);
+  font-family: var(--gothic);
+  font-size: 15px;
+}
+.app {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: 20px;
+  padding-block: 16px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  box-sizing: border-box;
+}
+@media (max-width: 860px) { .app { grid-template-columns: minmax(0, 1fr); } }
+
+/* 帳面（入力） */
+.panel {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 18px 18px 22px;
+  display: flex; flex-direction: column; gap: 14px;
+  align-self: start;
+  min-width: 0;
+}
+.panel h1 { font-family: var(--mincho); font-weight: 800; font-size: 20px; margin: 0; letter-spacing: .08em; }
+.panel .back { margin: -4px 0 0; font-size: 13px; }
+.panel .back a { color: var(--ink-soft); }
+.panel .lead { margin: -6px 0 0; color: var(--ink-soft); font-size: 13px; line-height: 1.6; }
+.group { display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--paper-2); padding-top: 12px; }
+.group > .gt { font-size: 11px; letter-spacing: .14em; color: var(--ink-soft); font-weight: 700; }
+label.f { display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 500; }
+label.f input, label.f textarea, label.f select {
+  font: inherit; font-size: 15px; color: var(--ink);
+  background: #fff; border: 1px solid #d4cebf; border-radius: 4px; padding: 7px 9px;
+  width: 100%; box-sizing: border-box;
+}
+label.f textarea { resize: vertical; min-height: 92px; line-height: 1.6; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.calc { font-size: 12px; color: var(--ink-soft); line-height: 1.5; }
+.checks { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; }
+.checks label { display: inline-flex; align-items: center; gap: 5px; }
+input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* 舞台 */
+.stagecol { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.bar .hint { color: var(--ivory-dim); font-size: 12px; margin-left: auto; }
+button {
+  font: inherit; font-size: 14px; cursor: pointer;
+  border-radius: 4px; padding: 7px 14px;
+  border: 1px solid var(--line); background: var(--night-2); color: var(--ivory);
+}
+button:hover { border-color: var(--ivory-dim); }
+button.primary { background: var(--gold); color: #231a06; border-color: var(--gold); font-weight: 700; }
+.seg { display: inline-flex; }
+.seg button { border-radius: 0; }
+.seg button:first-child { border-radius: 4px 0 0 4px; }
+.seg button:last-child { border-radius: 0 4px 4px 0; margin-left: -1px; }
+.seg button[aria-pressed="true"] { background: var(--ivory); color: var(--night); border-color: var(--ivory); }
+
+.frame { width: 100%; aspect-ratio: 16 / 9; max-width: 100%; container-type: size; position: relative; border-radius: 4px; overflow: hidden; box-shadow: 0 0 0 1px var(--line); }
+.stage {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 90% at 50% 0%, #1f2a4d 0%, var(--stage) 62%);
+  color: var(--ivory);
+  font-family: var(--mincho);
+  display: grid; grid-template-rows: auto minmax(0, 1fr);
+  padding: 4.5cqh 5cqh 4cqh;
+  box-sizing: border-box;
+  --fs: 5cqh;
+}
+.stage::before {
+  content: ""; position: absolute; inset: 1.6cqh; pointer-events: none;
+  border: 0.18cqh solid rgba(227, 189, 106, .35); border-radius: 0.6cqh;
+}
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 3cqh; padding: 0 1cqh 2cqh; border-bottom: 0.15cqh solid rgba(227, 189, 106, .4); }
+.head .ttl { font-weight: 800; font-size: 6cqh; letter-spacing: .12em; white-space: nowrap; }
+.head .ttl small { font-size: .62em; font-weight: 700; letter-spacing: .06em; margin-right: .6em; }
+.head .meta { font-size: 2.7cqh; color: var(--ivory-dim); text-align: right; line-height: 1.5; font-family: var(--gothic); }
+.head .meta b { color: var(--ivory); font-weight: 500; }
+
+.body { min-height: 0; min-width: 0; overflow: hidden; padding-top: 2.4cqh; position: relative; }
+.list { font-size: var(--fs); line-height: 1.5; }
+.v .list { writing-mode: vertical-rl; height: 100%; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0 0.55em; margin-right: 1cqh; }
+.h .list { columns: 2; column-gap: 6cqh; padding: 0 2cqh; }
+
+.it { display: block; transition: color .25s, opacity .25s; cursor: pointer; break-inside: avoid; }
+.it .mk { font-family: var(--gothic); font-weight: 400; margin-inline-end: .35em; font-size: .78em; color: var(--ivory-dim); }
+.it .nm { font-size: .62em; color: var(--ivory-dim); margin-inline-start: .5em; font-family: var(--gothic); }
+.it .nm b { color: var(--ivory); font-weight: 500; font-family: var(--mincho); font-size: 1.25em; }
+.it.quote { font-size: .66em; line-height: 1.55; font-weight: 700; padding-inline-start: 1.4em; }
+.v .it.quote { max-block-size: 100%; }
+.it.note { font-size: .62em; color: var(--ivory-dim); margin-block-start: 0; }
+.v .it.note { margin-inline-start: .8em; }
+.h .it.note { margin-top: .6em; }
+.it a.go { color: inherit; text-decoration: none; }
+.it a.go::after { content: "↗"; font-family: var(--gothic); font-size: .42em; color: var(--gold); opacity: .7; margin-inline-start: .3em; }
+.it a.go:hover { text-decoration: underline; text-decoration-color: rgba(227, 189, 106, .6); text-underline-offset: .2em; }
+.it ruby rt { font-size: .38em; font-family: var(--gothic); color: var(--ivory-dim); }
+.noruby rt { display: none; }
+
+.motto {
+  border: 0.15cqh solid rgba(227, 189, 106, .45); border-radius: .4em;
+  background: rgba(227, 189, 106, .06);
+  padding: .7em .6em; font-size: .52em; line-height: 1.75; font-weight: 700;
+  white-space: pre-line; cursor: default;
+}
+.v .motto { margin-inline-start: 1.4em; align-self: flex-end; max-block-size: 100%; }
+.h .motto { margin-top: 1em; break-inside: avoid; }
+.motto .mh { display: block; color: var(--gold); letter-spacing: .3em; font-size: 1.05em; margin-block-end: .3em; }
+
+/* 進行: 今の項目を金で灯し、ほかは沈める */
+.stage.live .it { opacity: .38; }
+.stage.live .it.on { opacity: 1; color: var(--gold); }
+.stage.live .it.on .mk { color: var(--gold); }
+.stage.live .it.on .mk::before { content: ""; }
+.stage.live .it.with.on + .it.quote { opacity: 1; color: var(--ivory); }
+.stage.live .motto { opacity: .55; }
+
+/* 発表（全画面） */
+body.present { overflow: hidden; background: #000; }
+body.present .panel, body.present .bar { display: none; }
+body.present .app { display: block; padding: 0; height: 100%; }
+body.present .stagecol { height: 100%; align-items: center; justify-content: center; }
+body.present .frame { width: min(100vw, 177.78vh); height: auto; border-radius: 0; box-shadow: none; }
+.exit {
+  position: fixed; top: calc(10px + env(safe-area-inset-top, 0px)); right: calc(10px + env(safe-area-inset-right, 0px));
+  opacity: 0; transition: opacity .3s; font-size: 12px; padding: 5px 10px; background: rgba(20,26,46,.8);
+}
+body.present .exit { display: block; }
+body.present .exit:hover, body.present .exit:focus-visible { opacity: 1; }
+body:not(.present) .exit { display: none; }
+
+@media (prefers-reduced-motion: reduce) { .it { transition: none; } }
+</style>
+
+</head>
+<body>
+<div class="app">
+  <form class="panel" id="form" autocomplete="off">
+    <h1>式次第をつくる</h1>
+    <p class="back"><a href="../index.html">← み旨の裏庭</a></p>
+    <p class="lead">名前と日付を入れると、右の画面がそのまま大画面用になります。入力はこのブラウザに残ります。</p>
+
+    <div class="group">
+      <span class="gt">担当</span>
+      <label class="f">司会者<input id="mc" placeholder="例：山田 花子"></label>
+      <label class="f">代表報告祈祷<input id="rep" placeholder="例：佐藤 一郎"></label>
+      <label class="f">感謝祈祷<input id="thanks" placeholder="例：鈴木 恵"></label>
+    </div>
+
+    <div class="group">
+      <span class="gt">礼拝と日付</span>
+      <label class="f">礼拝の名前<input id="kind" value="家庭礼拝"></label>
+      <label class="f">陽暦の日付<input id="date" type="date"></label>
+      <div class="row2">
+        <label class="f">天一国（年）<input id="tYear" inputmode="numeric"></label>
+        <label class="f">天暦（月/日）<input id="tDate" placeholder="9/25"></label>
+      </div>
+      <div class="calc" id="calc"></div>
+    </div>
+
+    <div class="group">
+      <span class="gt">中身（空欄なら出しません）</span>
+      <div class="row2">
+        <label class="f">聖歌（1曲目）<input id="song1" placeholder="例：第2番"></label>
+        <label class="f">聖歌（2曲目）<input id="song2" placeholder="例：第27番"></label>
+      </div>
+      <label class="f">み言訓読<input id="kundoku" placeholder="例：天聖経 第1篇"></label>
+      <label class="f">説教・映像
+        <select id="sermonKind">
+          <option value="both">説教または映像視聴</option>
+          <option value="sermon">説教</option>
+          <option value="video">映像視聴</option>
+        </select>
+      </label>
+      <label class="f">説教・映像の題<input id="sermonTitle" placeholder="例：真の愛の道"></label>
+    </div>
+
+    <div class="group">
+      <span class="gt">年頭標語</span>
+      <label class="f"><textarea id="motto"></textarea></label>
+    </div>
+
+    <div class="group">
+      <span class="gt">表示</span>
+      <div class="checks">
+        <label><input type="checkbox" id="optMokuto" checked>黙祷</label>
+        <label><input type="checkbox" id="optMotto" checked>年頭標語の枠</label>
+        <label><input type="checkbox" id="optRuby" checked>ふりがな</label>
+        <label><input type="checkbox" id="optShare" checked>★感想共有</label>
+      </div>
+      <button type="button" id="reset">入力を消して最初に戻す</button>
+    </div>
+  </form>
+
+  <div class="stagecol">
+    <div class="bar">
+      <div class="seg" role="group" aria-label="文字の向き">
+        <button type="button" id="dirV" aria-pressed="true">縦書き</button>
+        <button type="button" id="dirH" aria-pressed="false">横書き</button>
+      </div>
+      <button type="button" id="prev">◀ 前</button>
+      <button type="button" id="next">次 ▶</button>
+      <button type="button" id="clear">灯りを消す</button>
+      <button type="button" class="primary" id="present">大画面で表示</button>
+      <span class="hint">項目をクリック、または → / Space で進行</span>
+    </div>
+    <div class="frame" id="frame">
+      <div class="stage v" id="stage">
+        <div class="head">
+          <div class="ttl" id="ttl"></div>
+          <div class="meta" id="meta"></div>
+        </div>
+        <div class="body"><div class="list" id="list"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="button" class="exit" id="exit">表示を終える（Esc）</button>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const KEY = 'shikishidai-v1';
+  const OLD_MOTTO = '創造主・天の父母様に実体で侍って生きる\n天一国13年、全世界の祝福家庭は、\n真の父母様と一つになった選民として\n責任を果たす天一国の真の子女になろう！';
+  const DEFAULT_MOTTO = '創造主・天の父母様に実体で侍って生きる\n天一国14年、全世界の祝福家庭は、\n真の父母様と一つになった選民として\n責任を果たす天一国の真の子女になろう！';
+  const fields = ['mc','rep','thanks','kind','date','tYear','tDate','song1','song2','kundoku','sermonKind','sermonTitle','motto'];
+  const checks = ['optMokuto','optMotto','optRuby','optShare'];
+  let dir = 'v';
+  let cur = -1;
+
+  const pad = (n) => String(n).padStart(2, '0');
+  const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`; };
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  // 天暦 = 韓国の陰暦（Intl の dangi 暦）。天一国の年は 2013 年の基元節を元年として、天暦の正月で替わる
+  function tenreki(iso) {
+    const [y, m, d] = iso.split('-').map(Number);
+    const date = new Date(y, m - 1, d, 12);
+    for (const cal of ['dangi', 'chinese']) {
+      try {
+        const parts = new Intl.DateTimeFormat('en-u-ca-' + cal, { year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(date);
+        const get = (t) => (parts.find((p) => p.type === t) || {}).value;
+        const ry = Number(get('relatedYear') || get('year'));
+        const mon = get('month') || '';
+        const day = Number(get('day'));
+        const mm = Number((mon.match(/\d+/) || [])[0]);
+        if (!ry || !mm || !day || ry < 1900) continue;
+        return { year: ry - 2012, month: mm, day, leap: /bis|leap/i.test(mon) };
+      } catch (e) { /* 次の暦へ */ }
+    }
+    return null;
+  }
+
+  const state = () => {
+    const s = {};
+    fields.forEach((f) => s[f] = $(f).value);
+    checks.forEach((c) => s[c] = $(c).checked);
+    s.dir = dir;
+    return s;
+  };
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state())); } catch (e) {} };
+  function load() {
+    let s = null;
+    try { s = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+    $('motto').value = DEFAULT_MOTTO;
+    $('date').value = todayISO();
+    if (s) {
+      fields.forEach((f) => { if (typeof s[f] === 'string' && f !== 'date') $(f).value = s[f]; });
+      checks.forEach((c) => { if (typeof s[c] === 'boolean') $(c).checked = s[c]; });
+      if (s.dir === 'h' || s.dir === 'v') dir = s.dir;
+      if ($('motto').value === OLD_MOTTO) $('motto').value = DEFAULT_MOTTO;
+      // 日付は毎回「今日」から。前回の天暦の手入力は日付が変わると合わないので捨てる
+      $('tYear').value = ''; $('tDate').value = '';
+    }
+  }
+
+  function autoTenreki() {
+    const t = $('date').value ? tenreki($('date').value) : null;
+    if (t) {
+      $('tYear').placeholder = String(t.year);
+      $('tDate').placeholder = `${t.leap ? '閏' : ''}${t.month}/${t.day}`;
+      $('calc').textContent = `自動計算：天一国${t.year}年 天暦${t.leap ? '閏' : ''}${t.month}月${t.day}日（韓国の陰暦）。違うときだけ上の欄に入れてください。`;
+    } else {
+      $('calc').textContent = 'このブラウザでは天暦を計算できません。上の欄に入れてください。';
+    }
+    return t;
+  }
+
+  function dates() {
+    const t = autoTenreki();
+    const iso = $('date').value || todayISO();
+    const [y, m, d] = iso.split('-').map(Number);
+    const wd = '日月火水木金土'[new Date(y, m - 1, d).getDay()];
+    const year = ($('tYear').value.trim() || (t ? String(t.year) : '○')).replace(/[^\d○]/g, '') || '○';
+    let td = $('tDate').value.trim();
+    let tm = '○', tdd = '○';
+    if (td) {
+      const mm = td.match(/(閏)?\s*(\d+)\s*[\/月.\-]\s*(\d+)/);
+      if (mm) { tm = (mm[1] || '') + mm[2]; tdd = mm[3]; }
+    } else if (t) { tm = (t.leap ? '閏' : '') + t.month; tdd = String(t.day); }
+    return { y, m, d, wd, year, tm, tdd };
+  }
+
+  // 家庭盟誓・年頭標語のページへのリンク
+  const SITE = '../';
+
+  const R = (base, rt) => $('optRuby').checked ? `<ruby>${base}<rt>${rt}</rt></ruby>` : base;
+
+  function items() {
+    const mc = $('mc').value.trim(), rep = $('rep').value.trim(), thanks = $('thanks').value.trim();
+    const kind = $('kind').value.trim() || '家庭礼拝';
+    const D = dates();
+    const who = (n, fallback) => `<span class="nm">（${n ? `<b>${esc(n)}</b>` : fallback}）</span>`;
+    const sub = (t) => t ? `<span class="nm">${esc(t)}</span>` : '';
+    const sk = $('sermonKind').value;
+    const sermon = sk === 'sermon' ? '説教' : sk === 'video' ? `映像${R('視聴','しちょう')}` : `説教または映像${R('視聴','しちょう')}`;
+    const when = `${R('天一国','てんいちこく')}${D.year}年 ${R('天暦','てんれき')}${D.tm}月${D.tdd}日、陽暦${D.m}月${D.d}日、${esc(kind)}`;
+    const list = [];
+    if ($('optMokuto').checked) list.push({ html: `${R('黙祷','もくとう')}` });
+    list.push({ html: `開会${who(mc ? mc : '', '司会者')}<span class="nm">が開会宣言</span>`, with: true });
+    list.push({ quote: true, html: `「ただ今から、${when}を始めます」` });
+    list.push({ html: '敬拝' });
+    list.push({ html: `${R('家庭盟誓','カヂョンメンセ')}唱和`, href: SITE + 'family_pledge.html' });
+    list.push({ html: '年頭標語唱和', href: SITE + 'family_pledge.html#motto' });
+    list.push({ html: `代表報告${R('祈祷','きとう')}${who(rep, '代表者')}` });
+    list.push({ html: `聖歌${R('讃美','さんび')}${sub($('song1').value.trim())}` });
+    list.push({ html: `${R('み言','ことば')}訓読${sub($('kundoku').value.trim())}` });
+    list.push({ html: `${sermon}${sub($('sermonTitle').value.trim())}` });
+    list.push({ html: `聖歌${R('讃美','さんび')}${sub($('song2').value.trim())}` });
+    list.push({ html: 'お知らせ' });
+    list.push({ html: `感謝${R('祈祷','きとう')}${who(thanks, '代表者')}` });
+    list.push({ html: `全体${R('祈祷','きとう')}` });
+    list.push({ html: '敬拝' });
+    list.push({ html: `閉会${who(mc ? mc : '', '司会者')}<span class="nm">が閉会宣言</span>`, with: true });
+    list.push({ quote: true, html: `「以上で、${when}を終わります」` });
+    return { list, D, kind, mc };
+  }
+
+  function render() {
+    const { list, D, kind, mc } = items();
+    const stage = $('stage');
+    stage.className = 'stage ' + dir + (cur >= 0 ? ' live' : '') + ($('optRuby').checked ? '' : ' noruby');
+    $('ttl').innerHTML = `<small>${esc(kind)}</small>式次第`;
+    $('meta').innerHTML = `天一国${esc(D.year)}年 天暦${esc(D.tm)}月${esc(D.tdd)}日<br>陽暦 ${D.y}年${D.m}月${D.d}日（${D.wd}）${mc ? `　司会 <b>${esc(mc)}</b>` : ''}`;
+    let n = 0;
+    const html = list.map((it) => {
+      if (it.quote) return `<div class="it quote" data-q="1">${it.html}</div>`;
+      const i = n++;
+      return `<div class="it${it.with ? ' with' : ''}${i === cur ? ' on' : ''}" data-i="${i}"><span class="mk">${i === cur ? '◆' : '◇'}</span>${it.href ? `<a class="go" href="${esc(it.href)}" target="_blank" rel="noopener">${it.html}</a>` : it.html}</div>`;
+    }).join('');
+    const share = $('optShare').checked ? `<div class="it note">★礼拝後に、感想共有の時間を持ちましょう</div>` : '';
+    const motto = $('optMotto').checked && $('motto').value.trim()
+      ? `<div class="motto"><span class="mh">年頭標語</span>${esc($('motto').value.trim())}</div>` : '';
+    $('list').innerHTML = html + share + motto;
+    $('list').dataset.count = n;
+    kanjiDigits(stage);
+    fit();
+  }
+
+  // 式次第の中の数字は漢数字に。4桁以上（西暦）は「二〇二六」、それ以外は「二十五」
+  const KD = '〇一二三四五六七八九';
+  function kanNum(str) {
+    const s = str.replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
+    if (s.length >= 4) return [...s].map((c) => KD[c]).join('');
+    const n = Number(s);
+    if (n === 0) return '〇';
+    const h = Math.floor(n / 100), t = Math.floor(n / 10) % 10, o = n % 10;
+    return (h ? (h > 1 ? KD[h] : '') + '百' : '') + (t ? (t > 1 ? KD[t] : '') + '十' : '') + (o ? KD[o] : '');
+  }
+  function kanjiDigits(root) {
+    const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (w.nextNode()) nodes.push(w.currentNode);
+    nodes.forEach((t) => { if (/[0-9０-９]/.test(t.nodeValue)) t.nodeValue = t.nodeValue.replace(/[0-9０-９]+/g, kanNum); });
+  }
+
+  // 舞台に収まるまで文字を小さくする
+  function fit() {
+    const stage = $('stage'), body = stage.querySelector('.body'), list = $('list');
+    const h = $('frame').clientHeight;
+    if (!h) return;
+    let fs = (dir === 'v' ? 5.4 : 5.0);
+    const over = () => dir === 'v'
+      ? list.scrollWidth > body.clientWidth + 1 || list.scrollHeight > body.clientHeight + 1
+      : list.scrollHeight > body.clientHeight + 1;
+    for (let k = 0; k < 40; k++) {
+      stage.style.setProperty('--fs', (fs * h / 100) + 'px');
+      if (!over()) break;
+      fs -= 0.12;
+    }
+    if (dir === 'v') {
+      // 縦書きのリストは右寄せ（右から読み始める）
+      list.style.marginLeft = 'auto';
+    }
+  }
+
+  const count = () => Number($('list').dataset.count || 0);
+  const go = (i) => { cur = Math.max(-1, Math.min(count() - 1, i)); render(); };
+
+  $('list').addEventListener('click', (e) => {
+    const el = e.target.closest('.it[data-i]');
+    if (el) go(Number(el.dataset.i) === cur ? -1 : Number(el.dataset.i));
+  });
+  $('next').onclick = () => go(cur + 1);
+  $('prev').onclick = () => go(cur - 1);
+  $('clear').onclick = () => go(-1);
+  const setDir = (d) => { dir = d; $('dirV').setAttribute('aria-pressed', d === 'v'); $('dirH').setAttribute('aria-pressed', d === 'h'); save(); render(); };
+  $('dirV').onclick = () => setDir('v');
+  $('dirH').onclick = () => setDir('h');
+
+  let wake = null;
+  async function present(on) {
+    document.body.classList.toggle('present', on);
+    try {
+      if (on && !document.fullscreenElement) await document.documentElement.requestFullscreen();
+      if (!on && document.fullscreenElement) await document.exitFullscreen();
+    } catch (e) {}
+    try {
+      if (on && navigator.wakeLock) wake = await navigator.wakeLock.request('screen');
+      if (!on && wake) { await wake.release(); wake = null; }
+    } catch (e) {}
+    requestAnimationFrame(render);
+  }
+  $('present').onclick = () => present(true);
+  $('exit').onclick = () => present(false);
+  document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && document.body.classList.contains('present')) present(false); });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.target.matches('input, textarea, select')) return;
+    if (['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+    else if (['ArrowLeft','ArrowUp','PageUp'].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+    else if (e.key === 'Home') go(-1);
+    else if (e.key === 'Escape' && document.body.classList.contains('present')) present(false);
+  });
+
+  $('form').addEventListener('input', () => { save(); render(); });
+  $('form').addEventListener('submit', (e) => e.preventDefault());
+  $('reset').onclick = () => {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    fields.forEach((f) => $(f).value = '');
+    checks.forEach((c) => $(c).checked = true);
+    $('kind').value = '家庭礼拝'; $('sermonKind').value = 'both';
+    $('motto').value = DEFAULT_MOTTO; $('date').value = todayISO();
+    cur = -1; render();
+  };
+
+  new ResizeObserver(() => fit()).observe($('frame'));
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+
+  load();
+  setDir(dir);
+})();
+</script>
+
+</body>
+</html>
