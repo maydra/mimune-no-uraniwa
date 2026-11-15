@@ -26,7 +26,7 @@
     var SKIP = /(?:^|\/)(index|mokuji|random|gacha|search-all|404|offline|test_output|google[0-9a-f]+)(?:\.html)?$/i;
     // 本文ではない所（ここの文字は数に入れない）
     // .dpc-fig・.dpc-note は原理講論の図（dp/charts.js）。出し入れで字数が変わると、しおりの位置がずれる
-    var NOT_BODY = 'script,style,nav,rt,rp,.page-nav,.typo-box,#reader-ui,#reader-drawer,#reader-gacha,#reader-font,#kundoku,.seikon-history,#stacked-header-container,.toc,.hits,.dpc-fig,.dpc-note';
+    var NOT_BODY = 'script,style,nav,rt,rp,.page-nav,.typo-box,#reader-ui,#reader-drawer,#reader-gacha,#reader-font,#reader-hl,#kundoku,.seikon-history,#stacked-header-container,.toc,.hits,.dpc-fig,.dpc-note';
     var TOP = 96;              // 「画面の上」とみなす高さ
     var MIN_CHARS = 2500;      // これより短いページには出さない
     var STORE = 'reader.pos.';
@@ -1168,7 +1168,7 @@
         box.innerHTML = '';
         var list = readMarks().filter(function (m) { return m.p === location.pathname; })
             .sort(function (a, b) { return a.pos - b.pos; });
-        if (!list.length) return;
+        if (!list.length) { hlDrawer(box); return; }
         var h = document.createElement('h4');
         h.textContent = 'このページのしおり';
         box.appendChild(h);
@@ -1188,6 +1188,7 @@
             });
             box.appendChild(row);
         });
+        hlDrawer(box);
     }
 
     function ago(t) {
@@ -1653,6 +1654,293 @@
         });
     }
 
+    // ---- 自分で引くマーカー（2026-11-15） -----------------------------------
+    // 本文の字を選ぶと、画面の下に色の帯が出る。押すとその字に蛍光ペンを引く。
+    // 引いた所を押すと、色を替えるか消せる。拡張機能が無いスマホでも使えるように
+    // （ユーザー「スマホやPCのブラウザでみてテキスト選択した時に拡張機能なくてもマーカーできるようにしたい」）。
+    // 位置はしおりと同じく「本文の何文字目から何文字目か」で、ページごとに端末に覚える。
+    // 字を直して位置がずれたときは、覚えておいた字を近くで探し直す。
+    // 原理講論にもともとある色（color_filter.js の地の色）と見分けがつくよう、字の下半分だけを塗る
+    var HL = 'reader.hl.';
+    var HL_COLORS = [['y', '黄'], ['g', '緑'], ['b', '青'], ['p', '桃']];
+    var hls = [];              // { a: 始めの字, b: 終わりの次の字, c: 色, t: 字, at: 引いた時刻 }
+    var hlBar = null, hlSel = null, hlEdit = -1, hlHold = false, hlT = null;
+
+    function hlKey() { return HL + location.pathname; }
+    function hlRead() {
+        try {
+            var l = JSON.parse(localStorage.getItem(hlKey()) || '[]');
+            return Array.isArray(l) ? l.filter(function (m) {
+                return m && m.b > m.a && typeof m.t === 'string' && m.t;
+            }) : [];
+        } catch (e) { return []; }
+    }
+    function hlWrite() {
+        try {
+            if (hls.length) localStorage.setItem(hlKey(), JSON.stringify(hls));
+            else localStorage.removeItem(hlKey());
+        } catch (e) {
+            if (document.getElementById('reader-style')) toast('この端末では保存できませんでした');
+        }
+    }
+
+    function textOf(a, b) {
+        var out = '', i = nodeIndex(a);
+        for (; i < nodes.length && starts[i] < b; i++) {
+            var v = nodes[i].nodeValue;
+            out += v.slice(Math.max(0, a - starts[i]), Math.min(v.length, b - starts[i]));
+        }
+        return out;
+    }
+
+    // 覚えた位置の字が変わっていたら（誤植直しなど）、同じ字をいちばん近い所で探し直す
+    function hlRelocate() {
+        var full = null;
+        hls.forEach(function (m) {
+            if (textOf(m.a, m.b) === m.t) { m.lost = false; return; }
+            if (full === null) full = nodes.map(function (n) { return n.nodeValue; }).join('');
+            var best = -1, k = full.indexOf(m.t);
+            while (k >= 0) {
+                if (best < 0 || Math.abs(k - m.a) < Math.abs(best - m.a)) best = k;
+                k = full.indexOf(m.t, k + 1);
+            }
+            if (best < 0) { m.lost = true; return; }   // 見つからないものは消さずに残す（塗らない）
+            m.b = best + m.t.length; m.a = best; m.lost = false;
+        });
+    }
+
+    function hlClear() {
+        var ps = [];
+        Array.prototype.forEach.call(document.querySelectorAll('mark.reader-hl'), function (mk) {
+            var p = mk.parentNode;
+            while (mk.firstChild) p.insertBefore(mk.firstChild, mk);
+            p.removeChild(mk);
+            if (ps.indexOf(p) < 0) ps.push(p);
+        });
+        ps.forEach(function (p) { p.normalize(); });
+    }
+
+    // 字のノードを切り分けて <mark> で包む。字の数は変わらないので、位置はそのまま使える。
+    // 後ろのマーカーから包むと、前のマーカーが使うノードの頭の部分と starts は変わらない
+    function hlPaint() {
+        hlClear();
+        collect();
+        var order = hls.map(function (m, k) { return k; }).sort(function (x, y) { return hls[y].a - hls[x].a; });
+        order.forEach(function (k) {
+            var m = hls[k];
+            if (m.lost) return;
+            var parts = [];
+            for (var i = nodeIndex(m.a); i < nodes.length && starts[i] < m.b; i++) {
+                var s = Math.max(0, m.a - starts[i]), e = Math.min(nodes[i].nodeValue.length, m.b - starts[i]);
+                if (e > s) parts.push([nodes[i], s, e]);
+            }
+            parts.forEach(function (p) {
+                var n = p[0];
+                if (p[2] < n.nodeValue.length) n.splitText(p[2]);
+                if (p[1] > 0) n = n.splitText(p[1]);
+                var mk = document.createElement('mark');
+                mk.className = 'reader-hl hl-' + m.c;
+                mk.dataset.k = k;
+                n.parentNode.insertBefore(mk, n);
+                mk.appendChild(n);
+            });
+        });
+        collect();
+    }
+
+    // 選んだ範囲 → 本文の [a, b)。本文の外（目次・図・帯）は数えない。前後の空白は外す
+    function hlRange() {
+        var sel = window.getSelection();
+        if (!sel || sel.isCollapsed || !sel.rangeCount || !nodes.length) return null;
+        var r = sel.getRangeAt(0);
+        var cmp = function (n, o) { try { return r.comparePoint(n, o); } catch (e) { return 2; } };
+        var lo = 0, hi = nodes.length - 1, first = nodes.length;
+        while (lo <= hi) {             // 終わりが範囲の始めより後ろにある最初のノード
+            var mid = (lo + hi) >> 1;
+            if (cmp(nodes[mid], nodes[mid].nodeValue.length) !== -1) { first = mid; hi = mid - 1; } else lo = mid + 1;
+        }
+        lo = 0; hi = nodes.length - 1;
+        var last = -1;
+        while (lo <= hi) {             // 頭が範囲の終わりより前にある最後のノード
+            var md = (lo + hi) >> 1;
+            if (cmp(nodes[md], 0) !== 1) { last = md; lo = md + 1; } else hi = md - 1;
+        }
+        if (first >= nodes.length || last < first) return null;
+        var a = cmp(nodes[first], 0) === -1 && r.startContainer === nodes[first]
+            ? starts[first] + r.startOffset : starts[first];
+        var lastLen = nodes[last].nodeValue.length;
+        var b = cmp(nodes[last], lastLen) === 1 && r.endContainer === nodes[last]
+            ? starts[last] + r.endOffset : starts[last] + lastLen;
+        var t = textOf(a, b);
+        var lead = t.length - t.replace(/^\s+/, '').length;
+        var tail = t.length - t.replace(/\s+$/, '').length;
+        a += lead; b -= tail;
+        return b > a ? { a: a, b: b } : null;
+    }
+
+    function hlOverlaps(a, b) {
+        return hls.some(function (m) { return !m.lost && m.a < b && m.b > a; });
+    }
+
+    // [a, b) に重なっている所を削る（はみ出した所は残す）
+    function hlCut(a, b) {
+        var out = [];
+        hls.forEach(function (m) {
+            if (m.lost || m.b <= a || m.a >= b) { out.push(m); return; }
+            if (m.a < a) out.push({ a: m.a, b: a, c: m.c, t: textOf(m.a, a), at: m.at });
+            if (m.b > b) out.push({ a: b, b: m.b, c: m.c, t: textOf(b, m.b), at: m.at });
+        });
+        hls = out.filter(function (m) { return m.t.replace(/\s/g, ''); });
+    }
+
+    function hlAdd(a, b, c) {
+        // 同じ色で重なる・接するマーカーは1本にまとめる
+        hls.forEach(function (m) {
+            if (!m.lost && m.c === c && m.a <= b && m.b >= a) { a = Math.min(a, m.a); b = Math.max(b, m.b); }
+        });
+        hlCut(a, b);
+        hls.push({ a: a, b: b, c: c, t: textOf(a, b), at: Date.now() });
+        hls.sort(function (x, y) { return x.a - y.a; });
+    }
+
+    function hlDone() {
+        hlWrite();
+        hlPaint();
+        try { window.getSelection().removeAllRanges(); } catch (e) { }
+        hlHide();
+    }
+
+    function hlShow(mode) {
+        hlBar.dataset.mode = mode;
+        var on = mode === 'edit' ? hls[hlEdit] && hls[hlEdit].c : '';
+        Array.prototype.forEach.call(hlBar.querySelectorAll('button[data-c]'), function (o) {
+            o.setAttribute('aria-pressed', o.dataset.c === on ? 'true' : 'false');
+        });
+        var x = hlBar.querySelector('.x');
+        x.style.display = mode === 'edit' || (hlSel && hlOverlaps(hlSel.a, hlSel.b)) ? '' : 'none';
+        hlBar.classList.add('on');
+    }
+    function hlHide() {
+        hlBar.classList.remove('on');
+        hlSel = null; hlEdit = -1;
+    }
+
+    function hlPick(c) {
+        if (hlEdit >= 0 && hls[hlEdit]) {
+            var m = hls[hlEdit];
+            if (c) hlAdd(m.a, m.b, c); else hlCut(m.a, m.b);
+        } else if (hlSel) {
+            if (c) hlAdd(hlSel.a, hlSel.b, c); else hlCut(hlSel.a, hlSel.b);
+        } else return;
+        hlDone();
+    }
+
+    function hlCss() {
+        var s = document.createElement('style');
+        s.id = 'reader-hl-style';
+        s.textContent = [
+            'mark.reader-hl{color:inherit;padding:0;border-radius:2px;background:linear-gradient(transparent 52%,var(--hl) 52%);',
+            '-webkit-box-decoration-break:clone;box-decoration-break:clone;cursor:pointer}',
+            '.hl-y{--hl:rgba(250,204,21,.6)}.hl-g{--hl:rgba(74,222,128,.55)}.hl-b{--hl:rgba(96,165,250,.55)}.hl-p{--hl:rgba(244,114,182,.55)}',
+            'body.dark-mode .hl-y,body.dark .hl-y{--hl:rgba(250,204,21,.5)}',
+            'body.dark-mode .hl-g,body.dark .hl-g{--hl:rgba(74,222,128,.45)}',
+            'body.dark-mode .hl-b,body.dark .hl-b{--hl:rgba(96,165,250,.5)}',
+            'body.dark-mode .hl-p,body.dark .hl-p{--hl:rgba(244,114,182,.5)}',
+            '#reader-hl{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(1.4rem + env(safe-area-inset-bottom,0px));',
+            'z-index:10003;display:none;align-items:center;gap:.4rem;padding:.4rem .55rem;border-radius:999px;',
+            'background:rgba(30,30,40,.94);color:#fff;box-shadow:0 4px 18px rgba(0,0,0,.3);font-size:.85rem;',
+            '-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}',
+            '#reader-hl.on{display:flex}',
+            '#reader-hl span{opacity:.75;padding:0 .2rem 0 .3rem;white-space:nowrap}',
+            '#reader-hl button{font:inherit;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}',
+            '#reader-hl button[data-c]{width:2.1rem;height:2.1rem;border-radius:50%;border:2px solid rgba(255,255,255,.25);',
+            'color:#222;font-weight:700;font-size:.78rem}',
+            '#reader-hl button[data-c="y"]{background:#facc15}#reader-hl button[data-c="g"]{background:#4ade80}',
+            '#reader-hl button[data-c="b"]{background:#60a5fa}#reader-hl button[data-c="p"]{background:#f472b6}',
+            '#reader-hl button[aria-pressed="true"]{border-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.5)}',
+            '#reader-hl .x{background:rgba(255,255,255,.16);color:#fff;border-radius:999px;padding:.45em .9em;white-space:nowrap}',
+            // スマホは下の端に Safari の帯などが重なるので、少し上に出す
+            '@media (pointer:coarse){#reader-hl{bottom:calc(4.6rem + env(safe-area-inset-bottom,0px))}}',
+            '#reader-drawer .hl-row i{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.35em;vertical-align:-.05em}',
+            '@media print{#reader-hl{display:none !important}}'
+        ].join('');
+        document.head.appendChild(s);
+    }
+
+    function userMarks() {
+        hlCss();
+        hlBar = document.createElement('div');
+        hlBar.id = 'reader-hl';
+        hlBar.setAttribute('role', 'toolbar');
+        hlBar.setAttribute('aria-label', 'マーカー');
+        hlBar.innerHTML = '<span>🖍</span>' + HL_COLORS.map(function (c) {
+            return '<button type="button" data-c="' + c[0] + '" aria-label="' + c[1] + 'のマーカー">' + c[1] + '</button>';
+        }).join('') + '<button type="button" class="x">消す</button>';
+        document.body.appendChild(hlBar);
+        // 押した瞬間に選択が外れて帯が引っ込まないように、押している間は隠さない
+        hlBar.addEventListener('pointerdown', function (e) { e.preventDefault(); hlHold = true; });
+        hlBar.addEventListener('pointercancel', function () { hlHold = false; });
+        hlBar.addEventListener('click', function (e) {
+            var btn = e.target.closest('button');
+            hlHold = false;
+            if (!btn) return;
+            hlPick(btn.classList.contains('x') ? '' : btn.dataset.c);
+        });
+
+        hls = hlRead();
+        if (hls.length) { hlRelocate(); hlPaint(); }
+
+        document.addEventListener('selectionchange', function () {
+            clearTimeout(hlT);
+            hlT = setTimeout(function () {
+                if (hlHold) return;
+                var r = hlRange();
+                if (r) { hlSel = r; hlEdit = -1; hlShow('sel'); }
+                else if (hlBar.dataset.mode === 'sel') hlHide();
+            }, 220);
+        });
+        // 引いた所を押したら、色を替える・消す
+        document.addEventListener('click', function (e) {
+            if (hlBar.contains(e.target)) return;
+            var sel = window.getSelection();
+            if (sel && !sel.isCollapsed) return;
+            var mk = e.target.closest && e.target.closest('mark.reader-hl');
+            if (mk && hls[+mk.dataset.k]) { hlEdit = +mk.dataset.k; hlSel = null; hlShow('edit'); }
+            else if (hlBar.classList.contains('on')) hlHide();
+        });
+        window.addEventListener('keydown', function (e) { if (e.key === 'Escape') hlHide(); });
+        // 原理講論の図は字のノードを割って差し込む。包み直してマーカーの中に図が入らないようにする
+        document.addEventListener('dpchartsplaced', function () { if (hls.length) hlPaint(); });
+    }
+
+    // 目次の引き出しの「このページのマーカー」
+    function hlDrawer(box) {
+        var list = hls.filter(function (m) { return !m.lost; });
+        if (!list.length) return;
+        var h = document.createElement('h4');
+        h.textContent = 'このページのマーカー（' + list.length + '）';
+        box.appendChild(h);
+        list.forEach(function (m) {
+            var row = document.createElement('div');
+            row.className = 'mark hl-row';
+            var t = m.t.replace(/\s+/g, ' ');
+            row.innerHTML = '<a href="#"><i class="hl-' + m.c + '" style="background:var(--hl)"></i>'
+                + esc(t.length > 40 ? t.slice(0, 40) + '…' : t) + '</a><button type="button" aria-label="マーカーを消す">×</button>';
+            row.querySelector('a').addEventListener('click', function (e) {
+                e.preventDefault();
+                closeDrawer();
+                scrollToPos(m.a, TOP + 80);
+            });
+            row.querySelector('button').addEventListener('click', function () {
+                hlCut(m.a, m.b);
+                hlWrite();
+                hlPaint();
+                drawerMarks();
+            });
+            box.appendChild(row);
+        });
+    }
+
     // ---- キーボード --------------------------------------------------------
     function navTo(which) {
         var nav = document.querySelector('.page-nav');
@@ -1695,7 +1983,7 @@
         // 短いページでも、ガチャで来たときは一節に色を付ける
         if (total < MIN_CHARS || GACHA_ONLY) {
             if (lucky) { css(); gacha(); }
-            if (!GACHA_ONLY) pageFontControl();
+            if (!GACHA_ONLY) { pageFontControl(); if (total) userMarks(); }
             return;
         }
         collectHeads();
@@ -1707,6 +1995,7 @@
         splitTitle();
         build();
         onScroll();
+        userMarks();
         if (lucky) gacha(); else offerResume();
         window.addEventListener('scroll', onScroll, { passive: true });
         window.addEventListener('resize', onResize);
