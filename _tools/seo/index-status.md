@@ -1,4 +1,4 @@
-# Google のインデックス状況（2026-11-22 更新）
+# Google のインデックス状況（2026-11-23 更新）
 
 `_tools/root/search_console.py inspect` が毎日（Actions の index-status）書き直す。手で直さない。
 
@@ -109,17 +109,17 @@
 | 罪と蕩減復帰 | 0 | 10 | URL が Google に認識されていません 10 |
 | 宇宙主管を願う前に自己主管を完成せよ／み旨の道 | 0 | 5 | URL が Google に認識されていません 5 |
 
-## 検索での表示（2026-10-23〜2026-11-19）
+## 検索での表示（2026-10-24〜2026-11-20）
 
-表示されたページ 8、表示 559 回、クリック 158 回
+表示されたページ 8、表示 574 回、クリック 163 回
 
 | ページ | 表示 | クリック |
 |---|---:|---:|
-| /syuku_&_risoutengoku/index.html | 204 | 3 |
-| / | 194 | 146 |
-| /mimunetosekai/index.html | 137 | 7 |
-| /bokkaisyanomiti/0320040895.html | 10 | 1 |
-| /bokkaisyanomiti/0314030526.html | 9 | 0 |
-| /syougairotei_6/index.html | 3 | 1 |
+| /syuku_&_risoutengoku/index.html | 213 | 4 |
+| / | 199 | 151 |
+| /mimunetosekai/index.html | 141 | 7 |
+| /bokkaisyanomiti/0320040895.html | 9 | 1 |
+| /bokkaisyanomiti/0314030526.html | 8 | 0 |
+| /syougairotei_6/index.html | 2 | 0 |
 | /bokkaisyanomiti/0321060964.html | 1 | 0 |
 | /syuku_&_risoutengoku/002.html | 1 | 0 |
