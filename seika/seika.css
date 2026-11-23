@@ -674,6 +674,12 @@ body.light-mode .song details.howto {
     color: var(--mean) !important;
 }
 
+/* 一覧のハングルの題に添える読み（トンサネ ノレ）。目で探す手がかりなので控えめに */
+.song .songs .t small .yomi {
+    font-size: 0.78em;
+    opacity: 0.8;
+}
+
 .song .songs .off b {
     color: var(--mean) !important;
     font-weight: 400;

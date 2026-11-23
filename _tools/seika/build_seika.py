@@ -43,7 +43,7 @@ OUT = ROOT / "seika"
 THEME_V = "202610282236"
 # seika.css・hangul-yomi.js の ?v=。sw.js は theme/ の外の CSS・JS を手元のキャッシュ優先で出すので、
 # これらを直したら上げる（上げないと、前に開いた人には古いものが出続ける）
-VERSION = "202610282236"
+VERSION = "202611232127"
 SITE = "https://maydra.github.io/mimune-no-uraniwa/seika/"
 
 WORD = re.compile(r"([^\s{]+)(?:\{([^}]*)\})?")
@@ -1092,7 +1092,10 @@ def build_index():
         else:
             num = seika_no
             other = f"日本の聖歌 {ja_label(ja_no)}" if ja_no else "日本の聖歌には無い曲"
-        sub = [f'<span lang="ko">{html.escape(ko_title.get(str(ko_no), ""))}</span>'] if ko_no else []
+        # ハングルの題の後ろに読みを小さく添える。口で「トンサネノレ」と言われても目で探せるように
+        title_ko = ko_title.get(str(ko_no), "") if ko_no else ""
+        yomi = " ".join(to_kana(w) for w in title_ko.split())
+        sub = [f'<span lang="ko">{html.escape(title_ko)}</span><span class="yomi">（{html.escape(yomi)}）</span>'] if ko_no else []
         has_other = seika_no if mode == "ja" else ja_no
         other_cls = ("other-ko" if mode == "ja" else "other-ja") if has_other else "other-none"
         sub.append(f'<span class="{other_cls}">{other}</span>')
@@ -1101,7 +1104,7 @@ def build_index():
                 f'<span class="t"><span class="tt"><b>{html.escape(title_ja)}</b>{tag}</span><small>{" · ".join(sub)}</small></span>')
         link = f'<a class="go" href="{page}">{body}</a>' if page else f'<div class="go off">{body}</div>'
         share_url = SITE + (page or f"#{anchor}")
-        search = " ".join(filter(None, [ja_no, seika_no, title_ja, ko_title.get(str(ko_no), "") if ko_no else ""]
+        search = " ".join(filter(None, [ja_no, seika_no, title_ja, title_ko, yomi]
                                  + JA_ALIASES.get(ja_no, [])))
         id_attr = f' id="{anchor}"' if with_id else ""  # 同じ曲が2つの並びに出るので、id は片方だけ
         return (f'        <li{id_attr} data-ja="{html.escape(ja_no)}" data-ko="{seika_no}" data-search="{html.escape(search)}">'
@@ -1212,16 +1215,24 @@ def build_index_page(order, fname, by_ja, ko_only, by_ko):
       // 数字だけなら、いまの並びの番号とぴったり同じ曲。それ以外は題に含まれる曲
       function filter() {{
         var s = q.value.trim().replace(/番$/, '');
+        var key = kana(s);
         var digits = /^[0-9０-９]+$/.test(s) ? s.replace(/[０-９]/g, function (c) {{ return String.fromCharCode(c.charCodeAt(0) - 65248); }}) : '';
         var shown = 0;
         visibleItems().forEach(function (li) {{
-          var hit = !s ? true : digits ? (li.dataset[order] === digits) : li.dataset.search.indexOf(s) >= 0;
+          var hit = !s ? true : digits ? (li.dataset[order] === digits) : (li.dataset.search.indexOf(s) >= 0 || (key && kana(li.dataset.search).indexOf(key) >= 0));
           li.hidden = !hit;
           if (hit) shown++;
         }});
         document.getElementById('ko-only-h').hidden = order !== 'ja' || document.querySelectorAll('#list-ko-only > li:not([hidden])').length === 0;
         document.getElementById('none').hidden = shown > 0;
         return shown;
+      }}
+      // カナで題を引く: ひらがなもカタカナに、空白・「ッ」を外し、パッチムの小さいカナ（ㇰ ㇽ ㇺ ㇷ゚）を普通のカナに。
+      // 「とんさねのれ」「トンサネノレ」「トンサネ ノレ」のどれでも 동산의 노래 に当たる
+      function kana(t) {{
+        return t.replace(/[ぁ-ゖ]/g, function (c) {{ return String.fromCharCode(c.charCodeAt(0) + 96); }})
+          .replace(/ㇰ/g, 'ク').replace(/ㇽ/g, 'ル').replace(/ㇺ/g, 'ム').replace(/ㇷ゚|ㇷ/g, 'プ')
+          .replace(/[\\sッ・]/g, '');
       }}
       q.addEventListener('input', filter);
       // Enter で、1曲だけ当たっていてページがあれば開く
