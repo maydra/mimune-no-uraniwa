@@ -1,10 +1,14 @@
-"""聖歌のページを作る: _tools/seika/songs/NNN.txt → seika/NNN.html と一覧 seika/index.html
+"""聖歌のページを作る: _tools/seika/songs/NNN.txt → seika/sg-NNN.html と一覧 seika/index.html
 
     python -I -X utf8 _tools/seika/build_seika.py            # 全曲＋一覧
     python -I -X utf8 _tools/seika/build_seika.py 001 002    # 指定した曲＋一覧
 
-NNN はハングルの聖歌集『성가』の番号。日本の聖歌は番号の付け方が違うので
-（ハングル1番＝日本の5番）、ページと一覧には両方を出す（videos.tsv で対応を持つ）。
+songs/NNN.txt の NNN は、歌詞を取ったロシア語対訳版『성가 / Святые песни』（2018年、PDF）の番号で、
+曲の内部の番号として使う（videos.tsv もこれで引く）。画面に出す성가の番号とページの名前は、
+韓国の『성가』（成和出版社）の番号（songs_index.tsv の seika・slug）。ロシア語対訳版は천일국가に3番を振り、
+친구 되신 예수・가고파 주님께 が無いので、4番から後ろが韓国の版と1〜2ずれる（2026-11-23 に指摘を受けて直した）。
+韓国の版に無い曲（천일국가・流行歌）は성가の番号を出さない。前の seika/NNN.html は新しいページへの転送として残す。
+日本の聖歌は番号の付け方が違うので（성가1番＝日本の5番）、ページと一覧には両方を出す（videos.tsv で対応を持つ）。
 
 歌のファイルの書き方（songs/001.txt が見本）:
     no: / ko: / ja: / page:   曲番号・ハングルの題・日本語の題・聖歌集のページ
@@ -35,10 +39,10 @@ SONGS = HERE / "songs"
 OUT = ROOT / "seika"
 # theme/ の CSS・JS と favicon の ?v=。_tools/root/cache_bust.py が全ページで揃えた値に合わせる
 # （ずれていると、作り直すたびに古い版番号へ戻る。2026-10-25）
-THEME_V = "202610241207"
+THEME_V = "202610282236"
 # seika.css・hangul-yomi.js の ?v=。sw.js は theme/ の外の CSS・JS を手元のキャッシュ優先で出すので、
 # これらを直したら上げる（上げないと、前に開いた人には古いものが出続ける）
-VERSION = "202610251500"
+VERSION = "202610282236"
 SITE = "https://maydra.github.io/mimune-no-uraniwa/seika/"
 
 WORD = re.compile(r"([^\s{]+)(?:\{([^}]*)\})?")
@@ -56,6 +60,10 @@ def read_tsv(path):
 
 
 SONG_INDEX = read_tsv(HERE / "songs_index.tsv")                     # ハングルの聖歌集の目次
+SEIKA_NO = {s["no"]: s["seika"] for s in SONG_INDEX}                 # 内部の番号 → 韓国の『성가』の番号（無い曲は空）
+PAGE = {s["no"]: s["slug"] + ".html" for s in SONG_INDEX}            # 内部の番号 → ページの名前
+SEIKA_NO = {s["no"]: s["seika"] for s in SONG_INDEX}                 # 内部の番号 → 韓国の『성가』の番号（無い曲は空）
+PAGE = {s["no"]: s["slug"] + ".html" for s in SONG_INDEX}            # 内部の番号 → ページの名前
 VIDEOS = {r["no"]: r for r in read_tsv(HERE / "videos.tsv")}         # match_videos.py が作る
 JA_OFFICIAL = json.loads((HERE / "ja_official.json").read_text(encoding="utf-8"))  # parse_ja_official.py が作る
 # 静岡家庭教会のページに無い曲（第二部1・10〜17）は、動画の画面の歌詞を手で書き起こした
@@ -508,7 +516,9 @@ def render(song):
                    if gloss else "")
 
     badges = f'<span class="badge badge-ja">日本の聖歌 {ja_label(ja_no)}</span>' if ja_no else ""
-    badges += f'<span class="badge badge-ko">성가 {no}</span>'
+    seika_no = SEIKA_NO.get(str(no), "")
+    if seika_no:
+        badges += f'<span class="badge badge-ko">성가 {seika_no}</span>'
     # 表示はハングルと日本語のどちらか（並べると読みにくい）。行ごとの日本語（.side）は
     # ページに入れてあるが、いまは出さない（seika.css）
     view_tabs = ""
@@ -522,7 +532,8 @@ def render(song):
         off_source = (f'日本の聖歌の歌詞: 静岡家庭教会「<a href="{off["source"]}" target="_blank" rel="noopener">'
                       f'日本統一教会　聖歌　{part}</a>」（閉鎖、Internet Archive の保存から）。')
     made = "読み" if pairs else "読みと意味"
-    page_title = (f"日本の聖歌{ja_label(ja_no)}" if ja_no else f"성가{no}") + f"「{title_ja}」{plain(title_ko)} | み旨の裏庭"
+    page_title = ((f"日本の聖歌{ja_label(ja_no)}" if ja_no else f"성가{seika_no}" if seika_no else "")
+                  + f"「{title_ja}」{plain(title_ko)} | み旨の裏庭")
     desc = f"{plain(title_ko)}（{title_ja}）のハングルの歌詞。カタカナ・ローマ字の読みと日本語の歌詞つき。"
 
     return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION, theme_v=THEME_V) + f"""<body>
@@ -555,7 +566,7 @@ def render(song):
         </ul>
       </details>
 
-      <p class="source">ハングルの歌詞: 聖歌集『성가』（2018年）{html.escape(song.get("page", ""))}ページ。{off_source}{made}はこのサイトで付けたものです。</p>
+      <p class="source">ハングルの歌詞: 聖歌集『성가 / Святые песни』（ロシア語対訳版、2018年）{html.escape(song.get("page", ""))}ページ。{"성가の番号は韓国の『성가』（成和出版社）の番号です。" if seika_no else "韓国の『성가』（成和出版社）では番号を付けずに巻頭に入っています。" if no == 3 else "韓国の『성가』には入っていない歌です。"}{off_source}{made}はこのサイトで付けたものです。</p>
 {BETA_NOTE}    </article>
 {TYPO_BOX}
     <nav class="nav-links"><a href="index.html">聖歌の一覧</a> <a href="../index.html">トップページ</a></nav>
@@ -676,14 +687,15 @@ def render_intro(song):
     cards = [video_card(vid, label, (ch, url)) for vid, ch, url, label in song["videos"]]
     videos = ('\n      <section class="videos">\n        <h2>動画で聴く</h2>\n        <div class="vgrid">\n'
               + "\n".join(cards) + "\n        </div>\n      </section>\n") if cards else ""
-    page_title = f"성가{no}「{plain(title_ko)}」（{title_ja}） | み旨の裏庭"
+    seika_no = SEIKA_NO.get(str(no), "")
+    page_title = (f"성가{seika_no}" if seika_no else "") + f"「{plain(title_ko)}」（{title_ja}） | み旨の裏庭"
     desc = f"韓国の歌「{plain(title_ko)}」の紹介と主な語句。"
     return HEAD.format(title=html.escape(page_title), desc=html.escape(desc), version=VERSION, theme_v=THEME_V) + f"""<body>
 {THEME_BOOT}
   <div class="container">
     <article class="song read-kana" id="song">
       <header class="song-head">
-        <p class="badges"><span class="badge badge-ko">성가 {no}</span></p>
+        {f'<p class="badges"><span class="badge badge-ko">성가 {seika_no}</span></p>' if seika_no else ""}
         <h1 lang="ko">{ruby(title_ko)}</h1>
         <p class="title-ja">{html.escape(title_ja)}</p>
         <button type="button" class="share-btn" id="share">🔗 この歌を共有</button>
@@ -725,7 +737,7 @@ def render_intro(song):
       </section>
 {videos}
 
-      <p class="source">聖歌集『성가』（2018年）{html.escape(song.get("page", ""))}ページに入っている歌です。紹介・読み・意味はこのサイトで付けたものです。</p>
+      <p class="source">聖歌集『성가 / Святые песни』（ロシア語対訳版、2018年）{html.escape(song.get("page", ""))}ページに入っている歌です（韓国の『성가』には入っていません）。紹介・読み・意味はこのサイトで付けたものです。</p>
 {BETA_NOTE}    </article>
 {TYPO_BOX}
     <nav class="nav-links"><a href="index.html">聖歌の一覧</a> <a href="../index.html">トップページ</a></nav>
@@ -1057,21 +1069,24 @@ def build_index():
     def row(ja_no, title_ja, ko_no, mode, with_id=True):
         """mode = 大きく出す番号。"ja" は日本の聖歌の番号（紫）、"ko" は성가の番号（青緑）。
         2行目には、もう一方の番号を出す"""
+        # ko_no は内部の番号（ロシア語対訳版）。画面に出すのは韓国の『성가』の番号 seika_no
         if ko_no:
             ko_no = int(ko_no)
+        seika_no = SEIKA_NO.get(str(ko_no), "") if ko_no else ""
         if ko_no and ko_no in has_page:
-            page = f"{ko_no:03d}.html"
+            page = PAGE[str(ko_no)]
         else:
             page = ja_pages.get(ja_no, "")
-        anchor = f"j{ja_no}" if ja_no else f"k{ko_no}"
+        anchor = f"j{ja_no}" if ja_no else f"k{PAGE[str(ko_no)][3:-5]}"
         if mode == "ja":
             num = ja_no.replace("2部", "2-")
-            other = f"성가 {ko_no}" if ko_no else "ハングルの聖歌集には無い曲"
+            other = (f"성가 {seika_no}" if seika_no else "성가に番号の無い曲" if ko_no
+                     else "ハングルの聖歌集には無い曲")
         else:
-            num = str(ko_no)
+            num = seika_no
             other = f"日本の聖歌 {ja_label(ja_no)}" if ja_no else "日本の聖歌には無い曲"
         sub = [f'<span lang="ko">{html.escape(ko_title.get(str(ko_no), ""))}</span>'] if ko_no else []
-        has_other = ko_no if mode == "ja" else ja_no
+        has_other = seika_no if mode == "ja" else ja_no
         other_cls = ("other-ko" if mode == "ja" else "other-ja") if has_other else "other-none"
         sub.append(f'<span class="{other_cls}">{other}</span>')
         tag = '<span class="tag">準備中</span>' if not page else ""
@@ -1079,15 +1094,17 @@ def build_index():
                 f'<span class="t"><span class="tt"><b>{html.escape(title_ja)}</b>{tag}</span><small>{" · ".join(sub)}</small></span>')
         link = f'<a class="go" href="{page}">{body}</a>' if page else f'<div class="go off">{body}</div>'
         share_url = SITE + (page or f"#{anchor}")
-        search = " ".join(filter(None, [ja_no, str(ko_no or ""), title_ja, ko_title.get(str(ko_no), "") if ko_no else ""]
+        search = " ".join(filter(None, [ja_no, seika_no, title_ja, ko_title.get(str(ko_no), "") if ko_no else ""]
                                  + JA_ALIASES.get(ja_no, [])))
         id_attr = f' id="{anchor}"' if with_id else ""  # 同じ曲が2つの並びに出るので、id は片方だけ
-        return (f'        <li{id_attr} data-ja="{html.escape(ja_no)}" data-ko="{ko_no or ""}" data-search="{html.escape(search)}">'
+        return (f'        <li{id_attr} data-ja="{html.escape(ja_no)}" data-ko="{seika_no}" data-search="{html.escape(search)}">'
                 f'{link}<button type="button" class="share" data-url="{share_url}" data-title="{html.escape(title_ja)}" aria-label="{html.escape(title_ja)}を共有">🔗</button></li>')
 
     by_ja = [row(k, ja_rows[k], ko_by_ja.get(k, {}).get("no", ""), "ja") for k in sorted(ja_rows, key=ja_order)]
     by_ko, ko_only = [], []
-    for s in SONG_INDEX:
+    # 성가の番号の順。천일국가は韓国の『성가』と同じく番号なしで先頭に、ほかの番号の無い曲（流行歌）は後ろに
+    for s in sorted(SONG_INDEX, key=lambda s: (0 if s["no"] == "3" else 2 if not s["seika"] else 1,
+                                               int(s["seika"] or 0), int(s["no"]))):
         v = VIDEOS.get(s["no"], {})
         title = official_title(v["ja_no"]) if v.get("ja_no") and official_for(v["ja_no"]) else (v.get("ja_title") or "")
         by_ko.append(row(v.get("ja_no", ""), title or s["ko"], s["no"], "ko", with_id=False))
@@ -1222,28 +1239,38 @@ def main(args):
         else:
             song = parse(f)
             page = render(song)
-        dest = OUT / f"{int(song['no']):03d}.html"
+        dest = OUT / PAGE[str(int(song["no"]))]
         dest.write_text(ko_font_link(page), encoding="utf-8", newline="\n")
         print("wrote", dest.relative_to(ROOT))
+        # 前のページの名前（ロシア語対訳版の番号）。共有されたリンクが同じ曲に着くように転送で残す
+        (OUT / f"{int(song['no']):03d}.html").write_text(redirect_page(dest.name), encoding="utf-8", newline="\n")
     if not args:
         for k in JA_OFFICIAL_ONLY:
             (OUT / ja_page_name(k)).write_text(ko_font_link(render_ja_only(k)), encoding="utf-8", newline="\n")
         print("wrote", len(JA_OFFICIAL_ONLY), "pages of Japanese-only songs (seika/ja-*.html)")
     build_yomi()
     build_index()
-    build_sitemap()
+    # seika/sitemap.xml は _tools/root/build_sitemap.py が作る（push のたびに Actions が回す。転送ページは載せない）
 
 
-def build_sitemap():
-    """seika/sitemap.xml。サイト全体の sitemap-index.xml から読まれる（本のフォルダと同じ形）"""
-    import datetime
-    today = datetime.date.today().isoformat()
-    urls = "".join(f"<url><loc>{SITE}{p.name}</loc><lastmod>{today}</lastmod></url>"
-                   for p in sorted(OUT.glob("*.html")))
-    (OUT / "sitemap.xml").write_text(
-        "<?xml version='1.0' encoding='utf-8'?>\n"
-        f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>', encoding="utf-8", newline="\n")
-    print("wrote", (OUT / "sitemap.xml").relative_to(ROOT))
+def redirect_page(target):
+    """前の名前のページ。# の続きも持ったまま新しいページへ飛ぶ（サイトのほかの転送ページと同じ形）"""
+    return f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="refresh" content="0; url={target}">
+    <link rel="canonical" href="{SITE}{target}">
+    <title>移動しました | み旨の裏庭</title>
+    <script>location.replace("{target}" + location.hash);</script>
+</head>
+<body data-pagefind-ignore>
+    <p>このページは移動しました。自動で移動しない場合は <a href="{target}">こちら</a> へ。</p>
+</body>
+</html>
+"""
 
 
 if __name__ == "__main__":
