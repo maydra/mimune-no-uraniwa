@@ -12,6 +12,7 @@ songs/NNN.txt の NNN は、歌詞を取ったロシア語対訳版『성가 / �
 
 歌のファイルの書き方（songs/001.txt が見本）:
     no: / ko: / ja: / page:   曲番号・ハングルの題・日本語の題・聖歌集のページ
+    src:                      歌詞をロシア語対訳版以外から取ったときの出典（101〜 の曲。番号は内部の番号）
     [1] [2] …                 節の始まり。[*] は折り返し（＊）
     ハングル | 日本語の意味     1行ずつ。日本の聖歌の歌詞（公式の訳詞）が1行ずつ当たる曲では
                               意味は出さない（日本の聖歌が無い曲・当たらない曲だけに出す）
@@ -62,8 +63,12 @@ def read_tsv(path):
 SONG_INDEX = read_tsv(HERE / "songs_index.tsv")                     # ハングルの聖歌集の目次
 SEIKA_NO = {s["no"]: s["seika"] for s in SONG_INDEX}                 # 内部の番号 → 韓国の『성가』の番号（無い曲は空）
 PAGE = {s["no"]: s["slug"] + ".html" for s in SONG_INDEX}            # 内部の番号 → ページの名前
-SEIKA_NO = {s["no"]: s["seika"] for s in SONG_INDEX}                 # 内部の番号 → 韓国の『성가』の番号（無い曲は空）
-PAGE = {s["no"]: s["slug"] + ".html" for s in SONG_INDEX}            # 内部の番号 → ページの名前
+# src: のある曲（ロシア語対訳版に無く『천일국 성가』から取った曲）は、日本語の題も『천일국 성가』日本語版の題
+SRC_JA = {}
+for _f in SONGS.glob("*.txt"):
+    _head = dict(re.findall(r"^(no|ja|src):\s*(.*)$", _f.read_text(encoding="utf-8"), re.M))
+    if _head.get("src"):
+        SRC_JA[_head["no"]] = _head.get("ja", "")
 VIDEOS = {r["no"]: r for r in read_tsv(HERE / "videos.tsv")}         # match_videos.py が作る
 JA_OFFICIAL = json.loads((HERE / "ja_official.json").read_text(encoding="utf-8"))  # parse_ja_official.py が作る
 # 静岡家庭教会のページに無い曲（第二部1・10〜17）は、動画の画面の歌詞を手で書き起こした
@@ -142,7 +147,7 @@ def parse(path):
             term, _, desc = line.partition("|")
             song["glossary"].append((term.strip(), desc.strip()))
             continue
-        m = re.match(r"^(no|ko|ja|page|all):\s*(.*)$", line)
+        m = re.match(r"^(no|ko|ja|page|all|src):\s*(.*)$", line)
         if m and verse is None:
             song[m.group(1)] = m.group(2).strip()
             continue
@@ -443,7 +448,8 @@ def render(song):
     off = official_for(ja_no) if ja_no else None
     # 手で当てた行（ハングル || 訳詞）があればそれを使い、無ければ行数で当てる
     pairs = song.get("manual") or align_official(song, off)
-    title_ja = official_title(ja_no) if off else (v.get("ja_title") or song["ja"])
+    title_ja = (official_title(ja_no) if off else song["ja"] if song.get("src")
+                else (v.get("ja_title") or song["ja"]))
 
     out = []
     for vi, verse in enumerate(song["verses"]):
@@ -531,7 +537,8 @@ def render(song):
         part = "第二部" if ja_no.startswith("2部") else "第一部"
         off_source = (f'日本の聖歌の歌詞: 静岡家庭教会「<a href="{off["source"]}" target="_blank" rel="noopener">'
                       f'日本統一教会　聖歌　{part}</a>」（閉鎖、Internet Archive の保存から）。')
-    made = "読み" if pairs else "読みと意味"
+    made = "読み" if pairs or not any(ja for verse in song["verses"] for ln in verse["lines"] if ln for _, ja in [ln]) \
+        else "読みと意味"
     page_title = ((f"日本の聖歌{ja_label(ja_no)}" if ja_no else f"성가{seika_no}" if seika_no else "")
                   + f"「{title_ja}」{plain(title_ko)} | み旨の裏庭")
     desc = f"{plain(title_ko)}（{title_ja}）のハングルの歌詞。カタカナ・ローマ字の読みと日本語の歌詞つき。"
@@ -566,7 +573,7 @@ def render(song):
         </ul>
       </details>
 
-      <p class="source">ハングルの歌詞: 聖歌集『성가 / Святые песни』（ロシア語対訳版、2018年）{html.escape(song.get("page", ""))}ページ。{"성가の番号は韓国の『성가』（成和出版社）の番号です。" if seika_no else "韓国の『성가』（成和出版社）では番号を付けずに巻頭に入っています。" if no == 3 else "韓国の『성가』には入っていない歌です。"}{off_source}{made}はこのサイトで付けたものです。</p>
+      <p class="source">ハングルの歌詞: {html.escape(song["src"]) if song.get("src") else "聖歌集『성가 / Святые песни』（ロシア語対訳版、2018年）"}{html.escape(song.get("page", ""))}ページ。{"성가の番号は韓国の『성가』（成和出版社）の番号です。" if seika_no else "韓国の『성가』（成和出版社）では番号を付けずに巻頭に入っています。" if no == 3 else "韓国の『성가』には入っていない歌です。"}{off_source}{made}はこのサイトで付けたものです。</p>
 {BETA_NOTE}    </article>
 {TYPO_BOX}
     <nav class="nav-links"><a href="index.html">聖歌の一覧</a> <a href="../index.html">トップページ</a></nav>
@@ -1106,7 +1113,8 @@ def build_index():
     for s in sorted(SONG_INDEX, key=lambda s: (0 if s["no"] == "3" else 2 if not s["seika"] else 1,
                                                int(s["seika"] or 0), int(s["no"]))):
         v = VIDEOS.get(s["no"], {})
-        title = official_title(v["ja_no"]) if v.get("ja_no") and official_for(v["ja_no"]) else (v.get("ja_title") or "")
+        title = (official_title(v["ja_no"]) if v.get("ja_no") and official_for(v["ja_no"])
+                 else SRC_JA.get(s["no"]) or v.get("ja_title") or "")
         by_ko.append(row(v.get("ja_no", ""), title or s["ko"], s["no"], "ko", with_id=False))
         if not v.get("ja_no"):
             ko_only.append(row("", title or s["ko"], s["no"], "ko"))
@@ -1243,7 +1251,8 @@ def main(args):
         dest.write_text(ko_font_link(page), encoding="utf-8", newline="\n")
         print("wrote", dest.relative_to(ROOT))
         # 前のページの名前（ロシア語対訳版の番号）。共有されたリンクが同じ曲に着くように転送で残す
-        (OUT / f"{int(song['no']):03d}.html").write_text(redirect_page(dest.name), encoding="utf-8", newline="\n")
+        if int(song["no"]) < 100:  # 101〜 はロシア語対訳版に無い曲で、前の名前のページが無い
+            (OUT / f"{int(song['no']):03d}.html").write_text(redirect_page(dest.name), encoding="utf-8", newline="\n")
     if not args:
         for k in JA_OFFICIAL_ONLY:
             (OUT / ja_page_name(k)).write_text(ko_font_link(render_ja_only(k)), encoding="utf-8", newline="\n")
