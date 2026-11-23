@@ -1,12 +1,12 @@
-# Google のインデックス状況（2026-11-23 更新）
+# Google のインデックス状況（2026-11-24 更新）
 
 `_tools/root/search_console.py inspect` が毎日（Actions の index-status）書き直す。手で直さない。
 
-サイトマップのページ 3897、調べたページ 3897。
+サイトマップのページ 3901、調べたページ 3901。
 
 ## 状態ごと
 
-- URL が Google に認識されていません: 3871
+- URL が Google に認識されていません: 3875
 - クロール済み - インデックス未登録: 16
 - 送信して登録されました: 10
 
@@ -59,7 +59,7 @@
 | 平和神経／平和メッセージ／平和メッセージ | 0 | 18 | URL が Google に認識されていません 18 |
 | 人間の生と霊魂の世界 | 0 | 15 | URL が Google に認識されていません 15 |
 | 礼節と儀式 | 0 | 5 | URL が Google に認識されていません 5 |
-| 聖歌の一覧 | 0 | 99 | URL が Google に認識されていません 99 |
+| 聖歌の一覧（日本の聖歌の番号順） | 0 | 103 | URL が Google に認識されていません 103 |
 | seikonmondou | 0 | 1 | URL が Google に認識されていません 1 |
 | 青年の希望 | 0 | 7 | URL が Google に認識されていません 7 |
 | 成約人への道 | 0 | 24 | URL が Google に認識されていません 24 |
@@ -109,17 +109,17 @@
 | 罪と蕩減復帰 | 0 | 10 | URL が Google に認識されていません 10 |
 | 宇宙主管を願う前に自己主管を完成せよ／み旨の道 | 0 | 5 | URL が Google に認識されていません 5 |
 
-## 検索での表示（2026-10-24〜2026-11-20）
+## 検索での表示（2026-10-25〜2026-11-21）
 
-表示されたページ 8、表示 574 回、クリック 163 回
+表示されたページ 8、表示 597 回、クリック 172 回
 
 | ページ | 表示 | クリック |
 |---|---:|---:|
-| /syuku_&_risoutengoku/index.html | 213 | 4 |
-| / | 199 | 151 |
-| /mimunetosekai/index.html | 141 | 7 |
+| /syuku_&_risoutengoku/index.html | 222 | 6 |
+| / | 207 | 159 |
+| /mimunetosekai/index.html | 146 | 6 |
 | /bokkaisyanomiti/0320040895.html | 9 | 1 |
 | /bokkaisyanomiti/0314030526.html | 8 | 0 |
-| /syougairotei_6/index.html | 2 | 0 |
+| /syougairotei_6/index.html | 3 | 0 |
 | /bokkaisyanomiti/0321060964.html | 1 | 0 |
 | /syuku_&_risoutengoku/002.html | 1 | 0 |
