@@ -535,3 +535,24 @@ h2::after {
         justify-content: center;
     }
 }
+
+/* いちばん下の「管理人を応援する」。本の一覧の邪魔をしないよう、小さく薄く1行だけ */
+.support {
+    margin-top: 3rem;
+    /* 右下に浮いている配色ボタンに重ならないよう、下に余白を取る */
+    padding-bottom: 4rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.65;
+}
+
+/* 狭い画面では文の切れ目で折り返す */
+.support span {
+    display: inline-block;
+}
+
+.support a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
