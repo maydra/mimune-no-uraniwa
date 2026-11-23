@@ -1119,35 +1119,51 @@ def build_index():
         if not v.get("ja_no"):
             ko_only.append(row("", title or s["ko"], s["no"], "ko"))
 
-    page = HEAD.format(title="聖歌の一覧 | み旨の裏庭",
-                       desc="日本の聖歌とハングルの聖歌（성가）の一覧。番号で探して、そのまま共有できます。",
+    # 並びごとに別のページにする（index.html＝日本の聖歌の番号順、ko.html＝성가の番号順）。
+    # それぞれのリンクを共有できるように。ページの中で並びを替えたらアドレスも替える
+    for order, fname in (("ja", "index.html"), ("ko", "ko.html")):
+        build_index_page(order, fname, by_ja, ko_only, by_ko)
+
+
+INDEX_TITLE = {"ja": "聖歌の一覧（日本の聖歌の番号順）", "ko": "聖歌の一覧（성가の番号順）"}
+INDEX_FILE = {"ja": "index.html", "ko": "ko.html"}
+
+
+def build_index_page(order, fname, by_ja, ko_only, by_ko):
+    ja, ko = order == "ja", order == "ko"
+    hid = lambda show: "" if show else " hidden"  # noqa: E731
+    page = HEAD.format(title=f"{INDEX_TITLE[order]} | み旨の裏庭",
+                       desc=("日本の聖歌とハングルの聖歌（성가）の一覧。"
+                             + ("日本の聖歌の番号順。" if ja else "성가（ハングルの聖歌集）の番号順。")
+                             + "番号で探して、そのまま共有できます。"),
                        version=VERSION, theme_v=THEME_V) + f"""<body>
 {THEME_BOOT}
   <div class="container">
-    <article class="song seika-index" id="idx" data-view="ja">
+    <article class="song seika-index" id="idx" data-view="{order}">
       <header class="song-head">
         <h1>聖歌 <span class="beta-tag">試験中</span></h1>
         <p class="title-ja">番号か題で探して、🔗 で共有できます</p>
+        <button type="button" class="share-btn" id="share-list">🔗 この並びの一覧を共有</button>
         <p class="tool-link"><a href="yomi.html">ハングルの歌詞に読みと意味を付ける道具</a></p>
       </header>
 
       <div class="finder">
-        <input type="search" id="q" placeholder="日本の聖歌の番号か題（例: 5、勝利、승리）" inputmode="search" autocomplete="off" aria-label="番号か題で探す">
+        <input type="search" id="q" placeholder="{'日本の聖歌の番号か題（例: 5、勝利、승리）' if ja else '성가の番号か題（例: 1、勝利、승리）'}" inputmode="search" autocomplete="off" aria-label="番号か題で探す">
         <div class="seg seg-order" role="group" aria-label="並び">
-          <button type="button" data-order="ja" aria-pressed="true">日本の聖歌の番号</button><button type="button" data-order="ko" aria-pressed="false">성가の番号</button>
+          <button type="button" data-order="ja" aria-pressed="{str(ja).lower()}">日本の聖歌の番号</button><button type="button" data-order="ko" aria-pressed="{str(ko).lower()}">성가の番号</button>
         </div>
       </div>
 
-      <p class="list-cap" id="cap-ja">番号は <b class="c-ja">日本の聖歌</b> の番号です</p>
-      <p class="list-cap" id="cap-ko" hidden>番号は <b class="c-ko">성가（ハングルの聖歌集）</b> の番号です</p>
-      <ol class="songs" id="list-ja">
+      <p class="list-cap" id="cap-ja"{hid(ja)}>番号は <b class="c-ja">日本の聖歌</b> の番号です</p>
+      <p class="list-cap" id="cap-ko"{hid(ko)}>番号は <b class="c-ko">성가（ハングルの聖歌集）</b> の番号です</p>
+      <ol class="songs" id="list-ja"{hid(ja)}>
 {chr(10).join(by_ja)}
       </ol>
-      <h2 class="ko-only" id="ko-only-h">日本の聖歌に無い曲（番号は <span class="c-ko">성가</span> の番号）</h2>
-      <ol class="songs" id="list-ko-only">
+      <h2 class="ko-only" id="ko-only-h"{hid(ja)}>日本の聖歌に無い曲（番号は <span class="c-ko">성가</span> の番号）</h2>
+      <ol class="songs" id="list-ko-only"{hid(ja)}>
 {chr(10).join(ko_only)}
       </ol>
-      <ol class="songs" id="list-ko" hidden>
+      <ol class="songs" id="list-ko"{hid(ko)}>
 {chr(10).join(by_ko)}
       </ol>
       <p class="none" id="none" hidden>見つかりませんでした</p>
@@ -1182,7 +1198,12 @@ def build_index():
           }});
         }});
       }}
-      var order = 'ja';
+      var order = '{order}';
+      var FILE = {{ ja: 'index.html', ko: 'ko.html' }};
+      var TITLE = {{ ja: '{INDEX_TITLE["ja"]}', ko: '{INDEX_TITLE["ko"]}' }};
+      document.getElementById('share-list').addEventListener('click', function () {{
+        share(this, TITLE[order], '{SITE}' + FILE[order]);
+      }});
       function visibleItems() {{
         var out = [];
         lists[order].forEach(function (el) {{ if (el.tagName === 'OL') out = out.concat([].slice.call(el.children)); }});
@@ -1218,6 +1239,9 @@ def build_index():
           lists.ko.forEach(function (el) {{ el.hidden = order !== 'ko'; }});
           document.getElementById('idx').dataset.view = order;
           q.placeholder = PLACEHOLDER[order];
+          // アドレスと題も、その並びのページのものにする（そのままコピーしても共有できるように）
+          try {{ history.replaceState(null, '', FILE[order] + location.search); }} catch (e) {{}}
+          document.title = TITLE[order] + ' | み旨の裏庭';
           filter();
           flip();
         }});
@@ -1233,8 +1257,8 @@ def build_index():
 </body>
 </html>
 """
-    (OUT / "index.html").write_text(ko_font_link(page), encoding="utf-8", newline="\n")
-    print("wrote", (OUT / "index.html").relative_to(ROOT), f"({len(by_ja)} + {len(ko_only)} songs)")
+    (OUT / fname).write_text(ko_font_link(page), encoding="utf-8", newline="\n")
+    print("wrote", (OUT / fname).relative_to(ROOT), f"({len(by_ja)} + {len(ko_only)} songs)")
 
 
 def main(args):
