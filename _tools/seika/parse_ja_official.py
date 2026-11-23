@@ -19,6 +19,9 @@ SOURCES = {
     "1": "https://web.archive.org/web/20200219211424/http://www.u-ch.org/contents_song/song_p01.html",
     "2": "https://web.archive.org/web/20200211153532/http://www.u-ch.org/contents_song/song_p02.html",
 }
+# 元のページの誤字。「畔（ほとり）」がどの曲でも「磅」になっている（38番・68番）。
+# 38番は題も「生命と泉の磅」（再生リストと韓国語の題は「生命の泉のほとり」）
+TITLE_FIX = {"38": "生命の泉のほとり"}
 SONG = re.compile(r'<h3><a name="L(\d+)"[^>]*></a>\s*(\d+)\.(.+?)</h3>\s*<p class="line">(.*?)</p>', re.S)
 
 
@@ -53,6 +56,8 @@ def parse(path, part):
                 verses.append(cur)
             cur.append(ln)
         # 題に付いた読み「我は供物（くもつ）」は題としては外す
+        title = TITLE_FIX.get(key, title)
+        verses = [[ln.replace("磅", "畔") for ln in v] for v in verses]
         out[key] = {"title": title, "credit": credit, "verses": verses, "source": SOURCES[part] + f"#L{m.group(1)}"}
     return out
 
