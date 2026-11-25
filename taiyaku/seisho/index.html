@@ -204,6 +204,7 @@ try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="d
 
 <footer id="foot"></footer>
 
+<script src="../marks.js?v=202611251"></script>
 <script src="books.js?v=202610282236"></script>
 <script>
 (() => {
@@ -816,6 +817,7 @@ try{var c=JSON.parse(localStorage.getItem("bible.theme"));if(c!=="light"&&c!=="d
         });
       });
     }
+    window.dispatchEvent(new CustomEvent("taiyaku:paint", { detail: { key: s.key } }));   // 自分のマーカーを塗る（../marks.js）
     document.documentElement.style.setProperty(
       "--headh", document.querySelector("header").offsetHeight + "px");
     mark(true);

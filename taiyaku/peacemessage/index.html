@@ -305,6 +305,7 @@ try{var c=JSON.parse(localStorage.getItem("peacemessage.theme"));if(c!=="light"&
 
 <footer id="foot"></footer>
 
+<script src="../marks.js?v=202611251"></script>
 <script src="book.js?v=202610282236" defer></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -1079,6 +1080,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // 上のバーの高さ。寄せたとき行の頭がバーの下に隠れないように使う。
     // 段落数などを書き終えたあとで測る（バーの折り返しが変わって高さが動くため）
+    window.dispatchEvent(new CustomEvent("taiyaku:paint", { detail: { key: s.key } }));   // 自分のマーカーを塗る（../marks.js）
     document.documentElement.style.setProperty(
       "--headh", document.querySelector("header").offsetHeight + "px");
     mark();
